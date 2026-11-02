@@ -10,7 +10,7 @@
       "direct_shape": 415,
       "other_shape": 17,
       "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "terminal_static_candidate_reviews": 119,
+      "terminal_static_candidate_reviews": 432,
       "terminal_candidate_review_ledger_paths": [
         "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json",
         "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
@@ -23,13 +23,15 @@
         "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
         "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
         "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
-        "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+        "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json",
+        "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
       ],
-      "direct_shape_terminal_static_candidate_reviews": 86,
-      "direct_shape_without_terminal_static_candidate_decision": 329,
+      "direct_shape_terminal_static_candidate_reviews": 415,
+      "direct_shape_without_terminal_static_candidate_decision": 0,
       "other_shape_structurally_classified": 17,
       "other_shape_terminal_static_candidate_reviews": 17,
-      "other_shape_without_terminal_static_candidate_decision": 0
+      "other_shape_without_terminal_static_candidate_decision": 0,
+      "deferred_static_candidate_reviews": 0
     },
     {
       "source_id": "openai-plugins",
@@ -107,14 +109,14 @@
   "program_issue": 599,
   "source_vetting_receipt": "docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md",
   "dynamic_source_candidate_review_totals": {
-    "github_awesome_copilot": 119,
+    "github_awesome_copilot": 432,
     "openai_plugins": 169,
     "agentskillexchange_skills": 3196,
     "j4flmao_agent_skills": 90,
     "not_deduplicated_or_governed_semantic_reviews": true,
     "scope_caveat": "Path-matched candidate static reviews are source vetting only; not governed semantic review, security, behavior or admission.",
-    "path_matched_across_four_sources": 3405,
-    "path_matched_note": "119 Awesome Copilot + 90 j4flmao + 3196 AgentSkillExchange exact-path terminal candidate decisions (3 AgentSkillExchange DEFER not counted); OpenAI 169 plugin-family decisions not path-reconciled (41 historical exact matches separate). Corrected 2026-11-02: previous value 193 lagged the 209 source sum."
+    "path_matched_across_four_sources": 3718,
+    "path_matched_note": "432 Awesome Copilot + 90 j4flmao + 3196 AgentSkillExchange + 0 OpenAI Plugins current-standard exact-path decisions; DEFER excluded; 41 historical OpenAI candidate-only matches separate."
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
   "latest_awesome_copilot_tranche": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",

@@ -1028,14 +1028,16 @@
     "j4flmao_nested_game_terminal_candidate_decisions": 23,
     "j4flmao_nested_game_seven_file_pending": 0,
     "j4flmao_other_shape_unclassified": 182,
-    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 3405,
-    "github_awesome_copilot_exact_path_candidate_decisions": 119,
+    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 3718,
+    "github_awesome_copilot_exact_path_candidate_decisions": 432,
     "github_awesome_copilot_nested_structurally_classified": 17,
     "github_awesome_copilot_nested_terminal_candidate_decisions": 17,
     "github_awesome_copilot_nested_pending_terminal": 0,
     "agentskillexchange_exact_path_candidate_decisions": 3196,
     "agentskillexchange_exact_path_deferred": 3,
-    "agentskillexchange_identity_segmented_paths": 3200
+    "agentskillexchange_identity_segmented_paths": 3200,
+    "j4flmao_exact_path_candidate_decisions": 90,
+    "openai_plugins_exact_path_candidate_decisions": 0
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -4539,17 +4541,17 @@
     "date": "2026-11-02",
     "source_role": "dynamic-discovery-only",
     "raw_discovered_skill_md_paths": 4813,
-    "terminal_exact_path_candidate_decisions": 3405,
-    "raw_paths_without_terminal_path_matched_decision": 1408,
+    "terminal_exact_path_candidate_decisions": 3718,
+    "raw_paths_without_terminal_path_matched_decision": 1095,
     "source_progress": {
       "github_awesome_copilot": {
         "raw": 432,
-        "terminal": 119,
+        "terminal": 432,
         "direct_shape_terminal": 102,
         "direct_shape_total": 415,
         "other_shape_terminal": 17,
         "other_shape_total": 17,
-        "raw_pending": 313
+        "raw_pending": 0
       },
       "j4flmao_agent_skills": {
         "raw": 645,
@@ -4588,9 +4590,9 @@
     "governed_capability_linked_identities_unchanged": 78,
     "distinct_eligible_denominator": null,
     "capability_directory": {
-      "subdomain_candidate_example_instances": 227,
+      "subdomain_candidate_example_instances": 421,
       "overview_candidate_preview_instances": 154,
-      "distinct_source_path_pin_candidate_identities": 237,
+      "distinct_source_path_pin_candidate_identities": 431,
       "corrected_prior_declared": "179/172 declared vs 156/166 actual before this tranche"
     },
     "new_tranche": [
@@ -4606,8 +4608,8 @@
     "new_security_scans": 0,
     "new_behavioral_validations": 0,
     "caution": "Raw path decisions and source-vetting grades are NOT distinct eligible skill review completion or unchanged-use approval.",
-    "capability_directory_subdomain_examples": 227,
-    "capability_directory_distinct_source_vetted_candidates": 237,
+    "capability_directory_subdomain_examples": 421,
+    "capability_directory_distinct_source_vetted_candidates": 431,
     "historical_candidate_only_openai_exact_blob_tree_matches": 41,
     "raw_paths_with_any_exact_path_candidate_decision_evidence": 250,
     "raw_paths_without_any_exact_path_candidate_decision_evidence": 4563,
@@ -4827,6 +4829,28 @@
       "reference_only": 71,
       "reject_unchanged": 3125
     },
+    "governed_review_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null
+  },
+  "awesome_copilot_remaining_313_static_20261102": {
+    "date": "2026-11-02",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json",
+    "capability_index": "registry/discovery/github-awesome-copilot-capability-index-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-awesome-copilot-remaining-313-static.md",
+    "candidate_decisions": 313,
+    "reference_only": 194,
+    "reject_unchanged": 119,
+    "static_verified_threshold_signal": 73,
+    "integration_overrides": 28,
+    "source_before": 119,
+    "source_after": 432,
+    "source_snapshot_fully_dispositioned": true,
+    "four_source_before": 3405,
+    "four_source_after": 3718,
     "governed_review_delta": 0,
     "security_scans": 0,
     "behavioral_validations": 0,

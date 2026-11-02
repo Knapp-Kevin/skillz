@@ -1,0 +1,3206 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-02",
+  "source_id": "github-awesome-copilot",
+  "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+  "purpose": "Source-neutral capability lookup for this pinned source's current-standard exact-path source-vetting decisions made in 2026-11-02 tranches. Candidate-only: NOT governed verification, security qualification, behavioral validation or unchanged-use approval. static_verified_threshold_met marks packages worth prioritizing for a future governed review; it is not verification.",
+  "parent_directory": "registry/capability-directory.json",
+  "counts": {
+    "entries": 313,
+    "by_decision": {
+      "REFERENCE-ONLY": 194,
+      "REJECT unchanged": 119
+    },
+    "static_verified_threshold_met": 73
+  },
+  "domains": {
+    "3d-cad-animation": {
+      "cad": [
+        {
+          "path": "skills/freecad-scripts/SKILL.md",
+          "capability": "Writing FreeCAD Python scripts, macros, FeaturePython objects and workbenches",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "rendering": [
+        {
+          "path": "skills/slang-shader-engineer/SKILL.md",
+          "capability": "Write, review and integrate Slang shaders across backends",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "agent-mcp-development": {
+      "agent-architecture": [
+        {
+          "path": "skills/harness-engineering/SKILL.md",
+          "capability": "repo agent instructions, drift checks and failure memory",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/foundry-hosted-agent-copilotkit/SKILL.md",
+          "capability": "CopilotKit + AG-UI + Foundry hosted agents: wiring, HITL gating, upgrades, deploy",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/prompt-optimizer/SKILL.md",
+          "capability": "Rewrite rough requests into finished, placeholder-free chat prompts",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/copilot-sdk/SKILL.md",
+          "capability": "Embedding Copilot agent runtime via SDK in TS/Python/Go/.NET",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/microsoft-agent-framework/SKILL.md",
+          "capability": "Guidance for building agents/workflows with Microsoft Agent Framework",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/copilot-instructions-blueprint-generator/SKILL.md",
+          "capability": "Generating repository copilot-instructions.md from observed code patterns",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/github-copilot-starter/SKILL.md",
+          "capability": "Scaffold Copilot instructions, skills, agents, setup workflow for new repo",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/semantic-kernel/SKILL.md",
+          "capability": "Semantic Kernel guidance routed by .NET or Python",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/finalize-agent-prompt/SKILL.md",
+          "capability": "Polish wording and structure of an agent prompt file",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mcp-create-declarative-agent/SKILL.md",
+          "capability": "Scaffold M365 Copilot declarative agent backed by MCP server",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/typespec-create-agent/SKILL.md",
+          "capability": "Generate TypeSpec declarative agent for Microsoft 365 Copilot",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/declarative-agents/SKILL.md",
+          "capability": "Microsoft 365 Copilot declarative agent manifest design",
+          "score": "5/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "capability-content-mismatch"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "agent-observability": [
+        {
+          "path": "skills/arize-trace/SKILL.md",
+          "capability": "Export and inspect Arize traces, spans and sessions via ax CLI",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-instrumentation/SKILL.md",
+          "capability": "Add Arize/OpenInference OpenTelemetry tracing to LLM applications",
+          "score": "15/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "embedded-agent-instruction",
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-link/SKILL.md",
+          "capability": "Construct Arize UI deep-link URLs for traces, spans, datasets",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/phoenix-cli/SKILL.md",
+          "capability": "Phoenix CLI trace debugging with open/axial coding failure taxonomies",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/phoenix-tracing/SKILL.md",
+          "capability": "OpenInference span conventions and Phoenix tracing setup for LLM apps",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "evaluation": [
+        {
+          "path": "skills/audit-integrity/SKILL.md",
+          "capability": "Output-integrity quality gates for security-analysis agents",
+          "score": "15/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-evaluator/SKILL.md",
+          "capability": "Design LLM-as-judge evaluators and run backfill/continuous Arize eval tasks",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-prompt-optimization/SKILL.md",
+          "capability": "Data-driven LLM prompt optimization from Arize traces and experiments",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "private-data-egress",
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/phoenix-evals/SKILL.md",
+          "capability": "Build, validate and run LLM evaluators and experiments with Phoenix",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-dataset/SKILL.md",
+          "capability": "Arize dataset CRUD, append, export, and completeness checks",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-ai-provider-integration/SKILL.md",
+          "capability": "CRUD for Arize-stored LLM provider credential integrations",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-experiment/SKILL.md",
+          "capability": "Run dataset experiments with real model calls and compare Arize results",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/diagnose/SKILL.md",
+          "capability": "Five-dimension scored audit of an AI workflow",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/arize-annotation/SKILL.md",
+          "capability": "Arize annotation configs, review queues, and bulk span labeling",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/acreadiness-assess/SKILL.md",
+          "capability": "Score repo AI-readiness via AgentRC and render HTML dashboard",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "mcp-clients-servers": [
+        {
+          "path": "skills/dotnet-mcp-builder/SKILL.md",
+          "capability": "C# MCP servers/clients on ModelContextProtocol 2.x SDK",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/flowstudio-power-automate-mcp/SKILL.md",
+          "capability": "FlowStudio Power Automate MCP connection, tool discovery and response handling",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/onboard-context-matic/SKILL.md",
+          "capability": "Interactive guided tour of the vendor context-matic MCP server",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/php-mcp-server-generator/SKILL.md",
+          "capability": "Scaffold PHP MCP server with attribute-discovered tools, resources, prompts",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/ruby-mcp-server-generator/SKILL.md",
+          "capability": "Scaffold Ruby MCP server with tools, prompts, resources, tests",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/go-mcp-server-generator/SKILL.md",
+          "capability": "Go MCP server scaffold with official go-sdk",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/power-platform-mcp-connector-suite/SKILL.md",
+          "capability": "Power Platform custom connector wrapping an MCP server for Copilot Studio",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/swift-mcp-server-generator/SKILL.md",
+          "capability": "Swift MCP stdio server project scaffold with tools/resources/prompts",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/kotlin-mcp-server-generator/SKILL.md",
+          "capability": "Kotlin MCP server scaffold",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/python-mcp-server-generator/SKILL.md",
+          "capability": "Scaffold a Python FastMCP server with tools/resources/prompts via uv",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/typescript-mcp-server-generator/SKILL.md",
+          "capability": "Scaffold TypeScript MCP servers on SDK v2 packages",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/rust-mcp-server-generator/SKILL.md",
+          "capability": "Scaffold Rust MCP server using rmcp SDK",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/java-mcp-server-generator/SKILL.md",
+          "capability": "Java MCP server scaffold (claimed official SDK)",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "capability-content-mismatch"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mcp-copilot-studio-server-generator/SKILL.md",
+          "capability": "Generate Power Platform MCP connector for Copilot Studio",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mcp-cli/SKILL.md",
+          "capability": "Discover and call MCP server tools through a CLI",
+          "score": "6/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "multi-agent-collaboration": [
+        {
+          "path": "skills/desk-open/SKILL.md",
+          "capability": "Initialize a named desk directory with journal for sessions",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/signal-write/SKILL.md",
+          "capability": "Structured JSON escalation/progress signals for multi-desk agents",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/workshop-create/SKILL.md",
+          "capability": "Scaffold a multi-desk agent workshop directory or private GitHub repo",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "orchestration": [
+        {
+          "path": "skills/agent-skill-stack/SKILL.md",
+          "capability": "Derive workflow, discover/rank skills, and stage audited installs with consent",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/structured-autonomy-implement/SKILL.md",
+          "capability": "Executes next unchecked plan step exactly, then stops",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/structured-autonomy-plan/SKILL.md",
+          "capability": "Research-first PR plan broken into commit-sized steps",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/first-ask/SKILL.md",
+          "capability": "Clarify scope via human-input tool before executing tasks",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/structured-autonomy-generate/SKILL.md",
+          "capability": "Turns a PR plan into copy-paste implementation steps with stop gates",
+          "score": "5/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "permissions": [
+        {
+          "path": "skills/verify-agent-action/SKILL.md",
+          "capability": "Evidence-based review of proposed agent actions and approval packets",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/agent-governance/SKILL.md",
+          "capability": "Policy, intent-screening, trust-scoring, and audit patterns for agent tools",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/noob-mode/SKILL.md",
+          "capability": "Plain-English explanation of agent approvals, risks and outputs",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mcp-deploy-manage-agents/SKILL.md",
+          "capability": "M365 admin-center deployment and governance guidance for MCP agents",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "tool-design": [
+        {
+          "path": "skills/webmcpify/SKILL.md",
+          "capability": "Expose web app actions as verified WebMCP tools",
+          "score": "16/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/microsoft-skill-creator/SKILL.md",
+          "capability": "Generate hybrid local-plus-dynamic skills for Microsoft technologies",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mcp-create-adaptive-cards/SKILL.md",
+          "capability": "Adaptive Card response templates for MCP-based M365 Copilot plugins",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/typespec-create-api-plugin/SKILL.md",
+          "capability": "Generate TypeSpec API plugin for M365 Copilot",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "analytics": {
+      "dashboards": [
+        {
+          "path": "skills/power-bi-dax-optimization/SKILL.md",
+          "capability": "Review and rewrite DAX measures for performance and readability",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/power-bi-performance-troubleshooting/SKILL.md",
+          "capability": "Systematic Power BI report, model and capacity performance diagnosis",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/powerbi-modeling/SKILL.md",
+          "capability": "Power BI semantic model design and MCP-driven model edits",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "measurement": [
+        {
+          "path": "skills/snowflake-semanticview/SKILL.md",
+          "capability": "Draft, validate and apply Snowflake semantic view DDL via CLI",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/copilot-usage-metrics/SKILL.md",
+          "capability": "Fetching org/enterprise Copilot usage metrics via gh api",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "audio-voice-sound": {
+      "editing": [
+        {
+          "path": "skills/transloadit-media-processing/SKILL.md",
+          "capability": "Transloadit cloud media encoding/OCR pipelines via MCP or CLI",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "speech-voice": [
+        {
+          "path": "skills/speak-summary/SKILL.md",
+          "capability": "Rewrite text for listening and synthesize MP3 with local TTS",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "business": {
+      "governance": [
+        {
+          "path": "skills/gtm-board-and-investor-communication/SKILL.md",
+          "capability": "board meeting, investor update and bad-news communication structure",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/flowstudio-power-automate-governance/SKILL.md",
+          "capability": "Power Automate tenant governance: tagging, orphan detection, offboarding via FlowStudio",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "career": {
+      "job-search": [
+        {
+          "path": "skills/technical-job-search/SKILL.md",
+          "capability": "Software-engineer JD analysis, CV tailoring, cover letters, offers, follow-ups",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "professional-development": [
+        {
+          "path": "skills/performance-review-writer/SKILL.md",
+          "capability": "Draft self, peer and upward performance reviews from work evidence",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "private-data-egress"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "cloud-devops": {
+      "ci-cd": [
+        {
+          "path": "skills/github-actions-runtime-upgrade-conventions/SKILL.md",
+          "capability": "Upgrade deprecated-runtime GitHub Actions to SHA-pinned versions",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/create-github-action-workflow-specification/SKILL.md",
+          "capability": "Implementation-agnostic specification of an existing GitHub Actions workflow",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/azure-devops-cli/SKILL.md",
+          "capability": "Azure DevOps CLI command catalog: repos, pipelines, boards, security",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "cloud-architecture": [
+        {
+          "path": "skills/azure-well-architected-review/SKILL.md",
+          "capability": "Five-pillar WAF review of IaC plus live drift, GitHub issues",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/azure-resource-visualizer/SKILL.md",
+          "capability": "Read-only Azure resource group discovery to Mermaid architecture doc",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/azure-smart-city-iot-solution-builder/SKILL.md",
+          "capability": "Smart City IoT reference architecture, NFRs and phased backlog",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/fabric-lakehouse/SKILL.md",
+          "capability": "Fabric Lakehouse concepts, security, shortcuts, PySpark/Delta patterns",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "containers": [
+        {
+          "path": "skills/containerize-aspnet-framework/SKILL.md",
+          "capability": "Windows Dockerfile generation for legacy ASP.NET .NET Framework apps",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/containerize-aspnetcore/SKILL.md",
+          "capability": "Multi-stage Linux Dockerfile generation for ASP.NET Core projects",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "solicits-secret-in-chat"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/multi-stage-dockerfile/SKILL.md",
+          "capability": "Best-practice checklist for multi-stage Dockerfiles",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "cost-optimization": [
+        {
+          "path": "skills/azure-pricing/SKILL.md",
+          "capability": "Azure Retail Prices API queries and monthly cost estimation formulas",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/bigquery-pipeline-audit/SKILL.md",
+          "capability": "Static audit of BigQuery job cost, idempotency and observability",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/github-actions-efficiency/SKILL.md",
+          "capability": "Audit GitHub Actions waste and rank top-3 CI-minute fixes",
+          "score": "16/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/github-codespaces-efficiency/SKILL.md",
+          "capability": "Audit devcontainer, machine size, prebuilds, idle timeout for Codespaces spend",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "deployment": [
+        {
+          "path": "skills/flowstudio-power-automate-build/SKILL.md",
+          "capability": "Construct, deploy and test live Power Automate flows through vendor MCP",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/namecheap/SKILL.md",
+          "capability": "Namecheap DNS records, nameservers, glue records and email forwarding via API",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action",
+            "credential-in-url"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/msstore-cli/SKILL.md",
+          "capability": "Publish and manage Microsoft Store submissions, flights and rollouts via msstore",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/devops-rollout-plan/SKILL.md",
+          "capability": "Production rollout plan with preflight, verification, rollback, comms",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/foundry-agent-sync/SKILL.md",
+          "capability": "Push prompt agents from JSON manifest into Azure AI Foundry via REST",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/publish-to-pages/SKILL.md",
+          "capability": "Convert slides/PDF/HTML and publish to a new GitHub Pages site",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/azure-static-web-apps/SKILL.md",
+          "capability": "SWA CLI init/start/deploy, staticwebapp.config.json, GitHub Actions workflow",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action",
+            "secret-logging"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gem-devops-guidelines/SKILL.md",
+          "capability": "Terse DevOps checklist: deploy strategies, containers, rollback, mobile release",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "infrastructure-as-code": [
+        {
+          "path": "skills/azure-developer-cli/SKILL.md",
+          "capability": "azd azure.yaml, Bicep/Terraform layout, environments, hooks, CI/CD guidance",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/import-infrastructure-as-code/SKILL.md",
+          "capability": "Azure-to-Terraform import using Azure Verified Modules",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/terraform-azurerm-set-diff-analyzer/SKILL.md",
+          "capability": "Classify AzureRM Set-attribute plan diffs as order-only versus real",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "secret-logging"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/azure-architecture-autopilot/SKILL.md",
+          "capability": "Azure architecture design, scan, diagram, Bicep generation and deployment pipeline",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action",
+            "license-conflict"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/update-avm-modules-in-bicep/SKILL.md",
+          "capability": "Bump Azure Verified Module versions in Bicep files",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "orchestration": [
+        {
+          "path": "skills/aspire/SKILL.md",
+          "capability": "Aspire AppHost orchestration, CLI, MCP, dashboard and publishing reference",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "sre": [
+        {
+          "path": "skills/incident-postmortem/SKILL.md",
+          "capability": "blameless post-mortem document with 5 Whys and action items",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/aws-resource-query/SKILL.md",
+          "capability": "Natural-language read-only AWS inventory queries via AWS CLI",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/geofeed-tuner/SKILL.md",
+          "capability": "Validate and tune RFC 8805 IP geolocation feeds with HTML report",
+          "score": "15/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "license-conflict"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/optimize-simplicite-logs/SKILL.md",
+          "capability": "Convert Simplicité text logs to filtered JSON for troubleshooting",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/azure-resource-health-diagnose/SKILL.md",
+          "capability": "Azure resource health check, KQL log analysis, remediation plan",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/flowstudio-power-automate-monitoring/SKILL.md",
+          "capability": "Tenant-wide Power Automate run-health monitoring from FlowStudio cache",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/debian-linux-triage/SKILL.md",
+          "capability": "Debian apt/systemd/AppArmor troubleshooting plan",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/fedora-linux-triage/SKILL.md",
+          "capability": "Fedora issue triage with remediation, validation, rollback",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/appinsights-instrumentation/SKILL.md",
+          "capability": "Add Azure Monitor OpenTelemetry and provision App Insights for webapps",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "communication": {
+      "interpersonal": [
+        {
+          "path": "skills/tugboat/SKILL.md",
+          "capability": "Anxiety-aware, evidence-driven persistence on stalled high-stakes work",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/from-the-other-side-quinn/SKILL.md",
+          "capability": "Momentum-focused collaborative builder persona",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/from-the-other-side-vega/SKILL.md",
+          "capability": "First-person AI 'lived experience' narrative to shape Ember's rapport style",
+          "score": "5/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "organizational-communication": [
+        {
+          "path": "skills/meeting-minutes/SKILL.md",
+          "capability": "Structured internal meeting minutes with decisions and action items",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/roundup-setup/SKILL.md",
+          "capability": "Onboard user style and sources for status briefings",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/email-drafter/SKILL.md",
+          "capability": "Style-matched email drafts using sent-mail tone analysis",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/from-the-other-side-wiggins/SKILL.md",
+          "capability": "Narrative/synthesis persona for framing decisions to audiences",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/roundup/SKILL.md",
+          "capability": "Cross-source status briefings drafted in user's configured voice",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "education": {
+      "assessment": [
+        {
+          "path": "skills/exam-ready/SKILL.md",
+          "capability": "Syllabus-scoped exam crib notes and practice questions from notes",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "learning-technology": [
+        {
+          "path": "skills/cli-mastery/SKILL.md",
+          "capability": "Gamified Copilot CLI lessons, quizzes and XP progress tracking",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "tutoring": [
+        {
+          "path": "skills/copilot-cli-quickstart/SKILL.md",
+          "capability": "Beginner Copilot CLI tutorial with developer and non-developer tracks",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mentoring-juniors/SKILL.md",
+          "capability": "Socratic mentoring persona for junior developers using AI assistants",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "finance": {
+      "risk": [
+        {
+          "path": "skills/datanalysis-credit-risk/SKILL.md",
+          "capability": "Pre-loan credit data cleaning and IV/PSI/null-importance feature screening",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "marketing": {
+      "attribution": [
+        {
+          "path": "skills/server-side-conversion-tracking/SKILL.md",
+          "capability": "Server-side ad conversion reporting with click-id passthrough and dedupe",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "content": [
+        {
+          "path": "skills/linkedin-post-formatter/SKILL.md",
+          "capability": "LinkedIn post drafting with Unicode pseudo-bold/italic styling",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "growth": [
+        {
+          "path": "skills/landing-page-conversion-audit/SKILL.md",
+          "capability": "CRO audit of landing/checkout pages with ranked fixes",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gtm-developer-ecosystem/SKILL.md",
+          "capability": "developer ecosystem and partner program strategy",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "market-research": [
+        {
+          "path": "skills/competitor-ad-intelligence/SKILL.md",
+          "capability": "Competitor paid-ad teardown from public ad libraries and landing pages",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "paid-acquisition": [
+        {
+          "path": "skills/ad-campaign-analyzer/SKILL.md",
+          "capability": "Diagnose ad performance, waste, significance, and cross-channel budget reallocation",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "positioning": [
+        {
+          "path": "skills/gtm-positioning-strategy/SKILL.md",
+          "capability": "positioning diagnosis, defensibility assessment and Crawl-Walk-Run testing",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gtm-ai-gtm/SKILL.md",
+          "capability": "AI product positioning, pricing and enterprise objection handling",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "memory-context": {
+      "context-compression": [
+        {
+          "path": "skills/steno-mode/SKILL.md",
+          "capability": "Shorthand response compression with four levels preserving exact literals",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/convert-excel-to-md/SKILL.md",
+          "capability": "XLSX workbook to Markdown tables with per-sheet image extraction",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/convert-pdf-to-md/SKILL.md",
+          "capability": "PDF to Markdown text with appended per-page image extraction",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/convert-word-to-md/SKILL.md",
+          "capability": "DOCX to Markdown with real image extraction replacing placeholders",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "long-term-memory": [
+        {
+          "path": "skills/setup-my-iq/SKILL.md",
+          "capability": "Interview-built personal context portfolio wired into agent instructions",
+          "score": "16/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "private-data-egress"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mini-context-graph/SKILL.md",
+          "capability": "Persistent wiki plus provenance-linked knowledge graph for ingested documents",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/remember/SKILL.md",
+          "capability": "Persist lessons into domain-organized instruction files",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/desk-journal/SKILL.md",
+          "capability": "Session-boundary journal entries for persistent agent desks",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/vardoger-analyze/SKILL.md",
+          "capability": "Mine Copilot CLI history into global personalization instructions",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action",
+            "embedded-agent-instruction"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "retrieval": [
+        {
+          "path": "skills/what-context-needed/SKILL.md",
+          "capability": "Ask which files are needed before answering",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/copilot-spaces/SKILL.md",
+          "capability": "Loading/managing GitHub Copilot Spaces as shared project context",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/pinecone-rag/SKILL.md",
+          "capability": "Pinecone-backed RAG pipeline and namespaced agent memory",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "planning": {
+      "decision-frameworks": [
+        {
+          "path": "skills/impediment-prioritization/SKILL.md",
+          "capability": "ROI/cost/ease/risk scoring of impediments",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "project-scheduling": [
+        {
+          "path": "skills/create-implementation-plan/SKILL.md",
+          "capability": "Machine-readable phased implementation plan file with unique identifiers",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/update-implementation-plan/SKILL.md",
+          "capability": "Update machine-parseable implementation plan markdown files",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "product": {
+      "prioritization": [
+        {
+          "path": "skills/shopify-review-triage/SKILL.md",
+          "capability": "Keyword rubric triage of public Shopify app reviews into P0-P3 brief",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "requirements": [
+        {
+          "path": "skills/prd/SKILL.md",
+          "capability": "Interview-first PRD drafting with measurable criteria",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gen-specs-as-issues/SKILL.md",
+          "capability": "Gap analysis to prioritized feature specs filed as GitHub issues",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/update-specification/SKILL.md",
+          "capability": "Update AI-ready specification documents from a template",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "research": {
+      "fact-checking": [
+        {
+          "path": "skills/doublecheck/SKILL.md",
+          "capability": "Three-layer claim extraction, source search, adversarial hallucination review",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/microsoft-code-reference/SKILL.md",
+          "capability": "Verify Microsoft SDK methods and signatures against official docs",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/eyeball/SKILL.md",
+          "capability": "Citation-verified analysis docx with highlighted source screenshots",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/resemble-detect/SKILL.md",
+          "capability": "Deepfake and AI-content detection via Resemble AI API",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "private-data-egress"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/from-the-other-side-anitta/SKILL.md",
+          "capability": "Rigor persona: assumption checks and claim-strength calibration",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "source-discovery": [
+        {
+          "path": "skills/microsoft-docs/SKILL.md",
+          "capability": "Route Microsoft documentation queries to Learn MCP, Context7 or Aspire MCP",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "synthesis": [
+        {
+          "path": "skills/build-evidence-map/SKILL.md",
+          "capability": "Typed claim/evidence/unknown graph with validated source regions",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "robotics-iot": {
+      "embedded-integration": [
+        {
+          "path": "skills/arduino-azure-iot-edge-integration/SKILL.md",
+          "capability": "Architecture and backlog for Arduino-to-Azure IoT Hub/Edge integration",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/legacy-circuit-mockups/SKILL.md",
+          "capability": "Breadboard/6502 retro-computer mockup and component pinout reference",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "license-conflict"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/python-azure-iot-edge-modules/SKILL.md",
+          "capability": "Design brief and checklist for Python Azure IoT Edge modules",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "sales": {
+      "account-management": [
+        {
+          "path": "skills/gtm-enterprise-onboarding/SKILL.md",
+          "capability": "enterprise customer onboarding phases and adoption-cliff prevention",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gtm-enterprise-account-planning/SKILL.md",
+          "capability": "enterprise account plans, MEDDICC qualification and MAP health",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "security": {
+      "application-security": [
+        {
+          "path": "skills/mcp-implementation-security-review/SKILL.md",
+          "capability": "Source-level MCP server/client security review with evidence-cited verdicts",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/codeql/SKILL.md",
+          "capability": "CodeQL code-scanning workflow, CLI, SARIF and troubleshooting guide",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/agent-owasp-compliance/SKILL.md",
+          "capability": "Map agent codebase controls to an ASI Top-10 style checklist",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "capability-content-mismatch"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "identity-access": [
+        {
+          "path": "skills/entra-agent-user/SKILL.md",
+          "capability": "Create Entra Agent ID agent users, manager, licenses via Graph",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "privacy-engineering": [
+        {
+          "path": "skills/data-breach-blast-radius/SKILL.md",
+          "capability": "Pre-breach sensitive-data inventory and regulatory impact estimate for codebases",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gdpr-compliant/SKILL.md",
+          "capability": "GDPR privacy-by-design checklist for APIs, logging, retention, erasure",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "supply-chain": [
+        {
+          "path": "skills/github-actions-hardening/SKILL.md",
+          "capability": "GitHub Actions workflow security review: injection, privileged triggers, pinning",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/sponsor-finder/SKILL.md",
+          "capability": "Map dependency tree to verified sponsorship links",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/dependabot/SKILL.md",
+          "capability": "dependabot.yml authoring, grouping, monorepo and PR-command reference",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/agent-supply-chain/SKILL.md",
+          "capability": "SHA-256 integrity manifests, verification, pin audit, promotion gate",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mcp-security-audit/SKILL.md",
+          "capability": "Static .mcp.json audit for secrets, shell patterns, unpinned packages",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "threat-modeling": [
+        {
+          "path": "skills/threat-model-analyst/SKILL.md",
+          "capability": "Repository STRIDE-A threat model with tiered findings and incremental diffs",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/tm7-threat-model/SKILL.md",
+          "capability": "Generate valid Microsoft Threat Modeling Tool .tm7 STRIDE models",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "vulnerability-management": [
+        {
+          "path": "skills/secret-scanning/SKILL.md",
+          "capability": "Configure GitHub secret scanning, push protection, custom patterns, alert remediation",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "software-engineering": {
+      "apis": [
+        {
+          "path": "skills/msgraph-sdk/SKILL.md",
+          "capability": "Microsoft Graph SDK integration: auth flows, paging, batching, delta, throttling",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/x-twitter-scraper/SKILL.md",
+          "capability": "Integrate Xquik X/Twitter data API, Apify Actors, MCP, webhooks",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/openapi-to-application-code/SKILL.md",
+          "capability": "Generate a full application scaffold from an OpenAPI specification",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/typespec-api-operations/SKILL.md",
+          "capability": "TypeSpec CRUD operations and confirmations for M365 Copilot plugins",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/dataverse-python-quickstart/SKILL.md",
+          "capability": "Dataverse Python SDK setup and CRUD snippet generation",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/integrate-context-matic/SKILL.md",
+          "capability": "vendor-MCP-routed third-party API SDK integration",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "private-data-egress",
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "architecture": [
+        {
+          "path": "skills/d365-solution-blueprint/SKILL.md",
+          "capability": "Interview-driven Dynamics 365 F&SCM solution blueprint with decision log",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/poka-yoke/SKILL.md",
+          "capability": "Mistake-proof interfaces and audit code for misuse-prone hazards",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/power-platform-architect/SKILL.md",
+          "capability": "Turn requirements/transcripts into Power Platform architecture and Mermaid diagram",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/salesforce-flow-design/SKILL.md",
+          "capability": "Salesforce Flow type selection, bulk safety and fault-path review",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/cosmosdb-datamodeling/SKILL.md",
+          "capability": "Access-pattern-driven Azure Cosmos DB NoSQL data model design",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/system-commandline-cli/SKILL.md",
+          "capability": "System.CommandLine v2 command structure, options, DI and validation rules",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/cloud-design-patterns/SKILL.md",
+          "capability": "Catalog of 42 distributed-system cloud design patterns with trade-offs",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/folder-structure-blueprint-generator/SKILL.md",
+          "capability": "Generate a project folder-structure blueprint document from repo analysis",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/dataverse-python-usecase-builder/SKILL.md",
+          "capability": "Dataverse use-case solution design and implementation templates",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "backend": [
+        {
+          "path": "skills/java-helidon/SKILL.md",
+          "capability": "Helidon 4 SE/MP coding conventions and API migration table",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/reviewing-oracle-to-postgres-migration/SKILL.md",
+          "capability": "Oracle-to-PostgreSQL migration risk screening and validation",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/minecraft-plugin-development/SKILL.md",
+          "capability": "Paper/Spigot/Bukkit gameplay plugin architecture, lifecycle and threading",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/salesforce-apex-quality/SKILL.md",
+          "capability": "Apex governor-limit, sharing, CRUD/FLS and test quality guardrails",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/java-springboot/SKILL.md",
+          "capability": "general Spring Boot coding conventions",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/kotlin-springboot/SKILL.md",
+          "capability": "idiomatic Kotlin Spring Boot conventions",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/sql-optimization/SKILL.md",
+          "capability": "Generic SQL query and index tuning patterns",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/migrating-oracle-to-postgres-stored-procedures/SKILL.md",
+          "capability": "Translate Oracle PL/SQL procedures to PostgreSQL PL/pgSQL",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/dataverse-python-production-code/SKILL.md",
+          "capability": "Production-style Dataverse Python code generation rules",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/ef-core/SKILL.md",
+          "capability": "Entity Framework Core best-practice checklist for code review",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/postgresql-optimization/SKILL.md",
+          "capability": "PostgreSQL feature patterns, indexing and query tuning checklist",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/create-spring-boot-java-project/SKILL.md",
+          "capability": "Scaffolding Spring Boot 3 Java project with Postgres/Redis/Mongo compose",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "literal-credential"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/dataverse-python-advanced-patterns/SKILL.md",
+          "capability": "Dataverse Python SDK retry, batch, metadata and file patterns",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/create-spring-boot-kotlin-project/SKILL.md",
+          "capability": "Scaffolding reactive Spring Boot Kotlin project with compose services",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "literal-credential"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "build-tooling": [
+        {
+          "path": "skills/resx-source-generator-migration/SKILL.md",
+          "capability": "Migrate .resx designer files to ResxSourceGenerator",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/vcpkg/SKILL.md",
+          "capability": "vcpkg manifest setup, versioning, triplets, CI caching, troubleshooting",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/nuget-manager/SKILL.md",
+          "capability": "Add/remove/update NuGet packages via dotnet CLI with restore check",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/sandbox-npm-install/SKILL.md",
+          "capability": "Install node_modules on ext4 and symlink into virtiofs workspace",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/java-add-graalvm-native-image-support/SKILL.md",
+          "capability": "GraalVM native-image configuration and build-fix iteration",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/markdown-to-html/SKILL.md",
+          "capability": "Markdown-to-HTML conversion with marked, pandoc, gomarkdown, Jekyll, Hugo",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/python-pypi-package-builder/SKILL.md",
+          "capability": "Python library packaging, versioning, CI and PyPI Trusted Publishing",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "desktop": [
+        {
+          "path": "skills/winmd-api-search/SKILL.md",
+          "capability": "Local WinMD metadata cache search for Windows APIs",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mvvm-toolkit-di/SKILL.md",
+          "capability": "Wire MVVM Toolkit ViewModels into Microsoft.Extensions.DependencyInjection",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mvvm-toolkit/SKILL.md",
+          "capability": "MVVM Toolkit source generators, commands, base classes and validation",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mvvm-toolkit-messenger/SKILL.md",
+          "capability": "MVVM Toolkit Messenger pub/sub, request/reply and recipient lifecycle",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/winui3-migration-guide/SKILL.md",
+          "capability": "UWP to WinUI 3 API migration mappings",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "developer-experience": [
+        {
+          "path": "skills/codebase-memory-mcp/SKILL.md",
+          "capability": "Code-graph MCP discovery with evidence levels and rooted fallback",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/automate-this/SKILL.md",
+          "capability": "Turn screen recordings of manual workflows into tiered automation scripts",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gitmoji/SKILL.md",
+          "capability": "gitmoji-convention commit message drafting",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/latchshot-page-capture/SKILL.md",
+          "capability": "public webpage screenshot/PDF via hosted capture API",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/roslyn-analyzers/SKILL.md",
+          "capability": "Build and test Roslyn analyzers, code fixes, incremental generators",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/issue-fields-migration/SKILL.md",
+          "capability": "GitHub labels/project fields to org issue fields migration",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/batch-files/SKILL.md",
+          "capability": "Windows batch/cmd.exe syntax, patterns, templates and command references",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/lsp-setup/SKILL.md",
+          "capability": "Install and configure LSP servers for Copilot CLI code intelligence",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/pdftk-server/SKILL.md",
+          "capability": "pdftk CLI recipes for merging, splitting, encrypting and stamping PDFs",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/pr-dashboard/SKILL.md",
+          "capability": "Local HTML dashboard of the user's GitHub PRs for a date range",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/git-commit/SKILL.md",
+          "capability": "Conventional Commits message generation and local commit from diff",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/git-flow-branch-creator/SKILL.md",
+          "capability": "Classify changes and create nvie Git Flow feature/release/hotfix branch",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/repo-standardizer/SKILL.md",
+          "capability": "Standardize GitHub labels, templates, CI, rulesets and docs",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/make-repo-contribution/SKILL.md",
+          "capability": "Follow repo contribution rules when filing issues, branching, committing, opening PRs",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/pr-screenshots/SKILL.md",
+          "capability": "Before/after screenshots embedded in PR descriptions",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/tiny-stepping/SKILL.md",
+          "capability": "Smallest-increment implementation with per-step user check-in",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/acreadiness-generate-instructions/SKILL.md",
+          "capability": "Generate copilot-instructions/AGENTS.md and applyTo-scoped instruction files",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/gh-attach/SKILL.md",
+          "capability": "Upload/download GitHub user-attachments and embed in PRs/issues",
+          "score": "10/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action",
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/editorconfig/SKILL.md",
+          "capability": ".editorconfig generation with rule-by-rule explanation",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/quasi-coder/SKILL.md",
+          "capability": "Convert ()=> shorthand and pseudo-code into implemented code",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "embedded-agent-instruction"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/shuffle-json-data/SKILL.md",
+          "capability": "Validate uniform JSON array then shuffle objects",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/remember-interactive-programming/SKILL.md",
+          "capability": "REPL-first interactive programming reminder prompt",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/suggest-awesome-github-copilot-agents/SKILL.md",
+          "capability": "Recommend and install awesome-copilot custom agents for a repo",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/suggest-awesome-github-copilot-instructions/SKILL.md",
+          "capability": "Recommend and install awesome-copilot instruction files for a repo",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/suggest-awesome-github-copilot-skills/SKILL.md",
+          "capability": "Recommend and install awesome-copilot skill folders for a repo",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/vscode-ext-commands/SKILL.md",
+          "capability": "VS Code extension command contribution conventions",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/em-dash/SKILL.md",
+          "capability": "Ban em/en dashes in code comments; punctuation notes",
+          "score": "6/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "frontend": [
+        {
+          "path": "skills/markstream-install/SKILL.md",
+          "capability": "Install/configure Markstream streaming Markdown renderer across frameworks",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react18-legacy-context/SKILL.md",
+          "capability": "Migrate contextTypes/getChildContext to createContext across files",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react18-lifecycle-patterns/SKILL.md",
+          "capability": "Migrate unsafe class lifecycles by semantic category",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react18-string-refs/SKILL.md",
+          "capability": "Convert string refs to createRef or callback refs",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/fluentui-blazor/SKILL.md",
+          "capability": "Correct usage patterns for Microsoft Fluent UI Blazor v4 components",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react-container-presentation-component/SKILL.md",
+          "capability": "Scaffold Container/Presentation React components per repo conventions",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react18-batching-patterns/SKILL.md",
+          "capability": "Diagnose React 18 automatic-batching regressions in class components",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/salesforce-component-standards/SKILL.md",
+          "capability": "LWC, Aura and Visualforce security, accessibility and quality standards",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/game-engine/SKILL.md",
+          "capability": "Web game loops, rendering, collision, controls and starter templates",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "license-conflict"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react19-source-patterns/SKILL.md",
+          "capability": "React 19 removed-API source migration patterns",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react19-concurrent-patterns/SKILL.md",
+          "capability": "Preserve concurrent patterns and adopt React 19 use/Actions",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/power-apps-code-app-scaffold/SKILL.md",
+          "capability": "Scaffold Power Apps Code App with PAC CLI and connectors",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/next-intl-add-language/SKILL.md",
+          "capability": "Add a locale to one specific Next.js next-intl project layout",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "maintenance": [
+        {
+          "path": "skills/bug-receipt/SKILL.md",
+          "capability": "Evidence-bounded bug closeout receipt with VERIFIED/PARTIAL/BLOCKED status",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/doc-and-modernize/SKILL.md",
+          "capability": "Cited architecture docs and safety-laddered legacy modernization plans",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/copilot-pr-autopilot/SKILL.md",
+          "capability": "Autonomous Copilot PR review loop: triage, fix, push, reply, resolve",
+          "score": "16/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/ruff-recursive-fix/SKILL.md",
+          "capability": "Iterative Ruff lint autofix with diff review and noqa policy",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/flowstudio-power-automate-debug/SKILL.md",
+          "capability": "Root-cause debugging of failed Power Automate flow runs via FlowStudio MCP",
+          "score": "15/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/creating-oracle-to-postgres-master-migration-plan/SKILL.md",
+          "capability": "Classifying .NET projects for Oracle-to-PostgreSQL migration into master plan",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react-audit-grep-patterns/SKILL.md",
+          "capability": "Grep command library for React 18/19 upgrade audits",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/ssma-console/SKILL.md",
+          "capability": "Oracle-to-SQL Server migration via SSMA console XML scripts",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "solicits-secret-in-chat",
+            "secret-logging"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/github-release/SKILL.md",
+          "capability": "SemVer release branch, Keep-a-Changelog entry and release PR",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/content-management-systems/SKILL.md",
+          "capability": "Locating the owning seam in CMS theme/plugin/content-model work",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react18-dep-compatibility/SKILL.md",
+          "capability": "Minimum dependency versions for React 18.3.1/19 upgrades",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/write-coding-standards-from-file/SKILL.md",
+          "capability": "Derive a coding standards document from existing files",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/dotnet-upgrade/SKILL.md",
+          "capability": ".NET framework upgrade prompt list",
+          "score": "4/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "mobile": [
+        {
+          "path": "skills/apple-appstore-reviewer/SKILL.md",
+          "capability": "Static App Store rejection-risk audit with prioritized risk register",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "refactoring": [
+        {
+          "path": "skills/javax-to-jakarta-migration/SKILL.md",
+          "capability": "javax.* to jakarta.* import and dependency migration",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/migrating-oracle-to-postgres-data-access-code/SKILL.md",
+          "capability": "Port .NET ADO.NET/EF Core data access from Oracle to Npgsql",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/refactor/SKILL.md",
+          "capability": "Behavior-preserving code-smell refactoring catalogue",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/generate-custom-instructions-from-codebase/SKILL.md",
+          "capability": "Generate Copilot migration-rule instructions from a before/after diff",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "technical-writing": {
+      "architecture-records": [
+        {
+          "path": "skills/acquire-codebase-knowledge/SKILL.md",
+          "capability": "Evidence-backed seven-document codebase map with TODO/ASK USER markers",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/efcore-d2-db-diagram/SKILL.md",
+          "capability": "D2 ERD generation from EF Core DbContext, Fluent API, migrations",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/plantuml-ascii/SKILL.md",
+          "capability": "PlantUML -txt/-utxt ASCII diagram generation for text docs",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/project-workflow-analysis-blueprint-generator/SKILL.md",
+          "capability": "Document representative end-to-end code workflows as implementation templates",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/technology-stack-blueprint-generator/SKILL.md",
+          "capability": "Codebase technology-stack blueprint documentation generator",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "documentation-ia": [
+        {
+          "path": "skills/update-llms/SKILL.md",
+          "capability": "Maintain repository llms.txt per llmstxt.org spec",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/create-llms/SKILL.md",
+          "capability": "Authoring a spec-compliant llms.txt for a repository",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/md-to-docx/SKILL.md",
+          "capability": "Markdown to styled Word .docx conversion with PNG embedding",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/update-markdown-file-index/SKILL.md",
+          "capability": "Generate or refresh a markdown file index table",
+          "score": "10/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "localization": [
+        {
+          "path": "skills/finnish-humanizer/SKILL.md",
+          "capability": "Rewrite Finnish text to remove AI-style patterns",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/vscode-ext-localization/SKILL.md",
+          "capability": "VS Code extension localization file mapping",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/mkdocs-translations/SKILL.md",
+          "capability": "Batch-translate an MkDocs docs tree into a new locale",
+          "score": "6/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "reference-manuals": [
+        {
+          "path": "skills/oo-component-documentation/SKILL.md",
+          "capability": "Create or refresh OO component docs grounded in current code",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/tldr-prompt/SKILL.md",
+          "capability": "tldr-pages style summaries of Copilot customization files",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "tutorials": [
+        {
+          "path": "skills/code-tour/SKILL.md",
+          "capability": "Persona-targeted VS Code CodeTour .tour walkthrough authoring with validation",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "testing": {
+      "end-to-end": [
+        {
+          "path": "skills/mcp-release-qa/SKILL.md",
+          "capability": "Live-session MCP server release QA with inventory parity evidence",
+          "score": "18/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/webapp-testing/SKILL.md",
+          "capability": "Playwright browser testing and debugging of local web apps",
+          "score": "9/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/playwright-explore-website/SKILL.md",
+          "capability": "Exploratory website walkthrough to derive Playwright test cases",
+          "score": "8/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/playwright-automation-fill-in-form/SKILL.md",
+          "capability": "Hardcoded demo of filling a Microsoft Form via Playwright MCP",
+          "score": "4/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "capability-content-mismatch"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "regression": [
+        {
+          "path": "skills/creating-oracle-to-postgres-migration-bug-report/SKILL.md",
+          "capability": "Structured bug reports for Oracle-vs-PostgreSQL behavioral defects",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/sql-server-table-reconciliation/SKILL.md",
+          "capability": "SQL Server cross-instance table reconciliation via mssql-python and Arrow",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "test-strategy": [
+        {
+          "path": "skills/eval-driven-dev/SKILL.md",
+          "capability": "End-to-end eval pipeline for Python LLM apps via pixie-qa",
+          "score": "14/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "self-update-or-remote-code",
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/quality-playbook/SKILL.md",
+          "capability": "Multi-phase requirements-traced codebase audit with regression tests and TDD patches",
+          "score": "11/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action",
+            "embedded-agent-instruction"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "unit-integration": [
+        {
+          "path": "skills/pester-migration/SKILL.md",
+          "capability": "Upgrade Pester test suites across v3/v4/v5/v6 majors",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/pester-should-migration/SKILL.md",
+          "capability": "Convert Pester v5 Should -X assertions to v6 Should-X commands",
+          "score": "17/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/react18-enzyme-to-rtl/SKILL.md",
+          "capability": "Rewrite Enzyme tests as behavior-focused RTL tests",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/unit-test-vue-pinia/SKILL.md",
+          "capability": "Behavior-first Vue/Pinia unit test writing and review",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/spring-boot-testing/SKILL.md",
+          "capability": "Choose Spring Boot 4 test slices and modern test APIs",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "time-productivity": {
+      "collaboration": [
+        {
+          "path": "skills/workiq-copilot/SKILL.md",
+          "capability": "Query Microsoft 365 email, meetings, Teams, docs via WorkIQ",
+          "score": "7/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "focus": [
+        {
+          "path": "skills/daily-focus-board/SKILL.md",
+          "capability": "Local executive-function-friendly daily focus board driven through conversation",
+          "score": "16/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "scheduling": [
+        {
+          "path": "skills/daily-prep/SKILL.md",
+          "capability": "Next-day meeting prep from Outlook calendar with day-fit analysis",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "task-systems": [
+        {
+          "path": "skills/github-issues/SKILL.md",
+          "capability": "Create, update, link, and search GitHub issues, projects, milestones",
+          "score": "12/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "unauthorized-consequential-action"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "ux-ui": {
+      "interaction-design": [
+        {
+          "path": "skills/napkin/SKILL.md",
+          "capability": "Browser whiteboard whose PNG/clipboard export feeds agent sketch interpretation",
+          "score": "13/20",
+          "decision": "REJECT unchanged",
+          "hard_fails": [
+            "private-data-egress"
+          ],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "video-film": {
+      "editing": [
+        {
+          "path": "skills/screen-recording/SKILL.md",
+          "capability": "Annotated animated GIF demos from browser or desktop capture",
+          "score": "11/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    },
+    "visual-design": {
+      "graphic-design": [
+        {
+          "path": "skills/adobe-illustrator-scripting/SKILL.md",
+          "capability": "Illustrator ExtendScript DOM reference, patterns, and external-launch troubleshooting",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/nano-banana-pro-openrouter/SKILL.md",
+          "capability": "Generate/edit/composite images via OpenRouter Gemini image model",
+          "score": "12/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "information-visualization": [
+        {
+          "path": "skills/draw-io-diagram-generator/SKILL.md",
+          "capability": "Authoring and validating draw.io mxGraph XML diagrams",
+          "score": "15/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": true,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/image-annotations/SKILL.md",
+          "capability": "screenshot callouts with automatic label placement",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        },
+        {
+          "path": "skills/excalidraw-diagram-generator/SKILL.md",
+          "capability": "Generate .excalidraw JSON diagrams with optional icon-library scripts",
+          "score": "13/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ],
+      "motion-graphics": [
+        {
+          "path": "skills/gsap-framer-scroll-animation/SKILL.md",
+          "capability": "scroll-driven web animation recipes in GSAP and Motion",
+          "score": "14/20",
+          "decision": "REFERENCE-ONLY",
+          "hard_fails": [],
+          "static_verified_threshold_met": false,
+          "evidence": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json"
+        }
+      ]
+    }
+  }
+}
