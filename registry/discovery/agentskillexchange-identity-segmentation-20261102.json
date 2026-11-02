@@ -1,0 +1,2705 @@
+{
+ "schema_version": 1,
+ "snapshot_date": "2026-11-02",
+ "source_id": "agentskillexchange-skills",
+ "source_repository": "agentskillexchange/skills",
+ "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+ "source_license_blob": "209de096e132714210be26717f24129dd2c15b95",
+ "purpose": "Passive canonical identity and structural segmentation map for every raw SKILL.md path in the pinned AgentSkillExchange manifest. Segments are structural content classes, NOT grades or eligibility decisions.",
+ "manifest_index": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-index.json",
+ "identity_verification": {
+  "raw_paths": 3200,
+  "manifest_blob_and_tree_matches_against_pinned_checkout": 3200,
+  "mismatches": 0,
+  "method": "Nontruncated clone of the exact pin; git ls-tree -r -t compared with every manifest [path, blob, tree] entry (external host, not repository tooling)"
+ },
+ "segment_definitions": {
+  "catalog-stub-no-procedure": "Only Prerequisites/Installation/Documentation/Source sections and the Installation text states that no source-backed install or usage instructions could be extracted automatically; description-only catalog card",
+  "catalog-card-install-pointer": "Only Prerequisites/Installation/Documentation/Source sections with auto-extracted upstream install/usage fragments; a pointer card, not an authored procedure",
+  "authored-procedure": "Contains authored sections beyond the catalog template (workflow, safety, usage, etc.)",
+  "+bundled-files": "Package contains files beyond SKILL.md",
+  "other-shape": "SKILL.md not at skills/<slug>/SKILL.md"
+ },
+ "segment_counts": {
+  "authored-procedure": 69,
+  "authored-procedure+bundled-files": 14,
+  "catalog-card-install-pointer": 2651,
+  "catalog-stub-no-procedure": 462,
+  "other-shape": 4
+ },
+ "segment_paths": {
+  "catalog-stub-no-procedure": [
+   "skills/academic-paper-citation-network-mapper/SKILL.md",
+   "skills/activepieces-open-source-workflow-automation/SKILL.md",
+   "skills/add-shell-and-cli-smoke-tests-before-refactors-ship/SKILL.md",
+   "skills/address-github-pr-review-comments-from-the-current-branch-with-gh-address-comments/SKILL.md",
+   "skills/advance-gitops-app-manifests-to-newer-container-tags-with-argo-cd-image-updater/SKILL.md",
+   "skills/ahrefs-backlink-content-planner/SKILL.md",
+   "skills/ai-engine-wordpress-mcp-server-and-ai-automation/SKILL.md",
+   "skills/ai-meta-description-generator/SKILL.md",
+   "skills/alex-inclusive-writing-linter/SKILL.md",
+   "skills/api-documentation-indexer/SKILL.md",
+   "skills/argocd-application-health-runbook/SKILL.md",
+   "skills/asyncapi-event-catalog-builder/SKILL.md",
+   "skills/asyncapi-event-catalog-generator/SKILL.md",
+   "skills/atlassian-mcp-server-jira-confluence/SKILL.md",
+   "skills/audio-fingerprint-identifier-agent/SKILL.md",
+   "skills/audiobookshelf-self-hosted-audiobook-podcast-server-api/SKILL.md",
+   "skills/auto-crop-images-around-the-most-important-subject-before-generating-thumbnails/SKILL.md",
+   "skills/auto-editor-automated-video-audio-silence-trimmer-cli/SKILL.md",
+   "skills/autofix-common-nix-anti-patterns-before-style-drift-spreads-with-statix/SKILL.md",
+   "skills/aws-cloudwatch-alarm-diagnostic/SKILL.md",
+   "skills/aws-iam-privilege-escalation-audit/SKILL.md",
+   "skills/aws-lambda-mcp-server/SKILL.md",
+   "skills/aws-mcp-servers-cloud-service-integration/SKILL.md",
+   "skills/aws-s3-mcp-server/SKILL.md",
+   "skills/benchmark-deep-research-agents-across-factual-quality-and-process-dimensions-with-miroeval/SKILL.md",
+   "skills/benchmark-virtual-agents-with-scripted-multi-turn-conversations-using-agent-evaluation/SKILL.md",
+   "skills/better-auth-authentication-framework-typescript-applications/SKILL.md",
+   "skills/biome-high-performance-javascript-typescript-formatter-linter/SKILL.md",
+   "skills/biome-lint-migration-toolkit/SKILL.md",
+   "skills/block-secret-leaks-before-commit-or-push-with-ggshield/SKILL.md",
+   "skills/blurhash-compact-image-placeholder-encoder/SKILL.md",
+   "skills/bootstrap-claude-code-and-codex-workflows-with-zcf/SKILL.md",
+   "skills/broker-api-credentials-to-ai-agents-without-exposing-raw-keys-using-onecli/SKILL.md",
+   "skills/browser-use-agentic-browser-control/SKILL.md",
+   "skills/browser-use-ai-browser-automation-library/SKILL.md",
+   "skills/browser-use-browser-automation-framework/SKILL.md",
+   "skills/browser-use-web-agent-automation/SKILL.md",
+   "skills/browserless-headless-browser-automation-infrastructure/SKILL.md",
+   "skills/browsertrix-crawler-high-fidelity-web-archiving-qa-crawler/SKILL.md",
+   "skills/bruno-git-native-api-client-testing-exploration/SKILL.md",
+   "skills/build-deterministic-multi-agent-networks-with-inngest-agentkit/SKILL.md",
+   "skills/build-java-agent-transport-gateways-with-atmosphere/SKILL.md",
+   "skills/build-sql-and-vector-retrieval-context-layers-with-tidb/SKILL.md",
+   "skills/build-super-timelines-from-mixed-forensic-artifacts-with-plaso/SKILL.md",
+   "skills/buildkite-agent-fleet-scaler/SKILL.md",
+   "skills/buildkite-agent-monitor/SKILL.md",
+   "skills/buildkite-dynamic-pipeline-agent/SKILL.md",
+   "skills/buildkite-dynamic-pipeline-architect/SKILL.md",
+   "skills/buildkite-pipeline-optimizer-agent/SKILL.md",
+   "skills/buildkite-pipeline-profiler/SKILL.md",
+   "skills/cairosvg-svg-to-png-pdf-converter/SKILL.md",
+   "skills/camelot-advanced-pdf-table-intelligence/SKILL.md",
+   "skills/camelot-pdf-stream-parser/SKILL.md",
+   "skills/capture-linux-runtime-security-events-and-suspicious-behavior-for-live-triage-with-tracee/SKILL.md",
+   "skills/capture-responsive-website-screenshots-pageres/SKILL.md",
+   "skills/cdp-network-interception-logger/SKILL.md",
+   "skills/chartdb-database-schema-visualization/SKILL.md",
+   "skills/cheerio-dom-extraction-pipeline/SKILL.md",
+   "skills/cheerio-dom-scraping-toolkit/SKILL.md",
+   "skills/cheerio-html-xml-parsing-library-nodejs-extraction-workflows/SKILL.md",
+   "skills/cheerio-product-price-tracker/SKILL.md",
+   "skills/chezmoi-dotfiles-manager/SKILL.md",
+   "skills/chroma-mcp-server-embedding-database-operations/SKILL.md",
+   "skills/chrome-mcp-server-extension-based-browser-automation-ai-agents/SKILL.md",
+   "skills/circleci-flaky-test-detector-2/SKILL.md",
+   "skills/circleci-workflow-cost-auditor/SKILL.md",
+   "skills/clearscope-nlp-grading-pipeline/SKILL.md",
+   "skills/clickhouse-query-agent/SKILL.md",
+   "skills/compress-repeated-agent-context-and-command-output-before-it-reaches-coding-agents-with-sqz/SKILL.md",
+   "skills/content-cannibalization-detector/SKILL.md",
+   "skills/control-a-real-browser-from-mcp-clients-with-browser-mcp/SKILL.md",
+   "skills/control-ios-and-android-devices-through-a-deterministic-cli-for-agent-driven-mobile-testing-and-debugging-with-agent-device/SKILL.md",
+   "skills/convert-html-emails-and-web-fragments-into-clean-plain-text-for-downstream-agents/SKILL.md",
+   "skills/coordinate-durable-agent-work-with-compozy/SKILL.md",
+   "skills/coordinate-multi-agent-cowork-sessions-with-aionui/SKILL.md",
+   "skills/coordinate-multi-machine-terminal-agent-teams-with-ai-maestro/SKILL.md",
+   "skills/coordinate-multi-mode-coding-agent-work-in-the-ide-with-roo-code/SKILL.md",
+   "skills/coordinate-parallel-terminal-coding-agents-and-worktrees-with-pane/SKILL.md",
+   "skills/copyai-sales-email-sequence/SKILL.md",
+   "skills/core-audio-unit-v3-debugger/SKILL.md",
+   "skills/cross-validate-research-with-sandbase-multi-source-search/SKILL.md",
+   "skills/cut-coding-agent-response-tokens-with-caveman-mode/SKILL.md",
+   "skills/dagster-data-pipeline-orchestrator/SKILL.md",
+   "skills/dall-e-3-brand-asset-batch-generator/SKILL.md",
+   "skills/database-migration-validator/SKILL.md",
+   "skills/dbt-mcp-server-data-pipeline-context/SKILL.md",
+   "skills/debug-dns-resolution-and-record-mismatches-from-the-terminal-with-doggo/SKILL.md",
+   "skills/deepgram-nova-stt-pipeline/SKILL.md",
+   "skills/deepgram-podcast-chapter-generator/SKILL.md",
+   "skills/deploy-kubernetes-native-agents-with-kagent/SKILL.md",
+   "skills/detect-copy-pasted-code-hotspots-before-refactors-audits-or-review/SKILL.md",
+   "skills/directus-open-source-headless-cms-backend-platform/SKILL.md",
+   "skills/directus-sql-native-headless-cms-internal-app-platform/SKILL.md",
+   "skills/discord-moderation-ai-classification/SKILL.md",
+   "skills/docker-compose-generator-skill/SKILL.md",
+   "skills/docker-image-vulnerability-triage/SKILL.md",
+   "skills/docker-mcp-server-container-lifecycle-management/SKILL.md",
+   "skills/docusign-contract-auto-sender/SKILL.md",
+   "skills/dolby-atmos-adm-bwf-metadata-extractor/SKILL.md",
+   "skills/dolby-io-media-enhancer-agent/SKILL.md",
+   "skills/doxygen-cross-reference-indexer/SKILL.md",
+   "skills/draw-and-verify-excalidraw-diagrams-through-an-agent-canvas/SKILL.md",
+   "skills/drive-dependency-and-config-bumps-through-declarative-updatecli-pipelines/SKILL.md",
+   "skills/drizzle-orm-typescript-sql-database-toolkit/SKILL.md",
+   "skills/dynamodb-manager/SKILL.md",
+   "skills/elastic-kibana-mcp-server/SKILL.md",
+   "skills/elasticsearch-cluster-vitals-agent/SKILL.md",
+   "skills/elasticsearch-mcp/SKILL.md",
+   "skills/embed-an-in-page-gui-agent-with-page-agent/SKILL.md",
+   "skills/enforce-local-git-hook-checks-in-javascript-repos-with-husky/SKILL.md",
+   "skills/enforce-repo-hygiene-with-pre-commit-hooks/SKILL.md",
+   "skills/espeak-ng-multilingual-speech-synthesizer/SKILL.md",
+   "skills/evaluate-and-monitor-llm-workflows-with-agenta/SKILL.md",
+   "skills/evaluate-long-horizon-agents-against-wildclawbench/SKILL.md",
+   "skills/evolve-agent-behavior-into-auditable-genes-and-capsules-with-evolver/SKILL.md",
+   "skills/export-live-html-slide-decks-to-pdf-handouts-before-review-or-archival/SKILL.md",
+   "skills/expose-cli-agent-accounts-through-api-compatible-local-proxy-with-cliproxyapi/SKILL.md",
+   "skills/expose-internal-systems-to-agents-through-anythingmcp/SKILL.md",
+   "skills/expose-repository-code-intelligence-to-agents-with-gortex/SKILL.md",
+   "skills/extract-data-and-complete-workflows-in-your-real-logged-in-browser/SKILL.md",
+   "skills/eza-modern-file-listing-cli/SKILL.md",
+   "skills/fastmcp-python-mcp-server-client-framework/SKILL.md",
+   "skills/feroxbuster-content-discovery/SKILL.md",
+   "skills/ffmpeg-audio-normalization-pipeline/SKILL.md",
+   "skills/ffmpeg-audio-transcoder/SKILL.md",
+   "skills/ffmpeg-batch-transcode-pipeline/SKILL.md",
+   "skills/ffmpeg-batch-transcoder-skill/SKILL.md",
+   "skills/ffmpeg-clip-extractor-agent/SKILL.md",
+   "skills/ffmpeg-intelligent-media-processor/SKILL.md",
+   "skills/ffmpeg-media-transcoder/SKILL.md",
+   "skills/ffmpeg-thumbnail-grid-generator/SKILL.md",
+   "skills/ffmpeg-thumbnail-mosaic-generator/SKILL.md",
+   "skills/ffmpeg-video-processing-pipeline/SKILL.md",
+   "skills/find-and-group-duplicate-files-across-large-trees-before-cleanup-migration-or-backup-with-fclones/SKILL.md",
+   "skills/format-and-lint-toml-configs-and-lockfiles-before-config-drift-spreads-with-taplo/SKILL.md",
+   "skills/format-citations-and-bibliographies-from-dois-urls-bibtex-and-cff-before-publishing/SKILL.md",
+   "skills/format-plain-text-drafts-for-clean-substack-paste/SKILL.md",
+   "skills/frontend-design-guidance-skill/SKILL.md",
+   "skills/fx-terminal-json-viewer-processor/SKILL.md",
+   "skills/gate-agent-inputs-and-outputs-with-superagent-safety-checks/SKILL.md",
+   "skills/gate-mcp-tool-calls-behind-deterministic-policy-enforcement-with-intercept/SKILL.md",
+   "skills/gate-pull-requests-on-openapi-breaking-changes/SKILL.md",
+   "skills/gcalcli-google-calendar-cli/SKILL.md",
+   "skills/generate-and-screen-lookalike-domains-with-dnstwist-for-brand-abuse-triage/SKILL.md",
+   "skills/generate-and-validate-conventional-commits-and-semver-release-bumps-with-commitizen/SKILL.md",
+   "skills/generate-dependency-update-pull-requests-from-code-with-dependabot-core/SKILL.md",
+   "skills/generate-repository-wikis-with-deepwiki-open/SKILL.md",
+   "skills/generate-right-to-left-css-variants-from-ltr-stylesheets-before-multilingual-launches-rtlcss/SKILL.md",
+   "skills/generate-validated-office-deliverables-locally-with-openworkbuddy/SKILL.md",
+   "skills/gitbutler-virtual-branch-git-client/SKILL.md",
+   "skills/github-mcp-server-ai-repository-management/SKILL.md",
+   "skills/gitu-magit-inspired-terminal-git-interface/SKILL.md",
+   "skills/gitxray-github-repository-security-xray/SKILL.md",
+   "skills/give-agents-governed-semantic-data-context-with-wren-engine/SKILL.md",
+   "skills/glitchtip-open-source-error-tracking-platform/SKILL.md",
+   "skills/google-cloud-cli-gcloud/SKILL.md",
+   "skills/google-workspace-mcp-server-gmail-calendar-drive/SKILL.md",
+   "skills/goose-extensible-ai-coding-agent-block/SKILL.md",
+   "skills/goreleaser-cross-platform-release-automation/SKILL.md",
+   "skills/grafana-alert-router/SKILL.md",
+   "skills/grafana-dashboard-as-code-builder/SKILL.md",
+   "skills/grafana-dashboard-generator-3/SKILL.md",
+   "skills/grafana-dashboard-json-assembler/SKILL.md",
+   "skills/grafana-dashboard-json-migrator/SKILL.md",
+   "skills/grafana-dashboard-scaffolder/SKILL.md",
+   "skills/grafana-dashboard-snapshot-exporter/SKILL.md",
+   "skills/grafana-dashboard-sync-agent/SKILL.md",
+   "skills/grafana-dashboard-template-generator/SKILL.md",
+   "skills/grafana-unified-alerting-manager/SKILL.md",
+   "skills/gron-greppable-json-flattener/SKILL.md",
+   "skills/grpc-service-tool/SKILL.md",
+   "skills/gstreamer-live-stream-transcoder/SKILL.md",
+   "skills/gstreamer-pipeline-graph-optimizer/SKILL.md",
+   "skills/handbrake-open-source-video-transcoder/SKILL.md",
+   "skills/hanko-passkey-authentication-platform/SKILL.md",
+   "skills/harper-offline-grammar-checker-automattic/SKILL.md",
+   "skills/httpie-cli-api-testing-debugging-client/SKILL.md",
+   "skills/huggingface-model-deployer/SKILL.md",
+   "skills/hugo-static-site-generator-cms-framework/SKILL.md",
+   "skills/imgproxy-high-performance-image-processing-proxy/SKILL.md",
+   "skills/immich-photo-video-management-platform/SKILL.md",
+   "skills/incident-postmortem-generator/SKILL.md",
+   "skills/incident-response-checklist-engine/SKILL.md",
+   "skills/incident-response-playbook-runner/SKILL.md",
+   "skills/ingestr-cross-database-data-copier/SKILL.md",
+   "skills/inspect-binary-hardening-flags-and-exploit-mitigations-with-checksec/SKILL.md",
+   "skills/inspect-failing-github-actions-checks-and-plan-fixes-with-gh-fix-ci/SKILL.md",
+   "skills/inspect-pdfs-with-evidence-first-mcp-workflows-using-pdf-reader-mcp/SKILL.md",
+   "skills/inspect-the-real-claude-code-system-tool-and-subagent-prompts-before-designing-compatible-extensions-with-claude-code-system-prompts/SKILL.md",
+   "skills/install-project-agent-harnesses-with-rsc-harness/SKILL.md",
+   "skills/internal-link-optimizer-seo/SKILL.md",
+   "skills/inventory-live-database-schemas-and-generate-reviewable-docs-before-risky-sql-changes-with-schemacrawler/SKILL.md",
+   "skills/jenkins-build-log-analyzer/SKILL.md",
+   "skills/jenkins-declarative-pipeline-generator-2/SKILL.md",
+   "skills/jenkins-pipeline-shared-library-linter/SKILL.md",
+   "skills/jira-advanced-query-agent/SKILL.md",
+   "skills/jrnl-command-line-journal-note-capture/SKILL.md",
+   "skills/justhandledlabs-env-doctor/SKILL.md",
+   "skills/k8s-troubleshooting-runbook/SKILL.md",
+   "skills/kamal-zero-downtime-docker-deployment-basecamp/SKILL.md",
+   "skills/karakeep-bookmark-manager-ai-tagging/SKILL.md",
+   "skills/keep-agent-engineering-decisions-current-with-haft/SKILL.md",
+   "skills/keep-coding-agents-from-over-building-implementations-with-ponytail/SKILL.md",
+   "skills/keystonejs-headless-cms-graphql-react-admin/SKILL.md",
+   "skills/kics-iac-linter/SKILL.md",
+   "skills/knip-unused-code-dependency-finder/SKILL.md",
+   "skills/kroki-unified-diagram-rendering-api-server/SKILL.md",
+   "skills/kubernetes-crashloop-diagnostic-runbook/SKILL.md",
+   "skills/kubernetes-pod-crashloop-runbook/SKILL.md",
+   "skills/libsql-edge-sqlite-fork-turso/SKILL.md",
+   "skills/libvips-high-performance-image-processing-library-cli/SKILL.md",
+   "skills/lint-and-validate-prometheus-alerting-rules-before-noisy-or-broken-alerts-reach-production-with-pint/SKILL.md",
+   "skills/live-stream-audio-monitor/SKILL.md",
+   "skills/live-stream-clip-extractor-agent/SKILL.md",
+   "skills/llamaindex-mcp-server/SKILL.md",
+   "skills/lobehub-multi-agent-chat-platform-mcp-plugins/SKILL.md",
+   "skills/lsd-next-gen-ls-directory-listing/SKILL.md",
+   "skills/maintain-repo-local-agent-memory-with-mex/SKILL.md",
+   "skills/manage-agent-accounts-model-routing-echobird/SKILL.md",
+   "skills/manage-agent-cli-providers-and-mcp-settings-with-cc-switch/SKILL.md",
+   "skills/manage-baidu-netdisk-files-from-agent-workflows/SKILL.md",
+   "skills/manage-cross-agent-skill-files-from-obsidian-with-agentfiles/SKILL.md",
+   "skills/markdown-to-amp-article-converter/SKILL.md",
+   "skills/markuplint-html-linter/SKILL.md",
+   "skills/mdbook-markdown-book-generator-rust/SKILL.md",
+   "skills/meltano-declarative-elt-data-integration-engine/SKILL.md",
+   "skills/metamcp-unified-mcp-server-aggregator-gateway/SKILL.md",
+   "skills/midjourney-prompt-chain-builder/SKILL.md",
+   "skills/midjourney-prompt-engineering-suite/SKILL.md",
+   "skills/midjourney-prompt-optimizer-skill/SKILL.md",
+   "skills/minio-s3-compatible-object-storage/SKILL.md",
+   "skills/monitor-and-approve-coding-agent-sessions-with-coucou/SKILL.md",
+   "skills/monitor-claude-code-and-codex-local-usage-logs-for-spend-model-mix-and-session-burn-with-ccusage/SKILL.md",
+   "skills/monitor-live-coding-agent-sessions-with-abtop/SKILL.md",
+   "skills/monitor-local-coding-agent-sessions-and-token-usage-with-loongsuite-pilot/SKILL.md",
+   "skills/msw-api-mocking-skill-frontend-integration-tests/SKILL.md",
+   "skills/mysql-query-agent/SKILL.md",
+   "skills/nestjs-progressive-nodejs-framework/SKILL.md",
+   "skills/nitro-universal-server-toolkit-unjs/SKILL.md",
+   "skills/normalize-article-metadata-from-urls-before-generating-link-previews-or-content-briefs/SKILL.md",
+   "skills/normalize-international-phone-numbers-into-e164-before-crm-imports-or-messaging-workflows/SKILL.md",
+   "skills/notion-ai-doc-summarizer/SKILL.md",
+   "skills/notion-ai-workspace/SKILL.md",
+   "skills/notion-database-sync-page-generator-2/SKILL.md",
+   "skills/notion-to-pdf-knowledge-exporter/SKILL.md",
+   "skills/ntopng-web-based-network-traffic-monitoring-security/SKILL.md",
+   "skills/nuxt-vue-meta-framework-ssr/SKILL.md",
+   "skills/oauth2-flow-debugger/SKILL.md",
+   "skills/obsidian-vault-manager/SKILL.md",
+   "skills/openapi-spec-changelog-generator/SKILL.md",
+   "skills/openapi-spec-compliance-checker/SKILL.md",
+   "skills/openapi-spec-navigator/SKILL.md",
+   "skills/openapi-spec-reference-generator/SKILL.md",
+   "skills/openapi-spec-reference-indexer/SKILL.md",
+   "skills/openmeter-usage-metering-and-billing-platform/SKILL.md",
+   "skills/openreplay-self-hosted-session-replay-analytics/SKILL.md",
+   "skills/opentofu-open-source-infrastructure-as-code/SKILL.md",
+   "skills/orchestrate-coding-agents-across-desktop-mobile-and-headless-sessions-with-paseo/SKILL.md",
+   "skills/orchestrate-multi-environment-opentofu-and-terraform-stacks-with-shared-config-and-dependency-ordering-using-terragrunt/SKILL.md",
+   "skills/orchestrate-parallel-coding-agents-with-autonomous-ci-and-review-handoff-using-agent-orchestrator/SKILL.md",
+   "skills/osint-domain-intelligence-scanner/SKILL.md",
+   "skills/osv-scanner-dependency-vulnerability-detector/SKILL.md",
+   "skills/package-vuln-scanner-osv-api/SKILL.md",
+   "skills/pagefind-static-low-bandwidth-search-engine/SKILL.md",
+   "skills/pagerduty-event-orchestration-runbook/SKILL.md",
+   "skills/pangolinfo-amazon-scraper/SKILL.md",
+   "skills/parallelize-and-retry-rust-test-runs-before-flaky-or-slow-suites-stall-ci-with-cargo-nextest/SKILL.md",
+   "skills/parquet-to-postgresql-loader/SKILL.md",
+   "skills/patent-landscape-analyzer/SKILL.md",
+   "skills/pdf-table-extraction-camelot/SKILL.md",
+   "skills/pdfcpu-go-pdf-processor-cli/SKILL.md",
+   "skills/pdfme-typescript-pdf-generation-library/SKILL.md",
+   "skills/peertube-video-publishing-moderation-api/SKILL.md",
+   "skills/persist-reusable-coding-agent-memory-across-sessions-with-engram/SKILL.md",
+   "skills/pexels-api-stock-photo-curator/SKILL.md",
+   "skills/piper-local-neural-tts-engine/SKILL.md",
+   "skills/plan-draft-publish-and-review-social-posts-from-claude-code-with-social-post/SKILL.md",
+   "skills/playwright-extra-plugin-framework-for-playwright/SKILL.md",
+   "skills/podcast-rss-feed-audio-normalizer/SKILL.md",
+   "skills/podcast-transcription-pipeline-agent/SKILL.md",
+   "skills/posthog-product-analytics-and-feature-flags-sdk/SKILL.md",
+   "skills/prepare-evidence-backed-open-source-contribution-proposals-with-contribai/SKILL.md",
+   "skills/prepare-meeting-agendas-and-pre-reads-from-notion-context-with-notion-meeting-intelligence/SKILL.md",
+   "skills/prepare-meetings-and-follow-ups-from-local-work-memory-with-rowboat/SKILL.md",
+   "skills/prettier-config-conflict-resolver/SKILL.md",
+   "skills/prettier-config-harmonizer-2/SKILL.md",
+   "skills/prettier-format-enforcement-bot/SKILL.md",
+   "skills/preview-and-verify-token-saving-coding-harness-wiring-with-tokless/SKILL.md",
+   "skills/probe-kubernetes-clusters-for-exposed-attack-paths-with-kube-hunter/SKILL.md",
+   "skills/probe-kubernetes-clusters-with-kube-hunter-for-exposed-services-and-misconfigurations/SKILL.md",
+   "skills/probe-public-tls-endpoints-for-protocol-cipher-and-certificate-weaknesses-before-rollout-with-testssl-sh/SKILL.md",
+   "skills/product-review-sentiment-aggregator/SKILL.md",
+   "skills/prometheus-grafana-mcp-server/SKILL.md",
+   "skills/pubmed-literature-mining-agent/SKILL.md",
+   "skills/pulumi-drift-detector-reconciler/SKILL.md",
+   "skills/pulumi-mcp-server/SKILL.md",
+   "skills/push-pull-and-attach-non-container-oci-artifacts-in-registries-with-oras/SKILL.md",
+   "skills/pydub-python-audio-manipulation-library/SKILL.md",
+   "skills/qdrant-mcp-server-vector-search-semantic-memory/SKILL.md",
+   "skills/query-monitor-wordpress-developer-tools-panel/SKILL.md",
+   "skills/quickbooks-invoice-reconciliation/SKILL.md",
+   "skills/quickwit-cloud-native-search-engine-observability/SKILL.md",
+   "skills/radicale-self-hosted-caldav-carddav-server/SKILL.md",
+   "skills/ralph-loop/SKILL.md",
+   "skills/rclone-cloud-storage-sync-management-cli/SKILL.md",
+   "skills/recon-ng-web-reconnaissance-framework/SKILL.md",
+   "skills/redis-mcp-server/SKILL.md",
+   "skills/reduce-agent-token-burn-on-repo-scale-coding-commands-with-the-rtk-cli-proxy/SKILL.md",
+   "skills/reduce-coding-agent-token-waste-with-chisle/SKILL.md",
+   "skills/rehype-html-processor-unified/SKILL.md",
+   "skills/remote-control-tmux-sessions-for-interactive-cli-agents/SKILL.md",
+   "skills/renovate-automated-dependency-update-bot-and-cli/SKILL.md",
+   "skills/resend-developer-email-api-nodejs-sdk/SKILL.md",
+   "skills/rest-api-changelog-tracker/SKILL.md",
+   "skills/rest-api-documentation-generator/SKILL.md",
+   "skills/rest-api-reference-generator/SKILL.md",
+   "skills/rest-api-testing-reference-kit/SKILL.md",
+   "skills/resvg-svg-rendering-library-rust/SKILL.md",
+   "skills/retext-natural-language-processor-unified-plugins/SKILL.md",
+   "skills/review-ai-generated-code-changes-with-diffity/SKILL.md",
+   "skills/review-pull-requests-with-structured-summaries-checks-and-follow-up-prompts-using-pr-agent/SKILL.md",
+   "skills/review-risky-coding-agent-sessions-with-local-action-logs-using-gryph/SKILL.md",
+   "skills/route-multi-provider-llm-traffic-through-gomodel/SKILL.md",
+   "skills/rspack-rust-based-javascript-bundler/SKILL.md",
+   "skills/run-a-solo-multi-agent-coding-cockpit-with-dev-3-0/SKILL.md",
+   "skills/run-agent-cli-terminals-inside-obsidian-with-claude-sidebar/SKILL.md",
+   "skills/run-ai-assisted-security-triage-with-role-based-soc-runbooks-from-ai-runbooks/SKILL.md",
+   "skills/run-an-agent-across-browser-and-local-file-workflows-with-magentic-ui/SKILL.md",
+   "skills/run-claude-code-job-search-operations-with-career-ops/SKILL.md",
+   "skills/run-deterministic-sql-and-dbt-analysis-under-coding-agents-with-altimate-code/SKILL.md",
+   "skills/run-focused-accessibility-review-agents-with-accessibility-agents/SKILL.md",
+   "skills/run-kubernetes-cluster-operations-through-mcp/SKILL.md",
+   "skills/run-lightweight-headless-browser-automation-with-obscura/SKILL.md",
+   "skills/run-local-pi-coding-agent-workflows-with-sandbox-and-session-sharing-guardrails/SKILL.md",
+   "skills/run-local-small-model-coding-sessions-with-smallcode/SKILL.md",
+   "skills/run-multi-surface-coding-agent-workflows-with-kilo-code/SKILL.md",
+   "skills/run-sandboxed-multi-language-code-execution-with-judge0/SKILL.md",
+   "skills/run-secure-ironclaw-reborn-agent-sessions/SKILL.md",
+   "skills/run-specification-first-coding-workflows-with-ouroboros/SKILL.md",
+   "skills/run-supervised-local-coding-automation-with-alphacode/SKILL.md",
+   "skills/run-typescript-native-llm-eval-suites-with-evalite/SKILL.md",
+   "skills/runwayml-gen-3-alpha-video-composer/SKILL.md",
+   "skills/rust-crate-analyzer/SKILL.md",
+   "skills/rust-crates-io-explorer/SKILL.md",
+   "skills/sage-wordpress-starter-theme-laravel-blade/SKILL.md",
+   "skills/sanity-structured-content-studio-content-lake/SKILL.md",
+   "skills/scan-llm-generated-code-before-use-with-codeshield/SKILL.md",
+   "skills/schedule-and-inspect-dotnet-agent-jobs-with-tickerq/SKILL.md",
+   "skills/schema-markup-generator-seo/SKILL.md",
+   "skills/schema-org-markup-generator-agent/SKILL.md",
+   "skills/schema-org-structured-data-injector/SKILL.md",
+   "skills/score-kubernetes-manifests-for-reliability-and-security-risks-before-deploy-with-kube-score/SKILL.md",
+   "skills/scrapegraphai-llm-web-scraping/SKILL.md",
+   "skills/screen-packages-and-agent-skill-repos-for-malware-and-supply-chain-risk-before-adoption-with-safedep-vet/SKILL.md",
+   "skills/search-and-analyze-zotero-research-libraries-through-mcp/SKILL.md",
+   "skills/sec-edgar-filing-scraper-analyzer/SKILL.md",
+   "skills/sec-edgar-financial-filing-parser/SKILL.md",
+   "skills/self-improvement-learnings-capture/SKILL.md",
+   "skills/semrush-content-optimizer-agent/SKILL.md",
+   "skills/sentry-error-intelligence/SKILL.md",
+   "skills/sentry-error-triage-assistant/SKILL.md",
+   "skills/sentry-issue-spike-detection-agent/SKILL.md",
+   "skills/seo-content-cluster-generator/SKILL.md",
+   "skills/seo-keyword-research-automator/SKILL.md",
+   "skills/serpbear-self-hosted-serp-rank-tracker/SKILL.md",
+   "skills/serve-production-agentic-rag-through-r2r/SKILL.md",
+   "skills/shadcn-ui-react-component-collection/SKILL.md",
+   "skills/shard-retry-and-summarize-rust-test-runs-with-ci-friendly-artifacts-and-failure-isolation-using-cargo-nextest/SKILL.md",
+   "skills/sherlock-social-media-username-hunter/SKILL.md",
+   "skills/shiori-self-hosted-bookmark-manager-cli-web/SKILL.md",
+   "skills/shopify-admin-graphql-sync-agent/SKILL.md",
+   "skills/slack-channel-summarizer-triage/SKILL.md",
+   "skills/snowflake-mcp-server/SKILL.md",
+   "skills/snowflake-mcp/SKILL.md",
+   "skills/snowflake-query-history-extractor/SKILL.md",
+   "skills/snyk-agent-scan-mcp-skill-security-scanner/SKILL.md",
+   "skills/solidtime-open-source-time-tracking/SKILL.md",
+   "skills/sops-encrypted-secrets-editor-manager/SKILL.md",
+   "skills/sops-secret-file-encryption-rotation/SKILL.md",
+   "skills/sqlite-analyst/SKILL.md",
+   "skills/starlight-documentation-framework-astro/SKILL.md",
+   "skills/statamic-laravel-git-powered-cms/SKILL.md",
+   "skills/statsd-metrics-aggregation-pipeline/SKILL.md",
+   "skills/strip-noisy-runtime-fields-from-kubernetes-yaml-before-review-with-kubectl-neat/SKILL.md",
+   "skills/stripe-reporting-agent/SKILL.md",
+   "skills/stripe-revenue-analytics-dashboard/SKILL.md",
+   "skills/stripe-revenue-reconciliation-agent/SKILL.md",
+   "skills/subfinder-passive-subdomain-enumeration/SKILL.md",
+   "skills/supabase-mcp-server-database-project-management/SKILL.md",
+   "skills/supabase-mcp-server/SKILL.md",
+   "skills/surfer-seo-content-optimizer-integration/SKILL.md",
+   "skills/surfer-seo-content-optimizer/SKILL.md",
+   "skills/surfer-seo-serp-analyzer/SKILL.md",
+   "skills/sveltia-cms-git-based-headless-cms/SKILL.md",
+   "skills/swagger-openapi-validator/SKILL.md",
+   "skills/systemd-service-debugger/SKILL.md",
+   "skills/systemd-service-diagnostics/SKILL.md",
+   "skills/systemd-service-recovery-playbook-2/SKILL.md",
+   "skills/task-taskfile-build-automation-runner/SKILL.md",
+   "skills/teable-no-code-postgres-database-platform/SKILL.md",
+   "skills/technical-seo-audit-crawler/SKILL.md",
+   "skills/tera-rust-template-engine/SKILL.md",
+   "skills/terraform-mcp-server-infrastructure-as-code/SKILL.md",
+   "skills/terraform-module-registry/SKILL.md",
+   "skills/terraform-plan-diff-analyzer/SKILL.md",
+   "skills/terrascan-policy-scanner/SKILL.md",
+   "skills/test-agent-written-web-changes-in-a-real-browser-and-hand-failures-back-for-repair-with-expect/SKILL.md",
+   "skills/testcontainers-node-throwaway-docker-integration-testing/SKILL.md",
+   "skills/trace-python-memory-allocation-hotspots-before-leaks-and-spikes-reach-production-with-memray/SKILL.md",
+   "skills/triage-pull-requests-and-issues-from-a-keyboard-first-terminal-queue-with-gh-dash/SKILL.md",
+   "skills/turn-a-codebase-into-an-interactive-onboarding-course-with-codebase-to-course/SKILL.md",
+   "skills/turn-ics-calendar-invites-and-feeds-into-structured-events-for-scheduling-automations/SKILL.md",
+   "skills/turn-markdown-or-raw-content-into-agent-generated-html-artifacts-with-html-anything/SKILL.md",
+   "skills/turn-messy-datasets-into-auditable-reports-with-data-master/SKILL.md",
+   "skills/turn-notion-specs-into-implementation-plans-and-tasks-with-notion-spec-to-implementation/SKILL.md",
+   "skills/turn-windows-event-logs-into-sigma-backed-threat-hunting-timelines-with-hayabusa/SKILL.md",
+   "skills/twirp-go-rpc-framework-and-code-generator/SKILL.md",
+   "skills/twitter-x-trend-monitor-thread-publisher/SKILL.md",
+   "skills/typescript-ast-refactor-ts-morph/SKILL.md",
+   "skills/uptime-robot-multi-check-coordinator/SKILL.md",
+   "skills/uptime-robot-status-page-webhook-alerter/SKILL.md",
+   "skills/use-obsidian-agent-client-as-an-obsidian-front-end-for-local-agents/SKILL.md",
+   "skills/validate-kubernetes-manifests-against-upstream-schemas-before-cluster-apply/SKILL.md",
+   "skills/validate-lint-bundle-and-unit-test-json-schema-repositories-before-release-with-json-schema-cli/SKILL.md",
+   "skills/vercel-deployment-agent/SKILL.md",
+   "skills/verify-scoped-kafka-tool-access-through-zilla-mcp/SKILL.md",
+   "skills/video-frames-extractor/SKILL.md",
+   "skills/video-subtitle-auto-translator-agent/SKILL.md",
+   "skills/video-subtitle-translator-agent/SKILL.md",
+   "skills/vitepress-documentation-site-generator/SKILL.md",
+   "skills/vllm-high-throughput-llm-serving/SKILL.md",
+   "skills/vosk-offline-speech-recognition-toolkit/SKILL.md",
+   "skills/wasm-component-model-linker/SKILL.md",
+   "skills/watch-local-agent-token-usage-and-session-traces-with-tokentelemetry/SKILL.md",
+   "skills/wikijs-wiki-platform-nodejs/SKILL.md",
+   "skills/wordpress-acf-field-group-auditor/SKILL.md",
+   "skills/wordpress-content-optimizer-yoast-rest/SKILL.md",
+   "skills/wordpress-content-publisher/SKILL.md",
+   "skills/wordpress-gutenberg-block-generator/SKILL.md",
+   "skills/wordpress-gutenberg-block-scaffolder/SKILL.md",
+   "skills/wordpress-multisite-network-sync/SKILL.md",
+   "skills/wordpress-rest-api-builder/SKILL.md",
+   "skills/wordpress-rest-api-content-sync/SKILL.md",
+   "skills/wordpress-router/SKILL.md",
+   "skills/wordpress-scripts-build-and-block-toolchain/SKILL.md",
+   "skills/wp-abilities-api/SKILL.md",
+   "skills/wp-cli-command-line-interface-wordpress/SKILL.md",
+   "skills/wp-cli-site-migration-automator/SKILL.md",
+   "skills/wp-env-wordpress-dev-environment/SKILL.md",
+   "skills/wp-multisite-domain-mapping-agent/SKILL.md",
+   "skills/wp-multisite-provisioner-agent/SKILL.md",
+   "skills/wp-theme-json-design-token-manager/SKILL.md",
+   "skills/yazi-async-terminal-file-manager/SKILL.md",
+   "skills/yeoman-enterprise-generator-suite/SKILL.md",
+   "skills/yeoman-generator-builder/SKILL.md",
+   "skills/yeoman-scaffold-runner/SKILL.md",
+   "skills/yeoman-sub-generator-composition-builder/SKILL.md",
+   "skills/yeoman-workflow-orchestrator/SKILL.md",
+   "skills/yt-dlp-feature-rich-audio-video-downloader-cli/SKILL.md",
+   "skills/zapier-webhooks-by-zapier-router/SKILL.md",
+   "skills/zed-high-performance-multiplayer-code-editor/SKILL.md",
+   "skills/zod-schema-generator/SKILL.md"
+  ],
+  "authored-procedure": [
+   "skills/agent-guild-trust/SKILL.md",
+   "skills/ai-services-market-mcp/SKILL.md",
+   "skills/aident-loadout/SKILL.md",
+   "skills/aihot-news/SKILL.md",
+   "skills/asharehub/SKILL.md",
+   "skills/author-and-run-regression-tests-with-agent-qa/SKILL.md",
+   "skills/automation-integration-preflight/SKILL.md",
+   "skills/autonomous-session-workflow/SKILL.md",
+   "skills/berlin-job-search/SKILL.md",
+   "skills/book-to-mentor/SKILL.md",
+   "skills/brainiall-diarized-transcription/SKILL.md",
+   "skills/bulkpublish-social-publishing/SKILL.md",
+   "skills/constrain-coding-agent-over-defense-with-hero/SKILL.md",
+   "skills/cooper-email/SKILL.md",
+   "skills/curlshot-website-screenshots-over-mcp/SKILL.md",
+   "skills/darkmoon-pentest-mcp/SKILL.md",
+   "skills/datacircle/SKILL.md",
+   "skills/dealmachine-sales-intelligence/SKILL.md",
+   "skills/deed-page/SKILL.md",
+   "skills/email-voice/SKILL.md",
+   "skills/emit-policy-receipts-for-hard-rule-agent-skills-with-pluribus/SKILL.md",
+   "skills/eye-art-polyphemus/SKILL.md",
+   "skills/famulor-assistants-history/SKILL.md",
+   "skills/find-products-by-intent-with-mydentify/SKILL.md",
+   "skills/five-element-spec/SKILL.md",
+   "skills/generate-images-with-atlas-cloud/SKILL.md",
+   "skills/generate-images-with-muapi/SKILL.md",
+   "skills/gptme-terminal-ai-agent-with-local-tools/SKILL.md",
+   "skills/healthcare-job-search-carejobs-now/SKILL.md",
+   "skills/hol-guard/SKILL.md",
+   "skills/hyperconsciousness-knowledge-discovery/SKILL.md",
+   "skills/hypergrok-trading-desk/SKILL.md",
+   "skills/imaginevid-ai-generation/SKILL.md",
+   "skills/install-and-write-faber-romanus/SKILL.md",
+   "skills/jet-browser/SKILL.md",
+   "skills/jev-social/SKILL.md",
+   "skills/jira-import-doctor/SKILL.md",
+   "skills/keep-claude-code-skills-current-from-real-sessions-with-autoharness/SKILL.md",
+   "skills/ledger-tasks-yylo/SKILL.md",
+   "skills/live-search-console-data/SKILL.md",
+   "skills/looot-business-data-lookups-over-mcp/SKILL.md",
+   "skills/mnemoverse-memory-mcp/SKILL.md",
+   "skills/multi-lens-review/SKILL.md",
+   "skills/outagedeck-dependency-outage-triage/SKILL.md",
+   "skills/placecall/SKILL.md",
+   "skills/pre-landing-review/SKILL.md",
+   "skills/progressive-disclosure/SKILL.md",
+   "skills/pronounce-developer-jargon/SKILL.md",
+   "skills/proofed-completion-gate/SKILL.md",
+   "skills/reach-google-business-profile-optimization/SKILL.md",
+   "skills/read-ledger/SKILL.md",
+   "skills/render-pull-request-architecture-diagrams-with-pr-lens/SKILL.md",
+   "skills/run-one-shot-and-supervised-browser-automation-workflows-with-aihawk/SKILL.md",
+   "skills/sandbase-mcp/SKILL.md",
+   "skills/search-and-automate-x-twitter-from-openclaw-with-tweetclaw/SKILL.md",
+   "skills/self-push/SKILL.md",
+   "skills/seo-growth-loop/SKILL.md",
+   "skills/shar-production-metadata-validation/SKILL.md",
+   "skills/shopify-app-review-triage-workflow/SKILL.md",
+   "skills/snowe-ui-skill/SKILL.md",
+   "skills/social-corpus-harvest/SKILL.md",
+   "skills/solidping-uptime-monitoring/SKILL.md",
+   "skills/stockpile-market-mcp/SKILL.md",
+   "skills/unified-ai-gateway/SKILL.md",
+   "skills/use-404-directory/SKILL.md",
+   "skills/webask-results-digest/SKILL.md",
+   "skills/writingmate-mcp/SKILL.md",
+   "skills/xquik-apify-x-actors/SKILL.md",
+   "skills/zinc-universal-checkout/SKILL.md"
+  ],
+  "authored-procedure+bundled-files": [
+   "skills/clean-closed-issue-worktrees/SKILL.md",
+   "skills/concept-to-story/SKILL.md",
+   "skills/docsbot-administration/SKILL.md",
+   "skills/gauntlet/SKILL.md",
+   "skills/goal-instruction-writer/SKILL.md",
+   "skills/openhook/SKILL.md",
+   "skills/paperpilot-csv-preflight/SKILL.md",
+   "skills/popnow-video/SKILL.md",
+   "skills/sell-unused-tokens/SKILL.md",
+   "skills/shipvela-publish/SKILL.md",
+   "skills/tenancy-development/SKILL.md",
+   "skills/usdctofiat-cashout/SKILL.md",
+   "skills/verify-nano-payment/SKILL.md",
+   "skills/xletter/SKILL.md"
+  ],
+  "catalog-card-install-pointer": "all remaining direct-shape manifest paths (2,651); derive by subtraction from the manifest parts"
+ },
+ "other_shape_classification": [
+  {
+   "path": "skills/docsbot-administration/references/bot-builder/SKILL.md",
+   "class": "nested first-class reference skill inside docsbot-administration package",
+   "individually_reviewed": true
+  },
+  {
+   "path": "skills/docsbot-administration/references/evals/SKILL.md",
+   "class": "nested first-class reference skill inside docsbot-administration package",
+   "individually_reviewed": true
+  },
+  {
+   "path": "skills/docsbot-administration/references/response-quality/SKILL.md",
+   "class": "nested first-class reference skill inside docsbot-administration package",
+   "individually_reviewed": true
+  },
+  {
+   "path": "template/SKILL.md",
+   "class": "NOT-A-SKILL: contributor authoring template with placeholder values (name \"Your Skill Name\", example upstream); excluded from any eligible-skill denominator; no grade assigned",
+   "individually_reviewed": true,
+   "structural_terminal_decision": "EXCLUDED-NON-SKILL"
+  }
+ ],
+ "exact_content_duplicate_exposures": [
+  {
+   "canonical": "skills/draft-internal-status-updates-and-incident-comms/SKILL.md",
+   "duplicate_exposure": "skills/draft-internal-status-updates-and-incident-comms-2/SKILL.md",
+   "basis": "SKILL.md identical after removing slug line, self-referential catalog URL and star/download counters; blobs differ only in those identifiers"
+  },
+  {
+   "canonical": "skills/investigate-failing-github-actions-runs-with-ci-doctor/SKILL.md",
+   "duplicate_exposure": "skills/investigate-failing-github-actions-runs-with-ci-doctor-2/SKILL.md",
+   "basis": "SKILL.md identical after removing slug line, self-referential catalog URL and star/download counters; blobs differ only in those identifiers"
+  },
+  {
+   "canonical": "skills/mailgun-javascript-sdk-email-delivery-and-domain-operations/SKILL.md",
+   "duplicate_exposure": "skills/mailgun-javascript-sdk-email-delivery-and-domain-operations-2/SKILL.md",
+   "basis": "SKILL.md identical after removing slug line, self-referential catalog URL and star/download counters; blobs differ only in those identifiers"
+  }
+ ],
+ "same_name_distinct_content_pairs": [
+  {
+   "paths": [
+    "skills/prometheus-alertmanager-bridge/SKILL.md",
+    "skills/prometheus-alertmanager-bridge-2/SKILL.md"
+   ],
+   "finding": "different descriptions/framework claims; independent cards"
+  },
+  {
+   "paths": [
+    "skills/stagehand-ai-browser-automation-framework/SKILL.md",
+    "skills/stagehand-ai-browser-automation-framework-2/SKILL.md"
+   ],
+   "finding": "different descriptions/framework claims over the same upstream; near-duplicate exposure, separately reviewable"
+  }
+ ],
+ "shared_upstream_source_groups": {
+  "group_count": 201,
+  "paths_in_groups": 1044,
+  "finding": "Many cards are synthetic capability names wrapped around the same generic upstream repository (e.g. 29 cards cite hashicorp/terraform, 28 aws/aws-sdk-js-v3). Shared upstream is NOT proof of semantic duplication; each card is reviewed individually, but upstream-level facts may be shared.",
+  "groups": [
+   {
+    "upstream_source": "https://github.com/hashicorp/terraform",
+    "paths": [
+     "skills/terraform-cloud-mcp-server/SKILL.md",
+     "skills/terraform-cloud-orchestrator-skill/SKILL.md",
+     "skills/terraform-cloud-pipeline-agent/SKILL.md",
+     "skills/terraform-cloud-run-inspector-2/SKILL.md",
+     "skills/terraform-cloud-run-trigger/SKILL.md",
+     "skills/terraform-drift-detection-runbook/SKILL.md",
+     "skills/terraform-drift-detector-2/SKILL.md",
+     "skills/terraform-module-boilerplate-assembler/SKILL.md",
+     "skills/terraform-module-registry-browser/SKILL.md",
+     "skills/terraform-module-registry/SKILL.md",
+     "skills/terraform-module-scaffold-generator/SKILL.md",
+     "skills/terraform-module-scaffolder-hcl-sdk/SKILL.md",
+     "skills/terraform-module-template-engine/SKILL.md",
+     "skills/terraform-module-template-generator/SKILL.md",
+     "skills/terraform-module-testing-framework/SKILL.md",
+     "skills/terraform-plan-analyzer-agent/SKILL.md",
+     "skills/terraform-plan-apply-automation/SKILL.md",
+     "skills/terraform-plan-diff-analyzer/SKILL.md",
+     "skills/terraform-plan-diff-reviewer/SKILL.md",
+     "skills/terraform-plan-reviewer-4/SKILL.md",
+     "skills/terraform-plan-reviewer-agent/SKILL.md",
+     "skills/terraform-plan-validator-agent/SKILL.md",
+     "skills/terraform-plan-validator/SKILL.md",
+     "skills/terraform-provider-schema-explorer/SKILL.md",
+     "skills/terraform-state-diagnostics/SKILL.md",
+     "skills/terraform-state-drift-detector/SKILL.md",
+     "skills/terraform-state-forensics-tool/SKILL.md",
+     "skills/terraform-state-inspector/SKILL.md",
+     "skills/terraform-state-surgery-kit/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/aws/aws-sdk-js-v3",
+    "paths": [
+     "skills/aws-cloudtrail-log-normalizer/SKILL.md",
+     "skills/aws-cloudwatch-alarm-builder/SKILL.md",
+     "skills/aws-cloudwatch-alarm-diagnostic/SKILL.md",
+     "skills/aws-cloudwatch-alarm-runbook-generator/SKILL.md",
+     "skills/aws-cloudwatch-alarm-runbook-wave48/SKILL.md",
+     "skills/aws-cloudwatch-alarm-triage-5/SKILL.md",
+     "skills/aws-cloudwatch-alarm-triage-agent/SKILL.md",
+     "skills/aws-cloudwatch-alarm-triager/SKILL.md",
+     "skills/aws-cloudwatch-anomaly-detector/SKILL.md",
+     "skills/aws-cloudwatch-anomaly-investigator/SKILL.md",
+     "skills/aws-cloudwatch-anomaly-runbook/SKILL.md",
+     "skills/aws-cloudwatch-composite-alarm-builder/SKILL.md",
+     "skills/aws-cloudwatch-insights-agent/SKILL.md",
+     "skills/aws-cloudwatch-log-analyzer/SKILL.md",
+     "skills/aws-cloudwatch-log-anomaly-investigator/SKILL.md",
+     "skills/aws-cloudwatch-log-anomaly-scanner/SKILL.md",
+     "skills/aws-cloudwatch-runbook-agent/SKILL.md",
+     "skills/aws-codepipeline-orchestrator/SKILL.md",
+     "skills/aws-iam-privilege-escalation-audit/SKILL.md",
+     "skills/aws-lambda-mcp-server/SKILL.md",
+     "skills/aws-s3-mcp-server/SKILL.md",
+     "skills/aws-s3-sqs-pipeline-connector/SKILL.md",
+     "skills/aws-sdk-method-resolver/SKILL.md",
+     "skills/aws-ssm-runbook-engine/SKILL.md",
+     "skills/aws-ssm-runbook-executor/SKILL.md",
+     "skills/cloud-cost-analysis/SKILL.md",
+     "skills/cron-job-manager/SKILL.md",
+     "skills/dynamodb-manager/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/kubernetes/kubernetes",
+    "paths": [
+     "skills/k8s-troubleshooting-runbook/SKILL.md",
+     "skills/kubernetes-crashloop-diagnoser-agent/SKILL.md",
+     "skills/kubernetes-crashloop-diagnostic-runbook/SKILL.md",
+     "skills/kubernetes-crashloop-diagnostician/SKILL.md",
+     "skills/kubernetes-crashloopbackoff-resolver/SKILL.md",
+     "skills/kubernetes-diagnostic-runbook/SKILL.md",
+     "skills/kubernetes-diagnostics-agent/SKILL.md",
+     "skills/kubernetes-event-stream-analyzer/SKILL.md",
+     "skills/kubernetes-events-api-crashloop-investigator/SKILL.md",
+     "skills/kubernetes-incident-runbook/SKILL.md",
+     "skills/kubernetes-pod-crash-analyzer-3/SKILL.md",
+     "skills/kubernetes-pod-crash-diagnostician/SKILL.md",
+     "skills/kubernetes-pod-crash-diagnostics-3/SKILL.md",
+     "skills/kubernetes-pod-crash-investigator-3/SKILL.md",
+     "skills/kubernetes-pod-crash-loop-analyzer/SKILL.md",
+     "skills/kubernetes-pod-crashloop-runbook/SKILL.md",
+     "skills/kubernetes-pod-diagnostic-agent/SKILL.md",
+     "skills/kubernetes-pod-diagnostic-runbook/SKILL.md",
+     "skills/kubernetes-pod-diagnostics-runbook/SKILL.md",
+     "skills/kubernetes-pod-diagnostics-runner-2/SKILL.md",
+     "skills/kubernetes-pod-diagnostics-skill/SKILL.md",
+     "skills/kubernetes-rollback-runbook-3/SKILL.md",
+     "skills/kubernetes-runbook-executor-2/SKILL.md",
+     "skills/kubernetes-runbook-generator/SKILL.md",
+     "skills/kubernetes-troubleshoot-analyzer/SKILL.md",
+     "skills/pod-crashloop-runbook/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/circleci/circleci-docs",
+    "paths": [
+     "skills/circleci-config-validator/SKILL.md",
+     "skills/circleci-flaky-test-detector-2/SKILL.md",
+     "skills/circleci-mcp-server/SKILL.md",
+     "skills/circleci-orb-auditor/SKILL.md",
+     "skills/circleci-orb-builder-publisher/SKILL.md",
+     "skills/circleci-orb-builder/SKILL.md",
+     "skills/circleci-orb-composer-7/SKILL.md",
+     "skills/circleci-orb-composition-engine/SKILL.md",
+     "skills/circleci-orb-configuration-manager/SKILL.md",
+     "skills/circleci-orb-configurator-2/SKILL.md",
+     "skills/circleci-orb-debugger/SKILL.md",
+     "skills/circleci-orb-dependency-analyzer/SKILL.md",
+     "skills/circleci-orb-dependency-auditor-4/SKILL.md",
+     "skills/circleci-orb-dependency-checker/SKILL.md",
+     "skills/circleci-orb-dependency-scanner-4/SKILL.md",
+     "skills/circleci-orb-linter/SKILL.md",
+     "skills/circleci-orb-pipeline-agent/SKILL.md",
+     "skills/circleci-orb-pipeline-composer-2/SKILL.md",
+     "skills/circleci-orb-pipeline-debugger/SKILL.md",
+     "skills/circleci-orb-validator/SKILL.md",
+     "skills/circleci-pipeline-manager/SKILL.md",
+     "skills/circleci-pipeline-optimizer/SKILL.md",
+     "skills/circleci-workflow-analyzer/SKILL.md",
+     "skills/circleci-workflow-builder/SKILL.md",
+     "skills/circleci-workflow-cost-auditor/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/gitlabhq/gitlabhq",
+    "paths": [
+     "skills/ci-pipeline-generator-skill/SKILL.md",
+     "skills/gitlab-ci-auto-devops-configurator/SKILL.md",
+     "skills/gitlab-ci-cache-optimizer-agent/SKILL.md",
+     "skills/gitlab-ci-integration-2/SKILL.md",
+     "skills/gitlab-ci-merge-train-optimizer/SKILL.md",
+     "skills/gitlab-ci-pipeline-cost-calculator/SKILL.md",
+     "skills/gitlab-ci-pipeline-cost-estimator/SKILL.md",
+     "skills/gitlab-ci-pipeline-debugger/SKILL.md",
+     "skills/gitlab-ci-pipeline-dependency-tracer/SKILL.md",
+     "skills/gitlab-ci-pipeline-generator/SKILL.md",
+     "skills/gitlab-ci-pipeline-linter/SKILL.md",
+     "skills/gitlab-ci-pipeline-migrator/SKILL.md",
+     "skills/gitlab-ci-pipeline-optimizer-8/SKILL.md",
+     "skills/gitlab-ci-pipeline-profiler/SKILL.md",
+     "skills/gitlab-ci-pipeline-validator/SKILL.md",
+     "skills/gitlab-ci-template-generator/SKILL.md",
+     "skills/gitlab-ci-template-library/SKILL.md",
+     "skills/gitlab-cicd-pipeline-optimizer/SKILL.md",
+     "skills/gitlab-cicd-pipeline-orchestrator/SKILL.md",
+     "skills/gitlab-pipeline-bottleneck-profiler/SKILL.md",
+     "skills/gitlab-pipeline-dag-optimizer/SKILL.md",
+     "skills/gitlab-pipeline-optimizer/SKILL.md",
+     "skills/gitlab-pipeline-orchestrator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/jenkinsci/jenkins",
+    "paths": [
+     "skills/jenkins-build-log-analyzer/SKILL.md",
+     "skills/jenkins-groovy-shared-library-auditor/SKILL.md",
+     "skills/jenkins-mcp-server/SKILL.md",
+     "skills/jenkins-pipeline-code-review-agent/SKILL.md",
+     "skills/jenkins-pipeline-debugger/SKILL.md",
+     "skills/jenkins-pipeline-declarative-generator/SKILL.md",
+     "skills/jenkins-pipeline-dsl-generator/SKILL.md",
+     "skills/jenkins-pipeline-failure-analyzer/SKILL.md",
+     "skills/jenkins-pipeline-generator/SKILL.md",
+     "skills/jenkins-pipeline-health-monitor/SKILL.md",
+     "skills/jenkins-pipeline-lint-agent/SKILL.md",
+     "skills/jenkins-pipeline-linter-6/SKILL.md",
+     "skills/jenkins-pipeline-linter-agent-2/SKILL.md",
+     "skills/jenkins-pipeline-linter-fixer/SKILL.md",
+     "skills/jenkins-pipeline-linter-pro/SKILL.md",
+     "skills/jenkins-pipeline-log-parser/SKILL.md",
+     "skills/jenkins-pipeline-monitor/SKILL.md",
+     "skills/jenkins-pipeline-orchestrator-3/SKILL.md",
+     "skills/jenkins-pipeline-shared-library-linter/SKILL.md",
+     "skills/jenkins-shared-library-auditor-agent/SKILL.md",
+     "skills/jenkins-shared-library-builder/SKILL.md",
+     "skills/jenkins-shared-library-linter/SKILL.md",
+     "skills/jenkins-shared-library-manager/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/eslint/eslint",
+    "paths": [
+     "skills/eslint-auto-fix-agent/SKILL.md",
+     "skills/eslint-auto-fixer/SKILL.md",
+     "skills/eslint-autofix-orchestrator/SKILL.md",
+     "skills/eslint-autofix-pipeline/SKILL.md",
+     "skills/eslint-code-review/SKILL.md",
+     "skills/eslint-config-enforcer/SKILL.md",
+     "skills/eslint-custom-rule-builder/SKILL.md",
+     "skills/eslint-custom-rule-generator/SKILL.md",
+     "skills/eslint-rule-analyzer-fixer/SKILL.md",
+     "skills/eslint-rule-analyzer/SKILL.md",
+     "skills/eslint-rule-architect-2/SKILL.md",
+     "skills/eslint-rule-auditor-3/SKILL.md",
+     "skills/eslint-rule-composer/SKILL.md",
+     "skills/eslint-rule-configurator/SKILL.md",
+     "skills/eslint-rule-conflict-detector-2/SKILL.md",
+     "skills/eslint-rule-conflict-resolver/SKILL.md",
+     "skills/eslint-rule-enforcement-agent/SKILL.md",
+     "skills/eslint-rule-enforcer-agent/SKILL.md",
+     "skills/eslint-rule-enforcer/SKILL.md",
+     "skills/eslint-rule-generator-agent/SKILL.md",
+     "skills/eslint-rule-impact-analyzer-2/SKILL.md",
+     "skills/eslint-rule-violation-summarizer-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/prometheus/prometheus",
+    "paths": [
+     "skills/prometheus-alert-resolver-skill/SKILL.md",
+     "skills/prometheus-alert-router/SKILL.md",
+     "skills/prometheus-alert-rule-builder/SKILL.md",
+     "skills/prometheus-alert-rule-generator-2/SKILL.md",
+     "skills/prometheus-alert-rule-synthesizer/SKILL.md",
+     "skills/prometheus-alert-rule-tester/SKILL.md",
+     "skills/prometheus-alert-runbook-agent/SKILL.md",
+     "skills/prometheus-alert-runbook-linker/SKILL.md",
+     "skills/prometheus-alert-runbook/SKILL.md",
+     "skills/prometheus-alert-tuner/SKILL.md",
+     "skills/prometheus-alerting-rules/SKILL.md",
+     "skills/prometheus-alertmanager-bridge-2/SKILL.md",
+     "skills/prometheus-alertmanager-bridge/SKILL.md",
+     "skills/prometheus-alertmanager-configurator/SKILL.md",
+     "skills/prometheus-alertmanager-router/SKILL.md",
+     "skills/prometheus-alertmanager-rule-builder/SKILL.md",
+     "skills/prometheus-alertmanager-rule-generator/SKILL.md",
+     "skills/prometheus-alertmanager-rule-optimizer/SKILL.md",
+     "skills/prometheus-alertmanager-rules-engine/SKILL.md",
+     "skills/prometheus-custom-exporter-builder/SKILL.md",
+     "skills/prometheus-promql-alert-builder/SKILL.md",
+     "skills/prometheus-rule-evaluator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/argoproj/argo-cd",
+    "paths": [
+     "skills/argocd-application-deployer/SKILL.md",
+     "skills/argocd-application-health-runbook/SKILL.md",
+     "skills/argocd-application-sync-manager-2/SKILL.md",
+     "skills/argocd-application-sync-monitor/SKILL.md",
+     "skills/argocd-deployment-monitor/SKILL.md",
+     "skills/argocd-deployment-runbook-agent/SKILL.md",
+     "skills/argocd-deployment-sync-skill/SKILL.md",
+     "skills/argocd-gitops-sync-automator/SKILL.md",
+     "skills/argocd-gitops-sync-controller/SKILL.md",
+     "skills/argocd-gitops-sync-manager/SKILL.md",
+     "skills/argocd-gitops-sync-monitor/SKILL.md",
+     "skills/argocd-mcp-server/SKILL.md",
+     "skills/argocd-sync-drift-detector/SKILL.md",
+     "skills/argocd-sync-manager-skill/SKILL.md",
+     "skills/argocd-sync-orchestrator/SKILL.md",
+     "skills/argocd-sync-status-monitor-7/SKILL.md",
+     "skills/argocd-sync-troubleshooter/SKILL.md",
+     "skills/argocd-sync-wave-orchestrator-wave48/SKILL.md",
+     "skills/argocd-sync-wave-planner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/microsoft/playwright",
+    "paths": [
+     "skills/agent-browser-operator/SKILL.md",
+     "skills/playwright-accessibility-audit-runner/SKILL.md",
+     "skills/playwright-cross-browser-test-runner/SKILL.md",
+     "skills/playwright-cross-browser-testing-and-automation-framework/SKILL.md",
+     "skills/playwright-e2e-test-generator/SKILL.md",
+     "skills/playwright-multi-browser-test-generator/SKILL.md",
+     "skills/playwright-multi-browser-test-suite/SKILL.md",
+     "skills/playwright-multi-tab-session-manager-2/SKILL.md",
+     "skills/playwright-network-har-recorder/SKILL.md",
+     "skills/playwright-network-interceptor/SKILL.md",
+     "skills/playwright-page-data-extractor/SKILL.md",
+     "skills/playwright-parallel-tab-manager/SKILL.md",
+     "skills/playwright-pdf-export-automation/SKILL.md",
+     "skills/playwright-session-recorder-2/SKILL.md",
+     "skills/playwright-test-generator-codegen/SKILL.md",
+     "skills/playwright-test-recorder/SKILL.md",
+     "skills/playwright-test-report-to-slack/SKILL.md",
+     "skills/playwright-visual-regression-suite/SKILL.md",
+     "skills/playwright-visual-regression-tester-3/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/semgrep/semgrep",
+    "paths": [
+     "skills/sast-pipeline-scanner/SKILL.md",
+     "skills/sast-rule-compiler-semgrep/SKILL.md",
+     "skills/semgrep-code-pattern-scanner-2/SKILL.md",
+     "skills/semgrep-code-scanner/SKILL.md",
+     "skills/semgrep-custom-pattern-builder/SKILL.md",
+     "skills/semgrep-custom-pattern-generator/SKILL.md",
+     "skills/semgrep-custom-pattern-library/SKILL.md",
+     "skills/semgrep-custom-rule-builder-3/SKILL.md",
+     "skills/semgrep-custom-rule-runner-2/SKILL.md",
+     "skills/semgrep-pattern-matching-analyzer/SKILL.md",
+     "skills/semgrep-pattern-matching-auditor/SKILL.md",
+     "skills/semgrep-pattern-scanner/SKILL.md",
+     "skills/semgrep-rule-author/SKILL.md",
+     "skills/semgrep-rule-engine/SKILL.md",
+     "skills/semgrep-rule-runner/SKILL.md",
+     "skills/semgrep-sast-scanner-skill/SKILL.md",
+     "skills/semgrep-security-review-agent/SKILL.md",
+     "skills/semgrep-security-scanner-2/SKILL.md",
+     "skills/semgrep-supply-chain-rule-pack-runner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/datadog/dd-trace-js",
+    "paths": [
+     "skills/datadog-anomaly-alert-router/SKILL.md",
+     "skills/datadog-anomaly-detection-agent-2/SKILL.md",
+     "skills/datadog-anomaly-detector/SKILL.md",
+     "skills/datadog-apm-anomaly-detector/SKILL.md",
+     "skills/datadog-apm-trace-analyzer-2/SKILL.md",
+     "skills/datadog-apm-trace-query-agent/SKILL.md",
+     "skills/datadog-incident-runbook-runner-2/SKILL.md",
+     "skills/datadog-integration-connector-agent/SKILL.md",
+     "skills/datadog-mcp-server/SKILL.md",
+     "skills/datadog-metric-exporter/SKILL.md",
+     "skills/datadog-monitor-blueprint-generator/SKILL.md",
+     "skills/datadog-monitor-configuration-agent-2/SKILL.md",
+     "skills/datadog-monitor-configuration-engine/SKILL.md",
+     "skills/datadog-monitor-configurator-2/SKILL.md",
+     "skills/datadog-monitor-sync/SKILL.md",
+     "skills/datadog-monitors-skill/SKILL.md",
+     "skills/datadog-slo-monitor/SKILL.md",
+     "skills/datadog-triage-playbook/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/ffmpeg/ffmpeg",
+    "paths": [
+     "skills/ffmpeg-audio-normalization-pipeline/SKILL.md",
+     "skills/ffmpeg-audio-transcoder/SKILL.md",
+     "skills/ffmpeg-batch-transcode-pipeline/SKILL.md",
+     "skills/ffmpeg-batch-transcoder-skill/SKILL.md",
+     "skills/ffmpeg-clip-extractor-agent/SKILL.md",
+     "skills/ffmpeg-intelligent-media-processor/SKILL.md",
+     "skills/ffmpeg-media-transcoder/SKILL.md",
+     "skills/ffmpeg-thumbnail-grid-generator/SKILL.md",
+     "skills/ffmpeg-thumbnail-mosaic-generator/SKILL.md",
+     "skills/ffmpeg-video-processing-pipeline/SKILL.md",
+     "skills/live-stream-audio-monitor/SKILL.md",
+     "skills/live-stream-clip-extractor-agent/SKILL.md",
+     "skills/podcast-rss-feed-audio-normalizer/SKILL.md",
+     "skills/runwayml-gen-3-alpha-video-composer/SKILL.md",
+     "skills/video-frames-extractor/SKILL.md",
+     "skills/video-subtitle-auto-translator-agent/SKILL.md",
+     "skills/video-subtitle-translator-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.github.com/en/actions",
+    "paths": [
+     "skills/github-actions-ci-builder/SKILL.md",
+     "skills/github-actions-ci-pipeline-builder/SKILL.md",
+     "skills/github-actions-cicd-pipeline-manager/SKILL.md",
+     "skills/github-actions-matrix-build-optimizer/SKILL.md",
+     "skills/github-actions-matrix-builder-13/SKILL.md",
+     "skills/github-actions-matrix-optimizer-2/SKILL.md",
+     "skills/github-actions-matrix-orchestrator/SKILL.md",
+     "skills/github-actions-oidc-token-validator/SKILL.md",
+     "skills/github-actions-oidc-token-verifier/SKILL.md",
+     "skills/github-actions-pipeline-validator/SKILL.md",
+     "skills/github-actions-workflow-builder-skill/SKILL.md",
+     "skills/github-actions-workflow-composer-2/SKILL.md",
+     "skills/github-actions-workflow-debugger/SKILL.md",
+     "skills/github-actions-workflow-generator-3/SKILL.md",
+     "skills/github-actions-workflow-linter-2/SKILL.md",
+     "skills/github-actions-workflow-optimizer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/moby/moby",
+    "paths": [
+     "skills/docker-build-cache-optimizer/SKILL.md",
+     "skills/docker-compose-generator-skill/SKILL.md",
+     "skills/docker-compose-health-checker/SKILL.md",
+     "skills/docker-compose-health-monitor/SKILL.md",
+     "skills/docker-compose-orchestrator-v2/SKILL.md",
+     "skills/docker-compose-service-blueprint-creator/SKILL.md",
+     "skills/docker-compose-stack-analyzer/SKILL.md",
+     "skills/docker-compose-stack-builder-sdk/SKILL.md",
+     "skills/docker-compose-test-harness/SKILL.md",
+     "skills/docker-container-health-check-runbook/SKILL.md",
+     "skills/docker-container-health-inspector/SKILL.md",
+     "skills/docker-image-layer-analyzer/SKILL.md",
+     "skills/docker-image-layer-inspector/SKILL.md",
+     "skills/docker-image-layer-size-analyzer/SKILL.md",
+     "skills/docker-image-vulnerability-triage/SKILL.md",
+     "skills/docker-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/puppeteer/puppeteer",
+    "paths": [
+     "skills/browser-session-replay-analyzer/SKILL.md",
+     "skills/puppeteer-browser-automation-library-for-chrome-and-firefox/SKILL.md",
+     "skills/puppeteer-browser-automation-library/SKILL.md",
+     "skills/puppeteer-cookie-consent-automator/SKILL.md",
+     "skills/puppeteer-cookie-consent-handler-3/SKILL.md",
+     "skills/puppeteer-devtools-protocol-recorder/SKILL.md",
+     "skills/puppeteer-multi-tab-session-manager/SKILL.md",
+     "skills/puppeteer-pdf-renderer/SKILL.md",
+     "skills/puppeteer-scraping-framework-2/SKILL.md",
+     "skills/puppeteer-screenshot-diff-engine/SKILL.md",
+     "skills/puppeteer-stealth-scraper-agent/SKILL.md",
+     "skills/puppeteer-stealth-web-scraper/SKILL.md",
+     "skills/puppeteer-visual-regression-tester/SKILL.md",
+     "skills/puppeteer-visual-regression-testing/SKILL.md",
+     "skills/puppeteer-web-scraper/SKILL.md",
+     "skills/puppeteer-web-scraping-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/brianc/node-postgres",
+    "paths": [
+     "skills/postgresql-diagnostic-analyzer/SKILL.md",
+     "skills/postgresql-diagnostic-runbook/SKILL.md",
+     "skills/postgresql-health-diagnostics-agent/SKILL.md",
+     "skills/postgresql-performance-diagnostic-suite/SKILL.md",
+     "skills/postgresql-performance-diagnostics/SKILL.md",
+     "skills/postgresql-performance-runbook/SKILL.md",
+     "skills/postgresql-query-analyzer/SKILL.md",
+     "skills/postgresql-query-diagnostics/SKILL.md",
+     "skills/postgresql-query-optimizer-explain-api/SKILL.md",
+     "skills/postgresql-query-plan-analyzer-2/SKILL.md",
+     "skills/postgresql-query-plan-diagnostics-wave48/SKILL.md",
+     "skills/postgresql-query-plan-explainer/SKILL.md",
+     "skills/postgresql-slow-query-analyzer/SKILL.md",
+     "skills/postgresql-slow-query-runbook-agent/SKILL.md",
+     "skills/postgresql-vacuum-deadlock-runbook/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/graphql/graphql-js",
+    "paths": [
+     "skills/graphql-data-federation-agent/SKILL.md",
+     "skills/graphql-introspection-documenter/SKILL.md",
+     "skills/graphql-schema-analyzer/SKILL.md",
+     "skills/graphql-schema-documentation-builder/SKILL.md",
+     "skills/graphql-schema-documentation-generator/SKILL.md",
+     "skills/graphql-schema-drift-detector/SKILL.md",
+     "skills/graphql-schema-explorer/SKILL.md",
+     "skills/graphql-schema-introspection-analyzer/SKILL.md",
+     "skills/graphql-schema-introspection-mapper/SKILL.md",
+     "skills/graphql-schema-introspector/SKILL.md",
+     "skills/graphql-schema-registry-agent/SKILL.md",
+     "skills/graphql-schema-registry-client/SKILL.md",
+     "skills/graphql-schema-registry/SKILL.md",
+     "skills/graphql-schema-stitcher/SKILL.md",
+     "skills/graphql-schema-stitching-federation-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/sonarsource/sonarqube",
+    "paths": [
+     "skills/sonarqube-analysis-agent/SKILL.md",
+     "skills/sonarqube-analysis-runner/SKILL.md",
+     "skills/sonarqube-code-analysis/SKILL.md",
+     "skills/sonarqube-code-quality-scanner/SKILL.md",
+     "skills/sonarqube-code-scanner-agent/SKILL.md",
+     "skills/sonarqube-gate-checker-2/SKILL.md",
+     "skills/sonarqube-gate-enforcer/SKILL.md",
+     "skills/sonarqube-pr-gate-skill/SKILL.md",
+     "skills/sonarqube-quality-gate-agent/SKILL.md",
+     "skills/sonarqube-quality-gate-checker/SKILL.md",
+     "skills/sonarqube-quality-gate-enforcer-14/SKILL.md",
+     "skills/sonarqube-quality-gate-explainer/SKILL.md",
+     "skills/sonarqube-quality-gate-monitor-3/SKILL.md",
+     "skills/sonarqube-rule-enforcement-agent/SKILL.md",
+     "skills/sonarqube-scanner-skill/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/zaproxy/zaproxy",
+    "paths": [
+     "skills/owasp-zap-active-scanner-agent/SKILL.md",
+     "skills/owasp-zap-api-fuzzer/SKILL.md",
+     "skills/owasp-zap-api-security-auditor/SKILL.md",
+     "skills/owasp-zap-api-security-scanner/SKILL.md",
+     "skills/owasp-zap-api-security-tester/SKILL.md",
+     "skills/owasp-zap-automated-pen-testing-agent/SKILL.md",
+     "skills/owasp-zap-automated-scan-orchestrator/SKILL.md",
+     "skills/owasp-zap-scan-orchestrator/SKILL.md",
+     "skills/owasp-zap-scanner-agent/SKILL.md",
+     "skills/owasp-zap-scanner/SKILL.md",
+     "skills/owasp-zap-security-audit-skill/SKILL.md",
+     "skills/owasp-zap-security-scanner-agent/SKILL.md",
+     "skills/security-audit-skill/SKILL.md",
+     "skills/zap-automated-security-scan-orchestrator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/makenotion/notion-sdk-js",
+    "paths": [
+     "skills/notion-ai-doc-summarizer/SKILL.md",
+     "skills/notion-ai-workspace/SKILL.md",
+     "skills/notion-database-sync-agent/SKILL.md",
+     "skills/notion-database-sync-bridge/SKILL.md",
+     "skills/notion-database-sync-page-generator-2/SKILL.md",
+     "skills/notion-mcp-server/SKILL.md",
+     "skills/notion-task-board-automation-agent/SKILL.md",
+     "skills/notion-task-sync-bridge/SKILL.md",
+     "skills/notion-to-pdf-knowledge-exporter/SKILL.md",
+     "skills/notion-workspace-agent/SKILL.md",
+     "skills/notion-workspace-automation-hub/SKILL.md",
+     "skills/notion-workspace-automator-api-v1/SKILL.md",
+     "skills/notion-workspace-sync-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/seleniumhq/selenium",
+    "paths": [
+     "skills/selenium-grid-auto-scaling-orchestrator/SKILL.md",
+     "skills/selenium-grid-cloud-executor/SKILL.md",
+     "skills/selenium-grid-load-balancer/SKILL.md",
+     "skills/selenium-grid-multi-browser-test-runner/SKILL.md",
+     "skills/selenium-grid-orchestrator/SKILL.md",
+     "skills/selenium-grid-parallel-execution-manager/SKILL.md",
+     "skills/selenium-grid-parallel-executor/SKILL.md",
+     "skills/selenium-grid-parallel-test-runner/SKILL.md",
+     "skills/selenium-grid-session-distributor/SKILL.md",
+     "skills/selenium-grid-session-manager/SKILL.md",
+     "skills/selenium-grid-session-router/SKILL.md",
+     "skills/selenium-grid-test-orchestrator-2/SKILL.md",
+     "skills/selenium-webdriver-browser-automation-framework/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/stripe/stripe-node",
+    "paths": [
+     "skills/stripe-api-reference-navigator/SKILL.md",
+     "skills/stripe-connect-account-provisioner/SKILL.md",
+     "skills/stripe-connect-integration/SKILL.md",
+     "skills/stripe-connect-marketplace-sync/SKILL.md",
+     "skills/stripe-connect-platform-bridge/SKILL.md",
+     "skills/stripe-mcp-server/SKILL.md",
+     "skills/stripe-payment-flow-connector/SKILL.md",
+     "skills/stripe-payments-connector/SKILL.md",
+     "skills/stripe-reporting-agent/SKILL.md",
+     "skills/stripe-revenue-analytics-dashboard/SKILL.md",
+     "skills/stripe-revenue-reconciliation-agent/SKILL.md",
+     "skills/stripe-webhook-signature-verifier/SKILL.md",
+     "skills/webhook-debugger/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/ansible/ansible",
+    "paths": [
+     "skills/ansible-playbook-debugger/SKILL.md",
+     "skills/ansible-playbook-diagnostics-runner/SKILL.md",
+     "skills/ansible-playbook-dry-run-analyzer/SKILL.md",
+     "skills/ansible-playbook-dry-run-validator/SKILL.md",
+     "skills/ansible-playbook-dryrun-validator-agent/SKILL.md",
+     "skills/ansible-playbook-linter-2/SKILL.md",
+     "skills/ansible-playbook-linter-pro/SKILL.md",
+     "skills/ansible-playbook-runner/SKILL.md",
+     "skills/ansible-playbook-template-generator/SKILL.md",
+     "skills/ansible-playbook-template-library/SKILL.md",
+     "skills/ansible-playbook-vault-runner/SKILL.md",
+     "skills/ansible-runbook-executor/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/dbt-labs/dbt-core",
+    "paths": [
+     "skills/dbt-cloud-mcp/SKILL.md",
+     "skills/dbt-data-transform-orchestrator/SKILL.md",
+     "skills/dbt-data-transformation-orchestrator/SKILL.md",
+     "skills/dbt-mcp-server/SKILL.md",
+     "skills/dbt-model-dependency-analyzer/SKILL.md",
+     "skills/dbt-model-dependency-resolver-2/SKILL.md",
+     "skills/dbt-model-lineage-analyzer/SKILL.md",
+     "skills/dbt-model-lineage-extractor-2/SKILL.md",
+     "skills/dbt-model-lineage-mapper/SKILL.md",
+     "skills/dbt-model-lineage-test-coverage-2/SKILL.md",
+     "skills/dbt-model-transformation-architect/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/grafana/grafana",
+    "paths": [
+     "skills/grafana-alert-router/SKILL.md",
+     "skills/grafana-dashboard-as-code-builder/SKILL.md",
+     "skills/grafana-dashboard-generator-3/SKILL.md",
+     "skills/grafana-dashboard-json-assembler/SKILL.md",
+     "skills/grafana-dashboard-json-migrator/SKILL.md",
+     "skills/grafana-dashboard-scaffolder/SKILL.md",
+     "skills/grafana-dashboard-snapshot-exporter/SKILL.md",
+     "skills/grafana-dashboard-sync-agent/SKILL.md",
+     "skills/grafana-dashboard-template-generator/SKILL.md",
+     "skills/grafana-unified-alerting-manager/SKILL.md",
+     "skills/prometheus-grafana-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/wordpress/wordpress",
+    "paths": [
+     "skills/wordpress-acf-field-group-auditor/SKILL.md",
+     "skills/wordpress-content-optimizer-yoast-rest/SKILL.md",
+     "skills/wordpress-content-publisher/SKILL.md",
+     "skills/wordpress-gutenberg-block-generator/SKILL.md",
+     "skills/wordpress-gutenberg-block-scaffolder/SKILL.md",
+     "skills/wordpress-multisite-network-sync/SKILL.md",
+     "skills/wordpress-rest-api-builder/SKILL.md",
+     "skills/wordpress-rest-api-content-sync/SKILL.md",
+     "skills/wordpress-router/SKILL.md",
+     "skills/wp-multisite-provisioner-agent/SKILL.md",
+     "skills/wp-theme-json-design-token-manager/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/cookiecutter/cookiecutter",
+    "paths": [
+     "skills/cookiecutter-project-bootstrap/SKILL.md",
+     "skills/cookiecutter-project-bootstrapper/SKILL.md",
+     "skills/cookiecutter-project-builder/SKILL.md",
+     "skills/cookiecutter-project-scaffold-generator/SKILL.md",
+     "skills/cookiecutter-project-scaffold/SKILL.md",
+     "skills/cookiecutter-project-scaffolder-3/SKILL.md",
+     "skills/cookiecutter-project-scaffolding-agent/SKILL.md",
+     "skills/cookiecutter-project-template-engine/SKILL.md",
+     "skills/cookiecutter-project-template-scaffolder/SKILL.md",
+     "skills/cookiecutter-template-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/cypress-io/cypress",
+    "paths": [
+     "skills/cypress-component-test-generator/SKILL.md",
+     "skills/cypress-component-testing-framework-2/SKILL.md",
+     "skills/cypress-component-testing-suite/SKILL.md",
+     "skills/cypress-component-testing-toolkit/SKILL.md",
+     "skills/cypress-e2e-api-intercept-skill/SKILL.md",
+     "skills/cypress-e2e-test-generator-3/SKILL.md",
+     "skills/cypress-end-to-end-component-testing-framework/SKILL.md",
+     "skills/cypress-network-stub-generator/SKILL.md",
+     "skills/cypress-visual-regression-runner/SKILL.md",
+     "skills/cypress-visual-regression-testing-suite/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/nginx/nginx",
+    "paths": [
+     "skills/nginx-config-linter-tester/SKILL.md",
+     "skills/nginx-config-validator-optimizer/SKILL.md",
+     "skills/nginx-config-validator-runbook/SKILL.md",
+     "skills/nginx-error-log-analyzer-fixer/SKILL.md",
+     "skills/nginx-error-log-analyzer/SKILL.md",
+     "skills/nginx-error-log-classifier/SKILL.md",
+     "skills/nginx-error-log-parser/SKILL.md",
+     "skills/nginx-error-log-pattern-analyzer/SKILL.md",
+     "skills/nginx-error-log-runbook-agent/SKILL.md",
+     "skills/nginx-error-pattern-analyzer-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/openai/openai-node",
+    "paths": [
+     "skills/dall-e-prompt-engineering-kit/SKILL.md",
+     "skills/dalle-3-batch-asset-generator/SKILL.md",
+     "skills/dalle-batch-image-generator/SKILL.md",
+     "skills/dalle-image-variation-generator/SKILL.md",
+     "skills/dalle-image-variation-pipeline/SKILL.md",
+     "skills/dalle-prompt-chain-generator/SKILL.md",
+     "skills/dalle-variation-generator/SKILL.md",
+     "skills/dalle-variations-pipeline/SKILL.md",
+     "skills/openai-image-gen/SKILL.md",
+     "skills/openai-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/slackapi/bolt-js",
+    "paths": [
+     "skills/slack-bolt-event-subscription-debugger/SKILL.md",
+     "skills/slack-channel-summarizer-bolt-sdk/SKILL.md",
+     "skills/slack-channel-summarizer-triage/SKILL.md",
+     "skills/slack-digest-and-task-router/SKILL.md",
+     "skills/slack-standup-automator/SKILL.md",
+     "skills/slack-standup-summarizer/SKILL.md",
+     "skills/slack-workflow-automation-builder/SKILL.md",
+     "skills/slack-workflow-bot-bolt-sdk/SKILL.md",
+     "skills/slack-workflow-bot-builder/SKILL.md",
+     "skills/slack-workflow-builder-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/tektoncd/pipeline",
+    "paths": [
+     "skills/tekton-pipeline-chain-validator/SKILL.md",
+     "skills/tekton-pipeline-composer/SKILL.md",
+     "skills/tekton-pipeline-debugger/SKILL.md",
+     "skills/tekton-pipeline-generator/SKILL.md",
+     "skills/tekton-pipeline-resource-optimizer/SKILL.md",
+     "skills/tekton-pipeline-scaffolder/SKILL.md",
+     "skills/tekton-pipeline-task-assembler/SKILL.md",
+     "skills/tekton-pipeline-task-generator/SKILL.md",
+     "skills/tekton-pipeline-template-generator/SKILL.md",
+     "skills/tekton-pipeline-validator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/pagerduty/pdjs",
+    "paths": [
+     "skills/pagerduty-incident-escalator/SKILL.md",
+     "skills/pagerduty-incident-orchestrator-2/SKILL.md",
+     "skills/pagerduty-incident-runbook-automator/SKILL.md",
+     "skills/pagerduty-incident-runbook-engine/SKILL.md",
+     "skills/pagerduty-incident-runbook-executor/SKILL.md",
+     "skills/pagerduty-incident-runbook-linker/SKILL.md",
+     "skills/pagerduty-incident-runbook/SKILL.md",
+     "skills/pagerduty-mcp-server/SKILL.md",
+     "skills/pagerduty-on-call-escalation-checker-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/snyk/cli",
+    "paths": [
+     "skills/dependency-vulnerability-scanner-agent/SKILL.md",
+     "skills/npm-package-supply-chain-auditor/SKILL.md",
+     "skills/snyk-container-image-analyzer/SKILL.md",
+     "skills/snyk-container-vulnerability-agent/SKILL.md",
+     "skills/snyk-dependency-audit-skill/SKILL.md",
+     "skills/snyk-dependency-vulnerability-auditor/SKILL.md",
+     "skills/snyk-license-compliance-checker/SKILL.md",
+     "skills/snyk-open-source-dependency-auditor/SKILL.md",
+     "skills/snyk-vulnerability-scanner-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/aquasecurity/trivy",
+    "paths": [
+     "skills/container-image-vulnerability-scanner/SKILL.md",
+     "skills/trivy-container-iac-vulnerability-scanner/SKILL.md",
+     "skills/trivy-container-image-vulnerability-scanner/SKILL.md",
+     "skills/trivy-container-scanner-2/SKILL.md",
+     "skills/trivy-container-security-scanner/SKILL.md",
+     "skills/trivy-container-vulnerability-scanner/SKILL.md",
+     "skills/trivy-security-scanner-containers-iac/SKILL.md",
+     "skills/trivy-vulnerability-scanner-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/openai/whisper",
+    "paths": [
+     "skills/openai-whisper-transcription/SKILL.md",
+     "skills/podcast-rss-feed-transcriber/SKILL.md",
+     "skills/whisper-batch-transcription-pipeline/SKILL.md",
+     "skills/whisper-cpp-realtime-transcription-pipeline/SKILL.md",
+     "skills/whisper-diarization-post-processor/SKILL.md",
+     "skills/whisper-subtitle-generator/SKILL.md",
+     "skills/youtube-chapters-generator-whisper/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/scrapy/scrapy",
+    "paths": [
+     "skills/scrapy-distributed-crawler-framework/SKILL.md",
+     "skills/scrapy-pipeline-data-extractor/SKILL.md",
+     "skills/scrapy-pipeline-manager/SKILL.md",
+     "skills/scrapy-python-web-crawling-structured-data-extraction-framework/SKILL.md",
+     "skills/scrapy-spider-architect/SKILL.md",
+     "skills/scrapy-spider-data-pipeline/SKILL.md",
+     "skills/scrapy-spider-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://swagger.io/docs",
+    "paths": [
+     "skills/api-documentation-indexer/SKILL.md",
+     "skills/openapi-spec-compliance-checker/SKILL.md",
+     "skills/openapi-spec-navigator/SKILL.md",
+     "skills/openapi-spec-reference-generator/SKILL.md",
+     "skills/openapi-spec-reference-indexer/SKILL.md",
+     "skills/rest-api-documentation-generator/SKILL.md",
+     "skills/rest-api-reference-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://buildkite.com/docs",
+    "paths": [
+     "skills/buildkite-agent-fleet-scaler/SKILL.md",
+     "skills/buildkite-agent-monitor/SKILL.md",
+     "skills/buildkite-dynamic-pipeline-agent/SKILL.md",
+     "skills/buildkite-dynamic-pipeline-architect/SKILL.md",
+     "skills/buildkite-pipeline-optimizer-agent/SKILL.md",
+     "skills/buildkite-pipeline-profiler/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developer.wordpress.org",
+    "paths": [
+     "skills/ai-content-readability-optimizer/SKILL.md",
+     "skills/internal-link-builder-seo-agent/SKILL.md",
+     "skills/internal-link-graph-optimizer/SKILL.md",
+     "skills/keyword-cannibalization-detector/SKILL.md",
+     "skills/seo-meta-tag-optimizer-agent/SKILL.md",
+     "skills/seo-schema-markup-generator-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.npmjs.com/cli/v10/commands/npm-audit",
+    "paths": [
+     "skills/npm-audit-deep-scanner/SKILL.md",
+     "skills/npm-audit-dependency-report-generator/SKILL.md",
+     "skills/npm-package-audit-license-checker/SKILL.md",
+     "skills/npm-package-audit-reference/SKILL.md",
+     "skills/npm-package-vulnerability-runbook/SKILL.md",
+     "skills/npm-package-vulnerability-scanner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/apify/apify-sdk-js",
+    "paths": [
+     "skills/apify-actor-development-kit/SKILL.md",
+     "skills/apify-actor-runner/SKILL.md",
+     "skills/apify-actor-web-crawler/SKILL.md",
+     "skills/apify-actor-web-intelligence-agent/SKILL.md",
+     "skills/apify-sdk-web-scraping-actor-automation/SKILL.md",
+     "skills/apify-web-scraper-orchestrator-3/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/browserbase/stagehand",
+    "paths": [
+     "skills/stagehand-ai-browser-automation-framework-2/SKILL.md",
+     "skills/stagehand-ai-browser-automation-framework-browserbase/SKILL.md",
+     "skills/stagehand-ai-browser-automation-framework/SKILL.md",
+     "skills/stagehand-browser-agent-sdk/SKILL.md",
+     "skills/stagehand-browser-automation-sdk/SKILL.md",
+     "skills/stagehand-browser-automation/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/hashicorp/vault",
+    "paths": [
+     "skills/hashicorp-vault-secret-rotation-agent-2/SKILL.md",
+     "skills/hashicorp-vault-secret-scanner-2/SKILL.md",
+     "skills/hashicorp-vault-secrets-rotation-agent-2/SKILL.md",
+     "skills/vault-secrets-rotation-orchestrator/SKILL.md",
+     "skills/vault-secrets-rotator/SKILL.md",
+     "skills/vault-transit-secrets-envelope-verifier/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/swagger-api/swagger-ui",
+    "paths": [
+     "skills/swagger-codegen-api-client-builder/SKILL.md",
+     "skills/swagger-codegen-orchestrator/SKILL.md",
+     "skills/swagger-codegen-template-customizer/SKILL.md",
+     "skills/swagger-openapi-schema-validator/SKILL.md",
+     "skills/swagger-openapi-validator/SKILL.md",
+     "skills/swagger-ui-documentation-deployer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developer.todoist.com/api/v1",
+    "paths": [
+     "skills/todoist-gtd-workflow-automator/SKILL.md",
+     "skills/todoist-gtd-workflow-engine/SKILL.md",
+     "skills/todoist-natural-language-task-parser/SKILL.md",
+     "skills/todoist-project-automator-api-v2/SKILL.md",
+     "skills/todoist-sync-api-task-orchestrator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developers.notion.com",
+    "paths": [
+     "skills/content-brief-architect-agent/SKILL.md",
+     "skills/incident-response-template-generator/SKILL.md",
+     "skills/incident-timeline-builder/SKILL.md",
+     "skills/keyword-cluster-generator-agent/SKILL.md",
+     "skills/notion-workspace-sync-engine-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/helm/helm",
+    "paths": [
+     "skills/helm-chart-boilerplate-builder/SKILL.md",
+     "skills/helm-chart-diff-upgrade-manager/SKILL.md",
+     "skills/helm-chart-template-scaffolder/SKILL.md",
+     "skills/helm-chart-templater/SKILL.md",
+     "skills/kubernetes-helm-chart-scaffold-builder/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/pandas-dev/pandas",
+    "paths": [
+     "skills/pandas-dataframe-pipeline-builder/SKILL.md",
+     "skills/pandas-dataframe-pipeline-orchestrator/SKILL.md",
+     "skills/pandas-dataframe-schema-enforcer/SKILL.md",
+     "skills/pandas-dataframe-schema-validator/SKILL.md",
+     "skills/pandas-profiling-report-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/sigstore/cosign",
+    "paths": [
+     "skills/cosign-artifact-signature-verifier/SKILL.md",
+     "skills/sigstore-cosign-container-signature-checker/SKILL.md",
+     "skills/sigstore-cosign-container-verifier/SKILL.md",
+     "skills/sigstore-cosign-verification-pipeline/SKILL.md",
+     "skills/sigstore-cosign-verifier-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/snowflakedb/snowflake-connector-python",
+    "paths": [
+     "skills/snowflake-mcp-server/SKILL.md",
+     "skills/snowflake-mcp/SKILL.md",
+     "skills/snowflake-query-history-extractor/SKILL.md",
+     "skills/snowflake-query-optimizer-agent/SKILL.md",
+     "skills/snowflake-query-profiler/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/stoplightio/spectral",
+    "paths": [
+     "skills/openapi-spec-linter-docs-generator/SKILL.md",
+     "skills/openapi-spec-validator-agent/SKILL.md",
+     "skills/openapi-spec-validator-docs-generator/SKILL.md",
+     "skills/openapi-spec-validator-linter-2/SKILL.md",
+     "skills/spectral-openapi-asyncapi-linter/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://cloudinary.com/documentation",
+    "paths": [
+     "skills/cloudinary-asset-optimization-agent/SKILL.md",
+     "skills/cloudinary-dam-pipeline-skill/SKILL.md",
+     "skills/cloudinary-media-optimization-agent/SKILL.md",
+     "skills/cloudinary-media-transform-skill/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developers.figma.com/docs/rest-api",
+    "paths": [
+     "skills/figma-design-token-exporter/SKILL.md",
+     "skills/figma-design-token-extractor-3/SKILL.md",
+     "skills/figma-export-automator/SKILL.md",
+     "skills/figma-rest-api-asset-exporter/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.codecov.com/docs/quick-start",
+    "paths": [
+     "skills/codecov-coverage-analyzer/SKILL.md",
+     "skills/codecov-coverage-diff-analyzer-2/SKILL.md",
+     "skills/codecov-coverage-report-analyzer/SKILL.md",
+     "skills/codecov-coverage-tracker-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.npmjs.com",
+    "paths": [
+     "skills/npm-package-changelog-analyzer/SKILL.md",
+     "skills/npm-package-dependency-analyzer/SKILL.md",
+     "skills/npm-package-dependency-auditor/SKILL.md",
+     "skills/npm-package-explorer-registry-api/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.npmjs.com/cli/v10/using-npm/registry",
+    "paths": [
+     "skills/npm-package-analyzer/SKILL.md",
+     "skills/npm-package-auditor-registry-api/SKILL.md",
+     "skills/npm-registry-analyzer/SKILL.md",
+     "skills/npm-registry-explorer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/apache/kafka",
+    "paths": [
+     "skills/apache-kafka-consumer-lag-runbook/SKILL.md",
+     "skills/apache-kafka-schema-extractor/SKILL.md",
+     "skills/apache-kafka-stream-processor/SKILL.md",
+     "skills/apache-kafka-stream-transformer-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/apache/tika",
+    "paths": [
+     "skills/apache-tika-content-extraction-hub/SKILL.md",
+     "skills/apache-tika-document-extractor/SKILL.md",
+     "skills/apache-tika-document-parser-agent/SKILL.md",
+     "skills/apache-tika-document-parser/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/apify/crawlee",
+    "paths": [
+     "skills/crawlee-smart-crawler-agent/SKILL.md",
+     "skills/crawlee-web-crawling-and-scraping-library-by-apify/SKILL.md",
+     "skills/crawlee-web-crawling-and-scraping-sdk/SKILL.md",
+     "skills/crawlee-web-crawling-browser-automation-library/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/argoproj/argo-workflows",
+    "paths": [
+     "skills/argo-workflows-dag-optimizer/SKILL.md",
+     "skills/argo-workflows-dag-pipeline-builder/SKILL.md",
+     "skills/argo-workflows-deployer/SKILL.md",
+     "skills/argo-workflows-linter/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/browser-use/browser-use",
+    "paths": [
+     "skills/browser-use-agentic-browser-control/SKILL.md",
+     "skills/browser-use-ai-browser-automation-library/SKILL.md",
+     "skills/browser-use-browser-automation-framework/SKILL.md",
+     "skills/browser-use-web-agent-automation/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/cheeriojs/cheerio",
+    "paths": [
+     "skills/cheerio-dom-extraction-pipeline/SKILL.md",
+     "skills/cheerio-dom-scraping-toolkit/SKILL.md",
+     "skills/cheerio-html-xml-parsing-library-nodejs-extraction-workflows/SKILL.md",
+     "skills/cheerio-product-price-tracker/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/docling-project/docling",
+    "paths": [
+     "skills/docling-ai-document-intelligence-pipeline/SKILL.md",
+     "skills/docling-document-conversion-and-extraction-toolkit/SKILL.md",
+     "skills/docling-document-parsing-and-conversion-toolkit/SKILL.md",
+     "skills/docling-document-parsing-and-conversion/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/grafana/loki",
+    "paths": [
+     "skills/grafana-loki-log-aggregation-agent/SKILL.md",
+     "skills/grafana-loki-log-correlation-agent-2/SKILL.md",
+     "skills/grafana-loki-log-query-agent/SKILL.md",
+     "skills/loki-log-query-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/ironsource/parquetjs",
+    "paths": [
+     "skills/parquet-column-mapper/SKILL.md",
+     "skills/parquet-column-pruning-optimizer/SKILL.md",
+     "skills/parquet-column-statistics-profiler/SKILL.md",
+     "skills/parquet-schema-extractor-for-s3/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/jsforce/jsforce",
+    "paths": [
+     "skills/salesforce-bulk-api-data-loader/SKILL.md",
+     "skills/salesforce-bulk-api-sync-agent/SKILL.md",
+     "skills/salesforce-crm-sync-agent/SKILL.md",
+     "skills/salesforce-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/lovell/sharp",
+    "paths": [
+     "skills/sharp-image-cdn-optimizer/SKILL.md",
+     "skills/sharp-image-pipeline-processor-2/SKILL.md",
+     "skills/sharp-image-pipeline-skill/SKILL.md",
+     "skills/sharp-image-transform-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/twilio/twilio-node",
+    "paths": [
+     "skills/twilio-mcp-server/SKILL.md",
+     "skills/twilio-programmable-sms-gateway/SKILL.md",
+     "skills/twilio-programmable-voice-router-2/SKILL.md",
+     "skills/twilio-sms-voice-bridge/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/woocommerce/woocommerce",
+    "paths": [
+     "skills/woocommerce-order-sync-agent/SKILL.md",
+     "skills/woocommerce-rest-inventory-sync/SKILL.md",
+     "skills/woocommerce-webhook-delivery-inspector/SKILL.md",
+     "skills/woocommerce-webhook-orchestrator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/wp-cli/wp-cli",
+    "paths": [
+     "skills/wp-cli-bulk-content-migrator/SKILL.md",
+     "skills/wp-cli-command-line-interface-wordpress/SKILL.md",
+     "skills/wp-cli-content-drift-auditor/SKILL.md",
+     "skills/wp-cli-wordpress-command-line-interface/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://learn.microsoft.com/en-us/graph/outlook-mail-concept-overview",
+    "paths": [
+     "skills/ms-outlook-mail-sorter/SKILL.md",
+     "skills/outlook-email-automation/SKILL.md",
+     "skills/outlook-mail-triage-assistant/SKILL.md",
+     "skills/outlook-mail-triage-microsoft-graph/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://learn.microsoft.com/graph/overview",
+    "paths": [
+     "skills/microsoft-graph-email-digest-builder/SKILL.md",
+     "skills/microsoft-graph-email-triage-agent/SKILL.md",
+     "skills/microsoft-graph-email-triage-assistant/SKILL.md",
+     "skills/microsoft-graph-mail-triage-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://serpapi.com",
+    "paths": [
+     "skills/serpapi-research-pipeline/SKILL.md",
+     "skills/serpapi-search-aggregator/SKILL.md",
+     "skills/serpapi-search-intelligence-aggregator/SKILL.md",
+     "skills/serpapi-search-results-aggregator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://www.assemblyai.com/docs",
+    "paths": [
+     "skills/assemblyai-audio-intelligence-agent/SKILL.md",
+     "skills/assemblyai-lemur-summarizer-agent/SKILL.md",
+     "skills/assemblyai-realtime-call-intelligence/SKILL.md",
+     "skills/assemblyai-summarization-chapters-skill/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://datatracker.ietf.org/doc/html/rfc8446",
+    "paths": [
+     "skills/ssl-certificate-chain-validator-2/SKILL.md",
+     "skills/ssl-tls-certificate-validator-monitor/SKILL.md",
+     "skills/tls-certificate-chain-validator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developer.pagerduty.com",
+    "paths": [
+     "skills/incident-postmortem-generator/SKILL.md",
+     "skills/incident-response-checklist-engine/SKILL.md",
+     "skills/pagerduty-event-orchestration-runbook/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developers.google.com/calendar/api",
+    "paths": [
+     "skills/google-calendar-freebusy-scheduler-bridge/SKILL.md",
+     "skills/google-calendar-sync-agent-2/SKILL.md",
+     "skills/google-calendar-sync-conflict-resolver/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developers.google.com/workspace/calendar/api/guides/overview",
+    "paths": [
+     "skills/google-calendar-conflict-detector/SKILL.md",
+     "skills/google-calendar-conflict-resolver-2/SKILL.md",
+     "skills/google-calendar-smart-scheduler-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.pypi.org",
+    "paths": [
+     "skills/python-package-docs-fetcher/SKILL.md",
+     "skills/python-pypi-dependency-resolver/SKILL.md",
+     "skills/python-pypi-package-reference-indexer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.rs/about",
+    "paths": [
+     "skills/rust-crate-docs-scanner/SKILL.md",
+     "skills/rust-crate-documentation-extractor/SKILL.md",
+     "skills/rust-crate-documentation-indexer-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/agentskillexchange/skills/pull/13",
+    "paths": [
+     "skills/five-element-spec/SKILL.md",
+     "skills/multi-lens-review/SKILL.md",
+     "skills/self-push/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/astral-sh/ruff",
+    "paths": [
+     "skills/ruff-linter-configuration-architect/SKILL.md",
+     "skills/ruff-linter-formatter-agent/SKILL.md",
+     "skills/ruff-python-linter-configurator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/camelot-dev/camelot",
+    "paths": [
+     "skills/camelot-advanced-pdf-table-intelligence/SKILL.md",
+     "skills/camelot-pdf-stream-parser/SKILL.md",
+     "skills/pdf-table-extraction-camelot/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/elastic/elasticsearch",
+    "paths": [
+     "skills/elastic-kibana-mcp-server/SKILL.md",
+     "skills/elasticsearch-cluster-vitals-agent/SKILL.md",
+     "skills/elasticsearch-mcp/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/falcosecurity/falco",
+    "paths": [
+     "skills/container-runtime-security-monitor/SKILL.md",
+     "skills/falco-runtime-security-monitor/SKILL.md",
+     "skills/falco-runtime-security/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/firecrawl/firecrawl",
+    "paths": [
+     "skills/firecrawl-markdown-capture-pipeline/SKILL.md",
+     "skills/firecrawl-web-data-api-ai-search-scraping-crawl-workflows/SKILL.md",
+     "skills/firecrawl-web-data-api-for-ai-agents/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/getsentry/sentry",
+    "paths": [
+     "skills/sentry-error-intelligence/SKILL.md",
+     "skills/sentry-error-triage-assistant/SKILL.md",
+     "skills/sentry-issue-spike-detection-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/gitleaks/gitleaks",
+    "paths": [
+     "skills/git-secret-scanner-gitleaks/SKILL.md",
+     "skills/git-secret-scanner/SKILL.md",
+     "skills/gitleaks-git-secret-scanner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/imagemagick/imagemagick",
+    "paths": [
+     "skills/imagemagick-batch-converter-cli/SKILL.md",
+     "skills/imagemagick-batch-processor/SKILL.md",
+     "skills/imagemagick-batch-transform-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/lllyasviel/controlnet",
+    "paths": [
+     "skills/stable-diffusion-controlnet-compositor/SKILL.md",
+     "skills/stable-diffusion-controlnet-pipeline/SKILL.md",
+     "skills/stable-diffusion-controlnet-pose-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/microsoft/playwright-mcp",
+    "paths": [
+     "skills/microsoft-playwright-mcp/SKILL.md",
+     "skills/playwright-mcp-browser-automation/SKILL.md",
+     "skills/playwright-mcp-server-browser-automation/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/modelcontextprotocol/servers",
+    "paths": [
+     "skills/postgresql-mcp-server/SKILL.md",
+     "skills/slack-mcp-server/SKILL.md",
+     "skills/sqlite-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/nrwl/nx",
+    "paths": [
+     "skills/nx-monorepo-workflow-orchestrator/SKILL.md",
+     "skills/nx-workspace-generator-toolkit/SKILL.md",
+     "skills/nx-workspace-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/oasdiff/oasdiff",
+    "paths": [
+     "skills/gate-pull-requests-on-openapi-breaking-changes/SKILL.md",
+     "skills/openapi-spec-changelog-generator/SKILL.md",
+     "skills/rest-api-changelog-tracker/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/openapitools/openapi-generator",
+    "paths": [
+     "skills/api-client-generator-skill/SKILL.md",
+     "skills/openapi-generator-api-client-server-stub-tooling/SKILL.md",
+     "skills/openapi-sdk-generator-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/prettier/prettier",
+    "paths": [
+     "skills/prettier-config-conflict-resolver/SKILL.md",
+     "skills/prettier-config-harmonizer-2/SKILL.md",
+     "skills/prettier-format-enforcement-bot/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/pulumi/pulumi",
+    "paths": [
+     "skills/pulumi-drift-detector-reconciler/SKILL.md",
+     "skills/pulumi-infrastructure-stack-templater/SKILL.md",
+     "skills/pulumi-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/sendgrid/sendgrid-nodejs",
+    "paths": [
+     "skills/sendgrid-mcp-server/SKILL.md",
+     "skills/sendgrid-transactional-email-builder/SKILL.md",
+     "skills/sendgrid-transactional-email-router/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/stability-ai/generative-models",
+    "paths": [
+     "skills/stable-diffusion-xl-lora-trainer/SKILL.md",
+     "skills/stable-diffusion-xl-pipeline-builder/SKILL.md",
+     "skills/stable-diffusion-xl-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/systemd/systemd",
+    "paths": [
+     "skills/systemd-service-debugger/SKILL.md",
+     "skills/systemd-service-diagnostics/SKILL.md",
+     "skills/systemd-service-recovery-playbook-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/tesseract-ocr/tesseract",
+    "paths": [
+     "skills/tesseract-ocr-data-extractor/SKILL.md",
+     "skills/tesseract-ocr-document-extractor/SKILL.md",
+     "skills/tesseract-ocr-engine-for-image-to-text-workflows/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/textstat/textstat",
+    "paths": [
+     "skills/content-readability-analyzer-agent/SKILL.md",
+     "skills/content-readability-optimizer/SKILL.md",
+     "skills/textstat-python-readability-statistics-calculator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/tulios/kafkajs",
+    "paths": [
+     "skills/kafka-schema-registry-extractor/SKILL.md",
+     "skills/kafka-schema-registry-validator/SKILL.md",
+     "skills/queue-backup-runbook/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/unclecode/crawl4ai",
+    "paths": [
+     "skills/crawl4ai-llm-friendly-web-crawler/SKILL.md",
+     "skills/crawl4ai-llm-web-crawler-scraper/SKILL.md",
+     "skills/crawl4ai-open-source-web-crawling-and-markdown-extraction/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/unstructured-io/unstructured",
+    "paths": [
+     "skills/unstructured-document-etl-for-llm-pipelines/SKILL.md",
+     "skills/unstructured-document-etl-toolkit/SKILL.md",
+     "skills/unstructured-document-partitioning-etl-library-llm-pipelines/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/wp-graphql/wp-graphql",
+    "paths": [
+     "skills/wpgraphql-graphql-api-plugin-for-headless-wordpress/SKILL.md",
+     "skills/wpgraphql-graphql-api-wordpress/SKILL.md",
+     "skills/wpgraphql-schema-extension-builder/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/yeoman/yo",
+    "paths": [
+     "skills/yeoman-enterprise-generator-suite/SKILL.md",
+     "skills/yeoman-sub-generator-composition-builder/SKILL.md",
+     "skills/yeoman-workflow-orchestrator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://linear.app/docs",
+    "paths": [
+     "skills/linear-issue-manager/SKILL.md",
+     "skills/linear-issue-triage-sprint-planner-2/SKILL.md",
+     "skills/linear-sprint-planner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://pypi.org",
+    "paths": [
+     "skills/pypi-package-inspector/SKILL.md",
+     "skills/python-library-reference-builder/SKILL.md",
+     "skills/python-package-api-surface-mapper/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://routerbase.com",
+    "paths": [
+     "skills/routerbase-api-integration/SKILL.md",
+     "skills/routerbase-media-generation/SKILL.md",
+     "skills/routerbase-model-routing/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://schema.org",
+    "paths": [
+     "skills/schema-markup-generator-seo/SKILL.md",
+     "skills/schema-org-markup-generator-agent/SKILL.md",
+     "skills/schema-org-structured-data-injector/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://datatracker.ietf.org/doc/html/rfc3501",
+    "paths": [
+     "skills/imap-email-classifier-ml/SKILL.md",
+     "skills/imap-inbox-triage-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developer.adobe.com/firefly-services/docs/photoshop",
+    "paths": [
+     "skills/adobe-photoshop-api-batch-processor/SKILL.md",
+     "skills/photoshop-batch-action-automator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developer.mozilla.org",
+    "paths": [
+     "skills/mdn-web-api-reference-fetcher/SKILL.md",
+     "skills/mdn-web-docs-fetcher/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developer.wordpress.org/block-editor",
+    "paths": [
+     "skills/gutenberg-block-scaffolder-agent/SKILL.md",
+     "skills/wordpress-block-theme-scaffolder/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developers.deepgram.com",
+    "paths": [
+     "skills/deepgram-nova-stt-pipeline/SKILL.md",
+     "skills/deepgram-podcast-chapter-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://developers.google.com/webmaster-tools/v1/searchanalytics/query",
+    "paths": [
+     "skills/content-cannibalization-detector/SKILL.md",
+     "skills/gsc-performance-analyzer-skill/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.aws.amazon.com/amazoncloudwatch/latest/monitoring/cloudwatch_anomaly_detection.html",
+    "paths": [
+     "skills/cloudwatch-anomaly-detector/SKILL.md",
+     "skills/cloudwatch-intelligent-alarms/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.aws.amazon.com/awscloudformation/latest/userguide/using-cfn-stack-drift.html",
+    "paths": [
+     "skills/aws-cloudformation-drift-detector-4/SKILL.md",
+     "skills/aws-cloudformation-stack-diagnostics/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.docker.com",
+    "paths": [
+     "skills/makefile-workflow-generator/SKILL.md",
+     "skills/sbom-vulnerability-scanner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.midjourney.com/hc/en-us/categories/32013335627533-documentation",
+    "paths": [
+     "skills/midjourney-prompt-chain-builder/SKILL.md",
+     "skills/midjourney-prompt-optimizer-skill/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities",
+    "paths": [
+     "skills/npm-dependency-audit-scanner/SKILL.md",
+     "skills/npm-package-audit-analyzer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://git-scm.com/docs/git-bisect",
+    "paths": [
+     "skills/git-bisect-automation-agent/SKILL.md",
+     "skills/git-bisect-automator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/airbytehq/airbyte",
+    "paths": [
+     "skills/airbyte-connector-config-generator/SKILL.md",
+     "skills/airbyte-open-source-data-integration-platform/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/ajv-validator/ajv",
+    "paths": [
+     "skills/csv-schema-validator-auto-fixer/SKILL.md",
+     "skills/rest-api-response-schema-validator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/anchore/syft",
+    "paths": [
+     "skills/sbom-generator-cve-matcher/SKILL.md",
+     "skills/syft-sbom-generator-containers-filesystems/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
+    "paths": [
+     "skills/draft-internal-status-updates-and-incident-comms-2/SKILL.md",
+     "skills/draft-internal-status-updates-and-incident-comms/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/apache/avro",
+    "paths": [
+     "skills/apache-avro-schema-evolution-agent/SKILL.md",
+     "skills/json-to-avro-schema-transformer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/apache/spark",
+    "paths": [
+     "skills/apache-spark-job-manager/SKILL.md",
+     "skills/spark-dataframe-etl-pipeline/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/appwrite/appwrite",
+    "paths": [
+     "skills/appwrite-open-source-backend-as-a-service-platform/SKILL.md",
+     "skills/appwrite-open-source-backend-platform/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/aquasecurity/kube-bench",
+    "paths": [
+     "skills/benchmark-kubernetes-clusters-against-cis-controls-with-kube-bench/SKILL.md",
+     "skills/check-kubernetes-hosts-against-cis-guidance-with-kube-bench-before-audit-or-hardening-work/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/aquasecurity/kube-hunter",
+    "paths": [
+     "skills/probe-kubernetes-clusters-for-exposed-attack-paths-with-kube-hunter/SKILL.md",
+     "skills/probe-kubernetes-clusters-with-kube-hunter-for-exposed-services-and-misconfigurations/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/ashbrener/openclaw-workspace-sync",
+    "paths": [
+     "skills/mirror-and-back-up-openclaw-workspaces-to-your-own-storage-with-openclaw-workspace-sync/SKILL.md",
+     "skills/mirror-openclaw-workspaces-and-stream-encrypted-backups-with-openclaw-workspace-sync/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/backstage/backstage",
+    "paths": [
+     "skills/backstage-software-catalog-sync/SKILL.md",
+     "skills/backstage-software-template-composer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/biomejs/biome",
+    "paths": [
+     "skills/biome-high-performance-javascript-typescript-formatter-linter/SKILL.md",
+     "skills/biome-lint-migration-toolkit/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/bridgecrewio/checkov",
+    "paths": [
+     "skills/checkov-iac-scanner/SKILL.md",
+     "skills/checkov-infrastructure-policy-scanner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/browserbase/mcp-server-browserbase",
+    "paths": [
+     "skills/bright-data-web-mcp-live-web-access-scraping-tools/SKILL.md",
+     "skills/browserbase-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/bufbuild/buf",
+    "paths": [
+     "skills/buf-protobuf-linter/SKILL.md",
+     "skills/protobuf-schema-registry-manager/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/checkly/checkly-cli",
+    "paths": [
+     "skills/checkly-browser-check-failure-notifier/SKILL.md",
+     "skills/checkly-cli-monitoring-as-code-for-api-and-browser-checks/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/cloudflare/workers-sdk",
+    "paths": [
+     "skills/cloudflare-workers-deployer/SKILL.md",
+     "skills/wrangler-cloudflare-workers-cli-edge-deployment/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/comfy-org/comfyui",
+    "paths": [
+     "skills/comfyui-workflow-executor/SKILL.md",
+     "skills/stable-diffusion-comfyui-workflow-runner-2/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/crystaldba/postgres-mcp",
+    "paths": [
+     "skills/postgres-mcp-pro-database-analysis-tuning/SKILL.md",
+     "skills/postgres-mcp-pro/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/dathere/qsv",
+    "paths": [
+     "skills/profile-and-clean-large-csv-datasets-from-the-terminal-with-qsv/SKILL.md",
+     "skills/qsv-blazing-fast-csv-data-wrangling-toolkit/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/decaporg/decap-cms",
+    "paths": [
+     "skills/decap-cms-git-based-content-management-static-sites/SKILL.md",
+     "skills/decap-cms-git-based-content-management-system-for-static-sites/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/directus/directus",
+    "paths": [
+     "skills/directus-open-source-headless-cms-backend-platform/SKILL.md",
+     "skills/directus-sql-native-headless-cms-internal-app-platform/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/discordjs/discord.js",
+    "paths": [
+     "skills/discord-bot-manager/SKILL.md",
+     "skills/discord-moderation-ai-classification/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/formbricks/formbricks",
+    "paths": [
+     "skills/formbricks-open-source-survey-experience-management/SKILL.md",
+     "skills/formbricks-open-source-survey-platform/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/getsentry/sentry-mcp",
+    "paths": [
+     "skills/sentry-mcp-server-error-tracking-performance/SKILL.md",
+     "skills/sentry-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/getsops/sops",
+    "paths": [
+     "skills/sops-encrypted-secrets-editor-manager/SKILL.md",
+     "skills/sops-secret-file-encryption-rotation/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/ggml-org/whisper.cpp",
+    "paths": [
+     "skills/whisper-cpp-local-transcription-engine/SKILL.md",
+     "skills/whisper-cpp-speech-recognition-engine/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/githubnext/agentics/blob/main/docs/ci-doctor.md",
+    "paths": [
+     "skills/investigate-failing-github-actions-runs-with-ci-doctor-2/SKILL.md",
+     "skills/investigate-failing-github-actions-runs-with-ci-doctor/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/gptme/gptme",
+    "paths": [
+     "skills/gptme-terminal-ai-agent-with-local-tools/SKILL.md",
+     "skills/operate-a-persistent-local-terminal-agent-with-gptme/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/gptme/gptme-contrib",
+    "paths": [
+     "skills/pre-landing-review/SKILL.md",
+     "skills/progressive-disclosure/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/grafana/k6",
+    "paths": [
+     "skills/k6-load-testing-cli-javascript-performance-scenarios/SKILL.md",
+     "skills/k6-load-testing-performance-benchmarking-tool/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/grpc/grpc-node",
+    "paths": [
+     "skills/grpc-service-tool/SKILL.md",
+     "skills/protobuf-grpc-stub-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/hadolint/hadolint",
+    "paths": [
+     "skills/dockerfile-security-hardening-advisor/SKILL.md",
+     "skills/review-dockerfiles-for-risky-patterns-and-bad-defaults-with-hadolint/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/hubspot/hubspot-api-nodejs",
+    "paths": [
+     "skills/hubspot-crm-contact-enrichment-pipeline/SKILL.md",
+     "skills/hubspot-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/huggingface/transformers",
+    "paths": [
+     "skills/hugging-face-transformers-ml-library/SKILL.md",
+     "skills/huggingface-model-deployer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/infiniflow/ragflow",
+    "paths": [
+     "skills/build-document-grounded-agent-context-workflows-with-ragflow/SKILL.md",
+     "skills/use-ragflow-as-a-retrieval-and-context-layer-for-agent-workflows/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/jqlang/jq",
+    "paths": [
+     "skills/jq-json-stream-transformer/SKILL.md",
+     "skills/jq-pipeline-builder-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/jsdoc/jsdoc",
+    "paths": [
+     "skills/jsdoc-javascript-api-documentation-generator/SKILL.md",
+     "skills/jsdoc-type-definition-extractor/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/louislam/uptime-kuma",
+    "paths": [
+     "skills/uptime-kuma-self-hosted-uptime-monitoring-platform/SKILL.md",
+     "skills/uptime-kuma-status-sync/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/maildev/maildev",
+    "paths": [
+     "skills/maildev-smtp-capture-and-email-testing-server/SKILL.md",
+     "skills/maildev-smtp-testing-server-and-web-interface-for-development-email-workflows/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/mailgun/mailgun.js",
+    "paths": [
+     "skills/mailgun-javascript-sdk-email-delivery-and-domain-operations-2/SKILL.md",
+     "skills/mailgun-javascript-sdk-email-delivery-and-domain-operations/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/msitarzewski/agency-agents",
+    "paths": [
+     "skills/install-reusable-specialist-agent-roles-from-agency-agents/SKILL.md",
+     "skills/install-role-specific-agent-personas-with-agency-agents/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/nangohq/nango",
+    "paths": [
+     "skills/nango-integration-platform-sdk/SKILL.md",
+     "skills/nango-open-source-api-integration-platform/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/neondatabase/mcp-server-neon",
+    "paths": [
+     "skills/neon-mcp-server-serverless-postgres/SKILL.md",
+     "skills/neon-serverless-postgres-mcp/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/nextest-rs/nextest",
+    "paths": [
+     "skills/parallelize-and-retry-rust-test-runs-before-flaky-or-slow-suites-stall-ci-with-cargo-nextest/SKILL.md",
+     "skills/shard-retry-and-summarize-rust-test-runs-with-ci-friendly-artifacts-and-failure-isolation-using-cargo-nextest/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/open-policy-agent/conftest",
+    "paths": [
+     "skills/conftest-opa-config-policy-testing/SKILL.md",
+     "skills/conftest-policy-tester/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/open-policy-agent/opa",
+    "paths": [
+     "skills/opa-rego-policy-bundle-tester/SKILL.md",
+     "skills/open-policy-agent-opa/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/pallets/jinja",
+    "paths": [
+     "skills/jinja2-infrastructure-template-engine/SKILL.md",
+     "skills/jinja2-template-engine-agent/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/pantheon-security/medusa",
+    "paths": [
+     "skills/scan-agent-repos-for-repo-poisoning-unsafe-ai-config-files-and-mcp-attack-surfaces-with-medusa/SKILL.md",
+     "skills/scan-repositories-for-ai-supply-chain-and-agent-security-risks-with-medusa-security/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/penpot/penpot",
+    "paths": [
+     "skills/penpot-open-source-design-collaboration-platform/SKILL.md",
+     "skills/penpot-open-source-design-prototyping/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/plopjs/plop",
+    "paths": [
+     "skills/plopjs-code-generator-orchestrator/SKILL.md",
+     "skills/plopjs-code-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/projectdiscovery/nuclei",
+    "paths": [
+     "skills/nuclei-template-vulnerability-scanner/SKILL.md",
+     "skills/nuclei-vulnerability-template-runner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/pylint-dev/pylint",
+    "paths": [
+     "skills/pylint-baseline-manager-wave48/SKILL.md",
+     "skills/pylint-code-review-assistant/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/redis/redis",
+    "paths": [
+     "skills/redis-mcp-server/SKILL.md",
+     "skills/twitter-x-trend-monitor-thread-publisher/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/remotion-dev/remotion",
+    "paths": [
+     "skills/remotion-programmatic-video-creator/SKILL.md",
+     "skills/remotion-react-video-generation-rendering-framework/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/rhysd/actionlint",
+    "paths": [
+     "skills/lint-github-actions-workflows-before-ci-runs-with-actionlint/SKILL.md",
+     "skills/prevent-broken-github-actions-workflows-before-ci-runs-with-actionlint/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/run-llama/llama_index",
+    "paths": [
+     "skills/llamaindex-agent/SKILL.md",
+     "skills/llamaindex-mcp-server/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/snyk/agent-scan",
+    "paths": [
+     "skills/snyk-agent-scan-mcp-skill-security-scanner/SKILL.md",
+     "skills/snyk-agent-scan/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/splx-ai/agentic-radar",
+    "paths": [
+     "skills/scan-agent-workflows-for-tools-mcp-exposure-and-adversarial-risk-with-agentic-radar/SKILL.md",
+     "skills/scan-agentic-codebases-for-exposed-tools-mcp-usage-and-mapped-security-findings-with-agentic-radar/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/strapi/strapi",
+    "paths": [
+     "skills/strapi-headless-cms-rest-graphql/SKILL.md",
+     "skills/strapi-open-source-headless-cms-custom-content-apis/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/systran/faster-whisper",
+    "paths": [
+     "skills/faster-whisper-high-performance-speech-transcription-library/SKILL.md",
+     "skills/faster-whisper-high-performance-speech-transcription/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/tabulapdf/tabula-java",
+    "paths": [
+     "skills/tabula-pdf-table-extraction-agent/SKILL.md",
+     "skills/tabula-pdf-table-extractor/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/thedotmack/claude-mem",
+    "paths": [
+     "skills/preserve-agent-session-context-with-claude-mem/SKILL.md",
+     "skills/preserve-claude-code-session-memory-with-claude-mem/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/tox-dev/pipdeptree",
+    "paths": [
+     "skills/python-dependency-graph-resolver/SKILL.md",
+     "skills/python-package-dependency-graph-mapper/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/trufflesecurity/trufflehog",
+    "paths": [
+     "skills/git-secrets-precommit-scanner/SKILL.md",
+     "skills/trufflehog-credential-leak-scanner/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/typestrong/typedoc",
+    "paths": [
+     "skills/typedoc-symbol-resolver/SKILL.md",
+     "skills/typedoc-typescript-api-documentation-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/yoast/wordpress-seo",
+    "paths": [
+     "skills/yoast-seo-wordpress-optimization-toolkit/SKILL.md",
+     "skills/yoast-seo-wordpress-search-optimization-plugin/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://github.com/zizmorcore/zizmor",
+    "paths": [
+     "skills/audit-github-actions-for-privilege-and-supply-chain-risks-with-zizmor/SKILL.md",
+     "skills/audit-github-actions-workflows-for-insecure-permissions-and-unpinned-actions/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://opentelemetry.io",
+    "paths": [
+     "skills/opentelemetry-trace-aggregator/SKILL.md",
+     "skills/opentelemetry-trace-analyzer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://plaid.com/docs",
+    "paths": [
+     "skills/plaid-financial-data-aggregator/SKILL.md",
+     "skills/plaid-financial-data-connector/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://protobuf.dev",
+    "paths": [
+     "skills/protobuf-documentation-compiler/SKILL.md",
+     "skills/protobuf-documentation-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://surferseo.com",
+    "paths": [
+     "skills/surfer-seo-content-optimizer-integration/SKILL.md",
+     "skills/surfer-seo-content-optimizer/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://uptimerobot.com/api",
+    "paths": [
+     "skills/uptime-robot-multi-check-coordinator/SKILL.md",
+     "skills/uptime-robot-status-page-webhook-alerter/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://www.asyncapi.com",
+    "paths": [
+     "skills/asyncapi-event-catalog-builder/SKILL.md",
+     "skills/asyncapi-event-catalog-generator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://www.postgresql.org",
+    "paths": [
+     "skills/audio-fingerprint-identifier-agent/SKILL.md",
+     "skills/database-migration-validator/SKILL.md"
+    ]
+   },
+   {
+    "upstream_source": "https://www.screamingfrog.co.uk/seo-spider/user-guide",
+    "paths": [
+     "skills/internal-link-optimizer-seo/SKILL.md",
+     "skills/technical-seo-audit-crawler/SKILL.md"
+    ]
+   }
+  ]
+ },
+ "publisher_verification_labels": {
+  "counts": {
+   "security_reviewed": 2619,
+   "listed": 577
+  },
+  "status": "publisher assertions only; no package in this snapshot ships review evidence supporting security_reviewed"
+ },
+ "eligible_distinct_skill_denominator": null,
+ "denominator_note": "Structural upper bound for independent first-class package identities in this source is 3,199 (3,200 minus the template), minus 3 exact content duplicate exposures = 3,196 content-distinct paths. Whether catalog stubs/pointer cards count as eligible skills is a governance question; they remain individually reviewable and are not excluded here."
+}
