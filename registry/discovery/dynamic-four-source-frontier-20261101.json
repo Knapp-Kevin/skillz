@@ -77,7 +77,7 @@
       "direct_shape": 424,
       "other_shape": 221,
       "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
-      "terminal_static_candidate_reviews": 90,
+      "terminal_static_candidate_reviews": 645,
       "review_ledgers": [
         "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json",
         "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json",
@@ -89,17 +89,19 @@
         "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
         "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
         "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
-        "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+        "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+        "registry/discovery/j4flmao-agent-skills-555-current-standard-static-20261102.json"
       ],
       "other_shape_structurally_classified": 39,
       "other_shape_still_unclassified": 182,
       "nested_game_terminal_static_candidate_reviews": 23,
       "nested_game_multi_file_packages_pending": 0,
-      "direct_shape_terminal_static_candidate_reviews": 51,
+      "direct_shape_terminal_static_candidate_reviews": 406,
       "other_shape_terminal_static_candidate_reviews": 39,
-      "direct_shape_without_terminal_static_candidate_decision": 373,
+      "direct_shape_without_terminal_static_candidate_decision": 18,
       "hardware_acceleration_first_class_complete": "11/11",
-      "hardware_acceleration_review_ledger": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+      "hardware_acceleration_review_ledger": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+      "deferred_static_candidate_reviews": 0
     }
   ],
   "raw_skill_md_path_sum": 4813,
@@ -118,11 +120,11 @@
     "github_awesome_copilot": 432,
     "openai_plugins": 169,
     "agentskillexchange_skills": 3196,
-    "j4flmao_agent_skills": 90,
+    "j4flmao_agent_skills": 645,
     "not_deduplicated_or_governed_semantic_reviews": true,
     "scope_caveat": "Path-matched candidate static reviews are source vetting only; not governed semantic review, security, behavior or admission.",
-    "path_matched_across_four_sources": 4254,
-    "path_matched_note": "432 Awesome Copilot + 90 j4flmao + 3196 AgentSkillExchange + 536 OpenAI Plugins current-standard exact-path decisions; DEFER excluded; 41 historical OpenAI candidate-only matches separate.",
+    "path_matched_across_four_sources": 4809,
+    "path_matched_note": "432 Awesome Copilot + 645 j4flmao + 3196 AgentSkillExchange + 536 OpenAI Plugins current-standard exact-path decisions; DEFER excluded; 41 historical OpenAI candidate-only matches separate.",
     "openai_plugins_current_standard_exact_path": 536
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
