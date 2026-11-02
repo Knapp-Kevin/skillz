@@ -4299,5 +4299,37 @@
       "distinct_candidate_source_path_pins": 70,
       "governed_identity_links": 78
     }
+  },
+  "awesome_copilot_visual_cad_nine": {
+    "date": "2026-11-02",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "review_kind": "9 complete-package static candidate decisions; NOT governed verification",
+    "graded_ledger": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+    "macro_receipt": "docs/reviews/2026-11-02-awesome-copilot-visual-cad-nine-static.md",
+    "package_files_inspected": 34,
+    "reference_only": 2,
+    "rejected_unchanged": 7,
+    "awesome_copilot_exact_path_decisions_before": 69,
+    "awesome_copilot_exact_path_decisions_after": 78,
+    "awesome_copilot_raw_paths": 432,
+    "direct_shape_terminal": 61,
+    "direct_shape_undecided": 354,
+    "other_shape_terminal": 17,
+    "other_shape_undecided": 0,
+    "four_source_exact_path_decisions_before": 110,
+    "four_source_exact_path_decisions_after": 119,
+    "raw_four_source_paths": 4813,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "candidate_directory_recomputed": {
+      "subdomain_examples": 69,
+      "overview_previews": 77,
+      "distinct_candidate_source_path_pins": 79,
+      "governed_identity_links": 78
+    }
   }
 }

@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 110,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 119,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,12 +20,12 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 69,
-      "terminal_static_candidate_decisions": 69,
-      "direct_shape_path_decisions": 52,
+      "exact_path_fingerprints_checked": 78,
+      "terminal_static_candidate_decisions": 78,
+      "direct_shape_path_decisions": 61,
       "other_shape_path_decisions": 17,
-      "raw_paths_without_terminal_decision": 363,
-      "direct_shape_without_terminal_decision": 363,
+      "raw_paths_without_terminal_decision": 354,
+      "direct_shape_without_terminal_decision": 354,
       "other_shape_without_terminal_decision": 0,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
       "next_other_shape_path": null,
@@ -1182,18 +1182,108 @@
       "grade_20": 10,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/anti-ui-slop/SKILL.md",
+      "skill_blob": "63c9375fb01068f57d2a07f3e33be6e584cbed84",
+      "package_tree": "ec0d1544b2bc798a5fc74b9b9b197de2540f7f32",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/drawio/SKILL.md",
+      "skill_blob": "d3fe012ab2afd1cb3dfd852f8e0227ac0011782f",
+      "package_tree": "00d1a2392fc025320c9d4e535253496c584d1cf5",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/generate-image/SKILL.md",
+      "skill_blob": "21cd4d72561879ed94764849f1be7ee5ae7f2d81",
+      "package_tree": "573a9fc36086347076f51dab544abeec2beac01b",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/image-manipulation-image-magick/SKILL.md",
+      "skill_blob": "dfa17add1e816316cc0295fbd5f61ef9344bb5c4",
+      "package_tree": "9446ee862fb4013441e3275f969db3e2d3763872",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/penpot-uiux-design/SKILL.md",
+      "skill_blob": "b8f589e44af0169c002ea4fa56805354ca767ca2",
+      "package_tree": "cc4e1cf59e27f429306ac6fc6f66373e3b6b1277",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/premium-frontend-ui/SKILL.md",
+      "skill_blob": "35922e088cd4f02a4171ebd8534bbb3ec3f9101e",
+      "package_tree": "11ed1a3f37de027eaa81ed003541846491f6815c",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/rhino3d-scripts/SKILL.md",
+      "skill_blob": "59a0cb8361cd4681c9741fc6834f0ce2627b1565",
+      "package_tree": "9105cc5cc74ddbb03ec6f21b615bb5e8bafdf49a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ui-screenshots/SKILL.md",
+      "skill_blob": "2231e896ca24b24142e4ea3167cf51bc9286bf37",
+      "package_tree": "d6b2a6f01ef8ade82b305871225120156e7be1b6",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/web-design-reviewer/SKILL.md",
+      "skill_blob": "21764d37e99e24b2f4f0df3ea9fbbe099f0b739b",
+      "package_tree": "eded2bc5a7d38261501a76b2e4913b703cc547ec",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-02",
     "source_id": "github-awesome-copilot",
-    "source_candidate_decisions": "59 -> 69 / 432 raw paths",
-    "direct_candidate_decisions": "42 -> 52 / 415",
+    "source_candidate_decisions": "69 -> 78 / 432 raw paths",
+    "direct_candidate_decisions": "52 -> 61 / 415",
     "nested_candidate_decisions": "17 -> 17 / 17",
-    "four_source_exact_path_decisions": "100 -> 110 / 4813 raw paths",
+    "four_source_exact_path_decisions": "110 -> 119 / 4813 raw paths",
     "governed_records_added": 0,
     "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-02-awesome-copilot-testing-database-quality-ten-static.md"
+    "receipt": "docs/reviews/2026-11-02-awesome-copilot-visual-cad-nine-static.md"
   }
 }
