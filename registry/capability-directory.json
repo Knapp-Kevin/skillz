@@ -1204,20 +1204,6 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
-        },
-        {
-          "source_id": "github-awesome-copilot",
-          "canonical_path": "skills/memory-merger/SKILL.md",
-          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
-          "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
-          "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
-          "static_candidate_score": "12/20",
-          "candidate_disposition": "REJECT",
-          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
-          "security_scan": "not-run",
-          "behavioral_validation": "not-run",
-          "admitted_governed_record": false,
-          "unchanged_use_approved": false
         }
       ]
     },
@@ -8002,8 +7988,11 @@
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-01",
-    "records_in_directory": 15,
+    "subdomain_example_instances": 15,
+    "browse_overview_preview_instances": 15,
+    "distinct_source_path_pins": 17,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
-    "governed_identity_links_unchanged": 78
+    "governed_identity_links_unchanged": 78,
+    "note": "Source-vetted candidate examples and overview previews overlap and can be multi-domain; neither is governed review admission."
   }
 }
