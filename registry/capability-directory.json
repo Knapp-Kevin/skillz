@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 37,
+      "source_vetted_reference_count": 47,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -995,7 +995,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 12,
+      "source_vetted_reference_count": 13,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1755,7 +1755,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 4,
+      "source_vetted_reference_count": 5,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -1994,7 +1994,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Planning capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -2005,6 +2005,38 @@
           "static_candidate_score": "6/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/create-github-issues-feature-from-implementation-plan/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "e0d8662b1a44bae83df371f11382ff543cfa8b9d",
+          "package_tree": "e9c8ec75105420d2086d84b5d3c40fe721bd3622",
+          "capability": "Translate approved implementation phases into proposed issue breakdowns",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/create-technical-spike/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "bac8a01d6251010f639fbab6a15038a43afca047",
+          "package_tree": "65f850071712386064b40c0bddef0e06c922604d",
+          "capability": "Time-box a technical uncertainty with evidence and a decision receipt",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -2134,7 +2166,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Product capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 6,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -2174,6 +2206,38 @@
           "static_candidate_score": "11/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/create-github-issue-feature-from-specification/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "0a95a108d2c66e733d92b91547272aa84a04c0f7",
+          "package_tree": "200d493d9bf618fa2ce34e45f773f8ba03d820c4",
+          "capability": "Convert a supplied feature specification into one deduplicated proposed GitHub issue",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/create-github-issues-for-unmet-specification-requirements/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "54c469f3d571948b2896a61b1ccf532a94b49495",
+          "package_tree": "45404d3f8b658f8b6041ce33fb816564cb0358de",
+          "capability": "Map genuinely unmet requirements to proposed individual GitHub issues",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -2566,7 +2630,8 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Fiction / narrative / worldbuilding capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "technical-writing",
@@ -2594,7 +2659,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 5,
+      "source_vetted_reference_count": 7,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -2687,7 +2752,8 @@
       "coverage": "partial unassessed",
       "search_hint": "Music composition capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "audio-voice-sound",
@@ -2703,7 +2769,8 @@
       "coverage": "partial name-only leads",
       "search_hint": "Audio / voice / sound capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "video-film",
@@ -2727,7 +2794,8 @@
       "coverage": "partial evidence-linked",
       "search_hint": "Video / film capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "communication",
@@ -2795,7 +2863,8 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Communication capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "analytics",
@@ -3013,7 +3082,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Memory / context capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 4,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -3187,7 +3256,8 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Sales capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "career",
@@ -3256,7 +3326,8 @@
       "coverage": "partial name-only leads",
       "search_hint": "Education capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "science",
@@ -3269,7 +3340,8 @@
       "coverage": "partial unassessed",
       "search_hint": "Science capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "medicine",
@@ -3282,7 +3354,8 @@
       "coverage": "partial unassessed",
       "search_hint": "Medicine capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "law",
@@ -3299,7 +3372,8 @@
       "coverage": "partial name-only leads",
       "search_hint": "Law capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "finance",
@@ -3326,7 +3400,8 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Finance capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "robotics-iot",
@@ -3339,7 +3414,8 @@
       "coverage": "partial unassessed",
       "search_hint": "Robotics / IoT capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 0,
+      "source_vetted_reference_preview": []
     },
     {
       "domain": "ml-accelerators",
@@ -3529,9 +3605,11 @@
         {
           "id": "backend",
           "name": "backend",
-          "capabilities": [],
+          "capabilities": [
+            "Inspect C# async code for deadlocks, cancellation and return-type conventions"
+          ],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "coverage_status": "source-vetted-candidates-only",
           "search_hints": [
             "backend",
             "Software engineering backend"
@@ -3821,6 +3899,24 @@
               "static_candidate_score": "10/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/csharp-async/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "4dbe78b0b1d64272da25e1127830fcdbb31f9dc5",
+              "package_tree": "d4a1f9827d947b66c98581399424fd9510d1a8bf",
+              "capability": "Inspect C# async code for deadlocks, cancellation and return-type conventions",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
               "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
@@ -6345,7 +6441,8 @@
           "id": "project-scheduling",
           "name": "project scheduling",
           "capabilities": [
-            "Existing static-reviewed reference for project scheduling"
+            "Existing static-reviewed reference for project scheduling",
+            "Translate approved implementation phases into proposed issue breakdowns"
           ],
           "matched_skill_ids": [
             "addyosmani-agent-skills/planning-and-task-breakdown"
@@ -6368,6 +6465,24 @@
               "static_candidate_score": "6/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-github-issues-feature-from-implementation-plan/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "e0d8662b1a44bae83df371f11382ff543cfa8b9d",
+              "package_tree": "e9c8ec75105420d2086d84b5d3c40fe721bd3622",
+              "capability": "Translate approved implementation phases into proposed issue breakdowns",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -6410,7 +6525,8 @@
           "id": "decision-frameworks",
           "name": "decision frameworks",
           "capabilities": [
-            "Compare options, frame decisions, and record outcomes with explicit authority"
+            "Compare options, frame decisions, and record outcomes with explicit authority",
+            "Time-box a technical uncertainty with evidence and a decision receipt"
           ],
           "matched_skill_ids": [
             "local-skills/brief-writer",
@@ -6426,7 +6542,25 @@
             "david-ondrej-skills/next-decision"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-technical-spike/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "bac8a01d6251010f639fbab6a15038a43afca047",
+              "package_tree": "65f850071712386064b40c0bddef0e06c922604d",
+              "capability": "Time-box a technical uncertainty with evidence and a decision receipt",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "risk-planning",
@@ -6681,7 +6815,10 @@
           "id": "requirements",
           "name": "requirements",
           "capabilities": [
-            "Draft a problem-first product requirements document with non-goals and acceptance measures"
+            "Draft a problem-first product requirements document with non-goals and acceptance measures",
+            "Convert a supplied feature specification into one deduplicated proposed GitHub issue",
+            "Map genuinely unmet requirements to proposed individual GitHub issues",
+            "Draft structured AI-readable requirements and acceptance criteria"
           ],
           "matched_skill_ids": [
             "bm629-agent-skills/authoring-prd"
@@ -6723,6 +6860,56 @@
               "static_candidate_score": "13/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-specification/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "89d998c7af65ed9b7bd06548a9a0ecc969174cbb",
+              "package_tree": "a17da6122f4404016f5d94a10f3951f3671bd7da",
+              "capability": "Draft structured AI-readable requirements and acceptance criteria",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-github-issue-feature-from-specification/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "0a95a108d2c66e733d92b91547272aa84a04c0f7",
+              "package_tree": "200d493d9bf618fa2ce34e45f773f8ba03d820c4",
+              "capability": "Convert a supplied feature specification into one deduplicated proposed GitHub issue",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-github-issues-for-unmet-specification-requirements/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "54c469f3d571948b2896a61b1ccf532a94b49495",
+              "package_tree": "45404d3f8b658f8b6041ce33fb816564cb0358de",
+              "capability": "Map genuinely unmet requirements to proposed individual GitHub issues",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -7846,7 +8033,8 @@
           "id": "api-docs",
           "name": "API docs",
           "capabilities": [
-            "Author an API reference traceable to a supplied contract"
+            "Author an API reference traceable to a supplied contract",
+            "Review C# XML documentation completeness and formatting"
           ],
           "matched_skill_ids": [
             "bm629-agent-skills/authoring-api-reference"
@@ -7864,7 +8052,25 @@
             "bm629-agent-skills/reviewing-developer-guide"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 6
+          "name_only_review_hits_in_scope": 6,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/csharp-docs/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "6c673064bec2251911e563b05536f6e89cc5c0ca",
+              "package_tree": "11399c92c99088f48697c5e29cd39f594f8642c6",
+              "capability": "Review C# XML documentation completeness and formatting",
+              "static_candidate_score": "16/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "tutorials",
@@ -7907,9 +8113,11 @@
         {
           "id": "reference-manuals",
           "name": "reference manuals",
-          "capabilities": [],
+          "capabilities": [
+            "Create source-linked command reference examples without executing them"
+          ],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "coverage_status": "source-vetted-candidates-only",
           "search_hints": [
             "reference manuals",
             "Technical writing reference manuals"
@@ -7933,6 +8141,24 @@
               "static_candidate_score": "14/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-tldr-page/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "f9542ddc00f2132ef389d07f5287dfb01967c8dd",
+              "package_tree": "feacfdacc77e98fc56c606ebfdf1bb3c9a69e4d4",
+              "capability": "Create source-linked command reference examples without executing them",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -12486,13 +12712,14 @@
     "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
     "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
     "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
-    "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+    "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 143,
-    "browse_overview_preview_instances": 142,
-    "distinct_source_path_pins": 156,
+    "subdomain_example_instances": 171,
+    "browse_overview_preview_instances": 146,
+    "distinct_source_path_pins": 164,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted candidate scores are not governed semantic verification, security/behavioral validation or unchanged-use approval.",
@@ -12512,6 +12739,7 @@
     "latest_awesome_copilot_aws_azure_eight": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
     "latest_j4flmao_hardware_eleven": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
     "latest_awesome_copilot_developer_docs_eight": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
-    "accounting_reconciliation_20261102": "Recomputed from all source_vetted_candidate_examples, source_vetted_reference_records and browse_overview previews. Prior distinct_source_path_pins=145 understated actual 148 before this tranche; after eight new unique paths union=156. No governed review population change."
+    "accounting_reconciliation_20261102": "Recomputed from actual directory arrays: prior 143 subdomain examples was stale (163 actual); after eight new unique records: 171 instances, 146 previews, 164 distinct source/path/pin identities. Governed links remain 78.",
+    "latest_awesome_copilot_requirements_eight": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json"
   }
 }
