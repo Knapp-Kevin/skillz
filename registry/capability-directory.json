@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 34,
+      "source_vetted_reference_count": 37,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -614,6 +614,54 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/create-agentsmd/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "bdcfcf7c932f1d35028d209432db851034a24b21",
+          "package_tree": "290ab8ae85ba8695e9bceb674e74177e76f8633d",
+          "capability": "Draft evidence-grounded AGENTS.md guidance without unauthorized root writes",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/conventional-branch/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "7658a7d7c3e455156c79b6b9b1292e6b397d4ade",
+          "package_tree": "8609a0d58938270a0a82332d3141364480d2ee63",
+          "capability": "Validate conventional branch names separately from checkout or remote pull",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/commit-message-storyteller/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "21f0dd15cc7129469a4f02ab2a300dbdb9b3e5ae",
+          "package_tree": "7ca8cb588d4d3dd47214c774f98857e0c7acd950",
+          "capability": "Draft change-intent commit messages without inventing rationale or executing commits",
+          "static_candidate_score": "15/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -653,7 +701,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 14,
+      "source_vetted_reference_count": 15,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -862,6 +910,22 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/chrome-devtools/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "3e7a53f41dee505d2a4cd1a277436b249057295f",
+          "package_tree": "1425ccd89c83988f6bdbc9e801f81e9f1faf86ea",
+          "capability": "Inspect browser snapshots and network failures with explicit session and action scope",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -931,7 +995,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 11,
+      "source_vetted_reference_count": 12,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1096,6 +1160,22 @@
           "static_candidate_score": "12/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/ai-prompt-engineering-safety-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "86d8622d384e77056c4065cd616cb9285131d946",
+          "package_tree": "5479c057f0edef6e7956d1e3700ad28a6170f3e4",
+          "capability": "Compare prompt-injection, bias and privacy risks in a supplied prompt",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -2514,7 +2594,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 5,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -2556,6 +2636,38 @@
           "static_candidate_score": "7/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/convert-plaintext-to-md/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "c81b2e78a25dfdac342c73f47c95c8152b771add",
+          "package_tree": "1e13c30fa3b4a91234339acaeb7efd33d3b72a62",
+          "capability": "Preserve plaintext meaning while converting formatting to Markdown",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/create-architectural-decision-record/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "be10104faded844c01d0f5b1f82e8c9fca15ba20",
+          "package_tree": "b7a90ff5b56ab9cdc674cee2c415bee46cbbf394",
+          "capability": "Draft a proposed ADR with alternatives and consequences before authorized persistence",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -3109,7 +3221,25 @@
       "coverage": "partial evidence-linked",
       "search_hint": "Career capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/brag-sheet/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "250f4ac8ac04c3f6fa8ab4869ee3906aa1bdec99",
+          "package_tree": "1b49f3d6ca050ba2bbb99962b350057de981b8fa",
+          "capability": "Backfill evidence-backed engineering accomplishments without fabricated metrics",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "education",
@@ -4063,9 +4193,13 @@
         {
           "id": "developer-experience",
           "name": "developer experience",
-          "capabilities": [],
+          "capabilities": [
+            "Draft evidence-grounded AGENTS.md guidance without unauthorized root writes",
+            "Validate conventional branch names separately from checkout or remote pull",
+            "Draft change-intent commit messages without inventing rationale or executing commits"
+          ],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "coverage_status": "source-vetted-candidates-only",
           "search_hints": [
             "developer experience",
             "Software engineering developer experience"
@@ -4138,6 +4272,54 @@
               "static_candidate_score": "13/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-agentsmd/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "bdcfcf7c932f1d35028d209432db851034a24b21",
+              "package_tree": "290ab8ae85ba8695e9bceb674e74177e76f8633d",
+              "capability": "Draft evidence-grounded AGENTS.md guidance without unauthorized root writes",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/conventional-branch/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "7658a7d7c3e455156c79b6b9b1292e6b397d4ade",
+              "package_tree": "8609a0d58938270a0a82332d3141364480d2ee63",
+              "capability": "Validate conventional branch names separately from checkout or remote pull",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/commit-message-storyteller/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "21f0dd15cc7129469a4f02ab2a300dbdb9b3e5ae",
+              "package_tree": "7ca8cb588d4d3dd47214c774f98857e0c7acd950",
+              "capability": "Draft change-intent commit messages without inventing rationale or executing commits",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
               "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
@@ -4317,7 +4499,8 @@
           "id": "end-to-end",
           "name": "end-to-end",
           "capabilities": [
-            "Reference browser QA methods; unchanged skill rejected due unapproved setup and side effects"
+            "Reference browser QA methods; unchanged skill rejected due unapproved setup and side effects",
+            "Inspect browser snapshots and network failures with explicit session and action scope"
           ],
           "matched_skill_ids": [
             "addyosmani-agent-skills/browser-testing-with-devtools"
@@ -4360,6 +4543,22 @@
               "static_candidate_score": "8/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/chrome-devtools/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "3e7a53f41dee505d2a4cd1a277436b249057295f",
+              "package_tree": "1425ccd89c83988f6bdbc9e801f81e9f1faf86ea",
+              "capability": "Inspect browser snapshots and network failures with explicit session and action scope",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -4821,7 +5020,8 @@
           "name": "evaluation",
           "capabilities": [
             "Reference evaluation methods; default external LLM judge/trace egress not approved",
-            "Analyze failed agent sessions and propose falsifiable improvements"
+            "Analyze failed agent sessions and propose falsifiable improvements",
+            "Compare prompt-injection, bias and privacy risks in a supplied prompt"
           ],
           "matched_skill_ids": [
             "local-skills/agent-postmortem",
@@ -4864,6 +5064,22 @@
               "static_candidate_score": "9/20",
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/ai-prompt-engineering-safety-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "86d8622d384e77056c4065cd616cb9285131d946",
+              "package_tree": "5479c057f0edef6e7956d1e3700ad28a6170f3e4",
+              "capability": "Compare prompt-injection, bias and privacy risks in a supplied prompt",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
               "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
@@ -7727,9 +7943,11 @@
         {
           "id": "architecture-records",
           "name": "architecture records",
-          "capabilities": [],
+          "capabilities": [
+            "Draft a proposed ADR with alternatives and consequences before authorized persistence"
+          ],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "coverage_status": "source-vetted-candidates-only",
           "search_hints": [
             "architecture records",
             "Technical writing architecture records"
@@ -7759,6 +7977,22 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/create-architectural-decision-record/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "be10104faded844c01d0f5b1f82e8c9fca15ba20",
+              "package_tree": "b7a90ff5b56ab9cdc674cee2c415bee46cbbf394",
+              "capability": "Draft a proposed ADR with alternatives and consequences before authorized persistence",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -7783,9 +8017,11 @@
         {
           "id": "documentation-ia",
           "name": "documentation IA",
-          "capabilities": [],
+          "capabilities": [
+            "Preserve plaintext meaning while converting formatting to Markdown"
+          ],
           "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "coverage_status": "source-vetted-candidates-only",
           "search_hints": [
             "documentation IA",
             "Technical writing documentation IA"
@@ -7795,7 +8031,25 @@
             "cline-skills/mintlify"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/convert-plaintext-to-md/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "c81b2e78a25dfdac342c73f47c95c8152b771add",
+              "package_tree": "1e13c30fa3b4a91234339acaeb7efd33d3b72a62",
+              "capability": "Preserve plaintext meaning while converting formatting to Markdown",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "localization",
@@ -9234,7 +9488,8 @@
           "id": "professional-development",
           "name": "professional development",
           "capabilities": [
-            "Prepare a learning plan with measurable checkpoints"
+            "Prepare a learning plan with measurable checkpoints",
+            "Backfill evidence-backed engineering accomplishments without fabricated metrics"
           ],
           "matched_skill_ids": [
             "local-skills/learning-plan"
@@ -9246,7 +9501,25 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/brag-sheet/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "250f4ac8ac04c3f6fa8ab4869ee3906aa1bdec99",
+              "package_tree": "1b49f3d6ca050ba2bbb99962b350057de981b8fa",
+              "capability": "Backfill evidence-backed engineering accomplishments without fabricated metrics",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "networking",
@@ -12212,13 +12485,14 @@
     "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
     "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
     "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
-    "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+    "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 135,
-    "browse_overview_preview_instances": 134,
-    "distinct_source_path_pins": 145,
+    "subdomain_example_instances": 143,
+    "browse_overview_preview_instances": 142,
+    "distinct_source_path_pins": 156,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted candidate scores are not governed semantic verification, security/behavioral validation or unchanged-use approval.",
@@ -12236,6 +12510,8 @@
     "latest_j4flmao_deno_oak_two": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
     "latest_j4flmao_cloud_native_eight": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
     "latest_awesome_copilot_aws_azure_eight": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
-    "latest_j4flmao_hardware_eleven": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    "latest_j4flmao_hardware_eleven": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+    "latest_awesome_copilot_developer_docs_eight": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+    "accounting_reconciliation_20261102": "Recomputed from all source_vetted_candidate_examples, source_vetted_reference_records and browse_overview previews. Prior distinct_source_path_pins=145 understated actual 148 before this tranche; after eight new unique paths union=156. No governed review population change."
   }
 }
