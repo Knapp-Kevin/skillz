@@ -10,13 +10,14 @@
       "direct_shape": 415,
       "other_shape": 17,
       "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "terminal_static_candidate_reviews": 14,
+      "terminal_static_candidate_reviews": 24,
       "terminal_candidate_review_ledger_paths": [
         "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json",
-        "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
+        "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+        "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
       ],
-      "direct_shape_terminal_static_candidate_reviews": 14,
-      "direct_shape_without_terminal_static_candidate_decision": 401
+      "direct_shape_terminal_static_candidate_reviews": 24,
+      "direct_shape_without_terminal_static_candidate_decision": 391
     },
     {
       "source_id": "openai-plugins",
