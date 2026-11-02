@@ -1,0 +1,867 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "github-awesome-copilot",
+  "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+  "source_role": "dynamic-discovery",
+  "review_kind": "nine complete-package terminal source-vetting decisions; NOT governed verification",
+  "source_license_blob": "89bc5e962c9944cdb050887062afdaaf89be504a",
+  "source_denominator": {
+    "raw": 432,
+    "direct": 415,
+    "nested": 17
+  },
+  "rubric": {
+    "dimensions": [
+      "trigger_precision",
+      "procedural_clarity",
+      "authority_safety",
+      "failure_handling",
+      "evidence_discipline",
+      "dependency_coherence",
+      "portability_honesty",
+      "usefulness_differentiation",
+      "adversarial_resilience",
+      "effectiveness_design"
+    ],
+    "max_score": 20,
+    "score_values": [
+      0,
+      1,
+      2
+    ],
+    "static_only": true
+  },
+  "terminal_decisions": {
+    "count": 9,
+    "reference_only": 2,
+    "rejected_unchanged": 7,
+    "verified_governed": 0
+  },
+  "security_scans_executed": 0,
+  "behavioral_validations_executed": 0,
+  "admitted_source_denominator_delta": 0,
+  "governed_exact_version_review_pairs_created": 0,
+  "eligible_distinct_denominator": null,
+  "package_identity_method": "Nine exact Git package trees enumerated, eight single-file and one two-file package; 10/10 files inspected",
+  "macro_findings": [
+    "Host side-effect authorization fails for clipboard, Git, Python source/README, Linux remediation and policy/CI changes",
+    "Unpinned remote install and npx execution create supply-chain exposure",
+    "Arch and CentOS triage are near-template duplicates",
+    "ASP.NET typed API and Azure RBAC least-privilege advice retain reference value without unchanged-use approval",
+    "No cross-source semantic duplicate resolution or security/behavioral execution"
+  ],
+  "records": [
+    {
+      "name": "ai-ready",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/ai-ready/SKILL.md",
+      "skill_blob": "839ea891c66e98cf1ea4a15315c16c0d732c28ce",
+      "package_tree": "436c666e52961dfcb58cf29fd08f97239cfacee6",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/ai-ready/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 6,
+      "static_grade": "6/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/developer-experience"
+      ],
+      "purpose_and_use_case": "AI repository bootstrap wrapper",
+      "trigger_boundary": "Explicit user request for ai repository bootstrap wrapper",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Unpinned external skill install; review only first 20 lines",
+      "privacy_and_secret_risk": "External repo and PR history access not scoped",
+      "dependencies": "Mutable johnpapa/ai-ready; Copilot CLI",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Human-owned install recommendation, not exact-version qualification",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "Mutable johnpapa/ai-ready; Copilot CLI",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "arch-linux-triage",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/arch-linux-triage/SKILL.md",
+      "skill_blob": "80d0fced7501d393f38a094e4ccd022bbe460bd9",
+      "package_tree": "148fe897a1a9574e87a843ae85d8114b70f1693e",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/arch-linux-triage/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 8,
+      "static_grade": "8/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "purpose_and_use_case": "Arch troubleshooting checklist",
+      "trigger_boundary": "Explicit user request for arch troubleshooting checklist",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Copy-paste pacman/service remediation without action approval",
+      "privacy_and_secret_risk": "Journal and system logs may contain secrets/PII",
+      "dependencies": "Arch Linux, pacman, systemd, journalctl",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Verification and rollback sequencing",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "Arch Linux, pacman, systemd, journalctl",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "aspnet-minimal-api-openapi",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/aspnet-minimal-api-openapi/SKILL.md",
+      "skill_blob": "aae320d6e0acf08b9d5bb2ac9a283a6da63b0373",
+      "package_tree": "70227c6a2b5300d9c7c7e32c2d875c0cc5340663",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/aspnet-minimal-api-openapi/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 10,
+      "static_grade": "10/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": false,
+      "capability_paths": [
+        "software-engineering/apis"
+      ],
+      "purpose_and_use_case": "Typed API and schema design checklist",
+      "trigger_boundary": "Explicit user request for typed api and schema design checklist",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Code edits and deployment need explicit target and write authorization",
+      "privacy_and_secret_risk": "Auth metadata and internal schemas must be scoped",
+      "dependencies": ".NET 9 ASP.NET Core OpenAPI, TypedResults",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "MapGroup, DTOs, ProblemDetails and transformer ideas",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": ".NET 9 ASP.NET Core OpenAPI, TypedResults",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "boost-prompt",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/boost-prompt/SKILL.md",
+      "skill_blob": "f5cd27ff3808c9a2c95f403f36f469b451fca186",
+      "package_tree": "1e4715a4a395114392922cfa31d55c6b6e0b3736",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/boost-prompt/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 7,
+      "static_grade": "7/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "time-productivity/task-systems"
+      ],
+      "purpose_and_use_case": "Interactive prompt clarification",
+      "trigger_boundary": "Explicit user request for interactive prompt clarification",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Unconditional clipboard write and project exploration",
+      "privacy_and_secret_risk": "Clipboard and project exploration can expose private text",
+      "dependencies": "Joyride extension, VS Code Clojure clipboard API",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Constraints, deliverables and success-criteria questions",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "productivity"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "Joyride extension, VS Code Clojure clipboard API",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "centos-linux-triage",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/centos-linux-triage/SKILL.md",
+      "skill_blob": "22d79dab91fe245da1c477e21680992c50a2307f",
+      "package_tree": "2c49e5f067b98bc84978dd9aa6fa8518d34103e1",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/centos-linux-triage/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 8,
+      "static_grade": "8/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "purpose_and_use_case": "CentOS diagnostic checklist",
+      "trigger_boundary": "Explicit user request for centos diagnostic checklist",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Remediation commands without firewall/SELinux/package mutation gate",
+      "privacy_and_secret_risk": "System logs may expose host and user data",
+      "dependencies": "CentOS Stream/legacy, dnf/yum, systemd, firewalld, SELinux",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Stream/legacy and SELinux-aware diagnostics",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "CentOS Stream/legacy, dnf/yum, systemd, firewalld, SELinux",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "comment-code-generate-a-tutorial",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/comment-code-generate-a-tutorial/SKILL.md",
+      "skill_blob": "6ba8f399ad090cf7e75b9abac1e9c01f1b969cc3",
+      "package_tree": "630c21880072799dd9c79144710e081f17746761",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/comment-code-generate-a-tutorial/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 7,
+      "static_grade": "7/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "technical-writing/tutorials"
+      ],
+      "purpose_and_use_case": "Beginner-friendly Python tutorial generation",
+      "trigger_boundary": "Explicit user request for beginner-friendly python tutorial generation",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Automatically refactors Python and overwrites README without approval",
+      "privacy_and_secret_risk": "Source may include sensitive examples, no redaction",
+      "dependencies": "Python project and writable README",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Why/how, setup, usage and examples structure",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "documentation"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "Python project and writable README",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "conventional-commit",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/conventional-commit/SKILL.md",
+      "skill_blob": "38842177531a0df6a277ce4ac5f9661acbc31a84",
+      "package_tree": "2dd6528ab4c12198e4805ea62739f7c51d0dd51d",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/conventional-commit/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 6,
+      "static_grade": "6/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/developer-experience"
+      ],
+      "purpose_and_use_case": "Conventional commit message template",
+      "trigger_boundary": "Explicit user request for conventional commit message template",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Explicit automatic git add and git commit without confirmation",
+      "privacy_and_secret_risk": "git diff may reveal secrets; no minimization",
+      "dependencies": "Git, Conventional Commits v1.0.0",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Type/scope/description/footer guidance",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "Git, Conventional Commits v1.0.0",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "azure-role-selector",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/azure-role-selector/SKILL.md",
+      "skill_blob": "8662d92426230ab87b74f7932f0f1291b81637c9",
+      "package_tree": "a640be3febf621401502b10e6cd7505e84c85dec",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/azure-role-selector/SKILL.md",
+        "skills/azure-role-selector/LICENSE.txt"
+      ],
+      "package_files_inspected": 2,
+      "source_license_scope": "Root GitHub MIT and package-local Microsoft MIT; preserve both notices",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 10,
+      "static_grade": "10/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": false,
+      "capability_paths": [
+        "security/identity-access"
+      ],
+      "purpose_and_use_case": "Least-privilege Azure RBAC selection",
+      "trigger_boundary": "Explicit user request for least-privilege azure rbac selection",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Role assignments require separate tenant/principal/scope approval; generation alone is not assignment authority",
+      "privacy_and_secret_risk": "Tenant, principal and access details sensitive",
+      "dependencies": "Azure MCP documentation, CLI generation, Bicep, package-local MIT LICENSE.txt",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Least-privilege matching and Bicep/CLI drafting",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "security"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 2,
+        "external_tools": "Azure MCP documentation, CLI generation, Bicep, package-local MIT LICENSE.txt",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "acreadiness-policy",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/acreadiness-policy/SKILL.md",
+      "skill_blob": "ba2476200d292552f1d859a9ba51da0b37b1c926",
+      "package_tree": "e1296935b00037512537ff5ae61523a188238539",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/acreadiness-policy/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned GitHub root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; external dependencies retain their own terms",
+      "review_method": "Entire pinned SKILL.md and all package-owned files inspected; exact tree enumerated; no execution or independent API validation",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 9,
+      "static_grade": "9/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "agent-mcp-development/evaluation"
+      ],
+      "purpose_and_use_case": "AgentRC readiness policy configuration",
+      "trigger_boundary": "Explicit user request for agentrc readiness policy configuration",
+      "nontrigger_boundary": "Repository discovery or read-only advice never authorizes persistent writes, installs, cloud changes or external data disclosure",
+      "authority_and_safety": "Unpinned npx -y github:microsoft/agentrc; policy/CI writes not authorized",
+      "privacy_and_secret_risk": "Private repository posture and policy data",
+      "dependencies": "Node/npm, AgentRC, policy JSON, reporter agent",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; external version/host behavior not independently validated",
+      "differentiation_and_overlap": "Conceptual prior art only; cross-source semantic duplicate resolution not performed",
+      "reusable_reference": "Separate disable from impact override; layered policies",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "agent-development"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root/package license controls; no vendoring, unchanged-use approval or installation authorization",
+      "dependency_characterization": {
+        "package_owned_files": 1,
+        "external_tools": "Node/npm, AgentRC, policy JSON, reporter agent",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    }
+  ]
+}
