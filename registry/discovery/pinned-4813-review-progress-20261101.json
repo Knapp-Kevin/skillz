@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 128,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 138,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -69,17 +69,18 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 41,
-      "terminal_static_candidate_decisions": 41,
-      "direct_shape_path_decisions": 18,
-      "other_shape_path_decisions": 23,
-      "raw_paths_without_terminal_decision": 604,
-      "direct_shape_without_terminal_decision": 406,
-      "other_shape_without_terminal_decision": 198,
-      "next_direct_shape_path": "skills/ai/agentic-workflows/SKILL.md",
-      "next_other_shape_path": ".claude/skills/commit/SKILL.md",
+      "exact_path_fingerprints_checked": 51,
+      "terminal_static_candidate_decisions": 51,
+      "direct_shape_path_decisions": 20,
+      "other_shape_path_decisions": 31,
+      "raw_paths_without_terminal_decision": 594,
+      "direct_shape_without_terminal_decision": 404,
+      "other_shape_without_terminal_decision": 190,
+      "next_direct_shape_path": "skills/ai/genai-vision/SKILL.md",
+      "next_other_shape_path": "skills/ai/llm-engineering/kv-cache/SKILL.md",
       "next_structurally_qualified_nested_game_path": null,
-      "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 198 other-shape paths remain structurally unclassified."
+      "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 190 other-shape paths outside the classified set remain structurally unclassified.",
+      "other_shape_structurally_classified": 31
     }
   ],
   "reviewed_path_decisions": [
@@ -1362,18 +1363,118 @@
       "grade_20": 9,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": ".claude/skills/commit/SKILL.md",
+      "skill_blob": "a11946281686e15da9d87d13051cdbfda891d62a",
+      "package_tree": "1bfd7c4af491794399d65547d7fe19f56da51165",
+      "shape": "other",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": ".claude/skills/deep-research/SKILL.md",
+      "skill_blob": "e30e4851825542ef30eb79bd6dbf7af45ce923ce",
+      "package_tree": "a4328d50983d923912331237474d0ce5542cb1a9",
+      "shape": "other",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": ".claude/skills/deploy/SKILL.md",
+      "skill_blob": "da4d9acc11b7ddc4b2a0fa98bc013fd6c7a9f0d5",
+      "package_tree": "de6f5fb37fffe59844e51e2ba263e18466217c3d",
+      "shape": "other",
+      "grade_20": 4,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": ".claude/skills/fix-issue/SKILL.md",
+      "skill_blob": "9cae1af936efc376f26eca43117b90a0e89721f8",
+      "package_tree": "70eca45ff8be3262a86dacac87ce956ba10a1d37",
+      "shape": "other",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/agentic-workflows/SKILL.md",
+      "skill_blob": "dc9f99b5c7c5507c5dd516179763da5c9d3c9e56",
+      "package_tree": "c22b270ec2524bb794a962186cc8807a54a6ebdf",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/SKILL.md",
+      "skill_blob": "adb7114e01e3f360734437eb200000f22881dd5c",
+      "package_tree": "a667c5659bd99971056130c1c37fd31d38d538c0",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/core-architectures/SKILL.md",
+      "skill_blob": "c83351e1ec01043d367e34be8f173b7a49fabc07",
+      "package_tree": "6f84dd6a70fc48e41b17df8b8382c67e003cd3f3",
+      "shape": "other",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/memory-systems/SKILL.md",
+      "skill_blob": "bcf1a672a4619204d04e90c5a69b19e192861a9e",
+      "package_tree": "486420ea608af4e2b3bdf545cf6a786d970ec188",
+      "shape": "other",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/multi-agent-topology/SKILL.md",
+      "skill_blob": "5599dd3de274d258c6676148c7c20b5b64920157",
+      "package_tree": "6d0b26b00bcce30a605c235f9663421b137a69d3",
+      "shape": "other",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/tool-calling-principles/SKILL.md",
+      "skill_blob": "94359797ac8571ccacb7ae761bd0e1fc5bb49043",
+      "package_tree": "7f255dc916fd2f9fe7a0208779f55dccb2c7b31f",
+      "shape": "other",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-02",
-    "source_id": "github-awesome-copilot",
-    "source_candidate_decisions": "69 -> 78 / 432 raw paths",
-    "direct_candidate_decisions": "52 -> 61 / 415",
-    "nested_candidate_decisions": "17 -> 17 / 17",
-    "four_source_exact_path_decisions": "110 -> 119 / 4813 raw paths",
+    "source_id": "j4flmao-agent-skills",
+    "source_candidate_decisions": "41 -> 51 / 645 raw paths",
+    "direct_candidate_decisions": "18 -> 20 / 424",
+    "other_candidate_decisions": "23 -> 31 / 221",
+    "four_source_exact_path_decisions": "128 -> 138 / 4813 raw paths",
     "governed_records_added": 0,
     "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-02-awesome-copilot-visual-cad-nine-static.md"
+    "receipt": "docs/reviews/2026-11-02-j4flmao-agent-architecture-ten-static.md"
   }
 }
