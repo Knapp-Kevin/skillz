@@ -4560,7 +4560,8 @@
       "openai_plugins": {
         "raw": 536,
         "path_matched_terminal": 0,
-        "plugin_family_candidate_decisions_separate": 169
+        "plugin_family_candidate_decisions_separate": 169,
+        "historical_candidate_only_exact_tree_matches": 41
       },
       "agentskillexchange_skills": {
         "raw": 3200,
@@ -4588,7 +4589,12 @@
     "new_behavioral_validations": 0,
     "caution": "Raw path decisions and source-vetting grades are NOT distinct eligible skill review completion or unchanged-use approval.",
     "capability_directory_subdomain_examples": 179,
-    "capability_directory_distinct_source_vetted_candidates": 172
+    "capability_directory_distinct_source_vetted_candidates": 172,
+    "historical_candidate_only_openai_exact_blob_tree_matches": 41,
+    "raw_paths_with_any_exact_path_candidate_decision_evidence": 250,
+    "raw_paths_without_any_exact_path_candidate_decision_evidence": 4563,
+    "current_standard_ten_dimension_path_decisions": 209,
+    "historical_candidate_crosswalk": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
   },
   "awesome_copilot_developer_workflows_eight_static_20261102": {
     "date": "2026-11-02",
@@ -4645,5 +4651,18 @@
     "behavioral_validation": "not-run",
     "review_evidence": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json",
     "macro_review": "docs/reviews/2026-11-02-awesome-copilot-test-framework-eight-static.md"
+  },
+  "openai_plugins_historical_exact_tree_candidate_reconciliation": {
+    "date": "2026-11-02",
+    "source_id": "openai-plugins",
+    "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "exact_blob_tree_candidate_only": 41,
+    "blob_only_tree_mismatch": 9,
+    "family_only_without_exact_record": 119,
+    "ledger": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
+    "review": "docs/reviews/2026-11-02-openai-plugins-41-identity-crosswalk.md",
+    "current_standard_new_reviews": 0,
+    "governed_review_delta": 0,
+    "security_and_behavioral": "not-run"
   }
 }

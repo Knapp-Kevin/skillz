@@ -40,9 +40,16 @@
       "manifest_index": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
       "exact_path_fingerprints_checked": 0,
       "terminal_static_candidate_decisions": null,
-      "path_reconciliation": "NOT RUN; do not subtract source-family review counts until individual path/blob matches established",
+      "path_reconciliation": "PARTIAL: 41 existing historical candidate-only exact blob/tree matches; NOT current-standard reviewed or governed; 9 tree mismatches held",
       "source_family_candidate_decisions_reported": 169,
-      "remaining_eligible_paths": "unknown until package boundary, licensing and path matching completed"
+      "remaining_eligible_paths": "unknown until package boundary, licensing and path matching completed",
+      "historical_candidate_only_exact_blob_tree_matches": 41,
+      "historical_candidate_only_evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
+      "historical_blob_only_tree_mismatches_blocked": 9,
+      "historical_family_decisions_lacking_exact_record_in_index": 119,
+      "raw_paths_without_any_exact_path_decision_evidence": 495,
+      "current_standard_ten_dimension_path_decisions": 0,
+      "raw_paths_without_current_standard_ten_dimension_review": 536
     },
     {
       "source_id": "agentskillexchange-skills",
@@ -2235,5 +2242,341 @@
     "governed_review_delta": 0,
     "security_scan": "not-run",
     "behavioral_validation": "not-run"
-  }
+  },
+  "historical_candidate_only_exact_package_matches": 41,
+  "historical_candidate_only_exact_package_ledger": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
+  "all_exact_path_candidate_decision_evidence_matches": 250,
+  "raw_paths_without_any_exact_path_candidate_decision_evidence": 4563,
+  "current_standard_ten_dimension_path_decisions": 209,
+  "raw_paths_without_current_standard_ten_dimension_decision": 4604,
+  "openai_plugins_historical_candidate_only_exact_package_matches": [
+    {
+      "path": "plugins/adobe/skills/adobe-batch-edit-photos/SKILL.md",
+      "skill_blob": "78cf17f3158b120fae967b8fd248cd227ec14a6e",
+      "package_tree": "bba54e73e105a96555a7ad8ba207b5e6252ffe6d",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/adobe/skills/adobe-create-mockups/SKILL.md",
+      "skill_blob": "2459e742e4e7e0c34140035f14b8d17dda9ad98c",
+      "package_tree": "ee836ce313ba56f96118c9400b07c75486be75d9",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/adobe/skills/adobe-create-social-variations/SKILL.md",
+      "skill_blob": "78bc3459ce3206953c8daf5b164c26aa3c6cee62",
+      "package_tree": "e7ec119917ed8d97e9a86925600fbd9614dd54af",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/adobe/skills/adobe-design-from-template/SKILL.md",
+      "skill_blob": "cc52d936ba8330028f813f8a3368aa3b79a8d94a",
+      "package_tree": "5c99ff1f508663bf25d7f5f6f3f15c70be3ea9b9",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/adobe/skills/adobe-edit-quick-cut/SKILL.md",
+      "skill_blob": "f71032608c218b6c06b6ed10bcff5b2ef3adf61c",
+      "package_tree": "a6c89e59a76805a6fcd321ef5fc3b74dea51cb13",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/adobe/skills/adobe-retouch-portraits/SKILL.md",
+      "skill_blob": "dfd980e857549db804f34a98930367d592b2206c",
+      "package_tree": "08f578416aa375dde38266717328bb8c6b28233c",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/airtable/skills/airtable-cli/SKILL.md",
+      "skill_blob": "18c640ed84b8ad18334d4d3770bb867017af38cf",
+      "package_tree": "7559233a461bf4e234cb295fbb23590a83028880",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 12,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/airtable/skills/airtable-filters/SKILL.md",
+      "skill_blob": "cbd085dd84e5167d5600fbf4cbcd1bc68fd6f131",
+      "package_tree": "fb9b40bce3d37fd27eb34bba2a6d3b3c7bce91e7",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/airtable/skills/airtable-overview/SKILL.md",
+      "skill_blob": "c8e70d1ef23338c7eb77faf3a52b4b920b05e377",
+      "package_tree": "932e1854ca5e1439bb8b39524db19fc05223f01c",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/google-drive/skills/google-docs/SKILL.md",
+      "skill_blob": "32095d7ebf5fbdc9787b7b50c357c381f4537fe0",
+      "package_tree": "cc80605d8d4a9dd1ba87e7998f8b18224954782e",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/google-drive/skills/google-drive-comments/SKILL.md",
+      "skill_blob": "f4124a337f276bd1b23213f91bdf3994f27f25d7",
+      "package_tree": "de6d7d556dd5493d1c3c8642aa47ecc5d89a6f68",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/google-drive/skills/google-drive/SKILL.md",
+      "skill_blob": "418efac481d4bfb9dc770d170a7d499df4522bb5",
+      "package_tree": "fc0453cb068d6c4fb0601384e4bc56167b558a39",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 12,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/google-drive/skills/google-sheets/SKILL.md",
+      "skill_blob": "5f7f744a9b849c4f0028849b60505e7cf4094da9",
+      "package_tree": "d8d14972cbdb8b6b433fe6affd8f5b1ec4862fb1",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/google-drive/skills/google-slides/SKILL.md",
+      "skill_blob": "d576f9907487e092b99689b34603fb1a9b5eab03",
+      "package_tree": "38c10de3ad2157852a530b4cc8fef2a96823ddc9",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 11,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/dropbox/skills/clean-up-dropbox-content/SKILL.md",
+      "skill_blob": "d482f3231116b22890436b8b9d3572563e0ae9b7",
+      "package_tree": "7827bb319a79f8b4d22b820a1df6bd5955568410",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/dropbox/skills/collect-files-with-request/SKILL.md",
+      "skill_blob": "90cd5f61ded00b45e2b3fb14816ff7e14ebb0071",
+      "package_tree": "c96ccf61c1394b4a738c6ad08eacb2828d71d6a9",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/dropbox/skills/find-dropbox-content/SKILL.md",
+      "skill_blob": "3bbe938de1dd20749334bd537bff987fadb00687",
+      "package_tree": "8ff629d50b35b865212f3ca719e4c6c3e9f5049d",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/dropbox/skills/inspect-dropbox-file/SKILL.md",
+      "skill_blob": "912d12d57473dee919e312ad2f8870262848beb1",
+      "package_tree": "b1688c81825b4aa3cbd7620bd572a7a2d88a0568",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/dropbox/skills/organize-dropbox-folder/SKILL.md",
+      "skill_blob": "b43fcffc7c5fe1644d185352089032ac7b2ec204",
+      "package_tree": "86ceb9ca28d68347c0da3a1af269b2b7821a67e5",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/dropbox/skills/share-dropbox-content/SKILL.md",
+      "skill_blob": "e022bcf0f7174bed40aa8a7742404e595c1728d4",
+      "package_tree": "140482b4ec9d2b2d8f1af02212dc24c76441485d",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-best-practices/SKILL.md",
+      "skill_blob": "0d093a80d867e19d28610d7b034d4af1a792d2f5",
+      "package_tree": "4f8485e1097a958bba78bb8b96b1f71dc3adfe0e",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-captions/SKILL.md",
+      "skill_blob": "df7ea375d7dc1397a1ed800b5689ec373d1a2f71",
+      "package_tree": "be2438c713fbc52ae869dcdba906f61ace534305",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-create/SKILL.md",
+      "skill_blob": "e95a4013be13d436fca8d633c003be0eae12c849",
+      "package_tree": "d27da40f6ec1e8ac84332b01113e88e4e970fd9f",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 11,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-docs/SKILL.md",
+      "skill_blob": "d3667edbe5c9f8aedfcec06fd1ce57a2b3f3b1fb",
+      "package_tree": "09dd2846c77e6f962cf08468e489acf4fc80569d",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-interactivity/SKILL.md",
+      "skill_blob": "691c0a59625fe5f35f4df6d0991b590713242d25",
+      "package_tree": "83ce0a66ae7170d2e7edb017b4a3b35b231e85cf",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 18,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-maps/SKILL.md",
+      "skill_blob": "373333b670cb177bb2d30cb6bda85ebafc20aeec",
+      "package_tree": "a77c779e020e04a33c2f6ca753ef31e305a144d4",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-markup/SKILL.md",
+      "skill_blob": "5f41e49da564654c5a62ff37ff72e561348c4254",
+      "package_tree": "10a9e2f5f31bf016d9fa1efd87bf00244135123e",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 12,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-multimedia/SKILL.md",
+      "skill_blob": "70b76945af8bb0fb1e0691e3f0991879fc7c8e48",
+      "package_tree": "95e3471694f2962d595315225bcfe919a56acfba",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-render/SKILL.md",
+      "skill_blob": "3ec6a89cc4abc3e7b32a8354d6e877db673bc6a3",
+      "package_tree": "d7b3e231f4d2059af1b99cd544046ba97e74ad1a",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 15,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-saas/SKILL.md",
+      "skill_blob": "27f038ac309a9539eb4d4490bc32b31941a7e1b4",
+      "package_tree": "3b0c0f4f8642a520194d5c813729dcf839d6a1ca",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-studio/SKILL.md",
+      "skill_blob": "aad17ce3631c1c701fbdbaf8dad1da39b40a2019",
+      "package_tree": "e2785df7f2f087fb105f63e53c3965c943803228",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/remotion/skills/remotion-upgrade/SKILL.md",
+      "skill_blob": "82a75487e53c52e3b73c3d99b025080f566ce2f6",
+      "package_tree": "a2ba4f83e1c96a4ad187ce98e22873d258d0e149",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 12,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/accessibility-and-inclusive-visualization/SKILL.md",
+      "skill_blob": "6cef595762177aa3aa1364037a9d417da824ae6d",
+      "package_tree": "2850d9a4bc6d543164394a5d27eaeed1d9b2ac95",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 18,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/canvas2d-data-visualization/SKILL.md",
+      "skill_blob": "349a15611f2b87336249004d41def5096a6e9667",
+      "package_tree": "4adfe92e53d21b1cc06edd09357e96c3ce6c1555",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/d3-data-visualization/SKILL.md",
+      "skill_blob": "71d3f9ee2fe5954a5c7aaa985ac31f5847214d13",
+      "package_tree": "6367060ed53e92e3dd9fe0b0d3cd9addfb6a4aef",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/dashboards-and-real-time-visualization/SKILL.md",
+      "skill_blob": "6e2999c20b1503f35b46cdfb2d67d42c78baa7d6",
+      "package_tree": "99396c457b9eea8fe97f66dcd7a6108cd2b48eb5",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 14,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/data-visualization/SKILL.md",
+      "skill_blob": "c7fcf094f16ad8052825d370f3c6891f60c98a4e",
+      "package_tree": "632e4acaa7c066effddec6719d0b1166e772e3ac",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 16,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/gantt-chart-visualization/SKILL.md",
+      "skill_blob": "c6152f7fbec0d6575ff3f735f136874dc6352232",
+      "package_tree": "bdbc5c847df44c8893f6aa299138cea90003b447",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/geospatial-and-cartographic-visualization/SKILL.md",
+      "skill_blob": "51b926ba198cf89b4776a483de5534f596a4521e",
+      "package_tree": "420de6234f1d7b9fb180e6072303a392655577d9",
+      "historical_candidate_decision": "REJECT unchanged",
+      "score_20_historical": 13,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/grammar-of-graphics-and-declarative-visualization/SKILL.md",
+      "skill_blob": "cdb6fdb6aabde83e5efa5548480c2cf7bec3ab40",
+      "package_tree": "7577181e2eb76fdf89ebd1ebb264f810cf109cd9",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    },
+    {
+      "path": "plugins/build-web-data-visualization/skills/node-link-and-diagram-layout/SKILL.md",
+      "skill_blob": "d608506627659ad71286b992937aff39623775db",
+      "package_tree": "c5b4fff2200ca2ad9736f27cfac55919d6663724",
+      "historical_candidate_decision": "REFERENCE-ONLY",
+      "score_20_historical": 17,
+      "evidence_path": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json"
+    }
+  ]
 }

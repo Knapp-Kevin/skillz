@@ -12,6 +12,8 @@
 
 <sub>Badges reflect a **2026-11-02 repository snapshot**, not live counters or eligibility certificates. **209 of 4,813 raw paths** have terminal path-matched source-vetting decisions; this is not a distinct eligible-skill review percentage. The eligible denominator remains unknown. Governed reviews, raw paths and source-vetted candidates are different populations.</sub>
 
+**Identity reconciliation:** [41 additional historical candidate-only OpenAI Plugins decisions](registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json) now match exact pinned blobs **and** package trees; nine blob-only matches have conflicting package trees. These 41 are **not** new ten-dimension reviews or approved skills. Current-standard path reviews remain **209**; raw paths with any exact-path candidate decision evidence total **250**. No unique eligible-skill completion percentage is available.
+
 ## Find the capability, not the publisher
 
 | Goal | Start here | Result |
