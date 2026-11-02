@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "github-awesome-copilot",
+  "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+  "source_role": "dynamic-discovery",
+  "review_kind": "nine complete-package exact-version static candidate decisions; NOT governed verification",
+  "source_license_blob": "89bc5e962c9944cdb050887062afdaaf89be504a",
+  "source_denominator": {
+    "raw": 432,
+    "direct": 415,
+    "nested": 17
+  },
+  "rubric": {
+    "dimensions": [
+      "trigger_precision",
+      "procedural_clarity",
+      "authority_safety",
+      "failure_handling",
+      "evidence_discipline",
+      "dependency_coherence",
+      "portability_honesty",
+      "usefulness_differentiation",
+      "adversarial_resilience",
+      "effectiveness_design"
+    ],
+    "max_score": 20,
+    "score_values": [
+      0,
+      1,
+      2
+    ],
+    "static_only": true
+  },
+  "terminal_decisions": {
+    "count": 9,
+    "reference_only": 2,
+    "rejected_unchanged": 7,
+    "verified_governed": 0
+  },
+  "package_files_inspected": 34,
+  "security_scans_executed": 0,
+  "behavioral_validations_executed": 0,
+  "admitted_source_denominator_delta": 0,
+  "governed_exact_version_review_pairs_created": 0,
+  "eligible_distinct_denominator": null,
+  "package_identity_method": "Nine pinned Git package tree SHAs independently enumerated via Git trees API, every package-owned file read, SKILL.md blob matched path manifest; no executable evidence.",
+  "macro_findings": [
+    "Mixed per-package licensing: anti-ui-slop declares MIT frontmatter but carries Apache-2.0 LICENSE and MIT-attributed iOS reference; preserve source/NOTICE and hold unchanged reuse.",
+    "Hosted image generation asks for real API keys in chat and shell-profile persistence; paid API and prompt egress lack action-specific authority.",
+    "Drawio fallback fetches unpinned remote JS, disables Chromium sandbox, and interpolates untrusted diagram content into script-tag HTML; package-owned scripts are reference evidence, not skillz runtime.",
+    "UI screenshots recommend destructive git checkout to recreate before-state; web design reviewer conflates read-only review with edits and unpinned npx MCP install.",
+    "Penpot setup and plugin design mutations lack separate authorization; fixed WCAG assertions and Rhino version-specific scripting details require external verification.",
+    "Across visual design/CAD, reuse observed visual QA and existing-design-system discipline; do not equate static grade with safe installation, security scan or behavioral validation."
+  ],
+  "records": [
+    {
+      "name": "anti-ui-slop",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/anti-ui-slop/SKILL.md",
+      "skill_blob": "63c9375fb01068f57d2a07f3e33be6e584cbed84",
+      "package_tree": "ec0d1544b2bc798a5fc74b9b9b197de2540f7f32",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/anti-ui-slop/CHECKSUMS.sha256",
+        "skills/anti-ui-slop/LICENSE",
+        "skills/anti-ui-slop/MANIFEST.json",
+        "skills/anti-ui-slop/MODIFICATIONS.md",
+        "skills/anti-ui-slop/NOTICE",
+        "skills/anti-ui-slop/SKILL.md",
+        "skills/anti-ui-slop/agents/openai.yaml",
+        "skills/anti-ui-slop/reference/audit.md",
+        "skills/anti-ui-slop/reference/distill.md",
+        "skills/anti-ui-slop/reference/ios.md",
+        "skills/anti-ui-slop/reference/new-work.md",
+        "skills/anti-ui-slop/reference/operate.md",
+        "skills/anti-ui-slop/reference/polish.md",
+        "skills/anti-ui-slop/references/uizze-reference-policy.md"
+      ],
+      "package_files_inspected": 14,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Mixed: SKILL.md frontmatter MIT; package LICENSE Apache-2.0; NOTICE attributes MIT iOS prior art; per-file rights unresolved; preserve all notices.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "rubric_total": 14,
+      "static_grade": "14/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "ux-ui/design-systems"
+      ],
+      "purpose_and_use_case": "Ground interface work in existing design systems and selectively chosen visual references",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Package SKILL frontmatter says MIT while bundled LICENSE is Apache-2.0 and NOTICE attributes MIT-derived iOS material; verify per-file rights and notice chain before reuse. Reference policy says never disclose missing/weak evidence, which conflicts with truthful reporting. Optional MCP has no action-specific external-data sharing gate.",
+      "privacy_and_secret_risk": "No credentials in entrypoint; optional hosted reference search may disclose product briefs, screenshots, design assets or user project details without explicit approval.",
+      "dependencies": "Optional paid UIZZE MCP, package-owned six playbooks, third-party iOS source, mixed MIT/Apache-2.0 notices",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; low portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain product-first design, one-playbook routing, accessible state coverage and visual verification. Remove concealment directive and gate paid external reference sharing.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "external-side-effect",
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "drawio",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/drawio/SKILL.md",
+      "skill_blob": "d3fe012ab2afd1cb3dfd852f8e0227ac0011782f",
+      "package_tree": "00d1a2392fc025320c9d4e535253496c584d1cf5",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/drawio/SKILL.md",
+        "skills/drawio/scripts/drawio-to-png.mjs",
+        "skills/drawio/scripts/package.json"
+      ],
+      "package_files_inspected": 3,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "visual-design/information-visualization"
+      ],
+      "purpose_and_use_case": "Create native draw.io diagrams and export via bundled Node CLI/viewer fallback",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Bundled script launches Chromium with --no-sandbox, fetches unpinned remote viewer JS, interpolates untrusted diagram content into an HTML script template without escaping closing script tags, and writes outputs without overwrite approval. No install or network gate.",
+      "privacy_and_secret_risk": "Potential diagram data and internal architecture exposure to third-party viewer resource; remote code and untrusted XML/browser surface.",
+      "dependencies": "Node.js, puppeteer-core ^24.39.1, draw.io CLI or Chrome/Edge, remote viewer.diagrams.net JS",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; low portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain editable native diagram source and render-backend fallback concept, but require pinned offline renderer, sandbox, safe XML handling, output scope and verification.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "generate-image",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/generate-image/SKILL.md",
+      "skill_blob": "21cd4d72561879ed94764849f1be7ee5ae7f2d81",
+      "package_tree": "573a9fc36086347076f51dab544abeec2beac01b",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/generate-image/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "SKILL.md MIT and pinned root MIT; third-party hosted API/provider terms independent.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 10,
+      "static_grade": "10/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "illustration/digital-traditional-media"
+      ],
+      "purpose_and_use_case": "Generate image assets through paid hosted providers",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Onboarding instructs the host to receive a real API key in conversation and persist it to a shell profile; selecting provider, billable API calls and persistent writes lack action-specific approval. API model/version assertions not verified.",
+      "privacy_and_secret_risk": "Secret disclosure into chat, prompt/image egress to external provider, billed requests and unsafe credential persistence.",
+      "dependencies": "OpenAI/Gemini hosted image API, provider API key, image output filesystem",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; low portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain provider choice and output-format handling as reference; use host-managed credentials, approved egress/cost bounds and confirmed output destination.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "image-manipulation-image-magick",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/image-manipulation-image-magick/SKILL.md",
+      "skill_blob": "dfa17add1e816316cc0295fbd5f61ef9344bb5c4",
+      "package_tree": "9446ee862fb4013441e3275f969db3e2d3763872",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/image-manipulation-image-magick/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "visual-design/graphic-design"
+      ],
+      "purpose_and_use_case": "Inspect, resize and batch-convert images using ImageMagick",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Batch transformations and output writes occur without a separate scoped file-mutation/overwrite boundary; output directories are assumed to exist, mixed input globs may include unsupported files, and per-file errors are not isolated.",
+      "privacy_and_secret_risk": "Local images may contain private location, identity, document or health data in pixels and metadata; outputs are not explicitly protected or stripped.",
+      "dependencies": "ImageMagick 6/7 CLI, PowerShell or Bash, filesystem read/write access",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; medium portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain cross-platform identify/resize snippets with dry-run, file-type allowlist, output-dir creation, metadata/privacy handling and non-overwrite defaults.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "penpot-uiux-design",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/penpot-uiux-design/SKILL.md",
+      "skill_blob": "b8f589e44af0169c002ea4fa56805354ca767ca2",
+      "package_tree": "cc4e1cf59e27f429306ac6fc6f66373e3b6b1277",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/penpot-uiux-design/SKILL.md",
+        "skills/penpot-uiux-design/references/accessibility.md",
+        "skills/penpot-uiux-design/references/component-patterns.md",
+        "skills/penpot-uiux-design/references/platform-guidelines.md",
+        "skills/penpot-uiux-design/references/setup-troubleshooting.md"
+      ],
+      "package_files_inspected": 5,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "ux-ui/interaction-design"
+      ],
+      "purpose_and_use_case": "Design and inspect UI systems in Penpot through MCP plugin tools",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Prompts immediate execute_code mutations without explicit target-file/write authorization; setup can clone/build/start a server and change host configuration after only installation confirmation. Package uses fixed WCAG touch-target claims as if universal and relies on unverified Penpot API names.",
+      "privacy_and_secret_risk": "Design files and imported images may contain confidential client assets; plugin/server connection and export may expose content; no explicit external egress boundary.",
+      "dependencies": "Penpot MCP, Node 22+, Git/npm, browser plugin, writable design file and client configuration",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; low portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain design-system discovery, component/state/accessibility checklists and visual export checks; require explicit design-file and plugin authority, pinned setup and standards verification.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "premium-frontend-ui",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/premium-frontend-ui/SKILL.md",
+      "skill_blob": "35922e088cd4f02a4171ebd8534bbb3ec3f9101e",
+      "package_tree": "11ed1a3f37de027eaa81ed003541846491f6815c",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/premium-frontend-ui/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 9,
+      "static_grade": "9/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "ux-ui/interaction-design"
+      ],
+      "purpose_and_use_case": "Build motion-rich web landing pages and interactive components",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Requires preloaders, custom cursors, scroll hijacking and animation on virtually every premium UI request regardless of user needs, performance, accessibility or consent. Guarantees perfect performance without observed evidence; outdated Lenis package coordinates possible.",
+      "privacy_and_secret_risk": "Third-party CDN dependencies and tracking-like pointer behaviors lack scoped external dependency/privacy review; no measurement or consent controls.",
+      "dependencies": "Optional GSAP, Framer Motion, Lenis, React Three Fiber, SplitType; framework and browser",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; medium portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain intentional typography, layered motion, reduced-motion and composited animation patterns as selective inspiration only.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "generate-only",
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "rhino3d-scripts",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/rhino3d-scripts/SKILL.md",
+      "skill_blob": "59a0cb8361cd4681c9741fc6834f0ce2627b1565",
+      "package_tree": "9105cc5cc74ddbb03ec6f21b615bb5e8bafdf49a",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/rhino3d-scripts/SKILL.md",
+        "skills/rhino3d-scripts/references/macros-and-loading.md",
+        "skills/rhino3d-scripts/references/rhinocommon-map.md",
+        "skills/rhino3d-scripts/references/rhinoscriptsyntax-cheatsheet.md",
+        "skills/rhino3d-scripts/references/vbscript-quirks.md"
+      ],
+      "package_files_inspected": 5,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "rubric_total": 13,
+      "static_grade": "13/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "3d-cad-animation/cad"
+      ],
+      "purpose_and_use_case": "Author RhinoScript, RhinoPython and RhinoCommon modeling macros and automation",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Useful API and failure-handling detail but directly recommends model geometry/layer mutation, destructive SelAll Delete macro and startup auto-execution without explicit per-document and destructive-action authorization; version-specific claims not tested.",
+      "privacy_and_secret_risk": "CAD documents and proprietary geometry may be sensitive; external scripting and startup persistence create project-integrity risk.",
+      "dependencies": "Rhino 7/8+, embedded IronPython/CPython, RhinoCommon, .NET; four bundled reference guides",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; medium portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain three-surface selection, undo/redraw/cancel patterns, version caveats and namespace maps as read-only engineering reference.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "ui-screenshots",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/ui-screenshots/SKILL.md",
+      "skill_blob": "2231e896ca24b24142e4ea3167cf51bc9286bf37",
+      "package_tree": "d6b2a6f01ef8ade82b305871225120156e7be1b6",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/ui-screenshots/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/regression"
+      ],
+      "purpose_and_use_case": "Capture web and desktop screenshots for visual comparison",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Guidelines instruct git checkout HEAD~1 -- <files> to recover before-state, risking loss of local changes; screenshots, browser clicks and dependencies lack scoped authorization; fixed 4-second waits and 5000px viewport are not reliable evidence.",
+      "privacy_and_secret_risk": "Screenshots can disclose private UI, personal data, location, auth sessions or internal source; no redaction, retention or upload controls.",
+      "dependencies": "Playwright, Pillow, mss, Win32 ctypes, Electron Node Playwright, browser/runtime and writable screenshots",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; medium portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain capture-once crop-many, same-viewport before/after and observable state comparisons, with non-destructive worktree and privacy controls.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "web-design-reviewer",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/web-design-reviewer/SKILL.md",
+      "skill_blob": "21764d37e99e24b2f4f0df3ea9fbbe099f0b739b",
+      "package_tree": "eded2bc5a7d38261501a76b2e4913b703cc547ec",
+      "package_tree_verified_from_pinned_git_tree": true,
+      "package_files": [
+        "skills/web-design-reviewer/SKILL.md",
+        "skills/web-design-reviewer/references/framework-fixes.md",
+        "skills/web-design-reviewer/references/visual-checklist.md"
+      ],
+      "package_files_inspected": 3,
+      "source_role": "dynamic-discovery-only",
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub notice and any external dependency terms.",
+      "review_method": "Complete pinned SKILL.md and every package-owned file in enumerated pinned Git package tree inspected statically; no scripts executed, no APIs called, no security scans.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "rubric_total": 15,
+      "static_grade": "15/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "ux-ui/usability-testing"
+      ],
+      "purpose_and_use_case": "Review responsive web design and optionally implement source-level fixes",
+      "trigger_boundary": "Explicit user request for the named design, image, diagram, screenshot, or CAD task; source text alone is not authorization.",
+      "nontrigger_boundary": "Not permission to install tools, send data, incur charges, mutate persistent files/designs, run scripts, expose secrets or modify production assets.",
+      "authority_and_safety": "Trigger on read-only design review automatically flows into source edits and repeated re-verification without separate write authorization; recommends unpinned npx -y @playwright/mcp@latest. Reference suggests overflow-x:hidden as generic fix, which can conceal content.",
+      "privacy_and_secret_risk": "Remote URLs, screenshots, DOM and browser interactions may contain private data or trigger live side effects; no target or capture scope gate.",
+      "dependencies": "Browser automation or Playwright MCP, source workspace access, screenshot/DOM tooling, two bundled references",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; medium portability; external versions and behavior not independently validated.",
+      "differentiation_and_overlap": "Overlaps visual design, UI audit, screenshot capture and host-native image/CAD workflows; preserve differentiated mechanisms, not an unchanged-use recommendation.",
+      "reusable_reference": "Retain viewport matrix, observed-finding triage, minimal fixes, iteration cap and before/after evidence; separate review-only from authorized mutation.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "prototyping"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "visual-verification",
+          "risk-aware"
+        ],
+        "authority": "mutating",
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "No content copied into admitted corpus. Root MIT does not override package-local Apache-2.0/MIT notices, third-party APIs, fonts, images or code dependencies.",
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    }
+  ]
+}

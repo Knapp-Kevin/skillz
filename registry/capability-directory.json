@@ -349,7 +349,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 13,
+      "source_vetted_reference_count": 14,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -538,6 +538,22 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/ui-screenshots/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "2231e896ca24b24142e4ea3167cf51bc9286bf37",
+          "package_tree": "d6b2a6f01ef8ade82b305871225120156e7be1b6",
+          "capability": "Repeatable UI screenshot capture and cropping",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -1412,7 +1428,73 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "UX / UI capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 4,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/anti-ui-slop/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "63c9375fb01068f57d2a07f3e33be6e584cbed84",
+          "package_tree": "ec0d1544b2bc798a5fc74b9b9b197de2540f7f32",
+          "capability": "Use existing design system, one playbook and visual finish gate",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/penpot-uiux-design/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "b8f589e44af0169c002ea4fa56805354ca767ca2",
+          "package_tree": "cc4e1cf59e27f429306ac6fc6f66373e3b6b1277",
+          "capability": "Penpot design-system and component workflow",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/premium-frontend-ui/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "35922e088cd4f02a4171ebd8534bbb3ec3f9101e",
+          "package_tree": "11ed1a3f37de027eaa81ed003541846491f6815c",
+          "capability": "Motion-rich responsive frontend design patterns",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/web-design-reviewer/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "21764d37e99e24b2f4f0df3ea9fbbe099f0b739b",
+          "package_tree": "eded2bc5a7d38261501a76b2e4913b703cc547ec",
+          "capability": "Responsive design inspection and minimal fixes",
+          "static_candidate_score": "15/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "visual-design",
@@ -1440,7 +1522,41 @@
       "coverage": "partial name-only leads",
       "search_hint": "Visual design capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 2,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/drawio/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "d3fe012ab2afd1cb3dfd852f8e0227ac0011782f",
+          "package_tree": "00d1a2392fc025320c9d4e535253496c584d1cf5",
+          "capability": "Editable draw.io diagram export and rendering fallback",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/image-manipulation-image-magick/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "dfa17add1e816316cc0295fbd5f61ef9344bb5c4",
+          "package_tree": "9446ee862fb4013441e3275f969db3e2d3763872",
+          "capability": "Batch image resize and metadata inspection",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "illustration",
@@ -1457,7 +1573,25 @@
       "coverage": "partial name-only leads",
       "search_hint": "Illustration capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/generate-image/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "21cd4d72561879ed94764849f1be7ee5ae7f2d81",
+          "package_tree": "573a9fc36086347076f51dab544abeec2beac01b",
+          "capability": "Generate provider-hosted images with controlled credentials",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "3d-cad-animation",
@@ -1472,7 +1606,7 @@
       "coverage": "partial name-only leads",
       "search_hint": "3D / CAD / animation capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 4,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -1514,6 +1648,22 @@
           "static_candidate_score": "11/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/rhino3d-scripts/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "59a0cb8361cd4681c9741fc6834f0ce2627b1565",
+          "package_tree": "9105cc5cc74ddbb03ec6f21b615bb5e8bafdf49a",
+          "capability": "RhinoScript, RhinoPython and RhinoCommon scripting",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -3113,6 +3263,24 @@
               "static_candidate_score": "17/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/ui-screenshots/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "2231e896ca24b24142e4ea3167cf51bc9286bf37",
+              "package_tree": "d6b2a6f01ef8ade82b305871225120156e7be1b6",
+              "capability": "Repeatable UI screenshot capture and cropping",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -4769,7 +4937,41 @@
             "bm629-agent-skills/reviewing-user-flows"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/penpot-uiux-design/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "b8f589e44af0169c002ea4fa56805354ca767ca2",
+              "package_tree": "cc4e1cf59e27f429306ac6fc6f66373e3b6b1277",
+              "capability": "Penpot design-system and component workflow",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/premium-frontend-ui/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "35922e088cd4f02a4171ebd8534bbb3ec3f9101e",
+              "package_tree": "11ed1a3f37de027eaa81ed003541846491f6815c",
+              "capability": "Motion-rich responsive frontend design patterns",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "information-architecture",
@@ -4835,7 +5037,25 @@
             "addyosmani-agent-skills/browser-testing-with-devtools"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/web-design-reviewer/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "21764d37e99e24b2f4f0df3ea9fbbe099f0b739b",
+              "package_tree": "eded2bc5a7d38261501a76b2e4913b703cc547ec",
+              "capability": "Responsive design inspection and minimal fixes",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "design-systems",
@@ -4852,7 +5072,25 @@
             "bm629-agent-skills/reviewing-design-system"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/anti-ui-slop/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "63c9375fb01068f57d2a07f3e33be6e584cbed84",
+              "package_tree": "ec0d1544b2bc798a5fc74b9b9b197de2540f7f32",
+              "capability": "Use existing design system, one playbook and visual finish gate",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -4877,7 +5115,25 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/image-manipulation-image-magick/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "dfa17add1e816316cc0295fbd5f61ef9344bb5c4",
+              "package_tree": "9446ee862fb4013441e3275f969db3e2d3763872",
+              "capability": "Batch image resize and metadata inspection",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "typography",
@@ -4955,7 +5211,25 @@
             "anthropic-knowledge-work-plugins/data-visualization"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/drawio/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "d3fe012ab2afd1cb3dfd852f8e0227ac0011782f",
+              "package_tree": "00d1a2392fc025320c9d4e535253496c584d1cf5",
+              "capability": "Editable draw.io diagram export and rendering fallback",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "motion-graphics",
@@ -5069,7 +5343,25 @@
             "anthropic-skills/canvas-design"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/generate-image/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "21cd4d72561879ed94764849f1be7ee5ae7f2d81",
+              "package_tree": "573a9fc36086347076f51dab544abeec2beac01b",
+              "capability": "Generate provider-hosted images with controlled credentials",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -5146,7 +5438,25 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/rhino3d-scripts/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "59a0cb8361cd4681c9741fc6834f0ce2627b1565",
+              "package_tree": "9105cc5cc74ddbb03ec6f21b615bb5e8bafdf49a",
+              "capability": "RhinoScript, RhinoPython and RhinoCommon scripting",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "simulation",
@@ -9733,7 +10043,7 @@
   "grade_evidence_tranches": [
     "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
   ],
-  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review. The ten additional Qdrant routers/contributor candidates are source-vetted only, not governed verification; all linked children remain independently dispositioned. Ten additional cross-domain Awesome Copilot packages have source-vetting-only grades; none is governed, security-qualified or behaviorally validated.",
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review. The ten additional Qdrant routers/contributor candidates are source-vetted only, not governed verification; all linked children remain independently dispositioned. Ten additional cross-domain Awesome Copilot packages have source-vetting-only grades; none is governed, security-qualified or behaviorally validated. Nine visual/UI/CAD complete-package grades are candidate-only, with mixed rights and authority hard fails; none is approved for unchanged use.",
   "source_vetted_grade_tranches": [
     "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
     "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
@@ -9741,21 +10051,23 @@
     "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
     "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
-    "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+    "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 60,
-    "browse_overview_preview_instances": 68,
-    "distinct_source_path_pins": 70,
+    "subdomain_example_instances": 69,
+    "browse_overview_preview_instances": 77,
+    "distinct_source_path_pins": 79,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Candidate-only exact-tree grades including rejected/reference-only records; governed review links 78 unchanged. 10 testing/database-quality candidates newly mapped; no unchanged-use approvals.",
+    "note": "Candidate-only exact-tree grades including rejects/reference-only; governed 78 identity links unchanged. Nine visual/UI/CAD candidates added with explicit rights and authority hard-fail caveats.",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged.",
     "latest_awesome_copilot_qdrant_routers_contributor_ten": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
     "latest_awesome_copilot_cross_domain_ten": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
-    "latest_awesome_copilot_testing_quality_ten": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    "latest_awesome_copilot_testing_quality_ten": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+    "latest_awesome_copilot_visual_cad_nine": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
   }
 }
