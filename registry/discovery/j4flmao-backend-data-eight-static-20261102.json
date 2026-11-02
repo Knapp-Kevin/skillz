@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "review_kind": "8 complete pinned package static source-vetting decisions, not governed semantic verification",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "source_denominator": {
+    "raw": 645,
+    "direct": 424,
+    "other": 221
+  },
+  "macro": {
+    "before": 61,
+    "after": 69,
+    "direct_before": 23,
+    "direct_after": 31,
+    "other_before": 38,
+    "other_after": 38,
+    "source_raw_pending_before": 584,
+    "source_raw_pending_after": 576,
+    "four_source_terminal_before": 148,
+    "four_source_terminal_after": 156,
+    "reference_only": 2,
+    "reject_unchanged": 6,
+    "admissions": 0,
+    "governed_reviews_added": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null
+  },
+  "macro_findings": [
+    "Eight direct-shape first-class pinned packages: six single-SKILL trees, one two-file tree and one three-file tree; 11 package-owned files read including all bundled references.",
+    "Strong overlap between architecture/event-driven and backend/event-driven-architecture: distinct exact blobs and package trees, similar outbox/inbox patterns; do not treat as semantic duplicates without full comparative mapping.",
+    "Hard fails concentrate on durable cloud/warehouse scheduling, broker publication, private GraphQL reads, Redis PII caching, and collaborative document egress. Credentials in a secret backend or good architecture patterns are not authorization.",
+    "Database-internals bundled WAL note conflicts with the parent manifest on durability; source-package review must inspect bundled files, not only SKILL.md.",
+    "No source admission, governed verification pair, external security scan or representative behavioral validation; cross-source eligible denominator remains unknown."
+  ],
+  "records": [
+    {
+      "name": "architecture-crdts",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/architecture/crdts/SKILL.md",
+      "frontmatter_name": "architecture-crdts",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "29e1416019825d69d2a2bc9878d8ae9743f1a728",
+      "package_tree": "6cf4bc90f9781f6bef660bcc8639458308f71f06",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "29e1416019825d69d2a2bc9878d8ae9743f1a728"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "architecture",
+      "specific_capability": "Select CRDT merge types and local-first sync boundaries",
+      "trigger": "CRDT, local-first collaboration, Yjs, offline merge",
+      "nontrigger": "Single-writer authoritative data or offline caching without concurrent edits",
+      "dependencies": "Yjs, Automerge, Loro, optional WebSocket relay and IndexedDB",
+      "authority_and_side_effects": "The Yjs example persists documents in IndexedDB and sends document/presence data to a WebSocket endpoint without a scoped user/document egress or persistence authorization. Strong convergence and server-invariant warnings are useful extraction evidence.",
+      "privacy_and_egress": "Private collaborative documents and presence metadata; example remote sync and local durable storage require explicit user, room, destination, retention and revocation authority",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "score_20": 15,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "The Yjs example persists documents in IndexedDB and sends document/presence data to a WebSocket endpoint without a scoped user/document egress or persistence authorization. Strong convergence and server-invariant warnings are useful extraction evidence.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "architecture"
+        ],
+        "lifecycle": [
+          "design"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/crdts/SKILL.md"
+    },
+    {
+      "name": "architecture-micro-frontends",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/architecture/micro-frontends/SKILL.md",
+      "frontmatter_name": "architecture-micro-frontends",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "72f6ef086281b816d6fcbe25e7a5552541ee6036",
+      "package_tree": "64b2edf5d4ed8849f345cfbadc218564ea0c9249",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "72f6ef086281b816d6fcbe25e7a5552541ee6036"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "frontend",
+      "specific_capability": "Assess micro-frontend go/no-go, federation and rollback boundaries",
+      "trigger": "micro-frontends, module federation, independent UI deploys",
+      "nontrigger": "Design systems or bundler tuning without federation",
+      "dependencies": "webpack Module Federation, React, react-error-boundary, CDN-hosted remote bundles",
+      "authority_and_side_effects": "Strong organizational go/no-go and singleton/contract checklist, but executable remoteEntry from a CDN has no trust/integrity/version pin, deployment ownership approval, or production rollout authorization. Design prior art only.",
+      "privacy_and_egress": "Remote JavaScript execution and independent production deployment require origin integrity, release authorization and rollback ownership; events may carry user data",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 16,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "rationale": "Strong organizational go/no-go and singleton/contract checklist, but executable remoteEntry from a CDN has no trust/integrity/version pin, deployment ownership approval, or production rollout authorization. Design prior art only.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "architecture"
+        ],
+        "lifecycle": [
+          "design"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/micro-frontends/SKILL.md"
+    },
+    {
+      "name": "backend-caching-strategies",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/backend/caching-strategies/SKILL.md",
+      "frontmatter_name": "backend-caching-strategies",
+      "frontmatter_version": "1.1.0",
+      "skill_blob": "6062f4b4cdc0c52145714035effc24e97a650b14",
+      "package_tree": "b7c6c7857391be65e7760e5ae6dfcadf8fe59635",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "6062f4b4cdc0c52145714035effc24e97a650b14"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "backend",
+      "specific_capability": "Choose Redis cache-aside and invalidation/stampede safeguards",
+      "trigger": "cache-aside, write-behind, Redis stampede and invalidation",
+      "nontrigger": "CDN/browser cache or distributed-lock-only tasks",
+      "dependencies": "Redis, Go go-redis v9, x/sync/singleflight; optional Python redis and SQL",
+      "authority_and_side_effects": "The Go example writes a user's email into Redis without data-scope, tenant-isolation, encryption or retention approval; database updates and cache invalidation have no action-specific authority. The write-behind example explicitly has a double-count failure window. Preserve TTL jitter and singleflight patterns.",
+      "privacy_and_egress": "PII cached under predictable keys; Redis and database mutations, logging identifiers, and write-behind persistence require scoped authorization",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 0
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "The Go example writes a user's email into Redis without data-scope, tenant-isolation, encryption or retention approval; database updates and cache invalidation have no action-specific authority. The write-behind example explicitly has a double-count failure window. Preserve TTL jitter and singleflight patterns.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/caching-strategies/SKILL.md"
+    },
+    {
+      "name": "backend-event-driven-architecture",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/backend/event-driven-architecture/SKILL.md",
+      "frontmatter_name": "backend-event-driven-architecture",
+      "frontmatter_version": "1.1.0",
+      "skill_blob": "a8934c87173dc064fc810bc236bd5a6f2db5e110",
+      "package_tree": "2a199a4b2e06034196026fb15b6e91830828c52a",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "a8934c87173dc064fc810bc236bd5a6f2db5e110"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "backend",
+      "specific_capability": "Design Kafka event producer/consumer and idempotent delivery",
+      "trigger": "Kafka, RabbitMQ, at-least-once, consumer group, event ordering",
+      "nontrigger": "Event sourcing persistence or broker infrastructure operations",
+      "dependencies": "confluent-kafka-go v2, Kafka or RabbitMQ, SQL dedupe store",
+      "authority_and_side_effects": "Producer publishes customer IDs and monetary totals to a broker without destination/recipient/data authority; examples include SQL writes and operational DLQ replay without an action-specific approval gate. The consumer sample returns on first handler failure despite claiming retry/DLQ handoff. Keep envelope and dedupe guidance.",
+      "privacy_and_egress": "Customer IDs and payment totals in broker messages; publication, consumer effects, DLQ retention/replay and schema rollout need explicit scope",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 0
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Producer publishes customer IDs and monetary totals to a broker without destination/recipient/data authority; examples include SQL writes and operational DLQ replay without an action-specific approval gate. The consumer sample returns on first handler failure despite claiming retry/DLQ handoff. Keep envelope and dedupe guidance.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "architecture"
+        ],
+        "lifecycle": [
+          "design"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/event-driven-architecture/SKILL.md"
+    },
+    {
+      "name": "backend-graphql-optimization",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/backend/graphql-optimization/SKILL.md",
+      "frontmatter_name": "backend-graphql-optimization",
+      "frontmatter_version": "1.1.0",
+      "skill_blob": "209658f8033b7eeaa8583d3d3fa6ac3ab97cadde",
+      "package_tree": "df6498a7f3f43d053738df0362eed5daed27a6c9",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "209658f8033b7eeaa8583d3d3fa6ac3ab97cadde"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "apis",
+      "specific_capability": "Diagnose GraphQL N+1 with per-request DataLoader and query limits",
+      "trigger": "GraphQL N+1, DataLoader, query complexity, persisted queries",
+      "nontrigger": "GraphQL schema design or client-side caching",
+      "dependencies": "Apollo Server 4+, dataloader, pg, graphql-depth-limit",
+      "authority_and_side_effects": "Per-request loaders avoid cross-request cache leaks, but SQL batch queries select by arbitrary IDs without a demonstrated tenant/row authorization predicate. Advice to enable SQL logging can expose private queries; GET/CDN caching needs per-user isolation. Useful DataLoader ordering and cost-limit reference.",
+      "privacy_and_egress": "Query logs and user/author data can disclose PII; require authorization-scoped loaders and cache partitioning before implementation",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 0
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Per-request loaders avoid cross-request cache leaks, but SQL batch queries select by arbitrary IDs without a demonstrated tenant/row authorization predicate. Advice to enable SQL logging can expose private queries; GET/CDN caching needs per-user isolation. Useful DataLoader ordering and cost-limit reference.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "implementation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/graphql-optimization/SKILL.md"
+    },
+    {
+      "name": "data-airflow-dbt-orchestration",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/data/etl-pipelines/SKILL.md",
+      "frontmatter_name": "data-airflow-dbt-orchestration",
+      "frontmatter_version": "1.0.0",
+      "skill_blob": "308c97ace9192c181c52d674f3834675984500c1",
+      "package_tree": "b75206f6324b6a335c70b2dcc48ccdd98877a63c",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "308c97ace9192c181c52d674f3834675984500c1"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "analytics",
+      "capability_subdomain": "measurement",
+      "specific_capability": "Select Airflow 3 and dbt orchestration with freshness/testing gates",
+      "trigger": "Airflow dbt, Cosmos, scheduled ETL and asset-triggered DAGs",
+      "nontrigger": "General data architecture or streaming systems",
+      "dependencies": "Airflow 3, dbt Core/Cloud, Astronomer Cosmos, warehouse connections",
+      "authority_and_side_effects": "Sample DAGs schedule recurring production warehouse transformations and trigger dbt Cloud jobs with no approval for schedule, cost, warehouse target, external provider or downstream data publishing. Airflow connections protect credentials but are not authorization. Preserve dependency-isolation and freshness checks.",
+      "privacy_and_egress": "Scheduled private warehouse transformations, cloud job charges, cross-provider transmission and durable output require separate scoped approval",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 0
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Sample DAGs schedule recurring production warehouse transformations and trigger dbt Cloud jobs with no approval for schedule, cost, warehouse target, external provider or downstream data publishing. Airflow connections protect credentials but are not authorization. Preserve dependency-isolation and freshness checks.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "orchestration"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/data/etl-pipelines/SKILL.md"
+    },
+    {
+      "name": "database-internals-mechanics",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/data/database-internals/SKILL.md",
+      "frontmatter_name": "database-internals-mechanics",
+      "frontmatter_version": "1.0.0",
+      "skill_blob": "1de723863e4eb4c205d7069091b3954e3f7c4238",
+      "package_tree": "2c47681664370f92147b2ce0fd503f83c5604e40",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "1de723863e4eb4c205d7069091b3954e3f7c4238"
+        },
+        {
+          "path": "mvcc-and-wal.md",
+          "blob_sha": "e3ae38728187d622982cfeccb3581a515dd1c738"
+        },
+        {
+          "path": "storage-engines.md",
+          "blob_sha": "4f6bb1dc6d67c44ac8a277d8bf22471825a81911"
+        }
+      ],
+      "bundled_reference_count": 2,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "backend",
+      "specific_capability": "Explain WAL, MVCC and B-tree/LSM storage tradeoffs",
+      "trigger": "WAL, MVCC, B-tree, LSM-tree, write skew",
+      "nontrigger": "Schema migrations or database-specific query tuning",
+      "dependencies": "PostgreSQL, InnoDB, RocksDB; two bundled explanatory Markdown references",
+      "authority_and_side_effects": "Useful engine-specific isolation and amplification comparisons, but the bundled WAL reference says a commit is acknowledged immediately after append without requiring durable log flush, conflicting with the main SKILL. pg_stat_activity query can reveal sensitive SQL; durability-setting changes need approval. Reference-only until corrected.",
+      "privacy_and_egress": "Read-only diagnostics can expose active SQL/PII; production durability/isolation tuning is mutating and requires target/change-window approval",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 14,
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_use_approved": false,
+      "hard_fail": false,
+      "rationale": "Useful engine-specific isolation and amplification comparisons, but the bundled WAL reference says a commit is acknowledged immediately after append without requiring durable log flush, conflicting with the main SKILL. pg_stat_activity query can reveal sensitive SQL; durability-setting changes need approval. Reference-only until corrected.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "research"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/data/database-internals/SKILL.md"
+    },
+    {
+      "name": "architecture-event-driven",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/architecture/event-driven/SKILL.md",
+      "frontmatter_name": "architecture-event-driven",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "e408f6f27d2a3ee838fcebb94dd5fcb1c102d5a8",
+      "package_tree": "245bb27fce88f48a21cef92fa2eab90866475400",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "e408f6f27d2a3ee838fcebb94dd5fcb1c102d5a8"
+        },
+        {
+          "path": "references/cqrs-event-sourcing.md",
+          "blob_sha": "794f059675580992915f8e397e016c58ed63494d"
+        }
+      ],
+      "bundled_reference_count": 1,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; external dependencies, code and data retain own terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "architecture",
+      "specific_capability": "Design outbox/inbox and event-contract evolution",
+      "trigger": "EDA, pub/sub, outbox, CQRS, event contracts",
+      "nontrigger": "Event sourcing implementation or stream analytics",
+      "dependencies": "Kafka/RabbitMQ/cloud queues, SQL outbox, Debezium; one bundled CQRS/event-sourcing reference",
+      "authority_and_side_effects": "Transactional outbox and inbox are useful, but executable CREATE/INSERT, broker relay, event-carried state and DLQ replay lack target/recipient/PII and production-change authorization. Bundled event-sourcing note overclaims perfect audit logs and presents crypto-shredding as a universal deletion solution.",
+      "privacy_and_egress": "Broker egress, durable event retention, private payloads, schema deployment and destructive replay require explicit approval",
+      "portability_and_freshness": "Pinned 2026-11-01 source snapshot; upstream APIs and runnable examples not independently executed or refreshed",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 0
+      },
+      "score_20": 14,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "rationale": "Transactional outbox and inbox are useful, but executable CREATE/INSERT, broker relay, event-carried state and DLQ replay lack target/recipient/PII and production-change authorization. Bundled event-sourcing note overclaims perfect audit logs and presents crypto-shredding as a universal deletion solution.",
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "architecture"
+        ],
+        "lifecycle": [
+          "design"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/architecture/event-driven/SKILL.md"
+    }
+  ]
+}
