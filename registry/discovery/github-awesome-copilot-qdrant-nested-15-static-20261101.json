@@ -39,7 +39,7 @@
   ],
   "records": [
     {
-      "name": "debugging",
+      "name": "qdrant-monitoring-debugging",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -117,7 +117,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-monitoring/debugging/SKILL.md"
     },
     {
-      "name": "setup",
+      "name": "qdrant-monitoring-setup",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -196,7 +196,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-monitoring/setup/SKILL.md"
     },
     {
-      "name": "indexing-performance-optimization",
+      "name": "qdrant-indexing-performance-optimization",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -273,7 +273,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md"
     },
     {
-      "name": "memory-usage-optimization",
+      "name": "qdrant-memory-usage-optimization",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -351,7 +351,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md"
     },
     {
-      "name": "search-speed-optimization",
+      "name": "qdrant-search-speed-optimization",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -428,7 +428,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md"
     },
     {
-      "name": "minimize-latency",
+      "name": "qdrant-minimize-latency",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -506,7 +506,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/minimize-latency/SKILL.md"
     },
     {
-      "name": "scaling-data-volume",
+      "name": "qdrant-scaling-data-volume",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -587,7 +587,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/SKILL.md"
     },
     {
-      "name": "horizontal-scaling",
+      "name": "qdrant-horizontal-scaling",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -665,7 +665,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md"
     },
     {
-      "name": "sliding-time-window",
+      "name": "qdrant-sliding-time-window",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -742,7 +742,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md"
     },
     {
-      "name": "tenant-scaling",
+      "name": "qdrant-tenant-scaling",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -819,7 +819,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md"
     },
     {
-      "name": "vertical-scaling",
+      "name": "qdrant-vertical-scaling",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -897,7 +897,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md"
     },
     {
-      "name": "scaling-qps",
+      "name": "qdrant-scaling-qps",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -975,7 +975,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-qps/SKILL.md"
     },
     {
-      "name": "scaling-query-volume",
+      "name": "qdrant-scaling-query-volume",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -1052,7 +1052,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-query-volume/SKILL.md"
     },
     {
-      "name": "diagnosis",
+      "name": "qdrant-search-quality-diagnosis",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
@@ -1129,7 +1129,7 @@
       "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-search-quality/diagnosis/SKILL.md"
     },
     {
-      "name": "search-strategies",
+      "name": "qdrant-search-strategies",
       "source_id": "github-awesome-copilot",
       "source_repository": "github/awesome-copilot",
       "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
