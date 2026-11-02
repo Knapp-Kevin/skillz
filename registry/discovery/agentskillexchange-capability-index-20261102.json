@@ -7278,7 +7278,9 @@
      "capability": "Investigate failing GitHub Actions runs and open diagnostic issues",
      "score": "6/20",
      "decision": "REJECT unchanged",
-     "hard_fails": [],
+     "hard_fails": [
+      "unauthorized-consequential-action"
+     ],
      "segment": "catalog-card-install-pointer",
      "evidence": "registry/discovery/agentskillexchange-ops-pointer-453-static-20261102.json"
     },
@@ -7287,7 +7289,9 @@
      "capability": "Investigate failing GitHub Actions runs and open diagnostic issues",
      "score": "6/20",
      "decision": "REJECT unchanged",
-     "hard_fails": [],
+     "hard_fails": [
+      "unauthorized-consequential-action"
+     ],
      "segment": "catalog-card-install-pointer",
      "evidence": "registry/discovery/agentskillexchange-ops-pointer-453-static-20261102.json"
     },
@@ -11590,7 +11594,7 @@
     {
      "path": "skills/uptime-robot-status-page-webhook-alerter/SKILL.md",
      "capability": "Alert Slack or PagerDuty when UptimeRobot monitors change state",
-     "score": "4/20",
+     "score": "3/20",
      "decision": "REJECT unchanged",
      "hard_fails": [
       "unauthorized-consequential-action",
@@ -13030,7 +13034,7 @@
     {
      "path": "skills/draft-internal-status-updates-and-incident-comms-2/SKILL.md",
      "capability": "Draft internal status updates, 3P updates, FAQs and incident write-ups",
-     "score": "5/20",
+     "score": "6/20",
      "decision": "REJECT unchanged",
      "hard_fails": [],
      "segment": "catalog-card-install-pointer",
@@ -17680,7 +17684,9 @@
      "capability": "Replay suspected SQL injection requests and enumerate database access",
      "score": "9/20",
      "decision": "REJECT unchanged",
-     "hard_fails": [],
+     "hard_fails": [
+      "unauthorized-consequential-action"
+     ],
      "segment": "catalog-card-install-pointer",
      "evidence": "registry/discovery/agentskillexchange-security-quality-pointer-408-static-20261102.json"
     },
@@ -17783,7 +17789,9 @@
      "capability": "Orchestrate AI-planned penetration tests with common scanners",
      "score": "8/20",
      "decision": "REJECT unchanged",
-     "hard_fails": [],
+     "hard_fails": [
+      "unauthorized-consequential-action"
+     ],
      "segment": "catalog-card-install-pointer",
      "evidence": "registry/discovery/agentskillexchange-security-quality-pointer-408-static-20261102.json"
     },
@@ -17792,7 +17800,9 @@
      "capability": "Run Claude Code security research and scan-validation workflows",
      "score": "8/20",
      "decision": "REJECT unchanged",
-     "hard_fails": [],
+     "hard_fails": [
+      "unauthorized-consequential-action"
+     ],
      "segment": "catalog-card-install-pointer",
      "evidence": "registry/discovery/agentskillexchange-security-quality-pointer-408-static-20261102.json"
     },
@@ -22605,7 +22615,7 @@
     {
      "path": "skills/schedule-and-inspect-dotnet-agent-jobs-with-tickerq/SKILL.md",
      "capability": "Add persistent cron scheduling and dashboards to .NET agent services",
-     "score": "7/20",
+     "score": "6/20",
      "decision": "REJECT unchanged",
      "hard_fails": [],
      "segment": "catalog-stub-no-procedure",
@@ -23810,7 +23820,7 @@
     {
      "path": "skills/rspack-rust-based-javascript-bundler/SKILL.md",
      "capability": "Replace webpack with the Rust-based Rspack bundler",
-     "score": "6/20",
+     "score": "5/20",
      "decision": "REJECT unchanged",
      "hard_fails": [],
      "segment": "catalog-stub-no-procedure",
@@ -26068,7 +26078,7 @@
     {
      "path": "skills/jujutsu-jj-git-compatible-vcs/SKILL.md",
      "capability": "Use jj as a Git-compatible VCS",
-     "score": "5/20",
+     "score": "4/20",
      "decision": "REJECT unchanged",
      "hard_fails": [],
      "segment": "catalog-card-install-pointer",
@@ -27072,7 +27082,7 @@
     {
      "path": "skills/sage-wordpress-starter-theme-laravel-blade/SKILL.md",
      "capability": "Build WordPress themes with Sage, Blade, Vite and Tailwind",
-     "score": "6/20",
+     "score": "5/20",
      "decision": "REJECT unchanged",
      "hard_fails": [],
      "segment": "catalog-stub-no-procedure",
@@ -29427,7 +29437,9 @@
      "capability": "Generate negative API tests from OpenAPI/GraphQL schemas",
      "score": "8/20",
      "decision": "REJECT unchanged",
-     "hard_fails": [],
+     "hard_fails": [
+      "unauthorized-consequential-action"
+     ],
      "segment": "catalog-card-install-pointer",
      "evidence": "registry/discovery/agentskillexchange-security-quality-pointer-408-static-20261102.json"
     },
