@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 14,
+      "source_vetted_reference_count": 13,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -151,6 +151,70 @@
           "static_candidate_score": "11/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "20d1555608099de32fc780c045aa7cf30273253c",
+          "package_tree": "fd61abe33a75be8c5dcf9e6dfe6b25fc777225a1",
+          "capability": "Separate client batching from server optimizer bottlenecks; bulk-load restoration checklist.",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "d25e8fae4e8625f280d79a91b8ca9bb46541c400",
+          "package_tree": "f093a4e465dcaffbd04110a75b42bab8ddaeb1ca",
+          "capability": "Separate latency, throughput, filtered search and optimizer contention diagnostics.",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "e83645257af7de1f149b46dacf7f64c6fc467989",
+          "package_tree": "96753eeee600951da553af2c44bd418e34e933f6",
+          "capability": "Distinguish query result fan-out from query-per-second throughput; identify approximate-result tradeoffs.",
+          "static_candidate_score": "8/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-search-quality/search-strategies/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "7d5eabe880742c4e71aec15505db8ada36643e4b",
+          "package_tree": "efed90f016cda8d19fc61ded8aa986f9865d73c1",
+          "capability": "Hybrid retrieval, reranking, feedback, MMR and diversity decision map.",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -388,7 +452,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 10,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -400,6 +464,150 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-monitoring/debugging/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "9cd16d51c79ac630e23f8959f050e75ee270bb7c",
+          "package_tree": "f05d91dde632a4b3586768ea7dd2c53e184edeb6",
+          "capability": "Optimizer-first triage and page-cache-versus-resident-memory distinction.",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-monitoring/setup/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "6c468cc11da4a5ac88287886e66212edbdf61542",
+          "package_tree": "5ab481b7326f940457b55d6524cc25967b7e167e",
+          "capability": "Monitoring coverage matrix for node, operator and audit-log paths.",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "07f3e7acf97a11bfce911680daea06050693ade1",
+          "package_tree": "1719214047d33597718f7690005dc5ecffb60a6b",
+          "capability": "Capacity accounting and cold-versus-hot data placement options.",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "727d841cf37a6c19ffb81bbfa24dcd87d8724358",
+          "package_tree": "ae52538cedb17acf03ceaee2df214a5e89c9a99e",
+          "capability": "Latency-versus-throughput objective separation and working-set checks.",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "4fb0c2ddb00348222fc101b73a32c3cbc68f7aee",
+          "package_tree": "db0ce386f7a310c891a478f5aeb4390307738bee",
+          "capability": "Decision tree for capacity strategy; preserve four nested first-class skill identities.",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "8665b40d0665fd114be8b4c2d7368b49248028b7",
+          "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
+          "capability": "Vertical-before-horizontal capacity decision and consensus/replication tradeoffs.",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "4c6e86154df06ed9006ffe6062c5a363acbb825b",
+          "package_tree": "02371e7d85feeb413abc3f2dbd5a0e93457c2a33",
+          "capability": "Compare shard rotation, collection rotation and filter/delete retention strategies.",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "a2cb1e84ef0404ace43d2acd38e437761f9ea859",
+          "package_tree": "21705d29ee5edc21798cd5ed0f7f4146a51fe6dc",
+          "capability": "RAM, disk, IOPS and replication sizing checklist.",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-qps/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "765f2dee24d518491e32a2b465451e6a9c225baf",
+          "package_tree": "75470d23152d4d1fd9271a6b92ee14f1601c11b6",
+          "capability": "Throughput bottleneck decomposition and replica-versus-IOPS options.",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -463,7 +671,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 2,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -489,6 +697,22 @@
           "static_candidate_score": "11/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "7b5ab453aca6b02da81a8362d0bcd363927c8c32",
+          "package_tree": "58c62032ee1d79c700df6665dffa4f1e25692661",
+          "capability": "Shared versus dedicated tenant shard tradeoffs and compliance exception.",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -1201,7 +1425,25 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Analytics capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "39141c8ecb4ad5f91e5a8db7e4c6ae46662e014f",
+          "package_tree": "d98365ce40b0b666562d85c8c100c229cba71162",
+          "capability": "Use exact KNN as a diagnostic baseline and separate embedding/data from ANN defects.",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "time-productivity",
@@ -1635,6 +1877,70 @@
               "static_candidate_score": "13/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "20d1555608099de32fc780c045aa7cf30273253c",
+              "package_tree": "fd61abe33a75be8c5dcf9e6dfe6b25fc777225a1",
+              "capability": "Separate client batching from server optimizer bottlenecks; bulk-load restoration checklist.",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "d25e8fae4e8625f280d79a91b8ca9bb46541c400",
+              "package_tree": "f093a4e465dcaffbd04110a75b42bab8ddaeb1ca",
+              "capability": "Separate latency, throughput, filtered search and optimizer contention diagnostics.",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "e83645257af7de1f149b46dacf7f64c6fc467989",
+              "package_tree": "96753eeee600951da553af2c44bd418e34e933f6",
+              "capability": "Distinguish query result fan-out from query-per-second throughput; identify approximate-result tradeoffs.",
+              "static_candidate_score": "8/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-search-quality/search-strategies/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "7d5eabe880742c4e71aec15505db8ada36643e4b",
+              "package_tree": "efed90f016cda8d19fc61ded8aa986f9865d73c1",
+              "capability": "Hybrid retrieval, reranking, feedback, MMR and diversity decision map.",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -2436,6 +2742,38 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "4fb0c2ddb00348222fc101b73a32c3cbc68f7aee",
+              "package_tree": "db0ce386f7a310c891a478f5aeb4390307738bee",
+              "capability": "Decision tree for capacity strategy; preserve four nested first-class skill identities.",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "8665b40d0665fd114be8b4c2d7368b49248028b7",
+              "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
+              "capability": "Vertical-before-horizontal capacity decision and consensus/replication tradeoffs.",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -2557,7 +2895,105 @@
             "microsoft-skills/azure-reliability"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 3
+          "name_only_review_hits_in_scope": 3,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-monitoring/debugging/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "9cd16d51c79ac630e23f8959f050e75ee270bb7c",
+              "package_tree": "f05d91dde632a4b3586768ea7dd2c53e184edeb6",
+              "capability": "Optimizer-first triage and page-cache-versus-resident-memory distinction.",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-monitoring/setup/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "6c468cc11da4a5ac88287886e66212edbdf61542",
+              "package_tree": "5ab481b7326f940457b55d6524cc25967b7e167e",
+              "capability": "Monitoring coverage matrix for node, operator and audit-log paths.",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "07f3e7acf97a11bfce911680daea06050693ade1",
+              "package_tree": "1719214047d33597718f7690005dc5ecffb60a6b",
+              "capability": "Capacity accounting and cold-versus-hot data placement options.",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "727d841cf37a6c19ffb81bbfa24dcd87d8724358",
+              "package_tree": "ae52538cedb17acf03ceaee2df214a5e89c9a99e",
+              "capability": "Latency-versus-throughput objective separation and working-set checks.",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "4c6e86154df06ed9006ffe6062c5a363acbb825b",
+              "package_tree": "02371e7d85feeb413abc3f2dbd5a0e93457c2a33",
+              "capability": "Compare shard rotation, collection rotation and filter/delete retention strategies.",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-qps/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "765f2dee24d518491e32a2b465451e6a9c225baf",
+              "package_tree": "75470d23152d4d1fd9271a6b92ee14f1601c11b6",
+              "capability": "Throughput bottleneck decomposition and replica-versus-IOPS options.",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "cost-optimization",
@@ -2575,7 +3011,25 @@
             "microsoft-skills/azure-cost"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 3
+          "name_only_review_hits_in_scope": 3,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "a2cb1e84ef0404ace43d2acd38e437761f9ea859",
+              "package_tree": "21705d29ee5edc21798cd5ed0f7f4146a51fe6dc",
+              "capability": "RAM, disk, IOPS and replication sizing checklist.",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -2755,7 +3209,25 @@
             "bm629-agent-skills/external-content-sanitizer"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "7b5ab453aca6b02da81a8362d0bcd363927c8c32",
+              "package_tree": "58c62032ee1d79c700df6665dffa4f1e25692661",
+              "capability": "Shared versus dedicated tenant shard tradeoffs and compliance exception.",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -5022,7 +5494,25 @@
             "corey-haines-marketing-skills/analytics"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "39141c8ecb4ad5f91e5a8db7e4c6ae46662e014f",
+              "package_tree": "d98365ce40b0b666562d85c8c100c229cba71162",
+              "capability": "Use exact KNN as a diagnostic baseline and separate embedding/data from ANN defects.",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -8281,20 +8771,23 @@
   "grade_evidence_tranches": [
     "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
   ],
-  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids.",
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review.",
   "source_vetted_grade_tranches": [
     "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
     "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
-    "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+    "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-01",
-    "subdomain_example_instances": 35,
-    "browse_overview_preview_instances": 23,
-    "distinct_source_path_pins": 28,
+    "subdomain_example_instances": 30,
+    "browse_overview_preview_instances": 38,
+    "distinct_source_path_pins": 40,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted references and overview previews overlap and may map to multiple subdomains. These are candidate static grades, not governed verification, security approval, behavioral validation or install eligibility.",
-    "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+    "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+    "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged."
   }
 }

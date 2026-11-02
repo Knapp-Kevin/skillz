@@ -1,0 +1,1210 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "source_id": "github-awesome-copilot",
+  "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+  "source_role": "dynamic-discovery-only",
+  "review_kind": "pinned complete-package nested Qdrant static source-vetting; NOT governed semantic verification",
+  "source_license_blob": "89bc5e962c9944cdb050887062afdaaf89be504a",
+  "source_denominator": {
+    "raw_skill_paths": 432,
+    "direct_shape": 415,
+    "other_shape": 17,
+    "previous_exact_path_decisions": 24,
+    "new_decisions": 15,
+    "after_exact_path_decisions": 39,
+    "direct_shape_terminal": 24,
+    "other_shape_terminal": 15,
+    "other_shape_remaining": 2,
+    "other_shape_structurally_classified": 17
+  },
+  "rubric": "10 dimensions each scored 0-2; hard fail overrides numeric score",
+  "terminal_decisions": {
+    "reference_only": 2,
+    "rejected_unchanged": 13
+  },
+  "security_scans_executed": 0,
+  "behavioral_validations_executed": 0,
+  "admitted_source_denominator_delta": 0,
+  "governed_exact_version_review_pairs_created": 0,
+  "eligible_distinct_denominator": null,
+  "source_freshness": "Pinned source snapshot dated 2026-11-01; Qdrant API-version assertions and external documentation not independently revalidated",
+  "macro_findings": [
+    "All 15 nested Qdrant SKILL.md files have distinct blobs and first-class frontmatter; one scaling-data-volume parent contains four nested SKILL.md descendants, so package-level and path-level identities overlap without being duplicate blobs.",
+    "Four direct-shape Qdrant parent router SKILL.md files were read for dependency context but are not terminally reviewed or counted in this tranche.",
+    "13 procedures fail unchanged-use on missing production mutation, cloud-spend, sensitive telemetry, data retention or package/egress authorization; two remain reference-only for decision routing or conceptual approximation.",
+    "The sliding-time-window procedure directly instructs shard/collection/point deletion without retention-owner authorization or legal-hold/recovery checks.",
+    "Vector database operations and retrieval relevance lack a narrow dedicated domain in the current 32-domain directory; map conservatively to existing backend, SRE, measurement, security and cost-optimization subdomains until the governed taxonomy owner resolves it.",
+    "All Qdrant claims are version/workload sensitive; no security scan, representative run or performance/quality benchmark was executed."
+  ],
+  "records": [
+    {
+      "name": "qdrant-monitoring-debugging",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-monitoring/debugging/SKILL.md",
+      "skill_blob": "9cd16d51c79ac630e23f8959f050e75ee270bb7c",
+      "package_tree": "f05d91dde632a4b3586768ea7dd2c53e184edeb6",
+      "package_files": [
+        "skills/qdrant-monitoring/debugging/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 13,
+      "static_grade": "13/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "authority_and_safety": "Read-only troubleshooting is useful, but /telemetry, collection metrics and logs are private operational data without an account/cluster/field read authorization gate; fixed RSS and capacity heuristics are not workload evidence.",
+      "nontrigger_boundary": "Do not inspect a live cluster, private telemetry or logs from a generic debugging request.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Read-only troubleshooting is useful, but /telemetry, collection metrics and logs are private operational data without an account/cluster/field read authorization gate; fixed RSS and capacity heuristics are not workload evidence.",
+      "reusable_inspiration": "Optimizer-first triage and page-cache-versus-resident-memory distinction.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "monitoring",
+          "observability",
+          "debugging"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-monitoring/debugging/SKILL.md"
+    },
+    {
+      "name": "qdrant-monitoring-setup",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-monitoring/setup/SKILL.md",
+      "skill_blob": "6c468cc11da4a5ac88287886e66212edbdf61542",
+      "package_tree": "5ab481b7326f940457b55d6524cc25967b7e167e",
+      "package_files": [
+        "skills/qdrant-monitoring/setup/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "authority_and_safety": "Instructions configure production scrapes, alert routing to Slack/PagerDuty, audit-log sidecars and persistent log aggregation without separate deployment, recipient, retention and sensitive-data authority.",
+      "nontrigger_boundary": "Do not deploy scraping, send alerts, or export audit logs without explicit destination and privacy approval.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Instructions configure production scrapes, alert routing to Slack/PagerDuty, audit-log sidecars and persistent log aggregation without separate deployment, recipient, retention and sensitive-data authority.",
+      "reusable_inspiration": "Monitoring coverage matrix for node, operator and audit-log paths.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "monitoring",
+          "observability",
+          "cloud"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-monitoring/setup/SKILL.md"
+    },
+    {
+      "name": "qdrant-indexing-performance-optimization",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md",
+      "skill_blob": "20d1555608099de32fc780c045aa7cf30273253c",
+      "package_tree": "fd61abe33a75be8c5dcf9e6dfe6b25fc777225a1",
+      "package_files": [
+        "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/backend"
+      ],
+      "authority_and_safety": "Recommends live shard, HNSW and indexing-threshold changes that affect search quality, availability and resource costs without action authorization, rollback or measured load validation.",
+      "nontrigger_boundary": "Do not change production index parameters or shard counts from a performance complaint alone.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Recommends live shard, HNSW and indexing-threshold changes that affect search quality, availability and resource costs without action authorization, rollback or measured load validation.",
+      "reusable_inspiration": "Separate client batching from server optimizer bottlenecks; bulk-load restoration checklist.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "implementation",
+          "debugging"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md"
+    },
+    {
+      "name": "qdrant-memory-usage-optimization",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md",
+      "skill_blob": "07f3e7acf97a11bfce911680daea06050693ade1",
+      "package_tree": "1719214047d33597718f7690005dc5ecffb60a6b",
+      "package_files": [
+        "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 13,
+      "static_grade": "13/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "authority_and_safety": "Strong resident/page-cache distinction and storage options, but configuration changes to quantization, on-disk indexes and io_uring lack cluster authority, workload baselines and rollback gates; fixed 80% warning is heuristic.",
+      "nontrigger_boundary": "Do not change quantization, storage or index layout without approved target and measured baseline.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Strong resident/page-cache distinction and storage options, but configuration changes to quantization, on-disk indexes and io_uring lack cluster authority, workload baselines and rollback gates; fixed 80% warning is heuristic.",
+      "reusable_inspiration": "Capacity accounting and cold-versus-hot data placement options.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "monitoring",
+          "debugging",
+          "cloud"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md"
+    },
+    {
+      "name": "qdrant-search-speed-optimization",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md",
+      "skill_blob": "d25e8fae4e8625f280d79a91b8ca9bb46541c400",
+      "package_tree": "f093a4e465dcaffbd04110a75b42bab8ddaeb1ca",
+      "package_files": [
+        "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/backend"
+      ],
+      "authority_and_safety": "Mixes diagnostic comparisons with live segment-count, reindex, quantization and replica changes; no authorization or recall/latency regression acceptance gate, and blanket tuning values are workload-dependent.",
+      "nontrigger_boundary": "Do not trigger reindexing, replication or index configuration changes without owner approval.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Mixes diagnostic comparisons with live segment-count, reindex, quantization and replica changes; no authorization or recall/latency regression acceptance gate, and blanket tuning values are workload-dependent.",
+      "reusable_inspiration": "Separate latency, throughput, filtered search and optimizer contention diagnostics.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "debugging",
+          "implementation"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md"
+    },
+    {
+      "name": "qdrant-minimize-latency",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
+      "skill_blob": "727d841cf37a6c19ffb81bbfa24dcd87d8724358",
+      "package_tree": "ae52538cedb17acf03ceaee2df214a5e89c9a99e",
+      "package_files": [
+        "skills/qdrant-scaling/minimize-latency/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 9,
+      "static_grade": "9/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "authority_and_safety": "Suggests default_segment_number:16, RAM scaling and indexing schedule changes without authorization, measurements, cost or failure rollback; asserts a universal latency/throughput tradeoff too strongly.",
+      "nontrigger_boundary": "Do not resize production resources or alter segment/index settings without evidence and approval.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Suggests default_segment_number:16, RAM scaling and indexing schedule changes without authorization, measurements, cost or failure rollback; asserts a universal latency/throughput tradeoff too strongly.",
+      "reusable_inspiration": "Latency-versus-throughput objective separation and working-set checks.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "debugging"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/minimize-latency/SKILL.md"
+    },
+    {
+      "name": "qdrant-scaling-data-volume",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
+      "skill_blob": "4fb0c2ddb00348222fc101b73a32c3cbc68f7aee",
+      "package_tree": "db0ce386f7a310c891a478f5aeb4390307738bee",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md"
+      ],
+      "package_files_inspected": 5,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "rubric_total": 13,
+      "static_grade": "13/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": false,
+      "capability_paths": [
+        "cloud-devops/cloud-architecture"
+      ],
+      "authority_and_safety": "A read-only five-file router correctly distinguishes tenant, time-window, vertical and horizontal strategies, but its children include destructive/cost-bearing actions and there is no explicit transition from analysis to separately authorized execution.",
+      "nontrigger_boundary": "Use only for strategy selection; do not treat a routed child procedure as approved execution.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "A read-only five-file router correctly distinguishes tenant, time-window, vertical and horizontal strategies, but its children include destructive/cost-bearing actions and there is no explicit transition from analysis to separately authorized execution.",
+      "reusable_inspiration": "Decision tree for capacity strategy; preserve four nested first-class skill identities.",
+      "dependencies": "Nested child SKILL.md files within the pinned package; Qdrant version-dependent API/docs, authorized cluster context and host access required",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "decision-support"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/SKILL.md"
+    },
+    {
+      "name": "qdrant-horizontal-scaling",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+      "skill_blob": "8665b40d0665fd114be8b4c2d7368b49248028b7",
+      "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/cloud-architecture"
+      ],
+      "authority_and_safety": "Cluster topology, shard migration and replication choices affect cost and availability without explicit owner authorization, maintenance plan or rollback; zero-downtime and shard-count recommendations are not universally guaranteed.",
+      "nontrigger_boundary": "Do not add nodes, reshard, migrate collections or promise zero downtime without approved plan.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Cluster topology, shard migration and replication choices affect cost and availability without explicit owner authorization, maintenance plan or rollback; zero-downtime and shard-count recommendations are not universally guaranteed.",
+      "reusable_inspiration": "Vertical-before-horizontal capacity decision and consensus/replication tradeoffs.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md"
+    },
+    {
+      "name": "qdrant-sliding-time-window",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
+      "skill_blob": "4c6e86154df06ed9006ffe6062c5a363acbb825b",
+      "package_tree": "02371e7d85feeb413abc3f2dbd5a0e93457c2a33",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "authority_and_safety": "Directly instructs deletion of shard keys, collections and points, plus alias/write routing changes, without explicit retention owner approval, legal hold check, backups, verification or recovery path.",
+      "nontrigger_boundary": "Never delete vectors, shards or collections from an inferred retention window.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Directly instructs deletion of shard keys, collections and points, plus alias/write routing changes, without explicit retention owner approval, legal hold check, backups, verification or recovery path.",
+      "reusable_inspiration": "Compare shard rotation, collection rotation and filter/delete retention strategies.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "implementation"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md"
+    },
+    {
+      "name": "qdrant-tenant-scaling",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
+      "skill_blob": "7b5ab453aca6b02da81a8362d0bcd363927c8c32",
+      "package_tree": "58c62032ee1d79c700df6665dffa4f1e25692661",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "security/privacy-engineering"
+      ],
+      "authority_and_safety": "Tenant isolation and shard placement recommendations imply security-boundary and persistent migration changes without per-tenant authorization, data classification, verification or rollback; thresholds are workload-dependent.",
+      "nontrigger_boundary": "Do not alter tenant routing or isolation without explicit data-owner/security approval.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Tenant isolation and shard placement recommendations imply security-boundary and persistent migration changes without per-tenant authorization, data classification, verification or rollback; thresholds are workload-dependent.",
+      "reusable_inspiration": "Shared versus dedicated tenant shard tradeoffs and compliance exception.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "security",
+          "architecture"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md"
+    },
+    {
+      "name": "qdrant-vertical-scaling",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md",
+      "skill_blob": "a2cb1e84ef0404ace43d2acd38e437761f9ea859",
+      "package_tree": "21705d29ee5edc21798cd5ed0f7f4146a51fe6dc",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/cost-optimization"
+      ],
+      "authority_and_safety": "Cloud-console or VM resizing changes cost and service availability without explicit spending and maintenance approval; formula and 80% threshold are approximations, not sufficient sizing evidence.",
+      "nontrigger_boundary": "Do not resize clusters or incur cloud spend from a generic scaling question.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Cloud-console or VM resizing changes cost and service availability without explicit spending and maintenance approval; formula and 80% threshold are approximations, not sufficient sizing evidence.",
+      "reusable_inspiration": "RAM, disk, IOPS and replication sizing checklist.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "decision-support"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md"
+    },
+    {
+      "name": "qdrant-scaling-qps",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-qps/SKILL.md",
+      "skill_blob": "765f2dee24d518491e32a2b465451e6a9c225baf",
+      "package_tree": "75470d23152d4d1fd9271a6b92ee14f1601c11b6",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-qps/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "cloud-devops/sre"
+      ],
+      "authority_and_safety": "Proposes replica count, segment count, CPU budget and provisioned IOPS changes without separate authorization or cost/reliability gates; categorical latency-versus-throughput claims overstate the tradeoff.",
+      "nontrigger_boundary": "Do not provision replicas or tune production concurrency without measured load and approval.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Proposes replica count, segment count, CPU budget and provisioned IOPS changes without separate authorization or cost/reliability gates; categorical latency-versus-throughput claims overstate the tradeoff.",
+      "reusable_inspiration": "Throughput bottleneck decomposition and replica-versus-IOPS options.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "cloud",
+          "debugging"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-qps/SKILL.md"
+    },
+    {
+      "name": "qdrant-scaling-query-volume",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md",
+      "skill_blob": "e83645257af7de1f149b46dacf7f64c6fc467989",
+      "package_tree": "96753eeee600951da553af2c44bd418e34e933f6",
+      "package_files": [
+        "skills/qdrant-scaling/scaling-query-volume/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "rubric_total": 8,
+      "static_grade": "8/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": false,
+      "capability_paths": [
+        "software-engineering/backend"
+      ],
+      "authority_and_safety": "Conceptual description of Poisson-based shard subsampling provides no implementable algorithm, test method, proof of its 99.9% threshold or exactness guard; accepts incomplete results without user accuracy acceptance.",
+      "nontrigger_boundary": "Do not change result limits or promise exact top-K based on an unsupported safety factor.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Conceptual description of Poisson-based shard subsampling provides no implementable algorithm, test method, proof of its 99.9% threshold or exactness guard; accepts incomplete results without user accuracy acceptance.",
+      "reusable_inspiration": "Distinguish query result fan-out from query-per-second throughput; identify approximate-result tradeoffs.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "research"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-scaling/scaling-query-volume/SKILL.md"
+    },
+    {
+      "name": "qdrant-search-quality-diagnosis",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
+      "skill_blob": "39141c8ecb4ad5f91e5a8db7e4c6ae46662e014f",
+      "package_tree": "d98365ce40b0b666562d85c8c100c229cba71162",
+      "package_files": [
+        "skills/qdrant-search-quality/diagnosis/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 13,
+      "static_grade": "13/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "analytics/measurement"
+      ],
+      "authority_and_safety": "Exact-versus-approximate diagnosis is valuable, but production HNSW, model, filter and quantization changes lack authorization and representative relevance acceptance; >95% recall target is not universal.",
+      "nontrigger_boundary": "Do not deploy model, index or search parameter changes without approved quality thresholds.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Exact-versus-approximate diagnosis is valuable, but production HNSW, model, filter and quantization changes lack authorization and representative relevance acceptance; >95% recall target is not universal.",
+      "reusable_inspiration": "Use exact KNN as a diagnostic baseline and separate embedding/data from ANN defects.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "evaluation",
+          "debugging"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-search-quality/diagnosis/SKILL.md"
+    },
+    {
+      "name": "qdrant-search-strategies",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/qdrant-search-quality/search-strategies/SKILL.md",
+      "skill_blob": "7d5eabe880742c4e71aec15505db8ada36643e4b",
+      "package_tree": "efed90f016cda8d19fc61ded8aa986f9865d73c1",
+      "package_files": [
+        "skills/qdrant-search-quality/search-strategies/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "package_tree_verified": true,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; inspected package tree contains SKILL.md and nested SKILL.md only; no package-local license found; root MIT does not relicense independent dependencies.",
+      "source_license_evidence": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/LICENSE",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "All pinned package SKILL.md components read; exact package-tree inventory checked with GitHub Git tree endpoint; external linked docs and service behavior not executed or independently freshness-validated",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/backend"
+      ],
+      "authority_and_safety": "Suggests installing an external relevance-feedback package and invoking hosted models/rerankers without explicit installation, licensing, sensitive-query egress or cost approval; performance assertions require dataset evaluation.",
+      "nontrigger_boundary": "Do not install packages, transmit private queries or alter ranking without separate authorization.",
+      "privacy_sensitive_data": "Operational metrics, logs, tenant payload, queries and customer vectors require bounded read and disclosure authorization; no credential-bearing URLs or real secrets in conversation.",
+      "material_findings": "Suggests installing an external relevance-feedback package and invoking hosted models/rerankers without explicit installation, licensing, sensitive-query egress or cost approval; performance assertions require dataset evaluation.",
+      "reusable_inspiration": "Hybrid retrieval, reranking, feedback, MMR and diversity decision map.",
+      "dependencies": "No bundled code/assets; Qdrant version-dependent API/docs and authorized host access where applicable; external linked references not snapshotted",
+      "portability": "Qdrant-specific and version-sensitive; host deployment and API compatibility must be verified; no universal performance or zero-downtime guarantee",
+      "license_reuse": "MIT source notice/attribution when copying substantial content; independent linked dependencies and service terms evaluated separately",
+      "controlled_tags": {
+        "use_case": [
+          "research",
+          "implementation"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "authority": [
+          "external-side-effect",
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admission": "not admitted",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "source_url": "https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/qdrant-search-quality/search-strategies/SKILL.md"
+    }
+  ]
+}

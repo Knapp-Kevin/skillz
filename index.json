@@ -1028,7 +1028,11 @@
     "j4flmao_nested_game_terminal_candidate_decisions": 23,
     "j4flmao_nested_game_seven_file_pending": 0,
     "j4flmao_other_shape_unclassified": 198,
-    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 55
+    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 80,
+    "github_awesome_copilot_exact_path_candidate_decisions": 39,
+    "github_awesome_copilot_nested_structurally_classified": 17,
+    "github_awesome_copilot_nested_terminal_candidate_decisions": 15,
+    "github_awesome_copilot_nested_pending_terminal": 2
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1120,7 +1124,9 @@
     ],
     "dynamic-discovery": [
       "github-awesome-copilot",
-      "openai-plugins"
+      "openai-plugins",
+      "agentskillexchange-skills",
+      "j4flmao-agent-skills"
     ]
   },
   "interpretation_order": [
@@ -4161,5 +4167,43 @@
     "governed_semantic_pairs_delta": 0,
     "security_scans": 0,
     "behavioral_validations": 0
+  },
+  "awesome_copilot_qdrant_nested_15": {
+    "date": "2026-11-01",
+    "source_id": "github-awesome-copilot",
+    "source_revision": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "review_kind": "15 complete-package static source-vetting candidates; NOT governed verification",
+    "graded_ledger": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+    "macro_receipt": "docs/reviews/2026-11-01-awesome-copilot-qdrant-nested-fifteen-static.md",
+    "nested_structurally_classified": 17,
+    "nested_terminal_static_candidate_decisions": 15,
+    "nested_pending_terminal": 2,
+    "reference_only": 2,
+    "rejected_unchanged": 13,
+    "awesome_copilot_exact_path_decisions_before": 24,
+    "awesome_copilot_exact_path_decisions_after": 39,
+    "awesome_copilot_raw_paths": 432,
+    "direct_shape_terminal": 24,
+    "direct_shape_undecided": 391,
+    "other_shape_terminal": 15,
+    "other_shape_undecided": 2,
+    "four_source_exact_path_decisions_before": 65,
+    "four_source_exact_path_decisions_after": 80,
+    "raw_four_source_paths": 4813,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "candidate_directory_recomputed": {
+      "subdomain_examples": 30,
+      "overview_previews": 38,
+      "distinct_candidate_source_path_pins": 40,
+      "governed_identity_links": 78,
+      "prior_declared_subdomain_examples": 35,
+      "prior_actual_subdomain_examples": 15,
+      "prior_declared_distinct_candidate_identities": 28,
+      "prior_actual_distinct_candidate_identities": 25
+    }
   }
 }

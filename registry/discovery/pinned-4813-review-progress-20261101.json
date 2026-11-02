@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 65,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 80,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,15 +20,16 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 24,
-      "terminal_static_candidate_decisions": 24,
+      "exact_path_fingerprints_checked": 39,
+      "terminal_static_candidate_decisions": 39,
       "direct_shape_path_decisions": 24,
-      "other_shape_path_decisions": 0,
-      "raw_paths_without_terminal_decision": 408,
+      "other_shape_path_decisions": 15,
+      "raw_paths_without_terminal_decision": 393,
       "direct_shape_without_terminal_decision": 391,
-      "other_shape_without_terminal_decision": 17,
+      "other_shape_without_terminal_decision": 2,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
-      "next_other_shape_path": ".github/skills/agentic-workflows/SKILL.md"
+      "next_other_shape_path": ".github/skills/agentic-workflows/SKILL.md",
+      "other_shape_structurally_classified": 17
     },
     {
       "source_id": "openai-plugins",
@@ -731,17 +732,167 @@
       "grade_20": 14,
       "candidate_decision": "REFERENCE-ONLY",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-monitoring/debugging/SKILL.md",
+      "skill_blob": "9cd16d51c79ac630e23f8959f050e75ee270bb7c",
+      "package_tree": "f05d91dde632a4b3586768ea7dd2c53e184edeb6",
+      "shape": "nested-or-internal",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-monitoring/setup/SKILL.md",
+      "skill_blob": "6c468cc11da4a5ac88287886e66212edbdf61542",
+      "package_tree": "5ab481b7326f940457b55d6524cc25967b7e167e",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md",
+      "skill_blob": "20d1555608099de32fc780c045aa7cf30273253c",
+      "package_tree": "fd61abe33a75be8c5dcf9e6dfe6b25fc777225a1",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md",
+      "skill_blob": "07f3e7acf97a11bfce911680daea06050693ade1",
+      "package_tree": "1719214047d33597718f7690005dc5ecffb60a6b",
+      "shape": "nested-or-internal",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md",
+      "skill_blob": "d25e8fae4e8625f280d79a91b8ca9bb46541c400",
+      "package_tree": "f093a4e465dcaffbd04110a75b42bab8ddaeb1ca",
+      "shape": "nested-or-internal",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
+      "skill_blob": "727d841cf37a6c19ffb81bbfa24dcd87d8724358",
+      "package_tree": "ae52538cedb17acf03ceaee2df214a5e89c9a99e",
+      "shape": "nested-or-internal",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
+      "skill_blob": "4fb0c2ddb00348222fc101b73a32c3cbc68f7aee",
+      "package_tree": "db0ce386f7a310c891a478f5aeb4390307738bee",
+      "shape": "nested-or-internal",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+      "skill_blob": "8665b40d0665fd114be8b4c2d7368b49248028b7",
+      "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
+      "skill_blob": "4c6e86154df06ed9006ffe6062c5a363acbb825b",
+      "package_tree": "02371e7d85feeb413abc3f2dbd5a0e93457c2a33",
+      "shape": "nested-or-internal",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
+      "skill_blob": "7b5ab453aca6b02da81a8362d0bcd363927c8c32",
+      "package_tree": "58c62032ee1d79c700df6665dffa4f1e25692661",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md",
+      "skill_blob": "a2cb1e84ef0404ace43d2acd38e437761f9ea859",
+      "package_tree": "21705d29ee5edc21798cd5ed0f7f4146a51fe6dc",
+      "shape": "nested-or-internal",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-qps/SKILL.md",
+      "skill_blob": "765f2dee24d518491e32a2b465451e6a9c225baf",
+      "package_tree": "75470d23152d4d1fd9271a6b92ee14f1601c11b6",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md",
+      "skill_blob": "e83645257af7de1f149b46dacf7f64c6fc467989",
+      "package_tree": "96753eeee600951da553af2c44bd418e34e933f6",
+      "shape": "nested-or-internal",
+      "grade_20": 8,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
+      "skill_blob": "39141c8ecb4ad5f91e5a8db7e4c6ae46662e014f",
+      "package_tree": "d98365ce40b0b666562d85c8c100c229cba71162",
+      "shape": "nested-or-internal",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-search-quality/search-strategies/SKILL.md",
+      "skill_blob": "7d5eabe880742c4e71aec15505db8ada36643e4b",
+      "package_tree": "efed90f016cda8d19fc61ded8aa986f9865d73c1",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-01",
     "source_id": "github-awesome-copilot",
-    "source_candidate_decisions": "14 -> 24 / 432 raw paths",
-    "direct_shape_candidate_decisions": "14 -> 24 / 415",
-    "four_source_exact_path_decisions": "55 -> 65 / 4813 raw paths",
+    "source_candidate_decisions": "24 -> 39 / 432 raw paths",
+    "nested_candidate_decisions": "0 -> 15 / 17 (17 structurally classified)",
+    "four_source_exact_path_decisions": "65 -> 80 / 4813 raw paths",
     "governed_records_added": 0,
     "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-01-awesome-copilot-planning-evidence-ten-static.md"
+    "receipt": "docs/reviews/2026-11-01-awesome-copilot-qdrant-nested-fifteen-static.md"
   }
 }
