@@ -13010,5 +13010,14 @@
     "accounting_reconciliation_20261102": "Recomputed from all source_vetted_candidate_examples PLUS source_vetted_reference_records: 171→179 subdomain instances, 146→154 overview previews, 164→172 unique source/path/pin candidates. Governed evidence-linked 78 unchanged.",
     "latest_awesome_copilot_requirements_eight": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
     "latest_awesome_copilot_test_framework_eight": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+  },
+  "historical_candidate_only_identity_reconciliation": {
+    "date": "2026-11-02",
+    "source": "openai-plugins",
+    "exact_blob_tree_matches": 41,
+    "stage": "historical-candidate-only; NOT current-standard ten-dimension or verified-fit",
+    "evidence": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
+    "qualified_domain_links_added": 0,
+    "reason": "No current-standard individual capability-domain qualification; do not fabricate mapping from names or historical candidate scores"
   }
 }

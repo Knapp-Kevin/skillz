@@ -106,5 +106,14 @@
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
   "latest_awesome_copilot_tranche": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",
-  "latest_j4flmao_tranche": "docs/reviews/2026-11-02-j4flmao-hardware-acceleration-eleven-static.md"
+  "latest_j4flmao_tranche": "docs/reviews/2026-11-02-j4flmao-hardware-acceleration-eleven-static.md",
+  "openai_plugin_exact_path_reconciliation": {
+    "date": "2026-11-02",
+    "historical_candidate_only_blob_and_tree_matches": 41,
+    "blocked_tree_mismatches": 9,
+    "other_family_decisions_without_exact_record_in_index": 119,
+    "ledger": "registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json",
+    "new_ten_dimension_reviews": 0,
+    "governed_review_delta": 0
+  }
 }
