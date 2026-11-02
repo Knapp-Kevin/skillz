@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "kind": "nine complete seven-file nested game graphics/engine packages; exact-tree static source-vetting grades",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "macro": {
+    "source_raw_paths": 645,
+    "source_direct_shape": 424,
+    "source_other_shape": 221,
+    "nested_game_first_class": 23,
+    "nested_game_terminal_before": 14,
+    "nested_game_terminal_after": 23,
+    "nested_game_seven_file_pending_before": 9,
+    "nested_game_seven_file_pending_after": 0,
+    "source_terminal_candidate_decisions_before": 32,
+    "source_terminal_candidate_decisions_after": 41,
+    "source_direct_shape_terminal_unchanged": 18,
+    "source_other_shape_still_unclassified": 198,
+    "packages_reviewed": 9,
+    "source_files_reviewed": 63,
+    "bundled_references_reviewed": 54,
+    "reject_unchanged": 9,
+    "reference_only": 0,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_ecosystem_denominator": null
+  },
+  "macro_findings": [
+    "All nine first-class package trees contain one SKILL.md and six bundled references, with complete exact Git tree and blob identities; references are not additional skills.",
+    "All nine are rejected for unchanged use due consequential code correctness, synchronization, unsafe lifecycle or authority/privacy defects, not source reputation or a numerical quota.",
+    "Cross-package recurring defects: frame-count GPU retirement instead of fence completion, deterministic claims undermined by worker identity, unsafe allocator/handle lifetimes, and unbounded crash telemetry/remote tools.",
+    "Reference value remains: deterministic cooking, job DAGs, capability negotiation, SIMD/property tests, frame graphs, ECS scheduling, PAL interfaces; extraction must repair examples and preserve MIT notices.",
+    "Source-local nested game frontier now 23/23 candidate-terminal, but 198 other-shape source paths remain unclassified and 406 direct-shape paths remain without decisions. Ecosystem eligible distinct denominator remains unknown.",
+    "Candidate source-vetting scores are not governed verification pairs, package security scans, behavioral validation or unchanged-use approvals."
+  ],
+  "records": [
+    {
+      "name": "vulkan",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-development/vulkan/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "4086b6e9b7bd1776acfdecad0a474e6e2c027e64",
+      "package_tree": "09201bf639d7cf53bfac8da47647b0e34f26e42c",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "4086b6e9b7bd1776acfdecad0a474e6e2c027e64",
+          "bytes": 27289
+        },
+        {
+          "path": "references/compute-and-ray-tracing.md",
+          "blob_sha": "c87173ebb39debf863a55d5241f5a265e6055491",
+          "bytes": 6485
+        },
+        {
+          "path": "references/memory-and-upload.md",
+          "blob_sha": "8c8d9e33323509d2cf3d0a0691db61d184b893e7",
+          "bytes": 8082
+        },
+        {
+          "path": "references/render-passes-and-pipelines.md",
+          "blob_sha": "d02fd16f3eefb7de94fd914efe7d6eea12c2ac51",
+          "bytes": 6314
+        },
+        {
+          "path": "references/swapchain-and-present.md",
+          "blob_sha": "3ad4395e61e101e0cc2ae0a51265182f78ec5fdb",
+          "bytes": 4948
+        },
+        {
+          "path": "references/synchronization-deep-dive.md",
+          "blob_sha": "a218a042b7e5a465b981ebd584e88122ca6d11fe",
+          "bytes": 7123
+        },
+        {
+          "path": "references/vulkan-initialization.md",
+          "blob_sha": "cd2bb5d000d5d0014c3f6e1c1b43f05f4536af8e",
+          "bytes": 5225
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "3d-cad-animation/rendering/vulkan-device-swapchain-and-gpu-memory",
+      "trigger_nontrigger": "Use for vulkan device swapchain and gpu memory design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "The swapchain reference destroys the old swapchain before using it in oldSwapchain, ignores maxImageCount in image-count selection, and the compute reference's 64x64 local workgroup exceeds common per-workgroup invocation limits. Memory/upload examples contain invalid VMA usage and alignment omissions.",
+      "reference_extraction": "Use device capability negotiation, validation layers, staging discipline and fence-confirmed resource retirement only after correcting examples.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-development/vulkan/SKILL.md"
+    },
+    {
+      "name": "render-graph",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/render-graph/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "8b42b6205dd8442f4b2cd5d02bb0a2fda0549926",
+      "package_tree": "59f015b021da5e4b344303ef92226847e26ba692",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "8b42b6205dd8442f4b2cd5d02bb0a2fda0549926",
+          "bytes": 7625
+        },
+        {
+          "path": "references/barriers-and-transitions.md",
+          "blob_sha": "8e36f78169904d418b0683763674229fd23138db",
+          "bytes": 3875
+        },
+        {
+          "path": "references/command-lists-and-queues.md",
+          "blob_sha": "b77626bce60ba02c9e9afee88f7d122c0c8eacd4",
+          "bytes": 4508
+        },
+        {
+          "path": "references/gpu-driven-rendering.md",
+          "blob_sha": "9913553812490a4d2cc9c658d2d25087991bbf10",
+          "bytes": 4846
+        },
+        {
+          "path": "references/passes-and-attachments.md",
+          "blob_sha": "abeb5c5bc7da96c03db7853bf06188bdd4fc5776",
+          "bytes": 4439
+        },
+        {
+          "path": "references/resource-lifecycle.md",
+          "blob_sha": "3a4814a7c4100795fb70874fba6c881c3a34afec",
+          "bytes": 4039
+        },
+        {
+          "path": "references/synchronization-and-fencing.md",
+          "blob_sha": "ed99729df7c06c3e8fa12638750b4cf5141f665a",
+          "bytes": 4391
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "3d-cad-animation/rendering/frame-graph-resource-hazards",
+      "trigger_nontrigger": "Use for frame graph resource hazards design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Resource-lifecycle reference treats frame index arithmetic as GPU completion; barriers reference overstates simple graph edges and proposes discard transitions that may lose data; synchronization reference confuses semaphore waits/signals and queue ownership.",
+      "reference_extraction": "Extract pass/resource DAG, hazard and aliasing visualization, and fence-gated deferred retirement after API-specific correction.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/render-graph/SKILL.md"
+    },
+    {
+      "name": "asset-pipeline",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/asset-pipeline/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "476bb7f2f40f1e4f43f0f4dd01c683e90cf66fd5",
+      "package_tree": "b2f29cf45e43030504185bdff3b5be26a90ef2bf",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "476bb7f2f40f1e4f43f0f4dd01c683e90cf66fd5",
+          "bytes": 8396
+        },
+        {
+          "path": "references/asset-registry.md",
+          "blob_sha": "2616c9f20264e90a479037a82af03b10fabde200",
+          "bytes": 4233
+        },
+        {
+          "path": "references/hot-reload.md",
+          "blob_sha": "e8463830b43c8f21d5dd81004bcf22382e828b0e",
+          "bytes": 3688
+        },
+        {
+          "path": "references/import-and-cook.md",
+          "blob_sha": "abc16204adee1bb9ca440fb8f10217842a45e75c",
+          "bytes": 4879
+        },
+        {
+          "path": "references/packing.md",
+          "blob_sha": "ea4325bc415e5b3801f22fc662928a45ec89c16d",
+          "bytes": 4035
+        },
+        {
+          "path": "references/shader-pipeline.md",
+          "blob_sha": "ed574c2306702bcf817968ccc9691f9fc6a18912",
+          "bytes": 4109
+        },
+        {
+          "path": "references/streaming-throttle.md",
+          "blob_sha": "667d68a6dd83380d9deb990d27ce065e54784efb",
+          "bytes": 4047
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "software-engineering/architecture/game-asset-import-cook-and-streaming",
+      "trigger_nontrigger": "Use for game asset import cook and streaming design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "HARD FAIL: publishing/modifying persistent asset archives and hot reload requires explicit owner authorization, absent at action boundaries",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Registry unload immediately frees on zero refs despite in-flight async I/O/decode/GPU work; hot-reload retires GPU resources after a fixed frame count; pack integrity relies on CRC rather than authentication and does not specify bounded untrusted archive parsing.",
+      "reference_extraction": "Extract content hashing, deterministic cook DAG, dependency invalidation, staged publish and rights-aware packaging after fixing lifetimes and archive trust.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/asset-pipeline/SKILL.md"
+    },
+    {
+      "name": "ecs-pattern",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/ecs-pattern/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "ad5163695819ca68c1af519e2469345226e4e4a6",
+      "package_tree": "0604d31dbdb21aff02c79322105a03ef3a3bf8fc",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "ad5163695819ca68c1af519e2469345226e4e4a6",
+          "bytes": 24467
+        },
+        {
+          "path": "references/archetype-storage-deep-dive.md",
+          "blob_sha": "6ab6d832aff3b3225129826ed6a794c1db8d96de",
+          "bytes": 7909
+        },
+        {
+          "path": "references/bevy-ecs-patterns.md",
+          "blob_sha": "b705e1fc8f0c98a52e4e759d1247418480ab5752",
+          "bytes": 6455
+        },
+        {
+          "path": "references/ecs-netcode.md",
+          "blob_sha": "a8849b9f574a4a367fcc3e0aee12b82fead4deba",
+          "bytes": 5349
+        },
+        {
+          "path": "references/entt-and-flecs.md",
+          "blob_sha": "8cf92b33badf3007f9b36b1a234b7f1c002fa6d6",
+          "bytes": 7342
+        },
+        {
+          "path": "references/system-scheduling-pipelines.md",
+          "blob_sha": "85d5361278cd9d1486b189bddf8ea15f90644e4a",
+          "bytes": 7123
+        },
+        {
+          "path": "references/unity-dots-in-practice.md",
+          "blob_sha": "556195d08f8177c8840a3918b2d9f577a12fb811",
+          "bytes": 7705
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "software-engineering/architecture/game-entity-component-systems",
+      "trigger_nontrigger": "Use for game entity component systems design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "The sparse-set removal example indexes a popped slot at the last element; entity generation creation returns a stale generation; spawn assumes archetypes[0] exists; EnTT example uses undefined enny and Bevy API examples mix version eras.",
+      "reference_extraction": "Extract read/write-set scheduling, deferred structural changes, generational IDs, storage tradeoffs and version-pinned ECS comparisons after correcting code.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/ecs-pattern/SKILL.md"
+    },
+    {
+      "name": "job-system",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/job-system/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "90ddc1ef4e7f7ae5f24807703c7a1bd7ace6bbb7",
+      "package_tree": "6a73799ba6cf8b674f895956da35bade583b86c0",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "90ddc1ef4e7f7ae5f24807703c7a1bd7ace6bbb7",
+          "bytes": 10690
+        },
+        {
+          "path": "references/dependency-graph.md",
+          "blob_sha": "11f5a24c6aa1e002b593c0bf83a6cf2b6d0b527a",
+          "bytes": 5295
+        },
+        {
+          "path": "references/determinism.md",
+          "blob_sha": "101580d27b30143e6a9a06b30143cb65026100dc",
+          "bytes": 4723
+        },
+        {
+          "path": "references/fibers-and-async.md",
+          "blob_sha": "40d9be8c02801aea74446c49fb7388d12f4ffd1c",
+          "bytes": 5354
+        },
+        {
+          "path": "references/job-profiling.md",
+          "blob_sha": "7d0fca53aeae6798a2e2f552090f7291f9fbaa98",
+          "bytes": 4096
+        },
+        {
+          "path": "references/parallel-for.md",
+          "blob_sha": "8cd51b2b813baf3da56d3e63c073d8932de59995",
+          "bytes": 4463
+        },
+        {
+          "path": "references/scheduler-impl.md",
+          "blob_sha": "37c72a3ac6fe4409400101ed5a7d94599376cb8d",
+          "bytes": 5750
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "software-engineering/architecture/game-job-dag-scheduler",
+      "trigger_nontrigger": "Use for game job dag scheduler design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Dependency graph conflates ready in-degree with job completion and lacks race-safe callback registration; scheduler may execute an invalid job after failed steal; deterministic RNG seeds use worker ID despite work stealing.",
+      "reference_extraction": "Extract DAG cycle checking, separate readiness/completion counters, item-key RNG and bounded queue/worker profiling after correction.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/job-system/SKILL.md"
+    },
+    {
+      "name": "math-foundation",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/math-foundation/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "f2305d991fe9399f2c19b47ea5cc23981af38333",
+      "package_tree": "b7b9755ba792dce9277fb9686291e67220360a11",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "f2305d991fe9399f2c19b47ea5cc23981af38333",
+          "bytes": 10299
+        },
+        {
+          "path": "references/collision-primitives.md",
+          "blob_sha": "903cf6de0a8b8811871395daf50d024e2aefeba1",
+          "bytes": 4463
+        },
+        {
+          "path": "references/curves-and-interp.md",
+          "blob_sha": "651c4aecc48315dc3a1d15e632e24906903e6bd4",
+          "bytes": 3759
+        },
+        {
+          "path": "references/numerical-stability.md",
+          "blob_sha": "dcd7130b46e5fdd79614e59e20737038d1995ea2",
+          "bytes": 4165
+        },
+        {
+          "path": "references/quaternion.md",
+          "blob_sha": "8c7fb3e3ae1ad663fb2e5bf64946d6115d5cdcd5",
+          "bytes": 4164
+        },
+        {
+          "path": "references/simd.md",
+          "blob_sha": "ded6e3833a6a5166ed570ba005b7fdc206f1e571",
+          "bytes": 3954
+        },
+        {
+          "path": "references/transforms.md",
+          "blob_sha": "3e8012c6ec20b1a7e999cc4beeb2665586000869",
+          "bytes": 4352
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "3d-cad-animation/simulation/game-engine-numerical-geometry",
+      "trigger_nontrigger": "Use for game engine numerical geometry design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Ray-AABB slab code produces NaN for parallel rays at slab boundaries without handling zero direction; deterministic RNG reference includes worker ID; inverse TRS shortcut is incomplete under rotated nonuniform scale and shear.",
+      "reference_extraction": "Extract explicit coordinate conventions, quaternion sign-correct interpolation, scalar/SIMD property tests and robust geometric predicates.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/math-foundation/SKILL.md"
+    },
+    {
+      "name": "memory-management",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/memory-management/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "4dfc3f7a93125949fd75aa1271c89deb778a5114",
+      "package_tree": "a819c0d9d3198db11b1ce7f9c7527f068c480f59",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "4dfc3f7a93125949fd75aa1271c89deb778a5114",
+          "bytes": 15296
+        },
+        {
+          "path": "references/allocator-hierarchy.md",
+          "blob_sha": "f8c42d4b484e6241b92e6d4c23d22e7dd01d87b2",
+          "bytes": 9123
+        },
+        {
+          "path": "references/cache-aware-layout.md",
+          "blob_sha": "6929b039ad472ff92764eb9fef20ea2b15602b08",
+          "bytes": 6734
+        },
+        {
+          "path": "references/gc-avoidance.md",
+          "blob_sha": "0acec039a0969067efaffb383b70a11eacd4ddab",
+          "bytes": 5906
+        },
+        {
+          "path": "references/gpu-memory.md",
+          "blob_sha": "0a947c4293c523a7cf0d8a316e5ba17b76edf108",
+          "bytes": 5504
+        },
+        {
+          "path": "references/memory-tracking.md",
+          "blob_sha": "7d68a1982e03acd9e8e0cac49780c3f93ba95e7a",
+          "bytes": 5613
+        },
+        {
+          "path": "references/virtual-memory.md",
+          "blob_sha": "587cd64c47c76dd98487841695e6a11cefec4542",
+          "bytes": 5251
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "software-engineering/architecture/game-allocator-and-gpu-memory-lifetimes",
+      "trigger_nontrigger": "Use for game allocator and gpu memory lifetimes design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Main StackAllocator advances top before its bound assert and mismatches aligned allocation size with recorded capacity; reference aligned_alloc(64,cap) omits size multiple constraint; GPU free guidance conflates elapsed frames with confirmed fence completion.",
+      "reference_extraction": "Extract budget tagging, generation handles, per-thread arenas, sanitizer checks and fence-confirmed GPU resource retirement.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/memory-management/SKILL.md"
+    },
+    {
+      "name": "game-engine-patterns",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/patterns/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "a7e948d80753d3db55bdc321b8b0ffa93646c642",
+      "package_tree": "e53e879b521a31fc46486aded599840e67a1995e",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "a7e948d80753d3db55bdc321b8b0ffa93646c642",
+          "bytes": 16730
+        },
+        {
+          "path": "references/behavior-patterns.md",
+          "blob_sha": "b6fbbb42e70736a6ec668b74684562681eb81a18",
+          "bytes": 6492
+        },
+        {
+          "path": "references/component-architecture.md",
+          "blob_sha": "f2370c4755bb8a745fb63f403faae1b768b95a39",
+          "bytes": 5241
+        },
+        {
+          "path": "references/game-loop-and-timestep.md",
+          "blob_sha": "1b13eeca1a4bd841f848f0d096bc08c919ad0e4b",
+          "bytes": 5849
+        },
+        {
+          "path": "references/memory-and-pools.md",
+          "blob_sha": "1ce76dc426632f122005614af79b602560bfd8b0",
+          "bytes": 6061
+        },
+        {
+          "path": "references/rendering-pipeline-patterns.md",
+          "blob_sha": "96fef04ab49e2f4ec44d35ceb6bd1bbfd248e028",
+          "bytes": 5262
+        },
+        {
+          "path": "references/spatial-partitioning.md",
+          "blob_sha": "a6bfc84b05be6b42a35637057d43ee0d2f22d19c",
+          "bytes": 5038
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "software-engineering/architecture/game-loop-pooling-and-spatial-patterns",
+      "trigger_nontrigger": "Use for game loop pooling and spatial patterns design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "Generation-only interpretation; code execution, profiling, production changes and disclosure require separate host/user authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "Object pool acquire() and release() lack exhaustion/double-release checks; arena uses uninitialized vector capacity and unchecked indexing; game-loop reference declares recursively embedded SimState by value (ill-formed C++); rendering reference's AABB/frustum test uses only box.min and can wrongly cull visible objects.",
+      "reference_extraction": "Extract fixed-step accumulator, composition tradeoffs, event queues and spatial-index selection after replacing unsafe examples.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/patterns/SKILL.md"
+    },
+    {
+      "name": "platform-abstraction",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/game/game-engine/platform-abstraction/SKILL.md",
+      "frontmatter_version": "2.0.0",
+      "skill_blob": "1145f11f2dbf9b0d2db3e1be27107984c9b8b410",
+      "package_tree": "cd5f2252f9a94c6f7240d46f999dac36e5646bb4",
+      "package_tree_complete": true,
+      "package_file_count": 7,
+      "package_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "1145f11f2dbf9b0d2db3e1be27107984c9b8b410",
+          "bytes": 9709
+        },
+        {
+          "path": "references/filesystem.md",
+          "blob_sha": "ed67ee96cf43a147417166ec3457662e0003af9a",
+          "bytes": 4532
+        },
+        {
+          "path": "references/input-devices.md",
+          "blob_sha": "48295888f57b04d4156e62e2b9edc2049d0b4a2f",
+          "bytes": 3750
+        },
+        {
+          "path": "references/modules-and-tools.md",
+          "blob_sha": "0666a2d261a0ea36937a19b7949b075656ba0131",
+          "bytes": 3945
+        },
+        {
+          "path": "references/os-interface.md",
+          "blob_sha": "129c405c90126f53d80af1abd11707834e57af6b",
+          "bytes": 5004
+        },
+        {
+          "path": "references/threading.md",
+          "blob_sha": "e43ebbbf45fee65f66d1e1017f0f1d73afa19f67",
+          "bytes": 3933
+        },
+        {
+          "path": "references/windowing.md",
+          "blob_sha": "d160d7f6a9ebb36446b7054b35ead8abfe46ddfb",
+          "bytes": 3744
+        }
+      ],
+      "source_license": "Complete pinned root MIT (LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354); preserve notices; third-party APIs, drivers and engines have separate terms",
+      "capability_path": "software-engineering/architecture/game-platform-abstraction-and-filesystem",
+      "trigger_nontrigger": "Use for game platform abstraction and filesystem design and local code guidance; not automatic execution, production deployment, telemetry or external writes.",
+      "dependencies": "Six bundled pinned Markdown references listed in package_files; cross-package links are prior art, not independently bundled skill identities; external engines/APIs version-specific",
+      "freshness": "Pinned source revision dated 2026-11-01; verify target engine, API/driver, hardware limits, dependency versions and examples before use",
+      "authority": "HARD FAIL: instructions prescribe telemetry/remote service exposure without scoped authorization",
+      "privacy_egress": "Diagnostics, crash dumps, input traces, asset/source content, user data and remote telemetry require separately authorized collection, minimization, retention and disclosure; no private data was accessed",
+      "controlled_tags": {
+        "use_case": [
+          "architecture",
+          "implementation"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "compatibility-aware",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "rubric_10_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT unchanged",
+      "static_rationale": "PAL guide mandates minidump plus telemetry in all builds without a separate data-disclosure authorization; module/tool reference proposes a remote TCP console without authentication scope; VFS path concatenation omits traversal and symlink confinement; async read sample does not establish buffer lifetime.",
+      "reference_extraction": "Extract typed PAL capability gates, portable event conversion, mount separation and scoped diagnostics only after privacy/authorization and filesystem security fixes.",
+      "source_vetting_terminal": true,
+      "governed_semantic_pair_created": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/game/game-engine/platform-abstraction/SKILL.md"
+    }
+  ]
+}
