@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-01",
+  "snapshot_date": "2026-11-02",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 13,
+      "source_vetted_reference_count": 15,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -280,6 +280,36 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/sql-code-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "689c76eac6e6fe3801023ecb4e5bd3f8ec978fb3",
+          "package_tree": "6c99a2b1316105edde8c88d860ec1836a70735eb",
+          "capability": "Review cross-dialect SQL for security, correctness and performance",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/postgresql-code-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "72d8eac69920b97d20bbcf012469808129ec129f",
+          "package_tree": "5e41d23340dfe6988fc87a727083d1cd30bc1b1c",
+          "capability": "Review PostgreSQL JSONB, arrays, RLS, indexes and schema",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -319,7 +349,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 5,
+      "source_vetted_reference_count": 13,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -388,6 +418,126 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/playwright-generate-test/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "5d80435fe1697ca3d572bc653df877e503643b85",
+          "package_tree": "80b315fa5ec450946b5eb78c19fbd989dff33b11",
+          "capability": "Generate Playwright TypeScript tests after MCP-driven scenario walkthrough",
+          "static_candidate_score": "6/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/pytest-coverage/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "38a8ed6f46942e861341e16b396e110d024d243c",
+          "package_tree": "abd9a3fb4ce4642bcc016982cbf0afba0c8f7222",
+          "capability": "Increase Python line coverage using pytest-cov annotated reports",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/react19-test-patterns/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "b586d70527faf9ad59436335cc1c8b8373482f9c",
+          "package_tree": "89bd1bb207ad7325270a9fa90f644fe269190d8f",
+          "capability": "Migrate React test-utils patterns to React 19",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/csharp-mstest/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "e68bc31ea88ed3c288a45b593c1f2548101c8a23",
+          "package_tree": "81622aade749f379c8af8e20086a083a33e9bc03",
+          "capability": "Reference MSTest 3.x/4.x assertion and test organization patterns",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/scoutqa-test/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "cb0ae9689947c4c18671e3b304e1d8a35de584fb",
+          "package_tree": "2a3411b44940264bf50d57c5b29e10c3423b103a",
+          "capability": "Delegate browser exploration to ScoutQA remote CLI",
+          "static_candidate_score": "8/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "aba48c998e1ae04f902db8d4744a74474d4307cd",
+          "package_tree": "beff71b7fb9daff916f4192e3578d0c4dd663493",
+          "capability": "Generate Oracle baseline integration tests before PostgreSQL migration",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "8d99d9510ff46ccd172be503504f3a36ff597170",
+          "package_tree": "28557e8b6227481145671cf0e8ec42d7bf03a30c",
+          "capability": "Plan single-project Oracle to PostgreSQL integration test coverage",
+          "static_candidate_score": "15/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "294997539c2651057255f0d665a1d9e1d443b813",
+          "package_tree": "e2c7d4017f86883e41faf77a3e095c7d81632ba4",
+          "capability": "Scaffold Oracle-targeting xUnit project and seed/rollback infrastructure",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -2293,6 +2443,36 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/sql-code-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "689c76eac6e6fe3801023ecb4e5bd3f8ec978fb3",
+              "package_tree": "6c99a2b1316105edde8c88d860ec1836a70735eb",
+              "capability": "Review cross-dialect SQL for security, correctness and performance",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/postgresql-code-review/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "72d8eac69920b97d20bbcf012469808129ec129f",
+              "package_tree": "5e41d23340dfe6988fc87a727083d1cd30bc1b1c",
+              "capability": "Review PostgreSQL JSONB, arrays, RLS, indexes and schema",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -2682,7 +2862,69 @@
             "mattpocock-skills/tdd"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 4
+          "name_only_review_hits_in_scope": 4,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/pytest-coverage/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "38a8ed6f46942e861341e16b396e110d024d243c",
+              "package_tree": "abd9a3fb4ce4642bcc016982cbf0afba0c8f7222",
+              "capability": "Increase Python line coverage using pytest-cov annotated reports",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/csharp-mstest/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "e68bc31ea88ed3c288a45b593c1f2548101c8a23",
+              "package_tree": "81622aade749f379c8af8e20086a083a33e9bc03",
+              "capability": "Reference MSTest 3.x/4.x assertion and test organization patterns",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "aba48c998e1ae04f902db8d4744a74474d4307cd",
+              "package_tree": "beff71b7fb9daff916f4192e3578d0c4dd663493",
+              "capability": "Generate Oracle baseline integration tests before PostgreSQL migration",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "294997539c2651057255f0d665a1d9e1d443b813",
+              "package_tree": "e2c7d4017f86883e41faf77a3e095c7d81632ba4",
+              "capability": "Scaffold Oracle-targeting xUnit project and seed/rollback infrastructure",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "end-to-end",
@@ -2704,7 +2946,39 @@
             "microsoft-skills/azure-resource-manager-playwright-dotnet"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 4
+          "name_only_review_hits_in_scope": 4,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/playwright-generate-test/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "5d80435fe1697ca3d572bc653df877e503643b85",
+              "package_tree": "80b315fa5ec450946b5eb78c19fbd989dff33b11",
+              "capability": "Generate Playwright TypeScript tests after MCP-driven scenario walkthrough",
+              "static_candidate_score": "6/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/scoutqa-test/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "cb0ae9689947c4c18671e3b304e1d8a35de584fb",
+              "package_tree": "2a3411b44940264bf50d57c5b29e10c3423b103a",
+              "capability": "Delegate browser exploration to ScoutQA remote CLI",
+              "static_candidate_score": "8/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "performance",
@@ -2783,7 +3057,24 @@
             "archieindian-superpowers/skill-compatibility-checker"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/react19-test-patterns/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "b586d70527faf9ad59436335cc1c8b8373482f9c",
+              "package_tree": "89bd1bb207ad7325270a9fa90f644fe269190d8f",
+              "capability": "Migrate React test-utils patterns to React 19",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "fuzz-property-testing",
@@ -2872,6 +3163,23 @@
               "static_candidate_score": "8/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "8d99d9510ff46ccd172be503504f3a36ff597170",
+              "package_tree": "28557e8b6227481145671cf0e8ec42d7bf03a30c",
+              "capability": "Plan single-project Oracle to PostgreSQL integration test coverage",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -9432,20 +9740,22 @@
     "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
-    "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+    "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
-    "date": "2026-11-01",
-    "subdomain_example_instances": 50,
-    "browse_overview_preview_instances": 58,
-    "distinct_source_path_pins": 60,
+    "date": "2026-11-02",
+    "subdomain_example_instances": 60,
+    "browse_overview_preview_instances": 68,
+    "distinct_source_path_pins": 70,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Candidate-only static scores across all linked tranches, not governed verification or install eligibility; 10 additional distinct single-file cross-domain packages; earlier candidate examples retained.",
+    "note": "Candidate-only exact-tree grades including rejected/reference-only records; governed review links 78 unchanged. 10 testing/database-quality candidates newly mapped; no unchanged-use approvals.",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged.",
     "latest_awesome_copilot_qdrant_routers_contributor_ten": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
-    "latest_awesome_copilot_cross_domain_ten": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    "latest_awesome_copilot_cross_domain_ten": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+    "latest_awesome_copilot_testing_quality_ten": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
   }
 }

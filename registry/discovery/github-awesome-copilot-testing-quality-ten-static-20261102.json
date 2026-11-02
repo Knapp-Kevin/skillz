@@ -1,0 +1,1021 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "github-awesome-copilot",
+  "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+  "source_role": "dynamic-discovery",
+  "review_kind": "ten complete single-file exact-version static candidate decisions; NOT governed verification",
+  "source_license_blob": "89bc5e962c9944cdb050887062afdaaf89be504a",
+  "source_denominator": {
+    "raw": 432,
+    "direct": 415,
+    "nested": 17
+  },
+  "rubric": {
+    "dimensions": [
+      "trigger_precision",
+      "procedural_clarity",
+      "authority_safety",
+      "failure_handling",
+      "evidence_discipline",
+      "dependency_coherence",
+      "portability_honesty",
+      "usefulness_differentiation",
+      "adversarial_resilience",
+      "effectiveness_design"
+    ],
+    "max_score": 20,
+    "score_values": [
+      0,
+      1,
+      2
+    ],
+    "static_only": true
+  },
+  "terminal_decisions": {
+    "count": 10,
+    "reference_only": 2,
+    "rejected_unchanged": 8,
+    "verified_governed": 0
+  },
+  "security_scans_executed": 0,
+  "behavioral_validations_executed": 0,
+  "admitted_source_denominator_delta": 0,
+  "governed_exact_version_review_pairs_created": 0,
+  "eligible_distinct_denominator": null,
+  "package_identity_method": "Exact pinned SKILL.md Git blob matched fetch; independent one-entry Git tree SHA1 calculation matched each package tree; 10/10 complete single-file packages.",
+  "macro_findings": [
+    "Two tool-driven QA procedures presume background or immediate test execution, with no scoped authorization for target, side effects, cost, or remote data egress.",
+    "Remote ScoutQA procedure explicitly sends application URLs and potentially credentials to a third-party service; the host-specific timeout instructions are not portable.",
+    "React 19 StrictMode effect-count claim is not a safe universal migration rule; MSTest 3.x/4.x API examples require version-specific compilation.",
+    "Generic SQL review conflates dialects; PostgreSQL review's JSONB index and session-bound RLS examples need correction before reuse.",
+    "Oracle migration family has a useful plan/scaffold/test progression but relies on rollback as a safety substitute and omits secure credential and isolated database controls.",
+    "No package-owned references/scripts/assets in this tranche; each complete package is one SKILL.md at a verified Git tree. No cross-source semantic duplicate resolution claimed."
+  ],
+  "records": [
+    {
+      "name": "playwright-generate-test",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/playwright-generate-test/SKILL.md",
+      "skill_blob": "5d80435fe1697ca3d572bc653df877e503643b85",
+      "package_tree": "80b315fa5ec450946b5eb78c19fbd989dff33b11",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/playwright-generate-test/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 6,
+      "static_grade": "6/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/browser-testing"
+      ],
+      "purpose_and_use_case": "Generate Playwright TypeScript tests after MCP-driven scenario walkthrough",
+      "trigger_boundary": "Explicit scenario; requires Playwright MCP",
+      "nontrigger_boundary": "No automatic test-file writes or test execution from discovery or read-only review",
+      "authority_and_safety": "Unconditionally writes tests and executes them, without host capability check, repository scope approval or safe test-target boundaries",
+      "privacy_and_secret_risk": "Browser scenario may involve credentials, PII, state-changing interactions and third-party websites; no scoping or redaction",
+      "dependencies": "Playwright MCP, @playwright/test, TypeScript, writable tests directory",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Very short instruction, no test fixtures or rollback/cleanup; overlaps general browser-testing procedures",
+      "reusable_reference": "Retain scenario-first observed walkthrough and code-from-evidence sequencing",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "browser-testing"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "test-driven",
+          "tool-assisted"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/playwright-generate-test/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Playwright MCP, @playwright/test, TypeScript, writable tests directory",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "pytest-coverage",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/pytest-coverage/SKILL.md",
+      "skill_blob": "38a8ed6f46942e861341e16b396e110d024d243c",
+      "package_tree": "abd9a3fb4ce4642bcc016982cbf0afba0c8f7222",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/pytest-coverage/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 9,
+      "static_grade": "9/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/test-coverage"
+      ],
+      "purpose_and_use_case": "Increase Python line coverage using pytest-cov annotated reports",
+      "trigger_boundary": "Explicit Python coverage work",
+      "nontrigger_boundary": "Not authorization to rewrite tests or pursue 100% at unlimited cost",
+      "authority_and_safety": "Requires repeated test creation and execution until 100% line coverage, without time, risk or scope limits; treats line coverage as sufficient quality",
+      "privacy_and_secret_risk": "Coverage artifacts may contain source or test data; no handling for private projects or sensitive outputs",
+      "dependencies": "pytest, pytest-cov, writable tests, cov_annotate output",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "No branch/exclusion handling, no mutation gate, no meaningful test-quality criterion",
+      "reusable_reference": "Retain annotated uncovered-line discovery as a checklist, with bounded meaningful coverage goals",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "iterative"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/pytest-coverage/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "pytest, pytest-cov, writable tests, cov_annotate output",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "react19-test-patterns",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/react19-test-patterns/SKILL.md",
+      "skill_blob": "b586d70527faf9ad59436335cc1c8b8373482f9c",
+      "package_tree": "89bd1bb207ad7325270a9fa90f644fe269190d8f",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/react19-test-patterns/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 11,
+      "static_grade": "11/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/frontend-test-migration"
+      ],
+      "purpose_and_use_case": "Migrate React test-utils patterns to React 19",
+      "trigger_boundary": "React 19 migration with affected tests",
+      "nontrigger_boundary": "Not universal instruction to change StrictMode assertions without observed evidence",
+      "authority_and_safety": "Claims React 19 no longer double-invokes effects in StrictMode and prescribes 2-to-1 call-count rewrite; misleading generalization conflicts with React dev StrictMode behavior",
+      "privacy_and_secret_risk": "No direct data egress, but commands and automated edits require normal project authorization",
+      "dependencies": "React 19, @testing-library/react, npm/Jest conventions",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Useful import migration map; inaccurate effect behavior and brittle npm invocation can create false-green tests",
+      "reusable_reference": "Retain act import and Simulate replacement map; re-derive effect counts from actual harness and official versioned docs",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "refactoring"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "compatibility-aware",
+          "visual-verification"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/react19-test-patterns/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "React 19, @testing-library/react, npm/Jest conventions",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "csharp-mstest",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/csharp-mstest/SKILL.md",
+      "skill_blob": "e68bc31ea88ed3c288a45b593c1f2548101c8a23",
+      "package_tree": "81622aade749f379c8af8e20086a083a33e9bc03",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/csharp-mstest/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 14,
+      "static_grade": "14/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": false,
+      "capability_paths": [
+        "testing/dotnet-unit-testing"
+      ],
+      "purpose_and_use_case": "Reference MSTest 3.x/4.x assertion and test organization patterns",
+      "trigger_boundary": "MSTest-specific C# test-writing request",
+      "nontrigger_boundary": "Not a verified version-specific API compatibility guarantee",
+      "authority_and_safety": "Test examples are guidance, not explicit permission for repo mutation; version-gated API examples need actual NuGet/runtime checks",
+      "privacy_and_secret_risk": "TestContext output and attached result files can contain sensitive data; no explicit redaction or artifact retention rules",
+      "dependencies": "MSTest 3.x/4.x, .NET SDK, NuGet, optional Moq/NSubstitute",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Version-mixed API assertions, potential invalid/unstable examples and broad prescriptive defaults prevent unchanged approval without compilation",
+      "reusable_reference": "Retain AAA patterns, TestContext cancellation, typed assertions and data-driven-test structure",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "test-driven",
+          "reference-heavy"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/csharp-mstest/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "MSTest 3.x/4.x, .NET SDK, NuGet, optional Moq/NSubstitute",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "scoutqa-test",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/scoutqa-test/SKILL.md",
+      "skill_blob": "cb0ae9689947c4c18671e3b304e1d8a35de584fb",
+      "package_tree": "2a3411b44940264bf50d57c5b29e10c3423b103a",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/scoutqa-test/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 8,
+      "static_grade": "8/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/remote-exploratory-qa"
+      ],
+      "purpose_and_use_case": "Delegate browser exploration to ScoutQA remote CLI",
+      "trigger_boundary": "Explicit web QA request or post-implementation suggestion",
+      "nontrigger_boundary": "Not authority to launch remote tests, access private pages or send credentials",
+      "authority_and_safety": "Proactively launches background remote testing with no approval, target allowlist, cost/time bound, termination or side-effect constraints",
+      "privacy_and_secret_risk": "Third-party service receives URLs, pages, test flows and potentially credentials; includes plaintext test-credential message example",
+      "dependencies": "ScoutQA CLI, remote ScoutQA service, Claude Bash timeout semantics, network and account",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Claims automatic localhost support and host-specific background semantics without validation; overlaps browser QA tools",
+      "reusable_reference": "Retain exploratory-test prompt patterns and structured severity/impact reporting as nonexecuting reference",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "browser-testing"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "tool-assisted",
+          "iterative"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/scoutqa-test/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "ScoutQA CLI, remote ScoutQA service, Claude Bash timeout semantics, network and account",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "sql-code-review",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/sql-code-review/SKILL.md",
+      "skill_blob": "689c76eac6e6fe3801023ecb4e5bd3f8ec978fb3",
+      "package_tree": "6c99a2b1316105edde8c88d860ec1836a70735eb",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/sql-code-review/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "rubric_total": 9,
+      "static_grade": "9/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/database-code-review"
+      ],
+      "purpose_and_use_case": "Review cross-dialect SQL for security, correctness and performance",
+      "trigger_boundary": "Explicit SQL review request",
+      "nontrigger_boundary": "Not a universal executable SQL rewrite or measured performance score",
+      "authority_and_safety": "Presents PostgreSQL/MySQL PREPARE syntax as interchangeable and asks for performance/security scores without measurement; broad optimizer assumptions risk misleading fixes",
+      "privacy_and_secret_risk": "Review of real schemas, logs or data requires bounded authorized access and redaction; no such gate",
+      "dependencies": "SQL Server, Oracle, PostgreSQL, MySQL; dialect-specific syntax and actual execution plans",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Dialect conflation and fabricated numeric assessment risk; overlaps PostgreSQL-specific review",
+      "reusable_reference": "Retain injection checklist, least-privilege review, index/plan evidence checklist",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "code-review",
+          "security"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/sql-code-review/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "SQL Server, Oracle, PostgreSQL, MySQL; dialect-specific syntax and actual execution plans",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "postgresql-code-review",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/postgresql-code-review/SKILL.md",
+      "skill_blob": "72d8eac69920b97d20bbcf012469808129ec129f",
+      "package_tree": "5e41d23340dfe6988fc87a727083d1cd30bc1b1c",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/postgresql-code-review/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 10,
+      "static_grade": "10/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "software-engineering/postgresql-review"
+      ],
+      "purpose_and_use_case": "Review PostgreSQL JSONB, arrays, RLS, indexes and schema",
+      "trigger_boundary": "Explicit PostgreSQL code review",
+      "nontrigger_boundary": "Not permission to execute DDL, install extensions, alter roles or RLS",
+      "authority_and_safety": "Sample JSONB GIN expression index does not support the paired data @> predicate as claimed; RLS policy trusts session-configured identity without establishing authenticated binding; mutating DDL examples lack authorization boundary",
+      "privacy_and_secret_risk": "Uses illustrative plaintext password and app.current_user_id setting; real secrets and tenant identity must remain external to conversational examples",
+      "dependencies": "PostgreSQL extensions citext, uuid-ossp, pgcrypto, pg_trgm; version-specific SQL",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Concrete PostgreSQL-specific patterns differentiated from generic SQL review, but correctness/security examples unsafe unchanged",
+      "reusable_reference": "Retain PostgreSQL-specific audit categories; verify index operator classes and trusted RLS identity against official docs",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "code-review",
+          "security"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/postgresql-code-review/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "PostgreSQL extensions citext, uuid-ossp, pgcrypto, pg_trgm; version-specific SQL",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "creating-oracle-to-postgres-migration-integration-tests",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md",
+      "skill_blob": "aba48c998e1ae04f902db8d4744a74474d4307cd",
+      "package_tree": "beff71b7fb9daff916f4192e3578d0c4dd663493",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 12,
+      "static_grade": "12/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/database-migration-integration-tests"
+      ],
+      "purpose_and_use_case": "Generate Oracle baseline integration tests before PostgreSQL migration",
+      "trigger_boundary": "Phase 3 only, one target project, existing test scaffold",
+      "nontrigger_boundary": "Not permission to seed or modify shared/production Oracle data",
+      "authority_and_safety": "Assumes rollback guarantees safety, directs seed loading and database writes without explicit isolated test DB and data-access authorization; cannot guarantee rollback for all side effects",
+      "privacy_and_secret_risk": "Existing business/lookup rows and database connection may be sensitive; no access boundary or credential-handling rule",
+      "dependencies": "Oracle .NET test project, seed manager, transaction-rollback base class",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Good phase boundary, NULL/empty and datetime assertions, but rollback-only safety inadequate",
+      "reusable_reference": "Retain golden-source test case design and deterministic round-trip assertions for isolated authorized fixtures",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "implementation",
+          "verification"
+        ],
+        "characteristic": [
+          "test-driven",
+          "contract-first"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Oracle .NET test project, seed manager, transaction-rollback base class",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "planning-oracle-to-postgres-migration-integration-testing",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md",
+      "skill_blob": "8d99d9510ff46ccd172be503504f3a36ff597170",
+      "package_tree": "28557e8b6227481145671cf0e8ec42d7bf03a30c",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "rubric_total": 15,
+      "static_grade": "15/20",
+      "static_decision": "REFERENCE-ONLY",
+      "unchanged_eligible": false,
+      "hard_fail": false,
+      "capability_paths": [
+        "testing/database-migration-test-planning"
+      ],
+      "purpose_and_use_case": "Plan single-project Oracle to PostgreSQL integration test coverage",
+      "trigger_boundary": "Explicit migration test-planning task",
+      "nontrigger_boundary": "Not authorization to write the fixed .github/Reports path or inspect private schemas outside task scope",
+      "authority_and_safety": "Plan is otherwise read-oriented but hardcodes a persistent repository output path and assumes Oracle is the authoritative behavior source without validation against business requirements",
+      "privacy_and_secret_risk": "Project code/schema may contain sensitive data; use only authorized project scope and avoid copying data into reports",
+      "dependencies": "Access to target .NET project and Oracle schema; no package-owned additional files",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Distinct risk-based NULL/timezone migration matrix; narrow one-project scope",
+      "reusable_reference": "Retain risk-ranked touchpoint coverage and portable assertion plan as a checklist",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "spec-driven",
+          "evidence-first"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Access to target .NET project and Oracle schema; no package-owned additional files",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    },
+    {
+      "name": "scaffolding-oracle-to-postgres-migration-test-project",
+      "source_id": "github-awesome-copilot",
+      "source_repository": "github/awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "canonical_path": "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md",
+      "skill_blob": "294997539c2651057255f0d665a1d9e1d443b813",
+      "package_tree": "e2c7d4017f86883e41faf77a3e095c7d81632ba4",
+      "package_tree_verified_as_single_file": true,
+      "package_tree_verification": "SHA-1 Git tree of sole 100644 SKILL.md blob recomputed independently from pinned manifest and matched package-tree SHA",
+      "package_files": [
+        "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md"
+      ],
+      "package_files_inspected": 1,
+      "source_license_scope": "Pinned root MIT LICENSE blob 89bc5e962c9944cdb050887062afdaaf89be504a; preserve GitHub copyright and MIT notice; third-party external dependencies retain their own terms.",
+      "source_role": "dynamic-discovery-only",
+      "review_method": "Full pinned SKILL.md and root license inspected; complete single-file package tree independently confirmed; no execution or external API version validation.",
+      "rubric_dimensions": [
+        "trigger_precision",
+        "procedural_clarity",
+        "authority_safety",
+        "failure_handling",
+        "evidence_discipline",
+        "dependency_coherence",
+        "portability_honesty",
+        "usefulness_differentiation",
+        "adversarial_resilience",
+        "effectiveness_design"
+      ],
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_total": 10,
+      "static_grade": "10/20",
+      "static_decision": "REJECT",
+      "unchanged_eligible": false,
+      "hard_fail": true,
+      "capability_paths": [
+        "testing/database-migration-test-scaffolding"
+      ],
+      "purpose_and_use_case": "Scaffold Oracle-targeting xUnit project and seed/rollback infrastructure",
+      "trigger_boundary": "Phase 3 only, before Oracle baseline tests",
+      "nontrigger_boundary": "Not permission to create project files, add packages or connect to live database",
+      "authority_and_safety": "Creates appsettings.json for Oracle connectivity without secure credential path; assumes catch-all exception handling guarantees transaction rollback, and mandates build/seed setup without scoped authority",
+      "privacy_and_secret_risk": "Potential credentials in appsettings.json and shared database test data; no secret-store or isolated test-database requirement",
+      "dependencies": "xUnit, Oracle.ManagedDataAccess.Core, .NET SDK, writable project and Oracle test database",
+      "portability_and_freshness": "Pinned source snapshot 2026-11-01; product APIs, version assertions, tool behavior and external facts not independently freshness validated.",
+      "differentiation_and_overlap": "Phase-specific scaffold is useful but failure handling and credential hygiene insufficient",
+      "reusable_reference": "Retain version-matching, project-scoped scaffolding and rollback-focused test design, with secret store and isolated database requirements",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "testing",
+          "implementation"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "contract-first",
+          "test-driven"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Root MIT permits licensed use of source-owned text with attribution and notice; does not relicense external tool APIs, third-party examples or downstream assets. No copying into admitted corpus or installation authorized.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "xUnit, Oracle.ManagedDataAccess.Core, .NET SDK, writable project and Oracle test database",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
+    }
+  ]
+}

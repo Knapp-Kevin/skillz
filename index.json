@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-01",
+  "snapshot_date": "2026-11-02",
   "repository_mode": "passive-skill-knowledge-resource",
   "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
   "freecad_four_candidate_vetting": {
@@ -4266,6 +4266,37 @@
       "subdomain_examples": 50,
       "overview_previews": 58,
       "distinct_candidate_source_path_pins": 60,
+      "governed_identity_links": 78
+    }
+  },
+  "awesome_copilot_testing_database_quality_ten": {
+    "date": "2026-11-02",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "review_kind": "10 complete single-file package static candidate decisions; NOT governed verification",
+    "graded_ledger": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+    "macro_receipt": "docs/reviews/2026-11-02-awesome-copilot-testing-database-quality-ten-static.md",
+    "reference_only": 2,
+    "rejected_unchanged": 8,
+    "awesome_copilot_exact_path_decisions_before": 59,
+    "awesome_copilot_exact_path_decisions_after": 69,
+    "awesome_copilot_raw_paths": 432,
+    "direct_shape_terminal": 52,
+    "direct_shape_undecided": 363,
+    "other_shape_terminal": 17,
+    "other_shape_undecided": 0,
+    "four_source_exact_path_decisions_before": 100,
+    "four_source_exact_path_decisions_after": 110,
+    "raw_four_source_paths": 4813,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "candidate_directory_recomputed": {
+      "subdomain_examples": 60,
+      "overview_previews": 68,
+      "distinct_candidate_source_path_pins": 70,
       "governed_identity_links": 78
     }
   }
