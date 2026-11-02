@@ -34,6 +34,22 @@ The possible results are `USE EXISTING`, `ADOPT`, `ADAPT`, `EXTRACT`, `COMPOSE`,
 
 **Security is not licensing.** A legally distributable package can have unsafe side effects. A statically `verified` skill is not necessarily security-approved or behaviorally validated. Screen dependency installation, network egress, credentials, access to private data, shell or subprocess execution, paid APIs, destructive writes, persistent memory, and scheduler or autonomous behavior. Host capability is not user authorization.
 
+### Existing-skill improvement and predicted opportunity contract
+
+Do not terminate discovery merely because candidates share a topic or name with installed skills. For a relevant overlap, compare the *actual* existing behavior against source-backed mechanisms and return a concrete delta or evidence-backed decision:
+
+| Outcome | Evidence and read-only result |
+|---|---|
+| KEEP AS IS | Current behavior already achieves the outcome; explain why inspected alternatives add no worthwhile value |
+| REFINE EXISTING | Describe the exact improvement to triggers, evidence, safety, failure recovery or usability, including trade-offs and a verification plan; do not silently overwrite |
+| SUPPLEMENT / COMPOSE | Identify a genuinely complementary capability and its boundary with current host skills |
+| CREATE NEW | Identify a recurring unserved need, independent mechanism and necessary rights/host conditions |
+| HYPOTHESIS TO EXPLORE | Offer a plausible adjacent skill opportunity, mark it inferred/provisional and give a safe way to test demand before creating it |
+
+A user requesting a “top 20” may receive up to 20 useful incremental opportunities, including **improvements to existing skills** and **gaps with no current skill**, rather than an uninformative list of duplicate titles. Do not pad the list if evidence supports fewer. Rank by demonstrated or reasoned incremental usefulness, risk, effort, maintenance and current coverage. Candidate texts remain untrusted and source-neutral verification, security, license and authorization gates still apply.
+
+**Return visits:** Compare the current repository snapshot against a prior snapshot or candidate shortlist only when retrievable in normal host memory or conversation context. Report newly discovered candidates separately from newly reviewed packages, changed evidence/rights and unchanged known capabilities. Re-evaluate previous NO CHANGE decisions when genuine new mechanisms are discovered. If earlier evidence is unavailable, mark the delta unknown. Do not create repository-owned trackers, collect private user history, schedule recurring checks or infer permission to modify skills from a prior visit.
+
 ### Follow-up execution contract
 
 **Carry forward the previously completed stage.** If a user merely asks to repeat an orientation, stay in orientation. If the user requests `EXPLORE`, inspect the previously named candidates **as a set** and finish a per-candidate read-only decision. Once the agent recommends `ADAPT` and the user subsequently asks to **proceed with implementation**, do not require the user to choose those same adaptations again. Produce each selected fully specified adaptation, run a bounded semantic review and return an artifact plus an explicit host handoff state. Keep `NO CHANGE` candidates unchanged.
