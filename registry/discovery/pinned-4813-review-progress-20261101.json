@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 185,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 193,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,12 +20,12 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 95,
-      "terminal_static_candidate_decisions": 95,
-      "direct_shape_path_decisions": 78,
+      "exact_path_fingerprints_checked": 103,
+      "terminal_static_candidate_decisions": 103,
+      "direct_shape_path_decisions": 86,
       "other_shape_path_decisions": 17,
-      "raw_paths_without_terminal_decision": 337,
-      "direct_shape_without_terminal_decision": 337,
+      "raw_paths_without_terminal_decision": 329,
+      "direct_shape_without_terminal_decision": 329,
       "other_shape_without_terminal_decision": 0,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
       "next_other_shape_path": null,
@@ -1933,10 +1933,90 @@
       "grade_20": 15,
       "candidate_decision": "REFERENCE-ONLY",
       "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ai-prompt-engineering-safety-review/SKILL.md",
+      "skill_blob": "86d8622d384e77056c4065cd616cb9285131d946",
+      "package_tree": "5479c057f0edef6e7956d1e3700ad28a6170f3e4",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/brag-sheet/SKILL.md",
+      "skill_blob": "250f4ac8ac04c3f6fa8ab4869ee3906aa1bdec99",
+      "package_tree": "1b49f3d6ca050ba2bbb99962b350057de981b8fa",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/chrome-devtools/SKILL.md",
+      "skill_blob": "3e7a53f41dee505d2a4cd1a277436b249057295f",
+      "package_tree": "1425ccd89c83988f6bdbc9e801f81e9f1faf86ea",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/convert-plaintext-to-md/SKILL.md",
+      "skill_blob": "c81b2e78a25dfdac342c73f47c95c8152b771add",
+      "package_tree": "1e13c30fa3b4a91234339acaeb7efd33d3b72a62",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-agentsmd/SKILL.md",
+      "skill_blob": "bdcfcf7c932f1d35028d209432db851034a24b21",
+      "package_tree": "290ab8ae85ba8695e9bceb674e74177e76f8633d",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/conventional-branch/SKILL.md",
+      "skill_blob": "7658a7d7c3e455156c79b6b9b1292e6b397d4ade",
+      "package_tree": "8609a0d58938270a0a82332d3141364480d2ee63",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/create-architectural-decision-record/SKILL.md",
+      "skill_blob": "be10104faded844c01d0f5b1f82e8c9fca15ba20",
+      "package_tree": "b7a90ff5b56ab9cdc674cee2c415bee46cbbf394",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/commit-message-storyteller/SKILL.md",
+      "skill_blob": "21f0dd15cc7129469a4f02ab2a300dbdb9b3e5ae",
+      "package_tree": "7ca8cb588d4d3dd47214c774f98857e0c7acd950",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
-  "latest_macro_checkpoint": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+  "latest_macro_checkpoint": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
   "pinned_manifest_identity_preflight": {
     "date": "2026-11-02",
     "evidence": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
@@ -1954,5 +2034,18 @@
     "governed_review_records_delta": 0,
     "behavioral_validation": "not-run",
     "caution": "Fingerprint uniqueness excludes exact collisions in four manifests, not semantic duplicates or governed mirrors; names are leads only."
+  },
+  "risk_tiered_developer_docs_checkpoint": {
+    "date": "2026-11-02",
+    "evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",
+    "new_terminal_source_vetting_decisions": 8,
+    "source_before": 95,
+    "source_after": 103,
+    "four_source_before": 185,
+    "four_source_after": 193,
+    "governed_review_delta": 0,
+    "eligible_distinct_denominator": null,
+    "behavioral_validation": "not-run"
   }
 }
