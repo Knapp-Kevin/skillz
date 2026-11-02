@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 13,
+      "source_vetted_reference_count": 12,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -219,6 +219,51 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-clients-sdk/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "7530f87bb97f3dce4b6e095c7bf1762aef3ca11c",
+          "package_tree": "34cfbf83e7e7d97e357bbb4b06605bd7c4bd3cee",
+          "capability": "Choose Qdrant SDK and API reference",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-model-migration/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "e0f4e5e9384541cba76eee56c7de4d9d5c038fc9",
+          "package_tree": "7a55707484332ac1dd15829472d55f2ae1a5550f",
+          "capability": "Plan embedding-model migration and alias cutover",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": ".github/skills/create-canvas-extension/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "2de882563896ec5a6b94ab70a82774463eeaa325",
+          "package_tree": "216e65e38535c9e91a19dfaf4cf0a745591f0125",
+          "capability": "Scaffold Awesome Copilot canvas extension manifests",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -258,7 +303,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 5,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -297,6 +342,36 @@
           "static_candidate_score": "8/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-performance-optimization/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "09aa5038e3852aa4368061414a9aa6272bbf0947",
+          "package_tree": "7746e5bb9b7a77083f16894ab1931aa0388fab3b",
+          "capability": "Route Qdrant indexing, search and memory optimization",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-search-quality/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "c322b65e7f1d6ce8f979dd5dc34eb85a22069a00",
+          "package_tree": "7843eb02b3b097a1d443844cb650a5da3aaf6b9c",
+          "capability": "Route Qdrant relevance diagnosis and retrieval strategies",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -370,7 +445,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 4,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -409,6 +484,21 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": ".github/skills/agentic-workflows/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "f11eaadd2e755a1c104a37bb3ab35795a2dcf057",
+          "package_tree": "dade976f4086d43cf690af95c2af857c7b0c6108",
+          "capability": "Route GitHub Agentic Workflow creation and debugging",
+          "static_candidate_score": "5/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -452,7 +542,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 10,
+      "source_vetted_reference_count": 14,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -608,6 +698,66 @@
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
           "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-deployment-options/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "fb69c2556359187777230bd6d0282f2ee027563d",
+          "package_tree": "c17d32fa0af73e32cc7abe7b06392b62cb2ef314",
+          "capability": "Compare Qdrant local, self-hosted, managed and edge deployment",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-monitoring/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "6059717a5234bed9b92b846e80f112b5e5d6fb1f",
+          "package_tree": "a99743834822777625079202b1fd0327e12f67ea",
+          "capability": "Route Qdrant monitoring setup versus diagnosis",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-scaling/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "766ade82e8ef74d151d353db15bb5b48ef8fec56",
+          "package_tree": "5b4d1e67e3f1cb22f5dbfe3f8c4ac9df2fecfa7d",
+          "capability": "Route Qdrant capacity, throughput and latency planning",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/qdrant-version-upgrade/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "867dcf4a263ba9e9ac0bd692182906c26a2a179b",
+          "package_tree": "bcba4704cd42e3c44a2a6e5bf49406f1a16e793e",
+          "capability": "Plan Qdrant server and SDK upgrade order",
+          "static_candidate_score": "8/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -1816,7 +1966,24 @@
             "anthropic-skills/webapp-testing"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 14
+          "name_only_review_hits_in_scope": 14,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": ".github/skills/create-canvas-extension/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "2de882563896ec5a6b94ab70a82774463eeaa325",
+              "package_tree": "216e65e38535c9e91a19dfaf4cf0a745591f0125",
+              "capability": "Scaffold Awesome Copilot canvas extension manifests",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "backend",
@@ -1945,6 +2112,21 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-model-migration/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "e0f4e5e9384541cba76eee56c7de4d9d5c038fc9",
+              "package_tree": "7a55707484332ac1dd15829472d55f2ae1a5550f",
+              "capability": "Plan embedding-model migration and alias cutover",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -1999,7 +2181,24 @@
             "aws-agent-toolkit/aws-sdk-python-usage"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 14
+          "name_only_review_hits_in_scope": 14,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-clients-sdk/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "7530f87bb97f3dce4b6e095c7bf1762aef3ca11c",
+              "package_tree": "34cfbf83e7e7d97e357bbb4b06605bd7c4bd3cee",
+              "capability": "Choose Qdrant SDK and API reference",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "architecture",
@@ -2340,7 +2539,39 @@
             "cloudflare-skills/web-perf"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 2
+          "name_only_review_hits_in_scope": 2,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-performance-optimization/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "09aa5038e3852aa4368061414a9aa6272bbf0947",
+              "package_tree": "7746e5bb9b7a77083f16894ab1931aa0388fab3b",
+              "capability": "Route Qdrant indexing, search and memory optimization",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-search-quality/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "c322b65e7f1d6ce8f979dd5dc34eb85a22069a00",
+              "package_tree": "7843eb02b3b097a1d443844cb650a5da3aaf6b9c",
+              "capability": "Route Qdrant relevance diagnosis and retrieval strategies",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "accessibility",
@@ -2566,6 +2797,23 @@
               "admitted_governed_record": false,
               "unchanged_use_approved": false
             }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": ".github/skills/agentic-workflows/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "f11eaadd2e755a1c104a37bb3ab35795a2dcf057",
+              "package_tree": "dade976f4086d43cf690af95c2af857c7b0c6108",
+              "capability": "Route GitHub Agentic Workflow creation and debugging",
+              "static_candidate_score": "5/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
           ]
         },
         {
@@ -2774,6 +3022,21 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-scaling/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "766ade82e8ef74d151d353db15bb5b48ef8fec56",
+              "package_tree": "5b4d1e67e3f1cb22f5dbfe3f8c4ac9df2fecfa7d",
+              "capability": "Route Qdrant capacity, throughput and latency planning",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -2878,7 +3141,39 @@
             "microsoft-azure-skills/microsoft-foundry-deploy-model"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 23
+          "name_only_review_hits_in_scope": 23,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-deployment-options/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "fb69c2556359187777230bd6d0282f2ee027563d",
+              "package_tree": "c17d32fa0af73e32cc7abe7b06392b62cb2ef314",
+              "capability": "Compare Qdrant local, self-hosted, managed and edge deployment",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-version-upgrade/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "867dcf4a263ba9e9ac0bd692182906c26a2a179b",
+              "package_tree": "bcba4704cd42e3c44a2a6e5bf49406f1a16e793e",
+              "capability": "Plan Qdrant server and SDK upgrade order",
+              "static_candidate_score": "8/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "sre",
@@ -2988,6 +3283,21 @@
               "candidate_disposition": "REJECT unchanged",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
               "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/qdrant-monitoring/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "6059717a5234bed9b92b846e80f112b5e5d6fb1f",
+              "package_tree": "a99743834822777625079202b1fd0327e12f67ea",
+              "capability": "Route Qdrant monitoring setup versus diagnosis",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -8771,23 +9081,25 @@
   "grade_evidence_tranches": [
     "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
   ],
-  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review.",
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids. The fifteen Qdrant nested source-vetted grades are candidate-only; all 15 remain unadmitted, unscanned and behaviorally unvalidated. No database-specific domain has been introduced without governance review. The ten additional Qdrant routers/contributor candidates are source-vetted only, not governed verification; all linked children remain independently dispositioned.",
   "source_vetted_grade_tranches": [
     "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
     "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
-    "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+    "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-01",
-    "subdomain_example_instances": 30,
-    "browse_overview_preview_instances": 38,
-    "distinct_source_path_pins": 40,
+    "subdomain_example_instances": 40,
+    "browse_overview_preview_instances": 48,
+    "distinct_source_path_pins": 50,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Source-vetted references and overview previews overlap and may map to multiple subdomains. These are candidate static grades, not governed verification, security approval, behavioral validation or install eligibility.",
+    "note": "Source-vetted references and overview previews overlap and may map to multiple subdomains. These are candidate static grades, not governed verification, security approval, behavioral validation or install eligibility. Additional ten are source-vetting only; Qdrant parent/child overlap is retained, not deduplicated by path count.",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
-    "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged."
+    "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged.",
+    "latest_awesome_copilot_qdrant_routers_contributor_ten": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
   }
 }

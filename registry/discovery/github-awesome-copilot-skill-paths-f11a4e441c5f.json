@@ -3051,16 +3051,16 @@
   ],
   "review_progress": {
     "snapshot_date": "2026-11-01",
-    "exact_path_terminal_candidate_decisions": 39,
-    "direct_shape_terminal_candidate_decisions": 24,
-    "direct_shape_remaining": 391,
+    "exact_path_terminal_candidate_decisions": 49,
+    "direct_shape_terminal_candidate_decisions": 32,
+    "direct_shape_remaining": 383,
     "other_shape_pending_classification": 0,
     "governed_exact_version_reviews_created": 0,
     "security_scans": 0,
     "behavioral_validations": 0,
-    "latest_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+    "latest_evidence": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
     "other_shape_structurally_classified": 17,
-    "other_shape_terminal_candidate_decisions": 15,
-    "other_shape_pending_review": 2
+    "other_shape_terminal_candidate_decisions": 17,
+    "other_shape_pending_review": 0
   }
 }

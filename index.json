@@ -1028,11 +1028,11 @@
     "j4flmao_nested_game_terminal_candidate_decisions": 23,
     "j4flmao_nested_game_seven_file_pending": 0,
     "j4flmao_other_shape_unclassified": 198,
-    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 80,
-    "github_awesome_copilot_exact_path_candidate_decisions": 39,
+    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 90,
+    "github_awesome_copilot_exact_path_candidate_decisions": 49,
     "github_awesome_copilot_nested_structurally_classified": 17,
-    "github_awesome_copilot_nested_terminal_candidate_decisions": 15,
-    "github_awesome_copilot_nested_pending_terminal": 2
+    "github_awesome_copilot_nested_terminal_candidate_decisions": 17,
+    "github_awesome_copilot_nested_pending_terminal": 0
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -4204,6 +4204,37 @@
       "prior_actual_subdomain_examples": 15,
       "prior_declared_distinct_candidate_identities": 28,
       "prior_actual_distinct_candidate_identities": 25
+    }
+  },
+  "awesome_copilot_qdrant_routers_contributor_ten": {
+    "date": "2026-11-01",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "review_kind": "10 complete-package static candidate decisions; NOT governed verification",
+    "graded_ledger": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
+    "macro_receipt": "docs/reviews/2026-11-01-awesome-copilot-qdrant-routers-contributor-ten-static.md",
+    "reference_only": 1,
+    "rejected_unchanged": 9,
+    "awesome_copilot_exact_path_decisions_before": 39,
+    "awesome_copilot_exact_path_decisions_after": 49,
+    "awesome_copilot_raw_paths": 432,
+    "direct_shape_terminal": 32,
+    "direct_shape_undecided": 383,
+    "other_shape_terminal": 17,
+    "other_shape_undecided": 0,
+    "four_source_exact_path_decisions_before": 80,
+    "four_source_exact_path_decisions_after": 90,
+    "raw_four_source_paths": 4813,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "candidate_directory_recomputed": {
+      "subdomain_examples": 40,
+      "overview_previews": 48,
+      "distinct_candidate_source_path_pins": 50,
+      "governed_identity_links": 78
     }
   }
 }
