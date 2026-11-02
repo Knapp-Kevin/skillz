@@ -3050,15 +3050,15 @@
     ]
   ],
   "review_progress": {
-    "snapshot_date": "2026-11-01",
-    "exact_path_terminal_candidate_decisions": 59,
-    "direct_shape_terminal_candidate_decisions": 42,
-    "direct_shape_remaining": 373,
+    "snapshot_date": "2026-11-02",
+    "exact_path_terminal_candidate_decisions": 69,
+    "direct_shape_terminal_candidate_decisions": 52,
+    "direct_shape_remaining": 363,
     "other_shape_pending_classification": 0,
     "governed_exact_version_reviews_created": 0,
     "security_scans": 0,
     "behavioral_validations": 0,
-    "latest_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+    "latest_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
     "other_shape_structurally_classified": 17,
     "other_shape_terminal_candidate_decisions": 17,
     "other_shape_pending_review": 0
