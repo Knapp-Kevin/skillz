@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 9,
+      "source_vetted_reference_count": 14,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -194,7 +194,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Testing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -205,6 +205,34 @@
           "static_candidate_score": "9/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/bug-reproduction-brief/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "add9ca292293ef860cb4cab05063b922c49d3c1f",
+          "package_tree": "8283d7f7e7a342ceb16b6594b8a8fd0cfcf20f9c",
+          "static_candidate_score": "17/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/breakdown-test/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "8db13b659cee15a7bc91ac761449c934ffe31523",
+          "package_tree": "2b3157ccefd5d7b881c17c1eda7d371b18f56a8b",
+          "static_candidate_score": "8/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -278,7 +306,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 2,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -303,6 +331,20 @@
           "static_candidate_score": "9/20",
           "candidate_disposition": "REJECT",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/bench-read/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "665a3a99a8d83e9f62cf5e88eaca1375d77d70ba",
+          "package_tree": "cd36d323d9441d411fc3dffa5ccc9a4944c1b456",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -421,7 +463,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 1,
+      "source_vetted_reference_count": 2,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -433,6 +475,20 @@
           "static_candidate_score": "12/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/security-review/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+          "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -564,7 +620,23 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Planning capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/breakdown-plan/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "9200260a4a433347c7083684f5fcdcd2492c5b62",
+          "package_tree": "46ab78a4abbe716aefa6e4adb158d160da809414",
+          "static_candidate_score": "6/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "marketing",
@@ -670,7 +742,37 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Product capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 2,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/breakdown-epic-pm/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "91e5f2fb2a78f7c60e1209f0f989618631afa34d",
+          "package_tree": "2e27f6e92fffd53db64dc746f49d5a59fe8df716",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/breakdown-feature-prd/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "f758cc4388bb4df4020a3c0222baae5f000f3578",
+          "package_tree": "7f673bff9b8356b220727a372838ac0a59e0db0b",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "ux-ui",
@@ -934,7 +1036,23 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/code-exemplars-blueprint-generator/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "2382b7a991a3ee621711610a9c259775b45f2283",
+          "package_tree": "3d60e45078101dfd26d19cdab072f48fcb262589",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "music-composition",
@@ -1693,6 +1811,36 @@
               "admitted_governed_record": false,
               "unchanged_use_approved": false
             }
+          ],
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/breakdown-epic-arch/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "391719a9e33543668ceef296e0f4cde4621ce371",
+              "package_tree": "b74b2c68bcc53e4b5378230061b8cfa57bd425df",
+              "static_candidate_score": "6/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/breakdown-feature-implementation/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "691058528eb9847d404c3cbafb1c3bf3e64fdaa8",
+              "package_tree": "cf89444e41a91713b0070b9f2b5c4512ce60ea64",
+              "static_candidate_score": "5/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
           ]
         },
         {
@@ -1744,7 +1892,23 @@
             "mattpocock-skills/setup-pre-commit"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/code-exemplars-blueprint-generator/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "2382b7a991a3ee621711610a9c259775b45f2283",
+              "package_tree": "3d60e45078101dfd26d19cdab072f48fcb262589",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "maintenance",
@@ -1776,7 +1940,37 @@
             "addyosmani-agent-skills/debugging-and-error-recovery"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 10
+          "name_only_review_hits_in_scope": 10,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/bug-reproduction-brief/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "add9ca292293ef860cb4cab05063b922c49d3c1f",
+              "package_tree": "8283d7f7e7a342ceb16b6594b8a8fd0cfcf20f9c",
+              "static_candidate_score": "17/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/context-map/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "bb63c552fe88318aee040b833b3f8261c5065d57",
+              "package_tree": "8b684d625e209fc960011407e2e504fa2ff2cad8",
+              "static_candidate_score": "17/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         }
       ]
     },
@@ -1898,7 +2092,23 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/bug-reproduction-brief/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "add9ca292293ef860cb4cab05063b922c49d3c1f",
+              "package_tree": "8283d7f7e7a342ceb16b6594b8a8fd0cfcf20f9c",
+              "static_candidate_score": "17/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "test-strategy",
@@ -1929,6 +2139,20 @@
               "static_candidate_score": "9/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/breakdown-test/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "8db13b659cee15a7bc91ac761449c934ffe31523",
+              "package_tree": "2b3157ccefd5d7b881c17c1eda7d371b18f56a8b",
+              "static_candidate_score": "8/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -2146,6 +2370,20 @@
               "static_candidate_score": "12/20",
               "candidate_disposition": "REJECT",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/bench-read/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "665a3a99a8d83e9f62cf5e88eaca1375d77d70ba",
+              "package_tree": "cd36d323d9441d411fc3dffa5ccc9a4944c1b456",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -2710,7 +2948,23 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 1
+          "name_only_review_hits_in_scope": 1,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/breakdown-plan/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "9200260a4a433347c7083684f5fcdcd2492c5b62",
+              "package_tree": "46ab78a4abbe716aefa6e4adb158d160da809414",
+              "static_candidate_score": "6/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "resource-allocation",
@@ -3017,7 +3271,37 @@
             "bm629-agent-skills/reviewing-prd"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/breakdown-epic-pm/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "91e5f2fb2a78f7c60e1209f0f989618631afa34d",
+              "package_tree": "2e27f6e92fffd53db64dc746f49d5a59fe8df716",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/breakdown-feature-prd/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "f758cc4388bb4df4020a3c0222baae5f000f3578",
+              "package_tree": "7f673bff9b8356b220727a372838ac0a59e0db0b",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "product-strategy",
@@ -4017,7 +4301,23 @@
             "bm629-agent-skills/reviewing-user-guide"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "source_vetted_reference_records": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/code-exemplars-blueprint-generator/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "2382b7a991a3ee621711610a9c259775b45f2283",
+              "package_tree": "3d60e45078101dfd26d19cdab072f48fcb262589",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "architecture-records",
@@ -7984,15 +8284,17 @@
   "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids.",
   "source_vetted_grade_tranches": [
     "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
-    "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+    "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-01",
-    "subdomain_example_instances": 15,
-    "browse_overview_preview_instances": 15,
-    "distinct_source_path_pins": 17,
+    "subdomain_example_instances": 35,
+    "browse_overview_preview_instances": 23,
+    "distinct_source_path_pins": 28,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Source-vetted candidate examples and overview previews overlap and can be multi-domain; neither is governed review admission."
+    "note": "Source-vetted references and overview previews overlap and may map to multiple subdomains. These are candidate static grades, not governed verification, security approval, behavioral validation or install eligibility.",
+    "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
   }
 }
