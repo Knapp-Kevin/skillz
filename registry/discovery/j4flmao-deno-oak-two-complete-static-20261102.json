@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "review_kind": "Two complete pinned package static source-vetting decisions, not governed semantic verification",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "source_denominator": {
+    "raw": 645,
+    "direct": 424,
+    "other": 221
+  },
+  "macro": {
+    "before": 69,
+    "after": 71,
+    "direct_before": 31,
+    "direct_after": 32,
+    "other_before": 38,
+    "other_after": 39,
+    "source_raw_pending_before": 576,
+    "source_raw_pending_after": 574,
+    "four_source_terminal_before": 156,
+    "four_source_terminal_after": 158,
+    "reference_only": 0,
+    "reject_unchanged": 2,
+    "admissions": 0,
+    "governed_reviews_added": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null
+  },
+  "macro_findings": [
+    "Deno parent tree contains a nested independently front-mattered Oak package: 14 distinct source files in the parent tree, 7 parent-owned and 7 Oak-owned; count two first-class SKILL.md identities, not 21 separate reviewed files.",
+    "Oak six-reference bundle contradicts its parent v17 API guidance with pre-v13 request body calls, legacy import paths and a development JWT secret fallback; reading only SKILL.md would miss this.",
+    "Deno parent reference bundle mixes Deno 2/JSR guidance with obsolete std URLs and Fresh 1 conventions; examples persist and expose user email PII without route authorization.",
+    "Neither source permission flags nor presence of auth middleware supplies user authorization to publish, deploy, mutate customer data, expose logs, or enable telemetry.",
+    "No admission, governed verification pair, external security scan or behavioral validation; distinct eligible denominator remains unknown."
+  ],
+  "records": [
+    {
+      "name": "deno",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/backend/deno/SKILL.md",
+      "frontmatter_name": "deno",
+      "frontmatter_version": "1.1.0",
+      "skill_blob": "282b5c045ef12d9cebc2ec0f19e8acbc310d6254",
+      "package_tree": "30421dca7cef4cbe222ea927edd98ac22c8bfd26",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "282b5c045ef12d9cebc2ec0f19e8acbc310d6254"
+        },
+        {
+          "path": "references/deno-advanced.md",
+          "blob_sha": "eef6ac1a56c732e140649bb615199c9230d3916a"
+        },
+        {
+          "path": "references/deno-deployment.md",
+          "blob_sha": "9353ab926c0cb02ee69efa25ae490f7ee09f3ab3"
+        },
+        {
+          "path": "references/deno-essentials.md",
+          "blob_sha": "2bd4f26632ae90a31787ec61b0d56b17e768a1cd"
+        },
+        {
+          "path": "references/deno-fundamentals.md",
+          "blob_sha": "c8a90b987db54449c266cba23c948e47e23b64af"
+        },
+        {
+          "path": "references/deno-runtime.md",
+          "blob_sha": "6bade4eb7ada94f8b0a4b86816e52b72b8a667f0"
+        },
+        {
+          "path": "references/fresh-framework.md",
+          "blob_sha": "5cd94015307ac35393ebf26100a58a289cfa2e77"
+        }
+      ],
+      "bundled_reference_count": 6,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no separate LICENSE in inspected package subtree; external dependencies and linked examples have independent terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "backend",
+      "specific_capability": "Configure Deno 2 runtime permissions, KV-backed APIs and deployment",
+      "trigger": "Deno 2 runtime, JSR/npm, Deno KV, deno.json and Fresh framework",
+      "nontrigger": "Oak-specific deep architecture, Node/Bun projects, frontend-only TypeScript",
+      "dependencies": "Deno 2, JSR std/Hono, Zod, Deno KV, six direct bundled references plus separate nested Oak first-class package (not counted as a second parent-owned reference)",
+      "authority_and_side_effects": "Example Hono GET/POST routes persist and disclose user email records without authentication or per-user access control; deployment and deno publish/compile examples lack separate project/production authority.",
+      "privacy_and_egress": "Email PII in persistent Deno KV and read APIs, OTEL export, Stripe env permissions, deployment secrets; require per-destination and tenant authorization.",
+      "portability_and_freshness": "Deno 2.x current in parent, but bundled deno-essentials/deno-runtime/deployment/Fresh references include obsolete std imports, Fresh 1 API and unverified platform/pricing claims; no execution evidence.",
+      "rationale": "Parent uses unauthenticated GET/list/create user endpoints with email PII persisted to KV; a Fresh reference uses unsanitized dangerouslySetInnerHTML and unauthenticated PUT/DELETE. Bundled deployment includes a literal sample database credential URL and legacy imports. Strong least-privilege/lockfile and runtime decision guidance can be extracted without unchanged reuse.",
+      "required_authorization_boundary": "Explicit authorization for user data access/storage, API writes, production deployment, telemetry, credential provisioning, package publishing and persistent cloud resources.",
+      "hard_fail_reason": "Unscoped PII storage/disclosure and mutations in sample API plus unbounded deployment/publishing guidance and outdated bundled references.",
+      "nested_first_class_descendants": 1,
+      "nested_descendant_package": {
+        "path": "skills/backend/deno/oak/SKILL.md",
+        "tree": "a7e92cee04f25be5dae1eb072174f0e5bd4eb547",
+        "files": 7,
+        "reviewed_separately": true
+      },
+      "package_tree_file_count_including_nested_descendant": 14,
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 11,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "api-design",
+          "implementation",
+          "deployment"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "release"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/deno/SKILL.md",
+      "frontmatter_license": "MIT"
+    },
+    {
+      "name": "oak-backend",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/backend/deno/oak/SKILL.md",
+      "frontmatter_name": "oak-backend",
+      "frontmatter_version": "1.1.0",
+      "skill_blob": "47eca6dcf524cd94c19de175a2ed24234f9e019c",
+      "package_tree": "a7e92cee04f25be5dae1eb072174f0e5bd4eb547",
+      "package_tree_verified": true,
+      "shape": "other",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "47eca6dcf524cd94c19de175a2ed24234f9e019c"
+        },
+        {
+          "path": "references/deno-runtime-guide.md",
+          "blob_sha": "9ef52d755e3087889df81689db1c96095296b86d"
+        },
+        {
+          "path": "references/oak-middleware.md",
+          "blob_sha": "d6de8d3762de04cf6a73cb3ceacb36f284b911cb"
+        },
+        {
+          "path": "references/oak-performance.md",
+          "blob_sha": "ff27b8529330e60272b1b4c3da9848ebbe63fa5f"
+        },
+        {
+          "path": "references/oak-routing-deployment.md",
+          "blob_sha": "5ad1de7799f7c7589c7d4af1d6087eeaa504d422"
+        },
+        {
+          "path": "references/oak-setup.md",
+          "blob_sha": "98788510e475208b7ee10c3a44d91634c0edf71b"
+        },
+        {
+          "path": "references/oak-testing.md",
+          "blob_sha": "9f0406029cebb3cc6ffeba0d44414977d5734a74"
+        }
+      ],
+      "bundled_reference_count": 6,
+      "license": "Pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no separate LICENSE in inspected package subtree; external dependencies and linked examples have independent terms",
+      "capability_domain": "software-engineering",
+      "capability_subdomain": "backend",
+      "specific_capability": "Design Oak middleware, typed routing and request-isolated testing",
+      "trigger": "Oak on Deno, middleware/router/context and TypeScript API design",
+      "nontrigger": "Generic Deno permissions, Node Express or Hono-only API",
+      "dependencies": "Deno 2, Oak 17 on JSR, Zod, std/assert; six bundled references including legacy Oak imports and pre-v13 body calls",
+      "authority_and_side_effects": "Code examples create project files, modify dependencies, write orders and provide production deployment instructions without a distinct approval boundary for writes, user data, deployment destination or live traffic.",
+      "privacy_and_egress": "Order/customer identifiers, JWT auth, logs, request paths and DB operations; require scoped identity, tenant, data retention and egress authorization.",
+      "portability_and_freshness": "Deno 2/Oak 17 assumed; references mix legacy oak imports and pre-v13 ctx.request.body().value despite parent saying v13+ API. Not executed.",
+      "rationale": "Six bundled references materially contradict the v17 API guidance; setup reference supplies a dev-secret fallback, routing reference performs CRUD without authorization, performance reference uses non-atomic KV rate-limit increments, and deployment reference gives broad permission flags. Preserve Oak router/app.handle testing and dependency injection patterns as reference only.",
+      "required_authorization_boundary": "Explicit user/project authorization for local writes, live API/database mutations, deployment, credentials, private logs and remote destinations; validate per-route access controls.",
+      "hard_fail_reason": "Unbounded live CRUD/deployment guidance plus contradictory legacy API references and unsafe dev-secret fallback.",
+      "nested_first_class_descendants": 0,
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 0,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 10,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "api-design",
+          "implementation",
+          "deployment"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation",
+          "release"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/backend/deno/oak/SKILL.md",
+      "frontmatter_license": "MIT"
+    }
+  ]
+}

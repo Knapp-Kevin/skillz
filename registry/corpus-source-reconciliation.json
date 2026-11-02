@@ -279,7 +279,7 @@
         "raw_skill_md_paths": 432,
         "direct_shape_candidates": 415,
         "manifest": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-        "terminal_source_vetting_decisions": 10
+        "terminal_source_vetting_decisions": 87
       },
       {
         "source_id": "openai-plugins",
@@ -303,7 +303,7 @@
         "raw_skill_md_paths": 645,
         "direct_shape_candidates": 424,
         "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
-        "terminal_source_vetting_decisions": 10
+        "terminal_source_vetting_decisions": 71
       }
     ],
     "raw_skill_md_paths": 4813,
@@ -311,6 +311,8 @@
     "unique_exact_blobs_across_four": 4813,
     "semantic_duplicates": "not-assessed",
     "eligible_unique_skill_denominator": null,
-    "caution": "Exact blob uniqueness is not semantic deduplication; direct-shape candidate is not an approved/reviewed package"
+    "caution": "Exact blob uniqueness is not semantic deduplication; direct-shape candidate is not an approved/reviewed package",
+    "path_matched_candidate_decisions": 158,
+    "source_vetting_note": "87 Awesome Copilot and 71 j4flmao path-matched terminal source-vetting decisions; OpenAI 169 candidate family decisions not path-matched, AgentSkillExchange 0. No deduplicated eligible denominator."
   }
 }

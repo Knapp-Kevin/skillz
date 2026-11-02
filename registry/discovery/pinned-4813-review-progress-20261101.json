@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 156,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 158,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -69,18 +69,18 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 69,
-      "terminal_static_candidate_decisions": 69,
-      "direct_shape_path_decisions": 31,
-      "other_shape_path_decisions": 38,
-      "raw_paths_without_terminal_decision": 576,
-      "direct_shape_without_terminal_decision": 393,
-      "other_shape_without_terminal_decision": 183,
+      "exact_path_fingerprints_checked": 71,
+      "terminal_static_candidate_decisions": 71,
+      "direct_shape_path_decisions": 32,
+      "other_shape_path_decisions": 39,
+      "raw_paths_without_terminal_decision": 574,
+      "direct_shape_without_terminal_decision": 392,
+      "other_shape_without_terminal_decision": 182,
       "next_direct_shape_path": "skills/aspirational/roadmapping/SKILL.md",
-      "next_other_shape_path": "skills/backend/deno/oak/SKILL.md",
+      "next_other_shape_path": "skills/backend/dotnet/architecture/SKILL.md",
       "next_structurally_qualified_nested_game_path": null,
-      "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 183 other-shape paths outside the classified set remain structurally unclassified.",
-      "other_shape_structurally_classified": 38
+      "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 182 other-shape paths outside the classified set remain structurally unclassified.",
+      "other_shape_structurally_classified": 39
     }
   ],
   "reviewed_path_decisions": [
@@ -1643,20 +1643,28 @@
       "grade_20": 14,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/deno/SKILL.md",
+      "skill_blob": "282b5c045ef12d9cebc2ec0f19e8acbc310d6254",
+      "package_tree": "30421dca7cef4cbe222ea927edd98ac22c8bfd26",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/deno/oak/SKILL.md",
+      "skill_blob": "47eca6dcf524cd94c19de175a2ed24234f9e019c",
+      "package_tree": "a7e92cee04f25be5dae1eb072174f0e5bd4eb547",
+      "shape": "other",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
-  "latest_macro_checkpoint": {
-    "date": "2026-11-02",
-    "source_id": "j4flmao-agent-skills",
-    "ledger": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
-    "before": 148,
-    "after": 156,
-    "source_before": 61,
-    "source_after": 69,
-    "reference_only": 2,
-    "rejected_unchanged": 6,
-    "governed_reviews_added": 0,
-    "eligible_distinct_denominator": null
-  }
+  "latest_macro_checkpoint": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
 }
