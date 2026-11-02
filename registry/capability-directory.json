@@ -3210,6 +3210,117 @@
       "search_hint": "Robotics / IoT capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
       "source_vetted_reference_count": 0
+    },
+    {
+      "domain": "ml-accelerators",
+      "display_name": "ML accelerators and compute",
+      "linked_reviewed_examples": 0,
+      "subdomains_with_linked_examples": 0,
+      "name_only_candidate_count": 0,
+      "evidence_preview": [],
+      "name_only_preview": [],
+      "coverage": "source-vetted candidates only; no governed evidence-linked identities",
+      "search_hint": "GPU kernel, ML accelerator, TPU, quantization, inference, fabric",
+      "not_found_means": "unknown; broaden to governed name index and pinned discovery manifests",
+      "source_vetted_reference_count": 11,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/hardware-acceleration/cuda-programming/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "9325c10295afc02f022f0df768eb775191688154",
+          "package_tree": "ff52a6259b584319fb072f834d96e4076001adcb",
+          "capability": "Design and diagnose CUDA kernels, memory tiling, synchronization and profiler evidence",
+          "static_candidate_score": "16/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/hardware-acceleration/distributed-training/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "0bf134d7049f4e357a874ad3d3361a9836d0848d",
+          "package_tree": "1863c21a4c91b79cee3d6a04b0db2ab577d2ae53",
+          "capability": "Plan DDP, FSDP, ZeRO and parallelism against GPU memory and collective costs",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/hardware-acceleration/extreme-quantization/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "b95c2edfa05c7f1b9f1d883af828a1a228727355",
+          "package_tree": "acb8d9e22afde6fef53d1fc835db92cfeb3259f9",
+          "capability": "Select INT4/INT8/FP8/FP4 model quantization and evaluate accuracy tradeoffs",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/hardware-acceleration/flash-attention/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "b6c7cf7946aacbc9d27a4f0bf5e40eecca7c38df",
+          "package_tree": "995de921a7ae18a3dff4ba1037ddd49b8852338a",
+          "capability": "Choose FlashAttention/SDPA implementations and verify kernel selection",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/hardware-acceleration/paged-attention/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "ba29bc0eef7b6836b42cb0871459894b2b2e61a6",
+          "package_tree": "b91245a336a4027d8b54d4a26f53262578017ff5",
+          "capability": "Estimate paged KV-cache capacity and tune vLLM serving concurrency",
+          "static_candidate_score": "14/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/hardware-acceleration/ptx-assembly/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "6dc5bc80ad3c176245615fc2e72ba0b158f0b176",
+          "package_tree": "e39d06ae5a4fdf7bf7b2c95d7ba589e12604b0c0",
+          "capability": "Inspect and author PTX/inline assembly with register and synchronization diagnostics",
+          "static_candidate_score": "13/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     }
   ],
   "canonical_source": "docs/capability-discovery-matrix.md",
@@ -9854,6 +9965,319 @@
           "name_only_review_hits_in_scope": 0
         }
       ]
+    },
+    {
+      "id": "ml-accelerators",
+      "name": "ML accelerators and compute",
+      "classification": "evidence-grounded capability gap",
+      "subdomains": [
+        {
+          "id": "gpu-kernels",
+          "name": "GPU kernels",
+          "capabilities": [
+            "Design and diagnose CUDA kernels, memory tiling, synchronization and profiler evidence",
+            "Inspect and author PTX/inline assembly with register and synchronization diagnostics",
+            "Interpret SASS instructions and Nsight per-instruction stall evidence",
+            "Write and benchmark Triton fused GPU kernels against PyTorch baselines"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "GPU kernels",
+            "ML accelerator gpu kernels"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/cuda-programming/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "9325c10295afc02f022f0df768eb775191688154",
+              "package_tree": "ff52a6259b584319fb072f834d96e4076001adcb",
+              "capability": "Design and diagnose CUDA kernels, memory tiling, synchronization and profiler evidence",
+              "static_candidate_score": "16/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/ptx-assembly/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "6dc5bc80ad3c176245615fc2e72ba0b158f0b176",
+              "package_tree": "e39d06ae5a4fdf7bf7b2c95d7ba589e12604b0c0",
+              "capability": "Inspect and author PTX/inline assembly with register and synchronization diagnostics",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/sass-machine-code/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "2387144f9258cdf8d8f49e9234f8b404d9727130",
+              "package_tree": "b3fec27c2f857a91de6ea8ddba8c048ae755078c",
+              "capability": "Interpret SASS instructions and Nsight per-instruction stall evidence",
+              "static_candidate_score": "16/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/triton-kernels/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "856fac656b8771ecaa1cda651478be8c44c785d5",
+              "package_tree": "243a324e45a08b29ab1258824030082da3157f08",
+              "capability": "Write and benchmark Triton fused GPU kernels against PyTorch baselines",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        },
+        {
+          "id": "attention-kernels",
+          "name": "Attention kernels",
+          "capabilities": [
+            "Choose FlashAttention/SDPA implementations and verify kernel selection"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "Attention kernels",
+            "ML accelerator attention kernels"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/flash-attention/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "b6c7cf7946aacbc9d27a4f0bf5e40eecca7c38df",
+              "package_tree": "995de921a7ae18a3dff4ba1037ddd49b8852338a",
+              "capability": "Choose FlashAttention/SDPA implementations and verify kernel selection",
+              "static_candidate_score": "13/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        },
+        {
+          "id": "model-quantization",
+          "name": "Model quantization",
+          "capabilities": [
+            "Select INT4/INT8/FP8/FP4 model quantization and evaluate accuracy tradeoffs"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "Model quantization",
+            "ML accelerator model quantization"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/extreme-quantization/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "b95c2edfa05c7f1b9f1d883af828a1a228727355",
+              "package_tree": "acb8d9e22afde6fef53d1fc835db92cfeb3259f9",
+              "capability": "Select INT4/INT8/FP8/FP4 model quantization and evaluate accuracy tradeoffs",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        },
+        {
+          "id": "inference-serving",
+          "name": "Inference serving",
+          "capabilities": [
+            "Estimate paged KV-cache capacity and tune vLLM serving concurrency",
+            "Build and validate TensorRT inference engines and dynamic shape profiles"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "Inference serving",
+            "ML accelerator inference serving"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/paged-attention/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "ba29bc0eef7b6836b42cb0871459894b2b2e61a6",
+              "package_tree": "b91245a336a4027d8b54d4a26f53262578017ff5",
+              "capability": "Estimate paged KV-cache capacity and tune vLLM serving concurrency",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/tensorrt-optimization/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "ebbb2c67d3b7ded5acf937c494ec034c8bc39481",
+              "package_tree": "683100b09e84891578fe520bbf776b71008655ee",
+              "capability": "Build and validate TensorRT inference engines and dynamic shape profiles",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        },
+        {
+          "id": "distributed-training",
+          "name": "Distributed training",
+          "capabilities": [
+            "Plan DDP, FSDP, ZeRO and parallelism against GPU memory and collective costs"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "Distributed training",
+            "ML accelerator distributed training"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/distributed-training/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "0bf134d7049f4e357a874ad3d3361a9836d0848d",
+              "package_tree": "1863c21a4c91b79cee3d6a04b0db2ab577d2ae53",
+              "capability": "Plan DDP, FSDP, ZeRO and parallelism against GPU memory and collective costs",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        },
+        {
+          "id": "accelerator-fabrics",
+          "name": "Accelerator fabrics",
+          "capabilities": [
+            "Diagnose RDMA, RoCEv2, GPUDirect and NCCL fabric transport"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "Accelerator fabrics",
+            "ML accelerator accelerator fabrics"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/rdma-roce/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "ea00dbc48b3076efd2bc98908bb441b4a502f746",
+              "package_tree": "05079c39de41fb87a1745f1ac5c1a2a5c7380fe2",
+              "capability": "Diagnose RDMA, RoCEv2, GPUDirect and NCCL fabric transport",
+              "static_candidate_score": "14/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        },
+        {
+          "id": "accelerator-architecture",
+          "name": "Accelerator architecture",
+          "capabilities": [
+            "Reason about TPU MXU tiling, JAX sharding and compilation performance"
+          ],
+          "matched_skill_ids": [],
+          "coverage_status": "source-vetted-candidates-only",
+          "search_hints": [
+            "Accelerator architecture",
+            "ML accelerator accelerator architecture"
+          ],
+          "name_only_review_candidate_ids": [],
+          "name_only_candidate_basis": "none; no lexical quality inference",
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/hardware-acceleration/tpu-systolic-arrays/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "9a694152f91783b3999503ca7e10cd0965929c63",
+              "package_tree": "62616014ead8cef9656e577a2abe31387983482d",
+              "capability": "Reason about TPU MXU tiling, JAX sharding and compilation performance",
+              "static_candidate_score": "15/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "identity_level_capability_links_scope": "First-party plus exact-version third-party review records mapped as evidence-backed domain starting points, including some rejected unchanged records; not behavioral validation, external eligibility or complete search coverage.",
@@ -11753,7 +12177,7 @@
     "mapped_third_party_distinct": 34,
     "mapped_total_distinct": 78,
     "subdomains_with_evidence_linked_examples": 53,
-    "total_subdomains": 240,
+    "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
     "note": "Evidence-linked examples cover an evolving mix of first-party and third-party exact-version review records, with separate name-only lexical hints. Counts are a dated snapshot, not limits or eligibility claims. A mapping describes a specific procedure, not an entire professional specialty."
@@ -11787,13 +12211,14 @@
     "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
     "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
     "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
-    "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+    "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 124,
-    "browse_overview_preview_instances": 128,
-    "distinct_source_path_pins": 134,
+    "subdomain_example_instances": 135,
+    "browse_overview_preview_instances": 134,
+    "distinct_source_path_pins": 145,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
     "note": "Source-vetted candidate scores are not governed semantic verification, security/behavioral validation or unchanged-use approval.",
@@ -11810,6 +12235,7 @@
     "latest_j4flmao_backend_data_eight": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
     "latest_j4flmao_deno_oak_two": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json",
     "latest_j4flmao_cloud_native_eight": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json",
-    "latest_awesome_copilot_aws_azure_eight": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    "latest_awesome_copilot_aws_azure_eight": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+    "latest_j4flmao_hardware_eleven": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
   }
 }

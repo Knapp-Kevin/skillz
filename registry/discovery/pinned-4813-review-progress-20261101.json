@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 174,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 185,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -69,12 +69,12 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 79,
-      "terminal_static_candidate_decisions": 79,
-      "direct_shape_path_decisions": 40,
+      "exact_path_fingerprints_checked": 90,
+      "terminal_static_candidate_decisions": 90,
+      "direct_shape_path_decisions": 51,
       "other_shape_path_decisions": 39,
-      "raw_paths_without_terminal_decision": 566,
-      "direct_shape_without_terminal_decision": 384,
+      "raw_paths_without_terminal_decision": 555,
+      "direct_shape_without_terminal_decision": 373,
       "other_shape_without_terminal_decision": 182,
       "next_direct_shape_path": "skills/aspirational/roadmapping/SKILL.md",
       "next_other_shape_path": "skills/backend/dotnet/architecture/SKILL.md",
@@ -1823,6 +1823,116 @@
       "grade_20": 12,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/cuda-programming/SKILL.md",
+      "skill_blob": "9325c10295afc02f022f0df768eb775191688154",
+      "package_tree": "ff52a6259b584319fb072f834d96e4076001adcb",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/distributed-training/SKILL.md",
+      "skill_blob": "0bf134d7049f4e357a874ad3d3361a9836d0848d",
+      "package_tree": "1863c21a4c91b79cee3d6a04b0db2ab577d2ae53",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/extreme-quantization/SKILL.md",
+      "skill_blob": "b95c2edfa05c7f1b9f1d883af828a1a228727355",
+      "package_tree": "acb8d9e22afde6fef53d1fc835db92cfeb3259f9",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/flash-attention/SKILL.md",
+      "skill_blob": "b6c7cf7946aacbc9d27a4f0bf5e40eecca7c38df",
+      "package_tree": "995de921a7ae18a3dff4ba1037ddd49b8852338a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/paged-attention/SKILL.md",
+      "skill_blob": "ba29bc0eef7b6836b42cb0871459894b2b2e61a6",
+      "package_tree": "b91245a336a4027d8b54d4a26f53262578017ff5",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/ptx-assembly/SKILL.md",
+      "skill_blob": "6dc5bc80ad3c176245615fc2e72ba0b158f0b176",
+      "package_tree": "e39d06ae5a4fdf7bf7b2c95d7ba589e12604b0c0",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/rdma-roce/SKILL.md",
+      "skill_blob": "ea00dbc48b3076efd2bc98908bb441b4a502f746",
+      "package_tree": "05079c39de41fb87a1745f1ac5c1a2a5c7380fe2",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/sass-machine-code/SKILL.md",
+      "skill_blob": "2387144f9258cdf8d8f49e9234f8b404d9727130",
+      "package_tree": "b3fec27c2f857a91de6ea8ddba8c048ae755078c",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/tensorrt-optimization/SKILL.md",
+      "skill_blob": "ebbb2c67d3b7ded5acf937c494ec034c8bc39481",
+      "package_tree": "683100b09e84891578fe520bbf776b71008655ee",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/tpu-systolic-arrays/SKILL.md",
+      "skill_blob": "9a694152f91783b3999503ca7e10cd0965929c63",
+      "package_tree": "62616014ead8cef9656e577a2abe31387983482d",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/hardware-acceleration/triton-kernels/SKILL.md",
+      "skill_blob": "856fac656b8771ecaa1cda651478be8c44c785d5",
+      "package_tree": "243a324e45a08b29ab1258824030082da3157f08",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
