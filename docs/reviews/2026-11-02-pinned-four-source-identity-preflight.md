@@ -29,3 +29,14 @@ Next, resolve the 40 governed-name overlap leads by comparing exact pinned SKILL
 ## Safety and maintenance
 
 No executable code, repository runtime, CI, crawler, installer, private user context, behavioral test claim or license transfer is introduced. All results are passive source evidence. The crosswalk's negative findings are scoped to the declared pins and should be recomputed for any changed source snapshot.
+
+## Governed fingerprint follow-up (same day)
+
+Read all **45** governed verification companions whose leaf names matched the **40** raw paths identified above, and compared their recorded `content_blob_sha`, `skill_md_blob_sha` and `package_tree_sha` values against the pinned source manifest entries. This was an exact SHA comparison, not an additional semantic review.
+
+**Two SKILL.md byte-identical mirrors were confirmed**, both under `openai/plugins@0722921d` versus governed `cloudflare-skills`:
+
+- `plugins/cloudflare/skills/durable-objects/SKILL.md` matches governed `cloudflare-skills/durable-objects` at blob `b595f1c2...`; the governed companion does not record a package-tree SHA.
+- `plugins/cloudflare/skills/workers-best-practices/SKILL.md` matches governed `cloudflare-skills/workers-best-practices` at blob `bebd018c...`; their recorded package-tree SHAs **differ** (`fbf60b51...` versus `7dd384e7...`). The governed package is currently REJECT unchanged under the action-specific authority hard fail.
+
+The remaining 43 name-matched governed companions had no exact SKILL.md blob or confirmed package-tree match to their corresponding pinned path leads. **No complete-package equivalence was established**, and no source-vetting decision or eligible denominator was reduced. Before reusing a review, compare bundled references, per-package license/NOTICE, authority and source freshness. The two identical SKILL.md bodies are high-priority **package-diff leads**, not approved or deduplicated skills.

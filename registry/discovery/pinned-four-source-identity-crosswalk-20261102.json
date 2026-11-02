@@ -1039,8 +1039,45 @@
   ],
   "remaining_gates": [
     "Resolve first-class eligibility, nested package boundaries and package-local licensing.",
-    "Compare pinned upstream package blobs/trees with governed verification companions for potential mirrors; name equality alone cannot count as reviewed.",
+    "For two exact SKILL.md mirrors, inspect full package references and per-package rights before crediting any governed review; 43 other name-matched governed companions have no exact SHA match.",
     "Reconcile cross-source semantic duplicates without treating distinct Git blobs as proof of independent capabilities.",
     "Do not increment terminal review decisions or assign grades from this crosswalk."
-  ]
+  ],
+  "governed_verification_fingerprint_comparison": {
+    "checked_at": "2026-11-02",
+    "method": "Compared all 45 governed verification YAML companions whose leaf names matched 40 raw paths against exact SKILL.md blob and package-tree SHA fields from pinned manifest entries. Fingerprint-only crosswalk; no bundled package or rights inspection.",
+    "governed_companions_read": 45,
+    "raw_paths_with_same_leaf_name": 40,
+    "exact_skill_md_blob_matches": 2,
+    "confirmed_exact_package_tree_matches": 0,
+    "blob_matches": [
+      {
+        "discovery_source": "openai-plugins",
+        "discovery_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "discovery_path": "plugins/cloudflare/skills/durable-objects/SKILL.md",
+        "discovery_skill_md_blob_sha": "b595f1c2182f3b7d6f944d7ba0ac59667fba78aa",
+        "discovery_package_tree_sha": "cf3ced5c811c71da7d5dc546e7c526ffaf6571bc",
+        "governed_id": "cloudflare-skills/durable-objects",
+        "governed_verification_path": "registry/verification/cloudflare-skills/durable-objects.yaml",
+        "governed_package_tree_sha": "not-recorded",
+        "qualification": "SKILL.md bytes identical; package equality, rights and authority unverified"
+      },
+      {
+        "discovery_source": "openai-plugins",
+        "discovery_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "discovery_path": "plugins/cloudflare/skills/workers-best-practices/SKILL.md",
+        "discovery_skill_md_blob_sha": "bebd018cdcae1771eacdee30cfb96af3ad3bd936",
+        "discovery_package_tree_sha": "fbf60b5122db35fa71d21ef98ce1b3539ec9d3c0",
+        "governed_id": "cloudflare-skills/workers-best-practices",
+        "governed_verification_path": "registry/verification/cloudflare-skills/workers-best-practices.yaml",
+        "governed_package_tree_sha": "7dd384e79c76d3e388dfe53e12e93642679ff1fd",
+        "qualification": "SKILL.md bytes identical but package trees differ; do not reuse full-package disposition"
+      }
+    ],
+    "nonmatches": "Other 43 governed companions did not share a SKILL.md blob or confirmed package-tree SHA with the raw paths of the same leaf name. This does not establish semantic uniqueness.",
+    "eligible_denominator_delta": 0,
+    "terminal_review_decision_delta": 0,
+    "behavioral_validation": "not-run",
+    "rights_status": "per-package unresolved"
+  }
 }
