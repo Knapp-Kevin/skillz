@@ -44,18 +44,19 @@
       "direct_shape": 424,
       "other_shape": 221,
       "manifest": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-index.json",
-      "terminal_static_candidate_reviews": 32,
+      "terminal_static_candidate_reviews": 41,
       "review_ledgers": [
         "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json",
         "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json",
         "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json",
         "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json",
-        "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+        "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+        "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
       ],
       "other_shape_structurally_classified": 23,
       "other_shape_still_unclassified": 198,
-      "nested_game_terminal_static_candidate_reviews": 14,
-      "nested_game_multi_file_packages_pending": 9
+      "nested_game_terminal_static_candidate_reviews": 23,
+      "nested_game_multi_file_packages_pending": 0
     }
   ],
   "raw_skill_md_path_sum": 4813,
@@ -74,8 +75,11 @@
     "github_awesome_copilot": 14,
     "openai_plugins": 169,
     "agentskillexchange_skills": 0,
-    "j4flmao_agent_skills": 32,
+    "j4flmao_agent_skills": 41,
     "not_deduplicated_or_governed_semantic_reviews": true,
-    "scope_caveat": "github-awesome-copilot counts are unique reviewed direct-shape package paths at fixed pin; openai-plugins 169 are finite plugin-family decisions not yet reconciled against 502 direct-shape paths. Neither changes governed exact-version review pairs or security approval."
-  }
+    "scope_caveat": "github-awesome-copilot counts are unique reviewed direct-shape package paths at fixed pin; openai-plugins 169 are finite plugin-family decisions not yet reconciled against 502 direct-shape paths. Neither changes governed exact-version review pairs or security approval.",
+    "path_matched_across_four_sources": 55,
+    "path_matched_note": "14 github-awesome-copilot + 41 j4flmao; openai 169 family-scoped decisions are not path-reconciled; agentskillexchange 0"
+  },
+  "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md"
 }

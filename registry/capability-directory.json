@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 9,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -121,6 +121,36 @@
           "static_candidate_score": "13/20",
           "candidate_disposition": "REFERENCE-ONLY",
           "source_vetting_evidence": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-engine/asset-pipeline/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "476bb7f2f40f1e4f43f0f4dd01c683e90cf66fd5",
+          "package_tree": "b2f29cf45e43030504185bdff3b5be26a90ef2bf",
+          "capability": "game asset import cook and streaming",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-engine/ecs-pattern/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "ad5163695819ca68c1af519e2469345226e4e4a6",
+          "package_tree": "0604d31dbdb21aff02c79322105a03ef3a3bf8fc",
+          "capability": "game entity component systems",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -391,36 +421,8 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 2,
+      "source_vetted_reference_count": 1,
       "source_vetted_reference_preview": [
-        {
-          "source_id": "github-awesome-copilot",
-          "canonical_path": "skills/security-review/SKILL.md",
-          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
-          "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
-          "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
-          "static_candidate_score": "11/20",
-          "candidate_disposition": "REJECT",
-          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
-          "security_scan": "not-run",
-          "behavioral_validation": "not-run",
-          "admitted_governed_record": false,
-          "unchanged_use_approved": false
-        },
-        {
-          "source_id": "github-awesome-copilot",
-          "canonical_path": "skills/security-review/SKILL.md",
-          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
-          "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
-          "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
-          "static_candidate_score": "11/20",
-          "candidate_disposition": "REJECT",
-          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
-          "security_scan": "not-run",
-          "behavioral_validation": "not-run",
-          "admitted_governed_record": false,
-          "unchanged_use_approved": false
-        },
         {
           "source_id": "j4flmao-agent-skills",
           "canonical_path": "skills/game/game-server/anti-cheat-server/SKILL.md",
@@ -776,7 +778,54 @@
       "coverage": "partial name-only leads",
       "search_hint": "3D / CAD / animation capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 3,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-engine/math-foundation/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "f2305d991fe9399f2c19b47ea5cc23981af38333",
+          "package_tree": "b7b9755ba792dce9277fb9686291e67220360a11",
+          "capability": "game engine numerical geometry",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-development/vulkan/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "4086b6e9b7bd1776acfdecad0a474e6e2c027e64",
+          "package_tree": "09201bf639d7cf53bfac8da47647b0e34f26e42c",
+          "capability": "vulkan device swapchain and gpu memory",
+          "static_candidate_score": "12/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-engine/render-graph/SKILL.md",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_blob": "8b42b6205dd8442f4b2cd5d02bb0a2fda0549926",
+          "package_tree": "59f015b021da5e4b344303ef92226847e26ba692",
+          "capability": "frame graph resource hazards",
+          "static_candidate_score": "11/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "game-design",
@@ -1142,20 +1191,6 @@
       "not_found_means": "unknown; broaden to name index and discovery manifests",
       "source_vetted_reference_count": 1,
       "source_vetted_reference_preview": [
-        {
-          "source_id": "github-awesome-copilot",
-          "canonical_path": "skills/memory-merger/SKILL.md",
-          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
-          "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
-          "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
-          "static_candidate_score": "12/20",
-          "candidate_disposition": "REJECT",
-          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json",
-          "security_scan": "not-run",
-          "behavioral_validation": "not-run",
-          "admitted_governed_record": false,
-          "unchanged_use_approved": false
-        },
         {
           "source_id": "github-awesome-copilot",
           "canonical_path": "skills/memory-merger/SKILL.md",
@@ -1566,7 +1601,99 @@
             "bm629-agent-skills/reviewing-architecture-doc"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 11
+          "name_only_review_hits_in_scope": 11,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/asset-pipeline/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "476bb7f2f40f1e4f43f0f4dd01c683e90cf66fd5",
+              "package_tree": "b2f29cf45e43030504185bdff3b5be26a90ef2bf",
+              "capability": "game asset import cook and streaming",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/ecs-pattern/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "ad5163695819ca68c1af519e2469345226e4e4a6",
+              "package_tree": "0604d31dbdb21aff02c79322105a03ef3a3bf8fc",
+              "capability": "game entity component systems",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/job-system/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "90ddc1ef4e7f7ae5f24807703c7a1bd7ace6bbb7",
+              "package_tree": "6a73799ba6cf8b674f895956da35bade583b86c0",
+              "capability": "game job dag scheduler",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/memory-management/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "4dfc3f7a93125949fd75aa1271c89deb778a5114",
+              "package_tree": "a819c0d9d3198db11b1ce7f9c7527f068c480f59",
+              "capability": "game allocator and gpu memory lifetimes",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/patterns/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "a7e948d80753d3db55bdc321b8b0ffa93646c642",
+              "package_tree": "e53e879b521a31fc46486aded599840e67a1995e",
+              "capability": "game loop pooling and spatial patterns",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/platform-abstraction/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "1145f11f2dbf9b0d2db3e1be27107984c9b8b410",
+              "package_tree": "cd5f2252f9a94c6f7240d46f999dac36e5646bb4",
+              "capability": "game platform abstraction and filesystem",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "refactoring",
@@ -3423,7 +3550,24 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/math-foundation/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "f2305d991fe9399f2c19b47ea5cc23981af38333",
+              "package_tree": "b7b9755ba792dce9277fb9686291e67220360a11",
+              "capability": "game engine numerical geometry",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "rendering",
@@ -3437,7 +3581,39 @@
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
-          "name_only_review_hits_in_scope": 0
+          "name_only_review_hits_in_scope": 0,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-development/vulkan/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "4086b6e9b7bd1776acfdecad0a474e6e2c027e64",
+              "package_tree": "09201bf639d7cf53bfac8da47647b0e34f26e42c",
+              "capability": "vulkan device swapchain and gpu memory",
+              "static_candidate_score": "12/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "j4flmao-agent-skills",
+              "canonical_path": "skills/game/game-engine/render-graph/SKILL.md",
+              "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+              "skill_blob": "8b42b6205dd8442f4b2cd5d02bb0a2fda0549926",
+              "package_tree": "59f015b021da5e4b344303ef92226847e26ba692",
+              "capability": "frame graph resource hazards",
+              "static_candidate_score": "11/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "animation",
@@ -7805,8 +7981,18 @@
   "grade_evidence_tranches": [
     "registry/reviews/cross-domain-existing-grades-2026-11-01-part-01.json"
   ],
-  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Five new game-server candidate-only grades are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids.",
+  "grade_display_contract": "rubric_score reflects historical existing exact-version semantic review; rejected hard fail overrides numeric score; external security/behavioral/rights independent. No score is assigned to raw discovery paths or name-only leads. Fourteen j4flmao nested-game candidate-only grades (five game-server and nine graphics/engine) are source-vetting evidence, NOT governed verified identities; browse_overview source_vetted_reference_preview and subdomain source_vetted_candidate_examples are kept separate from matched_skill_ids.",
   "source_vetted_grade_tranches": [
-    "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
-  ]
+    "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json",
+    "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+  ],
+  "source_vetted_candidate_coverage": {
+    "date": "2026-11-01",
+    "subdomain_example_instances": 15,
+    "browse_overview_preview_instances": 15,
+    "distinct_source_path_pins": 17,
+    "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
+    "governed_identity_links_unchanged": 78,
+    "note": "Source-vetted candidate examples and overview previews overlap and can be multi-domain; neither is governed review admission."
+  }
 }
