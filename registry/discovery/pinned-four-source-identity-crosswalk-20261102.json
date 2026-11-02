@@ -61,8 +61,8 @@
       "raw_skill_paths": 432,
       "distinct_skill_md_blob_shas": 432,
       "distinct_package_tree_shas": 432,
-      "direct_shape": 0,
-      "other_shape": 432,
+      "direct_shape": 415,
+      "other_shape": 17,
       "nested_with_first_class_ancestor_path": 15
     },
     {
@@ -71,8 +71,8 @@
       "raw_skill_paths": 536,
       "distinct_skill_md_blob_shas": 536,
       "distinct_package_tree_shas": 536,
-      "direct_shape": 0,
-      "other_shape": 536,
+      "direct_shape": 502,
+      "other_shape": 34,
       "nested_with_first_class_ancestor_path": 29
     },
     {
@@ -1031,7 +1031,7 @@
   "terminal_source_vetting_path_decisions_as_of_snapshot": 185,
   "eligible_distinct_skill_denominator": null,
   "review_completion_percentage": null,
-  "method": "All 12 exact-pinned manifest files enumerated. Git blob SHA is content-exact for SKILL.md only; package tree SHA is content-exact for the containing package tree. Distinct blob/tree fingerprints do NOT prove distinct eligible semantic skills. Nested paths and lexical matches are leads, not duplicate or review decisions. Governed review name index has names, not a proof of content overlap; matching requires per-record verification fingerprints and rights/identity review.",
+  "method": "All 12 exact-pinned manifest files enumerated. Git blob SHA is content-exact for SKILL.md only; package tree SHA is content-exact for the containing package tree. Distinct blob/tree fingerprints do NOT prove distinct eligible semantic skills. Nested paths and lexical matches are leads, not duplicate or review decisions. Governed review name index has names, not a proof of content overlap; matching requires per-record verification fingerprints and rights/identity review. Structural shape labels are source-specific: 'direct' for github-awesome-copilot/openai-plugins and 'direct-shape' for agentskillexchange/j4flmao; both are normalized into direct_shape here.",
   "negative_findings": [
     "No repeated SKILL.md Git blob SHA within or across these four manifest snapshots.",
     "No repeated containing-package tree SHA within or across these four manifest snapshots.",
