@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source": "alexbrooker/aviation-skills",
+  "source_revision": "68b8856323d60bd6fb135c665acc16156cff350f",
+  "source_role": "discovered-only",
+  "snapshot_scope": "4 pinned complete single-file packages recovered from held #590; independently re-fetched SKILL.md blobs and reconstructed Git tree object SHAs",
+  "archive_ref": "f9567bc4f7489621c1597fa5bed58ac9f101a24b",
+  "review_standard": "docs/skill-verification.md",
+  "governed_review_population_delta": 0,
+  "four_source_raw_path_population_delta": 0,
+  "source_vetting_records": [
+    {
+      "repository": "alexbrooker/aviation-skills",
+      "source_commit": "68b8856323d60bd6fb135c665acc16156cff350f",
+      "skill_path": "skills/aviation-ai-assurance/SKILL.md",
+      "entrypoint_blob_sha": "4c92bb24a59fd452e02fdcdf965fb9479652965c",
+      "package_tree_sha": "01f912c859cb5062ec43d16435f4d53afe52b9db",
+      "supporting_blob_count": 0,
+      "path_role": "source-skill",
+      "archival_status": "DISCOVERED_UNGRADED",
+      "canonical_package_path": "skills/aviation-ai-assurance",
+      "single_file_git_tree_recomputed_match": true,
+      "complete_package_contents_inspected": [
+        "SKILL.md"
+      ],
+      "source_license": {
+        "type": "MIT",
+        "license_blob_sha": "6e3ead51136b2ef64631d06fb7bbecb7d4d76306",
+        "copyright": "Copyright (c) 2026 Airside Labs Ltd",
+        "notice_file_observed": false,
+        "scope": "Skill source files only; third-party MCP-served data, provider rights, credentials and EASA text are not relicensed"
+      },
+      "source_dependency": "Airside Labs aviation MCP at mcp.airsidelabs.com/mcp; no host connection or schema verified; some functions paid/keyed",
+      "trigger": "User requests a provisional EASA AI-level/hazard screen or an assurance section for a specific aviation AI use case",
+      "nontrigger": "Not a safety certification, formal hazard classification, compliance signoff, or live operational aviation decision",
+      "capability": {
+        "domain": "law",
+        "subdomain": "regulatory-analysis",
+        "description": "Portfolio-level aviation AI assurance screening with explicit ConOps and hazard-assessment limits"
+      },
+      "rubric": {
+        "dimensions": {
+          "trigger_precision": 2,
+          "procedural_clarity": 2,
+          "authority_and_safety": 1,
+          "failure_handling": 2,
+          "evidence_discipline": 1,
+          "dependency_coherence": 1,
+          "portability_honesty": 2,
+          "usefulness_differentiation": 2,
+          "adversarial_resilience": 2,
+          "effectiveness_design": 2
+        },
+        "score": 17,
+        "total_possible": 20,
+        "rationale": [
+          "Precise trigger, ordered screen/framework/page-reference/technique steps; repeats that a portfolio screen is not a regulatory determination.",
+          "Explicit ConOps, hazard assessment, proposed Issue 03 and changing-guidance caveats support failure handling.",
+          "Specific hard-coded regulatory technique ceiling and EASA page references were NOT independently checked against current official EASA text; do not present as verified legal facts.",
+          "External Airside Labs MCP tool is required; host availability, data handling, provenance and current output schema not tested; business-sensitive use-case queries need separately scoped egress authority."
+        ]
+      },
+      "hard_fail_flags": [],
+      "other_risks": [],
+      "static_candidate_disposition": "REFERENCE-ONLY",
+      "governed_exact_version_review": "not-created",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "installation_eligibility": "not-established",
+      "host_action_authority": "not-granted"
+    },
+    {
+      "repository": "alexbrooker/aviation-skills",
+      "source_commit": "68b8856323d60bd6fb135c665acc16156cff350f",
+      "skill_path": "skills/aviation-data-story/SKILL.md",
+      "entrypoint_blob_sha": "f85f496147e37064c52398e74d6a3a843bef6bc0",
+      "package_tree_sha": "c053bf1ab84185e606b35a15e6d1ca2234239758",
+      "supporting_blob_count": 0,
+      "path_role": "source-skill",
+      "archival_status": "DISCOVERED_UNGRADED",
+      "canonical_package_path": "skills/aviation-data-story",
+      "single_file_git_tree_recomputed_match": true,
+      "complete_package_contents_inspected": [
+        "SKILL.md"
+      ],
+      "source_license": {
+        "type": "MIT",
+        "license_blob_sha": "6e3ead51136b2ef64631d06fb7bbecb7d4d76306",
+        "copyright": "Copyright (c) 2026 Airside Labs Ltd",
+        "notice_file_observed": false,
+        "scope": "Skill source files only; third-party MCP-served data, provider rights, credentials and EASA text are not relicensed"
+      },
+      "source_dependency": "Airside Labs aviation MCP at mcp.airsidelabs.com/mcp; no host connection or schema verified; some functions paid/keyed",
+      "trigger": "User asks for measured aviation data-source caveats, evidence for a PRD, or reproducible identifier test cases",
+      "nontrigger": "Not live ADS-B monitoring, an industry-wide rate estimate, independent validation of the data feed, or authorization to redistribute provider data",
+      "capability": {
+        "domain": "analytics",
+        "subdomain": "measurement",
+        "description": "Scope dated aviation feed findings, denominator caveats and identifier edge cases before using them as product evidence"
+      },
+      "rubric": {
+        "dimensions": {
+          "trigger_precision": 2,
+          "procedural_clarity": 2,
+          "authority_and_safety": 1,
+          "failure_handling": 2,
+          "evidence_discipline": 2,
+          "dependency_coherence": 1,
+          "portability_honesty": 2,
+          "usefulness_differentiation": 2,
+          "adversarial_resilience": 2,
+          "effectiveness_design": 2
+        },
+        "score": 18,
+        "total_possible": 20,
+        "rationale": [
+          "Clear ordered evidence-field workflow, source/edition/window attribution, non-generalization and negative-case handling.",
+          "Claims and figures are sourced to the Airside Labs provider, not independently reproduced; a host must verify current service outputs and user data permissions.",
+          "Instruction to copy provider claims verbatim into documents can exceed source skill's MIT grant: tool-served data and third-party feed rights are separately unresolved.",
+          "Requires an external MCP endpoint, some calls keyless; queries and selected use cases may reveal private product/operations context, so authorize the exact read and data scope."
+        ]
+      },
+      "hard_fail_flags": [],
+      "other_risks": [
+        "third-party-data-reuse-rights-unverified"
+      ],
+      "static_candidate_disposition": "REFERENCE-ONLY",
+      "governed_exact_version_review": "not-created",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "installation_eligibility": "not-established",
+      "host_action_authority": "not-granted"
+    },
+    {
+      "repository": "alexbrooker/aviation-skills",
+      "source_commit": "68b8856323d60bd6fb135c665acc16156cff350f",
+      "skill_path": "skills/aviation-identity-check/SKILL.md",
+      "entrypoint_blob_sha": "e872e671458fde0371a38440d56aa9e3b13962aa",
+      "package_tree_sha": "83f9fe4ad7b7a0a753c5845211e48063668db400",
+      "supporting_blob_count": 0,
+      "path_role": "source-skill",
+      "archival_status": "DISCOVERED_UNGRADED",
+      "canonical_package_path": "skills/aviation-identity-check",
+      "single_file_git_tree_recomputed_match": true,
+      "complete_package_contents_inspected": [
+        "SKILL.md"
+      ],
+      "source_license": {
+        "type": "MIT",
+        "license_blob_sha": "6e3ead51136b2ef64631d06fb7bbecb7d4d76306",
+        "copyright": "Copyright (c) 2026 Airside Labs Ltd",
+        "notice_file_observed": false,
+        "scope": "Skill source files only; third-party MCP-served data, provider rights, credentials and EASA text are not relicensed"
+      },
+      "source_dependency": "Airside Labs aviation MCP at mcp.airsidelabs.com/mcp; no host connection or schema verified; some functions paid/keyed",
+      "trigger": "User asks to resolve or cross-check historical/current airport, airline, aircraft or flight identifiers",
+      "nontrigger": "Not live runway, slot, flight-status, air-traffic or other operational authority",
+      "capability": {
+        "domain": "research",
+        "subdomain": "fact-checking",
+        "description": "Resolve time-bounded aviation identifier aliases and distinguish unverifiable from consistent records"
+      },
+      "rubric": {
+        "dimensions": {
+          "trigger_precision": 2,
+          "procedural_clarity": 2,
+          "authority_and_safety": 1,
+          "failure_handling": 2,
+          "evidence_discipline": 2,
+          "dependency_coherence": 1,
+          "portability_honesty": 2,
+          "usefulness_differentiation": 2,
+          "adversarial_resilience": 2,
+          "effectiveness_design": 2
+        },
+        "score": 18,
+        "total_possible": 20,
+        "rationale": [
+          "Strong temporal `as_of` rule and differentiated ambiguous/unresolved/consistent_where_checkable outcomes.",
+          "Specific tools and confidence thresholds described, but service schema, identity dataset freshness and availability not tested.",
+          "External registration and operational identifier queries can be sensitive in context; no standalone action-specific private-data egress consent step.",
+          "Read-only methodology is valuable, but matching claims must remain provider assertions pending corroboration."
+        ]
+      },
+      "hard_fail_flags": [],
+      "other_risks": [
+        "external-identifier-query-privacy-scope"
+      ],
+      "static_candidate_disposition": "REFERENCE-ONLY",
+      "governed_exact_version_review": "not-created",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "installation_eligibility": "not-established",
+      "host_action_authority": "not-granted"
+    },
+    {
+      "repository": "alexbrooker/aviation-skills",
+      "source_commit": "68b8856323d60bd6fb135c665acc16156cff350f",
+      "skill_path": "skills/aviation-opportunity-map/SKILL.md",
+      "entrypoint_blob_sha": "53045b164d63374f6a7cd630b6da0170be3f0ecd",
+      "package_tree_sha": "e1da238dc89c0ede1cca5703a091988df16c4f43",
+      "supporting_blob_count": 0,
+      "path_role": "source-skill",
+      "archival_status": "DISCOVERED_UNGRADED",
+      "canonical_package_path": "skills/aviation-opportunity-map",
+      "single_file_git_tree_recomputed_match": true,
+      "complete_package_contents_inspected": [
+        "SKILL.md"
+      ],
+      "source_license": {
+        "type": "MIT",
+        "license_blob_sha": "6e3ead51136b2ef64631d06fb7bbecb7d4d76306",
+        "copyright": "Copyright (c) 2026 Airside Labs Ltd",
+        "notice_file_observed": false,
+        "scope": "Skill source files only; third-party MCP-served data, provider rights, credentials and EASA text are not relicensed"
+      },
+      "source_dependency": "Airside Labs aviation MCP at mcp.airsidelabs.com/mcp; no host connection or schema verified; some functions paid/keyed",
+      "trigger": "User asks for aviation AI opportunity maps, role-based PRD/briefing shortlists, or upstream/downstream feed mapping",
+      "nontrigger": "Not proof of industry adoption, certification, vendor deployment, or authorization to submit ideas to Airside Labs",
+      "capability": {
+        "domain": "product",
+        "subdomain": "discovery",
+        "description": "Discover aviation AI use cases and reverse data lineage while distinguishing catalogue coverage from market adoption"
+      },
+      "rubric": {
+        "dimensions": {
+          "trigger_precision": 2,
+          "procedural_clarity": 2,
+          "authority_and_safety": 0,
+          "failure_handling": 1,
+          "evidence_discipline": 2,
+          "dependency_coherence": 1,
+          "portability_honesty": 1,
+          "usefulness_differentiation": 2,
+          "adversarial_resilience": 1,
+          "effectiveness_design": 2
+        },
+        "score": 14,
+        "total_possible": 20,
+        "rationale": [
+          "Strong sequencing, operational search terms, evidence/denominator caveats and explicit keyless-vs-paid tool distinctions.",
+          "`report_unmet_need` is directed on an empty result and `submit_suggestion` is introduced as an intended channel without a separate approval for each external submission; this is a hard fail for external communications.",
+          "Provider queries may disclose confidential product strategy, role needs and data requirements; there is no explicit data-minimization/consent gate.",
+          "Paid-key calls and service data reuse are not qualified; retain useful method as reference, not unchanged-use candidate."
+        ]
+      },
+      "hard_fail_flags": [
+        "ungated-external-communication",
+        "private-context-egress"
+      ],
+      "other_risks": [
+        "unauthorized-external-communication",
+        "private-business-context-egress",
+        "paid-external-service"
+      ],
+      "static_candidate_disposition": "REJECT_UNCHANGED",
+      "governed_exact_version_review": "not-created",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "installation_eligibility": "not-established",
+      "host_action_authority": "not-granted"
+    }
+  ]
+}
