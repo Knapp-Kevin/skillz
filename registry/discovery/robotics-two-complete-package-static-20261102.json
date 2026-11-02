@@ -1,0 +1,268 @@
+{
+  "schema": "source_family_exact_package_static_review_v1",
+  "source": "graph-robots/open-robot-skills",
+  "pin": "752dfbd96968d4d08379f8111765efbf6457800b",
+  "date": "2026-11-02",
+  "review_type": "complete_pinned_package_source_static_not_security_or_behavioral",
+  "quality_standard": "docs/skill-verification.md 10 dimensions 0..2, hard-fails independent",
+  "original_corpus": "held PR #590, now source evidence preserved main PR #646",
+  "root_license": {
+    "type": "Apache-2.0",
+    "git_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+    "notice_file": "not observed at pinned source root"
+  },
+  "source_package_tree_reconciliation": {
+    "reconciled_entrypoints": 43,
+    "tree_sha_matches": 43,
+    "supporting_file_counts_match": 43,
+    "mismatches": 0,
+    "source_recursive_git_tree_entries": 333,
+    "truncated": false
+  },
+  "results": [
+    {
+      "identity": "graph-robots/open-robot-skills@752dfbd96968d4d08379f8111765efbf6457800b:skills/anchoring-a-free-end",
+      "path": "skills/anchoring-a-free-end",
+      "package_tree_sha": "734446b75a871b16ac291977322f6cc635c757ce",
+      "entrypoint_sha": "e5b491e73d19dac79cc444f8f563ee8f0994df67",
+      "files": [
+        [
+          "SKILL.md",
+          "e5b491e73d19dac79cc444f8f563ee8f0994df67"
+        ],
+        [
+          "scripts/anchor_far_end.py",
+          "2ecc2ded0a085f7409d477d8cc42979fc8bc2c94"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "rationales": [
+        "Clearly scoped to sim-only cable anchoring before subsequent crossings.",
+        "Two leg streams, grasp close, dwell, and anchored/unanchored exits are ordered.",
+        "Executes robot trajectories and closes a gripper on the strength of privileged planner output without runtime/permission gating in package; authority is declared, not enforced.",
+        "Missing worst_grasp_error defaults to 0.0, so malformed plans with stages may pass the safety threshold; no rollback/stop following partial stage motion; nan can evade > comparator.",
+        "Describes prior observed segment pileup and CPU test limitations, but held/anchored state is asserted on call completion without measured grasp confirmation.",
+        "Both package files inspected; gap NodeContext and cable/robot connector behavior exist outside this package and were not independently verified.",
+        "Explicitly sim-only, requires gap>=0.1, privileged cable planner and robot gripper tools.",
+        "Separates anchoring from weaving and encodes a specific IK-threshold refusal method.",
+        "Malformed/missing non-finite IK values or stage schemas can bypass or break the refusal and still attempt physical tool commands.",
+        "Mechanism is plausible but actual world/robot results and resulting hold are untested."
+      ],
+      "hard_fails": [
+        "unbounded authority / side effects without explicit permission gate for trajectory and gripper commands",
+        "material unsafe failure behavior on absent/non-finite grasp planner error values and partial execution"
+      ],
+      "recommended_remediation": [
+        "Fail closed on absent or non-finite worst_grasp_error, stages, arm ID, grasp width and trajectory data before any motion",
+        "Require host/operator-scoped authorization, explicit sim-only guard and stop/rollback on stage failure",
+        "Confirm grasp by observed/force evidence before returning anchored status"
+      ],
+      "source_revision": "752dfbd96968d4d08379f8111765efbf6457800b",
+      "package_file_inventory": [
+        {
+          "path": "SKILL.md",
+          "git_blob_sha": "e5b491e73d19dac79cc444f8f563ee8f0994df67",
+          "entrypoint": true
+        },
+        {
+          "path": "scripts/anchor_far_end.py",
+          "git_blob_sha": "2ecc2ded0a085f7409d477d8cc42979fc8bc2c94",
+          "entrypoint": false
+        }
+      ],
+      "file_count": 2,
+      "static_scores": {
+        "trigger_precision": {
+          "score": 2,
+          "rationale": "Clearly scoped to sim-only cable anchoring before subsequent crossings."
+        },
+        "procedural_clarity": {
+          "score": 2,
+          "rationale": "Two leg streams, grasp close, dwell, and anchored/unanchored exits are ordered."
+        },
+        "authority_and_safety": {
+          "score": 0,
+          "rationale": "Executes robot trajectories and closes a gripper on the strength of privileged planner output without runtime/permission gating in package; authority is declared, not enforced."
+        },
+        "failure_handling": {
+          "score": 0,
+          "rationale": "Missing worst_grasp_error defaults to 0.0, so malformed plans with stages may pass the safety threshold; no rollback/stop following partial stage motion; nan can evade > comparator."
+        },
+        "evidence_discipline": {
+          "score": 1,
+          "rationale": "Describes prior observed segment pileup and CPU test limitations, but held/anchored state is asserted on call completion without measured grasp confirmation."
+        },
+        "dependency_coherence": {
+          "score": 1,
+          "rationale": "Both package files inspected; gap NodeContext and cable/robot connector behavior exist outside this package and were not independently verified."
+        },
+        "portability_honesty": {
+          "score": 2,
+          "rationale": "Explicitly sim-only, requires gap>=0.1, privileged cable planner and robot gripper tools."
+        },
+        "usefulness_differentiation": {
+          "score": 2,
+          "rationale": "Separates anchoring from weaving and encodes a specific IK-threshold refusal method."
+        },
+        "adversarial_resilience": {
+          "score": 0,
+          "rationale": "Malformed/missing non-finite IK values or stage schemas can bypass or break the refusal and still attempt physical tool commands."
+        },
+        "effectiveness_design": {
+          "score": 1,
+          "rationale": "Mechanism is plausible but actual world/robot results and resulting hold are untested."
+        }
+      },
+      "score_total": 11,
+      "static_disposition": "REJECT_UNCHANGED",
+      "reference_value": "mechanism study / independently redesigned guarded procedure",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_source_files_read": true,
+      "downstream_runtime_and_external_dependencies_verified": false,
+      "license_scope": "Root source Apache-2.0 and each SKILL.md Apache-2.0; external gap connector/model tool licenses separately unverified"
+    },
+    {
+      "identity": "graph-robots/open-robot-skills@752dfbd96968d4d08379f8111765efbf6457800b:skills/verifying-grasps",
+      "path": "skills/verifying-grasps",
+      "package_tree_sha": "9b0301c89c0cb1a1252edccae40fcb9440c0cfb3",
+      "entrypoint_sha": "39b7f751966942a4480b6447739f47ee5fb7fce3",
+      "files": [
+        [
+          "SKILL.md",
+          "39b7f751966942a4480b6447739f47ee5fb7fce3"
+        ],
+        [
+          "scripts/verify_grasp.py",
+          "5a6b62b9a864c36f8429e813470045555a751a29"
+        ],
+        [
+          "scripts/verify_grip.py",
+          "ac332af376f76e1cb0f88ce5195a531650d9bf10"
+        ],
+        [
+          "scripts/verify_reach.py",
+          "cd355247c408b7afcb91db8877f2f3bd6bc65fbd"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "rationales": [
+        "Distinguishes before-close reach, immediately-after-close grip and post-lift observation stages.",
+        "Three separate scripts and exit routes are documented with object-relative tolerances.",
+        "verify_grasp calls robot.go_to_pose_cartesian before confirming presence of a wrist RGB-D camera or validating lift_m; no scoped operation approval or motion bounds.",
+        "verify_reach returns reached:true when command/observation/target box is missing; unsafe success classification when verification is impossible. verify_grasp raises after lifting when wrist camera absent.",
+        "Geometric and jaw-width measures are meaningful, but missing evidence may report success and lift outcome is not supported by an executed test here.",
+        "All four package files inspected; underlying gap runtime, connector, SAM3 and geometry tool providers remain external unverified dependencies.",
+        "Documents required gap>=0.1, RGB-D wrist camera and connector APIs; host-specific dependencies are explicit.",
+        "Separates reach, grip and observed grasp to diagnose several otherwise conflated failures.",
+        "Fail-open reach can be mistaken for authorization to close an unverified grasp; arbitrary lift_m and camera check ordering amplify risk.",
+        "Independent checks are promising but current missing-input and motion sequencing undermine safety without host-controlled mitigations."
+      ],
+      "hard_fails": [
+        "unsafe reach success state when inputs missing: verify_reach returns reached=True on absent command/observation/target box",
+        "robot motion before camera precondition check; lift_m not bounded or operator-scoped"
+      ],
+      "recommended_remediation": [
+        "Route unknown/not-verified when reach inputs missing and prevent downstream grip on unknown status",
+        "Validate wrist camera, workspace constraints, finite nonnegative bounded lift and operation authority before issuing Cartesian motion",
+        "Distinguish measurement absent, failed lift and verified hold; require real simulation/hardware acceptance before high-consequence reuse"
+      ],
+      "source_revision": "752dfbd96968d4d08379f8111765efbf6457800b",
+      "package_file_inventory": [
+        {
+          "path": "SKILL.md",
+          "git_blob_sha": "39b7f751966942a4480b6447739f47ee5fb7fce3",
+          "entrypoint": true
+        },
+        {
+          "path": "scripts/verify_grasp.py",
+          "git_blob_sha": "5a6b62b9a864c36f8429e813470045555a751a29",
+          "entrypoint": false
+        },
+        {
+          "path": "scripts/verify_grip.py",
+          "git_blob_sha": "ac332af376f76e1cb0f88ce5195a531650d9bf10",
+          "entrypoint": false
+        },
+        {
+          "path": "scripts/verify_reach.py",
+          "git_blob_sha": "cd355247c408b7afcb91db8877f2f3bd6bc65fbd",
+          "entrypoint": false
+        }
+      ],
+      "file_count": 4,
+      "static_scores": {
+        "trigger_precision": {
+          "score": 2,
+          "rationale": "Distinguishes before-close reach, immediately-after-close grip and post-lift observation stages."
+        },
+        "procedural_clarity": {
+          "score": 2,
+          "rationale": "Three separate scripts and exit routes are documented with object-relative tolerances."
+        },
+        "authority_and_safety": {
+          "score": 0,
+          "rationale": "verify_grasp calls robot.go_to_pose_cartesian before confirming presence of a wrist RGB-D camera or validating lift_m; no scoped operation approval or motion bounds."
+        },
+        "failure_handling": {
+          "score": 0,
+          "rationale": "verify_reach returns reached:true when command/observation/target box is missing; unsafe success classification when verification is impossible. verify_grasp raises after lifting when wrist camera absent."
+        },
+        "evidence_discipline": {
+          "score": 1,
+          "rationale": "Geometric and jaw-width measures are meaningful, but missing evidence may report success and lift outcome is not supported by an executed test here."
+        },
+        "dependency_coherence": {
+          "score": 1,
+          "rationale": "All four package files inspected; underlying gap runtime, connector, SAM3 and geometry tool providers remain external unverified dependencies."
+        },
+        "portability_honesty": {
+          "score": 2,
+          "rationale": "Documents required gap>=0.1, RGB-D wrist camera and connector APIs; host-specific dependencies are explicit."
+        },
+        "usefulness_differentiation": {
+          "score": 2,
+          "rationale": "Separates reach, grip and observed grasp to diagnose several otherwise conflated failures."
+        },
+        "adversarial_resilience": {
+          "score": 0,
+          "rationale": "Fail-open reach can be mistaken for authorization to close an unverified grasp; arbitrary lift_m and camera check ordering amplify risk."
+        },
+        "effectiveness_design": {
+          "score": 1,
+          "rationale": "Independent checks are promising but current missing-input and motion sequencing undermine safety without host-controlled mitigations."
+        }
+      },
+      "score_total": 11,
+      "static_disposition": "REJECT_UNCHANGED",
+      "reference_value": "mechanism study / independently redesigned guarded procedure",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "complete_package_source_files_read": true,
+      "downstream_runtime_and_external_dependencies_verified": false,
+      "license_scope": "Root source Apache-2.0 and each SKILL.md Apache-2.0; external gap connector/model tool licenses separately unverified"
+    }
+  ]
+}
