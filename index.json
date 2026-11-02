@@ -4531,5 +4531,79 @@
     "governed_review_records_delta": 0,
     "behavioral_validation": "not-run",
     "caution": "Fingerprint uniqueness excludes exact collisions in four manifests, not semantic duplicates or governed mirrors; names are leads only."
+  },
+  "current_source_vetting_snapshot_20261102": {
+    "date": "2026-11-02",
+    "source_role": "dynamic-discovery-only",
+    "raw_discovered_skill_md_paths": 4813,
+    "terminal_exact_path_candidate_decisions": 193,
+    "raw_paths_without_terminal_path_matched_decision": 4620,
+    "source_progress": {
+      "github_awesome_copilot": {
+        "raw": 432,
+        "terminal": 103,
+        "direct_shape_terminal": 86,
+        "direct_shape_total": 415,
+        "other_shape_terminal": 17,
+        "other_shape_total": 17,
+        "raw_pending": 329
+      },
+      "j4flmao_agent_skills": {
+        "raw": 645,
+        "terminal": 90,
+        "direct_shape_terminal": 51,
+        "direct_shape_total": 424,
+        "other_shape_terminal": 39,
+        "other_shape_total": 221,
+        "raw_pending": 555
+      },
+      "openai_plugins": {
+        "raw": 536,
+        "path_matched_terminal": 0,
+        "plugin_family_candidate_decisions_separate": 169
+      },
+      "agentskillexchange_skills": {
+        "raw": 3200,
+        "path_matched_terminal": 0
+      }
+    },
+    "governed_review_records_unchanged": 1039,
+    "governed_capability_linked_identities_unchanged": 78,
+    "distinct_eligible_denominator": null,
+    "capability_directory": {
+      "subdomain_candidate_example_instances": 143,
+      "overview_candidate_preview_instances": 142,
+      "distinct_source_path_pin_candidate_identities": 156,
+      "corrected_prior_declared_distinct": 145,
+      "actual_prior_union": 148
+    },
+    "new_tranche": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+    "new_review_receipt": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",
+    "new_candidate_decisions": 8,
+    "reference_only": 2,
+    "reject_unchanged": 6,
+    "admitted_source_denominator_delta": 0,
+    "new_governed_semantic_reviews": 0,
+    "new_security_scans": 0,
+    "new_behavioral_validations": 0,
+    "caution": "Raw path decisions and source-vetting grades are NOT distinct eligible skill review completion or unchanged-use approval."
+  },
+  "awesome_copilot_developer_workflows_eight_static_20261102": {
+    "date": "2026-11-02",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "exact_path_terminal_before": 95,
+    "exact_path_terminal_after": 103,
+    "direct_shape_before": 78,
+    "direct_shape_after": 86,
+    "other_shape_terminal": 17,
+    "complete_pinned_packages_read": 8,
+    "package_files_read": 9,
+    "reference_only": 2,
+    "rejected_unchanged": 6,
+    "review_evidence": "registry/discovery/github-awesome-copilot-developer-docs-eight-static-20261102.json",
+    "macro_review": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",
+    "governed_review_delta": 0,
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run"
   }
 }
