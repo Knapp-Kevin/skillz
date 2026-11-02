@@ -274,7 +274,7 @@ sources:
     license: MIT
     license_terms_status: repository-root; linked-upstream-rights-unverified
     pinned_revision: a6017b4af9d0298b7be3af7a6ec7485943d2c3e7
-    rationale: Discovery-only, source-vetted 2026-11-01. Nontruncated pinned tree contains 3200 raw SKILL.md paths, 3196 direct-shape and 4 other-shape. Publisher security labels are unverified external assertions; per-package upstream provenance, licensing, authority and quality must be independently reviewed. No vendoring, installation, blanket trust or admission. See docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md.
+    rationale: Discovery-only, source-vetted 2026-11-01. Nontruncated pinned tree contains 3200 raw SKILL.md paths, 3196 direct-shape and 4 other-shape. Publisher security labels are unverified external assertions; per-package upstream provenance, licensing, authority and quality must be independently reviewed. No vendoring, installation, blanket trust or admission. See docs/reviews/2026-11-01-expanded-dynamic-discovery-4813-source-vetting.md. Update 2026-11-02 - all 3,200 pinned paths identity-verified and individually dispositioned at source-vetting level (3,196 terminal - 71 REFERENCE-ONLY / 3,125 REJECT unchanged; 3 DEFER; template excluded as non-skill). - see registry/discovery/agentskillexchange-identity-segmentation-20261102.json and registry/discovery/agentskillexchange-capability-index-20261102.json. Still no admission or blanket trust.
 
   - id: j4flmao-agent-skills
     name: j4flmao Agent Skills
