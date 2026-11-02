@@ -1028,7 +1028,11 @@
     "j4flmao_nested_game_terminal_candidate_decisions": 23,
     "j4flmao_nested_game_seven_file_pending": 0,
     "j4flmao_other_shape_unclassified": 198,
-    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 55
+    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 80,
+    "github_awesome_copilot_exact_path_candidate_decisions": 39,
+    "github_awesome_copilot_nested_structurally_classified": 17,
+    "github_awesome_copilot_nested_terminal_candidate_decisions": 15,
+    "github_awesome_copilot_nested_pending_terminal": 2
   },
   "first_party_categories": {
     "planning-productivity": [
@@ -1120,7 +1124,9 @@
     ],
     "dynamic-discovery": [
       "github-awesome-copilot",
-      "openai-plugins"
+      "openai-plugins",
+      "agentskillexchange-skills",
+      "j4flmao-agent-skills"
     ]
   },
   "interpretation_order": [
