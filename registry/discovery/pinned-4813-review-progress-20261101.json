@@ -79,7 +79,7 @@
       "next_direct_shape_path": "skills/architecture/crdts/SKILL.md",
       "next_other_shape_path": "skills/backend/deno/oak/SKILL.md",
       "next_structurally_qualified_nested_game_path": null,
-      "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 190 other-shape paths outside the classified set remain structurally unclassified.",
+      "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 183 other-shape paths outside the classified set remain structurally unclassified.",
       "other_shape_structurally_classified": 38
     }
   ],
