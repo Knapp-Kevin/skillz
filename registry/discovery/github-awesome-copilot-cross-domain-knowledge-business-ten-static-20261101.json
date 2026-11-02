@@ -95,7 +95,40 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "research",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "implementation"
+        ],
+        "characteristic": [
+          "hypothesis-driven",
+          "metric-driven",
+          "iterative"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/autoresearch/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Git, terminal, project-specific metric command, local branch; source credits Karpathy inspiration, not proof of upstream authorship.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "power-bi-model-design-review",
@@ -159,7 +192,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "domain-modeling",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/power-bi-model-design-review/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Power BI model schema and metadata supplied by authorized host; no bundled files.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "power-bi-report-design-consultation",
@@ -223,7 +288,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "ux",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "design"
+        ],
+        "characteristic": [
+          "visual-verification",
+          "human-review"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/power-bi-report-design-consultation/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Power BI reporting context, data and authorized participant studies; no bundled files.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "gtm-operating-cadence",
@@ -287,7 +384,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "business-operations",
+          "planning"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "human-review"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/gtm-operating-cadence/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Company-specific finance, personnel, pipeline and calendar context; linked related skills are not package dependencies.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "gtm-technical-product-pricing",
@@ -351,7 +480,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "business-operations",
+          "decision-support"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "risk-aware"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/gtm-technical-product-pricing/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Private margins, customer contracts, cost structures; metadata credits Smit Patel/technical-product-gtm, root MIT alone does not settle original upstream terms.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "gtm-product-led-growth",
@@ -415,7 +576,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "business-operations",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "iterative"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/gtm-product-led-growth/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Product telemetry, conversion and customer economics; privacy and experiment consent needed; related skills not bundled.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "gtm-partnership-architecture",
@@ -479,7 +672,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "business-operations",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "risk-aware",
+          "human-review"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/gtm-partnership-architecture/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Partner/customer records, contractual and financial terms; related skills external, not bundled.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "architecture-blueprint-generator",
@@ -543,7 +768,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "architecture",
+          "documentation"
+        ],
+        "lifecycle": [
+          "design"
+        ],
+        "characteristic": [
+          "source-driven",
+          "traceable"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/architecture-blueprint-generator/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Repository source/configuration and Mermaid/C4 conventions; no bundled files.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "repo-story-time",
@@ -607,7 +864,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "documentation",
+          "research"
+        ],
+        "lifecycle": [
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "synthesis"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": "low"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/repo-story-time/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Git history, PowerShell, editFiles host tool; no bundled files; portability low.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     },
     {
       "name": "gtm-0-to-1-launch",
@@ -671,7 +960,39 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "admitted": false,
-      "external_state_mutated": false
+      "external_state_mutated": false,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "business-operations",
+          "planning"
+        ],
+        "lifecycle": [
+          "release"
+        ],
+        "characteristic": [
+          "metric-driven",
+          "iterative"
+        ],
+        "authority": [
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "candidate_review_stage": "terminal-source-vetting-only",
+      "rights_and_notice": "Source root MIT notice must be retained when copying substantial material. GTM author/source attribution is not an independent license audit; linked standards, services, code and externally sourced patterns retain their own terms.",
+      "dependency_characterization": {
+        "package_owned_files": [
+          "skills/gtm-0-to-1-launch/SKILL.md"
+        ],
+        "package_owned_other_files": 0,
+        "external_services_or_tools": "Customer/prospect data, outbound communications, product telemetry, spend; GTM related skills are not bundled.",
+        "host_installation_authorized": false
+      },
+      "skill_freshness": {
+        "pinned_snapshot_date": "2026-11-01",
+        "upstream_currentness": "not-checked",
+        "external_claims_currentness": "not-checked"
+      }
     }
   ]
 }
