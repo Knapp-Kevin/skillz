@@ -86,33 +86,93 @@
   "reviewed_path_decisions": [
     {
       "source_id": "github-awesome-copilot",
-      "path": ".github/skills/agentic-workflows/SKILL.md",
-      "skill_blob": "f11eaadd2e755a1c104a37bb3ab35795a2dcf057",
-      "package_tree": "dade976f4086d43cf690af95c2af857c7b0c6108",
-      "shape": "nested-or-internal",
-      "grade_20": 5,
+      "path": "skills/create-readme/SKILL.md",
+      "skill_blob": "686e10d517b319520049a485c87cffea23ee6b9f",
+      "package_tree": "f65537a3461b663121fe195697979c17a8004ea5",
+      "shape": "direct",
+      "grade_20": 11,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": ".github/skills/create-canvas-extension/SKILL.md",
-      "skill_blob": "2de882563896ec5a6b94ab70a82774463eeaa325",
-      "package_tree": "216e65e38535c9e91a19dfaf4cf0a745591f0125",
-      "shape": "nested-or-internal",
+      "path": "skills/documentation-writer/SKILL.md",
+      "skill_blob": "93e3fbf57fe64179570de382347db8258c661b56",
+      "package_tree": "016d8040a3f91c8360b1003e74fbf29f34c283f5",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/readme-blueprint-generator/SKILL.md",
+      "skill_blob": "76982e2b9b3c2de35a00dbb06087be43051a60c2",
+      "package_tree": "1caa0e533a87a92baee6e0bdf24f531588a2cfac",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/refactor-plan/SKILL.md",
+      "skill_blob": "ebeab3e11652f350def9676463e6e42cf5806cb0",
+      "package_tree": "a984f58fe6b8372e02dc807e991152a351a530b4",
+      "shape": "direct",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/review-and-refactor/SKILL.md",
+      "skill_blob": "b43226f903dc2a6b061465fd26217cbfa5904058",
+      "package_tree": "1c31b702214c02180ffaaa67ce54f51c9e10fac7",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dotnet-design-pattern-review/SKILL.md",
+      "skill_blob": "5d9ded0c58cb5efd1e9eb5efbf278e9860f7be52",
+      "package_tree": "4988a9e6586c0eab299198334aacca3b3947974b",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-refactoring-extract-method/SKILL.md",
+      "skill_blob": "173e6d7811b60c75a8cb67f261e1528efa5733ad",
+      "package_tree": "00c92f6fd3d8879714935fdfc126909daf37370e",
+      "shape": "direct",
       "grade_20": 10,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/acreadiness-policy/SKILL.md",
-      "skill_blob": "ba2476200d292552f1d859a9ba51da0b37b1c926",
-      "package_tree": "e1296935b00037512537ff5ae61523a188238539",
+      "path": "skills/java-refactoring-remove-parameter/SKILL.md",
+      "skill_blob": "6149fbe1d5e72996f2049decdf0053becd2553cc",
+      "package_tree": "edc519092e38538b1efa8f12acd209ab848703ca",
       "shape": "direct",
-      "grade_20": 9,
+      "grade_20": 8,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/refactor-method-complexity-reduce/SKILL.md",
+      "skill_blob": "46f0700f595686797dcefc0e1c0143a66da2e67d",
+      "package_tree": "99c64411d01bab783374b35f407c98cd3cd8213f",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -136,13 +196,13 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/ai-ready/SKILL.md",
-      "skill_blob": "839ea891c66e98cf1ea4a15315c16c0d732c28ce",
-      "package_tree": "436c666e52961dfcb58cf29fd08f97239cfacee6",
+      "path": "skills/memory-merger/SKILL.md",
+      "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
+      "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
       "shape": "direct",
-      "grade_20": 6,
+      "grade_20": 12,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -156,63 +216,423 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/anti-ui-slop/SKILL.md",
-      "skill_blob": "63c9375fb01068f57d2a07f3e33be6e584cbed84",
-      "package_tree": "ec0d1544b2bc798a5fc74b9b9b197de2540f7f32",
+      "path": "skills/security-review/SKILL.md",
+      "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
+      "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
       "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/ai-architect/SKILL.md",
+      "skill_blob": "d894758fb9080478099ba51196eed63cba688e6a",
+      "package_tree": "c64edcef87e792e7e98532712f7ce3deb26bf4c5",
+      "shape": "direct-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/backend-engineer/SKILL.md",
+      "skill_blob": "ce257a16d25d38a74faff767ef04a8b60a2e81a0",
+      "package_tree": "034e63026558ec25a40d8ea2ebf8f2d1101f6b41",
+      "shape": "direct-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/data-analyst/SKILL.md",
+      "skill_blob": "ec7f5dfbbb06aa7d63a405c85a280b8a1cc202e5",
+      "package_tree": "06872fb0dabfc21452cd30a7edc0fb9bd220fab9",
+      "shape": "direct-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/data-engineer/SKILL.md",
+      "skill_blob": "29cb8d029709a839626b3c9f7700deb3ca67e23b",
+      "package_tree": "5920d5ffb0fa913e1f9ab6395bb04e95cff95498",
+      "shape": "direct-shape",
       "grade_20": 14,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
     },
     {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/arch-linux-triage/SKILL.md",
-      "skill_blob": "80d0fced7501d393f38a094e4ccd022bbe460bd9",
-      "package_tree": "148fe897a1a9574e87a843ae85d8114b70f1693e",
-      "shape": "direct",
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/devops-sre-engineer/SKILL.md",
+      "skill_blob": "f8e8263a78f6e8c6d14b70596361bc9d13e2ef0e",
+      "package_tree": "f4648476502cd9f58b86f7bf20d9b2d2f65e9b0c",
+      "shape": "direct-shape",
       "grade_20": 8,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
     },
     {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/architecture-blueprint-generator/SKILL.md",
-      "skill_blob": "a9a24b0e85fbd1d2e39851cc12ec266f3a55794d",
-      "package_tree": "85df2c5df09933ba0cf7b1e3b39469d4437c8d95",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/aspnet-minimal-api-openapi/SKILL.md",
-      "skill_blob": "aae320d6e0acf08b9d5bb2ac9a283a6da63b0373",
-      "package_tree": "70227c6a2b5300d9c7c7e32c2d875c0cc5340663",
-      "shape": "direct",
-      "grade_20": 10,
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/frontend-engineer/SKILL.md",
+      "skill_blob": "bdaf479ca780f116bd0f7db53a3f8c580e9d7a93",
+      "package_tree": "0691b6f3aa131ab33cb067ae454fdff52f90c712",
+      "shape": "direct-shape",
+      "grade_20": 14,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
     },
     {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/autoresearch/SKILL.md",
-      "skill_blob": "ad54af302bb47c0c3ac7848271d610bf268c9661",
-      "package_tree": "a89e8007dc84571d21ad6717d96ccdc3d94d3039",
-      "shape": "direct",
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/gpu-engineer/SKILL.md",
+      "skill_blob": "07f32fe3fc74f5bfb2917d5cabc1ba58785c67da",
+      "package_tree": "d8e0df2facb0b62a77a15fd84668a552d83ef9ca",
+      "shape": "direct-shape",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/mobile-engineer/SKILL.md",
+      "skill_blob": "f795c57160014a7d0c33bb6a295d76fc96968d5f",
+      "package_tree": "0a58950480b7956f25337efd83442c06ad77605d",
+      "shape": "direct-shape",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/product-manager/SKILL.md",
+      "skill_blob": "b1df58f79711e6262b130748ec8ff8320927fc56",
+      "package_tree": "13dd88dea630e3382018a1d9120f5ac7729162f9",
+      "shape": "direct-shape",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/qa-architect/SKILL.md",
+      "skill_blob": "8d8603a27f36f55fcf3e3975a9fd8434fbca29ec",
+      "package_tree": "8d093b0921683461c625feb4c777a19ca083611d",
+      "shape": "direct-shape",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/cocos2d/SKILL.md",
+      "skill_blob": "2eb1c102d2dd86216928ca60dc6f6140ea7aa741",
+      "package_tree": "cb681bd2c03839279ebe0dde4a7073950a09d687",
+      "shape": "direct-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/ecs-architecture/SKILL.md",
+      "skill_blob": "487e4e348451ecdf0a895a58941046c69bd4601d",
+      "package_tree": "6b038f58a78a6b3a9bd4423e91e0a54df939b0d4",
+      "shape": "direct-shape",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/godot/SKILL.md",
+      "skill_blob": "ce92ad6ca4a5c3a63cb5c7dc1f7c3e2d3fc0a61e",
+      "package_tree": "f15609b31d33332afb24c536058f852279d94a15",
+      "shape": "direct-shape",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/multiplayer-netcode/SKILL.md",
+      "skill_blob": "fa05510930ba8ab54227993c29c4996865390570",
+      "package_tree": "775f6c453dec1580abf5f26ef7b9f0740ae99743",
+      "shape": "direct-shape",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/unity/SKILL.md",
+      "skill_blob": "cc75fe1af72d7b41079929fe4c7ab94e35bd6140",
+      "package_tree": "6e6a38069bd1fa4334f1b65ebc9b6e409d38f6db",
+      "shape": "direct-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/unreal/SKILL.md",
+      "skill_blob": "230e01fbde250dec2839387a6becc0f66e6774c3",
+      "package_tree": "ad5b41ee4abb5cffcb3a4081aac84dd7feea4219",
+      "shape": "direct-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/web/web3d/SKILL.md",
+      "skill_blob": "2d771db437cf8af2b9e60b5e5cda3400912465b9",
+      "package_tree": "957be0ea8be3a68d3059251c18958e1d74477761",
+      "shape": "direct-shape",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/personas/lead-tech-game-engine/SKILL.md",
+      "skill_blob": "970772c14c9f70cc2d817781b0f807c8ec1697f5",
+      "package_tree": "93b4d140f298d3a6c32e2760dcd5e7b2998cc4ba",
+      "shape": "direct-shape",
       "grade_20": 13,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
     },
     {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/azure-role-selector/SKILL.md",
-      "skill_blob": "8662d92426230ab87b74f7932f0f1291b81637c9",
-      "package_tree": "a640be3febf621401502b10e6cd7505e84c85dec",
-      "shape": "direct",
-      "grade_20": 10,
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-development/cocos2d-patterns/SKILL.md",
+      "skill_blob": "2da4aab7fbd3b8529132619be078ce7dff21c8c4",
+      "package_tree": "f51b8a4f5b2e26c050f346ef147dee47ff3c99eb",
+      "shape": "other-shape",
+      "grade_20": 16,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-development/godot-gdscript/SKILL.md",
+      "skill_blob": "ee9e595ffdc19d913a84852099fb2ab72b5b4097",
+      "package_tree": "a3dd70ea737f3273ebf7242e322641130e62ab2b",
+      "shape": "other-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-development/physics-engine/SKILL.md",
+      "skill_blob": "00701cfe86f96abe183ac38011386437800fce6c",
+      "package_tree": "9e2997726856c2e5747796e94e7949a0751dd34b",
+      "shape": "other-shape",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-development/unity-csharp/SKILL.md",
+      "skill_blob": "72851c6abf9b09c5d49ddc62859e4c86bc06cbff",
+      "package_tree": "e5bc6a3e12ef9006c234adc5e76883b0e333c527",
+      "shape": "other-shape",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/multiplayer-netcode/SKILL.md",
+      "skill_blob": "b39a576fd1383339da36b3b9109ed3f52d682e17",
+      "package_tree": "ca7c973cfdf4b04dbd4f60c6ae853615a4b3dd0d",
+      "shape": "other-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/client-engine/animation-systems/SKILL.md",
+      "skill_blob": "a47f9181a727aee821b9db040d8f9d60fd1b9aaf",
+      "package_tree": "19dd1efaa46266d1d89430b7e8f12ee720962160",
+      "shape": "other-shape",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/client-engine/audio-engine/SKILL.md",
+      "skill_blob": "a8054bc0748e8c20402c3547e0beefc75ce98db1",
+      "package_tree": "b2cccdce8df283963b7a8fefd25ca9053b5784db",
+      "shape": "other-shape",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/client-engine/input-systems/SKILL.md",
+      "skill_blob": "79f8ec616b36d3053a9c082a9f37bec52b2ee5dc",
+      "package_tree": "33950b38405b7130903f1307903c25453d89a37c",
+      "shape": "other-shape",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/client-engine/level-streaming/SKILL.md",
+      "skill_blob": "9c03055391b6ebf8a2ea590beac397433a221240",
+      "package_tree": "4f402f929ab3ecc5e011001122c41f3c6929f23a",
+      "shape": "other-shape",
+      "grade_20": 13,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/anti-cheat-server/SKILL.md",
+      "skill_blob": "861f2ca79d594492a1f603e02280a60180ba208f",
+      "package_tree": "09740a329c5be044fd054d2d5fbdb04cf83293ab",
+      "shape": "other-shape",
+      "grade_20": 12,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/authoritative-server/SKILL.md",
+      "skill_blob": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
+      "package_tree": "d5d09312860494f27b819a5d84d760f17c17487b",
+      "shape": "other-shape",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+      "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
+      "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
+      "shape": "other-shape",
+      "grade_20": 11,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/interest-management/SKILL.md",
+      "skill_blob": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
+      "package_tree": "3a3709c0a83f874086e208adbb7fb361d2ef6ca8",
+      "shape": "other-shape",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-server/scaling-architecture/SKILL.md",
+      "skill_blob": "02a052c1702b5823b22e68c0c462d8e8e715c801",
+      "package_tree": "899c5d353f227082eaeb45cf51216e30d97e79ef",
+      "shape": "other-shape",
+      "grade_20": 10,
+      "candidate_decision": "REJECT unchanged",
+      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-development/vulkan/SKILL.md",
+      "skill_blob": "4086b6e9b7bd1776acfdecad0a474e6e2c027e64",
+      "package_tree": "09201bf639d7cf53bfac8da47647b0e34f26e42c",
+      "shape": "other",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/render-graph/SKILL.md",
+      "skill_blob": "8b42b6205dd8442f4b2cd5d02bb0a2fda0549926",
+      "package_tree": "59f015b021da5e4b344303ef92226847e26ba692",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/asset-pipeline/SKILL.md",
+      "skill_blob": "476bb7f2f40f1e4f43f0f4dd01c683e90cf66fd5",
+      "package_tree": "b2f29cf45e43030504185bdff3b5be26a90ef2bf",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/ecs-pattern/SKILL.md",
+      "skill_blob": "ad5163695819ca68c1af519e2469345226e4e4a6",
+      "package_tree": "0604d31dbdb21aff02c79322105a03ef3a3bf8fc",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/job-system/SKILL.md",
+      "skill_blob": "90ddc1ef4e7f7ae5f24807703c7a1bd7ace6bbb7",
+      "package_tree": "6a73799ba6cf8b674f895956da35bade583b86c0",
+      "shape": "other",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/math-foundation/SKILL.md",
+      "skill_blob": "f2305d991fe9399f2c19b47ea5cc23981af38333",
+      "package_tree": "b7b9755ba792dce9277fb9686291e67220360a11",
+      "shape": "other",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/memory-management/SKILL.md",
+      "skill_blob": "4dfc3f7a93125949fd75aa1271c89deb778a5114",
+      "package_tree": "a819c0d9d3198db11b1ce7f9c7527f068c480f59",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/patterns/SKILL.md",
+      "skill_blob": "a7e948d80753d3db55bdc321b8b0ffa93646c642",
+      "package_tree": "e53e879b521a31fc46486aded599840e67a1995e",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/platform-abstraction/SKILL.md",
+      "skill_blob": "1145f11f2dbf9b0d2db3e1be27107984c9b8b410",
+      "package_tree": "cd5f2252f9a94c6f7240d46f999dac36e5646bb4",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -226,13 +646,13 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/boost-prompt/SKILL.md",
-      "skill_blob": "f5cd27ff3808c9a2c95f403f36f469b451fca186",
-      "package_tree": "1e4715a4a395114392922cfa31d55c6b6e0b3736",
+      "path": "skills/bug-reproduction-brief/SKILL.md",
+      "skill_blob": "add9ca292293ef860cb4cab05063b922c49d3c1f",
+      "package_tree": "8283d7f7e7a342ceb16b6594b8a8fd0cfcf20f9c",
       "shape": "direct",
-      "grade_20": 7,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -296,46 +716,6 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/bug-reproduction-brief/SKILL.md",
-      "skill_blob": "add9ca292293ef860cb4cab05063b922c49d3c1f",
-      "package_tree": "8283d7f7e7a342ceb16b6594b8a8fd0cfcf20f9c",
-      "shape": "direct",
-      "grade_20": 17,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/centos-linux-triage/SKILL.md",
-      "skill_blob": "22d79dab91fe245da1c477e21680992c50a2307f",
-      "package_tree": "2c49e5f067b98bc84978dd9aa6fa8518d34103e1",
-      "shape": "direct",
-      "grade_20": 8,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/code-exemplars-blueprint-generator/SKILL.md",
-      "skill_blob": "2382b7a991a3ee621711610a9c259775b45f2283",
-      "package_tree": "3d60e45078101dfd26d19cdab072f48fcb262589",
-      "shape": "direct",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/comment-code-generate-a-tutorial/SKILL.md",
-      "skill_blob": "6ba8f399ad090cf7e75b9abac1e9c01f1b969cc3",
-      "package_tree": "630c21880072799dd9c79144710e081f17746761",
-      "shape": "direct",
-      "grade_20": 7,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
       "path": "skills/context-map/SKILL.md",
       "skill_blob": "bb63c552fe88318aee040b833b3f8261c5065d57",
       "package_tree": "8b684d625e209fc960011407e2e504fa2ff2cad8",
@@ -346,283 +726,13 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/conventional-commit/SKILL.md",
-      "skill_blob": "38842177531a0df6a277ce4ac5f9661acbc31a84",
-      "package_tree": "2dd6528ab4c12198e4805ea62739f7c51d0dd51d",
-      "shape": "direct",
-      "grade_20": 6,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/create-readme/SKILL.md",
-      "skill_blob": "686e10d517b319520049a485c87cffea23ee6b9f",
-      "package_tree": "f65537a3461b663121fe195697979c17a8004ea5",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md",
-      "skill_blob": "aba48c998e1ae04f902db8d4744a74474d4307cd",
-      "package_tree": "beff71b7fb9daff916f4192e3578d0c4dd663493",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/csharp-mstest/SKILL.md",
-      "skill_blob": "e68bc31ea88ed3c288a45b593c1f2548101c8a23",
-      "package_tree": "81622aade749f379c8af8e20086a083a33e9bc03",
+      "path": "skills/code-exemplars-blueprint-generator/SKILL.md",
+      "skill_blob": "2382b7a991a3ee621711610a9c259775b45f2283",
+      "package_tree": "3d60e45078101dfd26d19cdab072f48fcb262589",
       "shape": "direct",
       "grade_20": 14,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/documentation-writer/SKILL.md",
-      "skill_blob": "93e3fbf57fe64179570de382347db8258c661b56",
-      "package_tree": "016d8040a3f91c8360b1003e74fbf29f34c283f5",
-      "shape": "direct",
-      "grade_20": 16,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/dotnet-design-pattern-review/SKILL.md",
-      "skill_blob": "5d9ded0c58cb5efd1e9eb5efbf278e9860f7be52",
-      "package_tree": "4988a9e6586c0eab299198334aacca3b3947974b",
-      "shape": "direct",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/drawio/SKILL.md",
-      "skill_blob": "d3fe012ab2afd1cb3dfd852f8e0227ac0011782f",
-      "package_tree": "00d1a2392fc025320c9d4e535253496c584d1cf5",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/generate-image/SKILL.md",
-      "skill_blob": "21cd4d72561879ed94764849f1be7ee5ae7f2d81",
-      "package_tree": "573a9fc36086347076f51dab544abeec2beac01b",
-      "shape": "direct",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/gtm-0-to-1-launch/SKILL.md",
-      "skill_blob": "a359ace75a86db333a3b6672992fdee9fde5af1e",
-      "package_tree": "13a06634c3f10ed3e251d6d7d55ddf04e014987f",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/gtm-operating-cadence/SKILL.md",
-      "skill_blob": "377534c9da3d5fb4819af717fef4c1e2ecad521e",
-      "package_tree": "54681a67b3dcc73c13e3d16d3a28a9b53e52725e",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/gtm-partnership-architecture/SKILL.md",
-      "skill_blob": "984252e864316635fc2450f7ca3a497f847209e4",
-      "package_tree": "4a86d4df893d27bee174d8df8d1b2fa9ef6ceb8c",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/gtm-product-led-growth/SKILL.md",
-      "skill_blob": "ae5172dafcc339f3357e3325a663a47fd309af4d",
-      "package_tree": "239d904465f131478d95816286c5863b54100503",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/gtm-technical-product-pricing/SKILL.md",
-      "skill_blob": "35c2db5798129c5d108dd1c8ddc4052fe83e53a5",
-      "package_tree": "117e986a663d7d8c4530ca81748ee5ac96b02542",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/image-manipulation-image-magick/SKILL.md",
-      "skill_blob": "dfa17add1e816316cc0295fbd5f61ef9344bb5c4",
-      "package_tree": "9446ee862fb4013441e3275f969db3e2d3763872",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/java-refactoring-extract-method/SKILL.md",
-      "skill_blob": "173e6d7811b60c75a8cb67f261e1528efa5733ad",
-      "package_tree": "00c92f6fd3d8879714935fdfc126909daf37370e",
-      "shape": "direct",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/java-refactoring-remove-parameter/SKILL.md",
-      "skill_blob": "6149fbe1d5e72996f2049decdf0053becd2553cc",
-      "package_tree": "edc519092e38538b1efa8f12acd209ab848703ca",
-      "shape": "direct",
-      "grade_20": 8,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/memory-merger/SKILL.md",
-      "skill_blob": "d6ff27b62e10110c93eb92212b64fd1df6c82810",
-      "package_tree": "706eaeca9cb2ce742416054a82b7c6b8857778c8",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/penpot-uiux-design/SKILL.md",
-      "skill_blob": "b8f589e44af0169c002ea4fa56805354ca767ca2",
-      "package_tree": "cc4e1cf59e27f429306ac6fc6f66373e3b6b1277",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md",
-      "skill_blob": "8d99d9510ff46ccd172be503504f3a36ff597170",
-      "package_tree": "28557e8b6227481145671cf0e8ec42d7bf03a30c",
-      "shape": "direct",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/playwright-generate-test/SKILL.md",
-      "skill_blob": "5d80435fe1697ca3d572bc653df877e503643b85",
-      "package_tree": "80b315fa5ec450946b5eb78c19fbd989dff33b11",
-      "shape": "direct",
-      "grade_20": 6,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/postgresql-code-review/SKILL.md",
-      "skill_blob": "72d8eac69920b97d20bbcf012469808129ec129f",
-      "package_tree": "5e41d23340dfe6988fc87a727083d1cd30bc1b1c",
-      "shape": "direct",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/power-bi-model-design-review/SKILL.md",
-      "skill_blob": "5447d29f3f01b8ba7694f76474fef28cb39439d6",
-      "package_tree": "7a28d24dfc4b8d760c37f5b9eaaf50a052c8b9e9",
-      "shape": "direct",
-      "grade_20": 13,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/power-bi-report-design-consultation/SKILL.md",
-      "skill_blob": "85a520c5aa923a90c81ce65c5634b0bee1c4ae7f",
-      "package_tree": "cbeb133eaffb89aaeb09c5c39745a3fef560566a",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/premium-frontend-ui/SKILL.md",
-      "skill_blob": "35922e088cd4f02a4171ebd8534bbb3ec3f9101e",
-      "package_tree": "11ed1a3f37de027eaa81ed003541846491f6815c",
-      "shape": "direct",
-      "grade_20": 9,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/pytest-coverage/SKILL.md",
-      "skill_blob": "38a8ed6f46942e861341e16b396e110d024d243c",
-      "package_tree": "abd9a3fb4ce4642bcc016982cbf0afba0c8f7222",
-      "shape": "direct",
-      "grade_20": 9,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-clients-sdk/SKILL.md",
-      "skill_blob": "7530f87bb97f3dce4b6e095c7bf1762aef3ca11c",
-      "package_tree": "34cfbf83e7e7d97e357bbb4b06605bd7c4bd3cee",
-      "shape": "direct",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-deployment-options/SKILL.md",
-      "skill_blob": "fb69c2556359187777230bd6d0282f2ee027563d",
-      "package_tree": "c17d32fa0af73e32cc7abe7b06392b62cb2ef314",
-      "shape": "direct",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-model-migration/SKILL.md",
-      "skill_blob": "e0f4e5e9384541cba76eee56c7de4d9d5c038fc9",
-      "package_tree": "7a55707484332ac1dd15829472d55f2ae1a5550f",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -643,16 +753,6 @@
       "grade_20": 11,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-monitoring/SKILL.md",
-      "skill_blob": "6059717a5234bed9b92b846e80f112b5e5d6fb1f",
-      "package_tree": "a99743834822777625079202b1fd0327e12f67ea",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -686,31 +786,11 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-performance-optimization/SKILL.md",
-      "skill_blob": "09aa5038e3852aa4368061414a9aa6272bbf0947",
-      "package_tree": "7746e5bb9b7a77083f16894ab1931aa0388fab3b",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
       "path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
       "skill_blob": "727d841cf37a6c19ffb81bbfa24dcd87d8724358",
       "package_tree": "ae52538cedb17acf03ceaee2df214a5e89c9a99e",
       "shape": "nested-or-internal",
       "grade_20": 9,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
-      "skill_blob": "8665b40d0665fd114be8b4c2d7368b49248028b7",
-      "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
-      "shape": "nested-or-internal",
-      "grade_20": 11,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
@@ -722,6 +802,16 @@
       "shape": "nested-or-internal",
       "grade_20": 13,
       "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+      "skill_blob": "8665b40d0665fd114be8b4c2d7368b49248028b7",
+      "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
+      "shape": "nested-or-internal",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
@@ -776,16 +866,6 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/qdrant-scaling/SKILL.md",
-      "skill_blob": "766ade82e8ef74d151d353db15bb5b48ef8fec56",
-      "package_tree": "5b4d1e67e3f1cb22f5dbfe3f8c4ac9df2fecfa7d",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
       "path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
       "skill_blob": "39141c8ecb4ad5f91e5a8db7e4c6ae46662e014f",
       "package_tree": "d98365ce40b0b666562d85c8c100c229cba71162",
@@ -803,6 +883,66 @@
       "grade_20": 11,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-clients-sdk/SKILL.md",
+      "skill_blob": "7530f87bb97f3dce4b6e095c7bf1762aef3ca11c",
+      "package_tree": "34cfbf83e7e7d97e357bbb4b06605bd7c4bd3cee",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-deployment-options/SKILL.md",
+      "skill_blob": "fb69c2556359187777230bd6d0282f2ee027563d",
+      "package_tree": "c17d32fa0af73e32cc7abe7b06392b62cb2ef314",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-model-migration/SKILL.md",
+      "skill_blob": "e0f4e5e9384541cba76eee56c7de4d9d5c038fc9",
+      "package_tree": "7a55707484332ac1dd15829472d55f2ae1a5550f",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-monitoring/SKILL.md",
+      "skill_blob": "6059717a5234bed9b92b846e80f112b5e5d6fb1f",
+      "package_tree": "a99743834822777625079202b1fd0327e12f67ea",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/SKILL.md",
+      "skill_blob": "09aa5038e3852aa4368061414a9aa6272bbf0947",
+      "package_tree": "7746e5bb9b7a77083f16894ab1931aa0388fab3b",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/SKILL.md",
+      "skill_blob": "766ade82e8ef74d151d353db15bb5b48ef8fec56",
+      "package_tree": "5b4d1e67e3f1cb22f5dbfe3f8c4ac9df2fecfa7d",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -826,43 +966,103 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/react19-test-patterns/SKILL.md",
-      "skill_blob": "b586d70527faf9ad59436335cc1c8b8373482f9c",
-      "package_tree": "89bd1bb207ad7325270a9fa90f644fe269190d8f",
+      "path": ".github/skills/agentic-workflows/SKILL.md",
+      "skill_blob": "f11eaadd2e755a1c104a37bb3ab35795a2dcf057",
+      "package_tree": "dade976f4086d43cf690af95c2af857c7b0c6108",
+      "shape": "nested-or-internal",
+      "grade_20": 5,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": ".github/skills/create-canvas-extension/SKILL.md",
+      "skill_blob": "2de882563896ec5a6b94ab70a82774463eeaa325",
+      "package_tree": "216e65e38535c9e91a19dfaf4cf0a745591f0125",
+      "shape": "nested-or-internal",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/autoresearch/SKILL.md",
+      "skill_blob": "ad54af302bb47c0c3ac7848271d610bf268c9661",
+      "package_tree": "a89e8007dc84571d21ad6717d96ccdc3d94d3039",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-bi-model-design-review/SKILL.md",
+      "skill_blob": "5447d29f3f01b8ba7694f76474fef28cb39439d6",
+      "package_tree": "7a28d24dfc4b8d760c37f5b9eaaf50a052c8b9e9",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/power-bi-report-design-consultation/SKILL.md",
+      "skill_blob": "85a520c5aa923a90c81ce65c5634b0bee1c4ae7f",
+      "package_tree": "cbeb133eaffb89aaeb09c5c39745a3fef560566a",
       "shape": "direct",
       "grade_20": 11,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/readme-blueprint-generator/SKILL.md",
-      "skill_blob": "76982e2b9b3c2de35a00dbb06087be43051a60c2",
-      "package_tree": "1caa0e533a87a92baee6e0bdf24f531588a2cfac",
+      "path": "skills/gtm-operating-cadence/SKILL.md",
+      "skill_blob": "377534c9da3d5fb4819af717fef4c1e2ecad521e",
+      "package_tree": "54681a67b3dcc73c13e3d16d3a28a9b53e52725e",
       "shape": "direct",
       "grade_20": 12,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/refactor-method-complexity-reduce/SKILL.md",
-      "skill_blob": "46f0700f595686797dcefc0e1c0143a66da2e67d",
-      "package_tree": "99c64411d01bab783374b35f407c98cd3cd8213f",
+      "path": "skills/gtm-technical-product-pricing/SKILL.md",
+      "skill_blob": "35c2db5798129c5d108dd1c8ddc4052fe83e53a5",
+      "package_tree": "117e986a663d7d8c4530ca81748ee5ac96b02542",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-product-led-growth/SKILL.md",
+      "skill_blob": "ae5172dafcc339f3357e3325a663a47fd309af4d",
+      "package_tree": "239d904465f131478d95816286c5863b54100503",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/gtm-partnership-architecture/SKILL.md",
+      "skill_blob": "984252e864316635fc2450f7ca3a497f847209e4",
+      "package_tree": "4a86d4df893d27bee174d8df8d1b2fa9ef6ceb8c",
       "shape": "direct",
       "grade_20": 12,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/refactor-plan/SKILL.md",
-      "skill_blob": "ebeab3e11652f350def9676463e6e42cf5806cb0",
-      "package_tree": "a984f58fe6b8372e02dc807e991152a351a530b4",
+      "path": "skills/architecture-blueprint-generator/SKILL.md",
+      "skill_blob": "a9a24b0e85fbd1d2e39851cc12ec266f3a55794d",
+      "package_tree": "85df2c5df09933ba0cf7b1e3b39469d4437c8d95",
       "shape": "direct",
-      "grade_20": 18,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -876,32 +1076,52 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/review-and-refactor/SKILL.md",
-      "skill_blob": "b43226f903dc2a6b061465fd26217cbfa5904058",
-      "package_tree": "1c31b702214c02180ffaaa67ce54f51c9e10fac7",
+      "path": "skills/gtm-0-to-1-launch/SKILL.md",
+      "skill_blob": "a359ace75a86db333a3b6672992fdee9fde5af1e",
+      "package_tree": "13a06634c3f10ed3e251d6d7d55ddf04e014987f",
       "shape": "direct",
-      "grade_20": 8,
+      "grade_20": 11,
       "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-ten-static-candidate-reviews-20261101.json"
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json"
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/rhino3d-scripts/SKILL.md",
-      "skill_blob": "59a0cb8361cd4681c9741fc6834f0ce2627b1565",
-      "package_tree": "9105cc5cc74ddbb03ec6f21b615bb5e8bafdf49a",
+      "path": "skills/playwright-generate-test/SKILL.md",
+      "skill_blob": "5d80435fe1697ca3d572bc653df877e503643b85",
+      "package_tree": "80b315fa5ec450946b5eb78c19fbd989dff33b11",
       "shape": "direct",
-      "grade_20": 13,
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/pytest-coverage/SKILL.md",
+      "skill_blob": "38a8ed6f46942e861341e16b396e110d024d243c",
+      "package_tree": "abd9a3fb4ce4642bcc016982cbf0afba0c8f7222",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/react19-test-patterns/SKILL.md",
+      "skill_blob": "b586d70527faf9ad59436335cc1c8b8373482f9c",
+      "package_tree": "89bd1bb207ad7325270a9fa90f644fe269190d8f",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/csharp-mstest/SKILL.md",
+      "skill_blob": "e68bc31ea88ed3c288a45b593c1f2548101c8a23",
+      "package_tree": "81622aade749f379c8af8e20086a083a33e9bc03",
+      "shape": "direct",
+      "grade_20": 14,
       "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
-      "path": "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md",
-      "skill_blob": "294997539c2651057255f0d665a1d9e1d443b813",
-      "package_tree": "e2c7d4017f86883e41faf77a3e095c7d81632ba4",
-      "shape": "direct",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
     },
     {
@@ -916,16 +1136,6 @@
     },
     {
       "source_id": "github-awesome-copilot",
-      "path": "skills/security-review/SKILL.md",
-      "skill_blob": "5281fa2f537eadca9e078a770ae129e81b759179",
-      "package_tree": "2c6732e6c9d8d3877953324c7605e45458fead3d",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/github-awesome-copilot-four-cross-domain-static-20261101.json"
-    },
-    {
-      "source_id": "github-awesome-copilot",
       "path": "skills/sql-code-review/SKILL.md",
       "skill_blob": "689c76eac6e6fe3801023ecb4e5bd3f8ec978fb3",
       "package_tree": "6c99a2b1316105edde8c88d860ec1836a70735eb",
@@ -933,6 +1143,116 @@
       "grade_20": 9,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/postgresql-code-review/SKILL.md",
+      "skill_blob": "72d8eac69920b97d20bbcf012469808129ec129f",
+      "package_tree": "5e41d23340dfe6988fc87a727083d1cd30bc1b1c",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md",
+      "skill_blob": "aba48c998e1ae04f902db8d4744a74474d4307cd",
+      "package_tree": "beff71b7fb9daff916f4192e3578d0c4dd663493",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/planning-oracle-to-postgres-migration-integration-testing/SKILL.md",
+      "skill_blob": "8d99d9510ff46ccd172be503504f3a36ff597170",
+      "package_tree": "28557e8b6227481145671cf0e8ec42d7bf03a30c",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/scaffolding-oracle-to-postgres-migration-test-project/SKILL.md",
+      "skill_blob": "294997539c2651057255f0d665a1d9e1d443b813",
+      "package_tree": "e2c7d4017f86883e41faf77a3e095c7d81632ba4",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/anti-ui-slop/SKILL.md",
+      "skill_blob": "63c9375fb01068f57d2a07f3e33be6e584cbed84",
+      "package_tree": "ec0d1544b2bc798a5fc74b9b9b197de2540f7f32",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/drawio/SKILL.md",
+      "skill_blob": "d3fe012ab2afd1cb3dfd852f8e0227ac0011782f",
+      "package_tree": "00d1a2392fc025320c9d4e535253496c584d1cf5",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/generate-image/SKILL.md",
+      "skill_blob": "21cd4d72561879ed94764849f1be7ee5ae7f2d81",
+      "package_tree": "573a9fc36086347076f51dab544abeec2beac01b",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/image-manipulation-image-magick/SKILL.md",
+      "skill_blob": "dfa17add1e816316cc0295fbd5f61ef9344bb5c4",
+      "package_tree": "9446ee862fb4013441e3275f969db3e2d3763872",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/penpot-uiux-design/SKILL.md",
+      "skill_blob": "b8f589e44af0169c002ea4fa56805354ca767ca2",
+      "package_tree": "cc4e1cf59e27f429306ac6fc6f66373e3b6b1277",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/premium-frontend-ui/SKILL.md",
+      "skill_blob": "35922e088cd4f02a4171ebd8534bbb3ec3f9101e",
+      "package_tree": "11ed1a3f37de027eaa81ed003541846491f6815c",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/rhino3d-scripts/SKILL.md",
+      "skill_blob": "59a0cb8361cd4681c9741fc6834f0ce2627b1565",
+      "package_tree": "9105cc5cc74ddbb03ec6f21b615bb5e8bafdf49a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
     },
     {
       "source_id": "github-awesome-copilot",
@@ -953,6 +1273,96 @@
       "grade_20": 15,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/ai-ready/SKILL.md",
+      "skill_blob": "839ea891c66e98cf1ea4a15315c16c0d732c28ce",
+      "package_tree": "436c666e52961dfcb58cf29fd08f97239cfacee6",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/arch-linux-triage/SKILL.md",
+      "skill_blob": "80d0fced7501d393f38a094e4ccd022bbe460bd9",
+      "package_tree": "148fe897a1a9574e87a843ae85d8114b70f1693e",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aspnet-minimal-api-openapi/SKILL.md",
+      "skill_blob": "aae320d6e0acf08b9d5bb2ac9a283a6da63b0373",
+      "package_tree": "70227c6a2b5300d9c7c7e32c2d875c0cc5340663",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/boost-prompt/SKILL.md",
+      "skill_blob": "f5cd27ff3808c9a2c95f403f36f469b451fca186",
+      "package_tree": "1e4715a4a395114392922cfa31d55c6b6e0b3736",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/centos-linux-triage/SKILL.md",
+      "skill_blob": "22d79dab91fe245da1c477e21680992c50a2307f",
+      "package_tree": "2c49e5f067b98bc84978dd9aa6fa8518d34103e1",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/comment-code-generate-a-tutorial/SKILL.md",
+      "skill_blob": "6ba8f399ad090cf7e75b9abac1e9c01f1b969cc3",
+      "package_tree": "630c21880072799dd9c79144710e081f17746761",
+      "shape": "direct",
+      "grade_20": 7,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/conventional-commit/SKILL.md",
+      "skill_blob": "38842177531a0df6a277ce4ac5f9661acbc31a84",
+      "package_tree": "2dd6528ab4c12198e4805ea62739f7c51d0dd51d",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-role-selector/SKILL.md",
+      "skill_blob": "8662d92426230ab87b74f7932f0f1291b81637c9",
+      "package_tree": "a640be3febf621401502b10e6cd7505e84c85dec",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/acreadiness-policy/SKILL.md",
+      "skill_blob": "ba2476200d292552f1d859a9ba51da0b37b1c926",
+      "package_tree": "e1296935b00037512537ff5ae61523a188238539",
+      "shape": "direct",
+      "grade_20": 9,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -1006,6 +1416,16 @@
     },
     {
       "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/SKILL.md",
+      "skill_blob": "adb7114e01e3f360734437eb200000f22881dd5c",
+      "package_tree": "a667c5659bd99971056130c1c37fd31d38d538c0",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
       "path": "skills/ai/ai-agents/core-architectures/SKILL.md",
       "skill_blob": "c83351e1ec01043d367e34be8f173b7a49fabc07",
       "package_tree": "6f84dd6a70fc48e41b17df8b8382c67e003cd3f3",
@@ -1036,16 +1456,6 @@
     },
     {
       "source_id": "j4flmao-agent-skills",
-      "path": "skills/ai/ai-agents/SKILL.md",
-      "skill_blob": "adb7114e01e3f360734437eb200000f22881dd5c",
-      "package_tree": "a667c5659bd99971056130c1c37fd31d38d538c0",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
       "path": "skills/ai/ai-agents/tool-calling-principles/SKILL.md",
       "skill_blob": "94359797ac8571ccacb7ae761bd0e1fc5bb49043",
       "package_tree": "7f255dc916fd2f9fe7a0208779f55dccb2c7b31f",
@@ -1053,16 +1463,6 @@
       "grade_20": 13,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/ai/genai-vision/SKILL.md",
-      "skill_blob": "f45c380314b5608ff4c34a9427bed5c42e1e05a4",
-      "package_tree": "ac0f0c278d55c24775f25404f002972387e1c976",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -1090,6 +1490,56 @@
       "skill_blob": "b94240af452891c3924aacd111a0d81b290b962a",
       "package_tree": "cd63b2fbf53c8d6eb8754f4b224411d08251ecdd",
       "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/databases/postgresql-internals/SKILL.md",
+      "skill_blob": "efda9b38615ac7412bd3dce83547e75403599ac5",
+      "package_tree": "90ec79822fde08fa34834611a94086980d5afbc7",
+      "shape": "other",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/databases/scaling-and-sharding/SKILL.md",
+      "skill_blob": "0f529493323bf230458a9b2459a32272a5c91bcf",
+      "package_tree": "fad3114baf3f5dbcf34198cd3be51faed7224cdb",
+      "shape": "other",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/system-design/domain-driven-design/SKILL.md",
+      "skill_blob": "ac8e8f7e3b5d747738f6cf1a8951a9b2e547b8a8",
+      "package_tree": "42bd81de91888aef6b9404721c1247430a9ad681",
+      "shape": "other",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/system-design/microservices-patterns/SKILL.md",
+      "skill_blob": "3ff167e5c570b58ec35e6251becfb1bd9d37b073",
+      "package_tree": "0b4971ae4acf9a5e6861caede8a776f30a3e086d",
+      "shape": "other",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/genai-vision/SKILL.md",
+      "skill_blob": "f45c380314b5608ff4c34a9427bed5c42e1e05a4",
+      "package_tree": "ac0f0c278d55c24775f25404f002972387e1c976",
+      "shape": "direct",
       "grade_20": 11,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
@@ -1126,36 +1576,6 @@
     },
     {
       "source_id": "j4flmao-agent-skills",
-      "path": "skills/architecture/databases/postgresql-internals/SKILL.md",
-      "skill_blob": "efda9b38615ac7412bd3dce83547e75403599ac5",
-      "package_tree": "90ec79822fde08fa34834611a94086980d5afbc7",
-      "shape": "other",
-      "grade_20": 14,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/architecture/databases/scaling-and-sharding/SKILL.md",
-      "skill_blob": "0f529493323bf230458a9b2459a32272a5c91bcf",
-      "package_tree": "fad3114baf3f5dbcf34198cd3be51faed7224cdb",
-      "shape": "other",
-      "grade_20": 14,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/architecture/event-driven/SKILL.md",
-      "skill_blob": "e408f6f27d2a3ee838fcebb94dd5fcb1c102d5a8",
-      "package_tree": "245bb27fce88f48a21cef92fa2eab90866475400",
-      "shape": "direct",
-      "grade_20": 14,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
       "path": "skills/architecture/micro-frontends/SKILL.md",
       "skill_blob": "72f6ef086281b816d6fcbe25e7a5552541ee6036",
       "package_tree": "64b2edf5d4ed8849f345cfbadc218564ea0c9249",
@@ -1166,26 +1586,6 @@
     },
     {
       "source_id": "j4flmao-agent-skills",
-      "path": "skills/architecture/system-design/domain-driven-design/SKILL.md",
-      "skill_blob": "ac8e8f7e3b5d747738f6cf1a8951a9b2e547b8a8",
-      "package_tree": "42bd81de91888aef6b9404721c1247430a9ad681",
-      "shape": "other",
-      "grade_20": 18,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/architecture/system-design/microservices-patterns/SKILL.md",
-      "skill_blob": "3ff167e5c570b58ec35e6251becfb1bd9d37b073",
-      "package_tree": "0b4971ae4acf9a5e6861caede8a776f30a3e086d",
-      "shape": "other",
-      "grade_20": 13,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
       "path": "skills/backend/caching-strategies/SKILL.md",
       "skill_blob": "6062f4b4cdc0c52145714035effc24e97a650b14",
       "package_tree": "b7c6c7857391be65e7760e5ae6dfcadf8fe59635",
@@ -1193,26 +1593,6 @@
       "grade_20": 13,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/backend/deno/oak/SKILL.md",
-      "skill_blob": "47eca6dcf524cd94c19de175a2ed24234f9e019c",
-      "package_tree": "a7e92cee04f25be5dae1eb072174f0e5bd4eb547",
-      "shape": "other",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/backend/deno/SKILL.md",
-      "skill_blob": "282b5c045ef12d9cebc2ec0f19e8acbc310d6254",
-      "package_tree": "30421dca7cef4cbe222ea927edd98ac22c8bfd26",
-      "shape": "direct",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -1233,6 +1613,56 @@
       "grade_20": 13,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/data/etl-pipelines/SKILL.md",
+      "skill_blob": "308c97ace9192c181c52d674f3834675984500c1",
+      "package_tree": "b75206f6324b6a335c70b2dcc48ccdd98877a63c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/data/database-internals/SKILL.md",
+      "skill_blob": "1de723863e4eb4c205d7069091b3954e3f7c4238",
+      "package_tree": "2c47681664370f92147b2ce0fd503f83c5604e40",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/event-driven/SKILL.md",
+      "skill_blob": "e408f6f27d2a3ee838fcebb94dd5fcb1c102d5a8",
+      "package_tree": "245bb27fce88f48a21cef92fa2eab90866475400",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/deno/SKILL.md",
+      "skill_blob": "282b5c045ef12d9cebc2ec0f19e8acbc310d6254",
+      "package_tree": "30421dca7cef4cbe222ea927edd98ac22c8bfd26",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/deno/oak/SKILL.md",
+      "skill_blob": "47eca6dcf524cd94c19de175a2ed24234f9e019c",
+      "package_tree": "a7e92cee04f25be5dae1eb072174f0e5bd4eb547",
+      "shape": "other",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
     },
     {
       "source_id": "j4flmao-agent-skills",
@@ -1313,436 +1743,6 @@
       "grade_20": 13,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/data/database-internals/SKILL.md",
-      "skill_blob": "1de723863e4eb4c205d7069091b3954e3f7c4238",
-      "package_tree": "2c47681664370f92147b2ce0fd503f83c5604e40",
-      "shape": "direct",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/data/etl-pipelines/SKILL.md",
-      "skill_blob": "308c97ace9192c181c52d674f3834675984500c1",
-      "package_tree": "b75206f6324b6a335c70b2dcc48ccdd98877a63c",
-      "shape": "direct",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/client-engine/animation-systems/SKILL.md",
-      "skill_blob": "a47f9181a727aee821b9db040d8f9d60fd1b9aaf",
-      "package_tree": "19dd1efaa46266d1d89430b7e8f12ee720962160",
-      "shape": "other-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/client-engine/audio-engine/SKILL.md",
-      "skill_blob": "a8054bc0748e8c20402c3547e0beefc75ce98db1",
-      "package_tree": "b2cccdce8df283963b7a8fefd25ca9053b5784db",
-      "shape": "other-shape",
-      "grade_20": 13,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/client-engine/input-systems/SKILL.md",
-      "skill_blob": "79f8ec616b36d3053a9c082a9f37bec52b2ee5dc",
-      "package_tree": "33950b38405b7130903f1307903c25453d89a37c",
-      "shape": "other-shape",
-      "grade_20": 16,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/client-engine/level-streaming/SKILL.md",
-      "skill_blob": "9c03055391b6ebf8a2ea590beac397433a221240",
-      "package_tree": "4f402f929ab3ecc5e011001122c41f3c6929f23a",
-      "shape": "other-shape",
-      "grade_20": 13,
-      "candidate_decision": "REJECT unchanged",
-      "review_evidence_path": "registry/discovery/j4flmao-client-engine-four-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/cocos2d/SKILL.md",
-      "skill_blob": "2eb1c102d2dd86216928ca60dc6f6140ea7aa741",
-      "package_tree": "cb681bd2c03839279ebe0dde4a7073950a09d687",
-      "shape": "direct-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/ecs-architecture/SKILL.md",
-      "skill_blob": "487e4e348451ecdf0a895a58941046c69bd4601d",
-      "package_tree": "6b038f58a78a6b3a9bd4423e91e0a54df939b0d4",
-      "shape": "direct-shape",
-      "grade_20": 17,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-development/cocos2d-patterns/SKILL.md",
-      "skill_blob": "2da4aab7fbd3b8529132619be078ce7dff21c8c4",
-      "package_tree": "f51b8a4f5b2e26c050f346ef147dee47ff3c99eb",
-      "shape": "other-shape",
-      "grade_20": 16,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-development/godot-gdscript/SKILL.md",
-      "skill_blob": "ee9e595ffdc19d913a84852099fb2ab72b5b4097",
-      "package_tree": "a3dd70ea737f3273ebf7242e322641130e62ab2b",
-      "shape": "other-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-development/physics-engine/SKILL.md",
-      "skill_blob": "00701cfe86f96abe183ac38011386437800fce6c",
-      "package_tree": "9e2997726856c2e5747796e94e7949a0751dd34b",
-      "shape": "other-shape",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-development/unity-csharp/SKILL.md",
-      "skill_blob": "72851c6abf9b09c5d49ddc62859e4c86bc06cbff",
-      "package_tree": "e5bc6a3e12ef9006c234adc5e76883b0e333c527",
-      "shape": "other-shape",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-development/vulkan/SKILL.md",
-      "skill_blob": "4086b6e9b7bd1776acfdecad0a474e6e2c027e64",
-      "package_tree": "09201bf639d7cf53bfac8da47647b0e34f26e42c",
-      "shape": "other",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/asset-pipeline/SKILL.md",
-      "skill_blob": "476bb7f2f40f1e4f43f0f4dd01c683e90cf66fd5",
-      "package_tree": "b2f29cf45e43030504185bdff3b5be26a90ef2bf",
-      "shape": "other",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/ecs-pattern/SKILL.md",
-      "skill_blob": "ad5163695819ca68c1af519e2469345226e4e4a6",
-      "package_tree": "0604d31dbdb21aff02c79322105a03ef3a3bf8fc",
-      "shape": "other",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/job-system/SKILL.md",
-      "skill_blob": "90ddc1ef4e7f7ae5f24807703c7a1bd7ace6bbb7",
-      "package_tree": "6a73799ba6cf8b674f895956da35bade583b86c0",
-      "shape": "other",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/math-foundation/SKILL.md",
-      "skill_blob": "f2305d991fe9399f2c19b47ea5cc23981af38333",
-      "package_tree": "b7b9755ba792dce9277fb9686291e67220360a11",
-      "shape": "other",
-      "grade_20": 12,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/memory-management/SKILL.md",
-      "skill_blob": "4dfc3f7a93125949fd75aa1271c89deb778a5114",
-      "package_tree": "a819c0d9d3198db11b1ce7f9c7527f068c480f59",
-      "shape": "other",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/multiplayer-netcode/SKILL.md",
-      "skill_blob": "b39a576fd1383339da36b3b9109ed3f52d682e17",
-      "package_tree": "ca7c973cfdf4b04dbd4f60c6ae853615a4b3dd0d",
-      "shape": "other-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-nested-game-23-structural-five-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/patterns/SKILL.md",
-      "skill_blob": "a7e948d80753d3db55bdc321b8b0ffa93646c642",
-      "package_tree": "e53e879b521a31fc46486aded599840e67a1995e",
-      "shape": "other",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/platform-abstraction/SKILL.md",
-      "skill_blob": "1145f11f2dbf9b0d2db3e1be27107984c9b8b410",
-      "package_tree": "cd5f2252f9a94c6f7240d46f999dac36e5646bb4",
-      "shape": "other",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-engine/render-graph/SKILL.md",
-      "skill_blob": "8b42b6205dd8442f4b2cd5d02bb0a2fda0549926",
-      "package_tree": "59f015b021da5e4b344303ef92226847e26ba692",
-      "shape": "other",
-      "grade_20": 11,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-server/anti-cheat-server/SKILL.md",
-      "skill_blob": "861f2ca79d594492a1f603e02280a60180ba208f",
-      "package_tree": "09740a329c5be044fd054d2d5fbdb04cf83293ab",
-      "shape": "other-shape",
-      "grade_20": 12,
-      "candidate_decision": "REJECT unchanged",
-      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-server/authoritative-server/SKILL.md",
-      "skill_blob": "ac01c6c513710e2f00f7e076dc9d40c628dc09af",
-      "package_tree": "d5d09312860494f27b819a5d84d760f17c17487b",
-      "shape": "other-shape",
-      "grade_20": 13,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-server/interest-management/SKILL.md",
-      "skill_blob": "3c7b08cadb5d4084adc9334c2db4e8ad4ba6f488",
-      "package_tree": "3a3709c0a83f874086e208adbb7fb361d2ef6ca8",
-      "shape": "other-shape",
-      "grade_20": 13,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
-      "skill_blob": "dbe29c45e21b3552d8efbb3bdfba320790a4abf8",
-      "package_tree": "4f5d396f2e8ddec617838e91c060235fe08427ee",
-      "shape": "other-shape",
-      "grade_20": 11,
-      "candidate_decision": "REJECT unchanged",
-      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/game-server/scaling-architecture/SKILL.md",
-      "skill_blob": "02a052c1702b5823b22e68c0c462d8e8e715c801",
-      "package_tree": "899c5d353f227082eaeb45cf51216e30d97e79ef",
-      "shape": "other-shape",
-      "grade_20": 10,
-      "candidate_decision": "REJECT unchanged",
-      "review_evidence_path": "registry/discovery/j4flmao-game-server-five-complete-package-static-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/godot/SKILL.md",
-      "skill_blob": "ce92ad6ca4a5c3a63cb5c7dc1f7c3e2d3fc0a61e",
-      "package_tree": "f15609b31d33332afb24c536058f852279d94a15",
-      "shape": "direct-shape",
-      "grade_20": 16,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/multiplayer-netcode/SKILL.md",
-      "skill_blob": "fa05510930ba8ab54227993c29c4996865390570",
-      "package_tree": "775f6c453dec1580abf5f26ef7b9f0740ae99743",
-      "shape": "direct-shape",
-      "grade_20": 16,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/unity/SKILL.md",
-      "skill_blob": "cc75fe1af72d7b41079929fe4c7ab94e35bd6140",
-      "package_tree": "6e6a38069bd1fa4334f1b65ebc9b6e409d38f6db",
-      "shape": "direct-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/game/unreal/SKILL.md",
-      "skill_blob": "230e01fbde250dec2839387a6becc0f66e6774c3",
-      "package_tree": "ad5b41ee4abb5cffcb3a4081aac84dd7feea4219",
-      "shape": "direct-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/ai-architect/SKILL.md",
-      "skill_blob": "d894758fb9080478099ba51196eed63cba688e6a",
-      "package_tree": "c64edcef87e792e7e98532712f7ce3deb26bf4c5",
-      "shape": "direct-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/backend-engineer/SKILL.md",
-      "skill_blob": "ce257a16d25d38a74faff767ef04a8b60a2e81a0",
-      "package_tree": "034e63026558ec25a40d8ea2ebf8f2d1101f6b41",
-      "shape": "direct-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/data-analyst/SKILL.md",
-      "skill_blob": "ec7f5dfbbb06aa7d63a405c85a280b8a1cc202e5",
-      "package_tree": "06872fb0dabfc21452cd30a7edc0fb9bd220fab9",
-      "shape": "direct-shape",
-      "grade_20": 15,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/data-engineer/SKILL.md",
-      "skill_blob": "29cb8d029709a839626b3c9f7700deb3ca67e23b",
-      "package_tree": "5920d5ffb0fa913e1f9ab6395bb04e95cff95498",
-      "shape": "direct-shape",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/devops-sre-engineer/SKILL.md",
-      "skill_blob": "f8e8263a78f6e8c6d14b70596361bc9d13e2ef0e",
-      "package_tree": "f4648476502cd9f58b86f7bf20d9b2d2f65e9b0c",
-      "shape": "direct-shape",
-      "grade_20": 8,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/frontend-engineer/SKILL.md",
-      "skill_blob": "bdaf479ca780f116bd0f7db53a3f8c580e9d7a93",
-      "package_tree": "0691b6f3aa131ab33cb067ae454fdff52f90c712",
-      "shape": "direct-shape",
-      "grade_20": 14,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/gpu-engineer/SKILL.md",
-      "skill_blob": "07f32fe3fc74f5bfb2917d5cabc1ba58785c67da",
-      "package_tree": "d8e0df2facb0b62a77a15fd84668a552d83ef9ca",
-      "shape": "direct-shape",
-      "grade_20": 12,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/lead-tech-game-engine/SKILL.md",
-      "skill_blob": "970772c14c9f70cc2d817781b0f807c8ec1697f5",
-      "package_tree": "93b4d140f298d3a6c32e2760dcd5e7b2998cc4ba",
-      "shape": "direct-shape",
-      "grade_20": 13,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/mobile-engineer/SKILL.md",
-      "skill_blob": "f795c57160014a7d0c33bb6a295d76fc96968d5f",
-      "package_tree": "0a58950480b7956f25337efd83442c06ad77605d",
-      "shape": "direct-shape",
-      "grade_20": 10,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/product-manager/SKILL.md",
-      "skill_blob": "b1df58f79711e6262b130748ec8ff8320927fc56",
-      "package_tree": "13dd88dea630e3382018a1d9120f5ac7729162f9",
-      "shape": "direct-shape",
-      "grade_20": 9,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/personas/qa-architect/SKILL.md",
-      "skill_blob": "8d8603a27f36f55fcf3e3975a9fd8434fbca29ec",
-      "package_tree": "8d093b0921683461c625feb4c777a19ca083611d",
-      "shape": "direct-shape",
-      "grade_20": 9,
-      "candidate_decision": "REJECT",
-      "review_evidence_path": "registry/discovery/j4flmao-persona-ten-static-candidate-reviews-20261101.json"
-    },
-    {
-      "source_id": "j4flmao-agent-skills",
-      "path": "skills/web/web3d/SKILL.md",
-      "skill_blob": "2d771db437cf8af2b9e60b5e5cda3400912465b9",
-      "package_tree": "957be0ea8be3a68d3059251c18958e1d74477761",
-      "shape": "direct-shape",
-      "grade_20": 17,
-      "candidate_decision": "REFERENCE-ONLY",
-      "review_evidence_path": "registry/discovery/j4flmao-game-web3d-eight-static-candidate-reviews-20261101.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
