@@ -1024,12 +1024,12 @@
     "archieindian_superpowers_community_current_standard_companions": 1,
     "archieindian_superpowers_community_eligible_denominator": 1,
     "archieindian_superpowers_community_current_standard_gaps": 0,
-    "j4flmao_source_total_terminal_candidate_decisions": 79,
+    "j4flmao_source_total_terminal_candidate_decisions": 90,
     "j4flmao_nested_game_terminal_candidate_decisions": 23,
     "j4flmao_nested_game_seven_file_pending": 0,
     "j4flmao_other_shape_unclassified": 182,
-    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 174,
-    "github_awesome_copilot_exact_path_candidate_decisions": 95,
+    "four_dynamic_sources_raw_path_exact_terminal_candidate_decisions": 201,
+    "github_awesome_copilot_exact_path_candidate_decisions": 111,
     "github_awesome_copilot_nested_structurally_classified": 17,
     "github_awesome_copilot_nested_terminal_candidate_decisions": 17,
     "github_awesome_copilot_nested_pending_terminal": 0
@@ -4536,17 +4536,17 @@
     "date": "2026-11-02",
     "source_role": "dynamic-discovery-only",
     "raw_discovered_skill_md_paths": 4813,
-    "terminal_exact_path_candidate_decisions": 193,
-    "raw_paths_without_terminal_path_matched_decision": 4620,
+    "terminal_exact_path_candidate_decisions": 201,
+    "raw_paths_without_terminal_path_matched_decision": 4612,
     "source_progress": {
       "github_awesome_copilot": {
         "raw": 432,
-        "terminal": 103,
-        "direct_shape_terminal": 86,
+        "terminal": 111,
+        "direct_shape_terminal": 94,
         "direct_shape_total": 415,
         "other_shape_terminal": 17,
         "other_shape_total": 17,
-        "raw_pending": 329
+        "raw_pending": 321
       },
       "j4flmao_agent_skills": {
         "raw": 645,
@@ -4586,7 +4586,9 @@
     "new_governed_semantic_reviews": 0,
     "new_security_scans": 0,
     "new_behavioral_validations": 0,
-    "caution": "Raw path decisions and source-vetting grades are NOT distinct eligible skill review completion or unchanged-use approval."
+    "caution": "Raw path decisions and source-vetting grades are NOT distinct eligible skill review completion or unchanged-use approval.",
+    "capability_directory_subdomain_examples": 171,
+    "capability_directory_distinct_source_vetted_candidates": 164
   },
   "awesome_copilot_developer_workflows_eight_static_20261102": {
     "date": "2026-11-02",
@@ -4605,5 +4607,26 @@
     "governed_review_delta": 0,
     "security_scan": "not-run",
     "behavioral_validation": "not-run"
+  },
+  "awesome_copilot_requirements_issues_eight_static_20261102": {
+    "date": "2026-11-02",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "source_role": "dynamic-discovery-only",
+    "terminal_candidate_decisions_added": 8,
+    "source_before": 103,
+    "source_after": 111,
+    "four_source_before": 193,
+    "four_source_after": 201,
+    "reference_only": 3,
+    "rejected_unchanged": 5,
+    "admitted_source_denominator_delta": 0,
+    "governed_review_delta": 0,
+    "security_scan_executed": false,
+    "behavioral_validation_executed": false,
+    "eligible_distinct_denominator": null,
+    "evidence": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-awesome-copilot-requirements-eight-static.md",
+    "accounting_correction": "Prior directory 143 subdomain example instances understated actual 163; corrected to 171. Stale index.json counts 174/95/79 corrected to 201/111/90."
   }
 }
