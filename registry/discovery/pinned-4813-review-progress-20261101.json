@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 201,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 209,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,12 +20,12 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 111,
-      "terminal_static_candidate_decisions": 111,
-      "direct_shape_path_decisions": 94,
+      "exact_path_fingerprints_checked": 119,
+      "terminal_static_candidate_decisions": 119,
+      "direct_shape_path_decisions": 102,
       "other_shape_path_decisions": 17,
-      "raw_paths_without_terminal_decision": 321,
-      "direct_shape_without_terminal_decision": 321,
+      "raw_paths_without_terminal_decision": 313,
+      "direct_shape_without_terminal_decision": 313,
       "other_shape_without_terminal_decision": 0,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
       "next_other_shape_path": null,
@@ -2093,10 +2093,90 @@
       "grade_20": 13,
       "candidate_decision": "REFERENCE-ONLY",
       "review_evidence_path": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/csharp-nunit/SKILL.md",
+      "skill_blob": "7890775bdf2391baf6b05f633a7150603a1ee987",
+      "package_tree": "3d541260df916843c10d12d63a1affcf76fef680",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/csharp-tunit/SKILL.md",
+      "skill_blob": "c972ebe1fd0db54f8ed66ad04cd2c4b244db1383",
+      "package_tree": "f9c76f783608a177fa0713fdc106cf5ce6b561f8",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/csharp-xunit/SKILL.md",
+      "skill_blob": "4347c5aa5aceb5b7f2704660aafa62837046c357",
+      "package_tree": "ca9d2dfbdb73ccd77e9f75a7492be95e53d9d57a",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-junit/SKILL.md",
+      "skill_blob": "b5da58d17eb7fa509baaca6974d77b91c94c7735",
+      "package_tree": "af0e8f90c2526b9534c2008f6e86e183fbce1d7d",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/javascript-typescript-jest/SKILL.md",
+      "skill_blob": "9552d7cb7b741148db4639124329fe3eb061354f",
+      "package_tree": "dde626acbe7a053f51fb0a2b706abe4c87d18a0c",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dotnet-best-practices/SKILL.md",
+      "skill_blob": "183d3beb113dd62a8bc6d2f2c9ea1b4fd8d3c5ed",
+      "package_tree": "348f6a99189c92bae1654b58f77904a0734b1e34",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/java-docs/SKILL.md",
+      "skill_blob": "72ceae42766f50afdf41c11c374a91d13d627200",
+      "package_tree": "199441f10fc12555b5067ad06a42d02033fd4f20",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/dotnet-timezone/SKILL.md",
+      "skill_blob": "94dc2a9c96b987b9b44ac2aabcfb1c5d3ac17b5a",
+      "package_tree": "aeb125c7c4b61152d9c2b4b46b47b9597e8292e3",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
-  "latest_macro_checkpoint": "registry/discovery/github-awesome-copilot-requirements-issues-eight-static-20261102.json",
+  "latest_macro_checkpoint": "Eight complete Awesome Copilot C#/Java/Jest testing and documentation packages; 6 REFERENCE-ONLY / 2 REJECT unchanged; exact ledger registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json; source-vetting only, governed population unchanged",
   "pinned_manifest_identity_preflight": {
     "date": "2026-11-02",
     "evidence": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
@@ -2139,6 +2219,21 @@
     "four_source_after": 201,
     "governed_review_delta": 0,
     "eligible_distinct_denominator": null,
+    "behavioral_validation": "not-run"
+  },
+  "risk_tiered_test_framework_checkpoint": {
+    "date": "2026-11-02",
+    "source_id": "github-awesome-copilot",
+    "source_before": 111,
+    "source_after": 119,
+    "four_source_before": 201,
+    "four_source_after": 209,
+    "review_evidence": "registry/discovery/github-awesome-copilot-test-framework-eight-static-20261102.json",
+    "complete_package_files_read": 10,
+    "reference_only": 6,
+    "reject_unchanged": 2,
+    "governed_review_delta": 0,
+    "security_scan": "not-run",
     "behavioral_validation": "not-run"
   }
 }
