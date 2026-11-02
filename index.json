@@ -4489,5 +4489,29 @@
     "macro_review": "docs/reviews/2026-11-02-awesome-copilot-aws-azure-eight-static.md",
     "concurrent_j4flmao_path_terminal": 79,
     "four_source_path_matched_terminal": 174
+  },
+  "j4flmao_hardware_acceleration_eleven_complete_static_20261102": {
+    "date": "2026-11-02",
+    "source_id": "j4flmao-agent-skills",
+    "source_revision": "982203e52afe0b726a7847599a8bfb293890e0c5",
+    "record": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
+    "macro_review": "docs/reviews/2026-11-02-j4flmao-hardware-acceleration-eleven-static.md",
+    "subfamily_first_class_denominator": 11,
+    "terminal_exact_path_candidate_reviews": 11,
+    "reference_only": 4,
+    "rejected_unchanged": 7,
+    "j4flmao_candidate_decisions_before": 79,
+    "j4flmao_candidate_decisions_after": 90,
+    "j4flmao_pending_raw_paths_after": 555,
+    "four_source_candidate_decisions_before": 174,
+    "four_source_candidate_decisions_after": 185,
+    "capability_domains_after": 33,
+    "capability_subdomains_after": 247,
+    "governed_review_records_unchanged": 1039,
+    "admissions": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "eligible_distinct_denominator": null,
+    "review_stage": "source-vetted-candidate-only"
   }
 }
