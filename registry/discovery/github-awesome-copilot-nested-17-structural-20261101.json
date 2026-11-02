@@ -3,13 +3,13 @@
   "snapshot_date": "2026-11-01",
   "source_id": "github-awesome-copilot",
   "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
-  "scope": "All 17 nested/internal SKILL.md paths structurally inspected at pinned source; no exact-version semantic reviews completed",
+  "scope": "All 17 nested/internal paths structurally classified; 15 Qdrant complete-package terminal candidate reviews, 2 upstream .github paths still unreviewed",
   "raw_nested_or_internal": 17,
   "frontmatter_confirmed": 17,
   "first_class_candidates": 17,
   "proven_duplicates_confirmed": 0,
-  "semantic_duplicates_unresolved": 17,
-  "terminal_candidate_decisions_added": 0,
+  "semantic_duplicates_unresolved": 2,
+  "terminal_candidate_decisions_added": 15,
   "governed_reviews_added": 0,
   "structural_family_counts": {
     "upstream-repository-maintenance": 2,
@@ -20,9 +20,10 @@
     "The Qdrant group clusters around monitoring, performance, scaling, search quality; query latency and throughput overlap semantically but have distinct names and trees, so retain each pending individual review.",
     "Many procedures concern live Qdrant operations, telemetry, tenant isolation, retention deletion and capacity costs; all require explicit action-specific authority, secure credential paths and privacy scoping.",
     "Two .github skills are upstream contributor tooling, not automatically user-facing library admissions.",
-    "Raw 432 remains unchanged; direct-shape 415 plus nested/internal 17; the 17 are now structurally classified but not graded, verified, or terminally vetted."
+    "Raw 432 remains unchanged; direct-shape 415 plus nested/internal 17; the 17 are now structurally classified but not graded, verified, or terminally vetted.",
+    "Fifteen Qdrant candidates now have complete-package individual static grades: 2 REFERENCE-ONLY and 13 REJECT unchanged; two .github contributor skills remain pending."
   ],
-  "next_cursor": "skills/qdrant-monitoring/debugging/SKILL.md",
+  "next_cursor": ".github/skills/agentic-workflows/SKILL.md",
   "records": [
     {
       "path": ".github/skills/agentic-workflows/SKILL.md",
@@ -35,7 +36,7 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "upstream-repository-maintenance",
-      "authority_risk": "production observability and sensitive operational data",
+      "authority_risk": "upstream repository contributor workflow writes; inspect host and repository permissions before use",
       "duplicate_status": "semantic overlap unresolved"
     },
     {
@@ -49,7 +50,7 @@
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "upstream-repository-maintenance",
-      "authority_risk": "production observability and sensitive operational data",
+      "authority_risk": "upstream repository contributor workflow writes; inspect host and repository permissions before use",
       "duplicate_status": "semantic overlap unresolved"
     },
     {
@@ -58,13 +59,16 @@
       "package_tree": "f05d91dde632a4b3586768ea7dd2c53e184edeb6",
       "declared_bytes": 3503,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production observability and sensitive operational data",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 13,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-monitoring/setup/SKILL.md",
@@ -72,13 +76,16 @@
       "package_tree": "5ab481b7326f940457b55d6524cc25967b7e167e",
       "declared_bytes": 3418,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 11,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md",
@@ -86,13 +93,16 @@
       "package_tree": "fd61abe33a75be8c5dcf9e6dfe6b25fc777225a1",
       "declared_bytes": 4863,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 11,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md",
@@ -100,13 +110,16 @@
       "package_tree": "1719214047d33597718f7690005dc5ecffb60a6b",
       "declared_bytes": 4859,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 13,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md",
@@ -114,13 +127,16 @@
       "package_tree": "f093a4e465dcaffbd04110a75b42bab8ddaeb1ca",
       "declared_bytes": 4730,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 12,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
@@ -128,13 +144,16 @@
       "package_tree": "ae52538cedb17acf03ceaee2df214a5e89c9a99e",
       "declared_bytes": 2574,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 9,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
@@ -142,13 +161,16 @@
       "package_tree": "db0ce386f7a310c891a478f5aeb4390307738bee",
       "declared_bytes": 1941,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 13,
+      "disposition": "REFERENCE-ONLY",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
@@ -156,13 +178,16 @@
       "package_tree": "1fc3c0734e692aa7d234d42c6ec9f419f7915ee1",
       "declared_bytes": 2995,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 11,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
@@ -170,13 +195,16 @@
       "package_tree": "02371e7d85feeb413abc3f2dbd5a0e93457c2a33",
       "declared_bytes": 4476,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "destructive data retention",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 12,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
@@ -184,13 +212,16 @@
       "package_tree": "58c62032ee1d79c700df6665dffa4f1e25692661",
       "declared_bytes": 2745,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 11,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md",
@@ -198,13 +229,16 @@
       "package_tree": "21705d29ee5edc21798cd5ed0f7f4146a51fe6dc",
       "declared_bytes": 4377,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 12,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-qps/SKILL.md",
@@ -212,13 +246,16 @@
       "package_tree": "75470d23152d4d1fd9271a6b92ee14f1601c11b6",
       "declared_bytes": 3608,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 11,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md",
@@ -226,13 +263,16 @@
       "package_tree": "96753eeee600951da553af2c44bd418e34e933f6",
       "declared_bytes": 1406,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production configuration or cost-bearing changes",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 8,
+      "disposition": "REFERENCE-ONLY",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
@@ -240,13 +280,16 @@
       "package_tree": "d98365ce40b0b666562d85c8c100c229cba71162",
       "declared_bytes": 3710,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production observability and sensitive operational data",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 13,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     },
     {
       "path": "skills/qdrant-search-quality/search-strategies/SKILL.md",
@@ -254,13 +297,18 @@
       "package_tree": "efed90f016cda8d19fc61ded8aa986f9865d73c1",
       "declared_bytes": 6963,
       "structural_status": "first_class_candidate_frontmatter_confirmed",
-      "source_vetting_status": "pending_complete_package_semantic_review",
+      "source_vetting_status": "terminal-static-candidate",
       "license_scope": "upstream root MIT; check package-level terms",
       "behavioral_validation": "not-run",
       "governed_exact_version_review": false,
       "category": "qdrant-operational-guidance",
       "authority_risk": "production observability and sensitive operational data",
-      "duplicate_status": "semantic overlap unresolved"
+      "duplicate_status": "distinct exact blob; semantic overlaps assessed, no proven duplicate",
+      "grade_20": 11,
+      "disposition": "REJECT",
+      "grade_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
     }
-  ]
+  ],
+  "semantic_overlap_reconciled_paths": 15,
+  "graded_ledger": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json"
 }
