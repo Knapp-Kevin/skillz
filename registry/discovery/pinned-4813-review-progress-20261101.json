@@ -1936,5 +1936,23 @@
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
-  "latest_macro_checkpoint": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+  "latest_macro_checkpoint": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json",
+  "pinned_manifest_identity_preflight": {
+    "date": "2026-11-02",
+    "evidence": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-pinned-four-source-identity-preflight.md",
+    "raw_paths": 4813,
+    "distinct_skill_md_blob_shas": 4813,
+    "distinct_package_tree_shas": 4813,
+    "exact_blob_or_tree_collisions": 0,
+    "nested_descendant_paths": 58,
+    "cross_source_same_leaf_groups": 14,
+    "cross_source_same_leaf_paths": 35,
+    "governed_name_only_overlap_paths": 40,
+    "eligible_distinct_denominator": null,
+    "review_decisions_delta": 0,
+    "governed_review_records_delta": 0,
+    "behavioral_validation": "not-run",
+    "caution": "Fingerprint uniqueness excludes exact collisions in four manifests, not semantic duplicates or governed mirrors; names are leads only."
+  }
 }
