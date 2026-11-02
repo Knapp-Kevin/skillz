@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "scope": "Bounded held-PR-590 recovery outside four-source 4,813 path snapshot; source-vetting evidence is not governed admission",
+  "archive_head": "f9567bc4f7489621c1597fa5bed58ac9f101a24b",
+  "sources": [
+    {
+      "repository": "alexbrooker/aviation-skills",
+      "pin": "68b8856323d60bd6fb135c665acc16156cff350f",
+      "raw_paths": 4,
+      "source_skill_paths": 4,
+      "complete_package_tree_recomputed_and_matched": 4,
+      "entrypoint_blobs_reverified": 4,
+      "source_vetting_decisions": 4,
+      "reference_only": 3,
+      "reject_unchanged": 1,
+      "governed_reviews_added": 0,
+      "license": "MIT source text, Airside Labs copyright; third-party data rights separate",
+      "cursor": "complete exact 4-package source snapshot; new upstream revisions unassessed",
+      "ledger": "registry/discovery/aviation-four-pinned-static-20261102.json"
+    },
+    {
+      "repository": "danmaps/gis-agent-skills",
+      "pin": "7b53423036342d917392dd9d7bd350e33ecd3f59",
+      "raw_paths": 21,
+      "source_skill_paths": 20,
+      "agent_configuration_paths": 1,
+      "distinct_entrypoint_blobs": 20,
+      "entrypoint_blobs_reverified": 21,
+      "package_trees_reverified": 0,
+      "source_vetting_decisions": 0,
+      "governed_reviews_added": 0,
+      "license": "README claims MIT but no root LICENSE/NOTICE grant located at pin; NOASSERTION until resolved",
+      "cursor": "21 entrypoint identities confirmed; 20 canonical source packages need full package-tree, bundled-file and rights inspection",
+      "ledger": "registry/discovery/gis-operations-21-identity-rights-20261102.csv",
+      "identity_findings": [
+        ".github/skills/agol-search/SKILL.md and skills/agol-search/SKILL.md have the same blob SHA 484aee224b51aa0fb58abf30bc0ee89fcaa4df6b but different package tree SHAs and supporting-file counts; configuration alias is not a proven complete-package duplicate",
+        "README markets 19 GIS skills; pinned packs/public-core.yaml enumerates 20 source-skill paths including sample-qa-skill; do not equate marketing count with eligible denominator"
+      ]
+    }
+  ],
+  "aggregate": {
+    "raw_path_occurrences_recovered": 25,
+    "source_skill_paths": 24,
+    "configuration_alias_occurrences": 1,
+    "entrypoint_blobs_reverified": 25,
+    "complete_package_trees_recomputed_and_matched": 4,
+    "individual_static_source_vetting_decisions": 4,
+    "governed_review_records_added": 0,
+    "four_source_raw_path_count_delta": 0,
+    "distinct_global_eligible_denominator": null
+  },
+  "security_scan": "not-run",
+  "behavioral_validation": "not-run",
+  "external_action": "none"
+}
