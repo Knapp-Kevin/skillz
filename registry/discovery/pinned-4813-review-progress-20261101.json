@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 148,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 156,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -69,14 +69,14 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 61,
-      "terminal_static_candidate_decisions": 61,
-      "direct_shape_path_decisions": 23,
+      "exact_path_fingerprints_checked": 69,
+      "terminal_static_candidate_decisions": 69,
+      "direct_shape_path_decisions": 31,
       "other_shape_path_decisions": 38,
-      "raw_paths_without_terminal_decision": 584,
-      "direct_shape_without_terminal_decision": 401,
+      "raw_paths_without_terminal_decision": 576,
+      "direct_shape_without_terminal_decision": 393,
       "other_shape_without_terminal_decision": 183,
-      "next_direct_shape_path": "skills/architecture/crdts/SKILL.md",
+      "next_direct_shape_path": "skills/aspirational/roadmapping/SKILL.md",
       "next_other_shape_path": "skills/backend/deno/oak/SKILL.md",
       "next_structurally_qualified_nested_game_path": null,
       "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 183 other-shape paths outside the classified set remain structurally unclassified.",
@@ -1563,18 +1563,100 @@
       "grade_20": 12,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/crdts/SKILL.md",
+      "skill_blob": "29e1416019825d69d2a2bc9878d8ae9743f1a728",
+      "package_tree": "6cf4bc90f9781f6bef660bcc8639458308f71f06",
+      "shape": "direct",
+      "grade_20": 15,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/micro-frontends/SKILL.md",
+      "skill_blob": "72f6ef086281b816d6fcbe25e7a5552541ee6036",
+      "package_tree": "64b2edf5d4ed8849f345cfbadc218564ea0c9249",
+      "shape": "direct",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/caching-strategies/SKILL.md",
+      "skill_blob": "6062f4b4cdc0c52145714035effc24e97a650b14",
+      "package_tree": "b7c6c7857391be65e7760e5ae6dfcadf8fe59635",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/event-driven-architecture/SKILL.md",
+      "skill_blob": "a8934c87173dc064fc810bc236bd5a6f2db5e110",
+      "package_tree": "2a199a4b2e06034196026fb15b6e91830828c52a",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/backend/graphql-optimization/SKILL.md",
+      "skill_blob": "209658f8033b7eeaa8583d3d3fa6ac3ab97cadde",
+      "package_tree": "df6498a7f3f43d053738df0362eed5daed27a6c9",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/data/etl-pipelines/SKILL.md",
+      "skill_blob": "308c97ace9192c181c52d674f3834675984500c1",
+      "package_tree": "b75206f6324b6a335c70b2dcc48ccdd98877a63c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/data/database-internals/SKILL.md",
+      "skill_blob": "1de723863e4eb4c205d7069091b3954e3f7c4238",
+      "package_tree": "2c47681664370f92147b2ce0fd503f83c5604e40",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/event-driven/SKILL.md",
+      "skill_blob": "e408f6f27d2a3ee838fcebb94dd5fcb1c102d5a8",
+      "package_tree": "245bb27fce88f48a21cef92fa2eab90866475400",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-02",
     "source_id": "j4flmao-agent-skills",
-    "source_candidate_decisions": "51 -> 61 / 645 raw paths",
-    "direct_candidate_decisions": "20 -> 23 / 424",
-    "other_candidate_decisions": "31 -> 38 / 221",
-    "four_source_exact_path_decisions": "138 -> 148 / 4813 raw paths",
-    "governed_records_added": 0,
-    "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-02-j4flmao-llm-data-architecture-ten-static.md"
+    "ledger": "registry/discovery/j4flmao-backend-data-eight-static-20261102.json",
+    "before": 148,
+    "after": 156,
+    "source_before": 61,
+    "source_after": 69,
+    "reference_only": 2,
+    "rejected_unchanged": 6,
+    "governed_reviews_added": 0,
+    "eligible_distinct_denominator": null
   }
 }
