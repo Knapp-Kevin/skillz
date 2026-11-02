@@ -40,8 +40,14 @@
       "direct_shape": 502,
       "other_shape": 34,
       "manifest": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
-      "terminal_static_candidate_reviews": 169,
-      "review_count_caveat": "22 scoped plugin families; not path-reconciled with the 502 direct-shape candidates"
+      "terminal_static_candidate_reviews": 536,
+      "review_count_caveat": "22 scoped plugin families; not path-reconciled with the 502 direct-shape candidates",
+      "review_ledgers": [
+        "registry/discovery/openai-plugins-536-current-standard-static-20261102.json"
+      ],
+      "direct_shape_terminal_static_candidate_reviews": 502,
+      "direct_shape_without_terminal_static_candidate_decision": 0,
+      "deferred_static_candidate_reviews": 0
     },
     {
       "source_id": "agentskillexchange-skills",
@@ -115,8 +121,9 @@
     "j4flmao_agent_skills": 90,
     "not_deduplicated_or_governed_semantic_reviews": true,
     "scope_caveat": "Path-matched candidate static reviews are source vetting only; not governed semantic review, security, behavior or admission.",
-    "path_matched_across_four_sources": 3718,
-    "path_matched_note": "432 Awesome Copilot + 90 j4flmao + 3196 AgentSkillExchange + 0 OpenAI Plugins current-standard exact-path decisions; DEFER excluded; 41 historical OpenAI candidate-only matches separate."
+    "path_matched_across_four_sources": 4254,
+    "path_matched_note": "432 Awesome Copilot + 90 j4flmao + 3196 AgentSkillExchange + 536 OpenAI Plugins current-standard exact-path decisions; DEFER excluded; 41 historical OpenAI candidate-only matches separate.",
+    "openai_plugins_current_standard_exact_path": 536
   },
   "latest_qualified_nested_game_tranche": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md",
   "latest_awesome_copilot_tranche": "docs/reviews/2026-11-02-awesome-copilot-developer-docs-eight-static.md",
