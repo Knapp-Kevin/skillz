@@ -79,7 +79,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Software engineering capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 15,
+      "source_vetted_reference_count": 18,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -306,6 +306,54 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/ai-ready/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "839ea891c66e98cf1ea4a15315c16c0d732c28ce",
+          "package_tree": "436c666e52961dfcb58cf29fd08f97239cfacee6",
+          "capability": "AI repository bootstrap wrapper",
+          "static_candidate_score": "6/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/aspnet-minimal-api-openapi/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "aae320d6e0acf08b9d5bb2ac9a283a6da63b0373",
+          "package_tree": "70227c6a2b5300d9c7c7e32c2d875c0cc5340663",
+          "capability": "Typed API and schema design checklist",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/conventional-commit/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "38842177531a0df6a277ce4ac5f9661acbc31a84",
+          "package_tree": "2dd6528ab4c12198e4805ea62739f7c51d0dd51d",
+          "capability": "Conventional commit message template",
+          "static_candidate_score": "6/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
@@ -627,7 +675,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Agent / MCP development capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 4,
+      "source_vetted_reference_count": 5,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -685,6 +733,22 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/acreadiness-policy/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "ba2476200d292552f1d859a9ba51da0b37b1c926",
+          "package_tree": "e1296935b00037512537ff5ae61523a188238539",
+          "capability": "AgentRC readiness policy configuration",
+          "static_candidate_score": "9/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -724,7 +788,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Cloud / DevOps capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 14,
+      "source_vetted_reference_count": 16,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -944,6 +1008,38 @@
           "behavioral_validation": "not-run",
           "admitted_governed_record": false,
           "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/arch-linux-triage/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "80d0fced7501d393f38a094e4ccd022bbe460bd9",
+          "package_tree": "148fe897a1a9574e87a843ae85d8114b70f1693e",
+          "capability": "Arch troubleshooting checklist",
+          "static_candidate_score": "8/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/centos-linux-triage/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "22d79dab91fe245da1c477e21680992c50a2307f",
+          "package_tree": "2c49e5f067b98bc84978dd9aa6fa8518d34103e1",
+          "capability": "CentOS diagnostic checklist",
+          "static_candidate_score": "8/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
         }
       ]
     },
@@ -1003,7 +1099,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Security capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 3,
+      "source_vetted_reference_count": 4,
       "source_vetted_reference_preview": [
         {
           "source_id": "j4flmao-agent-skills",
@@ -1044,6 +1140,22 @@
           "static_candidate_score": "11/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/azure-role-selector/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "8662d92426230ab87b74f7932f0f1291b81637c9",
+          "package_tree": "a640be3febf621401502b10e6cd7505e84c85dec",
+          "capability": "Least-privilege Azure RBAC selection",
+          "static_candidate_score": "10/20",
+          "candidate_disposition": "REFERENCE-ONLY",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -1778,7 +1890,7 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Technical writing capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 2,
+      "source_vetted_reference_count": 3,
       "source_vetted_reference_preview": [
         {
           "source_id": "github-awesome-copilot",
@@ -1804,6 +1916,22 @@
           "static_candidate_score": "10/20",
           "candidate_disposition": "REJECT unchanged",
           "source_vetting_evidence": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        },
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/comment-code-generate-a-tutorial/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "6ba8f399ad090cf7e75b9abac1e9c01f1b969cc3",
+          "package_tree": "630c21880072799dd9c79144710e081f17746761",
+          "capability": "Beginner-friendly Python tutorial generation",
+          "static_candidate_score": "7/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
           "stage": "source-vetted-candidate-only",
           "security_scan": "not-run",
           "behavioral_validation": "not-run",
@@ -2077,7 +2205,25 @@
       "coverage": "partial evidence-linked name-only leads",
       "search_hint": "Time / productivity capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
-      "source_vetted_reference_count": 0
+      "source_vetted_reference_count": 1,
+      "source_vetted_reference_preview": [
+        {
+          "source_id": "github-awesome-copilot",
+          "canonical_path": "skills/boost-prompt/SKILL.md",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_blob": "f5cd27ff3808c9a2c95f403f36f469b451fca186",
+          "package_tree": "1e4715a4a395114392922cfa31d55c6b6e0b3736",
+          "capability": "Interactive prompt clarification",
+          "static_candidate_score": "7/20",
+          "candidate_disposition": "REJECT unchanged",
+          "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+          "stage": "source-vetted-candidate-only",
+          "security_scan": "not-run",
+          "behavioral_validation": "not-run",
+          "admitted_governed_record": false,
+          "unchanged_use_approved": false
+        }
+      ]
     },
     {
       "domain": "memory-context",
@@ -2693,6 +2839,22 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/aspnet-minimal-api-openapi/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "aae320d6e0acf08b9d5bb2ac9a283a6da63b0373",
+              "package_tree": "70227c6a2b5300d9c7c7e32c2d875c0cc5340663",
+              "capability": "Typed API and schema design checklist",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -2920,6 +3082,40 @@
               "static_candidate_score": "14/20",
               "candidate_disposition": "REFERENCE-ONLY",
               "source_vetting_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/ai-ready/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "839ea891c66e98cf1ea4a15315c16c0d732c28ce",
+              "package_tree": "436c666e52961dfcb58cf29fd08f97239cfacee6",
+              "capability": "AI repository bootstrap wrapper",
+              "static_candidate_score": "6/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/conventional-commit/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "38842177531a0df6a277ce4ac5f9661acbc31a84",
+              "package_tree": "2dd6528ab4c12198e4805ea62739f7c51d0dd51d",
+              "capability": "Conventional commit message template",
+              "static_candidate_score": "6/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
               "security_scan": "not-run",
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
@@ -3531,6 +3727,24 @@
               "admitted_governed_record": false,
               "unchanged_use_approved": false
             }
+          ],
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/acreadiness-policy/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "ba2476200d292552f1d859a9ba51da0b37b1c926",
+              "package_tree": "e1296935b00037512537ff5ae61523a188238539",
+              "capability": "AgentRC readiness policy configuration",
+              "static_candidate_score": "9/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
           ]
         },
         {
@@ -3960,6 +4174,38 @@
               "behavioral_validation": "not-run",
               "admitted_governed_record": false,
               "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/arch-linux-triage/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "80d0fced7501d393f38a094e4ccd022bbe460bd9",
+              "package_tree": "148fe897a1a9574e87a843ae85d8114b70f1693e",
+              "capability": "Arch troubleshooting checklist",
+              "static_candidate_score": "8/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            },
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/centos-linux-triage/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "22d79dab91fe245da1c477e21680992c50a2307f",
+              "package_tree": "2c49e5f067b98bc84978dd9aa6fa8518d34103e1",
+              "capability": "CentOS diagnostic checklist",
+              "static_candidate_score": "8/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
             }
           ]
         },
@@ -4079,7 +4325,25 @@
             "microsoft-skills/azure-identity-rust"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 10
+          "name_only_review_hits_in_scope": 10,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/azure-role-selector/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "8662d92426230ab87b74f7932f0f1291b81637c9",
+              "package_tree": "a640be3febf621401502b10e6cd7505e84c85dec",
+              "capability": "Least-privilege Azure RBAC selection",
+              "static_candidate_score": "10/20",
+              "candidate_disposition": "REFERENCE-ONLY",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "threat-modeling",
@@ -5917,7 +6181,25 @@
             "bm629-agent-skills/reviewing-user-guide"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 5
+          "name_only_review_hits_in_scope": 5,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/comment-code-generate-a-tutorial/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "6ba8f399ad090cf7e75b9abac1e9c01f1b969cc3",
+              "package_tree": "630c21880072799dd9c79144710e081f17746761",
+              "capability": "Beginner-friendly Python tutorial generation",
+              "static_candidate_score": "7/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "reference-manuals",
@@ -6786,7 +7068,25 @@
             "addyosmani-agent-skills/planning-and-task-breakdown"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
-          "name_only_review_hits_in_scope": 8
+          "name_only_review_hits_in_scope": 8,
+          "source_vetted_candidate_examples": [
+            {
+              "source_id": "github-awesome-copilot",
+              "canonical_path": "skills/boost-prompt/SKILL.md",
+              "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+              "skill_blob": "f5cd27ff3808c9a2c95f403f36f469b451fca186",
+              "package_tree": "1e4715a4a395114392922cfa31d55c6b6e0b3736",
+              "capability": "Interactive prompt clarification",
+              "static_candidate_score": "7/20",
+              "candidate_disposition": "REJECT unchanged",
+              "source_vetting_evidence": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+              "stage": "source-vetted-candidate-only",
+              "security_scan": "not-run",
+              "behavioral_validation": "not-run",
+              "admitted_governed_record": false,
+              "unchanged_use_approved": false
+            }
+          ]
         },
         {
           "id": "focus",
@@ -10052,22 +10352,24 @@
     "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
     "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
     "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
-    "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+    "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
   ],
   "source_vetted_candidate_coverage": {
     "date": "2026-11-02",
-    "subdomain_example_instances": 69,
-    "browse_overview_preview_instances": 77,
-    "distinct_source_path_pins": 79,
+    "subdomain_example_instances": 78,
+    "browse_overview_preview_instances": 86,
+    "distinct_source_path_pins": 88,
     "latest_j4flmao_nested_game_9": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json",
     "governed_identity_links_unchanged": 78,
-    "note": "Candidate-only exact-tree grades including rejects/reference-only; governed 78 identity links unchanged. Nine visual/UI/CAD candidates added with explicit rights and authority hard-fail caveats.",
+    "note": "Candidate-only grades, governed 78 identity links unchanged; nine cross-domain examples added with authority/rights caveats",
     "latest_awesome_copilot_planning_ten": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
     "latest_awesome_copilot_qdrant_nested_15": "registry/discovery/github-awesome-copilot-qdrant-nested-15-static-20261101.json",
     "accounting_correction": "Recomputed from actual directory arrays: previous main advertised 35 subdomain examples but contained 15, and 28 distinct source/path/pins but contained 25. After 15 Qdrant additions: 30 subdomain examples, 38 overview previews, 40 distinct union identities. Governed 78 unchanged.",
     "latest_awesome_copilot_qdrant_routers_contributor_ten": "registry/discovery/github-awesome-copilot-qdrant-routers-contributor-ten-static-20261101.json",
     "latest_awesome_copilot_cross_domain_ten": "registry/discovery/github-awesome-copilot-cross-domain-knowledge-business-ten-static-20261101.json",
     "latest_awesome_copilot_testing_quality_ten": "registry/discovery/github-awesome-copilot-testing-quality-ten-static-20261102.json",
-    "latest_awesome_copilot_visual_cad_nine": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json"
+    "latest_awesome_copilot_visual_cad_nine": "registry/discovery/github-awesome-copilot-visual-cad-nine-static-20261102.json",
+    "latest_awesome_copilot_breadth_nine": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json"
   }
 }
