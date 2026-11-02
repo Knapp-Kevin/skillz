@@ -1,0 +1,279 @@
+{
+  "schema": "source_pinned_package_static_review_v1",
+  "date": "2026-11-02",
+  "source": "graph-robots/open-robot-skills",
+  "source_pin": "752dfbd96968d4d08379f8111765efbf6457800b",
+  "origin": "held PR #590; identity recovery merged in #646, entrypoint triage merged in #647; 43 tree verification merged in #649",
+  "methodology": "10 x (0-2) rubric per docs/skill-verification.md; independent hard fail gate",
+  "scope": "Complete five-file package content inspected for each package, including uv.lock dependency records. External graph-as-policy source, vendor APIs, secret handling beyond this package and all execution unverified.",
+  "results": [
+    {
+      "source_repo": "graph-robots/open-robot-skills",
+      "source_commit": "752dfbd96968d4d08379f8111765efbf6457800b",
+      "path": "tools/gemini-er",
+      "package_tree_sha": "d4916cdb807670e6e66a06af7cfb7bb4b8c6d59f",
+      "entrypoint_git_blob_sha": "9f5ce473ba65898fd7b1646e4b1ebc7d70a4d6c1",
+      "files": [
+        {
+          "relative_path": ".python-version",
+          "git_blob_sha": "2c0733315e415bfb5e5b353f9996ecd964d395b2"
+        },
+        {
+          "relative_path": "SKILL.md",
+          "git_blob_sha": "9f5ce473ba65898fd7b1646e4b1ebc7d70a4d6c1"
+        },
+        {
+          "relative_path": "pyproject.toml",
+          "git_blob_sha": "9313a69cdcdc3024b702d28631e71d7f8bbb67e2"
+        },
+        {
+          "relative_path": "tools.py",
+          "git_blob_sha": "98384385b859f35eb74a597148eef1121aa2cfa3"
+        },
+        {
+          "relative_path": "uv.lock",
+          "git_blob_sha": "75176c80b0b6153091f740d71911caadc3a7cc86"
+        }
+      ],
+      "source_file_count": 5,
+      "checked_dependency_lock": {
+        "filename": "uv.lock",
+        "packages": 35,
+        "sha": "75176c80b0b6153091f740d71911caadc3a7cc86",
+        "content_inspected": "complete lock text and 35 package records inspected",
+        "external_runtime": "graph-as-policy-core editable path ../../../graph-as-policy/gap-core; not independently pinned/read"
+      },
+      "license": {
+        "root": "Apache-2.0 at source root",
+        "package": "MIT in SKILL.md and pyproject.toml",
+        "effective_scope": "package-local MIT and root Apache-2.0 both observed; controlling scope and downstream bundled rights require context, no unconditional reuse claim"
+      },
+      "dimension_scores": {
+        "trigger_precision": {
+          "score": 2,
+          "rationale": "Defines detection from RGB image plus query, and alternative when segmentation/semantic Q&A is preferable."
+        },
+        "procedural_clarity": {
+          "score": 2,
+          "rationale": "API call, normalized-to-pixel conversion and downstream choice are described with concrete parameters."
+        },
+        "authority_and_safety": {
+          "score": 0,
+          "rationale": "No per-call private-image egress consent/allowlist or sensitive-frame classification is visible in tool code; use of env key does not establish authority."
+        },
+        "failure_handling": {
+          "score": 0,
+          "rationale": "Empty/unparseable responses are indistinguishable from true no-match; box-order/finite checks missing and unknown scores default to 1.0."
+        },
+        "evidence_discipline": {
+          "score": 0,
+          "rationale": "Missing score/confidence is assigned 1.0, a false strongest-confidence signal, so evidence uncertainty is hidden."
+        },
+        "dependency_coherence": {
+          "score": 1,
+          "rationale": "All five in-package files read, including 35 resolved lock package records and exact local graph-as-policy-core editable path; external graph-as-policy-core implementation/API service behavior not verified."
+        },
+        "portability_honesty": {
+          "score": 2,
+          "rationale": "Explicit google-genai, API keys, host-specific SDK and Python 3.11 requirements; supports one external Gemini provider."
+        },
+        "usefulness_differentiation": {
+          "score": 2,
+          "rationale": "Useful bridge from object query to pixel-space bounding boxes and SAM3 prompt."
+        },
+        "adversarial_resilience": {
+          "score": 0,
+          "rationale": "Malformed/inverted/non-finite boxes and missing confidence can pass parsing; attacker-controlled query is included verbatim in remote prompt; no bounded egress authorization."
+        },
+        "effectiveness_design": {
+          "score": 1,
+          "rationale": "Mechanism is plausible but safety and trust calibration are insufficient; no end-to-end behavioral evidence."
+        }
+      },
+      "total": 10,
+      "hard_fail": true,
+      "findings": [
+        {
+          "severity": "high",
+          "file": "tools.py",
+          "symbol": "detect",
+          "finding": "Calls google-genai Client.models.generate_content with PNG-encoded camera image and untrusted query. No image-specific egress authorization/endpoint restriction in package; host protections not examined."
+        },
+        {
+          "severity": "high",
+          "file": "tools.py",
+          "symbol": "_parse_detections",
+          "finding": "score defaults to 1.0 if missing, invalid or nonnumeric; fabricated maximum confidence may be chosen by downstream max(detections, key=score)."
+        },
+        {
+          "severity": "high",
+          "file": "tools.py",
+          "symbol": "_parse_detections",
+          "finding": "Box coordinates cast to floats then clamped without finite, monotonic, positive-area or confidence-range validation; inverted/malformed boxes may be represented as detections."
+        },
+        {
+          "severity": "medium",
+          "file": "tools.py",
+          "symbol": "detect",
+          "finding": "Unparseable model response yields empty detections, conflating malformed service output with true no match. Exceptions retain separate ToolError path."
+        },
+        {
+          "severity": "medium",
+          "file": "pyproject.toml / uv.lock",
+          "symbol": "graph-as-policy-core",
+          "finding": "Local editable external dependency ../../../graph-as-policy/gap-core is outside reviewed source tree; installation depends on neighbor checkout and security/authority controls are not established by this package."
+        }
+      ],
+      "remediations": [
+        "Require scoped image-egress approval, permitted endpoint and privacy classification at dispatch boundary before sending any camera frame; prove host adapter enforces it.",
+        "Treat missing/unparseable scores as unknown confidence, never 1.0; validate score finite and in [0,1], sort only valid detections.",
+        "Reject nonfinite, inverted, zero-area or out-of-bounds detector coordinates rather than silently constructing plausible boxes.",
+        "Return distinct no_match, malformed_response and provider_error statuses with provenance of actual model result.",
+        "Bind/package-qualify external graph-as-policy runtime and destination SDK behavior; independently test adversarial query, score omissions and malformed boxes."
+      ],
+      "disposition": "REJECT_UNCHANGED",
+      "behavioral_validation": "not-run",
+      "scanner_state": "not-run",
+      "executed_source_code": false,
+      "external_host_and_providers_unverified": true
+    },
+    {
+      "source_repo": "graph-robots/open-robot-skills",
+      "source_commit": "752dfbd96968d4d08379f8111765efbf6457800b",
+      "path": "tools/vlm",
+      "package_tree_sha": "aaca905ce5156066f295fa0c43225a016be88458",
+      "entrypoint_git_blob_sha": "56a393983d5c8407f034b4aeea61eee1243a9381",
+      "files": [
+        {
+          "relative_path": ".python-version",
+          "git_blob_sha": "2c0733315e415bfb5e5b353f9996ecd964d395b2"
+        },
+        {
+          "relative_path": "SKILL.md",
+          "git_blob_sha": "56a393983d5c8407f034b4aeea61eee1243a9381"
+        },
+        {
+          "relative_path": "pyproject.toml",
+          "git_blob_sha": "5ad4d3d2196ee676541a68e2b3f2c6bf5d7bf99d"
+        },
+        {
+          "relative_path": "tools.py",
+          "git_blob_sha": "4f7b383324b266aaefe02e08774f27fea2c3a434"
+        },
+        {
+          "relative_path": "uv.lock",
+          "git_blob_sha": "cc1af8d3c832f4642a7ee07dc3d826c0a2161c4f"
+        }
+      ],
+      "source_file_count": 5,
+      "checked_dependency_lock": {
+        "filename": "uv.lock",
+        "packages": 35,
+        "sha": "cc1af8d3c832f4642a7ee07dc3d826c0a2161c4f",
+        "content_inspected": "complete lock text and 35 package records inspected",
+        "external_runtime": "graph-as-policy-core editable path ../../../graph-as-policy/gap-core; not independently pinned/read"
+      },
+      "license": {
+        "root": "Apache-2.0 at source root",
+        "package": "MIT in SKILL.md and pyproject.toml",
+        "effective_scope": "package-local MIT and root Apache-2.0 both observed; controlling scope and downstream bundled rights require context, no unconditional reuse claim"
+      },
+      "dimension_scores": {
+        "trigger_precision": {
+          "score": 2,
+          "rationale": "Separates general VLM query and yes/no query and documents OpenRouter/Vertex routing."
+        },
+        "procedural_clarity": {
+          "score": 2,
+          "rationale": "Explicit provider routing, image encoding, retries and boolean parsing mechanisms."
+        },
+        "authority_and_safety": {
+          "score": 0,
+          "rationale": "No per-image/private-frame egress or provider-change authorization in package code; GAP_VLM_PROVIDER inherits GAP_LLM_PROVIDER and configurable GAP_VLM_BASE_URL can redirect image+bearer-key transmission."
+        },
+        "failure_handling": {
+          "score": 0,
+          "rationale": "Three retries for all exceptions can repeat transmissions/costs; ambiguous/no yes/no text is coerced to bool instead of a third UNKNOWN result."
+        },
+        "evidence_discipline": {
+          "score": 1,
+          "rationale": "Returns raw model text alongside boolean, a positive evidence practice; however substring fallback can manufacture yes from unrelated text."
+        },
+        "dependency_coherence": {
+          "score": 1,
+          "rationale": "All five in-package files read, including 35 resolved lock package records; external editable graph-as-policy-core and actual provider contracts unverified."
+        },
+        "portability_honesty": {
+          "score": 2,
+          "rationale": "Explicit OpenRouter/Vertex SDK and credential/provider config, Python 3.11, provider-specific default assumptions."
+        },
+        "usefulness_differentiation": {
+          "score": 2,
+          "rationale": "Encapsulates image Q&A and binary scene checks that can feed robot graphs."
+        },
+        "adversarial_resilience": {
+          "score": 0,
+          "rationale": "_coerce_yes_no uses first yes/no anywhere then substring yes fallback, susceptible to misleading response text; remote destination and token transport from inherited env are not explicitly constrained."
+        },
+        "effectiveness_design": {
+          "score": 1,
+          "rationale": "Useful architecture but high-consequence binary confidence and disclosed images lack robust failure-closed boundaries."
+        }
+      },
+      "total": 11,
+      "hard_fail": true,
+      "findings": [
+        {
+          "severity": "high",
+          "file": "tools.py",
+          "symbol": "_query_openrouter / _query_vertex",
+          "finding": "Sends PNG image bytes to selected hosted service without a visible per-image authorization gate; images may be sensitive camera observations."
+        },
+        {
+          "severity": "high",
+          "file": "tools.py",
+          "symbol": "_resolve_provider / _query_openrouter",
+          "finding": "Provider inherits GAP_LLM_PROVIDER and URL is controlled by GAP_VLM_BASE_URL; bearer token is attached to configured chat URL. Missing destination policy can redirect image+credential to unintended server. This is a configuration trust boundary, not proof maliciousness."
+        },
+        {
+          "severity": "high",
+          "file": "tools.py",
+          "symbol": "_coerce_yes_no",
+          "finding": "First standalone yes/no anywhere wins; absent standalone response falls back to substring yes in lowercased text (e.g., 'yesterday'), treating unrelated text as positive. Unknown/ambiguous response never yields UNKNOWN."
+        },
+        {
+          "severity": "medium",
+          "file": "tools.py",
+          "symbol": "_query_openrouter / _query_vertex",
+          "finding": "Retries every exception up to three calls, even nontransient errors; repeats potentially paid/private image transfer and logs exception strings whose redaction is not established."
+        },
+        {
+          "severity": "medium",
+          "file": "pyproject.toml / uv.lock",
+          "symbol": "graph-as-policy-core",
+          "finding": "External editable graph-as-policy-core is not exact-version bound by this source pin; outer authorization and data handling must be separately qualified."
+        }
+      ],
+      "remediations": [
+        "Add explicit action-specific egress controls, endpoint allowlist, provider/account disclosure and consent for each relevant image context; avoid inheriting new provider for private data silently.",
+        "Constrain or disallow untrusted GAP_VLM_BASE_URL with API credentials, require expected origin/TLS and verified resolved provider.",
+        "Parse only a strict leading yes/no token (or structured constrained schema); route ambiguous/missing/untrusted model outputs to UNKNOWN and do not permit robot action on unknown.",
+        "Retry only classified transient cases with budget/authorization and redact sensitive exception/request data.",
+        "Pin and qualify external gap runtime/providers and add executed authorization-pressure/ambiguous-answer acceptance tests."
+      ],
+      "disposition": "REJECT_UNCHANGED",
+      "behavioral_validation": "not-run",
+      "scanner_state": "not-run",
+      "executed_source_code": false,
+      "external_host_and_providers_unverified": true
+    }
+  ],
+  "accounting": {
+    "new_source_family_terminal_static_dispositions": 2,
+    "approved": 0,
+    "security_scanned": 0,
+    "behaviorally_tested": 0,
+    "external_four_source_raw_path_delta": 0,
+    "governed_review_identity_delta": 0
+  }
+}
