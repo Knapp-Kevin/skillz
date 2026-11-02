@@ -19,7 +19,7 @@
     "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
   ],
   "individual_reviews_scope": "governed exact-version semantic review pairs only; source-vetting candidate decisions are separate",
-  "terminal_static_candidate_reviews": 90,
+  "terminal_static_candidate_reviews": 645,
   "other_shape_structurally_classified": 39,
   "other_shape_still_unclassified": 182,
   "nested_game_multi_file_pending": 0,
@@ -28,5 +28,13 @@
   "latest_review_ledger": "registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json",
   "review_progress_ledger": "registry/discovery/pinned-4813-review-progress-20261101.json",
   "review_status_scope": "90 exact-path source-vetting decisions (51 direct, 39 other), not governed semantic reviews; 555 raw paths pending (373 direct, 182 other). All 11 hardware-acceleration first-class direct packages terminal candidate reviewed.",
-  "other_shape_terminal_static_candidate_reviews": 39
+  "other_shape_terminal_static_candidate_reviews": 39,
+  "review_progress": {
+    "snapshot_date": "2026-11-02",
+    "exact_path_terminal_candidate_decisions": 645,
+    "direct_shape_terminal_candidate_decisions": 406,
+    "direct_shape_remaining": 18,
+    "deferred": 0,
+    "latest_evidence": "registry/discovery/j4flmao-agent-skills-555-current-standard-static-20261102.json"
+  }
 }
