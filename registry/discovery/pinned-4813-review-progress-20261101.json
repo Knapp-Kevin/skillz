@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 158,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 166,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -69,12 +69,12 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 71,
-      "terminal_static_candidate_decisions": 71,
-      "direct_shape_path_decisions": 32,
+      "exact_path_fingerprints_checked": 79,
+      "terminal_static_candidate_decisions": 79,
+      "direct_shape_path_decisions": 40,
       "other_shape_path_decisions": 39,
-      "raw_paths_without_terminal_decision": 574,
-      "direct_shape_without_terminal_decision": 392,
+      "raw_paths_without_terminal_decision": 566,
+      "direct_shape_without_terminal_decision": 384,
       "other_shape_without_terminal_decision": 182,
       "next_direct_shape_path": "skills/aspirational/roadmapping/SKILL.md",
       "next_other_shape_path": "skills/backend/dotnet/architecture/SKILL.md",
@@ -1663,6 +1663,86 @@
       "grade_20": 10,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/aws-serverless/SKILL.md",
+      "skill_blob": "12e72fbb9ceba140472cc6386db7e2b300c5788b",
+      "package_tree": "c080ced06af5f7bb8bfa54647d55dd908c9e6dff",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/azure-functions/SKILL.md",
+      "skill_blob": "275c97e6083ed5c8cd9a2476e2d3edff72267e71",
+      "package_tree": "306f759376def165ae97cacdf7c5e5a65de76fd0",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/distributed-tracing/SKILL.md",
+      "skill_blob": "e43cab1b2c37b4f68b1b6da606f70e2f13293e9f",
+      "package_tree": "3c0effcf778db9e92ead4f4f1e667625fce39e88",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/ebpf-networking/SKILL.md",
+      "skill_blob": "0030d40a8d7976470a8ef69bd26e9c40bb07f8f6",
+      "package_tree": "f4a5e3c05a9d5b8400ab14957daf08df7f56708c",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/ebpf-observability/SKILL.md",
+      "skill_blob": "81a622b2975a4221f76e4ac8050f1891aa29be4e",
+      "package_tree": "1c77605bd2f184c67754616301e1537691bd9ffa",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/event-driven-scaling/SKILL.md",
+      "skill_blob": "a904257b8982065372d3628d29a9f0887dbb5b2a",
+      "package_tree": "e43dc9c21de599f4756193b64f89b86c9401e6db",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/gcp-bigquery/SKILL.md",
+      "skill_blob": "e263bdfc17a78ed26f982bc23283961fba786968",
+      "package_tree": "0b976ea06d12daf2aaca5b0f8e063f85390584fb",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/serverless-cold-starts/SKILL.md",
+      "skill_blob": "2935198faebe8a4569d0f817e30d42fe13a2791a",
+      "package_tree": "59e8874c2c1f28399dca9bd1b0967fdd7a64e7db",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",

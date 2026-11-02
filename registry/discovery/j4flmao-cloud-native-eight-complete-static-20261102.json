@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_id": "j4flmao-agent-skills",
+  "source_repository": "j4flmao/agent-skills",
+  "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+  "source_role": "dynamic-discovery-only",
+  "root_license_blob": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+  "review_kind": "Eight complete pinned cloud-native package source-vetting decisions; NOT governed semantic verification",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "source_denominator": {
+    "raw": 645,
+    "direct": 424,
+    "other": 221
+  },
+  "macro": {
+    "before": 71,
+    "after": 79,
+    "direct_before": 32,
+    "direct_after": 40,
+    "other_before": 39,
+    "other_after": 39,
+    "source_raw_pending_before": 574,
+    "source_raw_pending_after": 566,
+    "four_source_terminal_before": 158,
+    "four_source_terminal_after": 166,
+    "reference_only": 0,
+    "reject_unchanged": 8,
+    "admissions": 0,
+    "governed_reviews_added": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "distinct_eligible_denominator": null
+  },
+  "macro_findings": [
+    "Eight direct-shape first-class cloud-native packages cover AWS, Azure, GCP, eBPF, OTel and Kubernetes; 17 owned source files include nine bundled references.",
+    "Every package supplies valuable technical concepts but omits action-specific authorization for live infrastructure, billed resources, sensitive observability data, or system-wide probes; reject unchanged, preserve reference methods.",
+    "The distributed-tracing bundle includes insecure collector transport and invalid short trace IDs; KEDA Kafka reference contains a questionable scaler key; BigQuery job-history query emits user_email and full SQL.",
+    "Do not equate a complete root MIT license with permissions for external dependencies or production authority. No security or behavioral execution was performed.",
+    "Eight new candidate-only cloud-devops links improve sparse domain discovery; no governed admissions or distinct eligible denominator claim."
+  ],
+  "records": [
+    {
+      "name": "cloud-native-aws-serverless",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/aws-serverless/SKILL.md",
+      "frontmatter_name": "cloud-native-aws-serverless",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "12e72fbb9ceba140472cc6386db7e2b300c5788b",
+      "package_tree": "c080ced06af5f7bb8bfa54647d55dd908c9e6dff",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "12e72fbb9ceba140472cc6386db7e2b300c5788b"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "cloud-architecture",
+      "specific_capability": "Configure AWS Lambda invocation, concurrency, retries and event-source isolation",
+      "trigger": "AWS Lambda/Firecracker and SQS invocation design",
+      "nontrigger": "Generic container workloads or cold-start-only tuning",
+      "dependencies": "AWS Lambda, Firecracker, Terraform, IAM, SQS, DynamoDB, Python boto3",
+      "authority_and_side_effects": "Terraform Lambda/SQS mapping and DynamoDB writes affect cloud resources, bills and persisted order records; no action-specific approval before apply or production use.",
+      "privacy_and_egress": "Persistent order IDs/status and trace telemetry require account, tenant, retention and destination scope.",
+      "portability_and_freshness": "Lambda quota, timeout and pricing details are dated; 29s API Gateway timeout treated as universal despite configurable limits; examples not executed.",
+      "rationale": "Clear event-source and idempotency advice, but deployment config, X-Ray, reserved concurrency and live DynamoDB writes are not bounded by user/account/environment/cost authorization.",
+      "required_authorization_boundary": "Explicit approval for target AWS account/region, resource creation or mutation, cost ceiling, data access, telemetry destination and production rollout.",
+      "hard_fail_reason": "Explicit approval for target AWS account/region, resource creation or mutation, cost ceiling, data access, telemetry destination and production rollout.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/aws-serverless/SKILL.md"
+    },
+    {
+      "name": "cloud-native-azure-functions",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/azure-functions/SKILL.md",
+      "frontmatter_name": "cloud-native-azure-functions",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "275c97e6083ed5c8cd9a2476e2d3edff72267e71",
+      "package_tree": "306f759376def165ae97cacdf7c5e5a65de76fd0",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "275c97e6083ed5c8cd9a2476e2d3edff72267e71"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "orchestration",
+      "specific_capability": "Design replay-safe Azure Durable Functions and Event Grid workflows",
+      "trigger": "Azure Functions/Durable Task and Event Grid design",
+      "nontrigger": "AWS Lambda or generic multi-cloud comparison",
+      "dependencies": "Azure Functions isolated .NET worker, Durable Task, Azure Storage, Event Grid, Application Insights",
+      "authority_and_side_effects": "Examples schedule durable instances and read/write Blob data; hosting and monitoring choices create persistent Azure resources without scoped authorization.",
+      "privacy_and_egress": "Blob names, event payloads, orchestration histories and Application Insights may contain private data; tenant, subscription, destination and retention must be approved.",
+      "portability_and_freshness": ".NET in-process support cutoff and plan/backend features are time-sensitive; code depends on user-defined BlobLister/ImageResizer; not executed.",
+      "rationale": "Useful replay-safe orchestrator mechanics, but code and subscription/monitoring setup lack authorization for real cloud state, user content or cost.",
+      "required_authorization_boundary": "Explicit approval for Azure subscription/resource group, event/data scope, durable backend, monitoring, spend and production rollout.",
+      "hard_fail_reason": "Explicit approval for Azure subscription/resource group, event/data scope, durable backend, monitoring, spend and production rollout.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/azure-functions/SKILL.md"
+    },
+    {
+      "name": "cloud-native-distributed-tracing",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/distributed-tracing/SKILL.md",
+      "frontmatter_name": "cloud-native-distributed-tracing",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "e43cab1b2c37b4f68b1b6da606f70e2f13293e9f",
+      "package_tree": "3c0effcf778db9e92ead4f4f1e667625fce39e88",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "e43cab1b2c37b4f68b1b6da606f70e2f13293e9f"
+        },
+        {
+          "path": "references/otel-architecture.md",
+          "blob_sha": "d17b71e29ef91ca000ba6e65a24835aa37a78a4e"
+        },
+        {
+          "path": "references/sampling-strategies.md",
+          "blob_sha": "3f5797096abd9ddd974abcd39f3a06177377e60b"
+        },
+        {
+          "path": "references/trace-context-propagation.md",
+          "blob_sha": "a4deec019257483d11d82dd8198141e364a52a17"
+        }
+      ],
+      "bundled_reference_count": 3,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "sre",
+      "specific_capability": "Design W3C trace propagation and OTel tail-sampling collector topology",
+      "trigger": "Distributed tracing, W3C baggage and OTel Collector",
+      "nontrigger": "Metrics-only dashboards or simple SDK setup",
+      "dependencies": "OpenTelemetry SDK/Collector contrib, Jaeger/Tempo, Kafka and three bundled reference files",
+      "authority_and_side_effects": "Collector configuration enables OTLP network receivers and exporters, including insecure transport, without scoped deployment/egress approval.",
+      "privacy_and_egress": "Baggage and spans may disclose tenant IDs, URLs and PII; reference uses insecure Jaeger exporter; no per-tenant retention, redaction, destination or access gate.",
+      "portability_and_freshness": "Bundled propagation diagram uses invalid short trace IDs, legacy Jaeger exporter configuration and absolute claims about retaining all errors; compatibility untested.",
+      "rationale": "Strong trace-ID-aware tail sampling and span-link advice; privacy/egress and transport safety remain unresolved.",
+      "required_authorization_boundary": "Authorize telemetry sources, fields, destinations, encryption, retention, cost and production collector deployment; redact identifiers.",
+      "hard_fail_reason": "Authorize telemetry sources, fields, destinations, encryption, retention, cost and production collector deployment; redact identifiers.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "observability",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/distributed-tracing/SKILL.md"
+    },
+    {
+      "name": "cloud-native-ebpf-networking",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/ebpf-networking/SKILL.md",
+      "frontmatter_name": "cloud-native-ebpf-networking",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "0030d40a8d7976470a8ef69bd26e9c40bb07f8f6",
+      "package_tree": "f4a5e3c05a9d5b8400ab14957daf08df7f56708c",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "0030d40a8d7976470a8ef69bd26e9c40bb07f8f6"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "cloud-architecture",
+      "specific_capability": "Choose XDP/tc hooks and evaluate Cilium datapath packet filtering",
+      "trigger": "XDP, Cilium BPF maps and kernel packet hooks",
+      "nontrigger": "Read-only eBPF profiling or application tracing",
+      "dependencies": "Linux BTF, libbpf CO-RE, clang, bpftool, iproute2, kernel/NIC-specific XDP",
+      "authority_and_side_effects": "Direct `ip link set dev eth0 xdpdrv` attaches a packet-dropping program to a live interface; no network owner approval, maintenance window or rollback.",
+      "privacy_and_egress": "Kernel maps and packet metadata can reveal network topology; attach and map access must be host/cluster-scoped.",
+      "portability_and_freshness": "Kernel/Cilium feature-version assumptions and GPL helper licensing need target validation; no verifier or packet test executed.",
+      "rationale": "Useful verifier bounds checks and hook map, but production packet-drop code can disrupt traffic without authorization or safe recovery.",
+      "required_authorization_boundary": "Authorize exact host/NIC, network policy change, maintenance window, traffic impact, rollback and external communication.",
+      "hard_fail_reason": "Authorize exact host/NIC, network policy change, maintenance window, traffic impact, rollback and external communication.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "networking",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/ebpf-networking/SKILL.md"
+    },
+    {
+      "name": "cloud-native-ebpf-observability",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/ebpf-observability/SKILL.md",
+      "frontmatter_name": "cloud-native-ebpf-observability",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "81a622b2975a4221f76e4ac8050f1891aa29be4e",
+      "package_tree": "1c77605bd2f184c67754616301e1537691bd9ffa",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "81a622b2975a4221f76e4ac8050f1891aa29be4e"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "sre",
+      "specific_capability": "Select bpftrace/libbpf probes for bounded kernel performance investigation",
+      "trigger": "Kernel eBPF tracing and process/filename collection",
+      "nontrigger": "Cilium packet routing or OTel application spans",
+      "dependencies": "Linux kernel BTF, bpftrace, libbpf, bpftool, CAP_BPF/CAP_PERFMON",
+      "authority_and_side_effects": "System-wide bpftrace examples inspect file paths, exec events and user stacks; no authorization for target host/process or privileged probes.",
+      "privacy_and_egress": "Process names, file paths, stack frames and event streams are sensitive; no explicit scope, redaction, retention or export boundary.",
+      "portability_and_freshness": "Probe APIs vary by kernel/bpftrace; kernel version and privilege caveats noted, but code and loader not tested.",
+      "rationale": "Strong probe selection and overhead rules, but sensitive system-wide collection cannot be unchanged-use approved.",
+      "required_authorization_boundary": "Approve host/process/cgroup, privileged probe access, private-data minimization, retention and destination before tracing.",
+      "hard_fail_reason": "Approve host/process/cgroup, privileged probe access, private-data minimization, retention and destination before tracing.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "observability",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/ebpf-observability/SKILL.md"
+    },
+    {
+      "name": "cloud-native-event-driven-scaling",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/event-driven-scaling/SKILL.md",
+      "frontmatter_name": "cloud-native-event-driven-scaling",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "a904257b8982065372d3628d29a9f0887dbb5b2a",
+      "package_tree": "e43dc9c21de599f4756193b64f89b86c9401e6db",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "a904257b8982065372d3628d29a9f0887dbb5b2a"
+        },
+        {
+          "path": "references/kafka-scaler-internals.md",
+          "blob_sha": "7c192596e341940587b4ae09a79c503e884f8265"
+        },
+        {
+          "path": "references/keda-architecture.md",
+          "blob_sha": "83a99e738986c5dd6d005badbc072f80ca74bacd"
+        },
+        {
+          "path": "references/scale-to-zero-mechanics.md",
+          "blob_sha": "c85bfaf7a8927173f28691d36c425b424ca6564d"
+        }
+      ],
+      "bundled_reference_count": 3,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "orchestration",
+      "specific_capability": "Design KEDA ScaledObject/ScaledJob with queue-aware bounds",
+      "trigger": "KEDA Kafka/SQS/RabbitMQ autoscaling",
+      "nontrigger": "CPU-only HPA or serverless runtime cold-start tuning",
+      "dependencies": "KEDA operator/metrics adapter, Kubernetes HPA, Kafka/SQS/RabbitMQ, three bundled references",
+      "authority_and_side_effects": "ScaledObject and ScaledJob resources change live Kubernetes replicas and queue consumers, causing infrastructure/cost impact without cluster-owner approval.",
+      "privacy_and_egress": "Queue URLs, consumer-group metadata and identity roles require scoped read and safe output; unreviewed monitoring/retention destinations.",
+      "portability_and_freshness": "Bundled Kafka reference uses questionable `allowRouting` key and simplistic lag/threshold semantics; manifests not applied or schema-checked.",
+      "rationale": "Good queue throughput sizing and scale-to-zero cautions, but production mutations, spending and credentials are not action-authorized.",
+      "required_authorization_boundary": "Authorize cluster/namespace/workload, queue identity, replica/cost budget, availability SLO, rollout and rollback.",
+      "hard_fail_reason": "Authorize cluster/namespace/workload, queue identity, replica/cost budget, availability SLO, rollout and rollback.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 2
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/event-driven-scaling/SKILL.md"
+    },
+    {
+      "name": "cloud-native-gcp-bigquery",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/gcp-bigquery/SKILL.md",
+      "frontmatter_name": "cloud-native-gcp-bigquery",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "e263bdfc17a78ed26f982bc23283961fba786968",
+      "package_tree": "0b976ea06d12daf2aaca5b0f8e063f85390584fb",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "e263bdfc17a78ed26f982bc23283961fba786968"
+        }
+      ],
+      "bundled_reference_count": 0,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "cost-optimization",
+      "specific_capability": "Review BigQuery partitioning, billing and query optimization",
+      "trigger": "BigQuery Dremel/Capacitor, partitioning and slots",
+      "nontrigger": "General relational modeling or warehouse vendor selection",
+      "dependencies": "GCP BigQuery SQL, INFORMATION_SCHEMA.JOBS, bq CLI, slot reservations",
+      "authority_and_side_effects": "CREATE TABLE and reservation/quota suggestions change persistent paid GCP state without explicit project/dataset approval.",
+      "privacy_and_egress": "JOBS query emits user_email and full query text, potentially containing PII, secrets and proprietary SQL; no read-scope or redaction boundary.",
+      "portability_and_freshness": "Prices, slot quotas, partition limits and edition features vary; dry-run checks proposed but not performed.",
+      "rationale": "Useful partition pruning and dry-run concepts, but raw job-history disclosure and paid changes violate authority/privacy gates.",
+      "required_authorization_boundary": "Authorize project/dataset and billing scope, job-history read permissions, redacted output, quotas, spend and schema mutations.",
+      "hard_fail_reason": "Authorize project/dataset and billing scope, job-history read permissions, redacted output, quotas, spend and schema mutations.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "score_20": 12,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/gcp-bigquery/SKILL.md"
+    },
+    {
+      "name": "cloud-native-serverless-cold-starts",
+      "source_id": "j4flmao-agent-skills",
+      "source_repository": "j4flmao/agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "source_role": "dynamic-discovery-only",
+      "canonical_path": "skills/cloud-native/serverless-cold-starts/SKILL.md",
+      "frontmatter_name": "cloud-native-serverless-cold-starts",
+      "frontmatter_version": "2.0.0",
+      "frontmatter_license": "MIT",
+      "skill_blob": "2935198faebe8a4569d0f817e30d42fe13a2791a",
+      "package_tree": "59e8874c2c1f28399dca9bd1b0967fdd7a64e7db",
+      "package_tree_verified": true,
+      "shape": "direct",
+      "package_owned_files": [
+        {
+          "path": "SKILL.md",
+          "blob_sha": "2935198faebe8a4569d0f817e30d42fe13a2791a"
+        },
+        {
+          "path": "references/firecracker-microvm.md",
+          "blob_sha": "0224237f703745b3be064f04ac1ba9bc9452ed6f"
+        },
+        {
+          "path": "references/provisioned-concurrency.md",
+          "blob_sha": "f66b5af32f36f377b64bdd1cf3659a50dda368e4"
+        },
+        {
+          "path": "references/runtime-optimizations.md",
+          "blob_sha": "5da5a6112f1fd5faad8cdaa62fd49cda087fbc39"
+        }
+      ],
+      "bundled_reference_count": 3,
+      "license": "Complete pinned root MIT LICENSE blob 0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354; no package-local LICENSE in inspected directory; linked external dependencies retain independent terms",
+      "capability_domain": "cloud-devops",
+      "capability_subdomain": "cost-optimization",
+      "specific_capability": "Diagnose Lambda cold-start latency before paying for warm capacity",
+      "trigger": "Lambda SnapStart, provisioned concurrency and init optimization",
+      "nontrigger": "Event-source retry design or unrelated edge runtimes",
+      "dependencies": "AWS Lambda, CloudWatch Logs Insights, Terraform, Java/Python/.NET runtimes, three bundled references",
+      "authority_and_side_effects": "Terraform provisions 20 continuously billed Lambda environments; log reads and alias/version changes lack account, budget and rollout authorization.",
+      "privacy_and_egress": "CloudWatch logs and traces may include request/customer metadata; secret caching and warm snapshots need scoped credential/retention handling.",
+      "portability_and_freshness": "Billing date and SnapStart runtime support are freshness-sensitive; bundled reference claims simplistic universal performance numbers; no measurements executed.",
+      "rationale": "Strong measure-first optimization and SnapStart uniqueness caveats; unapproved recurring spend and sensitive log access block unchanged use.",
+      "required_authorization_boundary": "Approve AWS account/function/alias, log scope, cost ceiling, capacity changes, deployment and rollback.",
+      "hard_fail_reason": "Approve AWS account/function/alias, log scope, cost ceiling, capacity changes, deployment and rollback.",
+      "rubric_dimensions": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "score_20": 13,
+      "static_decision": "REJECT",
+      "unchanged_use_approved": false,
+      "hard_fail": true,
+      "controlled_taxonomy_tags": {
+        "use_case": [
+          "cloud",
+          "architecture"
+        ],
+        "lifecycle": [
+          "design",
+          "implementation"
+        ],
+        "characteristic": [
+          "reference-heavy",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only",
+          "external-side-effect"
+        ],
+        "portability": "medium"
+      },
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "governed_exact_version_review": false,
+      "admitted": false,
+      "source_vetting_stage": "terminal-exact-path-candidate-only",
+      "source_url": "https://github.com/j4flmao/agent-skills/blob/982203e52afe0b726a7847599a8bfb293890e0c5/skills/cloud-native/serverless-cold-starts/SKILL.md"
+    }
+  ]
+}
