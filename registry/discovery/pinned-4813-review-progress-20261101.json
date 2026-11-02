@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 138,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 148,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -69,18 +69,18 @@
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
         "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json"
       ],
-      "exact_path_fingerprints_checked": 51,
-      "terminal_static_candidate_decisions": 51,
-      "direct_shape_path_decisions": 20,
-      "other_shape_path_decisions": 31,
-      "raw_paths_without_terminal_decision": 594,
-      "direct_shape_without_terminal_decision": 404,
-      "other_shape_without_terminal_decision": 190,
-      "next_direct_shape_path": "skills/ai/genai-vision/SKILL.md",
-      "next_other_shape_path": "skills/ai/llm-engineering/kv-cache/SKILL.md",
+      "exact_path_fingerprints_checked": 61,
+      "terminal_static_candidate_decisions": 61,
+      "direct_shape_path_decisions": 23,
+      "other_shape_path_decisions": 38,
+      "raw_paths_without_terminal_decision": 584,
+      "direct_shape_without_terminal_decision": 401,
+      "other_shape_without_terminal_decision": 183,
+      "next_direct_shape_path": "skills/architecture/crdts/SKILL.md",
+      "next_other_shape_path": "skills/backend/deno/oak/SKILL.md",
       "next_structurally_qualified_nested_game_path": null,
       "next_structurally_qualified_nested_game_note": "All 23 first-class nested game packages have terminal candidate static decisions; 190 other-shape paths outside the classified set remain structurally unclassified.",
-      "other_shape_structurally_classified": 31
+      "other_shape_structurally_classified": 38
     }
   ],
   "reviewed_path_decisions": [
@@ -1463,18 +1463,118 @@
       "grade_20": 13,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-agent-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/llm-engineering/kv-cache/SKILL.md",
+      "skill_blob": "72290bc9458a88d33dcbc6431779eec458c1e68a",
+      "package_tree": "d350b8e62162017265259cd16c0534779888cef9",
+      "shape": "other",
+      "grade_20": 16,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/llm-engineering/model-quantization/SKILL.md",
+      "skill_blob": "aaf0ebd4e227802c0aeff383725b658f33bb4c91",
+      "package_tree": "83df39a7eecb9416e4f97604adb77e68486f2f93",
+      "shape": "other",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/llm-engineering/rag-architecture/SKILL.md",
+      "skill_blob": "b94240af452891c3924aacd111a0d81b290b962a",
+      "package_tree": "cd63b2fbf53c8d6eb8754f4b224411d08251ecdd",
+      "shape": "other",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/databases/postgresql-internals/SKILL.md",
+      "skill_blob": "efda9b38615ac7412bd3dce83547e75403599ac5",
+      "package_tree": "90ec79822fde08fa34834611a94086980d5afbc7",
+      "shape": "other",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/databases/scaling-and-sharding/SKILL.md",
+      "skill_blob": "0f529493323bf230458a9b2459a32272a5c91bcf",
+      "package_tree": "fad3114baf3f5dbcf34198cd3be51faed7224cdb",
+      "shape": "other",
+      "grade_20": 14,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/system-design/domain-driven-design/SKILL.md",
+      "skill_blob": "ac8e8f7e3b5d747738f6cf1a8951a9b2e547b8a8",
+      "package_tree": "42bd81de91888aef6b9404721c1247430a9ad681",
+      "shape": "other",
+      "grade_20": 18,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/architecture/system-design/microservices-patterns/SKILL.md",
+      "skill_blob": "3ff167e5c570b58ec35e6251becfb1bd9d37b073",
+      "package_tree": "0b4971ae4acf9a5e6861caede8a776f30a3e086d",
+      "shape": "other",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/genai-vision/SKILL.md",
+      "skill_blob": "f45c380314b5608ff4c34a9427bed5c42e1e05a4",
+      "package_tree": "ac0f0c278d55c24775f25404f002972387e1c976",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/llm-finetuning/SKILL.md",
+      "skill_blob": "c3076f6f11050bc78d6cb6120ca2b927928e630e",
+      "package_tree": "491af6c679aeaa35d5e16900a2c594886f039954",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "path": "skills/ai/multi-agent-systems/SKILL.md",
+      "skill_blob": "7bbd4b4d27c0281dcb1397e3c4ce2c84bbceb922",
+      "package_tree": "5d448901c02484f5ecbbd6cb0ef01a20e8d40df1",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/j4flmao-llm-data-architecture-ten-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-02",
     "source_id": "j4flmao-agent-skills",
-    "source_candidate_decisions": "41 -> 51 / 645 raw paths",
-    "direct_candidate_decisions": "18 -> 20 / 424",
-    "other_candidate_decisions": "23 -> 31 / 221",
-    "four_source_exact_path_decisions": "128 -> 138 / 4813 raw paths",
+    "source_candidate_decisions": "51 -> 61 / 645 raw paths",
+    "direct_candidate_decisions": "20 -> 23 / 424",
+    "other_candidate_decisions": "31 -> 38 / 221",
+    "four_source_exact_path_decisions": "138 -> 148 / 4813 raw paths",
     "governed_records_added": 0,
     "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-02-j4flmao-agent-architecture-ten-static.md"
+    "receipt": "docs/reviews/2026-11-02-j4flmao-llm-data-architecture-ten-static.md"
   }
 }
