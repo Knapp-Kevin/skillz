@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 166,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 174,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,12 +20,12 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 87,
-      "terminal_static_candidate_decisions": 87,
-      "direct_shape_path_decisions": 70,
+      "exact_path_fingerprints_checked": 95,
+      "terminal_static_candidate_decisions": 95,
+      "direct_shape_path_decisions": 78,
       "other_shape_path_decisions": 17,
-      "raw_paths_without_terminal_decision": 345,
-      "direct_shape_without_terminal_decision": 345,
+      "raw_paths_without_terminal_decision": 337,
+      "direct_shape_without_terminal_decision": 337,
       "other_shape_without_terminal_decision": 0,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
       "next_other_shape_path": null,
@@ -1743,8 +1743,88 @@
       "grade_20": 13,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-cloud-native-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aws-cdk-python-setup/SKILL.md",
+      "skill_blob": "90b5e4903dc7fb82e2e278c7f18cab1140504fb5",
+      "package_tree": "7aed6e86e09b4fe1dcc845378c0f9c7b1a131823",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aws-cloudwatch-investigation/SKILL.md",
+      "skill_blob": "ad433312bcf093a3e4b529131db9308d8a047a1d",
+      "package_tree": "7998b9b0ee7c8d14deab8deffbb2ef0fc06d06d9",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aws-cost-optimize/SKILL.md",
+      "skill_blob": "ed7581e130db7dd600ab1e9caefb050066622e73",
+      "package_tree": "8ce26214b5f856b834042dbed2df450c3e89f87d",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aws-resource-health-diagnose/SKILL.md",
+      "skill_blob": "2c44a40bf4634e234fcdab1cdf4d47afb88962ac",
+      "package_tree": "0d30f5c90a5ef887bf5e1c3c8b776c601b7264a8",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/aws-well-architected-review/SKILL.md",
+      "skill_blob": "ff7952f270ba6912ac5de22e4e6fc818878217b5",
+      "package_tree": "1fbcdd9dac139d719a6ada1655f57671be35dc66",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/az-cost-optimize/SKILL.md",
+      "skill_blob": "ec619b532f402a0a104480c30b99955f655521d1",
+      "package_tree": "75941e175066d21b970698c2f3e00de19f5c1c91",
+      "shape": "direct",
+      "grade_20": 11,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-container-registry-cli/SKILL.md",
+      "skill_blob": "61543032900e74fac0e5e47e5d1ffa9f0131f108",
+      "package_tree": "0519fbf761731492941e7412c4257881c0865d1e",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/azure-deployment-preflight/SKILL.md",
+      "skill_blob": "2a44dd5d7620dab51e4ae44efd30117c8722d971",
+      "package_tree": "dba68c7c606f72f275d21dc150a0f5c1c647393e",
+      "shape": "direct",
+      "grade_20": 12,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
-  "latest_macro_checkpoint": "registry/discovery/j4flmao-deno-oak-two-complete-static-20261102.json"
+  "latest_macro_checkpoint": "registry/discovery/github-awesome-copilot-aws-azure-eight-complete-static-20261102.json"
 }
