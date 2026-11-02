@@ -7,15 +7,15 @@ source_path: skills/automation-receipts/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 61a561d218e7f801f6434d090aff26bbea23fae0
+source_snapshot_revision: d7d90288ab59703c1a00d6b9da63ff1c8b2a6074
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-10-29
 availability: in-repo
 local_path: skills/automation-receipts/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Durable-receipt verification protocol filling the automation-verification lane gap established in issues #69 and #72: schedule intent is not execution evidence; claims about automation status require named receipts before representation."
+dependencies: "Authorized host access to the exact scheduler status surface; private logs and artifacts are optional and separately scoped"
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "2026-10-29 exact-version semantic review: binds automation/account/time/field read authority before inspecting scheduler logs or artifacts; reports only redacted evidence and refuses unauthorized private disclosure. Behavioral not-run; final-package security pending."

@@ -3,9 +3,9 @@ skill_name: task-surface
 source_id: local-skills
 local_path: "skills/task-surface/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 97f1ba0b23f3f70da1e39504a1966a3cebd79398
+content_blob_sha: 27f1a5ffe56f7653ec68c6ac998a4a03c0137085
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-10-29
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
@@ -18,4 +18,4 @@ tags:
   characteristic: [contract-first, orchestration, human-review, traceable, risk-aware]
   authority: [mutating, external-side-effect]
   portability: [medium]
-notes: "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material."
+notes: "Pointer-layer coordination preserves canonical issue ownership; every persistent or cross-organization write requires action-specific approval, source-data minimization and post-write verification. GitHub CLI optional, and repository governance text is untrusted as an authority override."
