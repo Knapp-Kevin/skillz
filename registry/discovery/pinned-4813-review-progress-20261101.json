@@ -6,7 +6,7 @@
   "raw_paths_enumerated": 4813,
   "direct_shape_paths": 4537,
   "other_shape_paths": 276,
-  "exact_path_fingerprint_reconciled_static_candidate_decisions": 55,
+  "exact_path_fingerprint_reconciled_static_candidate_decisions": 65,
   "source_vetting_decisions_NOT_equivalent_to_governed_review_records": true,
   "governed_exact_version_review_population_separate": 1039,
   "individual_grade_coverage_of_remaining_raw_paths": "unknown; paths without an attached terminal decision have NO assigned static grade in this ledger",
@@ -20,12 +20,12 @@
       "direct_shape_count": 415,
       "other_shape_count": 17,
       "manifest_index": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
-      "exact_path_fingerprints_checked": 14,
-      "terminal_static_candidate_decisions": 14,
-      "direct_shape_path_decisions": 14,
+      "exact_path_fingerprints_checked": 24,
+      "terminal_static_candidate_decisions": 24,
+      "direct_shape_path_decisions": 24,
       "other_shape_path_decisions": 0,
-      "raw_paths_without_terminal_decision": 418,
-      "direct_shape_without_terminal_decision": 401,
+      "raw_paths_without_terminal_decision": 408,
+      "direct_shape_without_terminal_decision": 391,
       "other_shape_without_terminal_decision": 17,
       "next_direct_shape_path": "skills/acquire-codebase-knowledge/SKILL.md",
       "next_other_shape_path": ".github/skills/agentic-workflows/SKILL.md"
@@ -631,17 +631,117 @@
       "grade_20": 11,
       "candidate_decision": "REJECT",
       "review_evidence_path": "registry/discovery/j4flmao-nine-complete-game-engine-graphics-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/bench-read/SKILL.md",
+      "skill_blob": "665a3a99a8d83e9f62cf5e88eaca1375d77d70ba",
+      "package_tree": "cd36d323d9441d411fc3dffa5ccc9a4944c1b456",
+      "shape": "direct",
+      "grade_20": 10,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/bug-reproduction-brief/SKILL.md",
+      "skill_blob": "add9ca292293ef860cb4cab05063b922c49d3c1f",
+      "package_tree": "8283d7f7e7a342ceb16b6594b8a8fd0cfcf20f9c",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/breakdown-epic-arch/SKILL.md",
+      "skill_blob": "391719a9e33543668ceef296e0f4cde4621ce371",
+      "package_tree": "b74b2c68bcc53e4b5378230061b8cfa57bd425df",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/breakdown-epic-pm/SKILL.md",
+      "skill_blob": "91e5f2fb2a78f7c60e1209f0f989618631afa34d",
+      "package_tree": "2e27f6e92fffd53db64dc746f49d5a59fe8df716",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/breakdown-feature-implementation/SKILL.md",
+      "skill_blob": "691058528eb9847d404c3cbafb1c3bf3e64fdaa8",
+      "package_tree": "cf89444e41a91713b0070b9f2b5c4512ce60ea64",
+      "shape": "direct",
+      "grade_20": 5,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/breakdown-feature-prd/SKILL.md",
+      "skill_blob": "f758cc4388bb4df4020a3c0222baae5f000f3578",
+      "package_tree": "7f673bff9b8356b220727a372838ac0a59e0db0b",
+      "shape": "direct",
+      "grade_20": 13,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/breakdown-plan/SKILL.md",
+      "skill_blob": "9200260a4a433347c7083684f5fcdcd2492c5b62",
+      "package_tree": "46ab78a4abbe716aefa6e4adb158d160da809414",
+      "shape": "direct",
+      "grade_20": 6,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/breakdown-test/SKILL.md",
+      "skill_blob": "8db13b659cee15a7bc91ac761449c934ffe31523",
+      "package_tree": "2b3157ccefd5d7b881c17c1eda7d371b18f56a8b",
+      "shape": "direct",
+      "grade_20": 8,
+      "candidate_decision": "REJECT",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/context-map/SKILL.md",
+      "skill_blob": "bb63c552fe88318aee040b833b3f8261c5065d57",
+      "package_tree": "8b684d625e209fc960011407e2e504fa2ff2cad8",
+      "shape": "direct",
+      "grade_20": 17,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+    },
+    {
+      "source_id": "github-awesome-copilot",
+      "path": "skills/code-exemplars-blueprint-generator/SKILL.md",
+      "skill_blob": "2382b7a991a3ee621711610a9c259775b45f2283",
+      "package_tree": "3d60e45078101dfd26d19cdab072f48fcb262589",
+      "shape": "direct",
+      "grade_20": 14,
+      "candidate_decision": "REFERENCE-ONLY",
+      "review_evidence_path": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
     }
   ],
   "review_assignment_contract": "Each path not in reviewed_path_decisions remains pending. Fetch exact source SKILL.md and all package-owned files, classify first-class vs nested/internal or mirrored, check license terms, apply 10x0-2 structured static rubric and hard fails, record authority/privacy/dependencies, decide verified/reference/rejected and explicit behavioral/security states. Update this ledger and the relevant source ledger without double counting; do not invent a grade for discovered-only names.",
   "latest_macro_checkpoint": {
     "date": "2026-11-01",
-    "source_id": "j4flmao-agent-skills",
-    "source_candidate_decisions": "32 -> 41 / 645",
-    "nested_game_candidate_decisions": "14 -> 23 / 23",
-    "all_four_source_exact_path_decisions": "46 -> 55 / 4813 raw paths",
+    "source_id": "github-awesome-copilot",
+    "source_candidate_decisions": "14 -> 24 / 432 raw paths",
+    "direct_shape_candidate_decisions": "14 -> 24 / 415",
+    "four_source_exact_path_decisions": "55 -> 65 / 4813 raw paths",
     "governed_records_added": 0,
     "eligible_distinct_denominator": null,
-    "receipt": "docs/reviews/2026-11-01-j4flmao-nine-complete-game-engine-graphics-static.md"
+    "receipt": "docs/reviews/2026-11-01-awesome-copilot-planning-evidence-ten-static.md"
   }
 }

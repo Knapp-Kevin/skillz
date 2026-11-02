@@ -11,7 +11,7 @@
   "nested_or_internal_paths": 17,
   "unique_skill_md_blobs": 432,
   "license_scope": "MIT root; package-level terms require checking",
-  "review_status": "enumerated-not-reviewed",
+  "review_status": "partially-source-vetted; candidate-only",
   "identity_contract": "Each row: [canonical source-relative SKILL.md path, SKILL.md Git blob SHA, containing package tree SHA if present, byte size, shape]. Direct shape is structural only, not a validated first-class/eligible skill or review decision.",
   "family_counts": {
     ".github": {
@@ -3048,5 +3048,16 @@
       8736,
       "direct"
     ]
-  ]
+  ],
+  "review_progress": {
+    "snapshot_date": "2026-11-01",
+    "exact_path_terminal_candidate_decisions": 24,
+    "direct_shape_terminal_candidate_decisions": 24,
+    "direct_shape_remaining": 391,
+    "other_shape_pending_classification": 17,
+    "governed_exact_version_reviews_created": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0,
+    "latest_evidence": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json"
+  }
 }
