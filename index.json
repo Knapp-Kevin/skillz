@@ -4136,5 +4136,30 @@
     "security_scans": 0,
     "behavioral_validations": 0,
     "eligible_distinct_denominator": null
+  },
+  "github_awesome_copilot_planning_evidence_ten_static_20261101": {
+    "date": "2026-11-01",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "record": "registry/discovery/github-awesome-copilot-planning-evidence-ten-static-20261101.json",
+    "receipt": "docs/reviews/2026-11-01-awesome-copilot-planning-evidence-ten-static.md",
+    "new_complete_package_static_candidate_decisions": 10,
+    "source_raw_path_terminal_before": 14,
+    "source_raw_path_terminal_after": 24,
+    "source_raw_paths": 432,
+    "direct_shape_terminal_after": 24,
+    "direct_shape_total": 415,
+    "direct_shape_undecided_after": 391,
+    "other_shape_unclassified": 17,
+    "reference_only": 3,
+    "rejected_unchanged": 7,
+    "four_source_exact_path_decisions_before": 55,
+    "four_source_exact_path_decisions_after": 65,
+    "raw_four_source_paths": 4813,
+    "eligible_distinct_denominator": null,
+    "admitted_source_denominator_delta": 0,
+    "governed_semantic_pairs_delta": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0
   }
 }
