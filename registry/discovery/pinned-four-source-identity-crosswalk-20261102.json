@@ -1,0 +1,1046 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-02",
+  "kind": "passive-exact-manifest-identity-preflight",
+  "authority": "Issue #624; current Tier-1 governance controls",
+  "pinned_source_scope": "Four dynamic discovery source snapshots only; this is NOT the global eligible-skill denominator",
+  "manifest_evidence": [
+    {
+      "path": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
+      "git_blob_sha": "12199e7b5e71f9559c15c871e75221854a316d4e"
+    },
+    {
+      "path": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
+      "git_blob_sha": "94721be03130978dc2137d1f4a3113b744a6132e"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-01.json",
+      "git_blob_sha": "039a5b2f46411ddd8aac6d49e448dacbda64cb8c"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-02.json",
+      "git_blob_sha": "e0bfb14b6369064901e0b01d5dc9fdf647ff9cdd"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-03.json",
+      "git_blob_sha": "9095ee757909eafcac6e51e5d722069b89a22044"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-04.json",
+      "git_blob_sha": "5b283c1c7aec3e8f1964a3578a874d249ef2d4d3"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-05.json",
+      "git_blob_sha": "49caf16c01e16edff3ec85524916429de83b128b"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-06.json",
+      "git_blob_sha": "b6d4c717473113254ac3267628db5cc7e9a9641e"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-07.json",
+      "git_blob_sha": "34cc9a03158ead170c7767b5d590dc35e8986a65"
+    },
+    {
+      "path": "registry/discovery/leads/agentskillexchange-skills-a6017b4af9d0-part-08.json",
+      "git_blob_sha": "cf34b41e0902839f463bef879e39f2b251992929"
+    },
+    {
+      "path": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
+      "git_blob_sha": "32808a984313d10b5786f56f3815e9d87f17c341"
+    },
+    {
+      "path": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json",
+      "git_blob_sha": "0e3fb74804e5c84b758e28fba30e01aba7abd43f"
+    }
+  ],
+  "source_rows": [
+    {
+      "source_id": "github-awesome-copilot",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+      "raw_skill_paths": 432,
+      "distinct_skill_md_blob_shas": 432,
+      "distinct_package_tree_shas": 432,
+      "direct_shape": 415,
+      "other_shape": 17,
+      "nested_with_first_class_ancestor_path": 15
+    },
+    {
+      "source_id": "openai-plugins",
+      "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "raw_skill_paths": 536,
+      "distinct_skill_md_blob_shas": 536,
+      "distinct_package_tree_shas": 536,
+      "direct_shape": 502,
+      "other_shape": 34,
+      "nested_with_first_class_ancestor_path": 29
+    },
+    {
+      "source_id": "agentskillexchange-skills",
+      "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+      "raw_skill_paths": 3200,
+      "distinct_skill_md_blob_shas": 3200,
+      "distinct_package_tree_shas": 3200,
+      "direct_shape": 3196,
+      "other_shape": 4,
+      "nested_with_first_class_ancestor_path": 3
+    },
+    {
+      "source_id": "j4flmao-agent-skills",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+      "raw_skill_paths": 645,
+      "distinct_skill_md_blob_shas": 645,
+      "distinct_package_tree_shas": 645,
+      "direct_shape": 424,
+      "other_shape": 221,
+      "nested_with_first_class_ancestor_path": 11
+    }
+  ],
+  "cross_source_git_blob_sha_collisions": 0,
+  "all_manifest_git_blob_sha_collisions": 0,
+  "all_manifest_package_tree_sha_collisions": 0,
+  "exact_raw_path_count": 4813,
+  "distinct_raw_skill_md_blob_shas": 4813,
+  "distinct_package_tree_shas": 4813,
+  "structural_nested_path_count": 58,
+  "nested_paths": [
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-monitoring/debugging/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-monitoring/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-monitoring/setup/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-monitoring/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/indexing-performance-optimization/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-performance-optimization/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/memory-usage-optimization/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-performance-optimization/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-performance-optimization/search-speed-optimization/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-performance-optimization/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/minimize-latency/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/horizontal-scaling/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/sliding-time-window/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/tenant-scaling/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-data-volume/vertical-scaling/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md",
+        "skills/qdrant-scaling/scaling-data-volume/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-qps/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-scaling/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-search-quality/diagnosis/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-search-quality/SKILL.md"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-search-quality/search-strategies/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/qdrant-search-quality/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/data-analytics/skills/build-report/report-to-google-doc/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/data-analytics/skills/build-report/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/data-analytics/skills/build-report/report-to-google-slides/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/data-analytics/skills/build-report/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/data-analytics/skills/build-report/report-to-pdf/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/data-analytics/skills/build-report/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/contact-center/android/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/contact-center/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/contact-center/ios/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/contact-center/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/contact-center/web/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/contact-center/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/android/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/electron/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/ios/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/linux/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/macos/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/react-native/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/unreal/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/web/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/web/client-view/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md",
+        "plugins/zoom/skills/meeting-sdk/web/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/web/component-view/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md",
+        "plugins/zoom/skills/meeting-sdk/web/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/meeting-sdk/windows/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/meeting-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/android/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/flutter/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/ios/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/linux/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/macos/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/react-native/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/unity/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/web/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/video-sdk/windows/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/video-sdk/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/virtual-agent/android/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/virtual-agent/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/virtual-agent/ios/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/virtual-agent/SKILL.md"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/virtual-agent/web/SKILL.md",
+      "ancestor_skill_paths": [
+        "plugins/zoom/skills/virtual-agent/SKILL.md"
+      ]
+    },
+    {
+      "source": "agentskillexchange-skills",
+      "path": "skills/docsbot-administration/references/bot-builder/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/docsbot-administration/SKILL.md"
+      ]
+    },
+    {
+      "source": "agentskillexchange-skills",
+      "path": "skills/docsbot-administration/references/evals/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/docsbot-administration/SKILL.md"
+      ]
+    },
+    {
+      "source": "agentskillexchange-skills",
+      "path": "skills/docsbot-administration/references/response-quality/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/docsbot-administration/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/core-architectures/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/ai/ai-agents/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/memory-systems/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/ai/ai-agents/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/multi-agent-topology/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/ai/ai-agents/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/ai/ai-agents/tool-calling-principles/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/ai/ai-agents/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/backend/deno/oak/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/backend/deno/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/backend/universal/design-patterns/microservices/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/backend/universal/design-patterns/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/devops/observability/opentelemetry-tracing/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/devops/observability/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/devops/observability/prometheus-grafana/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/devops/observability/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/seo/ai-content-optimization/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/seo/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/seo/programmatic-seo/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/seo/SKILL.md"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/seo/structured-data/SKILL.md",
+      "ancestor_skill_paths": [
+        "skills/seo/SKILL.md"
+      ]
+    }
+  ],
+  "cross_source_same_leaf_name_groups": 14,
+  "cross_source_same_leaf_name_path_count": 35,
+  "same_leaf_name_leads_not_deduplicated": [
+    {
+      "leaf_name": "android",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/contact-center/android/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/meeting-sdk/android/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/video-sdk/android/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/virtual-agent/android/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/mobile/android/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "ios",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/contact-center/ios/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/meeting-sdk/ios/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/video-sdk/ios/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/virtual-agent/ios/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/mobile/ios/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "react-native",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/meeting-sdk/react-native/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/video-sdk/react-native/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/mobile/react-native/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "agentic-workflows",
+      "paths": [
+        {
+          "source": "github-awesome-copilot",
+          "path": ".github/skills/agentic-workflows/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/ai/agentic-workflows/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "setup",
+      "paths": [
+        {
+          "source": "github-awesome-copilot",
+          "path": "skills/qdrant-monitoring/setup/SKILL.md"
+        },
+        {
+          "source": "openai-plugins",
+          "path": "plugins/mixpanel-headless/skills/setup/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "supabase",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/supabase/skills/supabase/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/backend/universal/supabase/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "nextjs",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/vercel/skills/nextjs/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/frontend/react/nextjs/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "observability",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/vercel/skills/observability/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/devops/observability/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "payments",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/vercel/skills/payments/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/ecommerce/payments/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "electron",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/meeting-sdk/electron/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/desktop/electron/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "unreal",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/meeting-sdk/unreal/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/game/unreal/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "flutter",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/video-sdk/flutter/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/mobile/flutter/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "unity",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/video-sdk/unity/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/game/unity/SKILL.md"
+        }
+      ]
+    },
+    {
+      "leaf_name": "webhooks",
+      "paths": [
+        {
+          "source": "openai-plugins",
+          "path": "plugins/zoom/skills/webhooks/SKILL.md"
+        },
+        {
+          "source": "j4flmao-agent-skills",
+          "path": "skills/backend/universal/webhooks/SKILL.md"
+        }
+      ]
+    }
+  ],
+  "governed_review_records_separate": 1039,
+  "governed_index_evidence": {
+    "path": "registry/governed-review-name-index.json",
+    "git_blob_sha": "56f5b4ce278790432907ae3ecfb04694706e5d95"
+  },
+  "governed_source_id_intersection": [],
+  "governed_same_leaf_name_raw_paths": 40,
+  "governed_same_leaf_name_leads_not_deduplicated": [
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/appinsights-instrumentation/SKILL.md",
+      "governed_name_matches": [
+        "microsoft-azure-skills/appinsights-instrumentation",
+        "microsoft-skills-candidate/appinsights-instrumentation",
+        "microsoft-skills/appinsights-instrumentation"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/azure-resource-visualizer/SKILL.md",
+      "governed_name_matches": [
+        "microsoft-azure-skills/azure-resource-visualizer",
+        "microsoft-skills-candidate/azure-resource-visualizer",
+        "microsoft-skills/azure-resource-visualizer"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/copilot-sdk/SKILL.md",
+      "governed_name_matches": [
+        "microsoft-skills/copilot-sdk"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/microsoft-docs/SKILL.md",
+      "governed_name_matches": [
+        "microsoft-skills/microsoft-docs"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/qdrant-monitoring/setup/SKILL.md",
+      "governed_name_matches": [
+        "aws-agent-toolkit/setup"
+      ]
+    },
+    {
+      "source": "github-awesome-copilot",
+      "path": "skills/webapp-testing/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-skills/webapp-testing"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/build-web-data-visualization/skills/data-visualization/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-knowledge-work-plugins/data-visualization"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/cloudflare/skills/agents-sdk/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/agents-sdk"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/cloudflare/skills/cloudflare/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/cloudflare"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/cloudflare/skills/durable-objects/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/durable-objects"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/cloudflare/skills/web-perf/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/web-perf"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/cloudflare/skills/workers-best-practices/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/workers-best-practices"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/cloudflare/skills/wrangler/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/wrangler"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/data-analytics/skills/build-dashboard/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-knowledge-work-plugins/build-dashboard"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/data-analytics/skills/validate-data/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-knowledge-work-plugins/validate-data"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/mixpanel-headless/skills/setup/SKILL.md",
+      "governed_name_matches": [
+        "aws-agent-toolkit/setup"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/openai-developers/skills/agents-sdk/SKILL.md",
+      "governed_name_matches": [
+        "cloudflare-skills/agents-sdk"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/product-design/skills/research/SKILL.md",
+      "governed_name_matches": [
+        "danjdewhurst-story-skills/research",
+        "mattpocock-skills-candidate/research",
+        "mattpocock-skills/research"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/brainstorming/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/brainstorming"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/executing-plans/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/executing-plans"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/subagent-driven-development/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/subagent-driven-development"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/systematic-debugging/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/systematic-debugging"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/test-driven-development/SKILL.md",
+      "governed_name_matches": [
+        "addyosmani-agent-skills/test-driven-development",
+        "archieindian-superpowers/test-driven-development"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/using-superpowers/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/using-superpowers"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/verification-before-completion/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/verification-before-completion"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/superpowers/skills/writing-plans/SKILL.md",
+      "governed_name_matches": [
+        "archieindian-superpowers/writing-plans"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/vercel/skills/agent-browser/SKILL.md",
+      "governed_name_matches": [
+        "cole-medin-skills/agent-browser"
+      ]
+    },
+    {
+      "source": "openai-plugins",
+      "path": "plugins/zoom/skills/start/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-knowledge-work-plugins/start"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": ".claude/skills/deep-research/SKILL.md",
+      "governed_name_matches": [
+        "david-ondrej-skills/deep-research"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/cloud-native/aws-serverless/SKILL.md",
+      "governed_name_matches": [
+        "aws-agent-toolkit/aws-serverless"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/core/onboarding/SKILL.md",
+      "governed_name_matches": [
+        "corey-haines-marketing-skills/onboarding"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/data-science/statistical-analysis/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-knowledge-work-plugins/statistical-analysis"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/dev-loop/code-review/SKILL.md",
+      "governed_name_matches": [
+        "mattpocock-skills-candidate/code-review",
+        "mattpocock-skills/code-review"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/enterprise/cost-governance/SKILL.md",
+      "governed_name_matches": [
+        "microsoft-skills-candidate/cost-governance"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/game/game-engine/memory-management/SKILL.md",
+      "governed_name_matches": [
+        "anthropic-knowledge-work-plugins/memory-management"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/mobile/universal/analytics/SKILL.md",
+      "governed_name_matches": [
+        "corey-haines-marketing-skills/analytics"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/personas/data-analyst/SKILL.md",
+      "governed_name_matches": [
+        "cline-skills/data-analyst"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/product/ab-testing/SKILL.md",
+      "governed_name_matches": [
+        "corey-haines-marketing-skills/ab-testing"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/product/analytics/SKILL.md",
+      "governed_name_matches": [
+        "corey-haines-marketing-skills/analytics"
+      ]
+    },
+    {
+      "source": "j4flmao-agent-skills",
+      "path": "skills/seo/programmatic-seo/SKILL.md",
+      "governed_name_matches": [
+        "corey-haines-marketing-skills/programmatic-seo"
+      ]
+    }
+  ],
+  "terminal_source_vetting_path_decisions_as_of_snapshot": 185,
+  "eligible_distinct_skill_denominator": null,
+  "review_completion_percentage": null,
+  "method": "All 12 exact-pinned manifest files enumerated. Git blob SHA is content-exact for SKILL.md only; package tree SHA is content-exact for the containing package tree. Distinct blob/tree fingerprints do NOT prove distinct eligible semantic skills. Nested paths and lexical matches are leads, not duplicate or review decisions. Governed review name index has names, not a proof of content overlap; matching requires per-record verification fingerprints and rights/identity review. Structural shape labels are source-specific: 'direct' for github-awesome-copilot/openai-plugins and 'direct-shape' for agentskillexchange/j4flmao; both are normalized into direct_shape here.",
+  "negative_findings": [
+    "No repeated SKILL.md Git blob SHA within or across these four manifest snapshots.",
+    "No repeated containing-package tree SHA within or across these four manifest snapshots.",
+    "No direct source-id match between four dynamic source IDs and 1,039 governed review IDs; cross-source mirrors or semantic overlap remain possible."
+  ],
+  "remaining_gates": [
+    "Resolve first-class eligibility, nested package boundaries and package-local licensing.",
+    "Compare pinned upstream package blobs/trees with governed verification companions for potential mirrors; name equality alone cannot count as reviewed.",
+    "Reconcile cross-source semantic duplicates without treating distinct Git blobs as proof of independent capabilities.",
+    "Do not increment terminal review decisions or assign grades from this crosswalk."
+  ]
+}

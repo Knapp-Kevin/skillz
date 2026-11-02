@@ -314,5 +314,23 @@
     "caution": "Exact blob uniqueness is not semantic deduplication; direct-shape candidate is not an approved/reviewed package",
     "path_matched_candidate_decisions": 158,
     "source_vetting_note": "87 Awesome Copilot and 71 j4flmao path-matched terminal source-vetting decisions; OpenAI 169 candidate family decisions not path-matched, AgentSkillExchange 0. No deduplicated eligible denominator."
+  },
+  "four_source_pinned_manifest_identity_preflight": {
+    "date": "2026-11-02",
+    "evidence": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
+    "review_receipt": "docs/reviews/2026-11-02-pinned-four-source-identity-preflight.md",
+    "raw_paths": 4813,
+    "distinct_skill_md_blob_shas": 4813,
+    "distinct_package_tree_shas": 4813,
+    "exact_blob_or_tree_collisions": 0,
+    "nested_descendant_paths": 58,
+    "cross_source_same_leaf_groups": 14,
+    "cross_source_same_leaf_paths": 35,
+    "governed_name_only_overlap_paths": 40,
+    "eligible_distinct_denominator": null,
+    "review_decisions_delta": 0,
+    "governed_review_records_delta": 0,
+    "behavioral_validation": "not-run",
+    "caution": "Fingerprint uniqueness excludes exact collisions in four manifests, not semantic duplicates or governed mirrors; names are leads only."
   }
 }

@@ -21,6 +21,7 @@
 | Explore more capability areas | [Capability Directory](registry/capability-directory.json) | 33 domains and 247 subdomains, with verified-record pointers and separate name-only search leads |
 | Search reviewed skill identities | [Governed Review Name Index](registry/governed-review-name-index.json) | All 1,039 persisted exact-version review companion names, regardless of author |
 | Search beyond reviewed entries | [Pinned Discovery Frontier](registry/discovery/dynamic-four-source-frontier-20261101.json) | Source-pinned manifests of unqualified `SKILL.md` paths and package leads |
+| Check exact identity overlap before reviewing | [Pinned Identity Crosswalk](registry/discovery/pinned-four-source-identity-crosswalk-20261102.json) | Exact pinned fingerprints, nested-path and name-only overlap leads; **not** a unique eligible denominator |
 | Build or refine skills for your host | [Skill Bootstrap](engine/skills/skill-bootstrap/SKILL.md) → [Consumer Contract](docs/consumer-discovery-and-installation.md) | An evidence-based decision and, when requested, complete host-owned or portable skill artifacts |
 
 The discovery index is intentionally **source-neutral**: skills are organized by what they help accomplish, not who authored them. Source identity is retained for provenance, rights, exact-version matching and attribution, never as a privileged recommendation tier.
