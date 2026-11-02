@@ -4331,5 +4331,30 @@
       "distinct_candidate_source_path_pins": 79,
       "governed_identity_links": 78
     }
+  },
+  "github_awesome_copilot_breadth_nine_candidate_checkpoint": {
+    "date": "2026-11-02",
+    "source_id": "github-awesome-copilot",
+    "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "complete_packages_reviewed": 9,
+    "package_files_inspected": 10,
+    "reference_only": 2,
+    "rejected_unchanged": 7,
+    "source_exact_path_decisions_before": 78,
+    "source_exact_path_decisions_after": 87,
+    "source_raw_paths": 432,
+    "direct_decisions": 70,
+    "direct_pending": 345,
+    "four_source_decisions_before": 119,
+    "four_source_decisions_after": 128,
+    "four_source_raw_paths": 4813,
+    "eligible_distinct_denominator": null,
+    "governed_exact_version_review_population": 1039,
+    "registered_sources": 25,
+    "admitted_source_denominator_delta": 0,
+    "security_scans_executed": 0,
+    "behavioral_validations_executed": 0,
+    "ledger": "registry/discovery/github-awesome-copilot-nine-breadth-static-20261102.json",
+    "review": "docs/reviews/2026-11-02-awesome-copilot-nine-breadth-static.md"
   }
 }
