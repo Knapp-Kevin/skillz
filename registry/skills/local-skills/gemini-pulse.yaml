@@ -7,7 +7,7 @@ source_path: skills/gemini-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
+source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
-exact_version_requalification: "Required for 437f1a0c71015898bbf4bd90ca1156791a137536; prior review fingerprint 8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80 is historical only. No current package security or behavioral pass."
+exact_version_requalification: "Required for 9dbae1510d0fb3c65056fc53f0050ce0ed6ede59; prior review fingerprint 8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80 is historical only. No current package security or behavioral pass."
