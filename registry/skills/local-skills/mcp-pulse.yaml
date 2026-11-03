@@ -7,15 +7,16 @@ source_path: skills/mcp-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-03
 availability: in-repo
 local_path: skills/mcp-pulse/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: verified-structured
+review_status: stale
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
+import_eligibility: conditional-on-security-and-user-fit
 rationale: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+exact_version_requalification: "Required for 46c878d52188f658cce1389294bc5aa6b13082f6; old reviewed blob 41451ac34a4a660ec82cae2c4356d3afe4b49334. No security or behavioral validation pass."
