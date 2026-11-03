@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-03",
+  "stage": "consumer-positive-recommendation-qualification",
+  "scope": "Starter shelf of three individually inspected, differentiated, non-unchanged-use conceptual references; NOT exhaustive domain or global catalog",
+  "catalog_categories": [
+    "RECOMMENDED_FOR_USE",
+    "VALUABLE_REFERENCE"
+  ],
+  "recommended_for_use_in_this_shelf": [],
+  "valuable_references": [
+    {
+      "id": "dcc-mcp-dcc-mcp-blender/dcc-blender-assembly-pitfalls",
+      "name": "Blender Assembly Pitfalls",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "3d-cad-animation",
+      "domain_display": "3D / CAD / animation",
+      "subdomain": "3d-modeling",
+      "capability": "Making Blender parts connect at the right size, direction and joint overlap",
+      "benefit": "Catch silent 3D assembly mistakes before they break renders, exports or 3D prints.",
+      "distinct_method": "Write a part-to-part connection map before modeling, then verify real world-space bounds, object axes, overlap and export scale against numeric tolerances.",
+      "reason_not_unchanged": "Its example verification script clears every object in the current Blender scene. Running it in a live user scene could destroy work; a normals/volume check also reports about half the true geometric volume. Its claimed Blender measurements were not reproduced here.",
+      "source": {
+        "repository": "dcc-mcp/dcc-mcp-blender",
+        "pin": "8d8027fe4377b4d399d545869fc11b80e04ff785",
+        "path": "skills/dcc-blender-assembly-pitfalls/SKILL.md",
+        "skill_blob_sha": "32bbb06a433361cc80f569b4b4d80ce8687cc63c",
+        "recorded_package_tree_sha": "f83613f8b12120860df008b04bd4e8b1dd131d22",
+        "package_files": [
+          {
+            "path": "skills/dcc-blender-assembly-pitfalls/SKILL.md",
+            "blob_sha": "32bbb06a433361cc80f569b4b4d80ce8687cc63c"
+          }
+        ],
+        "license": "MIT",
+        "license_file_sha": "6a4b18e6e58344c3bc6e182116dd13357678c097",
+        "license_obligation": "Keep MIT copyright and license notice with any copied or adapted protected text or code; a noncopying conceptual summary may be used without importing it.",
+        "package_sha_basis": "Published per-package review ledger; tree SHA not freshly recomputed against upstream Git in this consumer curation",
+        "file_inspection": "Read complete pinned SKILL.md and pinned root LICENSE; source blob matches reviewed exact version."
+      },
+      "dependencies": "Blender 4.5+ for code and verification; optional MCP host; the transferable connection-map method is host-independent.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "18/20",
+        "evidence": "registry/discovery/q4-dcc-mcp-dcc-mcp-blender-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS USEFUL METHOD/INSPIRATION ONLY, not approved for unchanged adoption or execution",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
+    },
+    {
+      "id": "bladecoder-narrative-skills/if-playtest-review",
+      "name": "IF Playtest Review",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "game-design",
+      "domain_display": "Game design",
+      "subdomain": "playtesting",
+      "capability": "Testing interactive fiction for dead ends, impossible locks, unreachable endings and state drift",
+      "benefit": "Find story paths that trap players or make endings impossible before release.",
+      "distinct_method": "Build a route matrix, check what game states are needed versus granted in both directions, and grade problems as blocking, major, minor or polish.",
+      "reason_not_unchanged": "It assumes a particular Ink project folder contract, writes playtest reports and may invoke a local compiler. It does not bound route search for very large branching stories or explicitly approve each file write.",
+      "source": {
+        "repository": "bladecoder/narrative-skills",
+        "pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+        "path": "skills/if/if-playtest-review/SKILL.md",
+        "skill_blob_sha": "e703f3c525fd62ba10cd887686d7eafa84dde13f",
+        "recorded_package_tree_sha": "6c6b9028d81ed25a5504052de5c541913a1b4b16",
+        "package_files": [
+          {
+            "path": "skills/if/if-playtest-review/SKILL.md",
+            "blob_sha": "e703f3c525fd62ba10cd887686d7eafa84dde13f"
+          },
+          {
+            "path": "skills/if/if-playtest-review/agents/openai.yaml",
+            "blob_sha": "568e465a11ee4bd154f20d43c0ff9cedbdc06b49"
+          }
+        ],
+        "license": "MIT",
+        "license_file_sha": "6218ab7ce333ac012513c331f9df84b8550982dd",
+        "license_obligation": "Preserve the root MIT copyright and license notice in copies and substantial adaptations; do not treat Codex host UI metadata as a generic installer.",
+        "package_sha_basis": "Published per-package review ledger; tree SHA not freshly recomputed against upstream Git in this consumer curation",
+        "file_inspection": "Read complete pinned SKILL.md, agents/openai.yaml and pinned root LICENSE; exact SKILL.md fingerprint matches review."
+      },
+      "dependencies": "Ink story files in the source's directory convention; optional installed inklecate compiler; review without compiler must disclose static-only check.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "16/20",
+        "evidence": "registry/discovery/q1-bladecoder-narrative-skills-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS USEFUL METHOD/INSPIRATION ONLY, not approved for unchanged adoption or execution",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
+    },
+    {
+      "id": "kunitoki-sonic-skills/audio-performance-debug",
+      "name": "Audio Performance Debug",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "testing",
+      "domain_display": "Testing",
+      "subdomain": "performance",
+      "capability": "Diagnosing real-time audio dropouts and CPU spikes with repeatable measurement",
+      "benefit": "Find what actually causes audio clicks and slowdowns instead of guessing at code changes.",
+      "distinct_method": "Match symptoms to measurements, profile the audio callback in an optimized and reproducible scenario, distinguish periodic from random spikes, then measure again after the fix.",
+      "reason_not_unchanged": "Bundled SIMD examples omit tail handling and can overrun buffers. The JUCE logging example conflicts with real-time audio safety advice; denormal and profiler assertions need platform-specific verification. Do not copy the implementation snippets or trigger profilers on other people's processes.",
+      "source": {
+        "repository": "kunitoki/sonic-skills",
+        "pin": "8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa",
+        "path": "skills/audio-performance-debug/SKILL.md",
+        "skill_blob_sha": "15c4648108b8882896f047e01849e224c3b64b19",
+        "recorded_package_tree_sha": "b6d07ad1cee260f2be4998103b44a164a597ddc7",
+        "package_files": [
+          {
+            "path": "skills/audio-performance-debug/SKILL.md",
+            "blob_sha": "15c4648108b8882896f047e01849e224c3b64b19"
+          },
+          {
+            "path": "skills/audio-performance-debug/references/performance-patterns.md",
+            "blob_sha": "fb8716a553b6eb7c2644808618bf5ecaf14ad2e3"
+          }
+        ],
+        "license": "Unlicense",
+        "license_file_sha": "fdddb29aa445bf3d6a5d843d6dd77e10a9f99657",
+        "license_obligation": "Upstream Unlicense is a public-domain dedication where recognized; independently confirm rights for third-party code/examples and applicable local law before reuse. No examples are copied into skillz.",
+        "package_sha_basis": "Published per-package review ledger; tree SHA not freshly recomputed against upstream Git in this consumer curation",
+        "file_inspection": "Read complete pinned SKILL.md, referenced performance-patterns.md and pinned root LICENSE; exact SKILL.md fingerprint matches review."
+      },
+      "dependencies": "An authorized target audio project; host profilers (Instruments, perf, VTune, Tracy or JUCE tooling) optional; sibling review skills are optional context and not separately installed.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "16/20",
+        "evidence": "registry/discovery/q5-kunitoki-sonic-skills-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS USEFUL METHOD/INSPIRATION ONLY, not approved for unchanged adoption or execution",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
+    }
+  ],
+  "starter_shelf_totals": {
+    "recommended_for_use": 0,
+    "valuable_reference": 3,
+    "distinct_capability_domains_represented": 3
+  },
+  "global_approved_for_use_total": null,
+  "global_promoted_valuable_reference_total": null,
+  "global_domain_totals_audited": false,
+  "source_verification": "Manually fetched upstream exact-pinned files through GitHub and matched SKILL.md blob SHA to prior exact package source vetting; read root license for each; reviewed all package-owned files.",
+  "promotion_rationale": "Specific differentiated methods with demonstrated documentation usefulness, no unsafe recommendation to execute or install the original packages",
+  "limitations": [
+    "This is a curated subset: zero in this starter shelf is not a claim of zero valuable skills in any other domain.",
+    "None of the three has an executed security scan, behavioral acceptance or unchanged-use license/safety clearance from skillz.",
+    "The referenced sources carry their own license obligations; skillz retains links and independent summaries, not their instructions or code.",
+    "Packaged scripts, CLI/tools and content remain untrusted until host-specific rights, safety and action authorization are established."
+  ]
+}
