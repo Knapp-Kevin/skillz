@@ -2,7 +2,7 @@
   "schema_version": 1,
   "as_of": "2026-11-03",
   "stage": "consumer-positive-recommendation-qualification",
-  "scope": "Eleven individually reasoned and positively endorsed method references across nine capability domains. Four newer methods are source-SKILL-pinned but full package tree identity is pending, and NONE is recommended for unchanged use. This is a bounded curated subset, not a global audited catalog.",
+  "scope": "Nineteen individually reviewed positively selected conceptual Valuable Reference methods across nine domains; includes nine music-composition methods serving all eight subdomains, but no unchanged-use package approvals, no complete music-source neutrality and no global audited positive denominator.",
   "catalog_categories": [
     "RECOMMENDED_FOR_USE",
     "VALUABLE_REFERENCE"
@@ -572,23 +572,801 @@
         "private_image_upload_without_authority",
         "billable_and_persistent_collection_mutation_without_approval"
       ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-harmony",
+      "name": "mc-harmony",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "harmony",
+      "capability": "Find sensible chords for a melody before adding jazzier substitutions or color, and know when the harmony is already good enough.",
+      "benefit": "Find sensible chords for a melody before adding jazzier substitutions or color, and know when the harmony is already good enough.",
+      "distinct_method": "Build a clear chord-function skeleton, test cadences, experiment with only necessary substitutions, then stop when added color obscures the tune.",
+      "reason_not_unchanged": "Reference companion heavily indexes and quotes harmony books and translations. Source NOTICE leaves their rights with third parties; do not copy the protected passages or treat assertions about emotion as measured fact.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-harmony/SKILL.md",
+        "skill_blob_sha": "72bd575edfaad46ca2061a836ebc36ce7f56ae37",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-harmony/SKILL.md",
+            "blob_sha": "72bd575edfaad46ca2061a836ebc36ce7f56ae37"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-harmony/reference.md",
+            "blob_sha": "9378f566487e26681eabd7f473559e83bab5258b"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 8.6k source SKILL and 12.1k reference; checked three-function/cadence step structure, color checklist, explicit stop and source attributions."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "17/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "book_excerpt_and_translation_rights_not_granted_for_unchanged_package"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-melody",
+      "name": "mc-melody",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "melody",
+      "capability": "Shape a melody that a specific vocalist can sing comfortably while avoiding flat phrases and awkward leaps.",
+      "benefit": "Shape a melody that a specific vocalist can sing comfortably while avoiding flat phrases and awkward leaps.",
+      "distinct_method": "Define the singer's usable register, plan the leap and landing, vary phrase endings and test each passage by singing rather than trusting theory alone.",
+      "reason_not_unchanged": "Source bibliography and 6.3k reference include protected translations; generic passaggio and feeling rules cannot replace actual singer testing.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-melody/SKILL.md",
+        "skill_blob_sha": "3aa2049057c44c5c32b52424c1c30f4b51589713",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-melody/SKILL.md",
+            "blob_sha": "3aa2049057c44c5c32b52424c1c30f4b51589713"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-melody/reference.md",
+            "blob_sha": "b35268e82a38ab34985c9cbdfbf5457a9a1868ab"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 10.6k SKILL and 6.3k reference; reviewed leap, singer range, cadence/opening choices and melodic anti-cliche steps."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "16/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "copyrighted_book_translations_not_cleared",
+        "unverified_voice_range_generalizations"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-rhythm-groove",
+      "name": "mc-rhythm-groove",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "rhythm",
+      "capability": "Fix a stiff groove without simply changing the tempo by deliberately changing accents, subdivisions and the melody's relationship to the backbeat.",
+      "benefit": "Fix a stiff groove without simply changing the tempo by deliberately changing accents, subdivisions and the melody's relationship to the backbeat.",
+      "distinct_method": "Choose rhythmic feel independently of BPM, place accents and rests intentionally, and test how the tune answers or overlaps the drums.",
+      "reason_not_unchanged": "Cross-references source-book derived advice via other skill sidecars; strict groove norms can be inapplicable to free-time and some club music.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-rhythm-groove/SKILL.md",
+        "skill_blob_sha": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-rhythm-groove/SKILL.md",
+            "blob_sha": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 6.7k SKILL in full and its separately attributed rhythm-section supporting references; no own sidecar present."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "15/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "source_book_advice_and_external_cross_reference_terms_not_cleared"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-rhythm-section",
+      "name": "mc-rhythm-section",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "rhythm",
+      "capability": "Make a programmed drum-and-bass groove feel intentional by choosing how kick and bass interact and what should remain quantized.",
+      "benefit": "Make a programmed drum-and-bass groove feel intentional by choosing how kick and bass interact and what should remain quantized.",
+      "distinct_method": "Select the groove family, decide whether bass reinforces or answers kick, then adjust timing and accents only on the instruments that need it.",
+      "reason_not_unchanged": "The two companion files reproduce and index many published drum-book styles and page-cited patterns; source MIT does not cover those third-party excerpts.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-rhythm-section/SKILL.md",
+        "skill_blob_sha": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-rhythm-section/SKILL.md",
+            "blob_sha": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-rhythm-section/reference.md",
+            "blob_sha": "662bffe27c7428871ae3cd44f71f7ef423f05552"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-rhythm-section/reference-styles.md",
+            "blob_sha": "0b6437a3633f031681367a9470b8c7f9a23aafac"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 12.9k SKILL plus 10.2k main reference and 16.1k genre-pattern reference-styles; saw extensive source-book attribution."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "16/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "extensive_published_drum_pattern_excerpts_not_cleared"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-orchestration",
+      "name": "mc-orchestration",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "orchestration",
+      "capability": "Assign musical lines to instruments with a reason, rather than layering sounds until they become muddy or disappear.",
+      "benefit": "Assign musical lines to instruments with a reason, rather than layering sounds until they become muddy or disappear.",
+      "distinct_method": "Decide each line's job, whether it should blend or stand apart, and verify that the chosen instruments can be heard in their intended registers.",
+      "reason_not_unchanged": "Eight 14–18k companion reference files contain hundreds of citations into protected translated orchestration textbooks. Notice expressly excludes quotations and translations. Manual rights review needed before copying any tables.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
+        "skill_blob_sha": "6a94014cbba85658345d8f1f8a3bfb4fa78dd495",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
+            "blob_sha": "6a94014cbba85658345d8f1f8a3bfb4fa78dd495"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference.md",
+            "blob_sha": "37ef97ea9bc3c350095008d407f0fb1af6bb54e3"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-minyue.md",
+            "blob_sha": "161de38b8b5b9e4511f04a7704e8c36149738514"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-percussion.md",
+            "blob_sha": "4fabb8ab400ae9f4df9008ba14251881e23aab53"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-keyboard-harp.md",
+            "blob_sha": "3d6d4ce17c1575d97a9b9e2c581b0bc95a791836"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-strings.md",
+            "blob_sha": "8c2d7502f54cf2a942259645be45ab89ad959819"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-winds.md",
+            "blob_sha": "ebd657e6aa6c9b8439580772478067139916abaf"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-brass.md",
+            "blob_sha": "6ab2bb9438a2eef9b382f6d134e714d1d563ae71"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-tutti.md",
+            "blob_sha": "01dff367a97152ea9d47fe0669eb9e852ee6dcc4"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 18.4k SKILL and all eight named sidecars including Yang strings/winds/brass/tutti, folk, percussion and keyboard. Complete upstream Git tree still not independently available."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "15/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "dense_third_party_orchestration_and_translation_excerpts_not_cleared",
+        "instrument_register_and_live_balance_claims_unverified"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-arrangement-arch",
+      "name": "mc-arrangement-arch",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "arranging",
+      "capability": "Give a song an arc so verses, choruses and builds feel different instead of remaining at maximum intensity all the time.",
+      "benefit": "Give a song an arc so verses, choruses and builds feel different instead of remaining at maximum intensity all the time.",
+      "distinct_method": "Map section energy, identify when each instrument enters and leaves, and deliberately remove layers before important lifts.",
+      "reason_not_unchanged": "Subtractive-arranging and dramatic arc are attributed to published texts; unverified statistics about a 62-track corpus should not become effectiveness proof.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-arrangement-arch/SKILL.md",
+        "skill_blob_sha": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-arrangement-arch/SKILL.md",
+            "blob_sha": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-arrangement-arch/reference.md",
+            "blob_sha": "c0efd30e7a04e9f2011a314fbabb3e76fdfd8f99"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 14.1k SKILL plus 4k reference of section definitions and measured data, and shared ARR-SPEC schema and template."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "17/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "publisher_book_derived_excerpts_not_relicensed",
+        "unverified_corpus_benchmark_generalization"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-symbolic-score",
+      "name": "mc-symbolic-score",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "notation",
+      "capability": "Turn one arrangement plan into consistent lead sheets, notation files and MIDI without maintaining contradictory versions.",
+      "benefit": "Turn one arrangement plan into consistent lead sheets, notation files and MIDI without maintaining contradictory versions.",
+      "distinct_method": "Define the score once, map each field to the formats it actually supports, and parse/read back output before considering it complete.",
+      "reason_not_unchanged": "Statements that symbolic scoring is the only fully reproducible approach and YuE2 special formatting reports are overbroad/model-version-specific. External notation tools and derivative music licenses remain separate.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
+        "skill_blob_sha": "d84cd65170744219c64a46387e6ff675bc1fabbd",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
+            "blob_sha": "d84cd65170744219c64a46387e6ff675bc1fabbd"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-symbolic-score/reference.md",
+            "blob_sha": "4c5183b6d7f0c15ef5e0df59f73139e5faeb522d"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 10.1k SKILL and 3.6k reference, shared ARR-SPEC schema/template/backend profiles and mc-progressions reference for key mapping."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "15/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "dated_unreproduced_model_specific_claims",
+        "source_music_and_symbolic_output_rights_not_cleared"
+      ]
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-style-edm",
+      "name": "mc-style-edm",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "electronic-composition",
+      "capability": "Plan an electronic track that builds, releases and changes texture intentionally rather than simply growing louder.",
+      "benefit": "Plan an electronic track that builds, releases and changes texture intentionally rather than simply growing louder.",
+      "distinct_method": "Plan the order layers enter and exit, decide what disappears before the drop, and make quantization a per-instrument choice.",
+      "reason_not_unchanged": "Style-specific universal assertions and publisher's measured corpus numbers have not been independently validated. Referenced synth recipe tables are from protected books.",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "path": "plugins/music-composition/skills/mc-style-edm/SKILL.md",
+        "skill_blob_sha": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "plugins/music-composition/skills/mc-style-edm/SKILL.md",
+            "blob_sha": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2"
+          }
+        ],
+        "reference_supporting_files": [
+          {
+            "path": "README.md",
+            "blob_sha": "815a275cf73c4b523ce91bc6b0c7b69bc89c76cd"
+          },
+          {
+            "path": "LICENSE",
+            "blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
+          },
+          {
+            "path": "NOTICE",
+            "blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+            "blob_sha": "dfe9c196ddb67bee0dee6f5f70512ba2f2dad726"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+            "blob_sha": "eff1a0187377e750ab3468f973224c9222e39731"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+            "blob_sha": "8aa9bc0380f813cd3c27a21467ee4fa59643e72a"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
+            "blob_sha": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+            "blob_sha": "e92411172b416074a69e871487b9b2896ab75445"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+            "blob_sha": "a30f8709af7cd10c586f97f5dc9ecec3e2f4aef7"
+          },
+          {
+            "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
+            "blob_sha": "82b0142bf67b841b61727afbbd6404d740d47a47"
+          }
+        ],
+        "license": "MIT (authored content only); protected third-party books, quotations, translations excluded per NOTICE",
+        "license_file_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_file_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "license_obligation": "Maintain original MIT license/copyright/NOTICE when reusing licensed author text; do NOT relicense, copy, or redistribute separately protected textbook passages, original music, translated excerpts or third-party model assets.",
+        "package_sha_basis": "UNKNOWN upstream package tree; SKILL.md source pin and named supporting files inspected but alias/mirror and whole-package SHA not reconstructed.",
+        "file_inspection": "Read 8.3k SKILL plus cross-skill sound-design reference, with explicit permission/genre exceptions and source attributions."
+      },
+      "dependencies": "Text-only music craft technique; companion reference material and ARR-SPEC shared schema. Any DAW edit, compilation, music generator, media upload or model credits require separate user authorization.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "15/20",
+        "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+        "static_stage": "exact-pinned-static-semantic-review-with-package-tree-UNKNOWN"
+      },
+      "consumer_adjudication": "Positive endorsement applies to the independently summarized method, not to source book tables or unchanged package; the method can assist original music craft with a clear trigger and different decision compared with neighboring methods.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Exact pinned SKILL.md and observed named files, but no verified whole-package tree/mirror equivalence",
+      "hard_fail_flags": [
+        "protected_synth_text_and_source_book_rights_not_granted",
+        "unverified_genre_statistics_and_quantization_generalization"
+      ]
     }
   ],
   "starter_shelf_totals": {
     "recommended_for_use": 0,
-    "valuable_reference": 11,
+    "valuable_reference": 19,
     "distinct_capability_domains_represented": 9,
     "creative_tranche_20261103": {
-      "music_composition": 1,
+      "music_composition": 9,
       "illustration": 3,
-      "all_source_tree_sha_verified": false
+      "music_positive_subdomains": 8,
+      "music_subdomains_total": 8,
+      "illustration_positive_subdomains": 3,
+      "illustration_subdomains_total": 6,
+      "all_source_tree_sha_verified": false,
+      "domain_fully_qualified": false
     }
   },
   "global_approved_for_use_total": null,
   "global_promoted_valuable_reference_total": null,
   "global_domain_totals_audited": false,
-  "source_verification": "Earlier seven: exact upstream SKILL.md and root licenses checked, with package-tree values reused from pinned static reviews. Four Q6 methods: exact pinned SKILL.md, root MIT license and named supporting files read; complete upstream package tree SHAs NOT independently established. All eleven are valued as individual *methods*, not installable packages.",
-  "promotion_rationale": "Each of eleven has a specifically differentiated transferable method, concrete user benefit and a disclosed safety and license boundary; the four creative methods were individually graded and selected by their distinctive method, NOT automatically promoted from REFERENCE-ONLY flags. Missing Q6 complete tree prevents unchanged-use.",
+  "source_verification": "Earlier seven and four Q6 methods retain their pinned evidence. Eight new music methods have exact pinned original SKILL.md, 14 observed owned references, root MIT LICENSE and explicit NOTICE verified; third-party textbook/translation excerpt rights excluded. Complete upstream package-tree SHAs/mirrors remain UNKNOWN for all 12 new Q6 methods.",
+  "promotion_rationale": "Each of nineteen has a separately useful, distinctive transferable method and explicitly stated user benefit, source rights, risk and nontrigger. The eight music methods span seven new subdomains with rhythm implementation distinct from groove design. Do not infer install eligibility from positive conceptual selection.",
   "limitations": [
     "This is a curated subset: zero in this starter shelf is not a claim of zero valuable skills in any other domain.",
     "None of the three has an executed security scan, behavioral acceptance or unchanged-use license/safety clearance from skillz.",
@@ -596,6 +1374,8 @@
     "Packaged scripts, CLI/tools and content remain untrusted until host-specific rights, safety and action authorization are established.",
     "The 28-record Siclaw root-license scope metadata was corrected from MIT to Apache-2.0 after reading its pinned LICENSE. Existing grades, SHA identities, and candidate decisions are unchanged.",
     "Four new Q6 methods have exact source/pin/SKILL.md fingerprints and 10-axis static scores, but full upstream package-tree identities and exhaustive per-file rights remain UNKNOWN; do not treat them as unchanged-use eligible or globally deduplicated.",
-    "Four creative sources expose unapproved filesystem writes, remote generation, private image upload or persistent collections. They have no security scans or model-executed behavioral results."
+    "Four creative sources expose unapproved filesystem writes, remote generation, private image upload or persistent collections. They have no security scans or model-executed behavioral results.",
+    "The original jtydhr88 repository NOTICE explicitly excludes book quotes and translated excerpts from root MIT; eight music references are original summaries to STUDY only and cannot be copied/redistributed unchanged as MIT packages.",
+    "Music 8/8 is positive METHOD coverage within this bounded catalog, NOT full independent multi-source, production, behavioral, security, package-tree or license clearance. Independent alternatives remain a priority."
   ]
 }
