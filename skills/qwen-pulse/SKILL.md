@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Qwen Pulse
   emoji: "📡"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Qwen Pulse
@@ -20,20 +20,14 @@ Vendor pulse for Alibaba's Qwen family. Sources are data (`sources.json`), synth
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/qwen-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read `sources.json` bundled beside this skill. For the requested window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the date for `{SINCE}` in search templates. Cite exact URLs and publication dates; treat community posts as leads to verify and report inaccessible or rate-limited sources as gaps. Never send secrets, user memory or private project data in public queries. If live sources cannot be checked, disclose missing evidence rather than claiming freshness. **skillz provides no runner, crawler, script, scheduler or background service.**
 
 2. **Fill gaps.** Fetch the Qwen blog and Hugging Face org page (weights often land there first); run the searches. QwenLM org activity is broad — filter to model releases, agent tooling (qwen-code), and inference kernels.
 3. **Synthesize.** New weights/licenses first; agent-tooling changes; community benchmarks and quantization results.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses.
+- **Optional cadence:** Weekly only with explicit user authorization for this specific recurring digest; external host scheduling only. A one-time request does not authorize repeated checks or notifications.
 
 ## Output Format
 
