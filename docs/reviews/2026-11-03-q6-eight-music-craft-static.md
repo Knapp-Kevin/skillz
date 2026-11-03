@@ -1,0 +1,40 @@
+# Eight music-composition methods: useful craft, with source rights preserved
+
+**Published static qualification, 2026-11-03:** Eight individual **Valuable Reference method** selections from the first exact-pinned `jtydhr88/music-composition-skills` tranche. Seven distinct music subdomains newly served by a useful source-checked idea, plus a second, differentiated rhythm approach. With the existing video-scoring reference, every one of the **eight** music-composition subdomains now has at least one conceptual method to study. This **does not mean the domain is fully vetted, multi-source, installation-ready or production-validated**.
+
+## Which problem can these methods help with?
+
+| What you want | Original pinned skill | Source-level grade | Transferable method |
+|---|---|---:|---|
+| Build chords for a melody | [mc-harmony](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-harmony/SKILL.md) | **17/20** | Build a clear chord-function skeleton, test cadences, experiment with only necessary substitutions, then stop when added color obscures the tune. |
+| Write singable melody lines | [mc-melody](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-melody/SKILL.md) | **16/20** | Define the singer's usable register, plan the leap and landing, vary phrase endings and test each passage by singing rather than trusting theory alone. |
+| Design rhythmic feel and accents | [mc-rhythm-groove](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-rhythm-groove/SKILL.md) | **15/20** | Choose rhythmic feel independently of BPM, place accents and rests intentionally, and test how the tune answers or overlaps the drums. |
+| Program drums and bass together | [mc-rhythm-section](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-rhythm-section/SKILL.md) | **16/20** | Select the groove family, decide whether bass reinforces or answers kick, then adjust timing and accents only on the instruments that need it. |
+| Assign instruments and ranges | [mc-orchestration](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-orchestration/SKILL.md) | **15/20** | Decide each line's job, whether it should blend or stand apart, and verify that the chosen instruments can be heard in their intended registers. |
+| Give a song a dynamic structure | [mc-arrangement-arch](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-arrangement-arch/SKILL.md) | **17/20** | Map section energy, identify when each instrument enters and leaves, and deliberately remove layers before important lifts. |
+| Export music notation and MIDI | [mc-symbolic-score](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-symbolic-score/SKILL.md) | **15/20** | Define the score once, map each field to the formats it actually supports, and parse/read back output before considering it complete. |
+| Structure an electronic/club track | [mc-style-edm](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-style-edm/SKILL.md) | **15/20** | Plan the order layers enter and exit, decide what disappears before the drop, and make quantization a per-instrument choice. |
+
+These cover *different work*: `mc-rhythm-groove` chooses the feel and melody/backbeat relationship, while `mc-rhythm-section` chooses how the kick, bass, percussion and humanization implement that feel. Orchestration assigns instruments to lines; arrangement controls their entry and exit over the duration. Notation makes a reproducible *symbolic plan*, while actual sound quality still depends on human listening and instrument/render choices.
+
+## License and attribution are part of the finding
+
+The source repository's [pinned LICENSE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/LICENSE) is **MIT** for its original author-created skill architecture, checklists and spec schema. Its equally important [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly **excludes rights in cited books, quotations, translated texts, musical works and third-party models**. Some supporting references contain dense, page-cited textbook material. Do **not** copy those passages or repackage their tables under MIT. The descriptions above are original short summaries of a practical technique, not reproduced material or endorsement of verbatim source reuse. Any installation or adaptation of the full skill package requires proper rights review.
+
+**The package-tree SHA is UNKNOWN for every reviewed entry.** The GitHub connector verified exact pinned `SKILL.md` blobs, 14 specific owned supporting references and shared ARR-SPEC schema, template, source NOTICE and backend metadata. It did **not** enumerate complete source Git trees, resolve all mirrored installation exposures, or establish per-file rights to excerpts. The publisher's 29-skill and 62-song statements are publisher claims, **not independently verified denominator or effect measures**.
+
+## Other safety and quality limits
+
+- **No automatic music generation or DAW mutation:** A reference method alone does not authorize writing a score, changing a user project, connecting to private accounts, buying model credits, uploading media or downloading instrument samples.
+- **No automatic audio aesthetic verdict:** A score or checklist can establish note events and structure. It cannot prove that a singer can perform a phrase comfortably or that a sound actually feels musical without listening and contextual evidence.
+- **Notated output is not universal perfection:** The symbolic-score skill includes 2026 model-specific YuE2 observations. Treat them as dated, not as a guaranteed property of every backend or every MusicXML/ABC/MIDI conversion.
+- **Genre laws are not absolutes:** Club-grid quantization, EDM drops, drum style tempos, instrument ranges and chord-to-emotion mappings can depend on performer, venue, region and subgenre. Source's reported recordings/corpus measurements have not been independently recomputed.
+- **No scan or executed test:** Every review has `security_scan: not-run` and `behavioral_validation: not-run`; all unchanged-use approvals are false. A static score above 15 is **not** an install/governance pass.
+
+## What is still missing to call music fully represented?
+
+All **8/8 subdomains now have a positively selected *conceptual method*** in this bounded source shelf, but **seven newly served topics depend on a single publisher's source family**, not source-neutral alternatives. We still need independent approaches for harmony, melody, rhythm, orchestration, arranging, notation and EDM; exact complete package trees and mirror reconciliation; independent license-by-file and translation checks; representative practical outputs; and rigorous rights/authority review for any tool or model interaction. The *other* music-scoring method is already on the shelf with its own separate unsafe-helper finding.
+
+[Individual 10-axis scores and source fingerprints](../../registry/discovery/q6-eight-music-craft-static-20261103.json) · [All 14 music/illustration subdomains](../capability-creative-coverage.md) · [Consumer method shortlist](../curated-capability-references.md).
+
+Source family research [#677](https://github.com/Knapp-Kevin/skillz/pull/677) remains separately owned and unmerged; this tranche uses a new branch and preserves its prior report. This is a genuine reviewed batch rather than a reason to close the permanent corpus objective.
