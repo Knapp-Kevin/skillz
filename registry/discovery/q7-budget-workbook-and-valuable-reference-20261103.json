@@ -115,7 +115,72 @@
     "explicit_no_count": 0,
     "expected_formula_branch": "GO",
     "correct_safe_decision": "HOLD until every mandatory gate explicitly passes",
-    "note": "Logical code-path inspection, not a spreadsheet-engine test"
+    "note": "Logical code-path inspection, not a spreadsheet-engine test",
+    "severity": "HIGH: incomplete mandatory eligibility checks can pass the score-only GO branch",
+    "proposed_formula_NOT_APPLIED": "IF(COUNTIF(Gates!C2:C7,\"Yes\")<ROWS(Gates!C2:C7),\"WAIT\",IF(F17>=70,\"GO\",IF(F17>=50,\"CONDITIONAL\",\"NO-GO\")))",
+    "proposed_regression_cases": [
+      {
+        "gates": [
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes"
+        ],
+        "score": 75,
+        "expected": "GO"
+      },
+      {
+        "gates": [
+          "Yes",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "score": 75,
+        "expected": "WAIT"
+      },
+      {
+        "gates": [
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "Yes"
+        ],
+        "score": 95,
+        "expected": "WAIT"
+      },
+      {
+        "gates": [
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Unknown"
+        ],
+        "score": 95,
+        "expected": "WAIT"
+      },
+      {
+        "gates": [
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes"
+        ],
+        "score": 49,
+        "expected": "NO-GO"
+      }
+    ],
+    "qualification_limit": "Proposed formula is an independently reasoned safeguard, NOT inserted in upstream workbook or executed by spreadsheet engine; a qualified revision must separately verify validations and score thresholds"
   },
   "fictional_budget_fixture": {
     "kind": "synthetic arithmetic oracle ONLY",
