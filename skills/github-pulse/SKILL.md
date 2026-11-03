@@ -24,7 +24,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 1. **Collect (external host only).** Read the bundled `sources.json` beside this skill. For the requested time window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the start date for `{SINCE}` where present. Cite source URLs and publication dates, distinguish official reports from community leads, and report inaccessible or rate-limited sources as gaps. Never put private context, credentials or tokens in public queries. If access is unavailable, provide an evidence-limited result, not invented freshness. **skillz has no runner, crawler, script, scheduler or background job.** GitHub rate limits can block some queries: use only existing host-authorized access, never require users to provide a GitHub token.
 
 2. **Fill gaps.** Fetch github.com/trending (weekly view) — the search API measures new repos, trending measures acceleration of existing ones; both matter. HN/Reddit searches catch the story behind a spike.
-3. **Filter.** For each candidate: real code or README-ware? active maintainer? does it duplicate something we already vendored/adopted (check INDEX.md and the registry)?
+3. **Filter.** For each candidate: real code or README-only? Active maintainer? Does it appear to duplicate prior discoveries? Check the skillz INDEX and candidate registry **only when those files are actually available to the authorized host**. Otherwise mark prior-corpus comparison not-run instead of claiming a fresh find or reading unrelated private repositories.
 4. **Synthesize.** One line per repo max; group by category; end with at most 3 "worth a deeper look" picks and why.
 
 ## Scheduling
@@ -52,5 +52,5 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Notes
 
-- Cross-check picks against `registry/candidates.yaml` before recommending — a repo already rejected there needs new evidence, not a re-pitch.
+- If `registry/candidates.yaml` is available within the user's authorized read scope, cross-check prior rejections and duplicate candidates before recommending. Otherwise mark the comparison not-run and present a provisional intake lead; never imply the absent registry was checked.
 - Handoff: propose a skill or tool intake entry only as a suggested handoff; writing any registry, backlog or issue requires separate approval.
