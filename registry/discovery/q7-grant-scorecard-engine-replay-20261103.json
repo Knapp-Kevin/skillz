@@ -1,0 +1,153 @@
+{
+  "schema": "q7-grant-scorecard-independent-engine-replay-v1",
+  "as_of": "2026-11-03",
+  "source_repository": "zicula/skills",
+  "source_revision": "ec7f94f84916be7bb25ec38752c24176330065a7",
+  "source_workbook": "grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx",
+  "source_git_blob_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+  "reference_static_workbook_inspection": "registry/discovery/q7-budget-workbook-and-valuable-reference-20261103.json",
+  "test_script": "scripts/qa/verify_grant_scorecard_gates.py",
+  "engine": "artifact_tool local spreadsheet calculation engine",
+  "environment": "Python execution of reproduced formula cells in new isolated in-memory workbook; no original source workbook executed",
+  "cases": 18,
+  "passes": 18,
+  "reproduced_source_false_go": true,
+  "proposed_formula": "=IF(OR(COUNTIF(Gates!C2:C7,\"Yes\")<ROWS(Gates!C2:C7),NOT(ISNUMBER(F17))),\"WAIT\",IF(F17>=70,\"GO\",IF(F17>=50,\"CONDITIONAL\",\"NO-GO\")))",
+  "source_formula": "=IF(COUNTIF(Gates!C2:C7,\"No\")>0,\"WAIT\",IF(F17>=70,\"GO\",IF(F17>=50,\"CONDITIONAL\",\"NO-GO\")))",
+  "scenario_results": [
+    {
+      "id": "all_yes_go",
+      "source_result": "GO",
+      "all_gates_formula": "GO",
+      "proposed_formula_result": "GO",
+      "pass": true
+    },
+    {
+      "id": "five_unanswered_go_score",
+      "source_result": "GO",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "all_unanswered_high_score",
+      "source_result": "GO",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "explicit_no_high_score",
+      "source_result": "WAIT",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "unknown_answer_high_score",
+      "source_result": "GO",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "numeric_answer_high_score",
+      "source_result": "GO",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "whitespace_answer",
+      "source_result": "GO",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "lowercase_yes_excel_countif",
+      "source_result": "GO",
+      "all_gates_formula": "GO",
+      "proposed_formula_result": "GO",
+      "pass": true
+    },
+    {
+      "id": "score_49",
+      "source_result": "NO-GO",
+      "all_gates_formula": "NO-GO",
+      "proposed_formula_result": "NO-GO",
+      "pass": true
+    },
+    {
+      "id": "score_50",
+      "source_result": "CONDITIONAL",
+      "all_gates_formula": "CONDITIONAL",
+      "proposed_formula_result": "CONDITIONAL",
+      "pass": true
+    },
+    {
+      "id": "score_69",
+      "source_result": "CONDITIONAL",
+      "all_gates_formula": "CONDITIONAL",
+      "proposed_formula_result": "CONDITIONAL",
+      "pass": true
+    },
+    {
+      "id": "score_70",
+      "source_result": "GO",
+      "all_gates_formula": "GO",
+      "proposed_formula_result": "GO",
+      "pass": true
+    },
+    {
+      "id": "score_zero",
+      "source_result": "NO-GO",
+      "all_gates_formula": "NO-GO",
+      "proposed_formula_result": "NO-GO",
+      "pass": true
+    },
+    {
+      "id": "score_negative",
+      "source_result": "NO-GO",
+      "all_gates_formula": "NO-GO",
+      "proposed_formula_result": "NO-GO",
+      "pass": true
+    },
+    {
+      "id": "score_100",
+      "source_result": "GO",
+      "all_gates_formula": "GO",
+      "proposed_formula_result": "GO",
+      "pass": true
+    },
+    {
+      "id": "score_missing",
+      "source_result": "NO-GO",
+      "all_gates_formula": "NO-GO",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "score_text",
+      "source_result": "GO",
+      "all_gates_formula": "GO",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "missing_score_and_gate",
+      "source_result": "NO-GO",
+      "all_gates_formula": "WAIT",
+      "proposed_formula_result": "WAIT",
+      "pass": true
+    }
+  ],
+  "still_unqualified": [
+    "Actual unchanged publisher workbook execution and data-validation behavior",
+    "Microsoft Excel and LibreOffice interoperability",
+    "Source workbook upstream remediation and version identity",
+    "Real funder eligibility and finance owner acceptance",
+    "Security scan, model behavior and any upload/send authority"
+  ],
+  "disposition": "ENGINE FORMULA REPRODUCTION PASS; ORIGINAL UPSTREAM PACKAGE STILL HOLD / NOT APPROVED UNCHANGED"
+}
