@@ -3,15 +3,18 @@ skill_name: xai-pulse
 source_id: local-skills
 local_path: "skills/xai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: ec172826db6d811dbea1985c8962ad342c310412
+content_blob_sha: 7b1a9cf2c21e36f05d0b2ee9507e90b78c67e924
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
+prior_reviewed_blob_sha: ec172826db6d811dbea1985c8962ad342c310412
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only collection changed exact skill bytes; previous semantic score historical, no current acceptance."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
