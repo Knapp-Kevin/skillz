@@ -24,15 +24,19 @@ There are two **positive** recommendations. Both must explain the specific benef
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Current inventory limitation:** We have individually endorsed **three skills as Valuable References**. They are **not** approved for unchanged use, and this starter shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Current inventory limitation:** We have individually endorsed **seven distinct skills as Valuable References** across seven capability domains. They are **not** approved for unchanged use, and this starter shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### First three valuable references
+### Seven useful skill references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
 | Reliable 3D assemblies | **Blender Assembly Pitfalls** | Plan connections, then check real sizes, directions and overlaps instead of trusting appearances |
 | Game playtesting | **IF Playtest Review** | Catch impossible story routes, circular locks and missing game states before players get stuck |
 | Audio performance | **Audio Performance Debug** | Measure the real cause of dropouts and CPU spikes before changing code |
+| Accessible services | **Singapore DSS Accessibility** | Find keyboard, form and screen-reader barriers while building interfaces |
+| Kubernetes connectivity | **NetworkPolicy Debug** | Identify which traffic rules block a connection before changing a live cluster |
+| Clear service positioning | **Singular Positioning Clarity** | Explain who you help and the outcome in one sentence |
+| Voice notes into useful records | **Split Transcript by Intent** | Separate decisions, tasks and context without losing the original wording |
 
 **These are useful ideas, not install recommendations.** Each has known limitations and unrun security/behavioral tests. [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
 

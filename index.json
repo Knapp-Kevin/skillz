@@ -5063,25 +5063,34 @@
   },
   "consumer_positive_recommendation_sample_20261103": {
     "as_of": "2026-11-03",
-    "scope": "Initial individually qualified positive reference examples, NOT an exhaustive or reconciled all-domain count",
+    "scope": "Seven individually source-checked useful reference ideas, NOT a reconciled all-domain positive count or unchanged-use approvals",
     "source": "registry/consumer-positive-references-20261103.json",
     "plain_english": "docs/curated-capability-references.md",
-    "valuable_reference_promotions_in_this_tranche": 3,
+    "valuable_reference_promotions_in_this_tranche": 7,
     "recommended_for_unchanged_use_in_this_tranche": 0,
     "domains_covered": [
       "3d-cad-animation",
       "game-design",
-      "testing"
+      "testing",
+      "ux-ui",
+      "cloud-devops",
+      "marketing",
+      "technical-writing"
     ],
     "recommended_reference_ids": [
       "dcc-mcp-dcc-mcp-blender/dcc-blender-assembly-pitfalls",
       "bladecoder-narrative-skills/if-playtest-review",
-      "kunitoki-sonic-skills/audio-performance-debug"
+      "kunitoki-sonic-skills/audio-performance-debug",
+      "kyleoliveiro-sg-gov-skills/sg-gov-dss-accessibility",
+      "scitix-siclaw/networkpolicy-debug",
+      "peterod99-consultant-skills/singular-positioning-clarity",
+      "danielrosehill-claude-transcription-plugin/split-transcript"
     ],
     "globally_audited_recommended_for_use_count": null,
     "globally_audited_promoted_reference_count": null,
     "static_source_vetting_not_adoption": true,
     "security_validation": "not-run",
-    "behavioral_validation": "not-run"
+    "behavioral_validation": "not-run",
+    "source_license_correction": "All 28 scitix/siclaw Q4 review records cite pinned Apache-2.0 LICENSE blob 7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f rather than incorrect MIT label"
   }
 }
