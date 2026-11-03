@@ -4,7 +4,7 @@
 
 **Find better skills for your AI assistant.**
 
-A skill is a set of instructions that helps an AI assistant do a task well. **Skillz is a discovery library across 33 capability domains, not a list of 19 approved skills.** Start with what you need to accomplish, search methods across the wider indexed research, compare evidence and rights, then decide what is useful. You can explore without installing anything.
+A skill is a set of instructions that helps an AI assistant do a task well. **Skillz is a discovery library across 33 capability domains, not merely a list of featured or approved skills.** Start with what you need to accomplish, search methods across the wider indexed research, compare evidence and rights, then decide what is useful. You can explore without installing anything.
 
 ## What can skillz help you do?
 
@@ -17,7 +17,7 @@ A skill is a set of instructions that helps an AI assistant do a task well. **Sk
 
 **Start here even when your task has no item on our short recommendation shelf.** Browse the [33-domain directory](registry/capability-directory.json), search [governed review names](registry/governed-review-name-index.json), and expand into [pinned source leads](registry/discovery/dynamic-four-source-frontier-20261101.json). Read the actual candidate before trusting its name. An empty featured shelf slot is a search prompt, **not** proof there are no applicable methods. [Agent discovery procedure](docs/agent-value-discovery.md).
 
-**Example: Grant and funding-proposal work.** The broader search found [six individually graded grant, budget and proposal-review skill candidates](docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md) across **four independent publishers**, including real nonprofit proposal-writing methods that do **not** appear on the 19-item featured shelf. Study the [source-pinned review ledger](registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json) and check adjacent research, technical writing, finance, business, marketing and legal work. **These are static reference candidates, not approved installations or new featured recommendations.**
+**Example: Grant and funding-proposal work.** The broader search found [six individually graded grant, budget and proposal-review skill candidates](docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md) across **four independent publishers**, including one grant-budget method now selected for study and five further grant candidates that remain outside the featured shelf. Study the [source-pinned review ledger](registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json) and check adjacent research, technical writing, finance, business, marketing and legal work. **One grant-budget method has been selected as a Valuable Reference for study. No source package is approved for unchanged use.**
 
 | You want help with… | Capability areas |
 |---|---|
@@ -32,11 +32,11 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 
 ### Two different views: research leads and the small featured shelf
 
-![33 capability domains: research-linked topics from November 2 alongside separately selected Valuable Reference methods from November 3.](docs/assets/capability-evidence-and-valued-methods-20261103.svg)
+![33 capability domains: research-linked topics from November 2 alongside separately selected Valuable Reference methods from November 3.](docs/assets/capability-evidence-and-valued-methods-q7-20261103.svg)
 
-**This chart is not a complete map of what the library could help you accomplish.** Continue searching the wider capability index even when a category has no featured selection. **Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q6 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
+**This chart is not a complete map of what the library could help you accomplish.** Continue searching the wider capability index even when a category has no featured selection. **Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q7 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
 
-The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at least one research link** and **37 without one**. Our newer public shelf has **19 Valuable Reference methods across nine domains**, serving **18 distinct topic mappings**; **zero skills approved unchanged**. Music has **nine ideas spanning 8/8 topics**, but almost all music methods share a single publisher; illustration has **three methods spanning 3/6 topics**, with environment art still insufficiently served. Neither domain is complete, behaviorally tested, or independently cleared for reuse.
+The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at least one research link** and **37 without one**. Our newer public shelf has **20 Valuable Reference methods across ten domains**, serving **19 distinct topic mappings**; **zero skills approved unchanged**. Music has **nine ideas spanning 8/8 topics**, but almost all music methods share a single publisher; illustration has **three methods spanning 3/6 topics**, with environment art still insufficiently served. Neither domain is complete, behaviorally tested, or independently cleared for reuse.
 
 <details>
 <summary>Read all 33 domains as a text table</summary>
@@ -73,13 +73,13 @@ The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at lea
 | Science | 6 / 7 | 0 | 0 / 7 |
 | Medicine | 6 / 7 | 0 | 0 / 7 |
 | Law | 6 / 7 | 0 | 0 / 7 |
-| Finance | 7 / 8 | 0 | 0 / 8 |
+| Finance | 7 / 8 | 1 | 1 / 8 |
 | Robotics / IoT | 5 / 7 | 0 | 0 / 7 |
 | ML accelerators and compute | 7 / 7 | 0 | 0 / 7 |
 
 </details>
 
-*Sources: [2026-11-02 research audit](registry/discovery/capability-coverage-audit-20261102.json) and [2026-11-03 bounded consumer reference shelf](registry/consumer-positive-references-20261103.json). [Machine-readable two-stage graph data](registry/discovery/capability-evidence-and-valued-methods-20261103.json) · [Preserved November 2 chart](docs/assets/capability-evidence-map-20261102.svg). This comparison does not claim a live all-corpus positive denominator, source independence, domain maturity, security clearance or proven outcomes.*
+*Sources: [2026-11-02 research audit](registry/discovery/capability-coverage-audit-20261102.json) and [2026-11-03 bounded consumer reference shelf](registry/consumer-positive-references-q7-20261103.json). [Machine-readable two-stage graph data](registry/discovery/capability-evidence-and-valued-methods-q7-20261103.json) · [Preserved November 2 chart](docs/assets/capability-evidence-map-20261102.svg). This comparison does not claim a live all-corpus positive denominator, source independence, domain maturity, security clearance or proven outcomes.*
 
 ## Our featured methods: a small, evidence-based shelf
 
@@ -92,9 +92,9 @@ We maintain two **positive** recommendation types for methods selected to appear
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Featured-shelf limitation, not total inventory:** We have individually endorsed **nineteen useful methods as Valuable References** across nine capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Featured-shelf limitation, not total inventory:** We have individually endorsed **twenty useful methods as Valuable References** across ten capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Nineteen featured method references
+### Twenty featured method references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -117,10 +117,11 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Song arrangement | **mc-arrangement-arch** | Give a song an arc by changing when layers enter and leave |
 | Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
 | Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
+| Grant budget reconciliation | **Nonprofit Budget Narrative** | Check actual quantity × rate, reconcile totals and hold unclear cost eligibility for human finance review |
 
-**Latest qualification beyond the nineteen methods:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None changes the 19-method shelf or the illustrated graph's positive counts.
+**Additional reviewed candidates outside the featured shelf:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None of those creative reviews adds a featured method. [The budget method and scorecard defect have separate qualification evidence](docs/reviews/2026-11-03-q7-budget-valuable-reference-and-workbook-formula-gate.md).
 
-**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
+**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-q7-20261103.json).
 
 **Start here:** [Browse all capability areas](registry/capability-directory.json) · [Search reviewed names](registry/governed-review-name-index.json) · [See concrete examples](docs/capability-quickstart.md).
 

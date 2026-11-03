@@ -5258,5 +5258,22 @@
     "security_not_run": true,
     "review_doc": "docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md",
     "machine_ledger": "registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json"
+  },
+  "q7_current_consumer_shelf_20261103": {
+    "as_of": "2026-11-03",
+    "source_evidence": "registry/discovery/q7-budget-workbook-and-valuable-reference-20261103.json",
+    "current_shelf": "registry/consumer-positive-references-q7-20261103.json",
+    "current_graph": "docs/assets/capability-evidence-and-valued-methods-q7-20261103.svg",
+    "current_machine_graph": "registry/discovery/capability-evidence-and-valued-methods-q7-20261103.json",
+    "valuable_reference_methods": 20,
+    "represented_canonical_domains": 10,
+    "represented_subdomains": 19,
+    "unchanged_use_approvals": 0,
+    "historical_q6_shelf_19_preserved": true,
+    "workbooks_xml_static_inspected": 3,
+    "workbook_formula_tags": 130,
+    "scorecard_incomplete_gate_go_defect": "OPEN",
+    "workbook_spreadsheet_engine_test": "not-run",
+    "source_agent_behavior_test": "not-run"
   }
 }
