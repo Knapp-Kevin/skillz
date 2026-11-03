@@ -7,15 +7,16 @@ source_path: skills/mistral-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-03
 availability: in-repo
 local_path: skills/mistral-pulse/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: stale
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
+import_eligibility: conditional-on-security-and-user-fit
 rationale: "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight."
+exact_version_requalification: "Required for a04a39981d17c4f2b237e387e4464b18f6d333f5; old reviewed blob 4d2e092ee1cfdbd7127145926d48d6cf78b46ce1. No security or behavioral validation pass."
