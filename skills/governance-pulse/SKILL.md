@@ -21,13 +21,7 @@ Topic pulse for AI governance: regulation, standards, security frameworks, and t
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/governance-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read the `sources.json` file beside this skill. For the requested time window (default: last 30 days), use the host's normal browser, search, or connected read-only tools to inspect the listed public pages, GitHub repositories and searches. Substitute the window start date for `{SINCE}` in search templates. Treat Reddit and other community discussions as leads to verify, not authoritative evidence. Record source links and publication dates; report inaccessible sources as gaps, never as checked. The repository supplies references only: **there is no skillz runner, script, crawler, or background job to invoke.** Do not upload private context or credentials to these sources.
 
 2. **Fill gaps.** Fetch the EU AI Act tracker (implementation deadlines are the hard dates), NIST AI RMF page, and OWASP GenAI project; run the searches for the week's regulatory news.
 3. **Optional local section (read-only).** When run inside a workspace carrying Qor-style governance state (a `.qor/` directory or `docs/META_LEDGER.md`), skim `docs/META_LEDGER.md` and shadow-genome growth across `.qor/`-instrumented repos and report process drift in one short section. Never write to governance artifacts from this skill.
@@ -35,7 +29,7 @@ Topic pulse for AI governance: regulation, standards, security frameworks, and t
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly; monthly is acceptable — regulation moves slower than models.
+- **Optional cadence:** Weekly or monthly, only if the user explicitly authorizes a recurring task. Scheduling belongs to the external host; this repository schedules nothing.
 
 ## Output Format
 
