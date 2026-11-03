@@ -1,0 +1,423 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "artifact": "gitskills-g1-g2-unreachable-recheck",
+ "method": "Second anonymous git ls-remote HEAD for every G1/G2 lead that failed to clone. GitHub serves renamed repositories through redirects for git, so a credential prompt indicates a deleted, private or access-restricted repository; the GitHub web/API was not reachable from this host to confirm further.",
+ "results": [
+  {
+   "repository": "CoolAssPuppy/slide-nerds",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "JaviMontano/mao-discovery-framework",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "GeorgeDoors888/GB-Power-Market-JJ",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Dealix-sa/dealix",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Hei33enberg/wallpaper6-pattern-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Jinstronda/homodeus-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "AmnadTaowsoam/CerebraSkills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Demerzels-lab/elsamultiskillagent",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "LJT-520/openClaw-backup",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "MDSIXONE/ResumeOS",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "HubDev-AI/godot-ai-builder",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "MoeenNehzati/video",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Pavel-Kravchenko/Bioinformatics",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "ParkChanNeul/ChanneulPark_HarnessMaker",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "OpticaLis/opticup-monorepo",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "PeterSalvato/formwork",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Solaris-CET/solaris-cet",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "SilverPham08091998/ai-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "YH-05/quants",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "TheYGN/masterpet",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "PippoluMatt/ros-devkit",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "StefanDockhorn/migrate_informatica_to_databricks",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "abzhaw/juliaz_agents",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Totes-MickGOATs/r8eo-x-unity",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "Zereo0317/legal-engineering-system",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "VCasecnikovs/klava",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "amijadoamijado/sd003",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "baljadrawy/SafeServe",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "bachdyon/video-automator-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "arkangelai/skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "anyi-econ/china-public-debt",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "bankosegger/claude-austria-law",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "bpainter/composable-dxp-claude-marketplace",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "catallactics/via-latina",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "cic8822-cpu/20260710",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "edri2or/or-aios",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "conjure-3301/skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "easttxkravmaga/Claude",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "dsuth10/Joshua",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "elbardii/ft-irc-mentor",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "fatcrapinmybutt/cortex-osint",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "gooseworks-ai/gooseworks-ads-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "fukukei23/claude-config",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "izetmolla/uetapp-v3",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "grahama1970/agent-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "jrachmanas/cv-tailor",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "itda-skills/skills.pub",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "kmansoni/ECOMANSONI",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "kent013/zenigame-fx",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "liq22/P02_agent_langraph",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "lightenup/dotfiles",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "liuminxin45/resume-screener",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "matthiola0/houserules-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "knightdx91-alt/Awakened-Calamity",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "masseater/claude-code-plugin",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "mtatwercom/masarat-erp",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "moongci38-oss/forge",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "newkub/skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "munalabs/ares",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "oktopi-org/dev-plugin",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "poolsideai/skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "persian-tools/persian-tools",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "prapanch/anima-salus",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "prepforeverything/prep-marketing",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "pongpitag/link-agent",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "rolandknight/voice-chatbot",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "sadlang/s-programming-language",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "sellingascode/secronjob-marketplace",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "sarthak683/GTM-tool",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "sales-skills/sales",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "starActive/courses-workshop-plugins",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "rudironsoni/Ghost",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "stgmt/dev-pomogator",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "therealproblem/agent-team",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "steviem101/market-entry-secrets",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "tonyzphan/PowerKPI_AI",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "whitehair-failure/lyrics_back",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "zachsrosen/pb-operations-suite",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "zgbrenner/agentcounsel",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "zirz1911/Littar-codex-skills",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "zxmengde/Playgroud",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "xpickey/ice-skills-claude-plugin",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  },
+  {
+   "repository": "zen-apps/spec-driven-app",
+   "recheck": "unreachable",
+   "detail": "fatal: could not read Username for 'https://github.com': terminal prompts disabl"
+  }
+ ]
+}
