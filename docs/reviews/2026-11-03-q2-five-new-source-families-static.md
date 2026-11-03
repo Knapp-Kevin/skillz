@@ -78,6 +78,20 @@ Routing entries are in the [capability routing file](../../registry/discovery/q2
   - **Credentials redacted:** vendor-published sandbox credentials and seeded fixture secrets are not hard fails, and are redacted here.
   - **Lapsed deadline:** the Myinfo v3/v4 migration deadline (end September 2026) has passed.
 
+## Cross-corpus identity check (Q1 + Q2, 240 records)
+
+This answers the open item in the [Q1 integrity audit](2026-11-03-q1-113-ledger-invariant-audit.md). Every check below is an exact string match on the 40-hex git identities recorded at the pins.
+
+| Check | Result |
+|---|---|
+| Distinct SKILL.md blobs / package trees across the 240 records | 240 / 240 (no within-tranche collisions) |
+| Any of these blobs or trees in any other tracked skillz file under `registry/`, `skills/` or `docs/` (governed records, four-source ledgers, first-party and pinned corpora, other discovery evidence) | **0 / 0** |
+| Blobs or trees in G1–G3 package listings from other repositories | **0 / 0** |
+| Blobs present in the GitSkills July 2026 snapshot | 127 of 240 (the rest are new or changed since July) |
+| Of those 127, held by any other repository in GitSkills | **0** (no exact copies elsewhere in that snapshot) |
+
+**Not checked:** near-duplicates (modified copies) and repositories outside GitSkills and the G-tranches. A matching blob would also not prove full package equivalence.
+
 ## Method and controls
 
 - **Review.** 16 parallel read-only reviewers worked on disjoint, size-balanced batches. Coverage is stated per package. Several sales SKILL.md files over 60 KB were characterised within the allowance.
