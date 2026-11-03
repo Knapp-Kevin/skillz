@@ -5292,5 +5292,20 @@
     "approved_as_written": 0,
     "check_command": "node scripts/build-capability-dashboard.mjs --check",
     "self_test_command": "node scripts/build-capability-dashboard.mjs --self-test"
+  },
+  "q7_source_workbook_real_column_correction_20261103": {
+    "as_of": "2026-11-03",
+    "source_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+    "review": "docs/reviews/2026-11-03-q7-scorecard-source-column-reconciliation.md",
+    "ledger": "registry/discovery/q7-scorecard-source-column-reconciliation-20261103.json",
+    "correct_gate_input": "Gates!B2:B7",
+    "original_wrong_formula_input": "Gates!C2:C7",
+    "publisher_example_explicit_no": "Gates!B4",
+    "legacy_receipts_source_fidelity": "superseded",
+    "replay_new_18_cases": "PASS on synthetic",
+    "acceptance_fixture_new_10_cases": "PASS on synthetic",
+    "source_workbook_engine_execution": "not-run",
+    "unchanged_use_approved": false,
+    "public_shelf_and_dashboard_unchanged": true
   }
 }
