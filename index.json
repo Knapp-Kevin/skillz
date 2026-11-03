@@ -5197,5 +5197,18 @@
     "disjoint_music_svg_static": "registry/discovery/q6-independent-music-svg-three-static-20261103.json",
     "all_corpus_eligible_denominator": null,
     "measurement_caution": "Q4 research candidate links include rejected evidence; Q6 selected reference methods are bounded sample and not complete corpus. Do not sum, conflate or claim all-corpus maturity. Zero new install approvals."
+  },
+  "first_visitor_full_corpus_route_20261103": {
+    "as_of": "2026-11-03",
+    "reason": "Externally observed first reply fixated on bounded featured shelf; a more explicit prompt produced a second sample, highlighting prompt dependence",
+    "repair": "Domain-first README and agent entry navigation, 19 as featured sample, zero visible as not-on-shelf",
+    "regression": "docs/reviews/2026-11-03-first-visitor-full-corpus-regression.md",
+    "search_frontier_is_not_featured_shelf": true,
+    "domains": 33,
+    "subdomains": 247,
+    "bounded_reference_methods": 19,
+    "unchanged_use_approvals": 0,
+    "historical_q1q5_static_decisions_unchanged": 5508,
+    "behavioral_external_retest": "not-run"
   }
 }
