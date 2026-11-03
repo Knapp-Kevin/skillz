@@ -1,0 +1,1041 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "artifact": "gitskills-g1-capability-coverage",
+ "how_to_use": "A returning consumer agent can compare its user's skills against a domain row: the verified repositories are pinned discovery leads to inspect (registry/discovery/gitskills-g1-verified-source-identities-20261103.json), and method families list concrete alternative approaches. Nothing here is approved or installable; any reuse requires exact-version review under docs/skill-verification.md.",
+ "gap_status_rule": "NEW-DOMAIN-CANDIDATE = heuristic domain absent from registry/capability-directory.json; UNDERSERVED-IN-SKILLZ = fewer than 10 directory examples today",
+ "domains": [
+  {
+   "domain": "unclassified",
+   "distinct_contents": 598539,
+   "novel_representatives": 239111,
+   "owners": 85872,
+   "repositories": 106634,
+   "skillz_directory_examples_now": null,
+   "g1_verified_original_author_repositories": [],
+   "g1_first_class_packages_listed_in_domain": 2082,
+   "skillz_gap_status": "UNCLASSIFIED"
+  },
+  {
+   "domain": "agent-mcp-development",
+   "distinct_contents": 224793,
+   "novel_representatives": 127355,
+   "owners": 60370,
+   "repositories": 74419,
+   "skillz_directory_examples_now": 86,
+   "g1_verified_original_author_repositories": [
+    "AvaTar-ArTs/my-codex",
+    "d-morrison/ai-config",
+    "hainamchung/agent-assistant",
+    "linkxzhou/build-your-own-x-skills",
+    "sebastianspicker/rae",
+    "tae2089/agent-team",
+    "whilmarbitoco/agent-skills",
+    "ziri22/agency-roster"
+   ],
+   "g1_first_class_packages_listed_in_domain": 658,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "software-engineering",
+   "distinct_contents": 174411,
+   "novel_representatives": 86340,
+   "owners": 54870,
+   "repositories": 64592,
+   "skillz_directory_examples_now": 513,
+   "g1_verified_original_author_repositories": [
+    "AndreVianna/aid-methodology",
+    "Ditto190/crispy-nextjs-turborepo-monorepo",
+    "Hey-Viswa/-claude-design-system-skills",
+    "WangYao-GoGoGo/architecture-agent-skills",
+    "baneeishaque/ai-suite",
+    "bhubbard/skills",
+    "burakdmir/abp-skills",
+    "emiljuchnikowski/smartsoft001",
+    "space-sunrise/fish-station",
+    "spqw/skill-observable-framework",
+    "valec3/Agents.skills.md"
+   ],
+   "g1_first_class_packages_listed_in_domain": 597,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "testing",
+   "distinct_contents": 113676,
+   "novel_representatives": 56908,
+   "owners": 41324,
+   "repositories": 48346,
+   "skillz_directory_examples_now": 65,
+   "g1_verified_original_author_repositories": [
+    "0disoft/mustflow",
+    "AZANIR/qa-skills",
+    "Hakkadaikon/hymme",
+    "Luqman-Ud-Din/blackbox-qa-agent",
+    "PramodDutta/qaskills",
+    "adbertram/cli-tools",
+    "carlosmarte/agents-skills-kit",
+    "engremran07/gsmvault",
+    "otey247/AutoTest",
+    "proffesor-for-testing/agentic-qe"
+   ],
+   "g1_first_class_packages_listed_in_domain": 438,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "finance",
+   "distinct_contents": 87867,
+   "novel_representatives": 55546,
+   "owners": 28138,
+   "repositories": 31844,
+   "skillz_directory_examples_now": 28,
+   "g1_verified_original_author_repositories": [
+    "JadeGate/jadegate",
+    "Prism-Shadow/GDPevo",
+    "aifinlab/FinClaw",
+    "apideck-libraries/api-skills",
+    "bencharoenwong/parallax-workflows",
+    "d-wwei/openclaw-financial-services",
+    "gururafiki/muffin-agent",
+    "jupid-tax/jupid-skills",
+    "jwangkun/claude-for-financial-services-cn",
+    "testland/qa",
+    "tianfh080058-gif/financial-codex-workspace"
+   ],
+   "g1_first_class_packages_listed_in_domain": 594,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "security",
+   "distinct_contents": 81452,
+   "novel_representatives": 37935,
+   "owners": 22782,
+   "repositories": 25722,
+   "skillz_directory_examples_now": 85,
+   "g1_verified_original_author_repositories": [
+    "Aradotso/security-skills",
+    "DevelopersCoffee/java-cwe-security-skills",
+    "Omar-Elhorbity/pentest-agent",
+    "abdulbasit742/anydesk",
+    "agentuity/example-tanstack-turborepo",
+    "at-src/cold-box",
+    "birdman4512/forensic-claw",
+    "firebitsbr/OWASP-claudeskills",
+    "maruakshay/mii-ai-security",
+    "riparino/Claude-Cyber",
+    "sjinks/ai-owasp-skillset",
+    "wyre-technology/msp-claude-plugins"
+   ],
+   "g1_first_class_packages_listed_in_domain": 508,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "cloud-devops",
+   "distinct_contents": 70344,
+   "novel_representatives": 37980,
+   "owners": 21653,
+   "repositories": 24499,
+   "skillz_directory_examples_now": 140,
+   "g1_verified_original_author_repositories": [
+    "CloreM-Fine/kimi-code-skill-adapters",
+    "LongLeo287/OmniClaw",
+    "Raishin/vanguard-frontier-agentic",
+    "Undermybelt/hermes-skills",
+    "WayfarerLabs/nerftools",
+    "chrishuffman5/awscliskills",
+    "david-2814/claw-aws",
+    "frootai/frootai",
+    "nemuba/azure-devops-mcp-skills",
+    "nixopus/nixopus",
+    "sasky80/ado-reviewer",
+    "sixers/ovhcloud-cli-skill"
+   ],
+   "g1_first_class_packages_listed_in_domain": 412,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "memory-context",
+   "distinct_contents": 66242,
+   "novel_representatives": 38222,
+   "owners": 26900,
+   "repositories": 30520,
+   "skillz_directory_examples_now": 25,
+   "g1_verified_original_author_repositories": [
+    "CowDogMoo/squad-agents",
+    "Goodnight77/rag-skills",
+    "HeadySystems/Heady-AI",
+    "Jang4360/Eumgil",
+    "Yabuku-xD/contextforge",
+    "chambear2809/splunk-cisco-skills",
+    "nowledge-co/community",
+    "tenbj/----",
+    "x8k/ethical-ai-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 296,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "ux-ui",
+   "distinct_contents": 49503,
+   "novel_representatives": 26508,
+   "owners": 22584,
+   "repositories": 24810,
+   "skillz_directory_examples_now": 30,
+   "g1_verified_original_author_repositories": [
+    "887/personalities",
+    "Big0range/vane",
+    "Dragoon0x/everything-design-taste",
+    "PeakTai/wok-ui",
+    "TechsioCZ/new-engine",
+    "borderux/recursica-knowledge",
+    "coastdigitalgroup/coastai-skills",
+    "genonai/uiux-design",
+    "jiaiyan/naive-ui-skills",
+    "nextscape/ui-design-grounding",
+    "ryanmaclean/bop",
+    "sextondjc/agentic",
+    "standardbeagle/standardbeagle-tools",
+    "zone1987/claude-a-dev-team"
+   ],
+   "g1_first_class_packages_listed_in_domain": 318,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "technical-writing",
+   "distinct_contents": 40525,
+   "novel_representatives": 19211,
+   "owners": 20378,
+   "repositories": 23105,
+   "skillz_directory_examples_now": 27,
+   "g1_verified_original_author_repositories": [
+    "KayKaspers/Nova-Development-Framework",
+    "genichin/stage-pilot",
+    "hk-vk/skills",
+    "kooda-ai/skills",
+    "luongnv89/asm",
+    "machenjie/rd-skills",
+    "olorehq/olore",
+    "shibasab/todoapp",
+    "spencerbeggs/design-docs-plugin",
+    "steph-dove/klaussy-agents",
+    "umbraco/Umbraco-CMS-Backoffice-Skills",
+    "wepn13232/element-plus-skills",
+    "zio/zio-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 277,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "medicine",
+   "distinct_contents": 37250,
+   "novel_representatives": 23832,
+   "owners": 14875,
+   "repositories": 16381,
+   "skillz_directory_examples_now": 5,
+   "g1_verified_original_author_repositories": [
+    "GoldenZero/skills",
+    "Open-Medica/open-medical-skills",
+    "aks-builds/healthcareskills",
+    "aws-samples/sample-ai-agent-skills",
+    "dromlakhani/MD2SKILL",
+    "langcare/langcare-mcp-fhir",
+    "mcorbett51090/RavenClaude",
+    "ndpvt-web/arxiv-claude-skills",
+    "netdata/skills",
+    "nroze22/TalosixSkills",
+    "samuelBury/cowork-ea-pharma-skills",
+    "sqlcss/copilot-agents",
+    "writer/skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 584,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "analytics",
+   "distinct_contents": 32728,
+   "novel_representatives": 19106,
+   "owners": 14206,
+   "repositories": 15380,
+   "skillz_directory_examples_now": 39,
+   "g1_verified_original_author_repositories": [
+    "ThinhTP204/fk-skills",
+    "UitbreidenOS/UitKit",
+    "cloudthinker-ai/CloudSkills",
+    "cockroachlabs/cockroach-university-assets",
+    "grafana/metrics-drilldown",
+    "paulpas/agent-skill-router",
+    "quantskills/skill-quant-factor-directional-alpha",
+    "rajrao/mypublicnotes",
+    "readdle/spark-cli-skills",
+    "secretkeylabs/sats-connect-skills",
+    "skforecast/skforecast",
+    "spark-harness/harness-repo"
+   ],
+   "g1_first_class_packages_listed_in_domain": 317,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "marketing",
+   "distinct_contents": 28757,
+   "novel_representatives": 14146,
+   "owners": 9112,
+   "repositories": 9877,
+   "skillz_directory_examples_now": 31,
+   "g1_verified_original_author_repositories": [
+    "Mysterio6193/Helix",
+    "beer-sakthai/Sak-Family-Agent",
+    "brainbytes-dev/everything-claude-marketing",
+    "caishengold/ai-agent-ops",
+    "findbene/skills",
+    "forbotsake/forbotsake",
+    "iblai/vibe-marketing",
+    "norahe0304-art/30x-seo",
+    "scumunna/programmatic-skills",
+    "smarks26/social-media-skills",
+    "the-nam-shub/e5-real-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 472,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "business",
+   "distinct_contents": 24279,
+   "novel_representatives": 13557,
+   "owners": 10404,
+   "repositories": 11252,
+   "skillz_directory_examples_now": 17,
+   "g1_verified_original_author_repositories": [
+    "HamishT26/Beyonder-Real-True-Journey",
+    "LivTorgEx/strategy-skill",
+    "Mgancita/strategy-skills",
+    "Oz-Networks/mirra-sdk",
+    "Simon-YHKim/AI-MBB-Consultant",
+    "baojie/shiji-kb",
+    "grandcamel/GitLab-Assistant-Skills",
+    "legendtkl/agentic-skill-router",
+    "omriariav/workspace-cli",
+    "opendatahub-io/strat-creator",
+    "srednoff888-art/srednoff-os"
+   ],
+   "g1_first_class_packages_listed_in_domain": 247,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "time-productivity",
+   "distinct_contents": 18319,
+   "novel_representatives": 9989,
+   "owners": 8640,
+   "repositories": 9159,
+   "skillz_directory_examples_now": 13,
+   "g1_verified_original_author_repositories": [
+    "DracoUnion/dankoe-skills",
+    "Pyfagorass/bookofspells",
+    "Treasoni/Study-Notes",
+    "bytesagain/ai-skills",
+    "gutolota/obsidian-brain",
+    "hilaryosborne/skills",
+    "mikonos/LLM-GTD",
+    "neckarshore-skills/obsidian-vault-autopilot",
+    "rexchengm/fios-skills",
+    "tiagopgr/skills-ia",
+    "vivy-yi/Greater-China-Legal"
+   ],
+   "g1_first_class_packages_listed_in_domain": 145,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "research",
+   "distinct_contents": 17547,
+   "novel_representatives": 9526,
+   "owners": 7726,
+   "repositories": 8347,
+   "skillz_directory_examples_now": 79,
+   "g1_verified_original_author_repositories": [
+    "AlterLab-IEU/AlterLab-Academic-Skills",
+    "CoveMB/research-skills-plugin",
+    "Picrew/auto-academic-sildes",
+    "ShanYiHao/codex-neurips-writing-skills",
+    "WILLOSCAR/research-units-pipeline-skills",
+    "YuanyuanMa03/academic-research-skills",
+    "genomike/seminario_de_investigacion",
+    "huangzesen/heliosi-501-corpus-skill",
+    "joshzyj/open-scholar-skill",
+    "pkgunboat/ScholarWriting",
+    "psyduckler/aeo-skills",
+    "santosomar/mitre-attack-agent-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 176,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "energy-environment*",
+   "distinct_contents": 16835,
+   "novel_representatives": 11152,
+   "owners": 7293,
+   "repositories": 7820,
+   "skillz_directory_examples_now": null,
+   "g1_verified_original_author_repositories": [
+    "ActiveInferenceInstitute/ActiveInferAnts",
+    "Impertio-Studio/TailwindCSS-Claude-Skill-Package",
+    "Linkai0905/ESG_monthly_agent",
+    "ShaneLogic/SolarLab",
+    "Thedoctorjpg/skit-dance",
+    "XuShuwenn/RedAct",
+    "bioepic-data/ecosim-agent",
+    "energychain/cernion-energy-tools",
+    "leesum-in/carbon-design-system-skills",
+    "wkqian06/LifeEnergyManager"
+   ],
+   "g1_first_class_packages_listed_in_domain": 288,
+   "skillz_gap_status": "NEW-DOMAIN-CANDIDATE"
+  },
+  {
+   "domain": "science",
+   "distinct_contents": 16688,
+   "novel_representatives": 10114,
+   "owners": 3520,
+   "repositories": 3788,
+   "skillz_directory_examples_now": 41,
+   "g1_verified_original_author_repositories": [
+    "InternScience/DrClaw",
+    "PharMolix/OpenBioMed",
+    "Unity-Technologies/PhysicsExamples2D",
+    "biomaps-infra/blender-opencode",
+    "boltz-bio/boltz-api-skills",
+    "fmschulz/omics-skills",
+    "gjbex/scientific-computing-skills",
+    "golab-ai/Huntianling",
+    "swaruplab/operon",
+    "vimalinx/bio-agent"
+   ],
+   "g1_first_class_packages_listed_in_domain": 120,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "education",
+   "distinct_contents": 15676,
+   "novel_representatives": 9411,
+   "owners": 7711,
+   "repositories": 8280,
+   "skillz_directory_examples_now": 5,
+   "g1_verified_original_author_repositories": [
+    "cajias/claude-skills",
+    "canedy/devrecess-sessions",
+    "carlvellotti/codex-pm-course",
+    "flywifi/educator-tools-k12-public",
+    "hezkvectory/hermes-edu-skills",
+    "miquelamor-ai/corpusFJE",
+    "qizhitang/xiaozhi-skills",
+    "radiant-ai-hub/pyrsm",
+    "robbywh/loyalty-adapter",
+    "wojons/je-ne-sais-quoi",
+    "xDido/chiron"
+   ],
+   "g1_first_class_packages_listed_in_domain": 184,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "planning",
+   "distinct_contents": 15172,
+   "novel_representatives": 7064,
+   "owners": 7716,
+   "repositories": 8306,
+   "skillz_directory_examples_now": 19,
+   "g1_verified_original_author_repositories": [
+    "AgentesIntegrados/gsd-pt-br-v2",
+    "EasyCode-Obsidian/workflow-architect",
+    "NVHoaiDT/estimate-skills",
+    "OceanEyeFF/servo",
+    "cfwl100/onology_dsl",
+    "diShine-digital-agency/SHINE-Code-System",
+    "equinor/neqsim-community-skills",
+    "haru860/takumi-method-agent",
+    "pulumi/pulumi-awsx",
+    "thecomputer07/qsd",
+    "trevi00/khaness",
+    "yogsoth-ai/de-anthropocentric-research-engine"
+   ],
+   "g1_first_class_packages_listed_in_domain": 98,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "audio-voice-sound",
+   "distinct_contents": 13644,
+   "novel_representatives": 7921,
+   "owners": 6376,
+   "repositories": 6839,
+   "skillz_directory_examples_now": 3,
+   "g1_verified_original_author_repositories": [
+    "JoshuaShepherd/my-skills",
+    "RJSSUE/podcast-workflow",
+    "SpiralCloudOmega/DevTeam6",
+    "angelarose210/ghostwriter",
+    "danielrosehill/Claude-Transcription-Plugin",
+    "dingkwang/podcastcut-skills",
+    "lancejames221b/openjarvis",
+    "lumenhelixsolutions/187WEB",
+    "mojowebs/digz-skills-arsenal",
+    "shishir28/EvoClaw",
+    "sidir13/test_moi",
+    "team-telnyx/ai"
+   ],
+   "g1_first_class_packages_listed_in_domain": 153,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "law",
+   "distinct_contents": 12936,
+   "novel_representatives": 9316,
+   "owners": 3321,
+   "repositories": 3538,
+   "skillz_directory_examples_now": 4,
+   "g1_verified_original_author_repositories": [
+    "Matrixx0070/sudo-skills",
+    "abdullahatrash/flowleap-cli",
+    "codearranger/claude-legal",
+    "crankshift/lawpowers",
+    "judicialmind/legal-skills",
+    "patsnap/skills",
+    "pixari/claude-per-il-diritto-italiano",
+    "sboghossian/mini-claude-for-legal",
+    "scottmss/hse-nz-au-skills",
+    "venturecrane/ss-console"
+   ],
+   "g1_first_class_packages_listed_in_domain": 162,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "product",
+   "distinct_contents": 12726,
+   "novel_representatives": 6089,
+   "owners": 6644,
+   "repositories": 7161,
+   "skillz_directory_examples_now": 21,
+   "g1_verified_original_author_repositories": [
+    "Consiliency/agent-harness",
+    "J3S5E/setup",
+    "chaimt/agentic_engineer_course",
+    "devfullcycle/mba-ia-dev-workflow",
+    "itseffi/productize",
+    "josemerca/mercadona-user-story-toolkit",
+    "samarv/Shanon",
+    "timywel/prompt-lab",
+    "wiggitywhitney/commit-story"
+   ],
+   "g1_first_class_packages_listed_in_domain": 75,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "robotics-iot",
+   "distinct_contents": 11582,
+   "novel_representatives": 7963,
+   "owners": 5064,
+   "repositories": 5370,
+   "skillz_directory_examples_now": 8,
+   "g1_verified_original_author_repositories": [
+    "IITA-Proyectos/iita-vibe-robotics-martes-SL",
+    "MIUAV/vibe-coding-ros2",
+    "Ming-Start/robotics-skills",
+    "MobyNL/pytemon",
+    "RiddheshMore/everything-ros2",
+    "SnapLogic/snaplogic-robotframework-examples",
+    "abelrguezr/hacktricks-skills",
+    "bensonlee5/openral",
+    "easyzoom/aix-skills",
+    "elliewlh2094/codex-robotics-skills",
+    "rahulbachina/robotics-skills",
+    "spacemit-robotics/robot-skills",
+    "therebelrobot/dinodeck-2026",
+    "tinkermonkey/documentation_robotics"
+   ],
+   "g1_first_class_packages_listed_in_domain": 239,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "career",
+   "distinct_contents": 11187,
+   "novel_representatives": 6613,
+   "owners": 6701,
+   "repositories": 7087,
+   "skillz_directory_examples_now": 7,
+   "g1_verified_original_author_repositories": [
+    "CurvineIO/curvine",
+    "KalharPandya/careerops",
+    "SpeciLiam/CodexSkills",
+    "TashanGKD/china-campus-resume-agent-kit",
+    "aommi/applycling",
+    "gethouston/houston",
+    "ihandley/opencode-config",
+    "nolte/claude-shared",
+    "sarthak22gaur/tailord",
+    "tmargolis/career-navigator",
+    "tstapler/dotfiles",
+    "wenmin-wu/ds-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 104,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "manufacturing-industrial*",
+   "distinct_contents": 11073,
+   "novel_representatives": 6611,
+   "owners": 4790,
+   "repositories": 5125,
+   "skillz_directory_examples_now": null,
+   "g1_verified_original_author_repositories": [
+    "Construct-AI-primary/agent-companies-core",
+    "Perlatours/factory",
+    "ShoumikSaha/agent-skill-security",
+    "TuringWorks/civstack",
+    "e2its/myrmion-AI-factory",
+    "leha-creator/youth_bot",
+    "msaad00/agent-bom",
+    "rweisssieker-xp/PowerBi-Codex-Plugin"
+   ],
+   "g1_first_class_packages_listed_in_domain": 82,
+   "skillz_gap_status": "NEW-DOMAIN-CANDIDATE"
+  },
+  {
+   "domain": "fiction-narrative-worldbuilding",
+   "distinct_contents": 8883,
+   "novel_representatives": 5090,
+   "owners": 3827,
+   "repositories": 4033,
+   "skillz_directory_examples_now": 3,
+   "g1_verified_original_author_repositories": [
+    "2799662352/ai-image-master",
+    "BaranziniLab/biorouter-skills",
+    "ImDanielGitHub/novel-craft",
+    "LJC-god/AI_novel",
+    "Nkzono99/paperops",
+    "arm2arm/AstroAgentAssistant",
+    "chen893/--skill",
+    "dama-cyber/Distilled-Novel-Toolbox",
+    "kavao/monogatari-coach",
+    "markus-michalski/storyforge",
+    "notnotype/neuro-book",
+    "wddxh/ShortVideoDirector"
+   ],
+   "g1_first_class_packages_listed_in_domain": 122,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "sales",
+   "distinct_contents": 8357,
+   "novel_representatives": 5274,
+   "owners": 2842,
+   "repositories": 2980,
+   "skillz_directory_examples_now": 4,
+   "g1_verified_original_author_repositories": [
+    "Avinava/sf-documentation-knowledge",
+    "Joresti/grocery-hack",
+    "heath-gtm/Skill-Builder",
+    "jared-hawkins-young/claude-trackers",
+    "keboola/crm-plugin",
+    "mittuled/skill-os",
+    "tdeschamps/modjo-sales-agent",
+    "wdm0006/evergreen-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 134,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "3d-cad-animation",
+   "distinct_contents": 8129,
+   "novel_representatives": 4759,
+   "owners": 4197,
+   "repositories": 4456,
+   "skillz_directory_examples_now": 7,
+   "g1_verified_original_author_repositories": [
+    "Kright/unreal-engine-vite-skills",
+    "LgrappaG/Workflows-Agents",
+    "Ranch-Hand-Robotics/rde-urdf",
+    "ZETAAAAAAAAAAA/TAAgent",
+    "arthurle3210/SwpilotCLI",
+    "dcc-mcp/dcc-mcp-blender",
+    "forevdev/Lovable-Skills",
+    "frederico-kluser/whatsapp-bot",
+    "heitorrapcinski/CAD-Claude-Plugin",
+    "kevinbadi/blender-skills",
+    "nexu-io/motion-anything",
+    "nguyenvanduocit/pandaConcept",
+    "thedaviddias/Front-End-Checklist"
+   ],
+   "g1_first_class_packages_listed_in_domain": 222,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "visual-design",
+   "distinct_contents": 8005,
+   "novel_representatives": 4239,
+   "owners": 4597,
+   "repositories": 4840,
+   "skillz_directory_examples_now": 35,
+   "g1_verified_original_author_repositories": [
+    "ADu2021/skillXiv",
+    "DoIT-Artificial-Intelligence/youtube-to-docs",
+    "Emasoft/ai-maestro-webdesign",
+    "cxcscmu/SkillLearnBench",
+    "jose-compu/logosdb",
+    "liyafly/epub-handbook",
+    "nahrun1682/paper2poster",
+    "suumo2246/parfum-viewagent",
+    "vm0-ai/vm0-skills",
+    "weshopai/skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 100,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "video-film",
+   "distinct_contents": 7812,
+   "novel_representatives": 4841,
+   "owners": 3535,
+   "repositories": 3698,
+   "skillz_directory_examples_now": 6,
+   "g1_verified_original_author_repositories": [
+    "45ck/content-machine",
+    "Runninghcm/skills",
+    "SeaCloudAI/seacloud-cli",
+    "T0UGH/videoclaw",
+    "apicurius/VideoRLM",
+    "baofeng-tech/agent-skills-io",
+    "damionrashford/media-os",
+    "janpereira-dev/skillsCurate",
+    "liuyunlong2021-wq/jiucaihezi-v6",
+    "mcbaivn/openclaw-skills-mcbai",
+    "smyx-sunjinhui/smyx-open-claw-skills",
+    "steliosot/comfy-agent"
+   ],
+   "g1_first_class_packages_listed_in_domain": 182,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "communication",
+   "distinct_contents": 7442,
+   "novel_representatives": 3877,
+   "owners": 4151,
+   "repositories": 4338,
+   "skillz_directory_examples_now": 20,
+   "g1_verified_original_author_repositories": [
+    "AgentiaPT/vela-slides",
+    "Chrisissorry/lazyslides",
+    "FunUd/ai-centric-marp-themes",
+    "PrithviTM-glitch/MassGenProjects",
+    "davideldersveld/Workplace-AI-Process-Decomposition-Framework",
+    "kilip/ductor-skills",
+    "nexvigilant/.true",
+    "sourcelabbg/eudi-knowledge",
+    "vivekgoquest/goquest-presentation-agent-framework"
+   ],
+   "g1_first_class_packages_listed_in_domain": 118,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "hr-people*",
+   "distinct_contents": 5627,
+   "novel_representatives": 3737,
+   "owners": 2519,
+   "repositories": 2637,
+   "skillz_directory_examples_now": null,
+   "g1_verified_original_author_repositories": [
+    "Arnutt-N/hr-ims",
+    "LBAI-Technology-Company/lbai-workspace-kit",
+    "LeadMagic/gtm-skills",
+    "erphq/skills",
+    "krasimir-archive/Talent-Filter",
+    "muhammadwaheedairi/Personal-AI-Employee",
+    "techeer-sv/Career-Skills",
+    "the2hourclo/aieb-thin-plugin",
+    "trycomp-io/comp-skills",
+    "tuanductran/hr-skills",
+    "wangjile200888-eng/hr-skillforge"
+   ],
+   "g1_first_class_packages_listed_in_domain": 139,
+   "skillz_gap_status": "NEW-DOMAIN-CANDIDATE"
+  },
+  {
+   "domain": "wellbeing-lifestyle*",
+   "distinct_contents": 5598,
+   "novel_representatives": 3415,
+   "owners": 2964,
+   "repositories": 3093,
+   "skillz_directory_examples_now": null,
+   "g1_verified_original_author_repositories": [
+    "CrestApps/CrestApps.AgentSkills",
+    "Metta-AI/coworld",
+    "chinkan/RustFox",
+    "claudianus/superliora",
+    "jeffreytse/grimoire-core",
+    "kendrekaran/dietcode",
+    "mvp-ai-lab/mvp-engine",
+    "notnavindu/microwave-as-a-skill",
+    "zhaoyan42/my-recipe"
+   ],
+   "g1_first_class_packages_listed_in_domain": 66,
+   "skillz_gap_status": "NEW-DOMAIN-CANDIDATE"
+  },
+  {
+   "domain": "music-composition",
+   "distinct_contents": 5526,
+   "novel_representatives": 3158,
+   "owners": 2935,
+   "repositories": 3084,
+   "skillz_directory_examples_now": 0,
+   "g1_verified_original_author_repositories": [
+    "BetterPromptme/skills",
+    "IsKenKenYa/skills",
+    "Korben00/ableton-producer-skills",
+    "Wcc723/claude-skill-design-gallery",
+    "djaboxx/iron-static",
+    "jaychempan/coding-with-beat",
+    "netzkontrast/agency"
+   ],
+   "g1_first_class_packages_listed_in_domain": 100,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "game-design",
+   "distinct_contents": 3530,
+   "novel_representatives": 1833,
+   "owners": 1263,
+   "repositories": 1342,
+   "skillz_directory_examples_now": 3,
+   "g1_verified_original_author_repositories": [
+    "925236118/AlphaAgent",
+    "Doctorjellybeans/Mini-Champions-Arena",
+    "Hmbown/Wizards-of-the-Ghosts",
+    "RJAudas/godot-agent-harness",
+    "hhhh124hhhh/godot-mcp",
+    "islee23520/lux",
+    "kimgea/agent-kit",
+    "mflRevan/unity-control-protocol",
+    "ssrjkk/claude-skills",
+    "tranvietanh0/oh-my-game-kit"
+   ],
+   "g1_first_class_packages_listed_in_domain": 90,
+   "skillz_gap_status": "UNDERSERVED-IN-SKILLZ"
+  },
+  {
+   "domain": "ml-accelerators",
+   "distinct_contents": 3510,
+   "novel_representatives": 2210,
+   "owners": 1373,
+   "repositories": 1527,
+   "skillz_directory_examples_now": 19,
+   "g1_verified_original_author_repositories": [
+    "Jerry2423/MoE-Kernel-Agent",
+    "Scientific-Computing-Lab/ParaCodex",
+    "amd/Quark",
+    "hsliuustc0106/vllm-omni-skills",
+    "zkkython/vllm-skills"
+   ],
+   "g1_first_class_packages_listed_in_domain": 182,
+   "skillz_gap_status": "REPRESENTED"
+  },
+  {
+   "domain": "government-public*",
+   "distinct_contents": 1811,
+   "novel_representatives": 1284,
+   "owners": 830,
+   "repositories": 863,
+   "skillz_directory_examples_now": null,
+   "g1_verified_original_author_repositories": [
+    "Be-Civic/be-civic-plugin",
+    "JiminLee-way/Awsome-KRDS-KoreaDesignSystem",
+    "cra-proto/MELB",
+    "fressiarf/sembremos-seguridad",
+    "michalskop/mahdalova-skop",
+    "tractorjuice/arckit-codex",
+    "vladimirkanchev/election-stream-monitor"
+   ],
+   "g1_first_class_packages_listed_in_domain": 35,
+   "skillz_gap_status": "NEW-DOMAIN-CANDIDATE"
+  }
+ ],
+ "multilingual": [
+  {
+   "script": "arabic",
+   "g1_verified_repositories": [
+    "Moshe-ship/hurmoz",
+    "YEEEAE/BRIGHTAI"
+   ]
+  },
+  {
+   "script": "cyrillic",
+   "g1_verified_repositories": [
+    "AlsKozlov/ru-legal",
+    "Desko77/claude-code-skills-1c",
+    "JHamidun/claude-code-config-pack",
+    "SteelMorgan/1c-agent-based-dev-framework",
+    "defin85/1c-runner-agnostic-template"
+   ]
+  },
+  {
+   "script": "devanagari",
+   "g1_verified_repositories": [
+    "INSANE0777/Kagaj"
+   ]
+  },
+  {
+   "script": "hebrew",
+   "g1_verified_repositories": [
+    "levori119/skyboard",
+    "meytalp-dev/ort-training",
+    "shalhevetvardi/shalhevet-agents-bootcamp",
+    "squadcodercom/squadcoder"
+   ]
+  },
+  {
+   "script": "ja-kana",
+   "g1_verified_repositories": [
+    "TOMTOM2004/knowledge",
+    "daishiman/harness-dev",
+    "minicoohei/ai-agent-camp",
+    "tsuji-tomonori/diopside-v3",
+    "ynitto/sandbox",
+    "yongwoon/ywc-agent-toolkit"
+   ]
+  },
+  {
+   "script": "ko",
+   "g1_verified_repositories": [
+    "MonumentalCloud/Poc_mcp_temp",
+    "SAM42-Lab/everything-claude-code-kr",
+    "Yoodaddy0311/artibot",
+    "modu-ai/cowork-plugins"
+   ]
+  },
+  {
+   "script": "thai",
+   "g1_verified_repositories": [
+    "aiunlocked1412/claude-skill-unlock",
+    "charoensakn/bluescope"
+   ]
+  },
+  {
+   "script": "zh-ja-han",
+   "g1_verified_repositories": [
+    "WenJunDuan/Rlues",
+    "aaione/everything-claude-code-zh",
+    "jewdore/openclaw-finclaw-test",
+    "killvxk/cybersecurity-skills-zh",
+    "lornshrimp/Lorn.NovelWriteSkills",
+    "mturac/everything-openai-codex"
+   ]
+  }
+ ],
+ "method_families": {
+  "legal-contract-review": {
+   "on_family": 6,
+   "distinct_methods": 6,
+   "labels": [
+    "anchor-ops-tracked-changes-redline",
+    "evidence-grounded-markup-risk-memo",
+    "statutory-standard-terms-control-path",
+    "single-clause-type-playbook",
+    "eval-harness-for-legal-ai",
+    "deal-team-issue-matrix-silent-change-log"
+   ]
+  },
+  "clinical-documentation": {
+   "on_family": 5,
+   "distinct_methods": 5,
+   "labels": [
+    "manifested-chronological-abstraction-with-provenance-tags",
+    "soap-section-template-with-rules",
+    "compliant-cdi-query-checklist",
+    "atomic-claim-grounding-eval",
+    "vendor-api-ambient-scribe-client"
+   ]
+  },
+  "lesson-and-curriculum-design": {
+   "on_family": 7,
+   "distinct_methods": 7,
+   "labels": [
+    "action-mapping-objective-blueprint-alignment",
+    "template-bound-edp-lesson-plan",
+    "verified-resource-learning-path-with-generative-reflection",
+    "concept-graph-with-depth-cut-and-diagnostic",
+    "typed-tiered-retrieval-practice-deck",
+    "standards-alignment-gap-check",
+    "artifact-pipeline-course-pack-with-autograder"
+   ]
+  },
+  "music-composition": {
+   "on_family": 4,
+   "distinct_methods": 4,
+   "labels": [
+    "notation-dsl-reference-with-progressive-disclosure",
+    "decision-rule-harmony-craft-plus-livecode",
+    "ml-feature-analysis-of-harmony",
+    "remote-parametric-generation-contest"
+   ]
+  },
+  "fiction-drafting-and-revision": {
+   "on_family": 3,
+   "distinct_methods": 3,
+   "labels": [
+    "author-lens-diagnostic-board",
+    "pattern-catalogue-deslop-revision-loop",
+    "multi-agent-serial-pipeline-with-continuity-ledgers"
+   ]
+  },
+  "job-application-tailoring": {
+   "on_family": 1,
+   "distinct_methods": 1,
+   "labels": [
+    "jd-dissection-weighted-bullet-scoring-rebuild"
+   ]
+  },
+  "sales-prospecting-outreach": {
+   "on_family": 5,
+   "distinct_methods": 5,
+   "labels": [
+    "public-signal-evidence-prospecting",
+    "question-sequence-discovery-framework",
+    "live-transcript-turn-coaching",
+    "notes-slotting-fit-scoring-profile",
+    "pitch-narrative-arc-audit-rebuild"
+   ]
+  },
+  "manufacturing-quality": {
+   "on_family": 3,
+   "distinct_methods": 3,
+   "labels": [
+    "aiag-vda-7step-action-priority-fmea",
+    "guideword-qualitative-dfmea",
+    "editable-lss-diagram-generation-with-lint"
+   ]
+  },
+  "energy-and-climate-analysis": {
+   "on_family": 0,
+   "distinct_methods": 0,
+   "labels": []
+  },
+  "grant-and-funding-proposals": {
+   "on_family": 0,
+   "distinct_methods": 0,
+   "labels": []
+  },
+  "accessibility-audit": {
+   "on_family": 5,
+   "distinct_methods": 5,
+   "labels": [
+    "criteria-checklist-review-report",
+    "audit-approve-apply-subagent-gate",
+    "native-mobile-a11y-test-automation",
+    "live-accessibility-tree-semantics-walk",
+    "validated-scan-to-vpat-conformance-report"
+   ]
+  },
+  "translation-localization": {
+   "on_family": 3,
+   "distinct_methods": 3,
+   "labels": [
+    "structure-preserving-llm-markdown-translation",
+    "tool-driven-i18n-coverage-and-qa",
+    "locale-risk-viewpoint-test-design"
+   ]
+  }
+ }
+}
