@@ -45,47 +45,33 @@ function dashboardCsv(model){
 }
 
 function dashboardSvg(model){
- const W=1530,H=1180,parts=[],T=model.totals;
- const rowHeight=40,columnWidth=710;
- const startX=43,startY=367;
- const tile=[{v:T.domains.toString(),label:"CAPABILITY DOMAINS"},{v:`${T.linked_topics}/${T.topics}`,label:"TOPICS WITH RESEARCH LINKS"},{v:T.reference_methods.toString(),label:"METHODS SELECTED TO STUDY"},{v:T.approved_methods.toString(),label:"APPROVED AS WRITTEN"}];
- parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="heading explanation">`);
- parts.push(`<title id="heading">Skillz capability overview: ${T.domains} domains with research leads and selected study methods</title>`);
- parts.push(`<desc id="explanation">Research-linked topics can include rejected candidate links and are not approved skills. ${T.linked_topics} of ${T.topics} topics have research links. A separate bounded featured shelf has ${T.reference_methods} selected methods across ${T.selected_domains} domains and ${T.approved_methods} approved as written. Every domain is listed in the README's accessible table and CSV.</desc>`);
- parts.push(`<defs><linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1729"/><stop offset="1" stop-color="#162744"/></linearGradient><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#39b9ec"/><stop offset="1" stop-color="#5eead4"/></linearGradient><linearGradient id="violet" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6d53b3"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>`);
- parts.push(`<rect width="${W}" height="${H}" rx="26" fill="url(#back)"/>`);
- parts.push(`<circle cx="1320" cy="80" r="240" fill="#2c446d" opacity=".13"/>`);
- parts.push(`<text x="48" y="65" fill="#e9f2ff" font-size="36" font-weight="700" font-family="Arial,Helvetica,sans-serif">Skillz | Capability evidence</text>`);
- parts.push(`<text x="49" y="104" fill="#b7c9de" font-size="19" font-family="Arial,Helvetica,sans-serif">Explore the whole library. Featured methods are only one small, carefully reviewed shelf.</text>`);
- tile.forEach((item,i)=>{const x=48+i*367;parts.push(`<rect x="${x}" y="134" width="350" height="101" rx="13" fill="#1d304a" stroke="#38506a"/>`);parts.push(`<text x="${x+20}" y="180" fill="#f0f6ff" font-size="31" font-weight="700" font-family="Arial,Helvetica,sans-serif">${html(item.v)}</text><text x="${x+20}" y="211" fill="#bfcee1" font-size="14" font-family="Arial,Helvetica,sans-serif">${html(item.label)}</text>`)});
- parts.push(`<rect x="50" y="264" width="16" height="14" rx="3" fill="#4ccddf"/><text x="78" y="278" fill="#d7e5f5" font-size="17" font-family="Arial,Helvetica,sans-serif">Research links (including rejected leads)</text>`);
- parts.push(`<rect x="495" y="264" width="16" height="14" rx="3" fill="#a78bfa"/><text x="523" y="278" fill="#d7e5f5" font-size="17" font-family="Arial,Helvetica,sans-serif">Methods selected to study (not installation clearance)</text>`);
- parts.push(`<text x="50" y="315" fill="#a9bbd2" font-size="16" font-family="Arial,Helvetica,sans-serif">“Not featured” means keep searching, not that a domain lacks useful skills.</text>`);
+ const W=1120,H=1000,parts=[],T=model.totals,startY=369,rh=33;
+ const metrics=[{v:String(T.domains),label:"CAPABILITY AREAS"},{v:`${T.linked_topics} / ${T.topics}`,label:"TOPICS WITH RESEARCH LINKS"},{v:String(T.reference_methods),label:"METHODS SELECTED TO STUDY"},{v:String(T.approved_methods),label:"APPROVED UNCHANGED"}];
+ parts.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-labelledby="chart-heading chart-detail">`);
+ parts.push(`<title id="chart-heading">Skillz capability evidence dashboard for ${T.domains} domains</title><desc id="chart-detail">${T.linked_topics} of ${T.topics} canonical topics have research or candidate links, including some rejected-only sources. ${T.reference_methods} distinct methods are featured for study across ${T.selected_domains} domains; ${T.approved_methods} approved unchanged. The README contains the full accessible table and downloadable CSV.</desc>`);
+ parts.push(`<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1a2f"/><stop offset="1" stop-color="#172b49"/></linearGradient><linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#5eead4"/></linearGradient></defs>`);
+ parts.push(`<rect x="0" y="0" width="${W}" height="${H}" rx="24" fill="url(#bg)"/><circle cx="998" cy="70" r="235" fill="#3e6094" opacity=".11"/>`);
+ parts.push(`<text x="35" y="63" font-size="34" font-weight="700" fill="#f3f7ff" font-family="Arial,Helvetica,sans-serif">Skillz | Capability overview</text><text x="36" y="101" font-size="18" fill="#c1d1e7" font-family="Arial,Helvetica,sans-serif">Find useful methods across the library. A featured shelf is not the entire catalog.</text>`);
+ metrics.forEach(({v,label},i)=>{const x=34+i*270;parts.push(`<rect x="${x}" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="${x+18}" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">${html(v)}</text><text x="${x+18}" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">${html(label)}</text>`)});
+ parts.push(`<rect x="37" y="259" width="14" height="14" rx="3" fill="#4fd5dd"/><text x="61" y="272" fill="#dfebf9" font-size="15" font-family="Arial,Helvetica,sans-serif">Topics with any research link (even rejected)</text><rect x="538" y="259" width="14" height="14" rx="3" fill="#af90f3"/><text x="562" y="272" fill="#dfebf9" font-size="15" font-family="Arial,Helvetica,sans-serif">Methods selected to study, not approved to install</text>`);
+ parts.push(`<text x="36" y="309" fill="#afc5dd" font-size="15" font-family="Arial,Helvetica,sans-serif">“Not featured” means keep searching the wider evidence index.</text>`);
  for(let col=0;col<2;col++){
-   const ox=startX+col*735,subset=model.rows.slice(col*17,(col+1)*17);
-   parts.push(`<rect x="${ox}" y="338" width="${columnWidth}" height="733" rx="15" fill="#111e32" stroke="#354863"/>`);
-   parts.push(`<text x="${ox+17}" y="365" fill="#eef4ff" font-size="15" font-weight="700" font-family="Arial,Helvetica,sans-serif">Capability domain</text>`);
-   parts.push(`<text x="${ox+280}" y="365" fill="#c9e6f4" font-size="15" font-family="Arial,Helvetica,sans-serif">Research links</text>`);
-   parts.push(`<text x="${ox+546}" y="365" fill="#ddccff" font-size="15" font-family="Arial,Helvetica,sans-serif">Featured</text>`);
-   subset.forEach((r,i)=>{
-     const y=startY+26+i*rowHeight,rowFill=i%2===0?"#1d2e46":"#16243a",pct=r.total_topics?r.research_topics/r.total_topics:0;
-     parts.push(`<g><title>${html(r.name)}: research links in ${r.research_topics} of ${r.total_topics} topics; ${r.reference_methods} selected study methods across ${r.selected_topics} topics; ${r.approved_methods} approved unchanged</title>`);
-     parts.push(`<rect x="${ox+8}" y="${y-20}" width="694" height="38" rx="7" fill="${rowFill}"/>`);
-     const display=r.name.length>32?r.name.slice(0,29)+"…":r.name;
-     parts.push(`<text x="${ox+16}" y="${y+3}" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">${html(display)}</text>`);
-     parts.push(`<rect x="${ox+280}" y="${y-10}" width="120" height="14" rx="5" fill="#394a61"/>`);
-     if(pct>0)parts.push(`<rect x="${ox+280}" y="${y-10}" width="${(120*pct).toFixed(2)}" height="14" rx="5" fill="url(#bar)"/>`);
-     parts.push(`<text x="${ox+409}" y="${y+3}" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">${r.research_topics}/${r.total_topics}</text>`);
-     const yes=r.reference_methods+r.approved_methods>0;
-     parts.push(`<rect x="${ox+541}" y="${y-17}" width="152" height="27" rx="8" fill="${yes?"#403360":"#1a2b3e"}" stroke="${yes?"#7d68bc":"#3a4a61"}"/>`);
-     const label=yes?`${r.reference_methods} study · ${r.selected_topics} topics`:"not featured";
-     parts.push(`<text x="${ox+617}" y="${y+2}" text-anchor="middle" fill="${yes?"#efe6ff":"#a1b2c8"}" font-weight="${yes?"700":"400"}" font-size="14" font-family="Arial,Helvetica,sans-serif">${html(label)}</text>`);
-     parts.push(`</g>`);
-   });
+  const x=31+col*539,subset=model.rows.slice(col*17,(col+1)*17);
+  parts.push(`<rect x="${x}" y="331" width="520" height="601" rx="14" stroke="#344c67" fill="#111f34"/>`);
+  parts.push(`<text x="${x+13}" y="357" font-size="14" font-weight="700" fill="#e9f2fe" font-family="Arial,Helvetica,sans-serif">Capability domain</text><text x="${x+216}" y="357" font-size="14" fill="#c6e8f4" font-family="Arial,Helvetica,sans-serif">Links</text><text x="${x+390}" y="357" font-size="14" fill="#d8c7fa" font-family="Arial,Helvetica,sans-serif">Selected</text>`);
+  subset.forEach((row,i)=>{
+   const y=startY+i*rh,pct=row.total_topics?row.research_topics/row.total_topics:0,chosen=row.reference_methods+row.approved_methods>0;
+   parts.push(`<g><title>${html(row.name)}: ${row.research_topics}/${row.total_topics} research-linked topics; ${row.reference_methods} study methods across ${row.selected_topics} topics; ${row.approved_methods} unchanged-use approvals</title>`);
+   parts.push(`<rect x="${x+7}" y="${y-18}" width="505" height="31" rx="6" fill="${i%2===0?"#1e314b":"#172842"}"/>`);
+   parts.push(`<text x="${x+12}" y="${y+3}" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">${html(row.name.length>26?row.name.slice(0,24)+"…":row.name)}</text>`);
+   parts.push(`<rect x="${x+216}" y="${y-9}" width="86" height="12" rx="4" fill="#3d506c"/>`);
+   if(pct>0)parts.push(`<rect x="${x+216}" y="${y-9}" width="${(pct*86).toFixed(2)}" height="12" rx="4" fill="url(#cyan)"/>`);
+   parts.push(`<text x="${x+309}" y="${y+3}" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">${row.research_topics}/${row.total_topics}</text>`);
+   parts.push(`<rect x="${x+381}" y="${y-16}" width="129" height="26" rx="8" stroke="${chosen?"#816bc0":"#3d526c"}" fill="${chosen?"#433467":"#1a2c44"}"/>`);
+   parts.push(`<text x="${x+446}" y="${y+2}" text-anchor="middle" font-size="12.5" font-weight="${chosen?"700":"400"}" fill="${chosen?"#f2eaff":"#a7bdd5"}" font-family="Arial,Helvetica,sans-serif">${html(chosen?`${row.reference_methods} refs · ${row.selected_topics} topics`:"not featured")}</text></g>`);
+  });
  }
- parts.push(`<text x="52" y="1116" fill="#e8f0fc" font-size="18" font-family="Arial,Helvetica,sans-serif">Research breadth is not quality clearance. A selected method is not permission to install or run its original package.</text>`);
- parts.push(`<text x="52" y="1151" fill="#b9cce1" font-size="16" font-family="Arial,Helvetica,sans-serif">Source: ${html(model.research_date)} research audit + ${html(model.as_of)} curated shelf | Generated from evidence ledgers, not hand-drawn</text>`);
- parts.push(`</svg>`);
+ parts.push(`<text x="38" y="967" fill="#d4e1f1" font-size="15" font-family="Arial,Helvetica,sans-serif">Research breadth ≠ skill quality. Selection ≠ installation clearance. All 33 rows also appear in the README and CSV.</text></svg>`);
  return parts.join("\n")+"\n";
 }
 
