@@ -4929,5 +4929,35 @@
     "admissions": 0,
     "security_scans": 0,
     "behavioral_validations": 0
+  },
+  "gitskills_g2_second_wave_20261103": {
+    "date": "2026-11-03",
+    "kind": "second-generation discovery (leads + canonical identity; not review)",
+    "receipt": "docs/discovery/2026-11-03-gitskills-g2-second-wave.md",
+    "cumulative_source_index": "registry/discovery/gitskills-discovery-source-index-20261103.json",
+    "verified_source_identities": "registry/discovery/gitskills-g2-verified-source-identities-20261103.json",
+    "package_identities": [
+      "registry/discovery/gitskills-g2-package-identities-20261103-part-01.json",
+      "registry/discovery/gitskills-g2-package-identities-20261103-part-02.json",
+      "registry/discovery/gitskills-g2-package-identities-20261103-part-03.json",
+      "registry/discovery/gitskills-g2-package-identities-20261103-part-04.json"
+    ],
+    "method_alternatives": "registry/discovery/gitskills-g2-method-alternatives-20261103.json",
+    "unclassified_sample": "registry/discovery/gitskills-g2-unclassified-sample-20261103.json",
+    "leads_selected": 430,
+    "verified_identities_T2": 390,
+    "unreachable": 40,
+    "original_author_candidates_with_skills": 349,
+    "cumulative_original_author_candidates_with_skills": 770,
+    "cumulative_repositories_checked": 991,
+    "package_records_listed": 17939,
+    "distinct_methodological_alternatives": 56,
+    "cumulative_distinct_methodological_alternatives": 98,
+    "registered_sources_delta": 0,
+    "source_vetting_reviews_delta": 0,
+    "governed_review_delta": 0,
+    "admissions": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0
   }
 }
