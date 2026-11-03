@@ -1,5 +1,7 @@
 # Capability quickstart: start with useful outcomes
 
+**New: three positively endorsed reference methods.** If you need to prevent silent Blender model assembly errors, find dead ends in interactive game stories, or diagnose audio dropouts, start with [these three individually checked reference skills](curated-capability-references.md). They are **valuable ideas to study, not approved packages to install unchanged**. They carry exact source pins, license notes, risks and unrun security/behavioral checks in the [machine-readable shelf](../registry/consumer-positive-references-20261103.json). Other examples below may be ordinary indexed candidates, not endorsements.
+
 **Purpose:** A short, populated shelf of **actual indexed skill examples**, followed by a complete name-search fallback. This is a **discovery aid**, not a source-ownership ranking, a list of install-approved packages, or a claim to cover the ecosystem.
 
 If the user only shared the repository and said **“take a look”**, first deliver the [memory-grounded value brief](agent-value-discovery.md). Use this page to turn those needs into concrete candidate files. If they already named a capability, skip the full interview and search directly.

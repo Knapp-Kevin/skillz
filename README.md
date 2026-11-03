@@ -24,7 +24,17 @@ There are two **positive** recommendations. Both must explain the specific benef
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Current inventory limitation:** We have not yet reconciled a complete, distinct, per-domain list of endorsed skills. **The number of skills approved for use, and the number promoted as valuable references, are not yet verified.** Historical review records and raw file counts must not be presented as usable-skill totals.
+**Current inventory limitation:** We have individually endorsed **three skills as Valuable References**. They are **not** approved for unchanged use, and this starter shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+
+### First three valuable references
+
+| What you want to improve | Skill worth studying | Specific benefit |
+|---|---|---|
+| Reliable 3D assemblies | **Blender Assembly Pitfalls** | Plan connections, then check real sizes, directions and overlaps instead of trusting appearances |
+| Game playtesting | **IF Playtest Review** | Catch impossible story routes, circular locks and missing game states before players get stuck |
+| Audio performance | **Audio Performance Debug** | Measure the real cause of dropouts and CPU spikes before changing code |
+
+**These are useful ideas, not install recommendations.** Each has known limitations and unrun security/behavioral tests. [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
 
 ## Find skills for the work you do
 
