@@ -1,0 +1,196 @@
+{
+  "schema": "q1_q5_disjoint_candidate_accounting_v1",
+  "as_of": "2026-11-03",
+  "base_main_sha": "b89e7e823f6a4dedb0be2bb224ecd8d24336cffe",
+  "scope": "Four pinned raw-path discovery sources plus 25 disjoint Q1-Q5 new source-family source-vetting ledgers, NOT a deduplicated all-corpus eligible-skill, approved-skill, installable-skill or review-companion inventory",
+  "source_of_truth": [
+    "registry/discovery/pinned-4813-review-progress-20261101.json",
+    "registry/discovery/q1-new-source-families-capability-routing-20261103.json",
+    "registry/discovery/q2-new-source-families-capability-routing-20261103.json",
+    "registry/discovery/q3-new-source-families-capability-routing-20261103.json",
+    "registry/discovery/q4-new-source-families-capability-routing-20261103.json",
+    "registry/discovery/q5-kunitoki-sonic-skills-static-20261103.json",
+    "registry/discovery/q5-arcprime-ip-patent-prompts-static-20261103.json",
+    "registry/discovery/q5-otenycom-talents-static-20261103.json",
+    "registry/discovery/q5-city-syntax-openclaw-ubem-static-20261103.json",
+    "registry/discovery/q5-kavao-monogatari-coach-static-20261103.json",
+    "registry/discovery/q5-akiojin-unity-cli-static-20261103.json",
+    "docs/reviews/2026-11-03-q5-six-new-source-families-static.md"
+  ],
+  "recorded_pinned_four_source_snapshot": {
+    "raw_paths": 4813,
+    "terminal_static_candidate_decisions": 4809,
+    "reference_only": 1205,
+    "rejected_unchanged": 3604,
+    "deferred": 3,
+    "excluded_non_skill_template": 1,
+    "unresolved_raw_paths": 4
+  },
+  "source_family_campaign": {
+    "q1_q4": {
+      "raw_decision_records": 550,
+      "terminal_decisions": 550,
+      "source_families": 19,
+      "reference_only": 312,
+      "rejected_unchanged": 238,
+      "subtranches": [
+        {
+          "round": "Q1",
+          "entries": 113,
+          "routing_path": "registry/discovery/q1-new-source-families-capability-routing-20261103.json",
+          "route_blob_sha": "21948e119e5936108d16f481e2bc0c1e3516220d"
+        },
+        {
+          "round": "Q2",
+          "entries": 127,
+          "routing_path": "registry/discovery/q2-new-source-families-capability-routing-20261103.json",
+          "route_blob_sha": "10cb94a501db0f9fc0aa37f90d40c3af5d9e203f"
+        },
+        {
+          "round": "Q3",
+          "entries": 151,
+          "routing_path": "registry/discovery/q3-new-source-families-capability-routing-20261103.json",
+          "route_blob_sha": "8bbde499317c3f12b395551d8b1881da0bdfcbfe"
+        },
+        {
+          "round": "Q4",
+          "entries": 159,
+          "routing_path": "registry/discovery/q4-new-source-families-capability-routing-20261103.json",
+          "route_blob_sha": "4a6735ee00e90f47290c01b0984749c8bfca6538"
+        }
+      ]
+    },
+    "q5": {
+      "raw_review_records": 150,
+      "terminal_decisions": 149,
+      "reference_only": 92,
+      "rejected_unchanged": 57,
+      "deferred": 1,
+      "source_families": 6,
+      "recorded_distinct_package_tree_hashes": 144,
+      "duplicate_excess_path_exposures": 6,
+      "collision_groups": 3,
+      "source_ledgers": [
+        {
+          "source_repository": "kunitoki/sonic-skills",
+          "source_pin": "8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa",
+          "source_id": "kunitoki-sonic-skills",
+          "ledger_path": "registry/discovery/q5-kunitoki-sonic-skills-static-20261103.json",
+          "ledger_blob_sha": "aec9d0c89011384de3e45ffb65afcd374ad3d5ec",
+          "records": 18,
+          "decisions": {
+            "REFERENCE-ONLY": 17,
+            "REJECT": 1
+          }
+        },
+        {
+          "source_repository": "arcprime-ip/patent-prompts",
+          "source_pin": "41e6a96bdec0b5aa1a4ea11ee489d49061d43114",
+          "source_id": "arcprime-ip-patent-prompts",
+          "ledger_path": "registry/discovery/q5-arcprime-ip-patent-prompts-static-20261103.json",
+          "ledger_blob_sha": "3c83b29c13169579ab4e83693d2b9a8ea75acf49",
+          "records": 15,
+          "decisions": {
+            "REFERENCE-ONLY": 13,
+            "REJECT": 2
+          }
+        },
+        {
+          "source_repository": "otenycom/talents",
+          "source_pin": "5bf3bee6dab56a75c265a313ca5f5068d2373d91",
+          "source_id": "otenycom-talents",
+          "ledger_path": "registry/discovery/q5-otenycom-talents-static-20261103.json",
+          "ledger_blob_sha": "d285e08a93a7e29afb7374e1fa8f41fab0a22cf4",
+          "records": 26,
+          "decisions": {
+            "REJECT": 14,
+            "REFERENCE-ONLY": 12
+          }
+        },
+        {
+          "source_repository": "City-Syntax/openclaw-ubem",
+          "source_pin": "261ad2c508a7b4a5971e0f83238b15d15fa7f651",
+          "source_id": "city-syntax-openclaw-ubem",
+          "ledger_path": "registry/discovery/q5-city-syntax-openclaw-ubem-static-20261103.json",
+          "ledger_blob_sha": "4117ea7a8411573a9e879f17c5c90d38c98fe1e7",
+          "records": 26,
+          "decisions": {
+            "REFERENCE-ONLY": 6,
+            "REJECT": 20
+          }
+        },
+        {
+          "source_repository": "kavao/monogatari-coach",
+          "source_pin": "01d5be3b671a2659dc50179f70c5483572989e71",
+          "source_id": "kavao-monogatari-coach",
+          "ledger_path": "registry/discovery/q5-kavao-monogatari-coach-static-20261103.json",
+          "ledger_blob_sha": "a3ec90b33cbcc8d32a207a55e879f2c354b1a583",
+          "records": 36,
+          "decisions": {
+            "REFERENCE-ONLY": 28,
+            "REJECT": 7,
+            "DEFER": 1
+          }
+        },
+        {
+          "source_repository": "akiojin/unity-cli",
+          "source_pin": "ca07dd8bafaf46326a0de0ffc98024d67adf5555",
+          "source_id": "akiojin-unity-cli",
+          "ledger_path": "registry/discovery/q5-akiojin-unity-cli-static-20261103.json",
+          "ledger_blob_sha": "b3b9697516f59fb87d5d917641be038e9ced1bc6",
+          "records": 29,
+          "decisions": {
+            "REJECT": 13,
+            "REFERENCE-ONLY": 16
+          }
+        }
+      ]
+    },
+    "combined_q1_q5": {
+      "raw_review_records": 700,
+      "terminal_decisions": 699,
+      "reference_only": 404,
+      "rejected_unchanged": 295,
+      "deferred": 1,
+      "source_families": 25,
+      "distinct_recorded_package_tree_hashes_in_q1_q5_only": 694,
+      "canonical_source_pin_overlap_between_q1_q4_and_q5": 0,
+      "recorded_tree_hash_overlap_between_q1_q4_and_q5": 0
+    }
+  },
+  "cumulative_terminal_static_candidate_decisions": {
+    "terminal_static_candidate_decisions": 5508,
+    "reference_only": 1609,
+    "reject_unchanged": 3899,
+    "q5_defer": 1,
+    "disjoint_source_family_count_in_new_q1_q5_campaign": 25,
+    "source_families_original_four_source_snapshot": 4
+  },
+  "governed_exact_version_review_companions_separate": 1039,
+  "positive_recommended_for_use_total": null,
+  "positive_valuable_reference_total": null,
+  "global_distinct_eligible_package_denominator": null,
+  "admission_delta": 0,
+  "security_scan_delta": 0,
+  "behavioral_validation_delta": 0,
+  "qualification_boundaries": [
+    "All Q5 package SHA values are ledger-recorded and not independently recomputed from upstream git trees in this reconciliation.",
+    "Four-source and new source-family source identities are disjoint as listed; global SHA equivalence against the four-source and governed corpora has not been audited.",
+    "'REFERENCE-ONLY' is a static source-vetting outcome, NOT an endorsed valuable-reference promotion.",
+    "One Q5 DEFER is a reviewed record but not a terminal decision; three four-source DEFER paths and one excluded non-skill template are not added to terminal totals.",
+    "No exact-version governed verification companion, license or security approval, behavioral execution, installation or action authorization is produced by this reconciliation."
+  ],
+  "original_q5_macro_arithmetic_defect": {
+    "incorrect_invariant_total": {
+      "reference_only": 96,
+      "rejected_unchanged": 53,
+      "deferred": 1
+    },
+    "verified_from_all_six_ledgers": {
+      "reference_only": 92,
+      "rejected_unchanged": 57,
+      "deferred": 1
+    },
+    "correction_location": "docs/reviews/2026-11-02-q5-150-exact-tree-invariant-audit.md"
+  }
+}
