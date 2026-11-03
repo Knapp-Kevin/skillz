@@ -5063,10 +5063,10 @@
   },
   "consumer_positive_recommendation_sample_20261103": {
     "as_of": "2026-11-03",
-    "scope": "Seven individually source-checked useful reference ideas, NOT a reconciled all-domain positive count or unchanged-use approvals",
+    "scope": "Eleven individually differentiated valuable reference METHODS in nine domains. Four Q6 methods have source-pinned SKILL.md blobs and ten-axis grades but upstream complete package-tree SHAs UNKNOWN. No unchanged-use approvals or global audited all-domain count.",
     "source": "registry/consumer-positive-references-20261103.json",
     "plain_english": "docs/curated-capability-references.md",
-    "valuable_reference_promotions_in_this_tranche": 7,
+    "valuable_reference_promotions_in_this_tranche": 11,
     "recommended_for_unchanged_use_in_this_tranche": 0,
     "domains_covered": [
       "3d-cad-animation",
@@ -5075,7 +5075,9 @@
       "ux-ui",
       "cloud-devops",
       "marketing",
-      "technical-writing"
+      "technical-writing",
+      "music-composition",
+      "illustration"
     ],
     "recommended_reference_ids": [
       "dcc-mcp-dcc-mcp-blender/dcc-blender-assembly-pitfalls",
@@ -5084,13 +5086,47 @@
       "kyleoliveiro-sg-gov-skills/sg-gov-dss-accessibility",
       "scitix-siclaw/networkpolicy-debug",
       "peterod99-consultant-skills/singular-positioning-clarity",
-      "danielrosehill-claude-transcription-plugin/split-transcript"
+      "danielrosehill-claude-transcription-plugin/split-transcript",
+      "grapeot-opus-video-audio-skill/video-scoring-audio",
+      "jeffreytse-grimoire-core/design-concept-art-brief",
+      "scenario-labs-skills/scenario-storyboards",
+      "scenario-labs-skills/scenario-identity-library"
     ],
     "globally_audited_recommended_for_use_count": null,
     "globally_audited_promoted_reference_count": null,
     "static_source_vetting_not_adoption": true,
     "security_validation": "not-run",
     "behavioral_validation": "not-run",
-    "source_license_correction": "All 28 scitix/siclaw Q4 review records cite pinned Apache-2.0 LICENSE blob 7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f rather than incorrect MIT label"
+    "source_license_correction": "All 28 scitix/siclaw Q4 review records cite pinned Apache-2.0 LICENSE blob 7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f rather than incorrect MIT label",
+    "identity_limitations": "Q6 complete Git package-tree hashes remain unknown; do not count these as full-package/unchanged-install eligible or deduplicate a global distinct denominator by their SKILL.md alone.",
+    "current_creative_domain_methods": {
+      "music_composition": {
+        "positive_reference_methods": 1,
+        "subdomains_total": 8
+      },
+      "illustration": {
+        "positive_reference_methods": 3,
+        "subdomains_total": 6,
+        "character_environment_partial": true
+      },
+      "evidence": "registry/discovery/q6-creative-capability-routing-20261103.json"
+    }
+  },
+  "q6_four_creative_method_reviews_20261103": {
+    "reviewed_exact_entrypoints": 4,
+    "source_families": 3,
+    "disposition": "4 REFERENCE-ONLY static reviews, not semantic verified or install approved",
+    "ledger": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+    "human_receipt": "docs/reviews/2026-11-03-q6-four-method-static-review.md",
+    "capability_routes": "registry/discovery/q6-creative-capability-routing-20261103.json",
+    "browse_overview": "docs/capability-creative-coverage.md",
+    "new_positive_valuable_reference_methods": 4,
+    "unchanged_use_approved": 0,
+    "complete_package_tree_identity_verified": 0,
+    "tree_identity_denominator_status": "UNKNOWN",
+    "behavioral_validation": "not-run",
+    "security_scan": "not-run",
+    "global_distinct_eligible_denominator": null,
+    "q1_q5_terminal_static_decisions_unchanged": 5508
   }
 }

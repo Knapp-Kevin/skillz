@@ -1,17 +1,20 @@
-# Seven useful skill ideas, with their limits
+# Eleven useful skill methods, with their limits
 
-**These are seven positive recommendations across seven different capability areas.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We picked each for a different practical benefit and checked the original pinned files, supporting material, license and known risks.
+**These are eleven positive reference-method recommendations across nine capability domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The four newly added creative examples still lack independently established complete package-tree identities, so they are strictly **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
 | Build 3D models that fit together | **[Blender Assembly Pitfalls](https://github.com/dcc-mcp/dcc-mcp-blender/blob/8d8027fe4377b4d399d545869fc11b80e04ff785/skills/dcc-blender-assembly-pitfalls/SKILL.md)** | Make a connection map before building; verify sizes, axes and joint overlap afterwards |
 | Test an interactive game story | **[IF Playtest Review](https://github.com/bladecoder/narrative-skills/blob/c0948f7970178b72bb9561030372e75d303d37b3/skills/if/if-playtest-review/SKILL.md)** | Catch impossible paths, stuck players, unreachable endings and states that never match |
 | Fix audio CPU spikes and dropouts | **[Audio Performance Debug](https://github.com/kunitoki/sonic-skills/blob/8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa/skills/audio-performance-debug/SKILL.md)** | Measure a real symptom, isolate the audio-thread hotspot, then verify a fix instead of guessing |
-
 | Make government forms work for everyone | **[Singapore DSS Accessibility](https://github.com/kyleoliveiro/sg-gov-skills/blob/16892fc613263c3f835457cd23ae092d404979ca/skills/sg-gov-dss-accessibility/SKILL.md)** | Check keyboard use, screen-reader labels, forms, and contrast before launch |
 | Troubleshoot blocked Kubernetes traffic | **[NetworkPolicy Debug](https://github.com/scitix/siclaw/blob/ceee3f49f8bdc9223c0a2b0afec33253f95616f9/skills/core/networkpolicy-debug/SKILL.md)** | Narrow down network rules before considering any change to a live cluster |
 | Explain your service clearly | **[Singular Positioning Clarity](https://github.com/peterod99/consultant-skills/blob/ee82a9dfe327a734e815a590aaaf92327d111d85/singular-positioning-clarity/SKILL.md)** | State who you help and what changes in one sentence people can repeat |
 | Organize a long voice note | **[Split Transcript by Intent](https://github.com/danielrosehill/Claude-Transcription-Plugin/blob/d19d6df5792490b477d9ea6fd4f7eebb0434dc9d/skills/split-transcript/SKILL.md)** | Separate decisions, tasks, background and instructions without losing words |
+| Time music to a film or narrated demo | **[Video Scoring Audio](https://github.com/grapeot/opus-video-audio-skill/blob/0abc18d22d6baf9e55d4fce9a01d29e2528ee426/skills/video-scoring-audio/SKILL.md)** | Link MIDI note times to scene beats; measure peaks, cue duration and dynamics |
+| Brief a character or environment artist | **[Design Concept Art Brief](https://github.com/jeffreytse/grimoire-core/blob/7ff5861b00836cb0d675c00a09a26d143722579e/skills/art/illustration/skills/design-concept-art-brief/SKILL.md)** | Agree on silhouette, visual references, production limits and handoff before artwork starts |
+| Make a comic or storyboard | **[Scenario Storyboards](https://github.com/scenario-labs/skills/blob/7f4b801c7248d51b093ec365aceb114bd06139e6/skills/scenario-storyboards/SKILL.md)** | Script, generate and repair panels separately; add readable lettering afterwards |
+| Keep an illustrated character recognizable | **[Scenario Identity Library](https://github.com/scenario-labs/skills/blob/7f4b801c7248d51b093ec365aceb114bd06139e6/skills/scenario-identity-library/SKILL.md)** | Approve one character reference and compare every new view to it |
 
 ## Why each is a valuable reference, not ready for unchanged use
 
@@ -71,8 +74,34 @@
 
 **Evidence:** Q3 static review **16/20**; `danielrosehill/Claude-Transcription-Plugin@d19d6df5`, SKILL.md `71edb736`; root **MIT**. [Individual review](../registry/discovery/q3-danielrosehill-claude-transcription-plugin-static-20261103.json).
 
+### Music composition: Video Scoring Audio
+
+**Useful insight:** Make an actual musical timeline from picture events instead of expecting a generative model to honor an exact second. The source pairs MIDI onset times with measured cue length, peaks and dynamic shape so a human can concentrate on the artistic result.
+
+**Important warning:** A name from the cue's JSON feeds directly into output paths. Absolute or parent-relative names could write beyond the intended folder, and the renderer uses an overwrite switch. The source's MIDI/ffmpeg helper is **not safe to run unchanged**. Soundfonts, downloads and paid music APIs require separate rights, authority and cost approval. **Static score: 14/20.**
+
+### Illustration: Design Concept Art Brief
+
+**Useful insight:** Ask for an actual artist brief before costly work: positive and negative visual references, silhouette constraints, technical limits, deliverables and revision ownership. Especially useful for film or game characters and environment direction.
+
+**Important warning:** The author's claims that all major studios work this way and save 40–60% of revisions lack supporting evidence. Use the briefing questions, not those statistics; third-party example art and book text have independent rights. **Static score: 15/20.**
+
+### Illustration: Scenario Storyboards
+
+**Useful insight:** Build the comic one image at a time, always referring to the same approved character, then place accurate text on top after the artwork. Individual bad panels can be replaced without regenerating a whole page.
+
+**Important warning:** Its original workflow may select a model, generate several images, upload references and persist results without specific approval, and a companion text renderer was not fully audited. These need separate authority and potentially incur charges. **Static score: 13/20.**
+
+### Illustration: Scenario Identity Library
+
+**Useful insight:** Describe a character's unmistakable features, approve a reference image, then gate new views on those features before adding anything to a reusable collection. This handles character consistency, **not general environment illustration**.
+
+**Important warning:** It can upload photographs/artwork, make billable requests and create or remove persistent asset records. None of those actions follows from an ordinary illustration question. **Static score: 12/20.**
+
+**New Q6 evidence and rights:** Each method has a source/pin/entrypoint blob, original root MIT license, observed dependency files and a separate 10-axis static review. Their **full package-tree SHAs remain UNKNOWN**: do not interpret matching SKILL.md values as identical or vetted whole packages. Security and model-executed behavior remain **not-run**. [Read all individual findings](reviews/2026-11-03-q6-four-method-static-review.md) and [the live creative coverage guide](capability-creative-coverage.md).
+
 ## What this does and doesn't count
 
-Seven **distinct, positively endorsed Valuable Reference examples** from seven different domains. **Zero Recommended for Use entries in this starter set.** We have **not** established global counts, or that the other 26 domains lack useful skills. Each package has static source-vetting evidence, but **security scanning and hands-on behavioral validation were not run**.
+Eleven **distinct source/path-pinned Valuable Reference methods** across nine domains in this bounded shelf; **zero Recommended for Use approvals**. Four creative methods have missing full package-tree identities and therefore no claim of whole-package equivalence or completeness. Other domains and methods remain unqualified, and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavior passed.
 
 The source-neutral [structured reference catalog](../registry/consumer-positive-references-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.

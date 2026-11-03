@@ -24,9 +24,9 @@ There are two **positive** recommendations. Both must explain the specific benef
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Current inventory limitation:** We have individually endorsed **seven distinct skills as Valuable References** across seven capability domains. They are **not** approved for unchanged use, and this starter shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Current inventory limitation:** We have individually endorsed **eleven useful methods as Valuable References** across nine capability domains. Four creative methods have confirmed source pins and independent static grades, but **complete package-tree identities are still UNKNOWN**. None is approved for unchanged use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Seven useful skill references
+### Eleven useful skill references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -37,8 +37,12 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Kubernetes connectivity | **NetworkPolicy Debug** | Identify which traffic rules block a connection before changing a live cluster |
 | Clear service positioning | **Singular Positioning Clarity** | Explain who you help and the outcome in one sentence |
 | Voice notes into useful records | **Split Transcript by Intent** | Separate decisions, tasks and context without losing the original wording |
+| Music timed to a film | **Video Scoring Audio** | Match notes to precise visual beats, then check duration, peaks and dynamics |
+| Concept art direction | **Design Concept Art Brief** | Give artists clear silhouettes, references, constraints and delivery requirements |
+| Comics and storyboards | **Scenario Storyboards** | Repair one panel at a time and add accurate lettering afterwards |
+| Consistent illustrated characters | **Scenario Identity Library** | Anchor every new view to one approved character reference |
 
-**These are useful ideas, not install recommendations.** Each has known limitations and unrun security/behavioral tests. [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
+**These are useful ideas, not install recommendations.** None has a new security or behavioral test pass. The four creative additions have explicit file, privacy and model-cost restrictions, and their full upstream package-tree identities remain unverified. [Explore the music and illustration coverage gaps](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
 
 ## Find skills for the work you do
 
