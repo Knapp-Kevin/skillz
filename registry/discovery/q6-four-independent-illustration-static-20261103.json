@@ -1,0 +1,366 @@
+{
+  "schema_version": "q6-four-independent-illustration-static-v1",
+  "as_of": "2026-11-03",
+  "main_base": "c25129c048a83f7a191e46d76ff4cfa797507b09",
+  "scope": "Four new illustration source-pinned static reviews from three independent source families, no positive publication or unchanged-use approval. Additive evidence only to avoid PR #680 shared-file collision.",
+  "source_families": {
+    "academic": {
+      "repo": "plbbl/academic-diagram-skill",
+      "pin": "501efb0208bf865897079fa05844c249f0736077",
+      "license": "MIT scoped original only; no rights to paper figures",
+      "license_sha": "0a9abfaf1827ca68b6e42e3c7a9897a4439dad9e",
+      "notice_sha": "b896b3147dcb65cbf58f79be3399753cbc7997e5"
+    },
+    "editorial": {
+      "repo": "orange2ai/orange-line-illustration",
+      "pin": "f7e1f8444c1832e38ab92bca03d314560fc4fb98",
+      "license": "custom dual grant; personal/open/public use free, proprietary/commercial requires paid license",
+      "license_sha": "8ccea4793f408a1622d60a7afd0a69af7734ed2c",
+      "notice_sha": null
+    },
+    "landscape": {
+      "repo": "GZ-L/photo-to-poster-skills",
+      "pin": "268ee78460ab5592167082d0501b7834f2e5b676",
+      "license": "MIT for author source; user source-photo and image-model outputs separate",
+      "license_sha": "6f3bafc2371adacd2d92897264ddae7468c474e7",
+      "notice_sha": null
+    }
+  },
+  "records": [
+    {
+      "name": "academic-diagram",
+      "source_repository": "plbbl/academic-diagram-skill",
+      "source_pin": "501efb0208bf865897079fa05844c249f0736077",
+      "canonical_path": "SKILL.md",
+      "skill_blob": "8daf921c67d89b954e775f200d2cae5e875acb42",
+      "package_tree": null,
+      "package_tree_sha_status": "UNKNOWN; GitHub tree enumeration and full asset inventory not performed",
+      "owned_files_observed": [
+        {
+          "path": "SKILL.md",
+          "sha": "8daf921c67d89b954e775f200d2cae5e875acb42"
+        },
+        {
+          "path": "references/README.md",
+          "sha": "c7d09f6992449007a4d24917478d777683e7751e"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "sha": "b896b3147dcb65cbf58f79be3399753cbc7997e5"
+        }
+      ],
+      "source_license": "MIT scoped original only; no rights to paper figures",
+      "source_license_sha": "0a9abfaf1827ca68b6e42e3c7a9897a4439dad9e",
+      "source_notice_sha": "b896b3147dcb65cbf58f79be3399753cbc7997e5",
+      "full_package_rights": "NOT CLEARED for bundled images, output assets, user photos, commercial derivative terms or third-party tooling",
+      "capability_domain": "illustration",
+      "capability_subdomain": "scientific",
+      "capability_specific": "Explain a scientific model or process with an editable figure whose arrows and labels match the underlying paper.",
+      "score_20": 16,
+      "rubric_scores": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "rubric_dimension_rationale": {
+        "trigger_precision": "2/2: Precise academic architecture/method schematic activation, not statistical charts or result grids",
+        "procedural_clarity": "2/2: Start with paper and claims, choose diagram structure, draw editable objects, inspect rendered output at publication scale",
+        "authority_safety": "1/2: Suggests reading full workspace and writing diagrams, but named scope, private manuscript reading and persistent exports require separate explicit authorization",
+        "failure_handling": "1/2: Re-render/review stage exists; missing data and out-of-date manuscript constraints acknowledged",
+        "evidence_discipline": "2/2: Labels and arrows must reflect manuscript/implementation, unknown numbers prohibited; no observed live science validation",
+        "dependency_coherence": "1/2: Uses host drawing tool, reference README and third-party figure pack; large third-party images uninspected and unrelated rights",
+        "portability_honesty": "2/2: Portable editable drawing method but publication formats and host tools vary",
+        "usefulness_differentiation": "2/2: Scientific truth-first decision, use real editable shapes, inspect every arrow at paper size",
+        "adversarial_resilience": "1/2: No explicit injection/secret-communication handling for research workspace or external reference material",
+        "effectiveness_design": "2/2: Editable source + visual QA + source-backed logic is a credible review method"
+      },
+      "hard_fail_flags": [
+        "third_party_paper_figure_reuse_rights_undetermined",
+        "unbounded_private_manuscript_scope_without_action_approval"
+      ],
+      "candidate_decision": "REFERENCE-ONLY",
+      "semantic_stage": "static-reviewed-not-verified",
+      "consumer_positive_decision": "HOLD pending whole-package identity, rights and current public accounting integration",
+      "benefit": "Explain a scientific model or process with an editable figure whose arrows and labels match the underlying paper.",
+      "distinct_method": "Read the scientific claim first, draw with editable vector objects, then inspect each connection at publication size.",
+      "reason_not_unchanged": "Thirty publisher-supplied paper figures are included as unlicensed reference material: source THIRD_PARTY_NOTICES expressly disclaims reuse or redistribution rights. Workspace access/export needs approval.",
+      "reviewer_finding": "Read full 2.8k SKILL, 14.8k references README, scoped MIT LICENSE and THIRD_PARTY_NOTICES; 30 original figure PNG and contact-sheet binaries not accessed/cleared.",
+      "unchanged_use_approved": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admitted_governed_record": false,
+      "authorization": "No image-gen provider calls, photo uploads, installs, private user data reads, commercial licenses or file writes authorized by source review"
+    },
+    {
+      "name": "orange-line-illustration",
+      "source_repository": "orange2ai/orange-line-illustration",
+      "source_pin": "f7e1f8444c1832e38ab92bca03d314560fc4fb98",
+      "canonical_path": "SKILL.md",
+      "skill_blob": "74f3241f6351ab6bf28ded46853c1674ac0be142",
+      "package_tree": null,
+      "package_tree_sha_status": "UNKNOWN; GitHub tree enumeration and full asset inventory not performed",
+      "owned_files_observed": [
+        {
+          "path": "SKILL.md",
+          "sha": "74f3241f6351ab6bf28ded46853c1674ac0be142"
+        },
+        {
+          "path": "references/xiao-orange-ip.md",
+          "sha": "dae50b80b6a1b9ac99f0edf55037b087924ad8ac"
+        },
+        {
+          "path": "references/xiao-orange-prompt-template.md",
+          "sha": "6a34a0c584af8ef3e9585ed3e0151b46d550fd8a"
+        },
+        {
+          "path": "references/xianren-ip.md",
+          "sha": "9277122722d693959a562a228c3aca0e6003e945"
+        },
+        {
+          "path": "references/xianmao-ip.md",
+          "sha": "279eba3d0d61766d90dc65311c0c3718c9b60b7d"
+        },
+        {
+          "path": "references/ppt-workflow.md",
+          "sha": "a0ff8048ca5891bf2092d7189eb1694d5241caa6"
+        }
+      ],
+      "source_license": "custom dual grant; personal/open/public use free, proprietary/commercial requires paid license",
+      "source_license_sha": "8ccea4793f408a1622d60a7afd0a69af7734ed2c",
+      "source_notice_sha": null,
+      "full_package_rights": "NOT CLEARED for bundled images, output assets, user photos, commercial derivative terms or third-party tooling",
+      "capability_domain": "illustration",
+      "capability_subdomain": "editorial",
+      "capability_specific": "Create simple editorial illustrations that communicate one article idea instead of cluttering the image with decorative objects.",
+      "score_20": 15,
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "rubric_dimension_rationale": {
+        "trigger_precision": "2/2: Strong trigger for article/cover/editorial metaphor drawing and illustrated slides",
+        "procedural_clarity": "2/2: Defines one message/one image, a small contrast accent, empty space, image drafts and visual-review criteria",
+        "authority_safety": "0/2: Workflow directs AI image generation and final files, while custom license demands paid permission for closed-source/commercial uses and scope not gated at each action",
+        "failure_handling": "1/2: Checks sketch simplicity and image consistency; absent model and rights if generation fails",
+        "evidence_discipline": "1/2: Explains visual constraints but no independent audience comprehension test or public image quality receipts",
+        "dependency_coherence": "2/2: Five referenced style/IP and slide workflow files inspected; external image provider unspecified and not authorized",
+        "portability_honesty": "2/2: Text prompt is tool-agnostic, but exact repeated visual IP and commercial source rights are not universally portable",
+        "usefulness_differentiation": "2/2: Concrete visual-metaphor and negative-space discipline helps distinguish editorial artwork from generic stock images",
+        "adversarial_resilience": "1/2: No explicit privacy controls for article draft/media uploads, and no protection against untrusted retrieved prompts",
+        "effectiveness_design": "2/2: Single focal metaphor and second-pass selection plausibly improve communication"
+      },
+      "hard_fail_flags": [
+        "proprietary_output_requires_independent_paid_license",
+        "unapproved_model_generation_and_upload_or_file_writes",
+        "private_article_input_egress_boundary_missing"
+      ],
+      "candidate_decision": "REFERENCE-ONLY",
+      "semantic_stage": "static-reviewed-not-verified",
+      "consumer_positive_decision": "HOLD pending whole-package identity, rights and current public accounting integration",
+      "benefit": "Create simple editorial illustrations that communicate one article idea instead of cluttering the image with decorative objects.",
+      "distinct_method": "Choose one visual metaphor, constrain the drawing's detail and color, then judge whether it conveys the point without lengthy captions.",
+      "reason_not_unchanged": "Custom dual license explicitly requires purchasing commercial rights for proprietary deliverables and even derivative style systems; original visual IP and generation service terms remain separate. No commercial-use clearance.",
+      "reviewer_finding": "Read full 10.1k SKILL, exact custom dual LICENSE and five owned reference text files. No examples/artwork used or generated.",
+      "unchanged_use_approved": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admitted_governed_record": false,
+      "authorization": "No image-gen provider calls, photo uploads, installs, private user data reads, commercial licenses or file writes authorized by source review"
+    },
+    {
+      "name": "impasto-miniature-landscape",
+      "source_repository": "GZ-L/photo-to-poster-skills",
+      "source_pin": "268ee78460ab5592167082d0501b7834f2e5b676",
+      "canonical_path": "skills/impasto-miniature-landscape/SKILL.md",
+      "skill_blob": "af97b43b803015c979ad2f9f599e70abc0c40a4b",
+      "package_tree": null,
+      "package_tree_sha_status": "UNKNOWN; GitHub tree enumeration and full asset inventory not performed",
+      "owned_files_observed": [
+        {
+          "path": "skills/impasto-miniature-landscape/SKILL.md",
+          "sha": "af97b43b803015c979ad2f9f599e70abc0c40a4b"
+        },
+        {
+          "path": "skills/impasto-miniature-landscape/agents/openai.yaml",
+          "sha": "4d53cc524a4ea2ea512629f91fd0e8553742f2e3"
+        }
+      ],
+      "source_license": "MIT for author source; user source-photo and image-model outputs separate",
+      "source_license_sha": "6f3bafc2371adacd2d92897264ddae7468c474e7",
+      "source_notice_sha": null,
+      "full_package_rights": "NOT CLEARED for bundled images, output assets, user photos, commercial derivative terms or third-party tooling",
+      "capability_domain": "illustration",
+      "capability_subdomain": "character-environment",
+      "capability_specific": "Turn an authorized landscape photograph into a tactile, painted miniature scene without keeping the original photo visible.",
+      "score_20": 13,
+      "rubric_scores": [
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "rubric_dimension_rationale": {
+        "trigger_precision": "2/2: Specific photo-to-impasto miniature landscape output; not original environment design or full scene construction",
+        "procedural_clarity": "1/2: Simple visual recipe, no measured iteration, separate input/reference workflow brief",
+        "authority_safety": "0/2: Defaults to image generation and possibly uploading user photographs without explicit authorization for provider, privacy, cost or file writes",
+        "failure_handling": "1/2: Quality negatives reject plastic/cartoon look but no handling for unavailable image tool or input-image rights",
+        "evidence_discipline": "1/2: Visual review criteria only, no delivered output or source-photo rights evidence",
+        "dependency_coherence": "2/2: Owned interface YAML inspected alongside complete SKILL; host image editing capability required",
+        "portability_honesty": "2/2: Tool-agnostic if photo reference and image model available, but original photos and output ratios essential",
+        "usefulness_differentiation": "2/2: Impasto physical-paint texture and scene scale specialization adds more than a generic style label",
+        "adversarial_resilience": "1/2: No explicit prompt injection protections on user/photo metadata and no protected-location/identity egress controls",
+        "effectiveness_design": "1/2: Provides a concrete target look but no visual correction cycle or environment-design validation"
+      },
+      "hard_fail_flags": [
+        "private_photo_upload_and_paid_model_action_without_explicit_scope",
+        "does_not_satisfy_general_environment_art_direction"
+      ],
+      "candidate_decision": "REFERENCE-ONLY",
+      "semantic_stage": "static-reviewed-not-verified",
+      "consumer_positive_decision": "HOLD pending whole-package identity, rights and current public accounting integration",
+      "benefit": "Turn an authorized landscape photograph into a tactile, painted miniature scene without keeping the original photo visible.",
+      "distinct_method": "Preserve the source landscape's spatial relations while transforming every part into consistent impasto material.",
+      "reason_not_unchanged": "Requires source photographs, optional provider uploads and AI generations, no default privacy or cost gate; only photo stylization, NOT independent environment illustration generation.",
+      "reviewer_finding": "Read complete 3k SKILL, 268-byte owned OpenAI interface YAML and pinned MIT LICENSE. No images or actual output inspected.",
+      "unchanged_use_approved": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admitted_governed_record": false,
+      "authorization": "No image-gen provider calls, photo uploads, installs, private user data reads, commercial licenses or file writes authorized by source review"
+    },
+    {
+      "name": "observational-pen-wash",
+      "source_repository": "GZ-L/photo-to-poster-skills",
+      "source_pin": "268ee78460ab5592167082d0501b7834f2e5b676",
+      "canonical_path": "skills/observational-pen-wash/SKILL.md",
+      "skill_blob": "1920fb9eea5fd551d91041457ca1cf2e74a6a3e0",
+      "package_tree": null,
+      "package_tree_sha_status": "UNKNOWN; GitHub tree enumeration and full asset inventory not performed",
+      "owned_files_observed": [
+        {
+          "path": "skills/observational-pen-wash/SKILL.md",
+          "sha": "1920fb9eea5fd551d91041457ca1cf2e74a6a3e0"
+        },
+        {
+          "path": "skills/observational-pen-wash/agents/openai.yaml",
+          "sha": "a7ff72631bf93ccdf509e518cd43737324bc2a00"
+        }
+      ],
+      "source_license": "MIT for author source; user source-photo and image-model outputs separate",
+      "source_license_sha": "6f3bafc2371adacd2d92897264ddae7468c474e7",
+      "source_notice_sha": null,
+      "full_package_rights": "NOT CLEARED for bundled images, output assets, user photos, commercial derivative terms or third-party tooling",
+      "capability_domain": "illustration",
+      "capability_subdomain": "digital-traditional-media",
+      "capability_specific": "Turn a permitted landscape or still-life photo into a sparse pen-and-wash study with believable observational linework.",
+      "score_20": 14,
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "rubric_dimension_rationale": {
+        "trigger_precision": "2/2: Explicit pen-and-wash sketchbook photo-to-illustration trigger",
+        "procedural_clarity": "2/2: Clear entire-frame transformation, restrained loose lines and negative-space style checks",
+        "authority_safety": "0/2: Defaults to provider image generation and user photo transfer with no independent scope or cost confirmation",
+        "failure_handling": "1/2: Negative constraints reject heavy outlines and overfilled backgrounds, but no formal remedy when host lacks provider",
+        "evidence_discipline": "1/2: Observable visual restrictions, no evidence that generated output meets them",
+        "dependency_coherence": "2/2: Owned OpenAI interface YAML and complete SKILL inspected, external image host needed",
+        "portability_honesty": "2/2: Cross-host prompt concept usable but source photo and output model choices not portable",
+        "usefulness_differentiation": "2/2: Clear art-medium-specific minimal observational rendering differs from impasto photo-to-poster",
+        "adversarial_resilience": "1/2: Image rights/secret location privacy and prompts supplied in media are not independently bounded",
+        "effectiveness_design": "1/2: Good style intent but no specified measured preview/revise acceptance process"
+      },
+      "hard_fail_flags": [
+        "photo_egress_and_unapproved_image_generation",
+        "generic_actual_artwork_quality_unverified"
+      ],
+      "candidate_decision": "REFERENCE-ONLY",
+      "semantic_stage": "static-reviewed-not-verified",
+      "consumer_positive_decision": "HOLD pending whole-package identity, rights and current public accounting integration",
+      "benefit": "Turn a permitted landscape or still-life photo into a sparse pen-and-wash study with believable observational linework.",
+      "distinct_method": "Keep a few structural lines and open whitespace while making the source scene recognizable, instead of repainting every detail.",
+      "reason_not_unchanged": "Photo rights and private-data uploads not preapproved; direct generation default lacks spending or failure limit and does not prove actual hand-drawn media skills.",
+      "reviewer_finding": "Read complete 3.4k SKILL, 256-byte owned OpenAI YAML and pinned root MIT LICENSE; no photo uploaded or art generated.",
+      "unchanged_use_approved": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "admitted_governed_record": false,
+      "authorization": "No image-gen provider calls, photo uploads, installs, private user data reads, commercial licenses or file writes authorized by source review"
+    }
+  ],
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "summary": {
+    "reviewed": 4,
+    "source_families": 3,
+    "observed_owned_file_blob_count": 13,
+    "scores": {
+      "academic-diagram": 16,
+      "orange-line-illustration": 15,
+      "impasto-miniature-landscape": 13,
+      "observational-pen-wash": 14
+    },
+    "terminal_reference_only": 4,
+    "full_package_tree_verified": 0,
+    "new_positive_promotions": 0,
+    "security_scans": 0,
+    "behavioral_tests": 0,
+    "global_distinct_eligible_denominator": null
+  },
+  "rights_findings": [
+    "plbbl root MIT expressly excludes unlicensed paper figures under references, original THIRD_PARTY_NOTICES says permission for 30 PNG and 3 contact sheets is absent.",
+    "orange2ai commercial/proprietary use of the original style specification or derivative style requires paid license, unlike generic MIT usage.",
+    "GZ-L owned photo stylization instructions MIT, but source photos and any image-provider outputs require authorization and separate rights."
+  ],
+  "nontrigger_notes": [
+    "Academic method diagrams are not general scientific quantitative plots or medical figures.",
+    "Photo-to-impasto landscape does not fully satisfy environment scene design/painting independent of a reference photograph.",
+    "Pen wash photo stylization is a specific media expression method, not verified actual analog painting ability.",
+    "Editorial orange-line is a specific proprietary style system subject to dual licensing, not a universal commercial usage permission."
+  ],
+  "parallel_prs_unchanged": [
+    677,
+    673,
+    680
+  ],
+  "current_public_shelf_unchanged": true
+}
