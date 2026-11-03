@@ -3,15 +3,18 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: aa2157650140bf0820b6d6b1921c5f0881d8c627
+content_blob_sha: e2c69537b86becb9293b5237dc0ec3f96a5f7b28
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
+prior_reviewed_blob_sha: aa2157650140bf0820b6d6b1921c5f0881d8c627
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only collection changed manifest bytes; previous score historical. No new scanner or behavioral acceptance."
 tags:
   use_case: [monitoring, research, security]
   lifecycle: [discovery, maintenance]
