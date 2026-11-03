@@ -1,0 +1,423 @@
+{
+  "schema_version": "q6-independent-music-svg-static-reviews-v1",
+  "as_of": "2026-11-03",
+  "base_main": "c4e848674c613a57ddf359250afc4497ea676653",
+  "scope": "Three individual 10-axis static source reviews in two independent source families from #677; no public consumer promotion or Q1-Q5 recount. All package Git trees enumerated, not all assets or rights reviewed.",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "review_count": 3,
+  "distinct_source_families": 2,
+  "complete_pinned_package_git_trees": 3,
+  "owned_source_blobs_enumerated": 40,
+  "source_security_scan_passes": 0,
+  "behavioral_passes": 0,
+  "unchanged_use_approvals": 0,
+  "public_consumer_promotions": 0,
+  "eligible_global_denominator": null,
+  "records": [
+    {
+      "name": "music-compose",
+      "source_repository": "sb-dev/music-production-skills",
+      "source_pin": "aa3933bc87f54a48ec018bb868bf6385b340db22",
+      "canonical_path": "skills/music-compose/SKILL.md",
+      "skill_blob_sha": "7cd753c860ffbc12756bd8485884dea2710abb90",
+      "complete_source_package_tree_sha": "4343fffa6cea369bfa95a56375dae7f39b044f9d",
+      "owned_file_count": 14,
+      "source_git_tree_entry_count": 364,
+      "source_tree_not_truncated": true,
+      "owned_package_files": [
+        {
+          "path": "skills/music-compose/SKILL.md",
+          "sha": "7cd753c860ffbc12756bd8485884dea2710abb90"
+        },
+        {
+          "path": "skills/music-compose/assets/arrangement.example.yaml",
+          "sha": "92ec11c5c92411f25888a8faa31be41271772902"
+        },
+        {
+          "path": "skills/music-compose/assets/composition.example.yaml",
+          "sha": "3c12622c050e187dbd48a8558cc4955282971f29"
+        },
+        {
+          "path": "skills/music-compose/assets/selection.example.yaml",
+          "sha": "31e18fff8f0d8a6c455d1336749753906488a647"
+        },
+        {
+          "path": "skills/music-compose/evals/evals.json",
+          "sha": "6cc6c4553638602dacb71960d56752d772105279"
+        },
+        {
+          "path": "skills/music-compose/package.json",
+          "sha": "dd6a289e196a7b6d1bf8f1c27d5198978ca506da"
+        },
+        {
+          "path": "skills/music-compose/references/arrangement.md",
+          "sha": "c7307951c9ed3645fc9b52fec1cb9803d6401d58"
+        },
+        {
+          "path": "skills/music-compose/references/composition.md",
+          "sha": "e08e25bd545a83d1f2e4f9f3df63a632820eca8c"
+        },
+        {
+          "path": "skills/music-compose/references/drafting-and-selection.md",
+          "sha": "f5a75f563be47bdc10c0e7cf1326febb556164de"
+        },
+        {
+          "path": "skills/music-compose/references/midi.md",
+          "sha": "5aca915c978973cd4e760d48ff959f36899dfd92"
+        },
+        {
+          "path": "skills/music-compose/references/reference-analysis.md",
+          "sha": "93f1bcf9e8b96b945ffee2da32c381a6b38db613"
+        },
+        {
+          "path": "skills/music-compose/scripts/inspect-midi.ts",
+          "sha": "eb90d47269abaed36b6b2c55d3f7ca8c6fc4b6ef"
+        },
+        {
+          "path": "skills/music-compose/scripts/transpose-midi.ts",
+          "sha": "2b3fd0093f8969e9edf9f9a3cfb7f5f9a3e889b8"
+        },
+        {
+          "path": "skills/music-compose/scripts/validate-composition.ts",
+          "sha": "986ac4bb2a05d922c1270e85b31e6ece43f10157"
+        }
+      ],
+      "inspected_text_files": [
+        "skills/music-compose/SKILL.md",
+        "skills/music-compose/references/composition.md",
+        "skills/music-compose/references/arrangement.md",
+        "skills/music-compose/references/drafting-and-selection.md",
+        "skills/music-compose/references/reference-analysis.md",
+        "skills/music-compose/references/midi.md",
+        "skills/music-compose/package.json",
+        "skills/music-compose/evals/evals.json",
+        "skills/music-compose/scripts/inspect-midi.ts",
+        "skills/music-compose/scripts/transpose-midi.ts",
+        "skills/music-compose/scripts/validate-composition.ts"
+      ],
+      "uninspected_package_assets": [
+        "skills/music-compose/assets/arrangement.example.yaml",
+        "skills/music-compose/assets/composition.example.yaml",
+        "skills/music-compose/assets/selection.example.yaml"
+      ],
+      "source_root_license": "MIT (publisher original source only; third-party source images/inputs require independent rights)",
+      "source_root_license_blob_sha": "1efcb2e58067d6b47988fdbdb1555ac9c86844dc",
+      "benefit": "Compare different melodies or arrangements without throwing away decisions you already approved.",
+      "transferable_method": "Write a brief, draft the smallest meaningful alternatives, select components with lineage, lock approved choices and hand a structured plan to production.",
+      "purpose_and_nontrigger": "Composition decisions and handoff, not mastered audio, automatic paid generation or permission to modify a person's files.",
+      "rubric_score_20": 15,
+      "ten_axis_scores": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Clear scope and excludes final production.",
+        "procedural_clarity": "Draft/selection/lock procedure and references are coherent.",
+        "authority_safety": "External audio requires optional Replicate token and paid host authority; file writes lack explicit user confirmation.",
+        "failure_handling": "Unresolved handoff decisions handled; helper error/rollback behavior incomplete.",
+        "evidence_discipline": "Provides test case specifications, lineage and structured examples, not actual test receipts.",
+        "dependency_coherence": "Node 22+, Tonal/@tonejs/midi and optional Replicate peer packages not all evaluated.",
+        "portability_honesty": "Core decision protocol transferable without the model or MIDI tooling.",
+        "usefulness_differentiation": "Unique component-level decision locks rather than simply another harmony/rhythm recipe.",
+        "adversarial_resilience": "No strong explicit controls over untrusted reference data or overwriting existing output paths.",
+        "effectiveness_design": "No production audition or real composition comparison executed."
+      },
+      "hard_fail_or_hold": [
+        "transpose-midi.ts writeFile(output) can overwrite an existing file (including input) without no-clobber check or output path approval",
+        "Replicate and npm installation are not authorized by static inspection",
+        "Reference music may be private or copyrighted; do not upload or mimic protected audio blindly"
+      ],
+      "license_and_rights": "MIT root for author code/docs; package assets metadata observed but examples not all read; reference recordings/music/lyrics and third-party model terms separate.",
+      "limits": "14 owned files source-tree verified. Eleven source text files read; three example YAML assets observed but not content-reviewed.",
+      "decision": "STATIC REFERENCE-ONLY; no consumer shelf promotion or unchanged package approval",
+      "source_crosswalk": "Full pinned source package tree verified; mirror/alias equivalence with governed index UNKNOWN",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "static_scenarios": "described, not executed",
+      "unchanged_use_approved": false,
+      "public_positive_promotion": false
+    },
+    {
+      "name": "illustration-flat",
+      "source_repository": "MengTo/Skills",
+      "source_pin": "1de14e21b2ba8937c0f7f6ddca581cf7cd9d94af",
+      "canonical_path": "agent-skills/illustration/illustration-flat/SKILL.md",
+      "skill_blob_sha": "039ba7ba490e7d43f9a59198ff684dc3e55e804c",
+      "complete_source_package_tree_sha": "227b78f8ef2f9aca6f11f5f3f0b6632a86636aec",
+      "owned_file_count": 13,
+      "source_git_tree_entry_count": 2051,
+      "source_tree_not_truncated": true,
+      "owned_package_files": [
+        {
+          "path": "agent-skills/illustration/illustration-flat/SKILL.md",
+          "sha": "039ba7ba490e7d43f9a59198ff684dc3e55e804c"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/agents/openai.yaml",
+          "sha": "e4d780b2a481192d65e0e5cc6768ede30fb495ae"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/demo/PROMPT.md",
+          "sha": "580d5427c0b4eeced53f75f408952f0ed2e364e6"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/demo/index.html",
+          "sha": "06664296aa46d23720c3f6b6d0cd0d5c0ab3da0d"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/demo/preview.jpg",
+          "sha": "e5535db728ceb8fb0a2d581e890b26b3a5baaf2b"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/examples/broken-link.svg",
+          "sha": "386a7a5c66ece53b92f827adda10eed4e4e05353"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/examples/coming-soon.svg",
+          "sha": "8ea59be839c6137b5021b5f3d35f387f556cdf97"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/examples/fatal-error.svg",
+          "sha": "a0441d20ce60e5cec69b90c157600574dc9c888a"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/references/craft.md",
+          "sha": "3f8bb5a1e6013c59c0e60c4786b7e838e6b66e19"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/scripts/flat-kit.mjs",
+          "sha": "920f2183ebe1dfc6669b2b90d36f9cca4b58e01f"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/scripts/lint.mjs",
+          "sha": "a2b17ac9e429829ce6ddcc358c10ba25ce7ad323"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/scripts/render.mjs",
+          "sha": "73c36aa871e0c2aedac6ffcb34d45e94661c8ff6"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-flat/style.json",
+          "sha": "3296e69f9391cc39f2fd580c3ce17616cd559748"
+        }
+      ],
+      "inspected_text_files": [
+        "agent-skills/illustration/illustration-flat/SKILL.md",
+        "agent-skills/illustration/illustration-flat/references/craft.md",
+        "agent-skills/illustration/illustration-flat/scripts/flat-kit.mjs",
+        "agent-skills/illustration/illustration-flat/scripts/lint.mjs",
+        "agent-skills/illustration/illustration-flat/scripts/render.mjs",
+        "agent-skills/illustration/illustration-flat/style.json"
+      ],
+      "uninspected_package_assets": [
+        "agent-skills/illustration/illustration-flat/agents/openai.yaml",
+        "agent-skills/illustration/illustration-flat/demo/PROMPT.md",
+        "agent-skills/illustration/illustration-flat/demo/index.html",
+        "agent-skills/illustration/illustration-flat/demo/preview.jpg",
+        "agent-skills/illustration/illustration-flat/examples/broken-link.svg",
+        "agent-skills/illustration/illustration-flat/examples/coming-soon.svg",
+        "agent-skills/illustration/illustration-flat/examples/fatal-error.svg"
+      ],
+      "source_root_license": "MIT (publisher original source only; third-party source images/inputs require independent rights)",
+      "source_root_license_blob_sha": "b3a5f823a69b4b010f92930ac09e8a776daf65c6",
+      "benefit": "Make simple, repeatable vector pictures for onboarding, empty states and product stories.",
+      "transferable_method": "Choose a restrained palette and one scene metaphor; build an SVG from simple reusable parts; compare at multiple sizes; run an illustration-specific lint before publishing.",
+      "purpose_and_nontrigger": "Flat SVG product illustrations, not full environmental painting, production asset redistribution, or running downloaded render scripts unreviewed.",
+      "rubric_score_20": 13,
+      "ten_axis_scores": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Precise flat-vector/UI activation and clear style nontriggers.",
+        "procedural_clarity": "Detailed proportion/palette/parts/QA workflow; self-contained SVG target.",
+        "authority_safety": "Local scripts write outputs without consent/overwrite safeguards.",
+        "failure_handling": "Visual checks and lint are offered, but a failed render may leave artifacts.",
+        "evidence_discipline": "Publisher claims measured/compared examples, with no independently reproduced result.",
+        "dependency_coherence": "Headless render requires Playwright/Chromium; SVG parts kit is Node-specific.",
+        "portability_honesty": "Planning and SVG craft transferable outside this exact art style.",
+        "usefulness_differentiation": "Procedural reusable parts and 2x/detail inspection improve reliability.",
+        "adversarial_resilience": "Raw SVG placed into page.setContent; regex lint is optional, not a sanitizer or network sandbox.",
+        "effectiveness_design": "No actual image generation, render, accessibility test or human art review executed."
+      },
+      "hard_fail_or_hold": [
+        "render.mjs embeds untrusted SVG directly in Chromium page.setContent with no visible network block or enforced sanitizer; possible script/external asset behavior",
+        "lint.mjs regex validation is NOT a complete SVG security sanitizer",
+        "writeFileSync in parts demo can clobber a chosen path",
+        "Demo screenshots/SVG assets have not received per-file rights clearance"
+      ],
+      "license_and_rights": "Root MIT covers publisher authored software/docs; examples/preview art ownership is publisher-stated, not independently proven. No bundled raster/vector redistribution proposed.",
+      "limits": "13 owned files source-tree verified; SKILL, craft rules, key scripts and style read; demo HTML/images/examples/OpenAI YAML not fully reviewed.",
+      "decision": "STATIC REFERENCE-ONLY; no consumer shelf promotion or unchanged package approval",
+      "source_crosswalk": "Full pinned source package tree verified; mirror/alias equivalence with governed index UNKNOWN",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "static_scenarios": "described, not executed",
+      "unchanged_use_approved": false,
+      "public_positive_promotion": false
+    },
+    {
+      "name": "illustration-ink-sketch",
+      "source_repository": "MengTo/Skills",
+      "source_pin": "1de14e21b2ba8937c0f7f6ddca581cf7cd9d94af",
+      "canonical_path": "agent-skills/illustration/illustration-ink-sketch/SKILL.md",
+      "skill_blob_sha": "129451077f11bc71816c3be87bf3439e36841828",
+      "complete_source_package_tree_sha": "41359afc0dc45779955540ba4a3ca2258dcf676a",
+      "owned_file_count": 13,
+      "source_git_tree_entry_count": 2051,
+      "source_tree_not_truncated": true,
+      "owned_package_files": [
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/SKILL.md",
+          "sha": "129451077f11bc71816c3be87bf3439e36841828"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/agents/openai.yaml",
+          "sha": "87a5bef9639d691825c9ee8a2c50de42914cf707"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/demo/PROMPT.md",
+          "sha": "35769038a214a89c4833c9c141b03a06fdedbee4"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/demo/index.html",
+          "sha": "bf01370b46e3a664061a57d9933fd9734446f077"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/demo/preview.jpg",
+          "sha": "96e4867c32b52b4d06f7b034b3d2d7b26e1dcd89"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/examples/hello-world.svg",
+          "sha": "89792e6360e6097370276ff528f3ba2d096a6a2a"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/examples/merge-conflict.svg",
+          "sha": "00d3e57f3a171dc5050e74a6348e4d738e5888f3"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/examples/slow-build.svg",
+          "sha": "e8513cccc75b388bb8fe5e6bf725a3fd883cfe23"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/references/craft.md",
+          "sha": "3f8bb5a1e6013c59c0e60c4786b7e838e6b66e19"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/scripts/ink-kit.mjs",
+          "sha": "e68c80fb367b551df616b94b12a8a199a8be2f91"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/scripts/lint.mjs",
+          "sha": "a2b17ac9e429829ce6ddcc358c10ba25ce7ad323"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/scripts/render.mjs",
+          "sha": "73c36aa871e0c2aedac6ffcb34d45e94661c8ff6"
+        },
+        {
+          "path": "agent-skills/illustration/illustration-ink-sketch/style.json",
+          "sha": "b96c7c407915beaa14db7c1fd4dabdcd26c11d7e"
+        }
+      ],
+      "inspected_text_files": [
+        "agent-skills/illustration/illustration-ink-sketch/SKILL.md",
+        "agent-skills/illustration/illustration-ink-sketch/references/craft.md",
+        "agent-skills/illustration/illustration-ink-sketch/scripts/ink-kit.mjs",
+        "agent-skills/illustration/illustration-ink-sketch/scripts/lint.mjs",
+        "agent-skills/illustration/illustration-ink-sketch/scripts/render.mjs",
+        "agent-skills/illustration/illustration-ink-sketch/style.json"
+      ],
+      "uninspected_package_assets": [
+        "agent-skills/illustration/illustration-ink-sketch/agents/openai.yaml",
+        "agent-skills/illustration/illustration-ink-sketch/demo/PROMPT.md",
+        "agent-skills/illustration/illustration-ink-sketch/demo/index.html",
+        "agent-skills/illustration/illustration-ink-sketch/demo/preview.jpg",
+        "agent-skills/illustration/illustration-ink-sketch/examples/hello-world.svg",
+        "agent-skills/illustration/illustration-ink-sketch/examples/merge-conflict.svg",
+        "agent-skills/illustration/illustration-ink-sketch/examples/slow-build.svg"
+      ],
+      "source_root_license": "MIT (publisher original source only; third-party source images/inputs require independent rights)",
+      "source_root_license_blob_sha": "b3a5f823a69b4b010f92930ac09e8a776daf65c6",
+      "benefit": "Create friendly sketch-style illustrated characters with consistent outlines, shading and expressive poses.",
+      "transferable_method": "Use seeded, separately keyed brush marks to preserve style consistency; build one clear character metaphor; review line quality, hatching and visual focus against reference cards.",
+      "purpose_and_nontrigger": "Hand-drawn-look SVG mascots, not original environment concept art or a safe-to-run browser renderer for arbitrary SVG.",
+      "rubric_score_20": 13,
+      "ten_axis_scores": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Narrow ink-brush/mascot activation plus adjacent-style exclusions.",
+        "procedural_clarity": "Detailed brush/texture/eye/pose and reproducible-key procedures.",
+        "authority_safety": "Seeded generator and browser renderer write files without per-action consent.",
+        "failure_handling": "Can reroll marks and lint output, but no robust runtime rollback.",
+        "evidence_discipline": "Original demo claims and reference comparisons exist but were not independently validated.",
+        "dependency_coherence": "Node kit plus optional Playwright/Chromium and external renderer assumptions.",
+        "portability_honesty": "Style rules transferable, while exact seeded kit locks into its implementation.",
+        "usefulness_differentiation": "Seeded per-mark randomness gives controlled revision without unrelated drift.",
+        "adversarial_resilience": "Same unsandboxed raw-SVG browser rendering and regex-only lint exposure.",
+        "effectiveness_design": "No rendered image, visual judgment, screen reader or quality regression check was run."
+      },
+      "hard_fail_or_hold": [
+        "render.mjs passes raw SVG into Chromium without guaranteed active-content filtering or network blocking",
+        "ink-kit.mjs svgOut(file) uses writeFileSync with no no-clobber guard",
+        "SVG aria-label and generated text are not shown universally escaped",
+        "Per-asset demo preview and example rights need separate confirmation"
+      ],
+      "license_and_rights": "Root MIT for authored code/docs; original card/image ownership assumed from publisher statement, not independently verified. No code, artwork or style table copied.",
+      "limits": "13 owned files source-tree verified; source SKILL, shared craft, core scripts and style read; demo/bitmap/svg examples and YAML not individually cleared.",
+      "decision": "STATIC REFERENCE-ONLY; no consumer shelf promotion or unchanged package approval",
+      "source_crosswalk": "Full pinned source package tree verified; mirror/alias equivalence with governed index UNKNOWN",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "static_scenarios": "described, not executed",
+      "unchanged_use_approved": false,
+      "public_positive_promotion": false
+    }
+  ],
+  "source_distinction": "sb-dev is independent of previously selected jtydhr88 music; MengTo offers two styles within ONE source family, not two independent publishers.",
+  "remaining_gates": [
+    "Source mirror/alias crosswalk",
+    "Per-image/preview rights and ownership checks",
+    "Security fixes or enforced sandbox for browser-rendered SVG",
+    "Transposition no-clobber output guards and authorizations",
+    "Independent hands-on image/music validation",
+    "Independent environment/concept illustration methods"
+  ]
+}
