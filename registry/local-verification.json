@@ -500,7 +500,7 @@
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b0c3784a53ef3ad15fda0a7678239b8bec86c42a",
+      "content_blob_sha": "5dc5cb3fd2527dcd39765ab66a9676146f91f1d7",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -528,7 +528,7 @@
       "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints.",
       "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
       "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
+      "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
     },
     {
       "skill_name": "glm-pulse",
@@ -1498,6 +1498,10 @@
       ],
       "requirement": "Separate explicit authorization of local path and read scope; generic news digest grants no private workspace/config inspection",
       "manifest_pinned_commit": "c75566e7470c5c6072a405e8c4a5526d2cb7c94f"
+    },
+    "github_pulse_registry_optional": {
+      "source_revision": "45303dcbab4089b3d4c3900e4c671ba9ba07d265",
+      "reason": "Prevent standalone agent from claiming to check unavailable skillz registry or accessing unrelated private repositories"
     }
   }
 }
