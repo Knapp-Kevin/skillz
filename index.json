@@ -5063,10 +5063,10 @@
   },
   "consumer_positive_recommendation_sample_20261103": {
     "as_of": "2026-11-03",
-    "scope": "Eleven individually differentiated valuable reference METHODS in nine domains. Four Q6 methods have source-pinned SKILL.md blobs and ten-axis grades but upstream complete package-tree SHAs UNKNOWN. No unchanged-use approvals or global audited all-domain count.",
+    "scope": "Nineteen useful conceptual methods across nine domains. Eight music packages have verified full source Git trees, four earlier creative package trees still UNKNOWN. No mirror, book/rights, unchanged-use or global audited clearance.",
     "source": "registry/consumer-positive-references-20261103.json",
     "plain_english": "docs/curated-capability-references.md",
-    "valuable_reference_promotions_in_this_tranche": 11,
+    "valuable_reference_promotions_in_this_tranche": 19,
     "recommended_for_unchanged_use_in_this_tranche": 0,
     "domains_covered": [
       "3d-cad-animation",
@@ -5090,7 +5090,15 @@
       "grapeot-opus-video-audio-skill/video-scoring-audio",
       "jeffreytse-grimoire-core/design-concept-art-brief",
       "scenario-labs-skills/scenario-storyboards",
-      "scenario-labs-skills/scenario-identity-library"
+      "scenario-labs-skills/scenario-identity-library",
+      "jtydhr88-music-composition-skills/mc-harmony",
+      "jtydhr88-music-composition-skills/mc-melody",
+      "jtydhr88-music-composition-skills/mc-rhythm-groove",
+      "jtydhr88-music-composition-skills/mc-rhythm-section",
+      "jtydhr88-music-composition-skills/mc-orchestration",
+      "jtydhr88-music-composition-skills/mc-arrangement-arch",
+      "jtydhr88-music-composition-skills/mc-symbolic-score",
+      "jtydhr88-music-composition-skills/mc-style-edm"
     ],
     "globally_audited_recommended_for_use_count": null,
     "globally_audited_promoted_reference_count": null,
@@ -5098,14 +5106,18 @@
     "security_validation": "not-run",
     "behavioral_validation": "not-run",
     "source_license_correction": "All 28 scitix/siclaw Q4 review records cite pinned Apache-2.0 LICENSE blob 7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f rather than incorrect MIT label",
-    "identity_limitations": "Q6 complete Git package-tree hashes remain unknown; do not count these as full-package/unchanged-install eligible or deduplicate a global distinct denominator by their SKILL.md alone.",
+    "identity_limitations": "Eight music complete pinned source package Git trees and all 22 owned blobs verified. Four other creative package trees, upstream aliases/mirrors, rights to source-book excerpts, security/behavior and use authorization remain unresolved.",
     "current_creative_domain_methods": {
       "music_composition": {
-        "positive_reference_methods": 1,
-        "subdomains_total": 8
+        "positive_reference_methods": 9,
+        "subdomains_positively_represented": 8,
+        "subdomains_total": 8,
+        "full_domain_qualification": false,
+        "independent_alternatives_pending": true
       },
       "illustration": {
         "positive_reference_methods": 3,
+        "subdomains_positively_represented": 3,
         "subdomains_total": 6,
         "character_environment_partial": true
       },
@@ -5128,5 +5140,42 @@
     "security_scan": "not-run",
     "global_distinct_eligible_denominator": null,
     "q1_q5_terminal_static_decisions_unchanged": 5508
+  },
+  "q6_eight_music_craft_static_20261103": {
+    "source_family": "jtydhr88/music-composition-skills",
+    "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+    "reviewed_entrypoints": 8,
+    "observed_package_owned_files": 22,
+    "individually_rubric_graded": true,
+    "grades": [
+      17,
+      16,
+      15,
+      16,
+      15,
+      17,
+      15,
+      15
+    ],
+    "source_license": "MIT for original author procedure text; NOTICE excludes third-party books and translations",
+    "source_license_blob": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+    "notice_blob": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+    "static_reference_only": 8,
+    "positive_methods": 8,
+    "newly_represented_music_subdomains": 7,
+    "music_subdomains_with_method_now": 8,
+    "music_subdomains_total": 8,
+    "music_method_coverage_is_domain_completion": false,
+    "complete_package_tree_identified": 8,
+    "full_package_alias_equivalence": "UNKNOWN",
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "unchanged_use_approved": 0,
+    "ledger": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+    "receipt": "docs/reviews/2026-11-03-q6-eight-music-craft-static.md",
+    "creative_browse": "docs/capability-creative-coverage.md",
+    "global_distinct_eligible_denominator": null,
+    "historical_q1q5_terminal_static_decisions_unchanged": 5508,
+    "package_tree_audit": "registry/discovery/q6-eight-music-craft-package-tree-audit-20261103.json"
   }
 }

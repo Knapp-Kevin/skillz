@@ -24,9 +24,9 @@ There are two **positive** recommendations. Both must explain the specific benef
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Current inventory limitation:** We have individually endorsed **eleven useful methods as Valuable References** across nine capability domains. Four creative methods have confirmed source pins and independent static grades, but **complete package-tree identities are still UNKNOWN**. None is approved for unchanged use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Current inventory limitation:** We have individually endorsed **nineteen useful methods as Valuable References** across nine capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Eleven useful skill references
+### Nineteen useful skill references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -41,8 +41,16 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Concept art direction | **Design Concept Art Brief** | Give artists clear silhouettes, references, constraints and delivery requirements |
 | Comics and storyboards | **Scenario Storyboards** | Repair one panel at a time and add accurate lettering afterwards |
 | Consistent illustrated characters | **Scenario Identity Library** | Anchor every new view to one approved character reference |
+| Harmony | **mc-harmony** | Build a functional chord plan first, add color only where needed |
+| Melody | **mc-melody** | Plan comfortable ranges, leaps and phrases for a real singer |
+| Rhythmic feel | **mc-rhythm-groove** | Choose backbeat interaction and accents independently of tempo |
+| Programmed drums and bass | **mc-rhythm-section** | Choose kick-bass interplay and selective timing adjustments |
+| Orchestration | **mc-orchestration** | Assign instrument roles and check blend, balance and register |
+| Song arrangement | **mc-arrangement-arch** | Give a song an arc by changing when layers enter and leave |
+| Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
+| Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
 
-**These are useful ideas, not install recommendations.** None has a new security or behavioral test pass. The four creative additions have explicit file, privacy and model-cost restrictions, and their full upstream package-tree identities remain unverified. [Explore the music and illustration coverage gaps](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
+**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
 
 ## Find skills for the work you do
 

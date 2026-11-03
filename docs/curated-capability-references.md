@@ -1,6 +1,6 @@
-# Eleven useful skill methods, with their limits
+# Nineteen useful skill methods, with their limits
 
-**These are eleven positive reference-method recommendations across nine capability domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The four newly added creative examples still lack independently established complete package-tree identities, so they are strictly **methods to study, not package reuse approvals**.
+**These are nineteen positively selected, individually differentiated Valuable Reference methods across nine domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -15,6 +15,14 @@
 | Brief a character or environment artist | **[Design Concept Art Brief](https://github.com/jeffreytse/grimoire-core/blob/7ff5861b00836cb0d675c00a09a26d143722579e/skills/art/illustration/skills/design-concept-art-brief/SKILL.md)** | Agree on silhouette, visual references, production limits and handoff before artwork starts |
 | Make a comic or storyboard | **[Scenario Storyboards](https://github.com/scenario-labs/skills/blob/7f4b801c7248d51b093ec365aceb114bd06139e6/skills/scenario-storyboards/SKILL.md)** | Script, generate and repair panels separately; add readable lettering afterwards |
 | Keep an illustrated character recognizable | **[Scenario Identity Library](https://github.com/scenario-labs/skills/blob/7f4b801c7248d51b093ec365aceb114bd06139e6/skills/scenario-identity-library/SKILL.md)** | Approve one character reference and compare every new view to it |
+| harmony | **[mc-harmony](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-harmony/SKILL.md)** | Find chords that support a melody without piling on needless substitutions |
+| melody | **[mc-melody](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-melody/SKILL.md)** | Make a tune easier to sing by planning intervals and comfortable range |
+| Rhythm: feel | **[mc-rhythm-groove](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-rhythm-groove/SKILL.md)** | Change accents and melodic rests separately from the tempo |
+| Rhythm: drum and bass | **[mc-rhythm-section](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-rhythm-section/SKILL.md)** | Decide how kick and bass cooperate, then humanize only what needs it |
+| orchestration | **[mc-orchestration](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-orchestration/SKILL.md)** | Give instruments specific line roles and compatible registers |
+| arranging | **[mc-arrangement-arch](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-arrangement-arch/SKILL.md)** | Plan when layers enter, disappear and return for an actual musical arc |
+| notation | **[mc-symbolic-score](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-symbolic-score/SKILL.md)** | Produce ABC, MusicXML and MIDI from one checked score plan |
+| electronic-composition | **[mc-style-edm](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-style-edm/SKILL.md)** | Build and release club-track energy by adding and removing layers |
 
 ## Why each is a valuable reference, not ready for unchanged use
 
@@ -100,8 +108,16 @@
 
 **New Q6 evidence and rights:** Each method has a source/pin/entrypoint blob, original root MIT license, observed dependency files and a separate 10-axis static review. Their **full package-tree SHAs remain UNKNOWN**: do not interpret matching SKILL.md values as identical or vetted whole packages. Security and model-executed behavior remain **not-run**. [Read all individual findings](reviews/2026-11-03-q6-four-method-static-review.md) and [the live creative coverage guide](capability-creative-coverage.md).
 
+### Music composition: eight independently graded craft methods
+
+These eight are *separate methods*, not eight licenses to operate a composition tool. Their ten-part static grades range from **15/20 to 17/20**. Harmony weighs chord function before color. Melody checks singability and phrase shape. Groove decides rhythmic feel; rhythm-section programming handles kick/bass, quantization and ghost notes. Orchestration assigns an instrumental role and a register; arranging makes a time-based entry/exit plan. Symbolic scoring checks one spec against several notation forms. Electronic composition builds musical tension through controlled layer changes.
+
+**Important limits:** All eight came from the same pinned source family. The author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) excludes passages from source books and translations from MIT. Referenced musical work, example/notation rights, original book tables, and model/provider terms also remain separate. We are recommending only the *original brief interpretations* in this guide. **Eight music package-tree SHAs are now verified; mirror/alias equality and protected-book rights are UNKNOWN.** No action permission, scanner result, actual song generation or human listening verdict was established.
+
+[Read the detailed eight-skill static review](reviews/2026-11-03-q6-eight-music-craft-static.md). [Browse the eight music topics and the remaining illustration gaps](capability-creative-coverage.md).
+
 ## What this does and doesn't count
 
-Eleven **distinct source/path-pinned Valuable Reference methods** across nine domains in this bounded shelf; **zero Recommended for Use approvals**. Four creative methods have missing full package-tree identities and therefore no claim of whole-package equivalence or completeness. Other domains and methods remain unqualified, and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavior passed.
+Nineteen **distinct source/path-pinned Valuable Reference methods** across nine domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
 The source-neutral [structured reference catalog](../registry/consumer-positive-references-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
