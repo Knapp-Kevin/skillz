@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1120" width="1500" height="1120" role="img" aria-labelledby="title desc">
+<title id="title">Skillz capability evidence by domain: 33 categories, 247 subdomains</title><desc id="desc">A historical November 2, 2026 evidence-link snapshot. Across 33 capability domains, 210 of 247 subdomains have at least one governed review or candidate pointer, and 37 have no pointer. These links may point to rejected skills; they are NOT counts of approved or recommended skills. All 33 domain names and counts are provided in the README text alternative.</desc>
+<rect width="1500" height="1120" rx="26" fill="#101c30"/>
+<text x="56" y="79" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#f8fafc">Where we have skill-review evidence</text>
+<text x="57" y="119" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#cbd5e1">Evidence links are research leads, not approved or recommended skills.</text>
+<rect x="55" y="149" width="336" height="94" rx="13" fill="#1e3047" stroke="#334155"/>
+<text x="73" y="194" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#ecfeff">33</text>
+<text x="73" y="222" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#b8cbdf">capability domains</text>
+<rect x="409" y="149" width="336" height="94" rx="13" fill="#1e3047" stroke="#334155"/>
+<text x="427" y="194" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#ecfeff">247</text>
+<text x="427" y="222" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#b8cbdf">subdomains</text>
+<rect x="763" y="149" width="336" height="94" rx="13" fill="#1e3047" stroke="#334155"/>
+<text x="781" y="194" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#ecfeff">210</text>
+<text x="781" y="222" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#b8cbdf">with a review or candidate link</text>
+<rect x="1117" y="149" width="336" height="94" rx="13" fill="#1e3047" stroke="#334155"/>
+<text x="1135" y="194" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#ecfeff">37</text>
+<text x="1135" y="222" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#b8cbdf">without a link</text>
+<rect x="55" y="274" width="20" height="15" rx="3" fill="#35b6a7"/><text x="85" y="288" fill="#dce8f5" font-size="19" font-family="Arial, Helvetica, sans-serif">Subdomains with at least one evidence link</text>
+<rect x="545" y="274" width="20" height="15" rx="3" fill="#33465d"/><text x="575" y="288" fill="#dce8f5" font-size="19" font-family="Arial, Helvetica, sans-serif">No recorded evidence link</text>
+<line x1="55" y1="310" x2="1445" y2="310" stroke="#334155"/>
+<text x="55" y="347" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Software engineering</text>
+<rect x="451" y="333" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="333" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="347" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">10/10</text>
+<text x="55" y="389" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Testing</text>
+<rect x="451" y="375" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="375" width="196.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="389" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/8</text>
+<text x="55" y="431" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Agent / MCP development</text>
+<rect x="451" y="417" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="417" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="431" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">8/8</text>
+<text x="55" y="473" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Cloud / DevOps</text>
+<rect x="451" y="459" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="459" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="473" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">8/8</text>
+<text x="55" y="515" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Security</text>
+<rect x="451" y="501" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="501" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="515" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="55" y="557" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Research</text>
+<rect x="451" y="543" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="543" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="557" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="55" y="599" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Planning</text>
+<rect x="451" y="585" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="585" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="599" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/6</text>
+<text x="55" y="641" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Marketing</text>
+<rect x="451" y="627" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="627" width="199.11" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="641" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">8/9</text>
+<text x="55" y="683" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Product</text>
+<rect x="451" y="669" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="669" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="683" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">8/8</text>
+<text x="55" y="725" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">UX / UI</text>
+<rect x="451" y="711" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="711" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="725" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="55" y="767" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Visual design</text>
+<rect x="451" y="753" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="753" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="767" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="55" y="809" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Illustration</text>
+<rect x="451" y="795" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="795" width="37.33" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="809" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">1/6</text>
+<text x="55" y="851" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">3D / CAD / animation</text>
+<rect x="451" y="837" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="837" width="174.22" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="851" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/9</text>
+<text x="55" y="893" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Game design</text>
+<rect x="451" y="879" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="879" width="168.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="893" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/8</text>
+<text x="55" y="935" font-family="Arial, Helvetica, sans-serif" font-size="16.8" fill="#f1f5f9">Fiction / narrative / worldbuilding</text>
+<rect x="451" y="921" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="921" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="935" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">8/8</text>
+<text x="55" y="977" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Technical writing</text>
+<rect x="451" y="963" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="451" y="963" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="690" y="977" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="55" y="1019" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Music composition</text>
+<rect x="451" y="1005" width="224" height="15" rx="6" fill="#33465d"/>
+<text x="690" y="1019" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#fecaca">0/8</text>
+<text x="771" y="347" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Audio / voice / sound</text>
+<rect x="1167" y="333" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="333" width="140.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="347" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">5/8</text>
+<text x="771" y="389" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Video / film</text>
+<rect x="1167" y="375" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="375" width="124.44" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="389" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">5/9</text>
+<text x="771" y="431" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Communication</text>
+<rect x="1167" y="417" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="417" width="160.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="431" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">5/7</text>
+<text x="771" y="473" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Analytics</text>
+<rect x="1167" y="459" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="459" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="473" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="771" y="515" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Time / productivity</text>
+<rect x="1167" y="501" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="501" width="192.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="515" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/7</text>
+<text x="771" y="557" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Memory / context</text>
+<rect x="1167" y="543" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="543" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="557" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="771" y="599" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Business</text>
+<rect x="1167" y="585" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="585" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="599" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="771" y="641" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Sales</text>
+<rect x="1167" y="627" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="627" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="641" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<text x="771" y="683" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Career</text>
+<rect x="1167" y="669" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="669" width="192.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="683" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/7</text>
+<text x="771" y="725" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Education</text>
+<rect x="1167" y="711" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="711" width="192.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="725" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/7</text>
+<text x="771" y="767" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Science</text>
+<rect x="1167" y="753" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="753" width="192.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="767" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/7</text>
+<text x="771" y="809" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Medicine</text>
+<rect x="1167" y="795" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="795" width="192.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="809" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/7</text>
+<text x="771" y="851" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Law</text>
+<rect x="1167" y="837" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="837" width="192.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="851" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">6/7</text>
+<text x="771" y="893" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Finance</text>
+<rect x="1167" y="879" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="879" width="196.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="893" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/8</text>
+<text x="771" y="935" font-family="Arial, Helvetica, sans-serif" font-size="18.3" fill="#f1f5f9">Robotics / IoT</text>
+<rect x="1167" y="921" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="921" width="160.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="935" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">5/7</text>
+<text x="771" y="977" font-family="Arial, Helvetica, sans-serif" font-size="17.6" fill="#f1f5f9">ML accelerators and compute</text>
+<rect x="1167" y="963" width="224" height="15" rx="6" fill="#33465d"/>
+<rect x="1167" y="963" width="224.00" height="15" rx="6" fill="#35b6a7"/>
+<text x="1406" y="977" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">7/7</text>
+<line x1="55" y1="1073" x2="1445" y2="1073" stroke="#334155"/>
+<text x="56" y="1100" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#b9cce0">Snapshot: November 2, 2026 (Q4) • Original audit: registry/discovery/capability-coverage-audit-20261102.json</text>
+</svg>
