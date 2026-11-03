@@ -1,6 +1,6 @@
 # Million-scale agent-skill discovery: research intake (2026-11-02)
 
-Status: **DISCOVERY LEAD ONLY**. This note does not admit, install, execute, mirror, score, or license any skill. It is intentionally isolated from Claude's ongoing four-source qualification work.
+Status: **OPEN-ENDED DISCOVERY**. This note does not admit, install, execute, score, or license any skill. Discovery may index metadata at ecosystem scale independently of qualification; storing or redistributing full third-party content remains subject to applicable rights. It is intentionally isolated from Claude's ongoing four-source qualification work.
 
 ## Evidence and population definitions
 
@@ -16,14 +16,14 @@ Status: **DISCOVERY LEAD ONLY**. This note does not admit, install, execute, mir
 - **Safety**: treat all external SKILL.md text and bundled scripts as untrusted data. No automatic execution, installation, private-data exposure, or network access on behalf of candidate instructions.
 - **Coverage**: map candidates to the existing 33 domains / 247 subdomains with evidence-linked, potentially multi-label assignments; separate name-only leads from inspected-content assignments. Do not fabricate per-domain totals.
 - **Quality**: keep distinct columns for raw occurrences, unique instruction blobs, reconciled package identities, exact-version static decisions, governed reviews, package security, behavioral validation and authorized reuse.
-- **Scale**: first run a bounded metadata-only sample and publish duplicate ratios, source overlap, per-domain coverage, rights unknowns, and error bars. Do not bulk mirror millions of packages without an explicit owner decision and resource budget.
+- **Scale**: index discoverable metadata broadly and continuously, with resumable source cursors, rate-limit compliance, per-source counts and provenance. Use a bounded sample to test ingestion quality, **not** to cap discovery. Avoid bulk copying full third-party packages without rights and resource review.
 - **Concurrency**: reconcile against the current four-source frontier and Claude's ongoing qualification records by pinned identities; never overwrite or reset its ledgers.
 
-## Next bounded investigation
+## Parallel execution tracks
 
-1. Confirm official GitSkills dataset download, checksum, schema, distribution license and practical metadata-only query access.
-2. Produce a read-only sample of **1,000 occurrences** across source families and capability domains, preserving sampling design and denominators.
-3. Report unique instruction blobs, exact package identities where available, overlap with the four-source corpus, rights visibility, and domain/subdomain gaps.
-4. Propose staged expansion only after evidence, cost and safety gates are met.
+1. **Unbounded discovery frontier**: expand metadata indexing across GitSkills and independent registries, repositories, ecosystems and future sources; retain incomplete and rejected leads, checkpoint progress, and respect source access limits. Do not require review, license clearance for *use*, or a domain placement before recording a lawful metadata lead.
+2. **Bounded ingestion QA**: verify dataset schema, rights and integrity, then use a 1,000-occurrence *diagnostic sample* to measure extraction fidelity, deduplication, overlap and coverage errors. This sample is not an upper bound or a gate on further metadata discovery.
+3. **Independent qualification**: continue exact-package evaluation, static grades, security and behavioral checks, license-specific reuse decisions and domain mapping as capacity permits. Never promote discovered counts into approved counts.
+4. **Progress reporting**: report cumulative occurrences, deduplicated blobs, package identities, sources and capability coverage alongside separately measured evaluated/qualified populations. Label unknown denominators.
 
-**Acceptance:** an auditable source and identity crosswalk plus a clearly labeled coverage report; no implication that discovered candidates are safe or approved.
+**Acceptance:** discovery can expand without waiting for evaluation, with auditable source identity and checkpointing; evaluation and adoption remain independently gated.
