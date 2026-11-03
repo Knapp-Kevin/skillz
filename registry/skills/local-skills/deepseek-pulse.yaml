@@ -7,7 +7,7 @@ source_path: skills/deepseek-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
+source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills."
-exact_version_requalification: "Required for eb5ee9d97e7efe9f38cff89958396dfd9ec82457; prior review fingerprint e5778521bac5459432731814755dd2c4d60ff705 is historical only. No current package security or behavioral pass."
+exact_version_requalification: "Required for 63be9ffb787e29e7c9d53a4111c817f660d0c943; prior review fingerprint e5778521bac5459432731814755dd2c4d60ff705 is historical only. No current package security or behavioral pass."
