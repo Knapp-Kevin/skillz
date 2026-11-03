@@ -1,0 +1,5088 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "artifact": "gitskills-g2-unclassified-sample",
+ "method": "600 owner-unique GitSkills descriptions that matched no G1 keyword rule (random by content hash, G1 owners excluded) labelled by two read-only workers against the capability taxonomy; text treated as untrusted data.",
+ "finding": "The unclassified 32% is mostly existing domains the rules missed (tool-specific names, project-internal workflows, non-English text), not a large unknown capability class.",
+ "domain_counts": {
+  "research": 29,
+  "software-engineering": 134,
+  "time-productivity": 20,
+  "game-design": 12,
+  "finance": 17,
+  "testing": 11,
+  "security": 22,
+  "agent-mcp-development": 69,
+  "non-skill-or-unclear": 29,
+  "ux-ui": 12,
+  "memory-context": 16,
+  "3d-cad-animation": 7,
+  "business": 14,
+  "analytics": 11,
+  "cloud-devops": 21,
+  "law": 12,
+  "product": 23,
+  "government-public": 2,
+  "marketing": 14,
+  "science": 7,
+  "technical-writing": 12,
+  "ml-accelerators": 5,
+  "visual-design": 6,
+  "education": 17,
+  "medicine": 4,
+  "sales": 6,
+  "planning": 13,
+  "communication": 11,
+  "audio-voice-sound": 3,
+  "fiction-narrative-worldbuilding": 3,
+  "robotics-iot": 5,
+  "career": 2,
+  "wellbeing-lifestyle": 7,
+  "persona-perspective": 6,
+  "agriculture-food": 2,
+  "documents-office": 4,
+  "data-engineering": 3,
+  "ecommerce-retail": 3,
+  "collectibles-hobbies": 2,
+  "video-film": 2,
+  "illustration": 1,
+  "geospatial-mapping": 1
+ },
+ "language_counts": {
+  "en": 445,
+  "de": 6,
+  "zh": 66,
+  "ko": 17,
+  "es": 14,
+  "tr": 3,
+  "ru": 5,
+  "vi": 3,
+  "ja": 25,
+  "fr": 1,
+  "pt": 12,
+  "nl": 1,
+  "cs": 1,
+  "id": 1
+ },
+ "worker_summaries": [
+  {
+   "n_items": 300,
+   "counts_by_domain": {
+    "software-engineering": 77,
+    "agent-mcp-development": 38,
+    "non-skill-or-unclear": 21,
+    "research": 14,
+    "time-productivity": 13,
+    "security": 11,
+    "finance": 10,
+    "cloud-devops": 9,
+    "communication": 8,
+    "memory-context": 7,
+    "business": 7,
+    "education": 7,
+    "game-design": 6,
+    "testing": 6,
+    "analytics": 6,
+    "product": 6,
+    "marketing": 6,
+    "technical-writing": 6,
+    "ux-ui": 5,
+    "law": 5,
+    "science": 5,
+    "planning": 5,
+    "sales": 4,
+    "ml-accelerators": 3,
+    "visual-design": 3,
+    "robotics-iot": 3,
+    "3d-cad-animation": 2,
+    "wellbeing-lifestyle": 2,
+    "government-public": 1,
+    "medicine": 1,
+    "audio-voice-sound": 1,
+    "fiction-narrative-worldbuilding": 1,
+    "career": 1
+   },
+   "proposed_new_domains": {
+    "government-public": [
+     33
+    ],
+    "wellbeing-lifestyle": [
+     268,
+     274
+    ]
+   },
+   "proposed_new_subdomains": {
+    "software-engineering/code-conventions": [
+     75,
+     102,
+     111
+    ],
+    "software-engineering/databases": [
+     58,
+     109,
+     126
+    ],
+    "communication/writing-style": [
+     121,
+     250,
+     286
+    ],
+    "agent-mcp-development/skill-management": [
+     127,
+     290,
+     292
+    ],
+    "analytics/data-engineering": [
+     30,
+     37
+    ],
+    "software-engineering/localization": [
+     64,
+     218
+    ],
+    "agent-mcp-development/skill-authoring": [
+     65,
+     237
+    ],
+    "research/news-monitoring": [
+     83,
+     129
+    ],
+    "finance/crypto-defi": [
+     167,
+     276
+    ],
+    "software-engineering/code-quality": [
+     168,
+     199
+    ],
+    "software-engineering/tv-platforms": [
+     219,
+     222
+    ],
+    "game-design/engine-systems": [
+     282,
+     298
+    ],
+    "science/metrology": [
+     38
+    ],
+    "software-engineering/modeling-languages": [
+     42
+    ],
+    "visual-design/generative-image": [
+     52
+    ],
+    "software-engineering/systems-programming": [
+     55
+    ],
+    "technical-writing/reports": [
+     67
+    ],
+    "science/quantum-computing": [
+     69
+    ],
+    "medicine/health-informatics": [
+     71
+    ],
+    "game-design/engine-tooling": [
+     77
+    ],
+    "research/linguistics": [
+     85
+    ],
+    "cloud-devops/databases-ops": [
+     97
+    ],
+    "security/reverse-engineering": [
+     114
+    ],
+    "software-engineering/xr-ar-vr": [
+     117
+    ],
+    "software-engineering/automation-rpa": [
+     120
+    ],
+    "communication/email-writing": [
+     122
+    ],
+    "education/school-administration": [
+     125
+    ],
+    "fiction-narrative-worldbuilding/genre": [
+     133
+    ],
+    "robotics-iot/home-automation": [
+     138
+    ],
+    "finance/banking-validation": [
+     144
+    ],
+    "analytics/ml-modeling": [
+     153
+    ],
+    "business/business-registration": [
+     154
+    ],
+    "science/geodesy-gnss": [
+     159
+    ],
+    "communication/application-review": [
+     162
+    ],
+    "technical-writing/indexing-terminology": [
+     182
+    ],
+    "business/cost-estimation": [
+     195
+    ],
+    "communication/customer-support": [
+     196
+    ],
+    "communication/humor-persona": [
+     201
+    ],
+    "marketing/analyst-relations": [
+     207
+    ],
+    "game-design/modding": [
+     210
+    ],
+    "software-engineering/programming-languages": [
+     214
+    ],
+    "analytics/data-quality": [
+     229
+    ],
+    "ml-accelerators/hyperdimensional-computing": [
+     238
+    ],
+    "security/compliance-controls": [
+     246
+    ],
+    "time-productivity/notes": [
+     247
+    ],
+    "research/experimental-design": [
+     248
+    ],
+    "visual-design/image-editing": [
+     252
+    ],
+    "business/ai-adoption": [
+     256
+    ],
+    "game-design/asset-pipeline": [
+     257
+    ],
+    "business/mergers-acquisitions": [
+     261
+    ],
+    "security/agent-safety": [
+     278
+    ]
+   },
+   "recurring_new_subdomains_ge2": {
+    "analytics/data-engineering": 2,
+    "software-engineering/databases": 4,
+    "software-engineering/localization": 2,
+    "agent-mcp-development/skill-authoring": 2,
+    "software-engineering/code-conventions": 6,
+    "research/news-monitoring": 2,
+    "communication/writing-style": 3,
+    "agent-mcp-development/skill-management": 3,
+    "finance/crypto-defi": 2,
+    "software-engineering/code-quality": 2,
+    "software-engineering/tv-platforms": 2,
+    "game-design/engine-systems": 2
+   },
+   "project_internal_or_one_repo_share": {
+    "project_internal": 72,
+    "share": 0.24,
+    "plus_agent_meta": 113,
+    "share_incl_agent_meta": 0.377
+   },
+   "non_english_share": 0.283,
+   "languages": {
+    "en": 215,
+    "zh": 34,
+    "ja": 15,
+    "ko": 8,
+    "es": 8,
+    "pt": 6,
+    "ru": 4,
+    "de": 3,
+    "vi": 3,
+    "tr": 2,
+    "fr": 1,
+    "nl": 1
+   },
+   "why_missed_counts": {
+    "tool-specific name": 86,
+    "non-English": 85,
+    "project-internal workflow": 72,
+    "agent-harness/meta workflow": 41,
+    "niche domain vocabulary": 37,
+    "generic verb phrasing": 18,
+    "test fixture/placeholder": 5
+   },
+   "keyword_suggestions": {
+    "software-engineering": [
+     "PR",
+     "pull request",
+     "worktree",
+     "branch",
+     "merge",
+     "dotfiles",
+     "SwiftUI",
+     "Flutter",
+     "MAUI",
+     "Capacitor",
+     "Nuxt",
+     "Preact",
+     "Angular",
+     "Django",
+     "MediatR",
+     "DDD",
+     "CQRS",
+     "import",
+     "package.json",
+     "go.mod",
+     "tvOS",
+     "leanback",
+     "driver",
+     "PCI",
+     "MMIO",
+     "sitemap",
+     "STL"
+    ],
+    "agent-mcp-development": [
+     "skill tool",
+     "SKILL.md",
+     "loop",
+     "turn",
+     "session",
+     "subagent",
+     "plan.md",
+     "PRP",
+     "spec-kit",
+     "BMAD",
+     "rubric",
+     "harness",
+     "self-improving",
+     "judge"
+    ],
+    "databases (new SE subdomain)": [
+     "PostgreSQL",
+     "MySQL",
+     "foreign key",
+     "DDL",
+     "WAL",
+     "Kudu"
+    ],
+    "time-productivity": [
+     "OmniFocus",
+     "Apple Notes",
+     "issue",
+     "backlog",
+     "grooming",
+     "Linear",
+     "Jira",
+     "sprint",
+     "standup",
+     "Teams channel",
+     "Feishu"
+    ],
+    "security": [
+     "CTF",
+     "nmap",
+     "nuclei",
+     "IDOR",
+     "reverse engineering",
+     "binary triage",
+     "ISO 27001",
+     "RBAC",
+     "token",
+     "Cognito"
+    ],
+    "finance": [
+     "stock",
+     "股票",
+     "投资",
+     "crypto",
+     "wallet",
+     "swap",
+     "odds",
+     "appraiser",
+     "depreciation",
+     "bank account"
+    ],
+    "law": [
+     "辩护",
+     "zamanaşımı",
+     "hukuk",
+     "LGPD",
+     "Fedlex",
+     "Tribunal"
+    ],
+    "education": [
+     "Lektion",
+     "lesson",
+     "olympiad",
+     "enrollment",
+     "FTE",
+     "培训课程",
+     "Lernsituation"
+    ],
+    "research": [
+     "RFC",
+     "Wayback",
+     "Wikipedia",
+     "SearXNG",
+     "FAOSTAT",
+     "news briefing",
+     "fact-check"
+    ],
+    "non-English stems": [
+     "技能",
+     "スキル",
+     "워크플로우",
+     "ワークフロー",
+     "审查",
+     "分析",
+     "设计",
+     "工作流"
+    ]
+   },
+   "notes": "Dominant miss causes: project-internal/agent-harness workflows and CJK/other non-English descriptions; tool-specific product names (Flutter, Jira, OmniFocus, PostgreSQL) also escape generic capability keywords. Candidate domains confirmed by sample: wellbeing-lifestyle (268,274), government-public (33). No hits for energy-environment, manufacturing-industrial, hr-people beyond borderline (125 school admin, 59 lab control)."
+  },
+  {
+   "n": 300,
+   "counts_by_domain": {
+    "software-engineering": 57,
+    "agent-mcp-development": 31,
+    "product": 17,
+    "research": 15,
+    "cloud-devops": 12,
+    "security": 11,
+    "education": 10,
+    "memory-context": 9,
+    "marketing": 8,
+    "planning": 8,
+    "non-skill-or-unclear": 8,
+    "time-productivity": 7,
+    "finance": 7,
+    "ux-ui": 7,
+    "law": 7,
+    "business": 7,
+    "game-design": 6,
+    "persona-perspective": 6,
+    "technical-writing": 6,
+    "wellbeing-lifestyle": 5,
+    "3d-cad-animation": 5,
+    "analytics": 5,
+    "testing": 5,
+    "documents-office": 4,
+    "communication": 3,
+    "data-engineering": 3,
+    "visual-design": 3,
+    "ecommerce-retail": 3,
+    "medicine": 3,
+    "agriculture-food": 2,
+    "ml-accelerators": 2,
+    "robotics-iot": 2,
+    "sales": 2,
+    "collectibles-hobbies": 2,
+    "audio-voice-sound": 2,
+    "fiction-narrative-worldbuilding": 2,
+    "video-film": 2,
+    "science": 2,
+    "government-public": 1,
+    "illustration": 1,
+    "geospatial-mapping": 1,
+    "career": 1
+   },
+   "language_counts": {
+    "en": 230,
+    "zh": 32,
+    "ja": 10,
+    "ko": 9,
+    "pt": 6,
+    "es": 6,
+    "de": 3,
+    "ru": 1,
+    "cs": 1,
+    "id": 1,
+    "tr": 1
+   },
+   "why_missed_counts": {
+    "tool-specific name": 76,
+    "project-internal workflow": 70,
+    "non-English": 64,
+    "generic phrasing, no domain keyword": 36,
+    "agent meta/harness workflow": 21,
+    "niche domain vocabulary": 21,
+    "persona/character distillation": 6,
+    "test fixture/stub": 6
+   },
+   "proposed_new_domains": {
+    "persona-perspective": {
+     "count": 6,
+     "examples": [
+      310,
+      323,
+      361
+     ]
+    },
+    "wellbeing-lifestyle": {
+     "count": 5,
+     "examples": [
+      311,
+      460,
+      508
+     ]
+    },
+    "documents-office": {
+     "count": 4,
+     "examples": [
+      346,
+      384,
+      453
+     ]
+    },
+    "data-engineering": {
+     "count": 3,
+     "examples": [
+      363,
+      365,
+      437
+     ]
+    },
+    "ecommerce-retail": {
+     "count": 3,
+     "examples": [
+      385,
+      402,
+      473
+     ]
+    },
+    "agriculture-food": {
+     "count": 2,
+     "examples": [
+      332,
+      350
+     ]
+    },
+    "collectibles-hobbies": {
+     "count": 2,
+     "examples": [
+      427,
+      517
+     ]
+    },
+    "government-public": {
+     "count": 1,
+     "examples": [
+      379
+     ]
+    },
+    "geospatial-mapping": {
+     "count": 1,
+     "examples": [
+      596
+     ]
+    }
+   },
+   "proposed_new_subdomains": {
+    "security/reverse-engineering": {
+     "count": 2,
+     "examples": [
+      312,
+      533
+     ]
+    },
+    "cloud-devops/networking": {
+     "count": 2,
+     "examples": [
+      328,
+      475
+     ]
+    },
+    "visual-design/ai-image-generation": {
+     "count": 2,
+     "examples": [
+      367,
+      395
+     ]
+    },
+    "robotics-iot/smart-home": {
+     "count": 2,
+     "examples": [
+      407,
+      518
+     ]
+    },
+    "software-engineering/ai-integration": {
+     "count": 2,
+     "examples": [
+      417,
+      570
+     ]
+    },
+    "cloud-devops/system-administration": {
+     "count": 2,
+     "examples": [
+      487,
+      586
+     ]
+    },
+    "game-design/mods-resource-packs": {
+     "count": 1,
+     "examples": [
+      308
+     ]
+    },
+    "finance/crypto-web3": {
+     "count": 1,
+     "examples": [
+      317
+     ]
+    },
+    "technical-writing/diagrams": {
+     "count": 1,
+     "examples": [
+      321
+     ]
+    },
+    "business/logistics-shipping": {
+     "count": 1,
+     "examples": [
+      343
+     ]
+    },
+    "3d-cad-animation/textures-materials": {
+     "count": 1,
+     "examples": [
+      393
+     ]
+    },
+    "planning/systems-thinking": {
+     "count": 1,
+     "examples": [
+      397
+     ]
+    },
+    "agent-mcp-development/browser-automation": {
+     "count": 1,
+     "examples": [
+      412
+     ]
+    },
+    "software-engineering/language-design": {
+     "count": 1,
+     "examples": [
+      413
+     ]
+    },
+    "agent-mcp-development/prompt-engineering": {
+     "count": 1,
+     "examples": [
+      418
+     ]
+    },
+    "game-design/playable-games": {
+     "count": 1,
+     "examples": [
+      426
+     ]
+    },
+    "software-engineering/debugging": {
+     "count": 1,
+     "examples": [
+      442
+     ]
+    },
+    "law/intellectual-property": {
+     "count": 1,
+     "examples": [
+      444
+     ]
+    },
+    "security/secrets-management": {
+     "count": 1,
+     "examples": [
+      482
+     ]
+    },
+    "security/osint": {
+     "count": 1,
+     "examples": [
+      524
+     ]
+    },
+    "software-engineering/blockchain": {
+     "count": 1,
+     "examples": [
+      528
+     ]
+    },
+    "game-design/prototyping": {
+     "count": 1,
+     "examples": [
+      539
+     ]
+    },
+    "science/bioinformatics": {
+     "count": 1,
+     "examples": [
+      556
+     ]
+    },
+    "software-engineering/low-level-programming": {
+     "count": 1,
+     "examples": [
+      557
+     ]
+    },
+    "science/structural-biology": {
+     "count": 1,
+     "examples": [
+      568
+     ]
+    },
+    "business/music-industry": {
+     "count": 1,
+     "examples": [
+      572
+     ]
+    }
+   },
+   "project_internal_or_one_repo_share": {
+    "count": 91,
+    "share": 0.303,
+    "note": "project-internal workflow + agent meta/harness workflow"
+   },
+   "non_english_share": 0.233,
+   "keyword_suggestions": {
+    "agent-mcp-development": [
+     "harness",
+     "subagent",
+     "beads",
+     "bead",
+     "plan mode",
+     "bypass",
+     "CLAUDE.md",
+     "skill tree",
+     "spec-driven",
+     "openspec",
+     "supervisor",
+     "merge gate",
+     "prompt markup",
+     "browser workflow"
+    ],
+    "software-engineering": [
+     "scaffold",
+     "NuGet",
+     "Swift Package",
+     "Bun",
+     "SQLAlchemy",
+     "FastAPI",
+     "Tailwind",
+     "MVVM",
+     "WIT",
+     "WebAssembly",
+     "DDD",
+     "aggregate root",
+     "Next.js",
+     "Vue",
+     "WordPress block",
+     "crash reporter",
+     "blockchain",
+     "CCIP",
+     "debug",
+     "root cause",
+     "call stack"
+    ],
+    "product": [
+     "SFR",
+     "RFP",
+     "acceptance criteria",
+     "grooming",
+     "backlog",
+     "traceability matrix",
+     "requirements",
+     "要件",
+     "요구사항",
+     "需求"
+    ],
+    "cloud-devops": [
+     "PagerDuty",
+     "alert",
+     "monitoring",
+     "proxy",
+     "sing-box",
+     "v2ray",
+     "subnet",
+     "disk cleanup",
+     "processes",
+     "Dependabot",
+     "fastlane"
+    ],
+    "data-engineering(new)": [
+     "Data Vault",
+     "Kimball",
+     "star schema",
+     "VACUUM",
+     "semantic layer",
+     "datasource"
+    ],
+    "persona-perspective(new)": [
+     "perspective",
+     "视角",
+     "思维框架",
+     "认知与表达框架",
+     "distill",
+     "蒸馏"
+    ],
+    "documents-office(new)": [
+     "PDF",
+     "docx",
+     "Word",
+     "钉钉",
+     "飞书",
+     "spreadsheet",
+     "file search"
+    ],
+    "law": [
+     "UWG",
+     "ZPO",
+     "GoBD",
+     "ESPR",
+     "Article 17",
+     "reps and warranties",
+     "NCL",
+     "clínica jurídica",
+     "meeting law"
+    ],
+    "non-English generic": [
+     "技能",
+     "スキル",
+     "스킬",
+     "生成",
+     "分析",
+     "レビュー",
+     "검증"
+    ],
+    "non-skill-or-unclear(filter)": [
+     "fixture",
+     "negative fixture",
+     "REDIRECT",
+     "Imported skill",
+     "stub"
+    ]
+   }
+  }
+ ],
+ "items": [
+  {
+   "i": 0,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 1,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "de",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 2,
+   "domain": "time-productivity",
+   "subdomain": "personal-planning",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 3,
+   "domain": "game-design",
+   "subdomain": "playtesting",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 4,
+   "domain": "finance",
+   "subdomain": "corporate-finance",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 5,
+   "domain": "testing",
+   "subdomain": "performance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 6,
+   "domain": "research",
+   "subdomain": "literature-review",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 7,
+   "domain": "security",
+   "subdomain": "threat-modeling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 8,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 9,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "shared-reference",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 10,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 11,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "ko",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 12,
+   "domain": "ux-ui",
+   "subdomain": "design-systems",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 13,
+   "domain": "memory-context",
+   "subdomain": "long-term-memory",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 14,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 15,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 16,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 17,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 18,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 19,
+   "domain": "3d-cad-animation",
+   "subdomain": "rendering",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 20,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 21,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 22,
+   "domain": "business",
+   "subdomain": "organizational-design",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 23,
+   "domain": "analytics",
+   "subdomain": "forecasting",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 24,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 25,
+   "domain": "cloud-devops",
+   "subdomain": "ci-cd",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 26,
+   "domain": "law",
+   "subdomain": "litigation-support",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 27,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "ko",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 28,
+   "domain": "cloud-devops",
+   "subdomain": "sre",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 29,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 30,
+   "domain": "analytics",
+   "subdomain": "data-engineering",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 31,
+   "domain": "product",
+   "subdomain": "discovery",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 32,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 33,
+   "domain": "government-public",
+   "subdomain": "public-statistics",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 34,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 35,
+   "domain": "marketing",
+   "subdomain": "market-research",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 36,
+   "domain": "marketing",
+   "subdomain": "paid-acquisition",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 37,
+   "domain": "analytics",
+   "subdomain": "data-engineering",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 38,
+   "domain": "science",
+   "subdomain": "metrology",
+   "language": "es",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 39,
+   "domain": "marketing",
+   "subdomain": "lifecycle",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 40,
+   "domain": "law",
+   "subdomain": "legal-research",
+   "language": "tr",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 41,
+   "domain": "technical-writing",
+   "subdomain": "documentation-ia",
+   "language": "es",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 42,
+   "domain": "software-engineering",
+   "subdomain": "modeling-languages",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 43,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 44,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 45,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 46,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "ru",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 47,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 48,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 49,
+   "domain": "ml-accelerators",
+   "subdomain": "gpu-kernels",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 50,
+   "domain": "agent-mcp-development",
+   "subdomain": "multi-agent-collaboration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 51,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 52,
+   "domain": "visual-design",
+   "subdomain": "generative-image",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 53,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 54,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 55,
+   "domain": "software-engineering",
+   "subdomain": "systems-programming",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 56,
+   "domain": "security",
+   "subdomain": "vulnerability-management",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 57,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "vi",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 58,
+   "domain": "software-engineering",
+   "subdomain": "databases",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 59,
+   "domain": "science",
+   "subdomain": "laboratory-methods",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 60,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 61,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 62,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/placeholder"
+  },
+  {
+   "i": 63,
+   "domain": "research",
+   "subdomain": "reproducibility",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 64,
+   "domain": "software-engineering",
+   "subdomain": "localization",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 65,
+   "domain": "agent-mcp-development",
+   "subdomain": "skill-authoring",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 66,
+   "domain": "software-engineering",
+   "subdomain": "refactoring",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 67,
+   "domain": "technical-writing",
+   "subdomain": "reports",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 68,
+   "domain": "cloud-devops",
+   "subdomain": "infrastructure-as-code",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 69,
+   "domain": "science",
+   "subdomain": "quantum-computing",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 70,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "ja",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 71,
+   "domain": "medicine",
+   "subdomain": "health-informatics",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 72,
+   "domain": "memory-context",
+   "subdomain": "provenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 73,
+   "domain": "cloud-devops",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 74,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 75,
+   "domain": "software-engineering",
+   "subdomain": "code-conventions",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 76,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 77,
+   "domain": "game-design",
+   "subdomain": "engine-tooling",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 78,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 79,
+   "domain": "marketing",
+   "subdomain": "market-research",
+   "language": "vi",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 80,
+   "domain": "sales",
+   "subdomain": "prospecting",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 81,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 82,
+   "domain": "planning",
+   "subdomain": "decision-frameworks",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 83,
+   "domain": "research",
+   "subdomain": "news-monitoring",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 84,
+   "domain": "law",
+   "subdomain": "legal-research",
+   "language": "fr",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 85,
+   "domain": "research",
+   "subdomain": "linguistics",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 86,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "ja",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 87,
+   "domain": "cloud-devops",
+   "subdomain": "deployment",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 88,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 89,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 90,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 91,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 92,
+   "domain": "education",
+   "subdomain": "learning-technology",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 93,
+   "domain": "testing",
+   "subdomain": "regression",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 94,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 95,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "ja",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 96,
+   "domain": "time-productivity",
+   "subdomain": "workload",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 97,
+   "domain": "cloud-devops",
+   "subdomain": "databases-ops",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 98,
+   "domain": "testing",
+   "subdomain": "end-to-end",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 99,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "es",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 100,
+   "domain": "communication",
+   "subdomain": "facilitation",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 101,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 102,
+   "domain": "software-engineering",
+   "subdomain": "code-conventions",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 103,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 104,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "ja",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 105,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 106,
+   "domain": "ml-accelerators",
+   "subdomain": "gpu-kernels",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 107,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "credentialed-account-scraper",
+   "language": "es",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 108,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 109,
+   "domain": "software-engineering",
+   "subdomain": "databases",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 110,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 111,
+   "domain": "software-engineering",
+   "subdomain": "code-conventions",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 112,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "ru",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 113,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 114,
+   "domain": "security",
+   "subdomain": "reverse-engineering",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 115,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-context",
+   "language": "zh",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 116,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 117,
+   "domain": "software-engineering",
+   "subdomain": "xr-ar-vr",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 118,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 119,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-architecture",
+   "language": "ja",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 120,
+   "domain": "software-engineering",
+   "subdomain": "automation-rpa",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 121,
+   "domain": "communication",
+   "subdomain": "writing-style",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 122,
+   "domain": "communication",
+   "subdomain": "email-writing",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 123,
+   "domain": "3d-cad-animation",
+   "subdomain": "procedural-design",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 124,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 125,
+   "domain": "education",
+   "subdomain": "school-administration",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 126,
+   "domain": "software-engineering",
+   "subdomain": "databases",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 127,
+   "domain": "agent-mcp-development",
+   "subdomain": "skill-management",
+   "language": "zh",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 128,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 129,
+   "domain": "research",
+   "subdomain": "news-monitoring",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 130,
+   "domain": "time-productivity",
+   "subdomain": "collaboration",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 131,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 132,
+   "domain": "audio-voice-sound",
+   "subdomain": "speech-voice",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 133,
+   "domain": "fiction-narrative-worldbuilding",
+   "subdomain": "genre",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 134,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 135,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "ja",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 136,
+   "domain": "science",
+   "subdomain": "earth-sciences",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 137,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-observability",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 138,
+   "domain": "robotics-iot",
+   "subdomain": "home-automation",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 139,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 140,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 141,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "shared-reference",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 142,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 143,
+   "domain": "planning",
+   "subdomain": "project-scheduling",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 144,
+   "domain": "finance",
+   "subdomain": "banking-validation",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 145,
+   "domain": "software-engineering",
+   "subdomain": "code-conventions",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 146,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 147,
+   "domain": "technical-writing",
+   "subdomain": "documentation-ia",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 148,
+   "domain": "software-engineering",
+   "subdomain": "databases",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 149,
+   "domain": "ux-ui",
+   "subdomain": "prototyping",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 150,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 151,
+   "domain": "visual-design",
+   "subdomain": "layout",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 152,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 153,
+   "domain": "analytics",
+   "subdomain": "ml-modeling",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 154,
+   "domain": "business",
+   "subdomain": "business-registration",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 155,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 156,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 157,
+   "domain": "technical-writing",
+   "subdomain": "documentation-ia",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 158,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/placeholder"
+  },
+  {
+   "i": 159,
+   "domain": "science",
+   "subdomain": "geodesy-gnss",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 160,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "pt",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 161,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "torrent-automation",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 162,
+   "domain": "communication",
+   "subdomain": "application-review",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 163,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 164,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 165,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 166,
+   "domain": "law",
+   "subdomain": "regulatory-analysis",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 167,
+   "domain": "finance",
+   "subdomain": "crypto-defi",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 168,
+   "domain": "software-engineering",
+   "subdomain": "code-quality",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 169,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 170,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 171,
+   "domain": "technical-writing",
+   "subdomain": "localization",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 172,
+   "domain": "testing",
+   "subdomain": "unit-integration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 173,
+   "domain": "planning",
+   "subdomain": "decision-frameworks",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 174,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "code-area-map",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 175,
+   "domain": "time-productivity",
+   "subdomain": "collaboration",
+   "language": "ja",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 176,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 177,
+   "domain": "sales",
+   "subdomain": "proposals",
+   "language": "vi",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 178,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "zh",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 179,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 180,
+   "domain": "ux-ui",
+   "subdomain": "design-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 181,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "ja",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 182,
+   "domain": "technical-writing",
+   "subdomain": "indexing-terminology",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 183,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 184,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 185,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 186,
+   "domain": "memory-context",
+   "subdomain": "retrieval",
+   "language": "es",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 187,
+   "domain": "software-engineering",
+   "subdomain": "code-conventions",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 188,
+   "domain": "ux-ui",
+   "subdomain": "design-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 189,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 190,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 191,
+   "domain": "security",
+   "subdomain": "application-security",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 192,
+   "domain": "cloud-devops",
+   "subdomain": "ci-cd",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 193,
+   "domain": "sales",
+   "subdomain": "prospecting",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 194,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 195,
+   "domain": "business",
+   "subdomain": "cost-estimation",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 196,
+   "domain": "communication",
+   "subdomain": "customer-support",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 197,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 198,
+   "domain": "robotics-iot",
+   "subdomain": "embedded-integration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 199,
+   "domain": "software-engineering",
+   "subdomain": "code-quality",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 200,
+   "domain": "security",
+   "subdomain": "vulnerability-management",
+   "language": "es",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 201,
+   "domain": "communication",
+   "subdomain": "humor-persona",
+   "language": "zh",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 202,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 203,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "template-placeholder",
+   "language": "en",
+   "why_missed": "test fixture/placeholder"
+  },
+  {
+   "i": 204,
+   "domain": "marketing",
+   "subdomain": "content",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 205,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 206,
+   "domain": "software-engineering",
+   "subdomain": "code-conventions",
+   "language": "zh",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 207,
+   "domain": "marketing",
+   "subdomain": "analyst-relations",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 208,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 209,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 210,
+   "domain": "game-design",
+   "subdomain": "modding",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 211,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 212,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-context",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 213,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "ja",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 214,
+   "domain": "software-engineering",
+   "subdomain": "programming-languages",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 215,
+   "domain": "research",
+   "subdomain": "fact-checking",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 216,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 217,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 218,
+   "domain": "software-engineering",
+   "subdomain": "localization",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 219,
+   "domain": "software-engineering",
+   "subdomain": "tv-platforms",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 220,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "de",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 221,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 222,
+   "domain": "software-engineering",
+   "subdomain": "tv-platforms",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 223,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 224,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 225,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 226,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 227,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "ru",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 228,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 229,
+   "domain": "analytics",
+   "subdomain": "data-quality",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 230,
+   "domain": "planning",
+   "subdomain": "decision-frameworks",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 231,
+   "domain": "testing",
+   "subdomain": "performance",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 232,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-architecture",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 233,
+   "domain": "ux-ui",
+   "subdomain": "information-architecture",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 234,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 235,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 236,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 237,
+   "domain": "agent-mcp-development",
+   "subdomain": "skill-authoring",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 238,
+   "domain": "ml-accelerators",
+   "subdomain": "hyperdimensional-computing",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 239,
+   "domain": "cloud-devops",
+   "subdomain": "deployment",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 240,
+   "domain": "analytics",
+   "subdomain": "visualization",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 241,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "nl",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 242,
+   "domain": "business",
+   "subdomain": "strategy",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 243,
+   "domain": "law",
+   "subdomain": "legal-research",
+   "language": "tr",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 244,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "ja",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 245,
+   "domain": "cloud-devops",
+   "subdomain": "ci-cd",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 246,
+   "domain": "security",
+   "subdomain": "compliance-controls",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 247,
+   "domain": "time-productivity",
+   "subdomain": "notes",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 248,
+   "domain": "research",
+   "subdomain": "experimental-design",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 249,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 250,
+   "domain": "communication",
+   "subdomain": "writing-style",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 251,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 252,
+   "domain": "visual-design",
+   "subdomain": "image-editing",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 253,
+   "domain": "business",
+   "subdomain": "operations",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 254,
+   "domain": "memory-context",
+   "subdomain": "long-term-memory",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 255,
+   "domain": "memory-context",
+   "subdomain": "provenance",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 256,
+   "domain": "business",
+   "subdomain": "ai-adoption",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 257,
+   "domain": "game-design",
+   "subdomain": "asset-pipeline",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 258,
+   "domain": "software-engineering",
+   "subdomain": "apis",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 259,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 260,
+   "domain": "memory-context",
+   "subdomain": "retrieval",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 261,
+   "domain": "business",
+   "subdomain": "mergers-acquisitions",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 262,
+   "domain": "career",
+   "subdomain": "interviews",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 263,
+   "domain": "education",
+   "subdomain": "subject-instruction",
+   "language": "ru",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 264,
+   "domain": "robotics-iot",
+   "subdomain": "embedded-integration",
+   "language": "ko",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 265,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "code-area-map",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 266,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 267,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 268,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "fitness-training",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 269,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 270,
+   "domain": "time-productivity",
+   "subdomain": "collaboration",
+   "language": "zh",
+   "why_missed": "non-English; tool-specific name"
+  },
+  {
+   "i": 271,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 272,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 273,
+   "domain": "memory-context",
+   "subdomain": "summarization",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 274,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "habit-cessation",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 275,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 276,
+   "domain": "finance",
+   "subdomain": "crypto-defi",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 277,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 278,
+   "domain": "security",
+   "subdomain": "agent-safety",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 279,
+   "domain": "finance",
+   "subdomain": "valuation",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 280,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 281,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "project-specific",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 282,
+   "domain": "game-design",
+   "subdomain": "engine-systems",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 283,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 284,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "persona-reflection",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 285,
+   "domain": "testing",
+   "subdomain": "performance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 286,
+   "domain": "communication",
+   "subdomain": "writing-style",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 287,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "ja",
+   "why_missed": "non-English; agent-harness/meta workflow"
+  },
+  {
+   "i": 288,
+   "domain": "planning",
+   "subdomain": "risk-planning",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 289,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 290,
+   "domain": "agent-mcp-development",
+   "subdomain": "skill-management",
+   "language": "en",
+   "why_missed": "agent-harness/meta workflow"
+  },
+  {
+   "i": 291,
+   "domain": "education",
+   "subdomain": "subject-instruction",
+   "language": "de",
+   "why_missed": "non-English; project-internal workflow"
+  },
+  {
+   "i": 292,
+   "domain": "agent-mcp-development",
+   "subdomain": "skill-management",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 293,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/placeholder"
+  },
+  {
+   "i": 294,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 295,
+   "domain": "software-engineering",
+   "subdomain": "refactoring",
+   "language": "en",
+   "why_missed": "generic verb phrasing"
+  },
+  {
+   "i": 296,
+   "domain": "sales",
+   "subdomain": "prospecting",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 297,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/placeholder"
+  },
+  {
+   "i": 298,
+   "domain": "game-design",
+   "subdomain": "engine-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 299,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 300,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 301,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 302,
+   "domain": "game-design",
+   "subdomain": "mechanics",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 303,
+   "domain": "agent-mcp-development",
+   "subdomain": "multi-agent-collaboration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 304,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 305,
+   "domain": "cloud-devops",
+   "subdomain": "sre",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 306,
+   "domain": "cloud-devops",
+   "subdomain": "deployment",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 307,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 308,
+   "domain": "game-design",
+   "subdomain": "mods-resource-packs",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 309,
+   "domain": "agent-mcp-development",
+   "subdomain": "permissions",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 310,
+   "domain": "persona-perspective",
+   "subdomain": "historical-figure",
+   "language": "zh",
+   "why_missed": "non-English; persona/character distillation"
+  },
+  {
+   "i": 311,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "travel",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 312,
+   "domain": "security",
+   "subdomain": "reverse-engineering",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 313,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 314,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 315,
+   "domain": "security",
+   "subdomain": "supply-chain",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 316,
+   "domain": "marketing",
+   "subdomain": "market-research",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 317,
+   "domain": "finance",
+   "subdomain": "crypto-web3",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 318,
+   "domain": "memory-context",
+   "subdomain": "summarization",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 319,
+   "domain": "ux-ui",
+   "subdomain": "interaction-design",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 320,
+   "domain": "communication",
+   "subdomain": "interpersonal",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 321,
+   "domain": "technical-writing",
+   "subdomain": "diagrams",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 322,
+   "domain": "communication",
+   "subdomain": "facilitation",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 323,
+   "domain": "persona-perspective",
+   "subdomain": "fictional-character",
+   "language": "zh",
+   "why_missed": "non-English; persona/character distillation"
+  },
+  {
+   "i": 324,
+   "domain": "law",
+   "subdomain": "litigation-support",
+   "language": "de",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 325,
+   "domain": "planning",
+   "subdomain": "decision-frameworks",
+   "language": "ru",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 326,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 327,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 328,
+   "domain": "cloud-devops",
+   "subdomain": "networking",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 329,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "-",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 330,
+   "domain": "research",
+   "subdomain": "literature-review",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 331,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 332,
+   "domain": "agriculture-food",
+   "subdomain": "livestock-health",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 333,
+   "domain": "3d-cad-animation",
+   "subdomain": "cad",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 334,
+   "domain": "ml-accelerators",
+   "subdomain": "inference-serving",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 335,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 336,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 337,
+   "domain": "ux-ui",
+   "subdomain": "prototyping",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 338,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-architecture",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 339,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 340,
+   "domain": "agent-mcp-development",
+   "subdomain": "multi-agent-collaboration",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 341,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 342,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 343,
+   "domain": "business",
+   "subdomain": "logistics-shipping",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 344,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 345,
+   "domain": "cloud-devops",
+   "subdomain": "ci-cd",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 346,
+   "domain": "documents-office",
+   "subdomain": "pdf-processing",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 347,
+   "domain": "memory-context",
+   "subdomain": "context-compression",
+   "language": "cs",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 348,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 349,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/stub"
+  },
+  {
+   "i": 350,
+   "domain": "agriculture-food",
+   "subdomain": "hydroponics",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 351,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 352,
+   "domain": "memory-context",
+   "subdomain": "long-term-memory",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 353,
+   "domain": "ux-ui",
+   "subdomain": "usability-testing",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 354,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 355,
+   "domain": "cloud-devops",
+   "subdomain": "sre",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 356,
+   "domain": "analytics",
+   "subdomain": "measurement",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 357,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-observability",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 358,
+   "domain": "software-engineering",
+   "subdomain": "apis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 359,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 360,
+   "domain": "marketing",
+   "subdomain": "growth",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 361,
+   "domain": "persona-perspective",
+   "subdomain": "fictional-character",
+   "language": "zh",
+   "why_missed": "non-English; persona/character distillation"
+  },
+  {
+   "i": 362,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 363,
+   "domain": "data-engineering",
+   "subdomain": "dimensional-modeling",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 364,
+   "domain": "agent-mcp-development",
+   "subdomain": "permissions",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 365,
+   "domain": "data-engineering",
+   "subdomain": "database-operations",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 366,
+   "domain": "planning",
+   "subdomain": "project-scheduling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 367,
+   "domain": "visual-design",
+   "subdomain": "ai-image-generation",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 368,
+   "domain": "planning",
+   "subdomain": "roadmapping",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 369,
+   "domain": "marketing",
+   "subdomain": "market-research",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 370,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 371,
+   "domain": "memory-context",
+   "subdomain": "retrieval",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 372,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/stub"
+  },
+  {
+   "i": 373,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 374,
+   "domain": "finance",
+   "subdomain": "risk",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 375,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 376,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 377,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "-",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 378,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 379,
+   "domain": "government-public",
+   "subdomain": "open-meetings-transparency",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 380,
+   "domain": "ux-ui",
+   "subdomain": "prototyping",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 381,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 382,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 383,
+   "domain": "game-design",
+   "subdomain": "mechanics",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 384,
+   "domain": "documents-office",
+   "subdomain": "collaboration-suites",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 385,
+   "domain": "ecommerce-retail",
+   "subdomain": "print-on-demand",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 386,
+   "domain": "product",
+   "subdomain": "prioritization",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 387,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 388,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/stub"
+  },
+  {
+   "i": 389,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-architecture",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 390,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 391,
+   "domain": "ux-ui",
+   "subdomain": "design-systems",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 392,
+   "domain": "education",
+   "subdomain": "learning-technology",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 393,
+   "domain": "3d-cad-animation",
+   "subdomain": "textures-materials",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 394,
+   "domain": "business",
+   "subdomain": "operations",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 395,
+   "domain": "visual-design",
+   "subdomain": "ai-image-generation",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 396,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 397,
+   "domain": "planning",
+   "subdomain": "systems-thinking",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 398,
+   "domain": "memory-context",
+   "subdomain": "long-term-memory",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 399,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 400,
+   "domain": "technical-writing",
+   "subdomain": "api-docs",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 401,
+   "domain": "3d-cad-animation",
+   "subdomain": "cad",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 402,
+   "domain": "ecommerce-retail",
+   "subdomain": "order-management",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 403,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 404,
+   "domain": "analytics",
+   "subdomain": "dashboards",
+   "language": "id",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 405,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 406,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 407,
+   "domain": "robotics-iot",
+   "subdomain": "smart-home",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 408,
+   "domain": "game-design",
+   "subdomain": "mechanics",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 409,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 410,
+   "domain": "sales",
+   "subdomain": "qualification",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 411,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 412,
+   "domain": "agent-mcp-development",
+   "subdomain": "browser-automation",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 413,
+   "domain": "software-engineering",
+   "subdomain": "language-design",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 414,
+   "domain": "law",
+   "subdomain": "regulatory-analysis",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 415,
+   "domain": "security",
+   "subdomain": "supply-chain",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 416,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 417,
+   "domain": "software-engineering",
+   "subdomain": "ai-integration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 418,
+   "domain": "agent-mcp-development",
+   "subdomain": "prompt-engineering",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 419,
+   "domain": "3d-cad-animation",
+   "subdomain": "simulation",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 420,
+   "domain": "education",
+   "subdomain": "assessment",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 421,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 422,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 423,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 424,
+   "domain": "memory-context",
+   "subdomain": "long-term-memory",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 425,
+   "domain": "marketing",
+   "subdomain": "content",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 426,
+   "domain": "game-design",
+   "subdomain": "playable-games",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 427,
+   "domain": "collectibles-hobbies",
+   "subdomain": "trading-cards",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 428,
+   "domain": "visual-design",
+   "subdomain": "graphic-design",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 429,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 430,
+   "domain": "marketing",
+   "subdomain": "content",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 431,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 432,
+   "domain": "ux-ui",
+   "subdomain": "design-systems",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 433,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 434,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 435,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 436,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 437,
+   "domain": "data-engineering",
+   "subdomain": "semantic-layer",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 438,
+   "domain": "testing",
+   "subdomain": "test-strategy",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 439,
+   "domain": "business",
+   "subdomain": "operations",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 440,
+   "domain": "marketing",
+   "subdomain": "market-research",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 441,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 442,
+   "domain": "software-engineering",
+   "subdomain": "debugging",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 443,
+   "domain": "audio-voice-sound",
+   "subdomain": "speech-voice",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 444,
+   "domain": "law",
+   "subdomain": "intellectual-property",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 445,
+   "domain": "business",
+   "subdomain": "operations",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 446,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 447,
+   "domain": "technical-writing",
+   "subdomain": "localization",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 448,
+   "domain": "analytics",
+   "subdomain": "measurement",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 449,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 450,
+   "domain": "business",
+   "subdomain": "governance",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 451,
+   "domain": "medicine",
+   "subdomain": "specialties",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 452,
+   "domain": "law",
+   "subdomain": "legal-drafting",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 453,
+   "domain": "documents-office",
+   "subdomain": "file-management",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 454,
+   "domain": "product",
+   "subdomain": "product-strategy",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 455,
+   "domain": "marketing",
+   "subdomain": "content",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 456,
+   "domain": "agent-mcp-development",
+   "subdomain": "multi-agent-collaboration",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 457,
+   "domain": "software-engineering",
+   "subdomain": "mobile",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 458,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "redirect-stub",
+   "language": "en",
+   "why_missed": "test fixture/stub"
+  },
+  {
+   "i": 459,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 460,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "food-beverage",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 461,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 462,
+   "domain": "time-productivity",
+   "subdomain": "scheduling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 463,
+   "domain": "law",
+   "subdomain": "regulatory-analysis",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 464,
+   "domain": "medicine",
+   "subdomain": "clinical-workflows",
+   "language": "es",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 465,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 466,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 467,
+   "domain": "technical-writing",
+   "subdomain": "localization",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 468,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 469,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 470,
+   "domain": "education",
+   "subdomain": "subject-instruction",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 471,
+   "domain": "testing",
+   "subdomain": "end-to-end",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 472,
+   "domain": "time-productivity",
+   "subdomain": "collaboration",
+   "language": "de",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 473,
+   "domain": "ecommerce-retail",
+   "subdomain": "catalog-quality",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 474,
+   "domain": "testing",
+   "subdomain": "performance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 475,
+   "domain": "cloud-devops",
+   "subdomain": "networking",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 476,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-observability",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 477,
+   "domain": "fiction-narrative-worldbuilding",
+   "subdomain": "editing",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 478,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "test-fixture",
+   "language": "en",
+   "why_missed": "test fixture/stub"
+  },
+  {
+   "i": 479,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 480,
+   "domain": "software-engineering",
+   "subdomain": "build-tooling",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 481,
+   "domain": "analytics",
+   "subdomain": "dashboards",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 482,
+   "domain": "security",
+   "subdomain": "secrets-management",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 483,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 484,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 485,
+   "domain": "audio-voice-sound",
+   "subdomain": "editing",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 486,
+   "domain": "video-film",
+   "subdomain": "screenwriting",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 487,
+   "domain": "cloud-devops",
+   "subdomain": "system-administration",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 488,
+   "domain": "cloud-devops",
+   "subdomain": "ci-cd",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 489,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 490,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 491,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 492,
+   "domain": "planning",
+   "subdomain": "project-scheduling",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 493,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 494,
+   "domain": "technical-writing",
+   "subdomain": "documentation-ia",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 495,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 496,
+   "domain": "cloud-devops",
+   "subdomain": "sre",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 497,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 498,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 499,
+   "domain": "testing",
+   "subdomain": "end-to-end",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 500,
+   "domain": "ml-accelerators",
+   "subdomain": "inference-serving",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 501,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 502,
+   "domain": "medicine",
+   "subdomain": "clinical-information-literacy",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 503,
+   "domain": "software-engineering",
+   "subdomain": "apis",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 504,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 505,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 506,
+   "domain": "finance",
+   "subdomain": "reporting",
+   "language": "de",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 507,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 508,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "mental-wellbeing",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 509,
+   "domain": "memory-context",
+   "subdomain": "long-term-memory",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 510,
+   "domain": "security",
+   "subdomain": "application-security",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 511,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 512,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 513,
+   "domain": "memory-context",
+   "subdomain": "retrieval",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 514,
+   "domain": "agent-mcp-development",
+   "subdomain": "multi-agent-collaboration",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 515,
+   "domain": "agent-mcp-development",
+   "subdomain": "evaluation",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 516,
+   "domain": "communication",
+   "subdomain": "facilitation",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 517,
+   "domain": "collectibles-hobbies",
+   "subdomain": "authentication-grading",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 518,
+   "domain": "robotics-iot",
+   "subdomain": "smart-home",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 519,
+   "domain": "time-productivity",
+   "subdomain": "task-systems",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 520,
+   "domain": "software-engineering",
+   "subdomain": "apis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 521,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 522,
+   "domain": "education",
+   "subdomain": "assessment",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 523,
+   "domain": "marketing",
+   "subdomain": "content",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 524,
+   "domain": "security",
+   "subdomain": "osint",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 525,
+   "domain": "cloud-devops",
+   "subdomain": "sre",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 526,
+   "domain": "business",
+   "subdomain": "risk",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 527,
+   "domain": "law",
+   "subdomain": "contracts",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 528,
+   "domain": "software-engineering",
+   "subdomain": "blockchain",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 529,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 530,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "life-design",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 531,
+   "domain": "security",
+   "subdomain": "privacy-engineering",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 532,
+   "domain": "persona-perspective",
+   "subdomain": "historical-figure",
+   "language": "zh",
+   "why_missed": "non-English; persona/character distillation"
+  },
+  {
+   "i": 533,
+   "domain": "security",
+   "subdomain": "reverse-engineering",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 534,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 535,
+   "domain": "wellbeing-lifestyle",
+   "subdomain": "household-services",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 536,
+   "domain": "product",
+   "subdomain": "prioritization",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 537,
+   "domain": "memory-context",
+   "subdomain": "retrieval",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 538,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 539,
+   "domain": "game-design",
+   "subdomain": "prototyping",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 540,
+   "domain": "fiction-narrative-worldbuilding",
+   "subdomain": "plotting",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 541,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 542,
+   "domain": "technical-writing",
+   "subdomain": "localization",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 543,
+   "domain": "software-engineering",
+   "subdomain": "refactoring",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 544,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 545,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 546,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 547,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 548,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 549,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "ko",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 550,
+   "domain": "finance",
+   "subdomain": "reporting",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 551,
+   "domain": "research",
+   "subdomain": "synthesis",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 552,
+   "domain": "product",
+   "subdomain": "prioritization",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 553,
+   "domain": "persona-perspective",
+   "subdomain": "writer",
+   "language": "zh",
+   "why_missed": "non-English; persona/character distillation"
+  },
+  {
+   "i": 554,
+   "domain": "agent-mcp-development",
+   "subdomain": "orchestration",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 555,
+   "domain": "education",
+   "subdomain": "tutoring",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 556,
+   "domain": "science",
+   "subdomain": "bioinformatics",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 557,
+   "domain": "software-engineering",
+   "subdomain": "low-level-programming",
+   "language": "pt",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 558,
+   "domain": "illustration",
+   "subdomain": "digital-traditional-media",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 559,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 560,
+   "domain": "ux-ui",
+   "subdomain": "prototyping",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 561,
+   "domain": "planning",
+   "subdomain": "project-scheduling",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 562,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 563,
+   "domain": "persona-perspective",
+   "subdomain": "self-distillation",
+   "language": "zh",
+   "why_missed": "non-English; persona/character distillation"
+  },
+  {
+   "i": 564,
+   "domain": "documents-office",
+   "subdomain": "pdf-generation",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 565,
+   "domain": "analytics",
+   "subdomain": "measurement",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 566,
+   "domain": "non-skill-or-unclear",
+   "subdomain": "import-stub",
+   "language": "en",
+   "why_missed": "test fixture/stub"
+  },
+  {
+   "i": 567,
+   "domain": "software-engineering",
+   "subdomain": "maintenance",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 568,
+   "domain": "science",
+   "subdomain": "structural-biology",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 569,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 570,
+   "domain": "software-engineering",
+   "subdomain": "ai-integration",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 571,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 572,
+   "domain": "business",
+   "subdomain": "music-industry",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 573,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "tr",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 574,
+   "domain": "software-engineering",
+   "subdomain": "architecture",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 575,
+   "domain": "education",
+   "subdomain": "assessment",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 576,
+   "domain": "agent-mcp-development",
+   "subdomain": "agent-architecture",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 577,
+   "domain": "law",
+   "subdomain": "regulatory-analysis",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 578,
+   "domain": "software-engineering",
+   "subdomain": "frontend",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 579,
+   "domain": "cloud-devops",
+   "subdomain": "deployment",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 580,
+   "domain": "product",
+   "subdomain": "requirements",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 581,
+   "domain": "education",
+   "subdomain": "curriculum",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 582,
+   "domain": "software-engineering",
+   "subdomain": "backend",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 583,
+   "domain": "planning",
+   "subdomain": "roadmapping",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 584,
+   "domain": "video-film",
+   "subdomain": "screenwriting",
+   "language": "ja",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 585,
+   "domain": "3d-cad-animation",
+   "subdomain": "procedural-design",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 586,
+   "domain": "cloud-devops",
+   "subdomain": "system-administration",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 587,
+   "domain": "planning",
+   "subdomain": "decision-frameworks",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 588,
+   "domain": "software-engineering",
+   "subdomain": "desktop",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 589,
+   "domain": "software-engineering",
+   "subdomain": "apis",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 590,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "en",
+   "why_missed": "project-internal workflow"
+  },
+  {
+   "i": 591,
+   "domain": "finance",
+   "subdomain": "investments",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 592,
+   "domain": "security",
+   "subdomain": "identity-access",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 593,
+   "domain": "software-engineering",
+   "subdomain": "developer-experience",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 594,
+   "domain": "sales",
+   "subdomain": "proposals",
+   "language": "en",
+   "why_missed": "niche domain vocabulary"
+  },
+  {
+   "i": 595,
+   "domain": "testing",
+   "subdomain": "end-to-end",
+   "language": "en",
+   "why_missed": "tool-specific name"
+  },
+  {
+   "i": 596,
+   "domain": "geospatial-mapping",
+   "subdomain": "geocoding",
+   "language": "zh",
+   "why_missed": "non-English"
+  },
+  {
+   "i": 597,
+   "domain": "agent-mcp-development",
+   "subdomain": "tool-design",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  },
+  {
+   "i": 598,
+   "domain": "career",
+   "subdomain": "professional-development",
+   "language": "en",
+   "why_missed": "generic phrasing, no domain keyword"
+  },
+  {
+   "i": 599,
+   "domain": "research",
+   "subdomain": "source-discovery",
+   "language": "en",
+   "why_missed": "agent meta/harness workflow"
+  }
+ ]
+}
