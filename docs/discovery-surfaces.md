@@ -53,6 +53,9 @@ The workbook is intentionally not registered in `registry/sources.yaml` as an ad
 
 Current useful discovery inputs include, where relevant:
 
+- [65-source pinned capability/rights bridge](discovery/2026-11-02-open-ended-source-expansion.md) recovered from held #590 (source-level leads only; no blanket license, admission or qualification);
+- [GitSkills research sample and structured corpus](https://arxiv.org/abs/2608.10906), its [Hugging Face mirror](https://huggingface.co/datasets/mvaccargiu/gitskills) and [Zenodo record](https://zenodo.org/records/21875637). Use the sample or bounded data analysis to discover independent creators rather than importing millions of files. Dataset metadata terms do not relicense upstream skill packages;
+- [skills.sh public directory](https://skills.sh/) as another discovery lead surface, never as evidence of package eligibility;
 - GitHub Awesome Copilot as a registered dynamic-discovery source;
 - Agent Skills Specification as a normative portability/format reference;
 - Hugging Face Skills and other source-vetted candidate corpora recorded in the living curation ledger;
