@@ -96,6 +96,12 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 
 ## Research archive: how we checked candidates
 
+### Latest source-vetting evidence
+
+**Current static review checkpoint (2026-11-03):** Across four original pinned discovery sources and **25 additional Q1–Q5 source families**, the recorded frontiers contain **5,508 terminal static candidate decisions**: **1,609 REFERENCE-ONLY** and **3,899 REJECT unchanged**. Q5 adds **150 reviewed records** but only **149 terminal decisions** (92 reference-only / 57 rejected / one deferred); its 150 paths represent **144 recorded package-tree SHA values** after six duplicate path exposures. The original four-source snapshot remains **4,809/4,813** terminal paths with three deferrals and one excluded non-skill template. The Q1–Q5 source-family review has **700 records** and **694 different recorded package-tree SHA values within those 25 families only**. [Exact evidence and qualification limits](docs/reviews/2026-11-03-q1-q5-decision-reconciliation.md). These are **research outcomes, not approved, installable, or positively recommended skill totals**. Governed historical review companions remain **1,039**; globally distinct eligible packages and endorsed per-domain recommendations remain **UNKNOWN**. Security scans and behavioral validation were not performed by this reconciliation.
+
+*The tables below retain the older Q4 snapshot as historical evidence. The current source-vetting figures are above.*
+
 <sub>Evidence snapshot: 2026-11-02, through main `3be1664b` (Q4). [Audited lifecycle accounting](registry/discovery/curation-lifecycle-dashboard-20261102.json) · [review receipt and counting rules](docs/reviews/2026-11-02-curation-coverage-and-lifecycle-audit.md). **Counts describe different populations. Do not add discovery paths, reviewed candidates and governed records into a supposed number of approved skills.**</sub>
 
 | What we measured | Count | What it actually means |
