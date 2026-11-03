@@ -3,15 +3,18 @@ skill_name: mistral-pulse
 source_id: local-skills
 local_path: "skills/mistral-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4d2e092ee1cfdbd7127145926d48d6cf78b46ce1
+content_blob_sha: a04a39981d17c4f2b237e387e4464b18f6d333f5
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
+prior_reviewed_blob_sha: 4d2e092ee1cfdbd7127145926d48d6cf78b46ce1
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only source collection changed manifest fingerprint; prior semantic score is historical, not applicable unchanged."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
