@@ -10,20 +10,20 @@
   "historical_graph_preserved": "docs/assets/capability-evidence-and-valued-methods-20261103.svg",
   "metric_definitions": {
     "evidence_linked_subdomains_20261102": "Nov 2 audited Q1–Q4 baseline: canonical topic with at least one governed review or source candidate link, including rejected-only; NOT a verified or usable skill",
-    "selected_valuable_reference_methods_20261103": "20 current bounded Q7 methods selected to study; no assertion about the entire discovery corpus or unchanged-use clearance",
-    "selected_method_subdomains_20261103": "Distinct canonical subdomains with at least one selected Valuable Reference in the bounded Q6 shelf. No independent/source-diversity, execution or maturity implication.",
+    "selected_valuable_reference_methods_20261103": "Q7 bounded 2026-11-03 public shelf: 20 source-pinned conceptual method references; not a complete corpus count, and not approval to install.",
+    "selected_method_subdomains_20261103": "Q7 bounded public shelf: 19 distinct canonical subdomains with at least one selected method; not proven operational coverage.",
     "zero_selected": "No currently featured method in this area; continue exploring the wider research library.",
-    "global_count_warning": "Do NOT sum Q4 evidence-link counts and Q6 selected methods; measurements differ in population and unit."
+    "global_count_warning": "Q4 research candidate link counts and Q7 selected conceptual method counts measure different populations and may not be added. Unchanged-use approvals: zero."
   },
   "totals": {
     "canonical_domains": 33,
     "canonical_subdomains": 247,
     "q4_any_evidence_link_subdomains": 210,
     "q4_no_link_subdomains": 37,
-    "q6_bounded_positive_reference_methods": 20,
-    "q6_domains_with_selected_reference_methods": 10,
-    "q6_bounded_positive_method_subdomains": 19,
-    "unchanged_use_approvals_in_shelf": 0
+    "unchanged_use_approvals_in_shelf": 0,
+    "q7_bounded_positive_reference_methods": 20,
+    "q7_domains_with_selected_reference_methods": 10,
+    "q7_bounded_positive_method_subdomains": 19
   },
   "rows": [
     {
