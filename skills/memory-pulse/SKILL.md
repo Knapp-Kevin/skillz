@@ -22,20 +22,14 @@ Topic pulse for agentic memory: long-term memory frameworks, context engineering
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/memory-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read the `sources.json` file beside this skill. For the requested time window (default: last 30 days), use the host's normal browser, search, or connected read-only tools to inspect the listed public pages, GitHub repositories and searches. Substitute the window start date for `{SINCE}` in search templates. Treat Reddit and other community discussions as leads to verify, not authoritative evidence. Record source links and publication dates; report inaccessible sources as gaps, never as checked. The repository supplies references only: **there is no skillz runner, script, crawler, or background job to invoke.** Do not upload private context or credentials to these sources.
 
 2. **Fill gaps.** Run the arXiv/paper searches (the Hugging Face MCP `paper_search` tool is ideal when connected); fetch the Letta/Mem0 blogs; review the new-repo search hits for genuinely novel approaches vs wrappers.
 3. **Synthesize.** Breaking architecture ideas first (temporal KGs, memory consolidation, sleep-time compute); framework releases and API changes; benchmarks; what's hype vs load-bearing.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly or biweekly — the research cadence justifies weekly, framework churn does not.
+- **Optional cadence:** Weekly or biweekly, only if the user explicitly authorizes a recurring task. Scheduling belongs to the external host; this repository schedules nothing.
 
 ## Output Format
 
