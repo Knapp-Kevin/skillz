@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: GitHub Pulse
   emoji: "⭐"
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # GitHub Pulse
@@ -21,13 +21,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root (set `GITHUB_TOKEN` — five search queries burn unauthenticated rate limits fast):
-
-   ```
-   node scripts/pulse-run.ts --sources skills/github-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read the bundled `sources.json` beside this skill. For the requested time window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the start date for `{SINCE}` where present. Cite source URLs and publication dates, distinguish official reports from community leads, and report inaccessible or rate-limited sources as gaps. Never put private context, credentials or tokens in public queries. If access is unavailable, provide an evidence-limited result, not invented freshness. **skillz has no runner, crawler, script, scheduler or background job.** GitHub rate limits can block some queries: use only existing host-authorized access, never require users to provide a GitHub token.
 
 2. **Fill gaps.** Fetch github.com/trending (weekly view) — the search API measures new repos, trending measures acceleration of existing ones; both matter. HN/Reddit searches catch the story behind a spike.
 3. **Filter.** For each candidate: real code or README-ware? active maintainer? does it duplicate something we already vendored/adopted (check INDEX.md and the registry)?
@@ -35,7 +29,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — pairs naturally with skills-pulse (repos found here often become skill/tool intake candidates there).
+- **Optional cadence:** Weekly, only if the user authorizes this recurring digest. A scheduled task belongs to the external host. A one-time request never authorizes recurring checks or notifications.
 
 ## Output Format
 
