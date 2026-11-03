@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1180" viewBox="0 0 1500 1180" role="img" aria-labelledby="heading explanation">
+<title id="heading">Skillz capability overview: 33 domains with research leads and selected study methods</title>
+<desc id="explanation">Research-linked topics can include rejected candidate links and are not approved skills. 210 of 247 topics have research links. A separate bounded featured shelf has 20 selected methods across 10 domains and 0 approved as written. Every domain is listed in the README's accessible table and CSV.</desc>
+<defs><linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1729"/><stop offset="1" stop-color="#162744"/></linearGradient><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#39b9ec"/><stop offset="1" stop-color="#5eead4"/></linearGradient><linearGradient id="violet" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6d53b3"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+<rect width="1500" height="1180" rx="26" fill="url(#back)"/>
+<circle cx="1320" cy="80" r="240" fill="#2c446d" opacity=".13"/>
+<text x="48" y="65" fill="#e9f2ff" font-size="36" font-weight="700" font-family="Arial,Helvetica,sans-serif">Skillz | Capability evidence</text>
+<text x="49" y="104" fill="#b7c9de" font-size="19" font-family="Arial,Helvetica,sans-serif">Explore the whole library. Featured methods are only one small, carefully reviewed shelf.</text>
+<rect x="48" y="134" width="350" height="101" rx="13" fill="#1d304a" stroke="#38506a"/>
+<text x="68" y="180" fill="#f0f6ff" font-size="31" font-weight="700" font-family="Arial,Helvetica,sans-serif">33</text><text x="68" y="211" fill="#bfcee1" font-size="14" font-family="Arial,Helvetica,sans-serif">CAPABILITY DOMAINS</text>
+<rect x="415" y="134" width="350" height="101" rx="13" fill="#1d304a" stroke="#38506a"/>
+<text x="435" y="180" fill="#f0f6ff" font-size="31" font-weight="700" font-family="Arial,Helvetica,sans-serif">210/247</text><text x="435" y="211" fill="#bfcee1" font-size="14" font-family="Arial,Helvetica,sans-serif">TOPICS WITH RESEARCH LINKS</text>
+<rect x="782" y="134" width="350" height="101" rx="13" fill="#1d304a" stroke="#38506a"/>
+<text x="802" y="180" fill="#f0f6ff" font-size="31" font-weight="700" font-family="Arial,Helvetica,sans-serif">20</text><text x="802" y="211" fill="#bfcee1" font-size="14" font-family="Arial,Helvetica,sans-serif">METHODS SELECTED TO STUDY</text>
+<rect x="1149" y="134" width="350" height="101" rx="13" fill="#1d304a" stroke="#38506a"/>
+<text x="1169" y="180" fill="#f0f6ff" font-size="31" font-weight="700" font-family="Arial,Helvetica,sans-serif">0</text><text x="1169" y="211" fill="#bfcee1" font-size="14" font-family="Arial,Helvetica,sans-serif">APPROVED AS WRITTEN</text>
+<rect x="50" y="264" width="16" height="14" rx="3" fill="#4ccddf"/><text x="78" y="278" fill="#d7e5f5" font-size="17" font-family="Arial,Helvetica,sans-serif">Research links (including rejected leads)</text>
+<rect x="495" y="264" width="16" height="14" rx="3" fill="#a78bfa"/><text x="523" y="278" fill="#d7e5f5" font-size="17" font-family="Arial,Helvetica,sans-serif">Methods selected to study (not installation clearance)</text>
+<text x="50" y="315" fill="#a9bbd2" font-size="16" font-family="Arial,Helvetica,sans-serif">“Not featured” means keep searching, not that a domain lacks useful skills.</text>
+<rect x="43" y="338" width="710" height="733" rx="15" fill="#111e32" stroke="#354863"/>
+<text x="60" y="365" fill="#eef4ff" font-size="15" font-weight="700" font-family="Arial,Helvetica,sans-serif">Capability domain</text>
+<text x="323" y="365" fill="#c9e6f4" font-size="15" font-family="Arial,Helvetica,sans-serif">Research links</text>
+<text x="589" y="365" fill="#ddccff" font-size="15" font-family="Arial,Helvetica,sans-serif">Featured</text>
+<g><title>Software engineering: research links in 10 of 10 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="373" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="396" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Software engineering</text>
+<rect x="323" y="383" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="383" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="396" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">10/10</text>
+<rect x="584" y="376" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="395" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Testing: research links in 7 of 8 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="413" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="436" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Testing</text>
+<rect x="323" y="423" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="423" width="105.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="436" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/8</text>
+<rect x="584" y="416" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="435" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Agent / MCP development: research links in 8 of 8 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="453" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="476" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Agent / MCP development</text>
+<rect x="323" y="463" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="463" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="476" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">8/8</text>
+<rect x="584" y="456" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="475" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Cloud / DevOps: research links in 8 of 8 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="493" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="516" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Cloud / DevOps</text>
+<rect x="323" y="503" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="503" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="516" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">8/8</text>
+<rect x="584" y="496" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="515" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Security: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="533" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="556" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Security</text>
+<rect x="323" y="543" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="543" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="556" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="584" y="536" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="555" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Research: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="573" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="596" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Research</text>
+<rect x="323" y="583" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="583" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="596" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="584" y="576" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="595" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Planning: research links in 6 of 6 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="613" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="636" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Planning</text>
+<rect x="323" y="623" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="623" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="636" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/6</text>
+<rect x="584" y="616" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="635" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Marketing: research links in 8 of 9 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="653" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="676" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Marketing</text>
+<rect x="323" y="663" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="663" width="106.67" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="676" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">8/9</text>
+<rect x="584" y="656" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="675" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Product: research links in 8 of 8 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="693" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="716" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Product</text>
+<rect x="323" y="703" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="703" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="716" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">8/8</text>
+<rect x="584" y="696" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="715" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>UX / UI: research links in 7 of 7 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="733" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="756" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">UX / UI</text>
+<rect x="323" y="743" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="743" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="756" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="584" y="736" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="755" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Visual design: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="773" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="796" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Visual design</text>
+<rect x="323" y="783" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="783" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="796" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="584" y="776" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="795" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Illustration: research links in 1 of 6 topics; 3 selected study methods across 3 topics; 0 approved unchanged</title>
+<rect x="51" y="813" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="836" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Illustration</text>
+<rect x="323" y="823" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="823" width="20.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="836" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">1/6</text>
+<rect x="584" y="816" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="835" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">3 study · 3 topics</text>
+</g>
+<g><title>3D / CAD / animation: research links in 7 of 9 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="853" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="876" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">3D / CAD / animation</text>
+<rect x="323" y="863" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="863" width="93.33" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="876" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/9</text>
+<rect x="584" y="856" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="875" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Game design: research links in 6 of 8 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="893" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="916" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Game design</text>
+<rect x="323" y="903" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="903" width="90.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="916" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/8</text>
+<rect x="584" y="896" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="915" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Fiction / narrative / worldbuilding: research links in 8 of 8 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="51" y="933" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="956" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Fiction / narrative / worldbu…</text>
+<rect x="323" y="943" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="943" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="956" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">8/8</text>
+<rect x="584" y="936" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="660" y="955" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Technical writing: research links in 7 of 7 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="51" y="973" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="59" y="996" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Technical writing</text>
+<rect x="323" y="983" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="323" y="983" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="452" y="996" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="584" y="976" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="995" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Music composition: research links in 0 of 8 topics; 9 selected study methods across 8 topics; 0 approved unchanged</title>
+<rect x="51" y="1013" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="59" y="1036" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Music composition</text>
+<rect x="323" y="1023" width="120" height="14" rx="5" fill="#394a61"/>
+<text x="452" y="1036" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">0/8</text>
+<rect x="584" y="1016" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="660" y="1035" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">9 study · 8 topics</text>
+</g>
+<rect x="778" y="338" width="710" height="733" rx="15" fill="#111e32" stroke="#354863"/>
+<text x="795" y="365" fill="#eef4ff" font-size="15" font-weight="700" font-family="Arial,Helvetica,sans-serif">Capability domain</text>
+<text x="1058" y="365" fill="#c9e6f4" font-size="15" font-family="Arial,Helvetica,sans-serif">Research links</text>
+<text x="1324" y="365" fill="#ddccff" font-size="15" font-family="Arial,Helvetica,sans-serif">Featured</text>
+<g><title>Audio / voice / sound: research links in 5 of 8 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="373" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="396" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Audio / voice / sound</text>
+<rect x="1058" y="383" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="383" width="75.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="396" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">5/8</text>
+<rect x="1319" y="376" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="395" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Video / film: research links in 5 of 9 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="413" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="436" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Video / film</text>
+<rect x="1058" y="423" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="423" width="66.67" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="436" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">5/9</text>
+<rect x="1319" y="416" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="435" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Communication: research links in 5 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="453" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="476" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Communication</text>
+<rect x="1058" y="463" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="463" width="85.71" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="476" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">5/7</text>
+<rect x="1319" y="456" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="475" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Analytics: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="493" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="516" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Analytics</text>
+<rect x="1058" y="503" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="503" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="516" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="1319" y="496" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="515" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Time / productivity: research links in 6 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="533" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="556" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Time / productivity</text>
+<rect x="1058" y="543" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="543" width="102.86" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="556" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/7</text>
+<rect x="1319" y="536" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="555" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Memory / context: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="573" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="596" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Memory / context</text>
+<rect x="1058" y="583" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="583" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="596" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="1319" y="576" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="595" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Business: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="613" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="636" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Business</text>
+<rect x="1058" y="623" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="623" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="636" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="1319" y="616" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="635" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Sales: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="653" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="676" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Sales</text>
+<rect x="1058" y="663" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="663" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="676" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="1319" y="656" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="675" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Career: research links in 6 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="693" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="716" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Career</text>
+<rect x="1058" y="703" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="703" width="102.86" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="716" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/7</text>
+<rect x="1319" y="696" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="715" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Education: research links in 6 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="733" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="756" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Education</text>
+<rect x="1058" y="743" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="743" width="102.86" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="756" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/7</text>
+<rect x="1319" y="736" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="755" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Science: research links in 6 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="773" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="796" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Science</text>
+<rect x="1058" y="783" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="783" width="102.86" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="796" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/7</text>
+<rect x="1319" y="776" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="795" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Medicine: research links in 6 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="813" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="836" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Medicine</text>
+<rect x="1058" y="823" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="823" width="102.86" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="836" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/7</text>
+<rect x="1319" y="816" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="835" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Law: research links in 6 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="853" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="876" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Law</text>
+<rect x="1058" y="863" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="863" width="102.86" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="876" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">6/7</text>
+<rect x="1319" y="856" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="875" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>Finance: research links in 7 of 8 topics; 1 selected study methods across 1 topics; 0 approved unchanged</title>
+<rect x="786" y="893" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="916" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Finance</text>
+<rect x="1058" y="903" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="903" width="105.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="916" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/8</text>
+<rect x="1319" y="896" width="152" height="27" rx="8" fill="#403360" stroke="#7d68bc"/>
+<text x="1395" y="915" text-anchor="middle" fill="#efe6ff" font-weight="700" font-size="14" font-family="Arial,Helvetica,sans-serif">1 study · 1 topics</text>
+</g>
+<g><title>Robotics / IoT: research links in 5 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="933" width="694" height="38" rx="7" fill="#1d2e46"/>
+<text x="794" y="956" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">Robotics / IoT</text>
+<rect x="1058" y="943" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="943" width="85.71" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="956" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">5/7</text>
+<rect x="1319" y="936" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="955" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<g><title>ML accelerators and compute: research links in 7 of 7 topics; 0 selected study methods across 0 topics; 0 approved unchanged</title>
+<rect x="786" y="973" width="694" height="38" rx="7" fill="#16243a"/>
+<text x="794" y="996" fill="#e7eff9" font-size="15" font-family="Arial,Helvetica,sans-serif">ML accelerators and compute</text>
+<rect x="1058" y="983" width="120" height="14" rx="5" fill="#394a61"/>
+<rect x="1058" y="983" width="120.00" height="14" rx="5" fill="url(#bar)"/>
+<text x="1187" y="996" fill="#e1effc" font-size="15" font-family="Arial,Helvetica,sans-serif">7/7</text>
+<rect x="1319" y="976" width="152" height="27" rx="8" fill="#1a2b3e" stroke="#3a4a61"/>
+<text x="1395" y="995" text-anchor="middle" fill="#a1b2c8" font-weight="400" font-size="14" font-family="Arial,Helvetica,sans-serif">not featured</text>
+</g>
+<text x="52" y="1116" fill="#e8f0fc" font-size="18" font-family="Arial,Helvetica,sans-serif">Research breadth is not quality clearance. A selected method is not permission to install or run its original package.</text>
+<text x="52" y="1151" fill="#b9cce1" font-size="16" font-family="Arial,Helvetica,sans-serif">Source: 2026-11-02 research audit + 2026-11-03 curated shelf | Generated from evidence ledgers, not hand-drawn</text>
+</svg>
