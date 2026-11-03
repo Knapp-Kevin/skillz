@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: OpenAI Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # OpenAI Pulse
@@ -20,20 +20,14 @@ Vendor pulse for OpenAI: official releases and community reception, synthesized 
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root (this skill's `sources.json` drives the shared engine):
-
-   ```
-   node scripts/pulse-run.ts --sources skills/openai-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools — same shape, no script required.
+1. **Collect (external host only).** Read `sources.json` bundled beside this skill. For the requested window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the date for `{SINCE}` in search templates. Cite exact URLs and publication dates; treat community posts as leads to verify and report inaccessible or rate-limited sources as gaps. Never send secrets, user memory or private project data in public queries. If live sources cannot be checked, disclose missing evidence rather than claiming freshness. **skillz provides no runner, crawler, script, scheduler or background service.**
 
 2. **Fill gaps.** Fetch the listed pages (API changelog, news, ChatGPT release notes) and run the listed web searches; the changelog pages are JS-rendered, so search results often beat raw fetches.
 3. **Synthesize.** Deprecations and pricing changes first; then model/feature releases; then SDK/repo activity worth acting on; then community sentiment. Do not paste raw output.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — pairs with claude-pulse and the other vendor pulses on the same morning for a cross-vendor view.
+- **Optional cadence:** Weekly only with explicit user authorization for this specific recurring digest; external host scheduling only. A one-time request does not authorize repeated checks or notifications.
 
 ## Output Format
 
