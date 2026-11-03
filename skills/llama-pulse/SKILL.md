@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Llama Pulse
   emoji: "📡"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Llama Pulse
@@ -20,20 +20,14 @@ Vendor pulse for Meta AI's Llama family and its open-weights ecosystem. Sources 
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/llama-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read `sources.json` bundled beside this skill. For the requested window (default 30 days), use the external host's browser, search, or connected read-only tools to check the listed public pages, upstream repos and queries. Substitute the window start date for `{SINCE}` search templates. Cite URLs and publication dates; treat community posts as unverified leads, and report inaccessible or rate-limited sources as gaps. Never expose user context, credentials, secrets or private project text through search queries or other outbound requests. If the host cannot fetch current sources, report an evidence-limited result, not fabricated freshness. **There is no skillz runner, crawler, script, scheduler or background worker.**
 
 2. **Fill gaps.** Fetch the Meta AI blog; run the searches. r/LocalLLaMA is the highest-signal community source for open-weights news — if the Reddit API was blocked, the site-scoped search is mandatory, not optional.
 3. **Synthesize.** New weights and licenses first (license terms matter for local deployment); llama-stack/tooling changes; benchmark and quantization chatter.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses.
+- **Optional cadence:** Weekly, only when the user has explicitly authorized this recurring digest. Any scheduling belongs to the external host. One-off research does not authorize repeated checks or outbound notifications.
 
 ## Output Format
 
