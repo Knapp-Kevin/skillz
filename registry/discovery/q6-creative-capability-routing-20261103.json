@@ -7,9 +7,9 @@
   "parallel_draft_pr": 677,
   "music_composition_subdomains": 8,
   "illustration_subdomains": 6,
-  "positive_reference_count_in_this_new_tranche": 4,
+  "positive_reference_count_in_this_new_tranche": 12,
   "positive_subdomain_count_in_this_new_tranche": {
-    "music": 1,
+    "music": 8,
     "illustration": 3
   },
   "global_distinct_eligible_denominator": null,
@@ -18,67 +18,173 @@
     "Dated 2026-11-02 audit says music 0/8, illustration 1/6 with any review/candidate link; these figures are not positive-endorsement counts.",
     "This route records new static reference methods, not verified unchanged package ability. Existing digital/traditional candidate link is not a positive endorsement.",
     "Character-only method is partial for character/environment and does not satisfy environment art.",
-    "All four method references lack independently established full package Git tree; complete-package identity is a HOLD for unchanged use and thorough review."
+    "All four method references lack independently established full package Git tree; complete-package identity is a HOLD for unchanged use and thorough review.",
+    "Q6 music craft addition: eight individually graded conceptual methods across seven new music subdomains. Earlier scoring method remains. All eight music subdomains now positively represented at METHOD-REFERENCE stage, but reliance on one publisher family, full tree identity and third-party books/translation rights prevent a domain-complete claim.",
+    "The two rhythm methods address different decisions: beat feel/accents versus drum-bass implementation and quantization. They are distinct methods but share publisher source family and rights provenance."
   ],
   "rows": [
     {
       "domain": "music-composition",
       "subdomain": "harmony",
       "specific_capability": "harmony",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-harmony",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-harmony/SKILL.md",
+          "skill_blob": "72bd575edfaad46ca2061a836ebc36ce7f56ae37",
+          "score_20": 17,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Draft #677 jtydhr88/mc-harmony",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
       "domain": "music-composition",
       "subdomain": "melody",
       "specific_capability": "melody",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-melody",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-melody/SKILL.md",
+          "skill_blob": "3aa2049057c44c5c32b52424c1c30f4b51589713",
+          "score_20": 16,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Draft #677 jtydhr88/mc-melody, no pinned individual review",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
       "domain": "music-composition",
       "subdomain": "rhythm",
       "specific_capability": "rhythm",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-rhythm-groove",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-rhythm-groove/SKILL.md",
+          "skill_blob": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068",
+          "score_20": 15,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        },
+        {
+          "name": "mc-rhythm-section",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-rhythm-section/SKILL.md",
+          "skill_blob": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a",
+          "score_20": 16,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Draft #677 jtydhr88/mc-rhythm-groove, no pinned individual review",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
       "domain": "music-composition",
       "subdomain": "orchestration",
       "specific_capability": "orchestration",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-orchestration",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
+          "skill_blob": "6a94014cbba85658345d8f1f8a3bfb4fa78dd495",
+          "score_20": 15,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Draft #677 jtydhr88/mc-orchestration, no pinned individual review",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
       "domain": "music-composition",
       "subdomain": "arranging",
       "specific_capability": "arranging",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-arrangement-arch",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-arrangement-arch/SKILL.md",
+          "skill_blob": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10",
+          "score_20": 17,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Draft #677 jtydhr88/mc-arrangement-arch",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
       "domain": "music-composition",
       "subdomain": "notation",
       "specific_capability": "notation",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-symbolic-score",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
+          "skill_blob": "d84cd65170744219c64a46387e6ff675bc1fabbd",
+          "score_20": 15,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Merged #678 ZongziForu/lilypond-score-editor (NOASSERTION license); draft #677 jtydhr88/mc-symbolic-score",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
@@ -109,10 +215,25 @@
       "domain": "music-composition",
       "subdomain": "electronic-composition",
       "specific_capability": "electronic-composition",
-      "valuable_reference_methods": [],
+      "valuable_reference_methods": [
+        {
+          "name": "mc-style-edm",
+          "source_repo": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "path": "plugins/music-composition/skills/mc-style-edm/SKILL.md",
+          "skill_blob": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2",
+          "score_20": 15,
+          "evidence": "registry/discovery/q6-eight-music-craft-static-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run",
+          "license_notice": "Root MIT excludes source-book quotes and translations from copyright clearance"
+        }
+      ],
       "recommended_for_use": [],
       "candidates_to_qualify": "Merged #678 elevenlabs/music; draft #677 jtydhr88 EDM",
-      "candidate_note": "unqualified",
+      "candidate_note": "Positive conceptual reference method evaluated, source-family peer alternatives remain unqualified; not an approved exact package or closed capability",
       "domain_fully_represented_with_positive_alternatives": false
     },
     {
@@ -217,5 +338,12 @@
       "candidate_note": "unqualified",
       "domain_fully_represented_with_positive_alternatives": false
     }
+  ],
+  "current_positive_music_method_entries": 9,
+  "music_method_coverage_stage": "8 of 8 subdomains now have at least one positively selected conceptual method, not 8 installable or fully vetted skills",
+  "distinct_positive_music_source_families": 2,
+  "reference_ledgers": [
+    "registry/discovery/q6-four-package-static-reviews-20261103.json",
+    "registry/discovery/q6-eight-music-craft-static-20261103.json"
   ]
 }
