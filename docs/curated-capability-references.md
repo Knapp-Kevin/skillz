@@ -1,6 +1,6 @@
-# Nineteen useful skill methods, with their limits
+# Twenty useful skill methods, with their limits
 
-**These are nineteen positively selected, individually differentiated Valuable Reference methods across nine domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
+**These are twenty positively selected, individually differentiated Valuable Reference methods across ten canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -23,6 +23,7 @@
 | arranging | **[mc-arrangement-arch](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-arrangement-arch/SKILL.md)** | Plan when layers enter, disappear and return for an actual musical arc |
 | notation | **[mc-symbolic-score](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-symbolic-score/SKILL.md)** | Produce ABC, MusicXML and MIDI from one checked score plan |
 | electronic-composition | **[mc-style-edm](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-style-edm/SKILL.md)** | Build and release club-track energy by adding and removing layers |
+| Reconcile a grant budget | **[Nonprofit Budget Narrative](https://github.com/dh2211/nonprofit-agents/blob/e1a247b8743d53e12677774bf67f6453b7f692b1/skills/npo-budget-narrative/SKILL.md)** | Recalculate each line from real costs and flag amounts or cost rules needing human finance review |
 
 ## Why each is a valuable reference, not ready for unchanged use
 
@@ -116,8 +117,14 @@ These eight are *separate methods*, not eight licenses to operate a composition 
 
 [Read the detailed eight-skill static review](reviews/2026-11-03-q6-eight-music-craft-static.md). [Browse the eight music topics and the remaining illustration gaps](capability-creative-coverage.md).
 
+### Finance / Budgeting: Nonprofit Budget Narrative
+
+**Distinct benefit:** Compute each grant cost from real quantity and rate, tie the line to its actual program activity, compare the official funding rules, and report unresolved mismatches to the finance owner instead of silently changing records.
+
+**Important limit:** Exact-pinned MIT single-file source, **17/20 static**. The original agent skill, financial records and official eligibility rules have not been executed or validated. A fictional arithmetic example supports a calculation oracle, **not** a tested skill. The separate Grant Writing Kit scorecard can report GO with unanswered eligibility gates; it remains **held**, not endorsed. [Full evidence](../registry/discovery/q7-budget-workbook-and-valuable-reference-20261103.json).
+
 ## What this does and doesn't count
 
-Nineteen **distinct source/path-pinned Valuable Reference methods** across nine domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
+Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
-The source-neutral [structured reference catalog](../registry/consumer-positive-references-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
+The source-neutral [structured reference catalog](../registry/consumer-positive-references-q7-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
