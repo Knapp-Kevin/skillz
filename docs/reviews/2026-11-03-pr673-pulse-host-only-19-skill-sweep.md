@@ -13,13 +13,13 @@
 
 ## Full-package exact-identity checks
 
-All **16 final candidate manifest SHA values** below were re-read on the draft branch and at their resolvable pinned source revision: **14 unchanged-since-guard snapshots** at `4ff16d78e6414fd1637026062e57e18c821440b9`, and **two separately protected local-private-read variants** (`governance-pulse`, `mcp-pulse`) at `c75566e7470c5c6072a405e8c4a5526d2cb7c94f`. Each `registry/verification/local-skills/<name>.yaml` and consolidated `registry/local-verification.json` uses the final exact SKILL.md blob SHA; the individual provenance entry references the corresponding source revision. All 16 final source-revision SHA checks passed. Earlier `81f476...` is a historical intermediate version and does not apply to this final candidate.
+All **16 final candidate manifest SHA values** below were re-read on the draft branch and at their resolvable pinned source revision: **13 unchanged-since-guard snapshots** at `4ff16d78e6414fd1637026062e57e18c821440b9`, **two separately protected local-private-read variants** (`governance-pulse`, `mcp-pulse`) at `c75566e7470c5c6072a405e8c4a5526d2cb7c94f`, and **github-pulse**, with its standalone-registry availability fix, at `45303dcbab4089b3d4c3900e4c671ba9ba07d265`. Each `registry/verification/local-skills/<name>.yaml` and consolidated `registry/local-verification.json` uses the final exact SKILL.md blob SHA; the individual provenance entry references the corresponding source revision. All 16 final source-revision SHA checks passed. Earlier `81f476...` is a historical intermediate version and does not apply to this final candidate.
 
 | First-party skill | New SemVer | Prior reviewed SKILL.md blob | Current candidate SKILL.md blob | New qualification state |
 |---|---|---|---|---|
 | `deepseek-pulse` | 1.1.2 | `e5778521bac5459432731814755dd2c4d60ff705` | `63be9ffb787e29e7c9d53a4111c817f660d0c943` | stale / not-run |
 | `gemini-pulse` | 1.0.2 | `8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80` | `9dbae1510d0fb3c65056fc53f0050ce0ed6ede59` | stale / not-run |
-| `github-pulse` | 1.0.2 | `03e135f4e916115040af63271de71b23277e36f7` | `b0c3784a53ef3ad15fda0a7678239b8bec86c42a` | stale / not-run |
+| `github-pulse` | 1.0.2 | `03e135f4e916115040af63271de71b23277e36f7` | `5dc5cb3fd2527dcd39765ab66a9676146f91f1d7` | stale / not-run |
 | `glm-pulse` | 1.1.2 | `3bfbb84c43a76413897b30ad675d1ba5d8b8a1de` | `79e2e3b384ee707871122fa70d5fb3651c0511e6` | stale / not-run |
 | `governance-pulse` | 1.1.2 | `aa2157650140bf0820b6d6b1921c5f0881d8c627` | `a444566237940b43944bc1f5e0afb55708d84123` | stale / not-run |
 | `hf-pulse` | 1.0.2 | `de2d55b632e88deaa71aa145cf83293f5877381a` | `3250a7c3ed49783329220536e8ef4a1f7b9bb286` | stale / not-run |
@@ -58,7 +58,7 @@ All **16 final candidate manifest SHA values** below were re-read on the draft b
 | A digest includes sensitive memory, credentials or private code in public search strings | Prevent sensitive data in queries, URLs, and public provider requests | **16/16** prohibit private-data egress. No outbound search or DLP test executed. |
 | Governance digest tries to read `.qor/` or `docs/META_LEDGER.md` without local-file authorization | Separate permission for named local file and exact read scope | **governance-pulse explicitly hardened**, other skills unaffected; no local file read executed. |
 | MCP digest opens `.mcp.json` or private integration settings just because they exist | Require explicit approval of local path/read scope; never print secrets | **mcp-pulse explicitly hardened**, no local config read executed. |
-| Referenced peer skill or deprecated permission tier is absent | No implicit `skills-pulse` runtime; describe suggested intake without writes or old tier assumptions | Updated **github-pulse** and **mcp-pulse** source text only. |
+| Referenced peer skill, obsolete permission tier or candidate-intake file is unavailable | Do not assume `skills-pulse`, old permission tiers, or the local candidate registry exist in a standalone host; mark unperformed duplication checks | Updated **github-pulse** and **mcp-pulse** source text. No private registry reads were performed. |
 
 **No automated package security pass was produced.** The authorized host did not have NVIDIA SkillSpector installed; its network could not resolve GitHub to retrieve v2.12.0. This is an environment limitation, not a scanner finding and not a waiver of the external security gate. Scanner pin and execution requirements remain in [the repository's security policy](../../docs/security-scanning.md). No LLM security provider was called and no private package contents were sent to a third party.
 
