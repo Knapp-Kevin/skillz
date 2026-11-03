@@ -5307,5 +5307,21 @@
     "source_workbook_engine_execution": "not-run",
     "unchanged_use_approved": false,
     "public_shelf_and_dashboard_unchanged": true
+  },
+  "q7_original_pinned_workbook_engine_acceptance_20261103": {
+    "source_pin": "ec7f94f84916be7bb25ec38752c24176330065a7",
+    "git_blob_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+    "imported_original_xlsx": true,
+    "receipt": "registry/discovery/q7-original-pinned-scorecard-engine-acceptance-20261103.json",
+    "review": "docs/reviews/2026-11-03-q7-original-pinned-scorecard-engine-acceptance.md",
+    "publisher_example_score": 76,
+    "original_go_with_B4_no": true,
+    "controlled_cases": 25,
+    "candidate_passes": 25,
+    "wrong_blob_rejected": true,
+    "upstream_binary_mirrored": false,
+    "excel_libreoffice_validated": false,
+    "unchanged_use_approved": false,
+    "shelf_and_graph_unmodified": true
   }
 }
