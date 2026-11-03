@@ -335,8 +335,8 @@
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e5778521bac5459432731814755dd2c4d60ff705",
-      "verification_status": "verified",
+      "content_blob_sha": "eb5ee9d97e7efe9f38cff89958396dfd9ec82457",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -360,7 +360,10 @@
           "high"
         ]
       },
-      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills."
+      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills.",
+      "prior_reviewed_blob_sha": "e5778521bac5459432731814755dd2c4d60ff705",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "devlog-draft",
@@ -463,8 +466,8 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80",
-      "verification_status": "verified",
+      "content_blob_sha": "437f1a0c71015898bbf4bd90ca1156791a137536",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -488,14 +491,17 @@
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
+      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability.",
+      "prior_reviewed_blob_sha": "8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
-      "verification_status": "verified",
+      "content_blob_sha": "24addb7d68087c21f99330830977920d77fd3269",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -519,14 +525,17 @@
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
+      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints.",
+      "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "glm-pulse",
       "local_path": "skills/glm-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3bfbb84c43a76413897b30ad675d1ba5d8b8a1de",
-      "verification_status": "verified",
+      "content_blob_sha": "82da67c37302abd77dac002014c82602527f5981",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -550,14 +559,17 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization."
+      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization.",
+      "prior_reviewed_blob_sha": "3bfbb84c43a76413897b30ad675d1ba5d8b8a1de",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
-      "verification_status": "verified",
+      "content_blob_sha": "e2c69537b86becb9293b5237dc0ec3f96a5f7b28",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -583,7 +595,10 @@
           "medium"
         ]
       },
-      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
+      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific.",
+      "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "handoff-writer",
@@ -622,8 +637,8 @@
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
-      "verification_status": "verified",
+      "content_blob_sha": "65465396c75537c6cd28036c6487ff68ec17b057",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -647,7 +662,10 @@
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented.",
+      "prior_reviewed_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "inbox-triage",
@@ -685,8 +703,8 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
-      "verification_status": "verified",
+      "content_blob_sha": "e8bc23828371be651bf8cfe449f1a0257a24a841",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -711,14 +729,17 @@
           "medium"
         ]
       },
-      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent.",
+      "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
-      "verification_status": "verified",
+      "content_blob_sha": "831a77f1d8250f6fd23db9a20a07570a63bf8d19",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -742,7 +763,10 @@
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability."
+      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability.",
+      "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "learning-plan",
@@ -780,8 +804,8 @@
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc",
-      "verification_status": "verified",
+      "content_blob_sha": "d90c47b7ac39122bd9ef26bfa88ac3c6af707b1b",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -805,14 +829,17 @@
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."
+      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical.",
+      "prior_reviewed_blob_sha": "d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
-      "verification_status": "verified",
+      "content_blob_sha": "46c878d52188f658cce1389294bc5aa6b13082f6",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -838,7 +865,10 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific.",
+      "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "mcp-vetting",
@@ -876,8 +906,8 @@
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "659441df0952f7db302835606068c812ed81d22f",
-      "verification_status": "verified",
+      "content_blob_sha": "b030f35f52c66b13892a3ad8f1e362f15ff9be5e",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -901,14 +931,17 @@
           "medium"
         ]
       },
-      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context.",
+      "prior_reviewed_blob_sha": "659441df0952f7db302835606068c812ed81d22f",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "mistral-pulse",
       "local_path": "skills/mistral-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d2e092ee1cfdbd7127145926d48d6cf78b46ce1",
-      "verification_status": "verified",
+      "content_blob_sha": "a04a39981d17c4f2b237e387e4464b18f6d333f5",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -932,14 +965,17 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight."
+      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight.",
+      "prior_reviewed_blob_sha": "4d2e092ee1cfdbd7127145926d48d6cf78b46ce1",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "openai-pulse",
       "local_path": "skills/openai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d6b98630525e16d392b3f50e67ae674332316310",
-      "verification_status": "verified",
+      "content_blob_sha": "bd16ca6f71c76c7c9dcfabf36a34752b9df408f3",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -963,7 +999,10 @@
           "high"
         ]
       },
-      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
+      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time.",
+      "prior_reviewed_blob_sha": "d6b98630525e16d392b3f50e67ae674332316310",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "paper-digest",
@@ -1032,8 +1071,8 @@
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ef8b1cfd50f464f91d02855eaad7d05032475493",
-      "verification_status": "verified",
+      "content_blob_sha": "26c79e2b73172810b1ff9342528b3a7c15b2de42",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -1057,14 +1096,17 @@
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
+      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation.",
+      "prior_reviewed_blob_sha": "ef8b1cfd50f464f91d02855eaad7d05032475493",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "qwen-pulse",
       "local_path": "skills/qwen-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e22ff1879ce563a76e733bc576bed80cf4cc5f12",
-      "verification_status": "verified",
+      "content_blob_sha": "8c1a9821f38fe09ccf275084ec2ebda029fe2d16",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -1088,7 +1130,10 @@
           "high"
         ]
       },
-      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
+      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized.",
+      "prior_reviewed_blob_sha": "e22ff1879ce563a76e733bc576bed80cf4cc5f12",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "repo-doctor",
@@ -1318,8 +1363,8 @@
       "skill_name": "xai-pulse",
       "local_path": "skills/xai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ec172826db6d811dbea1985c8962ad342c310412",
-      "verification_status": "verified",
+      "content_blob_sha": "7b1a9cf2c21e36f05d0b2ee9507e90b78c67e924",
+      "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
       "tags": {
@@ -1343,7 +1388,10 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency."
+      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency.",
+      "prior_reviewed_blob_sha": "ec172826db6d811dbea1985c8962ad342c310412",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source procedure changed this exact skill fingerprint. Previous rubric grade applies only to prior_reviewed_blob_sha; current static review, scanner and behavior all pending."
     },
     {
       "skill_name": "automation-receipts",
@@ -1409,5 +1457,37 @@
       },
       "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
     }
-  ]
+  ],
+  "pulse_host_only_remediation_20261103": {
+    "manifest_pin": "81f476885d8741343077f91faf60b4972485af21",
+    "affected_skill_count": 16,
+    "affected_skill_names": [
+      "deepseek-pulse",
+      "gemini-pulse",
+      "github-pulse",
+      "glm-pulse",
+      "governance-pulse",
+      "hf-pulse",
+      "inference-pulse",
+      "kimi-pulse",
+      "llama-pulse",
+      "mcp-pulse",
+      "memory-pulse",
+      "mistral-pulse",
+      "openai-pulse",
+      "perplexity-pulse",
+      "qwen-pulse",
+      "xai-pulse"
+    ],
+    "prior_review_scoring": "historical, not inherited for updated SKILL.md files",
+    "security_scan": "not-run",
+    "behavioral_validation": "not-run",
+    "status": "HOLD-until-independent-exact-version-review-and-security",
+    "source_lists_preserved": true,
+    "unaffected_inspected": [
+      "career-radar",
+      "claude-pulse",
+      "repo-pulse"
+    ]
+  }
 }
