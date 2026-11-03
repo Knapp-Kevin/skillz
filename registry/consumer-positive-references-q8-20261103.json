@@ -340,7 +340,7 @@
     "pin": "0abc18d22d6baf9e55d4fce9a01d29e2528ee426",
     "path": "skills/video-scoring-audio/SKILL.md",
     "skill_blob_sha": "d1fdfc6fba00bbb4b322a1fb13a442632246d2d2",
-    "recorded_package_tree_sha": null,
+    "recorded_package_tree_sha": "9c53aaf2275e7ddc1b82f5bb22ddcc080f3f9449",
     "package_files": [
      {
       "path": "skills/video-scoring-audio/SKILL.md",
@@ -360,7 +360,7 @@
     "license": "MIT for source-authored work; external content and model/asset rights separate",
     "license_file_sha": "225c9df040c1875ba11cd064e8d4d0625e5ffc32",
     "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
-    "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+    "package_sha_basis": "Git tree verified from the pinned upstream commit by the external-host SkillSpector receipt 2026-11-03 (registry/security/external-host-skillspector-featured-20261103.json), matched on exact source pin, path and SKILL.md blob. Earlier Q7 UNKNOWN is retained as dated history in the Q7 ledger.",
     "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
    },
    "dependencies": "Python3, mido, numpy, fluidsynth, ffmpeg/ffprobe, licensed soundfont; optional Gemini/Lyria API",
@@ -398,7 +398,7 @@
     "pin": "7ff5861b00836cb0d675c00a09a26d143722579e",
     "path": "skills/art/illustration/skills/design-concept-art-brief/SKILL.md",
     "skill_blob_sha": "fa6613c7603d1ec4ededea1e76469d53696cdf2f",
-    "recorded_package_tree_sha": null,
+    "recorded_package_tree_sha": "e9d0a458d2c837c3a679252bcd22e9a04f3b117d",
     "package_files": [
      {
       "path": "skills/art/illustration/skills/design-concept-art-brief/SKILL.md",
@@ -409,7 +409,7 @@
     "license": "MIT for source-authored work; external content and model/asset rights separate",
     "license_file_sha": "b5dc9c433b8b72768588a7d654e98c218ad0cea9",
     "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
-    "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+    "package_sha_basis": "Git tree verified from the pinned upstream commit by the external-host SkillSpector receipt 2026-11-03 (registry/security/external-host-skillspector-featured-20261103.json), matched on exact source pin, path and SKILL.md blob. Earlier Q7 UNKNOWN is retained as dated history in the Q7 ledger.",
     "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
    },
    "dependencies": "No runtime; original cites books and named studios whose claimed practices were not independently established",
@@ -446,7 +446,7 @@
     "pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
     "path": "skills/scenario-storyboards/SKILL.md",
     "skill_blob_sha": "9275b402c74f0165c1ea8c5a2ca3764cf327f367",
-    "recorded_package_tree_sha": null,
+    "recorded_package_tree_sha": "b0b029258172a8a46a5e9187306e1606fa0585f5",
     "package_files": [
      {
       "path": "skills/scenario-storyboards/SKILL.md",
@@ -486,7 +486,7 @@
     "license": "MIT for source-authored work; external content and model/asset rights separate",
     "license_file_sha": "05676553d9d10a0effff673b507b4fcfed652c17",
     "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
-    "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+    "package_sha_basis": "Git tree verified from the pinned upstream commit by the external-host SkillSpector receipt 2026-11-03 (registry/security/external-host-skillspector-featured-20261103.json), matched on exact source pin, path and SKILL.md blob. Earlier Q7 UNKNOWN is retained as dated history in the Q7 ledger.",
     "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
    },
    "dependencies": "Paid Scenario MCP, image and consistency skills, text-overlay/assembly helpers and account scope",
@@ -524,7 +524,7 @@
     "pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
     "path": "skills/scenario-identity-library/SKILL.md",
     "skill_blob_sha": "e36509de1f00a9b4114b437ae53f1c4b689b8c23",
-    "recorded_package_tree_sha": null,
+    "recorded_package_tree_sha": "d514d323fcd601d43551250e38809862d294e719",
     "package_files": [
      {
       "path": "skills/scenario-identity-library/SKILL.md",
@@ -552,7 +552,7 @@
     "license": "MIT for source-authored work; external content and model/asset rights separate",
     "license_file_sha": "05676553d9d10a0effff673b507b4fcfed652c17",
     "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
-    "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+    "package_sha_basis": "Git tree verified from the pinned upstream commit by the external-host SkillSpector receipt 2026-11-03 (registry/security/external-host-skillspector-featured-20261103.json), matched on exact source pin, path and SKILL.md blob. Earlier Q7 UNKNOWN is retained as dated history in the Q7 ledger.",
     "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
    },
    "dependencies": "Scenario MCP/account, model credits, scenario-consistency, scenario-quality-gate (possibly Enterprise), Grid Maker",
