@@ -7,7 +7,7 @@ source_path: skills/github-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
+source_snapshot_revision: 45303dcbab4089b3d4c3900e4c671ba9ba07d265
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
-exact_version_requalification: "Required for b0c3784a53ef3ad15fda0a7678239b8bec86c42a; prior review fingerprint 03e135f4e916115040af63271de71b23277e36f7 is historical only. No current package security or behavioral pass."
+exact_version_requalification: "Required for 5dc5cb3fd2527dcd39765ab66a9676146f91f1d7; prior review fingerprint 03e135f4e916115040af63271de71b23277e36f7 is historical only. No current package security or behavioral pass."
