@@ -3,7 +3,7 @@ skill_name: llama-pulse
 source_id: local-skills
 local_path: "skills/llama-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d90c47b7ac39122bd9ef26bfa88ac3c6af707b1b
+content_blob_sha: c0c38b0dd182f1f588d1800b832b331c8572080e
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
 verification_status: stale
