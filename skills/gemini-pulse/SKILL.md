@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Gemini Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # Gemini Pulse
@@ -20,20 +20,14 @@ Vendor pulse for Google Gemini / DeepMind. Sources are data (`sources.json`), sy
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/gemini-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read the bundled `sources.json` beside this skill. For the requested window (default 30 days), use only the external host's available browser, search, or connected read-only tools to check listed public pages, repositories, searches and community leads. Where a search includes `{SINCE}`, substitute the window's start date. Cite exact source URLs and publication dates, distinguish primary announcements from community reports, and label inaccessible or rate-limited sources as gaps instead of pretending to check them. Do not reveal private project context, credentials, tokens, or unapproved user data in search queries or outbound requests. If the host lacks live access, report the gap and offer an evidence-limited summary; do not invent freshness. **skillz provides no runner, crawler, script, scheduler or background job.**
 
 2. **Fill gaps.** Fetch the Gemini API changelog and the Google AI / DeepMind blogs; run the listed searches. Google announces across several surfaces — the searches catch what the blogs miss.
 3. **Synthesize.** Deprecations/quota changes first; model releases; agent tooling (gemini-cli, ADK); community sentiment.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses for a cross-vendor view.
+- **Optional cadence:** Weekly, and only when the user explicitly authorizes this recurring digest. Any scheduled task belongs to the external host, not this repository. A one-time research request is not authorization for continuing checks or user communications.
 
 ## Output Format
 
