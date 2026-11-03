@@ -3,15 +3,18 @@ skill_name: kimi-pulse
 source_id: local-skills
 local_path: "skills/kimi-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4d8935ea2d8006ea277ab1371f419c723a867643
+content_blob_sha: 831a77f1d8250f6fd23db9a20a07570a63bf8d19
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
+prior_reviewed_blob_sha: 4d8935ea2d8006ea277ab1371f419c723a867643
+rubric_score_current_fingerprint: false
+requalification_reason: "Changed manifest collection procedure; prior score is historical and requires exact-version re-review."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
