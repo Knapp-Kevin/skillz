@@ -3,15 +3,18 @@ skill_name: glm-pulse
 source_id: local-skills
 local_path: "skills/glm-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 3bfbb84c43a76413897b30ad675d1ba5d8b8a1de
+content_blob_sha: 82da67c37302abd77dac002014c82602527f5981
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
+prior_reviewed_blob_sha: 3bfbb84c43a76413897b30ad675d1ba5d8b8a1de
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only collection changed manifest bytes; previous score historical. No new scanner or behavioral acceptance."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
