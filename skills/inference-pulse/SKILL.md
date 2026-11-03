@@ -13,7 +13,7 @@ metadata:
   category: Productivity
   display-name: Inference Pulse
   emoji: "🧠"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Inference Pulse
@@ -30,18 +30,10 @@ skill offers to bind a target for next time.
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/inference-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read
-   `sources.json` beside this file and fetch/search those sources
-   directly with web tools.
+1. **Collect (external host only).** Read the bundled `sources.json` beside this skill. For the requested time window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the start date for `{SINCE}` where present. Cite source URLs and publication dates, distinguish official reports from community leads, and report inaccessible or rate-limited sources as gaps. Never put private context, credentials or tokens in public queries. If access is unavailable, provide an evidence-limited result, not invented freshness. **skillz has no runner, crawler, script, scheduler or background job.**
 
 2. **Fill gaps.** Fetch the llama.cpp releases page and the Ollama/vLLM
-   blogs directly if the engine's coverage is thin; run the searches,
+   blogs directly if the host's source coverage is thin; run the searches,
    especially for quantization-format and NPU support news.
 3. **Synthesize.** Breaking changes first (removed flags, API breaks,
    GGUF version bumps, with migration impact); then runtime releases;
@@ -50,8 +42,7 @@ skill offers to bind a target for next time.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly — runs alongside the other pulses
-  (mcp-pulse, github-pulse); cross-reference, don't duplicate.
+- **Optional cadence:** Weekly, only if the user authorizes this recurring digest. A scheduled task belongs to the external host. A one-time request never authorizes recurring checks or notifications.
 
 ## Output Format
 
