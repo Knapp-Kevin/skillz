@@ -1,3 +1,5 @@
+![skillz banner: Passive AI skill library, with blue and purple illustrations of AI, code, research, analytics, and security.](docs/assets/skillz-original-banner.png)
+
 # 🛠️ skillz
 
 **Find better skills for your AI assistant.**
