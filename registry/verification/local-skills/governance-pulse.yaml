@@ -3,7 +3,7 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e2c69537b86becb9293b5237dc0ec3f96a5f7b28
+content_blob_sha: 8331f8f07e39071913c0062d4a57a27bb8a2fa93
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
 verification_status: stale
