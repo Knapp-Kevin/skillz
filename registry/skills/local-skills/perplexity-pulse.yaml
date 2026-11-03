@@ -7,15 +7,16 @@ source_path: skills/perplexity-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-03
 availability: in-repo
 local_path: skills/perplexity-pulse/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: stale
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
+import_eligibility: conditional-on-security-and-user-fit
 rationale: "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
+exact_version_requalification: "Required for 26c79e2b73172810b1ff9342528b3a7c15b2de42; historical semantic review was ef8b1cfd50f464f91d02855eaad7d05032475493. Package security and behavior not-run."
