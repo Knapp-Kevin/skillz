@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1570 1200" width="1570" height="1200" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Skillz: research evidence and selected reference methods across 33 capability domains</title>
+<desc id="chart-desc">Two separate measurement stages. The November 2 research baseline shows 210 of 247 topics with at least one review or candidate link, which may be rejected. The November 3 bounded consumer shelf has 20 Valuable Reference methods across ten domains and 19 topic mappings. Zero skills are approved unchanged. See the README for a full domain-by-domain text alternative. Nothing here certifies full capability coverage.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c182b"/><stop offset="1" stop-color="#16233c"/></linearGradient><linearGradient id="active" x1="0" x2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs>
+<rect width="1570" height="1200" rx="24" fill="url(#bg)"/>
+<text x="56" y="67" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Capability search: evidence links versus featured methods</text>
+<text x="57" y="105" fill="#bbccdf" font-family="Arial, Helvetica, sans-serif" font-size="21">Two evidence stages. Neither is proof that a skill is safe to install or that a domain is mature.</text>
+<rect x="55" y="140" width="352" height="100" rx="14" fill="#1c2d44" stroke="#38516b"/>
+<text x="75" y="187" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#f1f5f9">33</text>
+<text x="75" y="216" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#bfd0e0">capability domains</text>
+<rect x="424" y="140" width="352" height="100" rx="14" fill="#1c2d44" stroke="#38516b"/>
+<text x="444" y="187" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#f1f5f9">210 / 247</text>
+<text x="444" y="216" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#bfd0e0">topics with research links (Nov 2)</text>
+<rect x="793" y="140" width="352" height="100" rx="14" fill="#1c2d44" stroke="#38516b"/>
+<text x="813" y="187" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#f1f5f9">20</text>
+<text x="813" y="216" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#bfd0e0">Valuable Reference methods (Nov 3)</text>
+<rect x="1162" y="140" width="352" height="100" rx="14" fill="#1c2d44" stroke="#38516b"/>
+<text x="1182" y="187" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#f1f5f9">0</text>
+<text x="1182" y="216" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#bfd0e0">unchanged-use approvals</text>
+<rect x="60" y="265" width="17" height="15" rx="3" fill="#36badd"/><text x="89" y="279" fill="#dbe6f1" font-size="17" font-family="Arial, Helvetica, sans-serif">Research-linked topics (Q4: includes rejected leads)</text>
+<rect x="595" y="265" width="17" height="15" rx="3" fill="#a78bfa"/><text x="624" y="279" fill="#dbe6f1" font-size="17" font-family="Arial, Helvetica, sans-serif">Featured methods (Q7 bounded shelf)</text>
+<text x="62" y="311" fill="#acbfd2" font-size="16" font-family="Arial, Helvetica, sans-serif">0 featured = not promoted to this shelf; search the wider library for other useful methods.</text>
+<rect x="55" y="333" width="728" height="754" rx="16" fill="#111e32" stroke="#314760"/>
+<text x="69" y="361" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#e2e8f0">Capability domain</text><text x="332" y="361" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#c5dbed">Linked topics</text><text x="609" y="361" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#d8cbff">Selected methods</text>
+<rect x="62" y="372.0" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Software engineering: 10 of 10 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="393.0" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Software engineering</text>
+<rect x="333" y="380.0" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="380.0" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="393.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">10/10</text>
+<rect x="614" y="373.0" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="393.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Testing: 7 of 8 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="435.1" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Testing</text>
+<rect x="333" y="422.1" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="422.1" width="131.25" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="435.1" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/8</text>
+<rect x="614" y="415.1" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="435.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/8 topics</text>
+</g>
+<rect x="62" y="456.2" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Agent / MCP development: 8 of 8 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="477.2" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Agent / MCP development</text>
+<rect x="333" y="464.2" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="464.2" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="477.2" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">8/8</text>
+<rect x="614" y="457.2" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="477.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Cloud / DevOps: 8 of 8 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="519.3" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Cloud / DevOps</text>
+<rect x="333" y="506.3" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="506.3" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="519.3" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">8/8</text>
+<rect x="614" y="499.3" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="519.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/8 topics</text>
+</g>
+<rect x="62" y="540.4" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Security: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="561.4" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Security</text>
+<rect x="333" y="548.4" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="548.4" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="561.4" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="614" y="541.4" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="561.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Research: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="603.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Research</text>
+<rect x="333" y="590.5" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="590.5" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="603.5" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="614" y="583.5" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="603.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="62" y="624.6" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Planning: 6 of 6 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="645.6" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Planning</text>
+<rect x="333" y="632.6" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="632.6" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="645.6" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/6</text>
+<rect x="614" y="625.6" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="645.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Marketing: 8 of 9 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="687.7" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Marketing</text>
+<rect x="333" y="674.7" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="674.7" width="133.33" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="687.7" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">8/9</text>
+<rect x="614" y="667.7" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="687.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/9 topics</text>
+</g>
+<rect x="62" y="708.8" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Product: 8 of 8 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="729.8" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Product</text>
+<rect x="333" y="716.8" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="716.8" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="729.8" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">8/8</text>
+<rect x="614" y="709.8" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="729.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>UX / UI: 7 of 7 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="771.9" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">UX / UI</text>
+<rect x="333" y="758.9" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="758.9" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="771.9" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="614" y="751.9" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="771.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/7 topics</text>
+</g>
+<rect x="62" y="793.0" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Visual design: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="814.0" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Visual design</text>
+<rect x="333" y="801.0" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="801.0" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="814.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="614" y="794.0" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="814.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Illustration: 1 of 6 research-linked topics in Q4; 3 selected Valuable Reference methods across 3 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="856.1" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Illustration</text>
+<rect x="333" y="843.1" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="843.1" width="25.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="856.1" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">1/6</text>
+<rect x="614" y="836.1" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="856.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">3 · 3/6 topics</text>
+</g>
+<rect x="62" y="877.2" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>3D / CAD / animation: 7 of 9 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="898.2" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">3D / CAD / animation</text>
+<rect x="333" y="885.2" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="885.2" width="116.67" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="898.2" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/9</text>
+<rect x="614" y="878.2" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="898.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/9 topics</text>
+</g>
+<g><title>Game design: 6 of 8 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="940.3" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Game design</text>
+<rect x="333" y="927.3" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="927.3" width="112.50" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="940.3" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/8</text>
+<rect x="614" y="920.3" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="940.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/8 topics</text>
+</g>
+<rect x="62" y="961.4" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Fiction / narrative / worldbuilding: 8 of 8 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="982.4" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Fiction / narrative / worldbuilding</text>
+<rect x="333" y="969.4" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="969.4" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="982.4" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">8/8</text>
+<rect x="614" y="962.4" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="687" y="982.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Technical writing: 7 of 7 research-linked topics in Q4; 1 selected Valuable Reference methods across 1 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="1024.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Technical writing</text>
+<rect x="333" y="1011.5" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="333" y="1011.5" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="492" y="1024.5" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="614" y="1004.5" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="1024.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/7 topics</text>
+</g>
+<rect x="62" y="1045.6" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Music composition: 0 of 8 research-linked topics in Q4; 9 selected Valuable Reference methods across 8 topics in Q6. Not install or maturity clearance.</title>
+<text x="68" y="1066.6" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Music composition</text>
+<rect x="333" y="1053.6" width="150" height="14" rx="5" fill="#354a62"/>
+<text x="492" y="1066.6" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">0/8</text>
+<rect x="614" y="1046.6" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="687" y="1066.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">9 · 8/8 topics</text>
+</g>
+<rect x="815" y="333" width="728" height="754" rx="16" fill="#111e32" stroke="#314760"/>
+<text x="829" y="361" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#e2e8f0">Capability domain</text><text x="1092" y="361" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#c5dbed">Linked topics</text><text x="1369" y="361" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#d8cbff">Selected methods</text>
+<rect x="822" y="372.0" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Audio / voice / sound: 5 of 8 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="393.0" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Audio / voice / sound</text>
+<rect x="1093" y="380.0" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="380.0" width="93.75" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="393.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">5/8</text>
+<rect x="1374" y="373.0" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="393.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Video / film: 5 of 9 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="435.1" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Video / film</text>
+<rect x="1093" y="422.1" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="422.1" width="83.33" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="435.1" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">5/9</text>
+<rect x="1374" y="415.1" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="435.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="822" y="456.2" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Communication: 5 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="477.2" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Communication</text>
+<rect x="1093" y="464.2" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="464.2" width="107.14" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="477.2" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">5/7</text>
+<rect x="1374" y="457.2" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="477.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Analytics: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="519.3" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Analytics</text>
+<rect x="1093" y="506.3" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="506.3" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="519.3" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="1374" y="499.3" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="519.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="822" y="540.4" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Time / productivity: 6 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="561.4" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Time / productivity</text>
+<rect x="1093" y="548.4" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="548.4" width="128.57" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="561.4" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/7</text>
+<rect x="1374" y="541.4" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="561.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Memory / context: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="603.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Memory / context</text>
+<rect x="1093" y="590.5" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="590.5" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="603.5" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="1374" y="583.5" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="603.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="822" y="624.6" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Business: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="645.6" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Business</text>
+<rect x="1093" y="632.6" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="632.6" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="645.6" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="1374" y="625.6" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="645.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Sales: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="687.7" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Sales</text>
+<rect x="1093" y="674.7" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="674.7" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="687.7" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="1374" y="667.7" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="687.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="822" y="708.8" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Career: 6 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="729.8" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Career</text>
+<rect x="1093" y="716.8" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="716.8" width="128.57" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="729.8" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/7</text>
+<rect x="1374" y="709.8" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="729.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Education: 6 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="771.9" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Education</text>
+<rect x="1093" y="758.9" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="758.9" width="128.57" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="771.9" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/7</text>
+<rect x="1374" y="751.9" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="771.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="822" y="793.0" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Science: 6 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="814.0" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Science</text>
+<rect x="1093" y="801.0" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="801.0" width="128.57" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="814.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/7</text>
+<rect x="1374" y="794.0" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="814.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Medicine: 6 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="856.1" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Medicine</text>
+<rect x="1093" y="843.1" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="843.1" width="128.57" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="856.1" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/7</text>
+<rect x="1374" y="836.1" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="856.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<rect x="822" y="877.2" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Law: 6 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="898.2" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Law</text>
+<rect x="1093" y="885.2" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="885.2" width="128.57" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="898.2" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">6/7</text>
+<rect x="1374" y="878.2" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="898.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>Finance: 7 of 8 research-linked topics in Q4; 1 selected Valuable Reference method across 1 topic in Q7. Not install or maturity clearance.</title>
+<text x="828" y="940.3" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Finance</text>
+<rect x="1093" y="927.3" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="927.3" width="131.25" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="940.3" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/8</text>
+<rect x="1374" y="920.3" width="146" height="28" rx="9" fill="#44336d" stroke="#8b70c3"/>
+<text x="1447" y="940.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f3e8ff">1 · 1/8 topics</text>
+</g>
+<rect x="822" y="961.4" width="714" height="38" rx="6" fill="#1b2c43" opacity=".60"/>
+<g><title>Robotics / IoT: 5 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="982.4" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">Robotics / IoT</text>
+<rect x="1093" y="969.4" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="969.4" width="107.14" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="982.4" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">5/7</text>
+<rect x="1374" y="962.4" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="982.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<g><title>ML accelerators and compute: 7 of 7 research-linked topics in Q4; 0 selected Valuable Reference methods across 0 topics in Q6. Not install or maturity clearance.</title>
+<text x="828" y="1024.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#f0f4fa">ML accelerators and compute</text>
+<rect x="1093" y="1011.5" width="150" height="14" rx="5" fill="#354a62"/>
+<rect x="1093" y="1011.5" width="150.00" height="14" rx="5" fill="url(#active)"/>
+<text x="1252" y="1024.5" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#e2eef8">7/7</text>
+<rect x="1374" y="1004.5" width="146" height="28" rx="9" fill="#1b2a3d" stroke="#34455c"/>
+<text x="1447" y="1024.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#8ea0b3">not on shelf</text>
+</g>
+<text x="58" y="1123" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#e2e8f0">Creative detail: music has 9 selected methods serving 8/8 topics; illustration has 3 serving 3/6. Both remain unqualified for unchanged use.</text>
+<text x="58" y="1156" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#bacbda">Evidence baseline: 2026-11-02 (Q4)   •   Bounded method shelf: 2026-11-03 (Q7)   •   No security or behavioral passes implied</text>
+</svg>

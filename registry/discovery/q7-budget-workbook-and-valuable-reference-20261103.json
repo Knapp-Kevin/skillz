@@ -1,0 +1,159 @@
+{
+  "schema": "q7-budget-method-and-three-xlsx-static-inspection-v1",
+  "date": "2026-11-03",
+  "source_git_pins": {
+    "grant_method": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+    "workbooks": "ec7f94f84916be7bb25ec38752c24176330065a7"
+  },
+  "consumer_selected_id": "dh2211-nonprofit-agents/npo-budget-narrative",
+  "consumer_state": "VALUABLE_REFERENCE_ONLY",
+  "canonical_mapping": "finance/budgeting",
+  "grade_static_20": 17,
+  "grant_method_complete_package_git_tree": "2c91ed5cf6d6d74ed2c00689df169c2c9cfc42e9",
+  "grant_method_root_mit_license_blob": "a4ef2eef75bcf2f7f5cf6a05c7cb75a980768c95",
+  "workbook_zip_xml_static_inspection": {
+    "method": "GitHub fetch_file encoding base64, binary decoded, ZIP central-directory enumerated and DEFLATE XML parts read only; no code run from workbooks",
+    "files": [
+      {
+        "name": "Grant Pipeline Tracker",
+        "path": "grant-writing-kit/references/1-pipeline/grant-pipeline-tracker.xlsx",
+        "git_blob_sha": "a52a22098d78492a2744f7de17536f6f9b1095ec",
+        "bytes": 9882,
+        "worksheets": [
+          "Pipeline",
+          "Deadlines",
+          "Log"
+        ],
+        "formula_count": 55,
+        "data_validation_tags": 3,
+        "security_static": {
+          "encrypted_entries": 0,
+          "macro_parts": 0,
+          "external_link_parts": 0,
+          "hidden_sheets": 0
+        },
+        "notable_formulas": [
+          "IF(F2=\"\",\"\",F2-TODAY())",
+          "COUNTIFS deadlines over next 7/30 days"
+        ],
+        "holds": [
+          "No engine recalculation",
+          "Potential blank-date overdue counting not independently tested"
+        ]
+      },
+      {
+        "name": "Grant Go/No-Go Scorecard",
+        "path": "grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx",
+        "git_blob_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+        "bytes": 10048,
+        "worksheets": [
+          "Scorecard",
+          "Gates",
+          "Log"
+        ],
+        "formula_count": 18,
+        "data_validation_tags": 2,
+        "security_static": {
+          "encrypted_entries": 0,
+          "macro_parts": 0,
+          "external_link_parts": 0,
+          "hidden_sheets": 0
+        },
+        "notable_formulas": [
+          "D2*E2/4",
+          "SUM(F2:F16)",
+          "IF(COUNTIF(Gates!C2:C7,\"No\")>0,\"WAIT\",IF(F17>=70,\"GO\",IF(F17>=50,\"CONDITIONAL\",\"NO-GO\")))"
+        ],
+        "holds": [
+          "CRITICAL: blank Gate C2:C7 cells do not equal explicit No; score threshold can produce GO without completed gates",
+          "No Excel engine/interactive dry-run or policy validation"
+        ]
+      },
+      {
+        "name": "Grant Budget",
+        "path": "grant-writing-kit/references/7-budget/grant-budget.xlsx",
+        "git_blob_sha": "d7026e403066ee6c8b2497946ac9cccfc438c4ff",
+        "bytes": 9884,
+        "worksheets": [
+          "Budget",
+          "Checklist"
+        ],
+        "formula_count": 57,
+        "data_validation_tags": 1,
+        "security_static": {
+          "encrypted_entries": 0,
+          "macro_parts": 0,
+          "external_link_parts": 0,
+          "hidden_sheets": 0
+        },
+        "notable_formulas": [
+          "IF(AND(C2=\"\",D2=\"\"),\"\",C2+D2)"
+        ],
+        "holds": [
+          "No engine recalculation, currency/rounding acceptance or funder allowability validation"
+        ]
+      }
+    ],
+    "total_formula_tags": 130,
+    "all_parts_unencrypted": true,
+    "no_macro_or_external_link_parts_found": true,
+    "no_hidden_sheet_states_found": true,
+    "security_scan_not_run": true,
+    "formula_recalculation_not_run": true
+  },
+  "go_no_go_gate_counterexample": {
+    "formula_shape": "COUNTIF(Gates!C2:C7,\"No\")>0 else threshold GO",
+    "sample_weighted_score": 75,
+    "sample_gate_answers": [
+      "Yes",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "explicit_no_count": 0,
+    "expected_formula_branch": "GO",
+    "correct_safe_decision": "HOLD until every mandatory gate explicitly passes",
+    "note": "Logical code-path inspection, not a spreadsheet-engine test"
+  },
+  "fictional_budget_fixture": {
+    "kind": "synthetic arithmetic oracle ONLY",
+    "lines": [
+      {
+        "label": "Instructors",
+        "quantity": 120,
+        "rate": 50,
+        "actual": 6000
+      },
+      {
+        "label": "Materials",
+        "quantity": 200,
+        "rate": 15,
+        "actual": 3000
+      },
+      {
+        "label": "Transport",
+        "quantity": 60,
+        "rate": 30,
+        "reported": 2000,
+        "actual": 1800
+      },
+      {
+        "label": "Evaluation",
+        "quantity": 30,
+        "rate": 40,
+        "actual": 1200
+      }
+    ],
+    "reported_total": 12200,
+    "recomputed_total": 12000,
+    "reported_overstatement": 200,
+    "expected_decision": "HOLD: report mismatch for human finance owner; never edit source data"
+  },
+  "source_skill_executed": false,
+  "original_q6_shelf_preserved": true,
+  "new_shelf": "registry/consumer-positive-references-q7-20261103.json",
+  "new_graph": "registry/discovery/capability-evidence-and-valued-methods-q7-20261103.json",
+  "unchanged_use_approved": false
+}
