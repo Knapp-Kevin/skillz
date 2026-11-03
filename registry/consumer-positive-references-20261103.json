@@ -2,7 +2,7 @@
   "schema_version": 1,
   "as_of": "2026-11-03",
   "stage": "consumer-positive-recommendation-qualification",
-  "scope": "Seven individually inspected, distinct, positively endorsed reference methods across seven capability domains. No original package is approved for unchanged use. This is a bounded subset, not a complete catalog.",
+  "scope": "Eleven individually reasoned and positively endorsed method references across nine capability domains. Four newer methods are source-SKILL-pinned but full package tree identity is pending, and NONE is recommended for unchanged use. This is a bounded curated subset, not a global audited catalog.",
   "catalog_categories": [
     "RECOMMENDED_FOR_USE",
     "VALUABLE_REFERENCE"
@@ -323,23 +323,279 @@
       "behavioral_validation": "not-run",
       "unchanged_use_approved": false,
       "requires_separate_action_authority": true
+    },
+    {
+      "id": "grapeot-opus-video-audio-skill/video-scoring-audio",
+      "name": "video-scoring-audio",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "music-composition",
+      "domain_display": "Music composition",
+      "subdomain": "scoring",
+      "capability": "Make soundtrack cues land on exact picture beats and check delivery length, clipping and real dynamic change.",
+      "benefit": "Make soundtrack cues land on exact picture beats and check delivery length, clipping and real dynamic change.",
+      "distinct_method": "Map storyboard timecodes to MIDI note events, then verify the rendered envelope, peak and timing before human listening.",
+      "reason_not_unchanged": "`spec['name']` controls output filenames and can escape `outdir`, and `ffmpeg -y` allows overwrite; paid model and soundfont rights unapproved.",
+      "source": {
+        "repository": "grapeot/opus-video-audio-skill",
+        "pin": "0abc18d22d6baf9e55d4fce9a01d29e2528ee426",
+        "path": "skills/video-scoring-audio/SKILL.md",
+        "skill_blob_sha": "d1fdfc6fba00bbb4b322a1fb13a442632246d2d2",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "skills/video-scoring-audio/SKILL.md",
+            "blob_sha": "d1fdfc6fba00bbb4b322a1fb13a442632246d2d2"
+          }
+        ],
+        "repo_level_supporting_files": [
+          {
+            "path": "scripts/score_cue.py",
+            "blob_sha": "c8aab6a0fd930f7eb386b2295653f0e5ffb63d20"
+          },
+          {
+            "path": "examples/cue_reveal.json",
+            "blob_sha": "44d3f6dc156f1e071b8bca7a73e8b6615ca5b1b6"
+          }
+        ],
+        "license": "MIT for source-authored work; external content and model/asset rights separate",
+        "license_file_sha": "225c9df040c1875ba11cd064e8d4d0625e5ffc32",
+        "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
+        "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+        "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
+      },
+      "dependencies": "Python3, mido, numpy, fluidsynth, ffmpeg/ffprobe, licensed soundfont; optional Gemini/Lyria API",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "14/20",
+        "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+        "static_stage": "PINNED_SKILL_STATIC_REVIEW_PACKAGE_TREE_PENDING"
+      },
+      "consumer_adjudication": "VALUABLE REFERENCE to method ONLY: The picture-aligned note-event and measurable audio QC method is distinct and valuable. Source helper has a statically identified output escape/overwrite hazard. Study the idea, not the script.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Pinned source/path/entrypoint blob verified; full package tree UNKNOWN; no exact-package unchanged-use approval",
+      "hard_fail_flags": [
+        "unbounded_output_path_and_overwrite",
+        "paid_api_calls_without_separate_authority",
+        "soundfont_asset_rights_unverified"
+      ]
+    },
+    {
+      "id": "jeffreytse-grimoire-core/design-concept-art-brief",
+      "name": "design-concept-art-brief",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "illustration",
+      "domain_display": "Illustration",
+      "subdomain": "concept-art",
+      "capability": "Give an artist an actionable brief for characters or environments before expensive concept exploration begins.",
+      "benefit": "Give an artist an actionable brief for characters or environments before expensive concept exploration begins.",
+      "distinct_method": "Describe the purpose, agreed positive/negative references, silhouette test, rigging/export restrictions, deliverables and revision rights.",
+      "reason_not_unchanged": "Unsupported quantified performance claims and uncleared third-party reference art/books; no binding contract or sending without user authorization.",
+      "source": {
+        "repository": "jeffreytse/grimoire-core",
+        "pin": "7ff5861b00836cb0d675c00a09a26d143722579e",
+        "path": "skills/art/illustration/skills/design-concept-art-brief/SKILL.md",
+        "skill_blob_sha": "fa6613c7603d1ec4ededea1e76469d53696cdf2f",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "skills/art/illustration/skills/design-concept-art-brief/SKILL.md",
+            "blob_sha": "fa6613c7603d1ec4ededea1e76469d53696cdf2f"
+          }
+        ],
+        "repo_level_supporting_files": [],
+        "license": "MIT for source-authored work; external content and model/asset rights separate",
+        "license_file_sha": "b5dc9c433b8b72768588a7d654e98c218ad0cea9",
+        "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
+        "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+        "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
+      },
+      "dependencies": "No runtime; original cites books and named studios whose claimed practices were not independently established",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "15/20",
+        "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+        "static_stage": "PINNED_SKILL_STATIC_REVIEW_PACKAGE_TREE_PENDING"
+      },
+      "consumer_adjudication": "VALUABLE REFERENCE to method ONLY: The positive/anti-reference silhouette and production-constraints briefing method is valuable for alignment, but the source's unsupported ROI figures and copyrighted examples cannot be treated as evidence or copied.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Pinned source/path/entrypoint blob verified; full package tree UNKNOWN; no exact-package unchanged-use approval",
+      "hard_fail_flags": [
+        "unsupported_effectiveness_statistics",
+        "external_reference_image_rights_unverified"
+      ]
+    },
+    {
+      "id": "scenario-labs-skills/scenario-storyboards",
+      "name": "scenario-storyboards",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "illustration",
+      "domain_display": "Illustration",
+      "subdomain": "sequential-art",
+      "capability": "Build a comic page or storyboard that can be repaired panel by panel without changing the hero's face or relying on AI-generated lettering.",
+      "benefit": "Build a comic page or storyboard that can be repaired panel by panel without changing the hero's face or relying on AI-generated lettering.",
+      "distinct_method": "Script individual shots, anchor character visuals, generate only approved panels, check continuity and add accurate text separately.",
+      "reason_not_unchanged": "Automatic paid model calls and persistent uploads lack action-specific permission; text-overlay dependency includes an unreviewed script.",
+      "source": {
+        "repository": "scenario-labs/skills",
+        "pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+        "path": "skills/scenario-storyboards/SKILL.md",
+        "skill_blob_sha": "9275b402c74f0165c1ea8c5a2ca3764cf327f367",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "skills/scenario-storyboards/SKILL.md",
+            "blob_sha": "9275b402c74f0165c1ea8c5a2ca3764cf327f367"
+          }
+        ],
+        "repo_level_supporting_files": [
+          {
+            "path": "skills/scenario/SKILL.md",
+            "blob_sha": "852813ab3aa685ca95d35e4c23d92c6ae21ea56c"
+          },
+          {
+            "path": "skills/scenario-consistency/SKILL.md",
+            "blob_sha": "2454d1d2192f389b9c46bb52e84a93fedbfd7b53"
+          },
+          {
+            "path": "skills/scenario-image/SKILL.md",
+            "blob_sha": "50068bd796292ab619b1b2397ef53a449d64644a"
+          },
+          {
+            "path": "skills/scenario-text-overlay/SKILL.md",
+            "blob_sha": "a32886b9368fe8625b1de64bb6bc2d25cfc1d9fe"
+          },
+          {
+            "path": "skills/scenario-image-editing/SKILL.md",
+            "blob_sha": "5bc4605f06f76561f5b4684051c244f5b49317f5"
+          },
+          {
+            "path": "skills/scenario-video-assembly/SKILL.md",
+            "blob_sha": "bc35db8417c48ce46945ef58384b83b1331c53bd"
+          },
+          {
+            "path": "skills/scenario-asset-analysis/SKILL.md",
+            "blob_sha": "d3ee415059fa6d360bdd2c779e2ae743e5916657"
+          }
+        ],
+        "license": "MIT for source-authored work; external content and model/asset rights separate",
+        "license_file_sha": "05676553d9d10a0effff673b507b4fcfed652c17",
+        "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
+        "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+        "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
+      },
+      "dependencies": "Paid Scenario MCP, image and consistency skills, text-overlay/assembly helpers and account scope",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "13/20",
+        "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+        "static_stage": "PINNED_SKILL_STATIC_REVIEW_PACKAGE_TREE_PENDING"
+      },
+      "consumer_adjudication": "VALUABLE REFERENCE to method ONLY: The independently regenerable panel-and-post-lettering method is valuable for sequential art, but the original depends on paid Scenario actions and uninspected overlay helper; no unchanged execution.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Pinned source/path/entrypoint blob verified; full package tree UNKNOWN; no exact-package unchanged-use approval",
+      "hard_fail_flags": [
+        "paid_generation_without_approval",
+        "persistent_external_asset_writes_without_authority",
+        "transitive_overlay_script_not_reviewed"
+      ]
+    },
+    {
+      "id": "scenario-labs-skills/scenario-identity-library",
+      "name": "scenario-identity-library",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "illustration",
+      "domain_display": "Illustration",
+      "subdomain": "character-environment",
+      "capability": "Keep a drawn character or prop recognizable through multiple views and scenes.",
+      "benefit": "Keep a drawn character or prop recognizable through multiple views and scenes.",
+      "distinct_method": "Name fixed silhouette, palette and features, approve a hero reference, test each new view against that reference before cataloguing it.",
+      "reason_not_unchanged": "Uploads of private or third-party reference art, paid models and persistent asset additions/removals require explicit separate approval.",
+      "source": {
+        "repository": "scenario-labs/skills",
+        "pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+        "path": "skills/scenario-identity-library/SKILL.md",
+        "skill_blob_sha": "e36509de1f00a9b4114b437ae53f1c4b689b8c23",
+        "recorded_package_tree_sha": null,
+        "package_files": [
+          {
+            "path": "skills/scenario-identity-library/SKILL.md",
+            "blob_sha": "e36509de1f00a9b4114b437ae53f1c4b689b8c23"
+          }
+        ],
+        "repo_level_supporting_files": [
+          {
+            "path": "skills/scenario/SKILL.md",
+            "blob_sha": "852813ab3aa685ca95d35e4c23d92c6ae21ea56c"
+          },
+          {
+            "path": "skills/scenario-consistency/SKILL.md",
+            "blob_sha": "2454d1d2192f389b9c46bb52e84a93fedbfd7b53"
+          },
+          {
+            "path": "skills/scenario-quality-gate/SKILL.md",
+            "blob_sha": "efa539bbce5eac2493d5160e522e3294809e0992"
+          },
+          {
+            "path": "skills/scenario-asset-analysis/SKILL.md",
+            "blob_sha": "d3ee415059fa6d360bdd2c779e2ae743e5916657"
+          }
+        ],
+        "license": "MIT for source-authored work; external content and model/asset rights separate",
+        "license_file_sha": "05676553d9d10a0effff673b507b4fcfed652c17",
+        "license_obligation": "Retain original MIT license and attribution when copying authorized source-authored expression; do not assume MIT for referenced books, source artwork, uploaded personal photos, generated output, soundfonts or third-party models. Separate source/host rights and explicit actions required.",
+        "package_sha_basis": "NOT ESTABLISHED: exact SKILL.md pinned but complete package-tree SHA and exhaustive per-file terms could not be verified. Do not use for identical-package installation or deduplicated eligible counts.",
+        "file_inspection": "Exact pinned SKILL.md, the listed supporting files and root LICENSE read by GitHub connector. Directory-tree completeness not established."
+      },
+      "dependencies": "Scenario MCP/account, model credits, scenario-consistency, scenario-quality-gate (possibly Enterprise), Grid Maker",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "12/20",
+        "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+        "static_stage": "PINNED_SKILL_STATIC_REVIEW_PACKAGE_TREE_PENDING"
+      },
+      "consumer_adjudication": "VALUABLE REFERENCE to method ONLY: The approved-anchor and gated reference-view method addresses multi-scene character drift; it does not cover full environment painting, and the original can transmit private images and persist external collections.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true,
+      "identity_qualification": "Pinned source/path/entrypoint blob verified; full package tree UNKNOWN; no exact-package unchanged-use approval",
+      "hard_fail_flags": [
+        "private_image_upload_without_authority",
+        "billable_and_persistent_collection_mutation_without_approval"
+      ]
     }
   ],
   "starter_shelf_totals": {
     "recommended_for_use": 0,
-    "valuable_reference": 7,
-    "distinct_capability_domains_represented": 7
+    "valuable_reference": 11,
+    "distinct_capability_domains_represented": 9,
+    "creative_tranche_20261103": {
+      "music_composition": 1,
+      "illustration": 3,
+      "all_source_tree_sha_verified": false
+    }
   },
   "global_approved_for_use_total": null,
   "global_promoted_valuable_reference_total": null,
   "global_domain_totals_audited": false,
-  "source_verification": "All seven: exact-pinned upstream SKILL.md fetched and blob SHA matched to original review; all source-identified package sidecars and root license text inspected; package-tree SHA reused from pinned reviewer evidence, not freshly recalculated.",
-  "promotion_rationale": "Seven distinct mechanisms with specific consumer benefits, documented source licenses and identified unchanged-use blockers; no automatic promotion from static REFERENCE-ONLY.",
+  "source_verification": "Earlier seven: exact upstream SKILL.md and root licenses checked, with package-tree values reused from pinned static reviews. Four Q6 methods: exact pinned SKILL.md, root MIT license and named supporting files read; complete upstream package tree SHAs NOT independently established. All eleven are valued as individual *methods*, not installable packages.",
+  "promotion_rationale": "Each of eleven has a specifically differentiated transferable method, concrete user benefit and a disclosed safety and license boundary; the four creative methods were individually graded and selected by their distinctive method, NOT automatically promoted from REFERENCE-ONLY flags. Missing Q6 complete tree prevents unchanged-use.",
   "limitations": [
     "This is a curated subset: zero in this starter shelf is not a claim of zero valuable skills in any other domain.",
     "None of the three has an executed security scan, behavioral acceptance or unchanged-use license/safety clearance from skillz.",
     "The referenced sources carry their own license obligations; skillz retains links and independent summaries, not their instructions or code.",
     "Packaged scripts, CLI/tools and content remain untrusted until host-specific rights, safety and action authorization are established.",
-    "The 28-record Siclaw root-license scope metadata was corrected from MIT to Apache-2.0 after reading its pinned LICENSE. Existing grades, SHA identities, and candidate decisions are unchanged."
+    "The 28-record Siclaw root-license scope metadata was corrected from MIT to Apache-2.0 after reading its pinned LICENSE. Existing grades, SHA identities, and candidate decisions are unchanged.",
+    "Four new Q6 methods have exact source/pin/SKILL.md fingerprints and 10-axis static scores, but full upstream package-tree identities and exhaustive per-file rights remain UNKNOWN; do not treat them as unchanged-use eligible or globally deduplicated.",
+    "Four creative sources expose unapproved filesystem writes, remote generation, private image upload or persistent collections. They have no security scans or model-executed behavioral results."
   ]
 }
