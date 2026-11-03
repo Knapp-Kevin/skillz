@@ -3,15 +3,18 @@ skill_name: mcp-pulse
 source_id: local-skills
 local_path: "skills/mcp-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 41451ac34a4a660ec82cae2c4356d3afe4b49334
+content_blob_sha: 46c878d52188f658cce1389294bc5aa6b13082f6
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
+prior_reviewed_blob_sha: 41451ac34a4a660ec82cae2c4356d3afe4b49334
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only source collection changed manifest fingerprint; prior semantic score is historical, not applicable unchanged."
 tags:
   use_case: [monitoring, security, research]
   lifecycle: [discovery, maintenance]
