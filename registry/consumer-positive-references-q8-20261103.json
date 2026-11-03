@@ -2,7 +2,7 @@
  "schema_version": 1,
  "as_of": "2026-11-03",
  "stage": "consumer-positive-recommendation-qualification",
- "scope": "27 differentiated source-pinned conceptual Valuable References across 17 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
+ "scope": "33 differentiated source-pinned conceptual Valuable References across 22 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
  "catalog_categories": [
   "RECOMMENDED_FOR_USE",
   "VALUABLE_REFERENCE"
@@ -1617,12 +1617,210 @@
    "behavioral_validation": "NOT RUN",
    "unchanged_use_approved": false,
    "requires_separate_action_authority": true
+  },
+  {
+   "id": "rvanshur-vertical-gtm-skills/gtm-deal-pulse",
+   "name": "GTM Deal Pulse",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "sales",
+   "domain_display": "Sales",
+   "subdomain": "pipeline",
+   "capability": "Score a sales deal only from sourced evidence, and refuse to score when records are thin.",
+   "benefit": "Score a sales deal only from sourced evidence, and refuse to score when records are thin.",
+   "distinct_method": "Grade each deal signal only on tagged, dated evidence, leave unknowns out of the average instead of counting them as zero, give no overall score below a coverage minimum, and raise risk when one pillar collapses.",
+   "reason_not_unchanged": "It needs a client profile file and a sibling skill that are not shipped. Its close-date rule contradicts itself and its score thresholds are not calibrated against won or lost deals. It reads customer emails and CRM notes with no rule to treat them as untrusted or to minimize personal data.",
+   "source": {
+    "repository": "rvanshur/vertical-gtm-skills",
+    "pin": "a9ee9d3547e1df59fe5b170b7fefc4ecff57350b",
+    "path": "skills/08-deal-pulse/SKILL.md",
+    "skill_blob_sha": "a894e3107dbdf40c26c99b5c3632f36e344963d7",
+    "recorded_package_tree_sha": "6adeff2c64610248c1d18aa51f5791e77e9e9817",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (LICENSE blob 6999f5b0, Copyright 2026 Ryan Vanshur); frontmatter license: MIT, author Ryan Vanshur; no package-level LICENSE/ATTRIBUTION/NOTICE. Public framework names (SPIN, MEDDPICC) are named, not copied text; no third-party content copied.",
+    "license_obligation": "Study the method in your own words. Before copying any text or code, confirm the controlling license text at the pin and keep required notices."
+   },
+   "dependencies": "Unshipped client-profile and call-coaching dependencies; Self-contradictory close-date slip rule (SKILL.md L555 vs Signal 11 rubric); CUSTOMIZE re-weighting conflicts with Hard Rule 2; No untrusted-content or customer-data minimization rule; Uncalibrated thresholds",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/q2-rvanshur-vertical-gtm-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "consumer_adjudication": "Q8 reference-only qualification batch 2: full-package current-standard re-review 15/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "kyleoliveiro-sg-gov-skills/sg-gov-ssp-navigator",
+   "name": "Singapore SSP Navigator",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "law",
+   "domain_display": "Law",
+   "subdomain": "regulatory-analysis",
+   "capability": "Pick the right Singapore government security plan and its mandatory controls, and flag gaps.",
+   "benefit": "Pick the right Singapore government security plan and its mandatory controls, and flag gaps.",
+   "distinct_method": "Collect the system's classification facts first, choose exactly one base plan by rule, stack the AI and public-service overlays, check model hosting against the data level, and escalate any combination with no published template.",
+   "reason_not_unchanged": "Its rules are a dated July 2026 snapshot of standards that change, with no expiry. Outputs need not state that date or say they are not legal or compliance advice. It hands off to sibling skills that are not in the package, and the reuse terms of the embedded government text are not stated.",
+   "source": {
+    "repository": "kyleoliveiro/sg-gov-skills",
+    "pin": "16892fc613263c3f835457cd23ae092d404979ca",
+    "path": "skills/sg-gov-ssp-navigator/SKILL.md",
+    "skill_blob_sha": "c731414a2c7a4655069776f9549594c7e06dca57",
+    "recorded_package_tree_sha": "135c3d625b2092ff3c9ee123e97641c09596ee53",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (LICENSE blob 4c827fc3, Copyright 2026 Kyle Oliveiro); no package-level LICENSE/ATTRIBUTION/NOTICE. Summarises/quotes SSP pages from info.standards.tech.gov.sg (attributed, 2026-07-16); notes GovtechSG/tech-standards OSCAL is MIT-licensed (not bundled).",
+    "license_obligation": "Study the method in your own words. Before copying any text or code, confirm the controlling license text at the pin and keep required notices."
+   },
+   "dependencies": "Dated 2026-07-16 regulatory snapshot with no expiry; Output lacks required snapshot date and not-legal-advice disclaimer; Unshipped sibling handoff skills",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/q2-kyleoliveiro-sg-gov-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "consumer_adjudication": "Q8 reference-only qualification batch 2: full-package current-standard re-review 17/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
+   "security_scan": "failed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "github-awesome-copilot/build-evidence-map",
+   "name": "Build Evidence Map",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "research",
+   "domain_display": "Research",
+   "subdomain": "synthesis",
+   "capability": "Keep counterevidence and unknowns visible in a decision, with a checked evidence map.",
+   "benefit": "Keep counterevidence and unknowns visible in a decision, with a checked evidence map.",
+   "distinct_method": "Map a contested decision as a typed graph that leads to one position, tie every piece of evidence to an exact source passage, add explicit unknowns, and accept the map only after an offline structural check passes.",
+   "reason_not_unchanged": "A 'VALID' result proves structure, not truth, and its receipt is a plain hash anyone can recompute. Hand-written verification entries pass the checker. Rendering and live verification rely on an outside tool that was not reviewed.",
+   "source": {
+    "repository": "github/awesome-copilot",
+    "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "path": "skills/build-evidence-map/SKILL.md",
+    "skill_blob_sha": "3d0ff9385a5603242e39989cbfc6e7a8d856d6cc",
+    "recorded_package_tree_sha": "e5de9060f2171ee6f1b6d7dae5e30402aad9eb4d",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (GitHub, Inc., blob 89bc5e962c9944cdb050887062afdaaf89be504a); no package LICENSE/ATTRIBUTION file; scripts implement the 'doubt-evidence-receipt-v1' contract associated with the external doubt-ai package (no separate license/attribution for that project in the package)",
+    "license_obligation": "Study the method in your own words. Before copying any text or code, confirm the controlling license text at the pin and keep required notices."
+   },
+   "dependencies": "Hand-authored verification objects pass format-only checks (scripts/contract.mjs L284); Receipt is an unkeyed self-computed hash; Depends on unreviewed external doubt-ai CLI for render/verify",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "consumer_adjudication": "Q8 reference-only qualification batch 2: full-package current-standard re-review 18/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "huang-sir1-radiology-skills/radiology-reproducibility",
+   "name": "Radiology Reproducibility",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "research",
+   "domain_display": "Research",
+   "subdomain": "reproducibility",
+   "capability": "Grade each research result's reproducibility honestly, with tolerances fixed before rerunning.",
+   "benefit": "Grade each research result's reproducibility honestly, with tolerances fixed before rerunning.",
+   "distinct_method": "Give each table or figure the highest replay level its evidence supports, fix the acceptance margin before rerunning, record and classify any mismatch instead of patching it, and track outside validation separately.",
+   "reason_not_unchanged": "Running replays could execute untrusted research code on restricted patient data, guarded only by written rules. Some evidence labels are never defined, the 'signed receipt' has no signing method, sibling skills are missing and the validator is Windows-only.",
+   "source": {
+    "repository": "huang-sir1/radiology-skills",
+    "pin": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+    "path": "radiology-skills/skills/radiology-reproducibility/SKILL.md",
+    "skill_blob_sha": "9a250af4fbe7a98057c73a14cad8d63c9dc358e2",
+    "recorded_package_tree_sha": "779011b2e2f2b706e2beff0730bdd0537649dbb0",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (radiology-skills/LICENSE identical to repo-root LICENSE, Copyright (c) 2026 Huang Yuhong, Gu Wenchao, Song Xinyang; plugin.json license 'SEE LICENSE IN LICENSE'); no package LICENSE/NOTICE/ATTRIBUTION; no copied third-party text; 12 sources (National Academies 2019, NIH, FAIR4RS, W3C PROV-O, OCI image-spec, GitHub/Zenodo docs, GO FAIR, CLAIM, IBSI, DICOM) cited by URL with access dates and paraphrased",
+    "license_obligation": "Study the method in your own words. Before copying any text or code, confirm the controlling license text at the pin and keep required notices."
+   },
+   "dependencies": "Undefined evidence states (INDEPENDENTLY_VERIFIED, EXTERNAL_DATA_VERIFIED, AUTHOR_REPORTED); Missing sibling handoff skills; PowerShell-only validator with Windows path filters",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/q1-huang-sir1-radiology-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "consumer_adjudication": "Q8 reference-only qualification batch 2: full-package current-standard re-review 16/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "agentskillexchange/read-ledger",
+   "name": "Read Ledger",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "memory-context",
+   "domain_display": "Memory / context",
+   "subdomain": "provenance",
+   "capability": "Know exactly which parts of which documents your agent actually reviewed, across sessions.",
+   "benefit": "Know exactly which parts of which documents your agent actually reviewed, across sessions.",
+   "distinct_method": "Keep an append-only log that ties each reviewed span of text to a hash of the source version, so edits reopen old reviews and coverage is recomputed from the file instead of the agent's memory.",
+   "reason_not_unchanged": "Its install section clones an unpinned upstream repository into the agent's skill folder. Fixtures it mentions are not in the package. Locator fields could leak private paths if a ledger is shared, and reviewed text is not treated as untrusted.",
+   "source": {
+    "repository": "agentskillexchange/skills",
+    "pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+    "path": "skills/read-ledger/SKILL.md",
+    "skill_blob_sha": "db653daa63684eb930836dc9feb98b1cd02c25f0",
+    "recorded_package_tree_sha": "e493db7077c3d83a481cec305719d791ac2c44d3",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (catalog, Copyright (c) 2026 Agent Skill Exchange); no package LICENSE/ATTRIBUTION; upstream makoncline/read-ledger license not stated in package",
+    "license_obligation": "Study the method in your own words. Before copying any text or code, confirm the controlling license text at the pin and keep required notices."
+   },
+   "dependencies": "Installation clones unpinned upstream HEAD (SKILL.md L26); Referenced fixtures not in package; No untrusted-content rule for reviewed text",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/agentskillexchange-authored-procedures-86-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "consumer_adjudication": "Q8 reference-only qualification batch 2: full-package current-standard re-review 15/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
+   "security_scan": "passed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "yujxzjcn-teaching-skills/submission-auditor",
+   "name": "Submission Auditor",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "education",
+   "domain_display": "Education",
+   "subdomain": "assessment",
+   "capability": "Check student work against your own rules consistently, with drafts you approve.",
+   "benefit": "Check student work against your own rules consistently, with drafts you approve.",
+   "distinct_method": "Turn the instructor's requirements into an approved checklist where every check traces to something students were told, split fact checks from judgment calls, cite where each finding sits, and compare verdicts across the class before drafting feedback.",
+   "reason_not_unchanged": "Student work is sent to the model host with only 'where feasible' pseudonymization and no retention or institutional-policy check. Submissions could carry injected instructions. Several shared files it depends on are missing, including the one that defines its person-affecting rule.",
+   "source": {
+    "repository": "YujxZJCN/teaching-skills",
+    "pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+    "path": "submission-auditor/SKILL.md",
+    "skill_blob_sha": "46adb631687ec846990cf3399476a8aeaaee9353",
+    "recorded_package_tree_sha": "9bfa23e2d497c948cf9dd41fbf02f2d66d56c30c",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (LICENSE blob 024003bb, 'Copyright (c) 2026 Jiaxing Yu'); no package-level LICENSE/NOTICE/ATTRIBUTION; plugin.json/marketplace.json declare MIT v1.2.0; no copied third-party text found \u2014 research cited by name only (Hattie & Timperley 2007, Boring et al. 2016, Uttl et al. 2017, Liang et al. 2023 etc.), all real attributions",
+    "license_obligation": "Study the method in your own words. Before copying any text or code, confirm the controlling license text at the pin and keep required notices."
+   },
+   "dependencies": "Missing shared files (checkpoint protocol, feedback principles, AI-tier definitions, course passport); No untrusted-submission rule; Thin student-data privacy and retention handling",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/q1-yujxzjcn-teaching-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "consumer_adjudication": "Q8 reference-only qualification batch 2: full-package current-standard re-review 17/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
   }
  ],
  "starter_shelf_totals": {
   "recommended_for_use": 0,
-  "valuable_reference": 27,
-  "distinct_capability_domains_represented": 17,
+  "valuable_reference": 33,
+  "distinct_capability_domains_represented": 22,
   "creative_tranche_20261103": {
    "music_composition": 9,
    "illustration": 3,
@@ -1633,7 +1831,8 @@
    "all_source_tree_sha_verified": false,
    "domain_fully_qualified": false
   },
-  "q8_batch1_additions": 7
+  "q8_batch1_additions": 7,
+  "q8_additions_total": 13
  },
  "global_approved_for_use_total": null,
  "global_promoted_valuable_reference_total": null,

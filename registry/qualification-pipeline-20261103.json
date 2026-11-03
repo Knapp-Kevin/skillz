@@ -4,14 +4,94 @@
  "non_additive_warning": "Each stage counts a different population with its own identity basis. Stages overlap and are not a reconciled funnel; never add or subtract them unless a stage says how.",
  "method": "Machine-reconciled from registry/discovery/*.json records. Static decisions are keyed by exact (source repository, pin, canonical path) and the latest dated ledger wins; 113 keys were reviewed more than once and none of those repeats conflict. Narrative historical totals (5,508 terminal decisions incl. 195 older static_decision-only records) are preserved in CURATION_QUEUE.md and are not replaced.",
  "stages": [
-  {"id": "package_identity_records", "label": "Package identity records (discovery)", "value": 61326, "population": "G1–G3 pinned package identity records across 942 repositories", "parts": {"distinct package-tree SHAs": 57715}, "source": "registry/discovery/gitskills-g1-package-identities-20261103-part-01.json and sibling parts"},
-  {"id": "static_decisions", "label": "Exact static review decisions", "value": 5351, "population": "distinct exact (source, pin, path) keys with a recorded candidate_decision", "parts": {"rejected unchanged": 3773, "reference-only": 1574, "deferred": 4}, "parts_sum_to_value": true, "source": "registry/discovery/*.json (candidate_decision)"},
-  {"id": "qualification_queue", "label": "Reference-only candidates awaiting a consumer decision", "value": 1545, "population": "latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review", "parts": {"already on shelf": 26, "kept in research by Q8 batch 1": 3}, "source": "registry/discovery/q8-reference-only-qualification-batch1-20261103.json"},
-  {"id": "positively_selected", "label": "Methods selected to study (Valuable Reference)", "value": 27, "population": "featured shelf entries", "parts": {"canonical domains": 17}, "source": "registry/consumer-positive-references-q8-20261103.json"},
-  {"id": "security_gate_passed_featured", "label": "Featured methods passing the static security gate", "value": 6, "population": "of 27 featured exact package trees, pinned SkillSpector, fail-closed", "parts": {"failed": 3, "incomplete": 18}, "parts_sum_to_value": false, "source": "registry/security/external-host-skillspector-featured-20261103.json"},
-  {"id": "security_gate_passed_first_party", "label": "First-party packages passing the static security gate", "value": 25, "population": "of 51 skills/ and engine/skills/ trees on main 09c93dd3", "parts": {"failed": 1, "incomplete": 25}, "source": "registry/security/external-host-skillspector-first-party-20261103.json"},
-  {"id": "behaviorally_validated", "label": "Behaviorally validated packages", "value": 0, "population": "packages with executed representative and adversarial acceptance tests", "source": "registry/discovery/q8-reference-only-qualification-batch1-20261103.json"},
-  {"id": "approved_unchanged", "label": "Approved for unchanged use", "value": 0, "population": "Recommended-for-use entries", "source": "registry/consumer-positive-references-q8-20261103.json"},
-  {"id": "distinct_eligible", "label": "Globally distinct eligible packages", "value": "UNKNOWN", "population": "no defensible denominator: semantic duplicates, license eligibility and most source families are unreconciled", "source": "docs/reviews/2026-11-03-q1-q5-decision-reconciliation.md"}
+  {
+   "id": "package_identity_records",
+   "label": "Package identity records (discovery)",
+   "value": 61326,
+   "population": "G1\u2013G3 pinned package identity records across 942 repositories",
+   "parts": {
+    "distinct package-tree SHAs": 57715
+   },
+   "source": "registry/discovery/gitskills-g1-package-identities-20261103-part-01.json and sibling parts"
+  },
+  {
+   "id": "static_decisions",
+   "label": "Exact static review decisions",
+   "value": 5351,
+   "population": "distinct exact (source, pin, path) keys with a recorded candidate_decision",
+   "parts": {
+    "rejected unchanged": 3773,
+    "reference-only": 1574,
+    "deferred": 4
+   },
+   "parts_sum_to_value": true,
+   "source": "registry/discovery/*.json (candidate_decision)"
+  },
+  {
+   "id": "qualification_queue",
+   "label": "Reference-only candidates awaiting a consumer decision",
+   "value": 1534,
+   "population": "latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review",
+   "parts": {
+    "already on shelf": 32,
+    "kept in research by Q8 qualification": 6,
+    "rejected unchanged by Q8 qualification": 2
+   },
+   "source": "registry/discovery/q8-reference-only-qualification-batch1-20261103.json; registry/discovery/q8-reference-only-qualification-batch2-20261103.json"
+  },
+  {
+   "id": "positively_selected",
+   "label": "Methods selected to study (Valuable Reference)",
+   "value": 33,
+   "population": "featured shelf entries",
+   "parts": {
+    "canonical domains": 22
+   },
+   "source": "registry/consumer-positive-references-q8-20261103.json"
+  },
+  {
+   "id": "security_gate_passed_featured",
+   "label": "Featured methods passing the static security gate",
+   "value": 7,
+   "population": "of 33 featured exact package trees, pinned SkillSpector, fail-closed",
+   "parts": {
+    "failed": 4,
+    "incomplete": 22
+   },
+   "parts_sum_to_value": false,
+   "source": "registry/security/external-host-skillspector-featured-20261103.json; registry/discovery/q8-reference-only-qualification-batch1-20261103.json; registry/discovery/q8-reference-only-qualification-batch2-20261103.json"
+  },
+  {
+   "id": "security_gate_passed_first_party",
+   "label": "First-party packages passing the static security gate",
+   "value": 25,
+   "population": "of 51 skills/ and engine/skills/ trees on main 09c93dd3",
+   "parts": {
+    "failed": 1,
+    "incomplete": 25
+   },
+   "source": "registry/security/external-host-skillspector-first-party-20261103.json"
+  },
+  {
+   "id": "behaviorally_validated",
+   "label": "Behaviorally validated packages",
+   "value": 0,
+   "population": "packages with executed representative and adversarial acceptance tests",
+   "source": "registry/discovery/q8-reference-only-qualification-batch1-20261103.json"
+  },
+  {
+   "id": "approved_unchanged",
+   "label": "Approved for unchanged use",
+   "value": 0,
+   "population": "Recommended-for-use entries",
+   "source": "registry/consumer-positive-references-q8-20261103.json"
+  },
+  {
+   "id": "distinct_eligible",
+   "label": "Globally distinct eligible packages",
+   "value": "UNKNOWN",
+   "population": "no defensible denominator: semantic duplicates, license eligibility and most source families are unreconciled",
+   "source": "docs/reviews/2026-11-03-q1-q5-decision-reconciliation.md"
+  }
  ]
 }

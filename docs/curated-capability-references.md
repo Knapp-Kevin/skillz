@@ -1,6 +1,6 @@
-# Twenty-seven useful skill methods, with their limits
+# Thirty-three useful skill methods, with their limits
 
-**These are twenty-seven positively selected, individually differentiated Valuable Reference methods across seventeen canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
+**These are thirty-three positively selected, individually differentiated Valuable Reference methods across twenty-two canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -31,6 +31,12 @@
 | Clean up old Git worktrees safely | **[Clean Closed Issue Worktrees](https://github.com/agentskillexchange/skills/blob/a6017b4af9d0298b7be3af7a6ec7485943d2c3e7/skills/clean-closed-issue-worktrees/SKILL.md)** | Clean up finished Git worktrees without losing unsaved work, secrets or unique commits. |
 | Chart a project schedule from real data | **[Gantt Chart Visualization](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/build-web-data-visualization/skills/gantt-chart-visualization/SKILL.md)** | Build project timelines from real tool exports without inventing dates or dependencies. |
 | Run an honest expert-consensus process | **[Radiology Consensus Guideline](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-consensus-guideline/SKILL.md)** | Keep expert-panel medical guidance honest: no fake evidence and no fake endorsement. |
+| Judge the real health of a sales deal | **[GTM Deal Pulse](https://github.com/rvanshur/vertical-gtm-skills/blob/a9ee9d3547e1df59fe5b170b7fefc4ecff57350b/skills/08-deal-pulse/SKILL.md)** | Score a sales deal only from sourced evidence, and refuse to score when records are thin. |
+| Plan security for a Singapore government system | **[Singapore SSP Navigator](https://github.com/kyleoliveiro/sg-gov-skills/blob/16892fc613263c3f835457cd23ae092d404979ca/skills/sg-gov-ssp-navigator/SKILL.md)** | Pick the right Singapore government security plan and its mandatory controls, and flag gaps. |
+| Weigh evidence for a contested decision | **[Build Evidence Map](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/build-evidence-map/SKILL.md)** | Keep counterevidence and unknowns visible in a decision, with a checked evidence map. |
+| Check whether research results really reproduce | **[Radiology Reproducibility](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-reproducibility/SKILL.md)** | Grade each research result's reproducibility honestly, with tolerances fixed before rerunning. |
+| Track which documents an agent actually read | **[Read Ledger](https://github.com/agentskillexchange/skills/blob/a6017b4af9d0298b7be3af7a6ec7485943d2c3e7/skills/read-ledger/SKILL.md)** | Know exactly which parts of which documents your agent actually reviewed, across sessions. |
+| Check student submissions against your rules | **[Submission Auditor](https://github.com/YujxZJCN/teaching-skills/blob/fd0c486e61cb1f065b88133b599e8806dfaeac12/submission-auditor/SKILL.md)** | Check student work against your own rules consistently, with drafts you approve. |
 
 ## Why each is a valuable reference, not ready for unchanged use
 
@@ -186,8 +192,56 @@ These eight are *separate methods*, not eight licenses to operate a composition 
 
 **Evidence:** Q8 full-package re-review **15/20** (earlier static record 18/20); pinned `huang-sir1/radiology-skills@aaa0fe62`; package tree `4bb70d9b` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (repo LICENSE blob 35a6f413..., 'Copyright (c) 2026 Huang Yuhong, Gu Wenchao, Song Xinyang'; identical copy at radiology-skills/LICENSE; plugin.json license 'SEE LICENSE IN LICENSE'); no package-level LICENSE/NOTICE/ATTRIBUTION; third-party standards/papers are cited by URL/DOI and paraphrased, no verbatim copied third-party content observed [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
 
+### Sales: GTM Deal Pulse
+
+**Unique idea:** Grade each deal signal only on tagged, dated evidence, leave unknowns out of the average instead of counting them as zero, give no overall score below a coverage minimum, and raise risk when one pillar collapses.
+
+**Important limit:** It needs a client profile file and a sibling skill that are not shipped. Its close-date rule contradicts itself and its score thresholds are not calibrated against won or lost deals. It reads customer emails and CRM notes with no rule to treat them as untrusted or to minimize personal data.
+
+**Evidence:** Q8 batch 2 full-package re-review **15/20** (earlier static record 17/20); pinned `rvanshur/vertical-gtm-skills@a9ee9d35`; package tree `6adeff2c` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (LICENSE blob 6999f5b0, Copyright 2026 Ryan Vanshur); frontmatter license: MIT, author Ryan Vanshur; no package-level LICENSE/ATTRIBUTION/NOTICE. Public framework names (SPIN, MEDDPICC) are named, not copied text; no third-party content copied. [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
+
+### Law: Singapore SSP Navigator
+
+**Unique idea:** Collect the system's classification facts first, choose exactly one base plan by rule, stack the AI and public-service overlays, check model hosting against the data level, and escalate any combination with no published template.
+
+**Important limit:** Its rules are a dated July 2026 snapshot of standards that change, with no expiry. Outputs need not state that date or say they are not legal or compliance advice. It hands off to sibling skills that are not in the package, and the reuse terms of the embedded government text are not stated.
+
+**Evidence:** Q8 batch 2 full-package re-review **17/20** (earlier static record 17/20); pinned `kyleoliveiro/sg-gov-skills@16892fc6`; package tree `135c3d62` verified; static security scan **failed**; behavioral tests **not run**. Licensing: root MIT only (LICENSE blob 4c827fc3, Copyright 2026 Kyle Oliveiro); no package-level LICENSE/ATTRIBUTION/NOTICE. Summarises/quotes SSP pages from info.standards.tech.gov.sg (attributed, 2026-07-16); notes GovtechSG/tech-standards OSCAL is MIT-licensed (not bundled). [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
+
+### Research: Build Evidence Map
+
+**Unique idea:** Map a contested decision as a typed graph that leads to one position, tie every piece of evidence to an exact source passage, add explicit unknowns, and accept the map only after an offline structural check passes.
+
+**Important limit:** A 'VALID' result proves structure, not truth, and its receipt is a plain hash anyone can recompute. Hand-written verification entries pass the checker. Rendering and live verification rely on an outside tool that was not reviewed.
+
+**Evidence:** Q8 batch 2 full-package re-review **18/20** (earlier static record 17/20); pinned `github/awesome-copilot@f11a4e44`; package tree `e5de9060` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (GitHub, Inc., blob 89bc5e962c9944cdb050887062afdaaf89be504a); no package LICENSE/ATTRIBUTION file; scripts implement the 'doubt-evidence-receipt-v1' contract associated with the external doubt-ai package (no separate license/attribution for that project in the package) [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
+
+### Research: Radiology Reproducibility
+
+**Unique idea:** Give each table or figure the highest replay level its evidence supports, fix the acceptance margin before rerunning, record and classify any mismatch instead of patching it, and track outside validation separately.
+
+**Important limit:** Running replays could execute untrusted research code on restricted patient data, guarded only by written rules. Some evidence labels are never defined, the 'signed receipt' has no signing method, sibling skills are missing and the validator is Windows-only.
+
+**Evidence:** Q8 batch 2 full-package re-review **16/20** (earlier static record 17/20); pinned `huang-sir1/radiology-skills@aaa0fe62`; package tree `779011b2` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (radiology-skills/LICENSE identical to repo-root LICENSE, Copyright (c) 2026 Huang Yuhong, Gu Wenchao, Song Xinyang; plugin.json license 'SEE LICENSE IN LICENSE'); no package LICENSE/NOTICE/ATTRIBUTION; no copied third-party text; 12 sources (National Academies 2019, NIH, FAIR4RS, W3C PROV-O, OCI image-spec, GitHub/Zenodo docs, GO FAIR, CLAIM, IBSI, DICOM) cited by URL with access dates and paraphrased [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
+
+### Memory / context: Read Ledger
+
+**Unique idea:** Keep an append-only log that ties each reviewed span of text to a hash of the source version, so edits reopen old reviews and coverage is recomputed from the file instead of the agent's memory.
+
+**Important limit:** Its install section clones an unpinned upstream repository into the agent's skill folder. Fixtures it mentions are not in the package. Locator fields could leak private paths if a ledger is shared, and reviewed text is not treated as untrusted.
+
+**Evidence:** Q8 batch 2 full-package re-review **15/20** (earlier static record 17/20); pinned `agentskillexchange/skills@a6017b4a`; package tree `e493db70` verified; static security scan **passed**; behavioral tests **not run**. Licensing: root MIT only (catalog, Copyright (c) 2026 Agent Skill Exchange); no package LICENSE/ATTRIBUTION; upstream makoncline/read-ledger license not stated in package [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
+
+### Education: Submission Auditor
+
+**Unique idea:** Turn the instructor's requirements into an approved checklist where every check traces to something students were told, split fact checks from judgment calls, cite where each finding sits, and compare verdicts across the class before drafting feedback.
+
+**Important limit:** Student work is sent to the model host with only 'where feasible' pseudonymization and no retention or institutional-policy check. Submissions could carry injected instructions. Several shared files it depends on are missing, including the one that defines its person-affecting rule.
+
+**Evidence:** Q8 batch 2 full-package re-review **17/20** (earlier static record 17/20); pinned `YujxZJCN/teaching-skills@fd0c486e`; package tree `9bfa23e2` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (LICENSE blob 024003bb, 'Copyright (c) 2026 Jiaxing Yu'); no package-level LICENSE/NOTICE/ATTRIBUTION; plugin.json/marketplace.json declare MIT v1.2.0; no copied third-party text found — research cited by name only (Hattie & Timperley 2007, Boring et al. 2016, Uttl et al. 2017, Liang et al. 2023 etc.), all real attributions [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
+
 ## What this does and doesn't count
 
-Twenty-seven **distinct source/path-pinned Valuable Reference methods** across seventeen canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 27 complete pinned source package Git tree identities are now verified (Q8), including four earlier creative methods that were previously UNKNOWN. Six pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
+Thirty-three **distinct source/path-pinned Valuable Reference methods** across twenty-two canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 33 complete pinned source package Git tree identities are now verified (Q8), including four earlier creative methods that were previously UNKNOWN. Seven pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
 The source-neutral [structured reference catalog](../registry/consumer-positive-references-q8-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
