@@ -13,7 +13,7 @@ metadata:
   category: Productivity
   display-name: Memory Pulse
   emoji: "🧠"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Memory Pulse
