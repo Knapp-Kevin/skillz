@@ -5177,5 +5177,25 @@
     "global_distinct_eligible_denominator": null,
     "historical_q1q5_terminal_static_decisions_unchanged": 5508,
     "package_tree_audit": "registry/discovery/q6-eight-music-craft-package-tree-audit-20261103.json"
+  },
+  "capability_domain_two_stage_graph_20261103": {
+    "as_of": "2026-11-03",
+    "canonical_domains": 33,
+    "canonical_subdomains": 247,
+    "historical_evidence_snapshot": "2026-11-02",
+    "q4_topics_with_any_link": 210,
+    "q4_topics_without_link": 37,
+    "current_bounded_shelf_positive_methods": 19,
+    "current_bounded_shelf_positive_domains": 9,
+    "current_bounded_shelf_positive_subdomain_mappings": 18,
+    "unchanged_use_approvals": 0,
+    "static_reference_review_promotions_added": 0,
+    "svg": "docs/assets/capability-evidence-and-valued-methods-20261103.svg",
+    "machine_readable": "registry/discovery/capability-evidence-and-valued-methods-20261103.json",
+    "historical_svg_preserved": "docs/assets/capability-evidence-map-20261102.svg",
+    "environment_static": "registry/discovery/q6-environment-illustration-static-20261103.json",
+    "disjoint_music_svg_static": "registry/discovery/q6-independent-music-svg-three-static-20261103.json",
+    "all_corpus_eligible_denominator": null,
+    "measurement_caution": "Q4 research candidate links include rejected evidence; Q6 selected reference methods are bounded sample and not complete corpus. Do not sum, conflate or claim all-corpus maturity. Zero new install approvals."
   }
 }

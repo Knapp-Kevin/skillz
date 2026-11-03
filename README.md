@@ -50,7 +50,7 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
 | Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
 
-**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
+**Latest qualification beyond the nineteen methods:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None changes the 19-method shelf or the illustrated graph's positive counts.\n\n**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
 
 ## Find skills for the work you do
 
@@ -65,54 +65,56 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 
 These are **33 areas to explore, not 33 fully covered skill sets**. Some have rich research evidence; others have few useful candidates. A category with many links is not necessarily a category with many good skills.
 
-### Where our research evidence exists
+### Where research exists, and what we actually recommend studying
 
-![Capability evidence chart showing the 33 domains, how many subdomains have review or candidate links, and where evidence is missing.](docs/assets/capability-evidence-map-20261102.svg)
+![33 capability domains: research-linked topics from November 2 alongside separately selected Valuable Reference methods from November 3.](docs/assets/capability-evidence-and-valued-methods-20261103.svg)
 
-**How to read the chart:** Each bar shows how many topics within a domain have at least one review or candidate link. A link might point to a rejected skill. **This chart does not measure approved or recommended skills.** Those per-domain totals are still being verified.
+**Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q6 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
+
+The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at least one research link** and **37 without one**. Our newer public shelf has **19 Valuable Reference methods across nine domains**, serving **18 distinct topic mappings**; **zero skills approved unchanged**. Music has **nine ideas spanning 8/8 topics**, but almost all music methods share a single publisher; illustration has **three methods spanning 3/6 topics**, with environment art still insufficiently served. Neither domain is complete, behaviorally tested, or independently cleared for reuse.
 
 <details>
-<summary>Read all 33 domain counts as text</summary>
+<summary>Read all 33 domains as a text table</summary>
 
-| Capability domain | Topics with an evidence link / total |
-|---|---:|
-| Software engineering | 10 / 10 |
-| Testing | 7 / 8 |
-| Agent / MCP development | 8 / 8 |
-| Cloud / DevOps | 8 / 8 |
-| Security | 7 / 7 |
-| Research | 7 / 7 |
-| Planning | 6 / 6 |
-| Marketing | 8 / 9 |
-| Product | 8 / 8 |
-| UX / UI | 7 / 7 |
-| Visual design | 7 / 7 |
-| Illustration | 1 / 6 |
-| 3D / CAD / animation | 7 / 9 |
-| Game design | 6 / 8 |
-| Fiction / narrative / worldbuilding | 8 / 8 |
-| Technical writing | 7 / 7 |
-| Music composition | 0 / 8 |
-| Audio / voice / sound | 5 / 8 |
-| Video / film | 5 / 9 |
-| Communication | 5 / 7 |
-| Analytics | 7 / 7 |
-| Time / productivity | 6 / 7 |
-| Memory / context | 7 / 7 |
-| Business | 7 / 7 |
-| Sales | 7 / 7 |
-| Career | 6 / 7 |
-| Education | 6 / 7 |
-| Science | 6 / 7 |
-| Medicine | 6 / 7 |
-| Law | 6 / 7 |
-| Finance | 7 / 8 |
-| Robotics / IoT | 5 / 7 |
-| ML accelerators and compute | 7 / 7 |
+| Capability domain | Research-linked topics (Nov 2) | Selected methods (Nov 3) | Topics served by selected methods |
+|---|---:|---:|---:|
+| Software engineering | 10 / 10 | 0 | 0 / 10 |
+| Testing | 7 / 8 | 1 | 1 / 8 |
+| Agent / MCP development | 8 / 8 | 0 | 0 / 8 |
+| Cloud / DevOps | 8 / 8 | 1 | 1 / 8 |
+| Security | 7 / 7 | 0 | 0 / 7 |
+| Research | 7 / 7 | 0 | 0 / 7 |
+| Planning | 6 / 6 | 0 | 0 / 6 |
+| Marketing | 8 / 9 | 1 | 1 / 9 |
+| Product | 8 / 8 | 0 | 0 / 8 |
+| UX / UI | 7 / 7 | 1 | 1 / 7 |
+| Visual design | 7 / 7 | 0 | 0 / 7 |
+| Illustration | 1 / 6 | 3 | 3 / 6 |
+| 3D / CAD / animation | 7 / 9 | 1 | 1 / 9 |
+| Game design | 6 / 8 | 1 | 1 / 8 |
+| Fiction / narrative / worldbuilding | 8 / 8 | 0 | 0 / 8 |
+| Technical writing | 7 / 7 | 1 | 1 / 7 |
+| Music composition | 0 / 8 | 9 | 8 / 8 |
+| Audio / voice / sound | 5 / 8 | 0 | 0 / 8 |
+| Video / film | 5 / 9 | 0 | 0 / 9 |
+| Communication | 5 / 7 | 0 | 0 / 7 |
+| Analytics | 7 / 7 | 0 | 0 / 7 |
+| Time / productivity | 6 / 7 | 0 | 0 / 7 |
+| Memory / context | 7 / 7 | 0 | 0 / 7 |
+| Business | 7 / 7 | 0 | 0 / 7 |
+| Sales | 7 / 7 | 0 | 0 / 7 |
+| Career | 6 / 7 | 0 | 0 / 7 |
+| Education | 6 / 7 | 0 | 0 / 7 |
+| Science | 6 / 7 | 0 | 0 / 7 |
+| Medicine | 6 / 7 | 0 | 0 / 7 |
+| Law | 6 / 7 | 0 | 0 / 7 |
+| Finance | 7 / 8 | 0 | 0 / 8 |
+| Robotics / IoT | 5 / 7 | 0 | 0 / 7 |
+| ML accelerators and compute | 7 / 7 | 0 | 0 / 7 |
 
 </details>
 
-*Source: [November 2, 2026 capability coverage audit](registry/discovery/capability-coverage-audit-20261102.json), covering published evidence through Q4. This is a dated research snapshot, not a live inventory or a quality score.*
+*Sources: [2026-11-02 research audit](registry/discovery/capability-coverage-audit-20261102.json) and [2026-11-03 bounded consumer reference shelf](registry/consumer-positive-references-20261103.json). [Machine-readable two-stage graph data](registry/discovery/capability-evidence-and-valued-methods-20261103.json) · [Preserved November 2 chart](docs/assets/capability-evidence-map-20261102.svg). This comparison does not claim a live all-corpus positive denominator, source independence, domain maturity, security clearance or proven outcomes.*
 
 **Start here:** [See skill examples and what they help with](docs/capability-quickstart.md) · [Browse all capability areas](registry/capability-directory.json) · [Find reviewed skill names](registry/governed-review-name-index.json).
 
@@ -146,7 +148,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 
 ### Capability coverage and expansion
 
-The canonical [33-domain / 247-subdomain directory](registry/capability-directory.json) is an unfinished evidence map. Our [subdomain-level audit](registry/discovery/capability-coverage-audit-20261102.json) finds **53 subdomains with governed-review pointers**, **210 with at least one individual reviewed or source-vetted candidate pointer**, and **37 without any such pointer**. Of the 204, some have **rejected-only** examples; neither a pointer nor a high static score establishes adequate, independent, installable coverage.
+The canonical [33-domain / 247-subdomain directory](registry/capability-directory.json) is an unfinished evidence map. Our [subdomain-level audit](registry/discovery/capability-coverage-audit-20261102.json) finds **53 subdomains with governed-review pointers**, **210 with at least one individual reviewed or source-vetted candidate pointer**, and **37 without any such pointer**. Of the 210, some have **rejected-only** examples; neither a pointer nor a high static score establishes adequate, independent, installable coverage.
 
 We also track [25 additional provisional domain families](registry/discovery/capability-domain-expansion-20261102.json) across office work, data engineering, agriculture, energy, public services, accessibility, logistics, journalism and more. They are **open discovery categories, not yet 25 canonical or mature domains**. Underrepresented canonical fields, especially music composition, illustration, 3D/CAD, audio and robotics, are explicit next-review priorities. Preserve multiple genuine approaches, owner diversity, package-level rights and rejection evidence rather than declaring every category covered after one filename.
 
