@@ -3,15 +3,18 @@ skill_name: openai-pulse
 source_id: local-skills
 local_path: "skills/openai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d6b98630525e16d392b3f50e67ae674332316310
+content_blob_sha: bd16ca6f71c76c7c9dcfabf36a34752b9df408f3
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
+prior_reviewed_blob_sha: d6b98630525e16d392b3f50e67ae674332316310
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only source collection changed exact skill bytes; the old rubric score is historical only."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
