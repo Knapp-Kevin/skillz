@@ -4,7 +4,7 @@
 
 **Find better skills for your AI assistant.**
 
-A skill is a set of instructions that helps an AI assistant do a task well. Skillz helps your assistant find useful methods, compare them, and understand their limits. You can explore the library without installing anything.
+A skill is a set of instructions that helps an AI assistant do a task well. **Skillz is a discovery library across 33 capability domains, not a list of 19 approved skills.** Start with what you need to accomplish, search methods across the wider indexed research, compare evidence and rights, then decide what is useful. You can explore without installing anything.
 
 ## What can skillz help you do?
 
@@ -13,46 +13,11 @@ A skill is a set of instructions that helps an AI assistant do a task well. Skil
 - **Learn from good ideas.** Some skills are worth studying even when they should not be used as written.
 - **Keep control.** The library does not run jobs or connect to your accounts. Your AI assistant performs any authorized work outside this repository.
 
-## What do we recommend?
+## Start with your goal: search all capability areas
 
-There are two **positive** recommendations. Both must explain the specific benefit and point to evidence.
+**Start here even when your task has no item on our short recommendation shelf.** Browse the [33-domain directory](registry/capability-directory.json), search [governed review names](registry/governed-review-name-index.json), and expand into [pinned source leads](registry/discovery/dynamic-four-source-frontier-20261101.json). Read the actual candidate before trusting its name. An empty featured shelf slot is a search prompt, **not** proof there are no applicable methods. [Agent discovery procedure](docs/agent-value-discovery.md).
 
-| Recommendation | What it means |
-|---|---|
-| **Recommended for use** | A distinct skill with enough exact-version evidence, rights, and safety checks to recommend it *as written* for an appropriate task. Any security or hands-on tests that have not run must be clearly disclosed. |
-| **Valuable reference** | A distinct skill with a useful method or idea worth learning from, but **not** endorsed for use as written. We explain the insight and any limits on reuse. |
-
-Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
-
-**Current inventory limitation:** We have individually endorsed **nineteen useful methods as Valuable References** across nine capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
-
-### Nineteen useful skill references
-
-| What you want to improve | Skill worth studying | Specific benefit |
-|---|---|---|
-| Reliable 3D assemblies | **Blender Assembly Pitfalls** | Plan connections, then check real sizes, directions and overlaps instead of trusting appearances |
-| Game playtesting | **IF Playtest Review** | Catch impossible story routes, circular locks and missing game states before players get stuck |
-| Audio performance | **Audio Performance Debug** | Measure the real cause of dropouts and CPU spikes before changing code |
-| Accessible services | **Singapore DSS Accessibility** | Find keyboard, form and screen-reader barriers while building interfaces |
-| Kubernetes connectivity | **NetworkPolicy Debug** | Identify which traffic rules block a connection before changing a live cluster |
-| Clear service positioning | **Singular Positioning Clarity** | Explain who you help and the outcome in one sentence |
-| Voice notes into useful records | **Split Transcript by Intent** | Separate decisions, tasks and context without losing the original wording |
-| Music timed to a film | **Video Scoring Audio** | Match notes to precise visual beats, then check duration, peaks and dynamics |
-| Concept art direction | **Design Concept Art Brief** | Give artists clear silhouettes, references, constraints and delivery requirements |
-| Comics and storyboards | **Scenario Storyboards** | Repair one panel at a time and add accurate lettering afterwards |
-| Consistent illustrated characters | **Scenario Identity Library** | Anchor every new view to one approved character reference |
-| Harmony | **mc-harmony** | Build a functional chord plan first, add color only where needed |
-| Melody | **mc-melody** | Plan comfortable ranges, leaps and phrases for a real singer |
-| Rhythmic feel | **mc-rhythm-groove** | Choose backbeat interaction and accents independently of tempo |
-| Programmed drums and bass | **mc-rhythm-section** | Choose kick-bass interplay and selective timing adjustments |
-| Orchestration | **mc-orchestration** | Assign instrument roles and check blend, balance and register |
-| Song arrangement | **mc-arrangement-arch** | Give a song an arc by changing when layers enter and leave |
-| Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
-| Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
-
-**Latest qualification beyond the nineteen methods:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None changes the 19-method shelf or the illustrated graph's positive counts.\n\n**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
-
-## Find skills for the work you do
+**Example:** Grant and funding-proposal work can require research, technical writing, business budgets, marketing and legal/compliance review. Explore those related capabilities before deciding whether a dedicated grant-writing skill exists. **No dedicated approved grant-writing package is claimed here.**
 
 | You want help with… | Capability areas |
 |---|---|
@@ -65,18 +30,18 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 
 These are **33 areas to explore, not 33 fully covered skill sets**. Some have rich research evidence; others have few useful candidates. A category with many links is not necessarily a category with many good skills.
 
-### Where research exists, and what we actually recommend studying
+### Two different views: research leads and the small featured shelf
 
 ![33 capability domains: research-linked topics from November 2 alongside separately selected Valuable Reference methods from November 3.](docs/assets/capability-evidence-and-valued-methods-20261103.svg)
 
-**Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q6 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
+**This chart is not a complete map of what the library could help you accomplish.** Continue searching the wider capability index even when a category has no featured selection. **Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q6 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
 
 The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at least one research link** and **37 without one**. Our newer public shelf has **19 Valuable Reference methods across nine domains**, serving **18 distinct topic mappings**; **zero skills approved unchanged**. Music has **nine ideas spanning 8/8 topics**, but almost all music methods share a single publisher; illustration has **three methods spanning 3/6 topics**, with environment art still insufficiently served. Neither domain is complete, behaviorally tested, or independently cleared for reuse.
 
 <details>
 <summary>Read all 33 domains as a text table</summary>
 
-| Capability domain | Research-linked topics (Nov 2) | Selected methods (Nov 3) | Topics served by selected methods |
+| Capability domain | Research-linked topics (Nov 2) | Featured methods (Nov 3) | Topics on featured shelf |
 |---|---:|---:|---:|
 | Software engineering | 10 / 10 | 0 | 0 / 10 |
 | Testing | 7 / 8 | 1 | 1 / 8 |
@@ -116,7 +81,48 @@ The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at lea
 
 *Sources: [2026-11-02 research audit](registry/discovery/capability-coverage-audit-20261102.json) and [2026-11-03 bounded consumer reference shelf](registry/consumer-positive-references-20261103.json). [Machine-readable two-stage graph data](registry/discovery/capability-evidence-and-valued-methods-20261103.json) · [Preserved November 2 chart](docs/assets/capability-evidence-map-20261102.svg). This comparison does not claim a live all-corpus positive denominator, source independence, domain maturity, security clearance or proven outcomes.*
 
-**Start here:** [See skill examples and what they help with](docs/capability-quickstart.md) · [Browse all capability areas](registry/capability-directory.json) · [Find reviewed skill names](registry/governed-review-name-index.json).
+## Our featured methods: a small, evidence-based shelf
+
+We maintain two **positive** recommendation types for methods selected to appear here. **This is not the entire collection of discoverable or reviewed methods.** A missing item should prompt wider research, not a conclusion that the repository cannot help. Both types explain the specific benefit and point to evidence.
+
+| Recommendation | What it means |
+|---|---|
+| **Recommended for use** | A distinct skill with enough exact-version evidence, rights, and safety checks to recommend it *as written* for an appropriate task. Any security or hands-on tests that have not run must be clearly disclosed. |
+| **Valuable reference** | A distinct skill with a useful method or idea worth learning from, but **not** endorsed for use as written. We explain the insight and any limits on reuse. |
+
+Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
+
+**Featured-shelf limitation, not total inventory:** We have individually endorsed **nineteen useful methods as Valuable References** across nine capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+
+### Nineteen featured method references
+
+| What you want to improve | Skill worth studying | Specific benefit |
+|---|---|---|
+| Reliable 3D assemblies | **Blender Assembly Pitfalls** | Plan connections, then check real sizes, directions and overlaps instead of trusting appearances |
+| Game playtesting | **IF Playtest Review** | Catch impossible story routes, circular locks and missing game states before players get stuck |
+| Audio performance | **Audio Performance Debug** | Measure the real cause of dropouts and CPU spikes before changing code |
+| Accessible services | **Singapore DSS Accessibility** | Find keyboard, form and screen-reader barriers while building interfaces |
+| Kubernetes connectivity | **NetworkPolicy Debug** | Identify which traffic rules block a connection before changing a live cluster |
+| Clear service positioning | **Singular Positioning Clarity** | Explain who you help and the outcome in one sentence |
+| Voice notes into useful records | **Split Transcript by Intent** | Separate decisions, tasks and context without losing the original wording |
+| Music timed to a film | **Video Scoring Audio** | Match notes to precise visual beats, then check duration, peaks and dynamics |
+| Concept art direction | **Design Concept Art Brief** | Give artists clear silhouettes, references, constraints and delivery requirements |
+| Comics and storyboards | **Scenario Storyboards** | Repair one panel at a time and add accurate lettering afterwards |
+| Consistent illustrated characters | **Scenario Identity Library** | Anchor every new view to one approved character reference |
+| Harmony | **mc-harmony** | Build a functional chord plan first, add color only where needed |
+| Melody | **mc-melody** | Plan comfortable ranges, leaps and phrases for a real singer |
+| Rhythmic feel | **mc-rhythm-groove** | Choose backbeat interaction and accents independently of tempo |
+| Programmed drums and bass | **mc-rhythm-section** | Choose kick-bass interplay and selective timing adjustments |
+| Orchestration | **mc-orchestration** | Assign instrument roles and check blend, balance and register |
+| Song arrangement | **mc-arrangement-arch** | Give a song an arc by changing when layers enter and leave |
+| Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
+| Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
+
+**Latest qualification beyond the nineteen methods:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None changes the 19-method shelf or the illustrated graph's positive counts.
+
+**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
+
+**Start here:** [Browse all capability areas](registry/capability-directory.json) · [Search reviewed names](registry/governed-review-name-index.json) · [See concrete examples](docs/capability-quickstart.md).
 
 **For AI assistants:** Read [AGENT_START_HERE.md](AGENT_START_HERE.md) and [Agent Value Discovery](docs/agent-value-discovery.md). Use relevant memory available in your own host to identify the user's needs; never copy private history into this repository. Reading this library does not authorize installation, messages, payments, cloud changes, or other external writes. Obtain action-specific approval before those actions.
 

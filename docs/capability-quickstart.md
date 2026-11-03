@@ -1,8 +1,10 @@
 # Capability quickstart: start with useful outcomes
 
-**Nineteen positively selected Valuable Reference methods across nine domains.** Music now has **nine selected methods serving all eight composition subdomains**, including separately graded groove design and drum/bass programming. These are original, brief method summaries to learn from, **not install-approved packages**. Eight new methods come from a single publisher, whose [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) excludes quoted and translated music-book material from MIT. Eight music package-tree SHAs are verified; mirror aliases, independent alternatives, protected source-book rights and hands-on results remain missing. [Browse the 19 selected ideas](curated-capability-references.md) · [See what's still open in music and illustration](capability-creative-coverage.md) · [Structured rights/source evidence](../registry/consumer-positive-references-20261103.json). Other items below are ordinary candidate examples unless separately marked positively selected.
+**Explore the full 33-domain library, not only the 19 featured methods.** Begin with a user task, browse the [247-subdomain capability directory](../registry/capability-directory.json), examine [governed review names](../registry/governed-review-name-index.json), and follow [pinned discovery sources](../registry/discovery/dynamic-four-source-frontier-20261101.json) when a domain is thin. An absent featured method means *not selected for this small shelf*, not that Skillz cannot help. The examples below demonstrate starting points and evidence states, not the entire corpus.
 
-**Purpose:** A short, populated shelf of **actual indexed skill examples**, followed by a complete name-search fallback. This is a **discovery aid**, not a source-ownership ranking, a list of install-approved packages, or a claim to cover the ecosystem.
+**Cross-domain example:** A grant or funding proposal may involve research, writing, business budgets, marketing and compliance. Search those related capabilities, check exact candidate evidence and rights, and do not invent a ready-to-use grant-writing package.
+
+**Purpose:** Concrete evidence-linked examples with a full-capability search fallback. This is a **discovery aid**, not a source-ownership ranking, a list of install-approved packages, or a claim to cover the ecosystem.
 
 If the user only shared the repository and said **“take a look”**, first deliver the [memory-grounded value brief](agent-value-discovery.md). Use this page to turn those needs into concrete candidate files. If they already named a capability, skip the full interview and search directly.
 
@@ -31,7 +33,7 @@ If the user only shared the repository and said **“take a look”**, first del
 
 **Need a package-security result without opening two large baseline files?** Use the scoped [per-skill security lookup](../registry/security/first-party-package-lookup.json). Its entries refer to matching historical scan records, with passed, incomplete and failed states; coverage does not extend automatically to unrelated packages. This is a lookup of prior evidence, **not a newly run scan or install approval**. For a skill modified after the indexed snapshot, recheck the package-tree identity before relying on it.
 
-## Find beyond these examples
+## Find beyond these examples (especially when your task is missing)
 
 1. **Browse [the capability directory](../registry/capability-directory.json)** by domain → subdomain. Its `matched_skill_ids` are evidence-linked seed examples; `name_only_review_candidate_ids` are **uninspected name-token leads** from the reviewed-record index. Those leads may be rejected, candidate-only or semantically irrelevant. An empty list is **unknown coverage**, never absence.
 2. **Search [all 1,039 governed review companion names](../registry/governed-review-name-index.json)**, across governed source identities. For an ID `source/skill`, read `registry/verification/source/skill.yaml` and `registry/skills/source/skill.yaml`. Use task synonyms, not just exact filename.
@@ -41,3 +43,9 @@ If the user only shared the repository and said **“take a look”**, first del
 6. **Decide with the [consumer contract](consumer-discovery-and-installation.md)** whether existing host capabilities suffice, whether safe and licensed reuse/adaptation is justified, or whether independent creation is better. Reading a candidate is not activating it. Only a separate authorized installation changes the user's host.
 
 A cold agent with no memory can still name concrete **provisional examples** from the table and distinguish them from user-specific fit. An agent with memory should rank examples against *observed repeated work, error-prevention needs, existing skills and host capabilities*, not invent a profile. The output for a vague first look is the value brief itself, **not an offer to provide one later**.
+
+## Featured reference shelf is not the whole library
+
+**Nineteen selected Valuable Reference methods across nine domains** are available as independently described procedures to study, not packages cleared for installation. Music has nine featured ideas spanning eight composition subdomains. Eight were reviewed from one publisher, whose [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) excludes copyrighted book quotations and translations from the source MIT license. Source-tree identity does not establish alias, rights, security or behavior clearance.
+
+[Browse the 19 selected methods](curated-capability-references.md) · [Inspect structured source and licensing evidence](../registry/consumer-positive-references-20261103.json). Zero featured selections in another domain does not mean zero discoverable skills.
