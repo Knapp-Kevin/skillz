@@ -37,6 +37,55 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 
 These are **33 areas to explore, not 33 fully covered skill sets**. Some have rich research evidence; others have few useful candidates. A category with many links is not necessarily a category with many good skills.
 
+### Where our research evidence exists
+
+![Capability evidence chart showing the 33 domains, how many subdomains have review or candidate links, and where evidence is missing.](docs/assets/capability-evidence-map-20261102.svg)
+
+**How to read the chart:** Each bar shows how many topics within a domain have at least one review or candidate link. A link might point to a rejected skill. **This chart does not measure approved or recommended skills.** Those per-domain totals are still being verified.
+
+<details>
+<summary>Read all 33 domain counts as text</summary>
+
+| Capability domain | Topics with an evidence link / total |
+|---|---:|
+| Software engineering | 10 / 10 |
+| Testing | 7 / 8 |
+| Agent / MCP development | 8 / 8 |
+| Cloud / DevOps | 8 / 8 |
+| Security | 7 / 7 |
+| Research | 7 / 7 |
+| Planning | 6 / 6 |
+| Marketing | 8 / 9 |
+| Product | 8 / 8 |
+| UX / UI | 7 / 7 |
+| Visual design | 7 / 7 |
+| Illustration | 1 / 6 |
+| 3D / CAD / animation | 7 / 9 |
+| Game design | 6 / 8 |
+| Fiction / narrative / worldbuilding | 8 / 8 |
+| Technical writing | 7 / 7 |
+| Music composition | 0 / 8 |
+| Audio / voice / sound | 5 / 8 |
+| Video / film | 5 / 9 |
+| Communication | 5 / 7 |
+| Analytics | 7 / 7 |
+| Time / productivity | 6 / 7 |
+| Memory / context | 7 / 7 |
+| Business | 7 / 7 |
+| Sales | 7 / 7 |
+| Career | 6 / 7 |
+| Education | 6 / 7 |
+| Science | 6 / 7 |
+| Medicine | 6 / 7 |
+| Law | 6 / 7 |
+| Finance | 7 / 8 |
+| Robotics / IoT | 5 / 7 |
+| ML accelerators and compute | 7 / 7 |
+
+</details>
+
+*Source: [November 2, 2026 capability coverage audit](registry/discovery/capability-coverage-audit-20261102.json), covering published evidence through Q4. This is a dated research snapshot, not a live inventory or a quality score.*
+
 **Start here:** [See skill examples and what they help with](docs/capability-quickstart.md) · [Browse all capability areas](registry/capability-directory.json) · [Find reviewed skill names](registry/governed-review-name-index.json).
 
 **For AI assistants:** Read [AGENT_START_HERE.md](AGENT_START_HERE.md) and [Agent Value Discovery](docs/agent-value-discovery.md). Use relevant memory available in your own host to identify the user's needs; never copy private history into this repository. Reading this library does not authorize installation, messages, payments, cloud changes, or other external writes. Obtain action-specific approval before those actions.
