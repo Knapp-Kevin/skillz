@@ -7,7 +7,7 @@ source_path: skills/openai-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
+source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
-exact_version_requalification: "Required for bd16ca6f71c76c7c9dcfabf36a34752b9df408f3; historical semantic review was d6b98630525e16d392b3f50e67ae674332316310. Package security and behavior not-run."
+exact_version_requalification: "Required for 1285b1226733e93b0db4b230a6fb0021e5220fd0; historical semantic review was d6b98630525e16d392b3f50e67ae674332316310. Package security and behavior not-run."
