@@ -45,7 +45,7 @@ function dashboardCsv(model){
 }
 
 function dashboardSvg(model){
- const W=1500,H=1180,parts=[],T=model.totals;
+ const W=1530,H=1180,parts=[],T=model.totals;
  const rowHeight=40,columnWidth=710;
  const startX=43,startY=367;
  const tile=[{v:T.domains.toString(),label:"CAPABILITY DOMAINS"},{v:`${T.linked_topics}/${T.topics}`,label:"TOPICS WITH RESEARCH LINKS"},{v:T.reference_methods.toString(),label:"METHODS SELECTED TO STUDY"},{v:T.approved_methods.toString(),label:"APPROVED AS WRITTEN"}];
