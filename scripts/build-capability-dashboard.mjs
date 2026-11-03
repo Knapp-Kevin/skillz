@@ -45,7 +45,7 @@ function dashboardCsv(model){
 }
 
 function dashboardSvg(model){
- const W=1120,H=1000,parts=[],T=model.totals,startY=369,rh=33;
+ const W=1120,H=1000,parts=[],T=model.totals,startY=397,rh=31;
  const metrics=[{v:String(T.domains),label:"CAPABILITY AREAS"},{v:`${T.linked_topics} / ${T.topics}`,label:"TOPICS WITH RESEARCH LINKS"},{v:String(T.reference_methods),label:"METHODS SELECTED TO STUDY"},{v:String(T.approved_methods),label:"APPROVED UNCHANGED"}];
  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-labelledby="chart-heading chart-detail">`);
  parts.push(`<title id="chart-heading">Skillz capability evidence dashboard for ${T.domains} domains</title><desc id="chart-detail">${T.linked_topics} of ${T.topics} canonical topics have research or candidate links, including some rejected-only sources. ${T.reference_methods} distinct methods are featured for study across ${T.selected_domains} domains; ${T.approved_methods} approved unchanged. The README contains the full accessible table and downloadable CSV.</desc>`);
@@ -58,7 +58,8 @@ function dashboardSvg(model){
  for(let col=0;col<2;col++){
   const x=31+col*539,subset=model.rows.slice(col*17,(col+1)*17);
   parts.push(`<rect x="${x}" y="331" width="520" height="601" rx="14" stroke="#344c67" fill="#111f34"/>`);
-  parts.push(`<text x="${x+13}" y="357" font-size="14" font-weight="700" fill="#e9f2fe" font-family="Arial,Helvetica,sans-serif">Capability domain</text><text x="${x+216}" y="357" font-size="14" fill="#c6e8f4" font-family="Arial,Helvetica,sans-serif">Links</text><text x="${x+390}" y="357" font-size="14" fill="#d8c7fa" font-family="Arial,Helvetica,sans-serif">Selected</text>`);
+  parts.push(`<text x="${x+13}" y="357" font-size="14" font-weight="700" fill="#e9f2fe" font-family="Arial,Helvetica,sans-serif">Capability domain</text><text x="${x+216}" y="357" font-size="14" fill="#c6e8f4" font-family="Arial,Helvetica,sans-serif">Research</text><text x="${x+390}" y="357" font-size="14" fill="#d8c7fa" font-family="Arial,Helvetica,sans-serif">Selected</text>`);
+  parts.push(`<line x1="${x+12}" y1="372" x2="${x+508}" y2="372" stroke="#405773" stroke-width="1"/>`);
   subset.forEach((row,i)=>{
    const y=startY+i*rh,pct=row.total_topics?row.research_topics/row.total_topics:0,chosen=row.reference_methods+row.approved_methods>0;
    parts.push(`<g><title>${html(row.name)}: ${row.research_topics}/${row.total_topics} research-linked topics; ${row.reference_methods} study methods across ${row.selected_topics} topics; ${row.approved_methods} unchanged-use approvals</title>`);
@@ -121,6 +122,8 @@ function selfTest(){
  const model=dashboardData(fixture,catalog,manifest);
  if(model.totals.topics!==2||model.totals.linked_topics!==1||model.totals.reference_methods!==1)throw Error("Self-test totals failed");
  if(!dashboardSvg(model).includes("Research &amp; &lt;Study&gt;"))throw Error("SVG escaping failed");
+ const firstRow = dashboardSvg(model).match(/<g><title>[\s\S]*?<rect x="38" y="(\d+)" width="505"/);
+ if(!firstRow||Number(firstRow[1])<375)throw Error("Dashboard header overlaps first data row");
  if(!dashboardCsv(model).includes('"Research & <Study>"'))throw Error("CSV quoting failed");
  const body=dashboardMarkdown(model),intro="Above\n### Two different views: research leads and the small featured shelf\nOLD\n## Our featured methods:\nAfter";
  const once=updateReadme(intro,body),twice=updateReadme(once,body);
