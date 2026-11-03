@@ -1,7 +1,7 @@
 {
   "schema": "curation_lifecycle_snapshot_v1",
   "date": "2026-11-02",
-  "source_main_commit": "34064627ffb3f1ff8a10e00c6f493eaa2d475de1",
+  "source_main_commit": "3be1664b71c023bb160383a39244aece34370e9e",
   "readme_use": "Grounded, nonadditive evidence-tier counters; not approved or installable skill counts.",
   "discovery": {
     "gitskills_research_population": {
@@ -42,18 +42,10 @@
       "excluded_template": 1,
       "source": "registry/discovery/pinned-4813-review-progress-20261101.json"
     },
-    "new_q1_q3": {
-      "exact_pinned_terminal_source_vetting_decisions": 391,
-      "source_families": 14,
-      "reference_only": 244,
-      "rejected_unchanged": 147,
-      "threshold_signals_not_admissions": 111,
-      "source": "docs/reviews/2026-11-02-q1-q3-cross-tranche-arithmetic.md"
-    },
     "two_disjoint_review_frontiers": {
-      "static_candidate_decisions": 5200,
-      "reference_only": 1449,
-      "rejected_unchanged": 3751,
+      "static_candidate_decisions": 5359,
+      "reference_only": 1517,
+      "rejected_unchanged": 3842,
       "unreviewed_or_blocked_paths_in_four_source_snapshot": 4
     },
     "normalization_receipt": {
@@ -99,7 +91,22 @@
       "Neither source vetting nor 15/20 threshold is governed approval, an executed security scan, or behavioral validation.",
       "These review frontiers are disjoint for this published accounting but not a deduplicated universe of skills.",
       "REFERENCE-ONLY means reference/design evidence, and REJECT means unchanged use rejected; useful approaches can still be studied."
-    ]
+    ],
+    "new_q1_q4": {
+      "exact_pinned_terminal_source_vetting_decisions": 550,
+      "source_families": 19,
+      "reference_only": 312,
+      "rejected_unchanged": 238,
+      "threshold_signals_not_admissions": 135,
+      "source": "docs/reviews/2026-11-03-q4-five-new-source-families-static.md",
+      "prior_receipts": [
+        "docs/reviews/2026-11-02-q1-q3-cross-tranche-arithmetic.md",
+        "docs/reviews/2026-11-03-q1-four-new-source-families-static.md",
+        "docs/reviews/2026-11-03-q2-five-new-source-families-static.md",
+        "docs/reviews/2026-11-03-q3-five-new-source-families-static.md"
+      ],
+      "status": "Merged exact-pinned candidate-only source-vetting; not registered/admitted and not new governed companions."
+    }
   },
   "governed_inventory": {
     "total_exact_version_review_companions": 1039,
@@ -115,19 +122,19 @@
     "reason_unknown": "Historical candidate intake has legacy adopted labels, but no reconciled, complete exact-version terminal acceptance/adaptation/promotion event ledger. Cannot interpret source vetting, static VERIFIED or governed companion presence as such an event."
   },
   "recent_campaign_actions": {
-    "new_governed_admissions_in_g1_g3_and_q1_q3": 0,
-    "new_adapted_artifacts_from_g1_g3_and_q1_q3": 0,
-    "new_promotions_from_g1_g3_and_q1_q3": 0,
-    "new_executed_package_security_scans_in_g1_g3_and_q1_q3": 0,
-    "new_executed_behavioral_validations_in_g1_g3_and_q1_q3": 0
+    "new_governed_admissions_in_g1_g3_and_q1_q4": 0,
+    "new_adapted_artifacts_from_g1_g3_and_q1_q4": 0,
+    "new_promotions_from_g1_g3_and_q1_q4": 0,
+    "new_executed_package_security_scans_in_g1_g3_and_q1_q4": 0,
+    "new_executed_behavioral_validations_in_g1_g3_and_q1_q4": 0
   },
   "coverage": {
     "canonical_domains": 33,
     "canonical_subdomains": 247,
     "with_governed_review_links": 53,
-    "with_any_review_or_candidate_link": 204,
-    "with_no_review_or_candidate_link": 43,
-    "with_governed_or_reference_only_link": 195,
+    "with_any_review_or_candidate_link": 210,
+    "with_no_review_or_candidate_link": 37,
+    "with_governed_or_reference_only_link": 201,
     "source": "registry/discovery/capability-coverage-audit-20261102.json",
     "quality_not_proven_by_link_counts": true
   },
@@ -154,7 +161,7 @@
   },
   "nonadditivity": [
     "Research dataset 282,200 repositories, 1,277 GitSkills inspected repositories, 65 archived sources, 25 registered sources are not additive across identities or trust tiers.",
-    "5,200 candidate source-vetting decisions and 1,039 governed verification companions are separate review surfaces and must not be summed as 6,239 unique reviewed skills.",
+    "5,359 candidate source-vetting decisions and 1,039 governed verification companions are separate review surfaces and must not be summed as 6,239 unique reviewed skills.",
     "Rejection describes unchanged reuse, not deletion or unusable reference material."
   ]
 }
