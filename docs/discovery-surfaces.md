@@ -64,6 +64,8 @@ Current useful discovery inputs include, where relevant:
 
 Broad web or GitHub discovery is appropriate when it answers a sharp question. It should not become count-driven harvesting.
 
+**Current domain-coverage evidence:** The [247-subdomain link audit](../registry/discovery/capability-coverage-audit-20261102.json) exposes gaps in the 33 canonical domains; the [25 provisional expansion domain leads](../registry/discovery/capability-domain-expansion-20261102.json) track new areas without falsely declaring taxonomic acceptance. Consumers can search these as lead surfaces while individual package identity, license and quality evidence remain separate.
+
 ## Promotion into evaluation
 
 A discovery lead should become a candidate issue when there is enough evidence to state:
