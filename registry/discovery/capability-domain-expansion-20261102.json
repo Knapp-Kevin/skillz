@@ -1,0 +1,883 @@
+{
+  "schema": "provisional_capability_domain_expansion_v1",
+  "snapshot_date": "2026-11-02",
+  "canonical_domain_count_unchanged": 33,
+  "canonical_subdomain_count_unchanged": 247,
+  "policy": "Discovery tracks expand inclusion immediately; do not promote to canonical/mature or claim source-vetted status until source-method fit, rights and individual evidence are qualified.",
+  "source_inputs": [
+    "registry/discovery/archived-65-source-diversity-leads-20261102.csv",
+    "docs/discovery/2026-11-03-gitskills-g3-new-domains-and-languages.md"
+  ],
+  "advancement": [
+    "Separate genuine new outcomes from existing domain subdomains, and preserve cross-domain tags.",
+    "Verify multiple original-author candidate mechanisms when the ecosystem offers them, with explicit source/pin/tree and rights.",
+    "Evaluate whole packages individually, including relevant sidecars, and retain rejected/adaptation-worthy mechanisms.",
+    "Provide concrete subdomain reviewed alternatives with independent provenance, not only name matches or ungraded source lists.",
+    "Decide canonical promotion only after taxonomic review; label gaps and lack of independent sources, rather than fabricating coverage.",
+    "Security and behavioral validation remain independent statuses; no domain is 'fully served' by a handful of static grades."
+  ],
+  "candidate_domains": [
+    {
+      "id": "documents-office",
+      "name": "Office documents",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "documents-office",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "authoring",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "spreadsheets",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "presentations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "document-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "accessibility-review",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data pipelines",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "data-engineering",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "ingestion",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "orchestration",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "data-quality",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "warehousing",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "pipeline-security",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "ecommerce-retail",
+      "name": "Commerce and retail",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "ecommerce-retail",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "catalogs",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "merchandising",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "marketplaces",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "conversion",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "fulfillment",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "agriculture-food",
+      "name": "Agriculture and food systems",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "agriculture-food",
+      "archive_source_lead_examples": [
+        "farmfriend-labs/agent-skills-farming",
+        "PangenomeAI/academic-skills-food-nutrition"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "crop-planning",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "farm-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "food-systems",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "agronomy",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "agricultural-data",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "collectibles-hobbies",
+      "name": "Collectibles and hobbies",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "collectibles-hobbies",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "collection-cataloging",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "authenticity",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "care-and-preservation",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "valuation",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "real-estate-property",
+      "name": "Real estate and property",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "real-estate-property",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "property-evaluation",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "fair-housing-marketing",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "property-management",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "transactions",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "maintenance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "logistics-supply-chain",
+      "name": "Logistics and supply chain",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "logistics-supply-chain",
+      "archive_source_lead_examples": [
+        "orbit-logistics/orbit-skills",
+        "ai-evos/agent-skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "transport-planning",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "procurement",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "inventory",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "transport-compliance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "supplier-risk",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "nonprofit-community",
+      "name": "Nonprofit and community organizations",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "nonprofit-religion-community",
+      "archive_source_lead_examples": [
+        "dh2211/nonprofit-agents",
+        "zicula/skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "grant-research",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "donor-stewardship",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "volunteers",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "program-evaluation",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "community-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Shared G3 heuristic bucket; nonprofit versus faith methods and counts not individually disambiguated."
+    },
+    {
+      "id": "religion-faith",
+      "name": "Faith and religious studies",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "nonprofit-religion-community",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "religious-study",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "community-care",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "faith-education",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "worship-planning",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Shared G3 heuristic bucket; nonprofit versus faith methods and counts not individually disambiguated."
+    },
+    {
+      "id": "sports-fitness",
+      "name": "Sports and fitness",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "sports-fitness",
+      "archive_source_lead_examples": [
+        "PuckAPI/claude-sports-analytics"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "training-design",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "recovery-wearables",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "sports-analysis",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "coaching",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "competition-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "persona-perspective",
+      "name": "Persona and perspective analysis",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": "persona-perspective",
+      "archive_source_lead_examples": [],
+      "proposed_subdomains": [
+        {
+          "id": "stakeholder-perspectives",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "multi-perspective-review",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "persona-research",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "impersonation-boundaries",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "G3 keyword/picker precision varied; candidate domain evidence is a discovery lead, not source evaluation."
+    },
+    {
+      "id": "energy-utilities",
+      "name": "Energy and utilities",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "sourabhghose/energy-skills",
+        "PowerGridModel/power-grid-model-ai"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "grid-analysis",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "utility-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "building-energy",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "energy-compliance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "geospatial-gis",
+      "name": "Geospatial and GIS",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "danmaps/gis-agent-skills",
+        "muend/geoai-skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "spatial-data",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "mapping",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "remote-sensing",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "geostatistics",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "geoai",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "public-sector-civic",
+      "name": "Public-sector and civic services",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "skills-il/government-services",
+        "AI-Lab-for-Cities-at-Harvard/civic-skill-exchange"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "government-processes",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "civic-research",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "public-records",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "service-navigation",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "regulatory-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "accessibility-inclusion",
+      "name": "Accessibility and inclusion",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "Owl-Listener/inclusive-design-skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "digital-accessibility",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "cognitive-accessibility",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "assistive-technology",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "inclusive-research",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "accessible-content",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "manufacturing-industrial",
+      "name": "Manufacturing and industry",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "ai-evos/agent-skills",
+        "AirsupHQ/factory-skill"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "production-planning",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "industrial-quality",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "maintenance-engineering",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "factory-safety",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "process-optimization",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "journalism-news",
+      "name": "Journalism and news production",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "press-pass/journalism-skills",
+        "ur-grue/autopunk-media-skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "source-verification",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "reporting-research",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "newsroom-workflows",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "editorial-review",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "archive-management",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "localization-i18n",
+      "name": "Localization and internationalization",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "skills-il/localization",
+        "lingui/skills",
+        "BrunoMiguens/translating-products-skill"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "translation-quality",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "regional-content",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "rtl-layout",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "product-localization",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "locale-testing",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "insurance-actuarial",
+      "name": "Insurance and actuarial methods",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "kalta-ai/actuarial-skills",
+        "open-source-modelling/insurance_skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "pricing-reserving",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "claims-analysis",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "policy-compliance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "risk-modeling",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "portfolio-reporting",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "construction-aec",
+      "name": "Construction and built environment",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "constructelligence-lab/construction-agent-skills",
+        "sahilyousafp/AEC_Agent_Skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "construction-planning",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "bim-ifc",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "aec-compliance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "safety-accessibility",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "contract-administration",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "climate-environment",
+      "name": "Climate and environmental science",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "jinwx/weather-data-skills",
+        "dgilford/ai-science-toolkit",
+        "Zhonghao1995/Agentic-MIKE-Plus"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "climate-data",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "environmental-monitoring",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "weather-workflows",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "sustainability-analysis",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "hydrology",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "electronics-hardware",
+      "name": "Electronics and hardware engineering",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "aklofas/kicad-happy",
+        "nickkraakman/skidl-skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "pcb-design",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "circuit-modeling",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "embedded-firmware",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "hardware-verification",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "manufacturability",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "aviation-transport",
+      "name": "Aviation and transport assurance",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "alexbrooker/aviation-skills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "flight-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "aviation-safety",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "transport-compliance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "audit-evidence",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "incident-analysis",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "culinary-foodservice",
+      "name": "Culinary and food-service operations",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "DedInc/chef-agentic-skills",
+        "jeremylongworth-source/ChefSkills"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "recipe-engineering",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "food-safety",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "menu-operations",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "kitchen-workflows",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "dietary-accessibility",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    },
+    {
+      "id": "humanities-history",
+      "name": "Humanities and history",
+      "status": "TRACKED_PROVISIONAL_DISCOVERY_ONLY",
+      "g3_heuristic_stratum": null,
+      "archive_source_lead_examples": [
+        "tizzy916/humanities-writing-companion",
+        "Travishistory/history-research-agent"
+      ],
+      "proposed_subdomains": [
+        {
+          "id": "archival-research",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "historical-methods",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "source-criticism",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "humanities-writing",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        },
+        {
+          "id": "citation-provenance",
+          "status": "UNASSESSED_NEEDS_QUALIFIED_EVIDENCE"
+        }
+      ],
+      "license_review": "NO_SOURCE_WIDE_PERMISSION_INFERRED",
+      "duplicate_review": "REQUIRED",
+      "future_promotion": "NOT_AUTOMATIC",
+      "notes": "Archive contains pinned source-level leads with rights HOLD; no per-domain admission implied."
+    }
+  ]
+}
