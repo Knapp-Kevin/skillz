@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Perplexity Pulse
   emoji: "📡"
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # Perplexity Pulse
@@ -20,20 +20,14 @@ Vendor pulse for Perplexity — the answer-engine/search-AI lane (Sonar API, Com
 
 ## Execution Flow
 
-1. **Collect.** From the skillz repo root:
-
-   ```
-   node scripts/pulse-run.ts --sources skills/perplexity-pulse/sources.json [--since 30d]
-   ```
-
-   If the engine is unavailable (skill deployed standalone), read `sources.json` beside this file and fetch/search those sources directly with web tools.
+1. **Collect (external host only).** Read `sources.json` bundled beside this skill. For the requested window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the date for `{SINCE}` in search templates. Cite exact URLs and publication dates; treat community posts as leads to verify and report inaccessible or rate-limited sources as gaps. Never send secrets, user memory or private project data in public queries. If live sources cannot be checked, disclose missing evidence rather than claiming freshness. **skillz provides no runner, crawler, script, scheduler or background service.**
 
 2. **Fill gaps.** Fetch the API changelog and hub blog; run the searches. Perplexity ships product faster than models — separate product news (Comet, integrations) from API/model news (Sonar line, deprecations).
 3. **Synthesize.** API/model deprecations and pricing first; Sonar capability changes (relevant to research-skill design — it's a search-grounding option); product moves; community sentiment.
 
 ## Scheduling
 
-- **Claude Code:** `/schedule` weekly, same morning as the other vendor pulses.
+- **Optional cadence:** Weekly only with explicit user authorization for this specific recurring digest; external host scheduling only. A one-time request does not authorize repeated checks or notifications.
 
 ## Output Format
 
