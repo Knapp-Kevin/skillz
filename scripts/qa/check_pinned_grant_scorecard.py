@@ -24,17 +24,26 @@ EXPECTED_SHA = "a58d34344847a73440cb8ded6be88a3e87cc093d"
 SOURCE_FORMULA = '=IF(COUNTIF(Gates!C2:C7,"No")>0,"WAIT — a gate is not met",IF(F17>=70,"GO — commit the hours",IF(F17>=50,"CONDITIONAL — fix low scorers first","NO-GO — pass this round")))' 
 RECOMMENDED_FORMULA = '=IF(OR(COUNTIF(Gates!B2:B7,"Yes")<ROWS(Gates!B2:B7),NOT(ISNUMBER(F17))),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
 TESTS = [
-    ("original_explicit_no", ["Yes", "Yes", "No", "Yes", "Yes", "Yes"], 75, "WAIT", True),
-    ("blank_gate", ["Yes", "Yes", "", "Yes", "Yes", "Yes"], 75, "WAIT", True),
-    ("unknown_gate", ["Yes", "Yes", "Unknown", "Yes", "Yes", "Yes"], 90, "WAIT", True),
-    ("all_yes", ["Yes"] * 6, 75, "GO", False),
-    ("score_49", ["Yes"] * 6, 49, "NO-GO", False),
-    ("score_50", ["Yes"] * 6, 50, "CONDITIONAL", False),
-    ("score_69", ["Yes"] * 6, 69, "CONDITIONAL", False),
-    ("score_70", ["Yes"] * 6, 70, "GO", False),
-    ("missing_score", ["Yes"] * 6, None, "WAIT", False),
-    ("text_score", ["Yes"] * 6, "70", "WAIT", False),
+    ("original_explicit_no", ["Yes","Yes","No","Yes","Yes","Yes"],75,"WAIT",True),
+    ("all_yes", ["Yes"]*6,75,"GO",False),
+    ("five_blanks", ["Yes","","","","",""],75,"WAIT",True),
+    ("all_blanks", [""]*6,90,"WAIT",True),
+    *[(f"no_at_gate_{i+1}", ["No" if n==i else "Yes" for n in range(6)],95,"WAIT",True) for i in range(6)],
+    ("invalid_empty", ["Yes","Yes","","Yes","Yes","Yes"],95,"WAIT",True),
+    ("invalid_unknown", ["Yes","Yes","Unknown","Yes","Yes","Yes"],95,"WAIT",True),
+    ("invalid_numeric", ["Yes","Yes",1,"Yes","Yes","Yes"],95,"WAIT",True),
+    ("invalid_trailing_space", ["Yes","Yes","Yes ","Yes","Yes","Yes"],95,"WAIT",True),
+    ("lowercase_yes", ["yes"]*6,95,"GO",False),
+    *[(f"score_{value}", ["Yes"]*6, value, expected, False) for value,expected in [
+        (-1,"NO-GO"), (0,"NO-GO"), (49,"NO-GO"),
+        (50,"CONDITIONAL"), (69,"CONDITIONAL"), (70,"GO"), (100,"GO")
+    ]],
+    ("missing_score", ["Yes"]*6,None,"WAIT",False),
+    ("text_score", ["Yes"]*6,"70","WAIT",False),
+    ("all_yes_note_says_no", ["Yes"]*6,75,"GO",False),
 ]
+assert len(TESTS)==25
+
 NS = {"x": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
 
@@ -91,30 +100,69 @@ def inspect_ooxml(raw: bytes) -> dict:
                 "hidden_sheets": sum(state != "visible" for _, state in sheets)}
 
 
-def run_cells(path: Path, located: dict) -> dict:
+def run_cells(path: Path, located: dict, *, pinned_original: bool) -> dict:
+    """Test exact imported workbook; all mutations are IN MEMORY and never exported."""
     book = SpreadsheetFile.import_xlsx(Blob.load(str(path)))
     gates = book.worksheets.get_item("Gates")
     score = book.worksheets.get_item("Scorecard")
     source_cell = located["source_gate_formula"]["cell"]
-    # Source F18 reads notes in C; candidate must read validated answers in B.
-    # F17 is replaced in memory only to isolate score thresholds.
+    publisher_baseline = None
+
+    if pinned_original:
+        if score.get_range("F17").formulas != [["=SUM(F2:F16)"]]:
+            raise AssertionError("Source weighted score formula differs from pin")
+        if gates.get_range("B4").values != [["No"]]:
+            raise AssertionError("Publisher's original example gate B4 must be No")
+        # XLSX contains blank formula caches. Re-enter the unchanged E2 numeric
+        # input in memory to recalculate the ORIGINAL F2:F16 -> F17 -> F18 chain.
+        e2 = score.get_range("E2").values[0][0]
+        score.get_range("E2").values = [[e2]]
+        baseline_score = score.get_range("F17").values[0][0]
+        baseline_decision = score.get_range(source_cell).values[0][0]
+        if baseline_score != 76 or not baseline_decision.startswith("GO"):
+            raise AssertionError(f"Publisher original example did not reproduce 76/unsafe GO: {baseline_score!r}, {baseline_decision!r}")
+        publisher_baseline = {
+            "gate_B4": "No",
+            "weighted_score_F17": baseline_score,
+            "source_F18": baseline_decision,
+            "reproduced_unsafe_go": True,
+        }
+
+    notes = [row[0] for row in gates.get_range("C2:C7").values]
     score.get_range("H18").formulas = [[RECOMMENDED_FORMULA]]
+    if pinned_original and score.get_range("H18").values != [["WAIT"]]:
+        raise AssertionError("Safe candidate must refuse the original publisher B4 No")
+
     results = []
     for title, answers, points, expected, original_must_go in TESTS:
         gates.get_range("B2:B7").values = [[a] for a in answers]
+        revised_notes = notes.copy()
+        if title == "all_yes_note_says_no":
+            revised_notes[0] = "No"
+        gates.get_range("C2:C7").values = [[v] for v in revised_notes]
+        # Isolate score thresholds in each synthetic scenario; the publisher
+        # baseline above separately exercises the actual weighted score chain.
         score.get_range("F17").values = [[points]]
         observed_original = score.get_range(source_cell).values[0][0]
         observed_candidate = score.get_range("H18").values[0][0]
         if observed_candidate != expected:
             raise AssertionError(f"{title}: candidate {observed_candidate!r} vs expected {expected!r}")
         if original_must_go and not (isinstance(observed_original, str) and observed_original.startswith("GO")):
-            raise AssertionError(f"{title}: source wrong-column false GO not reproduced: {observed_original!r}")
+            raise AssertionError(f"{title}: wrong-column source GO not reproduced: {observed_original!r}")
         results.append({"case": title, "source": observed_original,
                         "candidate": observed_candidate, "expected": expected})
-    source_bug = next(x for x in results if x["case"] == "original_explicit_no")["source"].startswith("GO")
-    if not source_bug:
-        raise AssertionError("Original false-GO defect was not reproduced in imported workbook")
-    return {"tests": results, "candidate_passes": len(results), "original_defect_reproduced": source_bug}
+
+    if not results[0]["source"].startswith("GO"):
+        raise AssertionError("Original explicit No in B4 did not reproduce false GO")
+    if not results[-1]["source"].startswith("WAIT"):
+        raise AssertionError("Original narrative note 'No' did not reproduce false WAIT")
+    return {
+        "tests": results,
+        "candidate_passes": len(results),
+        "original_false_go_reproduced": True,
+        "original_false_wait_reproduced": True,
+        "publisher_baseline": publisher_baseline,
+    }
 
 
 def make_fixture(path: Path) -> None:
@@ -150,9 +198,12 @@ def main(argv=None):
         if not a.fixture_test and digest != EXPECTED_SHA:
             raise ValueError(f"Git blob fingerprint mismatch: expected {EXPECTED_SHA}, observed {digest}")
         original = inspect_ooxml(raw)
-        formula_test = run_cells(path, original)
+        formula_test = run_cells(path, original, pinned_original=not a.fixture_test)
         report = {"status": "PASS", "kind": "SYNTHETIC HARNESS SELF-TEST" if a.fixture_test else "PINNED ORIGINAL SOURCE ACCEPTANCE",
                   "git_blob_sha": digest, "expected_source_sha": EXPECTED_SHA, "static": original, "engine": formula_test,
+                  "source_imported_in_engine": not a.fixture_test,
+                  "source_modified_on_disk": False,
+                  "source_exported": False,
                   "qualifications": ["No original file was modified or exported", "Excel/LibreOffice behavior is not inferred",
                                      "No real grant eligibility or finance acceptance was checked"]}
         print(json.dumps(report, indent=2))

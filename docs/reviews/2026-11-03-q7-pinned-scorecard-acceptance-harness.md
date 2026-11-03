@@ -1,5 +1,7 @@
 # Q7 pinned grant-scorecard workbook acceptance harness
 
+**LATEST EVIDENCE (2026-11-03):** [The actual SHA-matching publisher XLSX has now been imported and tested](2026-11-03-q7-original-pinned-scorecard-engine-acceptance.md): its own B4=No example calculates 76 points and wrongly says GO; 25 candidate-repair scenarios passed in the local engine. The earlier transfer-blocked state below is historical. Source unchanged-use remains HOLD.
+
 **CORRECTION (2026-11-03): This earlier fixture is superseded for source fidelity.** The original publisher's dropdown inputs live in `Gates!B2:B7`, not `Gates!C2:C7` (the notes column). Its F18 status includes descriptive text. [Corrected source inspection and test results](2026-11-03-q7-scorecard-source-column-reconciliation.md). The earlier receipt is preserved as history and must not be treated as a validated source-UI test.
 
 The new [read-only acceptance script](../../scripts/qa/check_pinned_grant_scorecard.py) rejects the wrong XLSX using the **exact Git blob hash**, inspects bounded OOXML parts, identifies the source No-only gate formula, and can compare it against the proposed all-Yes plus numeric-score formula within an imported workbook **without saving modifications**.

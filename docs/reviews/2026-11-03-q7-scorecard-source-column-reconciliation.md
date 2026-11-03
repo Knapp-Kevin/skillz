@@ -1,5 +1,7 @@
 # Q7 source workbook correction: gate answers were in the wrong column
 
+**LATEST EVIDENCE (2026-11-03):** [The actual SHA-matching publisher XLSX has now been imported and tested](2026-11-03-q7-original-pinned-scorecard-engine-acceptance.md): its own B4=No example calculates 76 points and wrongly says GO; 25 candidate-repair scenarios passed in the local engine. The earlier transfer-blocked state below is historical. Source unchanged-use remains HOLD.
+
 **High-priority correction:** In the actual source-pinned [Grant Go/No-Go Scorecard](https://github.com/zicula/skills/blob/ec7f94f84916be7bb25ec38752c24176330065a7/grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx), the user enters Yes/No eligibility answers in **Gates!B2:B7**. Column **C2:C7 contains explanatory notes**. But `Scorecard!F18` checks `COUNTIF(Gates!C2:C7,"No")>0`. The pinned example has an explicit **No in B4** and a note in C4. The published formula can therefore ignore a failed eligibility gate and return a `GO` decision when the score is high.
 
 This is worse than the earlier blank-only problem. In addition, any simplistic check for No still misses blank or unrecognized mandatory answers. We propose counting **all six Yes answers in B2:B7** and requiring `ISNUMBER(F17)` before score thresholds are evaluated. The public package remains held.

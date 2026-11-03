@@ -1,0 +1,225 @@
+{
+  "schema": "q7-original-pinned-scorecard-engine-acceptance-v1",
+  "as_of": "2026-11-03",
+  "original_source": {
+    "repository": "zicula/skills",
+    "revision": "ec7f94f84916be7bb25ec38752c24176330065a7",
+    "path": "grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx",
+    "source_git_blob_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+    "bytes": 10048
+  },
+  "transfer": "GitHub connector returned Base64 for the pinned original XLSX; encoded content was copied into the isolated local runtime; exact 10048-byte Git blob SHA1 verified before import; source binary is not republished in Skillz",
+  "engine": "artifact_tool.SpreadsheetFile.import_xlsx (actual original publisher XLSX)",
+  "actual_original_file_imported": true,
+  "on_disk_original_modified": false,
+  "original_file_exported": false,
+  "publisher_supplied_example": {
+    "user_gate": "Gates!B4",
+    "answer": "No",
+    "weighted_score_cell": "Scorecard!F17",
+    "weighted_score_formula": "=SUM(F2:F16)",
+    "recalculation_trigger": "Re-entered the unchanged Scorecard!E2 value inside the imported in-memory workbook to populate missing XLSX formula caches",
+    "computed_weighted_score": 76,
+    "actual_original_verdict": "GO — commit the hours",
+    "proposed_candidate_verdict": "WAIT",
+    "unsafe_go_reproduced": true
+  },
+  "controlled_test_cases": 25,
+  "controlled_test_passes": 25,
+  "tested_candidate_formula": "=IF(OR(COUNTIF(Gates!B2:B7,\"Yes\")<ROWS(Gates!B2:B7),NOT(ISNUMBER(F17))),\"WAIT\",IF(F17>=70,\"GO\",IF(F17>=50,\"CONDITIONAL\",\"NO-GO\")))",
+  "actual_original_f18_formula": "=IF(COUNTIF(Gates!C2:C7,\"No\")>0,\"WAIT — a gate is not met\",IF(F17>=70,\"GO — commit the hours\",IF(F17>=50,\"CONDITIONAL — fix low scorers first\",\"NO-GO — pass this round\")))",
+  "controlled_scenarios": [
+    {
+      "id": "original_explicit_no",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "all_yes",
+      "original_status_prefix": "GO",
+      "candidate_status": "GO",
+      "expected_candidate_status": "GO",
+      "pass": true
+    },
+    {
+      "id": "five_blanks",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "all_blanks",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "no_at_gate_1",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "no_at_gate_2",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "no_at_gate_3",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "no_at_gate_4",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "no_at_gate_5",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "no_at_gate_6",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "invalid_empty",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "invalid_unknown",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "invalid_numeric",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "invalid_trailing_space",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "lowercase_yes",
+      "original_status_prefix": "GO",
+      "candidate_status": "GO",
+      "expected_candidate_status": "GO",
+      "pass": true
+    },
+    {
+      "id": "score_-1",
+      "original_status_prefix": "NO-GO",
+      "candidate_status": "NO-GO",
+      "expected_candidate_status": "NO-GO",
+      "pass": true
+    },
+    {
+      "id": "score_0",
+      "original_status_prefix": "NO-GO",
+      "candidate_status": "NO-GO",
+      "expected_candidate_status": "NO-GO",
+      "pass": true
+    },
+    {
+      "id": "score_49",
+      "original_status_prefix": "NO-GO",
+      "candidate_status": "NO-GO",
+      "expected_candidate_status": "NO-GO",
+      "pass": true
+    },
+    {
+      "id": "score_50",
+      "original_status_prefix": "CONDITIONAL",
+      "candidate_status": "CONDITIONAL",
+      "expected_candidate_status": "CONDITIONAL",
+      "pass": true
+    },
+    {
+      "id": "score_69",
+      "original_status_prefix": "CONDITIONAL",
+      "candidate_status": "CONDITIONAL",
+      "expected_candidate_status": "CONDITIONAL",
+      "pass": true
+    },
+    {
+      "id": "score_70",
+      "original_status_prefix": "GO",
+      "candidate_status": "GO",
+      "expected_candidate_status": "GO",
+      "pass": true
+    },
+    {
+      "id": "score_100",
+      "original_status_prefix": "GO",
+      "candidate_status": "GO",
+      "expected_candidate_status": "GO",
+      "pass": true
+    },
+    {
+      "id": "missing_score",
+      "original_status_prefix": "NO-GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "text_score",
+      "original_status_prefix": "GO",
+      "candidate_status": "WAIT",
+      "expected_candidate_status": "WAIT",
+      "pass": true
+    },
+    {
+      "id": "all_yes_note_says_no",
+      "original_status_prefix": "WAIT",
+      "candidate_status": "GO",
+      "expected_candidate_status": "GO",
+      "pass": true
+    }
+  ],
+  "false_go_with_input_no": true,
+  "false_wait_with_note_no_and_all_answers_yes": true,
+  "negative_identity_test": {
+    "changed_one_binary_byte": true,
+    "wrong_hash_rejected_before_import": true,
+    "exit_code": 1
+  },
+  "independent_local_script_executed": "Local portable artifact_tool replay performed; updated repository check_pinned_grant_scorecard.py includes the same original-source acceptance scenarios and source baseline gate",
+  "prior_recorded_blocker_status": "RESOLVED: original upstream XLSX bytes now accessible and executable locally; earlier files documenting transfer inability retained as dated history",
+  "still_unqualified": [
+    "The unchanged source workbook is unsafe to use because it reads Gates!C2:C7 notes, not B2:B7 eligibility answers",
+    "Proposed formula only inserted in imported workbook memory, not submitted or written into source XLSX",
+    "Microsoft Excel/LibreOffice compatibility not executed",
+    "No complete security certification, current real funder rules, or authorized finance-owner approval",
+    "Candidate conceptual method promotion and source unchanged-use approval are different decisions"
+  ],
+  "disposition": "EXACT SOURCE INDEPENDENT ENGINE TEST PASS; SOURCE WORKBOOK REMAINS HOLD FOR FALSE GO/FALSE WAIT; ZERO UNCHANGED-USE APPROVALS"
+}
