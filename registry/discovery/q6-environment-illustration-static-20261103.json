@@ -1,0 +1,123 @@
+{
+  "schema_version": "q6-environment-art-static-and-source-leads-v1",
+  "as_of": "2026-11-03",
+  "main_base": "549f4d66b4295809527fcd58bad261eb713fa6ed",
+  "scope": "One individually graded static vendor-dependent game-environment SKILL plus two source-pinned rights-HOLD leads; no new consumer positive method, package acceptance, install or tests",
+  "rubric_dimensions": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "records": [
+    {
+      "name": "ai-game-environment",
+      "source_repository": "awesome-genmedia/skills",
+      "source_pin": "e4e641e21e59561fab7ab2bb7d90889e04aed84e",
+      "source_root_tree_entries": 1663,
+      "source_tree_truncated": false,
+      "skill_path": "categories/gaming/ai-game-environment/SKILL.md",
+      "skill_blob_sha": "fd3fead4c8f901aa72d27c26fc431a08052b0b35",
+      "complete_package_tree_sha": "6c36c0f95e5701f85067c0e51a755e56f945bbdf",
+      "owned_files": [
+        {
+          "path": "categories/gaming/ai-game-environment/SKILL.md",
+          "blob_sha": "fd3fead4c8f901aa72d27c26fc431a08052b0b35"
+        }
+      ],
+      "source_license": "Root MIT for authored procedure, not rights for paid provider/model outputs or user source images",
+      "source_license_sha": "ff4cf47c248de70a59902accf539c31d8c38b9f7",
+      "grade_20": 10,
+      "rubric_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rubric_notes": [
+        "Explicit level environment/biome/parallax triggers",
+        "Clear layer, viewpoint, landmark and lighting prompt sequence",
+        "Broad curl/WebFetch and remote API key with no per-request authorization",
+        "Pitfall prompts but no cancellation/retry/payment safeguards",
+        "Examples and techniques documented, no independent result verification",
+        "Entire execution depends on proprietary remote paid model",
+        "Layering method transfers but commands provider specific",
+        "Practical scale and gameplay-focus checks",
+        "No strong prompt/image trust or spending boundary",
+        "No user-validated artwork or playable-camera tests"
+      ],
+      "benefit": "Build a clearer game scene by planning camera/viewpoint, foreground/midground/background, a readable landmark, scale cue and light direction before making imagery.",
+      "nontrigger": "No authority to upload private reference art, spend provider credits, generate, publish, or approve game-ready scenes",
+      "holds": [
+        "Paid provider/API key with remote upload and egress",
+        "Unverified commercial/output/model rights",
+        "No independent rendered result, human scene review or playtest",
+        "Broad delegated Bash(curl *) tool boundary"
+      ],
+      "disposition": "STATIC REFERENCE-ONLY; no positive consumer recommendation or unchanged-use clearance",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "name": "game-art-director",
+      "source_repository": "roohe/agentic-super-skills",
+      "source_pin": "f483e54f3ad5f202a77d45f2e57f8d970b71195f",
+      "source_root_tree_entries": 8529,
+      "source_tree_truncated": false,
+      "skill_path": "skills_library/game-art-director/SKILL.md",
+      "skill_blob_sha": "c655d5567b34e6ebaa0fd4ad6eba695085cfe7cc",
+      "complete_package_tree_sha": "99235f72b64e06bebfcdb2a08e51434b59b3f6a7",
+      "observed_owned_files": 1,
+      "root_license": "NOASSERTION: no root LICENSE file was present in inspected upstream Git tree",
+      "potential_method": "Biome visual identity, macro/meso/micro landmarks, lighting, gameplay-readable value structure and style-guide review gates",
+      "hold": "No reuse rights verified; persona/authority assertions and embedded references require independent full review; no art creation/behavior demonstrated",
+      "disposition": "DISCOVERY ONLY; ungraded",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run"
+    },
+    {
+      "name": "fal-gamedev",
+      "source_repository": "fal-ai-community/skills",
+      "source_pin": "9ca850412943251fc9a466c4c29fdaf7a303a3d8",
+      "source_root_tree_entries": 132,
+      "source_tree_truncated": false,
+      "skill_path": "skills/fal-gamedev/SKILL.md",
+      "skill_blob_sha": "20c8d763c7490492ecc5afa6e73c6cad25717f0f",
+      "complete_package_tree_sha": "0827fcf033d0ebb93dceabc7ed1be0c3cffcee2e",
+      "observed_owned_files": 1,
+      "root_license": "NOASSERTION: no root LICENSE was present (unrelated nested LICENSE cannot clear this package)",
+      "potential_method": "Construct foreground/mid/background parallax assets as separate layers and verify game context",
+      "hold": "Provider-specific remote paid CLI, image uploads and downloads; unknown model/output rights and authorization; source is game-asset automation not independent painting guidance",
+      "disposition": "DISCOVERY ONLY; ungraded",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run"
+    }
+  ],
+  "independent_source_families": 3,
+  "individually_graded": 1,
+  "discovery_only_ungraded": 2,
+  "complete_source_package_trees_identified": 3,
+  "source_root_missing_licenses": 2,
+  "positive_consumer_promotions": 0,
+  "unchanged_use_approvals": 0,
+  "maturity": "ENVIRONMENT STILL PARTIAL/UNQUALIFIED; not solved by prompt-only model access or character styling",
+  "next_actions": [
+    "Find genuinely original environment-scene construction procedures independent of paid services",
+    "Review license/ownership for all source materials before copying",
+    "Test scene hierarchy and gameplay camera against human-graded examples with authorization",
+    "Require provider spend/egress and private image upload approval"
+  ]
+}
