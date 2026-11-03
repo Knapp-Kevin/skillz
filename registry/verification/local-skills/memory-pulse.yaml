@@ -3,15 +3,18 @@ skill_name: memory-pulse
 source_id: local-skills
 local_path: "skills/memory-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 659441df0952f7db302835606068c812ed81d22f
+content_blob_sha: b030f35f52c66b13892a3ad8f1e362f15ff9be5e
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
+prior_reviewed_blob_sha: 659441df0952f7db302835606068c812ed81d22f
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only source collection changed manifest fingerprint; prior semantic score is historical, not applicable unchanged."
 tags:
   use_case: [monitoring, memory, research]
   lifecycle: [discovery]
