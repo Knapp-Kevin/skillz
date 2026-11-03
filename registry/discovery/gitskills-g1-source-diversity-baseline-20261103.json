@@ -1,0 +1,583 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "artifact": "gitskills-g1-source-diversity-baseline",
+ "dataset": {
+  "name": "GitSkills",
+  "huggingface": "https://huggingface.co/datasets/mvaccargiu/gitskills",
+  "huggingface_revision": "ebab17454a7c236f8f26b183567f1a126f42e3f8",
+  "paper": "https://arxiv.org/abs/2608.10906",
+  "zenodo": "https://doi.org/10.5281/zenodo.21875637",
+  "sample_repository": "https://github.com/giuseppedestefanis/gitskills-sample (git HEAD fff3df93beeee51a5444450891751f143e38da3e observed; not cloned)",
+  "dataset_license": "CC-BY-4.0 (dataset compilation only; does NOT relicense individual creator skills)",
+  "collection_period": "July 2026 (last_commit_at max 2026-07-23T21:24:27Z)",
+  "access_method": "HTTP range-request column projection of the 31 artifacts Parquet partitions (repo_full_name, path, location_class, file_sha, name, description, dedup_primary, sibling_count, has_scripts, has_references, first_commit_author_type, last_commit_at, frontmatter_valid, body_chars) plus the complete repos and mining_runs tables; content and artifact_siblings columns were not downloaded. About 600 MB transferred of ~13.4 GB; nothing committed except derived aggregates."
+ },
+ "evidence_tier_note": "Dataset-derived figures are discovery leads (tier T-lead). They are not identity, rights, safety or usability verification. file_sha was confirmed to be the git blob SHA by spot comparison with a pinned clone.",
+ "population": {
+  "skill_file_occurrences": 3797117,
+  "repositories": 282200,
+  "owners": 195841,
+  "distinct_contents": 1877981,
+  "verbatim_copy_occurrences": 1919136,
+  "verbatim_copy_share": 0.5054,
+  "contents_single_owner": 1647626,
+  "contents_shared_across_owners": 230355,
+  "contents_shared_across_10plus_owners": 24555,
+  "max_owners_for_one_content": 897,
+  "contents_with_single_occurrence": 1489480,
+  "repositories_with_only_cross_owner_shared_contents": 47605,
+  "repositories_with_5plus_owner_unique_contents": 61042,
+  "owners_with_a_repo_having_5plus_owner_unique_contents": 49459,
+  "distinct_frontmatter_names": 845421,
+  "names_used_by_one_owner": 715037,
+  "names_used_by_20plus_owners": 5617,
+  "novel_representatives": 941243,
+  "novel_definition": "representative distinct content held by exactly one owner AND whose frontmatter name is used by at most 5 owners (excludes renamed copies of popular skills only partially; near-duplicate text is not detected)"
+ },
+ "location_classes": {
+  "skills-dir": 2102053,
+  "other": 1321412,
+  "canonical": 373652
+ },
+ "repo_license_labels_github_metadata_top20": {
+  "(none reported)": 156981,
+  "MIT": 85309,
+  "Apache-2.0": 16889,
+  "NOASSERTION": 12239,
+  "GPL-3.0": 3634,
+  "AGPL-3.0": 3093,
+  "BSD-3-Clause": 808,
+  "Unlicense": 433,
+  "GPL-2.0": 407,
+  "MPL-2.0": 393,
+  "CC0-1.0": 333,
+  "MIT-0": 278,
+  "ISC": 232,
+  "CC-BY-4.0": 210,
+  "LGPL-3.0": 183,
+  "BSD-2-Clause": 161,
+  "0BSD": 100,
+  "CC-BY-SA-4.0": 94,
+  "EUPL-1.2": 76,
+  "WTFPL": 74
+ },
+ "non_latin_script_signal_distinct_contents": {
+  "zh/ja-han": 133576,
+  "ja-kana": 28480,
+  "ko": 20090,
+  "cyrillic": 6605,
+  "arabic": 465,
+  "devanagari": 17,
+  "thai": 1097,
+  "hebrew": 473,
+  "greek": 863
+ },
+ "heuristic_capability_domains": {
+  "method": "Case-insensitive keyword rules over frontmatter name + description, first match in a fixed priority order (rules preserved in this file); domains marked * are candidate new domains not yet in registry/capability-directory.json. Precision is unmeasured and some rules are broad; use as navigation leads only.",
+  "rules": [
+   {
+    "domain": "medicine",
+    "regex": "\\b(clinic(al)?|patient|medical|medicine|diagnos|ehr|emr|fhir|hl7|icd-?10|nursing|pharma(cy|cology)?|radiolog|oncolog|cardiolog|healthcare|hipaa|telehealth|dental|veterinar)"
+   },
+   {
+    "domain": "law",
+    "regex": "\\b(legal|lawyer|attorney|contract review|litigation|statute|case law|court|paralegal|gdpr|regulator(y)? (filing|analysis)|jurisdiction|patent|trademark|terms of service)"
+   },
+   {
+    "domain": "finance",
+    "regex": "\\b(financ|accounting|bookkeep|invoice|tax(es)?\\b|budget|portfolio|trading|stock|equity|valuation|dcf|ledger|payroll|banking|crypto(currency)?|defi|forex|quantitative finance)"
+   },
+   {
+    "domain": "robotics-iot",
+    "regex": "\\b(robot|ros2?\\b|drone|uav|iot\\b|embedded|firmware|microcontroller|arduino|raspberry pi|plc\\b|scada|esp32|sensor fusion|slam\\b)"
+   },
+   {
+    "domain": "manufacturing-industrial*",
+    "regex": "\\b(manufactur|factory|cnc\\b|machining|production line|lean six sigma|six sigma|quality control|mes\\b|bill of materials|bom\\b|supply chain|warehouse|logistics|inventory management|procurement)"
+   },
+   {
+    "domain": "energy-environment*",
+    "regex": "\\b(energy|solar|wind power|grid\\b|utility|utilities|carbon|emission|climate|sustainab|esg\\b|environmental|hydrolog|agricultur|farm(ing)?\\b|crop)"
+   },
+   {
+    "domain": "government-public*",
+    "regex": "\\b(government|public sector|municipal|civic|policy analysis|procure(ment)? (rfp|tender)|grant (writing|proposal)|nonprofit|ngo\\b|election)"
+   },
+   {
+    "domain": "hr-people*",
+    "regex": "\\b(recruit|hiring|onboarding employees|human resources|\\bhr\\b|performance review|employee|compensation|benefits admin|workforce|talent)"
+   },
+   {
+    "domain": "education",
+    "regex": "\\b(teach|teacher|lesson plan|curriculum|tutor|student|course design|quiz|homework|pedagog|classroom|learning objective|flashcard|exam prep|syllabus)"
+   },
+   {
+    "domain": "career",
+    "regex": "\\b(resume|cv\\b|cover letter|job (search|application|interview)|interview prep|linkedin profile|career)"
+   },
+   {
+    "domain": "science",
+    "regex": "\\b(physics|chemistry|chemical|biolog|bioinformat|genom|protein|molecul|astronom|geolog|lab(oratory)? (protocol|notebook)|experiment design|materials science|scientific)"
+   },
+   {
+    "domain": "research",
+    "regex": "\\b(literature review|systematic review|citation|academic|paper writing|research paper|arxiv|pubmed|scholar|fact[- ]check|meta-analysis|survey research|thesis)"
+   },
+   {
+    "domain": "ml-accelerators",
+    "regex": "\\b(cuda|gpu kernel|triton\\b|tpu\\b|quantiz|inference serving|vllm|tensorrt|distributed training|fsdp|deepspeed)"
+   },
+   {
+    "domain": "security",
+    "regex": "\\b(security|vulnerab|pentest|penetration test|threat model|owasp|cve-|malware|exploit|siem|soc\\b|incident response|secrets? (scan|management)|auth(entication|orization)|zero trust|forensic|red team|blue team)"
+   },
+   {
+    "domain": "memory-context",
+    "regex": "\\b(memory|context window|context engineering|recall|knowledge base|retrieval|rag\\b|embedding|vector (store|db|database)|summariz|session (notes|handoff)|handoff)"
+   },
+   {
+    "domain": "agent-mcp-development",
+    "regex": "\\b(agent|mcp\\b|model context protocol|subagent|multi-agent|orchestrat|tool[- ]use|prompt engineering|llm|claude code|codex|skill (creator|author)|hook(s)?\\b|eval(uation)?s? (harness|suite))"
+   },
+   {
+    "domain": "testing",
+    "regex": "\\b(test(ing|s)?\\b|tdd\\b|unit test|e2e|end-to-end|playwright|cypress|jest|pytest|qa\\b|regression|load test|fuzz)"
+   },
+   {
+    "domain": "cloud-devops",
+    "regex": "\\b(devops|kubernetes|k8s|docker|terraform|helm|ci/cd|cicd|github actions|deploy|aws\\b|azure|gcp\\b|cloud|infrastructure|sre\\b|observability|monitoring|ansible|serverless)"
+   },
+   {
+    "domain": "analytics",
+    "regex": "\\b(analytics|dashboard|sql\\b|data analysis|data pipeline|etl\\b|bi\\b|tableau|power bi|metrics|kpi|forecast|statistic|a/b test|dbt\\b|spark\\b|pandas)"
+   },
+   {
+    "domain": "marketing",
+    "regex": "\\b(marketing|seo\\b|copywrit|ad(vertis|s)\\b|campaign|brand(ing)?\\b|social media|newsletter|content strategy|growth hack|email marketing|landing page copy)"
+   },
+   {
+    "domain": "sales",
+    "regex": "\\b(sales|prospect|lead gen|crm\\b|cold (email|outreach)|pipeline review|deal|account executive|quota|proposal writing)"
+   },
+   {
+    "domain": "product",
+    "regex": "\\b(product manag|prd\\b|product requirement|roadmap|user stor|feature prioriti|product discovery|okr|jobs[- ]to[- ]be[- ]done)"
+   },
+   {
+    "domain": "business",
+    "regex": "\\b(business plan|strategy|operations|consulting|startup|pitch deck|business model|market analysis|competitive analysis|executive summary|governance)"
+   },
+   {
+    "domain": "ux-ui",
+    "regex": "\\b(ux\\b|ui\\b|user experience|usability|wireframe|prototype|figma|design system|accessib|wcag|a11y|user research|persona)"
+   },
+   {
+    "domain": "visual-design",
+    "regex": "\\b(graphic design|typography|logo|color palette|poster|infographic|visual design|branding kit|illustrat|image generation|svg\\b)"
+   },
+   {
+    "domain": "3d-cad-animation",
+    "regex": "\\b(blender|3d model|cad\\b|freecad|openscad|autocad|solidworks|rendering|animation|rigging|unity3d|unreal)"
+   },
+   {
+    "domain": "game-design",
+    "regex": "\\b(game design|game dev|gamedev|godot|unity\\b|level design|tabletop|dungeon|rpg\\b|d&d|game mechanic)"
+   },
+   {
+    "domain": "fiction-narrative-worldbuilding",
+    "regex": "\\b(fiction|novel|story|storytelling|worldbuild|screenplay|character arc|plot|poem|poetry|manuscript)"
+   },
+   {
+    "domain": "music-composition",
+    "regex": "\\b(music|melody|chord|composition|midi\\b|song(writing)?|lyrics|harmony|beat making)"
+   },
+   {
+    "domain": "audio-voice-sound",
+    "regex": "\\b(audio|podcast|voice|speech|tts\\b|text-to-speech|transcri|sound design|mixing|mastering)"
+   },
+   {
+    "domain": "video-film",
+    "regex": "\\b(video|film|youtube|editing timeline|subtitle|caption|ffmpeg|storyboard|cinematograph)"
+   },
+   {
+    "domain": "technical-writing",
+    "regex": "\\b(documentation|docs\\b|readme|api docs|changelog|release notes|technical writ|tutorial|adr\\b|architecture decision)"
+   },
+   {
+    "domain": "communication",
+    "regex": "\\b(presentation|slides|public speaking|negotiat|meeting (notes|facilitat)|email (writing|draft)|communication|feedback conversation)"
+   },
+   {
+    "domain": "time-productivity",
+    "regex": "\\b(productivity|todo|to-do|task management|calendar|schedul|habit|pomodoro|gtd\\b|daily (plan|review)|journal(ing)?\\b|notion\\b|obsidian)"
+   },
+   {
+    "domain": "planning",
+    "regex": "\\b(planning|project plan|gantt|milestone|risk register|decision (framework|matrix)|work breakdown|estimate)"
+   },
+   {
+    "domain": "wellbeing-lifestyle*",
+    "regex": "\\b(fitness|workout|nutrition|diet|recipe|cooking|meditation|mental health|therapy|wellness|sleep|travel itinerary|parenting|relationship)"
+   },
+   {
+    "domain": "software-engineering",
+    "regex": "\\b(code|coding|refactor|frontend|backend|react|python|typescript|javascript|rust\\b|golang|java\\b|api\\b|database|git\\b|commit|pull request|debug|lint|architecture|migration|framework)"
+   }
+  ],
+  "rows": [
+   {
+    "domain": "unclassified",
+    "distinct_contents": 598539,
+    "novel_representatives": 239111,
+    "owners": 85872,
+    "repositories": 106634,
+    "skillz_directory_examples_now": null
+   },
+   {
+    "domain": "agent-mcp-development",
+    "distinct_contents": 224793,
+    "novel_representatives": 127355,
+    "owners": 60370,
+    "repositories": 74419,
+    "skillz_directory_examples_now": 86
+   },
+   {
+    "domain": "software-engineering",
+    "distinct_contents": 174411,
+    "novel_representatives": 86340,
+    "owners": 54870,
+    "repositories": 64592,
+    "skillz_directory_examples_now": 513
+   },
+   {
+    "domain": "testing",
+    "distinct_contents": 113676,
+    "novel_representatives": 56908,
+    "owners": 41324,
+    "repositories": 48346,
+    "skillz_directory_examples_now": 65
+   },
+   {
+    "domain": "finance",
+    "distinct_contents": 87867,
+    "novel_representatives": 55546,
+    "owners": 28138,
+    "repositories": 31844,
+    "skillz_directory_examples_now": 28
+   },
+   {
+    "domain": "security",
+    "distinct_contents": 81452,
+    "novel_representatives": 37935,
+    "owners": 22782,
+    "repositories": 25722,
+    "skillz_directory_examples_now": 85
+   },
+   {
+    "domain": "cloud-devops",
+    "distinct_contents": 70344,
+    "novel_representatives": 37980,
+    "owners": 21653,
+    "repositories": 24499,
+    "skillz_directory_examples_now": 140
+   },
+   {
+    "domain": "memory-context",
+    "distinct_contents": 66242,
+    "novel_representatives": 38222,
+    "owners": 26900,
+    "repositories": 30520,
+    "skillz_directory_examples_now": 25
+   },
+   {
+    "domain": "ux-ui",
+    "distinct_contents": 49503,
+    "novel_representatives": 26508,
+    "owners": 22584,
+    "repositories": 24810,
+    "skillz_directory_examples_now": 30
+   },
+   {
+    "domain": "technical-writing",
+    "distinct_contents": 40525,
+    "novel_representatives": 19211,
+    "owners": 20378,
+    "repositories": 23105,
+    "skillz_directory_examples_now": 27
+   },
+   {
+    "domain": "medicine",
+    "distinct_contents": 37250,
+    "novel_representatives": 23832,
+    "owners": 14875,
+    "repositories": 16381,
+    "skillz_directory_examples_now": 5
+   },
+   {
+    "domain": "analytics",
+    "distinct_contents": 32728,
+    "novel_representatives": 19106,
+    "owners": 14206,
+    "repositories": 15380,
+    "skillz_directory_examples_now": 39
+   },
+   {
+    "domain": "marketing",
+    "distinct_contents": 28757,
+    "novel_representatives": 14146,
+    "owners": 9112,
+    "repositories": 9877,
+    "skillz_directory_examples_now": 31
+   },
+   {
+    "domain": "business",
+    "distinct_contents": 24279,
+    "novel_representatives": 13557,
+    "owners": 10404,
+    "repositories": 11252,
+    "skillz_directory_examples_now": 17
+   },
+   {
+    "domain": "time-productivity",
+    "distinct_contents": 18319,
+    "novel_representatives": 9989,
+    "owners": 8640,
+    "repositories": 9159,
+    "skillz_directory_examples_now": 13
+   },
+   {
+    "domain": "research",
+    "distinct_contents": 17547,
+    "novel_representatives": 9526,
+    "owners": 7726,
+    "repositories": 8347,
+    "skillz_directory_examples_now": 79
+   },
+   {
+    "domain": "energy-environment*",
+    "distinct_contents": 16835,
+    "novel_representatives": 11152,
+    "owners": 7293,
+    "repositories": 7820,
+    "skillz_directory_examples_now": null
+   },
+   {
+    "domain": "science",
+    "distinct_contents": 16688,
+    "novel_representatives": 10114,
+    "owners": 3520,
+    "repositories": 3788,
+    "skillz_directory_examples_now": 41
+   },
+   {
+    "domain": "education",
+    "distinct_contents": 15676,
+    "novel_representatives": 9411,
+    "owners": 7711,
+    "repositories": 8280,
+    "skillz_directory_examples_now": 5
+   },
+   {
+    "domain": "planning",
+    "distinct_contents": 15172,
+    "novel_representatives": 7064,
+    "owners": 7716,
+    "repositories": 8306,
+    "skillz_directory_examples_now": 19
+   },
+   {
+    "domain": "audio-voice-sound",
+    "distinct_contents": 13644,
+    "novel_representatives": 7921,
+    "owners": 6376,
+    "repositories": 6839,
+    "skillz_directory_examples_now": 3
+   },
+   {
+    "domain": "law",
+    "distinct_contents": 12936,
+    "novel_representatives": 9316,
+    "owners": 3321,
+    "repositories": 3538,
+    "skillz_directory_examples_now": 4
+   },
+   {
+    "domain": "product",
+    "distinct_contents": 12726,
+    "novel_representatives": 6089,
+    "owners": 6644,
+    "repositories": 7161,
+    "skillz_directory_examples_now": 21
+   },
+   {
+    "domain": "robotics-iot",
+    "distinct_contents": 11582,
+    "novel_representatives": 7963,
+    "owners": 5064,
+    "repositories": 5370,
+    "skillz_directory_examples_now": 8
+   },
+   {
+    "domain": "career",
+    "distinct_contents": 11187,
+    "novel_representatives": 6613,
+    "owners": 6701,
+    "repositories": 7087,
+    "skillz_directory_examples_now": 7
+   },
+   {
+    "domain": "manufacturing-industrial*",
+    "distinct_contents": 11073,
+    "novel_representatives": 6611,
+    "owners": 4790,
+    "repositories": 5125,
+    "skillz_directory_examples_now": null
+   },
+   {
+    "domain": "fiction-narrative-worldbuilding",
+    "distinct_contents": 8883,
+    "novel_representatives": 5090,
+    "owners": 3827,
+    "repositories": 4033,
+    "skillz_directory_examples_now": 3
+   },
+   {
+    "domain": "sales",
+    "distinct_contents": 8357,
+    "novel_representatives": 5274,
+    "owners": 2842,
+    "repositories": 2980,
+    "skillz_directory_examples_now": 4
+   },
+   {
+    "domain": "3d-cad-animation",
+    "distinct_contents": 8129,
+    "novel_representatives": 4759,
+    "owners": 4197,
+    "repositories": 4456,
+    "skillz_directory_examples_now": 7
+   },
+   {
+    "domain": "visual-design",
+    "distinct_contents": 8005,
+    "novel_representatives": 4239,
+    "owners": 4597,
+    "repositories": 4840,
+    "skillz_directory_examples_now": 35
+   },
+   {
+    "domain": "video-film",
+    "distinct_contents": 7812,
+    "novel_representatives": 4841,
+    "owners": 3535,
+    "repositories": 3698,
+    "skillz_directory_examples_now": 6
+   },
+   {
+    "domain": "communication",
+    "distinct_contents": 7442,
+    "novel_representatives": 3877,
+    "owners": 4151,
+    "repositories": 4338,
+    "skillz_directory_examples_now": 20
+   },
+   {
+    "domain": "hr-people*",
+    "distinct_contents": 5627,
+    "novel_representatives": 3737,
+    "owners": 2519,
+    "repositories": 2637,
+    "skillz_directory_examples_now": null
+   },
+   {
+    "domain": "wellbeing-lifestyle*",
+    "distinct_contents": 5598,
+    "novel_representatives": 3415,
+    "owners": 2964,
+    "repositories": 3093,
+    "skillz_directory_examples_now": null
+   },
+   {
+    "domain": "music-composition",
+    "distinct_contents": 5526,
+    "novel_representatives": 3158,
+    "owners": 2935,
+    "repositories": 3084,
+    "skillz_directory_examples_now": 0
+   },
+   {
+    "domain": "game-design",
+    "distinct_contents": 3530,
+    "novel_representatives": 1833,
+    "owners": 1263,
+    "repositories": 1342,
+    "skillz_directory_examples_now": 3
+   },
+   {
+    "domain": "ml-accelerators",
+    "distinct_contents": 3510,
+    "novel_representatives": 2210,
+    "owners": 1373,
+    "repositories": 1527,
+    "skillz_directory_examples_now": 19
+   },
+   {
+    "domain": "government-public*",
+    "distinct_contents": 1811,
+    "novel_representatives": 1284,
+    "owners": 830,
+    "repositories": 863,
+    "skillz_directory_examples_now": null
+   }
+  ]
+ },
+ "skillz_baseline_before_campaign": {
+  "registered_source_identities": 25,
+  "governed_review_records": 1039,
+  "four_source_current_standard_decisions": 4809,
+  "four_source_raw_paths": 4813,
+  "archived_65_source_leads": "registry/discovery/archived-65-source-diversity-leads-20261102.csv",
+  "repositories_mentioned_anywhere_in_registry_docs": "2,635 distinct github owner/repo strings (mostly upstream links inside reviewed cards; mentions are not source identities)"
+ },
+ "counters_g1": {
+  "source_leads_gitskills_repositories": 282200,
+  "source_leads_gitskills_repositories_already_known_to_skillz": 55,
+  "source_leads_selected_for_verification_g1": 561,
+  "verified_canonical_source_identities_T2_full_listing": 486,
+  "verified_canonical_source_identities_T1_pin_only": 32,
+  "unreachable_at_verification": 43,
+  "verified_original_author_candidates_with_skills": 421,
+  "aggregator_or_mirror_suspected": 75,
+  "very_large_collection_role_unresolved": 16,
+  "skill_md_paths_observed_in_T2_repos": 170304,
+  "distinct_package_trees_observed_in_T2_repos_sum_per_repo": 162749,
+  "package_records_listed": 27832,
+  "unique_skill_blobs_listed": 26431,
+  "unique_package_trees_listed": 26497,
+  "first_class_candidate_packages_listed": 18486,
+  "first_class_candidate_distinct_blobs": 18411,
+  "exact_duplicate_exposures_in_repo_duplicate_paths_listed": 1242,
+  "exact_duplicate_exposures_cross_owner_in_gitskills_listed": 1056,
+  "method_alternative_families_examined": 12,
+  "method_skills_read": 97,
+  "method_skills_on_family": 42,
+  "distinct_methodological_alternatives": 42,
+  "source_vetting_reviews_added": 0,
+  "governed_admissions_added": 0,
+  "security_scans": 0,
+  "behavioral_validations": 0
+ },
+ "selection_method": {
+  "excluded": "91 repositories already registered, archived (65-source CSV) or in the four dynamic sources, plus every repository of their owners",
+  "strata": {
+   "volume": "per heuristic domain, up to 8 repositories with the most novel representatives in that domain (>=5)",
+   "specialist": "per domain, up to 6 repositories with 3-60 novel representatives of which >=60% are in that domain",
+   "multilingual": "per script, up to 6 repositories with >=3 owner-unique contents whose description uses that script"
+  },
+  "one_repository_per_owner": true,
+  "domain_order": "rarest domain first so rare domains claim owners first",
+  "forks_excluded": true,
+  "popularity": "stars used only as a tiebreak"
+ }
+}

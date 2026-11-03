@@ -1,0 +1,3001 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "artifact": "gitskills-g1-method-alternatives",
+ "method": "For 12 underserved capability families, 10 owner-unique skills from 10 different owners (none already known to skillz) were picked by keyword match on name/description in deterministic hash order; each was re-fetched at the current HEAD with git, its blob and package tree recorded, and 4 independent read-only workers read the SKILL.md (untrusted data, nothing executed) to record mechanism, inputs/outputs, dependencies, authority/data boundaries and relation to the other picks.",
+ "not_claimed": "Not a quality review, rubric grade, admission, security scan or approval. On-family rates measure the keyword picker, not the population.",
+ "totals": {
+  "read": 97,
+  "on": 42,
+  "methods": 42
+ },
+ "families": [
+  {
+   "family": "legal-contract-review",
+   "picked": 10,
+   "verified_and_read": 7,
+   "on_family": 6,
+   "keyword_pick_precision": 0.86,
+   "distinct_methods": 6,
+   "summary": {
+    "family": "legal-contract-review",
+    "skills_on_family": 6,
+    "distinct_methods": [
+     {
+      "label": "anchor-ops-tracked-changes-redline",
+      "description": "Convert requested changes into anchored edit operations and apply them as minimal word-level Word tracked changes with a match report.",
+      "exemplar_indices": [
+       "000"
+      ]
+     },
+     {
+      "label": "evidence-grounded-markup-risk-memo",
+      "description": "Provision-by-provision review of counterparty markup tested against diligence facts and companion deal documents, output as severity-ranked memo with plain-text change markers and owner/milestone actions.",
+      "exemplar_indices": [
+       "007",
+       "003"
+      ]
+     },
+     {
+      "label": "statutory-standard-terms-control-path",
+      "description": "Fixed statutory test sequence (incorporation, interpretation, content control, legal consequence) yielding traffic-light verdict plus safe and fallback replacement wording.",
+      "exemplar_indices": [
+       "009"
+      ]
+     },
+     {
+      "label": "single-clause-type-playbook",
+      "description": "Party/jurisdiction intake then fixed analysis template and dual (balanced/favorable) drafting for one clause type.",
+      "exemplar_indices": [
+       "004"
+      ]
+     },
+     {
+      "label": "eval-harness-for-legal-ai",
+      "description": "Attorney-labeled test set and threshold gates measuring clause extraction, risk calibration, redline quality and UPL compliance of a legal AI pipeline.",
+      "exemplar_indices": [
+       "002"
+      ]
+     },
+     {
+      "label": "deal-team-issue-matrix-silent-change-log",
+      "description": "Deal-perspective intake and issue matrix (fact/norm/evidence/assessment/counter-argument/next step) with silent-change detection.",
+      "exemplar_indices": [
+       "003"
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "Pair analysis with a mechanical, verifiable redline output (000) instead of prose-only suggestions",
+     "Ground each flagged change in the factual record and cross-document interactions, close every issue with consequence and negotiation ask (007)",
+     "Plain-text change markers that survive format loss (007)",
+     "Silent-change log for unannounced counterparty edits (003)",
+     "Anti-fabrication citation rule requiring court/date/docket/free source (003, 009)",
+     "Safe replacement plus negotiable fallback wording (009, 004)",
+     "Measurable quality gates incl. UPL/human-review disclaimers (002)"
+    ],
+    "coverage_gaps": [
+     "No skill performs actual version diffing of two contract drafts to detect silent changes (003 asserts but gives no procedure)",
+     "No playbook-driven review against an organization's own standard positions/fallback ladder",
+     "No full-contract clause inventory/missing-clause check for common commercial agreements (NDA/MSA/SaaS) outside eval harness",
+     "No obligation/deadline extraction or post-signature tracking",
+     "No handling of tables, schedules, headers/footers in redlines",
+     "Little coverage for non-US/non-German jurisdictions; no privilege/confidentiality handling procedure for uploading contracts"
+    ],
+    "high_risk_patterns": [
+     "Local script execution plus pip install to produce redlines (000)",
+     "Sending confidential contracts to external endpoints/LLM judges (002)",
+     "Templated statute lists that may push irrelevant norms (003)",
+     "Aggregator mirror with uncertain provenance (009)",
+     "Off-family item mis-bucketed (001)"
+    ]
+   },
+   "skills": [
+    {
+     "index": "000",
+     "repository": "CogBaseAI/cogbase",
+     "on_family": true,
+     "purpose": "Apply edits (from a change document or inline instructions) to a base .docx and return a Word tracked-changes redline.",
+     "mechanism": "Agent reads base and change source, converts changes into anchor-based operations (replace/delete/insert_after/append) with verbatim anchors, writes ops.json and runs bundled apply_operations.py, which word-diffs replacements and emits run-level w:ins/w:del. Agent then checks the per-op matched/granularity report, surfaces unmatched anchors rather than dropping them, and saves via save_artifact with a download link.",
+     "mechanism_label": "anchor-ops-tracked-changes-redline",
+     "inputs": "base .docx (app doc id); change document or inline edit instructions",
+     "outputs": "redlined .docx with tracked changes; JSON match report; summary with unmatched ops",
+     "dependencies": [
+      "python-docx (pip install)",
+      "bundled apply_operations.py",
+      "host app tools read_document/fetch_document/save_artifact/shell"
+     ],
+     "authority_data_boundaries": "Runs a local Python helper via shell and requires pip install of python-docx; writes output file and publishes a download artifact; processes possibly confidential contract text. No external transmission described beyond host app.",
+     "jurisdiction_or_language": "language-agnostic (CJK per-character diff noted)",
+     "relation": "distinct-method",
+     "notable_strengths": "Concrete minimal-diff redline engine; explicit unmatched-anchor reporting; accept-all/reject-all exactness guarantee; preserves formatting.",
+     "notable_risks_or_gaps": "Mechanical edit application only - no legal risk analysis; ignores tables/headers/footers; requires host-specific tools; pip install dependency; blob changed since July (re-review needed).",
+     "root_license_observed": "Apache-2.0",
+     "pinned_revision": "9d9b5e41ee8278753a6d0b3cd3ba75f6c88230c5",
+     "path": "skills/edit-docx/SKILL.md",
+     "skill_blob": "656d26557326abd7e8e5b186aad1f5c62c67ac0b",
+     "package_tree": "202a8d92a8e1713cd8a76105bd5e80b594ef126a",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "001",
+     "repository": "daemon-blockint-tech/Agentic-Enteprises-Skill",
+     "on_family": false,
+     "purpose": "General supply-chain management guidance (sourcing, inventory, logistics, supplier scorecards).",
+     "mechanism": "Router SKILL.md with six workflow areas each pointing to a references/ file; lists outputs such as supply plan, sourcing award matrix, risk register. Explicitly defers contract legal redlines to a separate commercial-counsel skill.",
+     "mechanism_label": "supply-chain-ops-router",
+     "inputs": "supply/sourcing questions",
+     "outputs": "plans, scorecards, risk registers",
+     "dependencies": [
+      "references/*.md (not inspected)"
+     ],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "none",
+     "relation": "off-family",
+     "notable_strengths": "Clear scope exclusions/handoff table.",
+     "notable_risks_or_gaps": "Not a contract-review skill; misclassified into this family; body is thin, content lives in uninspected references.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "526df1c1377ee392ce2448c370d597c42da75402",
+     "path": "supply-chain-manager/SKILL.md",
+     "skill_blob": "f76df5416e61c3e68a245bc68c9a7f28edb0d81b",
+     "package_tree": "afd2054af7773ec09acdedc3e363e12309f447a9",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "002",
+     "repository": "frootai/frootai",
+     "on_family": true,
+     "purpose": "Evaluate a deployed legal-document AI pipeline for clause extraction, risk calibration, redline quality and UPL/privilege compliance.",
+     "mechanism": "Builds an attorney-annotated test set (NDA/MSA/SLA/employment/edge cases), runs eval scripts per dimension against a pipeline endpoint, compares to threshold tables (e.g., clause detection >90%, UPL disclaimer 100%), uses an LLM judge (gpt-4o) for redline soundness, then generates a report.",
+     "mechanism_label": "eval-harness-for-legal-ai",
+     "inputs": "attorney-annotated contracts; deployed pipeline endpoint; guardrails config",
+     "outputs": "metric JSON per dimension; evaluation report.md",
+     "dependencies": [
+      "Python 3.11",
+      "azure-ai-evaluation",
+      "gpt-4o judge",
+      "evaluation/*.py scripts (not bundled in view)",
+      "$PIPELINE_ENDPOINT"
+     ],
+     "authority_data_boundaries": "Sends contract test data to a pipeline endpoint and to an external LLM judge; contracts may be confidential; requires prior deploy skill.",
+     "jurisdiction_or_language": "US-centric (Delaware example; UPL concept)",
+     "relation": "distinct-method",
+     "notable_strengths": "Only skill that measures quality of contract review output; explicit non-negotiable UPL/privilege gates; balanced-redline metric.",
+     "notable_risks_or_gaps": "Meta-evaluation, not review itself; referenced scripts not shown; thresholds unsourced; 'Attorney Work Product' marker on all outputs may be inappropriate.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "da596a3bc9a4191f4c5f704926ee85af2a7e5490",
+     "path": "solution-plays/53-legal-document-ai/.github/skills/evaluate-legal-document-ai/SKILL.md",
+     "skill_blob": "f7719aec28f7294af64eb75206fb134571d3bbb6",
+     "package_tree": "6e99832c28567a89fea8a9b6cebe39753318f6c3",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "003",
+     "repository": "Klotzkette/claude-fuer-deutsches-recht",
+     "on_family": true,
+     "purpose": "German Big-Law M&A redline comparison: compare markups, extract key issues, detect silent changes, propose responses.",
+     "mechanism": "Deal-practical intake table (perspective, phase, material, deadline, target output), then sort by company form/document/decision-maker/deadline; produce a matrix Tatsache/Norm/Beleg/Wertung/Gegenargument/naechster Schritt with risk traffic light and owner. Quality gate checks party perspective, deadlines, assumptions vs facts, and a concrete next step; requires live verification of norms via public legal databases.",
+     "mechanism_label": "deal-team-issue-matrix-silent-change-log",
+     "inputs": "base draft and counterparty markup; deal context",
+     "outputs": "Key Issues List, Silent-Change-Log, counter-markup proposals, decision matrix, workstream table",
+     "dependencies": [
+      "gesetze-im-internet.de, dejure.org, openJur, court databases (live lookup)"
+     ],
+     "authority_data_boundaries": "Directs live web lookups of statutes/case law; handles confidential deal documents. No consequential actions.",
+     "jurisdiction_or_language": "Germany (GmbHG, AktG, HGB, UmwG); German language",
+     "relation": "distinct-method",
+     "notable_strengths": "Silent-change detection framing; anti-hallucination citation rule (court, date, docket, free source); deadline-first triage.",
+     "notable_risks_or_gaps": "Heavily templated boilerplate (generic norm lists incl. tax/professional law not relevant to redlines); no concrete diff procedure; blob changed since July.",
+     "root_license_observed": "Apache-2.0",
+     "pinned_revision": "43a8b46b6b2feda274a51c91000b203277fe3887",
+     "path": "grosskanzlei-corporate-ma/skills/redline-comparison-automation/SKILL.md",
+     "skill_blob": "2513045b3def7bd120a0e25859aac40eeb187b02",
+     "package_tree": "4087a898a28d6f219c12e3403b46e3fa8288e1df",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "004",
+     "repository": "scholarly360/contract-intelligence",
+     "on_family": true,
+     "purpose": "Analyze, redline or draft Representations and Warranties clauses in merger agreements.",
+     "mechanism": "Three-question intake (party, jurisdiction, review vs draft); review produces fixed template: plain-language summary, key provisions, risk table High/Medium/Low, recommended redlines, market-standard comparison; drafting yields balanced and client-favorable versions plus negotiation notes. Defers to scripts/playbook.md for fallback positions.",
+     "mechanism_label": "single-clause-type-playbook",
+     "inputs": "clause text; party; jurisdiction",
+     "outputs": "structured clause analysis; balanced and favorable drafts; negotiation notes",
+     "dependencies": [
+      "scripts/playbook.md (not inspected)"
+     ],
+     "authority_data_boundaries": "none observed (not-legal-advice caveat)",
+     "jurisdiction_or_language": "common-law general; jurisdiction asked",
+     "relation": "distinct-method",
+     "notable_strengths": "Dual-version drafting with anticipated pushback; simple portable output template.",
+     "notable_risks_or_gaps": "Generic template (likely one of many clause x deal-type clones); real substance in uninspected playbook; 'market standard' comparison without data source.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "d7f80b691592de5da1addd465dbffb6f1ace3d59",
+     "path": "skills/representations-and-warranties-mergers/SKILL.md",
+     "skill_blob": "3fa482382cb418dbdbf0cc4dc4783fb6cd921669",
+     "package_tree": "051cb34d64bd6d28f22fac9be020dc2ad7c4b9fc",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "007",
+     "repository": "HHHHHejia/awesome-legal-aiagent-skills",
+     "on_family": true,
+     "purpose": "Risk-prioritized analysis of counterparty markup of an environmental indemnity agreement, grounded in diligence findings.",
+     "mechanism": "Confirms operative document set, per-site triage, then provision-by-provision review testing each change against diligence (RECs, remediation), caps/baskets vs remediation envelope, survival vs discovery timelines, claims mechanics and credit support; each issue closed with magnitude, interacting document and consequence. Output is a memo with severity legend, ranked issue table, plain-text change markers ([DELETED]/[INSERTED]/[REPLACED]) and role-assigned recommended actions tied to milestones.",
+     "mechanism_label": "evidence-grounded-markup-risk-memo",
+     "inputs": "original draft, counterparty redline, purchase agreement, diligence reports, financing terms",
+     "outputs": "risk-ranked redline analysis memorandum (eia-redline-analysis-memo.docx)",
+     "dependencies": [],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "US (CERCLA s.107, state cleanup statutes)",
+     "relation": "distinct-method",
+     "notable_strengths": "Ties each markup to factual record; explicit failure-mode list; formatting-independent change markers; cross-document consistency checks; no invented arithmetic.",
+     "notable_risks_or_gaps": "Narrow subject (environmental indemnity); no tooling for actual diff extraction; hardcoded output filename; no root license file observed.",
+     "root_license_observed": "none",
+     "pinned_revision": "19c01cd63fc9f204bd53bdab6da3724e47437add",
+     "path": "environmental-esg/analyze-counterparty-markup-of-environmental-indemnity-agreement/SKILL.md",
+     "skill_blob": "4ede4061b9b6a623c76802d179fb005b9348ba19",
+     "package_tree": "b76c25874d333f5c59ab208475c0ecc810d1d762",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "009",
+     "repository": "majiayu000/claude-skill-registry-data",
+     "on_family": true,
+     "purpose": "Review, redline and redraft a German bonus/discount (Bonus Rabatt) clause under AGB (standard terms) control.",
+     "mechanism": "Minimal intake (role, clause, contract, goal, evidence), then a 7-step test path: verify BGB 305-310 currency, scope (AGB vs individual agreement, B2B/B2C), customer-hostile interpretation, content control 307-309, special focus, legal consequence (306, UKlaG), and at least one safe replacement plus fallback. Output is a findings table with Gruen/Gelb/Rot risk light.",
+     "mechanism_label": "statutory-standard-terms-control-path",
+     "inputs": "clause text and context; party role",
+     "outputs": "clause traffic light, redline, replacement and fallback wording, short reasoning",
+     "dependencies": [
+      "references/QUELLEN.md etc. (not inspected)",
+      "gesetze-im-internet.de live check"
+     ],
+     "authority_data_boundaries": "Directs live statute lookup; may handle customer data evidence (screenshots, emails).",
+     "jurisdiction_or_language": "Germany (BGB AGB law); German language",
+     "relation": "distinct-method",
+     "notable_strengths": "Rigorous statutory test sequence; B2B vs B2C distinction; prohibition on fake citations and on geltungserhaltende Reduktion.",
+     "notable_risks_or_gaps": "Mirrored copy in an aggregator registry (provenance likely Klotzkette-style upstream; identity unconfirmed); clause-module template likely cloned across many clause types; no root license.",
+     "root_license_observed": "none",
+     "pinned_revision": "007e050f649424d0fa77ffcbc64cb17e344503b5",
+     "path": "domains/bonus-rabatt/SKILL.md",
+     "skill_blob": "0616a57e510e3c36d0074e476fa97644637173cc",
+     "package_tree": "8c3927fe1fece38e0820fc658c96a0c3daa8b173",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "clinical-documentation",
+   "picked": 10,
+   "verified_and_read": 10,
+   "on_family": 5,
+   "keyword_pick_precision": 0.5,
+   "distinct_methods": 5,
+   "summary": {
+    "family": "clinical-documentation",
+    "skills_on_family": 5,
+    "distinct_methods": [
+     {
+      "label": "manifested-chronological-abstraction-with-provenance-tags",
+      "description": "Inventory sources, extract fixed elements in date order, tag inferred/secondary/unverified data, generate CDI queries, reconcile against manifest and sample-audit.",
+      "exemplar_indices": [
+       "013"
+      ]
+     },
+     {
+      "label": "soap-section-template-with-rules",
+      "description": "Section-by-section SOAP authoring with HPI mnemonic, strict S/O/A separation, problem-organized actionable plan, safety netting and anti-copy-forward rules.",
+      "exemplar_indices": [
+       "016"
+      ]
+     },
+     {
+      "label": "compliant-cdi-query-checklist",
+      "description": "Non-leading, evidence-based physician query drafting with multiple choice and 'unable to determine' options.",
+      "exemplar_indices": [
+       "014",
+       "013"
+      ]
+     },
+     {
+      "label": "atomic-claim-grounding-eval",
+      "description": "Score generated notes by decomposing into atomic claims and checking support/contradiction against the transcript, plus coverage and concept F1.",
+      "exemplar_indices": [
+       "015"
+      ]
+     },
+     {
+      "label": "vendor-api-ambient-scribe-client",
+      "description": "Delegate note generation to an ambient-AI vendor API with source citations back to audio segments.",
+      "exemplar_indices": [
+       "011"
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "Fact vs inference vs secondary-reference tagging with [INFERRED]/[PER:]/[VERIFY] markers (013)",
+     "Source manifest with completeness reconciliation before and after drafting (013)",
+     "Atomic-claim grounding self-check against the transcript before finalizing a note (015)",
+     "Strict SOAP section boundary rules, safety-netting and no copy-forward (016)",
+     "Non-leading CDI query format with 'unable to determine' option (014/013)",
+     "Per-statement source citations back to transcript segments (011)"
+    ],
+    "coverage_gaps": [
+     "No skill drafts a note from a transcript AND verifies every claim against it (drafting 016 and grounding 015 are separate)",
+     "No discharge summary, progress note, referral letter, or handoff (SBAR/I-PASS) formats",
+     "No non-US / non-English documentation conventions",
+     "No PHI minimization procedure for drafting (only for abstraction de-identification)",
+     "No medication reconciliation or allergy cross-check",
+     "No clinician sign-off/review gate explicitly built into the drafting skill"
+    ],
+    "high_risk_patterns": [
+     "Sending transcripts/PHI and bearer secrets to external vendor APIs (011, 018)",
+     "Patient-level treatment recommendations from automated queries without clinician gate (019)",
+     "Unverified efficacy statistics and self-declared 'verified' status (016)",
+     "DRG-optimization framing in query generation (014)",
+     "Several off-family items (010, 012, 017, 018, 019) bucketed by keyword"
+    ]
+   },
+   "skills": [
+    {
+     "index": "010",
+     "repository": "nexvigilant/.true",
+     "on_family": false,
+     "purpose": "Knowledge-competency stub telling Claude to explain clinical note processing for pharmacovigilance at novice level.",
+     "mechanism": "Generated competency-framework card: instructs Claude to demonstrate L1/Bloom 'understand' proficiency, reference EMA-REG-004/ICH-E6 and map to EPAs. No procedure for processing notes.",
+     "mechanism_label": "competency-card-stub",
+     "inputs": "topic question",
+     "outputs": "explanation",
+     "dependencies": [],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "EU/ICH pharmacovigilance",
+     "relation": "off-family",
+     "notable_strengths": "Ties topic to regulatory refs.",
+     "notable_risks_or_gaps": "No actual method; auto-generated; duplicated triggers; opaque reference codes; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "bdc53a909e79e62e5f89932ded7c9bfc1b3f27af",
+     "path": "knowledge/pv-ksb/ksb-d05-k0045-clinical-note-processing/SKILL.md",
+     "skill_blob": "c3767a217e17c2de8da4d2af2b87e0c1dadb7f08",
+     "package_tree": "9643c8727a7192b5402b3c4df7010701f1d73f1f",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "011",
+     "repository": "flight505/skill-forge",
+     "on_family": true,
+     "purpose": "Minimal example integrating with Abridge ambient AI documentation API to turn a transcript into a structured note.",
+     "mechanism": "Scaffold a Node/TypeScript project, create an encounter session via REST, submit transcript, trigger generation and poll up to 60s, print SOAP sections, ICD-10/CPT codes, confidence and source citations with audio timestamps.",
+     "mechanism_label": "vendor-api-ambient-scribe-client",
+     "inputs": "sandbox credentials; transcript text",
+     "outputs": "console-printed structured note with codes and citations",
+     "dependencies": [
+      "Abridge sandbox API (endpoint likely illustrative)",
+      "Node 18+, axios, dotenv, TypeScript",
+      "npm/curl"
+     ],
+     "authority_data_boundaries": "Transmits clinical transcripts and bearer credentials to an external vendor API; installs npm packages; allowed-tools include Bash(npm/curl). Sample data de-identified.",
+     "jurisdiction_or_language": "none (English)",
+     "relation": "distinct-method",
+     "notable_strengths": "Shows source-citation linkage of note to transcript segments.",
+     "notable_risks_or_gaps": "API shape appears speculative/unverified against real Abridge docs; real PHI could be sent if adapted; vendor lock-in; mostly integration plumbing not documentation quality.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "a8d8ca2cde01b847b6a98d74c2c5aebddca94c71",
+     "path": "plugins/saas-packs/abridge-pack/skills/abridge-hello-world/SKILL.md",
+     "skill_blob": "52f8256fcf40652933e3f2ccace42477e5efd8cb",
+     "package_tree": "76fb7f377a07aac89c863d3e6ca4a4a0ba265847",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "012",
+     "repository": "GayanSamuditha/FHIR-Patient-Operations-Agent-Platform",
+     "on_family": false,
+     "purpose": "Project-specific engineering guidance for ingesting Synthea FHIR R4 data into a portfolio patient-operations platform.",
+     "mechanism": "Hard rules (synthetic data only, no HIPAA/clinical claims), resource ingestion priority order, idempotent upserts keyed on source ids, normalization of codes, and parser test expectations.",
+     "mechanism_label": "fhir-ingestion-engineering-rules",
+     "inputs": "Synthea FHIR bundles",
+     "outputs": "normalized tables, parsers, tests",
+     "dependencies": [
+      "FastAPI",
+      "PostgreSQL/pgvector",
+      "LangGraph",
+      "Next.js"
+     ],
+     "authority_data_boundaries": "Explicitly forbids real PHI; none other observed.",
+     "jurisdiction_or_language": "none",
+     "relation": "off-family",
+     "notable_strengths": "Strong synthetic-data/PHI guardrails; idempotent ingestion.",
+     "notable_risks_or_gaps": "Repo-specific coding guidance, not clinical documentation.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "c320a620e8aadf174555615d72eee55d6fb9f5e8",
+     "path": ".agents/skills/fhir-healthcare-engineer/SKILL.md",
+     "skill_blob": "b2ff85207a70dae3e2694d5e3b738c7b45a1c6c5",
+     "package_tree": "b748593ddf7cb62caf19cb7d6ee67ba727b09004",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "013",
+     "repository": "lev-os/agents",
+     "on_family": true,
+     "purpose": "Abstract bulk medical records into a chronological, source-cited clinical abstract with code-level specificity and CDI queries.",
+     "mechanism": "Mandatory pre-draft intake (purpose, scope, timeframe, audience, PHI handling, known gaps), then source document manifest with completeness flags, strict chronological extraction of fixed data elements, ICD-10/CPT descriptor normalization without assigning codes, fact-vs-inference tagging ([INFERRED], [PER:], [VERIFY]), structured CDI query generation, optional HIPAA Safe Harbor de-identification. Post-draft checkpoint on traceability, completeness against manifest, PHI spot-check, plus sampling audit (10%, or 100% of contested items for litigation).",
+     "mechanism_label": "manifested-chronological-abstraction-with-provenance-tags",
+     "inputs": "bulk medical records; purpose/audience",
+     "outputs": "abstract header, manifest, chronological abstract, problem and medication summaries, CDI queries, notes, attestation",
+     "dependencies": [
+      "references/ABSTRACTION-TEMPLATE.md (not inspected)"
+     ],
+     "authority_data_boundaries": "Processes full PHI; de-identification optional by purpose; supports litigation/audit use. No external transmission.",
+     "jurisdiction_or_language": "US (HIPAA, ICD-10-CM, CMS)",
+     "relation": "distinct-method",
+     "notable_strengths": "Best-in-family provenance discipline; explicit fact/inference/secondary-source tagging; manifest completeness reconciliation; audit sampling rule; escalation to SME.",
+     "notable_risks_or_gaps": "Description says 'extracts codeable diagnoses' but body forbids assigning codes (minor mismatch); skills-db/legal path in aggregator - upstream author 'casemark' identity unconfirmed; no license.",
+     "root_license_observed": "none",
+     "pinned_revision": "d043099c4ffc3bd346d18929081a2f6f3d1a1025",
+     "path": "skills-db/legal/abstracting-clinical-documentation/SKILL.md",
+     "skill_blob": "77f499f70a7ec208aea334b2a76413336b53f8b8",
+     "package_tree": "7aad734df38c27a603590f52ae577f83c7e04276",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "014",
+     "repository": "a5c-ai/babysitter",
+     "on_family": true,
+     "purpose": "Generate compliant (non-leading) physician CDI queries to clarify documentation for coding, severity and mortality capture.",
+     "mechanism": "Capability list plus 7-step process (review, identify opportunities, gather clinical evidence, draft query, submit, track, update); compliance requirements: non-leading, evidence-based, multiple choices including 'unable to determine', no financial motivation.",
+     "mechanism_label": "compliant-cdi-query-checklist",
+     "inputs": "clinical documentation",
+     "outputs": "physician queries; response tracking",
+     "dependencies": [
+      "AHIMA/ACDIS guidance (referenced)"
+     ],
+     "authority_data_boundaries": "Mentions submitting queries to physicians and updating documentation (consequential workflow actions, not concretely implemented); 'DRG optimization' framing.",
+     "jurisdiction_or_language": "US (AHIMA/ACDIS/OIG)",
+     "relation": "variant-of:013",
+     "notable_strengths": "Captures key AHIMA/ACDIS compliance constraints on query wording.",
+     "notable_risks_or_gaps": "Very thin; no templates or examples; 'DRG optimization' sits awkwardly with no-financial-motivation rule; 013 contains a fuller CDI query format.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "feb68abe397acc14f32b34984975c48fedba2b33",
+     "path": "library/specializations/domains/social-sciences-humanities/healthcare/skills/clinical-documentation-query/SKILL.md",
+     "skill_blob": "2fe35a0539d2d147a08c156b0e2fdcb818c2a893",
+     "package_tree": "f247ddbaa2d5c16f30c2c180f1b572e41fa2ab17",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "015",
+     "repository": "qhjqhj00/research-skills-pool",
+     "on_family": true,
+     "purpose": "Benchmark recipe for evaluating models that generate SOAP notes from long doctor-patient conversations.",
+     "mechanism": "Describes dataset (8,800 synthetic conversations), metrics (LLM-judge faithfulness/coverage 1-5, ROUGE-2/3/L, medical concept F1 via MeSH+scispaCy, unsupported-claim and contradiction rates) and a pseudocode scoring recipe using atomic-claim extraction checked against the transcript; lists pitfalls (LLM-generated references, low-WER synthetic audio).",
+     "mechanism_label": "atomic-claim-grounding-eval",
+     "inputs": "generated note, reference note, transcript/audio",
+     "outputs": "faithfulness/coverage/ROUGE/concept-F1/claim rates",
+     "dependencies": [
+      "LLM judge",
+      "ROUGE",
+      "scispaCy en_core_sci_md",
+      "MeSH"
+     ],
+     "authority_data_boundaries": "none observed (synthetic data)",
+     "jurisdiction_or_language": "English",
+     "relation": "distinct-method",
+     "notable_strengths": "Atomic-claim support/contradiction checking is directly reusable as a self-check for note drafting.",
+     "notable_risks_or_gaps": "Evaluation only; pseudocode not runnable; dataset access not specified; arXiv-derived auto-generated skill; no license.",
+     "root_license_observed": "none",
+     "pinned_revision": "c247302c836de6438d746b45670990eb71691166",
+     "path": "skill-factory/output/soap-note-generation-eval/SKILL.md",
+     "skill_blob": "c9068704816c97b038ac11111909f63422ef66d4",
+     "package_tree": "88df3d9f9f2bfc7271f1dfa10d32cef49cb601ef",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "016",
+     "repository": "jeffreytse/grimoire-core",
+     "on_family": true,
+     "purpose": "Write a patient encounter note in SOAP format.",
+     "mechanism": "Ten steps: header, Subjective with CC quotes and OLDCART HPI, Objective vitals/exam/labs without interpretation, Assessment with ranked differential and justification (optional ICD-10), problem-organized specific Plan with return precautions, sign/timestamp/attestation. Rules forbid copy-forward of S/A and require documenting consent/education.",
+     "mechanism_label": "soap-section-template-with-rules",
+     "inputs": "encounter information from clinician",
+     "outputs": "SOAP note",
+     "dependencies": [],
+     "authority_data_boundaries": "Handles PHI implicitly; disclaimer that it is formatting assistance for licensed providers.",
+     "jurisdiction_or_language": "US (Joint Commission, CMS, ICD-10)",
+     "relation": "distinct-method",
+     "notable_strengths": "Clear section separation rules (no interpretation in O); safety-netting and anti-cloning rules; when-not-to-use (psych DAP, ED, op notes).",
+     "notable_risks_or_gaps": "Unverified/possibly fabricated impact statistics (e.g., '23% fewer medication errors', '98% of programs') and self-declared 'verified: true'; no grounding/fact-check against source transcript; blob changed since July.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "7ff5861b00836cb0d675c00a09a26d143722579e",
+     "path": "skills/health/medicine/skills/write-clinical-note-soap/SKILL.md",
+     "skill_blob": "f9c3700da448283ac809e60704a277d4db22169f",
+     "package_tree": "1a1c5a1620cdd3e43d0cd4860116e36aacf9f17e",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "017",
+     "repository": "seancheick/PharmaGuide_Pipeline",
+     "on_family": false,
+     "purpose": "Repo-specific weekly FDA recall/ban sync that updates a supplement safety JSON database.",
+     "mechanism": "Runs repo script querying openFDA/MedWatch/DEA, filters false positives, applies ADD/SKIP decision gate by recall class/category, builds schema-compliant entries, verifies against FDA source URL, updates stale recalls, drafts (never publishes) safety alerts, runs targeted tests.",
+     "mechanism_label": "regulatory-feed-sync-to-curated-db",
+     "inputs": "FDA sync report",
+     "outputs": "updated banned_recalled_ingredients.json; draft alerts; summary",
+     "dependencies": [
+      "openFDA API",
+      "FDA RSS",
+      "DEA Federal Register",
+      "repo Python scripts and tests"
+     ],
+     "authority_data_boundaries": "Network fetches to FDA sources; writes repository data files; explicit human gate: never publish safety alerts, Class I does not bypass review.",
+     "jurisdiction_or_language": "US (FDA, DEA)",
+     "relation": "off-family",
+     "notable_strengths": "Strong human-review gate on publication; identity-by-canonical-id rule; no-guess rules.",
+     "notable_risks_or_gaps": "Not clinical documentation; repo-coupled; no root license file (frontmatter claims MIT).",
+     "root_license_observed": "none",
+     "pinned_revision": "0bd492188d775891bdfbbcbe295a7082ba7e367a",
+     "path": ".claude/skills/fda-weekly-sync/SKILL.md",
+     "skill_blob": "69c2e1dedcf937ac8cf1e1b299b5e8740113682b",
+     "package_tree": "2ec4c43677c0d420dc2714e890433fd2549385bf",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "018",
+     "repository": "ComeOnOliver/skillshub",
+     "on_family": false,
+     "purpose": "Plan Abridge API version upgrades and EHR migrations for ambient documentation integrations.",
+     "mechanism": "TypeScript snippets for canary dual-version adapter, an EHR migration step plan with parallel run, template migration loop, and an echo-only rollback script.",
+     "mechanism_label": "vendor-integration-migration-runbook",
+     "inputs": "current integration config",
+     "outputs": "adapter code, migration plan",
+     "dependencies": [
+      "Abridge API",
+      "EHR FHIR endpoints",
+      "npm"
+     ],
+     "authority_data_boundaries": "Would touch production EHR integrations and provider enrollment if adapted; credentials implied.",
+     "jurisdiction_or_language": "none",
+     "relation": "off-family",
+     "notable_strengths": "Parallel-run validation idea.",
+     "notable_risks_or_gaps": "Integration ops not documentation; mirror of jeremylongshore pack (same author as 011's source); rollback script is placeholder echo.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "def8531e65114c0fca8fb8551c1871ee0eed705c",
+     "path": "skills/jeremylongshore/claude-code-plugins-plus-skills/abridge-upgrade-migration/SKILL.md",
+     "skill_blob": "a76155ac5963ca312cc295089afcd7e6cdf9d650",
+     "package_tree": "c6c91369ca62b5ed133dc0c87041fd6e02e2f5cf",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "019",
+     "repository": "langcare/langcare-mcp-fhir",
+     "on_family": false,
+     "purpose": "Compute HEDIS-style quality measures from FHIR data with gap-to-goal and non-compliant patient lists.",
+     "mechanism": "Select measures, build denominators via fhir_search with SNOMED/LOINC codes, apply exclusions, compute numerators, rates and gaps, list non-compliant patients sorted by gap, present dashboard; troubleshooting for code systems.",
+     "mechanism_label": "fhir-measure-numerator-denominator",
+     "inputs": "FHIR server access via MCP",
+     "outputs": "quality measure dashboard with patient-level gaps and recommended actions",
+     "dependencies": [
+      "langcare-mcp-fhir MCP server (fhir_search)"
+     ],
+     "authority_data_boundaries": "Queries identifiable patient records (names, MRNs) and produces treatment recommendations per patient (e.g., switch medications) - clinical-decision-like output.",
+     "jurisdiction_or_language": "US (HEDIS/CMS)",
+     "relation": "off-family",
+     "notable_strengths": "Explicit numerator/denominator/exclusion logic; code-system fallback troubleshooting.",
+     "notable_risks_or_gaps": "Quality reporting, not documentation; simplified HEDIS specs; patient-level therapy recommendations without clinician review gate.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "430598bb5a76619ef55fa34fb1fd90c65f3d4783",
+     "path": "skills/core/population-health/quality-measure-dashboard/SKILL.md",
+     "skill_blob": "2c97fa517dccca3534ae8a0d4ac677710667c3f3",
+     "package_tree": "5867a02b538622d92ee7929bc924ff82a9ab509b",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "lesson-and-curriculum-design",
+   "picked": 10,
+   "verified_and_read": 8,
+   "on_family": 7,
+   "keyword_pick_precision": 0.88,
+   "distinct_methods": 7,
+   "summary": {
+    "family": "lesson-and-curriculum-design",
+    "skills_on_family": 7,
+    "distinct_methods": [
+     {
+      "label": "action-mapping-objective-blueprint-alignment",
+      "description": "Validate training need via performance goal, write measurable objectives, blueprint assessments, align every item/activity to one objective, plan accessibility and Kirkpatrick evaluation.",
+      "exemplar_indices": [
+       "020"
+      ]
+     },
+     {
+      "label": "template-bound-edp-lesson-plan",
+      "description": "Teacher-facing lesson plans filled into a mandated template with time budgets and lead-in strategy selection by activity type, age and session position.",
+      "exemplar_indices": [
+       "022"
+      ]
+     },
+     {
+      "label": "verified-resource-learning-path-with-generative-reflection",
+      "description": "Learner study path with verified resources, phased clusters, Bloom-tagged generative reflection prompts and a living plan updated from detected gaps.",
+      "exemplar_indices": [
+       "021"
+      ]
+     },
+     {
+      "label": "concept-graph-with-depth-cut-and-diagnostic",
+      "description": "Prerequisite concept graph with per-concept depth decisions and a rapid diagnostic to calibrate.",
+      "exemplar_indices": [
+       "023"
+      ]
+     },
+     {
+      "label": "typed-tiered-retrieval-practice-deck",
+      "description": "Generate retrieval practice items by card type/Bloom level/difficulty tier with SRS metadata and coverage modes.",
+      "exemplar_indices": [
+       "024"
+      ]
+     },
+     {
+      "label": "standards-alignment-gap-check",
+      "description": "Audit lessons/units against a standards framework to identify covered and missing standards.",
+      "exemplar_indices": [
+       "027"
+      ]
+     },
+     {
+      "label": "artifact-pipeline-course-pack-with-autograder",
+      "description": "Phased generation of handouts, assignments, exercises and syllabus from a knowledge vault with build verification and quality gates.",
+      "exemplar_indices": [
+       "029"
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "Action-mapping check that training is the right solution before designing (020)",
+     "One-objective-per-item alignment with misconception-mapped distractors (020)",
+     "Verify-before-cite rule for resources and chapter names (021)",
+     "Generative, Bloom-tagged reflection prompts with per-cluster Evaluate/Create requirement (021)",
+     "Rapid prerequisite diagnostic to calibrate depth decisions (023)",
+     "Lead-in strategy selection by age band and lesson position with time-budget accounting (022)",
+     "Assignment-exercise pairing with gated solutions and quality gates (029)",
+     "Standards coverage gap analysis (027)"
+    ],
+    "coverage_gaps": [
+     "No skill combines backward design (objectives -> assessment -> activities) with standards alignment and a teacher-ready lesson plan in one flow",
+     "No differentiation/IEP/ELL accommodation procedure beyond generic UDL mention",
+     "No unit/scope-and-sequence pacing across a term (except 029 syllabus grid and 021 learner plan)",
+     "No post-lesson reflection/revision loop using student assessment data",
+     "Standards coverage limited to US CCSS ELA; no NGSS/math/international frameworks",
+     "Little guidance on verifying factual accuracy of generated content beyond 020/021 no-invention rules"
+    ],
+    "high_risk_patterns": [
+     "Silent autonomous plan modification and memory persistence via proprietary CLI (021)",
+     "Local toolchain execution and mass file emission (029)",
+     "Named individual professor/course and homework-solving support (026, off-family)",
+     "Marketplace mirrors with uncertain provenance and no license (027)",
+     "Unsupported claims of binary APKG generation (024)"
+    ]
+   },
+   "skills": [
+    {
+     "index": "020",
+     "repository": "artechb152/geoInteractive",
+     "on_family": true,
+     "purpose": "Design learning objectives, assessment blueprints, question banks, activities, lesson plans and evaluation plans for training/elearning (Hebrew or English).",
+     "mechanism": "Fixed response sequence: assumption-labeled intake, action-mapping check whether training is the right solution, measurable objectives table, blueprint table with difficulty mix (25/50/25), requested artefacts (MCQ bank with misconception-mapped distractors and rationales, scenarios, rubrics, activities with near-transfer variants, storyboards), accessibility notes (UDL/WCAG/IS 5568), Kirkpatrick L1-2 evaluation plan and QA checklist. Decision tree routes to reference files.",
+     "mechanism_label": "action-mapping-objective-blueprint-alignment",
+     "inputs": "goal, audience, source material, constraints",
+     "outputs": "objectives, blueprint, item banks, rubrics, lesson plans/storyboards, evaluation plan, QA checklist (markdown, optional CSV/GIFT/QTI)",
+     "dependencies": [
+      "references/*.md (not inspected)"
+     ],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "Hebrew/English; Israeli accessibility standard IS 5568",
+     "relation": "distinct-method",
+     "notable_strengths": "Performance-first action mapping; every item aligned to one objective; misconception-based distractors; built-in evaluation and accessibility; no-invented-facts rule with placeholders.",
+     "notable_risks_or_gaps": "Workplace-training lens; detail lives in uninspected references; no root license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "6edc07e10e92237849bcb6db1a049738e14469e9",
+     "path": ".claude/skills/instructional-design-developer/SKILL.md",
+     "skill_blob": "8fc8baeb05c5cb62f4ed1de938faf69816890a27",
+     "package_tree": "60833150d85b9d435830976cacfe054b2282858e",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "021",
+     "repository": "hirojinho/marginalia",
+     "on_family": true,
+     "purpose": "Build and continuously maintain a personal study path for a course or self-directed topic.",
+     "mechanism": "Three modes: self-study (one-at-a-time intake with recommended answers, verify every resource's real structure, build phases with clusters, connective thread, ADR articulation exercise, session log), plan mode (course profile, verified chapters, Read->Watch->Reflect resource mix, no consecutive same-type), passive mode (detect gaps/misconceptions to restructure plan, log curiosity notes). Reflect tasks must be generative and Bloom-tagged with at least one Evaluate/Create per cluster.",
+     "mechanism_label": "verified-resource-learning-path-with-generative-reflection",
+     "inputs": "slides/syllabus or learning intent; conversation signals",
+     "outputs": "study-plan and interests markdown files; plan updates; memory pointers",
+     "dependencies": [
+      "claw-cli (course create, memory save, note save, plan show)",
+      "web search/subagents for resource verification"
+     ],
+     "authority_data_boundaries": "Writes files and persists to app memory via claw-cli; passive mode updates plan without asking permission; web research of resources.",
+     "jurisdiction_or_language": "none (English; user in Portuguese-language Mestrado context)",
+     "relation": "distinct-method",
+     "notable_strengths": "No invented chapter names / verify-before-cite; generation-effect rule for reflection prompts; Bloom-level cluster well-formedness; living plan driven by detected gaps.",
+     "notable_risks_or_gaps": "Coupled to proprietary claw-cli; silent plan modification; learner-side study planning rather than teacher lesson design.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "46b7d84a4590aefccbeaf4aaef869e33eca04501",
+     "path": "skills/course-study-path/SKILL.md",
+     "skill_blob": "217aca7feb64e0e37f2ea7873eed7f0476f16bd1",
+     "package_tree": "7d4fab9e527567ed129c95a1c13940f165e5316f",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "022",
+     "repository": "ngkienlong/curriculum-design-skill",
+     "on_family": true,
+     "purpose": "Write teacher lesson plans per project of a STEM/AI syllabus following a Vietnamese EDP template.",
+     "mechanism": "Read syllabus and textbook, read mandatory EDP template, write one lesson plan per project keeping template structure, timing per activity summing to session length, hands-on in every session; choose lead-in strategies via mapping table by activity type, age band and position in session, no repeated strategy, hook in first 2 minutes, ~30/70 closed/open questions; ask user after each project; save with slug-matched filenames.",
+     "mechanism_label": "template-bound-edp-lesson-plan",
+     "inputs": "syllabus file, textbook file, template",
+     "outputs": "lesson-plan-<slug>.md per project",
+     "dependencies": [
+      "Kiro file references to templates"
+     ],
+     "authority_data_boundaries": "Writes files to the course directory; none else.",
+     "jurisdiction_or_language": "Vietnam (THCS/THPT); Vietnamese",
+     "relation": "distinct-method",
+     "notable_strengths": "Age-band and session-position lead-in strategy selection; time-budget accounting; per-project human checkpoint.",
+     "notable_risks_or_gaps": "Tied to one template and folder convention; templates not inspected; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "433295eed5708a608361eab4512cf2c8fd8af1cf",
+     "path": ".kiro/skills/lesson-plan-writer/SKILL.md",
+     "skill_blob": "450bf6533600a3a424f693bca170da7de8e25088",
+     "package_tree": "8f1ac8882201db6fe1396a04a9a5919ba4889eca",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "023",
+     "repository": "youseiushida/benkyo",
+     "on_family": true,
+     "purpose": "Initialize or resume a tutoring project by turning a learning goal and materials into a concept graph with depth decisions.",
+     "mechanism": "Extract concrete goal via offered goal-type options, ingest materials to identify concepts, dependencies and exam problems, draft 10-20 concept nodes with direct prereq and confusable edges (dedupe via concept find), decide blackbox (use as formula) vs whitebox (understand) per concept (prune-first from materials or lazy-prune), confirm with learner, create via benkyo CLI, run a rapid expertise diagnostic to recalibrate, then hand off to tutoring skill. Returning learners get delayed-JOL probing where past confidence is a prior, not a conclusion.",
+     "mechanism_label": "concept-graph-with-depth-cut-and-diagnostic",
+     "inputs": "learner goal; textbook/syllabus/past exams",
+     "outputs": "benkyo project with concept/problem graph, treatments, first activity",
+     "dependencies": [
+      "benkyo CLI and DB",
+      "benkyo-tutoring skill",
+      "shared references"
+     ],
+     "authority_data_boundaries": "Writes to a local benkyo database; instructs explicit invocation of another skill. No external transmission.",
+     "jurisdiction_or_language": "Japanese learner-facing",
+     "relation": "distinct-method",
+     "notable_strengths": "Explicit depth decision (blackbox/whitebox) per concept; rapid diagnostic calibrating plan; learner-facing jargon ban; asks before abstracting many exam problems; evidence-based retention probing.",
+     "notable_risks_or_gaps": "Hard dependency on benkyo CLI/DB; learner-side tutoring rather than teacher curriculum.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "db1921b3a59d1d413b374c29732690e36f0351ef",
+     "path": ".claude/skills/benkyo-project-init/SKILL.md",
+     "skill_blob": "76ea0f612abf022fc7f5e490a7b84c7a8e26a9c5",
+     "package_tree": "99dc9183ae7fa9c6e629d4dafa050270dcee8c7b",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "024",
+     "repository": "pinakdhabu/Exam-prompt",
+     "on_family": true,
+     "purpose": "Convert study material into typed, tiered flashcard decks with SRS metadata and export formats.",
+     "mechanism": "Analyze content, choose among six card types (fact, cloze, association, multi-step problem, scenario, compare/contrast) mapped to Bloom levels, assign three difficulty tiers, attach SRS fields (due, interval, ease), organize deck hierarchy with cross-unit connection cards, add recall cues, export to CSV/Markdown/JSON/Anki; four generation modes including PYQ frequency weighting and exam cram.",
+     "mechanism_label": "typed-tiered-retrieval-practice-deck",
+     "inputs": "notes, syllabus, past papers",
+     "outputs": "flashcard decks with SRS metadata in Anki/CSV/MD/JSON",
+     "dependencies": [
+      "Anki/Quizlet import formats"
+     ],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "none (India-style PYQ terminology)",
+     "relation": "distinct-method",
+     "notable_strengths": "Card-type-to-Bloom mapping; syllabus coverage mode guaranteeing every point has a card; PYQ frequency weighting.",
+     "notable_risks_or_gaps": "Claims APKG generation without a described tool; hardcoded SRS dates; broken markdown table (Type F); assessment practice rather than lesson design.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "751cd9949a512a600fbaa10fdae61c013eb0cbb9",
+     "path": "skills/flashcard-generator/SKILL.md",
+     "skill_blob": "c74468a6a03f33243117a552b2a0a446295660d2",
+     "package_tree": "438c4831c990c3bceaf9fb903acfc0a5072aa6b9",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "026",
+     "repository": "ArmandoArV/Maestria-IA",
+     "on_family": false,
+     "purpose": "Course-specific knowledge base for a Chilean master's unsupervised learning course.",
+     "mechanism": "Maps course classes to reference files and summarizes clustering/PCA content; instructs matching class notation, language, and libraries.",
+     "mechanism_label": "course-knowledge-base",
+     "inputs": "student questions",
+     "outputs": "explanations, worked solutions, code",
+     "dependencies": [
+      "references/*.md",
+      "Python/R libraries used in class"
+     ],
+     "authority_data_boundaries": "Names a specific professor and institution; supports homework solving (academic integrity consideration).",
+     "jurisdiction_or_language": "Chile; Spanish",
+     "relation": "off-family",
+     "notable_strengths": "Notation-matching rule for course alignment.",
+     "notable_risks_or_gaps": "Subject tutoring content, not lesson/curriculum design; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "114d705390bc87d5f08255f10b8701e206dc4623",
+     "path": ".copilot/skills/aprendizaje-no-supervisado/SKILL.md",
+     "skill_blob": "d5f96fe1f6a4ff3332c19c9127e4d87ca862d30e",
+     "package_tree": "14f66795641d2f3853a3794459256a1f8a104326",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "027",
+     "repository": "dvcrn/openclaw-skills-marketplace",
+     "on_family": true,
+     "purpose": "Check lesson/unit plans and assessments for Common Core ELA standards alignment and gaps.",
+     "mechanism": "Lists features (identify addressed standards, suggest missing ones, verify grade appropriateness, gap analysis) and quick commands; relies on standards reference files (incl. a PDF).",
+     "mechanism_label": "standards-alignment-gap-check",
+     "inputs": "lesson/unit plan or assessment; grade",
+     "outputs": "alignment report; missing standards",
+     "dependencies": [
+      "references incl. common-core-ela-standards.pdf (not inspected)"
+     ],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "US Common Core ELA K-12",
+     "relation": "distinct-method",
+     "notable_strengths": "Only standards-alignment audit in the set.",
+     "notable_risks_or_gaps": "No actual procedure or output format; marketplace mirror with uncertain provenance; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "931184f93d78d90841bc66971fde8cc00539e027",
+     "path": "plugins/gowanginc--common-core-ela-checker/skills/common-core-ela-checker/SKILL.md",
+     "skill_blob": "ef28a103e1672157435f844ce4f952150a76b17b",
+     "package_tree": "ca43782f42335bf0ffdc2afa04e82237e862ed52",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "029",
+     "repository": "drunkcoding/AgentSkillsArxiv",
+     "on_family": true,
+     "purpose": "Generate a full university-style course pack (LaTeX handouts, assignments, problem sets, autograded exercises, syllabus) from an existing StudyVault.",
+     "mechanism": "Phased TH0-TH8 pipeline: detect vault and toolchain, ask scope, copy verbatim LaTeX classes and harness templates, generate per-topic handouts/cheatsheets/problem sets with anti-slop rules (named primary citation and numeric example per page), select exercises from banks to produce assignment writeups paired 1:1 with starter/reference code folders (gated solutions for hard ones), capstone and syllabus, then build with latexmk and self-review against 50+ gates. Hard invariants: CWD boundary, idempotence, no commercial fonts.",
+     "mechanism_label": "artifact-pipeline-course-pack-with-autograder",
+     "inputs": "StudyVault directory; flags",
+     "outputs": "Coursepack/ with .tex/PDF handouts, exercises, harness, Makefiles, README",
+     "dependencies": [
+      "latexmk/pdflatex",
+      "nvcc",
+      "Python harness",
+      "AskUserQuestion",
+      "cuda/triton-tutor-setup skills"
+     ],
+     "authority_data_boundaries": "Executes local build tools (latexmk, make, nvcc) and writes many files within CWD; CWD-only boundary stated.",
+     "jurisdiction_or_language": "CUDA/Triton domain; prose language follows user",
+     "relation": "distinct-method",
+     "notable_strengths": "Assignment-to-exercise 1:1 pairing; gated solutions; idempotent regeneration preserving hand edits; build verification and quality checklist.",
+     "notable_risks_or_gaps": "Domain-specific (GPU programming); heavy toolchain; depends on sibling setup skills; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "f5bac210406e31e3ce97d37283ab8189f63f8b41",
+     "path": "skills/tutor-handouts/SKILL.md",
+     "skill_blob": "5ed460975bd85e2a5443ebae0c30c1b6d185aeeb",
+     "package_tree": "96f5a395bd4ef26e8f5d6f74ceecbd2679257ab3",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "music-composition",
+   "picked": 10,
+   "verified_and_read": 8,
+   "on_family": 4,
+   "keyword_pick_precision": 0.5,
+   "distinct_methods": 4,
+   "summary": {
+    "family": "music-composition",
+    "skills_on_family": [
+     30,
+     32,
+     33,
+     37
+    ],
+    "distinct_methods": [
+     {
+      "label": "notation-dsl-reference-with-progressive-disclosure",
+      "description": "Agent writes music directly in a text notation (MML) using a syntax quick-reference plus topic-routed reference files.",
+      "exemplar_indices": [
+       32
+      ]
+     },
+     {
+      "label": "decision-rule-harmony-craft-plus-livecode",
+      "description": "Mode-first harmonic decision rules with explanations, emotion lookup and mistakes list, rendered as live-code patterns.",
+      "exemplar_indices": [
+       33
+      ]
+     },
+     {
+      "label": "ml-feature-analysis-of-harmony",
+      "description": "Quantitative clustering/classification of voicings, progressions and scales via ML tool servers to drive choices.",
+      "exemplar_indices": [
+       30
+      ]
+     },
+     {
+      "label": "remote-parametric-generation-contest",
+      "description": "Composition delegated to an external generator via parameter selection and API submission.",
+      "exemplar_indices": [
+       37
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "Mode-first decision rule and 'why it works' explanations (33) as a craft layer over any notation",
+     "Progressive-disclosure reference routing table and caveat checklist (32)",
+     "Data-driven mood-to-scale recommendation as an optional verification step (30)",
+     "Confirmation gates before destructive output steps, borrowed from off-family 35"
+    ],
+    "coverage_gaps": [
+     "Melody writing and motif development",
+     "Song/form structure and arrangement across sections",
+     "Lyrics/prosody",
+     "Rendering and listening-feedback loop (no audition/critique step)",
+     "Notation-agnostic output (MusicXML/ABC/LilyPond) and DAW handoff",
+     "Copyright/originality checks against existing melodies"
+    ],
+    "high_risk_patterns": [
+     "037: MUST-exec an unbundled credentialed wrapper script and transmit to a duckdns third-party service with public submissions/votes",
+     "034 (off-family): unpinned pip install from GitHub main, hardcoded user path"
+    ]
+   },
+   "skills": [
+    {
+     "index": 30,
+     "repository": "GuitarAlchemist/ix",
+     "on_family": true,
+     "purpose": "Data-driven music-theory analysis that clusters chord voicings, scores harmonic complexity and recommends scales for a target mood.",
+     "mechanism": "Three chained worked examples: gather voicing/pitch-class/scale data from a GA music-theory MCP server, build feature vectors, then run ix ML tools (k-means, stats, FFT on harmonic rhythm, Lyapunov chaos estimate, supervised mood classifier). Each step gives exact tool calls, expected data formats and interpretation guidance; final output is voicing palette, complexity rating and ranked scale recommendations.",
+     "mechanism_label": "ml-feature-analysis-of-harmony",
+     "inputs": "chord/scale names, target mood, progression",
+     "outputs": "voicing clusters, complexity scores, ranked scale recommendations",
+     "dependencies": [
+      "GA music-theory MCP server (ga_chord, ga_chord_atonal, ga_scale, ga_dsl)",
+      "ix MCP server (ix_kmeans, ix_stats, ix_fft, ix_chaos_lyapunov, ix_supervised)"
+     ],
+     "authority_data_boundaries": "none observed (calls local MCP tools only; disable-model-invocation: true)",
+     "jurisdiction_or_language": "",
+     "relation": "distinct-method",
+     "notable_strengths": "Only quantitative/empirical approach; explicit data formats; chains into a voicing->progression->melodic-palette workflow.",
+     "notable_risks_or_gaps": "Composition-support analysis rather than writing music; hard dependency on two project-specific MCP servers; toy mood-classifier training data of uncertain validity.",
+     "root_license_observed": "Apache License 2.0 (repo also lists LICENSE-MIT)",
+     "pinned_revision": "88dbd65965700e180eac80691a187e298284ba59",
+     "path": ".claude/skills/music-ml-demo/SKILL.md",
+     "skill_blob": "5e3d7ecb6f7dafc53b69d1c227a6891635fa2d77",
+     "package_tree": "c129862016d477a513a5f65ac3d09915cb8efb9a",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 32,
+     "repository": "karupanerura/music-composer-skills",
+     "on_family": true,
+     "purpose": "Write, edit and troubleshoot Sakura MML (text-to-MIDI) compositions.",
+     "mechanism": "Syntax-reference skill: core quick reference for notes, lengths, chords, tuplets, loops, tracks/channels, control changes, rhythm mode, macros and scripting, with a routing table that says which of seven bundled reference files to open per topic. Ends with a complete multi-track example and a caveat checklist (e.g. Rhythm mode does not auto-set channel 10).",
+     "mechanism_label": "notation-dsl-reference-with-progressive-disclosure",
+     "inputs": "composition intent or existing .mml file",
+     "outputs": ".mml source compiled by Sakura to Standard MIDI",
+     "dependencies": [
+      "Sakura MML / csakura v2 compiler (named, not invoked)"
+     ],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "Sakura MML; Japanese and Western note notation",
+     "relation": "distinct-method",
+     "notable_strengths": "Precise, compact reference with progressive disclosure into bundled references; concrete pitfalls list.",
+     "notable_risks_or_gaps": "Only notation mechanics, no musical craft (harmony, form); single niche DSL.",
+     "root_license_observed": "none",
+     "pinned_revision": "4f1e6f0d9e9a94cface90b9931d55ca0d7139516",
+     "path": ".claude/skills/sakura-mml-composition/SKILL.md",
+     "skill_blob": "115d68a8c31986855697678a3e4ace11840d1fc7",
+     "package_tree": "3a0c44d1ecc795454b62ae70de3cbc8847384ef7",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 33,
+     "repository": "vanities/toaster-strudel",
+     "on_family": true,
+     "purpose": "Guide harmony and chord-progression choices for electronic/cinematic music, expressed in Strudel live-coding patterns.",
+     "mechanism": "Craft-knowledge skill: choose mode first (mode-character table), then pick from progressions with explanations of why they work, borrowed chords/modal interchange, extended voicings, voice-leading rules, cadence, an emotion-to-harmony lookup and a common-mistakes list; closes with Strudel code idioms (chord().voicing(), scale-degree melodies, arp).",
+     "mechanism_label": "decision-rule-harmony-craft-plus-livecode",
+     "inputs": "desired mood/genre, existing progression",
+     "outputs": "progression and voicing choices, Strudel pattern code",
+     "dependencies": [
+      "Strudel (strudel.cc) live-coding environment; sibling strudel-* skills via wiki links"
+     ],
+     "authority_data_boundaries": "none observed (cites external docs URLs as sources only)",
+     "jurisdiction_or_language": "Strudel JS pattern language",
+     "relation": "distinct-method",
+     "notable_strengths": "Explains WHY progressions work; emotional-function table; mode-first decision rule; tool-agnostic theory reusable outside Strudel.",
+     "notable_risks_or_gaps": "Genre-scoped (electronic/cinematic); depends on sibling skills not in package; no melody/form/arrangement in this file.",
+     "root_license_observed": "GNU General Public License v3",
+     "pinned_revision": "1b53c590b1d84e9eff2904cdd29dae1e719c7014",
+     "path": "skills/skills/strudel-harmony/SKILL.md",
+     "skill_blob": "e0a56bcf21dd385f16c3479617d2d6e21d160bff",
+     "package_tree": "c5e832b7a0d8197fbdb97a9bd606a9fb590a80f7",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 34,
+     "repository": "zapperment/max-py-lang-skill",
+     "on_family": false,
+     "purpose": "Generate Max for Live devices and Max/MSP patches via MaxPyLang Python scripts.",
+     "mechanism": "Clarify device -> write MaxPyLang script -> run it to emit .amxd/.maxpat -> verify file -> explain signal chain; device-type table and API rules (plugin~/plugout~, mandatory clip~ limiter).",
+     "mechanism_label": "codegen-instrument-device-builder",
+     "inputs": "device description",
+     "outputs": "Python script, .amxd/.maxpat file",
+     "dependencies": [
+      "Python venv at hardcoded author path",
+      "MaxPyLang installed from GitHub main",
+      "Ableton Live / Max"
+     ],
+     "authority_data_boundaries": "Executes Python and suggests pip install from an unpinned GitHub branch; allowed-tools includes Bash/Write; writes output files to project root.",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "Good safety rule (clip~ limiter) for audio output.",
+     "notable_risks_or_gaps": "Sound-design/device tooling, not composition; hardcoded /Users/patrickhund path; unpinned dependency install.",
+     "root_license_observed": "none",
+     "pinned_revision": "d1ed7929d1e18da1ded3d58f1b1af3cc6ab52cef",
+     "path": ".claude/skills/maxpylang/SKILL.md",
+     "skill_blob": "d4f404c4534164d2dbd6fb074e8dd8d859af886b",
+     "package_tree": "768d2102580521b2612ebfa667cbfb71b0b5c7fd",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 35,
+     "repository": "SrBananaMan/HarvestMoon64BootOptionsMod",
+     "on_family": false,
+     "purpose": "Convert MIDI into Harvest Moon 64 .seq format and insert songs into a ROM build.",
+     "mechanism": "Intent-routing table (convert / replace+rebuild / add+rebuild / in-place ROM patch / parse), then scripted steps with explicit confirmation gates before branch switch, overwrites, make, and destructive insert_song.py; diagnostic list for bad conversions; 'prefer unknown over inference'.",
+     "mechanism_label": "game-rom-music-porting-pipeline",
+     "inputs": "MIDI file, ROM/source tree",
+     "outputs": "seq file, rebuilt or patched ROM, edited C/cutscene/spec files",
+     "dependencies": [
+      "project Python tools (main.py, insert_song.py)",
+      "git",
+      "make"
+     ],
+     "authority_data_boundaries": "Runs commands, git checkout, edits source, destructively patches ROM (with confirmation and backup check).",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "Exemplary confirm-before-destructive-action gating and explicit 'ask where the song should play' step.",
+     "notable_risks_or_gaps": "Porting existing MIDI, not composing; repository-specific.",
+     "root_license_observed": "GNU General Public License v3",
+     "pinned_revision": "56ca96d49470f9babecd69a4a919909864c03c43",
+     "path": "hm64-decomp/.claude/skills/hm64-music-modding/SKILL.md",
+     "skill_blob": "1d00e3629ff83221038de9a32ebaccfd9471b02d",
+     "package_tree": "9e8e031dbb7d11900ade35a4dc3b39ed6ecc6408",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 36,
+     "repository": "pjt222/agent-almanac",
+     "on_family": false,
+     "purpose": "Library/archival materials preservation procedures (German i18n).",
+     "mechanism": "Six-step conservation procedure (assess, environment, handling, repair, storage, disaster plan) with validation checklist.",
+     "mechanism_label": "archival-conservation-procedure",
+     "inputs": "collection conditions",
+     "outputs": "preservation plan",
+     "dependencies": "WebFetch/WebSearch allowed",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "German translation (mixed de/en)",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into music-composition; no musical content.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "1b47a3a6a2b9ded1f9ffe7f67afe6be8f85dbd56",
+     "path": "i18n/de/skills/preserve-materials/SKILL.md",
+     "skill_blob": "6d05e6fe3cd10902d7b78b9249b02ae80ae44e7d",
+     "package_tree": "5ea9a3e2488c47a8834fad126b61594309ce5a98",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": 37,
+     "repository": "modbender/skill-library-mcp",
+     "on_family": true,
+     "purpose": "Participate in an external daily AI MIDI song contest: submit parameterized songs, vote, read results.",
+     "mechanism": "Phase-gated API loop: check contest status, then in submission window POST tempo/genre/scale/root/complexity/duration/title to a remote service which generates MIDI; in voting window list songs and POST a score; in reveal window GET results. Includes 'tips for winning' parameter heuristics.",
+     "mechanism_label": "remote-parametric-generation-contest",
+     "inputs": "musical parameters (tempo, genre, scale, complexity)",
+     "outputs": "contest submissions, votes, results",
+     "dependencies": [
+      "curl",
+      "~/.openclaw/bin/eurobot-api.sh wrapper (not in package)",
+      "eurobot.duckdns.org service",
+      "EUROBOT_AGENT_NAME env"
+     ],
+     "authority_data_boundaries": "Instructs the agent it 'MUST use the exec tool' to run an unbundled local wrapper script that handles authentication; transmits agent identity and content to a third-party dynamic-DNS host; encourages up to 5 submissions/day and voting (public consequential actions).",
+     "jurisdiction_or_language": "",
+     "relation": "distinct-method",
+     "notable_strengths": "Only skill where composition is fully delegated to a parametric generator; clear phase/time constraints and error codes.",
+     "notable_risks_or_gaps": "No actual composition craft by the agent; unverifiable external service on duckdns; unbundled exec wrapper with credentials; score-gaming heuristics.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "d9c8fe903b5b4e82237dbe8d0df8567783022e18",
+     "path": "data/eurobot/SKILL.md",
+     "skill_blob": "fc33332ee2a948a12267f562f97d6ed6994049fa",
+     "package_tree": "4f479f54a0dca135928115a4c250a215afaed883",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 38,
+     "repository": "vibrationalforce/Echoelmusic",
+     "on_family": false,
+     "purpose": "Usage/guard rules for a protected biosignal event-detection DSP component.",
+     "mechanism": "Declares component read-only unless owner writes approval; documents caller-side use via EngineBus events, debugging without modification, allowed vs forbidden actions.",
+     "mechanism_label": "protected-component-usage-guard",
+     "inputs": "code touching BioEventGraph",
+     "outputs": "compliant caller code",
+     "dependencies": "app's EngineBus/sensor layer",
+     "authority_data_boundaries": "Restricts modification; touches health biosignal data (HR, EEG) conceptually.",
+     "jurisdiction_or_language": "Swift/iOS app context",
+     "relation": "off-family",
+     "notable_strengths": "Clear do/don't boundary for protected code.",
+     "notable_risks_or_gaps": "Not music composition.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "009e1ba41d5b0d3972efab628fefc843b08ca53a",
+     "path": ".claude/skills/BioEventGraph/SKILL.md",
+     "skill_blob": "c2565c7738019fa57196fee9ae1df9cfe1c12585",
+     "package_tree": "8ceebce1d908bafa06754fcabcbf72bdb39b8876",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "fiction-drafting-and-revision",
+   "picked": 10,
+   "verified_and_read": 8,
+   "on_family": 3,
+   "keyword_pick_precision": 0.38,
+   "distinct_methods": 3,
+   "summary": {
+    "family": "fiction-drafting-and-revision",
+    "skills_on_family": [
+     40,
+     43,
+     44
+    ],
+    "distinct_methods": [
+     {
+      "label": "author-lens-diagnostic-board",
+      "description": "Diagnose a draft through distilled author craft models/heuristics, naming the first broken link and revision moves, combinable as an advisor board.",
+      "exemplar_indices": [
+       40
+      ]
+     },
+     {
+      "label": "pattern-catalogue-deslop-revision-loop",
+      "description": "Catalogue of prose tells with false-positive guidance, optional voice calibration, draft->self-audit->final rewrite.",
+      "exemplar_indices": [
+       43
+      ]
+     },
+     {
+      "label": "multi-agent-serial-pipeline-with-continuity-ledgers",
+      "description": "Staged planner/writer/critic/improver/styler/QA/memory/publisher agents with persistent character, foreshadowing and chapter-fact ledgers.",
+      "exemplar_indices": [
+       44
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "Continuity ledgers (characters, foreshadowing, chapter facts) read before every write (44)",
+     "Voice calibration from the user's own sample plus false-positive list (43)",
+     "'Name the first broken link' diagnosis and no-imitation boundary (40)",
+     "Bounded critic/QA retry loop with human-review flag (44)"
+    ],
+    "coverage_gaps": [
+     "Generic (not book-specific) outline/beat planning",
+     "Manuscript-scale structural revision (act structure, pacing across chapters)",
+     "POV/tense consistency checking",
+     "Sensitivity/authenticity review",
+     "Submission packaging (synopsis, query)",
+     "Explicit AI-assistance disclosure guidance"
+    ],
+    "high_risk_patterns": [
+     "44: unbundled subagents and hardcoded local paths; forced PASS after retries",
+     "43: 'make AI prose pass as human' framing may conflict with publisher/contest AI-disclosure rules"
+    ]
+   },
+   "skills": [
+    {
+     "index": 40,
+     "repository": "danlinyu/great-author-lens",
+     "on_family": true,
+     "purpose": "Use a distilled William Gibson craft lens to diagnose and revise fiction without imitating the author.",
+     "mechanism": "Classify the problem (scene diagnosis, world design, line revision, market, fact-dependent), inspect story/system/genre/evidence/consequence pressure, then output one highest-risk problem, 3-6 lens diagnostics and revision moves; modes for advisor board, chapter audit ('name the first broken link'), revision pass in project voice, system design, continuity. Backed by six mental models, eight decision heuristics and bundled research references.",
+     "mechanism_label": "author-lens-diagnostic-board",
+     "inputs": "draft chapter/outline/summary",
+     "outputs": "diagnosis, revision moves, limits",
+     "dependencies": [
+      "parent orchestrator great-author-lens",
+      "bundled references/research files",
+      "optional web research for current facts"
+     ],
+     "authority_data_boundaries": "Explicit no-impersonation/no-style-imitation rule for living authors; may browse for fact-dependent questions.",
+     "jurisdiction_or_language": "",
+     "relation": "distinct-method",
+     "notable_strengths": "Diagnose-first with 'first broken link' rule; anti-imitation safety; multi-lens advisor-board composition; continuity tracking list.",
+     "notable_risks_or_gaps": "Contains project-specific adapters (Moonbound Oath, Broken Lantern Code) from the author's own projects; templated generated heuristics may be shallow; does not draft new prose.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "581dd08d3529ba514081c8f2be3c3e76d845442d",
+     "path": "skills/william-gibson-craft-lens/SKILL.md",
+     "skill_blob": "0ff131b69a8bf756e62874b723258c946949b24b",
+     "package_tree": "8d4e0e37715940ce063a9940260c7b8d0fe16a73",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 41,
+     "repository": "jagger19999/apa7-claude-skill",
+     "on_family": false,
+     "purpose": "APA 7 academic paper formatting rules.",
+     "mechanism": "Rule lists for format, headings, citations, references, statistics, bias-free language.",
+     "mechanism_label": "style-guide-ruleset",
+     "inputs": "academic manuscript",
+     "outputs": "APA-formatted text",
+     "dependencies": "none",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English/Chinese academic",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Academic, not fiction.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "75363b4b5da5cbce0dc04d829a0df0d420497fbc",
+     "path": ".claude/skills/apa7/SKILL.md",
+     "skill_blob": "54662b34efd75c8d4dda015182ad80e9dfd8bf51",
+     "package_tree": "c495374b47838a0befe9d417fd8d07b1601debac",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 42,
+     "repository": "hvp17/pstack-codex",
+     "on_family": false,
+     "purpose": "Build 2-3 competing prototypes before committing to a novel design.",
+     "mechanism": "Single principle with when/when-not lists.",
+     "mechanism_label": "explore-alternatives-principle",
+     "inputs": "design decision",
+     "outputs": "comparison",
+     "dependencies": "none",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "Applicable idea (draft alternatives) but not fiction-specific.",
+     "notable_risks_or_gaps": "Software design principle.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "998fc44d4e9a8732ae8776abfec513fa1af6a41a",
+     "path": "skills/principle-exhaust-the-design-space/SKILL.md",
+     "skill_blob": "2c974f6f4e5d45bdfe1e0198eeb16911a6ec68c7",
+     "package_tree": "ab736351141d72a2d40bf03ae06bb81df14f7967",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 43,
+     "repository": "tranzmatt/fictionizer",
+     "on_family": true,
+     "purpose": "Revise fiction to remove AI-generated prose patterns and restore human voice.",
+     "mechanism": "Optional voice calibration from a user-supplied author sample (rhythm, interiority, tags, what is noticed/skipped), then scan against a 23-pattern catalogue (content, language, structural, dialogue) with before/after examples and an explicit false-positive list; write draft rewrite, self-audit 'what still reads as AI', then final rewrite preserving all plot events and beats.",
+     "mechanism_label": "pattern-catalogue-deslop-revision-loop",
+     "inputs": "fiction passage, optional voice sample",
+     "outputs": "draft rewrite, residual-tells bullets, final rewrite, change summary",
+     "dependencies": [
+      "none (Read/Write/Edit/AskUserQuestion tools)"
+     ],
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English",
+     "relation": "distinct-method",
+     "notable_strengths": "Large concrete pattern taxonomy with false-positive guidance; voice calibration; built-in draft->audit->final loop; meaning-preservation constraint.",
+     "notable_risks_or_gaps": "Line/scene level only, no structure or continuity across a manuscript; 'pass as human' framing could be used to disguise AI authorship where disclosure is required.",
+     "root_license_observed": "none (frontmatter declares MIT)",
+     "pinned_revision": "190ad6928dc6b1ef821ec76689ffe9d451d72aba",
+     "path": "SKILL.md",
+     "skill_blob": "632aad665b4c90f70a62241a8126ce71a971c9fd",
+     "package_tree": "72bbae7f7431092847cc41904e3871ff67a3204c",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 44,
+     "repository": "LINHANXIN/-",
+     "on_family": true,
+     "purpose": "End-to-end chapter production system for one specific Chinese web serial (1000 chapters) on Shuqi.",
+     "mechanism": "Hard style rules and a four-step 'face-slap' formula, then an eight-subagent pipeline per chapter: planner -> writer -> critic (PASS/FAIL) -> improver -> styler (de-AI) -> QA -> memory (update character DB, foreshadowing tracker, chapter memory) -> publisher (save text). QA failures loop back max twice, then forced PASS flagged for human review; pre-writing reads of memory and foreshadowing files and periodic consistency sweeps.",
+     "mechanism_label": "multi-agent-serial-pipeline-with-continuity-ledgers",
+     "inputs": "chapter number, outline/plan files",
+     "outputs": "chapter text, author's note, updated tracking files",
+     "dependencies": [
+      "eight agent definitions in ~/.copilot/agents/ (not bundled)",
+      "data files at hardcoded Windows path e:\\问真\\小说合集\\书旗小说\\"
+     ],
+     "authority_data_boundaries": "Writes and overwrites manuscript and tracking files; 'publisher' saves to disk (no platform upload observed).",
+     "jurisdiction_or_language": "Simplified Chinese; Chinese web-novel platform (Shuqi) conventions",
+     "relation": "distinct-method",
+     "notable_strengths": "Only skill with persistent continuity ledgers (characters, foreshadowing, chapter facts) and staged critic/QA gates with bounded retries.",
+     "notable_risks_or_gaps": "Hardcoded to one book and one machine; agents not bundled; forced PASS after two retries can ship failing chapters; genre-formula prose rules not portable.",
+     "root_license_observed": "none",
+     "pinned_revision": "636ccd352044a24fc7637a5ffa47e2eaf113e552",
+     "path": "skills/shuqi-novel/SKILL.md",
+     "skill_blob": "96f14871a4bcb27a605d19f9ddb9fa755f58fa4f",
+     "package_tree": "ab22152822474003c567113a07eae93c64252e12",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 46,
+     "repository": "weisberg/agile_agentic_analytics",
+     "on_family": false,
+     "purpose": "Monitor early A/B experiment health (SRM, novelty, guardrails).",
+     "mechanism": "Contract, monitoring protocol, red flags, decision gates, artifact outputs.",
+     "mechanism_label": "experiment-early-read-protocol",
+     "inputs": "experiment data",
+     "outputs": "monitoring report",
+     "dependencies": "Bash/Write tools",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Analytics, not fiction.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "8d9ce3e8c80ddfea03af44bb5b900afc16b07c19",
+     "path": "plugins/experimentation/skills/early-signal-monitoring/SKILL.md",
+     "skill_blob": "30bb19a51a40405eeabe170c1c0a62376bab6a16",
+     "package_tree": "d69094102d95eb3fe90229110796742a9e7f9847",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 47,
+     "repository": "CYC2002tommy/Deep-Research-Agent",
+     "on_family": false,
+     "purpose": "Strict peer review of academic manuscripts on 10 aspects.",
+     "mechanism": "Fixed 10-point framework with no-fabricated-citations red lines and section-by-section review.",
+     "mechanism_label": "fixed-rubric-peer-review",
+     "inputs": "manuscript sections",
+     "outputs": "review report",
+     "dependencies": "none",
+     "authority_data_boundaries": "Advises section-by-section review for privacy/context.",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "No-hallucinated-citation red line.",
+     "notable_risks_or_gaps": "Academic, not fiction.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "b58ccac3abae73bd51ffdd7de3887bfcf3da56ab",
+     "path": "skills/remi/SKILL.md",
+     "skill_blob": "467a79c1687f647b3ddb3a7acba751d57eaf11f2",
+     "package_tree": "d533e522992c36669e8847ef5b0564b94e825e17",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 49,
+     "repository": "SSiertsema/claude-code-plugins",
+     "on_family": false,
+     "purpose": "Generate a single fictional, simulation-ready persona with an 18-section behavioral layer.",
+     "mechanism": "Parse optional constraints, pre-checks, narrative profile phase, behavioral layer phase, daily-life samples; hard rules (fictional, one person, present day, English).",
+     "mechanism_label": "synthetic-persona-generator",
+     "inputs": "optional constraints",
+     "outputs": "persona profile",
+     "dependencies": "none",
+     "authority_data_boundaries": "Allows optional real company names; produces health/diagnosis/political details for fictional persons.",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Internal-consistency rules could serve character bibles.",
+     "notable_risks_or_gaps": "For simulation/research personas, not story drafting.",
+     "root_license_observed": "none (ROOT_LICENSE_HEAD.txt held a tree listing, not license text)",
+     "pinned_revision": "092268e54fa1b948ec9e6f1b9e5a69bd6eb2d9c2",
+     "path": ".claude/skills/generate-realistic-person/SKILL.md",
+     "skill_blob": "5c5a0a7d9d3dbb6fe4b72cbc965db6a3f45ddec2",
+     "package_tree": "739d86b6f9afbef931ff88cb797beebed0f911f7",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "job-application-tailoring",
+   "picked": 10,
+   "verified_and_read": 7,
+   "on_family": 1,
+   "keyword_pick_precision": 0.14,
+   "distinct_methods": 1,
+   "summary": {
+    "family": "job-application-tailoring",
+    "skills_on_family": [
+     54
+    ],
+    "distinct_methods": [
+     {
+      "label": "jd-dissection-weighted-bullet-scoring-rebuild",
+      "description": "Classify company/JD, score existing achievements against JD layers with a visible formula, fill gaps truthfully, rebuild resume by seniority template, optional reusable bullet bank.",
+      "exemplar_indices": [
+       54
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "Visible bullet scoring with CUTS and GAPS sections (54)",
+     "Never-fabricate gap-fill tagged as new (54)",
+     "Persistent bullet bank written only with per-entry approval (54)",
+     "Evidence-chain and confidence-downgrade discipline from employer-side 51, inverted for self-assessment"
+    ],
+    "coverage_gaps": [
+     "Role-agnostic tailoring outside PMM",
+     "Cover letters and application question answers",
+     "ATS parsing/format checks",
+     "Application tracking and follow-up",
+     "Jurisdiction-specific CV norms (photo, DOB, length) and privacy guidance",
+     "Only one on-family skill; family sample dominated by keyword collisions (resume/quit/continue)"
+    ],
+    "high_risk_patterns": [
+     "51 (off-family): automated hire/no-hire ranking on third-party candidate PII with real-company rubric",
+     "52: reads local session transcripts and forces model self-dispatch"
+    ]
+   },
+   "skills": [
+    {
+     "index": 51,
+     "repository": "eng-manager-xyz/auteur-rs",
+     "on_family": false,
+     "purpose": "Employer-side evaluation and stack-ranking of India early-career SWE candidates for an Uber-calibrated L3 bar.",
+     "mechanism": "Ingest transcripts, resumes and icebreakers; STAR decomposition and red/green flags; 100-point rubric plus +/-15 adjustments; five-step cross-candidate anchoring and stack rank; mandatory hire/no-hire output.",
+     "mechanism_label": "employer-rubric-stack-rank",
+     "inputs": "candidate transcripts, resumes, icebreaker answers",
+     "outputs": "scorecards, stack rank, hire/no-hire",
+     "dependencies": [
+      "none"
+     ],
+     "authority_data_boundaries": "Processes third-party candidate personal data and produces consequential hiring recommendations; names a real company's internal rubric.",
+     "jurisdiction_or_language": "India; Uber-specific",
+     "relation": "off-family",
+     "notable_strengths": "Evidence-chain requirement and confidence downgrade when inputs missing.",
+     "notable_risks_or_gaps": "Hiring-side, not applicant tailoring; automated-decision and bias risk on candidate PII.",
+     "root_license_observed": "none",
+     "pinned_revision": "cd7fe0b5f2adcada37eae68f5652e8c9c75c7386",
+     "path": ".claude/skills/india-early-career-swe-evaluator/SKILL.md",
+     "skill_blob": "da5a26756b4c3b489be38858f9a8648696266775",
+     "package_tree": "f32e038c568d64ad4c7dc5561e0e10ae3e311002",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 52,
+     "repository": "FourthWiz/quoin",
+     "on_family": false,
+     "purpose": "Resume a prior Claude Code session from session history.",
+     "mechanism": "Model-tier self-dispatch, parse recent-sessions records, locate JSONL, extract checkpoint and last messages, present picker.",
+     "mechanism_label": "session-resume-picker",
+     "inputs": "session logs",
+     "outputs": "context summary",
+     "dependencies": "Claude Code session JSONL",
+     "authority_data_boundaries": "Reads local conversation transcripts; MUST self-dispatch to another model.",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "'resume' keyword collision; not job related.",
+     "root_license_observed": "PolyForm Noncommercial License 1.0.0",
+     "pinned_revision": "644d657a460357e2e6c428865a8e05c496ce2f6d",
+     "path": "quoin/adapters/claude/skills/continue_work/SKILL.md",
+     "skill_blob": "99dcbadf3ebd7c8d9a7492ed0b9bc5cef7bfc0f0",
+     "package_tree": "ba1d6666179a1e06ee99b02060dd80d0ba7837d1",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": 53,
+     "repository": "mgallet92i/waterfall",
+     "on_family": false,
+     "purpose": "Cleanly stop an active multi-agent workflow.",
+     "mechanism": "Detect session marker, load team config, send shutdown requests, close segment, delete cron watchdog, clean markers, confirm.",
+     "mechanism_label": "workflow-shutdown",
+     "inputs": "session id",
+     "outputs": "stopped team, cleaned markers",
+     "dependencies": "Bash, SendMessage, CronDelete",
+     "authority_data_boundaries": "Deletes markers and scheduled jobs; messages teammates.",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Not job related ('quit' collision).",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "22dbfd305ed97e91c99e9c7e271eeac82e52a467",
+     "path": "skills/wf-quit/SKILL.md",
+     "skill_blob": "16cd4b833072531b74d7ac7b5fa8f84f00287600",
+     "package_tree": "fb2d605a48ab076e3fcd592fd7e8e209b889bc90",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 54,
+     "repository": "stefanoskarakasis/Product-Marketing-Skills",
+     "on_family": true,
+     "purpose": "Review and tailor a Product Marketing Manager resume to a job description, IC through VP.",
+     "mechanism": "Mandatory opening goal question selects one of ~13 modes; TAILOR runs five steps: classify company type and set bullet-category weights, dissect JD into must-haves/cultural signals/nice-to-haves/red flags, score bullets with a visible weighted formula (category, keyword, JD-phrase mirroring, seniority) listing cuts and gaps, generate tagged gap-fill bullets via XYZ+S without fabrication, write 3-sentence summary and optional 'Why [Company]', then full rebuild by level template. Optional reusable bullet bank updated only with user approval.",
+     "mechanism_label": "jd-dissection-weighted-bullet-scoring-rebuild",
+     "inputs": "baseline resume, job description, optional bullet bank, optional brain.md",
+     "outputs": "tailored complete resume, scored bullet rationale, gaps, optional bullet-bank entries",
+     "dependencies": [
+      "bundled references (full-audit.md, modes-detail.md)",
+      "optional /foundation/brain.md"
+     ],
+     "authority_data_boundaries": "Handles user's resume (personal data); declares no file writes or external side effects; asks before saving bullet bank.",
+     "jurisdiction_or_language": "PMM/GTM roles; US-style resume conventions",
+     "relation": "distinct-method",
+     "notable_strengths": "Transparent scoring with cuts/gaps; explicit never-fabricate rule; confirmation of inferred mode/level; compounding bullet bank; bundled eval file.",
+     "notable_risks_or_gaps": "PMM-only by design; no cover letters; keyword-mirroring heuristic is crude; no ATS/format validation or application tracking.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "0719f97247110dfde24f5979a28535c99f4d710a",
+     "path": "pmm-toolkit/skills/pmm-resume/SKILL.md",
+     "skill_blob": "16233d26d0bce0ab848f7f05edecaeefc6ccb661",
+     "package_tree": "95ee0b598a76babb8f8ed97cee3fa8a4b1f39fb9",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": 55,
+     "repository": "quangdang46/factory-agent",
+     "on_family": false,
+     "purpose": "Gracefully stop a Factory loop.",
+     "mechanism": "Write .factory/STOP, check worktrees, report, remove signal on resume.",
+     "mechanism_label": "stop-signal-file",
+     "inputs": "none",
+     "outputs": "STOP file",
+     "dependencies": "git worktrees",
+     "authority_data_boundaries": "Writes control file in repo.",
+     "jurisdiction_or_language": "",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Not job related.",
+     "root_license_observed": "none",
+     "pinned_revision": "dada67edaeaa96e59ad7d14a8d024fececa87e1f",
+     "path": "skills/factory-stop/SKILL.md",
+     "skill_blob": "7de2b037cc1fcf2c3fb2277dea9541de345ef84e",
+     "package_tree": "82f13ad0c9609021c636e3cc14e2f38f4eff6ec4",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 56,
+     "repository": "egbertie/satisficing-lab",
+     "on_family": false,
+     "purpose": "Checkpoint/resume protection for long multi-step agent tasks.",
+     "mechanism": "Six-step protocol: split task, create progress file, save after each unit, silent precondition checks C1-C6, dual economy checkpoints, resume protocol.",
+     "mechanism_label": "task-checkpoint-resume",
+     "inputs": "long task",
+     "outputs": "progress tracking file",
+     "dependencies": "file writes",
+     "authority_data_boundaries": "Writes progress files.",
+     "jurisdiction_or_language": "Simplified Chinese",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "'resume' collision; not job related.",
+     "root_license_observed": "none",
+     "pinned_revision": "3ebcaaa9cdfddfeb2857f4e23a98109714b400ab",
+     "path": "满意姐和扣子的资料/kimi-workspace完整版/skills/task-resumption-guard/SKILL.md",
+     "skill_blob": "95b0c0a3ee218810e88e1b2609a35b508403264e",
+     "package_tree": "894796989813e14bc0e4a5ff7c45573cc0210cbe",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 59,
+     "repository": "gethouston/houston",
+     "on_family": false,
+     "purpose": "Morning one-screen sales/founder brief from calendar and pending drafts.",
+     "mechanism": "Read calendar, collect draft approval queue from other agents' outputs, pick top three actions, list stalled deals.",
+     "mechanism_label": "daily-brief-aggregation",
+     "inputs": "calendar, agent outputs",
+     "outputs": "morning brief",
+     "dependencies": "Google Calendar integration",
+     "authority_data_boundaries": "Reads calendar and other agents' drafts (no sending observed).",
+     "jurisdiction_or_language": "Spanish",
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Not job related.",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "bfb1614f4a142fd3d9ed5489b94a323dc06e7721",
+     "path": "store/agents-i18n/es/sales/.agents/skills/preparar-mi-dia/SKILL.md",
+     "skill_blob": "fa9e79c5180f0205cd603ddf05242f0bfb5f8b92",
+     "package_tree": "1ea3bee4a7fb360cf87d5d362b04f279b9efc63a",
+     "verification_status": "verified-blob-changed-since-july"
+    }
+   ]
+  },
+  {
+   "family": "sales-prospecting-outreach",
+   "picked": 10,
+   "verified_and_read": 7,
+   "on_family": 5,
+   "keyword_pick_precision": 0.71,
+   "distinct_methods": 5,
+   "summary": {
+    "family": "sales-prospecting-outreach",
+    "skills_on_family": 5,
+    "distinct_methods": [
+     {
+      "label": "public-signal-evidence-prospecting",
+      "description": "Find and score prospects from cited public demand signals, verify contact route, draft but never send outreach, refine via saved feedback.",
+      "exemplar_indices": [
+       63
+      ]
+     },
+     {
+      "label": "question-sequence-discovery-framework",
+      "description": "Scripted SPIN question progression with quotas and stage emphasis for discovery calls.",
+      "exemplar_indices": [
+       61
+      ]
+     },
+     {
+      "label": "live-transcript-turn-coaching",
+      "description": "Per-chunk call-phase and signal reading producing a glanceable say/ask/avoid coaching card.",
+      "exemplar_indices": [
+       66
+      ]
+     },
+     {
+      "label": "notes-slotting-fit-scoring-profile",
+      "description": "Slot post-call notes into fixed fields, mark unknowns, score product fit by rubric, pick open questions.",
+      "exemplar_indices": [
+       69
+      ]
+     },
+     {
+      "label": "pitch-narrative-arc-audit-rebuild",
+      "description": "Diagnose pitch failures then rebuild as a seven-beat tension-resolution narrative.",
+      "exemplar_indices": [
+       67
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "63: evidence-required shortlist with counter-evidence override, no quota filling, and draft-never-send boundary",
+     "63: feedback IDs translated into visible search-criteria updates with --new-only exclusion",
+     "69: [not stated] slotting rule and explicit rubric-based fit score with reasoning",
+     "66: latency-aware fixed coaching card and prospect-signal taxonomy",
+     "61: question-mix quotas and red-flag self-check",
+     "67: five-failure pitch diagnostic before rewrite"
+    ],
+    "coverage_gaps": [
+     "Multi-touch outreach sequencing with deliverability, opt-out and anti-spam law compliance (CAN-SPAM/GDPR/CASL)",
+     "Account-based research of named enterprise buying committees",
+     "Post-send reply tracking and pipeline hygiene without a CRM",
+     "Consent and disclosure for recording/transcribing live calls",
+     "Measurement/A-B testing of outreach variants"
+    ],
+    "high_risk_patterns": [
+     "64: curl-driven external API that grants third parties read/write access to user notes/calendar and collects visitor PII",
+     "66: hard-coded seller identity and reliance on user's private transcript library; no call-recording consent guidance",
+     "Urgency/loss-aversion pressure tactics (61, 66) without ethical limits",
+     "63: local persistent prospect history (mitigated by opt-out and product scoping)"
+    ]
+   },
+   "skills": [
+    {
+     "index": 61,
+     "repository": "jmbluhm/b2b-sales-skills",
+     "on_family": true,
+     "purpose": "Guides complex B2B discovery calls using Rackham's SPIN question sequence.",
+     "mechanism": "Prescribes a fixed Situation->Problem->Implication->Need-Payoff question progression with volume quotas (2-3 S, 3-4 P, 5-7 I, 2-3 N) and a timed 60-minute call script. Adds stage-specific emphasis (first/second/executive call), an implication ladder (tactical->strategic->competitive), 'double-click' and 'ripple cascade' quantification techniques, and a red-flag checklist (too many situation questions, >4 problems, >50% talk time).",
+     "mechanism_label": "question-sequence-discovery-framework",
+     "inputs": "Deal context, product/problem area, call stage",
+     "outputs": "Question plan, talk track, discovery summary/next-step close",
+     "dependencies": "None; references sibling skills (sandler, gap-selling, meddpicc, challenger, laer) and bundled reference files",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English; B2B enterprise (deal size >$50K)",
+     "relation": "distinct-method",
+     "notable_strengths": "Clear when-not-to-use boundaries; quantified question-mix targets; stage-differentiated question emphasis.",
+     "notable_risks_or_gaps": "Cites Gong/Rackham statistics without sourcing in-file; script-only, no artefact capture or post-call record; urgency-building can become manipulative if misapplied.",
+     "root_license_observed": "Apache-2.0",
+     "pinned_revision": "16951ed6fd5a10ec9a58cb08308b479ce56e310b",
+     "path": "skills/discovery/spin-selling/SKILL.md",
+     "skill_blob": "c0f85b47530041ea0076c780e625c638169a1a06",
+     "package_tree": "7effac93a1072b4641bae2f480e4cec769e989c0",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 62,
+     "repository": "core-wrk/employee-number-two",
+     "on_family": false,
+     "purpose": "Advises a founder on when third-party tools (CRM, prospecting DBs, email platforms) would amplify a current task.",
+     "mechanism": "Event-triggered advisory: only surfaces a recommendation when the current task (e.g. 47 prospects tracked in markdown) would concretely benefit; presents max 3 options in a table with free tier and MCP availability, then defers the decision ('Your call') and never revisits a declined tool.",
+     "mechanism_label": "contextual-tool-recommendation",
+     "inputs": "Current task context, founder scale",
+     "outputs": "Tool-opportunity table with recommendation",
+     "dependencies": "Names Apollo, HubSpot, Mailchimp, Loops, Resend, Stripe, PostHog etc. (recommendation only)",
+     "authority_data_boundaries": "Advisory only; explicitly defers decisions to user; no actions",
+     "jurisdiction_or_language": "English; startup founders",
+     "relation": "off-family",
+     "notable_strengths": "Good anti-upsell restraint rules (no preemptive catalog, <=3 options, respect declines).",
+     "notable_risks_or_gaps": "Not a prospecting/outreach method itself; product/pricing facts may go stale; project-numbered triggers are workspace-specific.",
+     "root_license_observed": "CC BY-NC 4.0 (non-commercial)",
+     "pinned_revision": "646cb9f77da75632d446ffbfe3d938c619b418fa",
+     "path": ".claude/skills/third-party-advisor/SKILL.md",
+     "skill_blob": "b16f2e756e57e0a6ce618a24db57f2bd827f95c7",
+     "package_tree": "fd0623e102bc5febf2cf749f7abb174c71ba8d9f",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 63,
+     "repository": "Kappaemme-git/codex-first-customer-finder-skill",
+     "on_family": true,
+     "purpose": "Finds evidence-backed potential first customers/design partners from public demand signals and drafts (never sends) outreach.",
+     "mechanism": "Product->ICP (primary+adjacent, triggers, disqualifiers) -> multi-angle public-signal search (tool requests, complaints, migration, hiring triggers) opening original sources with publication and checked dates -> scoring on pain/fit/timing/reachability/evidence with counter-evidence override and dedup -> verified public contact route and one problem-language opener with low-friction CTA. Bundled Python generator validates JSON, exports Markdown/CSV/HTML, and keeps product-scoped local keep/maybe/reject history for --new-only refinement.",
+     "mechanism_label": "public-signal-evidence-prospecting",
+     "inputs": "Startup URL or product description; optional prior feedback/history",
+     "outputs": "Report (verdict, ICP, shortlist with IDs/scores/citations/route/opener/caution, patterns, 7-day manual plan, limits), CSV, optional HTML, local history",
+     "dependencies": "Web search/browser tools; bundled Python helpers",
+     "authority_data_boundaries": "Strong privacy boundary: public professional info only, no data brokers/personal email enrichment/sensitive attributes, no bypassing logins/robots; never sends, follows, comments, or creates CRM records without separate authorization; writes local history files (product-scoped, opt-out)",
+     "jurisdiction_or_language": "English default; follows explicit language request",
+     "relation": "distinct-method",
+     "notable_strengths": "Evidence-first qualification with counter-evidence override; explicit no-quota-filling; feedback-to-criteria loop with visible preference updates; strongest privacy/consent guardrails in family.",
+     "notable_risks_or_gaps": "Depends on live browsing (reports limitation otherwise); local history persistence needs user awareness; blob changed since July snapshot.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "d3f6964bd989745ac183edbd545c588a68451146",
+     "path": "first-customer-finder/SKILL.md",
+     "skill_blob": "cf263b902b8db65bf4526b97a0326258f039e2d9",
+     "package_tree": "831e2fcc04796267e8f02b51a1dca28ed80cba3f",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": 64,
+     "repository": "Lord1Egypt/awesome-skill-forge",
+     "on_family": false,
+     "purpose": "Creates and manages shareable links to a user's AI agent on the Aicoo platform.",
+     "mechanism": "Checks context exists via API, then POSTs share-link config (scope, calendar/notes access, expiry, requireSignIn default true) with curl; lists, updates, revokes links and edits per-link policy notes.",
+     "mechanism_label": "hosted-agent-share-link-api",
+     "inputs": "AICOO_API_KEY, link parameters",
+     "outputs": "Share URL and permission summary",
+     "dependencies": "aicoo.io API, curl, jq; AICOO_API_KEY/PULSE_API_KEY env",
+     "authority_data_boundaries": "Exposes user's notes/calendar to third parties, can grant write/edit access to notes and calendar write; visitor analytics collect guest name/username/email; requires API key; external transmission to aicoo.io",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Sign-in required by default; explicit permission matrix and revocation.",
+     "notable_risks_or_gaps": "Off-family (mentions prospects only as share audience); consequential access-granting actions via external API; collects visitor PII.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "4aa004da461d820f4ea5499e58eb8d196cf99016",
+     "path": "community/clawhub/a/aicoo-share-agent/SKILL.md",
+     "skill_blob": "e879d28b5c1cf49146191336097b5ce09584052b",
+     "package_tree": "4e0d21a2ef1e68d08b4d0b6fbe4296223bb580de",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 66,
+     "repository": "bdevz/claude-skills",
+     "on_family": true,
+     "purpose": "Provides real-time coaching on what to say next during live sales calls from pasted transcript chunks.",
+     "mechanism": "For each pasted chunk, classify call phase (opening/discovery/demo/pricing/objection/closing), read prospect signals (enthusiasm, skepticism, budget, champion, danger), and emit a fixed glanceable block: what just happened, say-this-next lines, questions to ask, watch-out, next play. Draws from a technique library (Gap Selling, Challenger, floor+range pricing, boomerang objections, five-minute drill) and situational playbooks (flat call, early pricing, discount request).",
+     "mechanism_label": "live-transcript-turn-coaching",
+     "inputs": "Live call transcript chunks (Wispr Flow), optional 'go deeper' requests",
+     "outputs": "Per-turn coaching card; deeper technique expansions",
+     "dependencies": "references/sales-playbook.md, ai-solutions-context.md; user's local Transcripts folder (120+ files)",
+     "authority_data_boundaries": "Processes live third-party conversation content (prospect statements); suggests searching user's private transcript library; no outbound actions",
+     "jurisdiction_or_language": "English; tuned to selling AI-employee solutions at $500-1,500/month, named seller 'Karkis'",
+     "relation": "distinct-method",
+     "notable_strengths": "Latency-aware fixed output format; signal taxonomy for reading prospects; situational playbooks.",
+     "notable_risks_or_gaps": "Hard-coded seller identity, product and price points limit portability; no consent/recording-disclosure guidance for live call transcription; 'urgency with specificity' tactic could slide into pressure; no license file observed.",
+     "root_license_observed": "none",
+     "pinned_revision": "44076f4be3153fb122749dad655cc8db036dd460",
+     "path": "live-sales-coach/SKILL.md",
+     "skill_blob": "a011247e8523acbab7e25161c13da2af29739a95",
+     "package_tree": "1f4ce522da53151e6a256ec56aea77b5232dbe18",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 67,
+     "repository": "Fearofsnakes/pmm-skillset",
+     "on_family": true,
+     "purpose": "Turns a feature-dump pitch deck or demo script into a tension-resolution sales narrative with speaker notes.",
+     "mechanism": "Three gated acts confirmed with the user: (1) audit the current pitch against five named failures (feature dump, buried lead, no villain, persona mismatch, no ask); (2) build a seven-beat arc (shift, cost, old way, new way, proof, product, ask) with persona adaptations and a narrative integrity check; (3) produce a slide-by-slide narrative document with talk track. Modes: full build, from scratch, audit-only, re-entry with field feedback.",
+     "mechanism_label": "pitch-narrative-arc-audit-rebuild",
+     "inputs": "Current deck/script, buyer persona, core problem, proof points, positioning, deal-cycle context",
+     "outputs": "Pitch diagnosis, seven-beat arc, narrative document with speaker notes and persona adaptations",
+     "dependencies": "Optional upstream skills (/icp-definition, /positioning-audit)",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English; B2B SaaS",
+     "relation": "distinct-method",
+     "notable_strengths": "Diagnostic failure taxonomy before rewriting; non-negotiable persona/proof inputs; re-entry mode for iteration.",
+     "notable_risks_or_gaps": "Sales enablement rather than prospecting/outreach proper; long (31KB) conversational ceremony; worked example uses real company names (Linear, Ramp) as fictional proof.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "11eabde4b63f6d346d33e988eb25b0f6b008efe2",
+     "path": "skills/tier-3/sales-narrative/SKILL.md",
+     "skill_blob": "7278869b15b4a4a1ae2ca8d60b9316d3ccd12e05",
+     "package_tree": "876c9385ccaca0409acccdededefccf606b1eaa5",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 69,
+     "repository": "Viindoo/odoo-mcp-client",
+     "on_family": true,
+     "purpose": "Converts raw discovery-meeting notes into a structured prospect profile with Odoo fit assessment.",
+     "mechanism": "Round 0 resolves project facts (series/profile) via plugin snippet; Round 1 slots every note sentence into fixed fields (vertical, headcount band, current system, pains with verbatim quotes, success criteria, decision process, budget, timeline) marking [not stated] rather than inventing; Round 3 labels each pain Standard/Config/Custom/Cannot with confidence and computes a rule-based 1-5 fit score, optionally verifying low-confidence rows with OSM check_module_exists; Round 4 selects top-3 open questions. Fixed template output and continuation contract.",
+     "mechanism_label": "notes-slotting-fit-scoring-profile",
+     "inputs": "Discovery notes or RFP/spec (SSOT extraction mode)",
+     "outputs": "Discovery Profile markdown (snapshot, pains, success criteria, fit table, overall fit, open questions, next skills)",
+     "dependencies": "Optional Odoo OSM MCP tools; ${CLAUDE_PLUGIN_ROOT} snippets (project-facts, ssot-extraction, continuation-contract)",
+     "authority_data_boundaries": "Handles prospect business data; optional MCP calls auto-triggered for low-confidence rows; no outbound actions",
+     "jurisdiction_or_language": "English (Vietnamese trigger phrase noted); Odoo ERP vendor-specific",
+     "relation": "distinct-method",
+     "notable_strengths": "Anti-hallucination [not stated] rule; explicit fit-score rubric with stated reasoning; handoff-ready self-contained profile.",
+     "notable_risks_or_gaps": "Odoo-specific fit labels; depends on unbundled plugin snippets; blob changed since July snapshot.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "dd43fea95db244d4babe2042a2a00b029360e58d",
+     "path": "plugins/odoo-ai-agents/skills/odoo-discovery-summary/SKILL.md",
+     "skill_blob": "86db2bcb7b702069a4b50c79b7d29ed718e333ff",
+     "package_tree": "a67763fada1c8576be4d90282abc34b32ecd91eb",
+     "verification_status": "verified-blob-changed-since-july"
+    }
+   ]
+  },
+  {
+   "family": "manufacturing-quality",
+   "picked": 10,
+   "verified_and_read": 10,
+   "on_family": 3,
+   "keyword_pick_precision": 0.3,
+   "distinct_methods": 3,
+   "summary": {
+    "family": "manufacturing-quality",
+    "skills_on_family": 3,
+    "distinct_methods": [
+     {
+      "label": "aiag-vda-7step-action-priority-fmea",
+      "description": "Standards-aligned 7-step DFMEA/PFMEA with S/O/D ratings mapped to Action Priority, quality gates and scored analysis.",
+      "exemplar_indices": [
+       70
+      ]
+     },
+     {
+      "label": "guideword-qualitative-dfmea",
+      "description": "Configurable guideword-driven failure-mode generation with design/test/runtime mitigations and common-cause analysis, rendered to Excel/HTML.",
+      "exemplar_indices": [
+       78
+      ]
+     },
+     {
+      "label": "editable-lss-diagram-generation-with-lint",
+      "description": "Lean Six Sigma visual artefacts (VSM, SIPOC, fishbone, A3, control plan) as editable draw.io with metric completeness and lint QA.",
+      "exemplar_indices": [
+       73
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "70: Action Priority (severity-first) instead of RPN with embedded decision tables and per-step quality gates",
+     "70: weighted quality rubric scoring of the FMEA itself",
+     "78: guideword taxonomy for systematic failure-mode generation and runtime-mitigation category",
+     "73: mandatory per-diagram metric completeness (takt, C/O, uptime) and structural/visual lint",
+     "77 (off-family): applicability gate to avoid safety theater; 72 (off-family): evidence-for/against hypothesis ranking reusable for RCA"
+    ],
+    "coverage_gaps": [
+     "SPC/control charts and process capability (Cp/Cpk) analysis",
+     "Measurement system analysis (Gage R&R)",
+     "8D / CAPA nonconformance workflow with containment",
+     "Control plan generation linked from PFMEA",
+     "PPAP/APQP document packaging",
+     "Supplier quality and incoming inspection sampling (AQL)"
+    ],
+    "high_risk_patterns": [
+     "73: mandatory execution of scripts from an unbundled sibling skill path",
+     "75 (off-family): process kill and DLL deployment commands",
+     "70: reproduction of handbook rating/AP tables may carry copyright constraints",
+     "LLM-generated FMEA ratings over-trusted without qualified review (only 77 mandates sign-off)"
+    ]
+   },
+   "skills": [
+    {
+     "index": 70,
+     "repository": "ddunnock/claude-plugins",
+     "on_family": true,
+     "purpose": "Conducts DFMEA/PFMEA/FMEA-MSR using the AIAG-VDA 7-step method with Action Priority.",
+     "mechanism": "Seven gated steps: 5T planning, structure analysis (PFMEA via process flow and 4M work elements), function analysis (verb+noun per spec), failure chain (effect<-mode<-cause), risk analysis with prevention/detection controls and 1-10 S/O/D ratings mapped to H/M/L Action Priority via embedded AIAG-VDA tables (RPN shown only for legacy reference), optimization with owner/date and re-rating, and documentation. Bundled scripts compute a weighted six-dimension quality score (pass >=70) and generate an escaped HTML report; optional knowledge-mcp standards lookups with citations.",
+     "mechanism_label": "aiag-vda-7step-action-priority-fmea",
+     "inputs": "Product/process scope, team, structure, functions, controls, ratings",
+     "outputs": "Session JSON, AP-ranked FMEA, quality score, HTML report",
+     "dependencies": "Python scripts (score_analysis.py, generate_report.py); optional knowledge-mcp; tools: Read, Bash",
+     "authority_data_boundaries": "Local script execution only (claims no network/subprocess); treats user text as data; validates paths",
+     "jurisdiction_or_language": "English; automotive-origin standard (AIAG-VDA 2019), ISO 26262/MIL-STD-882 references",
+     "relation": "distinct-method",
+     "notable_strengths": "Current AP methodology instead of RPN; per-step quality gates; scored analysis quality; built-in prompt-injection and XSS handling.",
+     "notable_risks_or_gaps": "Standards tables embedded from copyrighted handbook may raise licensing questions; requires Bash for scripts; no linkage to control plan/SPC.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "e22db30ce9da9ff3686cda59edd8855443451ba0",
+     "path": "skills/fmea-analysis/SKILL.md",
+     "skill_blob": "f9b7b541bc886547544715eb910804c33f002530",
+     "package_tree": "346d2024a716f82638f9ffba2a73e1dce42445a4",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 71,
+     "repository": "sualeh/devaide",
+     "on_family": false,
+     "purpose": "Produces a weekly report of production software bugs closed in Jira with root cause and fix from Confluence.",
+     "mechanism": "Connectivity check on Atlassian Rovo MCP, JQL for bugs closed in last 7 days, enrich from Jira fields and Confluence pages, emit per-bug markdown with sentence-limited impact/root cause/fix sections ordered by priority.",
+     "mechanism_label": "jira-closed-bug-weekly-report",
+     "inputs": "Jira/Confluence via Rovo MCP",
+     "outputs": "Markdown weekly fixed-issues report",
+     "dependencies": "Atlassian Rovo MCP",
+     "authority_data_boundaries": "Reads internal Jira/Confluence content; read-only",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Explicit fallbacks for undocumented fields; stop-on-connectivity-failure.",
+     "notable_risks_or_gaps": "Software defect reporting, not manufacturing quality.",
+     "root_license_observed": "none",
+     "pinned_revision": "10b5cb15cacfca6d8442ee355db94f6ecd9ecc6e",
+     "path": "skills/fixed-issues/SKILL.md",
+     "skill_blob": "2a0d54dff3f62bf0b64b7a577f1fcef7dbe2343b",
+     "package_tree": "53b1f2b3075493a9c2e38a2e54e85ce7333e8976",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 72,
+     "repository": "otey247/AutoTest",
+     "on_family": false,
+     "purpose": "Builds ranked root-cause hypotheses for software test failures.",
+     "mechanism": "Gather failure context, generate hypotheses across six zones (code, config, data, dependency, infra, test), list evidence for/against and a verification step for each, rank by likelihood and order the investigation.",
+     "mechanism_label": "zoned-hypothesis-ranking-rca",
+     "inputs": "Failure description, recent changes, environment",
+     "outputs": "Ranked RCA hypothesis markdown",
+     "dependencies": "none",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Evidence-for/against with explicit verify-by step is a transferable RCA pattern.",
+     "notable_risks_or_gaps": "Software-test zones only; no 5-Why/Ishikawa 6M or containment/8D for physical defects.",
+     "root_license_observed": "none",
+     "pinned_revision": "61357f3d529820157d9b9b85672e6647dc554a59",
+     "path": ".github/skills/root-cause-hypothesis-builder/SKILL.md",
+     "skill_blob": "a3e126487924a83070948a9b69098fa3c60545da",
+     "package_tree": "44de8a5b561b96ef754bfbec5efa1bc888ae32f5",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 73,
+     "repository": "fjgonzalezmgt/drawingskills",
+     "on_family": true,
+     "purpose": "Creates editable draw.io Lean Six Sigma and operational-excellence diagrams (VSM, SIPOC, fishbone, DMAIC, A3, control plan/FMEA visuals).",
+     "mechanism": "Selects diagram type by intent, generates a template via bundled make_lss_template.py, uses native mxgraph.lean_mapping stencils for VSM symbols with a fixed semantic palette, and enforces per-type metric completeness (VSM must include takt, CT, C/O, uptime, inventory, demand, timeline). Mandatory QA runs a sibling skill's validate_drawio.py and visual_lint_drawio.py --strict, plus screenshot inspection when available.",
+     "mechanism_label": "editable-lss-diagram-generation-with-lint",
+     "inputs": "Process description, diagram intent, metrics",
+     "outputs": "Editable .drawio file plus QA results",
+     "dependencies": "Python script; sibling drawio-create-diagram skill scripts (not bundled); draw.io",
+     "authority_data_boundaries": "Executes local Python scripts including ones outside its own package (../drawio-create-diagram)",
+     "jurisdiction_or_language": "English and Spanish triggers",
+     "relation": "distinct-method",
+     "notable_strengths": "Per-diagram metric completeness rules; native VSM stencils; mandatory structural/visual QA.",
+     "notable_risks_or_gaps": "Visualization only, no statistical analysis (capability, SPC); mandatory QA depends on an unbundled sibling skill; no root license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "6bbd4b8ea84625ab69cf0044fb32c4d046acac9d",
+     "path": "skills/drawio-lean-six-sigma/SKILL.md",
+     "skill_blob": "3a65bdf49d848b4933cdd154e5d7f8bd023f0755",
+     "package_tree": "669a4d85904880827bf2703fb3412a4d483511c0",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 74,
+     "repository": "yanivkalfa/ReactiveUI-Unreal",
+     "on_family": false,
+     "purpose": "Pipeline for wrapping one Unreal Slate widget end-to-end (header research, adapter, style keys, contract case, test, docs).",
+     "mechanism": "Six-station software production line with exit gate (build, automation tests, contract green, docs-sync) and red->green test demonstration.",
+     "mechanism_label": "software-widget-wrapping-pipeline",
+     "inputs": "Slate widget name, engine headers",
+     "outputs": "C++ wrapper, tests, docs entries",
+     "dependencies": "Unreal Engine, templates, docs-sync skill",
+     "authority_data_boundaries": "Writes code in repo; model-tier escalation instructions",
+     "jurisdiction_or_language": "English; Unreal C++",
+     "relation": "off-family",
+     "notable_strengths": "Red->green once rule and 'header outranks docs' ground-truth rule.",
+     "notable_risks_or_gaps": "Uses 'production line' metaphor only; unrelated to manufacturing quality; custom community license.",
+     "root_license_observed": "Reactive UI Toolkit Community License 1.1",
+     "pinned_revision": "3a18e17b13802c503e7e0ff993dd593fa6bdd587",
+     "path": ".claude/skills/component-pipeline/SKILL.md",
+     "skill_blob": "f32f837934217a3b29d534d7131be357e5fa55f0",
+     "package_tree": "5dafd50fd93115f9aa63d607ad5ad4f6d935e1dd",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": 75,
+     "repository": "astrobleem/SNES-SuperMonkeyIsland",
+     "on_family": false,
+     "purpose": "Drives a Mesen2 emulator MCP server to debug and analyze SNES ROMs.",
+     "mechanism": "Python client session: run frames, look up symbols, add exec hooks, pause and dump PPU/memory state, record and analyze audio; build/deploy notes for extending the server.",
+     "mechanism_label": "emulator-mcp-debugging",
+     "inputs": "ROM, symbol file, local emulator",
+     "outputs": "State dumps, screenshots, audio captures",
+     "dependencies": "Mesen2 fork, Python client, MSBuild, dotnet, PowerShell",
+     "authority_data_boundaries": "Kills local processes (Stop-Process -Force), builds and copies DLLs; hard-coded local E:/ paths",
+     "jurisdiction_or_language": "English; Windows",
+     "relation": "off-family",
+     "notable_strengths": "Concrete pitfalls (pause before multi-read, drain stderr).",
+     "notable_risks_or_gaps": "Off-family; project-local absolute paths; process-kill commands.",
+     "root_license_observed": "none",
+     "pinned_revision": "3247641c38d00aa2ce5388708ab7301d43d865aa",
+     "path": ".agents/skills/mesen-mcp/SKILL.md",
+     "skill_blob": "d3a2de10516656afc49199abde27a8e06f5af6ec",
+     "package_tree": "26ff65e95813b9b15de7df73f64bcdac78129954",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 76,
+     "repository": "hiyenwong/ai_collection",
+     "on_family": false,
+     "purpose": "Describes distributionally robust data-driven predictive control (Wasserstein DR-DDPC) for stochastic LTI systems.",
+     "mechanism": "Collect I/O trajectory, fit subspace predictive control predictor by least squares on Hankel matrices, build empirical residual distribution, define Wasserstein ambiguity set and solve min-max MPC; includes a simplified Python sketch.",
+     "mechanism_label": "wasserstein-dr-predictive-control",
+     "inputs": "Input/output trajectory data",
+     "outputs": "Predictor matrices, robust MPC cost",
+     "dependencies": "numpy, scipy, sklearn (sketch)",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English; arXiv 2605.07589",
+     "relation": "off-family",
+     "notable_strengths": "Concise method summary of a recent paper.",
+     "notable_risks_or_gaps": "Control theory rather than quality; code sketch is simplified/incorrect for real DR-MPC (robustness penalty heuristic); no license.",
+     "root_license_observed": "none",
+     "pinned_revision": "3fb6b9e7e824dea8c7dd8050b3fcfd7682d355e8",
+     "path": "collection/skills/signal-control-systems/dr-data-driven-predictive-control/SKILL.md",
+     "skill_blob": "7e6643b33bf2428a971411e8ec4c93737b7171d5",
+     "package_tree": "0d11d5f7f4b2d51469e705817eeff09a3edf3d2e",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 77,
+     "repository": "hayaten0415/qa-skills",
+     "on_family": false,
+     "purpose": "Analyzes and tests software safety per ISO/IEC 25010:2023 (operational constraint, fail-safe, hazard warning, safe integration).",
+     "mechanism": "Applicability decision first (regulated domain defers to IEC 61508/ISO 26262/IEC 62304/DO-178C; low-hazard gets soft guardrails only), then hazard/FMEA table ranked by severity x likelihood x detectability, guardrail inventory for destructive actions, and tests that drive inputs past the safe envelope asserting refusal and safe state; mandatory sign-off disclaimer.",
+     "mechanism_label": "applicability-gated-software-safety-fmea",
+     "inputs": "System description, destructive actions, regulatory context",
+     "outputs": "Hazard analysis/FMEA, safety requirements, guardrail tests, sign-off block",
+     "dependencies": "Test framework (example TS)",
+     "authority_data_boundaries": "Recommends human functional-safety sign-off; no actions",
+     "jurisdiction_or_language": "English/Japanese; ISO/IEC 25010:2023",
+     "relation": "off-family",
+     "notable_strengths": "Applicability gate against 'safety theater'; mandatory qualified-engineer sign-off disclaimer; traceability of tests to hazards.",
+     "notable_risks_or_gaps": "Software product safety rather than manufacturing quality; FMEA is lightweight S x L x D.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "848d18a6211beaf3c49884be644ffb6785255421",
+     "path": "skills/safety-analysis/SKILL.md",
+     "skill_blob": "1863f624f564c904eac00242fe6d2874de7ec051",
+     "package_tree": "8a8c261e46ee489cd6ebd357c77aa191c91089a0",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 78,
+     "repository": "iamumairs/systems-engineer-skills",
+     "on_family": true,
+     "purpose": "Performs qualitative guideword-driven design FMEA for autonomous systems (perception, sensors, control).",
+     "mechanism": "Pre-analysis configuration interview (scope, optional S/O/D/RPN columns default off, depth level, output formats, project folder), function identification with explicit user confirmation, systematic guideword application (omission, commission, timing, value, spatial, degradation) to generate failure modes, system-level effect tracing, and design/testing/runtime mitigation categories plus common-cause failure analysis. Bundled scripts render JSON into Excel and an interactive HTML explorer.",
+     "mechanism_label": "guideword-qualitative-dfmea",
+     "inputs": "System description, sensors/components, operational domain, configuration choices",
+     "outputs": "dfmea_output.json, Excel report, interactive HTML explorer in project folder",
+     "dependencies": "Python scripts (generate_excel.py, generate_explorer.py), openpyxl, AskUserQuestion",
+     "authority_data_boundaries": "Creates local folders/files; runs local scripts",
+     "jurisdiction_or_language": "English; ISO 26262/IEC 61508 references",
+     "relation": "distinct-method",
+     "notable_strengths": "HAZOP-style guidewords give systematic failure-mode generation; mitigation split design/test/runtime; common-cause analysis; function confirmation gate.",
+     "notable_risks_or_gaps": "Ratings off by default so prioritization is weak; uses legacy RPN not AP; autonomy-focused, little PFMEA/process coverage; no root license.",
+     "root_license_observed": "none",
+     "pinned_revision": "af8691bdacac324e11321e662b64d976673581b4",
+     "path": "dfmea/SKILL.md",
+     "skill_blob": "039bcd45101ea81525ced4e6e5971a92f1750fa7",
+     "package_tree": "a49745cac25830cf7e25a0aa6d8446b0b12d1fe7",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 79,
+     "repository": "useblocks/pharaoh",
+     "on_family": false,
+     "purpose": "Orchestrates a V-model artefact chain (hazard, safety goal, requirements, architecture, verification plan, FMEA) for one feature.",
+     "mechanism": "Auto-detects layers from a project artefact catalog, dispatches drafting and review sub-skills top-down (safety_v, sys, sw, component) with guardrails on missing inputs/tailoring and non-blocking reviews, ending with a JSON flow summary.",
+     "mechanism_label": "v-model-artefact-orchestration",
+     "inputs": "Feature context, parent link, tailoring files, needs.json",
+     "outputs": "Drafted artefacts with reviews and flow summary",
+     "dependencies": "pharaoh sub-skills, sphinx-needs style catalog",
+     "authority_data_boundaries": "Writes requirement artefacts into project",
+     "jurisdiction_or_language": "English; ISO 26262/ASPICE",
+     "relation": "off-family",
+     "notable_strengths": "Explicit-vs-autodetect guardrails; review findings preserved without auto-regeneration.",
+     "notable_risks_or_gaps": "Systems/software safety engineering; FMEA is one delegated stage; requires extensive project tailoring.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "e3edd0b88c993f1600bdaf36c831eca4344adcea",
+     "path": "skills/pharaoh-flow/SKILL.md",
+     "skill_blob": "708816784248e6b476633c7a40714f1f97a2d346",
+     "package_tree": "d45f439f8f223a9cb30faf1a81e2fe955ab00167",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "energy-and-climate-analysis",
+   "picked": 10,
+   "verified_and_read": 7,
+   "on_family": 0,
+   "keyword_pick_precision": 0.0,
+   "distinct_methods": 0,
+   "summary": {
+    "family": "energy-and-climate-analysis",
+    "skills_on_family": 0,
+    "distinct_methods": [],
+    "best_differentiators": [
+     "No on-family method to adopt. Transferable patterns only: 89 claim-boundary/stub-tier labelling to prevent inheriting unverified numbers; 85 multiparameter-evidence caution."
+    ],
+    "coverage_gaps": [
+     "Greenhouse-gas inventory/carbon accounting (GHG Protocol Scopes 1-3)",
+     "Building or facility energy audits and load profiling",
+     "Renewable generation/yield estimation (PV, wind)",
+     "Climate dataset analysis (reanalysis, CMIP projections, anomaly/trend detection)",
+     "Climate risk / scenario analysis for disclosure (TCFD/ISSB)",
+     "Grid/energy market and tariff analysis",
+     "Life-cycle assessment"
+    ],
+    "high_risk_patterns": [
+     "Keyword-collision matches ('Climate' company, solar/lunar astrology, fire/smoke VFX, 'radar') inflate apparent family coverage",
+     "88: personal birth data sent to external API",
+     "80: external data upload/export with API credentials",
+     "81: hollow mass-generated stubs presenting as expert-level"
+    ]
+   },
+   "skills": [
+    {
+     "index": 80,
+     "repository": "Lap-Platform/claude-marketplace",
+     "on_family": false,
+     "purpose": "API reference for Climate FieldView (agronomic farm data) platform endpoints.",
+     "mechanism": "Auto-generated endpoint catalog (fields, boundaries, uploads, exports, planting/application/harvest layers) with request-to-endpoint mapping; auth via OAuth2/API key.",
+     "mechanism_label": "generated-api-endpoint-catalog",
+     "inputs": "API key/OAuth, user query",
+     "outputs": "Endpoint selections",
+     "dependencies": "Climate FieldView API (platform.climate.com), references/api-spec.lap",
+     "authority_data_boundaries": "Requires API key; can upload boundaries/data and export farm data (external writes)",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Compact endpoint map.",
+     "notable_risks_or_gaps": "'Climate' is the company name; agronomy data, not energy/climate analysis; generator boilerplate questions.",
+     "root_license_observed": "Apache-2.0",
+     "pinned_revision": "0b55f1b279397fd4334a93e9b128a2afdd4a3c01",
+     "path": "plugins/climate-com-climate-com/skills/api/SKILL.md",
+     "skill_blob": "750bbe6c697a2e4d179b45a52e25c887d34a15fd",
+     "package_tree": "8bebd2a5e57c7e5f39469d2209bb0bd72c034012",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 81,
+     "repository": "Sandeeprdy1729/skill_galaxy",
+     "on_family": false,
+     "purpose": "Placeholder 'climate expert' skill with generic content.",
+     "mechanism": "No concrete procedure: generic headings and a stub Python class whose _process returns an undefined variable.",
+     "mechanism_label": "hollow-template-stub",
+     "inputs": "none",
+     "outputs": "none",
+     "dependencies": "none",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "None.",
+     "notable_risks_or_gaps": "Name-only topical match; mass-generated filler; non-functional code.",
+     "root_license_observed": "Apache-2.0",
+     "pinned_revision": "991d5af7a87f49d2c27748ba143c8c6490ad2514",
+     "path": "skills/climate/climate-expert-66/SKILL.md",
+     "skill_blob": "60ffdb01d9a98336669f8cf89cd5fa411bf0fc7c",
+     "package_tree": "99308aa98ec8cf60785946e8f5dbea59f84f68f5",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 85,
+     "repository": "luokai0/ai-agent-skills-by-luo-kai",
+     "on_family": false,
+     "purpose": "Volcanology reference: eruption styles, hazards, monitoring.",
+     "mechanism": "Scoping questions then static domain facts (magma properties, VEI, hazards, monitoring signals) and pitfalls favoring multiparameter monitoring.",
+     "mechanism_label": "static-domain-reference",
+     "inputs": "Volcano/topic",
+     "outputs": "Explanatory answers",
+     "dependencies": "none",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Multiparameter-monitoring caution.",
+     "notable_risks_or_gaps": "Climate mentioned only in description; no energy/climate analysis procedure; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "4d2fb89cdfb75f3f6fd3c6c5ec9ad90ea129eb3c",
+     "path": "ai-agent-skills/15-earth-and-space-sciences (by Luo Kai)/volcanology-expert/SKILL.md",
+     "skill_blob": "0b5740bbeded94617561092519ee8bcbf2374dad",
+     "package_tree": "ab8318b96d1f53e32fbf27b8d365ad6fda8cb18f",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 86,
+     "repository": "AnttiJ73/Dreamer",
+     "on_family": false,
+     "purpose": "Unity particle-effect visual feedback loop via deterministic simulation captures.",
+     "mechanism": "Capture particle prefab at seeded timestamps into a grid PNG, tweak properties, recapture and compare.",
+     "mechanism_label": "seeded-visual-capture-iteration",
+     "inputs": "Unity prefab",
+     "outputs": "PNG grids",
+     "dependencies": "Unity, dreamer CLI",
+     "authority_data_boundaries": "Local editor actions; writes screenshots",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "Seed pinning for diffable iterations.",
+     "notable_risks_or_gaps": "Matched on 'fire/smoke' keywords only.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "a76fc334c62dabd331ecbb5db88db2c8305a7f57",
+     "path": ".claude/skills/dreamer-fx/SKILL.md",
+     "skill_blob": "86452c73310ca581b6dbb69c7c49fb7bbad45f2b",
+     "package_tree": "e02873b68e861ea4e5d11cf7d186fe4ccca35651",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 87,
+     "repository": "Terryc21/radar-suite",
+     "on_family": false,
+     "purpose": "Classification gate for code-audit findings (bug, scatter, dead code) with mandatory coaching citations.",
+     "mechanism": "Every candidate finding is classified on three axes, verified with reachability/whole-file/branch checks, and must cite a file:line pattern from the codebase before emission.",
+     "mechanism_label": "finding-axis-classification-gate",
+     "inputs": "Candidate audit findings",
+     "outputs": "Classified findings in handoff YAML",
+     "dependencies": "Read, Grep, Glob",
+     "authority_data_boundaries": "Read-only",
+     "jurisdiction_or_language": "English; Swift/iOS",
+     "relation": "off-family",
+     "notable_strengths": "Evidence checklist and rejection of uncited findings.",
+     "notable_risks_or_gaps": "Unrelated to energy/climate ('radar' name).",
+     "root_license_observed": "Apache-2.0",
+     "pinned_revision": "40488d46ac07a0ed4e0d182e0ccc39665049a1be",
+     "path": "skills/radar-suite-axis-classification/SKILL.md",
+     "skill_blob": "f37141dcdf8b6af22cd78f9faf63cf396626e687",
+     "package_tree": "735f1d382d4caf3a63f7b4617a0283be9ed98bec",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": 88,
+     "repository": "meghal86/stacksignal",
+     "on_family": false,
+     "purpose": "Astrology API client (natal charts, horoscopes, tarot, numerology).",
+     "mechanism": "Gather birth data then call astrologyapi via bundled curl wrapper and present results.",
+     "mechanism_label": "third-party-api-wrapper",
+     "inputs": "Name, birth date/time/place",
+     "outputs": "Chart/horoscope results",
+     "dependencies": "Astrology API, curl, ASTROLOGY_API_KEY",
+     "authority_data_boundaries": "Transmits personal birth data (name, DOB, time, city) to external API; requires API key",
+     "jurisdiction_or_language": "English",
+     "relation": "off-family",
+     "notable_strengths": "None relevant.",
+     "notable_risks_or_gaps": "Matched on 'solar/lunar/eclipse' terms; sends personal data externally; no license file.",
+     "root_license_observed": "none",
+     "pinned_revision": "54afe4b75ed2eb8f0feabb2f5b57dfa4bcbb3c44",
+     "path": ".agents/skills/astroapi-skill/SKILL.md",
+     "skill_blob": "52e35625f308d264f26804bed84c932543f36a38",
+     "package_tree": "5db8f07d68fd18e3b12f00e1b1944f8c36690feb",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": 89,
+     "repository": "huangzesen/heliosi-501-corpus-skill",
+     "on_family": false,
+     "purpose": "Stub paper-skill for the SuryaBench solar-wind speed ML benchmark.",
+     "mechanism": "Structured four-layer paper-skill template with claim boundary and failure modes; methods, data contracts and validation are explicitly TODO at stub tier.",
+     "mechanism_label": "paper-to-skill-stub-template",
+     "inputs": "Paper reference",
+     "outputs": "Trigger/claim-boundary guidance only",
+     "dependencies": "arXiv 2508.14107 reference",
+     "authority_data_boundaries": "none observed",
+     "jurisdiction_or_language": "English; heliophysics",
+     "relation": "off-family",
+     "notable_strengths": "Explicit claim boundary and do-not-inherit-numbers warning.",
+     "notable_risks_or_gaps": "Space weather, not energy/climate; stub with no executable method.",
+     "root_license_observed": "MIT",
+     "pinned_revision": "ff9bef32a11cfb5a823d8dd35a5decf2ab5d67bf",
+     "path": "references/corpus/wave500_sw_classification_ml_foundation_045/paper-roy-2025-suryabench-solar-wind-speed-benchmark/SKILL.md",
+     "skill_blob": "0458fc5c5f384d16743be8f72bfba97aef596157",
+     "package_tree": "90f9395bba21296e02e066f88d754a9c24bf5be9",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "grant-and-funding-proposals",
+   "picked": 10,
+   "verified_and_read": 7,
+   "on_family": 0,
+   "keyword_pick_precision": 0.0,
+   "distinct_methods": 0,
+   "summary": {
+    "family": "grant-and-funding-proposals",
+    "skills_on_family": 0,
+    "distinct_methods": [],
+    "best_differentiators": [
+     "None: no verified candidate targets grant or funding proposal work; all seven are misclassified software/ML/media skills."
+    ],
+    "coverage_gaps": [
+     "Funder guideline/solicitation parsing and compliance matrix",
+     "Budget and budget-justification construction",
+     "Logic models, aims, evaluation plans",
+     "Eligibility, deadline and submission-portal checks",
+     "Reviewer-criteria scoring and red-team review"
+    ],
+    "high_risk_patterns": [
+     "Package installs (pip) and workspace resource creation in off-family skills (093, 098); irrelevant to family."
+    ],
+    "excluded_not_verified": [
+     "091",
+     "095",
+     "097"
+    ]
+   },
+   "skills": [
+    {
+     "index": "090",
+     "purpose": "Documents JS/TS collection/shape predicates (isObject, isPlainObject, isEmpty) of a utility library.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "ts-predicate-reference",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "n/a",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "hassanzohdy/supportive-is",
+     "root_license_observed": "MIT License (Copyright (c) Hassan Zohdy)",
+     "pinned_revision": "fde4f8663c28c57f3fbf0f82404de486d6e74f01",
+     "path": "skills/collections/SKILL.md",
+     "skill_blob": "cb796e1c05e601780e4c258be415f9eb263f8613",
+     "package_tree": "5ef42b672fcfea725855bac2c9b9c0be75624e8d",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "092",
+     "purpose": "Catalog of feature-engineering transforms for ML modelling.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "ml-feature-engineering-catalog",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "reference python file feature_engineering.py",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "delany-ramirez/data_analyzer",
+     "root_license_observed": "none",
+     "pinned_revision": "9c1da1971ee82d3dec1a84ab5751ec7780c76798",
+     "path": ".claude/skills/feature-engineering-patterns/SKILL.md",
+     "skill_blob": "3704fdeebc72361c512ee02dbd8a1f5ef0db856a",
+     "package_tree": "36cd0513aede724f9f397b67dba182218ac13d2e",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "093",
+     "purpose": "Quantizing LLMs to 8/4-bit with bitsandbytes.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. Instructs pip install.",
+     "mechanism_label": "llm-quantization-howto",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "bitsandbytes, transformers, accelerate, torch",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "huang-sh/DeepScience",
+     "root_license_observed": "MIT License (Copyright (c) 2025 Mario Zechner)",
+     "pinned_revision": "c5d33f01c6bed15188a021624e66357e20b3b512",
+     "path": "packages/science/skills/ml-training/bitsandbytes/SKILL.md",
+     "skill_blob": "e4832e4556ec1040d6b043bbf52289d97f1f71bd",
+     "package_tree": "039c36f7f55221bca5ae3fb29be309d3a43c9c5a",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "094",
+     "purpose": "Maps Ethereum/Solidity concepts to Canton/Daml for developers.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "evm-to-canton-concept-map",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "n/a",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "nickthelegend/canton-agent-skills",
+     "root_license_observed": "Apache License 2.0",
+     "pinned_revision": "f9048a28b30dc6f0b3a062c68abba98ca55f3946",
+     "path": "skills/canton-for-ethereum-devs/SKILL.md",
+     "skill_blob": "30ced262f1bf2855764f556a66139b63b1f61958",
+     "package_tree": "bd776df9e7da23e5ef3d9e592d1022feeb7bc977",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "096",
+     "purpose": "Repo-specific answer-engine-optimization (JSON-LD, FAQ, crawlability) for a fantasy-football site.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "repo-specific-aeo",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "Next.js, Tailwind",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "DataFikr/fpl-mini",
+     "root_license_observed": "none",
+     "pinned_revision": "c1cefb480163efc7bb613297cf2f6509839d0244",
+     "path": ".claude/skills/fpl-aeo-optimizer/SKILL.MD",
+     "skill_blob": "8ee416fb3ae99767180312ca0e8593503f796bfa",
+     "package_tree": "430c14f0ee09e1e6a7548e2c50688bc6c77449b5",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "098",
+     "purpose": "Databricks SA coding-interview playbook (PySpark medallion pipelines).",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. Directs catalog creation in a workspace.",
+     "mechanism_label": "databricks-interview-playbook",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "Databricks, PySpark",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "slysik/databricks-claude-coding",
+     "root_license_observed": "none",
+     "pinned_revision": "4120a781500db70a8a6eba40b5df5dcdbaa44bf3",
+     "path": ".claude/skills/dbx-interview-playbook/SKILL.md",
+     "skill_blob": "00f148864920b10de7585b4cdf8b812bdeebb9a9",
+     "package_tree": "6c3ba32927775505a96e60b11212be5a535b3379",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "099",
+     "purpose": "ffmpeg + OpenColorIO colour-management workflows (ACES, LUTs, ICC).",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "ffmpeg-ocio-color-pipeline",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "ffmpeg, OpenColorIO",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "damionrashford/media-os",
+     "root_license_observed": "MIT License (Copyright (c) 2026 Media OS)",
+     "pinned_revision": "5014c1e8b23fd3e18d49926d9aa147d15a3aa08e",
+     "path": "skills/ffmpeg-ocio-colorpro/SKILL.md",
+     "skill_blob": "be7ca8492c15b9c0e3dd3b918fc91b43a796a59d",
+     "package_tree": "a4bf5ada6ad3bdfc4e255a307c34d0402002c594",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "accessibility-audit",
+   "picked": 10,
+   "verified_and_read": 9,
+   "on_family": 5,
+   "keyword_pick_precision": 0.56,
+   "distinct_methods": 5,
+   "summary": {
+    "family": "accessibility-audit",
+    "skills_on_family": 5,
+    "distinct_methods": [
+     {
+      "label": "criteria-checklist-review-report",
+      "description": "Static expert review against WCAG pillars with SC citations, impact, fixes and severity-tiered report.",
+      "exemplar_indices": [
+       "105"
+      ]
+     },
+     {
+      "label": "audit-approve-apply-subagent-gate",
+      "description": "Read-only audit plan, human approval gate, then apply and verify with build/lint/axe.",
+      "exemplar_indices": [
+       "102"
+      ]
+     },
+     {
+      "label": "native-mobile-a11y-test-automation",
+      "description": "Encode audits as XCUITest/Espresso tests in CI plus manual VoiceOver/TalkBack checks.",
+      "exemplar_indices": [
+       "101"
+      ]
+     },
+     {
+      "label": "live-accessibility-tree-semantics-walk",
+      "description": "Fetch runtime accessibility tree from device and walk components through a role/state/grouping decision procedure.",
+      "exemplar_indices": [
+       "106"
+      ]
+     },
+     {
+      "label": "validated-scan-to-vpat-conformance-report",
+      "description": "Aggregate human-reviewed scan data into a VPAT 2.5 conformance report with per-criterion status.",
+      "exemplar_indices": [
+       "108"
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "105 severity model plus mandatory passed-checks and manual AT checklist",
+     "102 separation of read-only audit from approved apply phase",
+     "101 regression tests with narrow suppression instead of one-off audits",
+     "106 grounding findings in the real runtime accessibility tree",
+     "108 requirement that only human-reviewed findings feed a conformance claim, with excluded-issue audit trail",
+     "Adjacent (off-family) 100: APCA as supplementary readability check while keeping WCAG 2.2 AA for compliance"
+    ],
+    "coverage_gaps": [
+     "No skill combines automated scanning with tool output evidence and manual verification for web in one portable flow",
+     "No PDF/document (PDF/UA), video caption or EN 301 549 / ADA jurisdiction-specific coverage",
+     "No cognitive/plain-language assessment",
+     "No user testing with disabled participants",
+     "No principled per-criterion conformance judgement (108 uses instance counts)"
+    ],
+    "high_risk_patterns": [
+     "Global npm installs and on-device WDA builds (106)",
+     "Credentials from .env and Jira uploads of customer-facing compliance artefacts (108)",
+     "Approval-bypass flag --apply-all (102)",
+     "Contrast compliance asserted by index arithmetic without measurement (107, adjacent)"
+    ],
+    "excluded_not_verified": [
+     "104"
+    ]
+   },
+   "skills": [
+    {
+     "index": "100",
+     "purpose": "Design-system colour/elevation guide: OKLCH ramps, semantic tokens, WCAG 2.2 + APCA contrast targets, dark-mode elevation.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. Adjacent: contrast-by-construction guidance (WCAG ratios plus APCA Lc targets) rather than an audit procedure.",
+     "mechanism_label": "oklch-palette-with-contrast-targets",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "CSS; apcacontrast.com mentioned",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "Explains WCAG 2.x ratio limits and APCA as a supplementary readability check while keeping WCAG 2.2 AA as compliance baseline.",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "jpoindexter/design-skills",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "677a3b7d06df0c121e0a5d163b64d67b9addd9d5",
+     "path": "skills/color-and-elevation/SKILL.md",
+     "skill_blob": "77dd855c781f803a2b050c6e3911c5a1bf1c7cb4",
+     "package_tree": "47ef549c18d58b3d25fffec566f6b92dcb56010f",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "101",
+     "on_family": true,
+     "purpose": "Author automated and assistive-technology accessibility tests for native iOS and Android apps.",
+     "mechanism": "Two layers: automated audits (XCUITest performAccessibilityAudit on iOS 17+ with continueAfterFailure=true and scoped suppression by auditType+element; Espresso AccessibilityChecks.enable().setRunChecksFromRootView(true)) plus manual VoiceOver/TalkBack checks for order, gestures and hints. Adds WCAG-aligned checks (44pt/48dp targets, contrast, labels, focus order), CI jobs that upload result bundles, and an anti-pattern table.",
+     "mechanism_label": "native-mobile-a11y-test-automation",
+     "inputs": "iOS/Android app project, screens to cover",
+     "outputs": "XCUITest/Espresso test code, CI workflow YAML, manual AT checklist",
+     "dependencies": "Xcode/XCUITest, Espresso + espresso-accessibility, Accessibility Scanner, GitHub Actions, android-emulator-runner",
+     "authority_data_boundaries": "Produces test code and CI config to be committed; no secrets or external transmission observed.",
+     "jurisdiction_or_language": "WCAG-aligned; Swift/Kotlin",
+     "relation": "distinct-method",
+     "notable_strengths": "Regression-guarding tests rather than one-off review; narrow suppression guidance avoids hiding whole audit types; cites WWDC/ATF sources; per-platform references.",
+     "notable_risks_or_gaps": "Mobile native only; automated audits cover structural issues only (acknowledged); CI examples pin third-party actions by tag not SHA.",
+     "repository": "testland/qa",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "47218e9b696bc443c6e3673800b2a6c4e1c34646",
+     "path": "plugins/qa-mobile/skills/mobile-a11y-test-author/SKILL.md",
+     "skill_blob": "fcd494d9587e2cd48032e0a6656ec750ec121ef2",
+     "package_tree": "71f8bec44c6e506bf268e235cb48ed01b9c7cb4a",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "102",
+     "on_family": true,
+     "purpose": "Audit and fix accessibility of one specific project docs site (timepicker-ui docs-app) against WCAG 2.2 AA.",
+     "mechanism": "Thin orchestrator: dispatch a docs-accessibility subagent in read-only audit mode producing a file-level plan in five groups (landmarks, keyboard/focus, names/roles/contrast, content/media, motion/reflow) with WCAG refs; present and gate approval via AskUserQuestion; re-dispatch in apply mode with the approved list; then build/lint, optional axe/Lighthouse pass, report and manual checklist.",
+     "mechanism_label": "audit-approve-apply-subagent-gate",
+     "inputs": "docs-app source tree, optional focus area",
+     "outputs": "prioritized audit plan, applied code edits, verification report, manual checklist",
+     "dependencies": "host subagent (docs-accessibility), AskUserQuestion, npm build/lint, optional axe/Lighthouse",
+     "authority_data_boundaries": "Edits repository files after approval gate; --apply-all flag skips the per-area approval; git/deploy left to user.",
+     "jurisdiction_or_language": "WCAG 2.2 AA",
+     "relation": "distinct-method",
+     "notable_strengths": "Explicit read-only audit phase separated from apply phase with a human approval gate; real verification output required (\"never assume green\").",
+     "notable_risks_or_gaps": "Hard-bound to one repository, a named subagent and HARD RULES/verify commands that do not exist elsewhere; --apply-all bypass.",
+     "repository": "pglejzer/timepicker-ui",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "dd2664e804fa1639e2acf9b6dd961e597fbbe075",
+     "path": ".claude/skills/docs-a11y/SKILL.md",
+     "skill_blob": "83a41ca63e51b0dd165875c1c6ca3bc26b4f1c18",
+     "package_tree": "9320cf286a0e2ce5770f190d7df7aefef7a5dda8",
+     "verification_status": "verified-blob-changed-since-july"
+    },
+    {
+     "index": "103",
+     "purpose": "Engineering reference for one Next.js/Postgres news app; includes a WCAG AAA implementation section and axe-core Playwright scans.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. Accessibility appears only as one section of a 120KB app reference.",
+     "mechanism_label": "app-specific-engineering-reference",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "Next.js, Postgres, Redis, Auth.js, AI SDKs, @axe-core/playwright",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "nordeim/story-into-video",
+     "root_license_observed": "none",
+     "pinned_revision": "7d045d4d6ec778ab8575aad8f8a7e7e7d4321918",
+     "path": "skills/nextjs16-react19-postgres17/SKILL.md",
+     "skill_blob": "dfba82ae34e06928c86e6a558eb556c046b41f06",
+     "package_tree": "f63c311242740fb0df30931b1bfdcb16bfbd917f",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "105",
+     "on_family": true,
+     "purpose": "General expert WCAG 2.1 AA audit of web code/URLs with cited success criteria, user impact and code fixes.",
+     "mechanism": "Clarify scope, stack, conformance target and AT targets (ask for code if none); walk six pillars from a bundled wcag-criteria reference; for each issue cite SC and level, explain impact, give a stack-matched fix from fix-patterns; emit a fixed-format report with severity tiers (Critical/Serious/Moderate/Advisory), passed checks, recommendations and a default manual AT testing checklist.",
+     "mechanism_label": "criteria-checklist-review-report",
+     "inputs": "HTML/JSX/CSS code, component or URL; conformance target",
+     "outputs": "Markdown audit report with SC-cited issues, fixes, passed checks, testing checklist",
+     "dependencies": "bundled references (wcag-criteria.md, fix-patterns.md); recommends axe DevTools, Lighthouse, eslint-plugin-jsx-a11y, CCA",
+     "authority_data_boundaries": "Read/advise only; none observed. Package includes a packaged .skill bundle and portable prompts not reviewed here.",
+     "jurisdiction_or_language": "WCAG 2.1 AA baseline, flags 2.2/AAA",
+     "relation": "distinct-method",
+     "notable_strengths": "Portable, stack-agnostic; consistent severity model; always reports passed checks; manual AT testing matrix.",
+     "notable_risks_or_gaps": "Static code review only, no tool execution or evidence capture; default WCAG 2.1 rather than 2.2; conformance estimate is judgement-based; no root license file observed.",
+     "repository": "YKehinde/accessibility-reviewer",
+     "root_license_observed": "none",
+     "pinned_revision": "e9a45d73cc007446020e86936fe56b2081a03029",
+     "path": "SKILL.md",
+     "skill_blob": "cd38acaf945d135775a2f654ad2942af106743e7",
+     "package_tree": "4e8326f8227ce5b4ed9815150c6e4f48b72e82df",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "106",
+     "on_family": true,
+     "purpose": "Check Flutter app screen-reader accessibility by fetching the live accessibility tree and reviewing Semantics usage.",
+     "mechanism": "Detect connected Android/iOS devices; for iOS ensure Appium XCUITest driver and WebDriverAgent are built, installed and running (port 8100, iproxy for devices); fetch tree via MCP tools; then walk components top-left onward through a 7-question decision procedure (split components, determine role via SemanticsRole, state, non-text content, grouping via MergeSemantics, hints) preferring higher-level widgets over added Semantics.",
+     "mechanism_label": "live-accessibility-tree-semantics-walk",
+     "inputs": "Flutter source, a running device/simulator",
+     "outputs": "component-level feedback and Semantics code fixes",
+     "dependencies": "adb, xcrun simctl/devicectl, Appium + xcuitest driver, WebDriverAgent, iproxy, plugin MCP accessibility-tree tools",
+     "authority_data_boundaries": "Instructs global npm install of appium and driver, building/installing WDA on devices, asks for Apple Team ID; local curl to localhost only.",
+     "jurisdiction_or_language": "Flutter/Dart",
+     "relation": "distinct-method",
+     "notable_strengths": "Grounds review in the actual runtime tree rather than source only; clear per-component decision questions; minimal-Semantics principle.",
+     "notable_risks_or_gaps": "Heavy toolchain setup with global installs; depends on a plugin-specific MCP server; screen-reader semantics only, not contrast/targets/WCAG mapping.",
+     "repository": "theodo-group/claude-plugins",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "7893aa19beb343609017d80b164a0b1b139a9fec",
+     "path": "plugins/accessibility/skills/screen-reader-flutter/SKILL.md",
+     "skill_blob": "a7064d02274d9758e5f8ecdb1ff8c367e0c11b0e",
+     "package_tree": "a5388f87be3b1ee2a5aa237ddd86638424cb6845",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "107",
+     "purpose": "Generate 11-step colour ramps whose index pairings are meant to yield WCAG AA/AAA text contrast.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. Adjacent design-time prevention method, not an audit.",
+     "mechanism_label": "index-paired-contrast-ramps",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "rampa CLI via npx @basiclines/rampa",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Asserts contrast levels from index arithmetic (e.g. 0+7 = AA) without computing ratios; examples are internally inconsistent with the pairing table; relies on npx package execution. Tip 3 does say to verify rendered contrast with tools.",
+     "repository": "basiclines/rampa-studio",
+     "root_license_observed": "MIT License (SKILL frontmatter says SEE LICENSE IN LICENSE.md)",
+     "pinned_revision": "0b7db904ce50e99e0a6b308d9392c5771ff19db9",
+     "path": "skills/accessible-contrast/SKILL.md",
+     "skill_blob": "ebbd61d293e7246df63ca053e39076e601aab2e4",
+     "package_tree": "2ee1e63bea650f32e6dfaa72231ccadb73eaa95b",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "108",
+     "on_family": true,
+     "purpose": "Generate VPAT 2.5 accessibility conformance reports (MD/HTML/PDF) from previously validated scan JSON.",
+     "mechanism": "Auto-discover per-page scan JSON requiring review_metadata.reviewed=true; aggregate validated issues across pages per WCAG 2.2 (or 2.1) A/AA criterion; map to Supports / Partially Supports / Does Not Support / Not Applicable using numeric thresholds (e.g. one feature and <=2 instances = Partially Supports; <=30% features and <=5 instances = Partially Supports); collect product info; render VPAT; export PDF via pandoc+WeasyPrint or Playwright; optional Jira attachment. Phase-gate system requires user \"proceed\" between phases.",
+     "mechanism_label": "validated-scan-to-vpat-conformance-report",
+     "inputs": "pages/ directory of reviewed scan JSON, product info, optional Jira ticket, WCAG version",
+     "outputs": "VPAT 2.5 report in Markdown, HTML, PDF; Jira comments",
+     "dependencies": "companion /a11y-vpat-scan workflow, pandoc, WeasyPrint, Playwright, MCP browser tools, Jira",
+     "authority_data_boundaries": "Posts comments and attaches PDF to Jira (external transmission); uses PLAYWRIGHT_USER/PLAYWRIGHT_PASSWORD from .env or params for authenticated scans; customer-facing compliance document.",
+     "jurisdiction_or_language": "VPAT 2.5 (US Section 508/ITI format), WCAG 2.2/2.1 A+AA",
+     "relation": "distinct-method",
+     "notable_strengths": "Only skill producing a procurement-grade conformance artefact; requires human-reviewed scan data and keeps excluded_issues audit trail; explicit phase gates.",
+     "notable_risks_or_gaps": "Conformance levels assigned by instance-count heuristics, not criterion judgement; automated-scan data cannot establish Supports for untested criteria; N/A media check is a placeholder; 82KB monolith; credentials and Jira side effects.",
+     "repository": "civitaslearning/a11y-toolkit",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "6296c44c92e235487c9f21b9028f2877b19c2288",
+     "path": "skills/a11y-vpat-report/SKILL.md",
+     "skill_blob": "09b6089124dff93a6085a91515fb799e866e1f5c",
+     "package_tree": "8d400f5552f75e0c5ea66a89f3bb1dfe4a57d568",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "109",
+     "purpose": "Visual redesign audit for \"generic AI-looking\" UIs (typography, colour, states); explicitly skips pure a11y audits.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. Mentions focus rings only in passing.",
+     "mechanism_label": "visual-redesign-audit",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "none",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "get-caio/harness",
+     "root_license_observed": "none",
+     "pinned_revision": "f17960c3cc250d0fded6921bc87ceccd29d8981e",
+     "path": ".claude/skills/design-redesign/SKILL.md",
+     "skill_blob": "5c67e46e85a4bab250588bc2dfaea7e7d2cce245",
+     "package_tree": "7b5f7ce884d807ecfa330eae4e803dcc9b94025c",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  },
+  {
+   "family": "translation-localization",
+   "picked": 10,
+   "verified_and_read": 9,
+   "on_family": 3,
+   "keyword_pick_precision": 0.33,
+   "distinct_methods": 3,
+   "summary": {
+    "family": "translation-localization",
+    "skills_on_family": 3,
+    "distinct_methods": [
+     {
+      "label": "structure-preserving-llm-markdown-translation",
+      "description": "Direct LLM translation of markdown with preservation rules for syntax, code and identifiers.",
+      "exemplar_indices": [
+       "117"
+      ]
+     },
+     {
+      "label": "tool-driven-i18n-coverage-and-qa",
+      "description": "Use an i18n CLI to analyze key coverage, scan hardcoded strings, auto-translate with protected terms and validate quality in CI.",
+      "exemplar_indices": [
+       "115"
+      ]
+     },
+     {
+      "label": "locale-risk-viewpoint-test-design",
+      "description": "Planner that surfaces missing locale/RTL/format/collation viewpoints and splits manual vs automated localization testing.",
+      "exemplar_indices": [
+       "112"
+      ]
+     }
+    ],
+    "best_differentiators": [
+     "115 coverage-vs-quality separation with concrete failure signals (placeholder drift, bidi controls, mojibake, source leakage) and dry-run before write",
+     "112 missing-viewpoint-first output and native-speaker review requirement",
+     "117 minimal preservation rules for code blocks, URLs and identifiers",
+     "Adjacent (off-family) 110: decide default-language URL prefix early"
+    ],
+    "coverage_gaps": [
+     "No glossary/termbase or style-guide management for LLM translation",
+     "No translation memory or consistency across files",
+     "No back-translation or bilingual reviewer workflow",
+     "No ICU MessageFormat plural/gender authoring guidance beyond checklists",
+     "No legal/regulated content localization or market-specific compliance",
+     "No XLIFF/PO/CAT tool interchange"
+    ],
+    "high_risk_patterns": [
+     "External transmission of source strings to DeepL/LibreTranslate (115)",
+     "npx execution of vendor package and noncommercial license constraint (115)",
+     "File writes with directory creation at arbitrary paths (117)"
+    ],
+    "excluded_not_verified": [
+     "114"
+    ]
+   },
+   "skills": [
+    {
+     "index": "110",
+     "purpose": "Hugo static-site architecture standards; one section covers multilingual config and i18n UI strings.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. i18n section is configuration advice (languages block, filename vs directory translation strategy, translationKey, default-language URL prefix decision).",
+     "mechanism_label": "hugo-architecture-standards",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "Hugo Extended",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "Useful i18n note: decide default-language URL prefix early because changing it breaks URLs.",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "ralvarezdev/ralvaskills",
+     "root_license_observed": "GNU GENERAL PUBLIC LICENSE",
+     "pinned_revision": "3fdad40becf9c9e3d3c031e41b717910fee7c75a",
+     "path": "skills/frameworks/hugo-architect/SKILL.md",
+     "skill_blob": "e7c545a25024a01b73a8ab32ec10059a8992d74c",
+     "package_tree": "66ed7e3c467161be5bf1450689f34d270a5d672e",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "111",
+     "purpose": "Convert multi-user workflow markdown into a Playwright test project; \"translate\" means code conversion.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "workflow-to-playwright-codegen",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "Playwright",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "neonwatty/qa-skills",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "ed051ce4bd914dd78049de9a52ab319f7a8faa02",
+     "path": "skills/multi-user-workflow-to-playwright/SKILL.md",
+     "skill_blob": "b104fb57477f932c2e242a4718596552106d0371",
+     "package_tree": "a94d3dc2fcf19a2a10e106d329b82c747ace0c03",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "112",
+     "on_family": true,
+     "purpose": "Design localization/i18n test coverage by surfacing missing locale viewpoints before writing manual cases or automation.",
+     "mechanism": "Act as test-design planner: separate explicit vs inferred locale requirements; identify locales, scripts, markets, formatting libraries; model locale-sensitive screens/data/inputs; find gaps (text expansion, RTL/bidi, date/number/currency/address formats, collation, IME, Unicode normalization, fallback, pseudo-localization); prioritize by impact; output a 10-section shape led by missing viewpoints with a review-aid table and manual vs automation direction; final self-check.",
+     "mechanism_label": "locale-risk-viewpoint-test-design",
+     "inputs": "UI specs, screenshots, flows, forms, implementation",
+     "outputs": "prioritized missing-viewpoint list, review table, manual/automation guidance, questions",
+     "dependencies": "none (routes to sibling role cards ui-flow-test-engineer, accessibility-test-engineer)",
+     "authority_data_boundaries": "Advisory only; explicitly will not rewrite its own file unless asked; none observed.",
+     "jurisdiction_or_language": "language-agnostic",
+     "relation": "distinct-method",
+     "notable_strengths": "Broad checklist (pluralization, collation, IME, mixed script); insists on native-speaker review and avoiding brittle exact-text assertions; marks assumptions instead of inventing locales.",
+     "notable_risks_or_gaps": "Does not translate or produce executable tests; references sibling skills absent outside its repo; no root license file observed.",
+     "repository": "KazuCocoa/specialist-role-cards",
+     "root_license_observed": "none",
+     "pinned_revision": "810e7fc11e8edec9d73677b98016188946540e0d",
+     "path": "skills/localization-test-engineer/SKILL.md",
+     "skill_blob": "ea4e50cb3b832297e9e1ad9004dfbe0e61df9e1e",
+     "package_tree": "1f669deac2da2c836e5faeb83e974cdb060b96c1",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "113",
+     "purpose": "VS Code extension package.json contribution-point guidance; touches %key% placeholders in package.nls.json.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "vscode-manifest-guidance",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "VS Code",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "tlcsdm/vscode-fixcnchar",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "8fb48af3d6a4c5545804cfe5204b193d11ce221c",
+     "path": ".github/skills/vscode-package-json-and-contributes/SKILL.md",
+     "skill_blob": "44ac30bd9fc2351fcfd4319c554e0b4ff521bbea",
+     "package_tree": "bc2f026890a334746836b1ac102f026d17938cfe",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "115",
+     "on_family": true,
+     "purpose": "Configure and operate the i18ntk CLI/runtime for key coverage, unused keys, hardcoded-string scanning, auto-translation and CI validation.",
+     "mechanism": "Inspect first (installed version, .i18ntk-config, locale layout, framework evidence) and state intended config patch before writing; pick workflow by goal (analyze then validate, usage, scanner with tuned exclusions, complete with source-copy markers, translate with --dry-run --preserve-placeholders and protected terms, report --json); treat quality separately from coverage (placeholders, mojibake, bidi controls, source leakage, tag mismatches, residual reports); always non-interactive flags in unattended runs; report exact exit codes.",
+     "mechanism_label": "tool-driven-i18n-coverage-and-qa",
+     "inputs": "repository with locale files and source code; optional translation provider credentials",
+     "outputs": "config patches, locale completions/translations, JSON reports, CI validation",
+     "dependencies": "i18ntk CLI/runtime (npx), optional DeepL or LibreTranslate, VS Code Workbench/Lens extensions",
+     "authority_data_boundaries": "Can write locale files and send strings to external translation providers (DeepL/LibreTranslate); says keep keys in env/secret manager, dry-run first, back up files, no untrusted custom hosts, defer to host permissions.",
+     "jurisdiction_or_language": "language-agnostic; tool is PolyForm Noncommercial (commercial use needs separate license)",
+     "relation": "distinct-method",
+     "notable_strengths": "Strong separation of coverage vs translation quality; concrete QA failure signals (placeholder drift, bidi controls, mojibake); explicit safety posture; refuses to invent translations it cannot validate.",
+     "notable_risks_or_gaps": "Tied to one vendor tool; noncommercial license restricts reuse; npx execution of external package; external transmission of source strings when auto-translating.",
+     "repository": "vladnoskv/i18ntk",
+     "root_license_observed": "PolyForm Noncommercial License 1.0.0",
+     "pinned_revision": "34ef23fecd78c7304e63f4e8db2b4aca18198ad6",
+     "path": "skills/i18ntk/SKILL.md",
+     "skill_blob": "c46c62f4fad270ef7590d0f6e240b866d470fc10",
+     "package_tree": "fa3988eda781ac436f82afc1b4753fc95f5be250",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "116",
+     "purpose": "Taskfile (taskfile.dev) authoring and Makefile migration.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "taskfile-authoring",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "Task",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "kbuley/skills",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "c25642eac955dd9598b7cbfbaea3d99b3ed5613f",
+     "path": "skills/kbuley-taskfile/SKILL.md",
+     "skill_blob": "0e40a447ea399ef84ca7382fdc3c4ed0170af5af",
+     "package_tree": "3a04596b09c8f9ffc4cd49e94643ec18257ddd35",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "117",
+     "on_family": true,
+     "purpose": "Translate a markdown file to a target language while preserving markdown structure.",
+     "mechanism": "Read source; determine target language and output path (ask if missing); apply rules delegated to a sibling language-translate skill: preserve markdown syntax, translate prose only, translate comments in code blocks but not code, never translate URLs/paths/identifiers; write to path (creating directories) or return inline; stop if already in target language.",
+     "mechanism_label": "structure-preserving-llm-markdown-translation",
+     "inputs": "markdown file or content, target language, optional output path",
+     "outputs": "translated markdown file or inline content",
+     "dependencies": "sibling language-translate skill; frontmatter requests haiku model and Bash/Write/Edit/Read tools",
+     "authority_data_boundaries": "Writes files and creates directories at user-given path; none else observed.",
+     "jurisdiction_or_language": "any target language",
+     "relation": "distinct-method",
+     "notable_strengths": "Simple, portable preservation rules for docs translation.",
+     "notable_risks_or_gaps": "Core rules live in an absent sibling skill; no terminology/glossary, no review or back-translation step, no quality check; pins a small model which may weaken quality.",
+     "repository": "tim-hub/powerball",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "823e477efc71f768f5f3f5c7bb415518d86d8369",
+     "path": "writing/skills/translate-markdown/SKILL.md",
+     "skill_blob": "21ce66790e9df3c00ccdaa4c44ebaef640111eb5",
+     "package_tree": "669aca56a78f07e606c44957f4f067de548a17be",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "118",
+     "purpose": "Define and sync event-driven agent hooks for the hatch3r tool.",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "agent-hook-management",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "hatch3r",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "hatch3r/hatch3r",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "9beecc0c3cf7c33a755cd82e2d41bcdf1f8c93f7",
+     "path": "skills/hatch3r-hooks/SKILL.md",
+     "skill_blob": "126f128786f3778fde9bc399b6d7fb68f1a38327",
+     "package_tree": "cd538e101b6e9dc72ada0d0f26c8f21c99af864e",
+     "verification_status": "verified-same-blob"
+    },
+    {
+     "index": "119",
+     "purpose": "Define ML model requirements (schema, accuracy, latency, fairness).",
+     "mechanism": "Not a procedure for the family outcome; content is unrelated domain guidance. ",
+     "mechanism_label": "ml-requirements-spec",
+     "inputs": "n/a for family",
+     "outputs": "n/a for family",
+     "dependencies": "none",
+     "authority_data_boundaries": "not assessed in depth (off-family); none observed relevant to family",
+     "jurisdiction_or_language": "n/a",
+     "on_family": false,
+     "relation": "off-family",
+     "notable_strengths": "n/a",
+     "notable_risks_or_gaps": "Misclassified into this family by the candidate search; no family-relevant method.",
+     "repository": "mittuled/skill-os",
+     "root_license_observed": "MIT License",
+     "pinned_revision": "84cea98b33bd7c71c870041af165ca71cab35e94",
+     "path": "agents/engineering/ai-ml-engineer/model-requirements-definer/SKILL.md",
+     "skill_blob": "bf1a7a8be9abbabb700333b7885850fd54c02e8c",
+     "package_tree": "fd7ea770fb20fa0168a53f4e5e01c789ac8a8a7c",
+     "verification_status": "verified-same-blob"
+    }
+   ]
+  }
+ ]
+}

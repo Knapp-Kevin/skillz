@@ -4896,5 +4896,38 @@
     "security_scans": 0,
     "behavioral_validations": 0,
     "distinct_eligible_denominator": null
+  },
+  "gitskills_g1_source_diversity_20261103": {
+    "date": "2026-11-03",
+    "kind": "second-generation discovery (leads + canonical identity; not review)",
+    "dataset": "https://huggingface.co/datasets/mvaccargiu/gitskills@ebab17454a7c236f8f26b183567f1a126f42e3f8",
+    "receipt": "docs/discovery/2026-11-03-gitskills-g1-source-diversity.md",
+    "baseline": "registry/discovery/gitskills-g1-source-diversity-baseline-20261103.json",
+    "verified_source_identities": "registry/discovery/gitskills-g1-verified-source-identities-20261103.json",
+    "package_identities": [
+      "registry/discovery/gitskills-g1-package-identities-20261103-part-01.json",
+      "registry/discovery/gitskills-g1-package-identities-20261103-part-02.json",
+      "registry/discovery/gitskills-g1-package-identities-20261103-part-03.json",
+      "registry/discovery/gitskills-g1-package-identities-20261103-part-04.json",
+      "registry/discovery/gitskills-g1-package-identities-20261103-part-05.json",
+      "registry/discovery/gitskills-g1-package-identities-20261103-part-06.json"
+    ],
+    "capability_coverage": "registry/discovery/gitskills-g1-capability-coverage-20261103.json",
+    "method_alternatives": "registry/discovery/gitskills-g1-method-alternatives-20261103.json",
+    "source_leads": 282200,
+    "leads_selected": 561,
+    "verified_identities_T2": 486,
+    "verified_identities_T1_pin_only": 32,
+    "unreachable": 43,
+    "original_author_candidates_with_skills": 421,
+    "package_records_listed": 27832,
+    "unique_package_trees_listed": 26497,
+    "distinct_methodological_alternatives": 42,
+    "registered_sources_delta": 0,
+    "source_vetting_reviews_delta": 0,
+    "governed_review_delta": 0,
+    "admissions": 0,
+    "security_scans": 0,
+    "behavioral_validations": 0
   }
 }
