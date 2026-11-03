@@ -13,9 +13,9 @@ Dependency: artifact_tool (local optional QA only, not a repository runtime).
 import json
 from artifact_tool import Workbook
 
-SOURCE_FORMULA = '=IF(COUNTIF(Gates!C2:C7,"No")>0,"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
-ALL_GATES_FORMULA = '=IF(COUNTIF(Gates!C2:C7,"Yes")<ROWS(Gates!C2:C7),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
-RECOMMENDED_FORMULA = '=IF(OR(COUNTIF(Gates!C2:C7,"Yes")<ROWS(Gates!C2:C7),NOT(ISNUMBER(F17))),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
+SOURCE_FORMULA = '=IF(COUNTIF(Gates!C2:C7,"No")>0,"WAIT — a gate is not met",IF(F17>=70,"GO — commit the hours",IF(F17>=50,"CONDITIONAL — fix low scorers first","NO-GO — pass this round")))'
+ALL_GATES_FORMULA = '=IF(COUNTIF(Gates!B2:B7,"Yes")<ROWS(Gates!B2:B7),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
+RECOMMENDED_FORMULA = '=IF(OR(COUNTIF(Gates!B2:B7,"Yes")<ROWS(Gates!B2:B7),NOT(ISNUMBER(F17))),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
 
 # FICTIONAL decision inputs. The actual grant requirements and source workbook
 # data validations have not been accepted or used.
@@ -45,10 +45,11 @@ def main():
     wb = Workbook.create()
     gates = wb.worksheets.add("Gates")
     score = wb.worksheets.add("Scorecard")
+    gates.get_range("C2:C7").values = [["evidence note"], ["location note"], ["Worked example: vote pending"], ["program note"], ["match note"], ["owner note"]]
     score.get_range("F18:F20").formulas = [[SOURCE_FORMULA], [ALL_GATES_FORMULA], [RECOMMENDED_FORMULA]]
     rows = []
     for name, answers, points, expected in CASES:
-        gates.get_range("C2:C7").values = [[v] for v in answers]
+        gates.get_range("B2:B7").values = [[v] for v in answers]
         score.get_range("F17").values = [[points]]
         source_result, basic_result, recommended_result = [row[0] for row in score.get_range("F18:F20").values]
         if recommended_result != expected:
@@ -57,14 +58,17 @@ def main():
                      "recommended_fix": recommended_result, "expected": expected,
                      "pass": recommended_result == expected})
 
-    assert next(r for r in rows if r["case"] == "five_unanswered_go_score")["source"] == "GO", "Source defect not reproduced"
+    assert next(r for r in rows if r["case"] == "five_unanswered_go_score")["source"].startswith("GO"), "Source defect not reproduced"
+    assert next(r for r in rows if r["case"] == "explicit_no_high_score")["source"].startswith("GO"), "Source ignored explicit No in user input column"
     assert next(r for r in rows if r["case"] == "score_missing")["recommended_fix"] == "WAIT", "Unscored state not held"
     report = {"status": "PASS", "case_count": len(rows), "passed": len(rows),
               "reproduced_source_blank_gate_go": True,
-              "method": "Independent local artifact_tool workbook with source formula; not actual original XLSX execution",
+              "reproduced_source_wrong_column_false_go": True,
+              "method": "Source-faithful synthetic workbook: user answers B2:B7, source F18 incorrectly reads C2:C7 explanatory notes. Not original XLSX execution.",
               "source_formula": SOURCE_FORMULA, "proposed_formula": RECOMMENDED_FORMULA,
               "limitations": ["Original downloaded workbook was not executed or modified",
                               "Formula semantics reproduced in artifact_tool, not Microsoft Excel",
+                              "Pinned source OOXML verified B2:B7 validation and C2:C7 notes; test workbook synthetic",
                               "Upstream data-validation UX and real grant requirements not tested",
                               "COUNTIF compares Yes case-insensitively by engine convention"],
               "results": rows}

@@ -4,7 +4,7 @@
 Required source: zicula/skills @ ec7f94f84916be7bb25ec38752c24176330065a7
 Use: python scripts/qa/check_pinned_grant_scorecard.py /path/to/go-no-go-scorecard.xlsx
 The upstream workbook is never modified or exported. --fixture-test constructs an
-original-code-shaped synthetic workbook, explicitly NOT a source qualification.
+original-column-shaped synthetic workbook, explicitly NOT a source qualification.
 """
 
 import argparse
@@ -21,17 +21,19 @@ from xml.etree import ElementTree as ET
 from artifact_tool import Blob, SpreadsheetFile, Workbook
 
 EXPECTED_SHA = "a58d34344847a73440cb8ded6be88a3e87cc093d"
-RECOMMENDED_FORMULA = '=IF(OR(COUNTIF(Gates!C2:C7,"Yes")<ROWS(Gates!C2:C7),NOT(ISNUMBER(F17))),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
+SOURCE_FORMULA = '=IF(COUNTIF(Gates!C2:C7,"No")>0,"WAIT — a gate is not met",IF(F17>=70,"GO — commit the hours",IF(F17>=50,"CONDITIONAL — fix low scorers first","NO-GO — pass this round")))' 
+RECOMMENDED_FORMULA = '=IF(OR(COUNTIF(Gates!B2:B7,"Yes")<ROWS(Gates!B2:B7),NOT(ISNUMBER(F17))),"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))'
 TESTS = [
-    ("all_yes", ["Yes"] * 6, 75, "GO"),
-    ("missing_gate", ["Yes", "", "", "", "", ""], 75, "WAIT"),
-    ("explicit_no", ["Yes", "Yes", "No", "Yes", "Yes", "Yes"], 90, "WAIT"),
-    ("unrecognized_gate", ["Yes"] * 5 + ["Unknown"], 90, "WAIT"),
-    ("low_score", ["Yes"] * 6, 49, "NO-GO"),
-    ("threshold_50", ["Yes"] * 6, 50, "CONDITIONAL"),
-    ("threshold_70", ["Yes"] * 6, 70, "GO"),
-    ("missing_score", ["Yes"] * 6, None, "WAIT"),
-    ("text_score", ["Yes"] * 6, "70", "WAIT"),
+    ("original_explicit_no", ["Yes", "Yes", "No", "Yes", "Yes", "Yes"], 75, "WAIT", True),
+    ("blank_gate", ["Yes", "Yes", "", "Yes", "Yes", "Yes"], 75, "WAIT", True),
+    ("unknown_gate", ["Yes", "Yes", "Unknown", "Yes", "Yes", "Yes"], 90, "WAIT", True),
+    ("all_yes", ["Yes"] * 6, 75, "GO", False),
+    ("score_49", ["Yes"] * 6, 49, "NO-GO", False),
+    ("score_50", ["Yes"] * 6, 50, "CONDITIONAL", False),
+    ("score_69", ["Yes"] * 6, 69, "CONDITIONAL", False),
+    ("score_70", ["Yes"] * 6, 70, "GO", False),
+    ("missing_score", ["Yes"] * 6, None, "WAIT", False),
+    ("text_score", ["Yes"] * 6, "70", "WAIT", False),
 ]
 NS = {"x": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
@@ -67,8 +69,26 @@ def inspect_ooxml(raw: bytes) -> dict:
         gate = [f for f in formulas if 'COUNTIF(Gates!C2:C7,"No")>0' in f["formula"]]
         if len(gate) != 1:
             raise ValueError("Expected exactly one source gate formula; found " + str(len(gate)))
-        return {"sheets": sheets, "formula_count": len(formulas), "source_gate_formula": gate[0],
-                "macro_external_parts": len(suspicious), "hidden_sheets": sum(state != "visible" for _, state in sheets)}
+        if gate[0]["cell"] != "F18" or "GO — commit the hours" not in gate[0]["formula"]:
+            raise ValueError("Original F18 status formatting or source formula changed")
+        gates_xml = ET.fromstring(z.read("xl/worksheets/sheet2.xml"))
+        validations = [item.get("sqref") for item in gates_xml.findall(".//x:dataValidation", NS)]
+        if "B2:B7" not in validations or "C2:C7" in validations:
+            raise ValueError("Gate answers are not validated in expected B2:B7: " + repr(validations))
+        def gate_text(ref):
+            cell = gates_xml.find(f'.//x:c[@r="{ref}"]', NS)
+            if cell is None:
+                return None
+            rich = "".join(t.text or "" for t in cell.findall(".//x:t", NS))
+            return rich or (cell.findtext("x:v", namespaces=NS) or "")
+        if gate_text("B4") != "No" or "Worked example" not in (gate_text("C4") or ""):
+            raise ValueError("Pinned source B4 No / C4 narrative-note example not found")
+        return {"sheets": sheets, "formula_count": len(formulas),
+                "source_gate_formula": gate[0], "actual_gate_input_range": "B2:B7",
+                "wrong_source_formula_range": "C2:C7",
+                "source_b4": gate_text("B4"), "source_c4_is_notes": True,
+                "macro_external_parts": len(suspicious),
+                "hidden_sheets": sum(state != "visible" for _, state in sheets)}
 
 
 def run_cells(path: Path, located: dict) -> dict:
@@ -76,34 +96,43 @@ def run_cells(path: Path, located: dict) -> dict:
     gates = book.worksheets.get_item("Gates")
     score = book.worksheets.get_item("Scorecard")
     source_cell = located["source_gate_formula"]["cell"]
-    # The referenced score cell is F17, so the candidate stays on the same sheet.
+    # Source F18 reads notes in C; candidate must read validated answers in B.
+    # F17 is replaced in memory only to isolate score thresholds.
     score.get_range("H18").formulas = [[RECOMMENDED_FORMULA]]
     results = []
-    for title, answers, points, expected in TESTS:
-        gates.get_range("C2:C7").values = [[a] for a in answers]
+    for title, answers, points, expected, original_must_go in TESTS:
+        gates.get_range("B2:B7").values = [[a] for a in answers]
         score.get_range("F17").values = [[points]]
         observed_original = score.get_range(source_cell).values[0][0]
         observed_candidate = score.get_range("H18").values[0][0]
         if observed_candidate != expected:
             raise AssertionError(f"{title}: candidate {observed_candidate!r} vs expected {expected!r}")
+        if original_must_go and not (isinstance(observed_original, str) and observed_original.startswith("GO")):
+            raise AssertionError(f"{title}: source wrong-column false GO not reproduced: {observed_original!r}")
         results.append({"case": title, "source": observed_original,
                         "candidate": observed_candidate, "expected": expected})
-    source_bug = next(x for x in results if x["case"] == "missing_gate")["source"] == "GO"
+    source_bug = next(x for x in results if x["case"] == "original_explicit_no")["source"].startswith("GO")
     if not source_bug:
         raise AssertionError("Original false-GO defect was not reproduced in imported workbook")
     return {"tests": results, "candidate_passes": len(results), "original_defect_reproduced": source_bug}
 
 
 def make_fixture(path: Path) -> None:
-    b = Workbook.create()
-    score = b.worksheets.add("Scorecard")
-    gates = b.worksheets.add("Gates")
-    b.worksheets.add("Log")
-    gates.get_range("C2:C7").values = [["Yes"]] * 6
+    """Build a source-shaped *synthetic* workbook, never a source acceptance."""
+    book = Workbook.create()
+    score = book.worksheets.add("Scorecard")
+    gates = book.worksheets.add("Gates")
+    book.worksheets.add("Log")
+    gates.get_range("B2:B7").values = [["Yes"], ["Yes"], ["No"], ["Yes"], ["Yes"], ["Yes"]]
+    gates.get_range("C2:C7").values = [
+        ["eligibility evidence"], ["service area evidence"],
+        ["Worked example: board approval pending"], ["budget note"],
+        ["cost-share note"], ["owner note"]
+    ]
+    gates.get_range("B2:B7").data_validation = {"rule": {"type": "list", "values": ["Yes", "No"]}}
     score.get_range("F17").values = [[75]]
-    score.get_range("F18").formulas = [['=IF(COUNTIF(Gates!C2:C7,"No")>0,"WAIT",IF(F17>=70,"GO",IF(F17>=50,"CONDITIONAL","NO-GO")))']]
-    SpreadsheetFile.export_xlsx(b).save(str(path))
-
+    score.get_range("F18").formulas = [[SOURCE_FORMULA]]
+    SpreadsheetFile.export_xlsx(book).save(str(path))
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)

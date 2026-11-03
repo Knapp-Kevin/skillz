@@ -1,5 +1,7 @@
 # Q7: spreadsheet-engine reproduction of grant scorecard decision defect
 
+**CORRECTION (2026-11-03): This earlier fixture is superseded for source fidelity.** The original publisher's dropdown inputs live in `Gates!B2:B7`, not `Gates!C2:C7` (the notes column). Its F18 status includes descriptive text. [Corrected source inspection and test results](2026-11-03-q7-scorecard-source-column-reconciliation.md). The earlier receipt is preserved as history and must not be treated as a validated source-UI test.
+
 **Result:** The pinned original source formula returns `GO` at score 75 when five of the six mandatory gates are unanswered. We reproduced that result in an independent local **artifact_tool spreadsheet engine**, then tested two proposed replacement formulas using **18 fictional inputs**.
 
 The stricter variant, which requires every gate to explicitly count as Yes **and** requires a numeric score, passed **18/18** cases. This includes blank/No/Unknown/numeric/whitespace gate answers, missing and text-valued scores, and boundaries at 49/50/69/70. In the original formula, **six** of these scenarios produce an unsafe GO against our deliberately conservative hold expectation (including unanswered/unknown gates).
