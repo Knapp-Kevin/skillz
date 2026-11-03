@@ -39,7 +39,7 @@ These are **four individually reasoned static source reviews** from three previo
 
 In the newly reviewed, positively selected method shelf, **music composition gains one specific subdomain (scoring)** and **illustration gains three (concept art, sequential art, character identity)**. None is unchanged-use approved. Other subdomains remain unserved by positive recommendations; character/environment is only partially addressed.
 
-The dated [November 2 capability graph](../discovery/capability-coverage-audit-20261102.json) still legitimately reports **0/8 and 1/6 historical review/candidate links**. It measures a different date and stage, not the new positive method counts. [Browse all 14 creative subdomains and pending sources](../../docs/capability-creative-coverage.md).
+The dated [November 2 capability audit](../../registry/discovery/capability-coverage-audit-20261102.json) still legitimately reports **0/8 and 1/6 historical review/candidate links**. It measures a different date and stage, not the new positive method counts. [Browse all 14 creative subdomains and pending sources](../capability-creative-coverage.md).
 
 ## Evidence and next gate
 
