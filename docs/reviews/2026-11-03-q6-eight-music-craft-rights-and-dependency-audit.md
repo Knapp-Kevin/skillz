@@ -1,5 +1,7 @@
 # Music composition: eight-package dependency and rights audit (2026-11-03)
 
+> **Historical prequalification snapshot:** Original pending-SHA/zero-grades statements describe the earlier stage, not current HEAD. Eight reviews are now graded, and all eight pinned music package Git trees/22 owned blobs verified. See the [current ledger](../../registry/discovery/q6-eight-music-craft-static-20261103.json) and [tree audit](../../registry/discovery/q6-eight-music-craft-package-tree-audit-20261103.json). Book excerpt rights, aliases, security and practical tests remain unresolved.
+
 **Status: prequalification evidence, not eight governed reviews.** This note records an independent static read of pinned source content. It does not grant unchanged-use permission, add grades, or increase the number of recommended skills. It is separate from the four creative method references already integrated on main at `c25129c048a83f7a191e46d76ff4cfa797507b09` and from draft discovery PR #677.
 
 ## Source and package scope

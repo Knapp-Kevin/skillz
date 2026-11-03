@@ -5,7 +5,7 @@
   "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
   "root_license_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
   "root_notice_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
-  "scope": "Eight individually graded text-only skill entrypoints and 13 named owned supporting references plus shared schema/source material; source-family under active research PR #677 is separately reviewed here on a disjoint branch, not changing that PR. Full upstream package tree identities and mirror reconciliation UNKNOWN.",
+  "scope": "Eight individually graded source-pinned static methods; all 8 complete source package Git trees and all 22 owned blobs now independently verified. Mirror aliases, protected book excerpts, model/output rights, security and behavioral testing remain pending.",
   "rubric_dimensions": [
     "trigger_precision",
     "procedural_clarity",
@@ -25,8 +25,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-harmony/SKILL.md",
       "skill_blob": "72bd575edfaad46ca2061a836ebc36ce7f56ae37",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "6fd7748262484ee95576c3c918e93b3c7c8cb699",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -141,8 +141,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-melody/SKILL.md",
       "skill_blob": "3aa2049057c44c5c32b52424c1c30f4b51589713",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "3d635b14d3df64c0b24aa06c353c2bb08f97d1fb",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -258,8 +258,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-rhythm-groove/SKILL.md",
       "skill_blob": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "3eeb3603c8b11a73e0bbf3c5ce9e297867fe0d9a",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -370,8 +370,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-rhythm-section/SKILL.md",
       "skill_blob": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "368d0aa91cd80a053a5528de78133de54ec3ef9b",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -490,8 +490,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
       "skill_blob": "6a94014cbba85658345d8f1f8a3bfb4fa78dd495",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "d7ce1990acdfff9cebb9c1e678a5bde42827dc7e",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -635,8 +635,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-arrangement-arch/SKILL.md",
       "skill_blob": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "f372d0e4348f02b9fb51cf7d39d91c05b0bb3fe8",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -752,8 +752,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
       "skill_blob": "d84cd65170744219c64a46387e6ff675bc1fabbd",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "4e2500d61b989b399c45ba70df795f7c5d820459",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -869,8 +869,8 @@
       "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
       "canonical_path": "plugins/music-composition/skills/mc-style-edm/SKILL.md",
       "skill_blob": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2",
-      "package_tree": null,
-      "package_tree_status": "UNKNOWN: source Git tree for this package could not be independently enumerated by connector; SKILL.md equality is not whole-package equivalence",
+      "package_tree": "803834c1b9360986a7d90e738e4fffb515628640",
+      "package_tree_status": "COMPLETE PINNED SOURCE GIT PACKAGE TREE VERIFIED; mirrors/aliases, protected-book rights, security and executed behavior still unverified",
       "source_type": "nested_first_class_skill_entrypoint",
       "possible_alias_exposures": "Publisher README states the same 29 skill files ship through two plugin directories; exact alias/tree comparison NOT performed",
       "observed_owned_files": [
@@ -981,7 +981,7 @@
     "new_static_review_decisions": 8,
     "source_family_count": 1,
     "distinct_skill_md_blobs": 8,
-    "package_tree_verified_count": 0,
+    "package_tree_verified_count": 8,
     "static_reference_only": 8,
     "static_rejected": 0,
     "static_deferred": 0,
@@ -997,5 +997,6 @@
   "claimed_publisher_29_skills": "Publisher README claim only, NOT denominator and NOT number reviewed",
   "claimed_publisher_50_books": "Bibliography count publisher claim, no independently reconstructed book rights",
   "claimed_62_arrangements": "Publisher claim about measurements; not independently rerun or verified",
-  "tool_state": "GitHub files read by connector only; no external installs, scans, model calls, MIDI renders, copyrighted music playback or changes to source projects."
+  "tool_state": "GitHub files read by connector only; no external installs, scans, model calls, MIDI renders, copyrighted music playback or changes to source projects.",
+  "source_tree_audit": "registry/discovery/q6-eight-music-craft-package-tree-audit-20261103.json"
 }

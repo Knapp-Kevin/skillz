@@ -5063,7 +5063,7 @@
   },
   "consumer_positive_recommendation_sample_20261103": {
     "as_of": "2026-11-03",
-    "scope": "Nineteen individually reasoned reference METHODS across nine domains. Nine music methods span eight subdomains, but most from one original publisher. Twelve Q6 source SKILLs have pinned hashes but complete package-tree SHA and alias rights UNKNOWN. No unchanged-use or global audited count.",
+    "scope": "Nineteen useful conceptual methods across nine domains. Eight music packages have verified full source Git trees, four earlier creative package trees still UNKNOWN. No mirror, book/rights, unchanged-use or global audited clearance.",
     "source": "registry/consumer-positive-references-20261103.json",
     "plain_english": "docs/curated-capability-references.md",
     "valuable_reference_promotions_in_this_tranche": 19,
@@ -5106,7 +5106,7 @@
     "security_validation": "not-run",
     "behavioral_validation": "not-run",
     "source_license_correction": "All 28 scitix/siclaw Q4 review records cite pinned Apache-2.0 LICENSE blob 7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f rather than incorrect MIT label",
-    "identity_limitations": "Twelve Q6 creative methods have exact pinned SKILL.md blobs; full upstream package-tree hashes/mirror identities remain unknown. The jtydhr88 publisher NOTICE excludes protected music-book quotations and translations from MIT. Cannot treat these as installable or globally deduplicated packages.",
+    "identity_limitations": "Eight music complete pinned source package Git trees and all 22 owned blobs verified. Four other creative package trees, upstream aliases/mirrors, rights to source-book excerpts, security/behavior and use authorization remain unresolved.",
     "current_creative_domain_methods": {
       "music_composition": {
         "positive_reference_methods": 9,
@@ -5166,7 +5166,7 @@
     "music_subdomains_with_method_now": 8,
     "music_subdomains_total": 8,
     "music_method_coverage_is_domain_completion": false,
-    "complete_package_tree_identified": 0,
+    "complete_package_tree_identified": 8,
     "full_package_alias_equivalence": "UNKNOWN",
     "security_scan": "not-run",
     "behavioral_validation": "not-run",
@@ -5175,6 +5175,7 @@
     "receipt": "docs/reviews/2026-11-03-q6-eight-music-craft-static.md",
     "creative_browse": "docs/capability-creative-coverage.md",
     "global_distinct_eligible_denominator": null,
-    "historical_q1q5_terminal_static_decisions_unchanged": 5508
+    "historical_q1q5_terminal_static_decisions_unchanged": 5508,
+    "package_tree_audit": "registry/discovery/q6-eight-music-craft-package-tree-audit-20261103.json"
   }
 }
