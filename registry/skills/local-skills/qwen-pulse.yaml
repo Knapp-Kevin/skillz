@@ -7,7 +7,7 @@ source_path: skills/qwen-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
+source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
-exact_version_requalification: "Required for 8c1a9821f38fe09ccf275084ec2ebda029fe2d16; historical semantic review was e22ff1879ce563a76e733bc576bed80cf4cc5f12. Package security and behavior not-run."
+exact_version_requalification: "Required for 03d3015bbfe571ddaf4fa9448de66f74bb62ce69; historical semantic review was e22ff1879ce563a76e733bc576bed80cf4cc5f12. Package security and behavior not-run."
