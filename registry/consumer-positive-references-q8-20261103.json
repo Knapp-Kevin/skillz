@@ -2,7 +2,7 @@
  "schema_version": 1,
  "as_of": "2026-11-03",
  "stage": "consumer-positive-recommendation-qualification",
- "scope": "33 differentiated source-pinned conceptual Valuable References across 22 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
+ "scope": "39 differentiated source-pinned conceptual Valuable References across 28 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
  "catalog_categories": [
   "RECOMMENDED_FOR_USE",
   "VALUABLE_REFERENCE"
@@ -1815,12 +1815,216 @@
    "behavioral_validation": "NOT RUN",
    "unchanged_use_approved": false,
    "requires_separate_action_authority": true
+  },
+  {
+   "id": "github-awesome-copilot/daily-focus-board",
+   "name": "Daily Focus Board",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "time-productivity",
+   "domain_display": "Time / productivity",
+   "subdomain": "focus",
+   "capability": "Plan a short, kind daily focus list with an agent that nudges one step at a time.",
+   "benefit": "Plan a short, kind daily focus list with an agent that nudges one step at a time.",
+   "distinct_method": "The agent acts as a gentle co-worker over a local, offline task board: one next step at a time, guilt-free deferral, a place to park distracting thoughts, and an end-of-day recap pasted back to plan tomorrow.",
+   "reason_not_unchanged": "Personal notes and parked thoughts stay in browser storage forever, with no clear button. The 'move to tomorrow' option does not actually carry anything to the next day. A background local server is started without a stop step. ADHD claims are stated as fact, and the skill is branded for one host app.",
+   "source": {
+    "repository": "github/awesome-copilot",
+    "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+    "path": "skills/daily-focus-board/SKILL.md",
+    "skill_blob_sha": "ca4f9c93f966bc57ba2be7418dace757c4189b4b",
+    "recorded_package_tree_sha": "b6816f5d51874b15b852090ad9d2880515dde640",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (GitHub, Inc., blob 89bc5e962c9944cdb050887062afdaaf89be504a); no package-level LICENSE/ATTRIBUTION file",
+    "license_obligation": "Study the method in your own words. Copying is allowed under MIT if the GitHub, Inc. copyright and permission notice are kept; remove the host branding.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "No clear-all for stored personal notes; per-day storage keys accumulate; 'Carry to tomorrow' not implemented across days (assets/board.template.html L271 per-date key); Background server started with no stop step; Host-specific branding",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "consumer_adjudication": "Q8 rights-focused qualification batch 3: full-package current-standard re-review 15/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "openai-plugins/build-web-data-visualization/geospatial-and-cartographic-visualization",
+   "name": "Geospatial and Cartographic Visualization",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "analytics",
+   "domain_display": "Analytics",
+   "subdomain": "visualization",
+   "capability": "Decide basemap, layers, overlap and zoom behavior before picking a map library.",
+   "benefit": "Decide basemap, layers, overlap and zoom behavior before picking a map library.",
+   "distinct_method": "First ask whether geography actually drives the question. Then choose the background map from the viewer's decision, keep context separate from data layers, give each layer a zoom and overlap rule, and log each layer's source and coordinate system.",
+   "reason_not_unchanged": "There is no license text anywhere at the pin: the plugin manifest only names MIT, so nothing may be copied. Five shared references it relies on are missing. Commercial map stacks it names need vendor accounts and send location and search data to those vendors.",
+   "source": {
+    "repository": "openai/plugins",
+    "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "path": "plugins/build-web-data-visualization/skills/geospatial-and-cartographic-visualization/SKILL.md",
+    "skill_blob_sha": "51b926ba198cf89b4776a483de5534f596a4521e",
+    "recorded_package_tree_sha": "420de6234f1d7b9fb180e6072303a392655577d9",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "Plugin manifest declares MIT (author OpenAI); no LICENSE text ships in plugin or package (notice text unavailable). No conflict observed.",
+    "license_obligation": "Study the method only, in your own words. Do not copy text: no license text exists at the pin. Use vendor names only descriptively.",
+    "copy_allowed": "NO"
+   },
+   "dependencies": "No license text at pin (manifest names MIT only; repo root has no LICENSE); Five ../../references/foundations/*.md files missing; No egress/privacy rule for commercial map and Places APIs",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "consumer_adjudication": "Q8 rights-focused qualification batch 3: full-package current-standard re-review 13/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+   "security_scan": "failed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "yujxzjcn-teaching-skills/media-scripter",
+   "name": "Media Scripter",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "video-film",
+   "domain_display": "Video / film",
+   "subdomain": "screenwriting",
+   "capability": "Turn written notes into speakable, caption-ready, accessible video scripts.",
+   "benefit": "Turn written notes into speakable, caption-ready, accessible video scripts.",
+   "distinct_method": "Rewrite written material for listening, tie every on-screen change to exact spoken words, say aloud what visuals show, add a scripted pause-and-predict question, size episodes by speaking rate, and carry unchecked facts as flags for the author.",
+   "reason_not_unchanged": "It depends on shared protocol files and a course 'passport' schema that are not in the package. Transcripts of class Q&A may contain students' voices and names, and there is no privacy rule for them. Source text is not treated as untrusted.",
+   "source": {
+    "repository": "YujxZJCN/teaching-skills",
+    "pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+    "path": "media-scripter/SKILL.md",
+    "skill_blob_sha": "02a6bb78e0a06930b84cc86ea0006a138181e40a",
+    "recorded_package_tree_sha": "06f8362251abe9203fca51c4c129f401b1701664",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (LICENSE blob 024003bb56236b1161c03c575372d0e97abd8fc4, 'Copyright (c) 2026 Jiaxing Yu'; plugin.json/marketplace.json also declare MIT); no package-level LICENSE/NOTICE/ATTRIBUTION; no copied third-party text found (research is cited by author/year; README credits Academic Research Skills by Cheng-I Wu as architectural inspiration only)",
+    "license_obligation": "Study the method in your own words; cite Guo et al. and Mayer when relying on their findings. Copying needs the MIT notice.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "Missing shared protocols and passport schema; Missing sibling skills; No privacy rule for student speech in transcripts",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/q1-yujxzjcn-teaching-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "consumer_adjudication": "Q8 rights-focused qualification batch 3: full-package current-standard re-review 17/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "bladecoder-narrative-skills/continuity-check",
+   "name": "Continuity Check",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "fiction-narrative-worldbuilding",
+   "domain_display": "Fiction / narrative / worldbuilding",
+   "subdomain": "continuity",
+   "capability": "Catch real story contradictions without turning unclear details into false canon.",
+   "benefit": "Catch real story contradictions without turning unclear details into false canon.",
+   "distinct_method": "Pull fact claims from new chapters, compare them with a stored story-facts ledger, label each as a contradiction, an ambiguity, a new fact or a plot-thread change, and add to the ledger only when the text clearly supports it.",
+   "reason_not_unchanged": "It writes to the author's story-fact files without asking first, never defines how much textual support is enough, and does not require chapter or passage citations for findings. It assumes a folder layout and file formats defined in sibling skills.",
+   "source": {
+    "repository": "bladecoder/narrative-skills",
+    "pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+    "path": "skills/continuity-check/SKILL.md",
+    "skill_blob_sha": "a816c69a82a24e654b3e040cf3ae08063a5c7953",
+    "recorded_package_tree_sha": "eac56199862673d2206a52f6a3d504bfa31565a7",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "root MIT only (LICENSE blob 6218ab7c, Copyright (c) 2026 Rafael Garcia Moreno); no package-level LICENSE/ATTRIBUTION/NOTICE; no third-party content copied into the package observed",
+    "license_obligation": "Study the method in your own words; copying needs the MIT notice.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "Writes continuity files without confirmation; Undefined evidence threshold; no citation requirement; Assumes undefined layout and schemas",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/q1-bladecoder-narrative-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "consumer_adjudication": "Q8 rights-focused qualification batch 3: full-package current-standard re-review 13/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "openai-plugins/adobe/adobe-create-mockups",
+   "name": "Adobe Create Mockups",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "visual-design",
+   "domain_display": "Visual design",
+   "subdomain": "graphic-design",
+   "capability": "See your logo on real products fast, with a checkpoint before the full set.",
+   "benefit": "See your logo on real products fast, with a checkpoint before the full set.",
+   "distinct_method": "Feed the actual design file as a reference image instead of describing it, approve one pilot scene before spending on the whole set, keep scene settings fixed across the set, and never add brand text the user did not give.",
+   "reason_not_unchanged": "The method runs only on Adobe's paid, signed-in service, and uploads the user's design to it, with no cost-consent step. No license text exists at the pin despite an Apache-2.0 label, and Adobe trademarked logo assets are bundled, so nothing may be copied.",
+   "source": {
+    "repository": "openai/plugins",
+    "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "path": "plugins/adobe/skills/adobe-create-mockups/SKILL.md",
+    "skill_blob_sha": "2459e742e4e7e0c34140035f14b8d17dda9ad98c",
+    "recorded_package_tree_sha": "ee836ce313ba56f96118c9400b07c75486be75d9",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "adobe plugin.json has no license key; SKILL frontmatter Apache-2.0 with no notice text shipped; repo root unlicensed. Rights ambiguous -> reference-only.",
+    "license_obligation": "Study the method only, in our own words. Do not copy: no license text at the pin, and Adobe trademarks/logo assets are embedded.",
+    "copy_allowed": "NO"
+   },
+   "dependencies": "No license text at pin despite Apache-2.0 label; Requires paid Adobe Firefly; uploads designs to Adobe; Adobe trademark assets embedded",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 18
+   },
+   "consumer_adjudication": "Q8 rights-focused qualification batch 3: full-package current-standard re-review 15/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "openai-plugins/nvidia/dynamo-interconnect-check",
+   "name": "Dynamo Interconnect Check",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "ml-accelerators",
+   "domain_display": "ML accelerators and compute",
+   "subdomain": "accelerator-fabrics",
+   "capability": "Catch a silent fast-network fallback before trusting disaggregated-serving benchmark numbers.",
+   "benefit": "Catch a silent fast-network fallback before trusting disaggregated-serving benchmark numbers.",
+   "distinct_method": "Check the transport, not just the endpoint: in three read-only layers, confirm the serving configuration, the node's fabric capability and reachability, and report any missing tool as inconclusive rather than as a pass.",
+   "reason_not_unchanged": "There is no license text at the pin, only SPDX identifiers, and the prose is CC-BY while the code is Apache-2.0. Running it needs permission to exec into worker pods, and the configuration assumptions are specific to one vendor's stack.",
+   "source": {
+    "repository": "openai/plugins",
+    "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+    "path": "plugins/nvidia/skills/dynamo-interconnect-check/SKILL.md",
+    "skill_blob_sha": "a9c9d46228fed0439b76ed74d36fd128358c5f1f",
+    "recorded_package_tree_sha": "24748c47b449ad8081ba50063ca70f1907f775f0",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "Skill frontmatter says Apache-2.0, but the SKILL.md body and reference carry SPDX CC-BY-4.0 headers and the scripts carry Apache-2.0. This matches the plugin's dual declaration, not a conflict. No license text ships; CC-BY-4.0 attribution must be preserved on reuse.",
+    "license_obligation": "Study the method in our own words. Copying code needs the Apache-2.0 text and NVIDIA copyright; copying prose needs CC-BY-4.0 attribution and text, neither of which is present at the pin.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "No license text at pin (SPDX identifiers only); Requires kubectl-exec privilege into worker pods; Vendor-specific env/recipe assumptions",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 18
+   },
+   "consumer_adjudication": "Q8 rights-focused qualification batch 3: full-package current-standard re-review 19/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+   "security_scan": "failed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
   }
  ],
  "starter_shelf_totals": {
   "recommended_for_use": 0,
-  "valuable_reference": 33,
-  "distinct_capability_domains_represented": 22,
+  "valuable_reference": 39,
+  "distinct_capability_domains_represented": 28,
   "creative_tranche_20261103": {
    "music_composition": 9,
    "illustration": 3,
@@ -1832,7 +2036,7 @@
    "domain_fully_qualified": false
   },
   "q8_batch1_additions": 7,
-  "q8_additions_total": 13
+  "q8_additions_total": 19
  },
  "global_approved_for_use_total": null,
  "global_promoted_valuable_reference_total": null,

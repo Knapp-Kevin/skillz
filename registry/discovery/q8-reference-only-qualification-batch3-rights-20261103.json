@@ -1,0 +1,1150 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "rubric_dimensions": [
+  "trigger_precision",
+  "procedural_clarity",
+  "authority_safety",
+  "failure_handling",
+  "evidence_discipline",
+  "dependency_coherence",
+  "portability_honesty",
+  "usefulness_differentiation",
+  "adversarial_resilience",
+  "effectiveness_design"
+ ],
+ "rubric_scale": "0-2 per dimension, 20 total",
+ "decision_vocabulary": {
+  "VALUABLE_REFERENCE": "Individually selected differentiated method to study; not approval to install or run unchanged.",
+  "KEEP_REFERENCE_ONLY": "Stays in research; useful lessons recorded but not promoted."
+ },
+ "tranche": "Q8 rights-focused qualification batch 3",
+ "selection": "Rights-focused batch for the 11 domains still unfeatured after batch 2: the top-scored candidates whose blocker is rights or vendor terms (Adobe, Boltz, NVIDIA Dynamo, OpenRAL, Unlicense DSP), each paired with a cleaner-rights alternative where one exists. Every upstream LICENSE/NOTICE/plugin.json on the path from package to repository root was extracted at the pin and read.",
+ "review_method": "Exact pinned commits fetched (depth 1) into isolated bare repositories; package trees re-derived and matched to prior records 10/10; trees exported with git archive; every package file read in full by three parallel read-only reviewers on disjoint lists with one shared brief; integration owner spot-checked each decisive claim against source lines and adjudicated decisions. Nothing executed, installed or fetched from candidates. Pinned SkillSpector static scan per exact tree.",
+ "counts": {
+  "reviewed": 12,
+  "valuable_reference": 6,
+  "keep_reference_only": 6,
+  "reject_unchanged": 0,
+  "security_passed": 1,
+  "behavioral_validated": 0,
+  "unchanged_use_approved": 0
+ },
+ "records": [
+  {
+   "name": "Daily Focus Board",
+   "consumer_id": "github-awesome-copilot/daily-focus-board",
+   "source_repository": "github/awesome-copilot",
+   "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+   "canonical_path": "skills/daily-focus-board/SKILL.md",
+   "package_tree": "b6816f5d51874b15b852090ad9d2880515dde640",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "ca4f9c93f966bc57ba2be7418dace757c4189b4b",
+   "package_file_count": 7,
+   "prior_static_record": {
+    "ledger": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "capability_domain": "time-productivity",
+   "capability_subdomain": "focus",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 2,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete triggers; offers the board rather than forcing it.",
+    "procedural_clarity": "Three build steps with a full config schema, serving commands and a fallback; clear split between tap state and regeneration.",
+    "authority_safety": "Scratch-dir output and 127.0.0.1 binding, but a background server starts (hidden in the PowerShell helper) with no confirmation or stop step.",
+    "failure_handling": "Covers missing Python, file:// storage limits and port conflicts; not stale servers or day rollover.",
+    "evidence_discipline": "Honest that the agent cannot read browser storage, but states ADHD/dopamine claims as fact.",
+    "dependency_coherence": "Self-contained template with no external scripts, fonts or network calls (verified: zero fetch/XHR/beacon/WebSocket/URLs).",
+    "portability_honesty": "Tuned to one app's canvas and persona; helper is Windows-leaning.",
+    "usefulness_differentiation": "Pairs an offline board with concrete partner behaviors and an end-of-day recap loop.",
+    "adversarial_resilience": "Escaping and id validation are implemented in code; config injection escapes '<'.",
+    "effectiveness_design": "Coherent design, but 'carry to tomorrow' does nothing because each date starts empty, and stored thoughts have no clear-all."
+   },
+   "score_20": 15,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Plan a short, kind daily focus list with an agent that nudges one step at a time.",
+   "distinct_method_original_summary": "The agent acts as a gentle co-worker over a local, offline task board: one next step at a time, guilt-free deferral, a place to park distracting thoughts, and an end-of-day recap pasted back to plan tomorrow.",
+   "reason_not_unchanged": "Personal notes and parked thoughts stay in browser storage forever, with no clear button. The 'move to tomorrow' option does not actually carry anything to the next day. A background local server is started without a stop step. ADHD claims are stated as fact, and the skill is branded for one host app.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "No clear-all for stored personal notes; per-day storage keys accumulate",
+    "'Carry to tomorrow' not implemented across days (assets/board.template.html L271 per-date key)",
+    "Background server started with no stop step",
+    "Host-specific branding"
+   ],
+   "package_license_finding": "root MIT only (GitHub, Inc., blob 89bc5e962c9944cdb050887062afdaaf89be504a); no package-level LICENSE/ATTRIBUTION file",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, Copyright GitHub, Inc. (full text present)",
+     "No package-level license field or file"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Links educational sources (CHADD, MDN, WCAG and others) without copying; uses a product name and an 'Ember' persona in UI strings.",
+    "service_terms": "None required; optional local Python static server; no data sent anywhere.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with 'Copyright GitHub, Inc.'",
+    "obligation": "Study the method in your own words. Copying is allowed under MIT if the GitHub, Inc. copyright and permission notice are kept; remove the host branding."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "038f9d18160a131dc526c0f8c13c7f7f956712cfe3789c03ba78f4da0e0fab76",
+    "findings": [
+     {
+      "id": "AE1",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 29
+     },
+     {
+      "id": "AR2",
+      "pattern": "Anti-Refusal Statement",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 135
+     },
+     {
+      "id": "AR2",
+      "pattern": "Anti-Refusal Statement",
+      "severity": "HIGH",
+      "file": "references/neurodivergent-design.md",
+      "line": 31
+     },
+     {
+      "id": "AE1",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 163
+     },
+     {
+      "id": "MP3",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "file": "assets/board.template.html",
+      "line": 411
+     },
+     {
+      "id": "MP3",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "file": "assets/board.template.html",
+      "line": 411
+     },
+     {
+      "id": "MP3",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "file": "examples/sample-board.html",
+      "line": 419
+     },
+     {
+      "id": "MP3",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "file": "examples/sample-board.html",
+      "line": 419
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 2,
+     "obfuscated_instruction_text": 2,
+     "static_parse_limit": 2
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Bullet Point Rewriter",
+   "consumer_id": "jirawatp-resume-career-toolkit/bullet-point-rewriter",
+   "source_repository": "jirawatp/resume-career-toolkit",
+   "source_pin": "85189e64c79dd544aa40d2d8b1a205517e6b0775",
+   "canonical_path": "skills/bullet-point-rewriter/SKILL.md",
+   "package_tree": "18bedb7de0d3cec093e446b2dfc1247f9491e03c",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "3e4362052e526ba40a93b38683527db782bc25a1",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q2-jirawatp-resume-career-toolkit-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "capability_domain": "career",
+   "capability_subdomain": "job-search",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 2,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete triggers for weak resume bullets.",
+    "procedural_clarity": "Four steps and a fixed output format.",
+    "authority_safety": "Text only, but no gate requiring the user to confirm each number.",
+    "failure_handling": "Has estimate fallbacks; nothing for users who cannot answer.",
+    "evidence_discipline": "Forbids fabrication but L23 requires a number in every bullet and examples model invented metrics.",
+    "dependency_coherence": "Single self-contained file.",
+    "portability_honesty": "Name is not a valid skill identifier.",
+    "usefulness_differentiation": "Standard action-verb + result formula; only the 'metrics used' provenance line is distinctive.",
+    "adversarial_resilience": "Rules resist overt fabrication but examples invite imitation.",
+    "effectiveness_design": "Mandatory-number rule with no placeholder pushes toward unverified figures."
+   },
+   "score_20": 13,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Textbook resume formula. Its anti-fabrication rule is undercut by requiring a number in every bullet (SKILL.md L23) with no placeholder or confirmation step, which risks invented figures in hiring documents. The 'record where each number came from' idea is salvage.",
+   "hard_fail_flags": [
+    "Mandatory number per bullet without placeholder/confirmation (L23)",
+    "Invented example metrics",
+    "Invalid skill identifier"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 7d40d44a..., (c) 2026 Jirawat Pattanayutanachot); no package-level LICENSE/ATTRIBUTION/NOTICE; README claims 'original content, not a fork'; no identifiable copied third-party text",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 Jirawat Pattanayutanachot (full text present)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "None material.",
+    "service_terms": "None.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with the copyright line",
+    "obligation": "Study only; MIT notice required for copying."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "634c316d5ee562c4629f162c2d50b1a941e4f206dabc8a993275e5587b33c69c",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Productized Service Blueprint",
+   "consumer_id": "peterod99-consultant-skills/productized-service-blueprint",
+   "source_repository": "peterod99/consultant-skills",
+   "source_pin": "ee82a9dfe327a734e815a590aaaf92327d111d85",
+   "canonical_path": "productized-service-blueprint/SKILL.md",
+   "package_tree": "dc8469f3ec091f1d4da61c5f2dd380a13f35e349",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "0191047f74d9b071f5d314a8162b2e35900438a1",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q4-peterod99-consultant-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 15
+   },
+   "capability_domain": "business",
+   "capability_subdomain": "business-models",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 1,
+    "authority_safety": 1,
+    "failure_handling": 0,
+    "evidence_discipline": 0,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Clear but broad; no exclusions.",
+    "procedural_clarity": "Five named steps but no inputs, questions or output artifact.",
+    "authority_safety": "Text only, but prescriptive pricing with no caveat.",
+    "failure_handling": "No path when delivery is not repeatable.",
+    "evidence_discipline": "Pricing figures are arbitrary and internally inconsistent.",
+    "dependency_coherence": "No dependencies.",
+    "portability_honesty": "Plain prose.",
+    "usefulness_differentiation": "Textbook productized-services summary credited to named authors.",
+    "adversarial_resilience": "No injection surface, but absolute rules could steer harmful decisions.",
+    "effectiveness_design": "Worked example helps; no fit check or template."
+   },
+   "score_20": 10,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Short summary of known frameworks with no agent procedure and inconsistent pricing guidance.",
+   "hard_fail_flags": [
+    "Inconsistent, unsupported pricing guidance",
+    "No intake, output format or failure path"
+   ],
+   "package_license_finding": "Root MIT only (LICENSE 97479e62, Copyright 2026 Peter O'Donnell); no package LICENSE/NOTICE/ATTRIBUTION. Content is a self-described derivative synthesis of third-party paid courses/books (README: 'summarizes and reframes; it does not redistribute source content'); 'Source credits' section names sources. No verbatim copying detected in the text read, but the MIT grant cannot cover any third-party expression; frameworks/ideas are not copyrightable, so treat as attributed paraphrase.",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 Peter O'Donnell (full text present)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Credits frameworks to named third parties (ideas, no quoted text).",
+    "service_terms": "None.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with the copyright line",
+    "obligation": "Study only; MIT notice required for copying."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "passed",
+    "report_sha256": "9705e2ae74072bc9accce853ddb25f311667b615eb80f97bc9003198dd70216d",
+    "findings": [],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Geospatial and Cartographic Visualization",
+   "consumer_id": "openai-plugins/build-web-data-visualization/geospatial-and-cartographic-visualization",
+   "source_repository": "openai/plugins",
+   "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+   "canonical_path": "plugins/build-web-data-visualization/skills/geospatial-and-cartographic-visualization/SKILL.md",
+   "package_tree": "420de6234f1d7b9fb180e6072303a392655577d9",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "51b926ba198cf89b4776a483de5534f596a4521e",
+   "package_file_count": 11,
+   "prior_static_record": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "capability_domain": "analytics",
+   "capability_subdomain": "visualization",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 2,
+    "dependency_coherence": 0,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete map decisions; warns against maps by reflex; implicit invocation off.",
+    "procedural_clarity": "18-step ordered decision path from 'is this spatial?' to stack choice.",
+    "authority_safety": "No execution, but no rule on API keys or data sent to commercial map providers.",
+    "failure_handling": "Covers stale/offline tiles; not missing references or failing sources.",
+    "evidence_discipline": "Per-layer ledger of license, cadence, coordinate system and measured/inferred status, with alignment spot checks.",
+    "dependency_coherence": "Cites five shared foundation references (7 mentions) that are not in the package.",
+    "portability_honesty": "Asks to name vendor dependencies but assumes the plugin folder layout.",
+    "usefulness_differentiation": "Substrate-before-library, overlap tactics and per-layer zoom rules go beyond picking a library.",
+    "adversarial_resilience": "Small attack surface; live API data not treated as untrusted.",
+    "effectiveness_design": "Checkable deliverables, but several references are thin stubs and there are no examples."
+   },
+   "score_20": 13,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Decide basemap, layers, overlap and zoom behavior before picking a map library.",
+   "distinct_method_original_summary": "First ask whether geography actually drives the question. Then choose the background map from the viewer's decision, keep context separate from data layers, give each layer a zoom and overlap rule, and log each layer's source and coordinate system.",
+   "reason_not_unchanged": "There is no license text anywhere at the pin: the plugin manifest only names MIT, so nothing may be copied. Five shared references it relies on are missing. Commercial map stacks it names need vendor accounts and send location and search data to those vendors.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "No license text at pin (manifest names MIT only; repo root has no LICENSE)",
+    "Five ../../references/foundations/*.md files missing",
+    "No egress/privacy rule for commercial map and Places APIs"
+   ],
+   "package_license_finding": "Plugin manifest declares MIT (author OpenAI); no LICENSE text ships in plugin or package (notice text unavailable). No conflict observed.",
+   "rights_review": {
+    "declared": [
+     "plugins/build-web-data-visualization/.codex-plugin/plugin.json: license 'MIT', author OpenAI",
+     "No repository-root LICENSE at the pin",
+     "No license in SKILL.md"
+    ],
+    "controlling_text_present": false,
+    "conflicts": "Manifest names MIT but no license text or copyright line exists at the pin.",
+    "third_party_material": "Vendor names (Google Maps Platform, Mapbox, Esri, Azure Maps, HERE, deck.gl, Leaflet, MapLibre); links to vendor docs and a research paper; OpenAI brand assets in the manifest.",
+    "service_terms": "None required; some suggested stacks need vendor accounts and send map views, geocoding and location queries; open alternatives exist.",
+    "copy_allowed": "NO",
+    "required_notices": "None determinable",
+    "obligation": "Study the method only, in your own words. Do not copy text: no license text exists at the pin. Use vendor names only descriptively."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "failed",
+    "report_sha256": "970a2ba8ef6b9636834a972a0293dfa11d1cf4efa393937f2ec097a373b54c65",
+    "findings": [
+     {
+      "id": "AR2",
+      "pattern": "Anti-Refusal Statement",
+      "severity": "HIGH",
+      "file": "references/deckgl-d3-geo-stack-selection.md",
+      "line": 25
+     }
+    ],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Media Scripter",
+   "consumer_id": "yujxzjcn-teaching-skills/media-scripter",
+   "source_repository": "YujxZJCN/teaching-skills",
+   "source_pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+   "canonical_path": "media-scripter/SKILL.md",
+   "package_tree": "06f8362251abe9203fca51c4c129f401b1701664",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "02a6bb78e0a06930b84cc86ea0006a138181e40a",
+   "package_file_count": 8,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q1-yujxzjcn-teaching-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "capability_domain": "video-film",
+   "capability_subdomain": "screenwriting",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Mode table, dispatch rule and a does-not-trigger table with named alternatives.",
+    "procedural_clarity": "Phases 0-4 with two human checkpoints; numbered procedures per agent file.",
+    "authority_safety": "Passport updated only after confirmation and append-only; never paraphrases the professor; cleanup level never raised silently.",
+    "failure_handling": "Covers missing source, over-length scripts, unsegmentable material, demo failure paths and transcript gaps.",
+    "evidence_discipline": "[VERIFY] and [NEW EXAMPLE] markers; forbids new domain claims; states the limits of the research it cites.",
+    "dependency_coherence": "Shared protocol files, passport schema and sibling skills are cited but absent.",
+    "portability_honesty": "Assumes the teaching pipeline layout, though the core method stands alone.",
+    "usefulness_differentiation": "Spoken-register rewriting, narration-anchored visuals, no 'this graph' pointing and timed prompts are concrete practices.",
+    "adversarial_resilience": "Source and transcript text not flagged as untrusted; speaker labels need permission.",
+    "effectiveness_design": "Templates carry built-in checks: verify register, timing math, banned strings and orphaned visuals."
+   },
+   "score_20": 17,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Turn written notes into speakable, caption-ready, accessible video scripts.",
+   "distinct_method_original_summary": "Rewrite written material for listening, tie every on-screen change to exact spoken words, say aloud what visuals show, add a scripted pause-and-predict question, size episodes by speaking rate, and carry unchecked facts as flags for the author.",
+   "reason_not_unchanged": "It depends on shared protocol files and a course 'passport' schema that are not in the package. Transcripts of class Q&A may contain students' voices and names, and there is no privacy rule for them. Source text is not treated as untrusted.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Missing shared protocols and passport schema",
+    "Missing sibling skills",
+    "No privacy rule for student speech in transcripts"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 024003bb56236b1161c03c575372d0e97abd8fc4, 'Copyright (c) 2026 Jiaxing Yu'; plugin.json/marketplace.json also declare MIT); no package-level LICENSE/NOTICE/ATTRIBUTION; no copied third-party text found (research is cited by author/year; README credits Academic Research Skills by Cheng-I Wu as architectural inspiration only)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, Copyright (c) 2026 Jiaxing Yu (full text present)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Paraphrased research summaries (Guo, Kim & Rubin 2014; Mayer, Multimedia Learning) with citations.",
+    "service_terms": "None.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with 'Copyright (c) 2026 Jiaxing Yu'",
+    "obligation": "Study the method in your own words; cite Guo et al. and Mayer when relying on their findings. Copying needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "6d48ec361273b2b606f269d2fb5aa557c6270c872ec5b61a92d482593fe19db7",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 4
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "DSP Algorithm Guide",
+   "consumer_id": "kunitoki-sonic-skills/dsp-algorithm-guide",
+   "source_repository": "kunitoki/sonic-skills",
+   "source_pin": "8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa",
+   "canonical_path": "skills/dsp-algorithm-guide/SKILL.md",
+   "package_tree": "e0b047018e1184bd232397a30a8d6bc92d760f98",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "e47c2e85d865c4485976c8237ec47fe4abea0f38",
+   "package_file_count": 2,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q5-kunitoki-sonic-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "capability_domain": "audio-voice-sound",
+   "capability_subdomain": "sound-design",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 1,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete DSP request phrases.",
+    "procedural_clarity": "Three thin steps.",
+    "authority_safety": "No warning to protect output level during extreme-gain tests.",
+    "failure_handling": "Lists stability checks but no path when tests fail.",
+    "evidence_discipline": "Credits RBJ and Simper but other formulas are unsourced.",
+    "dependency_coherence": "Assumes JUCE without saying so.",
+    "portability_honesty": "Framework calls presented as general.",
+    "usefulness_differentiation": "Mostly a textbook formula summary.",
+    "adversarial_resilience": "Static reference with no execution surface.",
+    "effectiveness_design": "Phase-vocoder frequency estimate omits the expected bin phase advance (references/algorithm-cookbook.md L148); peaking EQ uses an undefined A; shelf coefficients missing."
+   },
+   "score_20": 12,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Mostly textbook material with technical errors that block trust (phase-vocoder estimate, undefined peaking-EQ term, missing shelf formulas). The pre-code risk checklist and silence/extreme-parameter tests are salvage. Rights are clean (Unlicense).",
+   "hard_fail_flags": [
+    "Incorrect phase-vocoder frequency estimate (algorithm-cookbook.md L148)",
+    "Undefined A in peaking EQ; shelf coefficients absent",
+    "Undeclared JUCE dependency"
+   ],
+   "package_license_finding": "root Unlicense only (LICENSE blob fdddb29a, public-domain dedication); no package-level LICENSE/ATTRIBUTION/NOTICE; reference cites R. Bristow-Johnson Audio EQ Cookbook and Andrew Simper TPT SVF as sources of formulas (mathematical formulas restated, not verbatim copied prose; attribution adequate)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: Unlicense (public-domain dedication, text present)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Credited formulas (RBJ Audio EQ Cookbook, Simper SVF); JUCE API names.",
+    "service_terms": "None.",
+    "copy_allowed": "YES",
+    "required_notices": "None required by the Unlicense; courtesy credit to RBJ and Simper",
+    "obligation": "Public domain; credit formula sources as a courtesy."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "failed",
+    "report_sha256": "04550ddaa79e7a8838471d1f118db86866bdf47562932b8291241f7ff104fc3e",
+    "findings": [
+     {
+      "id": "MP2",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "file": "references/algorithm-cookbook.md",
+      "line": 126
+     }
+    ],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Scene Creator (OpenRAL)",
+   "consumer_id": "bensonlee5-openral/scene-creator",
+   "source_repository": "bensonlee5/openral",
+   "source_pin": "de448f8f4eef590ab86625416cb4df969156dc92",
+   "canonical_path": ".agents/skills/scene-creator/SKILL.md",
+   "package_tree": "1ecdf73dec418e1f9e62de011a0cf69caf76b39a",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "2ba8d003bc8a3e6dcd9c1cd349eb49b9fc9f9e4b",
+   "package_file_count": 2,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q3-bensonlee5-openral-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 15
+   },
+   "capability_domain": "robotics-iot",
+   "capability_subdomain": "motion-planning",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Precise to one project; no negative boundaries.",
+    "procedural_clarity": "Seven-step workflow and a scene-path decision table.",
+    "authority_safety": "Runs simulator and benchmark commands and edits repo tests/docs without a confirmation gate.",
+    "failure_handling": "Stop conditions block validity claims when the adapter, success key or assets are missing.",
+    "evidence_discipline": "Forbids mocks and fake metrics; requires a real success key and an honest-scope field.",
+    "dependency_coherence": "Seven repo files are required but absent (normal for a repo-internal skill).",
+    "portability_honesty": "Never says it is unusable outside OpenRAL.",
+    "usefulness_differentiation": "Value is mostly project-internal.",
+    "adversarial_resilience": "Copied upstream task files are trusted without provenance checks.",
+    "effectiveness_design": "Concrete checklist, validation ladder and hard stops."
+   },
+   "score_20": 14,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "A sound repo-internal procedure with strong no-fake-metrics discipline, but it is not transferable outside OpenRAL. Apache-2.0 + NOTICE obligations are identified for any future copy.",
+   "hard_fail_flags": [
+    "Requires OpenRAL CLI, schemas and registry absent from package",
+    "Runs sim/benchmark commands without confirmation"
+   ],
+   "package_license_finding": "root Apache-2.0 (LICENSE c13e1eb8) plus NOTICE 4ed5bac5 and LICENSES/Apache-2.0.txt; no package-level LICENSE/NOTICE/ATTRIBUTION. Redistribution of the package needs LICENSE and NOTICE to accompany it. Mentions LIBERO BDDL copying from upstream LIBERO patterns (upstream licence not discussed); no third-party content copied into the package.",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: Apache-2.0 full text, 'Copyright 2025-2026 OpenRAL Contributors'",
+     "NOTICE: project under Apache-2.0; Hugging Face model weights under their own licenses (some non-commercial, e.g. GR00T)",
+     "LICENSES/Apache-2.0.txt"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Names LIBERO, MuJoCo, robosuite and model families; NOTICE lists third-party weight licenses, some non-commercial.",
+    "service_terms": "Local simulators; paired model weights may carry non-commercial terms.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "Apache-2.0 text, the copyright line, NOTICE contents and change statements",
+    "obligation": "Copying requires the Apache-2.0 license, NOTICE contents and change notes; paired model weights keep their own licenses."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "62696e01ef4e6e05124bc84698d039a503218caf404c587ec52f2c2fb4ebf3b0",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 9
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Continuity Check",
+   "consumer_id": "bladecoder-narrative-skills/continuity-check",
+   "source_repository": "bladecoder/narrative-skills",
+   "source_pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+   "canonical_path": "skills/continuity-check/SKILL.md",
+   "package_tree": "eac56199862673d2206a52f6a3d504bfa31565a7",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "a816c69a82a24e654b3e040cf3ae08063a5c7953",
+   "package_file_count": 2,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q1-bladecoder-narrative-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 16
+   },
+   "capability_domain": "fiction-narrative-worldbuilding",
+   "capability_subdomain": "continuity",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete moments to use it; not a substitute for editorial review.",
+    "procedural_clarity": "Seven steps, eight named consistency areas and a fixed four-way classification.",
+    "authority_safety": "Writes canon files without confirmation, mitigated by additive-update and no-overwrite rules (L114, L169).",
+    "failure_handling": "Keeps weak evidence visible; no handling for missing or conflicting canon files.",
+    "evidence_discipline": "Separates ambiguity from contradiction and forbids invented facts, but 'strong enough support' is undefined and no passage citations are required.",
+    "dependency_coherence": "Assumes a project layout and YAML schemas defined elsewhere.",
+    "portability_honesty": "Works conceptually anywhere but doesn't name the layout's origin.",
+    "usefulness_differentiation": "Four-way finding labels and an evidence-gated canon ledger beat a flat error list.",
+    "adversarial_resilience": "Manuscript text not treated as untrusted; low risk.",
+    "effectiveness_design": "Quality-bar questions help; no schema, example or template."
+   },
+   "score_20": 13,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Catch real story contradictions without turning unclear details into false canon.",
+   "distinct_method_original_summary": "Pull fact claims from new chapters, compare them with a stored story-facts ledger, label each as a contradiction, an ambiguity, a new fact or a plot-thread change, and add to the ledger only when the text clearly supports it.",
+   "reason_not_unchanged": "It writes to the author's story-fact files without asking first, never defines how much textual support is enough, and does not require chapter or passage citations for findings. It assumes a folder layout and file formats defined in sibling skills.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Writes continuity files without confirmation",
+    "Undefined evidence threshold; no citation requirement",
+    "Assumes undefined layout and schemas"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 6218ab7c, Copyright (c) 2026 Rafael Garcia Moreno); no package-level LICENSE/ATTRIBUTION/NOTICE; no third-party content copied into the package observed",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, Copyright (c) 2026 Rafael Garc\u00eda Moreno (full text present)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "None observed.",
+    "service_terms": "None.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with the copyright line",
+    "obligation": "Study the method in your own words; copying needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "e55b17be5067d717d52ecff3d1b1d66c93fc5f7d1b39f356d06c3e5af6e655ed",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 23
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Adobe Create Mockups",
+   "consumer_id": "openai-plugins/adobe/adobe-create-mockups",
+   "source_repository": "openai/plugins",
+   "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+   "canonical_path": "plugins/adobe/skills/adobe-create-mockups/SKILL.md",
+   "package_tree": "ee836ce313ba56f96118c9400b07c75486be75d9",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "2459e742e4e7e0c34140035f14b8d17dda9ad98c",
+   "package_file_count": 4,
+   "prior_static_record": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 18
+   },
+   "capability_domain": "visual-design",
+   "capability_subdomain": "graphic-design",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Explicit triggers separate it from other Adobe skills.",
+    "procedural_clarity": "Seven-step pipeline with per-step tool calls and a prompt template.",
+    "authority_safety": "Read-only toward user data, but paid generation is never surfaced as a cost gate.",
+    "failure_handling": "Error table covers generate failure, rate limits and partial success.",
+    "evidence_discipline": "Behavior claims asserted with no evals.",
+    "dependency_coherence": "Entirely dependent on proprietary Adobe tools; the Apache-2.0 claim has no license text.",
+    "portability_honesty": "Assumes Adobe surface tools with no fallback.",
+    "usefulness_differentiation": "Reference-image-locked generation, a pilot checkpoint and a no-invented-brand-text rule beat a naive prompt.",
+    "adversarial_resilience": "Good degrade rules, but no handling of untrusted uploaded images.",
+    "effectiveness_design": "Locked scene constants and parallel batching aim at consistent output."
+   },
+   "score_20": 15,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "See your logo on real products fast, with a checkpoint before the full set.",
+   "distinct_method_original_summary": "Feed the actual design file as a reference image instead of describing it, approve one pilot scene before spending on the whole set, keep scene settings fixed across the set, and never add brand text the user did not give.",
+   "reason_not_unchanged": "The method runs only on Adobe's paid, signed-in service, and uploads the user's design to it, with no cost-consent step. No license text exists at the pin despite an Apache-2.0 label, and Adobe trademarked logo assets are bundled, so nothing may be copied.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "No license text at pin despite Apache-2.0 label",
+    "Requires paid Adobe Firefly; uploads designs to Adobe",
+    "Adobe trademark assets embedded"
+   ],
+   "package_license_finding": "adobe plugin.json has no license key; SKILL frontmatter Apache-2.0 with no notice text shipped; repo root unlicensed. Rights ambiguous -> reference-only.",
+   "rights_review": {
+    "declared": [
+     "SKILL.md frontmatter 'license: Apache-2.0'",
+     "Adobe plugin.json: no license field (Adobe Inc, v8.0.0)",
+     "Repository root: no LICENSE"
+    ],
+    "controlling_text_present": false,
+    "conflicts": "Frontmatter names Apache-2.0 but no Apache-2.0 text exists anywhere at the pin; manifest declares no license.",
+    "third_party_material": "Adobe trademark and 'A' logo SVGs; Firefly branding; Adobe ToS/privacy URLs.",
+    "service_terms": "Requires an Adobe account and paid Firefly generation; user designs are uploaded to Adobe Creative Cloud.",
+    "copy_allowed": "NO",
+    "required_notices": "None satisfiable (no license text present)",
+    "obligation": "Study the method only, in our own words. Do not copy: no license text at the pin, and Adobe trademarks/logo assets are embedded."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "1de5993238927581ac134292b0173d92efd5500436bc25988d3c5ceeba24d053",
+    "findings": [
+     {
+      "id": "P6",
+      "pattern": "Direct Prompt Extraction",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 436
+     },
+     {
+      "id": "EA2",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 126
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 2
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Adobe Edit Quick Cut",
+   "consumer_id": "openai-plugins/adobe/adobe-edit-quick-cut",
+   "source_repository": "openai/plugins",
+   "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+   "canonical_path": "plugins/adobe/skills/adobe-edit-quick-cut/SKILL.md",
+   "package_tree": "a6c89e59a76805a6fcd321ef5fc3b74dea51cb13",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "f71032608c218b6c06b6ed10bcff5b2ef3adf61c",
+   "package_file_count": 4,
+   "prior_static_record": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 18
+   },
+   "capability_domain": "video-film",
+   "capability_subdomain": "editing",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Long explicit trigger list.",
+    "procedural_clarity": "Numbered steps with parameter maps.",
+    "authority_safety": "Handles entitlement and auth errors; no spend gate.",
+    "failure_handling": "Strong error taxonomy.",
+    "evidence_discipline": "Claims asserted with no evals.",
+    "dependency_coherence": "Fully Adobe-tool dependent; Apache-2.0 claim lacks text.",
+    "portability_honesty": "Each widget step has a text fallback.",
+    "usefulness_differentiation": "Mostly Adobe Quick Cut orchestration; thin portable method.",
+    "adversarial_resilience": "Validates media type; little else.",
+    "effectiveness_design": "Documented hard gap where output cannot feed resize."
+   },
+   "score_20": 14,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Mostly a vendor runbook for Adobe Quick Cut; the portable part (parallel variations, surface-adaptive fallbacks) is thin and inseparable from the proprietary tool. No license text at the pin. Video-film is already featured this batch by Media Scripter.",
+   "hard_fail_flags": [
+    "No license text at pin despite Apache-2.0 label",
+    "Requires paid Adobe Quick Cut; uploads video to Adobe",
+    "Adobe trademark assets embedded",
+    "Documented downstream-chaining dead end"
+   ],
+   "package_license_finding": "adobe plugin.json has no license key; SKILL frontmatter Apache-2.0 with no notice text shipped; repo root unlicensed. Rights ambiguous -> reference-only.",
+   "rights_review": {
+    "declared": [
+     "SKILL.md frontmatter 'license: Apache-2.0'",
+     "Adobe plugin.json: no license field",
+     "Repository root: no LICENSE"
+    ],
+    "controlling_text_present": false,
+    "conflicts": "Frontmatter names Apache-2.0 but no text present; manifest declares no license.",
+    "third_party_material": "Adobe trademark and logo SVGs; product names; ToS/privacy URLs.",
+    "service_terms": "Requires an Adobe account and paid Quick Cut; source video uploaded to Adobe.",
+    "copy_allowed": "NO",
+    "required_notices": "None satisfiable",
+    "obligation": "Study only; do not copy (no license text, embedded trademarks)."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "6051d98e2b779265ee83862992bca363106b635b654c00ddfdf9ed3872322d18",
+    "findings": [
+     {
+      "id": "EA2",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 75
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 153
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 158
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Dynamo Interconnect Check",
+   "consumer_id": "openai-plugins/nvidia/dynamo-interconnect-check",
+   "source_repository": "openai/plugins",
+   "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+   "canonical_path": "plugins/nvidia/skills/dynamo-interconnect-check/SKILL.md",
+   "package_tree": "24748c47b449ad8081ba50063ca70f1907f775f0",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "a9c9d46228fed0439b76ed74d36fd128358c5f1f",
+   "package_file_count": 8,
+   "prior_static_record": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 18
+   },
+   "capability_domain": "ml-accelerators",
+   "capability_subdomain": "accelerator-fabrics",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Scoped to post-deploy validation; routes failures elsewhere; negative evals.",
+    "procedural_clarity": "Three concrete checks with exact commands and an output contract.",
+    "authority_safety": "Read-only claim backed by code: check=False probes, no mutation.",
+    "failure_handling": "Degrades on missing binaries and timeouts; distinguishes skipped from fail.",
+    "evidence_discipline": "Documents eval dimensions and reports its own Tier-1 findings candidly.",
+    "dependency_coherence": "Needs only stdlib plus kubectl and in-pod tools; missing tools reported as skipped.",
+    "portability_honesty": "States the env check misses runtime-injected vars and that skipped is not a pass.",
+    "usefulness_differentiation": "Targets a non-obvious failure: a healthy endpoint while transport silently falls back to TCP.",
+    "adversarial_resilience": "Read-only and safe, but regex manifest parsing can misclassify.",
+    "effectiveness_design": "ok/warn/fail/skipped rollup with a readiness verdict and the next command."
+   },
+   "score_20": 19,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Catch a silent fast-network fallback before trusting disaggregated-serving benchmark numbers.",
+   "distinct_method_original_summary": "Check the transport, not just the endpoint: in three read-only layers, confirm the serving configuration, the node's fabric capability and reachability, and report any missing tool as inconclusive rather than as a pass.",
+   "reason_not_unchanged": "There is no license text at the pin, only SPDX identifiers, and the prose is CC-BY while the code is Apache-2.0. Running it needs permission to exec into worker pods, and the configuration assumptions are specific to one vendor's stack.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "No license text at pin (SPDX identifiers only)",
+    "Requires kubectl-exec privilege into worker pods",
+    "Vendor-specific env/recipe assumptions"
+   ],
+   "package_license_finding": "Skill frontmatter says Apache-2.0, but the SKILL.md body and reference carry SPDX CC-BY-4.0 headers and the scripts carry Apache-2.0. This matches the plugin's dual declaration, not a conflict. No license text ships; CC-BY-4.0 attribution must be preserved on reuse.",
+   "rights_review": {
+    "declared": [
+     "SKILL.md frontmatter Apache-2.0; body SPDX CC-BY-4.0 with NVIDIA copyright",
+     "scripts SPDX Apache-2.0",
+     "plugin.json 'Apache-2.0 AND CC-BY-4.0'",
+     "Repository root: no LICENSE"
+    ],
+    "controlling_text_present": false,
+    "conflicts": "Code-vs-docs dual license is intentional (manifest reconciles it), but no license TEXT backs either identifier at the pin.",
+    "third_party_material": "NVIDIA trademark; Dynamo/NIXL/UCX/NCCL names; links to the project repo.",
+    "service_terms": "No paid service or account; runs against the user's own cluster; sends no data to the vendor.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "Apache-2.0 header + NVIDIA copyright for code; CC-BY-4.0 attribution for prose; both license texts must be supplied before copying",
+    "obligation": "Study the method in our own words. Copying code needs the Apache-2.0 text and NVIDIA copyright; copying prose needs CC-BY-4.0 attribution and text, neither of which is present at the pin."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "failed",
+    "report_sha256": "d9d00adea27c52a4ba0b3dd79af63a1528b4db1d5f97d0a0f44c94c04524114c",
+    "findings": [
+     {
+      "id": "MP3",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 134
+     },
+     {
+      "id": "AS3",
+      "pattern": "Skill Enumeration",
+      "severity": "MEDIUM",
+      "file": "BENCHMARK.md",
+      "line": 48
+     },
+     {
+      "id": "LP3",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 1
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "scripts/check_interconnect.py",
+      "line": 121
+     }
+    ],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Boltz Protein Design",
+   "consumer_id": "openai-plugins/boltz-api-cli/boltz-protein-design",
+   "source_repository": "openai/plugins",
+   "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+   "canonical_path": "plugins/boltz-api-cli/skills/boltz-protein-design/SKILL.md",
+   "package_tree": "112d62fe98fa15e925322b5a8eb6e561a751c25d",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "48694b2a053d66a763e122e1e9173f6071a2c3e4",
+   "package_file_count": 12,
+   "prior_static_record": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 19
+   },
+   "capability_domain": "science",
+   "capability_subdomain": "experimental-design",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Scoped, with explicit exclusions.",
+    "procedural_clarity": "Detailed workflow with run-sizing tiers.",
+    "authority_safety": "Strong per-run spending gate, but it instructs the agent not to ask permission first for auth and to request host sandbox bypass/escalation, and has no domain-safety gate.",
+    "failure_handling": "Handles auth, sandbox blocks and validation failures.",
+    "evidence_discipline": "Mandates an estimate as the only cost source; treats the confidence output as a soft signal.",
+    "dependency_coherence": "Pins dependencies and uses a throwaway environment.",
+    "portability_honesty": "Distinguishes runtimes and flags gotchas honestly.",
+    "usefulness_differentiation": "Frames the task as generate-and-filter and scouts cheap framings before committing.",
+    "adversarial_resilience": "Strong cost gating, but the no-ask-permission and sandbox-escalation language is an authority weakness.",
+    "effectiveness_design": "Scouting and yield readout are well designed."
+   },
+   "score_20": 18,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Conservative hold despite an 18/20 static score. The package is a dual-use scientific-design capability and its own instructions tell the agent not to ask permission first for authentication and to request host sandbox bypass/escalation. That host-authority pressure, combined with the dual-use nature and the absence of any domain-safety gate, makes it unsuitable for a public featured shelf. The transferable, domain-neutral lesson \u2014 scout several cheap options before committing to an expensive run, and gate every paid run on fresh approval \u2014 is recorded as salvage only. Rights themselves are clean (plugin MIT).",
+   "hard_fail_flags": [
+    "SKILL.md instructs 'do not ask permission first' for auth and to request host sandbox bypass/escalation",
+    "No domain-safety gate for a dual-use design capability",
+    "Requires a paid vendor account and real spend; uploads inputs to the vendor"
+   ],
+   "package_license_finding": "boltz-api-cli plugin ships LICENSE (MIT) and plugin.json declares MIT. Clean (applies to bundled scripts too).",
+   "rights_review": {
+    "declared": [
+     "SKILL.md frontmatter: no license field",
+     "plugin.json 'license: MIT' (Boltz, v0.1.1)",
+     "plugin LICENSE: full MIT text, 'Copyright (c) 2026 Boltz'",
+     "Repository root: no LICENSE"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "Frontmatter omits a license; the plugin-level MIT text governs.",
+    "third_party_material": "Pinned runtime deps (their own licenses); vendor trademark; open structure formats.",
+    "service_terms": "Requires a paid vendor account and cloud API; inputs are uploaded to the vendor; runs cost money.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT notice 'Copyright (c) 2026 Boltz' for any copied plugin text",
+    "obligation": "Study the domain-neutral cost-discipline idea only. Do not reproduce the host-escalation instructions. The method itself requires a paid, dual-use vendor service and is not featured."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "e01bd6be50484d9da6552dc33665df51a451fe92494945b6faa3e4ddde17131b",
+    "findings": [
+     {
+      "id": "RA2",
+      "pattern": "Session Persistence",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 67
+     },
+     {
+      "id": "E1",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 99
+     },
+     {
+      "id": "E1",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "file": "references/api.md",
+      "line": 294
+     },
+     {
+      "id": "SC4",
+      "pattern": "\ud83d\udfe1 SC4: OSV.dev unreachable, using static fallback (15 packages). Results may be incomplete. Set SKILLSPECTOR_OSV_TIMEOUT to increase timeout or check network connectivity to api.osv.dev.",
+      "severity": "LOW",
+      "file": "scripts/requirements.txt",
+      "line": 1
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 5,
+     "analyzer_runtime_error": 1,
+     "static_parse_limit": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  }
+ ]
+}

@@ -30,22 +30,22 @@
   {
    "id": "qualification_queue",
    "label": "Reference-only candidates awaiting a consumer decision",
-   "value": 1534,
+   "value": 1522,
    "population": "latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review",
    "parts": {
-    "already on shelf": 32,
-    "kept in research by Q8 qualification": 6,
+    "already on shelf": 38,
+    "kept in research by Q8 qualification": 12,
     "rejected unchanged by Q8 qualification": 2
    },
-   "source": "registry/discovery/q8-reference-only-qualification-batch1-20261103.json; registry/discovery/q8-reference-only-qualification-batch2-20261103.json"
+   "source": "registry/discovery/q8-reference-only-qualification-batch1-20261103.json; batch2; registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json"
   },
   {
    "id": "positively_selected",
    "label": "Methods selected to study (Valuable Reference)",
-   "value": 33,
+   "value": 39,
    "population": "featured shelf entries",
    "parts": {
-    "canonical domains": 22
+    "canonical domains": 28
    },
    "source": "registry/consumer-positive-references-q8-20261103.json"
   },
@@ -53,13 +53,13 @@
    "id": "security_gate_passed_featured",
    "label": "Featured methods passing the static security gate",
    "value": 7,
-   "population": "of 33 featured exact package trees, pinned SkillSpector, fail-closed",
+   "population": "of 39 featured exact package trees, pinned SkillSpector, fail-closed",
    "parts": {
-    "failed": 4,
-    "incomplete": 22
+    "failed": 6,
+    "incomplete": 26
    },
    "parts_sum_to_value": false,
-   "source": "registry/security/external-host-skillspector-featured-20261103.json; registry/discovery/q8-reference-only-qualification-batch1-20261103.json; registry/discovery/q8-reference-only-qualification-batch2-20261103.json"
+   "source": "registry/security/external-host-skillspector-featured-20261103.json; registry/discovery/q8-reference-only-qualification-batch1/2/3 ledgers"
   },
   {
    "id": "security_gate_passed_first_party",

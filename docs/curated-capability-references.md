@@ -1,6 +1,6 @@
-# Thirty-three useful skill methods, with their limits
+# Thirty-nine useful skill methods, with their limits
 
-**These are thirty-three positively selected, individually differentiated Valuable Reference methods across twenty-two canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
+**These are thirty-nine positively selected, individually differentiated Valuable Reference methods across twenty-eight canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -32,6 +32,12 @@
 | Chart a project schedule from real data | **[Gantt Chart Visualization](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/build-web-data-visualization/skills/gantt-chart-visualization/SKILL.md)** | Build project timelines from real tool exports without inventing dates or dependencies. |
 | Run an honest expert-consensus process | **[Radiology Consensus Guideline](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-consensus-guideline/SKILL.md)** | Keep expert-panel medical guidance honest: no fake evidence and no fake endorsement. |
 | Judge the real health of a sales deal | **[GTM Deal Pulse](https://github.com/rvanshur/vertical-gtm-skills/blob/a9ee9d3547e1df59fe5b170b7fefc4ecff57350b/skills/08-deal-pulse/SKILL.md)** | Score a sales deal only from sourced evidence, and refuse to score when records are thin. |
+| Plan a kind, focused day | **[Daily Focus Board](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/daily-focus-board/SKILL.md)** | Plan a short, kind daily focus list with an agent that nudges one step at a time. |
+| Design a map that is not misleading | **[Geospatial and Cartographic Visualization](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/build-web-data-visualization/skills/geospatial-and-cartographic-visualization/SKILL.md)** | Decide basemap, layers, overlap and zoom behavior before picking a map library. |
+| Script an accessible teaching video | **[Media Scripter](https://github.com/YujxZJCN/teaching-skills/blob/fd0c486e61cb1f065b88133b599e8806dfaeac12/media-scripter/SKILL.md)** | Turn written notes into speakable, caption-ready, accessible video scripts. |
+| Keep a long story consistent | **[Continuity Check](https://github.com/bladecoder/narrative-skills/blob/c0948f7970178b72bb9561030372e75d303d37b3/skills/continuity-check/SKILL.md)** | Catch real story contradictions without turning unclear details into false canon. |
+| See a logo on real products | **[Adobe Create Mockups](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/adobe/skills/adobe-create-mockups/SKILL.md)** | See your logo on real products fast, with a checkpoint before the full set. |
+| Trust a GPU-cluster benchmark | **[Dynamo Interconnect Check](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/nvidia/skills/dynamo-interconnect-check/SKILL.md)** | Catch a silent fast-network fallback before trusting disaggregated-serving benchmark numbers. |
 | Plan security for a Singapore government system | **[Singapore SSP Navigator](https://github.com/kyleoliveiro/sg-gov-skills/blob/16892fc613263c3f835457cd23ae092d404979ca/skills/sg-gov-ssp-navigator/SKILL.md)** | Pick the right Singapore government security plan and its mandatory controls, and flag gaps. |
 | Weigh evidence for a contested decision | **[Build Evidence Map](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/build-evidence-map/SKILL.md)** | Keep counterevidence and unknowns visible in a decision, with a checked evidence map. |
 | Check whether research results really reproduce | **[Radiology Reproducibility](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-reproducibility/SKILL.md)** | Grade each research result's reproducibility honestly, with tolerances fixed before rerunning. |
@@ -240,8 +246,68 @@ These eight are *separate methods*, not eight licenses to operate a composition 
 
 **Evidence:** Q8 batch 2 full-package re-review **17/20** (earlier static record 17/20); pinned `YujxZJCN/teaching-skills@fd0c486e`; package tree `9bfa23e2` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (LICENSE blob 024003bb, 'Copyright (c) 2026 Jiaxing Yu'); no package-level LICENSE/NOTICE/ATTRIBUTION; plugin.json/marketplace.json declare MIT v1.2.0; no copied third-party text found — research cited by name only (Hattie & Timperley 2007, Boring et al. 2016, Uttl et al. 2017, Liang et al. 2023 etc.), all real attributions [Individual review](../registry/discovery/q8-reference-only-qualification-batch2-20261103.json).
 
+### Time / productivity: Daily Focus Board
+
+**Unique idea:** The agent acts as a gentle co-worker over a local, offline task board: one next step at a time, guilt-free deferral, a place to park distracting thoughts, and an end-of-day recap pasted back to plan tomorrow.
+
+**Important limit:** Personal notes and parked thoughts stay in browser storage forever, with no clear button. The 'move to tomorrow' option does not actually carry anything to the next day. A background local server is started without a stop step. ADHD claims are stated as fact, and the skill is branded for one host app.
+
+**Rights:** copy_allowed = **CONDITIONAL**. root MIT only (GitHub, Inc., blob 89bc5e962c9944cdb050887062afdaaf89be504a); no package-level LICENSE/ATTRIBUTION file
+
+**Evidence:** Q8 rights batch full-package re-review **15/20** (earlier static record 16/20); pinned `github/awesome-copilot@f11a4e44`; package tree `b6816f5d` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
+
+### Analytics: Geospatial and Cartographic Visualization
+
+**Unique idea:** First ask whether geography actually drives the question. Then choose the background map from the viewer's decision, keep context separate from data layers, give each layer a zoom and overlap rule, and log each layer's source and coordinate system.
+
+**Important limit:** There is no license text anywhere at the pin: the plugin manifest only names MIT, so nothing may be copied. Five shared references it relies on are missing. Commercial map stacks it names need vendor accounts and send location and search data to those vendors.
+
+**Rights:** copy_allowed = **NO**. Plugin manifest declares MIT (author OpenAI); no LICENSE text ships in plugin or package (notice text unavailable). No conflict observed.
+
+**Evidence:** Q8 rights batch full-package re-review **13/20** (earlier static record 16/20); pinned `openai/plugins@0722921d`; package tree `420de623` verified; static security scan **failed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
+
+### Video / film: Media Scripter
+
+**Unique idea:** Rewrite written material for listening, tie every on-screen change to exact spoken words, say aloud what visuals show, add a scripted pause-and-predict question, size episodes by speaking rate, and carry unchecked facts as flags for the author.
+
+**Important limit:** It depends on shared protocol files and a course 'passport' schema that are not in the package. Transcripts of class Q&A may contain students' voices and names, and there is no privacy rule for them. Source text is not treated as untrusted.
+
+**Rights:** copy_allowed = **CONDITIONAL**. root MIT only (LICENSE blob 024003bb56236b1161c03c575372d0e97abd8fc4, 'Copyright (c) 2026 Jiaxing Yu'; plugin.json/marketplace.json also declare MIT); no package-level LICENSE/NOTICE/ATTRIBUTION; no copied third-party text found (research is cited by author/year; README credits Academic Research Skills by Cheng-I Wu as architectural inspiration only)
+
+**Evidence:** Q8 rights batch full-package re-review **17/20** (earlier static record 16/20); pinned `YujxZJCN/teaching-skills@fd0c486e`; package tree `06f83622` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
+
+### Fiction / narrative / worldbuilding: Continuity Check
+
+**Unique idea:** Pull fact claims from new chapters, compare them with a stored story-facts ledger, label each as a contradiction, an ambiguity, a new fact or a plot-thread change, and add to the ledger only when the text clearly supports it.
+
+**Important limit:** It writes to the author's story-fact files without asking first, never defines how much textual support is enough, and does not require chapter or passage citations for findings. It assumes a folder layout and file formats defined in sibling skills.
+
+**Rights:** copy_allowed = **CONDITIONAL**. root MIT only (LICENSE blob 6218ab7c, Copyright (c) 2026 Rafael Garcia Moreno); no package-level LICENSE/ATTRIBUTION/NOTICE; no third-party content copied into the package observed
+
+**Evidence:** Q8 rights batch full-package re-review **13/20** (earlier static record 16/20); pinned `bladecoder/narrative-skills@c0948f79`; package tree `eac56199` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
+
+### Visual design: Adobe Create Mockups
+
+**Unique idea:** Feed the actual design file as a reference image instead of describing it, approve one pilot scene before spending on the whole set, keep scene settings fixed across the set, and never add brand text the user did not give.
+
+**Important limit:** The method runs only on Adobe's paid, signed-in service, and uploads the user's design to it, with no cost-consent step. No license text exists at the pin despite an Apache-2.0 label, and Adobe trademarked logo assets are bundled, so nothing may be copied.
+
+**Rights:** copy_allowed = **NO**. adobe plugin.json has no license key; SKILL frontmatter Apache-2.0 with no notice text shipped; repo root unlicensed. Rights ambiguous -> reference-only.
+
+**Evidence:** Q8 rights batch full-package re-review **15/20** (earlier static record 18/20); pinned `openai/plugins@0722921d`; package tree `ee836ce3` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
+
+### ML accelerators and compute: Dynamo Interconnect Check
+
+**Unique idea:** Check the transport, not just the endpoint: in three read-only layers, confirm the serving configuration, the node's fabric capability and reachability, and report any missing tool as inconclusive rather than as a pass.
+
+**Important limit:** There is no license text at the pin, only SPDX identifiers, and the prose is CC-BY while the code is Apache-2.0. Running it needs permission to exec into worker pods, and the configuration assumptions are specific to one vendor's stack.
+
+**Rights:** copy_allowed = **CONDITIONAL**. Skill frontmatter says Apache-2.0, but the SKILL.md body and reference carry SPDX CC-BY-4.0 headers and the scripts carry Apache-2.0. This matches the plugin's dual declaration, not a conflict. No license text ships; CC-BY-4.0 attribution must be preserved on reuse.
+
+**Evidence:** Q8 rights batch full-package re-review **19/20** (earlier static record 18/20); pinned `openai/plugins@0722921d`; package tree `24748c47` verified; static security scan **failed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
+
 ## What this does and doesn't count
 
-Thirty-three **distinct source/path-pinned Valuable Reference methods** across twenty-two canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 33 complete pinned source package Git tree identities are now verified (Q8), including four earlier creative methods that were previously UNKNOWN. Seven pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
+Thirty-nine **distinct source/path-pinned Valuable Reference methods** across twenty-eight canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 39 complete pinned source package Git tree identities are now verified (Q8), including four earlier creative methods that were previously UNKNOWN. Seven pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
 The source-neutral [structured reference catalog](../registry/consumer-positive-references-q8-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
