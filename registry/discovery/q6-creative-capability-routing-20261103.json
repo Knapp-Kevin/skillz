@@ -1,0 +1,221 @@
+{
+  "schema_version": "q6-creative-capability-routing-v1",
+  "as_of": "2026-11-03",
+  "scope": "Auditable new bounded method-reference coverage with unqualified leads marked separately; not a replacement for dated 33-domain canonical graph",
+  "reference_ledger": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+  "discovery_ledger": "registry/discovery/q6-specialized-music-illustration-pinned-leads-20261103.json",
+  "parallel_draft_pr": 677,
+  "music_composition_subdomains": 8,
+  "illustration_subdomains": 6,
+  "positive_reference_count_in_this_new_tranche": 4,
+  "positive_subdomain_count_in_this_new_tranche": {
+    "music": 1,
+    "illustration": 3
+  },
+  "global_distinct_eligible_denominator": null,
+  "domain_complete": false,
+  "notes": [
+    "Dated 2026-11-02 audit says music 0/8, illustration 1/6 with any review/candidate link; these figures are not positive-endorsement counts.",
+    "This route records new static reference methods, not verified unchanged package ability. Existing digital/traditional candidate link is not a positive endorsement.",
+    "Character-only method is partial for character/environment and does not satisfy environment art.",
+    "All four method references lack independently established full package Git tree; complete-package identity is a HOLD for unchanged use and thorough review."
+  ],
+  "rows": [
+    {
+      "domain": "music-composition",
+      "subdomain": "harmony",
+      "specific_capability": "harmony",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 jtydhr88/mc-harmony",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "melody",
+      "specific_capability": "melody",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 jtydhr88/mc-melody, no pinned individual review",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "rhythm",
+      "specific_capability": "rhythm",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 jtydhr88/mc-rhythm-groove, no pinned individual review",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "orchestration",
+      "specific_capability": "orchestration",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 jtydhr88/mc-orchestration, no pinned individual review",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "arranging",
+      "specific_capability": "arranging",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 jtydhr88/mc-arrangement-arch",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "notation",
+      "specific_capability": "notation",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 ZongziForu/lilypond-score-editor (NOASSERTION license); draft #677 jtydhr88/mc-symbolic-score",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "scoring",
+      "specific_capability": "Timecode-constrained video cues and measured QC",
+      "valuable_reference_methods": [
+        {
+          "name": "video-scoring-audio",
+          "source_repo": "grapeot/opus-video-audio-skill",
+          "source_pin": "0abc18d22d6baf9e55d4fce9a01d29e2528ee426",
+          "path": "skills/video-scoring-audio/SKILL.md",
+          "skill_blob": "d1fdfc6fba00bbb4b322a1fb13a442632246d2d2",
+          "score_20": 14,
+          "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run"
+        }
+      ],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 grapeot/video-scoring-audio",
+      "candidate_note": "positive method, unsafe unchanged",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "music-composition",
+      "subdomain": "electronic-composition",
+      "specific_capability": "electronic-composition",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 elevenlabs/music; draft #677 jtydhr88 EDM",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "illustration",
+      "subdomain": "concept-art",
+      "specific_capability": "concept-art",
+      "valuable_reference_methods": [
+        {
+          "name": "design-concept-art-brief",
+          "source_repo": "jeffreytse/grimoire-core",
+          "source_pin": "7ff5861b00836cb0d675c00a09a26d143722579e",
+          "path": "skills/art/illustration/skills/design-concept-art-brief/SKILL.md",
+          "skill_blob": "fa6613c7603d1ec4ededea1e76469d53696cdf2f",
+          "score_20": 15,
+          "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run"
+        }
+      ],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 jeffreytse/design-concept-art-brief",
+      "candidate_note": "positive method, unsupported claims",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "illustration",
+      "subdomain": "editorial",
+      "specific_capability": "editorial",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 editorial-line-system; NOASSERTION rights",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "illustration",
+      "subdomain": "scientific",
+      "specific_capability": "scientific",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 Wuyang/CC_icons; multi-source assets with CC BY/variable terms",
+      "candidate_note": "rights HOLD",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "illustration",
+      "subdomain": "character-environment",
+      "specific_capability": "Character illustration identity; environment artwork not established",
+      "valuable_reference_methods": [
+        {
+          "name": "scenario-identity-library",
+          "source_repo": "scenario-labs/skills",
+          "source_pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+          "path": "skills/scenario-identity-library/SKILL.md",
+          "skill_blob": "e36509de1f00a9b4114b437ae53f1c4b689b8c23",
+          "score_20": 12,
+          "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run"
+        }
+      ],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 scenario-identity-library",
+      "candidate_note": "character method only; environment still missing",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "illustration",
+      "subdomain": "sequential-art",
+      "specific_capability": "sequential-art",
+      "valuable_reference_methods": [
+        {
+          "name": "scenario-storyboards",
+          "source_repo": "scenario-labs/skills",
+          "source_pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+          "path": "skills/scenario-storyboards/SKILL.md",
+          "skill_blob": "9275b402c74f0165c1ea8c5a2ca3764cf327f367",
+          "score_20": 13,
+          "evidence": "registry/discovery/q6-four-package-static-reviews-20261103.json",
+          "unchanged_use_approved": false,
+          "package_tree_verified": false,
+          "security": "not-run",
+          "behavior": "not-run"
+        }
+      ],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Merged #678 scenario-storyboards",
+      "candidate_note": "positive method, billable authority HOLD",
+      "domain_fully_represented_with_positive_alternatives": false
+    },
+    {
+      "domain": "illustration",
+      "subdomain": "digital-traditional-media",
+      "specific_capability": "digital-traditional-media",
+      "valuable_reference_methods": [],
+      "recommended_for_use": [],
+      "candidates_to_qualify": "Draft #677 MengTo illustration flat/ink sketch, dated audit existing three candidates",
+      "candidate_note": "unqualified",
+      "domain_fully_represented_with_positive_alternatives": false
+    }
+  ]
+}
