@@ -1,5 +1,7 @@
 # Skill Catalog Snapshot
 
+**Cross-domain grants evidence (2026-11-03):** [6 exact-source graded grant-writing and proposal review packages](docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md) cover a useful user task that the 19 featured methods omitted. They map first to **provisional nonprofit-community** and adjacent canonical research, finance, planning, business, writing and law, not a fabricated 34th mature domain. [Identity, per-license and ten-axis evidence](registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json); 4 source publishers, 6 complete package trees, 42 owned blobs, 39 text files inspected, 3 binary workbooks held. No new feature/approved-use claims; existing featured catalog and historical accounting unchanged.
+
 **First-visitor route corrected (2026-11-03):** An external agent initially mistook the bounded 19-method shelf for the entire 33-domain corpus. The README now foregrounds domain-first search; AGENT_START_HERE, quickstart, value discovery and consumer contract route beyond the shelf. The SVG says **not on shelf** instead of *none*. Evidence/grades/rights and historic counts are unchanged. [First-visitor regression guidance](docs/reviews/2026-11-03-first-visitor-full-corpus-regression.md).
 
 

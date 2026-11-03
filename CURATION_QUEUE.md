@@ -1,5 +1,7 @@
 # Skill Curation Queue
 
+**Q7 grant proposal discovery gap addressed (2026-11-03):** [6 graded methods from 4 independent original sources](docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md), exact pinned full package-tree SHA / 42 owned blobs; MIT free editions versus paid kit, CC BY-ND evaluator material, PI-document authority and three uninspected XLSX files explicitly held. [Machine evidence](registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json). Preexisting provisional nonprofit-community track now has real evidence; not a new canonical domain, published positive promotion or installation permission. Five static study methods / one reject-unchanged. Next: validate workbook formulas in an isolated environment, evaluate funder-policy/privacy fit and compare independent practical proposal outcomes; preserve 19 featured methods and 33-domain graph.
+
 **First-visitor route corrected (2026-11-03):** An external agent initially mistook the bounded 19-method shelf for the entire 33-domain corpus. The README now foregrounds domain-first search; AGENT_START_HERE, quickstart, value discovery and consumer contract route beyond the shelf. The SVG says **not on shelf** instead of *none*. Evidence/grades/rights and historic counts are unchanged. [First-visitor regression guidance](docs/reviews/2026-11-03-first-visitor-full-corpus-regression.md).
 
 

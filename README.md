@@ -17,7 +17,7 @@ A skill is a set of instructions that helps an AI assistant do a task well. **Sk
 
 **Start here even when your task has no item on our short recommendation shelf.** Browse the [33-domain directory](registry/capability-directory.json), search [governed review names](registry/governed-review-name-index.json), and expand into [pinned source leads](registry/discovery/dynamic-four-source-frontier-20261101.json). Read the actual candidate before trusting its name. An empty featured shelf slot is a search prompt, **not** proof there are no applicable methods. [Agent discovery procedure](docs/agent-value-discovery.md).
 
-**Example:** Grant and funding-proposal work can require research, technical writing, business budgets, marketing and legal/compliance review. Explore those related capabilities before deciding whether a dedicated grant-writing skill exists. **No dedicated approved grant-writing package is claimed here.**
+**Example: Grant and funding-proposal work.** The broader search found [six individually graded grant, budget and proposal-review skill candidates](docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md) across **four independent publishers**, including real nonprofit proposal-writing methods that do **not** appear on the 19-item featured shelf. Study the [source-pinned review ledger](registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json) and check adjacent research, technical writing, finance, business, marketing and legal work. **These are static reference candidates, not approved installations or new featured recommendations.**
 
 | You want help with… | Capability areas |
 |---|---|
