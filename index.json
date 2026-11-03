@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
   "repository_mode": "passive-skill-knowledge-resource",
-  "snapshot_scope": "Current passive catalog; dated review receipts are in CURATION_QUEUE.md and docs/reviews/. Static review is not security or behavioral validation.",
+  "snapshot_scope": "Current passive catalog with separate dated Q4 history and a November 3 Q1–Q5 candidate-review reconciliation. No inferred approved-skill counts.",
   "curation_effort_public_snapshot_20261102": {
     "date": "2026-11-02",
     "accounting_basis": "exact pinned path ledger and published Q1-Q3 review receipts; normalized literal REJECT unchanged variants",
@@ -5032,5 +5032,33 @@
     "admissions": 0,
     "security_scans": 0,
     "behavioral_validations": 0
+  },
+  "current_static_source_vetting_frontier_20261103": {
+    "as_of": "2026-11-03",
+    "evidence": "registry/discovery/q1-q5-terminal-decision-reconciliation-20261103.json",
+    "audit": "docs/reviews/2026-11-03-q1-q5-decision-reconciliation.md",
+    "four_source_raw_paths": 4813,
+    "four_source_terminal_static_decisions": 4809,
+    "q1_q4_terminal_decisions": 550,
+    "q5_reviewed_records": 150,
+    "q5_terminal_decisions": 149,
+    "q5_reference_only": 92,
+    "q5_rejected_unchanged": 57,
+    "q5_deferred": 1,
+    "q5_distinct_recorded_package_tree_hashes": 144,
+    "q5_duplicate_excess_path_exposures": 6,
+    "q1_q5_record_count": 700,
+    "q1_q5_source_families": 25,
+    "q1_q5_distinct_recorded_package_tree_hashes_only_within_these_families": 694,
+    "combined_terminal_static_candidate_decisions": 5508,
+    "combined_reference_only": 1609,
+    "combined_rejected_unchanged": 3899,
+    "separate_governed_review_companions": 1039,
+    "global_distinct_eligible_denominator": null,
+    "approved_for_use_total": null,
+    "valuable_reference_endorsement_total": null,
+    "not_approved_or_installable_counts": true,
+    "security_validation": "not-run",
+    "behavioral_validation": "not-run"
   }
 }
