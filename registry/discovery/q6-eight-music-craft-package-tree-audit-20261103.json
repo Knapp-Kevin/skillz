@@ -1,0 +1,167 @@
+{
+  "schema_version": "q6-eight-music-package-tree-audit-v1",
+  "as_of": "2026-11-03",
+  "source": "jtydhr88/music-composition-skills",
+  "source_commit": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+  "source_git_tree_sha": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+  "git_tree_complete": true,
+  "source_tree_entry_count": 111,
+  "package_tree_count": 8,
+  "complete_owned_file_count": 22,
+  "root_license_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+  "root_notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+  "root_rights_blobs_match": true,
+  "packages": [
+    {
+      "name": "mc-harmony",
+      "package_path": "plugins/music-composition/skills/mc-harmony",
+      "package_git_tree_sha": "6fd7748262484ee95576c3c918e93b3c7c8cb699",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-harmony/SKILL.md",
+          "blob_sha": "72bd575edfaad46ca2061a836ebc36ce7f56ae37"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-harmony/reference.md",
+          "blob_sha": "9378f566487e26681eabd7f473559e83bab5258b"
+        }
+      ]
+    },
+    {
+      "name": "mc-melody",
+      "package_path": "plugins/music-composition/skills/mc-melody",
+      "package_git_tree_sha": "3d635b14d3df64c0b24aa06c353c2bb08f97d1fb",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-melody/SKILL.md",
+          "blob_sha": "3aa2049057c44c5c32b52424c1c30f4b51589713"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-melody/reference.md",
+          "blob_sha": "b35268e82a38ab34985c9cbdfbf5457a9a1868ab"
+        }
+      ]
+    },
+    {
+      "name": "mc-rhythm-groove",
+      "package_path": "plugins/music-composition/skills/mc-rhythm-groove",
+      "package_git_tree_sha": "3eeb3603c8b11a73e0bbf3c5ce9e297867fe0d9a",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-rhythm-groove/SKILL.md",
+          "blob_sha": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068"
+        }
+      ]
+    },
+    {
+      "name": "mc-rhythm-section",
+      "package_path": "plugins/music-composition/skills/mc-rhythm-section",
+      "package_git_tree_sha": "368d0aa91cd80a053a5528de78133de54ec3ef9b",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-rhythm-section/SKILL.md",
+          "blob_sha": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-rhythm-section/reference-styles.md",
+          "blob_sha": "0b6437a3633f031681367a9470b8c7f9a23aafac"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-rhythm-section/reference.md",
+          "blob_sha": "662bffe27c7428871ae3cd44f71f7ef423f05552"
+        }
+      ]
+    },
+    {
+      "name": "mc-orchestration",
+      "package_path": "plugins/music-composition/skills/mc-orchestration",
+      "package_git_tree_sha": "d7ce1990acdfff9cebb9c1e678a5bde42827dc7e",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
+          "blob_sha": "6a94014cbba85658345d8f1f8a3bfb4fa78dd495"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-keyboard-harp.md",
+          "blob_sha": "3d6d4ce17c1575d97a9b9e2c581b0bc95a791836"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-minyue.md",
+          "blob_sha": "161de38b8b5b9e4511f04a7704e8c36149738514"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-percussion.md",
+          "blob_sha": "4fabb8ab400ae9f4df9008ba14251881e23aab53"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-brass.md",
+          "blob_sha": "6ab2bb9438a2eef9b382f6d134e714d1d563ae71"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-strings.md",
+          "blob_sha": "8c2d7502f54cf2a942259645be45ab89ad959819"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-tutti.md",
+          "blob_sha": "01dff367a97152ea9d47fe0669eb9e852ee6dcc4"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-winds.md",
+          "blob_sha": "ebd657e6aa6c9b8439580772478067139916abaf"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-orchestration/reference.md",
+          "blob_sha": "37ef97ea9bc3c350095008d407f0fb1af6bb54e3"
+        }
+      ]
+    },
+    {
+      "name": "mc-arrangement-arch",
+      "package_path": "plugins/music-composition/skills/mc-arrangement-arch",
+      "package_git_tree_sha": "f372d0e4348f02b9fb51cf7d39d91c05b0bb3fe8",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-arrangement-arch/SKILL.md",
+          "blob_sha": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-arrangement-arch/reference.md",
+          "blob_sha": "c0efd30e7a04e9f2011a314fbabb3e76fdfd8f99"
+        }
+      ]
+    },
+    {
+      "name": "mc-symbolic-score",
+      "package_path": "plugins/music-composition/skills/mc-symbolic-score",
+      "package_git_tree_sha": "4e2500d61b989b399c45ba70df795f7c5d820459",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
+          "blob_sha": "d84cd65170744219c64a46387e6ff675bc1fabbd"
+        },
+        {
+          "path": "plugins/music-composition/skills/mc-symbolic-score/reference.md",
+          "blob_sha": "4c5183b6d7f0c15ef5e0df59f73139e5faeb522d"
+        }
+      ]
+    },
+    {
+      "name": "mc-style-edm",
+      "package_path": "plugins/music-composition/skills/mc-style-edm",
+      "package_git_tree_sha": "803834c1b9360986a7d90e738e4fffb515628640",
+      "files": [
+        {
+          "path": "plugins/music-composition/skills/mc-style-edm/SKILL.md",
+          "blob_sha": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2"
+        }
+      ]
+    }
+  ],
+  "scope_limitations": [
+    "Mirrored packaging and alias crosswalk not verified",
+    "NOTICE excludes book-derived quotations/translations from author MIT grant",
+    "No installation or file writes from reviewed skills",
+    "No static check is an executed security scan or behavioral/audio validation",
+    "All eight remain reference-only for consumer use; no unchanged-use approvals"
+  ]
+}
