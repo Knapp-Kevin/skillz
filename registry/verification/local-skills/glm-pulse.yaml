@@ -3,7 +3,7 @@ skill_name: glm-pulse
 source_id: local-skills
 local_path: "skills/glm-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 82da67c37302abd77dac002014c82602527f5981
+content_blob_sha: 79e2e3b384ee707871122fa70d5fb3651c0511e6
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
 verification_status: stale
