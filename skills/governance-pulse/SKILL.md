@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: Governance Pulse
   emoji: "⚖️"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Governance Pulse
