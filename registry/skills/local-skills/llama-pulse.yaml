@@ -7,7 +7,7 @@ source_path: skills/llama-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
+source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."
-exact_version_requalification: "Required for d90c47b7ac39122bd9ef26bfa88ac3c6af707b1b; previous semantic review was for d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc. Security and behavioral validation not-run."
+exact_version_requalification: "Required for c0c38b0dd182f1f588d1800b832b331c8572080e; previous semantic review was for d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc. Security and behavioral validation not-run."
