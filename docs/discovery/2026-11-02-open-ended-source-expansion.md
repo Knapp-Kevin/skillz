@@ -2,7 +2,7 @@
 
 **Purpose:** broaden the set of **independently authored, capability-distinct** source families a consuming agent can inspect. This is a passive discovery guide. A source-index lead is NOT a reviewed skill package, a source-registry admission, a security pass, behavioral validation, or installation permission.
 
-## Start with relevant capabilities, not file totals
+**Current-main reconciliation:** [six exact-pinned source-family receipts across the 65-source bridge](2026-11-02-archived-65-current-main-reconciliation.md), with a [machine-readable 65-row crosswalk](../../registry/discovery/archived-65-main-evidence-crosswalk-20261102.json). This explicitly separates 119 reverified entrypoints, 47 verified package trees, eight complete-package current-standard static decisions and four preliminary candidate decisions. The other 59 source families remain discovery leads pending receipt reconciliation, not proven unreviewed packages. No changes to four-source or governed populations.\n\n## Start with relevant capabilities, not file totals
 
 Use the [65-original-source capability/rights lead index](../../registry/discovery/archived-65-source-diversity-leads-20261102.csv). It recovers archived source metadata from [held PR #590](https://github.com/Knapp-Kevin/skillz/pull/590) without merging its stale accounting/governance files or copying any third-party skill text.
 
