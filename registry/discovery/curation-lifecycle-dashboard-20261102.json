@@ -1,0 +1,167 @@
+{
+  "schema": "curation_lifecycle_snapshot_v1",
+  "date": "2026-11-02",
+  "source_main_commit": "3be1664b71c023bb160383a39244aece34370e9e",
+  "readme_use": "Grounded, nonadditive evidence-tier counters; not approved or installable skill counts.",
+  "discovery": {
+    "gitskills_research_population": {
+      "skill_file_occurrences": 3797117,
+      "distinct_content_hashes": 1877981,
+      "public_repositories": 282200,
+      "NOT_local_catalog": true,
+      "reference": "docs/discovery/2026-11-03-gitskills-g1-source-diversity.md"
+    },
+    "g1_g3_repositories_inspected": 1277,
+    "original_author_candidates_distinct_owners": 992,
+    "verified_T2_with_skills": 1113,
+    "verified_T2_without_skills": 15,
+    "verified_T1_pin_only": 33,
+    "unreachable": 116,
+    "listed_package_identity_records_not_distinct_skills": 61326,
+    "methodological_alternatives_reported": 138,
+    "source_receipts": [
+      "docs/discovery/2026-11-03-gitskills-g1-source-diversity.md",
+      "docs/discovery/2026-11-03-gitskills-g2-second-wave.md",
+      "docs/discovery/2026-11-03-gitskills-g3-new-domains-and-languages.md"
+    ],
+    "archived_65_original_source_leads": {
+      "unique_repo_pin_pairs": 65,
+      "archived_path_occurrences": 4835,
+      "rights": "HOLD_RIGHTS_AND_SECURITY",
+      "reference": "registry/discovery/archived-65-source-diversity-leads-20261102.csv"
+    },
+    "registered_source_identities": 25
+  },
+  "candidate_review": {
+    "four_source": {
+      "raw_paths": 4813,
+      "path_matched_terminal_decisions": 4809,
+      "reference_only": 1205,
+      "rejected_unchanged": 3604,
+      "defer": 3,
+      "excluded_template": 1,
+      "source": "registry/discovery/pinned-4813-review-progress-20261101.json"
+    },
+    "two_disjoint_review_frontiers": {
+      "static_candidate_decisions": 5359,
+      "reference_only": 1517,
+      "rejected_unchanged": 3842,
+      "unreviewed_or_blocked_paths_in_four_source_snapshot": 4
+    },
+    "normalization_receipt": {
+      "source_ledger": "registry/discovery/pinned-4813-review-progress-20261101.json",
+      "raw_label_histogram": {
+        "REJECT": 3600,
+        "REFERENCE-ONLY": 1205,
+        "REJECT unchanged": 4,
+        "DEFER": 3
+      },
+      "normalization": {
+        "REJECT unchanged": "REJECT"
+      },
+      "four_variant_records": [
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/client-engine/level-streaming/SKILL.md",
+          "original_status": "REJECT unchanged",
+          "normalized_status": "REJECT"
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/anti-cheat-server/SKILL.md",
+          "original_status": "REJECT unchanged",
+          "normalized_status": "REJECT"
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/matchmaking-lobby/SKILL.md",
+          "original_status": "REJECT unchanged",
+          "normalized_status": "REJECT"
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "canonical_path": "skills/game/game-server/scaling-architecture/SKILL.md",
+          "original_status": "REJECT unchanged",
+          "normalized_status": "REJECT"
+        }
+      ],
+      "decision_reason": "Four literal REJECT unchanged statuses were omitted from REJECT headline while counted as terminal source-vetting decisions. Each has an exact pinned path and score and remains rejected; the original evidence records are untouched."
+    },
+    "cautions": [
+      "Neither source vetting nor 15/20 threshold is governed approval, an executed security scan, or behavioral validation.",
+      "These review frontiers are disjoint for this published accounting but not a deduplicated universe of skills.",
+      "REFERENCE-ONLY means reference/design evidence, and REJECT means unchanged use rejected; useful approaches can still be studied."
+    ],
+    "new_q1_q4": {
+      "exact_pinned_terminal_source_vetting_decisions": 550,
+      "source_families": 19,
+      "reference_only": 312,
+      "rejected_unchanged": 238,
+      "threshold_signals_not_admissions": 135,
+      "source": "docs/reviews/2026-11-03-q4-five-new-source-families-static.md",
+      "prior_receipts": [
+        "docs/reviews/2026-11-02-q1-q3-cross-tranche-arithmetic.md",
+        "docs/reviews/2026-11-03-q1-four-new-source-families-static.md",
+        "docs/reviews/2026-11-03-q2-five-new-source-families-static.md",
+        "docs/reviews/2026-11-03-q3-five-new-source-families-static.md"
+      ],
+      "status": "Merged exact-pinned candidate-only source-vetting; not registered/admitted and not new governed companions."
+    }
+  },
+  "governed_inventory": {
+    "total_exact_version_review_companions": 1039,
+    "first_party": 44,
+    "third_party": 995,
+    "first_party_recorded_static_verified": 44,
+    "source": "registry/governed-review-name-index.json",
+    "not_1039_approved_or_promoted": true,
+    "global_acceptance_denominator": null,
+    "global_accepted_count": null,
+    "global_adapted_count": null,
+    "global_promoted_count": null,
+    "reason_unknown": "Historical candidate intake has legacy adopted labels, but no reconciled, complete exact-version terminal acceptance/adaptation/promotion event ledger. Cannot interpret source vetting, static VERIFIED or governed companion presence as such an event."
+  },
+  "recent_campaign_actions": {
+    "new_governed_admissions_in_g1_g3_and_q1_q4": 0,
+    "new_adapted_artifacts_from_g1_g3_and_q1_q4": 0,
+    "new_promotions_from_g1_g3_and_q1_q4": 0,
+    "new_executed_package_security_scans_in_g1_g3_and_q1_q4": 0,
+    "new_executed_behavioral_validations_in_g1_g3_and_q1_q4": 0
+  },
+  "coverage": {
+    "canonical_domains": 33,
+    "canonical_subdomains": 247,
+    "with_governed_review_links": 53,
+    "with_any_review_or_candidate_link": 210,
+    "with_no_review_or_candidate_link": 37,
+    "with_governed_or_reference_only_link": 201,
+    "source": "registry/discovery/capability-coverage-audit-20261102.json",
+    "quality_not_proven_by_link_counts": true
+  },
+  "terminal_decision_receipt_contract": {
+    "actions": [
+      "ADAPT",
+      "ACCEPT",
+      "ADMIT",
+      "PROMOTE",
+      "REJECT"
+    ],
+    "required_fields": [
+      "decision_id",
+      "action",
+      "exact_source_package_revision_and_tree",
+      "assessed_quality_and_security_evidence",
+      "rights_and_provenance",
+      "resulting_artifact_or_destination",
+      "authorization_and_owner_when_applicable",
+      "timestamp",
+      "superseded_event_id_if_any"
+    ],
+    "rule": "No receipt, no cumulative accepted/adapted/promoted claim. Preserve legacy labels separately until independently reconciled."
+  },
+  "nonadditivity": [
+    "Research dataset 282,200 repositories, 1,277 GitSkills inspected repositories, 65 archived sources, 25 registered sources are not additive across identities or trust tiers.",
+    "5,359 candidate source-vetting decisions and 1,039 governed verification companions are separate review surfaces and must not be summed as 6,239 unique reviewed skills.",
+    "Rejection describes unchanged reuse, not deletion or unusable reference material."
+  ]
+}
