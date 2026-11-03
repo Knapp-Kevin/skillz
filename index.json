@@ -5210,5 +5210,53 @@
     "unchanged_use_approvals": 0,
     "historical_q1q5_static_decisions_unchanged": 5508,
     "behavioral_external_retest": "not-run"
+  },
+  "q7_grant_writing_cross_domain_20261103": {
+    "date": "2026-11-03",
+    "stage": "STATIC SOURCE REVIEW, no public featured promotion",
+    "provisional_domain": "nonprofit-community",
+    "source_families": 4,
+    "individual_skills_reviewed": 6,
+    "pinned_complete_package_trees": 6,
+    "pinned_owned_blob_count": 42,
+    "textual_files_inspected": 39,
+    "uninspected_xlsx_files": 3,
+    "grades_out_of_20": [
+      {
+        "name": "npo-grant-proposal",
+        "grade": 17
+      },
+      {
+        "name": "npo-program-facts",
+        "grade": 17
+      },
+      {
+        "name": "npo-budget-narrative",
+        "grade": 17
+      },
+      {
+        "name": "grant-writing-kit",
+        "grade": 14
+      },
+      {
+        "name": "grant-writer",
+        "grade": 10
+      },
+      {
+        "name": "eu-grant-writer",
+        "grade": 15
+      }
+    ],
+    "static_reference_only": 5,
+    "static_reject_unchanged": 1,
+    "unchanged_use_approvals": 0,
+    "positive_featured_recommendations_added": 0,
+    "prior_positive_shelf_remains": 19,
+    "canonical_domains_unchanged": 33,
+    "canonical_subdomains_unchanged": 247,
+    "behavioral_not_run": true,
+    "security_not_run": true,
+    "review_doc": "docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md",
+    "machine_ledger": "registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json"
   }
 }
