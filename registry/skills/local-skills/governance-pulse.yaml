@@ -7,7 +7,7 @@ source_path: skills/governance-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
+source_snapshot_revision: c75566e7470c5c6072a405e8c4a5526d2cb7c94f
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
-exact_version_requalification: "Required for 8331f8f07e39071913c0062d4a57a27bb8a2fa93; earlier semantic review applied to aa2157650140bf0820b6d6b1921c5f0881d8c627. Security and behavior not-run."
+exact_version_requalification: "Required for a444566237940b43944bc1f5e0afb55708d84123; earlier semantic review applied to aa2157650140bf0820b6d6b1921c5f0881d8c627. Security and behavior not-run."
