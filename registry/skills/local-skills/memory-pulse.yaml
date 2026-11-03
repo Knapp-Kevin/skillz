@@ -7,15 +7,16 @@ source_path: skills/memory-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 81f476885d8741343077f91faf60b4972485af21
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-03
 availability: in-repo
 local_path: skills/memory-pulse/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: verified-structured
+review_status: stale
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
+import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+exact_version_requalification: "Required for b030f35f52c66b13892a3ad8f1e362f15ff9be5e; old reviewed blob 659441df0952f7db302835606068c812ed81d22f. No security or behavioral validation pass."
