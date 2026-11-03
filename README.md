@@ -14,6 +14,31 @@
 
 **Review evidence tiers:** **4,809** raw paths have current-standard 10-dimension source-vetting decisions; **4** do not. An additional [41 historical OpenAI Plugins candidate-only decisions](registry/discovery/openai-plugins-41-historical-exact-tree-crosswalk-20261102.json) match exact pinned instruction blobs and package trees, bringing paths with *any* exact-path decision evidence to **4,809**. Those 41 historical matches are **not** new ten-dimension reviews or approved skills. Nine further historical records lack established complete-package-tree evidence and remain unresolved. The deduplicated eligible-skill denominator is still unknown.
 
+## Curation effort and outcomes
+
+<sub>Evidence snapshot: 2026-11-02. [Audited lifecycle accounting](registry/discovery/curation-lifecycle-dashboard-20261102.json) · [review receipt and counting rules](docs/reviews/2026-11-02-curation-coverage-and-lifecycle-audit.md). **Counts describe different populations. Do not add discovery paths, reviewed candidates and governed records into a supposed number of approved skills.**</sub>
+
+| What we measured | Count | What it actually means |
+|---|---:|---|
+| Public GitSkills research universe | 3,797,117 file occurrences in 282,200 repositories | External discovery horizon, **not** our collected or vetted inventory |
+| New independent-source discovery campaign | **1,277 repositories checked**; **992 original-author candidates** | G1–G3 source investigation, originality provisional; 61,326 package identity *records*, not confirmed distinct reusable skills |
+| Additional archived source leads | **65 original repo/pin pairs** | Pinned, rights-HOLD source search leads, separate from the 25 registered source identities |
+| Original four-source path vetting | **4,809 / 4,813** | 1,205 reference-only; **3,604 rejected unchanged**; 3 missing-file DEFERs and 1 excluded non-skill template |
+| New Q1–Q3 complete-source-family vetting | **391** across 14 source families | 244 reference-only; 147 rejected unchanged; **not** governed admissions |
+| **Combined published static candidate decisions** | **5,200** | **1,449 reference-only + 3,751 rejected unchanged** across the two separate frontiers |
+| Governed exact-version review records | **1,039** | 44 first-party + 995 third-party verification companions with differing statuses; **not** 1,039 accepted installations |
+| Newly accepted/adapted/promoted in G1–G3 and Q1–Q3 | **0 / 0 / 0** | No such completed actions claimed for these specific campaigns |
+| Lifetime accepted, adapted or promoted totals | **Not yet reconciled** | Historical statuses lack a complete, exact-version decision-event ledger; **unknown is not zero** |
+
+**Why rejection matters:** An unchanged-use rejection prevents a weak, unsafe, misleading or uncleared package from being treated as ready to install; its useful mechanisms remain discoverable for properly licensed independent adaptation. **Why 3,604 rather than 3,600?** The pinned path ledger has four genuine j4flmao rejections literally labeled `REJECT unchanged` rather than `REJECT`. The [audit](docs/reviews/2026-11-02-curation-coverage-and-lifecycle-audit.md) normalizes the label for totals while preserving every original record.
+
+### Capability coverage and expansion
+
+The canonical [33-domain / 247-subdomain directory](registry/capability-directory.json) is an unfinished evidence map. Our [subdomain-level audit](registry/discovery/capability-coverage-audit-20261102.json) finds **53 subdomains with governed-review pointers**, **204 with at least one individual reviewed or source-vetted candidate pointer**, and **43 without any such pointer**. Of the 204, some have **rejected-only** examples; neither a pointer nor a high static score establishes adequate, independent, installable coverage.
+
+We also track [25 additional provisional domain families](registry/discovery/capability-domain-expansion-20261102.json) across office work, data engineering, agriculture, energy, public services, accessibility, logistics, journalism and more. They are **open discovery categories, not yet 25 canonical or mature domains**. Underrepresented canonical fields, especially music composition, illustration, 3D/CAD, audio and robotics, are explicit next-review priorities. Preserve multiple genuine approaches, owner diversity, package-level rights and rejection evidence rather than declaring every category covered after one filename.
+
+
 ## Find the capability, not the publisher
 
 | Goal | Start here | Result |
