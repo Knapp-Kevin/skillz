@@ -30,56 +30,59 @@ A skill is a set of instructions that helps an AI assistant do a task well. **Sk
 
 These are **33 areas to explore, not 33 fully covered skill sets**. Some have rich research evidence; others have few useful candidates. A category with many links is not necessarily a category with many good skills.
 
-### Two different views: research leads and the small featured shelf
+<!-- SKILLZ_CAPABILITY_DASHBOARD:START | generated: scripts/build-capability-dashboard.mjs -->
+### Capability dashboard
 
-![33 capability domains: research-linked topics from November 2 alongside separately selected Valuable Reference methods from November 3.](docs/assets/capability-evidence-and-valued-methods-q7-20261103.svg)
+**33 capability areas** · **247 topics** · **210 topics with research leads** · **20 useful methods selected for study** · **0 approved unchanged**
 
-**This chart is not a complete map of what the library could help you accomplish.** Continue searching the wider capability index even when a category has no featured selection. **Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q7 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
+![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across 33 domains.](docs/assets/capability-dashboard.svg)
 
-The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at least one research link** and **37 without one**. Our newer public shelf has **20 Valuable Reference methods across ten domains**, serving **19 distinct topic mappings**; **zero skills approved unchanged**. Music has **nine ideas spanning 8/8 topics**, but almost all music methods share a single publisher; illustration has **three methods spanning 3/6 topics**, with environment art still insufficiently served. Neither domain is complete, behaviorally tested, or independently cleared for reuse.
+**How to read this:** Turquoise means a topic has a research or candidate link, which can include rejected skills. Purple means at least one method has been selected to study in our *bounded* featured shelf. Neither is installation clearance, and an unfeatured domain can still contain useful candidates.
 
-<details>
-<summary>Read all 33 domains as a text table</summary>
+<details><summary>Explore all 33 capability areas in a spreadsheet-style table</summary>
 
-| Capability domain | Research-linked topics (Nov 2) | Featured methods (Nov 3) | Topics on featured shelf |
+| Capability area | Research-linked topics | Featured study methods | Topics with featured methods |
 |---|---:|---:|---:|
-| Software engineering | 10 / 10 | 0 | 0 / 10 |
+| Software engineering | 10 / 10 | Not featured | 0 / 10 |
 | Testing | 7 / 8 | 1 | 1 / 8 |
-| Agent / MCP development | 8 / 8 | 0 | 0 / 8 |
+| Agent / MCP development | 8 / 8 | Not featured | 0 / 8 |
 | Cloud / DevOps | 8 / 8 | 1 | 1 / 8 |
-| Security | 7 / 7 | 0 | 0 / 7 |
-| Research | 7 / 7 | 0 | 0 / 7 |
-| Planning | 6 / 6 | 0 | 0 / 6 |
+| Security | 7 / 7 | Not featured | 0 / 7 |
+| Research | 7 / 7 | Not featured | 0 / 7 |
+| Planning | 6 / 6 | Not featured | 0 / 6 |
 | Marketing | 8 / 9 | 1 | 1 / 9 |
-| Product | 8 / 8 | 0 | 0 / 8 |
+| Product | 8 / 8 | Not featured | 0 / 8 |
 | UX / UI | 7 / 7 | 1 | 1 / 7 |
-| Visual design | 7 / 7 | 0 | 0 / 7 |
+| Visual design | 7 / 7 | Not featured | 0 / 7 |
 | Illustration | 1 / 6 | 3 | 3 / 6 |
 | 3D / CAD / animation | 7 / 9 | 1 | 1 / 9 |
 | Game design | 6 / 8 | 1 | 1 / 8 |
-| Fiction / narrative / worldbuilding | 8 / 8 | 0 | 0 / 8 |
+| Fiction / narrative / worldbuilding | 8 / 8 | Not featured | 0 / 8 |
 | Technical writing | 7 / 7 | 1 | 1 / 7 |
 | Music composition | 0 / 8 | 9 | 8 / 8 |
-| Audio / voice / sound | 5 / 8 | 0 | 0 / 8 |
-| Video / film | 5 / 9 | 0 | 0 / 9 |
-| Communication | 5 / 7 | 0 | 0 / 7 |
-| Analytics | 7 / 7 | 0 | 0 / 7 |
-| Time / productivity | 6 / 7 | 0 | 0 / 7 |
-| Memory / context | 7 / 7 | 0 | 0 / 7 |
-| Business | 7 / 7 | 0 | 0 / 7 |
-| Sales | 7 / 7 | 0 | 0 / 7 |
-| Career | 6 / 7 | 0 | 0 / 7 |
-| Education | 6 / 7 | 0 | 0 / 7 |
-| Science | 6 / 7 | 0 | 0 / 7 |
-| Medicine | 6 / 7 | 0 | 0 / 7 |
-| Law | 6 / 7 | 0 | 0 / 7 |
+| Audio / voice / sound | 5 / 8 | Not featured | 0 / 8 |
+| Video / film | 5 / 9 | Not featured | 0 / 9 |
+| Communication | 5 / 7 | Not featured | 0 / 7 |
+| Analytics | 7 / 7 | Not featured | 0 / 7 |
+| Time / productivity | 6 / 7 | Not featured | 0 / 7 |
+| Memory / context | 7 / 7 | Not featured | 0 / 7 |
+| Business | 7 / 7 | Not featured | 0 / 7 |
+| Sales | 7 / 7 | Not featured | 0 / 7 |
+| Career | 6 / 7 | Not featured | 0 / 7 |
+| Education | 6 / 7 | Not featured | 0 / 7 |
+| Science | 6 / 7 | Not featured | 0 / 7 |
+| Medicine | 6 / 7 | Not featured | 0 / 7 |
+| Law | 6 / 7 | Not featured | 0 / 7 |
 | Finance | 7 / 8 | 1 | 1 / 8 |
-| Robotics / IoT | 5 / 7 | 0 | 0 / 7 |
-| ML accelerators and compute | 7 / 7 | 0 | 0 / 7 |
+| Robotics / IoT | 5 / 7 | Not featured | 0 / 7 |
+| ML accelerators and compute | 7 / 7 | Not featured | 0 / 7 |
 
 </details>
 
-*Sources: [2026-11-02 research audit](registry/discovery/capability-coverage-audit-20261102.json) and [2026-11-03 bounded consumer reference shelf](registry/consumer-positive-references-q7-20261103.json). [Machine-readable two-stage graph data](registry/discovery/capability-evidence-and-valued-methods-q7-20261103.json) · [Preserved November 2 chart](docs/assets/capability-evidence-map-20261102.svg). This comparison does not claim a live all-corpus positive denominator, source independence, domain maturity, security clearance or proven outcomes.*
+**[View the full CSV table](docs/data/capability-dashboard.csv)** · [Research source ledger](registry/discovery/capability-coverage-audit-20261102.json) · [Featured reference ledger](registry/consumer-positive-references-q7-20261103.json) · [How the dashboard updates](docs/capability-dashboard-maintenance.md)
+
+*As of 2026-11-03. The research links are from a historical audit; not every candidate is useful. All-corpus qualification totals remain unknown. Never add topic-link counts to selected-method counts.*
+<!-- SKILLZ_CAPABILITY_DASHBOARD:END -->
 
 ## Our featured methods: a small, evidence-based shelf
 

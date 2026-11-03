@@ -5275,5 +5275,22 @@
     "scorecard_incomplete_gate_go_defect": "OPEN",
     "workbook_spreadsheet_engine_test": "not-run",
     "source_agent_behavior_test": "not-run"
+  },
+  "generated_capability_dashboard_20261103": {
+    "date": "2026-11-03",
+    "manifest": "registry/capability-dashboard-sources.json",
+    "script": "scripts/build-capability-dashboard.mjs",
+    "readme_section": "SKILLZ_CAPABILITY_DASHBOARD",
+    "svg": "docs/assets/capability-dashboard.svg",
+    "csv": "docs/data/capability-dashboard.csv",
+    "maintenance": "docs/capability-dashboard-maintenance.md",
+    "historical_graphs_preserved": true,
+    "research_topics": 210,
+    "canonical_topics": 247,
+    "selected_methods": 20,
+    "selected_domains": 10,
+    "approved_as_written": 0,
+    "check_command": "node scripts/build-capability-dashboard.mjs --check",
+    "self_test_command": "node scripts/build-capability-dashboard.mjs --self-test"
   }
 }
