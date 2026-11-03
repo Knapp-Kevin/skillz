@@ -52,4 +52,4 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 ## Notes
 
 - Server finds that merit adoption may be proposed for intake (`registry/candidates.yaml`) only with explicit authorization for any registry write with exact connector capabilities and side-effect authority boundaries; an MCP server can expose consequential permissions.
-- Flag anything affecting the bound platform's MCP integration or locally configured MCP servers (`.mcp.json` and equivalents).
+- Flag public changes that may affect MCP integrations. Read local MCP configuration (`.mcp.json` or equivalents) **only** when the user has separately authorized the exact local file/path and read scope for this run. A generic MCP news request does not authorize opening private configs, credential files, or connected accounts. Do not expose secrets, private endpoint names or account identifiers in the digest; if local access is absent, mark local applicability unverified.
