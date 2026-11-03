@@ -3,15 +3,18 @@ skill_name: hf-pulse
 source_id: local-skills
 local_path: "skills/hf-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: de2d55b632e88deaa71aa145cf83293f5877381a
+content_blob_sha: 65465396c75537c6cd28036c6487ff68ec17b057
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
+prior_reviewed_blob_sha: de2d55b632e88deaa71aa145cf83293f5877381a
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only collection changed manifest bytes; previous score historical. No new scanner or behavioral acceptance."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery]
