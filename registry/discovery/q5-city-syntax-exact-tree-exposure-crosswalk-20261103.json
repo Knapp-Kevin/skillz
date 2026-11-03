@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-03",
+  "base_main": "182301d1d66e924821b13701e131bdf01edc362f",
+  "source_repository": "City-Syntax/openclaw-ubem",
+  "source_pin": "261ad2c508a7b4a5971e0f83238b15d15fa7f651",
+  "review_ledger": "registry/discovery/q5-city-syntax-openclaw-ubem-static-20261103.json",
+  "audit_receipt": "docs/reviews/2026-11-02-q5-150-exact-tree-invariant-audit.md",
+  "identity_basis": "Recorded complete package-tree SHA equality within one pinned source; upstream Git objects not independently recomputed in this crosswalk",
+  "scope": {
+    "q5_review_records": 150,
+    "recorded_distinct_package_trees": 145,
+    "duplicate_excess_exposures": 5,
+    "collision_groups": 3,
+    "paths_in_groups": 9
+  },
+  "groups": [
+    {
+      "package_tree": "e1a0039572446d7b498641271c1c1038cb42ec1c",
+      "skill_blob": "c0fd26c8f36e9132ea6e168c4668367562889357",
+      "canonical_identity": "tree:e1a0039572446d7b498641271c1c1038cb42ec1c",
+      "exposure_count": 2,
+      "paths": [
+        {
+          "canonical_path": "openclaw/workspace-anomalyagent/skills/nus-query/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        },
+        {
+          "canonical_path": "openclaw/workspace-diagnosisagent/skills/nus-query/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        }
+      ]
+    },
+    {
+      "package_tree": "912924998e3798c3c7881b25785c2232347791f5",
+      "skill_blob": "3931e09efe1d3f7b04c9bd1d8b595ebb06e0aa1d",
+      "canonical_identity": "tree:912924998e3798c3c7881b25785c2232347791f5",
+      "exposure_count": 2,
+      "paths": [
+        {
+          "canonical_path": "openclaw/workspace-anomalyagent/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        },
+        {
+          "canonical_path": "openclaw/workspace-simulationagent/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        }
+      ]
+    },
+    {
+      "package_tree": "e07a59668169bc2c04912a8c988c746510845ac2",
+      "skill_blob": "5c883f8b82bc980aab31eae592ca237dbdc882de",
+      "canonical_identity": "tree:e07a59668169bc2c04912a8c988c746510845ac2",
+      "exposure_count": 5,
+      "paths": [
+        {
+          "canonical_path": "openclaw/workspace-diagnosisagent/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        },
+        {
+          "canonical_path": "openclaw/workspace-orchestrator/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        },
+        {
+          "canonical_path": "openclaw/workspace-queryagent/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        },
+        {
+          "canonical_path": "openclaw/workspace-reportagent/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        },
+        {
+          "canonical_path": "openclaw/workspace-slacknotificationagent/skills/nus-soul/SKILL.md",
+          "review_record_preserved": true,
+          "context_may_differ": true
+        }
+      ]
+    }
+  ],
+  "global_governed_tree_equivalence": "unknown",
+  "globally_distinct_eligible_denominator": null,
+  "security_scan": "not-run",
+  "behavioral_validation": "not-run",
+  "rights_clearance": "not-established-by-crosswalk",
+  "disposition_policy": "Inherit each path's existing Q5 ledger disposition; never infer installation or action authorization",
+  "integration_rule": "Retain all nine path reviews; collapse only recorded within-source tree identity for identity navigation, not raw-path decision counts."
+}
