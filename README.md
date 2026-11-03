@@ -33,7 +33,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 <!-- SKILLZ_CAPABILITY_DASHBOARD:START | generated: scripts/build-capability-dashboard.mjs -->
 ### Capability dashboard
 
-**33 capability areas** · **247 topics** · **210 topics with research leads** · **20 useful methods selected for study** · **0 approved unchanged**
+**33 capability areas** · **247 topics** · **210 topics with research leads** · **27 useful methods selected for study** · **0 approved unchanged**
 
 ![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across 33 domains.](docs/assets/capability-dashboard.svg)
 
@@ -43,15 +43,15 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 
 | Capability area | Research-linked topics | Featured study methods | Topics with featured methods |
 |---|---:|---:|---:|
-| Software engineering | 10 / 10 | Not featured | 0 / 10 |
+| Software engineering | 10 / 10 | 1 | 1 / 10 |
 | Testing | 7 / 8 | 1 | 1 / 8 |
-| Agent / MCP development | 8 / 8 | Not featured | 0 / 8 |
+| Agent / MCP development | 8 / 8 | 1 | 1 / 8 |
 | Cloud / DevOps | 8 / 8 | 1 | 1 / 8 |
-| Security | 7 / 7 | Not featured | 0 / 7 |
+| Security | 7 / 7 | 1 | 1 / 7 |
 | Research | 7 / 7 | Not featured | 0 / 7 |
-| Planning | 6 / 6 | Not featured | 0 / 6 |
+| Planning | 6 / 6 | 1 | 1 / 6 |
 | Marketing | 8 / 9 | 1 | 1 / 9 |
-| Product | 8 / 8 | Not featured | 0 / 8 |
+| Product | 8 / 8 | 1 | 1 / 8 |
 | UX / UI | 7 / 7 | 1 | 1 / 7 |
 | Visual design | 7 / 7 | Not featured | 0 / 7 |
 | Illustration | 1 / 6 | 3 | 3 / 6 |
@@ -62,7 +62,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 | Music composition | 0 / 8 | 9 | 8 / 8 |
 | Audio / voice / sound | 5 / 8 | Not featured | 0 / 8 |
 | Video / film | 5 / 9 | Not featured | 0 / 9 |
-| Communication | 5 / 7 | Not featured | 0 / 7 |
+| Communication | 5 / 7 | 1 | 1 / 7 |
 | Analytics | 7 / 7 | Not featured | 0 / 7 |
 | Time / productivity | 6 / 7 | Not featured | 0 / 7 |
 | Memory / context | 7 / 7 | Not featured | 0 / 7 |
@@ -71,7 +71,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 | Career | 6 / 7 | Not featured | 0 / 7 |
 | Education | 6 / 7 | Not featured | 0 / 7 |
 | Science | 6 / 7 | Not featured | 0 / 7 |
-| Medicine | 6 / 7 | Not featured | 0 / 7 |
+| Medicine | 6 / 7 | 1 | 1 / 7 |
 | Law | 6 / 7 | Not featured | 0 / 7 |
 | Finance | 7 / 8 | 1 | 1 / 8 |
 | Robotics / IoT | 5 / 7 | Not featured | 0 / 7 |
@@ -79,7 +79,29 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 
 </details>
 
-**[View the full CSV table](docs/data/capability-dashboard.csv)** · [Research source ledger](registry/discovery/capability-coverage-audit-20261102.json) · [Featured reference ledger](registry/consumer-positive-references-q7-20261103.json) · [How the dashboard updates](docs/capability-dashboard-maintenance.md)
+#### Review and qualification pipeline
+
+Each row counts a **different population** with its own denominator. **Do not add rows together or read them as one funnel.** `UNKNOWN` means no defensible count exists yet.
+
+<details><summary>Show the pipeline stages, from discovery to approval</summary>
+
+| Stage | Count | What is counted |
+|---|---:|---|
+| Package identity records (discovery) | **61,326** | G1–G3 pinned package identity records across 942 repositories (distinct package-tree SHAs 57,715) |
+| Exact static review decisions | **5,351** | distinct exact (source, pin, path) keys with a recorded candidate_decision (rejected unchanged 3,773, reference-only 1,574, deferred 4) |
+| Reference-only candidates awaiting a consumer decision | **1,545** | latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review (already on shelf 26, kept in research by Q8 batch 1 3) |
+| Methods selected to study (Valuable Reference) | **27** | featured shelf entries (canonical domains 17) |
+| Featured methods passing the static security gate | **6** | of 27 featured exact package trees, pinned SkillSpector, fail-closed (failed 3, incomplete 18) |
+| First-party packages passing the static security gate | **25** | of 51 skills/ and engine/skills/ trees on main 09c93dd3 (failed 1, incomplete 25) |
+| Behaviorally validated packages | **0** | packages with executed representative and adversarial acceptance tests |
+| Approved for unchanged use | **0** | Recommended-for-use entries |
+| Globally distinct eligible packages | **UNKNOWN** | no defensible denominator: semantic duplicates, license eligibility and most source families are unreconciled |
+
+[Pipeline CSV](docs/data/qualification-pipeline.csv) · [Pipeline source ledger](registry/qualification-pipeline-20261103.json) · as of 2026-11-03
+
+</details>
+
+**[View the full CSV table](docs/data/capability-dashboard.csv)** · [Research source ledger](registry/discovery/capability-coverage-audit-20261102.json) · [Featured reference ledger](registry/consumer-positive-references-q8-20261103.json) · [How the dashboard updates](docs/capability-dashboard-maintenance.md)
 
 *As of 2026-11-03. The research links are from a historical audit; not every candidate is useful. All-corpus qualification totals remain unknown. Never add topic-link counts to selected-method counts.*
 <!-- SKILLZ_CAPABILITY_DASHBOARD:END -->
@@ -95,9 +117,9 @@ We maintain two **positive** recommendation types for methods selected to appear
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Featured-shelf limitation, not total inventory:** We have individually endorsed **twenty useful methods as Valuable References** across ten capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Featured-shelf limitation, not total inventory:** We have individually endorsed **twenty-seven useful methods as Valuable References** across **seventeen** capability domains. The seven newest (Q8) come from a qualification pass over the highest-graded reference-only candidates in domains that previously had nothing on the shelf; three other candidates in that pass stayed in research. Music composition has one useful conceptual method in **all eight subdomains**, but most music methods come from one publisher, and protected textbook excerpts and translations are **not relicensed by source MIT**. **All 27 complete Git package-tree identities are now verified** against pinned upstream commits, including four that were previously UNKNOWN. Six of 27 pass the pinned static security scan; that is not a clearance. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Twenty featured method references
+### Twenty-seven featured method references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -121,10 +143,17 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
 | Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
 | Grant budget reconciliation | **Nonprofit Budget Narrative** | Check actual quantity × rate, reconcile totals and hold unclear cost eligibility for human finance review |
+| Safe agent approvals | **Verify Agent Action** | Catch swapped, replayed or out-of-date approvals before an agent takes a risky action |
+| MCP server security | **MCP Implementation Security Review** | Review an MCP server line by line, scoped to how it is really exposed |
+| Product feedback triage | **Shopify Review Triage** | Turn scattered bad app reviews into a sourced, honestly labeled priority list |
+| Writing in your own voice | **Email Voice** | Draft emails that sound like you, checked against your own real replies |
+| Safe repository cleanup | **Clean Closed Issue Worktrees** | Remove finished Git worktrees without losing unsaved work, secrets or unique commits |
+| Project timelines | **Gantt Chart Visualization** | Build schedules from real tool exports without inventing dates or dependencies |
+| Honest expert guidance | **Radiology Consensus Guideline** | Keep panel guidance from posing as evidence or official endorsement (process design only, not clinical advice) |
 
 **Additional reviewed candidates outside the featured shelf:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None of those creative reviews adds a featured method. [The budget method and scorecard defect have separate qualification evidence](docs/reviews/2026-11-03-q7-budget-valuable-reference-and-workbook-formula-gate.md).
 
-**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-q7-20261103.json).
+**These are useful ideas, not install recommendations.** None has a behavioral acceptance pass. [Static security scan results](docs/reviews/2026-11-03-q8-external-skillspector-exact-tree-receipts.md) are recorded separately and are not a clearance. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-q8-20261103.json) · [Q8 qualification evidence](docs/reviews/2026-11-03-q8-reference-only-qualification-batch1.md).
 
 **Start here:** [Browse all capability areas](registry/capability-directory.json) · [Search reviewed names](registry/governed-review-name-index.json) · [See concrete examples](docs/capability-quickstart.md).
 

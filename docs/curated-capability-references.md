@@ -1,6 +1,6 @@
-# Twenty useful skill methods, with their limits
+# Twenty-seven useful skill methods, with their limits
 
-**These are twenty positively selected, individually differentiated Valuable Reference methods across ten canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
+**These are twenty-seven positively selected, individually differentiated Valuable Reference methods across seventeen canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -24,6 +24,13 @@
 | notation | **[mc-symbolic-score](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-symbolic-score/SKILL.md)** | Produce ABC, MusicXML and MIDI from one checked score plan |
 | electronic-composition | **[mc-style-edm](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/plugins/music-composition/skills/mc-style-edm/SKILL.md)** | Build and release club-track energy by adding and removing layers |
 | Reconcile a grant budget | **[Nonprofit Budget Narrative](https://github.com/dh2211/nonprofit-agents/blob/e1a247b8743d53e12677774bf67f6453b7f692b1/skills/npo-budget-narrative/SKILL.md)** | Recalculate each line from real costs and flag amounts or cost rules needing human finance review |
+| Check an agent's risky action against its approval | **[Verify Agent Action](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/verify-agent-action/SKILL.md)** | Catch swapped, replayed or out-of-date approvals before an agent takes a risky action. |
+| Security-review an MCP server | **[MCP Implementation Security Review](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/mcp-implementation-security-review/SKILL.md)** | Get a line-by-line security review of an MCP server, scoped to how it is really exposed. |
+| Sort bad app reviews into a priority list | **[Shopify Review Triage](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/shopify-review-triage/SKILL.md)** | Turn scattered bad app reviews into a sourced, honestly labeled priority list. |
+| Write emails in your own voice | **[Email Voice](https://github.com/agentskillexchange/skills/blob/a6017b4af9d0298b7be3af7a6ec7485943d2c3e7/skills/email-voice/SKILL.md)** | Draft emails that sound like you, checked against your own real replies. |
+| Clean up old Git worktrees safely | **[Clean Closed Issue Worktrees](https://github.com/agentskillexchange/skills/blob/a6017b4af9d0298b7be3af7a6ec7485943d2c3e7/skills/clean-closed-issue-worktrees/SKILL.md)** | Clean up finished Git worktrees without losing unsaved work, secrets or unique commits. |
+| Chart a project schedule from real data | **[Gantt Chart Visualization](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/build-web-data-visualization/skills/gantt-chart-visualization/SKILL.md)** | Build project timelines from real tool exports without inventing dates or dependencies. |
+| Run an honest expert-consensus process | **[Radiology Consensus Guideline](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-consensus-guideline/SKILL.md)** | Keep expert-panel medical guidance honest: no fake evidence and no fake endorsement. |
 
 ## Why each is a valuable reference, not ready for unchanged use
 
@@ -123,8 +130,64 @@ These eight are *separate methods*, not eight licenses to operate a composition 
 
 **Important limit:** Exact-pinned MIT single-file source, **17/20 static**. The original agent skill, financial records and official eligibility rules have not been executed or validated. A fictional arithmetic example supports a calculation oracle, **not** a tested skill. The separate Grant Writing Kit scorecard can report GO with unanswered eligibility gates; it remains **held**, not endorsed. [Full evidence](../registry/discovery/q7-budget-workbook-and-valuable-reference-20261103.json).
 
+### Agent / MCP development: Verify Agent Action
+
+**Unique idea:** Pin the proposed action to an exact field-by-field identity, then check approval binding, replay, reviewer independence, conflicting evidence and monitoring, and return a fail-closed verdict that never authorizes.
+
+**Important limit:** One step re-runs a 'declared evaluator', which is code execution with no permission gate. No worked example or test shows the six attacks are actually caught. Reports could repeat tokens from the approval packet because redaction is not required.
+
+**Evidence:** Q8 full-package re-review **18/20** (earlier static record 18/20); pinned `github/awesome-copilot@f11a4e44`; package tree `23d23e39` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
+### Security: MCP Implementation Security Review
+
+**Unique idea:** First work out whether an MCP server is actually reachable over a network, ignore code you do not own, then grade only the controls that apply, with file-and-line proof or an explicit 'needs investigation'.
+
+**Important limit:** Live attack payloads and unauthenticated test requests have no authorization or non-production gate, the OWASP step contradicts itself, and 'current' spec and SDK claims have no date. SkillSpector also flags those payload lines.
+
+**Evidence:** Q8 full-package re-review **15/20** (earlier static record 18/20); pinned `github/awesome-copilot@f11a4e44`; package tree `d9a6fa0f` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (no package LICENSE/ATTRIBUTION). [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
+### Product: Shopify Review Triage
+
+**Unique idea:** Give each pasted public review exactly one severity bucket in a fixed order, keep its link or say it is missing, and mark every item unverified until a person reproduces the problem.
+
+**Important limit:** The skill says its rubric copies an outside guide word for word, and that guide's license is not in the package, so copying rights are unresolved. Keyword matching is crude and review text could carry injected instructions. Study only the labeling and triage discipline, in your own words.
+
+**Evidence:** Q8 full-package re-review **16/20** (earlier static record 18/20); pinned `github/awesome-copilot@f11a4e44`; package tree `478c553a` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: frontmatter declares license: MIT (consistent with root MIT); rubric is stated to be reproduced verbatim from an external, independently maintained guide (alfredtech2026.github.io) whose own license is not stated in the package; non-affiliation and Shopify trademark notice included [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
+### Communication: Email Voice
+
+**Unique idea:** Build separate style notes for each kind of recipient from a planned sample of sent mail, freeze them, then score drafts against real replies that were held back before trusting the profile.
+
+**Important limit:** Once authorized it can read hundreds of private emails across every connected account, which sends that text to the model provider. The installation section points to an outside ZIP and an npx installer, and model advice names unverifiable products. The agent grades its own match, which can give false confidence.
+
+**Evidence:** Q8 full-package re-review **17/20** (earlier static record 18/20); pinned `agentskillexchange/skills@a6017b4a`; package tree `11cd6421` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: ATTRIBUTION: SKILL.md embeds full MIT License, Copyright (c) 2026 Rohit Motwani (package-level notice; preserve on reuse); consistent with root MIT, no conflict [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
+### Software engineering: Clean Closed Issue Worktrees
+
+**Unique idea:** Scan read-only first, have the user approve an exact list, gate execution with a one-time plan token, and recheck every local fact right before deleting, aborting the whole batch on any change.
+
+**Important limit:** The plan token is random and is not tied to the plan's contents, so targets can change after approval. Execution does not repeat every safety check made when the plan was created. Remote evidence is written by the agent and only shape-checked. A destructive script ships with no tests. SkillSpector reports subprocess and environment-copy findings in the script that need adjudication.
+
+**Evidence:** Q8 full-package re-review **16/20** (earlier static record 19/20); pinned `agentskillexchange/skills@a6017b4a`; package tree `e269b139` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: package LICENSE.txt MIT 'Copyright (c) 2026 Haoran Yu' (controls this package; notice must be preserved); compatible with root MIT [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
+### Planning: Gantt Chart Visualization
+
+**Unique idea:** Before drawing anything, decide what kind of schedule source you have, map each field with its origin and confidence, report broken links as problems, and only then choose a Gantt chart or a better view.
+
+**Important limit:** It points to a shared mobile guide that is not in the package, carries no license text inside the package, and tells the agent to call Jira or GitHub APIs without read-only or minimal-data limits. Vendor details may have drifted.
+
+**Evidence:** Q8 full-package re-review **15/20** (earlier static record 18/20); pinned `openai/plugins@0722921d`; package tree `bdbc5c84` verified; static security scan **passed**; behavioral tests **not run**. Licensing: Plugin manifest declares MIT (author OpenAI); no LICENSE text ships in plugin or package (notice text unavailable). No conflict observed. [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
+### Medicine: Radiology Consensus Guideline
+
+**Unique idea:** Name the guidance type and who may adopt it first, accept only versioned evidence, fix voting rules before results, and record evidence certainty, advice strength and panel agreement separately, with explicit stop points.
+
+**Important limit:** This is a high-stakes clinical domain with no behavioral evidence and no clinical-methodologist review. Required sibling skills are missing, the validator is Windows-specific, and no license text sits in the package. Drafts could still be mistaken for official guidance. Study the process design only; it gives no clinical advice.
+
+**Evidence:** Q8 full-package re-review **15/20** (earlier static record 18/20); pinned `huang-sir1/radiology-skills@aaa0fe62`; package tree `4bb70d9b` verified; static security scan **incomplete**; behavioral tests **not run**. Licensing: root MIT only (repo LICENSE blob 35a6f413..., 'Copyright (c) 2026 Huang Yuhong, Gu Wenchao, Song Xinyang'; identical copy at radiology-skills/LICENSE; plugin.json license 'SEE LICENSE IN LICENSE'); no package-level LICENSE/NOTICE/ATTRIBUTION; third-party standards/papers are cited by URL/DOI and paraphrased, no verbatim copied third-party content observed [Individual review](../registry/discovery/q8-reference-only-qualification-batch1-20261103.json).
+
 ## What this does and doesn't count
 
-Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
+Twenty-seven **distinct source/path-pinned Valuable Reference methods** across seventeen canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 27 complete pinned source package Git tree identities are now verified (Q8), including four earlier creative methods that were previously UNKNOWN. Six pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
-The source-neutral [structured reference catalog](../registry/consumer-positive-references-q7-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
+The source-neutral [structured reference catalog](../registry/consumer-positive-references-q8-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
