@@ -2,7 +2,7 @@
   "schema_version": 1,
   "as_of": "2026-11-03",
   "stage": "consumer-positive-recommendation-qualification",
-  "scope": "Starter shelf of three individually inspected, differentiated, non-unchanged-use conceptual references; NOT exhaustive domain or global catalog",
+  "scope": "Seven individually inspected, distinct, positively endorsed reference methods across seven capability domains. No original package is approved for unchanged use. This is a bounded subset, not a complete catalog.",
   "catalog_categories": [
     "RECOMMENDED_FOR_USE",
     "VALUABLE_REFERENCE"
@@ -139,22 +139,207 @@
       "behavioral_validation": "not-run",
       "unchanged_use_approved": false,
       "requires_separate_action_authority": true
+    },
+    {
+      "id": "kyleoliveiro-sg-gov-skills/sg-gov-dss-accessibility",
+      "name": "Singapore DSS Accessibility",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "ux-ui",
+      "domain_display": "UX / UI",
+      "subdomain": "accessibility",
+      "capability": "Checking government service forms and interfaces for accessibility",
+      "benefit": "Catch keyboard, screen-reader, form-error and contrast barriers while an interface is being built, rather than after launch.",
+      "distinct_method": "Map each UI finding to an exact accessibility control, separate mandatory and higher-impact service requirements, and combine automated, keyboard and assistive-technology checks with review heuristics.",
+      "reason_not_unchanged": "The embedded Singapore government control text and inferred WCAG mappings require current official verification, and government text is not automatically licensed under the repository's MIT license. One test references a control the package does not define. This is a jurisdiction-specific guide, not a general compliance certificate.",
+      "source": {
+        "repository": "kyleoliveiro/sg-gov-skills",
+        "pin": "16892fc613263c3f835457cd23ae092d404979ca",
+        "path": "skills/sg-gov-dss-accessibility/SKILL.md",
+        "skill_blob_sha": "ec0e8e20c2dce3f941395eb4eabb452a49b40da6",
+        "recorded_package_tree_sha": "d616f58c9079b3b78a3e367873b2d3e7982c5d3a",
+        "package_files": [
+          {
+            "path": "skills/sg-gov-dss-accessibility/SKILL.md",
+            "blob_sha": "ec0e8e20c2dce3f941395eb4eabb452a49b40da6"
+          },
+          {
+            "path": "skills/sg-gov-dss-accessibility/evals/evals.json",
+            "blob_sha": "9179895a9d59417a94ee6f37602e16cb00d30635"
+          },
+          {
+            "path": "skills/sg-gov-dss-accessibility/evals/files/application-flow.html",
+            "blob_sha": "ef49ead71db1c4b6b3f1fca88b065ca6f950c67e"
+          },
+          {
+            "path": "skills/sg-gov-dss-accessibility/evals/files/status.html",
+            "blob_sha": "3376fcfded1f0eec399aeccb7bb2ec55d0d12e28"
+          },
+          {
+            "path": "skills/sg-gov-dss-accessibility/evals/trigger-evals.json",
+            "blob_sha": "8d26d4bb3a9087979897eef72b4c0590f36978f5"
+          },
+          {
+            "path": "skills/sg-gov-dss-accessibility/references/wcag-controls.md",
+            "blob_sha": "e38b3eec5d8dfcfbedf1bca910faf747d8c3a545"
+          }
+        ],
+        "license": "MIT for source-authored material; embedded public government control text has independent rights and currency",
+        "license_file_sha": "4c827fc32ce43ebdadc16de241277918e2690113",
+        "license_obligation": "Retain MIT attribution when copying source-authored protected content. Check Singapore government's applicable public-content reuse conditions independently; do not relicense its embedded 53 controls under MIT, and verify current official source before compliance claims.",
+        "package_sha_basis": "Prior complete-package-tree review ledger, not freshly rederived from upstream Git in this consumer curation",
+        "file_inspection": "Fetched exact pinned SKILL.md, all five package sidecars/fixtures and root MIT LICENSE; six original package files were read or inspected for source/currency, fixtures, static eval prompts and scope. No tests or runtime executed."
+      },
+      "dependencies": "Singapore DSS/WCAG 2.2 context; optional axe-core, Oobee, screen readers and contrast tools; agency impact-tier facts must be checked.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "18/20",
+        "evidence": "registry/discovery/q2-kyleoliveiro-sg-gov-skills-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS A VALUABLE IDEA ONLY. No approval to install, run, or adopt original package unchanged.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
+    },
+    {
+      "id": "scitix-siclaw/networkpolicy-debug",
+      "name": "NetworkPolicy Debug",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "cloud-devops",
+      "domain_display": "Cloud / DevOps",
+      "subdomain": "sre",
+      "capability": "Diagnosing Kubernetes traffic blocked by NetworkPolicy rules",
+      "benefit": "Find why pods cannot talk to each other without guessing, deleting or weakening live security rules.",
+      "distinct_method": "Check selected pods and namespaces, ingress versus egress policy types, additive allow rules, selector AND/OR, DNS egress, extended CNI policies and SNAT before recommending a change.",
+      "reason_not_unchanged": "Some statements about hostNetwork exemptions and Cilium/Calico extended policy priority are overbroad or implementation-dependent. Inspecting a real cluster requires the user's explicit read authority, and optional network probes can require extra execution permissions; security and behavioral testing were not run.",
+      "source": {
+        "repository": "scitix/siclaw",
+        "pin": "ceee3f49f8bdc9223c0a2b0afec33253f95616f9",
+        "path": "skills/core/networkpolicy-debug/SKILL.md",
+        "skill_blob_sha": "4a80dcb34b5bdaf5b98be6ba9eba76b75cf8bb77",
+        "recorded_package_tree_sha": "55be639106d02a98a5670eea19d69d487932414e",
+        "package_files": [
+          {
+            "path": "skills/core/networkpolicy-debug/SKILL.md",
+            "blob_sha": "4a80dcb34b5bdaf5b98be6ba9eba76b75cf8bb77"
+          }
+        ],
+        "license": "Apache-2.0",
+        "license_file_sha": "7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f",
+        "license_obligation": "Include Apache-2.0 license when distributing copied work, mark modified files, preserve relevant notices/attribution and follow applicable patent terms. Root license is Apache-2.0, not MIT; the source ledger's incorrect MIT scope label was corrected across all 28 Siclaw records.",
+        "package_sha_basis": "Prior complete-package-tree review ledger, not freshly rederived from upstream Git in this consumer curation",
+        "file_inspection": "Fetched complete pinned SKILL.md and root Apache-2.0 LICENSE and matched reviewed SKILL.md blob. Confirmed family-wide source-scope mismatch before repairing all 28 ledger labels."
+      },
+      "dependencies": "Authorized read-only Kubernetes API access through kubectl, with CNI-specific CRDs where relevant; no unapproved cluster writes or test-pod creation.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "17/20",
+        "evidence": "registry/discovery/q4-scitix-siclaw-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS A VALUABLE IDEA ONLY. No approval to install, run, or adopt original package unchanged.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
+    },
+    {
+      "id": "peterod99-consultant-skills/singular-positioning-clarity",
+      "name": "Singular Positioning Clarity",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "marketing",
+      "domain_display": "Marketing",
+      "subdomain": "positioning",
+      "capability": "Writing a simple, repeatable statement about whom a service helps and what changes",
+      "benefit": "Help buyers understand who a service is for and what outcome it delivers, without a list of unrelated offerings.",
+      "distinct_method": "Use one sentence naming service, audience and outcome; test whether a stranger repeats it, it excludes unsuitable work, and the owner can confidently stand behind it.",
+      "reason_not_unchanged": "The skill gives an uncited example of improved sales outcomes, and its source credits describe a synthesis of third-party books and paid frameworks. Those examples are not independently verified, and the root MIT license does not extend to third-party expression. Use the general questions, not copied text or unsupported sales promises.",
+      "source": {
+        "repository": "peterod99/consultant-skills",
+        "pin": "ee82a9dfe327a734e815a590aaaf92327d111d85",
+        "path": "singular-positioning-clarity/SKILL.md",
+        "skill_blob_sha": "31e85f5fd1f7c9c0e8a21b2e1432a84d4878d808",
+        "recorded_package_tree_sha": "f949a6b8ff199cfcd60833aa62a4e93e1cad0ddb",
+        "package_files": [
+          {
+            "path": "singular-positioning-clarity/SKILL.md",
+            "blob_sha": "31e85f5fd1f7c9c0e8a21b2e1432a84d4878d808"
+          }
+        ],
+        "license": "MIT for original source expression; third-party sourced expression remains subject to its own rights",
+        "license_file_sha": "97479e629c88d2a70c342ed6f5c2d78ad046e2e4",
+        "license_obligation": "Preserve original MIT license/copyright if copying the skill. Do not assume a third-party paid-course or book excerpt is relicensed; reference general positioning ideas independently.",
+        "package_sha_basis": "Prior complete-package-tree review ledger, not freshly rederived from upstream Git in this consumer curation",
+        "file_inspection": "Fetched complete single-file pinned package and original root MIT license, reviewed credited frameworks and unverified numerical claims."
+      },
+      "dependencies": "None for reviewing the draft or applying its general reasoning exercise; no automatic website, CRM or profile changes.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "16/20",
+        "evidence": "registry/discovery/q4-peterod99-consultant-skills-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS A VALUABLE IDEA ONLY. No approval to install, run, or adopt original package unchanged.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
+    },
+    {
+      "id": "danielrosehill-claude-transcription-plugin/split-transcript",
+      "name": "Split Transcript by Intent",
+      "consumer_state": "VALUABLE_REFERENCE",
+      "domain": "technical-writing",
+      "domain_display": "Technical writing",
+      "subdomain": "documentation-ia",
+      "capability": "Organizing a long voice transcript into decisions, context, action items and prompts",
+      "benefit": "Turn a mixed voice note into separate useful records without losing what anyone said.",
+      "distinct_method": "Preserve original words and speaker labels while routing statements by intent, leaving ambiguous material in notes rather than inventing missing meaning.",
+      "reason_not_unchanged": "The skill writes local files without an explicit per-destination approval and offers to pipe extracted prompts directly into developer agents. Spoken transcripts may contain third-party instructions or private data; those must not be treated as trusted execution instructions. No completeness or adversarial test was run.",
+      "source": {
+        "repository": "danielrosehill/Claude-Transcription-Plugin",
+        "pin": "d19d6df5792490b477d9ea6fd4f7eebb0434dc9d",
+        "path": "skills/split-transcript/SKILL.md",
+        "skill_blob_sha": "71edb73660e4f2f85a3c66e2a0bb1645db0da87f",
+        "recorded_package_tree_sha": "d5aa1a7c143ee6830f1f12b46d6d6db6931bed80",
+        "package_files": [
+          {
+            "path": "skills/split-transcript/SKILL.md",
+            "blob_sha": "71edb73660e4f2f85a3c66e2a0bb1645db0da87f"
+          }
+        ],
+        "license": "MIT",
+        "license_file_sha": "6886682d2d0356c048f18a076bf9cb6acb078a51",
+        "license_obligation": "Include MIT copyright and license notice when copying or materially adapting this package. Private conversation transcripts remain the user's data and are not authorized for off-host export.",
+        "package_sha_basis": "Prior complete-package-tree review ledger, not freshly rederived from upstream Git in this consumer curation",
+        "file_inspection": "Fetched complete single-file pinned SKILL.md and pinned original root MIT license, inspected output categories, handoffs and privacy/authority boundaries."
+      },
+      "dependencies": "Local transcript and user-approved destination; no external service required for the categorization method.",
+      "prior_source_vetting": {
+        "status": "REFERENCE-ONLY",
+        "score": "16/20",
+        "evidence": "registry/discovery/q3-danielrosehill-claude-transcription-plugin-static-20261103.json"
+      },
+      "consumer_adjudication": "PROMOTED AS A VALUABLE IDEA ONLY. No approval to install, run, or adopt original package unchanged.",
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false,
+      "requires_separate_action_authority": true
     }
   ],
   "starter_shelf_totals": {
     "recommended_for_use": 0,
-    "valuable_reference": 3,
-    "distinct_capability_domains_represented": 3
+    "valuable_reference": 7,
+    "distinct_capability_domains_represented": 7
   },
   "global_approved_for_use_total": null,
   "global_promoted_valuable_reference_total": null,
   "global_domain_totals_audited": false,
-  "source_verification": "Manually fetched upstream exact-pinned files through GitHub and matched SKILL.md blob SHA to prior exact package source vetting; read root license for each; reviewed all package-owned files.",
-  "promotion_rationale": "Specific differentiated methods with demonstrated documentation usefulness, no unsafe recommendation to execute or install the original packages",
+  "source_verification": "All seven: exact-pinned upstream SKILL.md fetched and blob SHA matched to original review; all source-identified package sidecars and root license text inspected; package-tree SHA reused from pinned reviewer evidence, not freshly recalculated.",
+  "promotion_rationale": "Seven distinct mechanisms with specific consumer benefits, documented source licenses and identified unchanged-use blockers; no automatic promotion from static REFERENCE-ONLY.",
   "limitations": [
     "This is a curated subset: zero in this starter shelf is not a claim of zero valuable skills in any other domain.",
     "None of the three has an executed security scan, behavioral acceptance or unchanged-use license/safety clearance from skillz.",
     "The referenced sources carry their own license obligations; skillz retains links and independent summaries, not their instructions or code.",
-    "Packaged scripts, CLI/tools and content remain untrusted until host-specific rights, safety and action authorization are established."
+    "Packaged scripts, CLI/tools and content remain untrusted until host-specific rights, safety and action authorization are established.",
+    "The 28-record Siclaw root-license scope metadata was corrected from MIT to Apache-2.0 after reading its pinned LICENSE. Existing grades, SHA identities, and candidate decisions are unchanged."
   ]
 }
