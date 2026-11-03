@@ -9,8 +9,8 @@
   "identity_basis": "Recorded complete package-tree SHA equality within one pinned source; upstream Git objects not independently recomputed in this crosswalk",
   "scope": {
     "q5_review_records": 150,
-    "recorded_distinct_package_trees": 145,
-    "duplicate_excess_exposures": 5,
+    "recorded_distinct_package_trees": 144,
+    "duplicate_excess_exposures": 6,
     "collision_groups": 3,
     "paths_in_groups": 9
   },
@@ -91,5 +91,6 @@
   "behavioral_validation": "not-run",
   "rights_clearance": "not-established-by-crosswalk",
   "disposition_policy": "Inherit each path's existing Q5 ledger disposition; never infer installation or action authorization",
-  "integration_rule": "Retain all nine path reviews; collapse only recorded within-source tree identity for identity navigation, not raw-path decision counts."
+  "integration_rule": "Retain all nine path reviews; collapse only recorded within-source tree identity for identity navigation, not raw-path decision counts.",
+  "identity_arithmetic_correction": "2026-11-03: independently reparsed all six pinned Q5 JSON ledgers: 150 records, 144 distinct recorded package_tree SHAs; three collision groups with 2, 2, and 5 exposures (9 paths), hence (2-1)+(2-1)+(5-1)=6 excess exposures. Earlier 145/5 was an arithmetic error, not a package review or new identity claim."
 }
