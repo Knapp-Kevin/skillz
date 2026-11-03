@@ -21,3 +21,7 @@ Before the next material Q5 publication, inspect current PR heads and all five p
 ## Outcome
 
 One source-backed freshness defect documented; **zero** newly reviewed packages, **zero** promoted recommendations, **zero** new authority or licensing determinations. No GitHub Actions invoked. This note is passive evidence only.
+
+## Follow-up verification (2026-11-03)
+
+Re-read the first 45 lines of `docs/SYSTEM_STATE.md` on main `0c13f6b5`. Its opening headline explicitly pins the Q1–Q4 snapshot to `3be1664b`, while its next section separately reports four-source `4,809/4,813` exact-path decisions and `1,039` governed companions. These are distinct populations; the first line's `5,359` is not a current all-source unique-package total. The current README likewise identifies its figures as Q4 research evidence. The issue search returned open program issues #599 and #624, but the search endpoint did not reliably honor the PR qualifier; it is **not** a complete PR inventory. PR #669's changed-file inventory confirms this audit file is its only change. No full Q5 ledger reconciliation, per-domain promotion count, or workflow-run verification has occurred. The Q5 150 figure remains a commit-described tranche, not a newly audited increment. This correction narrows the next integration gate rather than claiming it passed.
