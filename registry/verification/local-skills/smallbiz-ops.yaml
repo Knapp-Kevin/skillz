@@ -3,13 +3,13 @@ skill_name: smallbiz-ops
 source_id: local-skills
 local_path: "skills/smallbiz-ops/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e33f99d0585d486a6bb3243aae9402bfc2cac0ec
+content_blob_sha: df69ebf178d42fde6c544a56b5b893641a8b3eb8
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
-verification_status: verified
+reviewed_at: 2026-11-04
+verification_status: unverified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Changed source after issue #478 authority repair. Historical rubric score does not transfer to this exact source; independent ten-axis semantic, security and actual adversarial host behavior remain not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, source-driven, synthesis, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+notes: "Historical score below applies to prior source only. Current source instruction readback passed scheduling and private-source consent text checks; full semantic requalification, exact-package security and behavioral validation still pending."
