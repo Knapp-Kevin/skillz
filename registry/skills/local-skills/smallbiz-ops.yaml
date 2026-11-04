@@ -7,15 +7,15 @@ source_path: skills/smallbiz-ops/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 521558fc6353915d4aacb98b5dfe963b7c4f1a8c
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/smallbiz-ops/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: unverified
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+import_eligibility: review-required
+rationale: "Issue #478: current source now requires scoped one-time private reads and separate approval for future schedules, recipients, retention, cost and revocation. Prior rubric grade describes the old fingerprint only; new exact package needs independent semantic/security and host adversarial qualification before unchanged use."
