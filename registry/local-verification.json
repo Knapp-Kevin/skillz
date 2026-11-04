@@ -501,9 +501,9 @@
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
-      "verification_status": "stale",
+      "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -525,7 +525,7 @@
           "high"
         ]
       },
-      "notes": "2026-11-04 issue #402 new source 9c345c88cef5f4f97235facb6d3d7414ab820f1a after implicit private profile/registry read removal; matching current provenance and verification, source-semantic and final-tree SkillSpector not rerun; no behavioral acceptance.",
+      "notes": "2026-11-04 issue #402 current source 9c345c88cef5f4f97235facb6d3d7414ab820f1a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
       "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
@@ -569,7 +569,7 @@
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
-      "verification_status": "stale",
+      "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -595,7 +595,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 issue #402 new source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce after implicit private profile/registry read removal; matching current provenance and verification, source-semantic and final-tree SkillSpector not rerun; no behavioral acceptance.",
+      "notes": "2026-11-04 issue #402 current source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
       "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
@@ -638,9 +638,9 @@
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
-      "verification_status": "stale",
+      "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -662,7 +662,7 @@
           "high"
         ]
       },
-      "notes": "2026-11-04 issue #402 revised source exact SHA 149e577a9f72895b09aea43d607203d731db1bce. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
+      "notes": "2026-11-04 issue #402 current source 149e577a9f72895b09aea43d607203d731db1bce static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
       "prior_reviewed_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
@@ -704,7 +704,7 @@
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
-      "verification_status": "stale",
+      "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -729,7 +729,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 issue #402 new source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c after implicit private profile/registry read removal; matching current provenance and verification, source-semantic and final-tree SkillSpector not rerun; no behavioral acceptance.",
+      "notes": "2026-11-04 issue #402 current source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
       "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
@@ -739,9 +739,9 @@
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
-      "verification_status": "stale",
+      "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -763,7 +763,7 @@
           "high"
         ]
       },
-      "notes": "2026-11-04 issue #402 revised source exact SHA 6625f147011dfd38ed2b9881eda2d5ea62e2ece4. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
+      "notes": "2026-11-04 issue #402 current source 6625f147011dfd38ed2b9881eda2d5ea62e2ece4 static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
       "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
@@ -839,9 +839,9 @@
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
-      "verification_status": "stale",
+      "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -865,7 +865,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 issue #402 revised source exact SHA 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
+      "notes": "2026-11-04 issue #402 current source 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
       "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
