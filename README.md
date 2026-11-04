@@ -218,7 +218,15 @@ Historical source-intake receipts and superseded progress checkpoints are retain
 4. **Decide.** Prefer `USE EXISTING`, `ADOPT`, `ADAPT`, `COMPOSE`, `CREATE` or `NO CHANGE` as warranted. Avoid skills that duplicate adequate host behavior.
 5. **Deliver only authorized work.** A generic link or `EXPLORE` request is read-only. After an explicit implementation request, produce complete user-host or portable skill artifacts. Do not silently install, write memory, transmit private data, schedule work or mutate the reference repository.
 
-**The repository itself is passive.** It has no repository-owned runtime, installer, crawler, scheduler, scanner, CI workflow or background agent. Any authorized execution happens in the consuming host. Skills developed for a user stay in that user's host/project or portable handoff unless repository maintenance was specifically requested.
+**The repository itself is passive for consumers.** It has no always-running service, installer, crawler, scheduler, scanner service, CI workflow or background agent. It does contain a few **manual maintainer-only reporting/QA scripts**, including the capability-dashboard renderer; these do not execute during browsing, grant permissions or certify skills as safe to run. User skill implementations stay in the user's host/project or a portable handoff unless repository maintenance was specifically requested.
+
+## Governance and active maintenance
+
+**Finding a skill is not approval to run it.** A skill can be **discovered**, **reviewed for useful ideas**, or **selected as a Valuable Reference** without being safe to install unchanged. Exact source and license, static quality, security scan, real agent behavior, and user authorization are **different checks**. Missing or incomplete results remain visible rather than counting as passes.
+
+**For agents and maintainers:** [Start-here contract](AGENT_START_HERE.md) · [current governance and permission rules](docs/GOVERNANCE_INDEX.md) · [issue-first intake](docs/candidate-intake.md) · [independent security evidence](docs/security-scanning.md). The only current controlled authority labels are `read-only`, `generate-only`, `mutating`, and `external-side-effect`; even `read-only` access requires the right account/data scope. A one-time request never authorizes recurring background checks, private logs or credential values.
+
+**Which progress count is current?** This README and its generated capability graphic describe the **checked-out branch**. Newer work in [open pull requests](https://github.com/Knapp-Kevin/skillz/pulls) is **proposed, not merged**. Follow the [maintainer workboard draft (#701)](https://github.com/Knapp-Kevin/skillz/pull/701) or [open issues](https://github.com/Knapp-Kevin/skillz/issues) for ongoing repairs; the workboard is a dated snapshot, not an automated monitor. Authorized maintainers may manually regenerate approved charts from pinned source records. The library does not run maintenance work for visitors.
 
 ## Reference map
 
