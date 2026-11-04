@@ -7,15 +7,15 @@ source_path: skills/handoff-writer/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: dc6d6c735d2b03977174f0455df972ae2e95f60a
+source_snapshot_revision: dcfcb2286a531afb39c1c47a56d0b26f7c611a59
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/handoff-writer/SKILL.md
 permission_tier: generate-only
 portability: high
-review_status: unverified
+review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled references ship with the skill folder"
 import_eligibility: review-required
-rationale: "Issue #402 candidate privacy correction at 733b8029063ff057051a61bc270cce138f324c7d: safe artifact pointers and path metadata, no credential fragments, private source read and recipient boundaries. Static semantic review is not security scanner or behavioral acceptance. New exact-package scan and observed agent-host tests remain HOLD."
+rationale: "Source 1.1.3 exact SKILL.md 733b8029063ff057051a61bc270cce138f324c7d and bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed received fresh 18/20 semantic review (docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md). Authority and privacy corrected; whole-package pinned security and independent observed agent-host acceptance NOT RUN. Reference-only/unchanged adoption held."
