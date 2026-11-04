@@ -3,13 +3,13 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 7f152bc910bf5a225170f7ab16c0c47c641613da
+content_blob_sha: 790ed6eaef4acd957bff5f7777202faec579fb65
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
 prior_reviewed_blob_sha: bc90e5248c04c408c8c5a44bea62b1d66a7fb143
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+notes: "2026-11-04 source security revision at 790ed6eaef4acd957bff5f7777202faec579fb65; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
