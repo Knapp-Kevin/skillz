@@ -3,19 +3,19 @@ skill_name: standup-writer
 source_id: local-skills
 local_path: "skills/standup-writer/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: b8473ac1ea68795d9563a21f335b5fd4bc169868
+content_blob_sha: 1812e0ca5845df2563bd888066c8674979bc1a34
 characterized_at: 2026-08-30
-reviewed_at: 2026-11-03
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Exact SKILL.md bytes match a previously static-reviewed source, but no current-package security scan or actual agent behavior has been observed; validation remains not-run.
+validation_note: Static 18/20 exact-current-package review only. This changed package has no matching external security scanner report and no observed agent-host behavioral validation.
 rubric: "docs/skill-verification.md"
-rubric_score: "17/20"
+rubric_score: "18/20"
 tags:
   use_case: [productivity, communication]
   lifecycle: [operations]
   characteristic: [evidence-first, synthesis, traceable, tool-routing]
   authority: [generate-only, external-side-effect]
   portability: [medium]
-notes: "Evidence-only standup with disclosed source gaps; optional future calendar/task access, recurrence, posting and recipients require distinct approval. Behavioral and external package-security qualification are not-run."
+notes: "Private root/profile discovery was removed; user-approved source binding now precedes access. Exact source 1812e0ca5845df2563bd888066c8674979bc1a34 / Git package 7fb796c1d7bb976d6cfaeaf09e62878a90c9050b has static 18/20 review at docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Scanner and host behavior not-run; unchanged use held."
