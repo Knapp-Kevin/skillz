@@ -1189,10 +1189,10 @@
       "skill_name": "standup-writer",
       "local_path": "skills/standup-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b8473ac1ea68795d9563a21f335b5fd4bc169868",
+      "content_blob_sha": "1812e0ca5845df2563bd888066c8674979bc1a34",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "productivity",
@@ -1214,7 +1214,7 @@
           "medium"
         ]
       },
-      "notes": "Evidence-backed standup; collects only approved repository/task/calendar sources, discloses gaps and does not schedule or post without separate continuing-access and recipient authorization. Scanner and observed behavior not-run."
+      "notes": "Exact repaired 1812e0ca5845df2563bd888066c8674979bc1a34 (tree 7fb796c1d7bb976d6cfaeaf09e62878a90c9050b) static semantic 18/20; no implicit private workspace discovery; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security scan/host behavior not-run, unchanged-use held."
     },
     {
       "skill_name": "task-surface",
@@ -1287,10 +1287,10 @@
       "skill_name": "week-in-review",
       "local_path": "skills/week-in-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "f2145e28256ebdfb72b035f1a405fd0e6586c5ba",
+      "content_blob_sha": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "productivity",
@@ -1312,7 +1312,7 @@
           "medium"
         ]
       },
-      "notes": "Source-backed weekly review with honest shipped/stalled/carry-forward; scheduling, saving notes, recipient delivery and recurring private source reads require separate approval; security and agent-behavior checks not-run."
+      "notes": "Exact repaired 5fa0b34372aa28067f41ab19afacbe4430a31b4e (tree 81646a594bf994e24899f7a086d86459cfaa5832) static semantic 18/20; no implicit private workspace discovery; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security scan/host behavior not-run, unchanged-use held."
     },
     {
       "skill_name": "xai-pulse",
