@@ -14,9 +14,9 @@ availability: in-repo
 local_path: skills/inference-pulse/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: stale
+review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
-exact_version_requalification: "New issue #402 source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c: public digest cannot implicitly read operator profiles, host memory or candidate registries; exact current source semantic, scanner and external-host adversarial qualification pending."
+exact_version_requalification: "Current d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic grade 17/20, documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md. Current whole-package security SkillSpector and external-host behavior NOT RUN; unchanged adoption held."
