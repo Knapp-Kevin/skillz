@@ -52,6 +52,6 @@ A user-requested briefing is **one run**, not consent for a persistent weekday r
 
 ## Notes
 
-- Read-only. Calendar and Gmail are consulted through their connected MCP tools only — never raw API calls. Git data comes from local git commands.
+- Read-only. Calendar and mail may be consulted only through explicitly authorized host connectors, when available; do not use raw or self-managed APIs. Git data is optional and may come from authorized local Git or a read-only repository connector within the approved scope. Omit inaccessible sources and identify missing coverage.
 - This skill never sends email or changes calendar events. If an "Act on" item suggests a reply, offer to draft it; drafts are shown for approval and never sent automatically.
 - Authority ordering: calendar is truth for time, git is truth for work state, memory files are hints and may be stale.
