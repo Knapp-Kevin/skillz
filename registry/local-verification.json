@@ -108,8 +108,8 @@
       "skill_name": "career-radar",
       "local_path": "skills/career-radar/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a17f9b53b9ed22c2cd4f715effd73ec7585a316b",
-      "verification_status": "verified",
+      "content_blob_sha": "d2137aa35929e89ae6c86dec2b95a080b53699f0",
+      "verification_status": "unverified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
       "tags": {
@@ -134,7 +134,7 @@
           "medium"
         ]
       },
-      "notes": "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+      "notes": "2026-11-04 issue #478 source-level recurrence/privacy fix at exact Git blob d2137aa35929e89ae6c86dec2b95a080b53699f0; previous rubric score applies only to prior source. Changed package requires independent ten-axis semantic review, security scan and observed adversarial behavior before unchanged use."
     },
     {
       "skill_name": "claude-pulse",
@@ -206,8 +206,8 @@
       "skill_name": "daily-briefing",
       "local_path": "skills/daily-briefing/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "64ee4849a7a06860d8f6ddbd23ae5d42591ffee1",
-      "verification_status": "verified",
+      "content_blob_sha": "469ffb53e5fea34c2300951c59556e95a898ba8f",
+      "verification_status": "unverified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -231,7 +231,7 @@
           "medium"
         ]
       },
-      "notes": "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+      "notes": "2026-11-04 issue #478 source-level recurrence/privacy fix at exact Git blob 469ffb53e5fea34c2300951c59556e95a898ba8f; previous rubric score applies only to prior source. Changed package requires independent ten-axis semantic review, security scan and observed adversarial behavior before unchanged use."
     },
     {
       "skill_name": "decision-log",
@@ -653,8 +653,8 @@
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c265af7280a9819ae1fc80292ba24a77c2b28ccd",
-      "verification_status": "verified",
+      "content_blob_sha": "dac77671b5e707d94856b4bac971f88be1bcf56d",
+      "verification_status": "unverified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -679,7 +679,7 @@
           "medium"
         ]
       },
-      "notes": "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+      "notes": "2026-11-04 issue #478 source-level recurrence/privacy fix at exact Git blob dac77671b5e707d94856b4bac971f88be1bcf56d; previous rubric score applies only to prior source. Changed package requires independent ten-axis semantic review, security scan and observed adversarial behavior before unchanged use."
     },
     {
       "skill_name": "inference-pulse",
@@ -1125,8 +1125,8 @@
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8d78a04e0993069bc3ecc283c756e420969a88d1",
-      "verification_status": "verified",
+      "content_blob_sha": "9480ee456a2f70d964bbf8d2ee555ff523a0cf3a",
+      "verification_status": "unverified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
       "tags": {
@@ -1151,14 +1151,14 @@
           "medium"
         ]
       },
-      "notes": "Action-first cross-repo monitoring with local-only fallback on GitHub-tool failure and no automatic mutation; depends on authenticated/local workspace tooling."
+      "notes": "2026-11-04 issue #478 source-level recurrence/privacy fix at exact Git blob 9480ee456a2f70d964bbf8d2ee555ff523a0cf3a; previous rubric score applies only to prior source. Changed package requires independent ten-axis semantic review, security scan and observed adversarial behavior before unchanged use."
     },
     {
       "skill_name": "smallbiz-ops",
       "local_path": "skills/smallbiz-ops/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e33f99d0585d486a6bb3243aae9402bfc2cac0ec",
-      "verification_status": "verified",
+      "content_blob_sha": "df69ebf178d42fde6c544a56b5b893641a8b3eb8",
+      "verification_status": "unverified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
       "tags": {
@@ -1183,7 +1183,7 @@
           "high"
         ]
       },
-      "notes": "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+      "notes": "2026-11-04 issue #478 source-level recurrence/privacy fix at exact Git blob df69ebf178d42fde6c544a56b5b893641a8b3eb8; previous rubric score applies only to prior source. Changed package requires independent ten-axis semantic review, security scan and observed adversarial behavior before unchanged use."
     },
     {
       "skill_name": "standup-writer",
