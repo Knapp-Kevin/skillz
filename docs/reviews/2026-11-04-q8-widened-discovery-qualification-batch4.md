@@ -57,13 +57,13 @@ Its limits are recorded in plain sight as **"do not run this as written"**:
 - full function needs a Python venv + Streamlit + SQLite, and "BRAINS Certified Gold" is a self-issued badge, not independent accreditation;
 - the BRAINS name, marks and badge are trademark/brand material to strip before any reuse.
 
-**Why this differs from the Boltz hold.** The dual-use science candidate stays *held* because it carries an active safety hazard — its own text pushes host-sandbox escalation, which disclosure cannot neutralize. BRAINS's problems are honesty, quality and rights, which a documented reference caution handles. Featuring a distinct method with its flaws labeled is different from endorsing a package for use; the shelf says study-only, zero unchanged-use approvals.
+**On the Boltz comparison (updated 2026-11-04).** This resume method and the dual-use Boltz method were both first held and later featured study-only, on the same principle: a Valuable Reference is a separable method worth studying, not a package to run, so a flaw in the package does not bury a safe, separable idea. The honesty/quality flaws here, and the dual-use nature and escalation text in Boltz, are documented as firm do-not-run limits; in Boltz's case we additionally reproduce none of its biology or escalation content, because its risk is third-party rather than to the user. Featuring a distinct method with its flaws labeled is different from endorsing a package for use; the shelf says study-only, zero unchanged-use approvals.
 
 Career therefore carries **two distinct methods**: Ghost-job-aware Job Search (finding and scoring postings) and this resume-review method (self-presentation and disclosure).
 
 ## Security scan (static, not a clearance)
 
-Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 45 featured trees: 8 passed / 7 failed / 30 incomplete. Behavioral tests: **not run**.
+Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 46 featured trees: 8 passed / 7 failed / 31 incomplete (Boltz added study-only on reconsideration). Behavioral tests: **not run**.
 
 ## Evidence
 

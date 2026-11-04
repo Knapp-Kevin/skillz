@@ -18,20 +18,22 @@ Method otherwise matches batches 1 and 2: exact pinned tree re-derived (**12 of 
 | Geospatial & Cartographic Visualization | Analytics | **13** | **NO** | **Valuable Reference** |
 | Continuity Check | Fiction | **13** | CONDITIONAL | **Valuable Reference** |
 | Adobe Create Mockups | Visual design | **15** | **NO** | **Valuable Reference** |
-| Boltz Protein Design | Science | 18 | YES | Keep in research (safety hold) |
+| Boltz Protein Design | Science | 18 | YES | **Valuable Reference** (study-only; reconsidered — see below) |
 | Adobe Edit Quick Cut | Video / film | 14 | NO | Keep in research |
 | DSP Algorithm Guide | Audio | 12 | YES | Keep in research |
 | Scene Creator (OpenRAL) | Robotics / IoT | 14 | CONDITIONAL | Keep in research |
 | Bullet Point Rewriter | Career | 13 | CONDITIONAL | Keep in research |
 | Productized Service Blueprint | Business | 10 | CONDITIONAL | Keep in research |
 
-**6 Valuable References in 6 new domains** (ML accelerators, video/film, time/productivity, analytics, fiction, visual design). The shelf grows from **33 methods / 22 domains to 39 / 28**. Unchanged-use approvals stay at **0**.
+**7 Valuable References** (the 6 new domains ML accelerators, video/film, time/productivity, analytics, fiction, visual design, plus Boltz's cost-discipline method in Science after the 2026-11-04 reconsideration). At batch-3 time the shelf grew from **33 methods / 22 domains to 39 / 28**; Boltz's later promotion is reflected in the current 46-method total. Unchanged-use approvals stay at **0**.
 
 A `copy_allowed: NO` method can still be a Valuable Reference, because the shelf publishes only our own plain-English summary of the idea. It means nobody should copy that package's text, and we say why.
 
-## A deliberate safety hold
+## A hold, then reconsidered (2026-11-04): featured study-only
 
-**Boltz Protein Design scored 18/20 but was kept in research, not featured.** Its own instructions tell the agent not to ask permission first for authentication and to request a host sandbox bypass or escalation, and it is a dual-use scientific-design capability with no domain-safety gate. That combination — pressure on host authority plus a dual-use capability — makes it unsuitable for a public featured shelf regardless of its score. The transferable, domain-neutral lesson (scout several cheap options before committing to one expensive run, and gate every paid run on fresh approval) is recorded as salvage only. A high rubric score never overrides this kind of concern.
+**Boltz Protein Design (18/20) was first kept off the shelf, then promoted to a study-only Valuable Reference on reconsideration.** The reasoning that changed: a Valuable Reference features a *method worth studying*, not a package to run, and the method here is **domain-neutral and separable** from the biology — "scout several cheap framings before committing to one expensive generate-and-filter run, and gate every paid run on fresh approval." The original hold conflated a property of the *package* (dual-use biology) with danger in the *method*; the method itself carries no misuse uplift.
+
+What stays firmly documented as **do-not-run** limits on the featured entry: it is a dual-use scientific-design package; it needs a paid vendor account and uploads inputs to the vendor; and **its own text instructs an agent not to ask permission first for authentication and to request a host sandbox bypass/escalation.** Per this library's reference-content rule, those instructions are untrusted data to flag, never to act on. No biology-specific methodology and no escalation text are reproduced in our materials — a reader gets only the cost-discipline idea, which adds no misuse uplift beyond the already-public repository. (The genuine asymmetry from an honesty/quality flaw: the dual-use risk is third-party, not to the user — which is exactly why we feature only the separable, safe method and reproduce none of the hazardous content.)
 
 ## Rights facts worth noting
 

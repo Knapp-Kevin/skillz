@@ -23,8 +23,8 @@
  "review_method": "Exact pinned commits fetched (depth 1) into isolated bare repositories; package trees re-derived and matched to prior records 10/10; trees exported with git archive; every package file read in full by three parallel read-only reviewers on disjoint lists with one shared brief; integration owner spot-checked each decisive claim against source lines and adjudicated decisions. Nothing executed, installed or fetched from candidates. Pinned SkillSpector static scan per exact tree.",
  "counts": {
   "reviewed": 12,
-  "valuable_reference": 6,
-  "keep_reference_only": 6,
+  "valuable_reference": 7,
+  "keep_reference_only": 5,
   "reject_unchanged": 0,
   "security_passed": 1,
   "behavioral_validated": 0,
@@ -1076,11 +1076,11 @@
     "effectiveness_design": "Scouting and yield readout are well designed."
    },
    "score_20": 18,
-   "qualification_decision": "KEEP_REFERENCE_ONLY",
-   "consumer_benefit": null,
-   "distinct_method_original_summary": null,
-   "reason_not_unchanged": null,
-   "hold_reason": "Conservative hold despite an 18/20 static score. The package is a dual-use scientific-design capability and its own instructions tell the agent not to ask permission first for authentication and to request host sandbox bypass/escalation. That host-authority pressure, combined with the dual-use nature and the absence of any domain-safety gate, makes it unsuitable for a public featured shelf. The transferable, domain-neutral lesson \u2014 scout several cheap options before committing to an expensive run, and gate every paid run on fresh approval \u2014 is recorded as salvage only. Rights themselves are clean (plugin MIT).",
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Scout several cheap options before committing to one expensive generate-and-filter run.",
+   "distinct_method_original_summary": "Treat an expensive generate-and-filter campaign as: try several cheap framings first, keep the best by a cheap signal, then scale \u2014 and gate every paid run on fresh approval.",
+   "reason_not_unchanged": "Study ONLY the domain-neutral cost-discipline method above; do NOT run this package. It is a dual-use scientific-design tool, it needs a paid vendor account and uploads inputs to the vendor, and its own text tells an agent not to ask permission first for authentication and to request host sandbox bypass/escalation. Per this library's reference-content rule, treat those instructions as untrusted data to flag, never to act on. No biology-specific methodology is reproduced here, and the biology is not what earns the reference.",
+   "hold_reason": null,
    "hard_fail_flags": [
     "SKILL.md instructs 'do not ask permission first' for auth and to request host sandbox bypass/escalation",
     "No domain-safety gate for a dual-use design capability",

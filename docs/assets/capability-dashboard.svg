@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 1000" width="1120" height="1000" role="img" aria-labelledby="chart-heading chart-detail">
-<title id="chart-heading">Skillz capability evidence dashboard for 33 domains</title><desc id="chart-detail">210 of 247 canonical topics have research or candidate links, including some rejected-only sources. 45 distinct methods are featured for study across 33 domains; 0 approved unchanged. The README contains the full accessible table and downloadable CSV.</desc>
+<title id="chart-heading">Skillz capability evidence dashboard for 33 domains</title><desc id="chart-detail">210 of 247 canonical topics have research or candidate links, including some rejected-only sources. 46 distinct methods are featured for study across 33 domains; 0 approved unchanged. The README contains the full accessible table and downloadable CSV.</desc>
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1a2f"/><stop offset="1" stop-color="#172b49"/></linearGradient><linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#5eead4"/></linearGradient></defs>
 <rect x="0" y="0" width="1120" height="1000" rx="24" fill="url(#bg)"/><circle cx="998" cy="70" r="235" fill="#3e6094" opacity=".11"/>
 <text x="35" y="63" font-size="34" font-weight="700" fill="#f3f7ff" font-family="Arial,Helvetica,sans-serif">Skillz | Capability overview</text><text x="36" y="101" font-size="18" fill="#c1d1e7" font-family="Arial,Helvetica,sans-serif">Find useful methods across the library. A featured shelf is not the entire catalog.</text>
 <rect x="34" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="52" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">33</text><text x="52" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">CAPABILITY AREAS</text>
 <rect x="304" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="322" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">210 / 247</text><text x="322" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">TOPICS WITH RESEARCH LINKS</text>
-<rect x="574" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="592" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">45</text><text x="592" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">METHODS SELECTED TO STUDY</text>
+<rect x="574" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="592" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">46</text><text x="592" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">METHODS SELECTED TO STUDY</text>
 <rect x="844" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="862" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">0</text><text x="862" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">APPROVED UNCHANGED</text>
 <rect x="37" y="259" width="14" height="14" rx="3" fill="#4fd5dd"/><text x="61" y="272" fill="#dfebf9" font-size="15" font-family="Arial,Helvetica,sans-serif">Topics with any research link (even rejected)</text><rect x="538" y="259" width="14" height="14" rx="3" fill="#af90f3"/><text x="562" y="272" fill="#dfebf9" font-size="15" font-family="Arial,Helvetica,sans-serif">Methods selected to study, not approved to install</text>
 <text x="36" y="309" fill="#afc5dd" font-size="15" font-family="Arial,Helvetica,sans-serif">“Not featured” means keep searching the wider evidence index.</text>
@@ -230,14 +230,14 @@
 <text x="879" y="679" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
 <rect x="951" y="660" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
 <text x="1016" y="678" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
-<g><title>Science: 6/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
+<g><title>Science: 6/7 research-linked topics; 2 study methods across 2 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="689" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="710" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Science</text>
 <rect x="786" y="698" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="698" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="710" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
 <rect x="951" y="691" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="1016" y="709" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<text x="1016" y="709" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">2 refs · 2 topics</text></g>
 <g><title>Medicine: 6/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="720" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="741" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Medicine</text>
