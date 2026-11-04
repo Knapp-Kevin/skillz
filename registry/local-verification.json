@@ -108,7 +108,7 @@
       "skill_name": "career-radar",
       "local_path": "skills/career-radar/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d2137aa35929e89ae6c86dec2b95a080b53699f0",
+      "content_blob_sha": "c93581c94e5a0af24e6805bd1f9f565a3e34efcc",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -134,7 +134,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 current exact-blob ten-axis source semantic review 18/20: docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md. Static reading only; external scanner, executed adversarial validation, approved unchanged use and PR merge NOT established."
+      "notes": "2026-11-04 current exact-source SHA c93581c94e5a0af24e6805bd1f9f565a3e34efcc Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "claude-pulse",
@@ -206,7 +206,7 @@
       "skill_name": "daily-briefing",
       "local_path": "skills/daily-briefing/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "eef59ac687d24e0b40609149860993592ae13f23",
+      "content_blob_sha": "59bcb56d5a39ea06c6518b0c715026eb308beac2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -231,7 +231,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 current exact-blob ten-axis source semantic review 17/20: docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md. Static reading only; external scanner, executed adversarial validation, approved unchanged use and PR merge NOT established."
+      "notes": "2026-11-04 current exact-source SHA 59bcb56d5a39ea06c6518b0c715026eb308beac2 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "decision-log",
@@ -653,7 +653,7 @@
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9010c33b6d3478736cd0fdfce46962bb7166477c",
+      "content_blob_sha": "9326d7a691e40ff30a07a71738b13a04117206d6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -679,7 +679,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 current exact-blob ten-axis source semantic review 18/20: docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md. Static reading only; external scanner, executed adversarial validation, approved unchanged use and PR merge NOT established."
+      "notes": "2026-11-04 current exact-source SHA 9326d7a691e40ff30a07a71738b13a04117206d6 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "inference-pulse",
@@ -1125,7 +1125,7 @@
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1ea83e99c9186ce92ee30abde42d3dccba06eb5b",
+      "content_blob_sha": "920e9cf3834527f3c110a24a0b5034a37c753de1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1151,13 +1151,13 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 current exact-blob ten-axis source semantic review 18/20: docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md. Static reading only; external scanner, executed adversarial validation, approved unchanged use and PR merge NOT established."
+      "notes": "2026-11-04 current exact-source SHA 920e9cf3834527f3c110a24a0b5034a37c753de1 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "smallbiz-ops",
       "local_path": "skills/smallbiz-ops/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "df69ebf178d42fde6c544a56b5b893641a8b3eb8",
+      "content_blob_sha": "38e1b266de255d38c94b2a32601c9f83f0926b51",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1183,7 +1183,7 @@
           "high"
         ]
       },
-      "notes": "2026-11-04 current exact-blob ten-axis source semantic review 18/20: docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md. Static reading only; external scanner, executed adversarial validation, approved unchanged use and PR merge NOT established."
+      "notes": "2026-11-04 current exact-source SHA 38e1b266de255d38c94b2a32601c9f83f0926b51 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "standup-writer",
