@@ -1,13 +1,13 @@
 {
   "schema_version": "skillz-q12-exact-featured-security-reconciliation-v1",
   "as_of": "2026-11-03",
-  "recorded_against_q8_head": "488316b12e83a62befc1120d5784b4151b030b90",
+  "recorded_against_q8_head": "d3aaaa29f84b81e1905b295adb3657348551b9d8",
   "recorded_q8_proposal_state": "DRAFT_NOT_MERGED",
   "root_q7_main_checkpoint": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
   "source_ledgers": [
     {
       "path": "registry/consumer-positive-references-q8-20261103.json",
-      "git_blob_sha": "e092a50fe32fc3e850dbf446961520d444b81b6b"
+      "git_blob_sha": "bfeda49f75d676fa24439e7eb56c831584381fd5"
     },
     {
       "path": "registry/security/external-host-skillspector-featured-20261103.json",
@@ -27,21 +27,21 @@
     },
     {
       "path": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
-      "git_blob_sha": "fa159c067dfdbd11b8950e3f806c6b9cacd0b122"
+      "git_blob_sha": "1c4f8d81cffa4d359334ed0ec20d5aebb31c469b"
     },
     {
       "path": "registry/qualification-pipeline-20261103.json",
-      "git_blob_sha": "27762d07fef226a9fe4996bc1e71215e4ce3f3be"
+      "git_blob_sha": "18a8ab6f364d7e168b2c00edabb3a128591923ec"
     }
   ],
   "meaning": "A read-only, source-pin-checked JOIN of Q7 external reports and Q8 newly reviewed candidate scan records; not a new scan, not a semantic approval.",
   "totals": {
-    "featured": 46,
-    "pass": 8,
+    "featured": 50,
+    "pass": 10,
     "fail": 7,
-    "incomplete": 31,
+    "incomplete": 33,
     "from_q7_external": 20,
-    "from_q8_new_selection": 26,
+    "from_q8_new_selection": 30,
     "legacy_catalog_not_run_labels_resolved": 20,
     "unchanged_use_approvals": 0,
     "behaviorally_validated": 0
@@ -53,13 +53,13 @@
       "incomplete": 12
     },
     "q8_batch_reviews": {
-      "passed": 3,
+      "passed": 5,
       "failed": 4,
-      "incomplete": 19
+      "incomplete": 21
     }
   },
   "incomplete_reason_occurrences": {
-    "reference_missing": 163,
+    "reference_missing": 167,
     "obfuscated_instruction_text": 5,
     "static_parse_limit": 8,
     "analyzer_runtime_error": 1
@@ -2024,6 +2024,204 @@
       "behavioral_validation": "NOT_RUN",
       "approved_unchanged": false,
       "next_gate": "Resolve incomplete scan and material paid-external-egress, permission-bypass and dual-use safety issues; no direct execution clearance"
+    },
+    {
+      "id": "koltyj-REW-mcp/room-acoustics",
+      "name": "Room Acoustics (REW)",
+      "domain": "audio-voice-sound",
+      "source": {
+        "repository": "koltyj/REW-mcp",
+        "revision": "1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5",
+        "package_tree_sha": "fce509678b29c12282e22287b6994bcdb8d600a0",
+        "skill_md_blob_sha": "6698696d5b3ab5f7c8d7bd404b106a6ddb1debff"
+      },
+      "original_catalog_security_label": "passed (pinned SkillSpector static gate; not a clearance)",
+      "gate_state": "passed",
+      "gate_scope": "EXACT_PINNED_SOURCE_STATIC_SCAN_ONLY",
+      "evidence": {
+        "origin": "Q8_BATCH_4_PINNED_REVIEW",
+        "ledger": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+        "report_sha256": "ab993f38de607d4eabd9f95579955b8d4a13575359e1f20a197a9cdba65d2771",
+        "scanner_name": "NVIDIA SkillSpector",
+        "scanner_version": "v2.12.0",
+        "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+        "llm_requested": false
+      },
+      "findings": [],
+      "incomplete_reasons": {},
+      "rights_label": "MIT (root; see rights_review)",
+      "copy_allowed": "YES",
+      "behavioral_validation": "NOT_RUN",
+      "approved_unchanged": false,
+      "next_gate": "Static pass only. Rights, hardware and tool behavior need independent acceptance."
+    },
+    {
+      "id": "rerun-io-rerun/rerun-urdf",
+      "name": "Rerun URDF Ingestion",
+      "domain": "robotics-iot",
+      "source": {
+        "repository": "rerun-io/rerun",
+        "revision": "6f39b09211b869d6e262083cfddefa392244088d",
+        "package_tree_sha": "d975189711aed05aadcbc93426906631df481b7e",
+        "skill_md_blob_sha": "b5a634f97b0dd20a0bb92a6fe294635cebc219c3"
+      },
+      "original_catalog_security_label": "incomplete (pinned SkillSpector static gate; not a clearance)",
+      "gate_state": "incomplete",
+      "gate_scope": "EXACT_PINNED_SOURCE_STATIC_SCAN_ONLY",
+      "evidence": {
+        "origin": "Q8_BATCH_4_PINNED_REVIEW",
+        "ledger": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+        "report_sha256": "3ed9476ebd8feae2d02cace91cc814f6c72c6c8dc2232d472745fbbdc16ec3a6",
+        "scanner_name": "NVIDIA SkillSpector",
+        "scanner_version": "v2.12.0",
+        "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+        "llm_requested": false
+      },
+      "findings": [
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 32,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 32,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 35,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 36,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 38,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 39,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "P9",
+          "pattern": "Whitespace Padding",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 40,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        }
+      ],
+      "incomplete_reasons": {
+        "reference_missing": 3
+      },
+      "rights_label": "Apache-2.0 (root; see rights_review)",
+      "copy_allowed": "CONDITIONAL",
+      "behavioral_validation": "NOT_RUN",
+      "approved_unchanged": false,
+      "next_gate": "Resolve missing references and authority/rights risks before any gate relaxation."
+    },
+    {
+      "id": "robium-ai-robium/navigation",
+      "name": "Nav2 Navigation Debugging",
+      "domain": "robotics-iot",
+      "source": {
+        "repository": "robium-ai/robium",
+        "revision": "ce944953d11ccdbd32613c4746389bc78a24e8c5",
+        "package_tree_sha": "70a2f22f944cf72fd6ce3a938f5858ca3b33b24e",
+        "skill_md_blob_sha": "3e251623f4c0fe4c913535980074c6537dcbc83e"
+      },
+      "original_catalog_security_label": "passed (pinned SkillSpector static gate; not a clearance)",
+      "gate_state": "passed",
+      "gate_scope": "EXACT_PINNED_SOURCE_STATIC_SCAN_ONLY",
+      "evidence": {
+        "origin": "Q8_BATCH_4_PINNED_REVIEW",
+        "ledger": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+        "report_sha256": "10b403df184321497dbc0ba4886600929f56242c70d70dacb091614068ca2eb7",
+        "scanner_name": "NVIDIA SkillSpector",
+        "scanner_version": "v2.12.0",
+        "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+        "llm_requested": false
+      },
+      "findings": [],
+      "incomplete_reasons": {},
+      "rights_label": "MIT (root; see rights_review)",
+      "copy_allowed": "YES",
+      "behavioral_validation": "NOT_RUN",
+      "approved_unchanged": false,
+      "next_gate": "Static pass only. Rights, hardware and tool behavior need independent acceptance."
+    },
+    {
+      "id": "matlab-matlab-agentic-toolkit/matlab-analyze-reliability",
+      "name": "MATLAB Reliability Analysis",
+      "domain": "science",
+      "source": {
+        "repository": "matlab/matlab-agentic-toolkit",
+        "revision": "032b4b605999b1f4adecaac1efa1c9faad41adf6",
+        "package_tree_sha": "c2476dd8fcc5144429d69a477f41ec0d91d76f25",
+        "skill_md_blob_sha": "ed98b6f3ce8ea52e8d3d6b3c19d515e88b3350ed"
+      },
+      "original_catalog_security_label": "incomplete (pinned SkillSpector static gate; not a clearance)",
+      "gate_state": "incomplete",
+      "gate_scope": "EXACT_PINNED_SOURCE_STATIC_SCAN_ONLY",
+      "evidence": {
+        "origin": "Q8_BATCH_4_PINNED_REVIEW",
+        "ledger": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+        "report_sha256": "018e5c3d5c1829fc49b8a0331ef8c95a4bccc79828aaa696ef05cf75f96ddc60",
+        "scanner_name": "NVIDIA SkillSpector",
+        "scanner_version": "v2.12.0",
+        "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+        "llm_requested": false
+      },
+      "findings": [
+        {
+          "id": "P4",
+          "pattern": "Behavior Manipulation",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 172,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        }
+      ],
+      "incomplete_reasons": {
+        "reference_missing": 1
+      },
+      "rights_label": "BSD-3-Clause-style (MathWorks) (root; see rights_review)",
+      "copy_allowed": "CONDITIONAL",
+      "behavioral_validation": "NOT_RUN",
+      "approved_unchanged": false,
+      "next_gate": "Resolve missing references and authority/rights risks before any gate relaxation."
     }
   ]
 }
