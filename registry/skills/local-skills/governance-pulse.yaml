@@ -7,7 +7,7 @@ source_path: skills/governance-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 1e4467a38bd47b4c20d7c0edfa6b768599fb6275
+source_snapshot_revision: dd35bd8295df4f57f9e586597cbc1173e9ba552d
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
-exact_version_requalification: "Required for d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
+exact_version_requalification: "Required for 5cff5684b7e339a0d52aad8533d9715bedbc5923. Public-only news digest and authorization-gated source/account changes; scanner and agent-host tests have not been rerun for this exact package."
