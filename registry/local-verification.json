@@ -590,9 +590,9 @@
       "local_path": "skills/handoff-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
       "content_blob_sha": "733b8029063ff057051a61bc270cce138f324c7d",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "not-requalified",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "handoff",
@@ -616,7 +616,7 @@
           "high"
         ]
       },
-      "notes": "2026-11-04 handoff-writer 1.1.3 exact source 733b8029063ff057051a61bc270cce138f324c7d. Credential fragments and sensitive path/artifact metadata redacted; authorized source and recipient gates enforced in instructions. Former 20/20 static score is historical; current exact version semantic/scanner/observed host behavior pending. No unchanged use approval."
+      "notes": "2026-11-04 exact Handoff Writer 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed and whole package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff. Current source-semantic 18/20 and 14/14 bounded source checks only; scanner and actual host behavior NOT RUN, no unchanged-use approval. See docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md."
     },
     {
       "skill_name": "hf-pulse",
