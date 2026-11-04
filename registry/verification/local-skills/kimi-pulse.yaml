@@ -3,13 +3,13 @@ skill_name: kimi-pulse
 source_id: local-skills
 local_path: "skills/kimi-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 3e2e6cc836ddb05e0da6a7dafb7048a30fd9921e
+content_blob_sha: 6625f147011dfd38ed2b9881eda2d5ea62e2ece4
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
 prior_reviewed_blob_sha: 4d8935ea2d8006ea277ab1371f419c723a867643
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability."
+notes: "2026-11-04 source security revision at 6625f147011dfd38ed2b9881eda2d5ea62e2ece4; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
