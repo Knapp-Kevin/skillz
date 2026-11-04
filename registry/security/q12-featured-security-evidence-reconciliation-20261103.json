@@ -1,13 +1,13 @@
 {
   "schema_version": "skillz-q12-exact-featured-security-reconciliation-v1",
   "as_of": "2026-11-03",
-  "recorded_against_q8_head": "e49df7b5832caefd1e611a2d3b6f614eac4d8cbf",
+  "recorded_against_q8_head": "488316b12e83a62befc1120d5784b4151b030b90",
   "recorded_q8_proposal_state": "DRAFT_NOT_MERGED",
   "root_q7_main_checkpoint": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
   "source_ledgers": [
     {
       "path": "registry/consumer-positive-references-q8-20261103.json",
-      "git_blob_sha": "f722b4a3331dcb3454f24e95e75ecb9177071e66"
+      "git_blob_sha": "e092a50fe32fc3e850dbf446961520d444b81b6b"
     },
     {
       "path": "registry/security/external-host-skillspector-featured-20261103.json",
@@ -23,7 +23,7 @@
     },
     {
       "path": "registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
-      "git_blob_sha": "dfb73538a285d69c7ac0c0b276772c5b0273c21d"
+      "git_blob_sha": "da71eaf9cd3f08242daaa02dc76d068a63294017"
     },
     {
       "path": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
@@ -31,17 +31,17 @@
     },
     {
       "path": "registry/qualification-pipeline-20261103.json",
-      "git_blob_sha": "ffb491a8b0b66b1c1ad07e1f93dbd2f2b64bda86"
+      "git_blob_sha": "27762d07fef226a9fe4996bc1e71215e4ce3f3be"
     }
   ],
   "meaning": "A read-only, source-pin-checked JOIN of Q7 external reports and Q8 newly reviewed candidate scan records; not a new scan, not a semantic approval.",
   "totals": {
-    "featured": 45,
+    "featured": 46,
     "pass": 8,
     "fail": 7,
-    "incomplete": 30,
+    "incomplete": 31,
     "from_q7_external": 20,
-    "from_q8_new_selection": 25,
+    "from_q8_new_selection": 26,
     "legacy_catalog_not_run_labels_resolved": 20,
     "unchanged_use_approvals": 0,
     "behaviorally_validated": 0
@@ -55,13 +55,14 @@
     "q8_batch_reviews": {
       "passed": 3,
       "failed": 4,
-      "incomplete": 18
+      "incomplete": 19
     }
   },
   "incomplete_reason_occurrences": {
-    "reference_missing": 158,
+    "reference_missing": 163,
     "obfuscated_instruction_text": 5,
-    "static_parse_limit": 7
+    "static_parse_limit": 8,
+    "analyzer_runtime_error": 1
   },
   "reason_count_limit": "Reasons are scanner occurrences; multiple reasons can affect one package. Do not sum reason occurrences as unique packages.",
   "scanner": "NVIDIA SkillSpector 2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc; --no-llm --fail-on-findings --fail-on-incomplete",
@@ -1952,6 +1953,77 @@
       "behavioral_validation": "NOT_RUN",
       "approved_unchanged": false,
       "next_gate": "Resolve scanner-coverage limits, missing refs and material risk before any gate relaxation"
+    },
+    {
+      "id": "openai-plugins/boltz-api-cli/boltz-protein-design",
+      "name": "Boltz Protein Design",
+      "domain": "science",
+      "source": {
+        "repository": "openai/plugins",
+        "revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "package_tree_sha": "112d62fe98fa15e925322b5a8eb6e561a751c25d",
+        "skill_md_blob_sha": "48694b2a053d66a763e122e1e9173f6071a2c3e4"
+      },
+      "original_catalog_security_label": "incomplete (pinned SkillSpector static gate; not a clearance)",
+      "gate_state": "incomplete",
+      "gate_scope": "EXACT_PINNED_SOURCE_STATIC_SCAN_ONLY",
+      "evidence": {
+        "origin": "Q8_BATCH_3_PINNED_REVIEW",
+        "ledger": "registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+        "report_sha256": "e01bd6be50484d9da6552dc33665df51a451fe92494945b6faa3e4ddde17131b",
+        "scanner_name": "NVIDIA SkillSpector",
+        "scanner_version": "v2.12.0",
+        "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+        "llm_requested": false
+      },
+      "findings": [
+        {
+          "id": "RA2",
+          "pattern": "Session Persistence",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 67,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "E1",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "file": "SKILL.md",
+          "line": 99,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "E1",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "file": "references/api.md",
+          "line": 294,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        },
+        {
+          "id": "SC4",
+          "pattern": "🟡 SC4: OSV.dev unreachable, using static fallback (15 packages). Results may be incomplete. Set SKILLSPECTOR_OSV_TIMEOUT to increase timeout or check network connectivity to api.osv.dev.",
+          "severity": "LOW",
+          "file": "scripts/requirements.txt",
+          "line": 1,
+          "host_disposition": null,
+          "accepted_by_maintainer": false
+        }
+      ],
+      "incomplete_reasons": {
+        "reference_missing": 5,
+        "analyzer_runtime_error": 1,
+        "static_parse_limit": 1
+      },
+      "rights_label": "boltz-api-cli plugin ships LICENSE (MIT) and plugin.json declares MIT. Clean (applies to bundled scripts too).",
+      "copy_allowed": "YES",
+      "behavioral_validation": "NOT_RUN",
+      "approved_unchanged": false,
+      "next_gate": "Resolve incomplete scan and material paid-external-egress, permission-bypass and dual-use safety issues; no direct execution clearance"
     }
   ]
 }
