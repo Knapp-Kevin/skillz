@@ -7,15 +7,15 @@ source_path: skills/career-radar/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: f2e0f7b910a4b55f50aa052d20310747168270ff
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/career-radar/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: verified-structured
+review_status: unverified
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+import_eligibility: review-required
+rationale: "Issue #478: current source now requires scoped one-time private reads and separate approval for future schedules, recipients, retention, cost and revocation. Prior rubric grade describes the old fingerprint only; new exact package needs independent semantic/security and host adversarial qualification before unchanged use."
