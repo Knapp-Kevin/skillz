@@ -3,19 +3,19 @@ skill_name: handoff-writer
 source_id: local-skills
 local_path: "skills/handoff-writer/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: a0fdd6b85f21ec009d3822f8f232fbfe3538b12b
+content_blob_sha: 733b8029063ff057051a61bc270cce138f324c7d
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
 verification_status: unverified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Security/privacy source changed on 2026-11-04. New exact version is not yet semantically qualified, not rescanned by SkillSpector and not behaviorally validated. Old rubric score is historical only.
+validation_note: New exact 2026-11-04 source version 1.1.3; independent whole-package SkillSpector and agent-host behavioral acceptance NOT RUN.
 rubric: "docs/skill-verification.md"
-rubric_score: "20/20"
+rubric_score: "not-requalified"
 tags:
   use_case: [handoff, documentation, communication]
   lifecycle: [release, maintenance]
   characteristic: [evidence-first, traceable, context-efficient, risk-aware]
   authority: [generate-only]
   portability: [high]
-notes: "Prior 20/20 score is from the former source blob. Current source addresses short-prefix leak and unauthorized private source/recipient expansion, but is held for current-version review and external security qualification."
+notes: "Current 733b8029063ff057051a61bc270cce138f324c7d updated private source/path and credential-fragment controls. Former 20/20 score belongs to a different source blob and is not inherited."
