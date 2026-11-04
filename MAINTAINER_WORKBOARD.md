@@ -4,6 +4,8 @@
 
 **Checked November 3, 2026:** **10 open draft PRs** and **12 open issues**. This inventory was captured **before opening hygiene PR #701**, so the live PR count increased to **11** afterward; #701 is the workboard itself, not an omitted review task. Merged `main` at `e083c47f13a8` still features **20 study references in 10 domains**; [Q8 draft #693](https://github.com/Knapp-Kevin/skillz/pull/693) proposes **50 across 33 domains**. Its source security breakdown is **10 pass, 7 fail, 33 incomplete; 0 unchanged-use approvals; 0 observed behavioral validations**. Those drafts have **not** been published to main.
 
+**Backlog scale:** Q8's pinned qualification queue reports **1,522 reference-only candidate entries**. That is a review queue, **not** the total number of distinct eligible skills or unchanged-use approvals. Continue discovery under #599 and risk-tiered evaluation under #624 without claiming this is the full universe.
+
 ## Next three maintenance actions
 
 1. **Fix shipped first-party instructions safely.** [#673](https://github.com/Knapp-Kevin/skillz/pull/673) repairs 16 removed pulse-runner paths, but 3 scanner failures and 3 incomplete scans remain. [#686](https://github.com/Knapp-Kevin/skillz/pull/686) fixes five secret/privacy instructions and has 5/5 scanner passes, but still lacks executed adversarial permission and leakage tests. Reconcile exact current package identities and linked review registries before any merge. Track through [#415](https://github.com/Knapp-Kevin/skillz/issues/415), [#491](https://github.com/Knapp-Kevin/skillz/issues/491), [#402](https://github.com/Knapp-Kevin/skillz/issues/402).
