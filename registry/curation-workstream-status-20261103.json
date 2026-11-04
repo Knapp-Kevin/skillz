@@ -39,11 +39,11 @@
   "q10": {
     "pr": 698,
     "url": "https://github.com/Knapp-Kevin/skillz/pull/698",
-    "head_sha": "7fb247d8a25c1c2ed56cd7c469509df0b8af1241",
+    "head_sha": "a97b46a361e1fa9fe178548a377e5a2d19e9b7f3",
     "state": "DRAFT_STATIC_REVIEWS_ONLY",
-    "individually_reviewed": 6,
-    "remaining_q9_entrypoints": 2,
-    "promising_but_held": 2,
+    "individually_reviewed": 7,
+    "remaining_q9_entrypoints": 1,
+    "promising_but_held": 3,
     "other_held": 4,
     "featured_promotions": 0,
     "security_scans_run": 0,
@@ -84,13 +84,19 @@
         "score": 11,
         "decision": "REJECT_UNCHANGED",
         "domain": "robotics-iot"
+      },
+      {
+        "name": "Resemble Detect",
+        "score": 13,
+        "decision": "PROMISING_HELD",
+        "domain": "audio-voice-sound"
       }
     ],
-    "source_on_unmerged_branch": "registry/discovery/q10-business-career-three-static-20261103.json; q10-science-literature-survey-static-20261103.json; q10-audio-sound-design-sixteen-file-static-20261103.json; q10-robotics-testing-single-file-static-20261103.json"
+    "source_on_unmerged_branch": "registry/discovery/q10-business-career-three-static-20261103.json; q10-science-literature-survey-static-20261103.json; q10-audio-sound-design-sixteen-file-static-20261103.json; q10-robotics-testing-single-file-static-20261103.json; q10-resemble-detect-hosted-static-20261103.json"
   },
   "interpretation": [
     "Q8 is a draft, so its 44 methods and 33-domain shelf are proposed rather than merged main numbers.",
-    "Q9 entries are not independent of Q10 reviews: Q10 statically reviews six of the same eight leads; never add 8 and 6.",
+    "Q9 entries are not independent of Q10 reviews: Q10 statically reviews seven of the same eight leads; never add 8 and 6.",
     "Q8 featured methods are study-only; a security scan pass does not grant installation authority, and failed/incomplete states are not passed.",
     "Q9/Q10 sources live on separate draft branches pinned above, and are not in Q8/main's ledgers. Refresh this snapshot by evidence review, not by silently auto-rolling branch HEAD."
   ]
