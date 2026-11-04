@@ -3,7 +3,7 @@ skill_name: repo-pulse
 source_id: local-skills
 local_path: "skills/repo-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 1ea83e99c9186ce92ee30abde42d3dccba06eb5b
+content_blob_sha: 920e9cf3834527f3c110a24a0b5034a37c753de1
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
 verification_status: verified
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, tool-assisted, synthesis, risk-aware]
   authority: [read-only]
   portability: [medium]
-notes: "New exact-version ten-axis source-level rubric in docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md; 18/20, not inherited from prior source. See documented missing-source, private-read, scheduler and prompt-injection constraints. Security scan and executed adversarial validation not-run."
+notes: "Current exact-version 920e9cf3834527f3c110a24a0b5034a37c753de1 re-read after addition of sensitive-output guard; Q15 source-semantic grade 18/20 remains supported by unchanged trigger/procedure and strengthened privacy boundaries. This is static review only. External whole-package security and actual host behavior remain not-run."
