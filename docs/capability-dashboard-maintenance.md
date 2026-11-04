@@ -34,6 +34,8 @@ node scripts/build-public-security-status.mjs
 node scripts/build-public-security-status.mjs --check
 ```
 
+The public security graphic generator now **fails closed on security-evidence drift**. It verifies repair counts and all 34 package identities against `registry/security/active-first-party-repair-frontier-20261104.json`, and ties every recorded current-tree static PASS to the matching exact package-tree and SHA-256 receipt in `registry/security/external-host-skillspector-first-party-20261103.json`. It rejects a stale repair PR head, inflated pass totals, duplicate package identity, unknown security state, and mismatched scanner receipt. Its `--self-test` includes adversarial mutations of those inputs. These are **local integrity checks of existing evidence**, not new SkillSpector scans or behavioral qualification. When new external scanner evidence is accepted, update the canonical source and the generator's explicitly supported source set before publishing a changed status chart. Never bypass the guard by changing only the public counts.
+
 Check the chart visually: its section labels, number alignment, and bar legend must remain readable. Link the release/PR and timestamp in the JSON note. Never count the overlapping 51 first-party/engine scan trees and 50 Q8 study-reference scan trees as 101 distinct skills; never infer unchanged-use approval from static scanner passes. Issue [#402](https://github.com/Knapp-Kevin/skillz/issues/402) is open until final exact-tree security and behavioral acceptance actually passes.
 
 
