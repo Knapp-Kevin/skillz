@@ -21,7 +21,10 @@ function dashboardData(audit,catalog,manifest){
    if(!domainIDs.has(x.domain))throw Error(`Selected method outside canonical domain: ${x.name}/${x.domain}`);
    const d=audit.domains.find(d=>d.id===x.domain);
    if(!d.subdomains.some(s=>s.id===x.subdomain))throw Error(`Selected method outside canonical subdomain: ${x.name}/${x.subdomain}`);
-   const key=x.id||`${x.source?.repository}/${x.source?.path}`||x.name;
+   const source=x.source;
+   const hasPinnedSource=!!(source?.repository&&source?.pin&&source?.path);
+   const key=x.id|| (hasPinnedSource?`${source.repository}@${source.pin}/${source.path}`:null);
+   if(!key||typeof key!=="string")throw Error(`Selected method has no stable ID or complete pinned source identity: ${x.name||"(unnamed)"}`);
    if(refs.has(key))throw Error(`Duplicate selected method: ${key}`);
    refs.add(key);
  }
@@ -177,6 +180,15 @@ function selfTest(){
  const once=updateReadme(intro,body),twice=updateReadme(once,body);
  if(once!==twice||!once.includes("## Our featured methods:")||once.includes("\nOLD\n"))throw Error("README idempotence failed");
  try{dashboardData(fixture,{...catalog,valuable_references:[{id:"a",domain:"wrong",subdomain:"one"}]},manifest);throw Error("Expected invalid mapping error")}catch(e){if(e.message==="Expected invalid mapping error")throw e;}
+ // Regression: entries without IDs must have an exact pinned source identity;
+ // the former fallback silently constructed the bogus key "undefined/undefined".
+ const sourceOnly={name:"Pinned method",domain:"fiction",subdomain:"one",source:{repository:"owner/repo",pin:"abcdef123",path:"skills/method/SKILL.md"}};
+ const noIdCatalog={...catalog,valuable_references:[sourceOnly]};
+ if(dashboardData(fixture,noIdCatalog,manifest).totals.reference_methods!==1)throw Error("Pinned source identity fallback failed");
+ const assertRejected=(value,description)=>{try{dashboardData(fixture,{...catalog,valuable_references:[value]},manifest);throw Error("Expected identity rejection: "+description)}catch(e){if(e.message==="Expected identity rejection: "+description)throw e;}};
+ assertRejected({name:"Missing identity",domain:"fiction",subdomain:"one"},"missing ID and source");
+ assertRejected({...sourceOnly,source:{repository:"owner/repo",path:"skills/method/SKILL.md"}},"missing source pin");
+ try{dashboardData(fixture,{...catalog,valuable_references:[sourceOnly,sourceOnly],starter_shelf_totals:{...catalog.starter_shelf_totals,valuable_reference:2}},manifest);throw Error("Expected duplicate pinned identity")}catch(e){if(e.message==="Expected duplicate pinned identity")throw e;}
  const pipe={as_of:"2026-11-03",stages:[{id:"decisions",label:"Decisions",value:3,population:"exact keys",source:"x.json",parts:{reject:2,reference:1},parts_sum_to_value:true},{id:"eligible",label:"Eligible",value:"UNKNOWN",population:"distinct eligible",source:"x.json"},{id:"positively_selected",label:"Selected",value:1,population:"refs",source:"c.json"},{id:"approved_unchanged",label:"Approved",value:0,population:"approved",source:"c.json"}]};
  const p=pipelineData(pipe,catalog),pm=pipelineMarkdown({...p,source:"x.json"}).join("\n");
  if(!pm.includes("**UNKNOWN**")||!pm.includes("Do not add rows together"))throw Error("Pipeline UNKNOWN or non-additive warning missing");
