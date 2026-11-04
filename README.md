@@ -106,6 +106,29 @@ Each row counts a **different population** with its own denominator. **Do not ad
 *As of 2026-11-03. The research links are from a historical audit; not every candidate is useful. All-corpus qualification totals remain unknown. Never add topic-link counts to selected-method counts.*
 <!-- SKILLZ_CAPABILITY_DASHBOARD:END -->
 
+<!-- SKILLZ_WORKSTREAM_PROGRESS:START | generated: scripts/build-workstream-progress.mjs -->
+### Qualification progress: what is merged and what is still in review
+
+**Merged is not the same as proposed.** The current `main` checkpoint has **20 Valuable References across 10 domains**. Draft Q8 proposes **45 study references across 33 / 33 domains**. This is broad study-method representation, **not** full domain qualification or approval to install any skill.
+
+![Generated Skillz curation workstream progress: merged baseline, Q8 proposal, Q9 leads, Q10 static reviews and scanner outcomes.](docs/assets/qualification-workstream-progress.svg)
+
+| Workstream | Evidence-backed progress | Still required |
+|---|---|---|
+| **[Q8 draft](https://github.com/Knapp-Kevin/skillz/pull/693)** | 45 proposed Valuable References; 33 / 33 domains represented; pinned scanner 8 passed / 7 failed / 30 incomplete | Independent merge acceptance, security finding adjudication and separate behavioral testing |
+| **[Q9 draft](https://github.com/Knapp-Kevin/skillz/pull/697)** | 8 pinned discovery leads from 7 source repositories across 5 domains | Exact identity, rights and fit assessment; leads are not accepted skills |
+| **[Q10 draft](https://github.com/Knapp-Kevin/skillz/pull/698)** | 8 of those 8 Q9 leads statically reviewed: 4 promising study concepts held, 4 other research/rejected unchanged | All original leads have a static review; no security/behavioral clearance |
+
+**ROS 2 Engineering, eighth static review:** [Q10 source-pinned review](https://github.com/Knapp-Kevin/skillz/pull/698) covers **118 portable source files** from **204 repository files**, including 15 Python scripts and 28 references. This is an individual **17/20 static reference-only review**, not a security scan, safe installation, verified plugin behavior or physical hardware clearance.
+
+**Never add Q9 and Q10 counts:** Q10 examined 8 of the same 8 Q9 candidates, not 16 distinct skills. No Q9/Q10 approvals or shelf promotions occurred. **Zero unchanged-use approvals and zero behavioral validations** remain the governing outcome.
+
+[Spreadsheet-ready progress CSV](docs/data/qualification-workstream-progress.csv) · [Pinned progress snapshot](registry/curation-workstream-status-20261103.json) · [How to regenerate](docs/capability-dashboard-maintenance.md)
+
+*Snapshot 2026-11-03. Draft branch revisions are pinned in the status ledger and may advance independently. This section is a review preview based on the Q8 draft, not a claim that Q8/Q9/Q10 has merged to `main`.*
+<!-- SKILLZ_WORKSTREAM_PROGRESS:END -->
+
+
 ## Our featured methods: a small, evidence-based shelf
 
 We maintain two **positive** recommendation types for methods selected to appear here. **This is not the entire collection of discoverable or reviewed methods.** A missing item should prompt wider research, not a conclusion that the repository cannot help. Both types explain the specific benefit and point to evidence.
