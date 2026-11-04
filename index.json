@@ -5349,5 +5349,33 @@
     "grant_workbook_acceptance_status": "See merged PR #696 (q7_original_pinned_workbook_engine_acceptance_20261103); original bytes unchanged, source still HOLD.",
     "all_33_domains_featured": true,
     "widened_sources_qualified": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json"
+  },
+  "q11_draft_workstream_progress_20261103": {
+    "date": "2026-11-03",
+    "state": "UNMERGED_BRANCH_PREVIEW_NOT_MAIN",
+    "source": "registry/curation-workstream-status-20261103.json",
+    "svg": "docs/assets/qualification-workstream-progress.svg",
+    "csv": "docs/data/qualification-workstream-progress.csv",
+    "renderer": "scripts/build-workstream-progress.mjs",
+    "merged_main_checkpoint_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+    "merged_main_featured_methods": 20,
+    "merged_main_domains": 10,
+    "q8_draft_pr": 693,
+    "q8_draft_method_count": 45,
+    "q8_draft_represented_domains": 33,
+    "q8_static_security": {
+      "passed": 8,
+      "failed": 7,
+      "incomplete": 30
+    },
+    "q9_draft_pr": 697,
+    "q9_discovered_leads_snapshot": 8,
+    "q10_draft_pr": 698,
+    "q10_static_reviews_of_q9_leads": 8,
+    "q10_leads_still_unreviewed": 0,
+    "behaviorally_validated": 0,
+    "approved_unchanged": 0,
+    "not_additive": true,
+    "not_an_all_corpus_census": true
   }
 }
