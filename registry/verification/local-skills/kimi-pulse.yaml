@@ -6,12 +6,12 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 6625f147011dfd38ed2b9881eda2d5ea62e2ece4
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: stale
+verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
-rubric_score: "16/20"
+rubric_score: "18/20"
 prior_reviewed_blob_sha: 4d8935ea2d8006ea277ab1371f419c723a867643
 rubric_score_current_fingerprint: false
 requalification_reason: "Changed manifest collection procedure; prior score is historical and requires exact-version re-review."
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "2026-11-04 source security revision at 6625f147011dfd38ed2b9881eda2d5ea62e2ece4; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
+notes: "2026-11-04 current exact-version source semantic 18/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."
