@@ -42,8 +42,8 @@ function renderSvg(s){
  add(txt(42,312,"Merged main (Q7)",17,"#dce8f6"));add(rect(bx,291,bw,bh,"#293f5c",6));add(rect(bx,291,Math.round(bw*m.featured/q.proposed_featured),bh,blue,6));add(txt(952,312,m.featured+" / "+q.proposed_featured,17,"#eaf2fc",'font-weight="700"'));
  add(txt(42,355,"Q8 draft (not merged)",17,"#dce8f6"));add(rect(bx,334,bw,bh,"#293f5c",6));add(rect(bx,334,bw,bh,purple,6));add(txt(952,355,String(q.proposed_featured),17,"#eaf2fc",'font-weight="700"'));
  add(txt(39,413,"Q9 discovered leads | Q10 static review coverage",21,"#f2f7ff",'font-weight="700"'));
- add(txt(42,453,"8 pinned leads",17,"#dce8f6"));add(rect(bx,433,bw,bh,"#293f5c",6));add(rect(bx,433,bw*rev.individually_reviewed/dis.pinned_entrypoints,bh,teal,6));add(rect(bx+bw*rev.individually_reviewed/dis.pinned_entrypoints,433,bw*rev.remaining_q9_entrypoints/dis.pinned_entrypoints,bh,amber,0));add(txt(952,453,rev.individually_reviewed+" reviewed",17,"#eaf2fc",'font-weight="700"'));
- add(txt(324,490,rev.promising_but_held+" promising concepts, held",15,teal));add(txt(673,490,rev.other_held+" other reviews held",15,amber));add(txt(42,514,rev.remaining_q9_entrypoints+" leads still need full static review. These are the same Q9 leads, not extra candidates.",14,"#afc4db"));
+ add(txt(42,453,dis.pinned_entrypoints+" pinned leads",17,"#dce8f6"));add(rect(bx,433,bw,bh,"#293f5c",6));add(rect(bx,433,bw*rev.individually_reviewed/dis.pinned_entrypoints,bh,teal,6));add(rect(bx+bw*rev.individually_reviewed/dis.pinned_entrypoints,433,bw*rev.remaining_q9_entrypoints/dis.pinned_entrypoints,bh,amber,0));add(txt(952,453,rev.individually_reviewed+" reviewed",17,"#eaf2fc",'font-weight="700"'));
+ add(txt(324,490,rev.promising_but_held+" promising concepts, held",15,teal));add(txt(673,490,rev.other_held+" other reviews held",15,amber));add(txt(42,514,rev.remaining_q9_entrypoints+(rev.remaining_q9_entrypoints===1?" lead still needs":" leads still need")+" full static review. These are the same Q9 leads, not extra candidates.",14,"#afc4db"));
  add(txt(39,557,"Q8 featured methods | pinned static security scan",21,"#f2f7ff",'font-weight="700"'));
  add(txt(42,598,q.proposed_featured+" total",17,"#dce8f6"));add(rect(bx,578,bw,bh,"#293f5c",6));
  let offset=0;for(const [count,color] of [[q.static_security.passed,teal],[q.static_security.failed,red],[q.static_security.incomplete,gray]]){let width=bw*count/q.proposed_featured;add(rect(bx+offset,578,width,bh,color,0));offset+=width}
@@ -87,7 +87,7 @@ function renderReadme(s){
  "|---|---|---|",
  "| **[Q8 draft]("+s.q8.url+")** | "+s.q8.proposed_featured+" proposed Valuable References; "+s.q8.represented_domains+" / "+s.q8.canonical_domains+" domains represented; pinned scanner "+s.q8.static_security.passed+" passed / "+s.q8.static_security.failed+" failed / "+s.q8.static_security.incomplete+" incomplete | Independent merge acceptance, security finding adjudication and separate behavioral testing |",
  "| **[Q9 draft]("+s.q9.url+")** | "+s.q9.pinned_entrypoints+" pinned discovery leads from "+s.q9.source_repositories+" source repositories across "+s.q9.covered_domains+" domains | Exact identity, rights and fit assessment; leads are not accepted skills |",
- "| **[Q10 draft]("+s.q10.url+")** | "+s.q10.individually_reviewed+" of those "+s.q9.pinned_entrypoints+" Q9 leads statically reviewed: "+s.q10.promising_but_held+" promising study concepts held, "+s.q10.other_held+" other research/rejected unchanged | "+s.q10.remaining_q9_entrypoints+" leads still need detailed static review; external scanner/behavioral checks not run |",
+ "| **[Q10 draft]("+s.q10.url+")** | "+s.q10.individually_reviewed+" of those "+s.q9.pinned_entrypoints+" Q9 leads statically reviewed: "+s.q10.promising_but_held+" promising study concepts held, "+s.q10.other_held+" other research/rejected unchanged | "+s.q10.remaining_q9_entrypoints+(s.q10.remaining_q9_entrypoints===1?" lead still needs":" leads still need")+" detailed static review; external scanner/behavioral checks not run |",
  "",
  "**Never add Q9 and Q10 counts:** Q10 examined "+s.q10.individually_reviewed+" of the same "+s.q9.pinned_entrypoints+" Q9 candidates, not "+(s.q9.pinned_entrypoints+s.q10.individually_reviewed)+" distinct skills. No Q9/Q10 approvals or shelf promotions occurred. **Zero unchanged-use approvals and zero behavioral validations** remain the governing outcome.",
  "",
@@ -125,6 +125,7 @@ if(args.has("--self-test")){
   if(updateReadme(a,renderReadme(status))!==a)throw Error("Non-idempotent README");
   if((files["docs/data/qualification-workstream-progress.csv"].match(/\n/g)||[]).length!==(16+status.q10.methods.length))throw Error("CSV row count");
   if(!files["docs/assets/qualification-workstream-progress.svg"].includes('viewBox="0 0 1120 740"'))throw Error("SVG viewport");
+  if(status.q10.remaining_q9_entrypoints===1 && (files["README.md"].includes("1 leads")||files["docs/assets/qualification-workstream-progress.svg"].includes("1 leads")))throw Error("Singular grammar regression");
   const broken=JSON.parse(JSON.stringify(status));broken.q10.remaining_q9_entrypoints++;
   let rejected=false;try{validateStatus(broken,q7,q8,pipe)}catch(_){rejected=true}
   if(!rejected)throw Error("Mismatch not rejected");
