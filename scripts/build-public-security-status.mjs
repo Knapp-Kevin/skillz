@@ -5,6 +5,50 @@ import {resolve,dirname} from "node:path";
 import {fileURLToPath} from "node:url";
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function check(s){if(s.schema_version!=="skillz-public-security-and-curation-v3"||s.non_additive!==true||s.merged_main.domains!==33||s.merged_main.research_topics>s.merged_main.topics||s.q8_merged_checkpoint.study_domains>s.merged_main.domains||s.approved_unchanged!==0||s.behaviorally_validated!==0)throw Error("Unsafe/invalid dashboard source");if(s.q8_merged_checkpoint.publication_state!=="MERGED_STUDY_ONLY"||s.merged_main.study_references!==s.q8_merged_checkpoint.study_references||s.merged_main.study_domains!==s.q8_merged_checkpoint.study_domains||s.merged_main.selected_topics>s.merged_main.topics||s.open_prs_at_snapshot<0)throw Error("Merged Q8 status inconsistent");const f=s.repair_frontier;if(!f||f.changed_packages!==f.existing_exact_tree_static_pass+f.needs_new_exact_tree_scan||f.observed_behavior_pass!==0||f.unchanged_use_approvals!==0||f.by_pr.reduce((n,x)=>n+x.total,0)!==f.changed_packages||f.by_pr.reduce((n,x)=>n+x.matched_pass,0)!==f.existing_exact_tree_static_pass)throw Error("Repair frontier totals disagree");for(const v of Object.values(s.security))if(v.total!==v.passed+v.failed+v.incomplete)throw Error("Security totals do not match")}
+
+function checkFrontierSnapshot(s,f){
+ const v=s.repair_frontier,t=f?.totals;
+ const whole=n=>Number.isSafeInteger(n)&&n>=0;
+ if(f?.schema_version!=="skillz-active-repair-security-frontier-v1"||f.issue!==s.security_issue||!v||!t||!Array.isArray(f.by_pr)||!Array.isArray(v.by_pr)||!Array.isArray(f.records))throw Error("Invalid canonical security frontier");
+ const parity=[["changed_packages","changed_packages"],["existing_exact_tree_static_pass","verified_pinned_scan_pass"],["needs_new_exact_tree_scan","need_new_scan"],["observed_behavior_pass","behavioral_validations"],["unchanged_use_approvals","unchanged_use_approvals"]];
+ for(const [published,source] of parity)if(!whole(t[source])||v[published]!==t[source])throw Error("Public security total differs from canonical frontier: "+published);
+ if(f.by_pr.length!==v.by_pr.length||s.open_prs_at_snapshot!==f.by_pr.length)throw Error("Stale published open-PR count");
+ const prs=new Map();
+ for(const p of f.by_pr){
+  if(!whole(p.pr)||p.pr===0||!(/^[a-f0-9]{40}$/).test(p.head)||prs.has(p.pr)||!whole(p.total)||!whole(p.matched_pass)||!whole(p.new_scans_needed)||p.total!==p.matched_pass+p.new_scans_needed)throw Error("Invalid canonical PR allocation");
+  prs.set(p.pr,p);
+ }
+ const seenPublic=new Set();
+ for(const p of v.by_pr){
+  const source=prs.get(p.pr);
+  if(!source||seenPublic.has(p.pr)||!["head","total","matched_pass","new_scans_needed"].every(k=>p[k]===source[k]))throw Error("Stale or conflicting public PR allocation: "+p.pr);
+  seenPublic.add(p.pr);
+ }
+ const ids=new Set(),counts=new Map();
+ let passing=0,pending=0;
+ for(const item of f.records){
+  const pr=prs.get(item.pr);
+  if(!pr||typeof item.id!=="string"||!item.id||ids.has(item.id)||item.pr_head!==pr.head||item.host_behavior!=="not-run"||item.unchanged_use_approved!==false)throw Error("Malformed or duplicated package entry");
+  ids.add(item.id);
+  const n=counts.get(item.pr)||{total:0,matched_pass:0,new_scans_needed:0};
+  n.total++;
+  if(item.security_state==="passed"){
+   if(item.package_tree_sha!==item.prior_scanned_tree_sha||item.security_evidence?.coverage_status!=="complete"||!(/^[a-f0-9]{64}$/).test(item.security_evidence?.report_sha256||""))throw Error("Nonmatching exact-tree scanner pass: "+item.id);
+   passing++;n.matched_pass++;
+  }else if(item.security_state==="not-run-current-tree"){
+   if(item.security_evidence!==null||item.package_tree_sha===item.prior_scanned_tree_sha)throw Error("Incorrect pending package identity: "+item.id);
+   pending++;n.new_scans_needed++;
+  }else throw Error("New scan disposition needs explicit accounting support: "+item.id);
+  counts.set(item.pr,n);
+ }
+ for(const [id,pr] of prs){
+  const count=counts.get(id);
+  if(!count||!["total","matched_pass","new_scans_needed"].every(k=>pr[k]===count[k]))throw Error("Per-PR package counts disagree: "+id);
+ }
+ if(ids.size!==t.changed_packages||passing!==t.verified_pinned_scan_pass||pending!==t.need_new_scan||passing+pending!==ids.size)throw Error("Canonical package counts disagree with details");
+ return true;
+}
+
 function rect(x,y,w,h,fill,r=12){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}"/>`}
 function label(x,y,v,size=16,color="#e6ecfa",weight=400,anchor="start"){return `<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}">${esc(v)}</text>`}
 function bar(x,y,w,title,v){const parts=[["passed","#43c8b0"],["failed","#ee7785"],["incomplete","#788da9"]];let out=label(x,y-12,title,18,"#f0f4ff",700),at=x;for(const [key,color]of parts){const width=w*v[key]/v.total;out+=rect(at,y,width,20,color,0);at+=width}out+=label(x,y+50,`${v.passed} pass`,15,"#43c8b0",700)+label(x+144,y+50,`${v.failed} fail`,15,"#ee7785",700)+label(x+272,y+50,`${v.incomplete} incomplete`,15,"#b4c4d7",700);return out}
@@ -13,7 +57,13 @@ function render(s){check(s);const a=s.merged_main,b=s.q8_merged_checkpoint,e=[];
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const src=resolve(root,"registry/public-security-curation-status-20261104.json");
 const dest=resolve(root,"docs/assets/security-and-curation-status.svg");
-const raw=JSON.parse(readFileSync(src,"utf8")),svg=render(raw);
-if(process.argv.includes("--self-test")){const bad=structuredClone(raw);bad.security.first_party_main.passed++;let rejected=false;try{render(bad)}catch{rejected=true}if(!rejected)throw Error("self test: did not reject bad totals");console.log("self-test passed");}
+const raw=JSON.parse(readFileSync(src,"utf8"));
+const frontier=JSON.parse(readFileSync(resolve(root,"registry/security/active-first-party-repair-frontier-20261104.json"),"utf8"));
+checkFrontierSnapshot(raw,frontier);
+const svg=render(raw);
+if(process.argv.includes("--self-test")){const bad=structuredClone(raw);bad.security.first_party_main.passed++;let rejected=false;try{render(bad)}catch{rejected=true}if(!rejected)throw Error("self test: did not reject bad totals");const corrupt=structuredClone(raw);corrupt.repair_frontier.by_pr[0].head="0".repeat(40);let staleRejected=false;try{checkFrontierSnapshot(corrupt,frontier)}catch{staleRejected=true}if(!staleRejected)throw Error("self test: stale PR head accepted");
+const inflated=structuredClone(frontier);inflated.totals.verified_pinned_scan_pass++;let inflatedRejected=false;try{checkFrontierSnapshot(raw,inflated)}catch{inflatedRejected=true}if(!inflatedRejected)throw Error("self test: unsupported scanner pass accepted");
+const wrongPackage=structuredClone(frontier);wrongPackage.records[0].package_tree_sha="0".repeat(40);let treeRejected=false;try{checkFrontierSnapshot(raw,wrongPackage)}catch{treeRejected=true}if(!treeRejected)throw Error("self test: mismatched package tree accepted");
+console.log("self-test passed");}
 else if(process.argv.includes("--check")){if(readFileSync(dest,"utf8")!==svg)throw Error("SVG differs from input");console.log("check passed");}
 else{writeFileSync(dest,svg);console.log("wrote SVG");}
