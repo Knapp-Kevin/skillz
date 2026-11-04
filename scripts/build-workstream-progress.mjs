@@ -123,7 +123,7 @@ if(args.has("--self-test")){
   if(args.has("--check"))throw Error("Use --self-test and --check separately");
   const a=files["README.md"];
   if(updateReadme(a,renderReadme(status))!==a)throw Error("Non-idempotent README");
-  if((files["docs/data/qualification-workstream-progress.csv"].match(/\n/g)||[]).length!==22)throw Error("CSV row count");
+  if((files["docs/data/qualification-workstream-progress.csv"].match(/\n/g)||[]).length!==(16+status.q10.methods.length))throw Error("CSV row count");
   if(!files["docs/assets/qualification-workstream-progress.svg"].includes('viewBox="0 0 1120 740"'))throw Error("SVG viewport");
   const broken=JSON.parse(JSON.stringify(status));broken.q10.remaining_q9_entrypoints++;
   let rejected=false;try{validateStatus(broken,q7,q8,pipe)}catch(_){rejected=true}
