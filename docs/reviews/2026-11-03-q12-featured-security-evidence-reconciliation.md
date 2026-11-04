@@ -1,18 +1,18 @@
 # Q12: Reconcile featured-method security receipts without relaxing the gates
 
-**Source snapshot:** Q8 draft `488316b12e83a62befc1120d5784b4151b030b90`, exact source pins and report SHA-256s · **Date:** 2026-11-03 · **Status:** Security evidence index only, **not a scanner rerun**.
+**Source snapshot:** Q8 draft `d3aaaa29f84b81e1905b295adb3657348551b9d8`, exact source pins and report SHA-256s · **Date:** 2026-11-03 · **Status:** Security evidence index only, **not a scanner rerun**.
 
 ## Why this matters
 
-The pinned Q8 catalog has **46** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](../../registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](../../registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
+The pinned Q8 catalog has **50** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](../../registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](../../registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
 
 We did not rewrite Q8's source catalog or original historical records. Instead, the [45-record security reconciliation](../../registry/security/q12-featured-security-evidence-reconciliation-20261103.json) joins **each exact consumer ID, source repository, source commit and package-tree SHA** to one authoritative report. The [CSV](../data/q12-featured-security-evidence-matrix.csv) can be opened in any spreadsheet without redrawing a chart.
 
 | Exact-source subset | Passed | Failed | Incomplete | Total |
 |---|---:|---:|---:|---:|
 | 20 Q7 external-host reports | 5 | 3 | 12 | 20 |
-| 26 Q8 new selected methods | 3 | 4 | 19 | 26 |
-| **All Q8 proposed references** | **8** | **7** | **31** | **46** |
+| 30 Q8 new selected methods | 5 | 4 | 21 | 30 |
+| **All Q8 proposed references** | **10** | **7** | **33** | **50** |
 
 **Zero** are approved for unchanged use. Passing one static gate does not authorize installation, paid model calls, secret access, email reads, shell execution, or robotic hardware.
 
@@ -34,9 +34,11 @@ A security pass is just one checkpoint. For example, a candidate that includes a
 
 **New Q8 source pin:** Boltz Protein Design was added for a **generic cost-scoping idea** only. The original skill can contact paid services, transmit inputs and requests permission bypass; the exact scanner state is **incomplete**. This catalog reference is **not** permission to run the source or reproduce its scientific procedure. No unsafe experimental instructions are included here.
 
-## The 31 incomplete scans
+**New Q8 study-only references:** Room Acoustics (REW), Rerun URDF Ingestion, Nav2 Navigation Debugging, and MATLAB Reliability Analysis add **two static passes and two incomplete scans**. Their source methods may involve paid proprietary tools, ROS hardware, web access or licensed MATLAB, so no execution authority or unchanged-use approval is implied.
 
-Across incomplete reports, the ledgers contain **163** `reference_missing` occurrences, **5** `obfuscated_instruction_text` occurrences and **8** `static_parse_limit` occurrences, plus **1** `analyzer_runtime_error` occurrence. These are **occurrences, not distinct packages**; some packages generate multiple reasons. A missing reference may mean a true unbundled sibling dependency, a named runtime output, a user local file, or a path outside the reviewed package. It cannot be automatically marked harmless.
+## The 33 incomplete scans
+
+Across incomplete reports, the ledgers contain **167** `reference_missing` occurrences, **5** `obfuscated_instruction_text` occurrences and **8** `static_parse_limit` occurrences, plus **1** `analyzer_runtime_error` occurrence. These are **occurrences, not distinct packages**; some packages generate multiple reasons. A missing reference may mean a true unbundled sibling dependency, a named runtime output, a user local file, or a path outside the reviewed package. It cannot be automatically marked harmless.
 
 Prioritize exact file/path classification per candidate and maintain separate gates:
 
