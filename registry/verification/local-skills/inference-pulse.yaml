@@ -6,7 +6,7 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: stale
+verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "Issue #402 new source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c limits private profile/registry discovery. Previous version's scanner findings/semantic grade not portable; exact package scan and host behavior not-run."
+notes: "2026-11-04 current exact-version source semantic 17/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."
