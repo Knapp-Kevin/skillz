@@ -54,7 +54,7 @@
     "by_pr": [
       {
         "pr": 673,
-        "head": "60daee92a00683239daf55814e9f99c300afa597",
+        "head": "214ebf1c8c304bc60d8a18b1fc95272c4f2fcd2a",
         "total": 16,
         "matched_pass": 10,
         "new_scans_needed": 6
