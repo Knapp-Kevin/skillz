@@ -6,7 +6,7 @@
 
 The pinned Q8 catalog has **50** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](../../registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](../../registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
 
-We did not rewrite Q8's source catalog or original historical records. Instead, the [45-record security reconciliation](../../registry/security/q12-featured-security-evidence-reconciliation-20261103.json) joins **each exact consumer ID, source repository, source commit and package-tree SHA** to one authoritative report. The [CSV](../data/q12-featured-security-evidence-matrix.csv) can be opened in any spreadsheet without redrawing a chart.
+We did not rewrite Q8's source catalog or original historical records. Instead, the [50-record security reconciliation](../../registry/security/q12-featured-security-evidence-reconciliation-20261103.json) joins **each exact consumer ID, source repository, source commit and package-tree SHA** to one authoritative report. The [CSV](../data/q12-featured-security-evidence-matrix.csv) can be opened in any spreadsheet without redrawing a chart.
 
 | Exact-source subset | Passed | Failed | Incomplete | Total |
 |---|---:|---:|---:|---:|
@@ -49,7 +49,11 @@ Prioritize exact file/path classification per candidate and maintain separate ga
 
 ## Maintainer and integration requirements
 
-This matrix was generated from six immutable source ledgers and the Q8 catalog and pipeline, each pinned by Git blob SHA in its JSON header. It checks unique consumer IDs, matching exact upstream commit/tree, per-report SHA-256 format, and totals `5+3=8`, `3+4=7`, `12+18=30`. It intentionally **does not** claim to have rerun SkillSpector, executed third-party code, copied upstream proprietary material, or approved false positives.
+This matrix was generated from six immutable source ledgers and the Q8 catalog and pipeline, each pinned by Git blob SHA in its JSON header. It checks unique consumer IDs, matching exact upstream commit/tree, per-report SHA-256 format, and totals `5+5=10`, `3+4=7`, `12+21=33`. It intentionally **does not** claim to have rerun SkillSpector, executed third-party code, copied upstream proprietary material, or approved false positives.
 
-Integrate as a derived status view in the Q11 reporting generator and README, not by rewriting Q7 historical scan fields. On a new Q8 branch head, recompute the exact join first. Keep [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) and [Q11 #699](https://github.com/Knapp-Kevin/skillz/pull/699) pending independent review.
+Preserve as a dated, source-pinned derived security evidence view. Its Q8 source is an unmerged draft; do not replace live README/graphics counters, rewrite Q7 historical scan fields, or present scanner results for a changed package tree without a new exact-tree scan. The Q11 visual/CSV and generator have been archived separately because their source reports an earlier 45-method Q8 proposal. On a new Q8 branch head, recompute the exact join first. Use the pinned [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) source snapshot for resolving historical records; Q11 #699 was closed without merge after byte-identical archival consolidation. Recompute this derived join when Q8's accepted final tree differs from the pinned source.
 
+
+## 2026-11-04 acceptance audit
+
+Verified 50 unique IDs and security statuses from the machine JSON: 10 passed, 7 failed, 33 incomplete. Fetched all seven source ledgers at pinned Q8 head `d3aaaa29f84b81e1905b295adb3657348551b9d8` and matched every declared Git blob SHA (7/7). The 50-row CSV includes a header plus 50 entries; the Q11 chart/CSV/generator are archived as a separate historical 45-reference snapshot, not live data. This is read-only evidence validation and does not execute SkillSpector or test candidate agents. No unchanged use is approved.
