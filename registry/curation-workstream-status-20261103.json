@@ -39,7 +39,7 @@
   "q10": {
     "pr": 698,
     "url": "https://github.com/Knapp-Kevin/skillz/pull/698",
-    "head_sha": "a97b46a361e1fa9fe178548a377e5a2d19e9b7f3",
+    "head_sha": "6ae26cbb26e67f0baaf75986eaca94401455a6ee",
     "state": "DRAFT_STATIC_REVIEWS_ONLY",
     "individually_reviewed": 7,
     "remaining_q9_entrypoints": 1,
@@ -92,7 +92,24 @@
         "domain": "audio-voice-sound"
       }
     ],
-    "source_on_unmerged_branch": "registry/discovery/q10-business-career-three-static-20261103.json; q10-science-literature-survey-static-20261103.json; q10-audio-sound-design-sixteen-file-static-20261103.json; q10-robotics-testing-single-file-static-20261103.json; q10-resemble-detect-hosted-static-20261103.json"
+    "source_on_unmerged_branch": "registry/discovery/q10-business-career-three-static-20261103.json; q10-science-literature-survey-static-20261103.json; q10-audio-sound-design-sixteen-file-static-20261103.json; q10-robotics-testing-single-file-static-20261103.json; q10-resemble-detect-hosted-static-20261103.json; q10-ros2-engineering-bundle-boundary-20261103.json (scope only)",
+    "remaining_boundary": {
+      "repository": "dbwls99706/ros2-engineering-skills",
+      "source_pin": "f0de84dfedd67b067ccc6d2851e681529606930c",
+      "source_repo_git_blobs": 204,
+      "portable_bundle_files": 118,
+      "excluded_repo_files": 86,
+      "reference_files": 28,
+      "python_scripts": 15,
+      "package_profiles": [
+        "portable-knowledge-only",
+        "Claude-plugin-hooks",
+        "legacy-copy-link"
+      ],
+      "stage": "SCOPE_MAPPED_NOT_COMPLETE_NOT_GRADED",
+      "ledger_on_q10_branch": "registry/discovery/q10-ros2-engineering-bundle-boundary-20261103.json",
+      "review_on_q10_branch": "docs/reviews/2026-11-03-q10-ros2-engineering-bundle-boundary.md"
+    }
   },
   "interpretation": [
     "Q8 is a draft, so its 44 methods and 33-domain shelf are proposed rather than merged main numbers.",
