@@ -37,7 +37,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 
 ![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across 33 domains.](docs/assets/capability-dashboard.svg)
 
-**How to read this:** Turquoise means a topic has a research or candidate link, which can include rejected skills. Purple means at least one method has been selected to study in our *bounded* featured shelf. Neither is installation clearance, and an unfeatured domain can still contain useful candidates.
+**How to read this:** Turquoise shows links from the older research audit (2026-11-02); purple shows separately selected study methods (2026-11-03). These are different dated evidence sets, not one funnel. A domain may have more selected study methods than older research-linked topics (for example Music composition). Neither color means a skill is approved to install.
 
 <details><summary>Explore all 33 capability areas in a spreadsheet-style table</summary>
 
