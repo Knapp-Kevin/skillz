@@ -589,8 +589,8 @@
       "skill_name": "handoff-writer",
       "local_path": "skills/handoff-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8a789ea0dd3b1c89ccac9d50727b06007abcf5c1",
-      "verification_status": "verified",
+      "content_blob_sha": "a0fdd6b85f21ec009d3822f8f232fbfe3538b12b",
+      "verification_status": "unverified",
       "validation_status": "not-run",
       "rubric_score": "20/20",
       "tags": {
@@ -616,7 +616,7 @@
           "high"
         ]
       },
-      "notes": "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."
+      "notes": "2026-11-04 issue #402 candidate source security fix: secret prefixes/credential fragments prohibited, private input and recipient scopes explicit. Previous 20/20 quality score historical only; changed exact version requires new semantic review, pinned final-package SkillSpector, observed adversarial tests and owner acceptance."
     },
     {
       "skill_name": "hf-pulse",
