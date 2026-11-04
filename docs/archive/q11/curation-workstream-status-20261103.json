@@ -1,0 +1,130 @@
+{
+  "schema_version": "skillz-workstream-qualification-progress-v1",
+  "as_of": "2026-11-03",
+  "publication_state": "BRANCH_PREVIEW_NOT_MERGED",
+  "purpose": "Show historical merged baseline separately from Q8 proposed featured shelf and Q9/Q10 draft source work. Not an all-corpus funnel.",
+  "merged_baseline": {
+    "main_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+    "featured": 20,
+    "represented_domains": 10,
+    "source": "registry/consumer-positive-references-q7-20261103.json"
+  },
+  "q8": {
+    "pr": 693,
+    "url": "https://github.com/Knapp-Kevin/skillz/pull/693",
+    "head_sha": "d9649c4a16206937a4b0d18d9edf02d4ce773a81",
+    "state": "DRAFT_NOT_MERGED",
+    "proposed_featured": 45,
+    "represented_domains": 33,
+    "canonical_domains": 33,
+    "static_security": {
+      "passed": 8,
+      "failed": 7,
+      "incomplete": 30
+    },
+    "behaviorally_validated": 0,
+    "approved_unchanged": 0,
+    "source": "registry/consumer-positive-references-q8-20261103.json"
+  },
+  "q9": {
+    "pr": 697,
+    "url": "https://github.com/Knapp-Kevin/skillz/pull/697",
+    "head_sha": "3d8b9f3d94ca6e872ccfc20cf1b54e27395646c4",
+    "state": "DRAFT_DISCOVERY_ONLY",
+    "pinned_entrypoints": 8,
+    "source_repositories": 7,
+    "covered_domains": 5,
+    "source_on_unmerged_branch": "registry/discovery/q9-five-domain-source-leads-20261103.json"
+  },
+  "q10": {
+    "pr": 698,
+    "url": "https://github.com/Knapp-Kevin/skillz/pull/698",
+    "head_sha": "053705f57907f2edb858e027c31231ec3ca57168",
+    "state": "DRAFT_STATIC_REVIEWS_ONLY",
+    "individually_reviewed": 8,
+    "remaining_q9_entrypoints": 0,
+    "promising_but_held": 4,
+    "other_held": 4,
+    "featured_promotions": 0,
+    "security_scans_run": 0,
+    "actual_behavioral_runs": 0,
+    "methods": [
+      {
+        "name": "Strategy Articulation",
+        "score": 10,
+        "decision": "RESEARCH_ONLY",
+        "domain": "business"
+      },
+      {
+        "name": "Evidence Miner",
+        "score": 15,
+        "decision": "PROMISING_HELD",
+        "domain": "career"
+      },
+      {
+        "name": "ATS Detective",
+        "score": 14,
+        "decision": "RESEARCH_ONLY",
+        "domain": "career"
+      },
+      {
+        "name": "Literature Survey",
+        "score": 15,
+        "decision": "PROMISING_HELD",
+        "domain": "science"
+      },
+      {
+        "name": "Sound Design",
+        "score": 13,
+        "decision": "REJECT_UNCHANGED",
+        "domain": "audio-voice-sound"
+      },
+      {
+        "name": "Robotics Testing",
+        "score": 11,
+        "decision": "REJECT_UNCHANGED",
+        "domain": "robotics-iot"
+      },
+      {
+        "name": "Resemble Detect",
+        "score": 13,
+        "decision": "PROMISING_HELD",
+        "domain": "audio-voice-sound"
+      },
+      {
+        "name": "ROS 2 Engineering",
+        "score": 17,
+        "decision": "PROMISING_HELD",
+        "domain": "robotics-iot"
+      }
+    ],
+    "source_on_unmerged_branch": "registry/discovery/q10-business-career-three-static-20261103.json; q10-science-literature-survey-static-20261103.json; q10-audio-sound-design-sixteen-file-static-20261103.json; q10-robotics-testing-single-file-static-20261103.json; q10-resemble-detect-hosted-static-20261103.json; q10-ros2-engineering-bundle-boundary-20261103.json (scope only); q10-ros2-engineering-portable-118-file-manifest-20261103.json; q10-ros2-engineering-portable-static-20261103.json; q10-ros2-engineering-bundle-boundary-20261103.json (historical scope)",
+    "completed_portable_review": {
+      "repository": "dbwls99706/ros2-engineering-skills",
+      "source_pin": "f0de84dfedd67b067ccc6d2851e681529606930c",
+      "source_repo_git_blobs": 204,
+      "portable_bundle_files": 118,
+      "excluded_repo_files": 86,
+      "reference_files": 28,
+      "python_scripts": 15,
+      "package_profiles": [
+        "portable-knowledge-only",
+        "Claude-plugin-hooks",
+        "legacy-copy-link"
+      ],
+      "stage": "SOURCE_STATIC_REVIEW_COMPLETE_NO_RUNTIME",
+      "manifest_on_q10_branch": "registry/discovery/q10-ros2-engineering-portable-118-file-manifest-20261103.json",
+      "static_review_on_q10_branch": "registry/discovery/q10-ros2-engineering-portable-static-20261103.json",
+      "score_20": 17,
+      "exact_blob_files_reviewed": 118,
+      "source_security_scan": "NOT_RUN",
+      "real_behavioral_validation": "NOT_RUN"
+    }
+  },
+  "interpretation": [
+    "Q8 is a draft, so its 45 methods and 33-domain shelf are proposed rather than merged main numbers.",
+    "Q9 entries are not independent of Q10 reviews: Q10 statically reviews all eight original Q9 leads; never add Q9 and Q10 as 16 distinct candidates.",
+    "Q8 featured methods are study-only; a security scan pass does not grant installation authority, and failed/incomplete states are not passed.",
+    "Q9/Q10 sources live on separate draft branches pinned above, and are not in Q8/main's ledgers. Refresh this snapshot by evidence review, not by silently auto-rolling branch HEAD."
+  ]
+}
