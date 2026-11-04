@@ -49,6 +49,23 @@ function checkFrontierSnapshot(s,f){
  return true;
 }
 
+
+function checkSourceScanReceipts(frontier,scans){
+ if(!Array.isArray(scans?.records)||!scans.records.length)throw Error("Historical external scanner receipts missing");
+ const source="registry/security/external-host-skillspector-first-party-20261103.json";
+ const pin="c7958a3268d9498644b22edb75d0f051bbc8cbfc";
+ let matched=0;
+ for(const item of frontier.records.filter(x=>x.security_state==="passed")){
+  const ev=item.security_evidence;
+  if(ev?.prior_scan_source!==source||ev?.scanner_commit!==pin||!ev.report_sha256)throw Error("Unrecognized pinned scan source for "+item.id);
+  const matches=scans.records.filter(r=>r.package===item.path&&r.package_git_tree_sha===item.package_tree_sha&&r.report_sha256===ev.report_sha256&&r.scanner?.commit===pin&&r.coverage_status==="complete"&&r.state==="passed"&&r.scanner_gate_result==="passed");
+  if(matches.length!==1)throw Error("External scan receipt missing or ambiguous for "+item.id);
+  matched++;
+ }
+ if(matched!==frontier.totals.verified_pinned_scan_pass)throw Error("Receipt count disagrees with canonical passed packages");
+ return matched;
+}
+
 function rect(x,y,w,h,fill,r=12){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}"/>`}
 function label(x,y,v,size=16,color="#e6ecfa",weight=400,anchor="start"){return `<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}">${esc(v)}</text>`}
 function bar(x,y,w,title,v){const parts=[["passed","#43c8b0"],["failed","#ee7785"],["incomplete","#788da9"]];let out=label(x,y-12,title,18,"#f0f4ff",700),at=x;for(const [key,color]of parts){const width=w*v[key]/v.total;out+=rect(at,y,width,20,color,0);at+=width}out+=label(x,y+50,`${v.passed} pass`,15,"#43c8b0",700)+label(x+144,y+50,`${v.failed} fail`,15,"#ee7785",700)+label(x+272,y+50,`${v.incomplete} incomplete`,15,"#b4c4d7",700);return out}
@@ -60,11 +77,14 @@ const dest=resolve(root,"docs/assets/security-and-curation-status.svg");
 const raw=JSON.parse(readFileSync(src,"utf8"));
 const frontier=JSON.parse(readFileSync(resolve(root,"registry/security/active-first-party-repair-frontier-20261104.json"),"utf8"));
 checkFrontierSnapshot(raw,frontier);
+const receipts=JSON.parse(readFileSync(resolve(root,"registry/security/external-host-skillspector-first-party-20261103.json"),"utf8"));
+checkSourceScanReceipts(frontier,receipts);
 const svg=render(raw);
 if(process.argv.includes("--self-test")){const bad=structuredClone(raw);bad.security.first_party_main.passed++;let rejected=false;try{render(bad)}catch{rejected=true}if(!rejected)throw Error("self test: did not reject bad totals");const corrupt=structuredClone(raw);corrupt.repair_frontier.by_pr[0].head="0".repeat(40);let staleRejected=false;try{checkFrontierSnapshot(corrupt,frontier)}catch{staleRejected=true}if(!staleRejected)throw Error("self test: stale PR head accepted");
 const otherPR=structuredClone(raw);otherPR.open_prs_at_snapshot++;checkFrontierSnapshot(otherPR,frontier);
 const inflated=structuredClone(frontier);inflated.totals.verified_pinned_scan_pass++;let inflatedRejected=false;try{checkFrontierSnapshot(raw,inflated)}catch{inflatedRejected=true}if(!inflatedRejected)throw Error("self test: unsupported scanner pass accepted");
 const wrongPackage=structuredClone(frontier);wrongPackage.records[0].package_tree_sha="0".repeat(40);let treeRejected=false;try{checkFrontierSnapshot(raw,wrongPackage)}catch{treeRejected=true}if(!treeRejected)throw Error("self test: mismatched package tree accepted");
+const alteredReceipt=structuredClone(receipts);const successfulIndex=alteredReceipt.records.findIndex(x=>x.state==="passed"&&frontier.records.some(y=>y.security_state==="passed"&&y.path===x.package&&y.package_tree_sha===x.package_git_tree_sha));if(successfulIndex<0)throw Error("self test: missing matching receipt");alteredReceipt.records[successfulIndex].report_sha256="0".repeat(64);let digestRejected=false;try{checkSourceScanReceipts(frontier,alteredReceipt)}catch{digestRejected=true}if(!digestRejected)throw Error("self test: forged receipt digest accepted");
 console.log("self-test passed");}
 else if(process.argv.includes("--check")){if(readFileSync(dest,"utf8")!==svg)throw Error("SVG differs from input");console.log("check passed");}
 else{writeFileSync(dest,svg);console.log("wrote SVG");}
