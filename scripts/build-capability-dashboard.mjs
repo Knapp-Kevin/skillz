@@ -138,7 +138,7 @@ function dashboardMarkdown(model){
  "",
  `![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across ${T.domains} domains.](${svg})`,
  "",
- `**How to read this:** Turquoise means a topic has a research or candidate link, which can include rejected skills. Purple means at least one method has been selected to study in our *bounded* featured shelf. Neither is installation clearance, and an unfeatured domain can still contain useful candidates.`,
+ `**How to read this:** Turquoise shows links from the older research audit (${model.research_date}); purple shows separately selected study methods (${model.as_of}). These are different dated evidence sets, not one funnel. A domain may have more selected study methods than older research-linked topics (for example Music composition). Neither color means a skill is approved to install.`,
  "",
  `<details><summary>Explore all ${T.domains} capability areas in a spreadsheet-style table</summary>`,
  "",
@@ -176,6 +176,7 @@ function selfTest(){
  const firstRow = dashboardSvg(model).match(/<g><title>[\s\S]*?<rect x="38" y="(\d+)" width="505"/);
  if(!firstRow||Number(firstRow[1])<375)throw Error("Dashboard header overlaps first data row");
  if(!dashboardCsv(model).includes('"Research & <Study>"'))throw Error("CSV quoting failed");
+ if(!dashboardMarkdown(model).includes("different dated evidence sets"))throw Error("Mixed-date README explanation missing");
  const body=dashboardMarkdown(model),intro="Above\n### Two different views: research leads and the small featured shelf\nOLD\n## Our featured methods:\nAfter";
  const once=updateReadme(intro,body),twice=updateReadme(once,body);
  if(once!==twice||!once.includes("## Our featured methods:")||once.includes("\nOLD\n"))throw Error("README idempotence failed");
