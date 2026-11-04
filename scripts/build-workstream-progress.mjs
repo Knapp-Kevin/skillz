@@ -33,7 +33,7 @@ function renderSvg(s){
  const bx=324,bw=604,bh=25,blue="#87a5ef",purple="#bc9cf8",teal="#64d7cd",amber="#eabf72",red="#e18c90",gray="#647b9a";
  add('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+h+'" width="'+w+'" height="'+h+'" role="img" aria-labelledby="workstream-title workstream-desc">');
  add('<title id="workstream-title">Skillz qualification progress, merged baseline and unmerged Q8 Q9 Q10</title>');
- add('<desc id="workstream-desc">Merged main has '+m.featured+' study references in '+m.represented_domains+' domains. Q8 draft proposes '+q.proposed_featured+' in '+q.represented_domains+' domains. '+rev.individually_reviewed+' of '+dis.pinned_entrypoints+' Q9 source leads have received Q10 static reviews; '+rev.remaining_q9_entrypoints+' remain. Q8 static security: '+q.static_security.passed+' pass, '+q.static_security.failed+' fail, '+q.static_security.incomplete+' incomplete. '+q.approved_unchanged+' approved unchanged.</desc>');
+ add('<desc id="workstream-desc">Merged main has '+m.featured+' study references in '+m.represented_domains+' domains. Q8 draft proposes '+q.proposed_featured+' in '+q.represented_domains+' domains. '+rev.individually_reviewed+' of '+dis.pinned_entrypoints+' Q9 source leads have received Q10 static reviews; '+rev.remaining_q9_entrypoints+(rev.remaining_q9_entrypoints===1?' remains':' remain')+'. Q8 static security: '+q.static_security.passed+' pass, '+q.static_security.failed+' fail, '+q.static_security.incomplete+' incomplete. '+q.approved_unchanged+' approved unchanged.</desc>');
  add('<defs><linearGradient id="workstream-bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0d1a2f"/><stop offset="1" stop-color="#183250"/></linearGradient></defs>');
  add(rect(0,0,w,h,"url(#workstream-bg)",24));add(txt(38,54,"Skillz | Curation progress",32,"#f4f8ff",'font-weight="700"'));add(txt(38,86,"Source-pinned evidence, not automatic installation or release approval",17,"#b8ccdf"));
  add(rect(887,35,194,39,"#3c3458",10));add(txt(984,61,"UNMERGED DRAFT",14,"#f0ddff",'text-anchor="middle" font-weight="700"'));
@@ -130,6 +130,7 @@ if(args.has("--self-test")){
   if(!files["docs/assets/qualification-workstream-progress.svg"].includes('viewBox="0 0 1120 740"'))throw Error("SVG viewport");
   if(status.q10.remaining_q9_entrypoints===1 && (files["README.md"].includes("1 leads")||files["docs/assets/qualification-workstream-progress.svg"].includes("1 leads")))throw Error("Singular grammar regression");
   if(files["docs/assets/qualification-workstream-progress.svg"].includes("Six of eight Q9"))throw Error("Stale SVG accessibility description");
+  if(status.q10.remaining_q9_entrypoints===1 && files["docs/assets/qualification-workstream-progress.svg"].includes("1 remain."))throw Error("Singular SVG accessibility grammar");
   const broken=JSON.parse(JSON.stringify(status));broken.q10.remaining_q9_entrypoints++;
   let rejected=false;try{validateStatus(broken,q7,q8,pipe)}catch(_){rejected=true}
   if(!rejected)throw Error("Mismatch not rejected");
