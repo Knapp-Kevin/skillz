@@ -1,0 +1,97 @@
+{
+  "schema_version": "skillz-workstream-qualification-progress-v1",
+  "as_of": "2026-11-03",
+  "publication_state": "BRANCH_PREVIEW_NOT_MERGED",
+  "purpose": "Show historical merged baseline separately from Q8 proposed featured shelf and Q9/Q10 draft source work. Not an all-corpus funnel.",
+  "merged_baseline": {
+    "main_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+    "featured": 20,
+    "represented_domains": 10,
+    "source": "registry/consumer-positive-references-q7-20261103.json"
+  },
+  "q8": {
+    "pr": 693,
+    "url": "https://github.com/Knapp-Kevin/skillz/pull/693",
+    "head_sha": "61ff4e2916df8cf9d05cb07aa954a12e9ceb5a80",
+    "state": "DRAFT_NOT_MERGED",
+    "proposed_featured": 44,
+    "represented_domains": 33,
+    "canonical_domains": 33,
+    "static_security": {
+      "passed": 8,
+      "failed": 7,
+      "incomplete": 29
+    },
+    "behaviorally_validated": 0,
+    "approved_unchanged": 0,
+    "source": "registry/consumer-positive-references-q8-20261103.json"
+  },
+  "q9": {
+    "pr": 697,
+    "url": "https://github.com/Knapp-Kevin/skillz/pull/697",
+    "head_sha": "3d8b9f3d94ca6e872ccfc20cf1b54e27395646c4",
+    "state": "DRAFT_DISCOVERY_ONLY",
+    "pinned_entrypoints": 8,
+    "source_repositories": 7,
+    "covered_domains": 5,
+    "source_on_unmerged_branch": "registry/discovery/q9-five-domain-source-leads-20261103.json"
+  },
+  "q10": {
+    "pr": 698,
+    "url": "https://github.com/Knapp-Kevin/skillz/pull/698",
+    "head_sha": "7fb247d8a25c1c2ed56cd7c469509df0b8af1241",
+    "state": "DRAFT_STATIC_REVIEWS_ONLY",
+    "individually_reviewed": 6,
+    "remaining_q9_entrypoints": 2,
+    "promising_but_held": 2,
+    "other_held": 4,
+    "featured_promotions": 0,
+    "security_scans_run": 0,
+    "actual_behavioral_runs": 0,
+    "methods": [
+      {
+        "name": "Strategy Articulation",
+        "score": 10,
+        "decision": "RESEARCH_ONLY",
+        "domain": "business"
+      },
+      {
+        "name": "Evidence Miner",
+        "score": 15,
+        "decision": "PROMISING_HELD",
+        "domain": "career"
+      },
+      {
+        "name": "ATS Detective",
+        "score": 14,
+        "decision": "RESEARCH_ONLY",
+        "domain": "career"
+      },
+      {
+        "name": "Literature Survey",
+        "score": 15,
+        "decision": "PROMISING_HELD",
+        "domain": "science"
+      },
+      {
+        "name": "Sound Design",
+        "score": 13,
+        "decision": "REJECT_UNCHANGED",
+        "domain": "audio-voice-sound"
+      },
+      {
+        "name": "Robotics Testing",
+        "score": 11,
+        "decision": "REJECT_UNCHANGED",
+        "domain": "robotics-iot"
+      }
+    ],
+    "source_on_unmerged_branch": "registry/discovery/q10-business-career-three-static-20261103.json; q10-science-literature-survey-static-20261103.json; q10-audio-sound-design-sixteen-file-static-20261103.json; q10-robotics-testing-single-file-static-20261103.json"
+  },
+  "interpretation": [
+    "Q8 is a draft, so its 44 methods and 33-domain shelf are proposed rather than merged main numbers.",
+    "Q9 entries are not independent of Q10 reviews: Q10 statically reviews six of the same eight leads; never add 8 and 6.",
+    "Q8 featured methods are study-only; a security scan pass does not grant installation authority, and failed/incomplete states are not passed.",
+    "Q9/Q10 sources live on separate draft branches pinned above, and are not in Q8/main's ledgers. Refresh this snapshot by evidence review, not by silently auto-rolling branch HEAD."
+  ]
+}
