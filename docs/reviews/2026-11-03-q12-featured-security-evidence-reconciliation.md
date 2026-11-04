@@ -4,15 +4,15 @@
 
 ## Why this matters
 
-The current Q8 catalog has **45** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](../../registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](../../registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
+The pinned Q8 catalog has **46** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](../../registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](../../registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
 
 We did not rewrite Q8's source catalog or original historical records. Instead, the [45-record security reconciliation](../../registry/security/q12-featured-security-evidence-reconciliation-20261103.json) joins **each exact consumer ID, source repository, source commit and package-tree SHA** to one authoritative report. The [CSV](../data/q12-featured-security-evidence-matrix.csv) can be opened in any spreadsheet without redrawing a chart.
 
 | Exact-source subset | Passed | Failed | Incomplete | Total |
 |---|---:|---:|---:|---:|
 | 20 Q7 external-host reports | 5 | 3 | 12 | 20 |
-| 25 Q8 new selected methods | 3 | 4 | 18 | 25 |
-| **All Q8 proposed references** | **8** | **7** | **30** | **45** |
+| 26 Q8 new selected methods | 3 | 4 | 19 | 26 |
+| **All Q8 proposed references** | **8** | **7** | **31** | **46** |
 
 **Zero** are approved for unchanged use. Passing one static gate does not authorize installation, paid model calls, secret access, email reads, shell execution, or robotic hardware.
 
@@ -32,9 +32,11 @@ The failed state is retained for **all seven**. Existing host false-positive pro
 
 A security pass is just one checkpoint. For example, a candidate that includes a static-gate pass may still clone an unpinned repository, access private files, depend on an unreviewed MCP server, or require paid hosted services. Do not turn a green scanner row into a consumer recommendation.
 
-## The 30 incomplete scans
+**New Q8 source pin:** Boltz Protein Design was added for a **generic cost-scoping idea** only. The original skill can contact paid services, transmit inputs and requests permission bypass; the exact scanner state is **incomplete**. This catalog reference is **not** permission to run the source or reproduce its scientific procedure. No unsafe experimental instructions are included here.
 
-Across incomplete reports, the ledgers contain **158** `reference_missing` occurrences, **5** `obfuscated_instruction_text` occurrences and **7** `static_parse_limit` occurrences. These are **occurrences, not distinct packages**; some packages generate multiple reasons. A missing reference may mean a true unbundled sibling dependency, a named runtime output, a user local file, or a path outside the reviewed package. It cannot be automatically marked harmless.
+## The 31 incomplete scans
+
+Across incomplete reports, the ledgers contain **163** `reference_missing` occurrences, **5** `obfuscated_instruction_text` occurrences and **8** `static_parse_limit` occurrences, plus **1** `analyzer_runtime_error` occurrence. These are **occurrences, not distinct packages**; some packages generate multiple reasons. A missing reference may mean a true unbundled sibling dependency, a named runtime output, a user local file, or a path outside the reviewed package. It cannot be automatically marked harmless.
 
 Prioritize exact file/path classification per candidate and maintain separate gates:
 
