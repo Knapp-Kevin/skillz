@@ -7,7 +7,7 @@ source_path: skills/github-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 30d3fe9db62dd43f6e24d27a8d5e660c9e84befa
+source_snapshot_revision: daf4d425d0037a521610c87422a544770f8c9a22
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
-exact_version_requalification: "Required for 846dfc3a493cdf9b2387ffca77a7a9e463898aff. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
+exact_version_requalification: "New issue #402 source 9c345c88cef5f4f97235facb6d3d7414ab820f1a: public digest cannot implicitly read operator profiles, host memory or candidate registries; exact current source semantic, scanner and external-host adversarial qualification pending."
