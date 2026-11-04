@@ -29,18 +29,11 @@
       "new_scans_needed": 0
     },
     {
-      "pr": 702,
-      "head": "d61ba91065175fd1651512901e358ee5ad382121",
-      "total": 2,
-      "matched_pass": 0,
-      "new_scans_needed": 2
-    },
-    {
       "pr": 703,
-      "head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
-      "total": 11,
+      "head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
+      "total": 13,
       "matched_pass": 0,
-      "new_scans_needed": 11
+      "new_scans_needed": 13
     }
   ],
   "records": [
@@ -415,8 +408,8 @@
     },
     {
       "id": "automation-receipts",
-      "pr": 702,
-      "pr_head": "d61ba91065175fd1651512901e358ee5ad382121",
+      "pr": 703,
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/automation-receipts",
       "package_tree_sha": "39a8e08f7037fca28665b33edcc9d93314059c2d",
       "proposal_only": true,
@@ -425,12 +418,15 @@
       "prior_scan_state": "not-checked-for-this-pr",
       "prior_scanned_tree_sha": null,
       "host_behavior": "not-run",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "original_pr": 702,
+      "original_pr_head": "d61ba91065175fd1651512901e358ee5ad382121",
+      "consolidation_commit": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7"
     },
     {
       "id": "task-surface",
-      "pr": 702,
-      "pr_head": "d61ba91065175fd1651512901e358ee5ad382121",
+      "pr": 703,
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/task-surface",
       "package_tree_sha": "951d5da3b04651e5612e8d1af811b39250672585",
       "proposal_only": true,
@@ -439,12 +435,15 @@
       "prior_scan_state": "not-checked-for-this-pr",
       "prior_scanned_tree_sha": null,
       "host_behavior": "not-run",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "original_pr": 702,
+      "original_pr_head": "d61ba91065175fd1651512901e358ee5ad382121",
+      "consolidation_commit": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7"
     },
     {
       "id": "career-radar",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/career-radar",
       "package_tree_sha": "9573dfb79626dd4538efdda0b63db4ac6062fec8",
       "proposal_only": true,
@@ -458,7 +457,7 @@
     {
       "id": "daily-briefing",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/daily-briefing",
       "package_tree_sha": "71ea41a1548b38df1b7cc71f032437fb09ce15ed",
       "proposal_only": true,
@@ -472,7 +471,7 @@
     {
       "id": "handoff-writer",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/handoff-writer",
       "package_tree_sha": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
       "proposal_only": true,
@@ -490,7 +489,7 @@
     {
       "id": "inbox-triage",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/inbox-triage",
       "package_tree_sha": "d5796de1dbb5605e3ba8c2932ddf6860f972bef0",
       "proposal_only": true,
@@ -504,7 +503,7 @@
     {
       "id": "learning-plan",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/learning-plan",
       "package_tree_sha": "931fb2192a3cb1212643fe1df51d5e4bc3c70af4",
       "proposal_only": true,
@@ -518,7 +517,7 @@
     {
       "id": "mcp-vetting",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/mcp-vetting",
       "package_tree_sha": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
       "proposal_only": true,
@@ -532,7 +531,7 @@
     {
       "id": "permissions-review",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/permissions-review",
       "package_tree_sha": "8b8cbd95cbcb4f053c1070fdb4400c823593863f",
       "proposal_only": true,
@@ -546,7 +545,7 @@
     {
       "id": "repo-pulse",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/repo-pulse",
       "package_tree_sha": "536d02c3c8ffed77f4acb9a90145a0a0e5c2197b",
       "proposal_only": true,
@@ -560,7 +559,7 @@
     {
       "id": "smallbiz-ops",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/smallbiz-ops",
       "package_tree_sha": "ba9ef84f09c14bd3284f92eeedcf4e4a3876a412",
       "proposal_only": true,
@@ -574,7 +573,7 @@
     {
       "id": "standup-writer",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/standup-writer",
       "package_tree_sha": "59dd3dd9f44b66b7b8a9dc21a72f49e5ce58d3d9",
       "proposal_only": true,
@@ -588,7 +587,7 @@
     {
       "id": "week-in-review",
       "pr": 703,
-      "pr_head": "d6c934b5cb21d0fc4ee98da9b44f38cdd023bbb4",
+      "pr_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
       "path": "skills/week-in-review",
       "package_tree_sha": "0d8ee8ccdefdbc6c6478a5dbbb7d54d8ef4ac321",
       "proposal_only": true,
@@ -599,5 +598,17 @@
       "host_behavior": "not-run",
       "unchanged_use_approved": false
     }
-  ]
+  ],
+  "active_pr_count": 3,
+  "pr_consolidation": {
+    "closed_pr": 702,
+    "into_open_pr": 703,
+    "integrated_head": "bb4bcb5f2a394db07fe956c34b560f97d5a357d7",
+    "closed_without_merge": true,
+    "unique_file_blobs_copied_identical": 8,
+    "skill_package_trees_preserved": 13,
+    "first_party_verification_entries": 44,
+    "security_state_changed": false,
+    "notes": "Historical #702 remains linked as source provenance. Its two package records are now scanned and accepted only as part of open draft #703; no source adoption or behavioral gate waived."
+  }
 }
