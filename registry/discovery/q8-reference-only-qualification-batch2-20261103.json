@@ -1,0 +1,824 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "rubric_dimensions": [
+  "trigger_precision",
+  "procedural_clarity",
+  "authority_safety",
+  "failure_handling",
+  "evidence_discipline",
+  "dependency_coherence",
+  "portability_honesty",
+  "usefulness_differentiation",
+  "adversarial_resilience",
+  "effectiveness_design"
+ ],
+ "rubric_scale": "0-2 per dimension, 20 total",
+ "decision_vocabulary": {
+  "VALUABLE_REFERENCE": "Individually selected differentiated method to study; not approval to install or run unchanged.",
+  "KEEP_REFERENCE_ONLY": "Stays in research; useful lessons recorded but not promoted."
+ },
+ "tranche": "Q8 reference-only qualification batch 2",
+ "selection": "Next-strongest current static scores (17/20) among reference-only keys in the 16 domains still unfeatured after Q8 batch 1, one or two per domain, skipping candidates with real-world side effects (e.g. placing phone calls). Eleven candidates across ten domains.",
+ "review_method": "Exact pinned commits fetched (depth 1) into isolated bare repositories; package trees re-derived and matched to prior records 10/10; trees exported with git archive; every package file read in full by three parallel read-only reviewers on disjoint lists with one shared brief; integration owner spot-checked each decisive claim against source lines and adjudicated decisions. Nothing executed, installed or fetched from candidates. Pinned SkillSpector static scan per exact tree.",
+ "counts": {
+  "reviewed": 11,
+  "valuable_reference": 6,
+  "keep_reference_only": 3,
+  "reject_unchanged": 2,
+  "security_passed": 1,
+  "behavioral_validated": 0,
+  "unchanged_use_approved": 0
+ },
+ "records": [
+  {
+   "name": "GTM Deal Pulse",
+   "consumer_id": "rvanshur-vertical-gtm-skills/gtm-deal-pulse",
+   "source_repository": "rvanshur/vertical-gtm-skills",
+   "source_pin": "a9ee9d3547e1df59fe5b170b7fefc4ecff57350b",
+   "canonical_path": "skills/08-deal-pulse/SKILL.md",
+   "package_tree": "6adeff2c64610248c1d18aa51f5791e77e9e9817",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "a894e3107dbdf40c26c99b5c3632f36e344963d7",
+   "package_file_count": 3,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q2-rvanshur-vertical-gtm-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "sales",
+   "capability_subdomain": "pipeline",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Applies to one active open deal only; routes engaged-stage deals elsewhere.",
+    "procedural_clarity": "Eight steps, a rubric for each of 16 signals, an exact score formula, report template and two worked examples whose arithmetic checks out.",
+    "authority_safety": "Draft-only: nothing sends or writes to the CRM; connectors read only named records after asking.",
+    "failure_handling": "Unknown signals are INSUFFICIENT and excluded; fewer than 12 scored signals gives no score; sparse-record fallback.",
+    "evidence_discipline": "Six source tags on every fact, call facts need a date, rates shown with n, 'claimed is not confirmed'.",
+    "dependency_coherence": "Requires a client profile and a call-coaching skill that are not shipped; links to sibling skills and a paid kit.",
+    "portability_honesty": "Claims multi-host use, but relative suite paths break outside its repo layout.",
+    "usefulness_differentiation": "Pipeline scorecards are common; the abstaining score math and pillar-weakness step are the differentiators.",
+    "adversarial_resilience": "Reads CRM notes, emails and transcripts without treating them as untrusted or limiting customer personal data.",
+    "effectiveness_design": "Uncalibrated thresholds presented as trustworthy; close-date slip rule contradicts itself (YELLOW cap at L555 vs RED in rubric/example)."
+   },
+   "score_20": 15,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Score a sales deal only from sourced evidence, and refuse to score when records are thin.",
+   "distinct_method_original_summary": "Grade each deal signal only on tagged, dated evidence, leave unknowns out of the average instead of counting them as zero, give no overall score below a coverage minimum, and raise risk when one pillar collapses.",
+   "reason_not_unchanged": "It needs a client profile file and a sibling skill that are not shipped. Its close-date rule contradicts itself and its score thresholds are not calibrated against won or lost deals. It reads customer emails and CRM notes with no rule to treat them as untrusted or to minimize personal data.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Unshipped client-profile and call-coaching dependencies",
+    "Self-contradictory close-date slip rule (SKILL.md L555 vs Signal 11 rubric)",
+    "CUSTOMIZE re-weighting conflicts with Hard Rule 2",
+    "No untrusted-content or customer-data minimization rule",
+    "Uncalibrated thresholds"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 6999f5b0, Copyright 2026 Ryan Vanshur); frontmatter license: MIT, author Ryan Vanshur; no package-level LICENSE/ATTRIBUTION/NOTICE. Public framework names (SPIN, MEDDPICC) are named, not copied text; no third-party content copied.",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "94a032ff3300cea3909a6a6012686c917d41792b6503cf594f6b97cf5c81a196",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 3
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Singapore SSP Navigator",
+   "consumer_id": "kyleoliveiro-sg-gov-skills/sg-gov-ssp-navigator",
+   "source_repository": "kyleoliveiro/sg-gov-skills",
+   "source_pin": "16892fc613263c3f835457cd23ae092d404979ca",
+   "canonical_path": "skills/sg-gov-ssp-navigator/SKILL.md",
+   "package_tree": "135c3d625b2092ff3c9ee123e97641c09596ee53",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "c731414a2c7a4655069776f9549594c7e06dca57",
+   "package_file_count": 4,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q2-kyleoliveiro-sg-gov-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "law",
+   "capability_subdomain": "regulatory-analysis",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete triggers plus 10 positive and 10 near-miss trigger evals.",
+    "procedural_clarity": "Six required inputs, ordered base-plan selection, overlays, report structure and lifecycle.",
+    "authority_safety": "Advisory only; classification and approvals stay with the agency, CISO and CSA; the flagged 'no approval' line only concerns optional Level 2 practices and still requires recorded reasoning.",
+    "failure_handling": "Undetermined sensitivity is a blocker; unpublished combinations escalate instead of forcing a template.",
+    "evidence_discipline": "Dated source snapshot with URLs and a verify-live note; quotes qualifying criteria.",
+    "dependency_coherence": "One reference ships; hands off to about 15 sibling skills not in the package.",
+    "portability_honesty": "No tools or connectors; open about Singapore-only scope and data currency.",
+    "usefulness_differentiation": "Encodes selection logic, overlay stacking and hosting-versus-classification checks for a niche high-stakes domain.",
+    "adversarial_resilience": "Little attack surface, but no check on user-asserted classification.",
+    "effectiveness_design": "Has evals that forbid invented thresholds, but the snapshot has no expiry and output need not carry the date or a not-legal-advice note."
+   },
+   "score_20": 17,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Pick the right Singapore government security plan and its mandatory controls, and flag gaps.",
+   "distinct_method_original_summary": "Collect the system's classification facts first, choose exactly one base plan by rule, stack the AI and public-service overlays, check model hosting against the data level, and escalate any combination with no published template.",
+   "reason_not_unchanged": "Its rules are a dated July 2026 snapshot of standards that change, with no expiry. Outputs need not state that date or say they are not legal or compliance advice. It hands off to sibling skills that are not in the package, and the reuse terms of the embedded government text are not stated.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Dated 2026-07-16 regulatory snapshot with no expiry",
+    "Output lacks required snapshot date and not-legal-advice disclaimer",
+    "Unshipped sibling handoff skills"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 4c827fc3, Copyright 2026 Kyle Oliveiro); no package-level LICENSE/ATTRIBUTION/NOTICE. Summarises/quotes SSP pages from info.standards.tech.gov.sg (attributed, 2026-07-16); notes GovtechSG/tech-standards OSCAL is MIT-licensed (not bundled).",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "failed",
+    "report_sha256": "19e1c5d60a372a5e12de94c6c57dff3495094381daefb13229f48d829109c4cc",
+    "findings": [
+     {
+      "id": "EA2",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 182
+     }
+    ],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Build Evidence Map",
+   "consumer_id": "github-awesome-copilot/build-evidence-map",
+   "source_repository": "github/awesome-copilot",
+   "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+   "canonical_path": "skills/build-evidence-map/SKILL.md",
+   "package_tree": "e5de9060f2171ee6f1b6d7dae5e30402aad9eb4d",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "3d0ff9385a5603242e39989cbfc6e7a8d856d6cc",
+   "package_file_count": 5,
+   "prior_static_record": {
+    "ledger": "registry/discovery/github-awesome-copilot-remaining-313-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "research",
+   "capability_subdomain": "synthesis",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Scoped to contested choices and research synthesis; simple fact checks routed elsewhere.",
+    "procedural_clarity": "Ten-step workflow with four node types, typed edges and a concrete JSON schema.",
+    "authority_safety": "Rendering only if a tool is already installed; network verification never implicit and needs permission; validator reads one file.",
+    "failure_handling": "Success only on exit 0 and a VALID receipt; reports a block rather than inventing success.",
+    "evidence_discipline": "Bounded source locators and excerpts, rejects confidence percentages, and never calls a valid map proven true.",
+    "dependency_coherence": "Offline validator uses only Node built-ins, but rendering and verification depend on an external unreviewed CLI.",
+    "portability_honesty": "States Node 18 need and that HTML is only a view of the JSON.",
+    "usefulness_differentiation": "Typed supports/contradicts/qualifies/missing graph with mandatory unknowns goes well beyond prose synthesis.",
+    "adversarial_resilience": "Verification blocks are only format-checked (contract.mjs L284+), so hand-written ones pass; receipt is an unkeyed hash.",
+    "effectiveness_design": "Code implements the stated graph invariants: one position, reachability, cycles, unused sources, excerpt checks."
+   },
+   "score_20": 18,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Keep counterevidence and unknowns visible in a decision, with a checked evidence map.",
+   "distinct_method_original_summary": "Map a contested decision as a typed graph that leads to one position, tie every piece of evidence to an exact source passage, add explicit unknowns, and accept the map only after an offline structural check passes.",
+   "reason_not_unchanged": "A 'VALID' result proves structure, not truth, and its receipt is a plain hash anyone can recompute. Hand-written verification entries pass the checker. Rendering and live verification rely on an outside tool that was not reviewed.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Hand-authored verification objects pass format-only checks (scripts/contract.mjs L284)",
+    "Receipt is an unkeyed self-computed hash",
+    "Depends on unreviewed external doubt-ai CLI for render/verify"
+   ],
+   "package_license_finding": "root MIT only (GitHub, Inc., blob 89bc5e962c9944cdb050887062afdaaf89be504a); no package LICENSE/ATTRIBUTION file; scripts implement the 'doubt-evidence-receipt-v1' contract associated with the external doubt-ai package (no separate license/attribution for that project in the package)",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "7c9828f3cb9a5e8cba8d889a0f3f12d46d2fc0d2956ad84764df9e0f7e94e0ec",
+    "findings": [
+     {
+      "id": "AE1",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 44
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 1,
+     "static_parse_limit": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Radiology Reproducibility",
+   "consumer_id": "huang-sir1-radiology-skills/radiology-reproducibility",
+   "source_repository": "huang-sir1/radiology-skills",
+   "source_pin": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+   "canonical_path": "radiology-skills/skills/radiology-reproducibility/SKILL.md",
+   "package_tree": "779011b2e2f2b706e2beff0730bdd0537649dbb0",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "9a250af4fbe7a98057c73a14cad8d63c9dc358e2",
+   "package_file_count": 9,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q1-huang-sir1-radiology-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "research",
+   "capability_subdomain": "reproducibility",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Precise mode table and boundary cases, but terse description without scope or exclusions.",
+    "procedural_clarity": "Eight-step workflow, input passport, clean replay protocol and templates.",
+    "authority_safety": "Replay needs user authorization, a safe workspace and lawful data; explicit STOP gates for both.",
+    "failure_handling": "Seven STOP gates; failed runs preserved; repairs create a new version instead of patching in place.",
+    "evidence_discipline": "Graded evidence states, tolerance frozen before replay, per-result levels never averaged.",
+    "dependency_coherence": "Hands off to sibling skills not in the package; several evidence states are listed but undefined.",
+    "portability_honesty": "Tool-agnostic method, but the bundled validator is PowerShell with Windows-only path filters.",
+    "usefulness_differentiation": "Separates 'reruns on the same data' from 'works on new data', with discrepancy classes.",
+    "adversarial_resilience": "Strong anti-upgrade rules, but 'sign the receipt' has no defined signing method.",
+    "effectiveness_design": "Clear output contract, templates with author-input defaults and routing/boundary cases."
+   },
+   "score_20": 16,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Grade each research result's reproducibility honestly, with tolerances fixed before rerunning.",
+   "distinct_method_original_summary": "Give each table or figure the highest replay level its evidence supports, fix the acceptance margin before rerunning, record and classify any mismatch instead of patching it, and track outside validation separately.",
+   "reason_not_unchanged": "Running replays could execute untrusted research code on restricted patient data, guarded only by written rules. Some evidence labels are never defined, the 'signed receipt' has no signing method, sibling skills are missing and the validator is Windows-only.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Undefined evidence states (INDEPENDENTLY_VERIFIED, EXTERNAL_DATA_VERIFIED, AUTHOR_REPORTED)",
+    "Missing sibling handoff skills",
+    "PowerShell-only validator with Windows path filters"
+   ],
+   "package_license_finding": "root MIT only (radiology-skills/LICENSE identical to repo-root LICENSE, Copyright (c) 2026 Huang Yuhong, Gu Wenchao, Song Xinyang; plugin.json license 'SEE LICENSE IN LICENSE'); no package LICENSE/NOTICE/ATTRIBUTION; no copied third-party text; 12 sources (National Academies 2019, NIH, FAIR4RS, W3C PROV-O, OCI image-spec, GitHub/Zenodo docs, GO FAIR, CLAIM, IBSI, DICOM) cited by URL with access dates and paraphrased",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "c20dbfaa86680123d7490e0ee4407d18e3a9e51692de29e6883e798a9cc35f08",
+    "findings": [
+     {
+      "id": "PE3",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "file": "references/restricted-data-archiving-and-software.md",
+      "line": 23
+     }
+    ],
+    "incomplete_reasons": {
+     "static_parse_limit": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "scRNA-seq QC",
+   "consumer_id": "openai-plugins/ngs-analysis/scrna-seq-qc",
+   "source_repository": "openai/plugins",
+   "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+   "canonical_path": "plugins/ngs-analysis/skills/scrna-seq-qc/SKILL.md",
+   "package_tree": "e193c8e0833415e0ff7ffa39c6aa59f9610e7431",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "4c60e7ff7426ce3167294c2005c6457b4cf4d2b3",
+   "package_file_count": 3,
+   "prior_static_record": {
+    "ledger": "registry/discovery/openai-plugins-536-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "science",
+   "capability_subdomain": "laboratory-methods",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 2,
+    "dependency_coherence": 0,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Covers scRNA QC broadly with no exclusions.",
+    "procedural_clarity": "Seven-step workflow with a detailed heuristics reference.",
+    "authority_safety": "Approval gates for extra filters, but the runner auto-launches a local server without confirmation.",
+    "failure_handling": "Flags a missing doublet tool as a blocker; little else on failures.",
+    "evidence_discipline": "Requires threshold plots, per-filter counts and recorded rationale.",
+    "dependency_coherence": "Runner script lives outside the package; R and Python stacks unpinned.",
+    "portability_honesty": "Admits a PBMC-oriented fallback but not environment needs.",
+    "usefulness_differentiation": "Useful governance, but mostly published community practice.",
+    "adversarial_resilience": "Resists silent method swaps; nothing guards the external runner.",
+    "effectiveness_design": "Auditable deliverables, but the runner outputs cannot be checked."
+   },
+   "score_20": 11,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "The operational half (runner script) is outside the package and auto-starts a local server; the remaining guidance is mostly published best practice.",
+   "hard_fail_flags": [
+    "Runner script outside package (SKILL.md L88)",
+    "Auto-launches localhost server without confirmation (L93)",
+    "No in-package license",
+    "Unpinned R/Python dependencies"
+   ],
+   "package_license_finding": "plugin.json declares MIT (author OpenAI); no LICENSE file in plugins/ngs-analysis or package (notice text unavailable). plugin.json repository field points to github.com/openai/openai, inconsistent with the hosting repo.",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "122753ceff06927012d836a22df45b99e0cca205c83b7be7d7e06d90921821b2",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 5
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Novel Text Rewrite Lint",
+   "consumer_id": "kavao-monogatari-coach/novel-text-rewrite-lint",
+   "source_repository": "kavao/monogatari-coach",
+   "source_pin": "01d5be3b671a2659dc50179f70c5483572989e71",
+   "canonical_path": ".rulesync/skills/novel-text-rewrite-lint/SKILL.md",
+   "package_tree": "8176d644af251179daafe0390447b43cf98d10bd",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "992a42d6a6bdc9cd60f1f3fa91e4658d9ea14286",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q5-kavao-monogatari-coach-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "fiction-narrative-worldbuilding",
+   "capability_subdomain": "editing",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 1,
+    "evidence_discipline": 2,
+    "dependency_coherence": 0,
+    "portability_honesty": 0,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Tied to one repository's manuscript paths; wildcard targets.",
+    "procedural_clarity": "Clear timing table, post-draft steps, profiles and completion procedure.",
+    "authority_safety": "Recommends a dry run first, but backup before in-place rewrite is optional.",
+    "failure_handling": "Explains exit codes but not a missing tool.",
+    "evidence_discipline": "Forbids claiming completion until the strict check exits 0.",
+    "dependency_coherence": "The lint tool, rule files and sibling skills are all absent from the package.",
+    "portability_honesty": "Does not say it only works inside its origin repository.",
+    "usefulness_differentiation": "Two-phase lint is sensible but generic; the rest is a manual for an absent tool.",
+    "adversarial_resilience": "Gate-before-claim helps, but trusts an unreviewed script's exit code.",
+    "effectiveness_design": "Cannot be assessed because the rules live in missing files."
+   },
+   "score_20": 10,
+   "qualification_decision": "REJECT_UNCHANGED",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "A usage manual for a project-local tool that is not in the package; non-functional elsewhere. The generic 'strict gate before claiming done' idea is recorded as salvage only.",
+   "hard_fail_flags": [
+    "Core lint tool and rule YAML not in package",
+    "Depends on absent sibling skills and project paths",
+    "In-place --fix with optional backup"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 404dc12b, kavao); no package-level LICENSE/NOTICE; no third-party content copied into package",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "e708a55380177ac77e755ff79b343d118b14f9fae5f7905f0ca991d540ae7605",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 29
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "RTOS Fundamentals",
+   "consumer_id": "j4flmao-agent-skills/rtos-fundamentals",
+   "source_repository": "j4flmao/agent-skills",
+   "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+   "canonical_path": "skills/embedded-systems/rtos-fundamentals/SKILL.md",
+   "package_tree": "20589547ab32736047ecde2ef9bd21c73954fef3",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "c0cb5e30f42112209c77ec4cee1cbedcc2935946",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/j4flmao-agent-skills-555-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "robotics-iot",
+   "capability_subdomain": "embedded-integration",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 1,
+    "authority_safety": 2,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete triggers and explicit do-not-use routes.",
+    "procedural_clarity": "Template and checklist, but mostly concept tables.",
+    "authority_safety": "Advisory only; no commands or files unless asked.",
+    "failure_handling": "Notes sufficiency limits but no path for missing task inputs.",
+    "evidence_discipline": "Correct worked response-time example; no rule to mark estimated vs measured times.",
+    "dependency_coherence": "Self-contained single file.",
+    "portability_honesty": "Honest platform caveats (PREEMPT_RT not provable hard real-time).",
+    "usefulness_differentiation": "Accurate textbook summary with light differentiation.",
+    "adversarial_resilience": "Anti-patterns help, but nothing stops estimated WCET being presented as proof.",
+    "effectiveness_design": "Useful output format, but no requirement to show iterations or overheads."
+   },
+   "score_20": 14,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Accurate and safe, but mostly standard real-time scheduling theory; no caveat that its verdicts are not certification evidence.",
+   "hard_fail_flags": [
+    "No caveat that schedulability output is not safety-certification evidence"
+   ],
+   "package_license_finding": "root MIT only (frontmatter license: MIT; no package-level LICENSE/ATTRIBUTION/NOTICE file)",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "e18537fb6c381c4c5e17ca85f2aabfb79940fcbf3265aa24e8f91e210bd481d2",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Management Hiring",
+   "consumer_id": "j4flmao-agent-skills/management-hiring",
+   "source_repository": "j4flmao/agent-skills",
+   "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+   "canonical_path": "skills/management/hiring/SKILL.md",
+   "package_tree": "a3f8a644d95363d2ceb0f68cf57b42f8cc501779",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "5101d4db98f210cb7a40983a3f736c3b9f428a98",
+   "package_file_count": 9,
+   "prior_static_record": {
+    "ledger": "registry/discovery/j4flmao-agent-skills-555-current-standard-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "career",
+   "capability_subdomain": "interviews",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 1,
+    "authority_safety": 0,
+    "failure_handling": 0,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 0,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "About 20 broad keywords with a short exclusion list.",
+    "procedural_clarity": "Ordered steps, but scales and no-hire cutoffs contradict across files (1-4 vs 1-5; 2.5 vs 2.75).",
+    "authority_safety": "Person-affecting outputs (ATS no-reapplication flag, probation, score-to-pay) with no legal or HR review gate.",
+    "failure_handling": "No handling for missing role data, jurisdiction conflicts or unlawful screening requests.",
+    "evidence_discipline": "Asks for evidence-based scorecards but states unsourced multipliers and effect sizes as fact.",
+    "dependency_coherence": "Eight references present but contradictory; handoff targets missing.",
+    "portability_honesty": "US-centric with fixed retention rules presented as compliance.",
+    "usefulness_differentiation": "Mostly a textbook summary; calibration loop is the useful part.",
+    "adversarial_resilience": "Salary expectations at screen, culture fit and demographic/language analysis with no consent or lawful-basis gate.",
+    "effectiveness_design": "Terse output style strips the legal and fairness caveats this domain needs."
+   },
+   "score_20": 7,
+   "qualification_decision": "REJECT_UNCHANGED",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "As written it steers an agent toward person-affecting employment actions (blacklisting via 'no reapplication eligibility', salary-at-screen, culture-fit, score-driven pay) with no legal, consent or human-review gate, and its own scales contradict. Rubric anchoring and the predictive-validity loop are recorded as salvage only.",
+   "hard_fail_flags": [
+    "Contradictory scales and cutoffs across files",
+    "'No reapplication eligibility' ATS flag (references/hiring-evaluation-decision.md L422) without review",
+    "Salary-at-screen and culture-fit guidance",
+    "Demographic tracking and debrief language analysis without consent gate",
+    "Unsourced quantitative claims"
+   ],
+   "package_license_finding": "root MIT only; no package-level LICENSE/ATTRIBUTION present",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "3dc7f2be7ca44afcc705ba43c2ca2073ce16b7d723dbda45388265044d4b3ab7",
+    "findings": [
+     {
+      "id": "AE1",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 411
+     },
+     {
+      "id": "EA3",
+      "pattern": "Scope Creep",
+      "severity": "LOW",
+      "file": "references/evaluation-rubric.md",
+      "line": 37
+     },
+     {
+      "id": "EA3",
+      "pattern": "Scope Creep",
+      "severity": "LOW",
+      "file": "references/interview-rubrics.md",
+      "line": 64
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 1,
+     "static_parse_limit": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Read Ledger",
+   "consumer_id": "agentskillexchange/read-ledger",
+   "source_repository": "agentskillexchange/skills",
+   "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+   "canonical_path": "skills/read-ledger/SKILL.md",
+   "package_tree": "e493db7077c3d83a481cec305719d791ac2c44d3",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "db653daa63684eb930836dc9feb98b1cd02c25f0",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/agentskillexchange-authored-procedures-86-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "memory-context",
+   "capability_subdomain": "provenance",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Clear use case but no when-not-to-use guidance; catalog metadata in frontmatter.",
+    "procedural_clarity": "Six steps each with exact actions and a finish condition; record fields fully defined.",
+    "authority_safety": "Local, append-only, single coordinator; but installation clones an unpinned upstream repo.",
+    "failure_handling": "Covers malformed lines, ID reuse, unreadable sources, truncation, missing files and stale reviews.",
+    "evidence_discipline": "Says reviews are self-reported, not proof; coverage computed as a union; token counts labeled estimates.",
+    "dependency_coherence": "Needs only hashing and JSON; referenced fixtures live upstream, not in the package.",
+    "portability_honesty": "Labeled for one framework but the format carries over.",
+    "usefulness_differentiation": "Hash-pinned range coverage across context resets fills a real gap.",
+    "adversarial_resilience": "Hash pinning resists silent source changes, but source text is not marked untrusted.",
+    "effectiveness_design": "Fixed-budget packets with reproducible IDs and a checkable coverage report."
+   },
+   "score_20": 15,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Know exactly which parts of which documents your agent actually reviewed, across sessions.",
+   "distinct_method_original_summary": "Keep an append-only log that ties each reviewed span of text to a hash of the source version, so edits reopen old reviews and coverage is recomputed from the file instead of the agent's memory.",
+   "reason_not_unchanged": "Its install section clones an unpinned upstream repository into the agent's skill folder. Fixtures it mentions are not in the package. Locator fields could leak private paths if a ledger is shared, and reviewed text is not treated as untrusted.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Installation clones unpinned upstream HEAD (SKILL.md L26)",
+    "Referenced fixtures not in package",
+    "No untrusted-content rule for reviewed text"
+   ],
+   "package_license_finding": "root MIT only (catalog, Copyright (c) 2026 Agent Skill Exchange); no package LICENSE/ATTRIBUTION; upstream makoncline/read-ledger license not stated in package",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "passed",
+    "report_sha256": "f0986a0e819b5f3df2522e6def2831caf9546ce97adcbc1a1d72e74fd27ec16b",
+    "findings": [],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "PaperPilot CSV Preflight",
+   "consumer_id": "agentskillexchange/paperpilot-csv-preflight",
+   "source_repository": "agentskillexchange/skills",
+   "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+   "canonical_path": "skills/paperpilot-csv-preflight/SKILL.md",
+   "package_tree": "5bf688da48b43aff33e3078f97d6d8797b092942",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "06e9a3372f6d28cf344e6d5f3f99389c01c5045c",
+   "package_file_count": 4,
+   "prior_static_record": {
+    "ledger": "registry/discovery/agentskillexchange-authored-procedures-86-static-20261102.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "analytics",
+   "capability_subdomain": "measurement",
+   "rubric_scores": {
+    "trigger_precision": 1,
+    "procedural_clarity": 1,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Clearly scoped preview, but mixes in an unrelated paid API.",
+    "procedural_clarity": "Local steps clear; catalog wrapper is broken.",
+    "authority_safety": "Local script has no network or writes; but advertises a paid upload endpoint.",
+    "failure_handling": "Fails closed on bad input, oversize, invalid UTF-8 and bad quoting.",
+    "evidence_discipline": "Honest caveats, but tests L81-82 assert install commands absent from SKILL.md.",
+    "dependency_coherence": "Node-only, but catalog copy diverges from upstream.",
+    "portability_honesty": "Honest about comma-only and 32 KiB limits.",
+    "usefulness_differentiation": "Generic CSV lint.",
+    "adversarial_resilience": "No data echo, but formula check misses tab/CR prefixes and headers.",
+    "effectiveness_design": "Count-only output is useful; some miscounts."
+   },
+   "score_20": 11,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Count-only, no-echo local checking is a sound privacy pattern, but the linter is generic, its tests fail against its own text, and it promotes a paid third-party upload route.",
+   "hard_fail_flags": [
+    "tests/preflight.test.cjs L81-82 assert install strings absent from SKILL.md",
+    "Promotes paid x402 upload endpoint",
+    "Incomplete formula-injection heuristic"
+   ],
+   "package_license_finding": "root MIT only (Copyright (c) 2026 Agent Skill Exchange); no package-level LICENSE/ATTRIBUTION file; upstream paperpilot-tools license not stated in package",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "63515913eb0b537f5077987e50894d78e53571b0f4772d43d4472b975b05c175",
+    "findings": [
+     {
+      "id": "AE1",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 30
+     },
+     {
+      "id": "RP1",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "file": "tests/preflight.test.cjs",
+      "line": 83
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 1,
+     "static_parse_limit": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Submission Auditor",
+   "consumer_id": "yujxzjcn-teaching-skills/submission-auditor",
+   "source_repository": "YujxZJCN/teaching-skills",
+   "source_pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+   "canonical_path": "submission-auditor/SKILL.md",
+   "package_tree": "9bfa23e2d497c948cf9dd41fbf02f2d66d56c30c",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "46adb631687ec846990cf3399476a8aeaaee9353",
+   "package_file_count": 8,
+   "prior_static_record": {
+    "ledger": "registry/discovery/q1-yujxzjcn-teaching-skills-static-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY",
+    "score_20": 17
+   },
+   "capability_domain": "education",
+   "capability_subdomain": "assessment",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Mode table plus explicit does-not-trigger routes; spec mode first.",
+    "procedural_clarity": "Phased batch audit with two human checkpoints and numbered agent steps.",
+    "authority_safety": "'Audit, don't grade' (L107); never posts, emails or publishes (L117); non-removable draft notice.",
+    "failure_handling": "Defines not-evaluable files, not-checkable exclusions, professor-review items and spec-gap reports.",
+    "evidence_discipline": "Every finding needs a location and quoted evidence; judgment verdicts carry confidence.",
+    "dependency_coherence": "Relies on shared files and a course passport not in the package.",
+    "portability_honesty": "Assumes a four-agent ecosystem, though the method works with one agent.",
+    "usefulness_differentiation": "Compiles the instructor's rules into source-traced checks and runs a whole-class fairness pass.",
+    "adversarial_resilience": "Guards scope creep and order effects, but student files are not treated as untrusted and privacy is 'where feasible'.",
+    "effectiveness_design": "Low-confidence items surface first; class patterns separate teaching from spec issues."
+   },
+   "score_20": 17,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Check student work against your own rules consistently, with drafts you approve.",
+   "distinct_method_original_summary": "Turn the instructor's requirements into an approved checklist where every check traces to something students were told, split fact checks from judgment calls, cite where each finding sits, and compare verdicts across the class before drafting feedback.",
+   "reason_not_unchanged": "Student work is sent to the model host with only 'where feasible' pseudonymization and no retention or institutional-policy check. Submissions could carry injected instructions. Several shared files it depends on are missing, including the one that defines its person-affecting rule.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Missing shared files (checkpoint protocol, feedback principles, AI-tier definitions, course passport)",
+    "No untrusted-submission rule",
+    "Thin student-data privacy and retention handling"
+   ],
+   "package_license_finding": "root MIT only (LICENSE blob 024003bb, 'Copyright (c) 2026 Jiaxing Yu'); no package-level LICENSE/NOTICE/ATTRIBUTION; plugin.json/marketplace.json declare MIT v1.2.0; no copied third-party text found \u2014 research cited by name only (Hattie & Timperley 2007, Boring et al. 2016, Uttl et al. 2017, Liang et al. 2023 etc.), all real attributions",
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "2c4feae7328bc956e2a36e4c76ebcc032861f8b7a4a9da2ab4005ee8de4fe3b7",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 8
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  }
+ ]
+}
