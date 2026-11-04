@@ -7,9 +7,9 @@ source_path: skills/hf-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
+source_snapshot_revision: f7c68788c864c1e63e750d57369a573d2e47636a
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/hf-pulse/SKILL.md
 permission_tier: read-only
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
-exact_version_requalification: "Required for 3250a7c3ed49783329220536e8ef4a1f7b9bb286; earlier semantic review applied to de2d55b632e88deaa71aa145cf83293f5877381a. Security and behavior not-run."
+exact_version_requalification: "Required for 149e577a9f72895b09aea43d607203d731db1bce. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
