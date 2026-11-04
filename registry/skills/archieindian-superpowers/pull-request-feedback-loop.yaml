@@ -24,5 +24,5 @@ portability: medium
 review_status: curated-external
 dependency_status: source-intact
 dependencies: "Standalone SKILL.md; user-identified PR, optional gh/GitHub read API, authorized local edits/tests; no mandatory push or reply."
-import_eligibility: conditional-exact-version-security-license-and-user-fit
-rationale: "VERIFIED semantic only. User-requested PR feedback scope, grouped fixes, verification and reply preparation; no automatic posting, force push, branch deletion or review dismissal. Does not authorize push, unrelated private reads or side-effecting tests. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance."
+import_eligibility: reference-only-license-hold
+rationale: "VERIFIED semantic only. User-requested PR feedback scope, grouped fixes, verification and reply preparation; no automatic posting, force push, branch deletion or review dismissal. Does not authorize push, unrelated private reads or side-effecting tests. Upstream LICENSE declares MIT but is incomplete (#544); no redistribution clearance."\nlicense_eligibility_note: "Prior semantic static verification remains historical exact-source evidence, not permission to install, copy, adapt or redistribute from this incomplete-license corpus. Conceptual reference only until upstream rights independently resolved."

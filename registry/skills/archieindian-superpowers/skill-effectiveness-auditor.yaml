@@ -24,5 +24,5 @@ portability: high
 review_status: curated-external
 dependency_status: source-intact
 dependencies: "Standalone SKILL.md; host-supplied target skill and adjacent descriptions; STATE_SCHEMA.yaml is suggested for stateful designs, not bundled or executed."
-import_eligibility: conditional-exact-version-security-and-user-fit
-rationale: "VERIFIED semantic only. Read-only review of triggers, non-triggers, overlap, actionability and testable outcomes with keep/revise/split/remove recommendations; no writes or tests are executed. Simulated use is design evidence, not representative host behavioral validation. Trigger: evaluate skill quality before adoption or revision. Non-trigger: automatic install, merge or file mutation."
+import_eligibility: reference-only-license-hold
+rationale: "VERIFIED semantic only. Read-only review of triggers, non-triggers, overlap, actionability and testable outcomes with keep/revise/split/remove recommendations; no writes or tests are executed. Simulated use is design evidence, not representative host behavioral validation. Trigger: evaluate skill quality before adoption or revision. Non-trigger: automatic install, merge or file mutation."\nlicense_eligibility_note: "Prior semantic static verification remains historical exact-source evidence, not permission to install, copy, adapt or redistribute from this incomplete-license corpus. Conceptual reference only until upstream rights independently resolved."
