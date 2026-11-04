@@ -3,13 +3,13 @@ skill_name: github-pulse
 source_id: local-skills
 local_path: "skills/github-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5dc5cb3fd2527dcd39765ab66a9676146f91f1d7
+content_blob_sha: 846dfc3a493cdf9b2387ffca77a7a9e463898aff
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
 prior_reviewed_blob_sha: 03e135f4e916115040af63271de71b23277e36f7
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
+notes: "2026-11-04 source security revision at 846dfc3a493cdf9b2387ffca77a7a9e463898aff; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
