@@ -28,11 +28,11 @@
   },
   "approved_unchanged": 0,
   "behaviorally_validated": 0,
-  "open_prs_at_snapshot": 3,
-  "open_issues_at_snapshot": 12,
+  "open_prs_at_snapshot": 1,
+  "open_issues_at_snapshot": 11,
   "security_issue": 402,
   "non_additive": true,
-  "notes": "Q8 #693 merged as 50 study-only Valuable References across 33 domains on 2026-11-04; Q7 20/10 is historical. Security evidence is pinned to earlier exact package trees; these populations overlap and must not be added. Active draft repair PRs: #673, #686, #703 (former #702 transferred intact into #703 and closed unmerged). Current 34 first-party proposed package trees: 14 exact-tree matching external static scan passes, 20 new scans pending, zero observed behavioral passes, zero unchanged-use approvals. Memory Pulse 1.1.3 repaired implicit private operator-profile/governance discovery on #673; its OLD passing SkillSpector tree is no longer current, so the pass was invalidated and its NEW package tree awaits scanning. No other scanner evidence changed. P0 issue #402 remains open through required first-party and currently eligible third-party backfill. 2026-11-04 #703 additional source-level privacy remediation: Standup Writer and Week in Review no longer discover private operator profiles, host memory or governance files to bind an unapproved reporting workspace; both complete exact package trees changed within the existing 13-package new-scan queue, with fresh 18/20 static semantic reviews. No scanner/agent behavior reclassification or approvals. PR #703 README overlap with newer main was resolved on its draft branch with an exact source-preserving 3-way reconciliation: current main's dashboard/status and the draft's governance additions are retained; GitHub reports the branch technically mergeable, but scanner/behavioral gates remain HOLD. P0 #402 exact-source repair: #703 Career Radar and Small Biz Ops 1.1.3 now require explicitly authorized private-source binding rather than default profile/memory discovery; current 18/20 static reviews recorded, no scanner or host behavioral acceptance. Totals unchanged 14 matching static passes / 20 pending scans.",
+  "notes": "November 4, 2026: The Q8 50 selected skills remain reference-only, not approved unchanged. P0 #402 security repairs have been consolidated into ONE open draft PR #703 (former #673/#686 closed unmerged after verified byte-identical transfer and canonical 44-skill registry reconciliation). 34 candidate exact Git package trees: 14 match historical pinned NVIDIA SkillSpector passes, 20 require new pinned scans, 0 actual behavioral validations, 0 unchanged-use approvals. No scanner run, source adoption, or security gate was waived by PR consolidation. Historical Q8/Q12 and first-party scan populations are overlapping and non-additive. Issue #589 closed only after its remaining work was assigned to #402/#588/#599; #544 remains open for upstream rights clarification.",
   "q8_merged_checkpoint": {
     "pr": 693,
     "source_head": "dfeb3ce191bd2242760c25a42115073799a1f5a0",
@@ -45,7 +45,7 @@
   },
   "repair_frontier": {
     "source": "registry/security/active-first-party-repair-frontier-20261104.json",
-    "scope": "Three open security repair PRs (#673, #686, consolidated #703); former #702 moved byte-identically into #703 and closed unmerged. Historical scanner population is separate.",
+    "scope": "One canonical open DRAFT repair PR #703 contains all 34 distinct first-party packages. Former repair PRs #673 and #686 closed unmerged after exact 72-file blob transfer and 44-record registry integration; their Git commits are parents of #703. Historical #702 likewise transferred; scanner populations overlap.",
     "changed_packages": 34,
     "existing_exact_tree_static_pass": 14,
     "needs_new_exact_tree_scan": 20,
@@ -53,25 +53,11 @@
     "unchanged_use_approvals": 0,
     "by_pr": [
       {
-        "pr": 673,
-        "head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
-        "total": 16,
-        "matched_pass": 9,
-        "new_scans_needed": 7
-      },
-      {
-        "pr": 686,
-        "head": "3d03c396d11645767c8e3a58b7113f8fec506ae2",
-        "total": 5,
-        "matched_pass": 5,
-        "new_scans_needed": 0
-      },
-      {
         "pr": 703,
-        "head": "913b8e123faefd60f31737b2b8bc324b39d070be",
-        "total": 13,
-        "matched_pass": 0,
-        "new_scans_needed": 13
+        "head": "7da266b84a88397dbf95fc950040e41ce3b81df5",
+        "total": 34,
+        "matched_pass": 14,
+        "new_scans_needed": 20
       }
     ]
   }
