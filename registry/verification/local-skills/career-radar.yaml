@@ -6,10 +6,10 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d2137aa35929e89ae6c86dec2b95a080b53699f0
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: unverified
+verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Changed source after issue #478 authority repair. Historical rubric score does not transfer to this exact source; independent ten-axis semantic, security and actual adversarial host behavior remain not-run.
+validation_note: Exact-version source-only semantic review complete on 2026-11-04. External-host behavioral validation not-run, security qualification and unchanged-use clearance not established.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [retrieval-first, source-driven, synthesis, evidence-first]
   authority: [read-only]
   portability: [medium]
-notes: "Historical score below applies to prior source only. Current source instruction readback passed scheduling and private-source consent text checks; full semantic requalification, exact-package security and behavioral validation still pending."
+notes: "New exact-version ten-axis source-level rubric in docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md; 18/20, not inherited from prior source. See documented missing-source, private-read, scheduler and prompt-injection constraints. Security scan and executed adversarial validation not-run."
