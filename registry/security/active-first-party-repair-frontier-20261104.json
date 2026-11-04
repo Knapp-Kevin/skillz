@@ -30,7 +30,7 @@
     },
     {
       "pr": 703,
-      "head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "total": 13,
       "matched_pass": 0,
       "new_scans_needed": 13
@@ -404,7 +404,7 @@
     {
       "id": "automation-receipts",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/automation-receipts",
       "package_tree_sha": "39a8e08f7037fca28665b33edcc9d93314059c2d",
       "proposal_only": true,
@@ -421,7 +421,7 @@
     {
       "id": "task-surface",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/task-surface",
       "package_tree_sha": "951d5da3b04651e5612e8d1af811b39250672585",
       "proposal_only": true,
@@ -438,7 +438,7 @@
     {
       "id": "career-radar",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/career-radar",
       "package_tree_sha": "9573dfb79626dd4538efdda0b63db4ac6062fec8",
       "proposal_only": true,
@@ -452,7 +452,7 @@
     {
       "id": "daily-briefing",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/daily-briefing",
       "package_tree_sha": "71ea41a1548b38df1b7cc71f032437fb09ce15ed",
       "proposal_only": true,
@@ -466,7 +466,7 @@
     {
       "id": "handoff-writer",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/handoff-writer",
       "package_tree_sha": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
       "proposal_only": true,
@@ -484,7 +484,7 @@
     {
       "id": "inbox-triage",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/inbox-triage",
       "package_tree_sha": "d5796de1dbb5605e3ba8c2932ddf6860f972bef0",
       "proposal_only": true,
@@ -498,7 +498,7 @@
     {
       "id": "learning-plan",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/learning-plan",
       "package_tree_sha": "931fb2192a3cb1212643fe1df51d5e4bc3c70af4",
       "proposal_only": true,
@@ -512,7 +512,7 @@
     {
       "id": "mcp-vetting",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/mcp-vetting",
       "package_tree_sha": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
       "proposal_only": true,
@@ -526,7 +526,7 @@
     {
       "id": "permissions-review",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/permissions-review",
       "package_tree_sha": "8b8cbd95cbcb4f053c1070fdb4400c823593863f",
       "proposal_only": true,
@@ -540,7 +540,7 @@
     {
       "id": "repo-pulse",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/repo-pulse",
       "package_tree_sha": "536d02c3c8ffed77f4acb9a90145a0a0e5c2197b",
       "proposal_only": true,
@@ -554,7 +554,7 @@
     {
       "id": "smallbiz-ops",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/smallbiz-ops",
       "package_tree_sha": "ba9ef84f09c14bd3284f92eeedcf4e4a3876a412",
       "proposal_only": true,
@@ -568,7 +568,7 @@
     {
       "id": "standup-writer",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/standup-writer",
       "package_tree_sha": "7fb796c1d7bb976d6cfaeaf09e62878a90c9050b",
       "proposal_only": true,
@@ -582,7 +582,7 @@
     {
       "id": "week-in-review",
       "pr": 703,
-      "pr_head": "6ff2b4c82220bdc5d37562e87a9253c2dae67e3b",
+      "pr_head": "c63b08cbafba9219da60f8d886905e07c7b86209",
       "path": "skills/week-in-review",
       "package_tree_sha": "81646a594bf994e24899f7a086d86459cfaa5832",
       "proposal_only": true,
