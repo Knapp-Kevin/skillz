@@ -7,9 +7,9 @@ source_path: skills/mcp-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: c75566e7470c5c6072a405e8c4a5526d2cb7c94f
+source_snapshot_revision: e422b8397a73b40e1f0ee9f73629756f1edf489e
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/mcp-pulse/SKILL.md
 permission_tier: read-only
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
-exact_version_requalification: "Required for d59296c2fcc6d287a1cc38a890bde34d0fcf43fa; old reviewed blob 41451ac34a4a660ec82cae2c4356d3afe4b49334. No security or behavioral validation pass."
+exact_version_requalification: "Required for 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
