@@ -12,7 +12,7 @@ function checkFrontierSnapshot(s,f){
  if(f?.schema_version!=="skillz-active-repair-security-frontier-v1"||f.issue!==s.security_issue||!v||!t||!Array.isArray(f.by_pr)||!Array.isArray(v.by_pr)||!Array.isArray(f.records))throw Error("Invalid canonical security frontier");
  const parity=[["changed_packages","changed_packages"],["existing_exact_tree_static_pass","verified_pinned_scan_pass"],["needs_new_exact_tree_scan","need_new_scan"],["observed_behavior_pass","behavioral_validations"],["unchanged_use_approvals","unchanged_use_approvals"]];
  for(const [published,source] of parity)if(!whole(t[source])||v[published]!==t[source])throw Error("Public security total differs from canonical frontier: "+published);
- if(f.by_pr.length!==v.by_pr.length||s.open_prs_at_snapshot!==f.by_pr.length)throw Error("Stale published open-PR count");
+ if(f.by_pr.length!==v.by_pr.length||!whole(s.open_prs_at_snapshot)||s.open_prs_at_snapshot<f.by_pr.length)throw Error("Stale published open-PR count");
  const prs=new Map();
  for(const p of f.by_pr){
   if(!whole(p.pr)||p.pr===0||!(/^[a-f0-9]{40}$/).test(p.head)||prs.has(p.pr)||!whole(p.total)||!whole(p.matched_pass)||!whole(p.new_scans_needed)||p.total!==p.matched_pass+p.new_scans_needed)throw Error("Invalid canonical PR allocation");
@@ -62,6 +62,7 @@ const frontier=JSON.parse(readFileSync(resolve(root,"registry/security/active-fi
 checkFrontierSnapshot(raw,frontier);
 const svg=render(raw);
 if(process.argv.includes("--self-test")){const bad=structuredClone(raw);bad.security.first_party_main.passed++;let rejected=false;try{render(bad)}catch{rejected=true}if(!rejected)throw Error("self test: did not reject bad totals");const corrupt=structuredClone(raw);corrupt.repair_frontier.by_pr[0].head="0".repeat(40);let staleRejected=false;try{checkFrontierSnapshot(corrupt,frontier)}catch{staleRejected=true}if(!staleRejected)throw Error("self test: stale PR head accepted");
+const otherPR=structuredClone(raw);otherPR.open_prs_at_snapshot++;checkFrontierSnapshot(otherPR,frontier);
 const inflated=structuredClone(frontier);inflated.totals.verified_pinned_scan_pass++;let inflatedRejected=false;try{checkFrontierSnapshot(raw,inflated)}catch{inflatedRejected=true}if(!inflatedRejected)throw Error("self test: unsupported scanner pass accepted");
 const wrongPackage=structuredClone(frontier);wrongPackage.records[0].package_tree_sha="0".repeat(40);let treeRejected=false;try{checkFrontierSnapshot(raw,wrongPackage)}catch{treeRejected=true}if(!treeRejected)throw Error("self test: mismatched package tree accepted");
 console.log("self-test passed");}
