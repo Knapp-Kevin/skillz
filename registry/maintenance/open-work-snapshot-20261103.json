@@ -236,7 +236,9 @@
         "incomplete": 33
       },
       "behaviorally_validated": 0,
-      "approved_unchanged": 0
+      "approved_unchanged": 0,
+      "reference_only_queue_entries": 1522,
+      "reference_queue_is_distinct_global_eligible_total": false
     },
     "q12": {
       "pr": 700,
