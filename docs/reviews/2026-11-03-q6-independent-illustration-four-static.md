@@ -1,0 +1,28 @@
+# Four independent illustration skills: static review and rights boundaries
+
+**November 3, 2026.** This is a substantive, source-pinned **four-skill static review**, not an install recommendation or a positive-value catalog promotion. It deliberately avoids the shared README/catalog files currently being integrated under [draft #680](https://github.com/Knapp-Kevin/skillz/pull/680). These sources are separate from the four families in [draft #677](https://github.com/Knapp-Kevin/skillz/pull/677), and no existing branch or historical evidence was overwritten.
+
+| Capability to improve | Original source method | Individual grade | Important limitation |
+|---|---|---:|---|
+| Explain a scientific system as an editable schematic | [Academic Diagram](https://github.com/plbbl/academic-diagram-skill/blob/501efb0208bf865897079fa05844c249f0736077/SKILL.md) | **16/20** | Thirty third-party paper figures and three contact sheets have no transferable redistribution grant |
+| Editorial illustration of a single idea | [Orange Line Illustration](https://github.com/orange2ai/orange-line-illustration/blob/f7e1f8444c1832e38ab92bca03d314560fc4fb98/SKILL.md) | **15/20** | **Custom dual license**: proprietary/commercial uses of this skill or derivative style system need a separately purchased license |
+| Stylized landscapes from a source photo | [Impasto Miniature Landscape](https://github.com/GZ-L/photo-to-poster-skills/blob/268ee78460ab5592167082d0501b7834f2e5b676/skills/impasto-miniature-landscape/SKILL.md) | **13/20** | Photo-to-image method only, not creating an original environment without a photo |
+| Sketchy pen-and-wash art from source photography | [Observational Pen and Wash](https://github.com/GZ-L/photo-to-poster-skills/blob/268ee78460ab5592167082d0501b7834f2e5b676/skills/observational-pen-wash/SKILL.md) | **14/20** | User photo egress, unapproved image-model calls and unverified handmade-media output |
+
+## What is worth studying, without importing the originals
+
+Academic Diagram's useful idea is **paper first, editable figure second**: decide what a reader needs to understand, use short grounded labels and editable vector objects, then inspect actual arrows and visual hierarchy at the final publication size. The source's pinned [LICENSE](https://github.com/plbbl/academic-diagram-skill/blob/501efb0208bf865897079fa05844c249f0736077/LICENSE) explicitly excludes third-party figures; its [THIRD_PARTY_NOTICES](https://github.com/plbbl/academic-diagram-skill/blob/501efb0208bf865897079fa05844c249f0736077/THIRD_PARTY_NOTICES.md) says the paper figures and contact sheets lack copying/redistribution permission. No images were mirrored into skillz. This helps conceptual architecture figures, but it does not prove medical or quantitative drawing capability.
+
+Orange Line Illustration is a **restrained visual-metaphor** example: one central idea, deliberate emptiness and a consistent contrast accent can be more communicative than a crowded editorial picture. The actual source is not MIT, despite looking like other published skills. Its [LICENSE.md](https://github.com/orange2ai/orange-line-illustration/blob/f7e1f8444c1832e38ab92bca03d314560fc4fb98/LICENSE.md) says a commercial license is needed for proprietary deliverables and derivative style systems. **Do not copy its original mascot or templates** and presume commercial rights. Its external image-generation actions are not authorized by reading the source.
+
+The GZ-L pair are distinct narrow art methods: impasto uses a tactile miniature-landscape look, while observational pen-and-wash deliberately leaves line and whitespace unfilled. Both rely on **user-provided photographs**. Their original repo text is MIT, but rights in source photos and service outputs do not pass to the library, and a user's request to inspect a skill is not consent to upload photos or spend model credits.
+
+## Scope and remaining blockers
+
+- All four **complete pinned SKILL.md** sources, three root licenses, available owned YAML/reference text, Plbbl's separate third-party rights notice and Orange's actual commercial license were read by the connected GitHub source. **13 observed package-owned file blobs** appear in the [individual ten-dimension ledger](../../registry/discovery/q6-four-independent-illustration-static-20261103.json).
+- **Complete upstream package-tree identities remain UNKNOWN**, and binary reference figures/illustration example images were not inspected, acquired, copied or redistributed. A matching SKILL.md is not full-package identity or licensing.
+- **No security scan, no model execution, no private file read, no image generation, no upload, no provider billing**. All four static decisions are REFERENCE-ONLY, **none newly promoted into the consumer shelf**.
+- The old positive shelf remains 11 on current main and the parallel music PR proposes an additional eight methods. Keep public counts fixed until coordination and controlled cross-surface integration.
+- The scientific and editorial leads are **right-aware, promising candidates for separately selected methods**; the two GZ-L transformations are narrower than a general environment design workflow. Environment illustration remains an unresolved capability even if an impasto landscape source is linked.
+
+**Next work:** Independently review actual environment scene-design/drawing capability and more than one editorial/scientific source method; verify the complete package-tree and referenced assets/terms before recommending any installation. When the music branch is ready, integrate only a coherent conflict-free five-surface public update. Do not close the [capability coverage issue #588](https://github.com/Knapp-Kevin/skillz/issues/588) merely because research paths exist.

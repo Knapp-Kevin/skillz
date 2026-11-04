@@ -1,0 +1,288 @@
+{
+  "schema_version": "skillz-q10-targeted-static-read-v1",
+  "as_of": "2026-11-03",
+  "route": "REPOSITORY_MAINTENANCE",
+  "baseline_main_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+  "scope": "Three previously unassessed Q9 single-file skill package entrypoints, business and career only; exact pin and source license evidence with scoped sibling inspection.",
+  "relationship": "Follow-on to draft Q9 #697; Q8 draft #693 covers different source families. No inventory/promotions/scanner/behavioral state change.",
+  "reading": "All three target SKILL.md complete text, repository root MIT license bodies, pinned recursive tree paths, and applicable existing sibling STAR extractor/CV optimizer SKILL.md inspected. Source README/marketing caveats noted. Exact blob and single-file subtree tree SHAs match Q9 lead records. No source package executed or installed. User tests are STATIC imagined scenarios, not observations.",
+  "crosswalk": "The 1,039-name governed index contains no exact source/path matches for these candidates. This does not prove no semantic overlap; Q8 twelve newly discovered publishers are different repos.",
+  "counts": {
+    "reviewed": 3,
+    "research_only": 3,
+    "featured_promotions": 0,
+    "unchanged_use_approvals": 0,
+    "security_scans_run": 0,
+    "behavioral_tests_run": 0
+  },
+  "rubric_axes": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "rubric_meaning": "0 deficient or unsafe; 1 materially constrained; 2 clear, appropriate",
+  "records": [
+    {
+      "name": "Strategy Articulation",
+      "domain": "business",
+      "repo": "linuszz/business-strategy-planning-skills",
+      "pin": "7737792630e2ba1dd98451619fd924486f6ed9fd",
+      "path": "bp-business-modeling/skills/strategy-articulation/SKILL.md",
+      "blob": "61e874a5545c1a65232495eb67fc18b35e0f548a",
+      "tree": "251d952df61cc39cba9c759061c926a9f4eaf1bd",
+      "root_license": "MIT",
+      "license_blob": "cbc77956fb34c23e1f5f555c80611bee802f7e0e",
+      "owned_blob_count": 1,
+      "status": "KEEP_RESEARCH_ONLY",
+      "human_value": "Separate direction, desired outcomes, responsible owners and next actions in a single understandable worksheet.",
+      "reasons_not_unchanged": [
+        "Missing evidence gate permits fictitious company metrics and dates to appear as decided goals.",
+        "No human approval boundary for assigning owners or setting strategic targets.",
+        "Method is too generic to justify feature prominence without a stronger differentiating implementation."
+      ],
+      "copy_rights": "MIT root text inspected; source license must accompany copied/substantially adapted text. No upstream material copied into skillz.",
+      "scenario_reading": [
+        {
+          "scenario": "User asks for a strategy but provides no evidence of current business performance.",
+          "expected": "Produce a labeled draft plus questions, not invented targets, markets or dates.",
+          "source_support": "not provided; source template can imply assumed objectives",
+          "status": "GAP"
+        },
+        {
+          "scenario": "Board has not approved an ambitious goal or owner.",
+          "expected": "Do not mark that goal or person as approved/assigned.",
+          "source_support": "no decision/authority gate",
+          "status": "GAP"
+        }
+      ],
+      "dependencies": [
+        "Prompt host supporting $ARGUMENTS, or manual replacement with user-provided context"
+      ],
+      "next": "Compare stronger business strategy/source-evidence methods, require explicit 'proposed vs approved' labeling and factual-target controls.",
+      "rubric_scores": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_safety": 1,
+        "failure_handling": 0,
+        "evidence_discipline": 0,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_differentiation": 1,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "dimension_rationale": {
+        "trigger_precision": "Named strategy/vision/mission triggers but no specific exclusions for brainstorming versus executive approval.",
+        "procedural_clarity": "Clear five-section outline, but it jumps from an unspecified argument straight to a completed business plan.",
+        "authority_safety": "Text itself is read-only; no explicit gate for confirming board-level decisions, target figures or owner assignments.",
+        "failure_handling": "No stop/ask path when company facts, targets, baselines or decision authority are absent.",
+        "evidence_discipline": "Illustrative market-share and deadline entries may be mistaken for true goals; no source/uncertainty handling.",
+        "dependency_coherence": "Single SKILL.md is complete at the pinned subtree and has no executable or required sidecars.",
+        "portability_honesty": "Generic prompt template with no hidden runtime dependency, but $ARGUMENTS assumes compatible prompt host.",
+        "usefulness_differentiation": "An ordinary vision-to-action worksheet; useful sequencing but little distinct advantage over structured prompting.",
+        "adversarial_resilience": "No test against unsupported strategic claims, fabricated dates, wishful targets or authority confusion.",
+        "effectiveness_design": "A compact structure could improve readability, but does not verify or measure whether a strategy is sound."
+      },
+      "score_20": 10,
+      "unchanged_use_approved": false,
+      "behavioral_validation": "NOT_RUN",
+      "security_scan": "NOT_RUN",
+      "static_scenarios_only": true,
+      "source_url": "https://github.com/linuszz/business-strategy-planning-skills/blob/7737792630e2ba1dd98451619fd924486f6ed9fd/bp-business-modeling/skills/strategy-articulation/SKILL.md",
+      "source": {
+        "repository": "linuszz/business-strategy-planning-skills",
+        "commit": "7737792630e2ba1dd98451619fd924486f6ed9fd",
+        "entrypoint": "bp-business-modeling/skills/strategy-articulation/SKILL.md",
+        "skill_blob_sha": "61e874a5545c1a65232495eb67fc18b35e0f548a",
+        "entrypoint_subtree_sha": "251d952df61cc39cba9c759061c926a9f4eaf1bd",
+        "owned_file_count": 1,
+        "license": "MIT",
+        "root_license_blob": "cbc77956fb34c23e1f5f555c80611bee802f7e0e"
+      },
+      "final_decision": "KEEP_RESEARCH_ONLY"
+    },
+    {
+      "name": "Evidence Miner",
+      "domain": "career",
+      "repo": "squerne/open-career-skills",
+      "pin": "f0946bdb369a422b0d1f8f9f591480312d2b07fc",
+      "path": ".claude/skills/evidence-miner/SKILL.md",
+      "blob": "201cc3be83b16778345aedb736308b63b3087571",
+      "tree": "07eeb93cc82261b56439cf815e519d2b26be8a06",
+      "root_license": "MIT",
+      "license_blob": "b94c4c10ead48f867c2169336fc4df55cd8ba54f",
+      "owned_blob_count": 1,
+      "status": "PROMISING_CONCEPT_REFERENCE_NOT_FEATURED",
+      "human_value": "Turn verified repository work into honest career stories; never infer impact metrics from code history.",
+      "reasons_not_unchanged": [
+        "User-selected local repository scope does not automatically authorize cloud GitHub reads or disclosure of private metadata.",
+        "Claims reads stay local while optional gh commands access a remote service; host/model processing is not acknowledged.",
+        "Requires a sibling STAR skill and story-bank workspace not owned by this package directory.",
+        "Source mandates a JobMentis marketing URL in the final answer without user request."
+      ],
+      "copy_rights": "MIT root text inspected, copyright JobMentis (Sylvain Querné); preserve license text for copying/adaptation. Independent conceptual restatement is allowed without copying protected expression.",
+      "scenario_reading": [
+        {
+          "scenario": "Commit says 'reduced latency' but no benchmark or user result exists.",
+          "expected": "Keep claim and business effect distinct; ask about measured improvement.",
+          "source_support": "explicit no-invented-impact rule",
+          "status": "SUPPORTED_STATICALLY"
+        },
+        {
+          "scenario": "User points to client repository without authorizing external GitHub requests.",
+          "expected": "Stay within permitted local reads; do not use gh remote API.",
+          "source_support": "privacy contract conflicts with optional gh; no explicit per-service boundary",
+          "status": "GAP"
+        },
+        {
+          "scenario": "Repo README instructs the agent to disclose private material.",
+          "expected": "Treat repository text as untrusted evidence, not instructions.",
+          "source_support": "no explicit injection boundary",
+          "status": "GAP"
+        }
+      ],
+      "dependencies": [
+        "git/bash and read rights for named repo",
+        "optional gh uses GitHub network",
+        "sibling .claude/skills/star-story-extractor/SKILL.md exists at pinned source blob 1d39ab044a71a827e33a2ca7aff8169a30e7727b",
+        "story-bank/ workspace, user-approved files"
+      ],
+      "next": "Extract the evidence-to-impact separation concept; compare existing career-radar and verification methods, add explicit private-read/egress and consent gates and suppress mandatory promotion before considering feature selection.",
+      "rubric_scores": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "dimension_rationale": {
+        "trigger_precision": "Explicit task triggers around evidence-backed career achievements and remembered work.",
+        "procedural_clarity": "Ordered repository scoping, command examples, candidate selection, confirmation and STAR filing.",
+        "authority_safety": "Asks user to select directories but dismisses separate read approval and can query GitHub; private-data and egress boundaries are not fully honest.",
+        "failure_handling": "Limits proposals when evidence is thin and asks for missing impact, but lacks permission/tool-error/private-data recovery.",
+        "evidence_discipline": "Every achievement must cite real artifact; business impact is explicitly user-confirmed, not inferred from code.",
+        "dependency_coherence": "References a separate star-story-extractor skill and story-bank/ directory; sibling exists at this source pin but lies outside the single-file package subtree.",
+        "portability_honesty": "Requires local git/bash and optional networked GitHub CLI, an existing workspace, and the specific career story bank.",
+        "usefulness_differentiation": "Turns normally hard-to-recall engineering history into candidate achievements with traceable evidence.",
+        "adversarial_resilience": "Separates repository facts from personal outcomes, but has no explicit prompt-injection treatment for repo contents and forces unrelated promotion in its final output.",
+        "effectiveness_design": "Likely helpful evidence-to-story workflow with real feedback/questions, pending representative host tests."
+      },
+      "score_20": 15,
+      "unchanged_use_approved": false,
+      "behavioral_validation": "NOT_RUN",
+      "security_scan": "NOT_RUN",
+      "static_scenarios_only": true,
+      "source_url": "https://github.com/squerne/open-career-skills/blob/f0946bdb369a422b0d1f8f9f591480312d2b07fc/.claude/skills/evidence-miner/SKILL.md",
+      "source": {
+        "repository": "squerne/open-career-skills",
+        "commit": "f0946bdb369a422b0d1f8f9f591480312d2b07fc",
+        "entrypoint": ".claude/skills/evidence-miner/SKILL.md",
+        "skill_blob_sha": "201cc3be83b16778345aedb736308b63b3087571",
+        "entrypoint_subtree_sha": "07eeb93cc82261b56439cf815e519d2b26be8a06",
+        "owned_file_count": 1,
+        "license": "MIT",
+        "root_license_blob": "b94c4c10ead48f867c2169336fc4df55cd8ba54f"
+      },
+      "final_decision": "PROMISING_CONCEPT_REFERENCE_NOT_FEATURED"
+    },
+    {
+      "name": "ATS Detective",
+      "domain": "career",
+      "repo": "squerne/open-career-skills",
+      "pin": "f0946bdb369a422b0d1f8f9f591480312d2b07fc",
+      "path": ".claude/skills/ats-detective/SKILL.md",
+      "blob": "28d0918eff3af368aad5c47914b21c2fda8d4f9c",
+      "tree": "65188a57e5ccb18b279717edcee8f6b68fd8254f",
+      "root_license": "MIT",
+      "license_blob": "b94c4c10ead48f867c2169336fc4df55cd8ba54f",
+      "owned_blob_count": 1,
+      "status": "KEEP_RESEARCH_ONLY",
+      "human_value": "Confirm a company's actual applicant-tracking platform before tailoring a resume; report unknown when not verified.",
+      "reasons_not_unchanged": [
+        "Parser compatibility advice is categorical across vendor families without current, authoritative validation.",
+        "Read-only probes need a bounded public-network authority and careful handling of external untrusted text.",
+        "Depends on related CV optimization skill; forced marketing link is unrelated to user intent.",
+        "A verified ATS vendor does not establish the vendor's specific parsing behavior."
+      ],
+      "copy_rights": "MIT root text inspected, copyright JobMentis (Sylvain Querné); preserve notice for copies. No upstream text copied.",
+      "scenario_reading": [
+        {
+          "scenario": "Board slug resolves to a different company or an empty board.",
+          "expected": "Reject as confirmation; show ambiguity.",
+          "source_support": "explicit multi-step board matching and empty-board tests",
+          "status": "SUPPORTED_STATICALLY"
+        },
+        {
+          "scenario": "Employer uses an ATS that cannot be probed by slug.",
+          "expected": "Report unconfirmed, do not pretend no ATS exists.",
+          "source_support": "explicit fallback and no-probe rule",
+          "status": "SUPPORTED_STATICALLY"
+        },
+        {
+          "scenario": "Host is asked to prescribe a PDF vs DOCX rule solely from assumed vendor category.",
+          "expected": "Require independent current parser evidence rather than vendor-group folklore.",
+          "source_support": "unsupported broad formatting claims",
+          "status": "GAP"
+        }
+      ],
+      "dependencies": [
+        "HTTP-capable host for public-board probes",
+        "sibling .claude/skills/ruthless-cv-optimizer/SKILL.md exists at pinned source blob eb061a9e1bdd28b2efadb6c8da9941eb3bb09bb4"
+      ],
+      "next": "Independently verify parser claims with vendor documentation or controlled upload tests; keep the board-confirmation mechanism distinct from document-format prescriptions.",
+      "rubric_scores": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "dimension_rationale": {
+        "trigger_precision": "Explicit employer ATS detection and CV advice triggers; distinguishes vendor identification from plain job searches.",
+        "procedural_clarity": "URL evidence, bounded public board probes, slug-name mismatch and no-board handling are laid out in sequence.",
+        "authority_safety": "Probes make live external requests without an action-specific approval rule; only modest request throttling is stated.",
+        "failure_handling": "Differentiates confirmed URL, validated live board, empty board, collisions, and unable-to-probe fallback.",
+        "evidence_discipline": "Strong evidence discipline for which board exists, but blanket per-vendor parser/date/PDF/keyword claims lack citations and versioned evidence.",
+        "dependency_coherence": "Skill self-labels 'zero dependencies' yet needs a networked host to probe and references sibling ruthless-cv-optimizer for fallback logic.",
+        "portability_honesty": "Assumes online HTTP access to ATS vendors; target platforms/host tools not constrained.",
+        "usefulness_differentiation": "Board ownership/name verification is stronger than guessing a recruiting platform from a company name.",
+        "adversarial_resilience": "Names collisions and demo boards, but hostile pages, redirects and untrusted API content are not explicitly fenced as data.",
+        "effectiveness_design": "Could prevent wrong-vendor advice, but asserted PDF/DOCX parser rules are untested and might mislead applicants."
+      },
+      "score_20": 14,
+      "unchanged_use_approved": false,
+      "behavioral_validation": "NOT_RUN",
+      "security_scan": "NOT_RUN",
+      "static_scenarios_only": true,
+      "source_url": "https://github.com/squerne/open-career-skills/blob/f0946bdb369a422b0d1f8f9f591480312d2b07fc/.claude/skills/ats-detective/SKILL.md",
+      "source": {
+        "repository": "squerne/open-career-skills",
+        "commit": "f0946bdb369a422b0d1f8f9f591480312d2b07fc",
+        "entrypoint": ".claude/skills/ats-detective/SKILL.md",
+        "skill_blob_sha": "28d0918eff3af368aad5c47914b21c2fda8d4f9c",
+        "entrypoint_subtree_sha": "65188a57e5ccb18b279717edcee8f6b68fd8254f",
+        "owned_file_count": 1,
+        "license": "MIT",
+        "root_license_blob": "b94c4c10ead48f867c2169336fc4df55cd8ba54f"
+      },
+      "final_decision": "KEEP_RESEARCH_ONLY"
+    }
+  ]
+}

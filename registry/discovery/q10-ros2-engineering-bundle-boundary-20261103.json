@@ -1,0 +1,178 @@
+{
+  "schema_version": "skillz-q10-ros2-engineering-bundle-boundary-v1",
+  "date": "2026-11-03",
+  "route": "REPOSITORY_MAINTENANCE",
+  "review_type": "EXACT_SOURCE_BUNDLE_BOUNDARY_MAPPING",
+  "disposition": "NOT_FULLY_REVIEWED_KEEP_Q9_QUEUE_OPEN",
+  "source": {
+    "repository": "dbwls99706/ros2-engineering-skills",
+    "commit": "f0de84dfedd67b067ccc6d2851e681529606930c",
+    "repo_tree_sha": "80e897fbca7ad7755a53a45320c76bc0ef230c9f",
+    "root_skill_blob": "90261057554784229fa61dbda403297285d0b73e",
+    "root_license": "Apache-2.0",
+    "root_license_blob": "82518a2f2de00cebe25f7799584a8bdb9949fc36",
+    "source_version": "1.7.2"
+  },
+  "inventory": {
+    "repository_git_blobs": 204,
+    "portable_installer_selected_blobs": 118,
+    "excluded_repository_blobs": 86,
+    "selected_by_source_installer": [
+      "SKILL.md",
+      "LICENSE",
+      "README.md",
+      "requirements.txt",
+      "references",
+      "scripts",
+      "agents",
+      "docs",
+      "evals",
+      "examples",
+      "CONTRIBUTING.md",
+      "SECURITY.md",
+      "ROADMAP.md",
+      "CHANGELOG.md"
+    ],
+    "selected_group_counts": {
+      "SKILL.md": 1,
+      "LICENSE": 1,
+      "README.md": 1,
+      "requirements.txt": 1,
+      "references": 28,
+      "scripts": 15,
+      "agents": 1,
+      "docs": 15,
+      "evals": 50,
+      "examples": 1,
+      "CONTRIBUTING.md": 1,
+      "SECURITY.md": 1,
+      "ROADMAP.md": 1,
+      "CHANGELOG.md": 1
+    },
+    "noteworthy_excluded": [
+      ".github",
+      "tests",
+      "hooks/hooks.json",
+      ".claude-plugin",
+      "install.sh",
+      "install.ps1"
+    ],
+    "portable_bundle_exact_tree_sha": null,
+    "portable_bundle_identity_status": "SELECTION_RULE_PINNED_BUT_NO_STANDALONE_GIT_TREE",
+    "source_installer_blob": "07d35f1b8bd67840e02c488f6c64455284d786bb"
+  },
+  "profiles": [
+    {
+      "name": "Portable knowledge-only copy",
+      "selection": "BUNDLE tuple of scripts/install_skill.py",
+      "source_contract": "Copies named file and directory groups, does not register hooks or update client permissions. Contains hook-related Python helper source but excludes hooks/hooks.json and plugin manifest.",
+      "status": "CLAIM_FROM_STATIC_SOURCE_NOT_INSTALLED"
+    },
+    {
+      "name": "Claude plugin",
+      "selection": ".claude-plugin/plugin.json and hooks/hooks.json",
+      "source_contract": "PreToolUse and Stop hooks invoke scripts/claude_hook.py, 10s and 15s timeouts.",
+      "status": "CALLABLE_HOOKS_NOT_RUN"
+    },
+    {
+      "name": "Legacy copy/link",
+      "selection": "install.sh and install.ps1",
+      "source_contract": "Alternative full-checkout install/copy paths, may include plugin descriptors and hooks; not equivalent to portable copy.",
+      "status": "NOT_REVIEWED"
+    }
+  ],
+  "inspected_sources": [
+    {
+      "path": "SKILL.md",
+      "blob": "90261057554784229fa61dbda403297285d0b73e"
+    },
+    {
+      "path": "README.md",
+      "blob": "2cbd39c1887b984d8b0ffdbe20ba36c9c68498ce"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "82518a2f2de00cebe25f7799584a8bdb9949fc36"
+    },
+    {
+      "path": "scripts/install_skill.py",
+      "blob": "07d35f1b8bd67840e02c488f6c64455284d786bb"
+    },
+    {
+      "path": "docs/SKILL_CONTRACT.md",
+      "blob": "c863a2de3eb1e8964180f5259243cd077e74446b"
+    },
+    {
+      "path": "docs/CLIENT_COMPATIBILITY.md",
+      "blob": "d84ed07c6e88f6f4ad5aefbd7090ca007286c57d"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "blob": "8dc0a3025ef908d834a4bcfdbddb224e0d4defe5"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "blob": "7436c285bd2b8c19bd10bfd0efd1ec3047d89f4e"
+    },
+    {
+      "path": "references/evidence-progression.md",
+      "blob": "3138e8554dede2f3acb40aea8026fee103ed7ee9"
+    },
+    {
+      "path": "references/safety-estop.md",
+      "blob": "",
+      "note": "Read during boundary analysis; Git blob not separately recorded"
+    },
+    {
+      "path": "references/testing.md",
+      "blob": "01d6c3743d8522d4dc35ed76d9038caa4f486be2"
+    },
+    {
+      "path": "scripts/launch_supervisor.py",
+      "blob": "30fade305e586f96453bf4d28fb71a322cba8020"
+    },
+    {
+      "path": "scripts/skill_validate_hook.py",
+      "blob": "ac28149abbb579982707c10eca5e1a1d0cbfc98c"
+    },
+    {
+      "path": "requirements.txt",
+      "blob": "a81e8f528fef9c4e32000900e6d5f1d351a02aac"
+    }
+  ],
+  "observed_positive_methods": [
+    "Scope before action; read-only review does not grant external/network/hardware authority.",
+    "Separates permission to attempt physical tests, readiness to execute, operator-only execution and actual evidence.",
+    "L0-L6 verification levels keep simulated/ROS software results distinct from hardware operation.",
+    "Distinguishes installed runtime parameters and actual process from source-file speculation.",
+    "Portable installation explicitly excludes hook registration; optional plugin path is separate."
+  ],
+  "risk_to_qualify": [
+    "Source portable selection includes 118 pinned blobs, not merely root SKILL.md. Must examine all package-owned executable/docs files before full ten-axis disposition.",
+    "Installer copies scripts/ directory (15 Python tools), including launch_supervisor.py which launches real processes when authorized; action policy needed per tool.",
+    "Claude plugin registers event hooks; static regex validators explicitly say they are not security/safety boundaries; separate plugin profile assessment needed.",
+    "Full checkout legacy install and link profile may expose plugin manifests; never assume portable installation semantics apply.",
+    "Source README reports prior CI fixtures and examples but these are not observed host acceptance for our exact installation; do not claim runtime/physical validation.",
+    "No detached portable Git tree exists from the 118 selected paths; compute a stable manifest/digest for exact copied bytes before promoting a portable package.",
+    "Per-file rights/notice audit beyond full root Apache-2.0 license not complete."
+  ],
+  "counts": {
+    "new_exact_static_reviews": 0,
+    "new_unchanged_approvals": 0,
+    "new_featured_methods": 0,
+    "source_package_full_review_complete": false,
+    "source_scripts_executed": 0,
+    "source_installers_executed": 0,
+    "physical_tests_executed": 0
+  },
+  "grade": null,
+  "security_scan": "NOT_RUN",
+  "behavioral_validation": "NOT_RUN",
+  "full_package_acceptance": "HOLD",
+  "next_actions": [
+    "Construct a complete exact-pin portable bundle manifest from the source 118 selected blobs, including per-file rights and SHA.",
+    "Perform static inspection of all 15 bundled Python scripts, 28 reference files and live-action/hook paths; then independent threat review.",
+    "Run isolated safe install/no-clobber/rollback behavior tests in a disposable host, with no ROS or physical hardware connected.",
+    "Only then record a bounded ten-axis disposition, separate for portable and Claude plugin profiles, with no claim of hardware safety."
+  ]
+}

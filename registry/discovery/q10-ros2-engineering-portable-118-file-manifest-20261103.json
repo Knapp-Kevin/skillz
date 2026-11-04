@@ -1,0 +1,787 @@
+{
+  "schema_version": "skillz-exact-pinned-bundle-manifest-v1",
+  "date": "2026-11-03",
+  "source_repository": "dbwls99706/ros2-engineering-skills",
+  "source_commit_sha": "f0de84dfedd67b067ccc6d2851e681529606930c",
+  "source_repository_git_tree_sha": "80e897fbca7ad7755a53a45320c76bc0ef230c9f",
+  "source_own_git_files": 204,
+  "portable_selected_file_count": 118,
+  "excluded_repo_file_count": 86,
+  "selection_rule": "scripts/install_skill.py @ 07d35f1b8bd67840e02c488f6c64455284d786bb: BUNDLE constant and copytree with COPY_IGNORES (no pinned selected files matched ignored cache patterns).",
+  "subtree_root": "filtered bundle; no independent Git tree SHA",
+  "materialization": "NOT_INSTALLED; only source Git blob identities verified",
+  "inspected_source_text": "All 118 selected files retrieved in bounded batches through GitHub and source content compared to each exact pin SHA. 15 Python script source files also statically screened for side-effect patterns, with representative high-risk code paths inspected more deeply. No source code execution.",
+  "group_file_counts": {
+    "CHANGELOG.md": 1,
+    "CONTRIBUTING.md": 1,
+    "LICENSE": 1,
+    "README.md": 1,
+    "ROADMAP.md": 1,
+    "SECURITY.md": 1,
+    "SKILL.md": 1,
+    "agents": 1,
+    "docs": 15,
+    "evals": 50,
+    "examples": 1,
+    "references": 28,
+    "requirements.txt": 1,
+    "scripts": 15
+  },
+  "read_batches": [
+    {
+      "category": "scripts",
+      "count": 15,
+      "sha_verified": 15
+    },
+    {
+      "category": "references",
+      "count": 28,
+      "sha_verified": 28
+    },
+    {
+      "category": "docs",
+      "count": 15,
+      "sha_verified": 15
+    },
+    {
+      "category": "evals",
+      "count": 50,
+      "sha_verified": 50
+    },
+    {
+      "category": "other selected source files",
+      "count": 10,
+      "sha_verified": 10
+    }
+  ],
+  "portable_files": [
+    {
+      "path": "CHANGELOG.md",
+      "git_blob_sha": "bb8521cdfb998bec862f2f7440df118e4d86a219",
+      "bytes": 41119,
+      "git_mode": "100644"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "git_blob_sha": "e441e9157e4a4f171fac5fdcea55a78683ef1767",
+      "bytes": 2673,
+      "git_mode": "100644"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "82518a2f2de00cebe25f7799584a8bdb9949fc36",
+      "bytes": 10708,
+      "git_mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha": "2cbd39c1887b984d8b0ffdbe20ba36c9c68498ce",
+      "bytes": 15015,
+      "git_mode": "100644"
+    },
+    {
+      "path": "ROADMAP.md",
+      "git_blob_sha": "edb3f83325cbbb15b3d7154a03df452ecd9c185e",
+      "bytes": 2213,
+      "git_mode": "100644"
+    },
+    {
+      "path": "SECURITY.md",
+      "git_blob_sha": "105a8f40438e37c249ebe1f1b31ca9fa4bbe01cb",
+      "bytes": 1004,
+      "git_mode": "100644"
+    },
+    {
+      "path": "SKILL.md",
+      "git_blob_sha": "90261057554784229fa61dbda403297285d0b73e",
+      "bytes": 11983,
+      "git_mode": "100644"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "git_blob_sha": "b8d235dfec0dae21652480d1029c39c190ca1ae6",
+      "bytes": 349,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/BENCHMARK_RUNBOOK.md",
+      "git_blob_sha": "1203f764dee05ca2a762bc36fee48a7dfaf1c10e",
+      "bytes": 15658,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/CLIENT_COMPATIBILITY.md",
+      "git_blob_sha": "d84ed07c6e88f6f4ad5aefbd7090ca007286c57d",
+      "bytes": 14574,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/CONTEXT_BUDGET.md",
+      "git_blob_sha": "b3f8b54b4bc2af862a4bd205b5633b01cd50da48",
+      "bytes": 2654,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/EVAL_WORKFLOW.md",
+      "git_blob_sha": "e34084d68a8f83614357effc589cef29bd2026cb",
+      "bytes": 7457,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/EVIDENCE_CAPTURE.md",
+      "git_blob_sha": "9b3778527742c8f1b5f6a265af4c48913f10c055",
+      "bytes": 11084,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/LIFECYCLE_STARTUP.md",
+      "git_blob_sha": "c22485603ce98d26560b2e5109846cf96fc732be",
+      "bytes": 6165,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/LOCAL_RUNTIME.md",
+      "git_blob_sha": "d94b39ab73d54dd89fc5f799f0600618b0f70edf",
+      "bytes": 9559,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/QOS_CASE_STUDY.md",
+      "git_blob_sha": "8a2ff17f2cd06c892548253fdf9c638ad6aac2a5",
+      "bytes": 1745,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/QUALITY_GATES.md",
+      "git_blob_sha": "fd65b4f4c9b0ef395c3ce7c93b46823797a638f8",
+      "bytes": 3111,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/RELEASING.md",
+      "git_blob_sha": "3c20e2803c92d57bd098403145da41a6884e9e1e",
+      "bytes": 2523,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/ROS_CI.md",
+      "git_blob_sha": "1347b737ba98d2bd4b784dab83b0e532bb030de1",
+      "bytes": 7090,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/SKILL_CONTRACT.md",
+      "git_blob_sha": "c863a2de3eb1e8964180f5259243cd077e74446b",
+      "bytes": 6061,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/assets/cover.svg",
+      "git_blob_sha": "e65b72b5f39341bcc4986998258c94cd2b39af04",
+      "bytes": 2485,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/assets/logo.svg",
+      "git_blob_sha": "a85281252f4d49e48851ad3cc95f049389ab0564",
+      "bytes": 693,
+      "git_mode": "100644"
+    },
+    {
+      "path": "docs/sources.json",
+      "git_blob_sha": "c8351cc0735e8cf323fa10ba52a0517e5ec2d7d3",
+      "bytes": 18358,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/benchmark_suite.json",
+      "git_blob_sha": "cdea5b4029d02363fb391635244f6d76f58bcf40",
+      "bytes": 2992,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/diagnostic_review_suite.json",
+      "git_blob_sha": "de205ba02356725f93b4b9a950bd76f96313ff25",
+      "bytes": 3476,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/diagnostics/README.md",
+      "git_blob_sha": "8b0230a42586df268587677d4a590dbb30f871a4",
+      "bytes": 1179,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/diagnostics/prompts/artifact-adoption.md",
+      "git_blob_sha": "26c45d0ccfeb4c880addd8ca4e19b41c49caf267",
+      "bytes": 1109,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/diagnostics/prompts/diagnostic-controls.md",
+      "git_blob_sha": "6e55959456b3e982c70952f50df1960370ff3fa6",
+      "bytes": 1061,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/diagnostics/prompts/rejected-metric.md",
+      "git_blob_sha": "429d9d3eea419b3db02606b1696b1098cb57f9b9",
+      "bytes": 1013,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/diagnostics/prompts/subset-semantics.md",
+      "git_blob_sha": "5368c636872bf878736a002d6c994d9621cc0573",
+      "bytes": 1087,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/eval.yaml",
+      "git_blob_sha": "9f544e5dd43d19689c19e028683ff3eb969cfd09",
+      "bytes": 19581,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/estop-safety.md",
+      "git_blob_sha": "5a29e435ca155f1713bea5e89950852abae03e16",
+      "bytes": 2013,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/launch-validation.md",
+      "git_blob_sha": "7fec1fde05f72f54dd62e16e703c0492175a06d8",
+      "bytes": 1832,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/lifecycle-design.md",
+      "git_blob_sha": "02726ee138beb03c54020a99a70e1d65cf61212a",
+      "bytes": 1543,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/micro-ros-firmware.md",
+      "git_blob_sha": "2f3fd4cfbbc1539b237996ed211efec38c688ff3",
+      "bytes": 1172,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/multi-robot-fleet.md",
+      "git_blob_sha": "cce0682fe32b57d062b33a07b2010a4c8f1d9ff2",
+      "bytes": 1101,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/nav2-configuration.md",
+      "git_blob_sha": "2a76eb9d8b2c90a09aa0cbacc1df9f8cda2d572b",
+      "bytes": 2556,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/package-creation.md",
+      "git_blob_sha": "04425bf41a941c768e6402af7f5b108fcfc5846b",
+      "bytes": 1477,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/python-package.md",
+      "git_blob_sha": "690f7c652fa710fae0efe89ff8abf399893a2cfa",
+      "bytes": 1567,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/qos-compatibility.md",
+      "git_blob_sha": "78e9f56782fb877d540d7456516e6ce78bed2be8",
+      "bytes": 1299,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/ros2-control-hardware.md",
+      "git_blob_sha": "92070baffe78755c0023245fc90ce7992dae044f",
+      "bytes": 2044,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/rosbag2-playback.md",
+      "git_blob_sha": "937fe77a0405d6a2fa2bf29fe733fbee4ce457c5",
+      "bytes": 1196,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/sensor-integration.md",
+      "git_blob_sha": "638511bcd9cdcc9e8150959be8a946815079688b",
+      "bytes": 1968,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/sros2-security.md",
+      "git_blob_sha": "bd41535030f05ee23da5a0115403f7ebde2d422c",
+      "bytes": 1005,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/expected/system-bringup.md",
+      "git_blob_sha": "a6551e8ad224b1a561dbec4026056a6d8628b96a",
+      "bytes": 2005,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/history/README.md",
+      "git_blob_sha": "be9e7ec0857825f68cc913d818027535ed0f9ad1",
+      "bytes": 577,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/outputs/README.md",
+      "git_blob_sha": "78ecd4a79bb71bbb4d299bd18df9811ee37a3e58",
+      "bytes": 585,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/outputs_baseline/README.md",
+      "git_blob_sha": "cddecbab43c31c88fb6abbb92b555102505909e0",
+      "bytes": 387,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/expected/gate-policy-review.md",
+      "git_blob_sha": "a677056dd623c54361da5fdb3f823bd44d25d2a4",
+      "bytes": 1613,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/expected/latched-localization-recovery.md",
+      "git_blob_sha": "95ba30f155012989fefac599a22574285346207c",
+      "bytes": 1428,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/expected/sensor-metric-separation.md",
+      "git_blob_sha": "fd1f38959166f00f1d18b8d5a8f1419dde0e7208",
+      "bytes": 1494,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/expected/supervised-test-authorization.md",
+      "git_blob_sha": "44f76f5ea48a0727bfbc787a818c7cb567794525",
+      "bytes": 2293,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/prompts/gate-policy-review.md",
+      "git_blob_sha": "c45372ae2dcc9940e88ca7d7089fb197f9a90592",
+      "bytes": 827,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/prompts/latched-localization-recovery.md",
+      "git_blob_sha": "affdbf372a1a6b5ec19b58039cb4f3fda520e231",
+      "bytes": 572,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/prompts/sensor-metric-separation.md",
+      "git_blob_sha": "0177fc0b9bafbb7729a1a9ace61eb4010c178e3f",
+      "bytes": 688,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/progression/prompts/supervised-test-authorization.md",
+      "git_blob_sha": "a9ccbd7d7efc746cd2d843d19e8863348b7edc3d",
+      "bytes": 1154,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/estop-safety.md",
+      "git_blob_sha": "66a8854a2d542dd8038d941ad106663c3a3f7db5",
+      "bytes": 1425,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/launch-validation.md",
+      "git_blob_sha": "c306a1fdf9650b912fbbf998895ad17c6f49695d",
+      "bytes": 785,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/lifecycle-design.md",
+      "git_blob_sha": "675174eb51e4c24d93711c14b356769de096ea5f",
+      "bytes": 697,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/micro-ros-firmware.md",
+      "git_blob_sha": "4f67f91ddb0329aeb4a9ad7d9bd8cc85125d3c08",
+      "bytes": 503,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/multi-robot-fleet.md",
+      "git_blob_sha": "4c399b01132c85ef7007dc29ea82abb79bbe1e22",
+      "bytes": 624,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/nav2-configuration.md",
+      "git_blob_sha": "f5eb1fc00abd9278949183126f11d84ffb64da3c",
+      "bytes": 971,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/package-creation.md",
+      "git_blob_sha": "bbcb940b9b89b66bea63d20ddead53f7d752e8e3",
+      "bytes": 597,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/python-package.md",
+      "git_blob_sha": "4c6c8409e2fdf13a986f7269e06bf65084a36363",
+      "bytes": 720,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/qos-compatibility.md",
+      "git_blob_sha": "8d2fad1bb4ffe2b57cc73963cf870d4fae319217",
+      "bytes": 618,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/ros2-control-hardware.md",
+      "git_blob_sha": "3081a9fca2971e06326410ca5ecb5e83fba5ef12",
+      "bytes": 836,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/rosbag2-playback.md",
+      "git_blob_sha": "ac9e24f0681fd6bfd95b10689094cf453dc59ead",
+      "bytes": 1075,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/scoped-doc-edit.md",
+      "git_blob_sha": "db7f0f10ce3d82c87d8854603bee9cf6830a6ac9",
+      "bytes": 841,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/scoped-safety-change.md",
+      "git_blob_sha": "8fa0849eacfd5fba71bcad7b7009b08b17ff7813",
+      "bytes": 880,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/sensor-integration.md",
+      "git_blob_sha": "55a19cfcf2a095e5aba15eb36b7ba7a8c522b729",
+      "bytes": 1303,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/sros2-security.md",
+      "git_blob_sha": "c8dd4c39a7f073772fcfcba6e9ee584f2a139ab5",
+      "bytes": 749,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/prompts/system-bringup.md",
+      "git_blob_sha": "b5f99a34c7e430b6e320314dc448464885e76d2a",
+      "bytes": 1347,
+      "git_mode": "100644"
+    },
+    {
+      "path": "evals/trigger_cases.json",
+      "git_blob_sha": "ecf2f8f8d473e1cf2de12929ce3f4ae994ffaee4",
+      "bytes": 5779,
+      "git_mode": "100644"
+    },
+    {
+      "path": "examples/qos_roundtrip.py",
+      "git_blob_sha": "da23b42427c087edb5a020b672343314da020745",
+      "bytes": 3645,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/artifact-lineage.md",
+      "git_blob_sha": "c06abc25f63179c786dcf733705bc6da92be4a50",
+      "bytes": 8487,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/communication.md",
+      "git_blob_sha": "84706da5dd7b759505d28cfec80289dda2188a26",
+      "bytes": 39553,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/debugging.md",
+      "git_blob_sha": "6fc1498dd69840d539a8ab64d34c97d479b7f1e7",
+      "bytes": 23255,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/deployment.md",
+      "git_blob_sha": "2316a00cd7ebe00d08897ab70a7330864aefbc8f",
+      "bytes": 20664,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/engineering-principles.md",
+      "git_blob_sha": "47ea75f6c9117d833b8f1804e95ed6495dcab666",
+      "bytes": 30335,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/evidence-progression.md",
+      "git_blob_sha": "3138e8554dede2f3acb40aea8026fee103ed7ee9",
+      "bytes": 21210,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/hardware-interface.md",
+      "git_blob_sha": "5967ab9d1fee8da3da39496fd9876b461da1d556",
+      "bytes": 39374,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/launch-system.md",
+      "git_blob_sha": "808896e0bc3501d576a7bd92b6cd7d6dc9a54078",
+      "bytes": 32405,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/lifecycle-components.md",
+      "git_blob_sha": "7c7802099c722f4779420df1160b97d5a98cc142",
+      "bytes": 30369,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/manipulation.md",
+      "git_blob_sha": "9d18d98100080c67a6d0261c1cda28dc33beaee7",
+      "bytes": 18915,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/message-types.md",
+      "git_blob_sha": "8db1e56b6e882315c69284bf0dfd0f7bd6e9c033",
+      "bytes": 29095,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/micro-ros.md",
+      "git_blob_sha": "f7e8258aa912da44b9d48e28e68576e7c2cc6a37",
+      "bytes": 18471,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/migration-ros1.md",
+      "git_blob_sha": "55023135aa690b1923d24f752da4f8fd1b27a2e7",
+      "bytes": 19595,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/multi-robot.md",
+      "git_blob_sha": "791c20091bc318655c761e144d849774d15db728",
+      "bytes": 18640,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/navigation.md",
+      "git_blob_sha": "035318cd7bd60ab04300cdc25953cd513f11bfac",
+      "bytes": 38067,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/nodes-executors.md",
+      "git_blob_sha": "cfb5af843dc7d216d7f516e278431fe41a461a4c",
+      "bytes": 51013,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/perception.md",
+      "git_blob_sha": "f7419adcfe7f8d05d7e517c37347e30b496ddfcc",
+      "bytes": 19498,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/realtime.md",
+      "git_blob_sha": "34701a213efe47955ea44a3d9155e78bda125cb9",
+      "bytes": 24137,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/runtime-provenance.md",
+      "git_blob_sha": "e1eca3afadfc287c516c7fa172479fea49650a24",
+      "bytes": 21946,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/safety-estop.md",
+      "git_blob_sha": "abfe9e3cc745c687d212f09ab20fb12cec2083b1",
+      "bytes": 36137,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/security.md",
+      "git_blob_sha": "6e6c3788c5542b0a83b9a75957ab319c3543a85d",
+      "bytes": 28625,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/sensor-integration.md",
+      "git_blob_sha": "cea8d97c7054521a77be68ca89d041c540385733",
+      "bytes": 21872,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/simulation.md",
+      "git_blob_sha": "a50665dcd2efbdc415cd03da272850ce71ab1b57",
+      "bytes": 25119,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/system-bringup.md",
+      "git_blob_sha": "8b7955ffd764d99bfbfbce29b95a8185d7d45796",
+      "bytes": 26668,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/system-diagnostics.md",
+      "git_blob_sha": "3a5b79416024fcb0b8a6decac31fe587c090addf",
+      "bytes": 11753,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/testing.md",
+      "git_blob_sha": "01d6c3743d8522d4dc35ed76d9038caa4f486be2",
+      "bytes": 29338,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/tf2-urdf.md",
+      "git_blob_sha": "88f926f3edd5efc0c3a394120cc2abe5a9651315",
+      "bytes": 18565,
+      "git_mode": "100644"
+    },
+    {
+      "path": "references/workspace-build.md",
+      "git_blob_sha": "a2ae928f8599ae5611a9b4d628d79c67cb4d40df",
+      "bytes": 18155,
+      "git_mode": "100644"
+    },
+    {
+      "path": "requirements.txt",
+      "git_blob_sha": "a81e8f528fef9c4e32000900e6d5f1d351a02aac",
+      "bytes": 81,
+      "git_mode": "100644"
+    },
+    {
+      "path": "scripts/benchmark_capture.py",
+      "git_blob_sha": "8e180890f93881eaaa78de1bd2c349a1ac900124",
+      "bytes": 38358,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/claude_hook.py",
+      "git_blob_sha": "001c4c650ea5e6a9f66e35407b9c7cf23c6faa2a",
+      "bytes": 11419,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/create_package.py",
+      "git_blob_sha": "fd88f54f0f8f853762e1e20815ca10c6881da7d9",
+      "bytes": 66233,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/eval_runner.py",
+      "git_blob_sha": "31efed8dec35e9d46df57e2c08c8ae3c0be553b0",
+      "bytes": 40916,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/install_skill.py",
+      "git_blob_sha": "07d35f1b8bd67840e02c488f6c64455284d786bb",
+      "bytes": 18099,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/launch_supervisor.py",
+      "git_blob_sha": "30fade305e586f96453bf4d28fb71a322cba8020",
+      "bytes": 4825,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/launch_validator.py",
+      "git_blob_sha": "ed866d5514bcb3e0f2524feb2b6aeadf8022f3c7",
+      "bytes": 44082,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/measure_context.py",
+      "git_blob_sha": "0119c6ce625f85fd60c6bf80a4a567145bac3b18",
+      "bytes": 3692,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/qos_audit.py",
+      "git_blob_sha": "2d911bb619316e662e5f91b8fecf26c8c00fa8ad",
+      "bytes": 62105,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/qos_checker.py",
+      "git_blob_sha": "8c4c94ef914bead1cbda4a39ff32b7284af00359",
+      "bytes": 26019,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/rosbag2_qos_checker.py",
+      "git_blob_sha": "b18a62124ebab7b752bbfd0b3de33ce9a90ce5d8",
+      "bytes": 13409,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/skill_stop_hook.py",
+      "git_blob_sha": "e361f7c39f200c97788866dae8f842284ac8c88a",
+      "bytes": 34146,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/skill_validate_hook.py",
+      "git_blob_sha": "ac28149abbb579982707c10eca5e1a1d0cbfc98c",
+      "bytes": 28104,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/validate_skill.py",
+      "git_blob_sha": "bfc0e42f27f7ec5fba6453fed7ae8c092fc807dd",
+      "bytes": 12326,
+      "git_mode": "100755"
+    },
+    {
+      "path": "scripts/verify_eval_capture.py",
+      "git_blob_sha": "19a2dae68ee8b650250aa1c936cd45cd3e8583bd",
+      "bytes": 11344,
+      "git_mode": "100755"
+    }
+  ],
+  "excluded_paths_summary": {
+    "explanation": "Excluded from portable installer: repository CI, tests, legacy install scripts, plugin descriptors/hooks, other development resources; these remain significant when choosing the full-checkout or Claude plugin profiles.",
+    "group_counts": {
+      ".claude-plugin": 2,
+      ".dockerignore": 1,
+      ".github": 8,
+      ".gitignore": 1,
+      ".markdownlint-cli2.yaml": 1,
+      "CODE_OF_CONDUCT.md": 1,
+      "hooks": 1,
+      "install.ps1": 1,
+      "install.sh": 1,
+      "pytest.ini": 1,
+      "requirements-dev.txt": 1,
+      "setup.cfg": 1,
+      "tests": 66
+    }
+  },
+  "legal": "Root Apache-2.0 LICENSE exact blob 82518a2f2de00cebe25f7799584a8bdb9949fc36; separate rights for cited external ROS materials/examples not independently cleared.",
+  "security": "Static file/read-only content check, not third-party security scan; no execution, file writes, installations or physical/hardware tests."
+}

@@ -1,6 +1,10 @@
 # Capability quickstart: start with useful outcomes
 
-**Purpose:** A short, populated shelf of **actual indexed skill examples**, followed by a complete name-search fallback. This is a **discovery aid**, not a source-ownership ranking, a list of install-approved packages, or a claim to cover the ecosystem.
+**Explore the full 33-domain library, not only the currently featured methods.** Begin with a user task, browse the [247-subdomain capability directory](../registry/capability-directory.json), examine [governed review names](../registry/governed-review-name-index.json), and follow [pinned discovery sources](../registry/discovery/dynamic-four-source-frontier-20261101.json) when a domain is thin. An absent featured method means *not selected for this small shelf*, not that Skillz cannot help. The examples below demonstrate starting points and evidence states, not the entire corpus.
+
+**Cross-domain example: grant and funding proposals.** [Six pinned packages were individually reviewed](reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md) across four original publishers; three nonprofit methods check funder fit, program facts and line-item budgets. One budget method is now featured for study; five grant candidates remain outside the featured shelf. None is approved for unchanged installation. Search the provisional nonprofit domain and adjacent research, planning, finance, writing, marketing and legal skills. [Exact-source grades and license limits](../registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json).
+
+**Purpose:** Concrete evidence-linked examples with a full-capability search fallback. This is a **discovery aid**, not a source-ownership ranking, a list of install-approved packages, or a claim to cover the ecosystem.
 
 If the user only shared the repository and said **“take a look”**, first deliver the [memory-grounded value brief](agent-value-discovery.md). Use this page to turn those needs into concrete candidate files. If they already named a capability, skip the full interview and search directly.
 
@@ -19,6 +23,8 @@ If the user only shared the repository and said **“take a look”**, first del
 | Reduce authorization or MCP integration risk | [Permissions Review](../skills/permissions-review/SKILL.md); [MCP Vetting](../skills/mcp-vetting/SKILL.md) | [Permissions](../registry/verification/local-skills/permissions-review.yaml) and [MCP vetting](../registry/verification/local-skills/mcp-vetting.yaml) evidence; read-only reviews |
 | Improve search-engine discoverability | [SEO Audit](../registry/verification/corey-haines-marketing-skills/seo-audit.yaml) | **Statically verified**, read-only SEO evaluation; website changes need separate approval |
 | Develop a fiction setting or plot | [Worldbuilding](../registry/verification/jwynia-agent-skills/worldbuilding.yaml); [Plot Structure](../registry/verification/danjdewhurst-story-skills/plot-structure.yaml) | Both **statically verified**; source terms and any mutating operations still matter |
+| Prepare a nonprofit grant application, verify budget, or decide which funding to pursue | [Six-source-pinned grant procedure reviews](reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md); [complete 10-axis audit](../registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json) | **6 individually graded static packages across 4 publishers**, none install-approved; funder AI rules, program facts, financial privacy and tool authority remain separate gates |
+| Check a grant budget before submitting | [Nonprofit Budget Narrative](https://github.com/dh2211/nonprofit-agents/blob/e1a247b8743d53e12677774bf67f6453b7f692b1/skills/npo-budget-narrative/SKILL.md); [static evidence](../registry/discovery/q7-budget-workbook-and-valuable-reference-20261103.json) | **17/20 Valuable Reference only**, no installation; finance owner and actual funder rules still required |
 | Evaluate career options | [Career Radar](../skills/career-radar/SKILL.md) | [Static verified](../registry/verification/local-skills/career-radar.yaml); relies on current accessible market sources |
 | Plan a presentation | [Deck Outline](../skills/deck-outline/SKILL.md) | [Static verified](../registry/verification/local-skills/deck-outline.yaml); outline is not an exported deck |
 | Diagnose GPU kernels, TPU tiling or ML inference capacity | [Hardware-acceleration source-vetting grades](../registry/discovery/j4flmao-hardware-acceleration-eleven-complete-static-20261102.json) | **11 pinned candidate-only packages**, 4 reference-only and 7 rejected unchanged. Useful CUDA, SASS, TPU, Triton and inference methods, but **not approved installations or execution**; check hardware, model rights, data and cost authority. |
@@ -29,7 +35,7 @@ If the user only shared the repository and said **“take a look”**, first del
 
 **Need a package-security result without opening two large baseline files?** Use the scoped [per-skill security lookup](../registry/security/first-party-package-lookup.json). Its entries refer to matching historical scan records, with passed, incomplete and failed states; coverage does not extend automatically to unrelated packages. This is a lookup of prior evidence, **not a newly run scan or install approval**. For a skill modified after the indexed snapshot, recheck the package-tree identity before relying on it.
 
-## Find beyond these examples
+## Find beyond these examples (especially when your task is missing)
 
 1. **Browse [the capability directory](../registry/capability-directory.json)** by domain → subdomain. Its `matched_skill_ids` are evidence-linked seed examples; `name_only_review_candidate_ids` are **uninspected name-token leads** from the reviewed-record index. Those leads may be rejected, candidate-only or semantically irrelevant. An empty list is **unknown coverage**, never absence.
 2. **Search [all 1,039 governed review companion names](../registry/governed-review-name-index.json)**, across governed source identities. For an ID `source/skill`, read `registry/verification/source/skill.yaml` and `registry/skills/source/skill.yaml`. Use task synonyms, not just exact filename.
@@ -39,3 +45,9 @@ If the user only shared the repository and said **“take a look”**, first del
 6. **Decide with the [consumer contract](consumer-discovery-and-installation.md)** whether existing host capabilities suffice, whether safe and licensed reuse/adaptation is justified, or whether independent creation is better. Reading a candidate is not activating it. Only a separate authorized installation changes the user's host.
 
 A cold agent with no memory can still name concrete **provisional examples** from the table and distinguish them from user-specific fit. An agent with memory should rank examples against *observed repeated work, error-prevention needs, existing skills and host capabilities*, not invent a profile. The output for a vague first look is the value brief itself, **not an offer to provide one later**.
+
+## Featured reference shelf is not the whole library
+
+**Twenty selected Valuable Reference methods across ten domains** are available as independently described procedures to study, not packages cleared for installation. Music has nine featured ideas spanning eight composition subdomains. Eight were reviewed from one publisher, whose [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) excludes copyrighted book quotations and translations from the source MIT license. Source-tree identity does not establish alias, rights, security or behavior clearance.
+
+[Browse the 20 selected methods](curated-capability-references.md) · [Inspect structured source and licensing evidence](../registry/consumer-positive-references-q7-20261103.json). Zero featured selections in another domain does not mean zero discoverable skills.

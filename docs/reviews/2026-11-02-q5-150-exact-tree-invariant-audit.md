@@ -14,7 +14,9 @@ All **150** ledger records were parsed from the following complete files. For ea
 | `q5-city-syntax-openclaw-ubem-static-20261103.json` | 26 | 6 | 20 | 0 |
 | `q5-kavao-monogatari-coach-static-20261103.json` | 36 | 28 | 7 | 1 |
 | `q5-akiojin-unity-cli-static-20261103.json` | 29 | 16 | 13 | 0 |
-| **Total** | **150** | **96** | **53** | **1** |
+| **Total** | **150** | **92** | **57** | **1** |
+
+**Independent record-count correction (2026-11-03):** The earlier total row displayed 96 reference-only / 53 rejected, but each of the six original per-family rows was already correct. Re-summing those rows, independently parsing all 150 individual `candidate_decision` fields, and cross-checking the 92-entry Q5 capability-routing file yields **92 REFERENCE-ONLY, 57 REJECT, 1 DEFER**. No individual dispositions or grades changed. [Full Q1–Q5 public-count reconciliation](2026-11-03-q1-q5-decision-reconciliation.md).
 
 ## Complete-package identity collisions within Q5
 

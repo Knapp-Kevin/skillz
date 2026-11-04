@@ -1,0 +1,424 @@
+{
+  "schema_version": "capability_two_stage_q7_20261103_v1",
+  "as_of": "2026-11-03",
+  "source_main_sha": "549f4d66b4295809527fcd58bad261eb713fa6ed",
+  "source_evidence_snapshot": "registry/discovery/capability-coverage-audit-20261102.json",
+  "historical_evidence_date": "2026-11-02",
+  "source_positive_shelf": "registry/consumer-positive-references-q7-20261103.json",
+  "positive_shelf_date": "2026-11-03 Q7",
+  "graph": "docs/assets/capability-evidence-and-valued-methods-q7-20261103.svg",
+  "historical_graph_preserved": "docs/assets/capability-evidence-and-valued-methods-20261103.svg",
+  "metric_definitions": {
+    "evidence_linked_subdomains_20261102": "Nov 2 audited Q1–Q4 baseline: canonical topic with at least one governed review or source candidate link, including rejected-only; NOT a verified or usable skill",
+    "selected_valuable_reference_methods_20261103": "Q7 bounded 2026-11-03 public shelf: 20 source-pinned conceptual method references; not a complete corpus count, and not approval to install.",
+    "selected_method_subdomains_20261103": "Q7 bounded public shelf: 19 distinct canonical subdomains with at least one selected method; not proven operational coverage.",
+    "zero_selected": "No currently featured method in this area; continue exploring the wider research library.",
+    "global_count_warning": "Q4 research candidate link counts and Q7 selected conceptual method counts measure different populations and may not be added. Unchanged-use approvals: zero."
+  },
+  "totals": {
+    "canonical_domains": 33,
+    "canonical_subdomains": 247,
+    "q4_any_evidence_link_subdomains": 210,
+    "q4_no_link_subdomains": 37,
+    "unchanged_use_approvals_in_shelf": 0,
+    "q7_bounded_positive_reference_methods": 20,
+    "q7_domains_with_selected_reference_methods": 10,
+    "q7_bounded_positive_method_subdomains": 19
+  },
+  "rows": [
+    {
+      "id": "software-engineering",
+      "name": "Software engineering",
+      "evidence_linked_subdomains_20261102": 10,
+      "canonical_subdomains": 10,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "performance"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "agent-mcp-development",
+      "name": "Agent / MCP development",
+      "evidence_linked_subdomains_20261102": 8,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "cloud-devops",
+      "name": "Cloud / DevOps",
+      "evidence_linked_subdomains_20261102": 8,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "sre"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "planning",
+      "name": "Planning",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 6,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "evidence_linked_subdomains_20261102": 8,
+      "canonical_subdomains": 9,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "positioning"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "evidence_linked_subdomains_20261102": 8,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "ux-ui",
+      "name": "UX / UI",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "accessibility"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "visual-design",
+      "name": "Visual design",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "illustration",
+      "name": "Illustration",
+      "evidence_linked_subdomains_20261102": 1,
+      "canonical_subdomains": 6,
+      "selected_valuable_reference_methods_20261103": 3,
+      "selected_method_subdomains_20261103": 3,
+      "selected_method_subdomain_ids": [
+        "concept-art",
+        "sequential-art",
+        "character-environment"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "3d-cad-animation",
+      "name": "3D / CAD / animation",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 9,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "3d-modeling"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "game-design",
+      "name": "Game design",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "playtesting"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "fiction-narrative-worldbuilding",
+      "name": "Fiction / narrative / worldbuilding",
+      "evidence_linked_subdomains_20261102": 8,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "technical-writing",
+      "name": "Technical writing",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "documentation-ia"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "music-composition",
+      "name": "Music composition",
+      "evidence_linked_subdomains_20261102": 0,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 9,
+      "selected_method_subdomains_20261103": 8,
+      "selected_method_subdomain_ids": [
+        "scoring",
+        "harmony",
+        "melody",
+        "rhythm",
+        "orchestration",
+        "arranging",
+        "notation",
+        "electronic-composition"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "audio-voice-sound",
+      "name": "Audio / voice / sound",
+      "evidence_linked_subdomains_20261102": 5,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "video-film",
+      "name": "Video / film",
+      "evidence_linked_subdomains_20261102": 5,
+      "canonical_subdomains": 9,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "evidence_linked_subdomains_20261102": 5,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "time-productivity",
+      "name": "Time / productivity",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "memory-context",
+      "name": "Memory / context",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "career",
+      "name": "Career",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "evidence_linked_subdomains_20261102": 6,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 8,
+      "selected_valuable_reference_methods_20261103": 1,
+      "selected_method_subdomains_20261103": 1,
+      "selected_method_subdomain_ids": [
+        "budgeting"
+      ],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "robotics-iot",
+      "name": "Robotics / IoT",
+      "evidence_linked_subdomains_20261102": 5,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    },
+    {
+      "id": "ml-accelerators",
+      "name": "ML accelerators and compute",
+      "evidence_linked_subdomains_20261102": 7,
+      "canonical_subdomains": 7,
+      "selected_valuable_reference_methods_20261103": 0,
+      "selected_method_subdomains_20261103": 0,
+      "selected_method_subdomain_ids": [],
+      "evidence_is_quality_clearance": false,
+      "selected_method_is_unchanged_use_approval": false
+    }
+  ],
+  "coverage_maturity": "UNKNOWN; no domain classified mature by this graph",
+  "missing_data": "All-corpus deduplicated eligible and positively recommended totals UNKNOWN"
+}

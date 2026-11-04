@@ -1,0 +1,670 @@
+{
+  "schema_version": "q7-cross-domain-grant-proposal-review-v1",
+  "as_of": "2026-11-03",
+  "main_parent": "0045bb24cc5aeff047c8b9964765ebef23dd951f",
+  "related_provisional_domain": "nonprofit-community",
+  "historical_provisional_snapshot": "registry/discovery/capability-domain-expansion-20261102.json",
+  "origin": "First-visitor grant-writing false-negative from externally provided agent screenshots, following #685 discovery-routing repair",
+  "scope": "Four independent upstream families and six individual static ten-axis reviews. Exact complete pinned package Git tree identities and 42 owned blobs; 39 text files examined and three .xlsx files not inspected or executed. No install/behavior/security/consumer-featured promotion.",
+  "canonical_domain_count_unchanged": 33,
+  "canonical_subdomain_count_unchanged": 247,
+  "provisional_domain_not_mature": true,
+  "source_families_count": 4,
+  "reviewed_packages_count": 6,
+  "complete_pinned_package_trees": 6,
+  "owned_blob_count": 42,
+  "text_files_inspected": 39,
+  "spreadsheet_binary_files_not_inspected": 3,
+  "ten_axis_rubric": [
+    "trigger_precision",
+    "procedural_clarity",
+    "authority_safety",
+    "failure_handling",
+    "evidence_discipline",
+    "dependency_coherence",
+    "portability_honesty",
+    "usefulness_differentiation",
+    "adversarial_resilience",
+    "effectiveness_design"
+  ],
+  "source_families": [
+    {
+      "repository": "dh2211/nonprofit-agents",
+      "pin": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "root_git_tree_entries": 72,
+      "complete_root_tree": true,
+      "license_evidence_path": "LICENSE",
+      "license_blob_sha": "a4ef2eef75bcf2f7f5cf6a05c7cb75a980768c95",
+      "license_scope": "MIT"
+    },
+    {
+      "repository": "zicula/skills",
+      "pin": "ec7f94f84916be7bb25ec38752c24176330065a7",
+      "root_git_tree_entries": 252,
+      "complete_root_tree": true,
+      "license_evidence_path": "grant-writing-kit/references/LICENSE.txt",
+      "license_blob_sha": "2e58f399a29c7ae19a211370dbf587b6a2ba6935",
+      "license_scope": "MIT (free package edition only; paid kit separate)"
+    },
+    {
+      "repository": "stamate/grant-writer-skills",
+      "pin": "6e57fe732b118d738b44f5cb2483b60cfe612295",
+      "root_git_tree_entries": 99,
+      "complete_root_tree": true,
+      "license_evidence_path": "LICENSE",
+      "license_blob_sha": "cc05e736c5c3d0dd2298ae1daea47a3f4f0045d8",
+      "license_scope": "MIT (original publisher code/docs; dependencies separate)"
+    },
+    {
+      "repository": "pkahlem/eu-grant-writer",
+      "pin": "912c651580e96249eb4a28e19a8cf558d2965ddc",
+      "root_git_tree_entries": 22,
+      "complete_root_tree": true,
+      "license_evidence_path": "NOTICE.md",
+      "license_blob_sha": "f08d5e042ae6e3d70a7ce86b646a13cda6364ab7",
+      "license_scope": "CC BY-ND 4.0 (no redistributed adaptations; excluded evaluator quotations)"
+    }
+  ],
+  "records": [
+    {
+      "name": "npo-grant-proposal",
+      "source_repository": "dh2211/nonprofit-agents",
+      "source_pin": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "source_root_git_tree_sha": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "source_root_entry_count": 72,
+      "source_git_tree_truncated": false,
+      "canonical_skill_path": "skills/npo-grant-proposal/SKILL.md",
+      "skill_blob_sha": "7a98f836b3c3a0b0a0dee38c48796c70070fbca3",
+      "complete_package_git_tree_sha": "0d37e25b132b93d24fab3c58b41870beb83638da",
+      "package_owned_file_count": 1,
+      "package_owned_blobs": [
+        {
+          "path": "skills/npo-grant-proposal/SKILL.md",
+          "sha": "7a98f836b3c3a0b0a0dee38c48796c70070fbca3"
+        }
+      ],
+      "source_license": "MIT",
+      "license_evidence_path": "LICENSE",
+      "license_evidence_sha": "a4ef2eef75bcf2f7f5cf6a05c7cb75a980768c95",
+      "benefit": "Write a grant proposal that follows the funder's actual questions and word limits instead of inventing program claims.",
+      "transferable_method": "Funder eligibility/AI policy check → section map → source-bound drafted answers → totals/attachment verification.",
+      "nontrigger_and_authority": "Read/draft only; never submit or send, reveal client/donor names, infer nonexistent eligibility or override funder AI-use restrictions.",
+      "rubric_score_20": 17,
+      "ten_axis_scores": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Clear grant/LOI/section triggers",
+        "procedural_clarity": "Explicit eligibility, outline, draft and final check steps",
+        "authority_safety": "Draft-only and privacy rules; funder AI restriction wording could let user's choice conflict with published restriction",
+        "failure_handling": "Stops when guidelines missing and leaves sourced placeholders",
+        "evidence_discipline": "Dates/numbers/quotes must cite real records and budget",
+        "dependency_coherence": "Funder requirements and program/budget companion skills needed",
+        "portability_honesty": "Text-only and platform neutral",
+        "usefulness_differentiation": "Section limits plus eligibility upfront is a useful distinct method",
+        "adversarial_resilience": "Rejects invented people/outcomes and personal details",
+        "effectiveness_design": "No actual document or funder compliance executed"
+      },
+      "evidence_inspection": "Complete single-file pinned SKILL.md and root MIT LICENSE read; two named peer skills reviewed separately.",
+      "external_dependencies": "Funder's up-to-date instructions; organization's source facts and budget companion procedures.",
+      "risks_and_holds": [
+        "Ambiguous 'follow user decision' when funder prohibits AI drafting requires refusal to represent noncompliant work as compliant",
+        "Eligibility and tax/legal accuracy must be verified by organization; no executed word-limit check"
+      ],
+      "rights_conclusion": "Root MIT covers author procedure; third-party funder instructions, program records and personal stories retain separate rights.",
+      "static_disposition": "REFERENCE-ONLY: STUDY METHOD; NO PUBLIC FEATURED PROMOTION",
+      "source_identity_verified": true,
+      "source_mirror_alias_match": "UNKNOWN",
+      "license_clearance_for_unchanged_installation": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "user_action_authorization": "NOT GRANTED",
+      "unchanged_use_approved": false,
+      "public_featured_promotion": false
+    },
+    {
+      "name": "npo-program-facts",
+      "source_repository": "dh2211/nonprofit-agents",
+      "source_pin": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "source_root_git_tree_sha": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "source_root_entry_count": 72,
+      "source_git_tree_truncated": false,
+      "canonical_skill_path": "skills/npo-program-facts/SKILL.md",
+      "skill_blob_sha": "3c67085578006501106ca43dc8dec2727ca3c963",
+      "complete_package_git_tree_sha": "200257e3b1bce92c98d25ea4c184917633dad7bd",
+      "package_owned_file_count": 1,
+      "package_owned_blobs": [
+        {
+          "path": "skills/npo-program-facts/SKILL.md",
+          "sha": "3c67085578006501106ca43dc8dec2727ca3c963"
+        }
+      ],
+      "source_license": "MIT",
+      "license_evidence_path": "LICENSE",
+      "license_evidence_sha": "a4ef2eef75bcf2f7f5cf6a05c7cb75a980768c95",
+      "benefit": "Keep grant applications consistent by reusing one verified program fact sheet and separating real outcomes from activity counts.",
+      "transferable_method": "Sourced/date-stamped program facts → logic model → missing-evidence list → consented story summaries.",
+      "nontrigger_and_authority": "No authority to fetch private client records or write/share fact sheets without approval.",
+      "rubric_score_20": 17,
+      "ten_axis_scores": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Grants-season fact sheet and logic-model trigger",
+        "procedural_clarity": "Inputs/activities/outputs/outcomes process is clear",
+        "authority_safety": "Draft only; placeholders and privacy/consent gate",
+        "failure_handling": "Gaps marked but no formal recovery or stale-source refresh",
+        "evidence_discipline": "Numbers require date and source; separates outputs from outcomes",
+        "dependency_coherence": "Requires real org data and consented story provenance",
+        "portability_honesty": "Portable narrative/table without host CLI",
+        "usefulness_differentiation": "Distinct reusable fact source reduces contradictions across applications",
+        "adversarial_resilience": "Rejects client identity leakage and invented evidence",
+        "effectiveness_design": "No fact sheet constructed and verified in a real organization"
+      },
+      "evidence_inspection": "Complete single-file pinned SKILL.md and root MIT LICENSE read.",
+      "external_dependencies": "Organization's audited source numbers, reporting dates and consent records.",
+      "risks_and_holds": [
+        "Human verification of changing figures and story permissions still required",
+        "No active data validation or behavior trial"
+      ],
+      "rights_conclusion": "MIT-authored procedural text, no rights to private program documents or participants' stories.",
+      "static_disposition": "REFERENCE-ONLY: STUDY METHOD; NO PUBLIC FEATURED PROMOTION",
+      "source_identity_verified": true,
+      "source_mirror_alias_match": "UNKNOWN",
+      "license_clearance_for_unchanged_installation": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "user_action_authorization": "NOT GRANTED",
+      "unchanged_use_approved": false,
+      "public_featured_promotion": false
+    },
+    {
+      "name": "npo-budget-narrative",
+      "source_repository": "dh2211/nonprofit-agents",
+      "source_pin": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "source_root_git_tree_sha": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+      "source_root_entry_count": 72,
+      "source_git_tree_truncated": false,
+      "canonical_skill_path": "skills/npo-budget-narrative/SKILL.md",
+      "skill_blob_sha": "a7fc317db2b8edad823ffda9875fdc584bf0699a",
+      "complete_package_git_tree_sha": "2c91ed5cf6d6d74ed2c00689df169c2c9cfc42e9",
+      "package_owned_file_count": 1,
+      "package_owned_blobs": [
+        {
+          "path": "skills/npo-budget-narrative/SKILL.md",
+          "sha": "a7fc317db2b8edad823ffda9875fdc584bf0699a"
+        }
+      ],
+      "source_license": "MIT",
+      "license_evidence_path": "LICENSE",
+      "license_evidence_sha": "a4ef2eef75bcf2f7f5cf6a05c7cb75a980768c95",
+      "benefit": "Explain a funding budget line by line and catch mismatched totals before an application is submitted.",
+      "transferable_method": "Recompute rates × quantities → confirm cost eligibility/limits → justify each line → reconcile ask with full budget.",
+      "nontrigger_and_authority": "Do not access financial records or auto-edit/send a proposal; finance lead validates every number.",
+      "rubric_score_20": 17,
+      "ten_axis_scores": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Budget justification trigger unambiguous",
+        "procedural_clarity": "Arithmetic, allowability, per-line narrative and total reconcile steps",
+        "authority_safety": "No side effects; explicit finance-owner check",
+        "failure_handling": "Discrepancies reported but no formal workbook error handling",
+        "evidence_discipline": "Requests basis, rates, caps, match and source numbers",
+        "dependency_coherence": "Requires real finance records and funder rules",
+        "portability_honesty": "Plain-text checks transferable across budget tools",
+        "usefulness_differentiation": "Explicit recalculation before writing addresses a high-cost failure",
+        "adversarial_resilience": "No invention/silent fixes or disclosure of sensitive donor data",
+        "effectiveness_design": "Calculation instructions not executed on a real budget"
+      },
+      "evidence_inspection": "Complete single-file pinned SKILL.md and root MIT LICENSE read.",
+      "external_dependencies": "Accurate current rates/quantities, official cost rules and human finance signoff.",
+      "risks_and_holds": [
+        "No executed spreadsheet check",
+        "Financial/tax/compliance advice not replaced by this method"
+      ],
+      "rights_conclusion": "MIT-authored procedure; financial statements and funder rules not relicensed.",
+      "static_disposition": "REFERENCE-ONLY: STUDY METHOD; NO PUBLIC FEATURED PROMOTION",
+      "source_identity_verified": true,
+      "source_mirror_alias_match": "UNKNOWN",
+      "license_clearance_for_unchanged_installation": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "user_action_authorization": "NOT GRANTED",
+      "unchanged_use_approved": false,
+      "public_featured_promotion": false
+    },
+    {
+      "name": "grant-writing-kit",
+      "source_repository": "zicula/skills",
+      "source_pin": "ec7f94f84916be7bb25ec38752c24176330065a7",
+      "source_root_git_tree_sha": "ec7f94f84916be7bb25ec38752c24176330065a7",
+      "source_root_entry_count": 252,
+      "source_git_tree_truncated": false,
+      "canonical_skill_path": "grant-writing-kit/SKILL.md",
+      "skill_blob_sha": "5855ea4ae766a067deb0c6ad73f3ef35a432bf76",
+      "complete_package_git_tree_sha": "0c540226bad605fbb6f47715774d0301911281da",
+      "package_owned_file_count": 31,
+      "package_owned_blobs": [
+        {
+          "path": "grant-writing-kit/README.md",
+          "sha": "484228824c4ae02969f5239c7e8cb916b88dd5e8"
+        },
+        {
+          "path": "grant-writing-kit/SKILL.md",
+          "sha": "5855ea4ae766a067deb0c6ad73f3ef35a432bf76"
+        },
+        {
+          "path": "grant-writing-kit/references/1-pipeline/grant-pipeline-tracker.xlsx",
+          "sha": "a52a22098d78492a2744f7de17536f6f9b1095ec"
+        },
+        {
+          "path": "grant-writing-kit/references/1-pipeline/pipeline-sop.md",
+          "sha": "198196acde23f964ce00c6f2c30c896d69af0739"
+        },
+        {
+          "path": "grant-writing-kit/references/10-calendar/grants-annual-calendar.md",
+          "sha": "fa1565631679b16f113c1e436b9eccd5f9dd1e8e"
+        },
+        {
+          "path": "grant-writing-kit/references/2-go-no-go/go-no-go-guide.md",
+          "sha": "1c554913c7077f83ba67b1dd21fba5041d612f55"
+        },
+        {
+          "path": "grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx",
+          "sha": "a58d34344847a73440cb8ded6be88a3e87cc093d"
+        },
+        {
+          "path": "grant-writing-kit/references/3-funder-research/funder-research-sop.md",
+          "sha": "893b28c79114b05b181f70985027d1d3a4596778"
+        },
+        {
+          "path": "grant-writing-kit/references/4-boilerplate/impact-metrics.md",
+          "sha": "2542114d58cdde6cf7e3e2c71c803b94a455e618"
+        },
+        {
+          "path": "grant-writing-kit/references/4-boilerplate/mission-one-pager.md",
+          "sha": "e073535a9c3fade6d9050d211d9768cea6aa8250"
+        },
+        {
+          "path": "grant-writing-kit/references/4-boilerplate/needs-statement.md",
+          "sha": "ceef7cdee39ad688505441f081029b956deac488"
+        },
+        {
+          "path": "grant-writing-kit/references/4-boilerplate/org-history.md",
+          "sha": "5c3548bcefe14b646ab75bfa3f5f094c8004fa62"
+        },
+        {
+          "path": "grant-writing-kit/references/4-boilerplate/program-profile.md",
+          "sha": "5fa4bdb488e23dc1ac494723b8e07e4d47332ca0"
+        },
+        {
+          "path": "grant-writing-kit/references/4-boilerplate/staff-bios.md",
+          "sha": "c2ccee6fc020c2f7216dfda1198104ec423f3403"
+        },
+        {
+          "path": "grant-writing-kit/references/5-loi-library/loi-craft-guide.md",
+          "sha": "efd7f362e461a9ef5de741a4b14d87b2414deae2"
+        },
+        {
+          "path": "grant-writing-kit/references/5-loi-library/loi-library.md",
+          "sha": "1f2a8e4292bdd7099e9bf1d2a3e708495c8e464a"
+        },
+        {
+          "path": "grant-writing-kit/references/6-proposal-skeletons/skeleton-capacity-building.md",
+          "sha": "c1abd6dc45b837e8072154e7ed969eefa44b8974"
+        },
+        {
+          "path": "grant-writing-kit/references/6-proposal-skeletons/skeleton-capital.md",
+          "sha": "945f049c4803f2042380278f1ff281d5c51dd24c"
+        },
+        {
+          "path": "grant-writing-kit/references/6-proposal-skeletons/skeleton-general-operating.md",
+          "sha": "2b84c27dfd804aa4866a5e6b04cb6e920311f0f3"
+        },
+        {
+          "path": "grant-writing-kit/references/6-proposal-skeletons/skeleton-program-project.md",
+          "sha": "7dcae57581d05215676afea1648e1d95cb020695"
+        },
+        {
+          "path": "grant-writing-kit/references/6-proposal-skeletons/skeleton-renewal-continuation.md",
+          "sha": "69522a392fed1bb2213414c4c48982e7f472a532"
+        },
+        {
+          "path": "grant-writing-kit/references/6-proposal-skeletons/skeleton-research-evaluation.md",
+          "sha": "230e4f75ea18e8c4fd9e8d010c1852432d48f02e"
+        },
+        {
+          "path": "grant-writing-kit/references/7-budget/budget-narrative-template.md",
+          "sha": "063fdf4d4ad19f376d91e175bb412613d1ce34e9"
+        },
+        {
+          "path": "grant-writing-kit/references/7-budget/funder-requirements-checklist.md",
+          "sha": "ad2406cac32a4f22213798e6e3ee450a4eb01980"
+        },
+        {
+          "path": "grant-writing-kit/references/7-budget/grant-budget.xlsx",
+          "sha": "d7026e403066ee6c8b2497946ac9cccfc438c4ff"
+        },
+        {
+          "path": "grant-writing-kit/references/8-reporting/grant-report-skeleton.md",
+          "sha": "6b2fdc21589c5b941c241447d3e746829ecce339"
+        },
+        {
+          "path": "grant-writing-kit/references/8-reporting/stewardship-emails.md",
+          "sha": "d2a1269d913ca643f06443c11d6e9f8d6d2c42a8"
+        },
+        {
+          "path": "grant-writing-kit/references/8-reporting/what-changed-memo.md",
+          "sha": "20e466af82ce1345f2f23e6f68b1f0b713ad182b"
+        },
+        {
+          "path": "grant-writing-kit/references/9-ai/ai-prompt-pack.md",
+          "sha": "909792d706ff9bdfb4dac27789c3699272f06287"
+        },
+        {
+          "path": "grant-writing-kit/references/LICENSE.txt",
+          "sha": "2e58f399a29c7ae19a211370dbf587b6a2ba6935"
+        },
+        {
+          "path": "grant-writing-kit/references/START-HERE.md",
+          "sha": "2b9031b29d1ca65205ee87aa98f11721bf6a5a9b"
+        }
+      ],
+      "source_license": "MIT (free package edition only; paid kit separate)",
+      "license_evidence_path": "grant-writing-kit/references/LICENSE.txt",
+      "license_evidence_sha": "2e58f399a29c7ae19a211370dbf587b6a2ba6935",
+      "benefit": "Avoid wasting weeks on poor-fit grants by scoring eligibility and readiness before committing to an application.",
+      "transferable_method": "Funder research → weighted go/no-go hard gates → deadline pipeline → sourced narrative and budget → reporting/renewal.",
+      "nontrigger_and_authority": "Does not authorize sending proposals/emails, uploading private organizational data, installing workbooks or recurring scheduler.",
+      "rubric_score_20": 14,
+      "ten_axis_scores": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Broad grant go/no-go/tracking/write/report activation",
+        "procedural_clarity": "Eight-stage guide and numbered reference library are detailed",
+        "authority_safety": "Calls for submission/stewardship emails and workbooks without a host-action consent gate in the skill",
+        "failure_handling": "Guide has pass/hold and checklist but no execution rollback",
+        "evidence_discipline": "Funder source and verification methods specific, not independently tested",
+        "dependency_coherence": "Relies on 3 binary spreadsheets and templates; workbook formulas not inspected",
+        "portability_honesty": "Reusable SOPs but Excel/Google Sheets reliance and paid-kit scope nuance",
+        "usefulness_differentiation": "Go/no-go hard gates and funder-verbatim compliance are valuable differentiated methods",
+        "adversarial_resilience": "Prompt pack warns confidentiality but no enforced private-data egress stop",
+        "effectiveness_design": "No executed scoring, Excel formula validation or actual funder decision sample"
+      },
+      "evidence_inspection": "Read all 28/28 owned .md source files at pinned SHA; 31 owned files including 3 .xlsx workbooks have exact Git blob identities; workbook bytes/formulas never inspected or executed.",
+      "external_dependencies": "Three .xlsx workbooks, official funder rules, spreadsheet/host environment; paid commercial kit is legally separate.",
+      "risks_and_holds": [
+        "Three workbook formula/hidden-sheet properties NOT qualified",
+        "Sending stewardship emails, persistent deadline tracking and private funder/account data require separate authorization",
+        "Funder-fit scores cannot prove funding probability"
+      ],
+      "rights_conclusion": "Publisher's embedded MIT LICENSE covers the free Agent Skill edition, explicitly not the separately sold paid kit. Do not reproduce source templates in public skillz.",
+      "static_disposition": "REFERENCE-ONLY: STUDY METHOD; NO PUBLIC FEATURED PROMOTION",
+      "source_identity_verified": true,
+      "source_mirror_alias_match": "UNKNOWN",
+      "license_clearance_for_unchanged_installation": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "user_action_authorization": "NOT GRANTED",
+      "unchanged_use_approved": false,
+      "public_featured_promotion": false
+    },
+    {
+      "name": "grant-writer",
+      "source_repository": "stamate/grant-writer-skills",
+      "source_pin": "6e57fe732b118d738b44f5cb2483b60cfe612295",
+      "source_root_git_tree_sha": "6e57fe732b118d738b44f5cb2483b60cfe612295",
+      "source_root_entry_count": 99,
+      "source_git_tree_truncated": false,
+      "canonical_skill_path": "skills/grant-writer/SKILL.md",
+      "skill_blob_sha": "70e4c34437aac234237ae590313f3281e6a98fbc",
+      "complete_package_git_tree_sha": "86c830f68e5e4434dd5db0247aa99868d57eddb8",
+      "package_owned_file_count": 1,
+      "package_owned_blobs": [
+        {
+          "path": "skills/grant-writer/SKILL.md",
+          "sha": "70e4c34437aac234237ae590313f3281e6a98fbc"
+        }
+      ],
+      "source_license": "MIT (original publisher code/docs; dependencies separate)",
+      "license_evidence_path": "LICENSE",
+      "license_evidence_sha": "cc05e736c5c3d0dd2298ae1daea47a3f4f0045d8",
+      "benefit": "Understand how a grant proposal pipeline could track requirements, evidence, revisions and human review as separate stages.",
+      "transferable_method": "Formal FOA intake → sourced aims/evidence → budget/compliance → adversarial review → controlled revision.",
+      "nontrigger_and_authority": "DO NOT execute uv install, auto-import confidential documents, invoke external models, write local project state or publish proposals merely because this SKILL is read.",
+      "rubric_score_20": 10,
+      "ten_axis_scores": [
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "Funding agency/mechanism and proposal pipeline triggers clear",
+        "procedural_clarity": "Extensive phase and review workflow",
+        "authority_safety": "Auto-import of PI CV/budget/letters, local writes, external model calls and tool use lack sufficient per-action approval",
+        "failure_handling": "Describes failure cases but skips phases on service timeout",
+        "evidence_discipline": "Formal fact-check and compliance stages but no actual validation receipts",
+        "dependency_coherence": "Requires uv setup, external companions, full plugin scripts and Codex; dependency tree unqualified",
+        "portability_honesty": "Mostly Claude-specific CLI interfaces though conceptual gates transfer",
+        "usefulness_differentiation": "Combines intake/FOA/landscape/revision into coherent proposal workflow",
+        "adversarial_resilience": "Sensitive input and provider interactions not gated by exact scoped authority",
+        "effectiveness_design": "No real dry-run, data-isolation or correctness test executed"
+      },
+      "evidence_inspection": "Complete 423-line SKILL.md, dependent compliance and budget SKILLs, config and README inspected; repository runtime scripts and external plugins NOT assessed.",
+      "external_dependencies": "uv/Python, grant-writer CLI, multiple local package scripts, cross-agent tools, private PI data and funded-grants APIs.",
+      "risks_and_holds": [
+        "Auto-import confidential PI documents and external model use require consent/evidence",
+        "Complete third-party tool/dependency tree unqualified",
+        "Skip-review option and silent fallback can obscure missing assurance"
+      ],
+      "rights_conclusion": "Root MIT publisher code; private proposal documents, models and third-party plugin dependencies remain separate.",
+      "static_disposition": "REJECT UNCHANGED: METHOD INSIGHT ONLY; NO PUBLIC FEATURED PROMOTION",
+      "source_identity_verified": true,
+      "source_mirror_alias_match": "UNKNOWN",
+      "license_clearance_for_unchanged_installation": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "user_action_authorization": "NOT GRANTED",
+      "unchanged_use_approved": false,
+      "public_featured_promotion": false
+    },
+    {
+      "name": "eu-grant-writer",
+      "source_repository": "pkahlem/eu-grant-writer",
+      "source_pin": "912c651580e96249eb4a28e19a8cf558d2965ddc",
+      "source_root_git_tree_sha": "912c651580e96249eb4a28e19a8cf558d2965ddc",
+      "source_root_entry_count": 22,
+      "source_git_tree_truncated": false,
+      "canonical_skill_path": "skills/eu-grant-writer/SKILL.md",
+      "skill_blob_sha": "c509f8affce62e1e6a39d72b6bb50b0f7be6bff5",
+      "complete_package_git_tree_sha": "e18834dbe7327530dcd9a7c20ae2764be030c4b4",
+      "package_owned_file_count": 7,
+      "package_owned_blobs": [
+        {
+          "path": "skills/eu-grant-writer/LICENSE.txt",
+          "sha": "0ceca853aedb33536c1bb1b53b96c195447263e6"
+        },
+        {
+          "path": "skills/eu-grant-writer/SKILL.md",
+          "sha": "c509f8affce62e1e6a39d72b6bb50b0f7be6bff5"
+        },
+        {
+          "path": "skills/eu-grant-writer/references/about.md",
+          "sha": "2f21a320b873a94486b181f9dbaa169d403f11a1"
+        },
+        {
+          "path": "skills/eu-grant-writer/references/confidentiality.md",
+          "sha": "3d34dd98e4a1f4b081651991171aab820c8672d3"
+        },
+        {
+          "path": "skills/eu-grant-writer/references/evaluator-patterns.md",
+          "sha": "5e07b391d5b13ceb6c03a1ae6a7a508f0c955cba"
+        },
+        {
+          "path": "skills/eu-grant-writer/references/mock-review.md",
+          "sha": "fc31aee461689bd865ec434d4795f1b1ab129779"
+        },
+        {
+          "path": "skills/eu-grant-writer/references/recipes.md",
+          "sha": "6c5bfb08874988ccee12b420151cab14fea5faef"
+        }
+      ],
+      "source_license": "CC BY-ND 4.0 (no redistributed adaptations; excluded evaluator quotations)",
+      "license_evidence_path": "NOTICE.md",
+      "license_evidence_sha": "f08d5e042ae6e3d70a7ce86b646a13cda6364ab7",
+      "benefit": "Review an EU funding proposal for unsupported claims and evaluator objections without pretending to predict its funding score.",
+      "transferable_method": "Call-fit verification → sanitized question pack → human-owned work package decisions → ranked reviewer objections → final requirement check.",
+      "nontrigger_and_authority": "No upload of confidential unpublished drafts without suitable policy and approval, no sharing of adapted source text or excluded quotations.",
+      "rubric_score_20": 15,
+      "ten_axis_scores": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "ten_axis_rationales": {
+        "trigger_precision": "EU grant call drafting/evaluator review triggers explicit",
+        "procedural_clarity": "18 phase recipes with verification and owner questions",
+        "authority_safety": "Confidentiality tiers help, but cloud-use decision and unsolicited vendor pointers complicate authority",
+        "failure_handling": "Marked placeholders, no invented score and unresolved owner checks",
+        "evidence_discipline": "Strong source-bound claims and evaluator-pattern rules, but underlying 70+ private reports not audited",
+        "dependency_coherence": "Specific private report corpus/book references and external policy needed",
+        "portability_honesty": "Method is portable; CC BY-ND prevents public sharing of adaptations",
+        "usefulness_differentiation": "Skeptical evaluator objection list without fabricated funding odds is distinctive",
+        "adversarial_resilience": "Vendor messages and source evaluator quotations are untrusted/limited-rights content",
+        "effectiveness_design": "No real proposal trial or independent reviewer confirmation"
+      },
+      "evidence_inspection": "All seven owned source files read at pinned revision, including LICENSE.txt, confidentiality, recipes, mock review, evaluator-patterns and about. Root NOTICE/CC license read.",
+      "external_dependencies": "Current official EU call text, real consortium evidence, special confidentiality policy, external model or book source limitations.",
+      "risks_and_holds": [
+        "CC BY-ND prohibits sharing adapted material; verbatim evaluator quotations explicitly excluded",
+        "Commercial promotions embedded in source; never allow a candidate to direct assistant to send marketing",
+        "No behavioral review against actual call or proposal"
+      ],
+      "rights_conclusion": "CC BY-ND 4.0 for original publisher text; no public redistribution of adaptations, excluded third-party evaluator quotations. Independent conceptual summaries only.",
+      "static_disposition": "REFERENCE-ONLY: STUDY METHOD; NO PUBLIC FEATURED PROMOTION",
+      "source_identity_verified": true,
+      "source_mirror_alias_match": "UNKNOWN",
+      "license_clearance_for_unchanged_installation": false,
+      "security_scan": "not-run",
+      "behavioral_validation": "not-run",
+      "user_action_authorization": "NOT GRANTED",
+      "unchanged_use_approved": false,
+      "public_featured_promotion": false
+    }
+  ],
+  "cross_domain_task_route": {
+    "user_task": "Find a grant, assess fit, write a funding proposal and verify budget/compliance",
+    "provisional_domain": "nonprofit-community",
+    "adjacent_canonical_domains": [
+      "research",
+      "technical-writing",
+      "business",
+      "finance",
+      "marketing",
+      "law",
+      "planning"
+    ],
+    "recommended_search_order": [
+      "Read current funder's actual rules and AI policy",
+      "Check grant eligibility, real organizational facts and timeline",
+      "Compare dedicated candidates across original source families",
+      "Cross-check budgeting, evidence and legal/privacy constraints",
+      "Select a reference method or new skill only with exact rights and user-fit evidence"
+    ],
+    "shortlist": [
+      {
+        "name": "npo-grant-proposal",
+        "use": "Requirements-aligned drafts with real data",
+        "stage": "STATIC REFERENCE-ONLY"
+      },
+      {
+        "name": "npo-program-facts",
+        "use": "Verifiable program fact sheet",
+        "stage": "STATIC REFERENCE-ONLY"
+      },
+      {
+        "name": "npo-budget-narrative",
+        "use": "Explain and recompute budget",
+        "stage": "STATIC REFERENCE-ONLY"
+      },
+      {
+        "name": "grant-writing-kit",
+        "use": "Go/no-go and lifecycle planning",
+        "stage": "STATIC REFERENCE-ONLY; workbook validation HOLD"
+      },
+      {
+        "name": "eu-grant-writer",
+        "use": "Evaluator-style objections and privacy classification",
+        "stage": "STATIC REFERENCE-ONLY; CC BY-ND rights HOLD"
+      },
+      {
+        "name": "grant-writer",
+        "use": "Research-grant pipeline architecture",
+        "stage": "REJECT UNCHANGED; external data/runtime authority HOLD"
+      }
+    ],
+    "consumer_featured_shelf_is_not_exhaustive": true,
+    "global_deduplicated_eligible_count": null
+  },
+  "static_methods_to_study": 5,
+  "reject_unchanged_packages": 1,
+  "unchanged_use_approvals": 0,
+  "security_passes": 0,
+  "behavioral_passes": 0,
+  "new_public_featured_promotions": 0,
+  "prior_bounded_featured_shelf_unchanged": 19,
+  "first_visitor_external_retest": "not-run",
+  "conclusion": "The task has real, separately pinned source candidates; the initial 19-shelf no-fit implication is wrong. Selection/installation safety and maturity remain outstanding."
+}
