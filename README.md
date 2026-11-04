@@ -84,6 +84,30 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 *As of 2026-11-03. The research links are from a historical audit; not every candidate is useful. All-corpus qualification totals remain unknown. Never add topic-link counts to selected-method counts.*
 <!-- SKILLZ_CAPABILITY_DASHBOARD:END -->
 
+<!-- SKILLZ_SECURITY_STATUS:START -->
+### Security and curation status (November 4, 2026)
+
+**The main dashboard above describes what has actually merged.** The research is broader, but reviewed material and approved skills are not the same thing. The dated graphic below shows merged work, separately proposed Q8 work, and the remaining security gap. It is regenerated from [machine-readable evidence](registry/public-security-curation-status-20261104.json) with [a dependency-free renderer](scripts/build-public-security-status.mjs); run `node scripts/build-public-security-status.mjs --self-test` and `--check` before changing the snapshot.
+
+![Skillz dated security and curation dashboard. Merged main has 20 study methods across 10 domains. Q8 proposes 50 across 33 domains. Static scans: first-party main 25 pass, 1 fail and 25 incomplete; Q8 study methods 10 pass, 7 fail and 33 incomplete. No unchanged-use approvals.](docs/assets/security-and-curation-status.svg)
+
+| What the count means | Confirmed merged main | Open review or historical security evidence |
+|---|---:|---:|
+| Capability domains | **33** | Q8 proposes at least one selected study method in all 33 |
+| Topics / topics with research leads | **247 / 210** | Research link does not mean quality approval |
+| First-party skill records | **44** | Separate 7 engine skill procedures in security scan population |
+| Distinct methods selected for study | **20 in 10 domains** | [Q8 draft #693](https://github.com/Knapp-Kevin/skillz/pull/693): **50 in 33** |
+| Exact static review decisions / awaiting consumer qualification | Not an additive main-release funnel | Q8 draft: **5,351 / 1,522** |
+| First-party main security scan, 51 package trees | Not a live scan of later draft changes | **25 passed / 1 failed / 25 incomplete**, pinned external scan of main |
+| Q8 featured study-method static security, 50 trees | Not a merged-main approval | **10 passed / 7 failed / 33 incomplete**, separate pinned evidence |
+| Approved unchanged / behaviorally validated in proposed shelf | **0 / 0** | **0 / 0** |
+
+**Security issue [#402](https://github.com/Knapp-Kevin/skillz/issues/402) remains open and is a priority.** The security failures and incomplete results are not dismissed. A concrete Handoff Writer credential-fragment disclosure defect has been corrected in [draft #703](https://github.com/Knapp-Kevin/skillz/pull/703), but its changed package needs a new pinned security scan and independent agent-behavior checks before merge. A passed static scan is not permission to install, run, or expose private accounts.
+
+These populations overlap and **must not be added together**. The two security rows reflect **different pinned package sets**, and all figures are dated snapshots rather than live counters. The original source-level receipt and limitations remain with [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) and the [Q12 evidence consolidated into #698](https://github.com/Knapp-Kevin/skillz/pull/698).
+
+<!-- SKILLZ_SECURITY_STATUS:END -->
+
 ## Our featured methods: a small, evidence-based shelf
 
 We maintain two **positive** recommendation types for methods selected to appear here. **This is not the entire collection of discoverable or reviewed methods.** A missing item should prompt wider research, not a conclusion that the repository cannot help. Both types explain the specific benefit and point to evidence.
