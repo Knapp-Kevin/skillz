@@ -157,7 +157,7 @@
       "title": "Four additional recurring review authority gaps",
       "lane": "AUTHORITY_BACKLOG",
       "state": "OPEN",
-      "description": "permissions-review draft #703; 3 other recurring skills not yet fixed, security/behavior pending"
+      "description": "All four first-party recurring-review source fixes drafted in canonical #703; external scanner, observed host behavior and accepted merge pending."
     },
     {
       "number": 483,
@@ -165,7 +165,7 @@
       "title": "Two obsolete permission/source-trust contracts",
       "lane": "AUTHORITY_BACKLOG",
       "state": "OPEN",
-      "description": "Both named governance skills updated on draft #703, scanner and host acceptance pending"
+      "description": "Both named governance repairs in #703; security/behavior/merge not complete."
     },
     {
       "number": 495,
@@ -276,9 +276,9 @@
     {
       "order": 2,
       "owner_lane": "AUTHORITY_BACKLOG",
-      "scope": "#478 unassigned; #481 three skills outstanding; #483 draft #703; #495 draft #702",
-      "completion": "Implement remaining recurring-authority skill repairs. Obtain separate external scanner and observed host acceptance for #702 and #703, then reconcile shared 44-entry registry against main.",
-      "status": "PARTIALLY_IMPLEMENTED_TWO_DRAFTS_HOLD"
+      "scope": "#478 unimplemented; #481 all four source fixes in #703; #483 both source fixes in #703; #495 draft #702",
+      "completion": "Qualify existing five-source #703 and two-source #702 with exact-final package security and observed host behavior, then reconcile 44-entry registry for owner merge. Implement #478 only in a controlled existing branch.",
+      "status": "FIVE_SOURCE_REPAIR_DRAFT_HOLD"
     },
     {
       "order": 3,
@@ -343,5 +343,51 @@
       }
     ],
     "open_pr_count_at_followup": 13
+  },
+  "latest_hygiene_reconciliation": {
+    "date_local": "2026-11-03",
+    "before_open_prs": 13,
+    "after_open_prs": 8,
+    "open_issues": 12,
+    "closed_without_merge": [
+      {
+        "pr": 701,
+        "successor": 703,
+        "paths": 2
+      },
+      {
+        "pr": 677,
+        "successor": 698,
+        "paths": 1
+      },
+      {
+        "pr": 682,
+        "successor": 698,
+        "paths": 1
+      },
+      {
+        "pr": 697,
+        "successor": 698,
+        "paths": 2
+      },
+      {
+        "pr": 692,
+        "successor": 700,
+        "paths": 1
+      }
+    ],
+    "archival_rule": "Every unique source file is independently read back byte-for-byte under the canonical successor PR before closing the source PR. No branch deletion, no merge to main, no security or behavioral approval.",
+    "open_prs_at_latest_check": [
+      673,
+      686,
+      693,
+      698,
+      699,
+      700,
+      702,
+      703
+    ],
+    "open_issues_at_latest_check": 12,
+    "not_merged_or_approved": true
   }
 }
