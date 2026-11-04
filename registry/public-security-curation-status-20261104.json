@@ -28,11 +28,11 @@
   },
   "approved_unchanged": 0,
   "behaviorally_validated": 0,
-  "open_prs_at_snapshot": 4,
+  "open_prs_at_snapshot": 3,
   "open_issues_at_snapshot": 12,
   "security_issue": 402,
   "non_additive": true,
-  "notes": "Q8 #693 merged as 50 study-only Valuable References across 33 domains on 2026-11-04; Q7 20/10 is historical. Security evidence is pinned to earlier exact package trees, not the newer repairs in #673/#686/#702/#703. Static pass is not unchanged-use approval. The 51 first-party/engine and 50 study-reference scan populations overlap and must not be added. Approved unchanged: 0. Behavioral validation: 0. Open security #402 remains unresolved. Security repair frontier PRs #673/#686/#702/#703: 34 exact proposed changed packages, 15 existing scanner passes valid by identical current Git package trees and 19 requiring new scans; no observed behavioral acceptances.",
+  "notes": "Q8 #693 merged as 50 study-only Valuable References across 33 domains on 2026-11-04; Q7 20/10 is historical. Security evidence is pinned to earlier exact package trees, not the newer repairs in #673/#686/#702/#703. Static pass is not unchanged-use approval. The 51 first-party/engine and 50 study-reference scan populations overlap and must not be added. Approved unchanged: 0. Behavioral validation: 0. Open security #402 remains unresolved. Security repair frontier PRs #673/#686/#702/#703: 34 exact proposed changed packages, 15 existing scanner passes valid by identical current Git package trees and 19 requiring new scans; no observed behavioral acceptances. 2026-11-04 #702 was closed unmerged only after all eight unique files/2 complete skill packages were preserved in #703, reducing open repair PRs 4 to 3; scan/behavior counts unchanged.",
   "q8_merged_checkpoint": {
     "pr": 693,
     "source_head": "dfeb3ce191bd2242760c25a42115073799a1f5a0",
@@ -45,7 +45,7 @@
   },
   "repair_frontier": {
     "source": "registry/security/active-first-party-repair-frontier-20261104.json",
-    "scope": "Four unmerged first-party security repair PRs, distinct from historical corpus scanner rows",
+    "scope": "Three open security repair PRs (#673, #686, consolidated #703); former #702 moved byte-identically into #703 and closed unmerged. Historical scanner population is separate.",
     "changed_packages": 34,
     "existing_exact_tree_static_pass": 15,
     "needs_new_exact_tree_scan": 19,
@@ -67,18 +67,11 @@
         "new_scans_needed": 0
       },
       {
-        "pr": 702,
-        "head": "d61ba91065175fd1651512901e358ee5ad382121",
-        "total": 2,
-        "matched_pass": 0,
-        "new_scans_needed": 2
-      },
-      {
         "pr": 703,
-        "head": "19faefeea408946352760f542514023927915dd3",
-        "total": 11,
+        "head": "fa217584586acbc2183307e0b7ad7669cc74d4e5",
+        "total": 13,
         "matched_pass": 0,
-        "new_scans_needed": 11
+        "new_scans_needed": 13
       }
     ]
   }
