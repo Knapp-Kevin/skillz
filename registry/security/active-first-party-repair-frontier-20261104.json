@@ -3,7 +3,7 @@
   "as_of": "2026-11-04",
   "issue": 402,
   "baseline_main_sha": "e19d5ce3389f783f5b58bbea3ff4b4f7a492dff3",
-  "scope": "Unmerged 34 first-party repair package trees across 4 open PRs; NOT all governed first-party or third-party corpus",
+  "scope": "Unmerged 34 first-party repair package trees across 3 open PRs; NOT all governed first-party or third-party corpus",
   "scanner_pin": "NVIDIA SkillSpector v2.12.0 c7958a3268d9498644b22edb75d0f051bbc8cbfc",
   "interpretation": "Passed means prior executed scanner results only when current Git package-tree identity exactly matches; every changed tree requires new scan. No host behavior performed; no unchanged skill approved. Do not sum with Q8 third-party population.",
   "totals": {
