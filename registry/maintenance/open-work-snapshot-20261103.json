@@ -173,7 +173,7 @@
       "title": "Private automation receipts/cross-repo writes",
       "lane": "AUTHORITY_BACKLOG",
       "state": "OPEN",
-      "description": "older PR #496 closed without merge; no confirmed current replacement"
+      "description": "Current draft PR #702 restores 2 source-pinned scope/write fixes from closed-unmerged #496; scanner, behavior and merge gate still HOLD."
     },
     {
       "number": 544,
@@ -276,9 +276,9 @@
     {
       "order": 2,
       "owner_lane": "AUTHORITY_BACKLOG",
-      "scope": "#478 #481 #483 #495",
-      "completion": "Allocate one writer per shared skill; preserve host-native optional scheduling and separate explicit authorization; create bounded disjoint repair PRs.",
-      "status": "NOT_IMPLEMENTED"
+      "scope": "#478 #481 #483 unassigned; #495 has draft #702",
+      "completion": "Create disjoint owner-approved fixes for #478/#481/#483, sharing one permissions-review writer. Independently qualify #702 with pinned scanner and executed adversarial tests.",
+      "status": "PARTIALLY_IMPLEMENTED_DRAFT_HOLD"
     },
     {
       "order": 3,
@@ -314,6 +314,23 @@
     "before_creation_of_this_workboard_pr": true,
     "workboard_pr_number": 701,
     "open_pr_count_after_creation_if_no_other_changes": 11,
-    "reason": "Avoid counting the PR documenting the original open-work inventory as a missing pre-existing task."
+    "reason": "Avoid counting the PR documenting the original open-work inventory as a missing pre-existing task.",
+    "post_snapshot_changes": [
+      {
+        "pr": 701,
+        "kind": "MAINTAINER_WORKBOARD",
+        "opened_after_snapshot": true,
+        "scope": "Adds dated workboard; does not alter snapshot base counts."
+      },
+      {
+        "pr": 702,
+        "kind": "FIRST_PARTY_AUTHORITY_REPAIR",
+        "opened_after_snapshot": true,
+        "issue": 495,
+        "head_sha": "cca9ec1d8956e3ce1c6d052780a7522da612317d",
+        "scope": "Automation receipts and task-surface exact-pinned authority fixes; draft, unmerged, scanner/behavior pending."
+      }
+    ],
+    "open_pr_count_at_followup": 12
   }
 }
