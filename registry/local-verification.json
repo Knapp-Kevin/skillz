@@ -568,7 +568,7 @@
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2",
+      "content_blob_sha": "5cff5684b7e339a0d52aad8533d9715bedbc5923",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -595,7 +595,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 issue #402 revised source exact SHA d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
+      "notes": "Issue #402 public-only governance pulse authority correction at exact Git blob 5cff5684b7e339a0d52aad8533d9715bedbc5923. Structural checks only; new pinned security scan, full semantic and external behavior qualification pending.",
       "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
