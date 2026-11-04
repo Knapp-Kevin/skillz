@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 1000" width="1120" height="1000" role="img" aria-labelledby="chart-heading chart-detail">
-<title id="chart-heading">Skillz capability evidence dashboard for 33 domains</title><desc id="chart-detail">210 of 247 canonical topics have research or candidate links, including some rejected-only sources. 20 distinct methods are featured for study across 10 domains; 0 approved unchanged. The README contains the full accessible table and downloadable CSV.</desc>
+<title id="chart-heading">Skillz capability evidence dashboard for 33 domains</title><desc id="chart-detail">210 of 247 canonical topics have research or candidate links, including some rejected-only sources. 50 distinct methods are featured for study across 33 domains; 0 approved unchanged. The README contains the full accessible table and downloadable CSV.</desc>
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1a2f"/><stop offset="1" stop-color="#172b49"/></linearGradient><linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#5eead4"/></linearGradient></defs>
 <rect x="0" y="0" width="1120" height="1000" rx="24" fill="url(#bg)"/><circle cx="998" cy="70" r="235" fill="#3e6094" opacity=".11"/>
 <text x="35" y="63" font-size="34" font-weight="700" fill="#f3f7ff" font-family="Arial,Helvetica,sans-serif">Skillz | Capability overview</text><text x="36" y="101" font-size="18" fill="#c1d1e7" font-family="Arial,Helvetica,sans-serif">Find useful methods across the library. A featured shelf is not the entire catalog.</text>
 <rect x="34" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="52" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">33</text><text x="52" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">CAPABILITY AREAS</text>
 <rect x="304" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="322" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">210 / 247</text><text x="322" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">TOPICS WITH RESEARCH LINKS</text>
-<rect x="574" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="592" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">20</text><text x="592" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">METHODS SELECTED TO STUDY</text>
+<rect x="574" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="592" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">50</text><text x="592" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">METHODS SELECTED TO STUDY</text>
 <rect x="844" y="136" width="242" height="96" rx="13" stroke="#3b5371" fill="#1c314c"/><text x="862" y="179" fill="#f0f6ff" font-size="29" font-weight="700" font-family="Arial,Helvetica,sans-serif">0</text><text x="862" y="208" fill="#bfd0e4" font-size="12.5" font-family="Arial,Helvetica,sans-serif">APPROVED UNCHANGED</text>
 <rect x="37" y="259" width="14" height="14" rx="3" fill="#4fd5dd"/><text x="61" y="272" fill="#dfebf9" font-size="15" font-family="Arial,Helvetica,sans-serif">Topics with any research link (even rejected)</text><rect x="538" y="259" width="14" height="14" rx="3" fill="#af90f3"/><text x="562" y="272" fill="#dfebf9" font-size="15" font-family="Arial,Helvetica,sans-serif">Methods selected to study, not approved to install</text>
 <text x="36" y="309" fill="#afc5dd" font-size="15" font-family="Arial,Helvetica,sans-serif">“Not featured” means keep searching the wider evidence index.</text>
 <rect x="31" y="331" width="520" height="601" rx="14" stroke="#344c67" fill="#111f34"/>
 <text x="44" y="357" font-size="14" font-weight="700" fill="#e9f2fe" font-family="Arial,Helvetica,sans-serif">Capability domain</text><text x="247" y="357" font-size="14" fill="#c6e8f4" font-family="Arial,Helvetica,sans-serif">Research</text><text x="421" y="357" font-size="14" fill="#d8c7fa" font-family="Arial,Helvetica,sans-serif">Selected</text>
 <line x1="43" y1="372" x2="539" y2="372" stroke="#405773" stroke-width="1"/>
-<g><title>Software engineering: 10/10 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<g><title>Software engineering: 10/10 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="379" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="400" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Software engineering</text>
 <rect x="247" y="388" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="388" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="400" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">10/10</text>
-<rect x="412" y="381" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="399" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="412" y="381" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="399" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Testing: 7/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="410" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="431" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Testing</text>
@@ -27,15 +27,15 @@
 <rect x="247" y="419" width="75.25" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="431" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/8</text>
 <rect x="412" y="412" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="430" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
-<g><title>Agent / MCP development: 8/8 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<text x="477" y="430" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Agent / MCP development: 8/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="441" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="462" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Agent / MCP development</text>
 <rect x="247" y="450" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="450" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="462" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">8/8</text>
-<rect x="412" y="443" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="461" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="412" y="443" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="461" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Cloud / DevOps: 8/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="472" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="493" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Cloud / DevOps</text>
@@ -43,31 +43,31 @@
 <rect x="247" y="481" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="493" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">8/8</text>
 <rect x="412" y="474" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="492" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
-<g><title>Security: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<text x="477" y="492" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Security: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="503" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="524" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Security</text>
 <rect x="247" y="512" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="512" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="524" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="412" y="505" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="523" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Research: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="412" y="505" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="523" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Research: 7/7 research-linked topics; 2 study methods across 2 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="534" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="555" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Research</text>
 <rect x="247" y="543" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="543" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="555" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="412" y="536" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="554" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Planning: 6/6 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="412" y="536" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="554" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">2 refs · 2 topics</text></g>
+<g><title>Planning: 6/6 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="565" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="586" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Planning</text>
 <rect x="247" y="574" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="574" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="586" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/6</text>
-<rect x="412" y="567" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="585" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="412" y="567" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="585" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Marketing: 8/9 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="596" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="617" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Marketing</text>
@@ -75,15 +75,15 @@
 <rect x="247" y="605" width="76.44" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="617" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">8/9</text>
 <rect x="412" y="598" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="616" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
-<g><title>Product: 8/8 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<text x="477" y="616" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Product: 8/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="627" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="648" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Product</text>
 <rect x="247" y="636" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="636" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="648" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">8/8</text>
-<rect x="412" y="629" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="647" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="412" y="629" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="647" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>UX / UI: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="658" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="679" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">UX / UI</text>
@@ -91,15 +91,15 @@
 <rect x="247" y="667" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="679" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
 <rect x="412" y="660" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="678" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
-<g><title>Visual design: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<text x="477" y="678" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Visual design: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="689" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="710" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Visual design</text>
 <rect x="247" y="698" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="698" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="710" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="412" y="691" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="709" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="412" y="691" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="709" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Illustration: 1/6 research-linked topics; 3 study methods across 3 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="720" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="741" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Illustration</text>
@@ -115,7 +115,7 @@
 <rect x="247" y="760" width="66.89" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="772" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/9</text>
 <rect x="412" y="753" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="771" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
+<text x="477" y="771" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Game design: 6/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="782" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="803" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Game design</text>
@@ -123,15 +123,15 @@
 <rect x="247" y="791" width="64.50" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="803" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/8</text>
 <rect x="412" y="784" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="802" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
-<g><title>Fiction / narrative / worldbuilding: 8/8 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<text x="477" y="802" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Fiction / narrative / worldbuilding: 8/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="813" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="834" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Fiction / narrative / wo…</text>
 <rect x="247" y="822" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="247" y="822" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="834" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">8/8</text>
-<rect x="412" y="815" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="477" y="833" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="412" y="815" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="477" y="833" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Technical writing: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="844" width="505" height="31" rx="6" fill="#172842"/>
 <text x="43" y="865" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Technical writing</text>
@@ -139,7 +139,7 @@
 <rect x="247" y="853" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="340" y="865" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
 <rect x="412" y="846" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="477" y="864" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
+<text x="477" y="864" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Music composition: 0/8 research-linked topics; 9 study methods across 8 topics; 0 unchanged-use approvals</title>
 <rect x="38" y="875" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="43" y="896" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Music composition</text>
@@ -150,110 +150,110 @@
 <rect x="570" y="331" width="520" height="601" rx="14" stroke="#344c67" fill="#111f34"/>
 <text x="583" y="357" font-size="14" font-weight="700" fill="#e9f2fe" font-family="Arial,Helvetica,sans-serif">Capability domain</text><text x="786" y="357" font-size="14" fill="#c6e8f4" font-family="Arial,Helvetica,sans-serif">Research</text><text x="960" y="357" font-size="14" fill="#d8c7fa" font-family="Arial,Helvetica,sans-serif">Selected</text>
 <line x1="582" y1="372" x2="1078" y2="372" stroke="#405773" stroke-width="1"/>
-<g><title>Audio / voice / sound: 5/8 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<g><title>Audio / voice / sound: 5/8 research-linked topics; 2 study methods across 2 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="379" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="400" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Audio / voice / sound</text>
 <rect x="786" y="388" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="388" width="53.75" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="400" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">5/8</text>
-<rect x="951" y="381" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="399" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Video / film: 5/9 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="381" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="399" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">2 refs · 2 topics</text></g>
+<g><title>Video / film: 5/9 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="410" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="431" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Video / film</text>
 <rect x="786" y="419" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="419" width="47.78" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="431" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">5/9</text>
-<rect x="951" y="412" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="430" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Communication: 5/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="412" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="430" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Communication: 5/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="441" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="462" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Communication</text>
 <rect x="786" y="450" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="450" width="61.43" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="462" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">5/7</text>
-<rect x="951" y="443" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="461" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Analytics: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="443" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="461" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Analytics: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="472" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="493" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Analytics</text>
 <rect x="786" y="481" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="481" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="493" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="951" y="474" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="492" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Time / productivity: 6/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="474" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="492" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Time / productivity: 6/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="503" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="524" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Time / productivity</text>
 <rect x="786" y="512" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="512" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="524" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
-<rect x="951" y="505" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="523" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Memory / context: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="505" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="523" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Memory / context: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="534" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="555" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Memory / context</text>
 <rect x="786" y="543" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="543" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="555" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="951" y="536" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="554" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Business: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="536" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="554" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Business: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="565" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="586" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Business</text>
 <rect x="786" y="574" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="574" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="586" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="951" y="567" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="585" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Sales: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="567" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="585" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Sales: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="596" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="617" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Sales</text>
 <rect x="786" y="605" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="605" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="617" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="951" y="598" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="616" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Career: 6/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="598" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="616" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Career: 6/7 research-linked topics; 2 study methods across 2 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="627" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="648" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Career</text>
 <rect x="786" y="636" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="636" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="648" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
-<rect x="951" y="629" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="647" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Education: 6/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="629" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="647" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">2 refs · 2 topics</text></g>
+<g><title>Education: 6/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="658" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="679" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Education</text>
 <rect x="786" y="667" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="667" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="679" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
-<rect x="951" y="660" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="678" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Science: 6/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="660" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="678" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Science: 6/7 research-linked topics; 3 study methods across 2 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="689" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="710" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Science</text>
 <rect x="786" y="698" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="698" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="710" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
-<rect x="951" y="691" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="709" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Medicine: 6/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="691" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="709" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">3 refs · 2 topics</text></g>
+<g><title>Medicine: 6/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="720" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="741" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Medicine</text>
 <rect x="786" y="729" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="729" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="741" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
-<rect x="951" y="722" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="740" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>Law: 6/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="722" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="740" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Law: 6/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="751" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="772" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Law</text>
 <rect x="786" y="760" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="760" width="73.71" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="772" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">6/7</text>
-<rect x="951" y="753" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="771" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="951" y="753" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="771" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <g><title>Finance: 7/8 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="782" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="803" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Finance</text>
@@ -261,21 +261,21 @@
 <rect x="786" y="791" width="75.25" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="803" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/8</text>
 <rect x="951" y="784" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
-<text x="1016" y="802" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 refs · 1 topics</text></g>
-<g><title>Robotics / IoT: 5/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<text x="1016" y="802" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
+<g><title>Robotics / IoT: 5/7 research-linked topics; 3 study methods across 2 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="813" width="505" height="31" rx="6" fill="#1e314b"/>
 <text x="582" y="834" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">Robotics / IoT</text>
 <rect x="786" y="822" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="822" width="61.43" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="834" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">5/7</text>
-<rect x="951" y="815" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="833" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
-<g><title>ML accelerators and compute: 7/7 research-linked topics; 0 study methods across 0 topics; 0 unchanged-use approvals</title>
+<rect x="951" y="815" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="833" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">3 refs · 2 topics</text></g>
+<g><title>ML accelerators and compute: 7/7 research-linked topics; 1 study methods across 1 topics; 0 unchanged-use approvals</title>
 <rect x="577" y="844" width="505" height="31" rx="6" fill="#172842"/>
 <text x="582" y="865" font-size="14" fill="#e7f1fc" font-family="Arial,Helvetica,sans-serif">ML accelerators and comp…</text>
 <rect x="786" y="853" width="86" height="12" rx="4" fill="#3d506c"/>
 <rect x="786" y="853" width="86.00" height="12" rx="4" fill="url(#cyan)"/>
 <text x="879" y="865" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">7/7</text>
-<rect x="951" y="846" width="129" height="26" rx="8" stroke="#3d526c" fill="#1a2c44"/>
-<text x="1016" y="864" text-anchor="middle" font-size="12.5" font-weight="400" fill="#a7bdd5" font-family="Arial,Helvetica,sans-serif">not featured</text></g>
+<rect x="951" y="846" width="129" height="26" rx="8" stroke="#816bc0" fill="#433467"/>
+<text x="1016" y="864" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f2eaff" font-family="Arial,Helvetica,sans-serif">1 ref · 1 topic</text></g>
 <text x="38" y="967" fill="#d4e1f1" font-size="15" font-family="Arial,Helvetica,sans-serif">Research breadth ≠ skill quality. Selection ≠ installation clearance. All 33 rows also appear in the README and CSV.</text></svg>
