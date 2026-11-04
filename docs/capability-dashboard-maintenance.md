@@ -4,7 +4,7 @@ Skillz uses **generated charts and spreadsheet-ready CSV files**. Do not redraw 
 
 ## 1. Capability coverage: what the catalog contains
 
-The existing [capability dashboard](../README.md#capability-dashboard) is generated from `registry/capability-dashboard-sources.json`. That manifest identifies the historical research-link audit, the **current catalog in the checked-out branch**, and the non-additive qualification pipeline. The Q8 proposal selects **44 Valuable References across 33 domains**. The last merged-main baseline was **20 across 10 domains** at commit `e083c47`; do not call Q8 merged until its PR is actually merged.
+The existing [capability dashboard](../README.md#capability-dashboard) is generated from `registry/capability-dashboard-sources.json`. That manifest identifies the historical research-link audit, the **current catalog in the checked-out branch**, and the non-additive qualification pipeline. The Q8 proposal selects **45 Valuable References across 33 domains**. The last merged-main baseline was **20 across 10 domains** at commit `e083c47`; do not call Q8 merged until its PR is actually merged.
 
 ```sh
 node scripts/build-capability-dashboard.mjs --self-test

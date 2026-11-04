@@ -34,9 +34,9 @@ For each previously-empty domain, the **single best-fit, cleanest method was fea
 | Mastering Prep / Ableton (`glincker/ableton-skills`) | Audio | 14 | YES | Keep |
 | MATLAB Reliability Analysis (`matlab/...`) | Science | 16 | CONDITIONAL | Keep |
 | Acoustics Physicist persona (`K-Dense-AI/...`) | Science | 14 | YES | Keep |
-| Neurodivergence-aware Resume (`BRAINS-Certified/...`) | Career | 15 | CONDITIONAL | **Held** (see below) |
+| Neurodivergence-aware Resume (`BRAINS-Certified/...`) | Career | 15 | CONDITIONAL | **Valuable Reference** (study-only, see below) |
 
-**5 Valuable References fill the last 5 empty domains.** The shelf grows from **39 methods / 28 domains to 44 / 33 — every canonical domain now has at least one featured method.** Unchanged-use approvals and behavioral validations both stay **0**.
+**5 Valuable References fill the last 5 empty domains**, plus a sixth (the resume method below) added as a second, distinct Career reference after review. The shelf grows from **39 methods / 28 domains to 45 / 33 — every canonical domain now has at least one featured method.** Unchanged-use approvals and behavioral validations both stay **0**.
 
 ## The five new featured methods
 
@@ -46,19 +46,24 @@ For each previously-empty domain, the **single best-fit, cleanest method was fea
 - **CAAIL query (Science).** Query a curated research corpus so a *curated* gap is never reported as a real-world absence: enumerate from small index files, verify row counts against a manifest, and distinguish an un-indexed cell from a genuinely absent subject. Read-only public JSON; the indexed works keep their own licenses.
 - **Cross-border Unit Economics (Business).** Tag each input by source and confidence, compute contribution margin after *all* order-variable costs per market and channel, then give a go/conditional/no-go verdict that names the assumptions which would flip it. Limit: it leans on an undefined proprietary "Chwezi Accounting Doctrine" and embeds the author's phone number (strip on reuse).
 
-## One held method
+## A reference to study, not a package to run
 
-**Neurodivergence-aware Resume (BRAINS)** has a genuinely distinct method — a ten-pattern neurodivergence-bias catalog, a staged disclosure framework, and scanners for resume prompt-injection and AI-tell language. It was **held off the shelf**, not featured, because:
+**Neurodivergence-aware Resume (BRAINS)** is featured as a Valuable Reference, with its flaws documented, because its *method* is genuinely distinct: a ten-pattern catalog of neurodivergence-specific resume bias, a staged whether/when/how disclosure framework, and a masking-cost lens that fixes over-hedging without inflating. Those are contributions a generic resume reviewer does not produce, and the whole point of the Valuable Reference tier is the idea worth studying — not an installable package.
 
-- its Privacy Contract claims **"no outbound network requests,"** which is contradicted by a bundled script that fetches arbitrary `http`/`https`/`file://` URLs;
+Its limits are recorded in plain sight as **"do not run this as written"**:
+
+- its Privacy Contract claims **"no outbound network requests,"** contradicted by a bundled script that fetches arbitrary `http`/`https`/`file://` URLs;
 - the loaded `SKILL.md` says version 1.4.0 while the shipped repo is v2.3.0, so the instructions misdescribe the code;
-- full function needs a Python venv + Streamlit + SQLite (not a passive, no-shell use), and "BRAINS Certified Gold" is a self-issued badge, not independent accreditation.
+- full function needs a Python venv + Streamlit + SQLite, and "BRAINS Certified Gold" is a self-issued badge, not independent accreditation;
+- the BRAINS name, marks and badge are trademark/brand material to strip before any reuse.
 
-A false privacy claim and a version mismatch are integrity problems a high score does not excuse. Career is filled instead by the cleaner Job Search method.
+**Why this differs from the Boltz hold.** The dual-use science candidate stays *held* because it carries an active safety hazard — its own text pushes host-sandbox escalation, which disclosure cannot neutralize. BRAINS's problems are honesty, quality and rights, which a documented reference caution handles. Featuring a distinct method with its flaws labeled is different from endorsing a package for use; the shelf says study-only, zero unchanged-use approvals.
+
+Career therefore carries **two distinct methods**: Ghost-job-aware Job Search (finding and scoring postings) and this resume-review method (self-presentation and disclosure).
 
 ## Security scan (static, not a clearance)
 
-Of the 5 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 44 featured trees: 8 passed / 7 failed / 29 incomplete. Behavioral tests: **not run**.
+Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 44 featured trees: 8 passed / 7 failed / 29 incomplete. Behavioral tests: **not run**.
 
 ## Evidence
 

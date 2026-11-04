@@ -42,10 +42,11 @@
   {
    "id": "positively_selected",
    "label": "Methods selected to study (Valuable Reference)",
-   "value": 44,
+   "value": 45,
    "population": "featured shelf entries (all 33 canonical domains now have at least one featured method)",
    "parts": {
-    "canonical domains": 33
+    "canonical domains": 33,
+    "career methods": 2
    },
    "source": "registry/consumer-positive-references-q8-20261103.json"
   },
@@ -53,10 +54,10 @@
    "id": "security_gate_passed_featured",
    "label": "Featured methods passing the static security gate",
    "value": 8,
-   "population": "of 44 featured exact package trees, pinned SkillSpector, fail-closed",
+   "population": "of 45 featured exact package trees, pinned SkillSpector, fail-closed",
    "parts": {
     "failed": 7,
-    "incomplete": 29
+    "incomplete": 30
    },
    "parts_sum_to_value": false,
    "source": "registry/security/external-host-skillspector-featured-20261103.json; registry/discovery/q8-reference-only-qualification-batch1/2/3/4 ledgers"

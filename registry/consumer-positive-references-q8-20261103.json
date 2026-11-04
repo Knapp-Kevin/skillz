@@ -2,7 +2,7 @@
  "schema_version": 1,
  "as_of": "2026-11-03",
  "stage": "consumer-positive-recommendation-qualification",
- "scope": "44 differentiated source-pinned conceptual Valuable References across 33 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
+ "scope": "45 differentiated source-pinned conceptual Valuable References across 33 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
  "catalog_categories": [
   "RECOMMENDED_FOR_USE",
   "VALUABLE_REFERENCE"
@@ -2189,11 +2189,45 @@
    "behavioral_validation": "NOT RUN",
    "unchanged_use_approved": false,
    "requires_separate_action_authority": true
+  },
+  {
+   "id": "BRAINS-Certified-BRAINS-resume-skill/brains-resume",
+   "name": "Neurodivergence-aware Resume",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "career",
+   "domain_display": "Career",
+   "subdomain": "portfolios",
+   "capability": "Surface neurodivergence bias and disclosure trade-offs in a resume, leaving every choice to the user.",
+   "benefit": "Surface neurodivergence bias and disclosure trade-offs in a resume, leaving every choice to the user.",
+   "distinct_method": "Apply a named catalog of neurodivergence-specific resume-bias patterns and a staged whether/when/how disclosure framework, as user-vetoable suggestions, not automatic edits.",
+   "reason_not_unchanged": "Study the method, do NOT run this package as written. Its Privacy Contract claims 'no outbound network requests' while a bundled script fetches arbitrary http/https/file:// URLs; the loaded SKILL.md is version 1.4.0 while the shipped repo is v2.3.0, so the instructions misdescribe the code; full function needs a Python venv plus Streamlit and SQLite; and 'BRAINS Certified Gold' is a self-issued badge, not independent accreditation. The transferable ideas \u2014 the bias-pattern catalog, the disclosure decision framework, and the masking-cost lens \u2014 are what make it worth studying.",
+   "source": {
+    "repository": "BRAINS-Certified/BRAINS-resume-skill",
+    "pin": "d8763b8bdaddd0345288fdb4b4fdd2a652677bdc",
+    "path": "SKILL.md",
+    "skill_blob_sha": "de50da2f4556a33e4239421939b88bd98d0b57a2",
+    "recorded_package_tree_sha": "c22ace992dc202c79c2de28fc4565d4fbd977e71",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study the ND-bias catalog, disclosure framework and scanner concepts in our own words; do not reuse the BRAINS name/marks or imply any certification.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "Loaded SKILL.md v1.4.0 vs shipped repo v2.3.0 \u2014 instructions misdescribe the code; Privacy Contract 'no outbound network requests' contradicted by bundled jd_url_fetch.py (urllib, http/https/file://); Full function needs a Python venv + streamlit + sqlite (not a no-shell passive use); 'BRAINS Certified Gold' is a self-issued org badge, not independent accreditation",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 15/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
   }
  ],
  "starter_shelf_totals": {
   "recommended_for_use": 0,
-  "valuable_reference": 44,
+  "valuable_reference": 45,
   "distinct_capability_domains_represented": 33,
   "creative_tranche_20261103": {
    "music_composition": 9,
@@ -2206,7 +2240,7 @@
    "domain_fully_qualified": false
   },
   "q8_batch1_additions": 7,
-  "q8_additions_total": 24
+  "q8_additions_total": 25
  },
  "global_approved_for_use_total": null,
  "global_promoted_valuable_reference_total": null,

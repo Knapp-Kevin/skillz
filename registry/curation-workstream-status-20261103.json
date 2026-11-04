@@ -12,15 +12,15 @@
   "q8": {
     "pr": 693,
     "url": "https://github.com/Knapp-Kevin/skillz/pull/693",
-    "head_sha": "61ff4e2916df8cf9d05cb07aa954a12e9ceb5a80",
+    "head_sha": "d9649c4a16206937a4b0d18d9edf02d4ce773a81",
     "state": "DRAFT_NOT_MERGED",
-    "proposed_featured": 44,
+    "proposed_featured": 45,
     "represented_domains": 33,
     "canonical_domains": 33,
     "static_security": {
       "passed": 8,
       "failed": 7,
-      "incomplete": 29
+      "incomplete": 30
     },
     "behaviorally_validated": 0,
     "approved_unchanged": 0,
@@ -122,7 +122,7 @@
     }
   },
   "interpretation": [
-    "Q8 is a draft, so its 44 methods and 33-domain shelf are proposed rather than merged main numbers.",
+    "Q8 is a draft, so its 45 methods and 33-domain shelf are proposed rather than merged main numbers.",
     "Q9 entries are not independent of Q10 reviews: Q10 statically reviews all eight original Q9 leads; never add Q9 and Q10 as 16 distinct candidates.",
     "Q8 featured methods are study-only; a security scan pass does not grant installation authority, and failed/incomplete states are not passed.",
     "Q9/Q10 sources live on separate draft branches pinned above, and are not in Q8/main's ledgers. Refresh this snapshot by evidence review, not by silently auto-rolling branch HEAD."
