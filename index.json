@@ -2,7 +2,7 @@
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
   "repository_mode": "passive-skill-knowledge-resource",
-  "snapshot_scope": "Current passive catalog with separate dated Q4 history and a November 3 Q1–Q5 candidate-review reconciliation. No inferred approved-skill counts.",
+  "snapshot_scope": "Current passive catalog with separate dated Q4 history and a November 3 Q1\u2013Q5 candidate-review reconciliation. No inferred approved-skill counts.",
   "curation_effort_public_snapshot_20261102": {
     "date": "2026-11-02",
     "accounting_basis": "exact pinned path ledger and published Q1-Q3 review receipts; normalized literal REJECT unchanged variants",
