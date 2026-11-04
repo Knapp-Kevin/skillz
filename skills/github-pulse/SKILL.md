@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: GitHub Pulse
   emoji: "⭐"
-  version: 1.0.2
+  version: 1.0.3
 ---
 
 # GitHub Pulse
@@ -52,5 +52,5 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 
 ## Notes
 
-- If `registry/candidates.yaml` is available within the user's authorized read scope, cross-check prior rejections and duplicate candidates before recommending. Otherwise mark the comparison not-run and present a provisional intake lead; never imply the absent registry was checked.
+- When the user has already supplied an approved list of prior candidates and rejections, compare the new public findings against that list. Otherwise label duplicate and prior-rejection checks not-run, and propose provisional intake leads. A public GitHub trends request does not authorize accessing a local registry or private workspace.
 - Handoff: propose a skill or tool intake entry only as a suggested handoff; writing any registry, backlog or issue requires separate approval.
