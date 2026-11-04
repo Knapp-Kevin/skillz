@@ -3,7 +3,7 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 790ed6eaef4acd957bff5f7777202faec579fb65
+content_blob_sha: d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
 verification_status: stale
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "2026-11-04 source security revision at 790ed6eaef4acd957bff5f7777202faec579fb65; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
+notes: "Issue #402 new source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c limits private profile/registry discovery. Previous version's scanner findings/semantic grade not portable; exact package scan and host behavior not-run."
