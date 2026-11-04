@@ -7,7 +7,7 @@ source_path: skills/governance-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: dd35bd8295df4f57f9e586597cbc1173e9ba552d
+source_snapshot_revision: 9612726de838fc98eefa5f833d71c0345374974a
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
-exact_version_requalification: "Required for 5cff5684b7e339a0d52aad8533d9715bedbc5923. Public-only news digest and authorization-gated source/account changes; scanner and agent-host tests have not been rerun for this exact package."
+exact_version_requalification: "New issue #402 source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce: public digest cannot implicitly read operator profiles, host memory or candidate registries; exact current source semantic, scanner and external-host adversarial qualification pending."
