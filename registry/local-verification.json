@@ -500,7 +500,7 @@
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "5dc5cb3fd2527dcd39765ab66a9676146f91f1d7",
+      "content_blob_sha": "846dfc3a493cdf9b2387ffca77a7a9e463898aff",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -525,7 +525,7 @@
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints.",
+      "notes": "2026-11-04 issue #402 revised source exact SHA 846dfc3a493cdf9b2387ffca77a7a9e463898aff. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
       "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
@@ -568,7 +568,7 @@
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a444566237940b43944bc1f5e0afb55708d84123",
+      "content_blob_sha": "d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -595,7 +595,7 @@
           "medium"
         ]
       },
-      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific.",
+      "notes": "2026-11-04 issue #402 revised source exact SHA d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
       "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
@@ -637,7 +637,7 @@
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3250a7c3ed49783329220536e8ef4a1f7b9bb286",
+      "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -662,7 +662,7 @@
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented.",
+      "notes": "2026-11-04 issue #402 revised source exact SHA 149e577a9f72895b09aea43d607203d731db1bce. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
       "prior_reviewed_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
@@ -703,7 +703,7 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "7f152bc910bf5a225170f7ab16c0c47c641613da",
+      "content_blob_sha": "790ed6eaef4acd957bff5f7777202faec579fb65",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -729,7 +729,7 @@
           "medium"
         ]
       },
-      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent.",
+      "notes": "2026-11-04 issue #402 revised source exact SHA 790ed6eaef4acd957bff5f7777202faec579fb65. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
       "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
@@ -738,7 +738,7 @@
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3e2e6cc836ddb05e0da6a7dafb7048a30fd9921e",
+      "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -763,7 +763,7 @@
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability.",
+      "notes": "2026-11-04 issue #402 revised source exact SHA 6625f147011dfd38ed2b9881eda2d5ea62e2ece4. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
       "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
@@ -838,7 +838,7 @@
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d59296c2fcc6d287a1cc38a890bde34d0fcf43fa",
+      "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -865,7 +865,7 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific.",
+      "notes": "2026-11-04 issue #402 revised source exact SHA 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
       "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
