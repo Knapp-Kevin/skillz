@@ -1,6 +1,6 @@
 # Q12: Reconcile featured-method security receipts without relaxing the gates
 
-**Source snapshot:** Q8 draft `e49df7b5832caefd1e611a2d3b6f614eac4d8cbf`, exact source pins and report SHA-256s · **Date:** 2026-11-03 · **Status:** Security evidence index only, **not a scanner rerun**.
+**Source snapshot:** Q8 draft `488316b12e83a62befc1120d5784b4151b030b90`, exact source pins and report SHA-256s · **Date:** 2026-11-03 · **Status:** Security evidence index only, **not a scanner rerun**.
 
 ## Why this matters
 
