@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: MCP Pulse
   emoji: "🔌"
-  version: 1.1.2
+  version: 1.1.3
 ---
 
 # MCP Pulse
@@ -51,5 +51,5 @@ Topic pulse for the Model Context Protocol — the portability layer this repo's
 
 ## Notes
 
-- Server finds that merit adoption may be proposed for intake (`registry/candidates.yaml`) only with explicit authorization for any registry write with exact connector capabilities and side-effect authority boundaries; an MCP server can expose consequential permissions.
-- Flag public changes that may affect MCP integrations. Read local MCP configuration (`.mcp.json` or equivalents) **only** when the user has separately authorized the exact local file/path and read scope for this run. A generic MCP news request does not authorize opening private configs, credential files, or connected accounts. Do not expose secrets, private endpoint names or account identifiers in the digest; if local access is absent, mark local applicability unverified.
+- Server findings may be presented as draft intake recommendations describing connector capabilities and side-effect authority boundaries. No repository registry is accessed or updated as part of the public pulse; persistent intake requires a separately authorized workflow.
+- Flag public changes that may affect MCP integrations. For local applicability, use only a redacted configuration summary explicitly supplied for this run. Do not inspect local MCP configuration, credential files or connected accounts during public news discovery. When no approved summary is supplied, mark local applicability unverified; never expose private endpoints, account identifiers or secrets.
