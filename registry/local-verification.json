@@ -500,7 +500,7 @@
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "846dfc3a493cdf9b2387ffca77a7a9e463898aff",
+      "content_blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -525,7 +525,7 @@
           "high"
         ]
       },
-      "notes": "2026-11-04 issue #402 revised source exact SHA 846dfc3a493cdf9b2387ffca77a7a9e463898aff. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
+      "notes": "2026-11-04 issue #402 new source 9c345c88cef5f4f97235facb6d3d7414ab820f1a after implicit private profile/registry read removal; matching current provenance and verification, source-semantic and final-tree SkillSpector not rerun; no behavioral acceptance.",
       "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
@@ -568,7 +568,7 @@
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "5cff5684b7e339a0d52aad8533d9715bedbc5923",
+      "content_blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -595,7 +595,7 @@
           "medium"
         ]
       },
-      "notes": "Issue #402 public-only governance pulse authority correction at exact Git blob 5cff5684b7e339a0d52aad8533d9715bedbc5923. Structural checks only; new pinned security scan, full semantic and external behavior qualification pending.",
+      "notes": "2026-11-04 issue #402 new source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce after implicit private profile/registry read removal; matching current provenance and verification, source-semantic and final-tree SkillSpector not rerun; no behavioral acceptance.",
       "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
@@ -703,7 +703,7 @@
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "790ed6eaef4acd957bff5f7777202faec579fb65",
+      "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
       "verification_status": "stale",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -729,7 +729,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 issue #402 revised source exact SHA 790ed6eaef4acd957bff5f7777202faec579fb65. Removed unnecessary private local-read/scope-expansion instructions. Old scanner findings on former source identities cannot be treated as passed; full new-package security and semantic/behavioral requalification required.",
+      "notes": "2026-11-04 issue #402 new source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c after implicit private profile/registry read removal; matching current provenance and verification, source-semantic and final-tree SkillSpector not rerun; no behavioral acceptance.",
       "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
