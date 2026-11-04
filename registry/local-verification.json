@@ -44,7 +44,7 @@
       "skill_name": "agent-postmortem",
       "local_path": "skills/agent-postmortem/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fb8777d18a27a89f47f9e8a022385b480d49f7c0",
+      "content_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -70,13 +70,13 @@
           "high"
         ]
       },
-      "notes": "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
+      "notes": "2026-11-04 #686 exact source SHA dde789e87da090b92021b3e55304299244f62ac2; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "brief-writer",
       "local_path": "skills/brief-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0eb629e92e53a03c26df0ebef15662e1888c25b0",
+      "content_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -102,7 +102,7 @@
           "high"
         ]
       },
-      "notes": "Clear decision-first structure, anti-fabrication rules, reversibility framing, and compact output; effectiveness is design-credible but not behaviorally measured."
+      "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "career-radar",
@@ -172,7 +172,7 @@
       "skill_name": "compare",
       "local_path": "skills/compare/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b933a8266b8eda18807de9b9717436c54af0362d",
+      "content_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -200,7 +200,7 @@
           "high"
         ]
       },
-      "notes": "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."
+      "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "daily-briefing",
@@ -302,7 +302,7 @@
       "skill_name": "deep-dive",
       "local_path": "skills/deep-dive/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b518f172abce491d979cf8f8ef854a61605b2790",
+      "content_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -329,7 +329,7 @@
           "high"
         ]
       },
-      "notes": "Strong multi-lane research plus active refutation of load-bearing claims, explicit confidence and source hierarchy; runtime source quality still depends on available search/fetch tools."
+      "notes": "2026-11-04 #686 exact source SHA 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "deepseek-pulse",
@@ -398,7 +398,7 @@
       "skill_name": "fact-check",
       "local_path": "skills/fact-check/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e58dea59671c8a7c537e27403d6f52e466bf8d86",
+      "content_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "20/20",
@@ -425,7 +425,7 @@
           "high"
         ]
       },
-      "notes": "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict."
+      "notes": "2026-11-04 #686 exact source SHA d83c43282d525682f3e13b8296111d7fe7de46f0; prior 20/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "finance-review",
