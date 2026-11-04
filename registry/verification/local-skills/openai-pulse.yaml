@@ -3,19 +3,19 @@ skill_name: openai-pulse
 source_id: local-skills
 local_path: "skills/openai-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d6b98630525e16d392b3f50e67ae674332316310
+content_blob_sha: 1285b1226733e93b0db4b230a6fb0021e5220fd0
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
 rubric: "docs/skill-verification.md"
-rubric_score: "16/20"
+rubric_score: "18/20"
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
+notes: "Current exact-version 2026-11-04 source/package semantic review 18/20: Public official API, release and Codex-SDK source hierarchy, with explicit inaccessible-source disclosure and no autonomous action. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."

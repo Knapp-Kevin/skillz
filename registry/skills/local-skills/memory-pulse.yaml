@@ -7,9 +7,9 @@ source_path: skills/memory-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 07869b6d589b784588c8aaa8d447c545e81827dd
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/memory-pulse/SKILL.md
 permission_tier: read-only
@@ -17,5 +17,6 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
-rationale: "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+import_eligibility: conditional-on-security-and-user-fit
+rationale: "Public agent-memory ecosystem digest with optional project relevance only from expressly authorized input. Exact 1.1.3 full-package static review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md. Matching new security scan and actual host behavior remain NOT RUN; unchanged-use remains conditional."
+exact_version_requalification: "Static requalification complete for SKILL.md 84fe948e761f95d4196efaf80a0ef6add7c01a16 and package tree 69d2337cc4d9c0728dfca18d556c7d0b7551057a. Previous package scanner PASS is stale; 1.1.3 scanner and behavioral acceptance pending."

@@ -3,19 +3,19 @@ skill_name: gemini-pulse
 source_id: local-skills
 local_path: "skills/gemini-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80
+content_blob_sha: 9dbae1510d0fb3c65056fc53f0050ce0ed6ede59
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
 rubric: "docs/skill-verification.md"
-rubric_score: "16/20"
+rubric_score: "17/20"
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
+notes: "Current exact-version 2026-11-04 source/package semantic review 17/20: Public Google/DeepMind API, deprecation and SDK digest; host-specific Qor relevance remains conditional on authorized supplied context. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."

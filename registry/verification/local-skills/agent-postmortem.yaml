@@ -3,13 +3,13 @@ skill_name: agent-postmortem
 source_id: local-skills
 local_path: "skills/agent-postmortem/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: fb8777d18a27a89f47f9e8a022385b480d49f7c0
+content_blob_sha: dde789e87da090b92021b3e55304299244f62ac2
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Exact-blob static source refresh only. Independent adversarial behavior not-run; external exact-tree SkillSpector 5/5 pass evidence recorded separately on draft #693 is not unchanged-use approval.
 rubric: "docs/skill-verification.md"
 rubric_score: "19/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, decomposition, traceable, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
+notes: "Retains prior 19/20 static semantic rationale; repaired source scopes private reads, forbids secret fragments and rejects untrusted retrieved instructions. No host behavioral acceptance performed."

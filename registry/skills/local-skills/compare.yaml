@@ -7,9 +7,9 @@ source_path: skills/compare/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7970edf438afb67cee91d87fe79174623800d0cb
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/compare/SKILL.md
 permission_tier: read-only
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
 import_eligibility: eligible-standalone
-rationale: "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."
+rationale: "2026-11-04 authority repair source identity tied to PR #686 commit 7970edf438af. Previous 19/20 static grade retained, external scanner evidence separately recorded at #693, executed adversarial validation not-run; unchanged adoption not approved."

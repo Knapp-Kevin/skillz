@@ -3,13 +3,13 @@ skill_name: fact-check
 source_id: local-skills
 local_path: "skills/fact-check/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e58dea59671c8a7c537e27403d6f52e466bf8d86
+content_blob_sha: d83c43282d525682f3e13b8296111d7fe7de46f0
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Exact-blob static source refresh only. Independent adversarial behavior not-run; external exact-tree SkillSpector 5/5 pass evidence recorded separately on draft #693 is not unchanged-use approval.
 rubric: "docs/skill-verification.md"
 rubric_score: "20/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, decomposition, source-driven, traceable, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict."
+notes: "Retains prior 20/20 static semantic rationale; repaired source scopes private reads, forbids secret fragments and rejects untrusted retrieved instructions. No host behavioral acceptance performed."

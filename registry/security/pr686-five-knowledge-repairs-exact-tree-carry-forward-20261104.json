@@ -1,0 +1,134 @@
+{
+  "schema_version": "first-party-security-evidence-carry-forward-v1",
+  "as_of": "2026-11-04",
+  "pr": 686,
+  "integrated_branch_head": "dc399b3ed2b78a14b1e18ec3141c6a98ad04ca17",
+  "integrated_repo_tree_sha": "8fbca8b06beaf9ea89f4a9e2616af1a7162fbfed",
+  "recorded_evidence_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+  "evidence_executed_at": "2026-11-03",
+  "scanner_policy_pin": "NVIDIA SkillSpector v2.12.0 c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+  "basis": "No new scan. Exact package-tree Git identity from existing executed report was compared with the integrated 2026-11-04 branch Git tree; all 5 match. Semantic and behavioral gates are independent.",
+  "count": {
+    "bound_passed": 5,
+    "changed_package_tree": 0,
+    "behavioral_validated": 0,
+    "approved_unchanged": 0
+  },
+  "required_next": [
+    "Independent external-host adversarial behavior tests with synthetic sensitive content",
+    "Owner acceptance after observed results",
+    "Merge and verify main source+registry without broadening reuse authority"
+  ],
+  "records": [
+    {
+      "skill": "agent-postmortem",
+      "package_path": "skills/agent-postmortem",
+      "final_tree_sha": "cceb115c92467cd3be2a997484ef6756a47b6f58",
+      "skill_md_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
+      "scan_source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+      "report_sha256": "1928c233ba78aa50b4c093c48e273b4a0b036c53019430ef1f24dd146ded197a",
+      "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+      "coverage": {
+        "total_components": 1,
+        "scanned_components": 1,
+        "coverage_percent": 100,
+        "fully_inspected_files": 1,
+        "partially_inspected_files": 0,
+        "entirely_uninspected_files": 0
+      },
+      "active_findings": 0,
+      "security_state": "passed",
+      "semantic_status": "verified-static",
+      "behavioral_state": "not-run",
+      "unchanged_use_approval": false
+    },
+    {
+      "skill": "brief-writer",
+      "package_path": "skills/brief-writer",
+      "final_tree_sha": "3f45875f509b1a20fca4c1847c8122b549a76126",
+      "skill_md_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
+      "scan_source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+      "report_sha256": "88762e926b4d8074e6c40a5aba96c118027ffd59b2035be1d24f47d89cd1cc68",
+      "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+      "coverage": {
+        "total_components": 2,
+        "scanned_components": 2,
+        "coverage_percent": 100,
+        "fully_inspected_files": 2,
+        "partially_inspected_files": 0,
+        "entirely_uninspected_files": 0
+      },
+      "active_findings": 0,
+      "security_state": "passed",
+      "semantic_status": "verified-static",
+      "behavioral_state": "not-run",
+      "unchanged_use_approval": false
+    },
+    {
+      "skill": "compare",
+      "package_path": "skills/compare",
+      "final_tree_sha": "4ceefd2c39842ebb3e711a2f82d9840131588054",
+      "skill_md_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
+      "scan_source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+      "report_sha256": "96861ff66de3db8cadd55cba9c65d8c0148a1c3a50036ab27691a27b2051646b",
+      "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+      "coverage": {
+        "total_components": 1,
+        "scanned_components": 1,
+        "coverage_percent": 100,
+        "fully_inspected_files": 1,
+        "partially_inspected_files": 0,
+        "entirely_uninspected_files": 0
+      },
+      "active_findings": 0,
+      "security_state": "passed",
+      "semantic_status": "verified-static",
+      "behavioral_state": "not-run",
+      "unchanged_use_approval": false
+    },
+    {
+      "skill": "deep-dive",
+      "package_path": "skills/deep-dive",
+      "final_tree_sha": "6119cf00ef09a1bb4097c28c3ed4aac8909b7037",
+      "skill_md_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
+      "scan_source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+      "report_sha256": "215d23012d07079fbbfaae0e7a4e5a320fd764be506eebee2bc20f5dfdcc1d7b",
+      "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+      "coverage": {
+        "total_components": 1,
+        "scanned_components": 1,
+        "coverage_percent": 100,
+        "fully_inspected_files": 1,
+        "partially_inspected_files": 0,
+        "entirely_uninspected_files": 0
+      },
+      "active_findings": 0,
+      "security_state": "passed",
+      "semantic_status": "verified-static",
+      "behavioral_state": "not-run",
+      "unchanged_use_approval": false
+    },
+    {
+      "skill": "fact-check",
+      "package_path": "skills/fact-check",
+      "final_tree_sha": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+      "skill_md_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "scan_source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+      "report_sha256": "2618f67bb9de1fefbbc04c7f13039b09caeff109e3fc44748bd51674c5101c7c",
+      "scanner_commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+      "coverage": {
+        "total_components": 1,
+        "scanned_components": 1,
+        "coverage_percent": 100,
+        "fully_inspected_files": 1,
+        "partially_inspected_files": 0,
+        "entirely_uninspected_files": 0
+      },
+      "active_findings": 0,
+      "security_state": "passed",
+      "semantic_status": "verified-static",
+      "behavioral_state": "not-run",
+      "unchanged_use_approval": false
+    }
+  ]
+}

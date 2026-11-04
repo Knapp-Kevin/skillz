@@ -3,19 +3,22 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: aa2157650140bf0820b6d6b1921c5f0881d8c627
+content_blob_sha: 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
+prior_reviewed_blob_sha: aa2157650140bf0820b6d6b1921c5f0881d8c627
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only collection changed manifest bytes; previous score historical. No new scanner or behavioral acceptance."
 tags:
   use_case: [monitoring, research, security]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis, risk-aware]
   authority: [read-only]
   portability: [medium]
-notes: "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
+notes: "2026-11-04 current exact-version source semantic 17/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."

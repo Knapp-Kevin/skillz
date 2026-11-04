@@ -3,19 +3,19 @@ skill_name: mistral-pulse
 source_id: local-skills
 local_path: "skills/mistral-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4d2e092ee1cfdbd7127145926d48d6cf78b46ce1
+content_blob_sha: 5695a01a8d7927f87be7da76ec353d12ef56ddb9
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
 rubric: "docs/skill-verification.md"
-rubric_score: "16/20"
+rubric_score: "17/20"
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight."
+notes: "Current exact-version 2026-11-04 source/package semantic review 17/20: Mistral API versus open-weights research is grounded; generic vendor-pulse overlap and unmeasured effectiveness limit score. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."
