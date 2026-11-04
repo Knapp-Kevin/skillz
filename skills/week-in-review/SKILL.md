@@ -22,16 +22,17 @@ A Friday retrospective built from evidence: what actually shipped (git history a
 
 1. **Bind the workspace.** Discover the bound workspace root(s) — the directory(ies) whose git repos this review sweeps — from the operator's profile, host memory, or a workspace governance note; the bound source wins over assumptions. If none is discoverable, ask once and offer to persist the answer for future runs.
 2. **Set the window** — Monday morning through now, or since the last review if one exists in the project's notes or memory files.
-3. **Shipped.** Sweep the bound repos with local git commands: `git log --all --since=<window> --oneline` and merged branches (`git branch --merged`) per repo. Shipped means merged, tagged, deployed, or delivered — not merely committed.
+3. **Shipped.** Sweep the bound repos through the host's authorized repository capability (local git when available): `git log --all --since=<window> --oneline` and merged branches (`git branch --merged`) per repo. Shipped means merged, tagged, deployed, or delivered — not merely committed.
 4. **Stalled.** Compare against the week's starting intentions (last review's carry-forward, task lists, memory files). Anything planned but not shipped is stalled; state the honest reason — descoped, blocked, displaced by something more urgent, or simply harder than expected. No euphemisms.
-5. **Decisions.** Collect decisions made this week from memory files, the project's decisions log (see the decision-log skill), and decision-shaped commit messages or meeting outcomes pulled via the Google Calendar MCP tools.
+5. **Decisions.** Collect decisions made this week from authorized memory files, the project's decisions log (see the decision-log skill), and decision-shaped commits. Include calendar meeting outcomes only when the user has authorized the relevant calendar scope and the host has a suitable connector; do not infer meeting decisions from attendance alone.
 6. **Carry-forward.** Distill stalled and unfinished items into a ranked starting list for next week. Write it so Monday's daily-briefing can consume it verbatim; save it to the project's notes or memory files if the user agrees.
 7. **Present** in the Output Format below.
 
-## Scheduling
+## Optional host-managed scheduling
 
-- **Claude Code:** use `/schedule` to create a Friday-afternoon routine that runs this skill and posts the review, or `/loop` for an in-session interval.
-- **Other agent platforms:** a scheduled automation whose instruction is "Run the week-in-review skill and post the retrospective."
+- Default to a one-time retrospective and a proposed reusable Friday prompt. Do not create recurrence or send the report as a consequence of one review request.
+- Before an authorized external host creates a recurring review, obtain separate explicit approval of cadence/timezone, continuing repo/task/calendar and private-data scope, recipients/delivery, retention, applicable costs, and pause/revocation controls. Saving carry-forward notes and posting the retrospective are distinct actions requiring approval.
+- If a host scheduler or future access is unavailable or unauthorized, report scheduling `not configured` and keep the reusable prompt as a manual handoff.
 
 ## Output Format
 
@@ -54,5 +55,5 @@ A Friday retrospective built from evidence: what actually shipped (git history a
 ## Notes
 
 - Honesty rule: the Stalled section exists to be truthful, not flattering. "I avoided it" is a valid reason and more useful than silence.
-- Git data comes from local git commands; calendar context comes from the connected Google Calendar MCP tools — never raw API calls.
+- Use only the authorized repository/calendar capabilities actually available in the host. Do not assume local git or a specific calendar MCP tool; missing source coverage must be reported.
 - Read-only by default. Writing the carry-forward list into notes or memory files happens only with the user's approval.
