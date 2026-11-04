@@ -3,13 +3,13 @@ skill_name: daily-briefing
 source_id: local-skills
 local_path: "skills/daily-briefing/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 64ee4849a7a06860d8f6ddbd23ae5d42591ffee1
+content_blob_sha: 469ffb53e5fea34c2300951c59556e95a898ba8f
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
-verification_status: verified
+reviewed_at: 2026-11-04
+verification_status: unverified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Changed source after issue #478 authority repair. Historical rubric score does not transfer to this exact source; independent ten-axis semantic, security and actual adversarial host behavior remain not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [synthesis, tool-routing, context-efficient, evidence-first]
   authority: [read-only]
   portability: [medium]
-notes: "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+notes: "Historical score below applies to prior source only. Current source instruction readback passed scheduling and private-source consent text checks; full semantic requalification, exact-package security and behavioral validation still pending."
