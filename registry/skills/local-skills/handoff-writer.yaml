@@ -7,7 +7,7 @@ source_path: skills/handoff-writer/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: ca2f783387f668590b67fbb40dd63489170cb12f
+source_snapshot_revision: dc6d6c735d2b03977174f0455df972ae2e95f60a
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -18,4 +18,4 @@ review_status: unverified
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled references ship with the skill folder"
 import_eligibility: review-required
-rationale: "Issue #402 source security correction: credential prefixes/identifying fragments may not be disclosed in handoff text; private source access and external publication require explicit approval. The prior 20/20 semantic grade is historical for a different Git blob. Fresh exact-version semantic and pinned static security scans plus external-host acceptance remain outstanding."
+rationale: "Issue #402 candidate privacy correction at 733b8029063ff057051a61bc270cce138f324c7d: safe artifact pointers and path metadata, no credential fragments, private source read and recipient boundaries. Static semantic review is not security scanner or behavioral acceptance. New exact-package scan and observed agent-host tests remain HOLD."
