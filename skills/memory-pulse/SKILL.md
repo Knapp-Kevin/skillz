@@ -6,8 +6,8 @@ description: >-
   community discussion — and synthesize a digest. Use when the user asks
   "memory pulse", "what's new in agent memory", "context engineering news",
   "agentic memory papers", or wants ecosystem awareness feeding the
-  operator's bound memory-layer project and agent memory architecture
-  decisions.
+  agent-memory architecture decisions, with project-specific relevance only
+  when the user explicitly supplies or approves the project context.
 metadata:
   author: frostwulf.zo.computer
   category: Productivity
@@ -46,7 +46,7 @@ Topic pulse for agentic memory: long-term memory frameworks, context engineering
 ## Research frontier (papers, with one-line takeaways)
 ## Framework releases (Letta, Mem0, Zep, cognee, new entrants)
 ## New repos worth a look (filtered from search hits)
-## Relevance to the bound memory layer / agent memory
+## Agent-memory relevance (generic unless project context is expressly authorized)
 ## Notable patterns
 ## Sources
 ```
