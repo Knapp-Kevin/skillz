@@ -9,14 +9,14 @@ license: MIT
 relationship: first-party
 source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/gemini-pulse/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: stale
+review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
-rationale: "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
-exact_version_requalification: "Required for 9dbae1510d0fb3c65056fc53f0050ce0ed6ede59; prior review fingerprint 8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80 is historical only. No current package security or behavioral pass."
+rationale: "Current exact two-file package/source semantically reviewed 17/20 on 2026-11-04. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Existing static scanner PASS matches the unchanged package tree; agent-host behavior and unchanged-use approval not established."
+exact_version_requalification: "Current SKILL.md 9dbae1510d0fb3c65056fc53f0050ce0ed6ede59 semantically verified 17/20 by new exact-package review; earlier rubric is historical. Host behavioral validation not-run; import conditional on fit and qualified security."
