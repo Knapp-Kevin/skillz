@@ -7,7 +7,7 @@ source_path: skills/inference-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 586191623952fda6272ae8ff28a585971891fe0f
+source_snapshot_revision: 822c2f13d3cb1d80a100812d1c0baf506c2956e5
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
-exact_version_requalification: "Required for 790ed6eaef4acd957bff5f7777202faec579fb65. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
+exact_version_requalification: "New issue #402 source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c: public digest cannot implicitly read operator profiles, host memory or candidate registries; exact current source semantic, scanner and external-host adversarial qualification pending."
