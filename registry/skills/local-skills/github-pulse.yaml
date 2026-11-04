@@ -14,9 +14,9 @@ availability: in-repo
 local_path: skills/github-pulse/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: stale
+review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
-exact_version_requalification: "New issue #402 source 9c345c88cef5f4f97235facb6d3d7414ab820f1a: public digest cannot implicitly read operator profiles, host memory or candidate registries; exact current source semantic, scanner and external-host adversarial qualification pending."
+exact_version_requalification: "Current 9c345c88cef5f4f97235facb6d3d7414ab820f1a static semantic grade 18/20, documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md. Current whole-package security SkillSpector and external-host behavior NOT RUN; unchanged adoption held."
