@@ -7,7 +7,7 @@ source_path: skills/repo-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: a83e156d982c205cfee7ed09bc11bc5633e42bc0
+source_snapshot_revision: c8bf7e063529066956dc8d7d52d0540b7b7708ef
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
 import_eligibility: review-required
-rationale: "2026-11-04 new exact-blob ten-axis source-semantic review 18/20 in docs/reviews/2026-11-04-q15-five-recurring-access-static-rubric.md; trigger and authority boundaries inspected. Unchanged adoption still held for package security, observed adversarial behavior, exact-rights/user fit and maintainer acceptance."
+rationale: "2026-11-04 exact new source 920e9cf3834527f3c110a24a0b5034a37c753de1: Q15 ten-axis source-semantic review 18/20, with follow-up output-secret redaction inspected as a non-broadening safety amendment. External scanner and host-behavior tests NOT RUN; unchanged adoption remains held."
