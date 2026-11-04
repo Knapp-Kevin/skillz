@@ -117,7 +117,7 @@ Each row counts a **different population** with its own denominator. **Do not ad
 |---|---|---|
 | **[Q8 draft](https://github.com/Knapp-Kevin/skillz/pull/693)** | 44 proposed Valuable References; 33 / 33 domains represented; pinned scanner 8 passed / 7 failed / 29 incomplete | Independent merge acceptance, security finding adjudication and separate behavioral testing |
 | **[Q9 draft](https://github.com/Knapp-Kevin/skillz/pull/697)** | 8 pinned discovery leads from 7 source repositories across 5 domains | Exact identity, rights and fit assessment; leads are not accepted skills |
-| **[Q10 draft](https://github.com/Knapp-Kevin/skillz/pull/698)** | 7 of those 8 Q9 leads statically reviewed: 3 promising study concepts held, 4 other research/rejected unchanged | 1 leads still need detailed static review; external scanner/behavioral checks not run |
+| **[Q10 draft](https://github.com/Knapp-Kevin/skillz/pull/698)** | 7 of those 8 Q9 leads statically reviewed: 3 promising study concepts held, 4 other research/rejected unchanged | 1 lead still needs detailed static review; external scanner/behavioral checks not run |
 
 **Never add Q9 and Q10 counts:** Q10 examined 7 of the same 8 Q9 candidates, not 15 distinct skills. No Q9/Q10 approvals or shelf promotions occurred. **Zero unchanged-use approvals and zero behavioral validations** remain the governing outcome.
 
