@@ -6,20 +6,23 @@
 
 **Backlog scale:** Q8's pinned qualification queue reports **1,522 reference-only candidate entries**. That is a review queue, **not** the total number of distinct eligible skills or unchanged-use approvals. Continue discovery under #599 and risk-tiered evaluation under #624 without claiming this is the full universe.
 
+**Since this snapshot:** [hygiene workboard PR #701](https://github.com/Knapp-Kevin/skillz/pull/701) and [authority repair PR #702](https://github.com/Knapp-Kevin/skillz/pull/702) were opened; **12 PRs / 12 issues** were live at the follow-up check. The original 10-PR snapshot is preserved as a dated inventory, not silently rewritten.
+
 ## Next three maintenance actions
 
 1. **Fix shipped first-party instructions safely.** [#673](https://github.com/Knapp-Kevin/skillz/pull/673) repairs 16 removed pulse-runner paths, but 3 scanner failures and 3 incomplete scans remain. [#686](https://github.com/Knapp-Kevin/skillz/pull/686) fixes five secret/privacy instructions and has 5/5 scanner passes, but still lacks executed adversarial permission and leakage tests. Reconcile exact current package identities and linked review registries before any merge. Track through [#415](https://github.com/Knapp-Kevin/skillz/issues/415), [#491](https://github.com/Knapp-Kevin/skillz/issues/491), [#402](https://github.com/Knapp-Kevin/skillz/issues/402).
-2. **Assign the uncovered authority fixes.** [#478](https://github.com/Knapp-Kevin/skillz/issues/478) (five recurring skills), [#481](https://github.com/Knapp-Kevin/skillz/issues/481) (four more), [#483](https://github.com/Knapp-Kevin/skillz/issues/483) (two obsolete permission policies), and [#495](https://github.com/Knapp-Kevin/skillz/issues/495) (private receipts and cross-repo writes) have no confirmed open replacement implementation PR. `permissions-review` appears in both #481 and #483: **one writer should combine those edits** rather than produce conflicting patches. A one-time request never authorizes a recurring schedule, private source read or cross-repository write.
+2. **Assign the uncovered authority fixes.** [#478](https://github.com/Knapp-Kevin/skillz/issues/478) (five recurring skills), [#481](https://github.com/Knapp-Kevin/skillz/issues/481) (four more), [#483](https://github.com/Knapp-Kevin/skillz/issues/483) (two obsolete permission policies), still have no confirmed replacement PR. [#495](https://github.com/Knapp-Kevin/skillz/issues/495) now has [draft fix #702](https://github.com/Knapp-Kevin/skillz/pull/702): two exact-pinned source and registry repairs, 44/44 fingerprints consistent, **scanner and behavioral tests still pending**. `permissions-review` appears in both #481 and #483: **one writer should combine those edits** rather than produce conflicting patches. A one-time request never authorizes a recurring schedule, private source read or cross-repository write.
 3. **Reconcile curation and publishing only once its source settles.** [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) is the source of 50 proposed study references; [Q12 #700](https://github.com/Knapp-Kevin/skillz/pull/700) gives 50 source-pinned per-method security receipts; [Q11 #699](https://github.com/Knapp-Kevin/skillz/pull/699) still renders an older 45-method draft checkpoint. Once Q8 is stable, regenerate Q11, run both Node generators with `--self-test` and `--check` in a real checkout, inspect the chart/README visually, then seek maintainer acceptance. **Never merge a stale generated chart because it happens to render.**
 
-## Open PRs, grouped by purpose
+## Open PRs, grouped by purpose (snapshot plus two subsequent drafts)
 
 | Lane | PRs | Why they remain open |
 |---|---|---|
-| First-party authority fixes | [#673](https://github.com/Knapp-Kevin/skillz/pull/673), [#686](https://github.com/Knapp-Kevin/skillz/pull/686) | Exact package and behavioral gates still pending; no new runner, private data or credentials may leak |
+| First-party authority fixes | [#673](https://github.com/Knapp-Kevin/skillz/pull/673), [#686](https://github.com/Knapp-Kevin/skillz/pull/686), [#702](https://github.com/Knapp-Kevin/skillz/pull/702) | Exact package and behavioral gates still pending; no new runner, private data or credentials may leak |
 | Curated references | [#693](https://github.com/Knapp-Kevin/skillz/pull/693) | 50 study-only references across 33 areas, not install recommendations |
 | Discovery and static reviews | [#697](https://github.com/Knapp-Kevin/skillz/pull/697), [#698](https://github.com/Knapp-Kevin/skillz/pull/698) | 8 distinct Q9 leads, all 8 statically reviewed by Q10; counts overlap, no hardware/runtime proof |
 | Publication and scanner evidence | [#699](https://github.com/Knapp-Kevin/skillz/pull/699), [#700](https://github.com/Knapp-Kevin/skillz/pull/700) | Q11 is behind Q8; Q12 correctly distinguishes passed/failed/incomplete scanner results |
+| Maintainer hygiene | [#701](https://github.com/Knapp-Kevin/skillz/pull/701) | Dated workboard, additive, not merged |
 | Prior source research worth keeping | [#677](https://github.com/Knapp-Kevin/skillz/pull/677), [#682](https://github.com/Knapp-Kevin/skillz/pull/682), [#692](https://github.com/Knapp-Kevin/skillz/pull/692) | Independent discovery, MIDI review, historical Q7 identity-gap receipt; preserve even when newer ledgers supersede individual status claims |
 
 ## Open issues, by responsibility
@@ -27,7 +30,8 @@
 | Lane | Issues | Main remaining outcome |
 |---|---|---|
 | First-party security/authority | [#402](https://github.com/Knapp-Kevin/skillz/issues/402), [#415](https://github.com/Knapp-Kevin/skillz/issues/415), [#491](https://github.com/Knapp-Kevin/skillz/issues/491) | Secure changed package trees, executed adversarial tests and exact evidence integration |
-| Unassigned authority repairs | [#478](https://github.com/Knapp-Kevin/skillz/issues/478), [#481](https://github.com/Knapp-Kevin/skillz/issues/481), [#483](https://github.com/Knapp-Kevin/skillz/issues/483), [#495](https://github.com/Knapp-Kevin/skillz/issues/495) | Narrow consent boundaries and non-overlapping ownership |
+| Unassigned authority repairs | [#478](https://github.com/Knapp-Kevin/skillz/issues/478), [#481](https://github.com/Knapp-Kevin/skillz/issues/481), [#483](https://github.com/Knapp-Kevin/skillz/issues/483) | Narrow recurrence and permissions-review consent boundaries with non-overlapping ownership |
+| First-party fix awaiting qualification | [#495](https://github.com/Knapp-Kevin/skillz/issues/495) | [Draft #702](https://github.com/Knapp-Kevin/skillz/pull/702) implements exact-source edits, but final scanner and adversarial tests are not run |
 | Rights | [#544](https://github.com/Knapp-Kevin/skillz/issues/544) | Resolve truncated pinned upstream MIT license; do not silently relicense |
 | Coverage and corpus | [#588](https://github.com/Knapp-Kevin/skillz/issues/588), [#599](https://github.com/Knapp-Kevin/skillz/issues/599), [#624](https://github.com/Knapp-Kevin/skillz/issues/624) | Distinct lanes: capability-depth map, open-ended source universe, risk-tiered review throughput |
 | External evidence | [#589](https://github.com/Knapp-Kevin/skillz/issues/589) | Pinned external scanners and representative host acceptance without adding repository runtime |
