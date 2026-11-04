@@ -7,9 +7,9 @@ source_path: skills/github-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 45303dcbab4089b3d4c3900e4c671ba9ba07d265
+source_snapshot_revision: 30d3fe9db62dd43f6e24d27a8d5e660c9e84befa
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/github-pulse/SKILL.md
 permission_tier: read-only
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
-exact_version_requalification: "Required for 5dc5cb3fd2527dcd39765ab66a9676146f91f1d7; prior review fingerprint 03e135f4e916115040af63271de71b23277e36f7 is historical only. No current package security or behavioral pass."
+exact_version_requalification: "Required for 846dfc3a493cdf9b2387ffca77a7a9e463898aff. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
