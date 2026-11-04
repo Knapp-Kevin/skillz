@@ -3,7 +3,7 @@ skill_name: governance-pulse
 source_id: local-skills
 local_path: "skills/governance-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2
+content_blob_sha: 5cff5684b7e339a0d52aad8533d9715bedbc5923
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
 verification_status: stale
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, retrieval-first, synthesis, risk-aware]
   authority: [read-only]
   portability: [medium]
-notes: "2026-11-04 source security revision at d9530d6c1584157d4ee9d9d9a8ac8c981645dcc2; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
+notes: "2026-11-04 revised governance-pulse 5cff5684b7e339a0d52aad8533d9715bedbc5923; previous semantic and security observations are not transferable; new exact package scan remains not-run."
