@@ -3,13 +3,13 @@ skill_name: mcp-pulse
 source_id: local-skills
 local_path: "skills/mcp-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d59296c2fcc6d287a1cc38a890bde34d0fcf43fa
+content_blob_sha: 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: stale
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
 prior_reviewed_blob_sha: 41451ac34a4a660ec82cae2c4356d3afe4b49334
@@ -21,4 +21,4 @@ tags:
   characteristic: [source-driven, risk-aware, synthesis, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+notes: "2026-11-04 source security revision at 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a; prior static score is historical; new exact-source semantic and final-package security need independent qualification."
