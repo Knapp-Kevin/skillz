@@ -79,7 +79,7 @@
       }
     ]
   },
-  "scope": "All 16 package-owned files at exact upstream pin statically read, including sound-design SKILL.md, 3 references, cues schema, 5 CLI script entrypoints and shared lib_audio helpers. Reviewed script output/destruction paths. No tests, imports, code execution, downloads, model judging, audio reads or edits.",
+  "scope": "Fetched full source text of all 16 owned files and applied static screening for execution, output writes, directory deletion and dependencies; inspected the affected destructive/write code paths in detail. Not an exhaustive independent functional code audit. No imports, source execution, downloads, model judging, audio reads or edits.",
   "grade": 13,
   "rubric_scores": {
     "trigger_precision": 2,
