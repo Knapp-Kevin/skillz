@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 740" width="1120" height="740" role="img" aria-labelledby="workstream-title workstream-desc">
 <title id="workstream-title">Skillz qualification progress, merged baseline and unmerged Q8 Q9 Q10</title>
-<desc id="workstream-desc">Merged main has 20 study references in 10 domains. Q8 draft proposes 44 in 33 domains. 7 of 8 Q9 source leads have received Q10 static reviews; 1 remains. Q8 static security: 8 pass, 7 fail, 29 incomplete. 0 approved unchanged.</desc>
+<desc id="workstream-desc">Merged main has 20 study references in 10 domains. Q8 draft proposes 44 in 33 domains. 8 of 8 Q9 source leads have received Q10 static reviews; none remain. Q8 static security: 8 pass, 7 fail, 29 incomplete. 0 approved unchanged.</desc>
 <defs><linearGradient id="workstream-bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0d1a2f"/><stop offset="1" stop-color="#183250"/></linearGradient></defs>
 <rect x="0" y="0" width="1120" height="740" rx="24" fill="url(#workstream-bg)"/>
 <text x="38" y="54" font-family="Arial,Helvetica,sans-serif" font-size="32" fill="#f4f8ff" font-weight="700">Skillz | Curation progress</text>
@@ -17,7 +17,7 @@
 <text x="323" y="195" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#d1ddeb" >Q9 pinned leads</text>
 <rect x="577" y="117" width="248" height="99" rx="12" fill="#1d3451"/>
 <rect x="577" y="117" width="248" height="99" rx="12" fill="none" stroke="#405b7b"/>
-<text x="593" y="166" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#64d7cd" font-weight="700">7</text>
+<text x="593" y="166" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#64d7cd" font-weight="700">8</text>
 <text x="593" y="195" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#d1ddeb" >Q10 static reviews</text>
 <rect x="847" y="117" width="248" height="99" rx="12" fill="#1d3451"/>
 <rect x="847" y="117" width="248" height="99" rx="12" fill="none" stroke="#405b7b"/>
@@ -35,12 +35,11 @@
 <text x="39" y="413" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#f2f7ff" font-weight="700">Q9 discovered leads | Q10 static review coverage</text>
 <text x="42" y="453" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#dce8f6" >8 pinned leads</text>
 <rect x="324" y="433" width="604" height="25" rx="6" fill="#293f5c"/>
-<rect x="324" y="433" width="528.5" height="25" rx="6" fill="#64d7cd"/>
-<rect x="852.5" y="433" width="75.5" height="25" rx="0" fill="#eabf72"/>
-<text x="952" y="453" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#eaf2fc" font-weight="700">7 reviewed</text>
-<text x="324" y="490" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#64d7cd" >3 promising concepts, held</text>
+<rect x="324" y="433" width="604" height="25" rx="6" fill="#64d7cd"/>
+<text x="952" y="453" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#eaf2fc" font-weight="700">8 reviewed</text>
+<text x="324" y="490" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#64d7cd" >4 promising concepts, held</text>
 <text x="673" y="490" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#eabf72" >4 other reviews held</text>
-<text x="42" y="514" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#afc4db" >1 lead still needs full review: ROS 2 bundle mapped (118/204 repo files).</text>
+<text x="42" y="514" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#afc4db" >All 8 Q9 leads statically reviewed. No Q9 package approved unchanged.</text>
 <text x="39" y="557" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#f2f7ff" font-weight="700">Q8 featured methods | pinned static security scan</text>
 <text x="42" y="598" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#dce8f6" >44 total</text>
 <rect x="324" y="578" width="604" height="25" rx="6" fill="#293f5c"/>
