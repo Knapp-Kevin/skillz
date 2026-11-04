@@ -1,0 +1,96 @@
+{
+  "schema": "q7-source-column-reconciliation-v1",
+  "as_of": "2026-11-03",
+  "source": {
+    "repository": "zicula/skills",
+    "pin": "ec7f94f84916be7bb25ec38752c24176330065a7",
+    "path": "grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx",
+    "github_declared_blob_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+    "binary_size_bytes": 10048,
+    "inspection": "Read-only decode of exact pinned Base64 OOXML GitHub connector response; original binary not mounted in local spreadsheet engine"
+  },
+  "verified_structure": {
+    "workbook_sheets": [
+      "Scorecard",
+      "Gates",
+      "Log"
+    ],
+    "scorecard_source_cell": "F18",
+    "source_formula_countif_range": "Gates!C2:C7",
+    "source_score_cell": "F17",
+    "source_status_prefixes": [
+      "WAIT",
+      "GO",
+      "CONDITIONAL",
+      "NO-GO"
+    ],
+    "user_gate_dropdown_range": "Gates!B2:B7",
+    "gate_allowed_values": [
+      "Yes",
+      "No"
+    ],
+    "gate_validation_allow_blank": true,
+    "source_example_B4": "No",
+    "source_example_C4": "Worked example: board meets Thursday 9/29 to sign the budget numbers the LOI cites. Flip to Yes after the vote and watch the verdict change.",
+    "notes_column": "C",
+    "scorecard_score_validation": "E2:E16 whole number 0-4"
+  },
+  "defects": [
+    {
+      "id": "P0-1",
+      "finding": "Published source decision formula checks column C narrative notes instead of Yes/No answers in column B",
+      "impact": "An explicit No in user input B4 can be ignored and GO shown if the score threshold is met",
+      "source_evidence": [
+        "Gates!B2:B7 dataValidation list Yes,No",
+        "Gates!B4=No",
+        "Gates!C4=Worked example notes",
+        "Scorecard!F18 COUNTIF(Gates!C2:C7,\"No\")>0"
+      ]
+    },
+    {
+      "id": "P0-2",
+      "finding": "Even testing the checked range for No alone would allow blank/unrecognized mandatory answers",
+      "impact": "An incomplete or invalid eligibility response can produce GO"
+    }
+  ],
+  "prior_receipts": [
+    {
+      "path": "registry/discovery/q7-grant-scorecard-engine-replay-20261103.json",
+      "status": "SUPERSEDED FOR SOURCE FIDELITY",
+      "why": "Old formula replay entered answers into C2:C7, although real answer cells are B2:B7; old 18/18 only proves simulated C-column logic."
+    },
+    {
+      "path": "registry/discovery/q7-pinned-scorecard-acceptance-harness-20261103.json",
+      "status": "SUPERSEDED FOR SOURCE FIDELITY",
+      "why": "Old 9-case fixture used answers C2:C7, bare GO status and never inspected B2:B7 input validation."
+    }
+  ],
+  "new_checks": {
+    "source_faithful_formula_replay": {
+      "tool": "artifact_tool",
+      "cases": 18,
+      "passed": 18,
+      "kind": "SYNTHETIC; independently executed local workbook logic; actual pinned XLSX not imported"
+    },
+    "source_shaped_pinned_acceptance_fixture": {
+      "tool": "artifact_tool",
+      "cases": 10,
+      "passed": 10,
+      "kind": "SYNTHETIC; validates input/notes separation and original verbose outcome"
+    },
+    "negative_wrong_hash_admission": {
+      "passed": true,
+      "kind": "Local wrong-file input rejected before original-source acceptance"
+    }
+  },
+  "safe_candidate_formula": "=IF(OR(COUNTIF(Gates!B2:B7,\"Yes\")<ROWS(Gates!B2:B7),NOT(ISNUMBER(F17))),\"WAIT\",IF(F17>=70,\"GO\",IF(F17>=50,\"CONDITIONAL\",\"NO-GO\")))",
+  "permissions_and_hold": {
+    "upstream_workbook_modified": false,
+    "unchanged_use_approved": false,
+    "original_xlsx_imported_into_spreadsheet_engine": false,
+    "excel_libreoffice_acceptance": false,
+    "consumer_shelf_count_changed": false,
+    "required_next": "Run fixed harness against exact Git-blob-matching source workbook; test an authorized corrected copy in Excel-compatible engine and check user-facing validations. Until then DO NOT TRUST source GO."
+  },
+  "historical_shelf_and_dashboard_unchanged": true
+}

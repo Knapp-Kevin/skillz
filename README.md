@@ -4,7 +4,7 @@
 
 **Find better skills for your AI assistant.**
 
-A skill is a set of instructions that helps an AI assistant do a task well. **Skillz is a discovery library across 33 capability domains, not a list of 19 approved skills.** Start with what you need to accomplish, search methods across the wider indexed research, compare evidence and rights, then decide what is useful. You can explore without installing anything.
+A skill is a set of instructions that helps an AI assistant do a task well. **Skillz is a discovery library across 33 capability domains, not merely a list of featured or approved skills.** Start with what you need to accomplish, search methods across the wider indexed research, compare evidence and rights, then decide what is useful. You can explore without installing anything.
 
 ## What can skillz help you do?
 
@@ -17,7 +17,7 @@ A skill is a set of instructions that helps an AI assistant do a task well. **Sk
 
 **Start here even when your task has no item on our short recommendation shelf.** Browse the [33-domain directory](registry/capability-directory.json), search [governed review names](registry/governed-review-name-index.json), and expand into [pinned source leads](registry/discovery/dynamic-four-source-frontier-20261101.json). Read the actual candidate before trusting its name. An empty featured shelf slot is a search prompt, **not** proof there are no applicable methods. [Agent discovery procedure](docs/agent-value-discovery.md).
 
-**Example:** Grant and funding-proposal work can require research, technical writing, business budgets, marketing and legal/compliance review. Explore those related capabilities before deciding whether a dedicated grant-writing skill exists. **No dedicated approved grant-writing package is claimed here.**
+**Example: Grant and funding-proposal work.** The broader search found [six individually graded grant, budget and proposal-review skill candidates](docs/reviews/2026-11-03-q7-grant-proposal-cross-domain-reviews.md) across **four independent publishers**, including one grant-budget method now selected for study and five further grant candidates that remain outside the featured shelf. Study the [source-pinned review ledger](registry/discovery/q7-grant-proposal-cross-domain-reviews-20261103.json) and check adjacent research, technical writing, finance, business, marketing and legal work. **One grant-budget method has been selected as a Valuable Reference for study. No source package is approved for unchanged use.**
 
 | You want help with… | Capability areas |
 |---|---|
@@ -30,56 +30,105 @@ A skill is a set of instructions that helps an AI assistant do a task well. **Sk
 
 These are **33 areas to explore, not 33 fully covered skill sets**. Some have rich research evidence; others have few useful candidates. A category with many links is not necessarily a category with many good skills.
 
-### Two different views: research leads and the small featured shelf
+<!-- SKILLZ_CAPABILITY_DASHBOARD:START | generated: scripts/build-capability-dashboard.mjs -->
+### Capability dashboard
 
-![33 capability domains: research-linked topics from November 2 alongside separately selected Valuable Reference methods from November 3.](docs/assets/capability-evidence-and-valued-methods-20261103.svg)
+**33 capability areas** · **247 topics** · **210 topics with research leads** · **50 useful methods selected for study** · **0 approved unchanged**
 
-**This chart is not a complete map of what the library could help you accomplish.** Continue searching the wider capability index even when a category has no featured selection. **Read the two columns separately.** The turquoise bars count topics with *any* review or candidate link in our **November 2 Q4 research snapshot**. Some links point only to rejected skills. The purple numbers show *methods we positively selected for study* in the **bounded November 3 Q6 public reference shelf**, not packages cleared for installation. A zero in the purple column means no selection in this shelf, **not** that the whole domain has no useful skills. Never add these different counts together.
+![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across 33 domains.](docs/assets/capability-dashboard.svg)
 
-The 33-domain map contains **247 topics**. The Q4 baseline had **210 with at least one research link** and **37 without one**. Our newer public shelf has **19 Valuable Reference methods across nine domains**, serving **18 distinct topic mappings**; **zero skills approved unchanged**. Music has **nine ideas spanning 8/8 topics**, but almost all music methods share a single publisher; illustration has **three methods spanning 3/6 topics**, with environment art still insufficiently served. Neither domain is complete, behaviorally tested, or independently cleared for reuse.
+**How to read this:** Turquoise means a topic has a research or candidate link, which can include rejected skills. Purple means at least one method has been selected to study in our *bounded* featured shelf. Neither is installation clearance, and an unfeatured domain can still contain useful candidates.
 
-<details>
-<summary>Read all 33 domains as a text table</summary>
+<details><summary>Explore all 33 capability areas in a spreadsheet-style table</summary>
 
-| Capability domain | Research-linked topics (Nov 2) | Featured methods (Nov 3) | Topics on featured shelf |
+| Capability area | Research-linked topics | Featured study methods | Topics with featured methods |
 |---|---:|---:|---:|
-| Software engineering | 10 / 10 | 0 | 0 / 10 |
+| Software engineering | 10 / 10 | 1 | 1 / 10 |
 | Testing | 7 / 8 | 1 | 1 / 8 |
-| Agent / MCP development | 8 / 8 | 0 | 0 / 8 |
+| Agent / MCP development | 8 / 8 | 1 | 1 / 8 |
 | Cloud / DevOps | 8 / 8 | 1 | 1 / 8 |
-| Security | 7 / 7 | 0 | 0 / 7 |
-| Research | 7 / 7 | 0 | 0 / 7 |
-| Planning | 6 / 6 | 0 | 0 / 6 |
+| Security | 7 / 7 | 1 | 1 / 7 |
+| Research | 7 / 7 | 2 | 2 / 7 |
+| Planning | 6 / 6 | 1 | 1 / 6 |
 | Marketing | 8 / 9 | 1 | 1 / 9 |
-| Product | 8 / 8 | 0 | 0 / 8 |
+| Product | 8 / 8 | 1 | 1 / 8 |
 | UX / UI | 7 / 7 | 1 | 1 / 7 |
-| Visual design | 7 / 7 | 0 | 0 / 7 |
+| Visual design | 7 / 7 | 1 | 1 / 7 |
 | Illustration | 1 / 6 | 3 | 3 / 6 |
 | 3D / CAD / animation | 7 / 9 | 1 | 1 / 9 |
 | Game design | 6 / 8 | 1 | 1 / 8 |
-| Fiction / narrative / worldbuilding | 8 / 8 | 0 | 0 / 8 |
+| Fiction / narrative / worldbuilding | 8 / 8 | 1 | 1 / 8 |
 | Technical writing | 7 / 7 | 1 | 1 / 7 |
 | Music composition | 0 / 8 | 9 | 8 / 8 |
-| Audio / voice / sound | 5 / 8 | 0 | 0 / 8 |
-| Video / film | 5 / 9 | 0 | 0 / 9 |
-| Communication | 5 / 7 | 0 | 0 / 7 |
-| Analytics | 7 / 7 | 0 | 0 / 7 |
-| Time / productivity | 6 / 7 | 0 | 0 / 7 |
-| Memory / context | 7 / 7 | 0 | 0 / 7 |
-| Business | 7 / 7 | 0 | 0 / 7 |
-| Sales | 7 / 7 | 0 | 0 / 7 |
-| Career | 6 / 7 | 0 | 0 / 7 |
-| Education | 6 / 7 | 0 | 0 / 7 |
-| Science | 6 / 7 | 0 | 0 / 7 |
-| Medicine | 6 / 7 | 0 | 0 / 7 |
-| Law | 6 / 7 | 0 | 0 / 7 |
-| Finance | 7 / 8 | 0 | 0 / 8 |
-| Robotics / IoT | 5 / 7 | 0 | 0 / 7 |
-| ML accelerators and compute | 7 / 7 | 0 | 0 / 7 |
+| Audio / voice / sound | 5 / 8 | 2 | 2 / 8 |
+| Video / film | 5 / 9 | 1 | 1 / 9 |
+| Communication | 5 / 7 | 1 | 1 / 7 |
+| Analytics | 7 / 7 | 1 | 1 / 7 |
+| Time / productivity | 6 / 7 | 1 | 1 / 7 |
+| Memory / context | 7 / 7 | 1 | 1 / 7 |
+| Business | 7 / 7 | 1 | 1 / 7 |
+| Sales | 7 / 7 | 1 | 1 / 7 |
+| Career | 6 / 7 | 2 | 2 / 7 |
+| Education | 6 / 7 | 1 | 1 / 7 |
+| Science | 6 / 7 | 3 | 2 / 7 |
+| Medicine | 6 / 7 | 1 | 1 / 7 |
+| Law | 6 / 7 | 1 | 1 / 7 |
+| Finance | 7 / 8 | 1 | 1 / 8 |
+| Robotics / IoT | 5 / 7 | 3 | 2 / 7 |
+| ML accelerators and compute | 7 / 7 | 1 | 1 / 7 |
 
 </details>
 
-*Sources: [2026-11-02 research audit](registry/discovery/capability-coverage-audit-20261102.json) and [2026-11-03 bounded consumer reference shelf](registry/consumer-positive-references-20261103.json). [Machine-readable two-stage graph data](registry/discovery/capability-evidence-and-valued-methods-20261103.json) · [Preserved November 2 chart](docs/assets/capability-evidence-map-20261102.svg). This comparison does not claim a live all-corpus positive denominator, source independence, domain maturity, security clearance or proven outcomes.*
+#### Review and qualification pipeline
+
+Each row counts a **different population** with its own denominator. **Do not add rows together or read them as one funnel.** `UNKNOWN` means no defensible count exists yet.
+
+<details><summary>Show the pipeline stages, from discovery to approval</summary>
+
+| Stage | Count | What is counted |
+|---|---:|---|
+| Package identity records (discovery) | **61,326** | G1–G3 pinned package identity records across 942 repositories (distinct package-tree SHAs 57,715) |
+| Exact static review decisions | **5,351** | distinct exact (source, pin, path) keys with a recorded candidate_decision (rejected unchanged 3,773, reference-only 1,574, deferred 4) |
+| Reference-only candidates awaiting a consumer decision | **1,522** | latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review (already on shelf 38, kept in research by Q8 qualification 12, rejected unchanged by Q8 qualification 2) |
+| Methods selected to study (Valuable Reference) | **50** | featured shelf entries (all 33 canonical domains now have at least one featured method) (canonical domains 33) |
+| Featured methods passing the static security gate | **10** | of 50 featured exact package trees, pinned SkillSpector, fail-closed (failed 7, incomplete 33) |
+| First-party packages passing the static security gate | **25** | of 51 skills/ and engine/skills/ trees on main 09c93dd3 (failed 1, incomplete 25) |
+| Behaviorally validated packages | **0** | packages with executed representative and adversarial acceptance tests |
+| Approved for unchanged use | **0** | Recommended-for-use entries |
+| Globally distinct eligible packages | **UNKNOWN** | no defensible denominator: semantic duplicates, license eligibility and most source families are unreconciled |
+
+[Pipeline CSV](docs/data/qualification-pipeline.csv) · [Pipeline source ledger](registry/qualification-pipeline-20261103.json) · as of 2026-11-03
+
+</details>
+
+**[View the full CSV table](docs/data/capability-dashboard.csv)** · [Research source ledger](registry/discovery/capability-coverage-audit-20261102.json) · [Featured reference ledger](registry/consumer-positive-references-q8-20261103.json) · [How the dashboard updates](docs/capability-dashboard-maintenance.md)
+
+*As of 2026-11-03. The research links are from a historical audit; not every candidate is useful. All-corpus qualification totals remain unknown. Never add topic-link counts to selected-method counts.*
+<!-- SKILLZ_CAPABILITY_DASHBOARD:END -->
+
+<!-- SKILLZ_SECURITY_STATUS:START -->
+### Security and curation status (November 4, 2026)
+
+**Now on main: 50 useful methods to study across all 33 capability domains.** They cover 47 distinct subtopics. This is a curated reference shelf, **not** 50 approved skills to install. The earlier Q7 checkpoint of 20 study methods across 10 domains is historical; [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) is merged.
+
+![Generated Skillz security and curation status, November 4: 50 merged study methods across 33 domains; 5,351 static decisions and 1,522 candidates still awaiting qualification; first-party scanner 25 pass, 1 fail and 25 incomplete; 50 study-method scanner 10 pass, 7 fail and 33 incomplete; zero unchanged-use approvals.](docs/assets/security-and-curation-status.svg)
+
+| What we measured | Current checkpoint | What it means |
+|---|---:|---|
+| Capability domains / topics | **33 / 247** | **210** topics have research leads, including some unqualified candidates |
+| Distinct useful methods selected for study | **50 in 33 domains** | [Source-pinned Q8 catalog](registry/consumer-positive-references-q8-20261103.json); all are *Valuable References* |
+| Exact static review decisions | **5,351** | Historical decisions about candidate source versions, not 5,351 ready skills |
+| Candidates still awaiting consumer qualification | **1,522** | A review backlog, **not** a count to add to the 50 selected methods |
+| First-party skills in the source registry | **44** | Separate from the **51-tree** first-party/engine security-scan population |
+| First-party/engine historical static scans | **25 pass / 1 fail / 25 incomplete** | 51 pinned source trees; results do **not** apply to newer changed skill versions |
+| Selected Q8 study-method historical static scans | **10 pass / 7 fail / 33 incomplete** | 50 pinned package trees; failed and incomplete states remain held |
+| Approved for unchanged use / behaviorally validated | **0 / 0** | No new installation, private-data, purchase or execution authority |
+
+**Security issue [#402](https://github.com/Knapp-Kevin/skillz/issues/402) remains open.** Repairs in [#673](https://github.com/Knapp-Kevin/skillz/pull/673), [#686](https://github.com/Knapp-Kevin/skillz/pull/686), [#702](https://github.com/Knapp-Kevin/skillz/pull/702), and [#703](https://github.com/Knapp-Kevin/skillz/pull/703) still require final-tree scanner evidence, independent behavioral tests and governed acceptance. A passed *static* scan does not automatically make a skill safe to run.
+
+These security groups have different and overlapping source populations. **Do not add their totals.** [Q12 evidence](registry/security/q12-featured-security-evidence-reconciliation-20261103.json) is merged as a pinned historical record; the superseded Q11 45-method visual is [archived](docs/archive/q11/README.md). The generated status chart uses [this machine-readable checkpoint](registry/public-security-curation-status-20261104.json) and [this dependency-free renderer](scripts/build-public-security-status.mjs). Maintain it with `node scripts/build-public-security-status.mjs --self-test` and `--check`, and visually review the generated SVG. These are dated findings, not live counters.
+
+<!-- SKILLZ_SECURITY_STATUS:END -->
 
 ## Our featured methods: a small, evidence-based shelf
 
@@ -92,9 +141,9 @@ We maintain two **positive** recommendation types for methods selected to appear
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Featured-shelf limitation, not total inventory:** We have individually endorsed **nineteen useful methods as Valuable References** across nine capability domains. Music composition now has one useful conceptual method in **all eight subdomains**, including two distinct rhythm approaches, but most music methods come from one publisher. Eight source music packages now have **verified complete Git package-tree identities**, while four earlier creative packages retain **UNKNOWN complete package-tree identity**, and protected textbook excerpts and translations are **not relicensed by source MIT**. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Featured-shelf limitation, not total inventory:** We have individually endorsed **fifty useful methods as Valuable References** across **all thirty-three** capability domains — every domain now has at least one featured method. Two of them are featured **as references to study with their flaws documented, not to run as written** — a neurodivergence-aware resume method, and a dual-use protein-design package featured only for its separable, domain-neutral cost-discipline method (its biology and host-escalation text are not reproduced). Both were first held, then reconsidered: a Valuable Reference is a distinct, inspirational idea, not an installable package. A follow-up audit of the held and reference-only candidates then promoted four more distinct methods — Room Acoustics, Rerun URDF ingestion, Nav2 debugging, and MATLAB reliability analysis — that had been held only to keep an earlier pass lean, an extrinsic reason, not a quality one. Candidates held for low differentiation or active harm were left as they were. Music composition has one useful conceptual method in **all eight subdomains**, but most music methods come from one publisher, and protected textbook excerpts and translations are **not relicensed by source MIT**. **All 50 complete Git package-tree identities are now verified** against pinned upstream commits, including four that were previously UNKNOWN. Ten of 50 pass the pinned static security scan; that is not a clearance. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Nineteen featured method references
+### Fifty featured method references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -117,10 +166,41 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Song arrangement | **mc-arrangement-arch** | Give a song an arc by changing when layers enter and leave |
 | Music notation | **mc-symbolic-score** | Validate notation and MIDI outputs against one score plan |
 | Electronic composition | **mc-style-edm** | Build and release club energy through deliberate layer changes |
+| Grant budget reconciliation | **Nonprofit Budget Narrative** | Check actual quantity × rate, reconcile totals and hold unclear cost eligibility for human finance review |
+| Safe agent approvals | **Verify Agent Action** | Catch swapped, replayed or out-of-date approvals before an agent takes a risky action |
+| MCP server security | **MCP Implementation Security Review** | Review an MCP server line by line, scoped to how it is really exposed |
+| Product feedback triage | **Shopify Review Triage** | Turn scattered bad app reviews into a sourced, honestly labeled priority list |
+| Writing in your own voice | **Email Voice** | Draft emails that sound like you, checked against your own real replies |
+| Safe repository cleanup | **Clean Closed Issue Worktrees** | Remove finished Git worktrees without losing unsaved work, secrets or unique commits |
+| Project timelines | **Gantt Chart Visualization** | Build schedules from real tool exports without inventing dates or dependencies |
+| Honest expert guidance | **Radiology Consensus Guideline** | Keep panel guidance from posing as evidence or official endorsement (process design only, not clinical advice) |
+| Decisions with visible counterevidence | **Build Evidence Map** | Keep evidence against a choice, and unknowns, visible in a checked evidence map |
+| Honest reproducibility claims | **Radiology Reproducibility** | Grade each research result's rerun evidence, with tolerances fixed in advance |
+| Tracking what an agent really read | **Read Ledger** | Know exactly which document text your agent reviewed, even across sessions |
+| Fair assignment checking | **Submission Auditor** | Check student work against your own rules consistently, with drafts you approve |
+| Regulatory security planning | **Singapore SSP Navigator** | Pick the right Singapore government security plan and mandatory controls, and flag gaps |
+| Realistic sales forecasts | **GTM Deal Pulse** | Score a deal only from sourced evidence, and refuse to score when records are thin |
+| Kind daily planning | **Daily Focus Board** | Plan a short, kind daily focus list with an agent that nudges one step at a time |
+| Choosing a map design | **Geospatial and Cartographic Visualization** | Choose basemap, layers, overlap and zoom behavior before picking a map library |
+| Accessible teaching video | **Media Scripter** | Turn written notes into speakable, caption-ready, accessible video scripts |
+| Keeping a story consistent | **Continuity Check** | Catch real story contradictions without turning unclear details into false canon |
+| Product mockups from a logo | **Adobe Create Mockups** | See your logo on real products fast, with a checkpoint before the full set |
+| Trusting GPU-cluster benchmarks | **Dynamo Interconnect Check** | Catch a silent fast-network fallback before trusting benchmark numbers |
+| Mastering AI-made tracks | **Audio Mastering** | Master AI-generated tracks to streaming loudness without adding digital artifacts |
+| Inspecting a live robot | **Inspect ROS2 Robot** | A safe, read-only recipe for inspecting a live ROS2 graph or a recorded bag |
+| Querying a research corpus | **CAAIL query** | Query a curated corpus without reporting curated gaps as real-world absence |
+| Cross-border e-commerce margins | **Cross-border Unit Economics** | Show whether a cross-border route truly profits after every variable cost |
+| Finding real job openings | **Ghost-job-aware Job Search** | Find real postings and score ghost-job risk separately from how well you fit |
+| Fairer resumes for neurodivergent candidates | **Neurodivergence-aware Resume** | Surface bias and disclosure trade-offs, leaving every choice to the user (study-only — see limits) |
+| Spending wisely on big compute runs | **Scout-before-scale (Boltz)** | Try cheap options before one expensive run, gating each paid run (study-only — dual-use package, do not run) |
+| Diagnose a room acoustically | **[Room Acoustics (REW)](https://github.com/koltyj/REW-mcp/blob/1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5/plugin/skills/room-acoustics/SKILL.md)** | Decide which room problems EQ can fix and which need physical treatment |
+| Ingest a robot URDF correctly | **[Rerun URDF Ingestion](https://github.com/rerun-io/rerun/blob/6f39b09211b869d6e262083cfddefa392244088d/skills/rerun-urdf/SKILL.md)** | Ingest a robot URDF so every frame connects to one root, or fail loudly |
+| Debug a robot navigation stack | **[Nav2 Navigation Debugging](https://github.com/robium-ai/robium/blob/ce944953d11ccdbd32613c4746389bc78a24e8c5/skills/navigation/SKILL.md)** | Pinpoint the first broken link in a robot navigation stack, with evidence |
+| Analyze failure/life data | **[MATLAB Reliability Analysis](https://github.com/matlab/matlab-agentic-toolkit/blob/032b4b605999b1f4adecaac1efa1c9faad41adf6/skills-catalog/ai-and-statistics/matlab-analyze-reliability/SKILL.md)** | Fit life-and-failure data with censoring handled and stable confidence intervals |
 
-**Latest qualification beyond the nineteen methods:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None changes the 19-method shelf or the illustrated graph's positive counts.
+**Additional reviewed candidates outside the featured shelf:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None of those creative reviews adds a featured method. [The budget method and scorecard defect have separate qualification evidence](docs/reviews/2026-11-03-q7-budget-valuable-reference-and-workbook-formula-gate.md); [18-case independent spreadsheet-engine reproduction](docs/reviews/2026-11-03-q7-grant-scorecard-engine-replay.md); [pinned original-XLSX acceptance harness and current blocker](docs/reviews/2026-11-03-q7-pinned-scorecard-acceptance-harness.md); **[correction: source checks notes column C instead of eligibility answers column B](docs/reviews/2026-11-03-q7-scorecard-source-column-reconciliation.md)**; **[actual pinned-workbook 25-case engine acceptance](docs/reviews/2026-11-03-q7-original-pinned-scorecard-engine-acceptance.md)**.
 
-**These are useful ideas, not install recommendations.** None has a new security or behavioral acceptance pass. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-20261103.json).
+**These are useful ideas, not install recommendations.** None has a behavioral acceptance pass. [Static security scan results](docs/reviews/2026-11-03-q8-external-skillspector-exact-tree-receipts.md) are recorded separately and are not a clearance. The eight new music-craft methods have individual static grades and pinned source files, but their author's [NOTICE](https://github.com/jtydhr88/music-composition-skills/blob/e283141babb8806f2798d5fd2d9e833e75c1bd26/NOTICE) expressly excludes book quotations and translations from MIT. Eight source music package trees are verified; mirror aliases, source-book rights, security and behavior remain unverified. **Music 8/8 is conceptual METHOD coverage, not eight install-ready skills or complete multi-source qualification.** [Explore all eight music and six illustration subdomains](docs/capability-creative-coverage.md). [Read exactly why each made the list](docs/curated-capability-references.md) · [See source pins and licensing](registry/consumer-positive-references-q8-20261103.json) · Q8 qualification evidence: [batch 1](docs/reviews/2026-11-03-q8-reference-only-qualification-batch1.md), [batch 2](docs/reviews/2026-11-03-q8-reference-only-qualification-batch2.md).
 
 **Start here:** [Browse all capability areas](registry/capability-directory.json) · [Search reviewed names](registry/governed-review-name-index.json) · [See concrete examples](docs/capability-quickstart.md).
 

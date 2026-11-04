@@ -1,0 +1,37 @@
+{
+  "schema": "q7-pinned-scorecard-acceptance-harness-v1",
+  "date": "2026-11-03",
+  "source_repository": "zicula/skills",
+  "source_pin": "ec7f94f84916be7bb25ec38752c24176330065a7",
+  "source_path": "grant-writing-kit/references/2-go-no-go/go-no-go-scorecard.xlsx",
+  "source_git_blob_sha": "a58d34344847a73440cb8ded6be88a3e87cc093d",
+  "script": "scripts/qa/check_pinned_grant_scorecard.py",
+  "test_run": {
+    "kind": "SYNTHETIC HARNESS SELF-TEST",
+    "engine": "artifact_tool",
+    "passed": 9,
+    "total": 9,
+    "original_false_go_reproduced": true,
+    "synthetic_fixture_git_blob_sha": "8dc047147a7fcf0f2ba1c137e8e896e6fba96e5f"
+  },
+  "source_execution": {
+    "status": "BLOCKED",
+    "reason": "Original file bytes retrievable via GitHub connector Base64 but cannot be transferred directly to the isolated local spreadsheet execution environment; no original-workbook import or acceptance run performed"
+  },
+  "checks": [
+    "Git blob SHA-1 exact-version precondition",
+    "Bounded OOXML archive and part counts",
+    "Reject encrypted/macro/external-link/embed parts",
+    "Require named Scorecard, Gates, Log worksheets",
+    "Locate exactly one original No-only gating formula",
+    "9 simulated imported-cell scenarios after in-memory candidate formula insertion"
+  ],
+  "limitations": [
+    "Synthetic workbook does not establish publisher XLSX formula compatibility",
+    "Source original exact workbook remains unexecuted",
+    "Validation-list usability, hidden XML behavior and calculation cache not fully accepted",
+    "No Excel or LibreOffice acceptance",
+    "No license, financial-input, client-data or account permissions changed"
+  ],
+  "outcome": "Reproducible local acceptance harness ready, original unchanged-use HOLD remains"
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": "skillz-q10-audio-16-file-source-review-v1",
+  "date": "2026-11-03",
+  "baseline_main_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+  "route": "REPOSITORY_MAINTENANCE",
+  "source": {
+    "repository": "salomonMuriel/media-production-skills",
+    "pin": "6ba42845c9d355776fb10091e47ee32e035509fc",
+    "package_path": "skills/sound-design",
+    "package_tree_sha": "23f68eb57f4a0e93032e9108ae0de3f2684713e5",
+    "entrypoint_blob_sha": "dd9d5102965782db3c6f36a340ef5483c7e3d9ce",
+    "root_license": "MIT",
+    "root_license_blob": "44a666fb7b15bb3f52a1d88f06ba46f8992df423",
+    "own_file_count": 16,
+    "own_files": [
+      {
+        "path": "skills/sound-design/SKILL.md",
+        "blob_sha": "dd9d5102965782db3c6f36a340ef5483c7e3d9ce"
+      },
+      {
+        "path": "skills/sound-design/references/mix.md",
+        "blob_sha": "026a12ac9b560255e543c891a314945edfddedea"
+      },
+      {
+        "path": "skills/sound-design/references/music.md",
+        "blob_sha": "302151adf32af1085a339babb8542086d723d9fb"
+      },
+      {
+        "path": "skills/sound-design/references/sfx.md",
+        "blob_sha": "0ad69d54ad4b14690a2791827131109a4fac0b6a"
+      },
+      {
+        "path": "skills/sound-design/scripts/audio_qa.py",
+        "blob_sha": "4f68775d564d797b96181c946f472d742dd9080e"
+      },
+      {
+        "path": "skills/sound-design/scripts/cues.schema.md",
+        "blob_sha": "140dd9d8540312d3b7ea9c89c59db948447c0690"
+      },
+      {
+        "path": "skills/sound-design/scripts/foley.py",
+        "blob_sha": "244adc6c8255f49dc335e39e6fbbb36f4bf06b4c"
+      },
+      {
+        "path": "skills/sound-design/scripts/lib_audio/__init__.py",
+        "blob_sha": "eddc81efc869834418f8f8e0553b97221fd397aa"
+      },
+      {
+        "path": "skills/sound-design/scripts/lib_audio/audibility.py",
+        "blob_sha": "8c544ec9b4e6e04c29846a580f20aa7e601eace5"
+      },
+      {
+        "path": "skills/sound-design/scripts/lib_audio/cues_model.py",
+        "blob_sha": "cc646cb299112668dfeeec7b1ae8290c8ca104c8"
+      },
+      {
+        "path": "skills/sound-design/scripts/lib_audio/dsp.py",
+        "blob_sha": "f72c6d11521447a9a150209cf63b4ef022a65da6"
+      },
+      {
+        "path": "skills/sound-design/scripts/lib_audio/limiter.py",
+        "blob_sha": "f67ead0725ec5a1ddb2be93b84df87f6fd472dd7"
+      },
+      {
+        "path": "skills/sound-design/scripts/lib_audio/media.py",
+        "blob_sha": "ab305dd82f5869531ccda8d98504586717e94d21"
+      },
+      {
+        "path": "skills/sound-design/scripts/mix.py",
+        "blob_sha": "98db065f00c026b0c5bf30183d06b2637d648813"
+      },
+      {
+        "path": "skills/sound-design/scripts/music_analyze.py",
+        "blob_sha": "eed6eeadcaeaa0d90d43ab7acd0a8d453d42b59b"
+      },
+      {
+        "path": "skills/sound-design/scripts/music_splice.py",
+        "blob_sha": "ff577ff8fd3b0c037f5667e411891037abbf0b54"
+      }
+    ]
+  },
+  "scope": "Fetched full source text of all 16 owned files and applied static screening for execution, output writes, directory deletion and dependencies; inspected the affected destructive/write code paths in detail. Not an exhaustive independent functional code audit. No imports, source execution, downloads, model judging, audio reads or edits.",
+  "grade": 13,
+  "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 0,
+    "failure_handling": 1,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 0,
+    "effectiveness_design": 2
+  },
+  "rubric_rationale": {
+    "trigger_precision": "Defined triggers for audio, SFX, voice/music mixing and loudness; clarifies video handoff.",
+    "procedural_clarity": "Clear sequence from source selection to analysis, transient-aligned SFX, blind splice comparison and measured final master; commands named.",
+    "authority_safety": "The blind-splice CLI deletes an arbitrary preexisting --out-dir; other scripts overwrite output paths and no action-specific consent/preflight protects user files.",
+    "failure_handling": "Numeric performance checks and nonzero exit codes exist, but there is no safe recovery from deleted blind-test folders, overwritten stems or missing dependencies.",
+    "evidence_discipline": "Loudness, true peak, transient timing, fades and SFX audibility are tied to computed measurements, though not executed here.",
+    "dependency_coherence": "Package owns all 16 files; uv can resolve Python dependencies and ffmpeg is external. External video-director media_judge sibling is referenced for some review steps.",
+    "portability_honesty": "Requires Python 3.11+, uv, ffmpeg and large scientific Python dependencies; root path assumes Claude install and video-director/OpenRouter is not generally portable.",
+    "usefulness_differentiation": "Measured, reproducible audio timing and blind control comparisons go beyond shallow prompting.",
+    "adversarial_resilience": "No safeguards against unsafe chosen --out-dir or overwriting existing output, and untrusted cue paths are not tied to a project-root allowed-write plan.",
+    "effectiveness_design": "Mechanisms are plausible and measurable but real mix accuracy and preservation of existing files were not tested."
+  },
+  "status": "REJECT_UNCHANGED_KEEP_CONCEPTUAL_METHODS",
+  "consumer_value": "Measure edits rather than guessing: compare musical splices against blind untouched controls, align SFX by transient peak, and verify mastered loudness on the actual output.",
+  "data_loss_risk": "CONFIRMED_SOURCE_CODE_UNGUARDED_DELETION",
+  "critical_findings": [
+    {
+      "file": "skills/sound-design/scripts/music_splice.py",
+      "location": "run_blind, lines 193-195",
+      "observation": "When --out-dir already exists, shutil.rmtree(arguments.out_dir) recursively deletes it without any project containment, empty-directory, manifest ownership, dry-run or permission check.",
+      "impact": "Could erase unrelated user files selected by --out-dir or present in default out/review/splice-blind.",
+      "evidence": "source text inspected at pinned blob ff577ff8fd3b0c037f5667e411891037abbf0b54",
+      "status": "STATIC_VERIFIED_NOT_EXECUTED"
+    },
+    {
+      "file": "skills/sound-design/scripts/music_splice.py",
+      "location": "run_render, lines 169-173",
+      "observation": "soundfile.write and joins_path.write_text replace chosen --out and sidecar content; no no-clobber mechanism.",
+      "impact": "Existing WAV or joins JSON can be overwritten.",
+      "status": "STATIC_VERIFIED_NOT_EXECUTED"
+    },
+    {
+      "file": "skills/sound-design/scripts/mix.py",
+      "location": "main, lines 249-290",
+      "observation": "Writes fixed stem names then mastered output and optional report, with no explicit exists/overwrite gate.",
+      "impact": "May overwrite prior stems, master audio, and report in the chosen destination.",
+      "status": "STATIC_VERIFIED_NOT_EXECUTED"
+    },
+    {
+      "file": "skills/sound-design/scripts/audio_qa.py",
+      "location": "write_reports, lines 188-195",
+      "observation": "Reports keyed only by input path stem in a shared report_dir.",
+      "impact": "Two different source paths with the same stem can overwrite each other's report.",
+      "status": "STATIC_VERIFIED_NOT_EXECUTED"
+    },
+    {
+      "file": "skills/sound-design/scripts/foley.py",
+      "location": "main, lines 270-280",
+      "observation": "Writes predictable generated SFX filenames and manifest to --out without a no-clobber gate.",
+      "impact": "Prior user SFX content at same path can be overwritten.",
+      "status": "STATIC_VERIFIED_NOT_EXECUTED"
+    }
+  ],
+  "missing_qualification": [
+    "Safe output plan and confined scratch workdir; no path deletion or overwrite absent explicit action-scoped user approval.",
+    "No implicit uv dependency installation, external judgment API use or OpenRouter disclosure without approval.",
+    "Rights check for source music, SFX, sample uploads and generated/remixed recordings; root MIT does not license users' audio.",
+    "Security scanner on exact tree and executed adversarial/read-write tests; neither ran.",
+    "Representative audio file acceptance for tempo, splice confidence, audibility, loudness and true-peak correctness, with real listening review."
+  ],
+  "static_scenarios": [
+    {
+      "scenario": "User supplies --out-dir pointing to a folder with unrelated work",
+      "expected": "Refuse to delete unrelated files and request an isolated empty output destination.",
+      "source_status": "FAIL: run_blind deletes it unconditionally if it exists; not executed."
+    },
+    {
+      "scenario": "User reuses an existing mix output path",
+      "expected": "Require overwrite approval and preserve originals.",
+      "source_status": "GAP: scripts overwrite expected filenames; not executed."
+    },
+    {
+      "scenario": "One control segment sounds like an obvious edit",
+      "expected": "Compare blind controls independently rather than trusting edit score.",
+      "source_status": "Mechanism included; judged listening not executed."
+    }
+  ],
+  "rights": {
+    "root_license": "MIT verified text at exact source pin",
+    "copy_allowed": "CONDITIONAL",
+    "note": "MIT covers original source code and text subject to notice; external music rights, user voice recordings and paid/hosted review model outputs are separate."
+  },
+  "actual_behavioral_tests": "NOT_RUN",
+  "security_scan": "NOT_RUN",
+  "unchanged_use_approved": false,
+  "featured": false,
+  "public_catalog_change": 0,
+  "governed_source_admission": false,
+  "next": "Publish a destructive-path defect as a required repair to upstream or independent adaptation. In an isolated authorized test project, implement path containment/no-clobber and verify real-world audio quality before considering another qualification."
+}

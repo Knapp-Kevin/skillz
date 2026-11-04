@@ -1,0 +1,3331 @@
+{
+ "schema_version": 1,
+ "recorded_at": "2026-11-03",
+ "source_repository": "Knapp-Kevin/skillz",
+ "executor": "Authorized external host (Claude Code cloud session) during explicit REPOSITORY_MAINTENANCE; no repository-owned scanner, CI, script or runtime used or added.",
+ "scanner_install": "pip install git+https://github.com/NVIDIA/SkillSpector.git@c7958a3268d9498644b22edb75d0f051bbc8cbfc into an isolated host virtualenv; reported version 2.12.0, package_vcs_metadata revision matches pin.",
+ "invocation": "skillspector scan <exported exact git tree> --no-llm --fail-on-findings --fail-on-incomplete --format json",
+ "package_export": "git archive <commit>:<package path> into an empty per-tree directory; package_git_tree_sha is git rev-parse <commit>:<path>.",
+ "egress": "No LLM provider configured or requested (metadata.llm_requested=false). No package content sent to third-party models. Raw reports kept only in ephemeral host scratch; report_sha256 digests persisted.",
+ "state_rule": "state equals the fail-closed scanner gate result. host_disposition values are proposals; no record is promoted to findings-reviewed without maintainer acceptance. A pass is static security evidence only, not semantic, behavioral or user-fit approval.",
+ "record_type": "external-host-exact-tree-security-scan-first-party",
+ "scope": "All 51 SKILL.md packages under skills/ and engine/skills/ at current main (44 first-party user-facing + 7 engine procedures), plus the exact changed final trees of draft PRs #686 (5) and #673 (16).",
+ "counts": {
+  "PR #673": {
+   "failed": 3,
+   "incomplete": 3,
+   "passed": 10
+  },
+  "PR #686": {
+   "passed": 5
+  },
+  "main": {
+   "failed": 1,
+   "incomplete": 25,
+   "passed": 25
+  }
+ },
+ "baseline_reconciliation_main": {
+  "no_2026_10_10_baseline_record": 6,
+  "changed_tree_passed_to_incomplete": 1,
+  "same_tree_same_state": 44
+ },
+ "baseline_reconciliation_note": "Unchanged trees reproduce the 2026-10-10 baseline state exactly; the scanner is deterministic for these packages at this pin. Report digests differ because reports embed scan time and local path.",
+ "records": [
+  {
+   "package": "engine/skills/skill-audit",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "5ea7fa7d93e24d1380657531b686b56a05b9ff26",
+   "skill_md_blob_sha": "65a5dfa1aa915ab18bcec1764adfdbacd14cf874",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:27.643545+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 8,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "MEDIUM"
+   },
+   "active_findings": [
+    {
+     "id": "AS3",
+     "category": "Agent Snooping",
+     "pattern": "Skill Enumeration",
+     "severity": "MEDIUM",
+     "confidence": 0.8,
+     "file": "SKILL.md",
+     "line": 25,
+     "matched_text": "skills/skill-bootstrap/SKILL.md",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "Reference to sibling repository procedure engine/skills/skill-bootstrap/SKILL.md for routing; it does not enumerate or exfiltrate host skills."
+    }
+   ],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "0d8835f5b892f01ecf3e5d96e37bc72b324656c5e3ca11a9310ea7c33e1e7654",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:25"
+   ],
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "engine/skills/skill-bootstrap",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "b1b9a0e79053041a04c6f259c8597f84ba57d3bf",
+   "skill_md_blob_sha": "b4fa7eaa7b2eadb4d85580897815c054baf88711",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:30.913767+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 7,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "MEDIUM"
+   },
+   "active_findings": [
+    {
+     "id": "EA2",
+     "category": "Excessive Agency",
+     "pattern": "Autonomous Decision Making",
+     "severity": "MEDIUM",
+     "confidence": 0.7,
+     "file": "SKILL.md",
+     "line": 82,
+     "matched_text": "assume permission",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "Line 82 says 'Do not assume permission based on root repository licensing' - a restriction on autonomous decisions."
+    }
+   ],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "ea0d86454ef65d67409f018051cdcccd4370116b71086043215c57ce723bca49",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 4,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:136",
+    "SKILL.md:142",
+    "SKILL.md:150",
+    "SKILL.md:195"
+   ],
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "engine/skills/skill-eval",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "9f5f63652b7e058b58e71c7e44171ab5088c3823",
+   "skill_md_blob_sha": "0b97075aade486d0018f217723586c242f65a712",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:37.069948+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 0,
+    "coverage_percent": 0.0,
+    "fully_inspected_files": 0,
+    "partially_inspected_files": 1,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "568eea29f65fbe73d959e2cb1f5aca470122dd69daf09b85042e3b5808edfd70",
+   "incomplete_reasons": {
+    "static_parse_limit": {
+     "count": 1,
+     "meaning": "A file exceeded a static parse limit; partial coverage."
+    },
+    "reference_missing": {
+     "count": 3,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:32",
+    "SKILL.md:48",
+    "SKILL.md:49",
+    "SKILL.md:None"
+   ],
+   "degraded_analyzers": [
+    "static_patterns_tool_misuse"
+   ]
+  },
+  {
+   "package": "engine/skills/skill-forge",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "2d027ea38da73b7122a024cbd94ca591ba1f4e32",
+   "skill_md_blob_sha": "b12e399d6b8577ec54d3e3057a80657929cf0eeb",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:40.415097+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 28,
+    "severity": "MEDIUM",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "HIGH"
+   },
+   "active_findings": [
+    {
+     "id": "MP3",
+     "category": "Memory Poisoning",
+     "pattern": "Memory Manipulation",
+     "severity": "HIGH",
+     "confidence": 0.8,
+     "file": "SKILL.md",
+     "line": 28,
+     "matched_text": "new name is",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "Line 28 says 'Do not create a duplicate merely because a new name is available'; no memory or identity manipulation."
+    },
+    {
+     "id": "AS3",
+     "category": "Agent Snooping",
+     "pattern": "Skill Enumeration",
+     "severity": "MEDIUM",
+     "confidence": 0.8,
+     "file": "SKILL.md",
+     "line": 22,
+     "matched_text": "skills/skill-bootstrap/SKILL.md",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "Reference to sibling repository procedure engine/skills/skill-bootstrap/SKILL.md for routing; it does not enumerate or exfiltrate host skills."
+    }
+   ],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "cff70859466a9632a6b90606bb511b89577011c3a64f5eb72380e8069d658970",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 5,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:22",
+    "SKILL.md:29",
+    "SKILL.md:32",
+    "SKILL.md:34",
+    "SKILL.md:36"
+   ],
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "engine/skills/skill-sync",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "214f442b3ecca7623bd61d27e8377e83184cecfb",
+   "skill_md_blob_sha": "3503882d51acb67e0ab848e2e4b7884a1dbd35b1",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:43.699088+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "3f9c199a8625e1d52242e071ec5d3114beef7bfd4a7975f82777d90a4f8a08b8"
+  },
+  {
+   "package": "engine/skills/skills-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "945eae12def16e3e804a337f7d3edc208554dd5a",
+   "skill_md_blob_sha": "23bff9873d8dfc2141103aae2248f5d47cf19467",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:47.156873+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "4af29c41693b10635d501b0fb0e74250e6bd2c1820e91d94092799d417a6bd2a",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:24"
+   ]
+  },
+  {
+   "package": "engine/skills/source-vetting",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "591db689f8505eafc008bf64614c722acb8998a4",
+   "skill_md_blob_sha": "ccc9121e6b7fa21eadba661b634978e59e8a85a6",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:50.741576+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "f74b29a1149696d7cb324450cede66c8738a98be50470a5ae32e50cb939af73d"
+  },
+  {
+   "package": "skills/agent-home-doctor",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "715150a85cf47b6f68e08735996f5fe394deac72",
+   "skill_md_blob_sha": "d8b41939deec81ef67b96398ae54afee72075459",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:54.527274+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "a991b6d92916a3fef60a269416e38007e10373c56366d6f6c06339c4bbff8ece"
+  },
+  {
+   "package": "skills/agent-postmortem",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "2859a7ce0b9424e52c4c044cef7074bcd924af8a",
+   "skill_md_blob_sha": "fb8777d18a27a89f47f9e8a022385b480d49f7c0",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:06:58.490630+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "528eb804011845f6fdc69c9fc568c78f0a685df75c7ff0c6613a53fb4548c56e"
+  },
+  {
+   "package": "skills/automation-receipts",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "cdf9aa3df667e2b1156b310d924b0559716c7d6a",
+   "skill_md_blob_sha": "1d6c076f2888a0d6c8b2be1552717b96e14a341b",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:02.357553+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "033816f6370fc7602420a1006dfb450c58e23a6faa31e4206985048aaf322c3e"
+  },
+  {
+   "package": "skills/brief-writer",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "c6d40fbd06c310a0259548c37c2d5338bfc42903",
+   "skill_md_blob_sha": "0eb629e92e53a03c26df0ebef15662e1888c25b0",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:07:05.977739+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "9c47a1d8d42dfd80325a9bac7c52760d751a200a60a59eb9b289b7d18cd074f5"
+  },
+  {
+   "package": "skills/career-radar",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "cfcbff6d7d3b1d6300e3287a3e01caebd8855104",
+   "skill_md_blob_sha": "a17f9b53b9ed22c2cd4f715effd73ec7585a316b",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:09.874513+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "e8662e1f4dd2a9d58a3e84988e63fe714e13673a32d7753c210fc981093e1700"
+  },
+  {
+   "package": "skills/claude-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
+   "skill_md_blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:13.296521+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "ba7ea19bd60fcc203f16eef70bc2cf02332325e0ce96cfca7d0632db14c8bb9a"
+  },
+  {
+   "package": "skills/compare",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "6d67ced9cf7a588ad35774918ed07b9a2a6d7f71",
+   "skill_md_blob_sha": "b933a8266b8eda18807de9b9717436c54af0362d",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:17.031291+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "3f23de07faacd105810c1e30a0bc71e8af57f35f503f55adc90462b7f7442c98"
+  },
+  {
+   "package": "skills/daily-briefing",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "a43d8314e09a10227eac37c710261160b0a887d2",
+   "skill_md_blob_sha": "64ee4849a7a06860d8f6ddbd23ae5d42591ffee1",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:20.780695+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "8fecb5679909ba6a42219825724dcb744356c50b6b92fe5cbdeb2e8988f4a732"
+  },
+  {
+   "package": "skills/decision-log",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "286f2aac12926ba8fba0836c35dce3daf2d83965",
+   "skill_md_blob_sha": "56e5c574c295546c9e654a9e6a14a9814136f2f4",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:24.838598+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "bcec4b8955ee331815103ab218a431e130785cc7a41b846a32e85d86dd463f1d",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:24"
+   ]
+  },
+  {
+   "package": "skills/deck-outline",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
+   "skill_md_blob_sha": "63c943992417148d010551238a15259d4968cb55",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:28.792459+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "c2fa66c490064c894ff049838c0d60a4aeb62e878f9fb1338cfb6d615de090e7"
+  },
+  {
+   "package": "skills/deep-dive",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "aca9a5ead634fa4e7bf986ab11c38da228890e56",
+   "skill_md_blob_sha": "b518f172abce491d979cf8f8ef854a61605b2790",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:32.475519+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "8dc790e2654e6fc18abfce024886d13fcaafb6e7a9658450ba1c14fccf06a79a"
+  },
+  {
+   "package": "skills/deepseek-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "10aa4e6d8b2cf89ac9c27b538684de75581653e0",
+   "skill_md_blob_sha": "e5778521bac5459432731814755dd2c4d60ff705",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:07:36.416941+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "7f9a8ee6eac90959a1dc61ca3170a49218a3a80b7b3f3555b9fadd24cb6de7d5",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/devlog-draft",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "867a94024356cc4545c4fc712b247c9fc0cd0244",
+   "skill_md_blob_sha": "073f18ba2c2f7de21015cd072741c395335e9f2e",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:40.300758+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "0cf5c22532ae287c2ef766514529f0230d53552e8876f5ab83f9adaf855fe711",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:25"
+   ]
+  },
+  {
+   "package": "skills/fact-check",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "a922bd0405fe1779b43349ac2336f71a86e8e099",
+   "skill_md_blob_sha": "e58dea59671c8a7c537e27403d6f52e466bf8d86",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:44.171021+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "506ed6a38e9aae5b773adc45949b81a6600b65e9c5fcdcf174e8582c96c7c076"
+  },
+  {
+   "package": "skills/finance-review",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
+   "skill_md_blob_sha": "86bdf2f9d6ebca2932612212882f6a915709203d",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:07:47.917444+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "ba9e787b7349596727d68a688777a26eae6251eaf9b3444877b0b7ce6816ad2d"
+  },
+  {
+   "package": "skills/gemini-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "b08a023ebe015ef072b1c3acfb566c218c494508",
+   "skill_md_blob_sha": "8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:07:51.712806+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "bb779a4e8719254ee4a37967fe4a5464d1cab5f6926f7615632d542e095711d7",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/github-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "3e914c97c76ec2e5ef9f861ee434516dfbd70455",
+   "skill_md_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:07:55.326058+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "db20ed100507b6e2b77dfe2edefeadc4da8bd977b3f46db63a7176e995da6f6e",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 2,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:27",
+    "SKILL.md:53"
+   ]
+  },
+  {
+   "package": "skills/glm-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "32584b50b6a82a5186a6133539c33ed702f6f3a9",
+   "skill_md_blob_sha": "3bfbb84c43a76413897b30ad675d1ba5d8b8a1de",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:07:59.143748+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "9b8d7390c84148f994d1e874463188bbc63dcd76658791bf5b4be86365d9f99f",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/governance-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "af3a1710ea1c187956bd6034e52327e2f257b8d5",
+   "skill_md_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:02.688746+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "884949c69545340a7cdfd0c697af2238a482a243ea3b35463d157d3048c49491",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 2,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:27",
+    "SKILL.md:33"
+   ]
+  },
+  {
+   "package": "skills/handoff-writer",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "430f96ac8b01b0ade5ffbe680131d1e2d575af2d",
+   "skill_md_blob_sha": "8a789ea0dd3b1c89ccac9d50727b06007abcf5c1",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:06.201456+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 7,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "MEDIUM"
+   },
+   "active_findings": [
+    {
+     "id": "EA2",
+     "category": "Excessive Agency",
+     "pattern": "Autonomous Decision Making",
+     "severity": "MEDIUM",
+     "confidence": 0.75,
+     "file": "SKILL.md",
+     "line": 62,
+     "matched_text": "no verification",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "'no verification' occurs in 'If ... a State row has no verification method, write not established' - an anti-fabrication rule."
+    }
+   ],
+   "scanner_gate_result": "failed",
+   "state": "failed",
+   "report_sha256": "f2a2231ca9ace2de8a3796d5f0753157b82e591b13b3698acd43c168d3fa5bfe",
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "skills/hf-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "5bc8e3c60139688e4fc9ff0a7e2d10685701ca7a",
+   "skill_md_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:10.304729+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "997b7dd332bfcf3f1f265635cbfcb2acc2660c77a57d53fbbbf51e8cb13c75b6",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:32"
+   ]
+  },
+  {
+   "package": "skills/inbox-triage",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "b00a0c36f604147b4665e34a62aaffc608b8f246",
+   "skill_md_blob_sha": "c265af7280a9819ae1fc80292ba24a77c2b28ccd",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:08:13.890817+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "cca3f4b20ba4f6fad1d4926aa64e8546493e61f9442963adf45e8016d8c8669e"
+  },
+  {
+   "package": "skills/inference-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "7c7b0b48bba555f4e989d78a1d4463af933bdc05",
+   "skill_md_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:17.383025+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "efe9ae176b33804db180cd558ce76d4ff01bb31404e21f65cefc5c0e2192848e",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:36"
+   ]
+  },
+  {
+   "package": "skills/kimi-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "0b6d6d9d339448fe9baaea566ee28c2a2b8583ad",
+   "skill_md_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:21.237367+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "d0c2bc0f3108cc5945c4fbb41d367eaa972c69d0180e6c77659bdf2e670e8ab6",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/learning-plan",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "706728f600246427b77609ff3cd9904c1490218a",
+   "skill_md_blob_sha": "a544118bd121b354aec330f9a565a338868dd53e",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:08:24.982835+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "2eff9ab88420f7f02db58a4ad8834de55aa4729a452de67b79502163b201774a"
+  },
+  {
+   "package": "skills/llama-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "221db05d2638e6407eb608ba1225e17fdf0abb95",
+   "skill_md_blob_sha": "d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:28.431926+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "842571f1639477644b6fc60cf7ee58515ed7149b472dd6c8d3103421d5ea1b9b",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/mcp-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "fe568a39ebd18f11353f74ae4d567b785c07afa0",
+   "skill_md_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:31.795673+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "b1867fae2a09f5e64637d2fb46c6525fd4c3391375d7485411f8adc2de1507f9",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 3,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26",
+    "SKILL.md:52",
+    "SKILL.md:53"
+   ]
+  },
+  {
+   "package": "skills/mcp-vetting",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "d06472b10125e598253ca82564a43242433f58f7",
+   "skill_md_blob_sha": "806e79f593446ad15938249898e15230208f2d81",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:08:35.376002+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "f15eff9f47ed0a26e9bd3678f832bf81f6953b4f1e596c9b53f975802a4e6692",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 3,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:24",
+    "SKILL.md:28",
+    "SKILL.md:71"
+   ]
+  },
+  {
+   "package": "skills/memory-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "da8047567efa064415e0945542835c444fbe1b01",
+   "skill_md_blob_sha": "659441df0952f7db302835606068c812ed81d22f",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:39.060814+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "b42ccaf4aefb6cec1c105feeb6695d835d4ff55f59de1567de2d25fe237c0a8e",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:28"
+   ]
+  },
+  {
+   "package": "skills/mistral-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "cb9b3571e69a60d4f2fd76c52704202331f0efa3",
+   "skill_md_blob_sha": "4d2e092ee1cfdbd7127145926d48d6cf78b46ce1",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:42.507350+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "2ff4d198bd6ccb5d86b23dd3dc25a193bd72c6e1c13b070423fba00f475925d5",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/openai-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "aabca083ed4bef6e520089d39dba36fc545b892b",
+   "skill_md_blob_sha": "d6b98630525e16d392b3f50e67ae674332316310",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:46.191769+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "2f28654bf8579c96c1353b981487c1a5b0656479073ea67297ad906d3908f1b7",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/paper-digest",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "6820240e263bafbf832742f47310cab4958573a4",
+   "skill_md_blob_sha": "b2abf289b265b3d4a8508bda4a35083fa7c35f8a",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:08:49.624979+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "d727615ca90f2a57844b2e6b12188363481ec8aa6e296831079a9a172c2e7e53"
+  },
+  {
+   "package": "skills/permissions-review",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "71246bf93839c94885d43acd21ee3a4dc5704ef3",
+   "skill_md_blob_sha": "60e1d546e713cfa5b289def082dd73e8b326f029",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:08:53.314094+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "b991a750a2e2525befb554927f0ea5b5f0c9277897e7a4bb6c5d0f73098eaa8e",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 2,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:23",
+    "SKILL.md:24"
+   ]
+  },
+  {
+   "package": "skills/perplexity-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "819d6aadafdfb37887efda8bb7ed5aa42e8befea",
+   "skill_md_blob_sha": "ef8b1cfd50f464f91d02855eaad7d05032475493",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:08:57.126305+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "d7918cc260377c8e23eb9dd8e3bfa1efe9b01e8c75a4a31541d1255cda5b9a8c",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/qwen-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "0103e9d55e6c7e804dc765386644605b4ac2c072",
+   "skill_md_blob_sha": "e22ff1879ce563a76e733bc576bed80cf4cc5f12",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:09:00.539853+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "de01a88d6d2f284fbaa20b8731ec7d7f74c28c0fbd8d862c9bb8dc60062c9c53",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/repo-doctor",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "c2529253b35b5f90d58500091a0d1efbb1c14c2b",
+   "skill_md_blob_sha": "8bc7f360be091aac35d61652fe8a34ff7bee3060",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:04.064734+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "156ecb387dbe7d5b101e40505ba1d75455d2e4e44d072cc27373dd17cc4f959a"
+  },
+  {
+   "package": "skills/repo-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "bb8e4cac90acfadabf235a0b09435e7e2f8fa50d",
+   "skill_md_blob_sha": "8d78a04e0993069bc3ecc283c756e420969a88d1",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:07.479298+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "ad900c88199ab6b0439808fa27cc2534398f6df618b8eb1e23b47c1ec2367048"
+  },
+  {
+   "package": "skills/session-continuity",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
+   "skill_md_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:11.154405+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "e65c892adaa3b6b778212f644e071ad1dd3351437a94ce6a130cacc4a6a54b47"
+  },
+  {
+   "package": "skills/smallbiz-ops",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "979bf89b0a3d3ec2b8858462560b1a05ef100cdc",
+   "skill_md_blob_sha": "e33f99d0585d486a6bb3243aae9402bfc2cac0ec",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:14.710399+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "dbf4f705b8ab37a05b353dbb81b65da0c2ad3b26a5b9fe629087a19946f79f85"
+  },
+  {
+   "package": "skills/standup-writer",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "ff5aef8e22cad85d0423cc3ce50b857316b2dbdc",
+   "skill_md_blob_sha": "a1cd8678794c90bbaf4f5f2a70d469576ec4b633",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:18.171849+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "c96449d3f5641c5f7cc160d621a0153e316125f164c175b599540fb66e531001"
+  },
+  {
+   "package": "skills/task-surface",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "084c416caea0bf8413859dff06cbc23370019168",
+   "skill_md_blob_sha": "97f1ba0b23f3f70da1e39504a1966a3cebd79398",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:21.840139+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "ed0c8a4ec280d1b23db062233c05e8794b2ab0d19035dab5b4a2a5cd7cee9ed2"
+  },
+  {
+   "package": "skills/todo-harvester",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
+   "skill_md_blob_sha": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:25.510576+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "c5f3714e62738e5e367e11ac6f84e9c1068624c740433b051a36a5e4ac31bb94"
+  },
+  {
+   "package": "skills/week-in-review",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "36c5b72bdba27b46118b5745032ea066ecf8cdb9",
+   "skill_md_blob_sha": "cd6671df6042d5a864850f6362d0947d61eb7357",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:29.257359+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "ad71721e3521ed298c57220c6675600e71fd77c3eba8504550fee00563698aaa"
+  },
+  {
+   "package": "skills/xai-pulse",
+   "scope": "origin/main 09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "source_revision": "09c93dd3d7dc7b2536a078ff5c8ea0aad1d4cc23",
+   "package_git_tree_sha": "68a3a03703847cf32d71f74f33068be360315d25",
+   "skill_md_blob_sha": "ec172826db6d811dbea1985c8962ad342c310412",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:09:32.817367+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "1d47b77e35013b9a3943eb62e32055d463fbcb933ec6fe31c5daf1e90f7638f7",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:26"
+   ]
+  },
+  {
+   "package": "skills/agent-postmortem",
+   "scope": "PR #686 head 7970edf438afb67cee91d87fe79174623800d0cb (unmerged draft)",
+   "source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+   "package_git_tree_sha": "cceb115c92467cd3be2a997484ef6756a47b6f58",
+   "skill_md_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:36.449910+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "1928c233ba78aa50b4c093c48e273b4a0b036c53019430ef1f24dd146ded197a"
+  },
+  {
+   "package": "skills/brief-writer",
+   "scope": "PR #686 head 7970edf438afb67cee91d87fe79174623800d0cb (unmerged draft)",
+   "source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+   "package_git_tree_sha": "3f45875f509b1a20fca4c1847c8122b549a76126",
+   "skill_md_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:09:40.327996+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "88762e926b4d8074e6c40a5aba96c118027ffd59b2035be1d24f47d89cd1cc68"
+  },
+  {
+   "package": "skills/compare",
+   "scope": "PR #686 head 7970edf438afb67cee91d87fe79174623800d0cb (unmerged draft)",
+   "source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+   "package_git_tree_sha": "4ceefd2c39842ebb3e711a2f82d9840131588054",
+   "skill_md_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:44.055349+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "96861ff66de3db8cadd55cba9c65d8c0148a1c3a50036ab27691a27b2051646b"
+  },
+  {
+   "package": "skills/deep-dive",
+   "scope": "PR #686 head 7970edf438afb67cee91d87fe79174623800d0cb (unmerged draft)",
+   "source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+   "package_git_tree_sha": "6119cf00ef09a1bb4097c28c3ed4aac8909b7037",
+   "skill_md_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:47.436721+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "215d23012d07079fbbfaae0e7a4e5a320fd764be506eebee2bc20f5dfdcc1d7b"
+  },
+  {
+   "package": "skills/fact-check",
+   "scope": "PR #686 head 7970edf438afb67cee91d87fe79174623800d0cb (unmerged draft)",
+   "source_revision": "7970edf438afb67cee91d87fe79174623800d0cb",
+   "package_git_tree_sha": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+   "skill_md_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+   "package_file_count": 1,
+   "scan_timestamp": "2026-11-03T22:09:50.884339+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "2618f67bb9de1fefbbc04c7f13039b09caeff109e3fc44748bd51674c5101c7c"
+  },
+  {
+   "package": "skills/deepseek-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "8984411410ccae81474a93e53c28a180ff61ec25",
+   "skill_md_blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:09:54.396988+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "e64e823648a2f1e44c7a7d81de68eab957fae14f17a789a7aff11e92a323eff0"
+  },
+  {
+   "package": "skills/gemini-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
+   "skill_md_blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:09:57.797061+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "e688da31e35ae9912ed2b521c72d3d063943e2d97951d9d8970497d6a05fd30b"
+  },
+  {
+   "package": "skills/github-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "d39fabd43cdc4a450491d0bb7911211e767c069c",
+   "skill_md_blob_sha": "5dc5cb3fd2527dcd39765ab66a9676146f91f1d7",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:01.294683+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "fea1490c52e9bffe44ded33be8503f093ce0a0c4c71b883ecb63d2deee7762dc",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:55"
+   ]
+  },
+  {
+   "package": "skills/glm-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
+   "skill_md_blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:04.948634+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "3e6888a5c32a5beab9105c31a120674f9662a24e616848a06be40ce4bb2fe55f"
+  },
+  {
+   "package": "skills/governance-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "ed68dd912e3e05fcb55bb1249fb43411535d2970",
+   "skill_md_blob_sha": "a444566237940b43944bc1f5e0afb55708d84123",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:08.442970+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 3,
+    "severity": "LOW",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "LOW"
+   },
+   "active_findings": [
+    {
+     "id": "EA3",
+     "category": "Excessive Agency",
+     "pattern": "Scope Creep",
+     "severity": "LOW",
+     "confidence": 0.75,
+     "file": "SKILL.md",
+     "line": 37,
+     "matched_text": "extend the scope",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "'Never silently extend the scope' - recurrence bounding instruction."
+    }
+   ],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "e22e3de158d5565d5917f8bba8d31134d93b7f84898f97b0f30ef65ebe34e49c",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 1,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:27"
+   ],
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "skills/hf-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "86f551bd49fb00a48cb5c669715ee979b0cd9758",
+   "skill_md_blob_sha": "3250a7c3ed49783329220536e8ef4a1f7b9bb286",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:12.086774+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 3,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "LOW"
+   },
+   "active_findings": [
+    {
+     "id": "EA3",
+     "category": "Excessive Agency",
+     "pattern": "Scope Creep",
+     "severity": "LOW",
+     "confidence": 0.75,
+     "file": "SKILL.md",
+     "line": 41,
+     "matched_text": "extend the scope",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "'Never silently extend the scope' - recurrence bounding instruction."
+    }
+   ],
+   "scanner_gate_result": "failed",
+   "state": "failed",
+   "report_sha256": "8ba1fd770ee48526bf0a6f5ab5e2bc01e4f0e2b7f085b782fe6c7740a79abf99",
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "skills/inference-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "badb2e7584a078aa045fda64a642dfe713f156b0",
+   "skill_md_blob_sha": "7f152bc910bf5a225170f7ab16c0c47c641613da",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:15.764055+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 3,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "LOW"
+   },
+   "active_findings": [
+    {
+     "id": "EA3",
+     "category": "Excessive Agency",
+     "pattern": "Scope Creep",
+     "severity": "LOW",
+     "confidence": 0.75,
+     "file": "SKILL.md",
+     "line": 50,
+     "matched_text": "extend the scope",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "'Never silently extend the scope' - recurrence bounding instruction."
+    }
+   ],
+   "scanner_gate_result": "failed",
+   "state": "failed",
+   "report_sha256": "082dc761a3f000e42b32d8d46de5fdb982f8489a8b1097389be5115dcfa79bd1",
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "skills/kimi-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "42c81d3fed40c2f5196b5a8b97b4332283aa4f17",
+   "skill_md_blob_sha": "3e2e6cc836ddb05e0da6a7dafb7048a30fd9921e",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:19.550164+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 3,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "LOW"
+   },
+   "active_findings": [
+    {
+     "id": "EA3",
+     "category": "Excessive Agency",
+     "pattern": "Scope Creep",
+     "severity": "LOW",
+     "confidence": 0.75,
+     "file": "SKILL.md",
+     "line": 35,
+     "matched_text": "extend the scope",
+     "host_disposition": "false-positive-proposed",
+     "rationale": "'Never silently extend the scope' - recurrence bounding instruction."
+    }
+   ],
+   "scanner_gate_result": "failed",
+   "state": "failed",
+   "report_sha256": "524f1213bdf05180e28ec0713943f0e7a33f5b29a73b19362eed51ce33c518c1",
+   "maintainer_acceptance": "PENDING - all findings proposed false positive; state stays fail-closed until a maintainer accepts (then findings-reviewed if coverage is complete)."
+  },
+  {
+   "package": "skills/llama-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "53dbd090ce88c406296ff84fce4faa61534044cd",
+   "skill_md_blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:23.216253+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "a983af295d1147b5b6c07cd3244ba5987277eb1d06323ccef9ad21f2469ad242"
+  },
+  {
+   "package": "skills/mcp-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "cba92c07d1eb95de5a6ed771f98a4cabb95e56b8",
+   "skill_md_blob_sha": "d59296c2fcc6d287a1cc38a890bde34d0fcf43fa",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:26.730402+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "incomplete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 22,
+    "severity": "MEDIUM",
+    "recommendation": "CAUTION",
+    "max_issue_severity": "HIGH"
+   },
+   "active_findings": [
+    {
+     "id": "AS2",
+     "category": "Agent Snooping",
+     "pattern": "MCP Config Access",
+     "severity": "HIGH",
+     "confidence": 0.9,
+     "file": "SKILL.md",
+     "line": 55,
+     "matched_text": "mcp.json` or equivalents) **only** when the user has separately authorized the exact local file/path and read scope for ",
+     "host_disposition": "true-surface-bounded-proposed",
+     "rationale": "The skill names .mcp.json, but reads it ONLY with separate exact-path user authorization and forbids exposing secrets/endpoints. The access surface is real; the bound is explicit. Requires maintainer acceptance before findings-reviewed."
+    }
+   ],
+   "scanner_gate_result": "incomplete",
+   "state": "incomplete",
+   "report_sha256": "324d53e2bd36aee233cef45eaf8666a5d55ce5ed300d0fb69ccded20250190ba",
+   "incomplete_reasons": {
+    "reference_missing": {
+     "count": 2,
+     "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+    }
+   },
+   "incomplete_locations": [
+    "SKILL.md:54",
+    "SKILL.md:55"
+   ],
+   "maintainer_acceptance": "PENDING - at least one finding is a real access/egress surface; not eligible for findings-reviewed without explicit risk acceptance."
+  },
+  {
+   "package": "skills/memory-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "bc5e32b023a13bdd39e077d05f0a4ad43eb2aba2",
+   "skill_md_blob_sha": "d0b57c1da47b800cf0003149ef08a869068d5944",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:30.426501+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "01db39591f97490b6da6eab89d5e6692fa7a64d4c93eaa440725d99c847b0b82"
+  },
+  {
+   "package": "skills/mistral-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
+   "skill_md_blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:33.996787+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "07dff5e71c022143c561159ab992442d56c3ba71739fe6240dd265f94502a03b"
+  },
+  {
+   "package": "skills/openai-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
+   "skill_md_blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:37.800679+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "fa262b4d34cf18deb1ae406add049a50c61c2477e3ed78cb68ea93f8a59187ac"
+  },
+  {
+   "package": "skills/perplexity-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "2929295240f02db18afc52eeb44a8d3c30ec8346",
+   "skill_md_blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:41.274278+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "bde5fcae85a85b80357551dbce4f764695db953f1f38c13edc170398b6e5cd1b"
+  },
+  {
+   "package": "skills/qwen-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "e328cb591e98f994d2646bae448cb779c6adee06",
+   "skill_md_blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:44.746552+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "b8f8791c3509540a611250b489dbb755f28b7117f1d6268b1e2ce3ac33e575fc"
+  },
+  {
+   "package": "skills/xai-pulse",
+   "scope": "PR #673 head aa59c36f1298c28bc399a13e2e39354663de8811 (unmerged draft)",
+   "source_revision": "aa59c36f1298c28bc399a13e2e39354663de8811",
+   "package_git_tree_sha": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+   "skill_md_blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
+   "package_file_count": 2,
+   "scan_timestamp": "2026-11-03T22:10:48.430817+00:00",
+   "scanner": {
+    "name": "NVIDIA SkillSpector",
+    "release": "v2.12.0",
+    "commit": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+    "mode": "static-only",
+    "gate_options": [
+     "--no-llm",
+     "--fail-on-findings",
+     "--fail-on-incomplete"
+    ]
+   },
+   "llm_requested": false,
+   "coverage_status": "complete",
+   "coverage": {
+    "total_components": 2,
+    "scanned_components": 2,
+    "coverage_percent": 100.0,
+    "fully_inspected_files": 2,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0
+   },
+   "risk": {
+    "score": 0,
+    "severity": "LOW",
+    "recommendation": "SAFE",
+    "max_issue_severity": "NONE"
+   },
+   "active_findings": [],
+   "scanner_gate_result": "passed",
+   "state": "passed",
+   "report_sha256": "dd3e41fbddb3472a4494e202726a25ffce751c3749bfe1b3f5c324a1817aec01"
+  }
+ ]
+}
