@@ -63,6 +63,6 @@ A request to triage now **never** authorizes recurring Gmail reads or background
 
 ## Notes
 
-- Gmail is accessed through the connected Gmail MCP tools only — never raw API calls.
+- Email is accessed only through a user-authorized, scoped host Gmail connector when available. No raw or self-managed API credentials. If no permitted connector exists, report the missing source and offer a workflow using messages explicitly supplied by the user; do not silently search other accounts.
 - Strictly draft-only: this skill never sends mail, archives, labels, or deletes anything. Every mutation requires the user's explicit approval after seeing the exact change.
 - When a message is ambiguous between piles, prefer act over archive and say why — a false "act" costs seconds; a false "archive" loses a thread.
