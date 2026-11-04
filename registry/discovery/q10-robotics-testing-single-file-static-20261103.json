@@ -1,0 +1,110 @@
+{
+  "schema_version": "skillz-q10-robotics-static-v1",
+  "date": "2026-11-03",
+  "baseline_main_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+  "source": {
+    "repository": "arpitg1304/robotics-agent-skills",
+    "pin": "f9bc5467ff9ee3d23f1a1b0b29a649843bb6ad11",
+    "entrypoint": "skills/robotics-testing/SKILL.md",
+    "entrypoint_blob": "c2c2c3326591d49935381ffc43a9342b88b53e55",
+    "owned_package_tree": "79de981d57e0b64eee681d374720708fb7326f64",
+    "owned_file_count": 1,
+    "root_license": "Apache-2.0",
+    "root_license_blob": "c32fd4634d8ba91fb8755092a711f0e95711cf98"
+  },
+  "method": "Entire pinned single-file SKILL.md read; full root Apache-2.0 text checked and source README inspected. Exact pinned Git tree and blob matched. Static code review and constant arithmetic check only, no ROS runtime/simulation/hardware execution.",
+  "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 0,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 0,
+    "effectiveness_design": 1
+  },
+  "rubric_rationale": {
+    "trigger_precision": "Specific ROS/robotics unit, integration, mock, simulation, HIL and regression test triggers; no narrow out-of-scope guard for deployed robot safety.",
+    "procedural_clarity": "Clear tiered testing progression with examples and anti-patterns.",
+    "authority_safety": "Integration examples publish to ordinary ROS topic names and launch ROS nodes; no mandatory isolated ROS_DOMAIN_ID, simulation-only namespace, physical actuator disconnection or hardware owner authorization.",
+    "failure_handling": "Shows negative tests/timeouts, but golden-file test auto-creates baseline from current code and skips if missing; failures can be concealed by first-run acceptance.",
+    "evidence_discipline": "Examples include compile/runtime defects and a wrong strict assertion on rounded quaternion; no proof of representative code execution or tested fixtures.",
+    "dependency_coherence": "Only one owned SKILL.md; snippets rely on project-specific ROS packages, Message types, pytest, hypothesis, numpy, MuJoCo, and GHA dependencies with undeclared example imports.",
+    "portability_honesty": "ROS2 Humble / Ubuntu-22.04 YAML and ROS-specific runtime assumed; not universal across distros, hardware, or agents.",
+    "usefulness_differentiation": "Testing pyramid, property checks, deterministic replay and simulation-before-HIL structure are transferable engineering practices.",
+    "adversarial_resilience": "Does not guard against test-to-live-robot contact; auto-writing golden baseline lets regressions become accepted on a missing fixture.",
+    "effectiveness_design": "Coherent coverage of test layers, but claimed actionable code has concrete defects and real hardware safety is unproven."
+  },
+  "score_20": 11,
+  "decision": "REJECT_UNCHANGED_KEEP_REFERENCE_IDEAS",
+  "positive_methods": [
+    "Testing pyramid with separate unit/integration/simulation/HIL/field layers",
+    "Property-based/round-trip checks and deterministic-replay concepts",
+    "Controlled real-hardware acceptance should follow simulation and lower-risk tests"
+  ],
+  "critical_source_findings": [
+    {
+      "path": "skills/robotics-testing/SKILL.md",
+      "lines": "347-372",
+      "kind": "BUG",
+      "evidence": "publish_next uses self.node but __init__ only initializes self.pub, self.step and self.trajectory",
+      "status": "STATIC_CONFIRMED"
+    },
+    {
+      "path": "skills/robotics-testing/SKILL.md",
+      "lines": "187-195",
+      "kind": "FALSE_NEGATIVE_TEST",
+      "evidence": "q2=[0.707,0.707,0,0], norm=0.9998489885977782, deviation=0.00015101140222184561 > 1e-10 threshold",
+      "status": "STATIC_ARITHMETIC_CHECK"
+    },
+    {
+      "path": "skills/robotics-testing/SKILL.md",
+      "lines": "375-397",
+      "kind": "UNREVIEWED_GOLDEN_WRITE",
+      "evidence": "if absent, np.save(golden_file, trajectory) then pytest.skip",
+      "status": "STATIC_CONFIRMED"
+    },
+    {
+      "path": "skills/robotics-testing/SKILL.md",
+      "lines": "252-313; 348-372",
+      "kind": "MISSING_ROS_GRAPH_ISOLATION",
+      "evidence": "Launches nodes and publishes to global topics; no explicit ROS_DOMAIN_ID, isolation namespace, hardware owner consent, or actuation prevention",
+      "status": "POTENTIAL_SAFETY_RISK_CONTEXT_DEPENDENT"
+    }
+  ],
+  "known_dependencies": [
+    "ROS2/rclpy and launch_testing; message definitions, project-specific planner/fixtures",
+    "NumPy/PyTest/Hypothesis; MuJoCo or target simulator",
+    "ROS2 Humble and Ubuntu sample CI; authorization for any deployment/robot actions"
+  ],
+  "rights": {
+    "license": "Apache-2.0 complete text inspected at exact source pin",
+    "copy_allowed": "CONDITIONAL",
+    "obligation": "Retain required upstream attribution, license and applicable notices; source code not copied into skillz."
+  },
+  "scenarios": [
+    {
+      "scenario": "Disconnected isolated simulator and synthetic image",
+      "expected": "No real hardware or adjacent ROS graph receives test topics",
+      "source_result": "No isolation requirement declared, not executed"
+    },
+    {
+      "scenario": "Golden baseline does not yet exist",
+      "expected": "Require human-confirmed expected values rather than accepting current trajectory",
+      "source_result": "Auto-creates gold and skips, static confirmed"
+    },
+    {
+      "scenario": "Test quaternion multiply preserves correct norm",
+      "expected": "Pass within meaningful tolerance",
+      "source_result": "Reference q2 is not normalized; tight assert may fail even with correct code"
+    }
+  ],
+  "security_scan": "NOT_RUN",
+  "behavioral_validation": "NOT_RUN",
+  "unchanged_use_approved": false,
+  "featured": false,
+  "public_count_delta": 0,
+  "next": "Review and independently test each code snippet, require ROS domain/namespace isolation and explicit owner consent for any hardware/HIL, preapprove baseline provenance. Do not equate simulation with hardware safety."
+}

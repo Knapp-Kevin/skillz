@@ -2,6 +2,7 @@
   "schema_version": "skillz-dashboard-sources-v1",
   "as_of": "2026-11-03",
   "historical_research_audit": "registry/discovery/capability-coverage-audit-20261102.json",
-  "current_featured_shelf": "registry/consumer-positive-references-q7-20261103.json",
-  "note": "The research source is a dated historical Q4 snapshot including rejected candidates. Featured methods are a bounded Q7 selection to study, not an all-corpus count or approved installations. Change source pointers here when new audited snapshots supersede them; generator validates each count."
+  "current_featured_shelf": "registry/consumer-positive-references-q8-20261103.json",
+  "note": "The research source is a dated historical Q4 snapshot including rejected candidates. Featured methods are a bounded Q8 selection to study, not an all-corpus count or approved installations. The qualification pipeline lists separately counted, non-additive populations with UNKNOWN where no defensible denominator exists. Change source pointers here when new audited snapshots supersede them; generator validates each count.",
+  "qualification_pipeline": "registry/qualification-pipeline-20261103.json"
 }

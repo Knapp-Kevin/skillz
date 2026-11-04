@@ -38,6 +38,53 @@ function dashboardData(audit,catalog,manifest){
  return {rows,totals,as_of:manifest.as_of,research_source:manifest.historical_research_audit,featured_source:manifest.current_featured_shelf,research_date:audit.as_of||"2026-11-02"};
 }
 
+function pipelineData(pipe,catalog){
+ if(!pipe)return null;
+ if(!Array.isArray(pipe.stages)||!pipe.stages.length)throw Error("Pipeline ledger has no stages");
+ const ids=new Set(),ok=v=>v==="UNKNOWN"||(Number.isInteger(v)&&v>=0);
+ for(const st of pipe.stages){
+   if(!st.id||!st.label||!st.population||!st.source||ids.has(st.id))throw Error(`Invalid or duplicate pipeline stage: ${st.id}`);
+   ids.add(st.id);
+   if(!ok(st.value))throw Error(`Pipeline value must be a whole number or UNKNOWN: ${st.id}`);
+   for(const [k,v] of Object.entries(st.parts||{}))if(!ok(v))throw Error(`Pipeline part must be a whole number or UNKNOWN: ${st.id}/${k}`);
+   if(st.parts_sum_to_value){const vals=Object.values(st.parts||{});if(vals.includes("UNKNOWN")||vals.reduce((a,b)=>a+b,0)!==st.value)throw Error(`Pipeline parts do not add up: ${st.id}`)}
+ }
+ const sel=pipe.stages.find(s=>s.id==="positively_selected");
+ if(!sel||sel.value!==catalog.valuable_references.length)throw Error("Pipeline positively_selected disagrees with the featured catalog");
+ const appr=pipe.stages.find(s=>s.id==="approved_unchanged");
+ if(!appr||appr.value!==(catalog.recommended_for_use_in_this_shelf||[]).length)throw Error("Pipeline approved_unchanged disagrees with the featured catalog");
+ return {as_of:pipe.as_of,stages:pipe.stages};
+}
+
+function fmt(v){return v==="UNKNOWN"?"UNKNOWN":Number(v).toLocaleString("en-US")}
+
+function pipelineCsv(p){
+ const lines=[["Stage ID","Stage","Count","Population counted","Breakdown","Source ledger"]];
+ for(const s of p.stages)lines.push([s.id,s.label,s.value,s.population,Object.entries(s.parts||{}).map(([k,v])=>`${k}: ${v}`).join("; "),s.source]);
+ return lines.map(cells=>cells.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\n")+"\n";
+}
+
+function pipelineMarkdown(p){
+ if(!p)return [];
+ const rows=p.stages.map(s=>`| ${md(s.label)} | **${fmt(s.value)}** | ${md(s.population)}${s.parts?" ("+md(Object.entries(s.parts).map(([k,v])=>`${k} ${fmt(v)}`).join(", "))+")":""} |`);
+ return [
+ "",
+ "#### Review and qualification pipeline",
+ "",
+ "Each row counts a **different population** with its own denominator. **Do not add rows together or read them as one funnel.** `UNKNOWN` means no defensible count exists yet.",
+ "",
+ "<details><summary>Show the pipeline stages, from discovery to approval</summary>",
+ "",
+ "| Stage | Count | What is counted |",
+ "|---|---:|---|",
+ ...rows,
+ "",
+ `[Pipeline CSV](docs/data/qualification-pipeline.csv) · [Pipeline source ledger](${p.source}) · as of ${p.as_of}`,
+ "",
+ "</details>"
+ ];
+}
+
 function dashboardCsv(model){
  const lines=[["Domain ID","Capability domain","Research-linked topics","Total topics","Research link coverage %","Valuable Reference methods","Approved-as-written methods","Subdomains with selected methods"]];
  for(const r of model.rows)lines.push([r.id,r.name,r.research_topics,r.total_topics,r.total_topics?Math.round(r.research_topics/r.total_topics*100):0,r.reference_methods,r.approved_methods,r.selected_topics]);
@@ -69,7 +116,7 @@ function dashboardSvg(model){
    if(pct>0)parts.push(`<rect x="${x+216}" y="${y-9}" width="${(pct*86).toFixed(2)}" height="12" rx="4" fill="url(#cyan)"/>`);
    parts.push(`<text x="${x+309}" y="${y+3}" font-size="13.5" fill="#e0eaf8" font-family="Arial,Helvetica,sans-serif">${row.research_topics}/${row.total_topics}</text>`);
    parts.push(`<rect x="${x+381}" y="${y-16}" width="129" height="26" rx="8" stroke="${chosen?"#816bc0":"#3d526c"}" fill="${chosen?"#433467":"#1a2c44"}"/>`);
-   parts.push(`<text x="${x+446}" y="${y+2}" text-anchor="middle" font-size="12.5" font-weight="${chosen?"700":"400"}" fill="${chosen?"#f2eaff":"#a7bdd5"}" font-family="Arial,Helvetica,sans-serif">${html(chosen?`${row.reference_methods} refs · ${row.selected_topics} topics`:"not featured")}</text></g>`);
+   parts.push(`<text x="${x+446}" y="${y+2}" text-anchor="middle" font-size="12.5" font-weight="${chosen?"700":"400"}" fill="${chosen?"#f2eaff":"#a7bdd5"}" font-family="Arial,Helvetica,sans-serif">${html(chosen?`${row.reference_methods} ref${row.reference_methods===1?"":"s"} · ${row.selected_topics} topic${row.selected_topics===1?"":"s"}`:"not featured")}</text></g>`);
   });
  }
  parts.push(`<text x="38" y="967" fill="#d4e1f1" font-size="15" font-family="Arial,Helvetica,sans-serif">Research breadth ≠ skill quality. Selection ≠ installation clearance. All 33 rows also appear in the README and CSV.</text></svg>`);
@@ -97,6 +144,7 @@ function dashboardMarkdown(model){
  rows,
  "",
  "</details>",
+ ...pipelineMarkdown(model.pipeline),
  "",
  `**[View the full CSV table](${csv})** · [Research source ledger](${model.research_source}) · [Featured reference ledger](${model.featured_source}) · [How the dashboard updates](docs/capability-dashboard-maintenance.md)`,
  "",
@@ -129,17 +177,31 @@ function selfTest(){
  const once=updateReadme(intro,body),twice=updateReadme(once,body);
  if(once!==twice||!once.includes("## Our featured methods:")||once.includes("\nOLD\n"))throw Error("README idempotence failed");
  try{dashboardData(fixture,{...catalog,valuable_references:[{id:"a",domain:"wrong",subdomain:"one"}]},manifest);throw Error("Expected invalid mapping error")}catch(e){if(e.message==="Expected invalid mapping error")throw e;}
+ const pipe={as_of:"2026-11-03",stages:[{id:"decisions",label:"Decisions",value:3,population:"exact keys",source:"x.json",parts:{reject:2,reference:1},parts_sum_to_value:true},{id:"eligible",label:"Eligible",value:"UNKNOWN",population:"distinct eligible",source:"x.json"},{id:"positively_selected",label:"Selected",value:1,population:"refs",source:"c.json"},{id:"approved_unchanged",label:"Approved",value:0,population:"approved",source:"c.json"}]};
+ const p=pipelineData(pipe,catalog),pm=pipelineMarkdown({...p,source:"x.json"}).join("\n");
+ if(!pm.includes("**UNKNOWN**")||!pm.includes("Do not add rows together"))throw Error("Pipeline UNKNOWN or non-additive warning missing");
+ if(!pipelineCsv(p).includes('"UNKNOWN"'))throw Error("Pipeline CSV lost UNKNOWN");
+ const bad=(m,mut)=>{try{pipelineData(mut(JSON.parse(JSON.stringify(pipe))),catalog);throw Error("Expected: "+m)}catch(e){if(e.message==="Expected: "+m)throw e;}};
+ bad("parts mismatch",x=>{x.stages[0].parts.reject=5;return x});
+ bad("non-integer",x=>{x.stages[1].value=1.5;return x});
+ bad("selected mismatch",x=>{x.stages[2].value=7;return x});
+ bad("negative",x=>{x.stages[0].value=-1;return x});
+ const withPipe=updateReadme(once,dashboardMarkdown({...model,pipeline:{...p,source:"x.json"}}));
+ if(updateReadme(withPipe,dashboardMarkdown({...model,pipeline:{...p,source:"x.json"}}))!==withPipe)throw Error("Pipeline README idempotence failed");
  return true;
 }
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const read=(p)=>readFileSync(resolve(ROOT,p),"utf8");
 const manifest=JSON.parse(read("registry/capability-dashboard-sources.json"));
-const model=dashboardData(JSON.parse(read(manifest.historical_research_audit)),JSON.parse(read(manifest.current_featured_shelf)),manifest);
+const catalogDoc=JSON.parse(read(manifest.current_featured_shelf));
+const model=dashboardData(JSON.parse(read(manifest.historical_research_audit)),catalogDoc,manifest);
+if(manifest.qualification_pipeline){model.pipeline=pipelineData(JSON.parse(read(manifest.qualification_pipeline)),catalogDoc);model.pipeline.source=manifest.qualification_pipeline;}
 const paths={
  "README.md":updateReadme(read("README.md"),dashboardMarkdown(model)),
  "docs/data/capability-dashboard.csv":dashboardCsv(model),
  "docs/assets/capability-dashboard.svg":dashboardSvg(model)
 };
+if(model.pipeline)paths["docs/data/qualification-pipeline.csv"]=pipelineCsv(model.pipeline);
 if(process.argv.includes("--self-test")){selfTest();console.log("dashboard self-test passed");process.exit(0)}
 if(process.argv.includes("--check")){
  let dirty=0;
