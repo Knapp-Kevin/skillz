@@ -12,12 +12,12 @@ metadata:
   category: Productivity
   display-name: Governance Pulse
   emoji: "⚖️"
-  version: 1.1.4
+  version: 1.1.5
 ---
 
 # Governance Pulse
 
-Topic pulse for AI governance: regulation, standards, security frameworks, and the emerging governance-tooling market. Directly feeds the operator's bound governance-product positioning (from operator profile or governance doc; generic market read when none is bound).
+Topic pulse for AI governance: regulation, standards, security frameworks, and the emerging governance-tooling market. May inform a governance product when a positioning summary is explicitly supplied or approved for this run. Otherwise provide a generic market read; do not inspect private operator profiles or governance documents to discover a product context.
 
 ## Execution Flow
 
