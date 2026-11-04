@@ -3,13 +3,13 @@ skill_name: career-radar
 source_id: local-skills
 local_path: "skills/career-radar/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: a17f9b53b9ed22c2cd4f715effd73ec7585a316b
+content_blob_sha: d2137aa35929e89ae6c86dec2b95a080b53699f0
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
-verification_status: verified
+reviewed_at: 2026-11-04
+verification_status: unverified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Changed source after issue #478 authority repair. Historical rubric score does not transfer to this exact source; independent ten-axis semantic, security and actual adversarial host behavior remain not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [retrieval-first, source-driven, synthesis, evidence-first]
   authority: [read-only]
   portability: [medium]
-notes: "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+notes: "Historical score below applies to prior source only. Current source instruction readback passed scheduling and private-source consent text checks; full semantic requalification, exact-package security and behavioral validation still pending."
