@@ -7,9 +7,9 @@ source_path: skills/inference-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
+source_snapshot_revision: 586191623952fda6272ae8ff28a585971891fe0f
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/inference-pulse/SKILL.md
 permission_tier: read-only
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
-exact_version_requalification: "Required for 7f152bc910bf5a225170f7ab16c0c47c641613da; previous semantic review was for bc90e5248c04c408c8c5a44bea62b1d66a7fb143. Security and behavioral validation not-run."
+exact_version_requalification: "Required for 790ed6eaef4acd957bff5f7777202faec579fb65. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
