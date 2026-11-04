@@ -33,7 +33,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 <!-- SKILLZ_CAPABILITY_DASHBOARD:START | generated: scripts/build-capability-dashboard.mjs -->
 ### Capability dashboard
 
-**33 capability areas** · **247 topics** · **210 topics with research leads** · **46 useful methods selected for study** · **0 approved unchanged**
+**33 capability areas** · **247 topics** · **210 topics with research leads** · **50 useful methods selected for study** · **0 approved unchanged**
 
 ![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across 33 domains.](docs/assets/capability-dashboard.svg)
 
@@ -60,7 +60,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 | Fiction / narrative / worldbuilding | 8 / 8 | 1 | 1 / 8 |
 | Technical writing | 7 / 7 | 1 | 1 / 7 |
 | Music composition | 0 / 8 | 9 | 8 / 8 |
-| Audio / voice / sound | 5 / 8 | 1 | 1 / 8 |
+| Audio / voice / sound | 5 / 8 | 2 | 2 / 8 |
 | Video / film | 5 / 9 | 1 | 1 / 9 |
 | Communication | 5 / 7 | 1 | 1 / 7 |
 | Analytics | 7 / 7 | 1 | 1 / 7 |
@@ -70,11 +70,11 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 | Sales | 7 / 7 | 1 | 1 / 7 |
 | Career | 6 / 7 | 2 | 2 / 7 |
 | Education | 6 / 7 | 1 | 1 / 7 |
-| Science | 6 / 7 | 2 | 2 / 7 |
+| Science | 6 / 7 | 3 | 2 / 7 |
 | Medicine | 6 / 7 | 1 | 1 / 7 |
 | Law | 6 / 7 | 1 | 1 / 7 |
 | Finance | 7 / 8 | 1 | 1 / 8 |
-| Robotics / IoT | 5 / 7 | 1 | 1 / 7 |
+| Robotics / IoT | 5 / 7 | 3 | 2 / 7 |
 | ML accelerators and compute | 7 / 7 | 1 | 1 / 7 |
 
 </details>
@@ -90,8 +90,8 @@ Each row counts a **different population** with its own denominator. **Do not ad
 | Package identity records (discovery) | **61,326** | G1–G3 pinned package identity records across 942 repositories (distinct package-tree SHAs 57,715) |
 | Exact static review decisions | **5,351** | distinct exact (source, pin, path) keys with a recorded candidate_decision (rejected unchanged 3,773, reference-only 1,574, deferred 4) |
 | Reference-only candidates awaiting a consumer decision | **1,522** | latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review (already on shelf 38, kept in research by Q8 qualification 12, rejected unchanged by Q8 qualification 2) |
-| Methods selected to study (Valuable Reference) | **46** | featured shelf entries (all 33 canonical domains now have at least one featured method) (canonical domains 33, career methods 2, science methods 2) |
-| Featured methods passing the static security gate | **8** | of 46 featured exact package trees, pinned SkillSpector, fail-closed (failed 7, incomplete 31) |
+| Methods selected to study (Valuable Reference) | **50** | featured shelf entries (all 33 canonical domains now have at least one featured method) (canonical domains 33) |
+| Featured methods passing the static security gate | **10** | of 50 featured exact package trees, pinned SkillSpector, fail-closed (failed 7, incomplete 33) |
 | First-party packages passing the static security gate | **25** | of 51 skills/ and engine/skills/ trees on main 09c93dd3 (failed 1, incomplete 25) |
 | Behaviorally validated packages | **0** | packages with executed representative and adversarial acceptance tests |
 | Approved for unchanged use | **0** | Recommended-for-use entries |
@@ -117,9 +117,9 @@ We maintain two **positive** recommendation types for methods selected to appear
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Featured-shelf limitation, not total inventory:** We have individually endorsed **forty-six useful methods as Valuable References** across **all thirty-three** capability domains — every domain now has at least one featured method. Two of them are featured **as references to study with their flaws documented, not to run as written** — a neurodivergence-aware resume method, and a dual-use protein-design package featured only for its separable, domain-neutral cost-discipline method (its biology and host-escalation text are not reproduced). Both were first held, then reconsidered: a Valuable Reference is a distinct, inspirational idea, not an installable package. Music composition has one useful conceptual method in **all eight subdomains**, but most music methods come from one publisher, and protected textbook excerpts and translations are **not relicensed by source MIT**. **All 46 complete Git package-tree identities are now verified** against pinned upstream commits, including four that were previously UNKNOWN. Eight of 46 pass the pinned static security scan; that is not a clearance. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Featured-shelf limitation, not total inventory:** We have individually endorsed **fifty useful methods as Valuable References** across **all thirty-three** capability domains — every domain now has at least one featured method. Two of them are featured **as references to study with their flaws documented, not to run as written** — a neurodivergence-aware resume method, and a dual-use protein-design package featured only for its separable, domain-neutral cost-discipline method (its biology and host-escalation text are not reproduced). Both were first held, then reconsidered: a Valuable Reference is a distinct, inspirational idea, not an installable package. A follow-up audit of the held and reference-only candidates then promoted four more distinct methods — Room Acoustics, Rerun URDF ingestion, Nav2 debugging, and MATLAB reliability analysis — that had been held only to keep an earlier pass lean, an extrinsic reason, not a quality one. Candidates held for low differentiation or active harm were left as they were. Music composition has one useful conceptual method in **all eight subdomains**, but most music methods come from one publisher, and protected textbook excerpts and translations are **not relicensed by source MIT**. **All 50 complete Git package-tree identities are now verified** against pinned upstream commits, including four that were previously UNKNOWN. Ten of 50 pass the pinned static security scan; that is not a clearance. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Forty-six featured method references
+### Fifty featured method references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -169,6 +169,10 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Finding real job openings | **Ghost-job-aware Job Search** | Find real postings and score ghost-job risk separately from how well you fit |
 | Fairer resumes for neurodivergent candidates | **Neurodivergence-aware Resume** | Surface bias and disclosure trade-offs, leaving every choice to the user (study-only — see limits) |
 | Spending wisely on big compute runs | **Scout-before-scale (Boltz)** | Try cheap options before one expensive run, gating each paid run (study-only — dual-use package, do not run) |
+| Diagnose a room acoustically | **[Room Acoustics (REW)](https://github.com/koltyj/REW-mcp/blob/1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5/plugin/skills/room-acoustics/SKILL.md)** | Decide which room problems EQ can fix and which need physical treatment |
+| Ingest a robot URDF correctly | **[Rerun URDF Ingestion](https://github.com/rerun-io/rerun/blob/6f39b09211b869d6e262083cfddefa392244088d/skills/rerun-urdf/SKILL.md)** | Ingest a robot URDF so every frame connects to one root, or fail loudly |
+| Debug a robot navigation stack | **[Nav2 Navigation Debugging](https://github.com/robium-ai/robium/blob/ce944953d11ccdbd32613c4746389bc78a24e8c5/skills/navigation/SKILL.md)** | Pinpoint the first broken link in a robot navigation stack, with evidence |
+| Analyze failure/life data | **[MATLAB Reliability Analysis](https://github.com/matlab/matlab-agentic-toolkit/blob/032b4b605999b1f4adecaac1efa1c9faad41adf6/skills-catalog/ai-and-statistics/matlab-analyze-reliability/SKILL.md)** | Fit life-and-failure data with censoring handled and stable confidence intervals |
 
 **Additional reviewed candidates outside the featured shelf:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None of those creative reviews adds a featured method. [The budget method and scorecard defect have separate qualification evidence](docs/reviews/2026-11-03-q7-budget-valuable-reference-and-workbook-formula-gate.md); [18-case independent spreadsheet-engine reproduction](docs/reviews/2026-11-03-q7-grant-scorecard-engine-replay.md); [pinned original-XLSX acceptance harness and current blocker](docs/reviews/2026-11-03-q7-pinned-scorecard-acceptance-harness.md); **[correction: source checks notes column C instead of eligibility answers column B](docs/reviews/2026-11-03-q7-scorecard-source-column-reconciliation.md)**; **[actual pinned-workbook 25-case engine acceptance](docs/reviews/2026-11-03-q7-original-pinned-scorecard-engine-acceptance.md)**.
 

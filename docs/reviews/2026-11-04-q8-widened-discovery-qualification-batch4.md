@@ -28,15 +28,17 @@ For each previously-empty domain, the **single best-fit, cleanest method was fea
 | Inspect ROS2 Robot (`yaniswav/TopicForge`) | Robotics / IoT | **19** | YES | **Valuable Reference** |
 | CAAIL query (`tucca-cellag/caail`) | Science | **20** | CONDITIONAL | **Valuable Reference** |
 | Cross-border Unit Economics (`peterbamuhigire/business-plan-skills`) | Business | **16** | CONDITIONAL | **Valuable Reference** |
-| Rerun URDF Ingestion (`rerun-io/rerun`) | Robotics / IoT | 19 | CONDITIONAL | Keep (lean) |
-| Nav2 Navigation Debugging (`robium-ai/robium`) | Robotics / IoT | 18 | YES | Keep (lean) |
-| Room Acoustics / REW (`koltyj/REW-mcp`) | Audio | 15 | YES | Keep (lean) |
+| Rerun URDF Ingestion (`rerun-io/rerun`) | Robotics / IoT | 19 | CONDITIONAL | **Valuable Reference** (promoted on 2026-11-04 audit) |
+| Nav2 Navigation Debugging (`robium-ai/robium`) | Robotics / IoT | 18 | YES | **Valuable Reference** (promoted on 2026-11-04 audit) |
+| Room Acoustics / REW (`koltyj/REW-mcp`) | Audio | 15 | YES | **Valuable Reference** (promoted on 2026-11-04 audit) |
 | Mastering Prep / Ableton (`glincker/ableton-skills`) | Audio | 14 | YES | Keep |
-| MATLAB Reliability Analysis (`matlab/...`) | Science | 16 | CONDITIONAL | Keep |
+| MATLAB Reliability Analysis (`matlab/...`) | Science | 16 | CONDITIONAL | **Valuable Reference** (promoted on 2026-11-04 audit) |
 | Acoustics Physicist persona (`K-Dense-AI/...`) | Science | 14 | YES | Keep |
 | Neurodivergence-aware Resume (`BRAINS-Certified/...`) | Career | 15 | CONDITIONAL | **Valuable Reference** (study-only, see below) |
 
 **5 Valuable References fill the last 5 empty domains**, plus a sixth (the resume method below) added as a second, distinct Career reference after review. The shelf grows from **39 methods / 28 domains to 45 / 33 — every canonical domain now has at least one featured method.** Unchanged-use approvals and behavioral validations both stay **0**.
+
+**Audit follow-up (2026-11-04):** a re-audit of the held and reference-only candidates applied the same principle used for the resume and Boltz methods — do not suppress a distinct method for an extrinsic reason. Four methods that had been kept only to keep this fill lean were promoted: **Rerun URDF Ingestion** and **Nav2 Navigation Debugging** (Robotics), **Room Acoustics** (Audio), and **MATLAB Reliability Analysis** (Science). Candidates held for low differentiation (e.g. Mastering Prep, the Acoustics Physicist persona) or active harm were left unchanged. The shelf is now **50 methods / all 33 domains**; Robotics carries three distinct methods, Science three, Audio and Career two each.
 
 ## The five new featured methods
 
@@ -63,7 +65,7 @@ Career therefore carries **two distinct methods**: Ghost-job-aware Job Search (f
 
 ## Security scan (static, not a clearance)
 
-Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 46 featured trees: 8 passed / 7 failed / 31 incomplete (Boltz added study-only on reconsideration). Behavioral tests: **not run**.
+Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 50 featured trees: 10 passed / 7 failed / 33 incomplete (Boltz added study-only on reconsideration; four more promoted on the 2026-11-04 audit). Behavioral tests: **not run**.
 
 ## Evidence
 

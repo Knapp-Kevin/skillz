@@ -23,8 +23,8 @@
  "review_method": "Exact pinned commits fetched (depth 1) into isolated bare repositories; package trees re-derived and matched to prior records 10/10; trees exported with git archive; every package file read in full by three parallel read-only reviewers on disjoint lists with one shared brief; integration owner spot-checked each decisive claim against source lines and adjudicated decisions. Nothing executed, installed or fetched from candidates. Pinned SkillSpector static scan per exact tree.",
  "counts": {
   "reviewed": 12,
-  "valuable_reference": 6,
-  "keep_reference_only": 6,
+  "valuable_reference": 10,
+  "keep_reference_only": 2,
   "reject_unchanged": 0,
   "security_passed": 3,
   "behavioral_validated": 0,
@@ -73,11 +73,11 @@
     "effectiveness_design": "Symptom-to-cause-to-tool table makes it directly actionable."
    },
    "score_20": 15,
-   "qualification_decision": "KEEP_REFERENCE_ONLY",
-   "consumer_benefit": null,
-   "distinct_method_original_summary": null,
-   "reason_not_unchanged": null,
-   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Audio is filled this pass by the self-contained open-source Audio Mastering method; Room Acoustics is a distinct acoustics-diagnosis method but is locked to a proprietary REW/Genelec toolchain it does not declare.",
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Decide which room problems EQ can fix and which need physical treatment.",
+   "distinct_method_original_summary": "Diagnose each measured room anomaly, then route it to speaker placement, absorption, or EQ depending on whether it is an electronically correctable peak or a physics-limited null.",
+   "reason_not_unchanged": "The diagnostic framing is distinct, but the package is wired to a proprietary toolchain (Room EQ Wizard, a REW MCP, a calibrated mic, optional Genelec GLM) it never declares as a requirement, and offers no path when measurements or tools are missing. Study the EQ-vs-physics classification; do not expect it to run without that stack.",
+   "hold_reason": null,
    "hard_fail_flags": [
     "Undeclared hard dependency on REW app, a REW MCP, a calibrated mic and Genelec GLM/SAM",
     "No fallback when measurements or tools are absent"
@@ -256,11 +256,11 @@
     "effectiveness_design": "Layered references, a runnable validation script and a minimal shape make a hard task executable."
    },
    "score_20": 19,
-   "qualification_decision": "KEEP_REFERENCE_ONLY",
-   "consumer_benefit": null,
-   "distinct_method_original_summary": null,
-   "reason_not_unchanged": null,
-   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Robotics is filled this pass by the read-only, self-contained Inspect ROS2 Robot method; rerun-urdf is an excellent distinct URDF-ingestion method but needs the unbundled rerun SDK, three sibling skills, and WebFetch over external URLs.",
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Ingest a robot URDF so every frame connects to one root, or fail loudly instead of rendering a wrong pose.",
+   "distinct_method_original_summary": "Treat a URDF ingest as a frame graph: reconcile joint mapping against the model's limits, find every root, and resolve or loudly fail each missing calibration edge before writing a pose.",
+   "reason_not_unchanged": "A strong, distinct method (19/20). It needs the rerun SDK (rerun.urdf/rerun.chunk) and three sibling skills not in the package, and its allowed-tools include WebFetch over many external repository URLs (untrusted content). Study the graph-resolution and silent-failure taxonomy; the SDK and siblings must be supplied, and treat fetched URLs as untrusted.",
+   "hold_reason": null,
    "hard_fail_flags": [
     "Requires the unbundled rerun SDK and three sibling skills",
     "WebFetch over many external repo URLs (untrusted content)"
@@ -551,11 +551,11 @@
     "effectiveness_design": "Layered 'go deeper only when needed' design."
    },
    "score_20": 18,
-   "qualification_decision": "KEEP_REFERENCE_ONLY",
-   "consumer_benefit": null,
-   "distinct_method_original_summary": null,
-   "reason_not_unchanged": null,
-   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Robotics is filled this pass by Inspect ROS2 Robot; this chain-trace Nav2 debugging method is distinct and strong, but it changes robot configuration with no confirmation gate and references an absent sibling 'architect' skill.",
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Pinpoint the first broken link in a robot navigation stack, with evidence.",
+   "distinct_method_original_summary": "Model the navigation stack as an ordered dependency chain, locate the earliest link whose evidence is wrong, fix only that link, then re-verify everything downstream.",
+   "reason_not_unchanged": "The chain-trace debugging method is distinct and field-tested, but the package changes robot configuration with no confirmation gate before steps that move a physical robot, and it references an absent sibling 'architect' skill plus a full external Nav2/ROS2/Gazebo stack. Study the first-broken-link discipline; do NOT run its config changes unconfirmed.",
+   "hold_reason": null,
    "hard_fail_flags": [
     "Changes robot config with no confirmation gate",
     "References absent ../architect/SKILL.md",
@@ -701,11 +701,11 @@
     "effectiveness_design": "Well-structured single-purpose reference."
    },
    "score_20": 16,
-   "qualification_decision": "KEEP_REFERENCE_ONLY",
-   "consumer_benefit": null,
-   "distinct_method_original_summary": null,
-   "reason_not_unchanged": null,
-   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Science is filled this pass by the clean, open CAAIL query method. The transferable statistics rules here are useful, but the package is locked to paid MATLAB (core functions R2026a-only), carries a copy-paste code bug (distNames[i] is invalid MATLAB, SKILL.md L117), and its two license references disagree.",
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Fit life-and-failure data correctly, with censoring handled and stable confidence intervals.",
+   "distinct_method_original_summary": "Fit life distributions as objects, compare them by AIC/BIC, get the survival function from the upper-tail CDF for numerical stability, and bootstrap-refit (with censoring) for confidence intervals on derived quantities.",
+   "reason_not_unchanged": "The statistical conventions are genuinely non-trivial, but the package runs only through paid, licensed MATLAB plus a toolbox (core accelerated-life functions are R2026a-only), carries a copy-paste code bug (invalid bracket indexing, SKILL.md L117), and its frontmatter license URL disagrees with its bundled BSD-style LICENSE.md. Study the statistics rules in your own words; do not expect the package to run as written.",
+   "hold_reason": null,
    "hard_fail_flags": [
     "Invalid MATLAB bracket indexing distNames[i] (SKILL.md L117)",
     "Core accelerated-life functions are R2026a-only",

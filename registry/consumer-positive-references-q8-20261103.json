@@ -2,7 +2,7 @@
  "schema_version": 1,
  "as_of": "2026-11-03",
  "stage": "consumer-positive-recommendation-qualification",
- "scope": "46 differentiated source-pinned conceptual Valuable References across 33 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
+ "scope": "50 differentiated source-pinned conceptual Valuable References across 33 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
  "catalog_categories": [
   "RECOMMENDED_FOR_USE",
   "VALUABLE_REFERENCE"
@@ -2257,11 +2257,147 @@
    "behavioral_validation": "NOT RUN",
    "unchanged_use_approved": false,
    "requires_separate_action_authority": true
+  },
+  {
+   "id": "koltyj-REW-mcp/room-acoustics",
+   "name": "Room Acoustics (REW)",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "audio-voice-sound",
+   "domain_display": "Audio / voice / sound",
+   "subdomain": "acoustics",
+   "capability": "Decide which room problems EQ can fix and which need physical treatment.",
+   "benefit": "Decide which room problems EQ can fix and which need physical treatment.",
+   "distinct_method": "Diagnose each measured room anomaly, then route it to speaker placement, absorption, or EQ depending on whether it is an electronically correctable peak or a physics-limited null.",
+   "reason_not_unchanged": "The diagnostic framing is distinct, but the package is wired to a proprietary toolchain (Room EQ Wizard, a REW MCP, a calibrated mic, optional Genelec GLM) it never declares as a requirement, and offers no path when measurements or tools are missing. Study the EQ-vs-physics classification; do not expect it to run without that stack.",
+   "source": {
+    "repository": "koltyj/REW-mcp",
+    "pin": "1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5",
+    "path": "plugin/skills/room-acoustics/SKILL.md",
+    "skill_blob_sha": "6698696d5b3ab5f7c8d7bd404b106a6ddb1debff",
+    "recorded_package_tree_sha": "fce509678b29c12282e22287b6994bcdb8d600a0",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study the diagnostic framing in our own words; copying needs the MIT notice. Treat REW/Genelec/GLM as trademarks.",
+    "copy_allowed": "YES"
+   },
+   "dependencies": "Undeclared hard dependency on REW app, a REW MCP, a calibrated mic and Genelec GLM/SAM; No fallback when measurements or tools are absent",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 15/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "passed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "rerun-io-rerun/rerun-urdf",
+   "name": "Rerun URDF Ingestion",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "robotics-iot",
+   "domain_display": "Robotics / IoT",
+   "subdomain": "perception",
+   "capability": "Ingest a robot URDF so every frame connects to one root, or fail loudly instead of rendering a wrong pose.",
+   "benefit": "Ingest a robot URDF so every frame connects to one root, or fail loudly instead of rendering a wrong pose.",
+   "distinct_method": "Treat a URDF ingest as a frame graph: reconcile joint mapping against the model's limits, find every root, and resolve or loudly fail each missing calibration edge before writing a pose.",
+   "reason_not_unchanged": "A strong, distinct method (19/20). It needs the rerun SDK (rerun.urdf/rerun.chunk) and three sibling skills not in the package, and its allowed-tools include WebFetch over many external repository URLs (untrusted content). Study the graph-resolution and silent-failure taxonomy; the SDK and siblings must be supplied, and treat fetched URLs as untrusted.",
+   "source": {
+    "repository": "rerun-io/rerun",
+    "pin": "6f39b09211b869d6e262083cfddefa392244088d",
+    "path": "skills/rerun-urdf/SKILL.md",
+    "skill_blob_sha": "b5a634f97b0dd20a0bb92a6fe294635cebc219c3",
+    "recorded_package_tree_sha": "d975189711aed05aadcbc93426906631df481b7e",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "Apache-2.0 (root; see rights_review)",
+    "license_obligation": "Study the graph-reasoning method in our own words; copying requires one of the dual licenses' notices.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "Requires the unbundled rerun SDK and three sibling skills; WebFetch over many external repo URLs (untrusted content)",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 19/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "robium-ai-robium/navigation",
+   "name": "Nav2 Navigation Debugging",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "robotics-iot",
+   "domain_display": "Robotics / IoT",
+   "subdomain": "motion-planning",
+   "capability": "Pinpoint the first broken link in a robot navigation stack, with evidence.",
+   "benefit": "Pinpoint the first broken link in a robot navigation stack, with evidence.",
+   "distinct_method": "Model the navigation stack as an ordered dependency chain, locate the earliest link whose evidence is wrong, fix only that link, then re-verify everything downstream.",
+   "reason_not_unchanged": "The chain-trace debugging method is distinct and field-tested, but the package changes robot configuration with no confirmation gate before steps that move a physical robot, and it references an absent sibling 'architect' skill plus a full external Nav2/ROS2/Gazebo stack. Study the first-broken-link discipline; do NOT run its config changes unconfirmed.",
+   "source": {
+    "repository": "robium-ai/robium",
+    "pin": "ce944953d11ccdbd32613c4746389bc78a24e8c5",
+    "path": "skills/navigation/SKILL.md",
+    "skill_blob_sha": "3e251623f4c0fe4c913535980074c6537dcbc83e",
+    "recorded_package_tree_sha": "70a2f22f944cf72fd6ce3a938f5858ca3b33b24e",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study the chain-trace method in our own words; copying needs the MIT notice.",
+    "copy_allowed": "YES"
+   },
+   "dependencies": "Changes robot config with no confirmation gate; References absent ../architect/SKILL.md; Requires a full external Nav2/ROS2/Gazebo stack",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 18/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "passed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "matlab-matlab-agentic-toolkit/matlab-analyze-reliability",
+   "name": "MATLAB Reliability Analysis",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "science",
+   "domain_display": "Science",
+   "subdomain": "experimental-design",
+   "capability": "Fit life-and-failure data correctly, with censoring handled and stable confidence intervals.",
+   "benefit": "Fit life-and-failure data correctly, with censoring handled and stable confidence intervals.",
+   "distinct_method": "Fit life distributions as objects, compare them by AIC/BIC, get the survival function from the upper-tail CDF for numerical stability, and bootstrap-refit (with censoring) for confidence intervals on derived quantities.",
+   "reason_not_unchanged": "The statistical conventions are genuinely non-trivial, but the package runs only through paid, licensed MATLAB plus a toolbox (core accelerated-life functions are R2026a-only), carries a copy-paste code bug (invalid bracket indexing, SKILL.md L117), and its frontmatter license URL disagrees with its bundled BSD-style LICENSE.md. Study the statistics rules in your own words; do not expect the package to run as written.",
+   "source": {
+    "repository": "matlab/matlab-agentic-toolkit",
+    "pin": "032b4b605999b1f4adecaac1efa1c9faad41adf6",
+    "path": "skills-catalog/ai-and-statistics/matlab-analyze-reliability/SKILL.md",
+    "skill_blob_sha": "ed98b6f3ce8ea52e8d3d6b3c19d515e88b3350ed",
+    "recorded_package_tree_sha": "c2476dd8fcc5144429d69a477f41ec0d91d76f25",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "BSD-3-Clause-style (MathWorks) (root; see rights_review)",
+    "license_obligation": "Study the statistics rules in our own words. Copying is allowed only under the restricted MathWorks field-of-use license, with notices kept and the license discrepancy resolved first.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "Invalid MATLAB bracket indexing distNames[i] (SKILL.md L117); Core accelerated-life functions are R2026a-only; Requires paid MATLAB + toolbox + an execution tool; Frontmatter license URL vs bundled BSD-style LICENSE.md discrepancy",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 16/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
   }
  ],
  "starter_shelf_totals": {
   "recommended_for_use": 0,
-  "valuable_reference": 46,
+  "valuable_reference": 50,
   "distinct_capability_domains_represented": 33,
   "creative_tranche_20261103": {
    "music_composition": 9,
@@ -2274,7 +2410,7 @@
    "domain_fully_qualified": false
   },
   "q8_batch1_additions": 7,
-  "q8_additions_total": 26
+  "q8_additions_total": 30
  },
  "global_approved_for_use_total": null,
  "global_promoted_valuable_reference_total": null,

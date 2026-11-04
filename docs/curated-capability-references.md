@@ -1,6 +1,6 @@
-# Forty-six useful skill methods, with their limits
+# Fifty useful skill methods, with their limits
 
-**These are forty-six positively selected, individually differentiated Valuable Reference methods spanning all thirty-three canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
+**These are fifty positively selected, individually differentiated Valuable Reference methods spanning all thirty-three canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -46,6 +46,10 @@
 | Find real jobs, skip ghost ones | **[Ghost-job-aware Job Search](https://github.com/wexxwuther/job-hunter/blob/8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5/job-search/SKILL.md)** | Find real job postings and score ghost-job risk separately from how well you fit. |
 | Make a resume fairer for a neurodivergent candidate | **[Neurodivergence-aware Resume](https://github.com/BRAINS-Certified/BRAINS-resume-skill/blob/d8763b8bdaddd0345288fdb4b4fdd2a652677bdc/SKILL.md)** | Surface neurodivergence bias and disclosure trade-offs in a resume, leaving every choice to the user. |
 | Spend wisely on an expensive compute campaign | **[Scout-before-scale (Boltz)](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/boltz-api-cli/skills/boltz-protein-design/SKILL.md)** | Scout several cheap options before committing to one expensive generate-and-filter run. |
+| Decide which room problems EQ can fix and which need physical treatment | **[Room Acoustics (REW)](https://github.com/koltyj/REW-mcp/blob/1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5/plugin/skills/room-acoustics/SKILL.md)** | Decide which room problems EQ can fix and which need physical treatment. |
+| Ingest a robot URDF so every frame connects to one root, or fail loudly | **[Rerun URDF Ingestion](https://github.com/rerun-io/rerun/blob/6f39b09211b869d6e262083cfddefa392244088d/skills/rerun-urdf/SKILL.md)** | Ingest a robot URDF so every frame connects to one root, or fail loudly instead of rendering a wrong pose. |
+| Pinpoint the first broken link in a robot navigation stack, with evidence | **[Nav2 Navigation Debugging](https://github.com/robium-ai/robium/blob/ce944953d11ccdbd32613c4746389bc78a24e8c5/skills/navigation/SKILL.md)** | Pinpoint the first broken link in a robot navigation stack, with evidence. |
+| Fit life-and-failure data with censoring handled and stable confidence intervals | **[MATLAB Reliability Analysis](https://github.com/matlab/matlab-agentic-toolkit/blob/032b4b605999b1f4adecaac1efa1c9faad41adf6/skills-catalog/ai-and-statistics/matlab-analyze-reliability/SKILL.md)** | Fit life-and-failure data correctly, with censoring handled and stable confidence intervals. |
 | Weigh evidence for a contested decision | **[Build Evidence Map](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/build-evidence-map/SKILL.md)** | Keep counterevidence and unknowns visible in a decision, with a checked evidence map. |
 | Check whether research results really reproduce | **[Radiology Reproducibility](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-reproducibility/SKILL.md)** | Grade each research result's reproducibility honestly, with tolerances fixed before rerunning. |
 | Track which documents an agent actually read | **[Read Ledger](https://github.com/agentskillexchange/skills/blob/a6017b4af9d0298b7be3af7a6ec7485943d2c3e7/skills/read-ledger/SKILL.md)** | Know exactly which parts of which documents your agent actually reviewed, across sessions. |
@@ -383,8 +387,40 @@ These eight are *separate methods*, not eight licenses to operate a composition 
 
 **Rights:** copy_allowed = **YES** (plugin MIT; keep the Boltz notice). **Evidence:** Q8 batch 3 full-package review **18/20**; pinned `openai/plugins@0722921d`; tree `112d62fe` verified; static scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
 
+### Audio / voice / sound: Room Acoustics (REW)
+
+**Unique idea:** Diagnose each measured room anomaly, then route it to speaker placement, absorption, or EQ depending on whether it is an electronically correctable peak or a physics-limited null.
+
+**Important limit:** The diagnostic framing is distinct, but the package is wired to a proprietary toolchain (Room EQ Wizard, a REW MCP, a calibrated mic, optional Genelec GLM) it never declares as a requirement, and offers no path when measurements or tools are missing. Study the EQ-vs-physics classification; do not expect it to run without that stack.
+
+**Why it is featured:** promoted on the 2026-11-04 audit — it was a distinct method held only to keep an earlier pass lean, not for a quality reason. copy_allowed = **YES**. **Evidence:** full-package review **15/20**; pinned `koltyj/REW-mcp@1d1f7543`; tree `fce50967` verified; static scan **passed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Robotics / IoT: Rerun URDF Ingestion
+
+**Unique idea:** Treat a URDF ingest as a frame graph: reconcile joint mapping against the model's limits, find every root, and resolve or loudly fail each missing calibration edge before writing a pose.
+
+**Important limit:** A strong, distinct method (19/20). It needs the rerun SDK (rerun.urdf/rerun.chunk) and three sibling skills not in the package, and its allowed-tools include WebFetch over many external repository URLs (untrusted content). Study the graph-resolution and silent-failure taxonomy; the SDK and siblings must be supplied, and treat fetched URLs as untrusted.
+
+**Why it is featured:** promoted on the 2026-11-04 audit — it was a distinct method held only to keep an earlier pass lean, not for a quality reason. copy_allowed = **CONDITIONAL**. **Evidence:** full-package review **19/20**; pinned `rerun-io/rerun@6f39b092`; tree `d9751897` verified; static scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Robotics / IoT: Nav2 Navigation Debugging
+
+**Unique idea:** Model the navigation stack as an ordered dependency chain, locate the earliest link whose evidence is wrong, fix only that link, then re-verify everything downstream.
+
+**Important limit:** The chain-trace debugging method is distinct and field-tested, but the package changes robot configuration with no confirmation gate before steps that move a physical robot, and it references an absent sibling 'architect' skill plus a full external Nav2/ROS2/Gazebo stack. Study the first-broken-link discipline; do NOT run its config changes unconfirmed.
+
+**Why it is featured:** promoted on the 2026-11-04 audit — it was a distinct method held only to keep an earlier pass lean, not for a quality reason. copy_allowed = **YES**. **Evidence:** full-package review **18/20**; pinned `robium-ai/robium@ce944953`; tree `70a2f22f` verified; static scan **passed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Science: MATLAB Reliability Analysis
+
+**Unique idea:** Fit life distributions as objects, compare them by AIC/BIC, get the survival function from the upper-tail CDF for numerical stability, and bootstrap-refit (with censoring) for confidence intervals on derived quantities.
+
+**Important limit:** The statistical conventions are genuinely non-trivial, but the package runs only through paid, licensed MATLAB plus a toolbox (core accelerated-life functions are R2026a-only), carries a copy-paste code bug (invalid bracket indexing, SKILL.md L117), and its frontmatter license URL disagrees with its bundled BSD-style LICENSE.md. Study the statistics rules in your own words; do not expect the package to run as written.
+
+**Why it is featured:** promoted on the 2026-11-04 audit — it was a distinct method held only to keep an earlier pass lean, not for a quality reason. copy_allowed = **CONDITIONAL**. **Evidence:** full-package review **16/20**; pinned `matlab/matlab-agentic-toolkit@032b4b60`; tree `c2476dd8` verified; static scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
 ## What this does and doesn't count
 
-Forty-six **distinct source/path-pinned Valuable Reference methods** spanning all thirty-three canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 46 complete pinned source package Git tree identities are now verified (Q8). Eight pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
+Fifty **distinct source/path-pinned Valuable Reference methods** spanning all thirty-three canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 50 complete pinned source package Git tree identities are now verified (Q8). Ten pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
 The source-neutral [structured reference catalog](../registry/consumer-positive-references-q8-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.
