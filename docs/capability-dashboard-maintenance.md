@@ -35,3 +35,12 @@ node scripts/build-public-security-status.mjs --check
 ```
 
 Check the chart visually: its section labels, number alignment, and bar legend must remain readable. Link the release/PR and timestamp in the JSON note. Never count the overlapping 51 first-party/engine scan trees and 50 Q8 study-reference scan trees as 101 distinct skills; never infer unchanged-use approval from static scanner passes. Issue [#402](https://github.com/Knapp-Kevin/skillz/issues/402) is open until final exact-tree security and behavioral acceptance actually passes.
+
+
+## Mixed-date coverage labels: avoid false zero-coverage conclusions
+
+The generated table currently combines **two deliberately different evidence dimensions**: `Research-linked topics` comes from the 2026-11-02 historical Q4 research audit (`has_any_review_or_candidate_link`), while `Featured study methods` comes from the later 2026-11-03 Q8 selected-method catalog. They are **not** an inclusion hierarchy. For example, the present Music composition row reports **0/8 historical research-linked topics** alongside **9 selected methods covering 8/8 topics**. This is a mixed-date audit limitation, **not** evidence that the selected study methods are nonexistent or approved for unchanged use.
+
+**Required fix at the next sourced regeneration:** produce a refreshed capability audit that incorporates the selected methods' exact evidence pointers, distinguishes rejected-only leads from qualified study references, and separately reports freshness and review depth. Do not simply flip eight historical audit booleans, union counts without traceable evidence, or manually edit the generated README table/SVG/CSV. Until that new audit is accepted, keep both axes dated and explicitly labeled so consumers do not interpret an old snapshot as current absence of coverage.
+
+**Regression checks:** the generator's `--self-test` and `--check` must continue to pass; inspect the Music composition row plus other domains with selected topics exceeding historical research-linked topics; require exact count parity across the source manifest, rendered README block, CSV, and SVG; preserve 0 unchanged-use approvals unless independently accepted. A visual-only redraw is not a correction.
