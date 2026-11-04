@@ -13,12 +13,12 @@ metadata:
   category: Productivity
   display-name: Memory Pulse
   emoji: "🧠"
-  version: 1.1.2
+  version: 1.1.3
 ---
 
 # Memory Pulse
 
-Topic pulse for agentic memory: long-term memory frameworks, context engineering, knowledge-graph memory, and the research frontier. Feeds the operator's bound memory-layer project and agent-architecture decisions. **Bind:** discover the memory-layer project from an operator profile or project governance doc — when none is bound, the verdict goes generic (relevance to a typical agent-memory layer) and the skill offers to bind one for next time.
+Topic pulse for agentic memory: long-term memory frameworks, context engineering, knowledge-graph memory, and the research frontier. Public ecosystem research is the default. **Optional project relevance:** use only a redacted project summary explicitly supplied by the user, or a specific project source whose read scope the user expressly approves for this run. A general public-news request does **not** authorize discovering or opening operator profiles, host memory, local governance documents, private repositories or connected accounts. Without approved project context, give a generic agent-memory relevance verdict and mark project-specific applicability **not checked**.
 
 ## Execution Flow
 
@@ -53,5 +53,5 @@ Topic pulse for agentic memory: long-term memory frameworks, context engineering
 
 ## Notes
 
-- The relevance section is the point — every digest ends with "what, if anything, should change in our memory architecture" (usually: nothing yet).
+- The relevance section is the point: explain implications for a generic agent-memory architecture. Discuss changes to a particular user project only with specifically authorized, supplied context; never search private project records merely to personalize the digest.
 - Promising frameworks become registry `track` candidates, not immediate adoptions.
