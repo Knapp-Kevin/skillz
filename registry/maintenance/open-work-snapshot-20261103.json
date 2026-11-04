@@ -307,5 +307,11 @@
     "branches_force_pushed": 0,
     "prs_merged": 0
   },
-  "ci": "NOT_TRIGGERED"
+  "ci": "NOT_TRIGGERED",
+  "snapshot_boundary": {
+    "before_creation_of_this_workboard_pr": true,
+    "workboard_pr_number": 701,
+    "open_pr_count_after_creation_if_no_other_changes": 11,
+    "reason": "Avoid counting the PR documenting the original open-work inventory as a missing pre-existing task."
+  }
 }
