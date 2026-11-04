@@ -16,7 +16,7 @@
   "by_pr": [
     {
       "pr": 673,
-      "head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "total": 16,
       "matched_pass": 9,
       "new_scans_needed": 7
@@ -40,7 +40,7 @@
     {
       "id": "deepseek-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/deepseek-pulse",
       "package_tree_sha": "8984411410ccae81474a93e53c28a180ff61ec25",
       "proposal_only": true,
@@ -59,7 +59,7 @@
     {
       "id": "gemini-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/gemini-pulse",
       "package_tree_sha": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
       "proposal_only": true,
@@ -78,7 +78,7 @@
     {
       "id": "github-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/github-pulse",
       "package_tree_sha": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
       "proposal_only": true,
@@ -92,7 +92,7 @@
     {
       "id": "glm-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/glm-pulse",
       "package_tree_sha": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
       "proposal_only": true,
@@ -111,7 +111,7 @@
     {
       "id": "governance-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/governance-pulse",
       "package_tree_sha": "506e6452333173778aa6e0e4e9a614b10cd12c58",
       "proposal_only": true,
@@ -125,7 +125,7 @@
     {
       "id": "hf-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/hf-pulse",
       "package_tree_sha": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
       "proposal_only": true,
@@ -139,7 +139,7 @@
     {
       "id": "inference-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/inference-pulse",
       "package_tree_sha": "3eba79599f77970dd91367df55f1325ded8f2149",
       "proposal_only": true,
@@ -153,7 +153,7 @@
     {
       "id": "kimi-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/kimi-pulse",
       "package_tree_sha": "049e00a74897ba13f8168e7f8ce2a896d9937e84",
       "proposal_only": true,
@@ -167,7 +167,7 @@
     {
       "id": "llama-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/llama-pulse",
       "package_tree_sha": "53dbd090ce88c406296ff84fce4faa61534044cd",
       "proposal_only": true,
@@ -186,7 +186,7 @@
     {
       "id": "mcp-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/mcp-pulse",
       "package_tree_sha": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
       "proposal_only": true,
@@ -200,7 +200,7 @@
     {
       "id": "memory-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/memory-pulse",
       "package_tree_sha": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
       "proposal_only": true,
@@ -214,7 +214,7 @@
     {
       "id": "mistral-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/mistral-pulse",
       "package_tree_sha": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
       "proposal_only": true,
@@ -233,7 +233,7 @@
     {
       "id": "openai-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/openai-pulse",
       "package_tree_sha": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
       "proposal_only": true,
@@ -252,7 +252,7 @@
     {
       "id": "perplexity-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/perplexity-pulse",
       "package_tree_sha": "2929295240f02db18afc52eeb44a8d3c30ec8346",
       "proposal_only": true,
@@ -271,7 +271,7 @@
     {
       "id": "qwen-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/qwen-pulse",
       "package_tree_sha": "e328cb591e98f994d2646bae448cb779c6adee06",
       "proposal_only": true,
@@ -290,7 +290,7 @@
     {
       "id": "xai-pulse",
       "pr": 673,
-      "pr_head": "be0026b190be257e0e3980e6e2f5c991d9326c50",
+      "pr_head": "1aa39ce7b63dfe047b6eb28b27dac4912f54ea89",
       "path": "skills/xai-pulse",
       "package_tree_sha": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
       "proposal_only": true,
