@@ -7,9 +7,9 @@ source_path: skills/standup-writer/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 3b7de585b83467b5194150e29373fea6235e5afd
+source_snapshot_revision: 8de682ef0ac8098874abaf3ead3264a17fa357c3
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/standup-writer/SKILL.md
 permission_tier: generate-only
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "Authorized repository/task sources; optional calendar connector and host scheduler, neither mandatory"
 import_eligibility: conditional-on-security-and-user-fit
-rationale: "Evidence-only standup with disclosed source gaps; optional future calendar/task access, recurrence, posting and recipients require distinct approval."
+rationale: "Exact 1812e0ca5845df2563bd888066c8674979bc1a34 complete one-file package tree 7fb796c1d7bb976d6cfaeaf09e62878a90c9050b statically reviewed 18/20 after explicit pre-read source authorization fix; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security and behavioral validation not-run. Unchanged-use approval held."
