@@ -2,7 +2,7 @@
  "schema_version": 1,
  "as_of": "2026-11-03",
  "stage": "consumer-positive-recommendation-qualification",
- "scope": "39 differentiated source-pinned conceptual Valuable References across 28 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
+ "scope": "44 differentiated source-pinned conceptual Valuable References across 33 canonical domains; zero unchanged-use approvals or behavioral validations; static security gate results recorded separately; no audited all-corpus positive total.",
  "catalog_categories": [
   "RECOMMENDED_FOR_USE",
   "VALUABLE_REFERENCE"
@@ -2019,12 +2019,182 @@
    "behavioral_validation": "NOT RUN",
    "unchanged_use_approved": false,
    "requires_separate_action_authority": true
+  },
+  {
+   "id": "FuDesign2008-open-music-skills/audio-mastering",
+   "name": "Audio Mastering (AI tracks)",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "audio-voice-sound",
+   "domain_display": "Audio / voice / sound",
+   "subdomain": "mastering",
+   "capability": "Master AI-generated tracks to streaming loudness without adding digital artifacts.",
+   "benefit": "Master AI-generated tracks to streaming loudness without adding digital artifacts.",
+   "distinct_method": "For AI-generated audio, subtract (clean mud, cut artifacts) rather than enhance, then run a two-pass loudness normalization from measured values to hit the streaming target exactly, and verify the result.",
+   "reason_not_unchanged": "The A/B verification step hard-codes macOS-only afplay with no cross-platform fallback, and the skill cross-references a sibling 'whitespace-craft' skill that is not in the package. Install guidance is Homebrew-only.",
+   "source": {
+    "repository": "FuDesign2008/open-music-skills",
+    "pin": "95e66582a82579fa44dca55fff64b874de608a98",
+    "path": "skills/audio-mastering/SKILL.md",
+    "skill_blob_sha": "9570c7ef2689f32a88e844d6c1bb51d17b64b525",
+    "recorded_package_tree_sha": "33e78f89415c2963f6de8b31d60e49b2ed921db5",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study and restate the recipe in our own words; copying needs the MIT notice.",
+    "copy_allowed": "YES"
+   },
+   "dependencies": "Core A/B step depends on macOS-only afplay (SKILL.md L32/L196); Cross-references absent 'whitespace-craft' skill (SKILL.md L210); brew-only install guidance",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 17/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "yaniswav-TopicForge/inspect-ros2-robot",
+   "name": "Inspect ROS2 Robot",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "robotics-iot",
+   "domain_display": "Robotics / IoT",
+   "subdomain": "perception",
+   "capability": "A safe, read-only recipe for inspecting a live ROS2 graph or a recorded bag.",
+   "benefit": "A safe, read-only recipe for inspecting a live ROS2 graph or a recorded bag.",
+   "distinct_method": "Sweep then drill, read-only: name each tool and field you use, flag any mock or truncated data, treat silence or an empty graph as unknown rather than absence, and report only what the tools actually returned.",
+   "reason_not_unchanged": "The skill does nothing on its own: it needs the external TopicForge MCP server, a local ros2 CLI and the rosbags library, and it pins no version for that server beyond a contract number or says how to trust it.",
+   "source": {
+    "repository": "yaniswav/TopicForge",
+    "pin": "9de14cec12447b2f505342803c7a6bfcb100cb5d",
+    "path": "plugin/skills/inspect-ros2-robot/SKILL.md",
+    "skill_blob_sha": "d28e512955d4e8f9335ebf963276417331dcf10b",
+    "recorded_package_tree_sha": "99fd63adead3d4e0b98d8fcea0628de981ca8c1c",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study the inspection method in our own words; copying needs the MIT notice. Treat ROS/Open Robotics as trademarks.",
+    "copy_allowed": "YES"
+   },
+   "dependencies": "Requires external TopicForge MCP server, ros2 CLI and rosbags, none bundled; No version pin or trust statement for the MCP server",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 19/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "passed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "tucca-cellag-caail/caail",
+   "name": "Cellular Agriculture AI Library query",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "science",
+   "domain_display": "Science",
+   "subdomain": "scientific-communication",
+   "capability": "Query a curated research corpus without reporting curated gaps as real-world absence.",
+   "benefit": "Query a curated research corpus without reporting curated gaps as real-world absence.",
+   "distinct_method": "Enumerate from small index files first, verify the parsed row count against a tiny manifest, map abbreviated labels, and carefully distinguish an un-indexed cell from a genuinely absent subject before answering.",
+   "reason_not_unchanged": "The method is clean, but the works it indexes each keep their own license (148 carry no grant), so the catalog's MIT does not cover copying those works, and its license tiers are advisory, not verified terms.",
+   "source": {
+    "repository": "tucca-cellag/caail",
+    "pin": "5db336dbe013e06187a63724ef66bfd7c39c24fc",
+    "path": "plugin/skills/caail/SKILL.md",
+    "skill_blob_sha": "8699f83f9dfc63b549cf9f743b62e820d8d0317c",
+    "recorded_package_tree_sha": "3a44185c15af28341050f850f1dcfcba9690ac8e",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study and restate the querying discipline in our own words. The skill text is MIT; copying any indexed work is governed by that work's own license, not the catalog's.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 20/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "peterbamuhigire-business-plan-skills/ecommerce-unit-economics",
+   "name": "Cross-border Unit Economics",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "business",
+   "domain_display": "Business",
+   "subdomain": "business-models",
+   "capability": "Show whether a cross-border e-commerce route truly profits after every variable cost.",
+   "benefit": "Show whether a cross-border e-commerce route truly profits after every variable cost.",
+   "distinct_method": "Tag each input by source and confidence, compute contribution margin after all order-variable costs per market and channel, then issue a go/conditional/no-go verdict that names the assumptions which would flip it.",
+   "reason_not_unchanged": "The method is incomplete without an undefined, unbundled proprietary 'Chwezi Accounting Doctrine' it lists as required; it has duplicated/divergent workflow sections, no explicit not-financial-advice line, and embeds the author's personal phone number, which should be stripped.",
+   "source": {
+    "repository": "peterbamuhigire/business-plan-skills",
+    "pin": "00a85b14b0770951a4c8dd0f8505b2bbaf7bfc95",
+    "path": "skills/ict/ecommerce-unit-economics-and-cross-border-margin-model/SKILL.md",
+    "skill_blob_sha": "5c7e7e82b9b73e75d7b1be1fdf99417b65153097",
+    "recorded_package_tree_sha": "8697477b3b824931a77afcddf430916c91e4b7bb",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study and reimplement the method in our own words, substituting an open accounting-treatment step for the Chwezi dependency and stripping the personal contact line; copying bundled files needs the MIT notice.",
+    "copy_allowed": "CONDITIONAL"
+   },
+   "dependencies": "Requires an undefined, unbundled proprietary 'Chwezi Accounting Doctrine'; Duplicated/divergent workflow and anti-patterns sections; Embedded personal phone number (PII); No explicit not-financial-advice disclaimer; frontmatter has no license field",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 16/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "failed (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
+  },
+  {
+   "id": "wexxwuther-job-hunter/job-search",
+   "name": "Ghost-job-aware Job Search",
+   "consumer_state": "VALUABLE_REFERENCE",
+   "domain": "career",
+   "domain_display": "Career",
+   "subdomain": "job-search",
+   "capability": "Find real job postings and score ghost-job risk separately from how well you fit.",
+   "benefit": "Find real job postings and score ghost-job risk separately from how well you fit.",
+   "distinct_method": "Search four source tiers, then score each posting on five sub-scores that keep posting legitimacy independent from fit, applying red flags as a multiplier that can sink an otherwise strong match.",
+   "reason_not_unchanged": "The web fetching is the host's responsibility and runs against third-party job boards and ATS feeds subject to their terms; the anti-fabrication gate lives in a sibling skill rather than in this member; a script docstring mislabels the multiplicative penalty as subtractive.",
+   "source": {
+    "repository": "wexxwuther/job-hunter",
+    "pin": "8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5",
+    "path": "job-search/SKILL.md",
+    "skill_blob_sha": "690dadeec6b579a2c43fe51717de84b4f4069fcc",
+    "recorded_package_tree_sha": "9b240990f9b56f145cca59e658ed99a72e3cc7ff",
+    "package_sha_basis": "Git tree re-derived from the pinned upstream commit in this tranche and matched to the prior static record.",
+    "license": "MIT (root; see rights_review)",
+    "license_obligation": "Study the search-and-scoring method in our own words; copying needs the MIT notice. Note the host performs the web egress, subject to each site's terms.",
+    "copy_allowed": "YES"
+   },
+   "dependencies": "",
+   "prior_source_vetting": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "consumer_adjudication": "Q8 batch 4: widened-discovery lead qualification: full-package current-standard re-review 20/20; selected for a differentiated, plainly explained method. Evidence: registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json",
+   "security_scan": "incomplete (pinned SkillSpector static gate; not a clearance)",
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false,
+   "requires_separate_action_authority": true
   }
  ],
  "starter_shelf_totals": {
   "recommended_for_use": 0,
-  "valuable_reference": 39,
-  "distinct_capability_domains_represented": 28,
+  "valuable_reference": 44,
+  "distinct_capability_domains_represented": 33,
   "creative_tranche_20261103": {
    "music_composition": 9,
    "illustration": 3,
@@ -2036,7 +2206,7 @@
    "domain_fully_qualified": false
   },
   "q8_batch1_additions": 7,
-  "q8_additions_total": 19
+  "q8_additions_total": 24
  },
  "global_approved_for_use_total": null,
  "global_promoted_valuable_reference_total": null,

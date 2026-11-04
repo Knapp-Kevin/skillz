@@ -33,7 +33,7 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 <!-- SKILLZ_CAPABILITY_DASHBOARD:START | generated: scripts/build-capability-dashboard.mjs -->
 ### Capability dashboard
 
-**33 capability areas** · **247 topics** · **210 topics with research leads** · **39 useful methods selected for study** · **0 approved unchanged**
+**33 capability areas** · **247 topics** · **210 topics with research leads** · **44 useful methods selected for study** · **0 approved unchanged**
 
 ![Generated Skillz capability evidence dashboard, with research-linked topic bars and separately selected study methods across 33 domains.](docs/assets/capability-dashboard.svg)
 
@@ -60,21 +60,21 @@ These are **33 areas to explore, not 33 fully covered skill sets**. Some have ri
 | Fiction / narrative / worldbuilding | 8 / 8 | 1 | 1 / 8 |
 | Technical writing | 7 / 7 | 1 | 1 / 7 |
 | Music composition | 0 / 8 | 9 | 8 / 8 |
-| Audio / voice / sound | 5 / 8 | Not featured | 0 / 8 |
+| Audio / voice / sound | 5 / 8 | 1 | 1 / 8 |
 | Video / film | 5 / 9 | 1 | 1 / 9 |
 | Communication | 5 / 7 | 1 | 1 / 7 |
 | Analytics | 7 / 7 | 1 | 1 / 7 |
 | Time / productivity | 6 / 7 | 1 | 1 / 7 |
 | Memory / context | 7 / 7 | 1 | 1 / 7 |
-| Business | 7 / 7 | Not featured | 0 / 7 |
+| Business | 7 / 7 | 1 | 1 / 7 |
 | Sales | 7 / 7 | 1 | 1 / 7 |
-| Career | 6 / 7 | Not featured | 0 / 7 |
+| Career | 6 / 7 | 1 | 1 / 7 |
 | Education | 6 / 7 | 1 | 1 / 7 |
-| Science | 6 / 7 | Not featured | 0 / 7 |
+| Science | 6 / 7 | 1 | 1 / 7 |
 | Medicine | 6 / 7 | 1 | 1 / 7 |
 | Law | 6 / 7 | 1 | 1 / 7 |
 | Finance | 7 / 8 | 1 | 1 / 8 |
-| Robotics / IoT | 5 / 7 | Not featured | 0 / 7 |
+| Robotics / IoT | 5 / 7 | 1 | 1 / 7 |
 | ML accelerators and compute | 7 / 7 | 1 | 1 / 7 |
 
 </details>
@@ -90,8 +90,8 @@ Each row counts a **different population** with its own denominator. **Do not ad
 | Package identity records (discovery) | **61,326** | G1–G3 pinned package identity records across 942 repositories (distinct package-tree SHAs 57,715) |
 | Exact static review decisions | **5,351** | distinct exact (source, pin, path) keys with a recorded candidate_decision (rejected unchanged 3,773, reference-only 1,574, deferred 4) |
 | Reference-only candidates awaiting a consumer decision | **1,522** | latest-decision reference-only keys not yet selected for the shelf or kept in research by a qualification review (already on shelf 38, kept in research by Q8 qualification 12, rejected unchanged by Q8 qualification 2) |
-| Methods selected to study (Valuable Reference) | **39** | featured shelf entries (canonical domains 28) |
-| Featured methods passing the static security gate | **7** | of 39 featured exact package trees, pinned SkillSpector, fail-closed (failed 6, incomplete 26) |
+| Methods selected to study (Valuable Reference) | **44** | featured shelf entries (all 33 canonical domains now have at least one featured method) (canonical domains 33) |
+| Featured methods passing the static security gate | **8** | of 44 featured exact package trees, pinned SkillSpector, fail-closed (failed 7, incomplete 29) |
 | First-party packages passing the static security gate | **25** | of 51 skills/ and engine/skills/ trees on main 09c93dd3 (failed 1, incomplete 25) |
 | Behaviorally validated packages | **0** | packages with executed representative and adversarial acceptance tests |
 | Approved for unchanged use | **0** | Recommended-for-use entries |
@@ -117,9 +117,9 @@ We maintain two **positive** recommendation types for methods selected to appear
 
 Other items stay in the research archive. **Discovered, reviewed, and recommended are not the same thing.** A high score or an old `VERIFIED` label is not an automatic endorsement.
 
-**Featured-shelf limitation, not total inventory:** We have individually endorsed **thirty-nine useful methods as Valuable References** across **twenty-eight** capability domains. The nineteen newest (Q8) come from three qualification passes, the third of them rights-focused, over the highest-graded reference-only candidates in domains that previously had nothing on the shelf; fourteen other candidates in those passes stayed in research and two were rejected. Music composition has one useful conceptual method in **all eight subdomains**, but most music methods come from one publisher, and protected textbook excerpts and translations are **not relicensed by source MIT**. **All 39 complete Git package-tree identities are now verified** against pinned upstream commits, including four that were previously UNKNOWN. Seven of 39 pass the pinned static security scan; that is not a clearance. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
+**Featured-shelf limitation, not total inventory:** We have individually endorsed **forty-four useful methods as Valuable References** across **all thirty-three** capability domains — every domain now has at least one featured method. The newest five (Q8 batch 4) come from a bounded exact-version review of twelve newly discovered sources; seven other candidates in that pass stayed in research, including a strong resume method held for a false network-privacy claim. Music composition has one useful conceptual method in **all eight subdomains**, but most music methods come from one publisher, and protected textbook excerpts and translations are **not relicensed by source MIT**. **All 44 complete Git package-tree identities are now verified** against pinned upstream commits, including four that were previously UNKNOWN. Eight of 44 pass the pinned static security scan; that is not a clearance. None is approved for unchanged installation/use; this shelf is **not** the complete catalog. Global positive recommendation totals across all 33 domains remain **UNKNOWN**. Historical review records and raw file counts are not usable-skill totals.
 
-### Thirty-nine featured method references
+### Forty-four featured method references
 
 | What you want to improve | Skill worth studying | Specific benefit |
 |---|---|---|
@@ -162,6 +162,11 @@ Other items stay in the research archive. **Discovered, reviewed, and recommende
 | Keeping a story consistent | **Continuity Check** | Catch real story contradictions without turning unclear details into false canon |
 | Product mockups from a logo | **Adobe Create Mockups** | See your logo on real products fast, with a checkpoint before the full set |
 | Trusting GPU-cluster benchmarks | **Dynamo Interconnect Check** | Catch a silent fast-network fallback before trusting benchmark numbers |
+| Mastering AI-made tracks | **Audio Mastering** | Master AI-generated tracks to streaming loudness without adding digital artifacts |
+| Inspecting a live robot | **Inspect ROS2 Robot** | A safe, read-only recipe for inspecting a live ROS2 graph or a recorded bag |
+| Querying a research corpus | **CAAIL query** | Query a curated corpus without reporting curated gaps as real-world absence |
+| Cross-border e-commerce margins | **Cross-border Unit Economics** | Show whether a cross-border route truly profits after every variable cost |
+| Finding real job openings | **Ghost-job-aware Job Search** | Find real postings and score ghost-job risk separately from how well you fit |
 
 **Additional reviewed candidates outside the featured shelf:** [Three independently pinned music/SVG reviews](docs/reviews/2026-11-03-q6-independent-music-svg-three-static.md) graded one additional composition method (15/20) and two illustration methods (13/20 each). They remain **static reference-only candidates**, not new consumer promotions. [Environment-art review](docs/reviews/2026-11-03-q6-environment-illustration-static.md) found a scene-framing method worth studying but held its paid-model execution and unverified art rights. None of those creative reviews adds a featured method. [The budget method and scorecard defect have separate qualification evidence](docs/reviews/2026-11-03-q7-budget-valuable-reference-and-workbook-formula-gate.md); [18-case independent spreadsheet-engine reproduction](docs/reviews/2026-11-03-q7-grant-scorecard-engine-replay.md); [pinned original-XLSX acceptance harness and current blocker](docs/reviews/2026-11-03-q7-pinned-scorecard-acceptance-harness.md); **[correction: source checks notes column C instead of eligibility answers column B](docs/reviews/2026-11-03-q7-scorecard-source-column-reconciliation.md)**; **[actual pinned-workbook 25-case engine acceptance](docs/reviews/2026-11-03-q7-original-pinned-scorecard-engine-acceptance.md)**.
 

@@ -1,6 +1,6 @@
-# Thirty-nine useful skill methods, with their limits
+# Forty-four useful skill methods, with their limits
 
-**These are thirty-nine positively selected, individually differentiated Valuable Reference methods across twenty-eight canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
+**These are forty-four positively selected, individually differentiated Valuable Reference methods spanning all thirty-three canonical domains.** They are ideas worth learning from, **not** skills we recommend installing or running unchanged. We chose each for a distinct practical benefit and studied its pinned source and risks. The twelve new creative methods have pinned SKILL.md and named-file evidence; eight new music package trees now have complete Git identity, while four older creative package trees remain **UNKNOWN**. They remain **methods to study, not package reuse approvals**.
 
 | If you need to… | Study this method | Why it's worth your time |
 |---|---|---|
@@ -39,6 +39,11 @@
 | See a logo on real products | **[Adobe Create Mockups](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/adobe/skills/adobe-create-mockups/SKILL.md)** | See your logo on real products fast, with a checkpoint before the full set. |
 | Trust a GPU-cluster benchmark | **[Dynamo Interconnect Check](https://github.com/openai/plugins/blob/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/nvidia/skills/dynamo-interconnect-check/SKILL.md)** | Catch a silent fast-network fallback before trusting disaggregated-serving benchmark numbers. |
 | Plan security for a Singapore government system | **[Singapore SSP Navigator](https://github.com/kyleoliveiro/sg-gov-skills/blob/16892fc613263c3f835457cd23ae092d404979ca/skills/sg-gov-ssp-navigator/SKILL.md)** | Pick the right Singapore government security plan and its mandatory controls, and flag gaps. |
+| Master an AI-generated track | **[Audio Mastering (AI tracks)](https://github.com/FuDesign2008/open-music-skills/blob/95e66582a82579fa44dca55fff64b874de608a98/skills/audio-mastering/SKILL.md)** | Master AI-generated tracks to streaming loudness without adding digital artifacts. |
+| Safely inspect a live robot | **[Inspect ROS2 Robot](https://github.com/yaniswav/TopicForge/blob/9de14cec12447b2f505342803c7a6bfcb100cb5d/plugin/skills/inspect-ros2-robot/SKILL.md)** | A safe, read-only recipe for inspecting a live ROS2 graph or a recorded bag. |
+| Query a research corpus honestly | **[Cellular Agriculture AI Library query](https://github.com/tucca-cellag/caail/blob/5db336dbe013e06187a63724ef66bfd7c39c24fc/plugin/skills/caail/SKILL.md)** | Query a curated research corpus without reporting curated gaps as real-world absence. |
+| Check cross-border e-commerce profit | **[Cross-border Unit Economics](https://github.com/peterbamuhigire/business-plan-skills/blob/00a85b14b0770951a4c8dd0f8505b2bbaf7bfc95/skills/ict/ecommerce-unit-economics-and-cross-border-margin-model/SKILL.md)** | Show whether a cross-border e-commerce route truly profits after every variable cost. |
+| Find real jobs, skip ghost ones | **[Ghost-job-aware Job Search](https://github.com/wexxwuther/job-hunter/blob/8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5/job-search/SKILL.md)** | Find real job postings and score ghost-job risk separately from how well you fit. |
 | Weigh evidence for a contested decision | **[Build Evidence Map](https://github.com/github/awesome-copilot/blob/f11a4e441c5ff061b4f8ae37952be8c602e4034e/skills/build-evidence-map/SKILL.md)** | Keep counterevidence and unknowns visible in a decision, with a checked evidence map. |
 | Check whether research results really reproduce | **[Radiology Reproducibility](https://github.com/huang-sir1/radiology-skills/blob/aaa0fe621c404d3146333e0e1a2a22ed51f415fe/radiology-skills/skills/radiology-reproducibility/SKILL.md)** | Grade each research result's reproducibility honestly, with tolerances fixed before rerunning. |
 | Track which documents an agent actually read | **[Read Ledger](https://github.com/agentskillexchange/skills/blob/a6017b4af9d0298b7be3af7a6ec7485943d2c3e7/skills/read-ledger/SKILL.md)** | Know exactly which parts of which documents your agent actually reviewed, across sessions. |
@@ -306,8 +311,58 @@ These eight are *separate methods*, not eight licenses to operate a composition 
 
 **Evidence:** Q8 rights batch full-package re-review **19/20** (earlier static record 18/20); pinned `openai/plugins@0722921d`; package tree `24748c47` verified; static security scan **failed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json).
 
+### Audio / voice / sound: Audio Mastering (AI tracks)
+
+**Unique idea:** For AI-generated audio, subtract (clean mud, cut artifacts) rather than enhance, then run a two-pass loudness normalization from measured values to hit the streaming target exactly, and verify the result.
+
+**Important limit:** The A/B verification step hard-codes macOS-only afplay with no cross-platform fallback, and the skill cross-references a sibling 'whitespace-craft' skill that is not in the package. Install guidance is Homebrew-only.
+
+**Rights:** copy_allowed = **YES**. MIT (root; see rights_review)
+
+**Evidence:** Q8 batch 4 (newly discovered source) full-package review **17/20**; pinned `FuDesign2008/open-music-skills@95e66582`; package tree `33e78f89` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Robotics / IoT: Inspect ROS2 Robot
+
+**Unique idea:** Sweep then drill, read-only: name each tool and field you use, flag any mock or truncated data, treat silence or an empty graph as unknown rather than absence, and report only what the tools actually returned.
+
+**Important limit:** The skill does nothing on its own: it needs the external TopicForge MCP server, a local ros2 CLI and the rosbags library, and it pins no version for that server beyond a contract number or says how to trust it.
+
+**Rights:** copy_allowed = **YES**. MIT (root; see rights_review)
+
+**Evidence:** Q8 batch 4 (newly discovered source) full-package review **19/20**; pinned `yaniswav/TopicForge@9de14cec`; package tree `99fd63ad` verified; static security scan **passed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Science: Cellular Agriculture AI Library query
+
+**Unique idea:** Enumerate from small index files first, verify the parsed row count against a tiny manifest, map abbreviated labels, and carefully distinguish an un-indexed cell from a genuinely absent subject before answering.
+
+**Important limit:** The method is clean, but the works it indexes each keep their own license (148 carry no grant), so the catalog's MIT does not cover copying those works, and its license tiers are advisory, not verified terms.
+
+**Rights:** copy_allowed = **CONDITIONAL**. MIT (root; see rights_review)
+
+**Evidence:** Q8 batch 4 (newly discovered source) full-package review **20/20**; pinned `tucca-cellag/caail@5db336db`; package tree `3a44185c` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Business: Cross-border Unit Economics
+
+**Unique idea:** Tag each input by source and confidence, compute contribution margin after all order-variable costs per market and channel, then issue a go/conditional/no-go verdict that names the assumptions which would flip it.
+
+**Important limit:** The method is incomplete without an undefined, unbundled proprietary 'Chwezi Accounting Doctrine' it lists as required; it has duplicated/divergent workflow sections, no explicit not-financial-advice line, and embeds the author's personal phone number, which should be stripped.
+
+**Rights:** copy_allowed = **CONDITIONAL**. MIT (root; see rights_review)
+
+**Evidence:** Q8 batch 4 (newly discovered source) full-package review **16/20**; pinned `peterbamuhigire/business-plan-skills@00a85b14`; package tree `8697477b` verified; static security scan **failed**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
+### Career: Ghost-job-aware Job Search
+
+**Unique idea:** Search four source tiers, then score each posting on five sub-scores that keep posting legitimacy independent from fit, applying red flags as a multiplier that can sink an otherwise strong match.
+
+**Important limit:** The web fetching is the host's responsibility and runs against third-party job boards and ATS feeds subject to their terms; the anti-fabrication gate lives in a sibling skill rather than in this member; a script docstring mislabels the multiplicative penalty as subtractive.
+
+**Rights:** copy_allowed = **YES**. MIT (root; see rights_review)
+
+**Evidence:** Q8 batch 4 (newly discovered source) full-package review **20/20**; pinned `wexxwuther/job-hunter@8c03dd4c`; package tree `9b240990` verified; static security scan **incomplete**; behavioral tests **not run**. [Individual review](../registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json).
+
 ## What this does and doesn't count
 
-Thirty-nine **distinct source/path-pinned Valuable Reference methods** across twenty-eight canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 39 complete pinned source package Git tree identities are now verified (Q8), including four earlier creative methods that were previously UNKNOWN. Seven pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
+Forty-four **distinct source/path-pinned Valuable Reference methods** spanning all thirty-three canonical domains in this bounded shelf; **zero Recommended for Use approvals**. All 44 complete pinned source package Git tree identities are now verified (Q8). Eight pass the pinned static security scan; none has behavioral validation. *Earlier text, kept for history:* Twenty **distinct source/path-pinned Valuable Reference methods** across ten canonical domains in this bounded shelf; **zero Recommended for Use approvals**. Eight music methods have verified full pinned source package Git tree identities, while four earlier creative methods do not. Mirror equality and book/image/music reuse rights remain unverified. Music has one conceptual reference in each of eight subdomains, with two different rhythm methods, but lacks genuinely independent alternatives and actual performance evidence. Other domains remain unqualified and all-corpus endorsed totals are **UNKNOWN**. No security scanner or hands-on model-executed behavioral pass.
 
 The source-neutral [structured reference catalog](../registry/consumer-positive-references-q8-20261103.json) includes exact pins, file hashes, supported mechanisms, limits, licensing and evidence. Other candidates, rejected packages and historical decisions stay in the broader research archive.

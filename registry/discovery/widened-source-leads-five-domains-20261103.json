@@ -179,5 +179,6 @@
    "license_guess": "MIT",
    "value_and_cautions": "Open-source job-search skill ('stop applying to ghost jobs'): searches and matches postings. Check egress to job boards and any account/scraping terms."
   }
- ]
+ ],
+ "qualified_by": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json (2026-11-04): one representative package per source reviewed; 5 Valuable References (one per previously-unfeatured domain), 7 kept in research including a held resume method. HEAD pins used as the review baseline; shelf entries record the exact package tree/blob."
 }

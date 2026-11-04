@@ -5328,23 +5328,26 @@
     "as_of": "2026-11-03",
     "note": "Current bounded featured shelf pointer. Supersedes q7_current_consumer_shelf_20261103 for CURRENT counts only; all dated historical counters in this file are retained as history, not replaced.",
     "current_shelf": "registry/consumer-positive-references-q8-20261103.json",
-    "valuable_reference_methods": 39,
-    "distinct_canonical_domains": 28,
+    "valuable_reference_methods": 44,
+    "distinct_canonical_domains": 33,
     "unchanged_use_approvals": 0,
     "behavioral_validations": 0,
-    "featured_tree_identities_verified": "39/39",
-    "static_security_gate_passed_featured": "7/39",
+    "featured_tree_identities_verified": "44/44",
+    "static_security_gate_passed_featured": "8/44",
     "qualification_queue_reference_only": 1522,
     "global_eligible_packages": "UNKNOWN",
     "security_receipts": "registry/security/external-host-skillspector-first-party-20261103.json; registry/security/external-host-skillspector-featured-20261103.json",
     "qualification_ledgers": [
       "registry/discovery/q8-reference-only-qualification-batch1-20261103.json",
       "registry/discovery/q8-reference-only-qualification-batch2-20261103.json",
-      "registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json"
+      "registry/discovery/q8-reference-only-qualification-batch3-rights-20261103.json",
+      "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json"
     ],
     "pipeline_ledger": "registry/qualification-pipeline-20261103.json",
     "new_source_leads_discovery_only": "registry/discovery/widened-source-leads-five-domains-20261103.json",
     "supersedes_for_current_counts": "q7_current_consumer_shelf_20261103",
-    "grant_workbook_acceptance_status": "See merged PR #696 (q7_original_pinned_workbook_engine_acceptance_20261103); original bytes unchanged, source still HOLD."
+    "grant_workbook_acceptance_status": "See merged PR #696 (q7_original_pinned_workbook_engine_acceptance_20261103); original bytes unchanged, source still HOLD.",
+    "all_33_domains_featured": true,
+    "widened_sources_qualified": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json"
   }
 }

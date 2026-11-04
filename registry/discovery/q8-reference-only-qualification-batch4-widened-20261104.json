@@ -1,0 +1,1107 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-03",
+ "rubric_dimensions": [
+  "trigger_precision",
+  "procedural_clarity",
+  "authority_safety",
+  "failure_handling",
+  "evidence_discipline",
+  "dependency_coherence",
+  "portability_honesty",
+  "usefulness_differentiation",
+  "adversarial_resilience",
+  "effectiveness_design"
+ ],
+ "rubric_scale": "0-2 per dimension, 20 total",
+ "decision_vocabulary": {
+  "VALUABLE_REFERENCE": "Individually selected differentiated method to study; not approval to install or run unchanged.",
+  "KEEP_REFERENCE_ONLY": "Stays in research; useful lessons recorded but not promoted."
+ },
+ "tranche": "Q8 batch 4: widened-discovery lead qualification",
+ "selection": "Bounded exact-version qualification of the 12 widened-discovery source leads (one representative, domain-apt package per new source). Each exact pinned tree re-derived (12/12 match), every file read, pinned static scan, 10-dimension grade, and a rights review extracting upstream LICENSE/NOTICE/plugin.json. For each of the five previously-unfeatured domains, the single best-fit, cleanest method was featured; other strong distinct methods were kept reference-only (shelf-eligible) to keep the fill lean. The BRAINS resume method was held for a false network-privacy claim and a material version inconsistency.",
+ "review_method": "Exact pinned commits fetched (depth 1) into isolated bare repositories; package trees re-derived and matched to prior records 10/10; trees exported with git archive; every package file read in full by three parallel read-only reviewers on disjoint lists with one shared brief; integration owner spot-checked each decisive claim against source lines and adjudicated decisions. Nothing executed, installed or fetched from candidates. Pinned SkillSpector static scan per exact tree.",
+ "counts": {
+  "reviewed": 12,
+  "valuable_reference": 5,
+  "keep_reference_only": 7,
+  "reject_unchanged": 0,
+  "security_passed": 3,
+  "behavioral_validated": 0,
+  "unchanged_use_approved": 0
+ },
+ "records": [
+  {
+   "name": "Room Acoustics (REW)",
+   "consumer_id": "koltyj-REW-mcp/room-acoustics",
+   "source_repository": "koltyj/REW-mcp",
+   "source_pin": "1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5",
+   "canonical_path": "plugin/skills/room-acoustics/SKILL.md",
+   "package_tree": "fce509678b29c12282e22287b6994bcdb8d600a0",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "6698696d5b3ab5f7c8d7bd404b106a6ddb1debff",
+   "package_file_count": 3,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "audio-voice-sound",
+   "capability_subdomain": "acoustics",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 1,
+    "authority_safety": 2,
+    "failure_handling": 1,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Enumerates exact triggers (room modes, SBIR, GLM, RT60) plus plain symptoms.",
+    "procedural_clarity": "Strong interpretive reference, but the ordered procedure lives only in the treatment priority list.",
+    "authority_safety": "Purely advisory: recommends placement and treatment, performs no automated action.",
+    "failure_handling": "Covers what GLM cannot fix and overcorrection, but not a missing REW tool or bad measurement.",
+    "evidence_discipline": "Gives the physics formulas, quantified thresholds and research target curves.",
+    "dependency_coherence": "Assumes a REW MCP and Genelec GLM hardware, never declared.",
+    "portability_honesty": "Heavy reliance on REW, a REW MCP, a calibrated mic and Genelec hardware is unstated.",
+    "usefulness_differentiation": "Classifies each issue as EQ/GLM-fixable vs physics-limited and maps it to a tool.",
+    "adversarial_resilience": "Data-only, but no guard against a noisy or wrong-position measurement.",
+    "effectiveness_design": "Symptom-to-cause-to-tool table makes it directly actionable."
+   },
+   "score_20": 15,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Audio is filled this pass by the self-contained open-source Audio Mastering method; Room Acoustics is a distinct acoustics-diagnosis method but is locked to a proprietary REW/Genelec toolchain it does not declare.",
+   "hard_fail_flags": [
+    "Undeclared hard dependency on REW app, a REW MCP, a calibrated mic and Genelec GLM/SAM",
+    "No fallback when measurements or tools are absent"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 Kolton Jacobs; frontmatter silent"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Trademarks referenced as reference material (Genelec, GLM, REW, UMIK-1, acoustic-panel brands, Harman/B&K curves).",
+    "service_terms": "Requires the proprietary REW app and a REW MCP, optionally Genelec SAM/GLM; measurement data stays local.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with the copyright line",
+    "obligation": "Study the diagnostic framing in our own words; copying needs the MIT notice. Treat REW/Genelec/GLM as trademarks."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "passed",
+    "report_sha256": "ab993f38de607d4eabd9f95579955b8d4a13575359e1f20a197a9cdba65d2771",
+    "findings": [],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Audio Mastering (AI tracks)",
+   "consumer_id": "FuDesign2008-open-music-skills/audio-mastering",
+   "source_repository": "FuDesign2008/open-music-skills",
+   "source_pin": "95e66582a82579fa44dca55fff64b874de608a98",
+   "canonical_path": "skills/audio-mastering/SKILL.md",
+   "package_tree": "33e78f89415c2963f6de8b31d60e49b2ed921db5",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "9570c7ef2689f32a88e844d6c1bb51d17b64b525",
+   "package_file_count": 4,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "audio-voice-sound",
+   "capability_subdomain": "mastering",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Exact trigger words and a clear reverse boundary.",
+    "procedural_clarity": "Five-stage flow with copy-ready commands and a workflow cheat sheet.",
+    "authority_safety": "'Never overwrite the original'; the script writes only to mastered/.",
+    "failure_handling": "Common-problems table, LUFS strategy table, overshoot caveat and silence thresholds.",
+    "evidence_discipline": "Recipe grounded in a documented 5-round A/B history with a rejected-filter table.",
+    "dependency_coherence": "Declares ffmpeg/librosa, but afplay is macOS-only and it cites an absent sibling skill.",
+    "portability_honesty": "Install commands are brew/macOS-centric; A/B step hard-codes afplay.",
+    "usefulness_differentiation": "'Subtractive mastering for AI audio' plus a measured two-pass loudnorm recipe is distinctive.",
+    "adversarial_resilience": "Scripts are benign and local, but parse loudnorm JSON without validation.",
+    "effectiveness_design": "Parameterized two-pass and silence-check scripts close the measure-to-verify loop."
+   },
+   "score_20": 17,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Master AI-generated tracks to streaming loudness without adding digital artifacts.",
+   "distinct_method_original_summary": "For AI-generated audio, subtract (clean mud, cut artifacts) rather than enhance, then run a two-pass loudness normalization from measured values to hit the streaming target exactly, and verify the result.",
+   "reason_not_unchanged": "The A/B verification step hard-codes macOS-only afplay with no cross-platform fallback, and the skill cross-references a sibling 'whitespace-craft' skill that is not in the package. Install guidance is Homebrew-only.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Core A/B step depends on macOS-only afplay (SKILL.md L32/L196)",
+    "Cross-references absent 'whitespace-craft' skill (SKILL.md L210)",
+    "brew-only install guidance"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 FUD2008; frontmatter version only"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Trademarks (Suno, streaming platforms); EBU R128 standard; ffmpeg filter syntax quoted.",
+    "service_terms": "Needs only open-source ffmpeg (optional ffmpeg-normalize/librosa); AI platforms named only as the WAV source; all local.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with the copyright line",
+    "obligation": "Study and restate the recipe in our own words; copying needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "a13e43deb0c2731d79a312125f699195d101ed23f4740b31ce522f3728ea100d",
+    "findings": [
+     {
+      "id": "LP3",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 1
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "scripts/master_twopass.py",
+      "line": 21
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "scripts/master_twopass.py",
+      "line": 51
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "scripts/master_twopass.py",
+      "line": 56
+     }
+    ],
+    "incomplete_reasons": {
+     "static_parse_limit": 1,
+     "reference_missing": 7
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Rerun URDF Ingestion",
+   "consumer_id": "rerun-io-rerun/rerun-urdf",
+   "source_repository": "rerun-io/rerun",
+   "source_pin": "6f39b09211b869d6e262083cfddefa392244088d",
+   "canonical_path": "skills/rerun-urdf/SKILL.md",
+   "package_tree": "d975189711aed05aadcbc93426906631df481b7e",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "b5a634f97b0dd20a0bb92a6fe294635cebc219c3",
+   "package_file_count": 2,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "robotics-iot",
+   "capability_subdomain": "perception",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Names exact use cases (logging a model, FK from joint states, extrinsics chains, a tree that won't connect).",
+    "procedural_clarity": "Two-call API, stream+FK pattern, a numbered forest-resolution procedure and a minimal end-to-end shape.",
+    "authority_safety": "Read-only analysis; the validation script only reads and prints; allowed-tools scoped.",
+    "failure_handling": "'Fail loudly' on broken chains plus a nine-item silent-failure taxonomy.",
+    "evidence_discipline": "Separates a mapping bug from calibration slack, fit from answer; cites concrete examples.",
+    "dependency_coherence": "Builds on named sibling skills and the rerun SDK; the script pins its own deps.",
+    "portability_honesty": "Flags that xacro is not URDF and that package:// needs ROS paths.",
+    "usefulness_differentiation": "Transform-forest resolution and silent-failure taxonomy go well beyond API docs.",
+    "adversarial_resilience": "Benign and local, but WebFetch is allowed and it lists many external repo URLs (untrusted).",
+    "effectiveness_design": "Layered references, a runnable validation script and a minimal shape make a hard task executable."
+   },
+   "score_20": 19,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Robotics is filled this pass by the read-only, self-contained Inspect ROS2 Robot method; rerun-urdf is an excellent distinct URDF-ingestion method but needs the unbundled rerun SDK, three sibling skills, and WebFetch over external URLs.",
+   "hard_fail_flags": [
+    "Requires the unbundled rerun SDK and three sibling skills",
+    "WebFetch over many external repo URLs (untrusted content)"
+   ],
+   "package_license_finding": "Apache-2.0 (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root: LICENSE-APACHE (Apache-2.0) and LICENSE-MIT (MIT, (c) 2022 Rerun Technologies AB) \u2014 dual-licensed; frontmatter has only allowed-tools"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None; the dual Apache-2.0/MIT offer is intentional.",
+    "third_party_material": "Rerun trademark and many robot-vendor trademarks and repo links; MuJoCo Menagerie; ROS.",
+    "service_terms": "Needs the open-source Rerun SDK; optional dataset/robot-description downloads from GitHub; all local, no paid account.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "Licensee's choice: MIT text with 'Copyright (c) 2022 Rerun Technologies AB', or Apache-2.0 text with any NOTICE attribution",
+    "obligation": "Study the graph-reasoning method in our own words; copying requires one of the dual licenses' notices."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "3ed9476ebd8feae2d02cace91cc814f6c72c6c8dc2232d472745fbbdc16ec3a6",
+    "findings": [
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 32
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 32
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 35
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 36
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 38
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 39
+     },
+     {
+      "id": "P9",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 40
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 3
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Mastering Prep (Ableton)",
+   "consumer_id": "glincker-ableton-skills/mastering-prep",
+   "source_repository": "glincker/ableton-skills",
+   "source_pin": "347cd7dc4c9b53a42fcc39b332b972c687cf9fdc",
+   "canonical_path": "skills/mastering-prep/SKILL.md",
+   "package_tree": "2e91ea1b83f684b24c6bb37ca39f9e3b34ecfcb2",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "3558794dd4649cd70e1ed22e47646978181974bd",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "audio-voice-sound",
+   "capability_subdomain": "mastering",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 1,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 1,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Precise finishing-a-track scenario with example phrases.",
+    "procedural_clarity": "Five steps with a 12-row audit table and an export checklist.",
+    "authority_safety": "Explicit gates: fixes only on confirmation, one at a time, never master on the user's behalf.",
+    "failure_handling": "Fail readings reported, but no handling for a missing meter reading or absent MCP tool.",
+    "evidence_discipline": "Several thresholds asserted without basis.",
+    "dependency_coherence": "Whole workflow calls an Ableton Live MCP never declared as a dependency.",
+    "portability_honesty": "Silently assumes Ableton Live plus its MCP and stock devices.",
+    "usefulness_differentiation": "Sound pre-master checklist but largely standard knowledge.",
+    "adversarial_resilience": "No guard against acting on bad or missing meter data.",
+    "effectiveness_design": "Fail-first reporting, a worked sample and an export checklist make it executable."
+   },
+   "score_20": 14,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Procedurally sound and safely gated, but undifferentiated mastering-prep knowledge bound to an undeclared Ableton Live MCP. Audio is already featured this batch by the stronger audio-mastering and room-acoustics methods; the confirmation-gated audit-checklist pattern is salvage.",
+   "hard_fail_flags": [
+    "Undeclared hard dependency on an Ableton Live MCP and stock devices (SKILL.md L14)",
+    "Some meter thresholds asserted without justification",
+    "No fallback when readings are missing"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 Glincker; frontmatter silent"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Ableton device names as trademarks.",
+    "service_terms": "Requires the proprietary Ableton Live DAW plus an Ableton MCP; processing local.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with the copyright line",
+    "obligation": "Study only; copying needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "9ff9fb57ba31accf60a87d544e5ac0fe5f6366cda13e5a17fbf43068369c6e07",
+    "findings": [
+     {
+      "id": "YR4",
+      "pattern": "YARA rule 'agent_skill_mcp_tool_poisoning_metadata': MCP/tool metadata poisoning indicators in tool schemas or skill manifests [agent_skills]",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 3
+     },
+     {
+      "id": "EA2",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 71
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Inspect ROS2 Robot",
+   "consumer_id": "yaniswav-TopicForge/inspect-ros2-robot",
+   "source_repository": "yaniswav/TopicForge",
+   "source_pin": "9de14cec12447b2f505342803c7a6bfcb100cb5d",
+   "canonical_path": "plugin/skills/inspect-ros2-robot/SKILL.md",
+   "package_tree": "99fd63adead3d4e0b98d8fcea0628de981ca8c1c",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "d28e512955d4e8f9335ebf963276417331dcf10b",
+   "package_file_count": 2,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "robotics-iot",
+   "capability_subdomain": "perception",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Scoped tightly to read-only ROS2 topic/bag inspection questions.",
+    "procedural_clarity": "Ordered diagnose-first sweep then drill, each step naming the exact tool and fields.",
+    "authority_safety": "States read-only up front; never suggests publishing or commanding; masks credential-named parameter values.",
+    "failure_handling": "Covers timeouts, empty-list caveat, null-params-as-finding, mock mode, size caps.",
+    "evidence_discipline": "Reports what tools returned, names tool and field, separates observed facts from guesses.",
+    "dependency_coherence": "Thin wrapper over the TopicForge MCP, a ros2 CLI and rosbags, none bundled (honest).",
+    "portability_honesty": "Flags backend-none fallback, rosbags-missing, sim-vs-wall clock, the sample-size cap.",
+    "usefulness_differentiation": "Encodes non-obvious tool-contract knowledge beyond generic ROS advice.",
+    "adversarial_resilience": "Mandates flagging mock/fictional data; treats silence as unknown, not absence.",
+    "effectiveness_design": "Compact SKILL.md delegating depth to a tool-notes reference."
+   },
+   "score_20": 19,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "A safe, read-only recipe for inspecting a live ROS2 graph or a recorded bag.",
+   "distinct_method_original_summary": "Sweep then drill, read-only: name each tool and field you use, flag any mock or truncated data, treat silence or an empty graph as unknown rather than absence, and report only what the tools actually returned.",
+   "reason_not_unchanged": "The skill does nothing on its own: it needs the external TopicForge MCP server, a local ros2 CLI and the rosbags library, and it pins no version for that server beyond a contract number or says how to trust it.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Requires external TopicForge MCP server, ros2 CLI and rosbags, none bundled",
+    "No version pin or trust statement for the MCP server"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 Yanis ETHVIGNOT; plugin LICENSE identical MIT; frontmatter silent"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "References ROS2/DDS (Open Robotics trademarks) as target tech; TopicForge is the author's own tool.",
+    "service_terms": "Needs the self-hosted TopicForge MCP, a local ros2 CLI and optionally rosbags; all open, no paid account; inspection stays local.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with 'Copyright (c) 2026 Yanis ETHVIGNOT'",
+    "obligation": "Study the inspection method in our own words; copying needs the MIT notice. Treat ROS/Open Robotics as trademarks."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "passed",
+    "report_sha256": "b2a79741147aaef6d206d24a2ee2373af720f650a3ee8e9f54b1ed04426b582a",
+    "findings": [],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Nav2 Navigation Debugging",
+   "consumer_id": "robium-ai-robium/navigation",
+   "source_repository": "robium-ai/robium",
+   "source_pin": "ce944953d11ccdbd32613c4746389bc78a24e8c5",
+   "canonical_path": "skills/navigation/SKILL.md",
+   "package_tree": "70a2f22f944cf72fd6ce3a938f5858ca3b33b24e",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "3e251623f4c0fe4c913535980074c6537dcbc83e",
+   "package_file_count": 4,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "robotics-iot",
+   "capability_subdomain": "motion-planning",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 1,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Separates existing-app Nav2 fixes from new-demo work via evals.",
+    "procedural_clarity": "'Trace the chain' walks the stack in order, fixing the first broken link then re-checking.",
+    "authority_safety": "Flags risky tradeoffs but gives no confirm gate before config that moves a physical robot.",
+    "failure_handling": "FAILURES.md is a full symptom-ordered troubleshooting tree.",
+    "evidence_discipline": "Demands reading the running system as evidence; treats platform values as observed, not defaults.",
+    "dependency_coherence": "Depends on a sibling 'architect' skill not in the package, plus a full Nav2 stack.",
+    "portability_honesty": "Insists on re-reading version/distro/model; adds a platform card only after a real run.",
+    "usefulness_differentiation": "Field-tested gotchas go well beyond generic Nav2 docs.",
+    "adversarial_resilience": "Warns a viewer path proves only planning and that duplicate owners create convincing false symptoms.",
+    "effectiveness_design": "Layered 'go deeper only when needed' design."
+   },
+   "score_20": 18,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Robotics is filled this pass by Inspect ROS2 Robot; this chain-trace Nav2 debugging method is distinct and strong, but it changes robot configuration with no confirmation gate and references an absent sibling 'architect' skill.",
+   "hard_fail_flags": [
+    "Changes robot config with no confirmation gate",
+    "References absent ../architect/SKILL.md",
+    "Requires a full external Nav2/ROS2/Gazebo stack"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 robium; plugin.json MIT; frontmatter silent"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Names TurtleBot3/ROBOTIS, Nav2, Gazebo, RViz2, Foxglove (trademarks); nothing copied in.",
+    "service_terms": "No paid account; open-source ROS2/Nav2/Gazebo plus a sibling skill; no vendor egress.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with 'Copyright (c) 2026 robium'",
+    "obligation": "Study the chain-trace method in our own words; copying needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "passed",
+    "report_sha256": "10b403df184321497dbc0ba4886600929f56242c70d70dacb091614068ca2eb7",
+    "findings": [],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Cellular Agriculture AI Library query",
+   "consumer_id": "tucca-cellag-caail/caail",
+   "source_repository": "tucca-cellag/caail",
+   "source_pin": "5db336dbe013e06187a63724ef66bfd7c39c24fc",
+   "canonical_path": "plugin/skills/caail/SKILL.md",
+   "package_tree": "3a44185c15af28341050f850f1dcfcba9690ac8e",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "8699f83f9dfc63b549cf9f743b62e820d8d0317c",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "science",
+   "capability_subdomain": "scientific-communication",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Precise description enumerating the cell-ag catalog questions it answers.",
+    "procedural_clarity": "Question-to-endpoint table, index-first fetch order and a count-against-manifest check.",
+    "authority_safety": "Read-only catalog query over public static JSON; no wet-lab protocols; license-tier guidance defers to counsel.",
+    "failure_handling": "Extensive handling of truncation false-zeros, abbreviated labels and an unreachable-endpoint fallback.",
+    "evidence_discipline": "Forces distinguishing an empty cell and a matrix-ineligible section from true absence; say which population you counted.",
+    "dependency_coherence": "Needs only an HTTP fetch of public static JSON; nothing to install or authenticate.",
+    "portability_honesty": "Documents raw-vs-Pages reachability, file size limits and the markdown fallback's reduced capability.",
+    "usefulness_differentiation": "The anti-false-negative discipline is a genuinely distinct method, not a topic summary.",
+    "adversarial_resilience": "Guards against reporting curated absence as field absence and against trusting a summariser's 'not found'.",
+    "effectiveness_design": "Thorough and well-sectioned; pushes heavy records to index files."
+   },
+   "score_20": 20,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Query a curated research corpus without reporting curated gaps as real-world absence.",
+   "distinct_method_original_summary": "Enumerate from small index files first, verify the parsed row count against a tiny manifest, map abbreviated labels, and carefully distinguish an un-indexed cell from a genuinely absent subject before answering.",
+   "reason_not_unchanged": "The method is clean, but the works it indexes each keep their own license (148 carry no grant), so the catalog's MIT does not cover copying those works, and its license tiers are advisory, not verified terms.",
+   "hold_reason": null,
+   "hard_fail_flags": [],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "SKILL.md body and LICENSE: MIT, (c) 2026 Tufts University Center for Cellular Agriculture (TUCCA) and CAAIL contributors"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None for the skill itself.",
+    "third_party_material": "Indexes third-party papers/software/datasets each under their own licenses (some restricted; 148 with no grant); DOIs and industry reports referenced; the indexed works are NOT MIT.",
+    "service_terms": "No account or paid API; HTTP GETs of public static JSON only; no user data sent.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with the TUCCA/CAAIL copyright for the skill; each referenced work keeps its own notice when copied",
+    "obligation": "Study and restate the querying discipline in our own words. The skill text is MIT; copying any indexed work is governed by that work's own license, not the catalog's."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "f1a0f89c24090dc36ee04153ef41f042cae229268e1bba0dcdd763102cd4c450",
+    "findings": [],
+    "incomplete_reasons": {
+     "reference_missing": 16
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "MATLAB Reliability Analysis",
+   "consumer_id": "matlab-matlab-agentic-toolkit/matlab-analyze-reliability",
+   "source_repository": "matlab/matlab-agentic-toolkit",
+   "source_pin": "032b4b605999b1f4adecaac1efa1c9faad41adf6",
+   "canonical_path": "skills-catalog/ai-and-statistics/matlab-analyze-reliability/SKILL.md",
+   "package_tree": "c2476dd8fcc5144429d69a477f41ec0d91d76f25",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "ed98b6f3ce8ea52e8d3d6b3c19d515e88b3350ed",
+   "package_file_count": 3,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "science",
+   "capability_subdomain": "experimental-design",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Clear when-to-use / when-not lists.",
+    "procedural_clarity": "Stepwise fit-compare-plot-test workflow with runnable code.",
+    "authority_safety": "Analysis-only; warns GoF tests must not be applied to censored data.",
+    "failure_handling": "Covers convergence warnings, censored-data caveats and numerical-stability survival.",
+    "evidence_discipline": "Good rigor, but undercut by a code error and unverifiable release-availability claims.",
+    "dependency_coherence": "Requires licensed MATLAB plus a toolbox and an execution tool; core functions pinned to R2026a.",
+    "portability_honesty": "Lists releases, but the R2026a gate on the headline workflow is only lightly flagged.",
+    "usefulness_differentiation": "Expert conventions (distribution objects, upper-tail survival, bootstrap CIs with censoring) are non-trivial.",
+    "adversarial_resilience": "No untrusted-data boundary and a copy-paste bracket-indexing bug would error.",
+    "effectiveness_design": "Well-structured single-purpose reference."
+   },
+   "score_20": 16,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Distinct, well-evidenced method, but held off the shelf this pass to keep the domain-fill lean (one feature per newly-filled domain). Recorded as shelf-eligible; a maintainer can promote it. Science is filled this pass by the clean, open CAAIL query method. The transferable statistics rules here are useful, but the package is locked to paid MATLAB (core functions R2026a-only), carries a copy-paste code bug (distNames[i] is invalid MATLAB, SKILL.md L117), and its two license references disagree.",
+   "hard_fail_flags": [
+    "Invalid MATLAB bracket indexing distNames[i] (SKILL.md L117)",
+    "Core accelerated-life functions are R2026a-only",
+    "Requires paid MATLAB + toolbox + an execution tool",
+    "Frontmatter license URL vs bundled BSD-style LICENSE.md discrepancy"
+   ],
+   "package_license_finding": "BSD-3-Clause-style (MathWorks) (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "frontmatter license URL (MathWorks PMRL) + bundled LICENSE.md (BSD-3-style, 'Copyright 2026 The MathWorks, Inc.', with a 'solely in conjunction with MathWorks products' field-of-use clause)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "Frontmatter/manifest name a PMRL license URL while the bundled LICENSE.md is a BSD-3-style text with an extra field-of-use restriction; not confirmed identical.",
+    "third_party_material": "MATLAB/MathWorks and all function names are trademarks and proprietary API.",
+    "service_terms": "Requires commercial licensed MATLAB plus the Statistics and Machine Learning Toolbox (and R2026a) and an execution tool; data stays wherever that MATLAB runs.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "'Copyright 2026 The MathWorks, Inc. All rights reserved.' plus the BSD-style conditions, the field-of-use clause and the disclaimer",
+    "obligation": "Study the statistics rules in our own words. Copying is allowed only under the restricted MathWorks field-of-use license, with notices kept and the license discrepancy resolved first."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "018e5c3d5c1829fc49b8a0331ef8c95a4bccc79828aaa696ef05cf75f96ddc60",
+    "findings": [
+     {
+      "id": "P4",
+      "pattern": "Behavior Manipulation",
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 172
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 1
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Acoustics Physicist persona",
+   "consumer_id": "K-Dense-AI-scientific-agents/acoustics-physicist",
+   "source_repository": "K-Dense-AI/scientific-agents",
+   "source_pin": "98c7fae46648724e1a43a1f2b207b0c82fcc462e",
+   "canonical_path": "scientific-agents/acoustics-physicist/skills/acoustics-physicist/SKILL.md",
+   "package_tree": "9268dc2f1b974af838b468c5ec253e53b2dc215c",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "47c730768b1462d7451a66f50bcfcbf38260e144",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "science",
+   "capability_subdomain": "physics",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 1,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 2,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 0,
+    "adversarial_resilience": 1,
+    "effectiveness_design": 1
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Concrete description naming governing relations and first-class failure modes.",
+    "procedural_clarity": "Advisory prose (framing, playbook, definition-of-done) rather than a gated procedure.",
+    "authority_safety": "Pure reasoning document; adds an exposure/consent ethics section.",
+    "failure_handling": "Playbook and reflexive questions enumerate and triage failure modes.",
+    "evidence_discipline": "Enforces calibration-before-physics, correct reference pressures, energy-conservation bound, hedged language.",
+    "dependency_coherence": "Lists commercial tools only as optional; self-contained.",
+    "portability_honesty": "Portable markdown, but does not disclose it is one of ~503 near-identical persona skills.",
+    "usefulness_differentiation": "Textbook knowledge summary a capable model already largely knows; no differentiated method.",
+    "adversarial_resilience": "No injection surface, but nothing specifically adversarial.",
+    "effectiveness_design": "Useful reasoning scaffold but no concrete deliverables or gates."
+   },
+   "score_20": 14,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Science is filled this pass by the clean, distinct CAAIL corpus-query method. This is a generic templated persona (one of ~503) summarising textbook acoustics with no differentiated procedure; its reflexive-question/definition-of-done scaffold is salvage.",
+   "hard_fail_flags": [
+    "Advisory prose only; no procedure, gates or artifacts",
+    "Undifferentiated textbook content duplicated across ~503 sibling personas"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "frontmatter license MIT; LICENSE.md full MIT, (c) 2026 K-Dense, Inc."
+    ],
+    "controlling_text_present": true,
+    "conflicts": "None.",
+    "third_party_material": "Names commercial software and standards bodies only as references.",
+    "service_terms": "None required; reasoning-only; the simulation tools it mentions are optional.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with 'Copyright (c) 2026 K-Dense, Inc.'",
+    "obligation": "Study the reasoning habits in our own words; copying needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "cc4d033fc862140f0b9e57a33c6bb32d218cb88ba6a59ffe6b795f421a3956b8",
+    "findings": [
+     {
+      "id": "AE4",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "file": "SKILL.md",
+      "line": 1
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 2
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Cross-border Unit Economics",
+   "consumer_id": "peterbamuhigire-business-plan-skills/ecommerce-unit-economics",
+   "source_repository": "peterbamuhigire/business-plan-skills",
+   "source_pin": "00a85b14b0770951a4c8dd0f8505b2bbaf7bfc95",
+   "canonical_path": "skills/ict/ecommerce-unit-economics-and-cross-border-margin-model/SKILL.md",
+   "package_tree": "8697477b3b824931a77afcddf430916c91e4b7bb",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "5c7e7e82b9b73e75d7b1be1fdf99417b65153097",
+   "package_file_count": 3,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "business",
+   "capability_subdomain": "business-models",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 1,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 0,
+    "portability_honesty": 1,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Names concrete triggers and hands wider work to a sibling skill.",
+    "procedural_clarity": "Numbered workflows and a workbook spec, but two overlapping dual-compat sections duplicate and diverge.",
+    "authority_safety": "Capability Contract forbids changing live prices/ads/tax and gates conclusions behind professional review.",
+    "failure_handling": "Degraded Mode forbids a firm go-verdict when a load-bearing cost is missing.",
+    "evidence_discipline": "Every input tagged by source/owner/date/confidence; the 3:1 LTV:CAC flagged as a reference not a fact.",
+    "dependency_coherence": "Lists a proprietary 'Chwezi Accounting Doctrine' as a Required input but neither defines nor bundles it.",
+    "portability_honesty": "Tool-free markdown, but the duplicated sections and undefined doctrine undercut portability.",
+    "usefulness_differentiation": "Contribution margin after all order-variable costs, per-route landed cost and flip-the-verdict sensitivity beat naive margin analysis.",
+    "adversarial_resilience": "Anti-Patterns catch GMV-as-revenue, invented figures and blended averages that hide loss-making segments.",
+    "effectiveness_design": "Workbook spec + assumptions register + verdict rules form a usable decision system."
+   },
+   "score_20": 16,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Show whether a cross-border e-commerce route truly profits after every variable cost.",
+   "distinct_method_original_summary": "Tag each input by source and confidence, compute contribution margin after all order-variable costs per market and channel, then issue a go/conditional/no-go verdict that names the assumptions which would flip it.",
+   "reason_not_unchanged": "The method is incomplete without an undefined, unbundled proprietary 'Chwezi Accounting Doctrine' it lists as required; it has duplicated/divergent workflow sections, no explicit not-financial-advice line, and embeds the author's personal phone number, which should be stripped.",
+   "hold_reason": null,
+   "hard_fail_flags": [
+    "Requires an undefined, unbundled proprietary 'Chwezi Accounting Doctrine'",
+    "Duplicated/divergent workflow and anti-patterns sections",
+    "Embedded personal phone number (PII)",
+    "No explicit not-financial-advice disclaimer; frontmatter has no license field"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "Repository root LICENSE: MIT, (c) 2026 Peter Bamuhigire; SKILL.md frontmatter has no license field; body embeds author contact details"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "Frontmatter omits a license, so identity rests on the root MIT LICENSE; the required 'Chwezi Accounting Doctrine' is referenced without any license or definition.",
+    "third_party_material": "References the proprietary 'Chwezi Accounting Doctrine' (not included, not licensed); embeds the author's personal contact details.",
+    "service_terms": "No paid API or service; needs company finance data and the external Chwezi doctrine, neither hosted.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with 'Copyright (c) 2026 Peter Bamuhigire'",
+    "obligation": "Study and reimplement the method in our own words, substituting an open accounting-treatment step for the Chwezi dependency and stripping the personal contact line; copying bundled files needs the MIT notice."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "failed",
+    "report_sha256": "d97fd05b26179a7d71338a47931d5a28c451cbccf41b39ccf04dcbe4a2829f24",
+    "findings": [
+     {
+      "id": "P2",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "file": "SKILL.md",
+      "line": 76
+     }
+    ],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Ghost-job-aware Job Search",
+   "consumer_id": "wexxwuther-job-hunter/job-search",
+   "source_repository": "wexxwuther/job-hunter",
+   "source_pin": "8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5",
+   "canonical_path": "job-search/SKILL.md",
+   "package_tree": "9b240990f9b56f145cca59e658ed99a72e3cc7ff",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "690dadeec6b579a2c43fe51717de84b4f4069fcc",
+   "package_file_count": 21,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "career",
+   "capability_subdomain": "job-search",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 2,
+    "failure_handling": 2,
+    "evidence_discipline": 2,
+    "dependency_coherence": 2,
+    "portability_honesty": 2,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Many concrete example asks, explicit do-not-use boundaries and shipped trigger-evals.",
+    "procedural_clarity": "Four search tiers, a deterministic scoring phase with a worked command, and an HTML output spec.",
+    "authority_safety": "Never asks for or types the user's password; reaches postings through public ATS feeds, not credentialed scraping.",
+    "failure_handling": "Degrades gracefully standalone, broadens on thin results and keeps a link with a best-effort note.",
+    "evidence_discipline": "Family-wide anti-fabrication invariant; ghost-job stats cited; pay labelled with its source; weights documented.",
+    "dependency_coherence": "Scripts use only the Python standard library; sister scripts degrade gracefully if absent.",
+    "portability_honesty": "Cross-vendor claims backed by plain stdlib and an honest reads-if-present contract.",
+    "usefulness_differentiation": "Scores posting legitimacy (ghost-job axis) independently from match quality, with red flags as a multiplier.",
+    "adversarial_resilience": "Detects scam/ghost signals, treats fetched content as untrusted and respects board blocking.",
+    "effectiveness_design": "A deterministic scorer with semantic tests and filterable HTML output makes results reproducible."
+   },
+   "score_20": 20,
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Find real job postings and score ghost-job risk separately from how well you fit.",
+   "distinct_method_original_summary": "Search four source tiers, then score each posting on five sub-scores that keep posting legitimacy independent from fit, applying red flags as a multiplier that can sink an otherwise strong match.",
+   "reason_not_unchanged": "The web fetching is the host's responsibility and runs against third-party job boards and ATS feeds subject to their terms; the anti-fabrication gate lives in a sibling skill rather than in this member; a script docstring mislabels the multiplicative penalty as subtractive.",
+   "hold_reason": null,
+   "hard_fail_flags": [],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "frontmatter license MIT; _meta.json MIT; LICENSE full MIT, (c) 2026 Greg Borden (holder name differs from repo owner handle wexxwuther)"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "No license conflict; a minor provenance note (LICENSE holder vs repo owner differ).",
+    "third_party_material": "References job-board and ATS brand names as search targets only; cited stats; no copied content or assets.",
+    "service_terms": "Queries third-party job boards and public ATS feeds via the host's WebSearch/WebFetch; no account or password; role/location/search terms go out to those sites; resume content stays local, web content treated as untrusted.",
+    "copy_allowed": "YES",
+    "required_notices": "MIT text with 'Copyright (c) 2026 Greg Borden'",
+    "obligation": "Study the search-and-scoring method in our own words; copying needs the MIT notice. Note the host performs the web egress, subject to each site's terms."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "1e2e331c62be72fa3f9713b784ad43c6a7bd0d415bba1bf8e4a56b09210643ad",
+    "findings": [
+     {
+      "id": "LP1",
+      "pattern": null,
+      "severity": "HIGH",
+      "file": "scripts/build_search_queries.py",
+      "line": 1
+     },
+     {
+      "id": "EA2",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "file": "references/workspace-contract.md",
+      "line": 68
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "tests/test_score_posting.py",
+      "line": 228
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "tests/test_score_posting.py",
+      "line": 241
+     },
+     {
+      "id": "AST4",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "file": "tests/test_score_posting.py",
+      "line": 253
+     }
+    ],
+    "incomplete_reasons": {
+     "reference_missing": 5
+    }
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  },
+  {
+   "name": "Neurodivergence-aware Resume",
+   "consumer_id": "BRAINS-Certified-BRAINS-resume-skill/brains-resume",
+   "source_repository": "BRAINS-Certified/BRAINS-resume-skill",
+   "source_pin": "d8763b8bdaddd0345288fdb4b4fdd2a652677bdc",
+   "canonical_path": "SKILL.md",
+   "package_tree": "c22ace992dc202c79c2de28fc4565d4fbd977e71",
+   "package_tree_verified_against_pinned_upstream": true,
+   "skill_blob": "de50da2f4556a33e4239421939b88bd98d0b57a2",
+   "package_file_count": 1,
+   "prior_static_record": {
+    "ledger": "registry/discovery/widened-source-leads-five-domains-20261103.json",
+    "candidate_decision": "REFERENCE-ONLY (discovery lead)",
+    "score_20": null
+   },
+   "capability_domain": "career",
+   "capability_subdomain": "portfolios",
+   "rubric_scores": {
+    "trigger_precision": 2,
+    "procedural_clarity": 2,
+    "authority_safety": 1,
+    "failure_handling": 2,
+    "evidence_discipline": 1,
+    "dependency_coherence": 1,
+    "portability_honesty": 0,
+    "usefulness_differentiation": 2,
+    "adversarial_resilience": 2,
+    "effectiveness_design": 2
+   },
+   "rubric_dimension_rationale": {
+    "trigger_precision": "Description and a workflow router scope it tightly to resume/cover-letter/LinkedIn with ND-bias awareness.",
+    "procedural_clarity": "A router dispatches to per-workflow files with step sequences and quality gates; edits presented one at a time.",
+    "authority_safety": "Strong vetoes and a not-legal-advice caveat, but the 'no outbound network requests' privacy claim is contradicted by a bundled URL-fetch script.",
+    "failure_handling": "Workflows ask clarifying follow-ups rather than inserting placeholders.",
+    "evidence_discipline": "Validators framed as deterministic backstops, but several research claims are uncited.",
+    "dependency_coherence": "Scripts need a Python venv; the loaded SKILL.md version does not match the shipped repo.",
+    "portability_honesty": "Material internal version inconsistency (frontmatter 1.4.0 vs README v2.3.0).",
+    "usefulness_differentiation": "Ten-pattern ND-bias catalog, disclosure framework and integrity/AI-tell scanners are genuinely distinct.",
+    "adversarial_resilience": "Detects prompt-injection in resume text and skips third-party PII; findings are user-vetoable.",
+    "effectiveness_design": "A cohesive system of workflows, templates and validators whose code matches their descriptions."
+   },
+   "score_20": 15,
+   "qualification_decision": "KEEP_REFERENCE_ONLY",
+   "consumer_benefit": null,
+   "distinct_method_original_summary": null,
+   "reason_not_unchanged": null,
+   "hold_reason": "Career is filled this pass by the cleaner, credential-free job-search method. This ND-bias catalog + disclosure framework + integrity/AI-tell scanners are a genuinely distinct method worth studying, but the package carries a FALSE 'no outbound network requests' privacy claim (a bundled script fetches arbitrary http/https/file:// URLs), a material version inconsistency (1.4.0 vs 2.3.0), passive-boundary-breaking infra, and a self-issued 'Certified Gold' badge \u2014 so it is held, not featured.",
+   "hard_fail_flags": [
+    "Loaded SKILL.md v1.4.0 vs shipped repo v2.3.0 \u2014 instructions misdescribe the code",
+    "Privacy Contract 'no outbound network requests' contradicted by bundled jd_url_fetch.py (urllib, http/https/file://)",
+    "Full function needs a Python venv + streamlit + sqlite (not a no-shell passive use)",
+    "'BRAINS Certified Gold' is a self-issued org badge, not independent accreditation"
+   ],
+   "package_license_finding": "MIT (root; see rights_review)",
+   "rights_review": {
+    "declared": [
+     "frontmatter license MIT; README MIT; LICENSE full MIT, (c) 2026 BRAINS Certified; plus BRAINS/'Certified Gold' brand marks"
+    ],
+    "controlling_text_present": true,
+    "conflicts": "MIT throughout for code/text, but the BRAINS name, 'Certified Gold' badge and logo marks are trademark/brand material not licensed by MIT; separately a version-provenance problem (1.4.0 vs 2.3.0).",
+    "third_party_material": "BRAINS brand marks and badges, externally hosted brand images, a 'Certified Gold' SVG, social badges, a font reference, and the trafilatura dependency.",
+    "service_terms": "No paid API for the core method; optional local Streamlit dashboard; the URL-fetch script sends a job-description URL to that site when used.",
+    "copy_allowed": "CONDITIONAL",
+    "required_notices": "MIT text with 'Copyright (c) 2026 BRAINS Certified'; strip BRAINS marks, the 'Certified Gold' badge and brand-credit footers before any redistribution",
+    "obligation": "Study the ND-bias catalog, disclosure framework and scanner concepts in our own words; do not reuse the BRAINS name/marks or imply any certification."
+   },
+   "security_scan": {
+    "scanner": "NVIDIA SkillSpector v2.12.0 @ c7958a32",
+    "mode": "--no-llm --fail-on-findings --fail-on-incomplete",
+    "state": "incomplete",
+    "report_sha256": "3bc3e14fe678bc8451fdfcc43ebf19287883b49b7c9946700b609361e8ba767c",
+    "findings": [],
+    "incomplete_reasons": null
+   },
+   "behavioral_validation": "NOT RUN",
+   "unchanged_use_approved": false
+  }
+ ]
+}
