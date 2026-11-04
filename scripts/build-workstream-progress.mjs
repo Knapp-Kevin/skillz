@@ -18,6 +18,7 @@ function validateStatus(s,q7cat,q8cat,p){
  if(g.static_security.passed+g.static_security.failed+g.static_security.incomplete!==g.proposed_featured)throw Error("Scanner denominator mismatch");
  if(stage("behaviorally_validated").value!==g.behaviorally_validated||stage("approved_unchanged").value!==g.approved_unchanged)throw Error("Approval mismatch");
  if(h.pinned_entrypoints!==k.individually_reviewed+k.remaining_q9_entrypoints)throw Error("Q9/Q10 overlap count mismatch");
+ if(k.remaining_boundary){const b=k.remaining_boundary;if(b.stage!=="SCOPE_MAPPED_NOT_COMPLETE_NOT_GRADED"||k.remaining_q9_entrypoints!==1||b.portable_bundle_files<=0||b.source_repo_git_blobs!==b.portable_bundle_files+b.excluded_repo_files||b.python_scripts<=0||b.reference_files<=0)throw Error("Pending package boundary failed validation")};
  if(k.individually_reviewed!==k.promising_but_held+k.other_held||k.methods.length!==k.individually_reviewed)throw Error("Q10 review breakdown mismatch");
  if(k.methods.filter(x=>x.decision==="PROMISING_HELD").length!==k.promising_but_held||k.methods.filter(x=>x.decision!=="PROMISING_HELD").length!==k.other_held)throw Error("Disposition mismatch");
  const names=new Set();for(const x of k.methods){if(names.has(x.name)||!Number.isInteger(x.score)||x.score<0||x.score>20)throw Error("Invalid Q10 method");names.add(x.name);}
@@ -32,7 +33,7 @@ function renderSvg(s){
  const bx=324,bw=604,bh=25,blue="#87a5ef",purple="#bc9cf8",teal="#64d7cd",amber="#eabf72",red="#e18c90",gray="#647b9a";
  add('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+h+'" width="'+w+'" height="'+h+'" role="img" aria-labelledby="workstream-title workstream-desc">');
  add('<title id="workstream-title">Skillz qualification progress, merged baseline and unmerged Q8 Q9 Q10</title>');
- add('<desc id="workstream-desc">Merged main has '+m.featured+' study references in '+m.represented_domains+' domains. Q8 draft proposes '+q.proposed_featured+' in '+q.represented_domains+' domains. Six of eight Q9 source leads have received Q10 static reviews; two remain. Q8 static security: eight pass, seven fail, twenty-nine incomplete. Zero approved unchanged.</desc>');
+ add('<desc id="workstream-desc">Merged main has '+m.featured+' study references in '+m.represented_domains+' domains. Q8 draft proposes '+q.proposed_featured+' in '+q.represented_domains+' domains. '+rev.individually_reviewed+' of '+dis.pinned_entrypoints+' Q9 source leads have received Q10 static reviews; '+rev.remaining_q9_entrypoints+' remain. Q8 static security: '+q.static_security.passed+' pass, '+q.static_security.failed+' fail, '+q.static_security.incomplete+' incomplete. '+q.approved_unchanged+' approved unchanged.</desc>');
  add('<defs><linearGradient id="workstream-bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0d1a2f"/><stop offset="1" stop-color="#183250"/></linearGradient></defs>');
  add(rect(0,0,w,h,"url(#workstream-bg)",24));add(txt(38,54,"Skillz | Curation progress",32,"#f4f8ff",'font-weight="700"'));add(txt(38,86,"Source-pinned evidence, not automatic installation or release approval",17,"#b8ccdf"));
  add(rect(887,35,194,39,"#3c3458",10));add(txt(984,61,"UNMERGED DRAFT",14,"#f0ddff",'text-anchor="middle" font-weight="700"'));
@@ -43,7 +44,7 @@ function renderSvg(s){
  add(txt(42,355,"Q8 draft (not merged)",17,"#dce8f6"));add(rect(bx,334,bw,bh,"#293f5c",6));add(rect(bx,334,bw,bh,purple,6));add(txt(952,355,String(q.proposed_featured),17,"#eaf2fc",'font-weight="700"'));
  add(txt(39,413,"Q9 discovered leads | Q10 static review coverage",21,"#f2f7ff",'font-weight="700"'));
  add(txt(42,453,dis.pinned_entrypoints+" pinned leads",17,"#dce8f6"));add(rect(bx,433,bw,bh,"#293f5c",6));add(rect(bx,433,bw*rev.individually_reviewed/dis.pinned_entrypoints,bh,teal,6));add(rect(bx+bw*rev.individually_reviewed/dis.pinned_entrypoints,433,bw*rev.remaining_q9_entrypoints/dis.pinned_entrypoints,bh,amber,0));add(txt(952,453,rev.individually_reviewed+" reviewed",17,"#eaf2fc",'font-weight="700"'));
- add(txt(324,490,rev.promising_but_held+" promising concepts, held",15,teal));add(txt(673,490,rev.other_held+" other reviews held",15,amber));add(txt(42,514,rev.remaining_q9_entrypoints+(rev.remaining_q9_entrypoints===1?" lead still needs":" leads still need")+" full static review. These are the same Q9 leads, not extra candidates.",14,"#afc4db"));
+ add(txt(324,490,rev.promising_but_held+" promising concepts, held",15,teal));add(txt(673,490,rev.other_held+" other reviews held",15,amber));add(txt(42,514,rev.remaining_boundary ? rev.remaining_q9_entrypoints+" lead still needs full review: ROS 2 bundle mapped ("+rev.remaining_boundary.portable_bundle_files+"/"+rev.remaining_boundary.source_repo_git_blobs+" repo files)." : rev.remaining_q9_entrypoints+(rev.remaining_q9_entrypoints===1?" lead still needs":" leads still need")+" full static review. These are the same Q9 leads, not extra candidates.",14,"#afc4db"));
  add(txt(39,557,"Q8 featured methods | pinned static security scan",21,"#f2f7ff",'font-weight="700"'));
  add(txt(42,598,q.proposed_featured+" total",17,"#dce8f6"));add(rect(bx,578,bw,bh,"#293f5c",6));
  let offset=0;for(const [count,color] of [[q.static_security.passed,teal],[q.static_security.failed,red],[q.static_security.incomplete,gray]]){let width=bw*count/q.proposed_featured;add(rect(bx+offset,578,width,bh,color,0));offset+=width}
@@ -89,6 +90,8 @@ function renderReadme(s){
  "| **[Q9 draft]("+s.q9.url+")** | "+s.q9.pinned_entrypoints+" pinned discovery leads from "+s.q9.source_repositories+" source repositories across "+s.q9.covered_domains+" domains | Exact identity, rights and fit assessment; leads are not accepted skills |",
  "| **[Q10 draft]("+s.q10.url+")** | "+s.q10.individually_reviewed+" of those "+s.q9.pinned_entrypoints+" Q9 leads statically reviewed: "+s.q10.promising_but_held+" promising study concepts held, "+s.q10.other_held+" other research/rejected unchanged | "+s.q10.remaining_q9_entrypoints+(s.q10.remaining_q9_entrypoints===1?" lead still needs":" leads still need")+" detailed static review; external scanner/behavioral checks not run |",
  "",
+ "**Remaining package boundary:** [ROS 2 Engineering scope mapping]("+s.q10.url+") found **"+s.q10.remaining_boundary.portable_bundle_files+" files** selected by the portable installer from **"+s.q10.remaining_boundary.source_repo_git_blobs+" repository files**, including "+s.q10.remaining_boundary.python_scripts+" Python scripts and "+s.q10.remaining_boundary.reference_files+" references. The plugin has a separate hook-enabled profile. This is **not** the eighth completed skill review, a security scan, an installation approval, or a hardware test.",
+ "",
  "**Never add Q9 and Q10 counts:** Q10 examined "+s.q10.individually_reviewed+" of the same "+s.q9.pinned_entrypoints+" Q9 candidates, not "+(s.q9.pinned_entrypoints+s.q10.individually_reviewed)+" distinct skills. No Q9/Q10 approvals or shelf promotions occurred. **Zero unchanged-use approvals and zero behavioral validations** remain the governing outcome.",
  "",
  "[Spreadsheet-ready progress CSV](docs/data/qualification-workstream-progress.csv) · [Pinned progress snapshot](registry/curation-workstream-status-20261103.json) · [How to regenerate](docs/capability-dashboard-maintenance.md)",
@@ -126,6 +129,7 @@ if(args.has("--self-test")){
   if((files["docs/data/qualification-workstream-progress.csv"].match(/\n/g)||[]).length!==(16+status.q10.methods.length))throw Error("CSV row count");
   if(!files["docs/assets/qualification-workstream-progress.svg"].includes('viewBox="0 0 1120 740"'))throw Error("SVG viewport");
   if(status.q10.remaining_q9_entrypoints===1 && (files["README.md"].includes("1 leads")||files["docs/assets/qualification-workstream-progress.svg"].includes("1 leads")))throw Error("Singular grammar regression");
+  if(files["docs/assets/qualification-workstream-progress.svg"].includes("Six of eight Q9"))throw Error("Stale SVG accessibility description");
   const broken=JSON.parse(JSON.stringify(status));broken.q10.remaining_q9_entrypoints++;
   let rejected=false;try{validateStatus(broken,q7,q8,pipe)}catch(_){rejected=true}
   if(!rejected)throw Error("Mismatch not rejected");
