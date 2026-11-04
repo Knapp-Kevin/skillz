@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: GitHub Pulse
   emoji: "⭐"
-  version: 1.0.3
+  version: 1.0.4
 ---
 
 # GitHub Pulse
@@ -24,7 +24,7 @@ Topic pulse for new and trending GitHub repositories, AI-centric first. Star vel
 1. **Collect (external host only).** Read the bundled `sources.json` beside this skill. For the requested time window (default 30 days), use the external host's browser, search, or connected read-only tools to check listed public pages, repositories and queries. Substitute the start date for `{SINCE}` where present. Cite source URLs and publication dates, distinguish official reports from community leads, and report inaccessible or rate-limited sources as gaps. Never put private context, credentials or tokens in public queries. If access is unavailable, provide an evidence-limited result, not invented freshness. **skillz has no runner, crawler, script, scheduler or background job.** GitHub rate limits can block some queries: use only existing host-authorized access, never require users to provide a GitHub token.
 
 2. **Fill gaps.** Fetch github.com/trending (weekly view) — the search API measures new repos, trending measures acceleration of existing ones; both matter. HN/Reddit searches catch the story behind a spike.
-3. **Filter.** For each candidate: real code or README-only? Active maintainer? Does it appear to duplicate prior discoveries? Check the skillz INDEX and candidate registry **only when those files are actually available to the authorized host**. Otherwise mark prior-corpus comparison not-run instead of claiming a fresh find or reading unrelated private repositories.
+3. **Filter.** For each candidate: real code or README-only? Active maintainer? Does it appear to duplicate prior discoveries? Use only a prior-candidate comparison list explicitly supplied or approved for this one run. A normal public-trends request does not authorize reading local repository indexes, candidate registries or other private workspaces. If no comparison list is supplied, mark prior-corpus comparison not-run and qualify the finds as provisional.
 4. **Synthesize.** One line per repo max; group by category; end with at most 3 "worth a deeper look" picks and why.
 
 ## Scheduling
