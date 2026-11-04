@@ -1,13 +1,16 @@
 # Q14: Accurate permission governance and README navigation
 
-**Date:** 2026-11-03 · **Issues:** [#481](https://github.com/Knapp-Kevin/skillz/issues/481) (partial) and [#483](https://github.com/Knapp-Kevin/skillz/issues/483) (two named skills) · **Status:** **DRAFT / HOLD**
+**Date:** 2026-11-03 · **Issues:** [#481](https://github.com/Knapp-Kevin/skillz/issues/481) (all four named source repairs) and [#483](https://github.com/Knapp-Kevin/skillz/issues/483) (both named source repairs) · **Status:** **DRAFT / HOLD**
 
 ## What was fixed
 
 1. **Permissions Review** still teaches a useful risk-ranked inventory of agent-accessible tools, hooks and credentials. It now starts with an *approved host/workspace/access scope*, classifies actions using the actual four governed authority tags, and does not read credential values. A one-time audit is the default. Scheduling and future private-data access need **separate user approval** with cadence, sources, recipients, retention and revocation.
 2. **MCP Vetting** remains a static, non-installing review of a proposed MCP server. It now inventories the entire tool surface, credentials and outbound data flows against exact source pins. It no longer invents nonexistent source-trust score caps or legacy permission tiers, or treats a retired candidate registry as an admission gate. Missing evidence remains unknown, and a favorable static review cannot authorize connecting a server.
-3. **Repository guidance** now explains the actual passive boundary. Ordinary visitors cannot be asked to run anything or give the library background account access. The tree *does* contain a manually invoked dashboard generator and two QA-source scripts; only an explicitly authorized external maintainer can run approved checks for a bounded maintenance task. Their presence does not permit CI, scheduled jobs, background agents or approval claims.
-4. **README** adds a short governance/status guide and safe link to the live issue/PR views. It leaves the original **20-method merged-main** dashboard and its generated markers intact. Q8’s **draft** catalog totals must not be substituted for the current checked-out main branch without an actual merge.
+3. **Learning Plan** still verifies real learning sources and gives tangible weekly checkpoints, but does not schedule future private review or messages without separate scope, cadence, recipient, retention, cost and revocation approval.
+4. **Standup Writer** creates an evidence-backed draft from only authorized repo/task/calendar sources; missing access means a declared coverage gap, not a guessed accomplishment. Sending or scheduling requires new authorization.
+5. **Week in Review** preserves an honest shipped/stalled/decision/carry-forward view and never equates a commit with delivery. Future private reads, saving notes, posting and Friday recurrence require separate explicit user approvals.
+6. **Repository guidance** now explains the actual passive boundary. Ordinary visitors cannot be asked to run anything or give the library background account access. The tree *does* contain a manually invoked dashboard generator and two QA-source scripts; only an explicitly authorized external maintainer can run approved checks for a bounded maintenance task. Their presence does not permit CI, scheduled jobs, background agents or approval claims.
+7. **README** adds a short governance/status guide and safe link to the live issue/PR views. It leaves the original **20-method merged-main** dashboard and its generated markers intact. Q8’s **draft** catalog totals must not be substituted for the current checked-out main branch without an actual merge.
 
 ## Exact identities
 
@@ -15,8 +18,11 @@
 |---|---|---|---|---:|
 | Permissions Review | `60e1d546e713cfa5b289def082dd73e8b326f029` | `dcaf7ff96c832c69bb5be1c7cd8f4c3ed418b707` | `8b8cbd95cbcb4f053c1070fdb4400c823593863f` | 17/20 |
 | MCP Vetting | `806e79f593446ad15938249898e15230208f2d81` | `37a13d7296c7d3d87dc360988bc6aca1f873c4db` | `a8824fff4a3d0ed5b7a82603b48f1aefbccb9666` | 19/20 |
+| Learning Plan | `a544118bd121b354aec330f9a565a338868dd53e` | `7941b70fc971bf7c16c1201b7c8876f35db4ab29` | `931fb2192a3cb1212643fe1df51d5e4bc3c70af4` | 18/20 |
+| Standup Writer | `a1cd8678794c90bbaf4f5f2a70d469576ec4b633` | `b8473ac1ea68795d9563a21f335b5fd4bc169868` | `59dd3dd9f44b66b7b8a9dc21a72f49e5ce58d3d9` | 17/20 |
+| Week in Review | `cd6671df6042d5a864850f6362d0947d61eb7357` | `f2145e28256ebdfb72b035f1a405fd0e6586c5ba` | `0d8ee8ccdefdbc6c6478a5dbbb7d54d8ef4ac321` | 17/20 |
 
-Both revised skill files are byte-identical to previously reviewed exact files from **closed-unmerged #489**. Source snapshot revisions now point to commits made on this branch, not expired historical patch commits. The prior semantic scores are source-static judgments carried over by exact Git identity, **not** newly executed tests. The 44-entry consolidated first-party verification registry was compared against the branch Git tree: **44/44 source fingerprints match**, no unrelated entries changed.
+All five revised skill files are byte-identical to previously reviewed exact files from **closed-unmerged #489**. Source snapshot revisions now point to commits made on this branch, not expired historical patch commits. The prior semantic scores are source-static judgments carried over by exact Git identity, **not** newly executed tests. The 44-entry consolidated first-party verification registry was compared against the branch Git tree: **44/44 source fingerprints match**, no unrelated entries changed.
 
 ## Governance and safety boundaries
 
@@ -27,11 +33,11 @@ Static review and license compliance remain separate from security scans and rea
 ## What remains open
 
 - **Issue #483:** Both named skill instructions have a *source-static repair* on this branch, but #483 stays OPEN until exact-package security, independent real-behavior and owner-approved merge gates pass.
-- **Issue #481:** This addresses the shared `permissions-review` skill, only **one of four** skills listed. `learning-plan`, `standup-writer` and `week-in-review` remain unmodified and separately require recurring-access fixes.
+- **Issue #481:** All **four named source procedures** now have bounded one-time/default and separately authorized recurrence instructions on this branch, including `learning-plan`, `standup-writer`, `week-in-review` and `permissions-review`. The issue stays OPEN because final exact-tree scans, real host behavior and maintainer-accepted merge have not occurred.
 - **Concurrent branch risk:** Other first-party repairs in #673, #686 and #702 touch shared registry surfaces. Recheck their accepted source identities before final integration. Never overwrite accepted work with an older snapshot.
-- **Nine adversarial scenarios:** Their expected behaviors are documented in the [machine receipt](../../registry/maintenance/q14-permissions-governance-static-20261103.json), but **none was actually executed**. No new SkillSpector report, installer, scanner pass, generated dashboard build or actual behavioral validation is claimed.
+- **Fifteen adversarial scenarios:** Their expected behaviors are documented in the [machine receipt](../../registry/maintenance/q14-permissions-governance-static-20261103.json), but **none was actually executed**. No new SkillSpector report, installer, scanner pass, generated dashboard build or actual behavioral validation is claimed.
 
 ## Maintainer handoff
 
-Recheck current main, run only an approved pinned external scanner against both final package trees, record actual host-observed no-unauthorized-read/recurrence and no-connect behavior, reconcile full provenance and the 44-record registry, inspect README/governance links and generated-block boundaries, and request explicit maintainer merge acceptance. Use `[skip ci]`; no repository-owned automation or test runner is introduced.
+Recheck current main, run only an approved pinned external scanner against all five final package trees, record actual host-observed no-unauthorized-read/recurrence and no-connect behavior, reconcile full provenance and the 44-record registry, inspect README/governance links and generated-block boundaries, and request explicit maintainer merge acceptance. Use `[skip ci]`; no repository-owned automation or test runner is introduced.
 
