@@ -35,9 +35,9 @@
   },
   "approved_unchanged": 0,
   "behaviorally_validated": 0,
-  "open_prs_at_snapshot": 6,
+  "open_prs_at_snapshot": 5,
   "open_issues_at_snapshot": 12,
   "security_issue": 402,
   "non_additive": true,
-  "notes": "Static, source-pinned evidence; main counts and unmerged draft counts are separate. Changed source packages require exact new scans. Zero unchanged-use approvals."
+  "notes": "Static, source-pinned evidence; main counts and unmerged draft counts are separate. Changed source packages require exact new scans. Zero unchanged-use approvals. PR #698 merged on 2026-11-04 as historical Q6-Q12 research evidence; Q8 study shelf remains draft, security/behavior approvals unchanged."
 }
