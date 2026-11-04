@@ -1,0 +1,311 @@
+{
+  "schema_version": "skillz-maintainer-open-work-snapshot-v1",
+  "date_local": "2026-11-03",
+  "timezone": "America/New_York",
+  "captured_from": "Authenticated GitHub read-only PR/issue search and exact PR/issue lookups; state can change concurrently.",
+  "main_sha": "e083c47f13a8ca70ab4c22e6e369dc004837a04b",
+  "observed_open_pull_requests": 10,
+  "observed_open_issues": 12,
+  "active_prs": [
+    {
+      "number": 673,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/673",
+      "title": "First-party: 16 obsolete pulse runner references",
+      "lane": "SECURITY_FIX",
+      "disposition": "HOLD",
+      "description": "issue #415; scanner 10 pass / 3 fail / 3 incomplete; final integration/behavior outstanding",
+      "pinned_head_sha": "aa59c36f1298c28bc399a13e2e39354663de8811",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 686,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/686",
+      "title": "First-party: five private/secret-evidence fixes",
+      "lane": "SECURITY_FIX",
+      "disposition": "HOLD",
+      "description": "issue #491; external scanner 5/5 pass; real adversarial read/no-leak tests outstanding",
+      "pinned_head_sha": "7970edf438afb67cee91d87fe79174623800d0cb",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 693,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/693",
+      "title": "Q8 featured-shelf expansion, 33 domains",
+      "lane": "CURATION",
+      "disposition": "DRAFT_UNMERGED",
+      "description": "50 study-only Valuable References at snapshot; security 10/7/33; 0 approved",
+      "pinned_head_sha": "d3aaaa29f84b81e1905b295adb3657348551b9d8",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 700,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/700",
+      "title": "Q12 exact-source per-method security receipts",
+      "lane": "SECURITY_EVIDENCE",
+      "disposition": "DRAFT_UNMERGED",
+      "description": "50 source-pinned rows and 51-row CSV at same Q8 pin; 20 stale not-run labels corrected as derived view",
+      "pinned_head_sha": "e74b23afb8041e2f98116c64b3d18595a69e0acd",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 699,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/699",
+      "title": "Q11 generated README/graphics/CSV",
+      "lane": "REPORTING",
+      "disposition": "OUTDATED_PIN_HOLD",
+      "description": "last committed chart reflects 45-method Q8 checkpoint; rebase/generate once Q8 is stable",
+      "pinned_head_sha": "c88eb7e53f885e202b89e4942414a4273adea045",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 697,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/697",
+      "title": "Q9 eight independent exact-pinned discovery leads",
+      "lane": "DISCOVERY",
+      "disposition": "DRAFT_UNMERGED",
+      "description": "discovery only; no installations or approvals; eight lead identities",
+      "pinned_head_sha": "3d8b9f3d94ca6e872ccfc20cf1b54e27395646c4",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 698,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/698",
+      "title": "Q10 static review of eight original Q9 leads",
+      "lane": "STATIC_REVIEW",
+      "disposition": "DRAFT_UNMERGED",
+      "description": "8/8 reviewed; ROS2 portable 118-file package source checked; no security/behavioral clearance",
+      "pinned_head_sha": "053705f57907f2edb858e027c31231ec3ca57168",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 677,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/677",
+      "title": "Music and illustration pinned source-discovery handoff",
+      "lane": "HISTORICAL_RESEARCH",
+      "disposition": "KEEP_PROVENANCE",
+      "description": "research source leads; preserve despite later Q8 discovery overlaps",
+      "pinned_head_sha": "d6812dede46620f40e65c02b8513d9bc26add0bd",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 682,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/682",
+      "title": "Independent music-compose/MIDI safety review",
+      "lane": "HISTORICAL_RESEARCH",
+      "disposition": "KEEP_PROVENANCE",
+      "description": "one 15/20 source-static review; unresolved output-overwrite/identity/external acceptance",
+      "pinned_head_sha": "1659ea5ef4cf13289c7af1c3cebc2d28665d5054",
+      "draft": true,
+      "merged": false
+    },
+    {
+      "number": 692,
+      "url": "https://github.com/Knapp-Kevin/skillz/pull/692",
+      "title": "Q7 historical featured-source identity gaps",
+      "lane": "HISTORICAL_AUDIT",
+      "disposition": "KEEP_PROVENANCE",
+      "description": "earlier four unknown source trees later resolved in Q8 pinned reports; preserve receipt chronology",
+      "pinned_head_sha": "cc98837ed94ad48739308917e255e81491930c4e",
+      "draft": true,
+      "merged": false
+    }
+  ],
+  "active_issues": [
+    {
+      "number": 402,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/402",
+      "title": "Security backfill",
+      "lane": "SECURITY_BACKFILL",
+      "state": "OPEN",
+      "description": "umbrella; obsolete closed-unmerged PR pointers corrected in issue body"
+    },
+    {
+      "number": 415,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/415",
+      "title": "Removed first-party pulse runner",
+      "lane": "FIRST_PARTY_REPAIR",
+      "state": "OPEN",
+      "description": "implement via PR #673; 16 skill instructions; executed acceptance outstanding"
+    },
+    {
+      "number": 491,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/491",
+      "title": "Credential-prefix/private-source exposure",
+      "lane": "FIRST_PARTY_REPAIR",
+      "state": "OPEN",
+      "description": "implement via PR #686; 5/5 static scanner is not behavioral acceptance"
+    },
+    {
+      "number": 478,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/478",
+      "title": "Five recurring-scan authority gaps",
+      "lane": "AUTHORITY_BACKLOG",
+      "state": "OPEN",
+      "description": "no confirmed current fix PR; separate future schedule authorization from one-time reads"
+    },
+    {
+      "number": 481,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/481",
+      "title": "Four additional recurring review authority gaps",
+      "lane": "AUTHORITY_BACKLOG",
+      "state": "OPEN",
+      "description": "no confirmed current fix PR; coordinate permissions-review with issue #483"
+    },
+    {
+      "number": 483,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/483",
+      "title": "Two obsolete permission/source-trust contracts",
+      "lane": "AUTHORITY_BACKLOG",
+      "state": "OPEN",
+      "description": "no confirmed current fix PR; permissions-review overlaps issue #481"
+    },
+    {
+      "number": 495,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/495",
+      "title": "Private automation receipts/cross-repo writes",
+      "lane": "AUTHORITY_BACKLOG",
+      "state": "OPEN",
+      "description": "older PR #496 closed without merge; no confirmed current replacement"
+    },
+    {
+      "number": 544,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/544",
+      "title": "Ambiguous truncated MIT source terms",
+      "lane": "RIGHTS_RESEARCH",
+      "state": "OPEN",
+      "description": "keep reference only; need canonical upstream clarification; don't silently relicense"
+    },
+    {
+      "number": 588,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/588",
+      "title": "Coverage map and domain depth",
+      "lane": "PROGRAM",
+      "state": "OPEN",
+      "description": "coverage quality and navigation; not the same as corpus-wide denominator"
+    },
+    {
+      "number": 599,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/599",
+      "title": "Continuous corpus discovery and exact-source inventory",
+      "lane": "PROGRAM",
+      "state": "OPEN",
+      "description": "ever-expanding source snapshot and unique-package denominator"
+    },
+    {
+      "number": 624,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/624",
+      "title": "Risk-tiered qualification throughput",
+      "lane": "PROGRAM",
+      "state": "OPEN",
+      "description": "qualification/process lane, not a duplicate of discovery"
+    },
+    {
+      "number": 589,
+      "url": "https://github.com/Knapp-Kevin/skillz/issues/589",
+      "title": "External scanner and evaluator receipts",
+      "lane": "PROGRAM",
+      "state": "OPEN",
+      "description": "pinned external qualification; scanner pass does not establish behavior"
+    }
+  ],
+  "closed_unmerged_historical_prs": [
+    412,
+    413,
+    489,
+    492,
+    496,
+    590
+  ],
+  "source_revisions": {
+    "q8": {
+      "pr": 693,
+      "head_sha": "d3aaaa29f84b81e1905b295adb3657348551b9d8",
+      "proposed_featured": 50,
+      "represented_domains": 33,
+      "static_security": {
+        "passed": 10,
+        "failed": 7,
+        "incomplete": 33
+      },
+      "behaviorally_validated": 0,
+      "approved_unchanged": 0
+    },
+    "q12": {
+      "pr": 700,
+      "head_sha": "e74b23afb8041e2f98116c64b3d18595a69e0acd",
+      "matrix_methods": 50,
+      "stale_not_run_catalog_labels_reconciled": 20
+    },
+    "q11": {
+      "pr": 699,
+      "head_sha": "c88eb7e53f885e202b89e4942414a4273adea045",
+      "snapshot_featured": 45,
+      "source_drift": "MUST_REFRESH_AFTER_Q8_STABILIZES"
+    },
+    "main": {
+      "featured": 20,
+      "represented_domains": 10,
+      "not_superseded_by_unmerged_prs": true
+    }
+  },
+  "separation_rules": [
+    "A draft PR is not merged or production-ready, even when GitHub reports mergeable.",
+    "Q9 8 discovered leads and Q10 8 reviews are the SAME eight candidates; never add.",
+    "Closing an obsolete draft requires confirming its distinct artifacts and receipts remain available and linking to their successor. No automatic closing here.",
+    "Security pass, semantic grade, source license and behavioral validation are four separate concepts.",
+    "New issue or PR owner mapping is subject to re-reading current source heads; no inferred missing PR from search alone."
+  ],
+  "next_work": [
+    {
+      "order": 1,
+      "owner_lane": "FIRST_PARTY_REPAIR",
+      "scope": "#673 and #686",
+      "completion": "Per changed tree, exact pinned security and independent no-runner/no-secret/no-unapproved-read tests; reconcile current verification registry; owner accepts merge.",
+      "status": "BLOCKED_BY_QUALIFICATION"
+    },
+    {
+      "order": 2,
+      "owner_lane": "AUTHORITY_BACKLOG",
+      "scope": "#478 #481 #483 #495",
+      "completion": "Allocate one writer per shared skill; preserve host-native optional scheduling and separate explicit authorization; create bounded disjoint repair PRs.",
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "order": 3,
+      "owner_lane": "CURATION_AND_EVIDENCE",
+      "scope": "#693 #697 #698 #700",
+      "completion": "Keep all stage counts, source pin/rights and scan receipts distinct; validate the 50-method Q12 source join and resolve fail/incomplete cases.",
+      "status": "DRAFT_STAGES"
+    },
+    {
+      "order": 4,
+      "owner_lane": "REPORTING",
+      "scope": "#699",
+      "completion": "After Q8 stabilizes, re-pin Q8 and Q12, regenerate README, SVG and CSV; run actual Node CLI --self-test/--check; inspect rendering and get reviewer signoff.",
+      "status": "OUTDATED_PIN_HOLD"
+    },
+    {
+      "order": 5,
+      "owner_lane": "RIGHTS_AND_CORPUS",
+      "scope": "#544 #588 #599 #624 #589",
+      "completion": "Resolve truncated rights source and continue exact-source licensed discovery/qualification without invented global approval totals.",
+      "status": "ONGOING"
+    }
+  ],
+  "destructive_actions": {
+    "issues_closed": 0,
+    "prs_closed": 0,
+    "files_deleted": 0,
+    "branches_force_pushed": 0,
+    "prs_merged": 0
+  },
+  "ci": "NOT_TRIGGERED"
+}
