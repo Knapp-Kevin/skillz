@@ -1,5 +1,19 @@
 # Maintainer Workboard
 
+## Current live checkpoint: November 4, 2026
+
+**OPEN: 1 PR, 11 issues.** This count is from the live GitHub inventory, not the historical November 3 workboard snapshot below. The sole active repair PR is [#703](https://github.com/Knapp-Kevin/skillz/pull/703), containing **all 34 first-party repair packages** formerly split across #673 (16), #686 (5) and #703 (13). Source PRs #673 and #686 were **closed unmerged only after 72/72 unique Git blobs, 44/44 verification records and 34/34 package trees were preserved** in #703. Their original commits are parents of the canonical integration commit. No security approvals or source content were discarded. See [the transfer ledger](docs/reviews/2026-11-04-pr703-three-repair-consolidation.md).
+
+**P0 #402 remains open:** 14 of the 34 package trees exactly match previously executed pinned NVIDIA SkillSpector static PASS receipts, **20 current trees still need new pinned static scans**, and **34 independent observed agent-host behavioral acceptances remain unperformed**. All 34 are still unapproved for unchanged use. Canonical machine ledger: [active first-party frontier](registry/security/active-first-party-repair-frontier-20261104.json). The repository remains a passive source library; no CI, scanner daemon or owned consumer runtime is authorized.
+
+**Other issue lifecycle:** #589 was completed only after accepted historical receipts were confirmed on merged #693/#698 and remaining scanner/evaluator/freshness work explicitly transferred to #402/#588/#599. #544 remains OPEN pending upstream maintainer-controlled license clarification, despite the new source-level reference-only license lock across all 56 Archie Indian records. The remaining open issues are #402, #415, #478, #481, #483, #491, #495, #544, #588, #599, #624.
+
+**Next three actions, in order:** (1) scan the 20 exact final package trees on an authorized non-billable external host at pinned SkillSpector revision; (2) run independent synthetic-host adversarial tests with actual read/write/egress traces for all 34 and adjudicate failures, never relabeling static reviews as observed behavior; (3) reconcile the final #703 branch against live main, secure owner approval, merge the qualified repairs, and close only those issue criteria truly satisfied. Keep #402 open for remaining eligible corpus backfill. Do not open another draft for this work.
+
+---
+
+## Historical snapshots (November 3 and earlier, retained for provenance)
+
 **What needs attention next in Skillz.** This is a **dated, hand-maintained issue/PR snapshot**, not a live monitor, and not a skill installer. It helps a maintainer find the active implementation, see what is blocked, and keep valuable earlier research. [Machine-readable snapshot](registry/maintenance/open-work-snapshot-20261103.json).
 
 **Checked November 3, 2026:** **10 open draft PRs** and **12 open issues**. This inventory was captured **before opening hygiene PR #701**, so the live PR count increased to **11** afterward; #701 is the workboard itself, not an omitted review task. Merged `main` at `e083c47f13a8` still features **20 study references in 10 domains**; [Q8 draft #693](https://github.com/Knapp-Kevin/skillz/pull/693) proposes **50 across 33 domains**. Its source security breakdown is **10 pass, 7 fail, 33 incomplete; 0 unchanged-use approvals; 0 observed behavioral validations**. Those drafts have **not** been published to main.
@@ -14,7 +28,7 @@
 2. **Complete authority acceptance without opening more PRs.** [#703](https://github.com/Knapp-Kevin/skillz/pull/703) now includes all four recurring-review source fixes in [#481](https://github.com/Knapp-Kevin/skillz/issues/481), plus both governance source fixes in [#483](https://github.com/Knapp-Kevin/skillz/issues/483). Its five distinct revised skill files have not passed external exact-package scanning or observed behavioral tests. [#702](https://github.com/Knapp-Kevin/skillz/pull/702) covers [#495](https://github.com/Knapp-Kevin/skillz/issues/495) under the same holds. [#478](https://github.com/Knapp-Kevin/skillz/issues/478) remains unimplemented. Qualify and integrate existing branches before creating another draft.
 3. **Reconcile curation and publishing only once its source settles.** [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) is the source of 50 proposed study references; [Q12 #700](https://github.com/Knapp-Kevin/skillz/pull/700) gives 50 source-pinned per-method security receipts; [Q11 #699](https://github.com/Knapp-Kevin/skillz/pull/699) still renders an older 45-method draft checkpoint. Once Q8 is stable, regenerate Q11, run both Node generators with `--self-test` and `--check` in a real checkout, inspect the chart/README visually, then seek maintainer acceptance. **Never merge a stale generated chart because it happens to render.**
 
-## Eight currently open PRs by purpose
+## Historical eight-PR snapshot by purpose (November 3; superseded)
 
 | Lane | PRs | Why they remain open |
 |---|---|---|
