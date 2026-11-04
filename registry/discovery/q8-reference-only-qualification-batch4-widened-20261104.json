@@ -23,8 +23,8 @@
  "review_method": "Exact pinned commits fetched (depth 1) into isolated bare repositories; package trees re-derived and matched to prior records 10/10; trees exported with git archive; every package file read in full by three parallel read-only reviewers on disjoint lists with one shared brief; integration owner spot-checked each decisive claim against source lines and adjudicated decisions. Nothing executed, installed or fetched from candidates. Pinned SkillSpector static scan per exact tree.",
  "counts": {
   "reviewed": 12,
-  "valuable_reference": 5,
-  "keep_reference_only": 7,
+  "valuable_reference": 6,
+  "keep_reference_only": 6,
   "reject_unchanged": 0,
   "security_passed": 3,
   "behavioral_validated": 0,
@@ -1068,11 +1068,11 @@
     "effectiveness_design": "A cohesive system of workflows, templates and validators whose code matches their descriptions."
    },
    "score_20": 15,
-   "qualification_decision": "KEEP_REFERENCE_ONLY",
-   "consumer_benefit": null,
-   "distinct_method_original_summary": null,
-   "reason_not_unchanged": null,
-   "hold_reason": "Career is filled this pass by the cleaner, credential-free job-search method. This ND-bias catalog + disclosure framework + integrity/AI-tell scanners are a genuinely distinct method worth studying, but the package carries a FALSE 'no outbound network requests' privacy claim (a bundled script fetches arbitrary http/https/file:// URLs), a material version inconsistency (1.4.0 vs 2.3.0), passive-boundary-breaking infra, and a self-issued 'Certified Gold' badge \u2014 so it is held, not featured.",
+   "qualification_decision": "VALUABLE_REFERENCE",
+   "consumer_benefit": "Surface neurodivergence bias and disclosure trade-offs in a resume, leaving every choice to the user.",
+   "distinct_method_original_summary": "Apply a named catalog of neurodivergence-specific resume-bias patterns and a staged whether/when/how disclosure framework, as user-vetoable suggestions, not automatic edits.",
+   "reason_not_unchanged": "Study the method, do NOT run this package as written. Its Privacy Contract claims 'no outbound network requests' while a bundled script fetches arbitrary http/https/file:// URLs; the loaded SKILL.md is version 1.4.0 while the shipped repo is v2.3.0, so the instructions misdescribe the code; full function needs a Python venv plus Streamlit and SQLite; and 'BRAINS Certified Gold' is a self-issued badge, not independent accreditation. The transferable ideas \u2014 the bias-pattern catalog, the disclosure decision framework, and the masking-cost lens \u2014 are what make it worth studying.",
+   "hold_reason": null,
    "hard_fail_flags": [
     "Loaded SKILL.md v1.4.0 vs shipped repo v2.3.0 \u2014 instructions misdescribe the code",
     "Privacy Contract 'no outbound network requests' contradicted by bundled jd_url_fetch.py (urllib, http/https/file://)",
