@@ -40,7 +40,7 @@
 <text x="952" y="453" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#eaf2fc" font-weight="700">7 reviewed</text>
 <text x="324" y="490" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#64d7cd" >3 promising concepts, held</text>
 <text x="673" y="490" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#eabf72" >4 other reviews held</text>
-<text x="42" y="514" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#afc4db" >1 leads still need full static review. These are the same Q9 leads, not extra candidates.</text>
+<text x="42" y="514" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#afc4db" >1 lead still needs full static review. These are the same Q9 leads, not extra candidates.</text>
 <text x="39" y="557" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#f2f7ff" font-weight="700">Q8 featured methods | pinned static security scan</text>
 <text x="42" y="598" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#dce8f6" >44 total</text>
 <rect x="324" y="578" width="604" height="25" rx="6" fill="#293f5c"/>
