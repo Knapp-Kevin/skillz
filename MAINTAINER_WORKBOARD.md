@@ -2,7 +2,7 @@
 
 **What needs attention next in Skillz.** This is a **dated, hand-maintained issue/PR snapshot**, not a live monitor, and not a skill installer. It helps a maintainer find the active implementation, see what is blocked, and keep valuable earlier research. [Machine-readable snapshot](registry/maintenance/open-work-snapshot-20261103.json).
 
-**Checked November 3, 2026:** **10 open draft PRs** and **12 open issues**. Merged `main` at `e083c47f13a8` still features **20 study references in 10 domains**; [Q8 draft #693](https://github.com/Knapp-Kevin/skillz/pull/693) proposes **50 across 33 domains**. Its source security breakdown is **10 pass, 7 fail, 33 incomplete; 0 unchanged-use approvals; 0 observed behavioral validations**. Those drafts have **not** been published to main.
+**Checked November 3, 2026:** **10 open draft PRs** and **12 open issues**. This inventory was captured **before opening hygiene PR #701**, so the live PR count increased to **11** afterward; #701 is the workboard itself, not an omitted review task. Merged `main` at `e083c47f13a8` still features **20 study references in 10 domains**; [Q8 draft #693](https://github.com/Knapp-Kevin/skillz/pull/693) proposes **50 across 33 domains**. Its source security breakdown is **10 pass, 7 fail, 33 incomplete; 0 unchanged-use approvals; 0 observed behavioral validations**. Those drafts have **not** been published to main.
 
 ## Next three maintenance actions
 
