@@ -63,7 +63,7 @@ Career therefore carries **two distinct methods**: Ghost-job-aware Job Search (f
 
 ## Security scan (static, not a clearance)
 
-Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 44 featured trees: 8 passed / 7 failed / 29 incomplete. Behavioral tests: **not run**.
+Of the 6 new Valuable References: 3 passed (Inspect ROS2 Robot, Nav2 is kept, Job Search's scanner findings were all negated test/anti-fabrication phrases), and the rest were incomplete on references outside the package. Across all 45 featured trees: 8 passed / 7 failed / 30 incomplete. Behavioral tests: **not run**.
 
 ## Evidence
 
