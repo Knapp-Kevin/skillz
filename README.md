@@ -109,24 +109,24 @@ Each row counts a **different population** with its own denominator. **Do not ad
 <!-- SKILLZ_SECURITY_STATUS:START -->
 ### Security and curation status (November 4, 2026)
 
-**The main dashboard above describes what has actually merged.** The research is broader, but reviewed material and approved skills are not the same thing. The dated graphic below shows merged work, separately proposed Q8 work, and the remaining security gap. It is regenerated from [machine-readable evidence](registry/public-security-curation-status-20261104.json) with [a dependency-free renderer](scripts/build-public-security-status.mjs); run `node scripts/build-public-security-status.mjs --self-test` and `--check` before changing the snapshot.
+**Now on main: 50 useful methods to study across all 33 capability domains.** They cover 47 distinct subtopics. This is a curated reference shelf, **not** 50 approved skills to install. The earlier Q7 checkpoint of 20 study methods across 10 domains is historical; [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693) is merged.
 
-![Skillz dated security and curation dashboard. Merged main has 20 study methods across 10 domains. Q8 proposes 50 across 33 domains. Static scans: first-party main 25 pass, 1 fail and 25 incomplete; Q8 study methods 10 pass, 7 fail and 33 incomplete. No unchanged-use approvals.](docs/assets/security-and-curation-status.svg)
+![Generated Skillz security and curation status, November 4: 50 merged study methods across 33 domains; 5,351 static decisions and 1,522 candidates still awaiting qualification; first-party scanner 25 pass, 1 fail and 25 incomplete; 50 study-method scanner 10 pass, 7 fail and 33 incomplete; zero unchanged-use approvals.](docs/assets/security-and-curation-status.svg)
 
-| What the count means | Confirmed merged main | Open review or historical security evidence |
-|---|---:|---:|
-| Capability domains | **33** | Q8 proposes at least one selected study method in all 33 |
-| Topics / topics with research leads | **247 / 210** | Research link does not mean quality approval |
-| First-party skill records | **44** | Separate 7 engine skill procedures in security scan population |
-| Distinct methods selected for study | **20 in 10 domains** | [Q8 draft #693](https://github.com/Knapp-Kevin/skillz/pull/693): **50 in 33** |
-| Exact static review decisions / awaiting consumer qualification | Not an additive main-release funnel | Q8 draft: **5,351 / 1,522** |
-| First-party main security scan, 51 package trees | Not a live scan of later draft changes | **25 passed / 1 failed / 25 incomplete**, pinned external scan of main |
-| Q8 featured study-method static security, 50 trees | Not a merged-main approval | **10 passed / 7 failed / 33 incomplete**, separate pinned evidence |
-| Approved unchanged / behaviorally validated in proposed shelf | **0 / 0** | **0 / 0** |
+| What we measured | Current checkpoint | What it means |
+|---|---:|---|
+| Capability domains / topics | **33 / 247** | **210** topics have research leads, including some unqualified candidates |
+| Distinct useful methods selected for study | **50 in 33 domains** | [Source-pinned Q8 catalog](registry/consumer-positive-references-q8-20261103.json); all are *Valuable References* |
+| Exact static review decisions | **5,351** | Historical decisions about candidate source versions, not 5,351 ready skills |
+| Candidates still awaiting consumer qualification | **1,522** | A review backlog, **not** a count to add to the 50 selected methods |
+| First-party skills in the source registry | **44** | Separate from the **51-tree** first-party/engine security-scan population |
+| First-party/engine historical static scans | **25 pass / 1 fail / 25 incomplete** | 51 pinned source trees; results do **not** apply to newer changed skill versions |
+| Selected Q8 study-method historical static scans | **10 pass / 7 fail / 33 incomplete** | 50 pinned package trees; failed and incomplete states remain held |
+| Approved for unchanged use / behaviorally validated | **0 / 0** | No new installation, private-data, purchase or execution authority |
 
-**Security issue [#402](https://github.com/Knapp-Kevin/skillz/issues/402) remains open and is a priority.** The security failures and incomplete results are not dismissed. A concrete Handoff Writer credential-fragment disclosure defect has been corrected in [draft #703](https://github.com/Knapp-Kevin/skillz/pull/703), but its changed package needs a new pinned security scan and independent agent-behavior checks before merge. A passed static scan is not permission to install, run, or expose private accounts.
+**Security issue [#402](https://github.com/Knapp-Kevin/skillz/issues/402) remains open.** Repairs in [#673](https://github.com/Knapp-Kevin/skillz/pull/673), [#686](https://github.com/Knapp-Kevin/skillz/pull/686), [#702](https://github.com/Knapp-Kevin/skillz/pull/702), and [#703](https://github.com/Knapp-Kevin/skillz/pull/703) still require final-tree scanner evidence, independent behavioral tests and governed acceptance. A passed *static* scan does not automatically make a skill safe to run.
 
-These populations overlap and **must not be added together**. The two security rows reflect **different pinned package sets**, and all figures are dated snapshots rather than live counters. The proposed shelf and original scanner receipts remain on [Q8 #693](https://github.com/Knapp-Kevin/skillz/pull/693); the [50-method Q12 security reconciliation](registry/security/q12-featured-security-evidence-reconciliation-20261103.json) and [eight Q9/Q10 source-review receipts](docs/reviews/2026-11-04-pr698-evidence-only-merge-acceptance.md) are now merged as **historical evidence only** via [PR #698](https://github.com/Knapp-Kevin/skillz/pull/698). The obsolete 45-method Q11 graphics are [archived](docs/archive/q11/README.md), not used in live counters.
+These security groups have different and overlapping source populations. **Do not add their totals.** [Q12 evidence](registry/security/q12-featured-security-evidence-reconciliation-20261103.json) is merged as a pinned historical record; the superseded Q11 45-method visual is [archived](docs/archive/q11/README.md). The generated status chart uses [this machine-readable checkpoint](registry/public-security-curation-status-20261104.json) and [this dependency-free renderer](scripts/build-public-security-status.mjs). Maintain it with `node scripts/build-public-security-status.mjs --self-test` and `--check`, and visually review the generated SVG. These are dated findings, not live counters.
 
 <!-- SKILLZ_SECURITY_STATUS:END -->
 
