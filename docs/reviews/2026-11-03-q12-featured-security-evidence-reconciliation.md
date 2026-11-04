@@ -4,7 +4,7 @@
 
 ## Why this matters
 
-The pinned Q8 catalog has **50** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](../../registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](../../registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
+The pinned Q8 catalog has **50** proposed Valuable References. For the original **20** inherited from Q7, the `security_scan` field still says `not-run` even though [the exact-tree external-host scan receipts](https://github.com/Knapp-Kevin/skillz/blob/d3aaaa29f84b81e1905b295adb3657348551b9d8/registry/security/external-host-skillspector-featured-20261103.json) exist and are pinned. A reader opening one of those catalog entries receives stale security information. The [Q8 machine pipeline](https://github.com/Knapp-Kevin/skillz/blob/d3aaaa29f84b81e1905b295adb3657348551b9d8/registry/qualification-pipeline-20261103.json) has the correct combined total, but offers no easy per-method cross-ledger answer.
 
 We did not rewrite Q8's source catalog or original historical records. Instead, the [50-record security reconciliation](../../registry/security/q12-featured-security-evidence-reconciliation-20261103.json) joins **each exact consumer ID, source repository, source commit and package-tree SHA** to one authoritative report. The [CSV](../data/q12-featured-security-evidence-matrix.csv) can be opened in any spreadsheet without redrawing a chart.
 
