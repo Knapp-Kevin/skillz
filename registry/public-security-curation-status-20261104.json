@@ -1,21 +1,14 @@
 {
-  "schema_version": "skillz-public-security-and-curation-v1",
+  "schema_version": "skillz-public-security-and-curation-v2",
   "as_of": "2026-11-04",
   "merged_main": {
     "domains": 33,
     "topics": 247,
     "research_topics": 210,
     "first_party_skills": 44,
-    "study_references": 20,
-    "study_domains": 10
-  },
-  "q8_draft": {
-    "pr": 693,
-    "commit": "d3aaaa29f84b81e1905b295adb3657348551b9d8",
     "study_references": 50,
     "study_domains": 33,
-    "exact_static_decisions": 5351,
-    "review_queue": 1522
+    "selected_topics": 47
   },
   "security": {
     "first_party_main": {
@@ -25,19 +18,29 @@
       "incomplete": 25,
       "source": "PR #693 / external-host-skillspector-first-party-20261103.json"
     },
-    "q8_study_draft": {
+    "q8_study_merged": {
       "total": 50,
       "passed": 10,
       "failed": 7,
       "incomplete": 33,
-      "source": "PR #698 / q12-featured-security-evidence-reconciliation-20261103.json"
+      "source": "Merged Q12 evidence from #698 and study-method Q8 #693; pinned historical static receipts (not a new scan)"
     }
   },
   "approved_unchanged": 0,
   "behaviorally_validated": 0,
-  "open_prs_at_snapshot": 5,
+  "open_prs_at_snapshot": 4,
   "open_issues_at_snapshot": 12,
   "security_issue": 402,
   "non_additive": true,
-  "notes": "Static, source-pinned evidence; main counts and unmerged draft counts are separate. Changed source packages require exact new scans. Zero unchanged-use approvals. PR #698 merged on 2026-11-04 as historical Q6-Q12 research evidence; Q8 study shelf remains draft, security/behavior approvals unchanged."
+  "notes": "Q8 #693 merged as 50 study-only Valuable References across 33 domains on 2026-11-04; Q7 20/10 is historical. Security evidence is pinned to earlier exact package trees, not the newer repairs in #673/#686/#702/#703. Static pass is not unchanged-use approval. The 51 first-party/engine and 50 study-reference scan populations overlap and must not be added. Approved unchanged: 0. Behavioral validation: 0. Open security #402 remains unresolved.",
+  "q8_merged_checkpoint": {
+    "pr": 693,
+    "source_head": "dfeb3ce191bd2242760c25a42115073799a1f5a0",
+    "merge_commit": "63dd19418e4360ca517136a649ee7e263aaf3a0d",
+    "publication_state": "MERGED_STUDY_ONLY",
+    "study_references": 50,
+    "study_domains": 33,
+    "exact_static_decisions": 5351,
+    "review_queue": 1522
+  }
 }
