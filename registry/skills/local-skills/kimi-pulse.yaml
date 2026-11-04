@@ -7,9 +7,9 @@ source_path: skills/kimi-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
+source_snapshot_revision: aabe6ffef1d1ff949271ae160c92332d2f625a9a
 curated_at: 2026-08-30
-last_checked_at: 2026-11-03
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/kimi-pulse/SKILL.md
 permission_tier: read-only
@@ -19,4 +19,4 @@ dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
 import_eligibility: conditional-on-security-and-user-fit
 rationale: "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability."
-exact_version_requalification: "Required for 3e2e6cc836ddb05e0da6a7dafb7048a30fd9921e; previous semantic review was for 4d8935ea2d8006ea277ab1371f419c723a867643. Security and behavioral validation not-run."
+exact_version_requalification: "Required for 6625f147011dfd38ed2b9881eda2d5ea62e2ece4. 2026-11-04 issue #402 source-level least-authority correction. Prior scanner fail/incomplete on older package DOES NOT transfer or become passed. New exact package needs pinned external scan, fresh static semantic read and executed host acceptance."
