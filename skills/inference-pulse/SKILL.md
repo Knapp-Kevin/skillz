@@ -13,7 +13,7 @@ metadata:
   category: Productivity
   display-name: Inference Pulse
   emoji: "🧠"
-  version: 1.1.3
+  version: 1.1.4
 ---
 
 # Inference Pulse
@@ -21,12 +21,12 @@ metadata:
 Topic pulse for local-inference runtimes — llama.cpp, Ollama, and vLLM.
 Local runtimes ride these upstreams, so breaking changes,
 quantization-format shifts, and GPU/NPU support moves land here first;
-every digest ends with a relevance verdict for the bound local-runtime
-target. **Bind:** discover the operator's local-runtime target from an
-operator profile, project governance doc, or host memory — the bound
-source is authoritative over assumptions; when none exists, the verdict
-goes generic (relevance to a typical local-inference stack) and the
-skill offers to bind a target for next time.
+every digest ends with a relevance verdict for the authorized local-runtime
+target. **Bind:** use a runtime target expressly supplied by the user or an
+approved project source within the current request's read scope. Do not
+inspect private profiles, host memory or unrelated workspace records merely
+to customize a public digest. When no target is authorized, provide a generic
+relevance verdict and offer a draft target description for separate approval.
 
 ## Execution Flow
 
