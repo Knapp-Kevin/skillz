@@ -117,11 +117,11 @@ Each row counts a **different population** with its own denominator. **Do not ad
 |---|---|---|
 | **[Q8 draft](https://github.com/Knapp-Kevin/skillz/pull/693)** | 44 proposed Valuable References; 33 / 33 domains represented; pinned scanner 8 passed / 7 failed / 29 incomplete | Independent merge acceptance, security finding adjudication and separate behavioral testing |
 | **[Q9 draft](https://github.com/Knapp-Kevin/skillz/pull/697)** | 8 pinned discovery leads from 7 source repositories across 5 domains | Exact identity, rights and fit assessment; leads are not accepted skills |
-| **[Q10 draft](https://github.com/Knapp-Kevin/skillz/pull/698)** | 7 of those 8 Q9 leads statically reviewed: 3 promising study concepts held, 4 other research/rejected unchanged | 1 lead still needs detailed static review; external scanner/behavioral checks not run |
+| **[Q10 draft](https://github.com/Knapp-Kevin/skillz/pull/698)** | 8 of those 8 Q9 leads statically reviewed: 4 promising study concepts held, 4 other research/rejected unchanged | All original leads have a static review; no security/behavioral clearance |
 
-**Remaining package boundary:** [ROS 2 Engineering scope mapping](https://github.com/Knapp-Kevin/skillz/pull/698) found **118 files** selected by the portable installer from **204 repository files**, including 15 Python scripts and 28 references. The plugin has a separate hook-enabled profile. This is **not** the eighth completed skill review, a security scan, an installation approval, or a hardware test.
+**ROS 2 Engineering, eighth static review:** [Q10 source-pinned review](https://github.com/Knapp-Kevin/skillz/pull/698) covers **118 portable source files** from **204 repository files**, including 15 Python scripts and 28 references. This is an individual **17/20 static reference-only review**, not a security scan, safe installation, verified plugin behavior or physical hardware clearance.
 
-**Never add Q9 and Q10 counts:** Q10 examined 7 of the same 8 Q9 candidates, not 15 distinct skills. No Q9/Q10 approvals or shelf promotions occurred. **Zero unchanged-use approvals and zero behavioral validations** remain the governing outcome.
+**Never add Q9 and Q10 counts:** Q10 examined 8 of the same 8 Q9 candidates, not 16 distinct skills. No Q9/Q10 approvals or shelf promotions occurred. **Zero unchanged-use approvals and zero behavioral validations** remain the governing outcome.
 
 [Spreadsheet-ready progress CSV](docs/data/qualification-workstream-progress.csv) · [Pinned progress snapshot](registry/curation-workstream-status-20261103.json) · [How to regenerate](docs/capability-dashboard-maintenance.md)
 
