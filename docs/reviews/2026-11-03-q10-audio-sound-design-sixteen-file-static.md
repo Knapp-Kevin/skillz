@@ -6,7 +6,7 @@
 
 The pinned [Sound Design package](https://github.com/salomonMuriel/media-production-skills/tree/6ba42845c9d355776fb10091e47ee32e035509fc/skills/sound-design) has a valuable production method: use measurements to align music and sound effects, perform blind comparisons of edits with untouched controls, and test loudness and peaks on the **finished** recording. It earned **13/20** on the ten-axis static rubric.
 
-**Do not execute unchanged.** The blind-splice program has an unguarded directory-deletion path that could destroy unrelated files. The 16 source files were inspected; the finding is grounded in the code, **not** a hypothetical behavioral run or a scanner alarm.
+**Do not execute unchanged.** The blind-splice program has an unguarded directory-deletion path that could destroy unrelated files. All 16 source file texts were fetched and statically screened, and the destructive/write paths were inspected in detail. This was **not** a full independent dynamic or functional code audit; the deletion finding is grounded in source code, not a hypothetical behavioral run or a scanner alarm.
 
 | Useful mechanism | Why it matters |
 |---|---|
@@ -23,7 +23,7 @@ Other output paths also lack no-clobber guards: `music_splice.py` writes edit WA
 
 ## Package, licensing and missing tests
 
-Every file in the **16-file owned subtree** was opened and read without executing scripts. The package Git tree is `23f68eb57f4a0e93032e9108ae0de3f2684713e5`; the root MIT license blob is `44a666fb7b15bb3f52a1d88f06ba46f8992df423`. The package depends on Python 3.11+, `uv`, NumPy/SciPy, FFmpeg and related audio libraries. Optional judging refers to a separate `video-director` skill and hosted model. No binary, package, network request, audio analysis, model judging or file write was executed during this review.
+Every file in the **16-file owned subtree** was fetched and screened for risky file/system operations without executing scripts. Key write and deletion paths were inspected directly. The package Git tree is `23f68eb57f4a0e93032e9108ae0de3f2684713e5`; the root MIT license blob is `44a666fb7b15bb3f52a1d88f06ba46f8992df423`. The package depends on Python 3.11+, `uv`, NumPy/SciPy, FFmpeg and related audio libraries. Optional judging refers to a separate `video-director` skill and hosted model. No binary, package, network request, audio analysis, model judging or file write was executed during this review.
 
 Upstream MIT licenses its own code/text with the required notices. It does **not** grant use of someone else's music, performance recordings or samples. Commercial/music content rights and disclosure to any hosted judge remain separate.
 
