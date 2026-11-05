@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-failed-featured-exact-static-content-dispositions",
+  "date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "source_ledger": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "source_shelf": "registry/consumer-positive-references-q8-20261103.json",
+  "claim": "Exactly three pinned Q8 featured third-party full packages reviewed directly as static source; all 9 material package files plus three root LICENSE files inspected. Git blob fingerprints and complete package trees verified against upstream pinned revision. Upstream default-branch heads match pins on date. No source commands, scripts, agent hosts, scanners or live government standards were executed or verified.",
+  "counts": {
+    "packages": 3,
+    "owned_files_reviewed": 9,
+    "root_licenses_reviewed": 3,
+    "upstream_pins_matching_current_head": 3,
+    "source_security_findings_adjudicated_statically": 3,
+    "confirmed_material_content_risks": 9,
+    "unchanged_use_recommendations": 0,
+    "new_scans": 0,
+    "observed_behavioral": 0
+  },
+  "policy": "Historical scanner gate states remain failed and any proposed false-positive interpretations remain unaccepted; this ledger does not rewrite, supersede, or relabel actual scanner reports. Static reviewer finds additional independent safety/dependency risks that still block unchanged use.",
+  "records": [
+    {
+      "id": "peterbamuhigire-business-plan-skills/ecommerce-unit-economics",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "review_method": "complete passive package + root license static reading, exact Git-tree validation, static adversarial reasoned cases",
+      "reviewer": "ChatGPT maintainer session",
+      "source_repo": "peterbamuhigire/business-plan-skills",
+      "source_pin": "00a85b14b0770951a4c8dd0f8505b2bbaf7bfc95",
+      "source_head_checked": "00a85b14b0770951a4c8dd0f8505b2bbaf7bfc95",
+      "source_head_matches_pin": true,
+      "path": "skills/ict/ecommerce-unit-economics-and-cross-border-margin-model",
+      "source_blob_sha": "5c7e7e82b9b73e75d7b1be1fdf99417b65153097",
+      "complete_package_tree_sha": "8697477b3b824931a77afcddf430916c91e4b7bb",
+      "actual_tree_matches_record": true,
+      "inspected_files": {
+        "SKILL.md": "5c7e7e82b9b73e75d7b1be1fdf99417b65153097",
+        "references/unit-economics-workbook-spec.md": "96362fab976577fac902bbd20cdd2383d6f26a81",
+        "references/assumptions-register-and-verdict.md": "3b5b935249e4857970c07835a7f8d85380520d8e"
+      },
+      "root_license": {
+        "path": "LICENSE",
+        "blob_sha": "39d69a62ca40ee161b47394ef5493d4c26b43331",
+        "meaning": "MIT at pinned source; copying source-specific expression requires the original notice."
+      },
+      "historical_scanner": {
+        "state": "failed",
+        "finding_id": "P2",
+        "severity": "HIGH",
+        "location": "SKILL.md:76",
+        "pattern": "Hidden Instructions",
+        "report_sha256": "d97fd05b26179a7d71338a47931d5a28c451cbccf41b39ccf04dcbe4a2829f24",
+        "receipt": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+        "static_interpretation": "Line 76 is an HTML comment delimiting a duplicated compatibility appendix, not on its face a covert instruction. Prior FAIL and maintainer acceptance status are not changed."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "required-dependency-unavailable",
+          "evidence": "SKILL.md:83,118,124",
+          "finding": "Finance, revenue, refund, FX, tax and settlement treatment are made contingent on a named accounting doctrine not supplied or specified in the package. No reproducible or independent rule set is provided.",
+          "effect": "No authoritative go/no-go financial recommendation until transparent accounting treatment is supplied and reviewed."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "dimension-mismatch",
+          "evidence": "references/unit-economics-workbook-spec.md:core-formula-logic",
+          "finding": "Contribution calculation subtracts CAC without specifying its allocation basis. CAC is usually customer-cohort acquisition cost while other terms can be order-level; naïve subtraction per order can double-count acquisition across repeat purchases.",
+          "effect": "Require a declared per-order/per-customer cohort basis, units and reconciliation before trusting margin or payback."
+        },
+        {
+          "severity": "LOW",
+          "type": "contact-data-minimization",
+          "evidence": "SKILL.md:12",
+          "finding": "Source includes a personal author contact number unnecessary to execute the method; preserve rights/provenance without copying the contact into derived artifacts."
+        }
+      ],
+      "case_readings": {
+        "positive": "With validated per-market costs, scenario margin and sensitivity tables can be constructed without live mutations.",
+        "non_trigger": "When no company costs are available, abstain from an actionable viability verdict.",
+        "adversarial": "A requested firm GO with missing doctrine or marketing/settlement data must remain unresolved, not be manufactured from proxy inputs."
+      },
+      "minimum_repair_before_unchanged": "Bundle or clearly replace the required accounting standard with independent reconciled accounting assumptions; define acquisition cohort/unit basis; remove nonessential contact from derived copies; re-review exact new tree and rights.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 1,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 0,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 13,
+      "semantic_quality_state": "unverified",
+      "disposition": "reference-only; reject unchanged execution or installation",
+      "observed_agent_behavior": "not-run",
+      "new_scanner_run": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "kunitoki-sonic-skills/audio-performance-debug",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "review_method": "complete passive package + root license static reading, exact Git-tree validation, static adversarial reasoned cases",
+      "reviewer": "ChatGPT maintainer session",
+      "source_repo": "kunitoki/sonic-skills",
+      "source_pin": "8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa",
+      "source_head_checked": "8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa",
+      "source_head_matches_pin": true,
+      "path": "skills/audio-performance-debug",
+      "source_blob_sha": "15c4648108b8882896f047e01849e224c3b64b19",
+      "complete_package_tree_sha": "b6d07ad1cee260f2be4998103b44a164a597ddc7",
+      "actual_tree_matches_record": true,
+      "inspected_files": {
+        "SKILL.md": "15c4648108b8882896f047e01849e224c3b64b19",
+        "references/performance-patterns.md": "fb8716a553b6eb7c2644808618bf5ecaf14ad2e3"
+      },
+      "root_license": {
+        "path": "LICENSE",
+        "blob_sha": "fdddb29aa445bf3d6a5d843d6dd77e10a9f99657",
+        "meaning": "Unlicense at pinned source; no third-party example rights or platform behavior presumed."
+      },
+      "historical_scanner": {
+        "state": "failed",
+        "finding_id": "MP2",
+        "severity": "MEDIUM",
+        "location": "references/performance-patterns.md:42",
+        "pattern": "Context Window Stuffing",
+        "report_sha256": "52e170b2e1aba8320fbc0e5cd24f91cc69bbd8ed2070605c383344300885db4f",
+        "receipt": "registry/security/external-host-skillspector-featured-20261103.json",
+        "static_interpretation": "Scanner matched a reference to FFT input padding, which is not an instruction to stuff model context. Previous false-positive proposal is plausible but not formally accepted; historical FAIL remains."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "unsafe-simd-exemplar",
+          "evidence": "references/performance-patterns.md SIMD Vectorization examples",
+          "finding": "SSE2 and xsimd loops step by the vector width but show no scalar or masked remainder handling or declared divisibility precondition; for non-multiple sample counts the last load/store can address past the buffer end.",
+          "effect": "Do not transplant the SIMD examples; add width-bounded main loops plus safe tail processing and size-oriented tests."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "realtime-unsafe-profiling-example",
+          "evidence": "SKILL.md platform profiler table; references/performance-patterns.md JUCE PerformanceCounter section",
+          "finding": "Example logging inside an audio callback and globally prescriptive profiler attach commands are not constrained by measured real-time budgets or owner authorization.",
+          "effect": "Require synthetic/offline or authorized process profiling; avoid callback logging in production real-time paths."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "spinlock-recommendation",
+          "evidence": "references/performance-patterns.md Lock Contention section",
+          "finding": "Recommending an atomic_flag spinlock, even with try-lock language, can be misread as a safe replacement for a mutex on real-time threads. Busy waiting must not occur on the audio callback.",
+          "effect": "Require bounded nonblocking try-lock with fallback or wait-free ownership/queue, not a blocking spin loop."
+        }
+      ],
+      "case_readings": {
+        "positive": "Use symptom-first timing to locate xrun cause in a controlled profiling session.",
+        "non_trigger": "Do not attach to a user's live DAW or deploy profiling instrumentation merely because reference text suggests it.",
+        "adversarial": "Buffer sizes 127/129 and real-time callback stress reveal missing SIMD remainder and logging latency; source has no executed validation evidence."
+      },
+      "minimum_repair_before_unchanged": "Correct SIMD tails and add bounded test vectors; remove unsafe callback logging and ambiguity about spinlocks; scope profiler process attachment; re-review package and license.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 12,
+      "semantic_quality_state": "unverified",
+      "disposition": "reference-only; reject unchanged execution or installation",
+      "observed_agent_behavior": "not-run",
+      "new_scanner_run": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "kyleoliveiro-sg-gov-skills/sg-gov-ssp-navigator",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "review_method": "complete passive package + root license static reading, exact Git-tree validation, static adversarial reasoned cases",
+      "reviewer": "ChatGPT maintainer session",
+      "source_repo": "kyleoliveiro/sg-gov-skills",
+      "source_pin": "16892fc613263c3f835457cd23ae092d404979ca",
+      "source_head_checked": "16892fc613263c3f835457cd23ae092d404979ca",
+      "source_head_matches_pin": true,
+      "path": "skills/sg-gov-ssp-navigator",
+      "source_blob_sha": "c731414a2c7a4655069776f9549594c7e06dca57",
+      "complete_package_tree_sha": "135c3d625b2092ff3c9ee123e97641c09596ee53",
+      "actual_tree_matches_record": true,
+      "inspected_files": {
+        "SKILL.md": "c731414a2c7a4655069776f9549594c7e06dca57",
+        "references/ssp-profiles.md": "864ff0d769688058eebc94812a2577935c1f5622",
+        "evals/evals.json": "6d65f759f8d6c9b05aa7fd5a07e9948974ea5302",
+        "evals/trigger-evals.json": "e2d03af7e35048f699b12567d3f55f26c8a2d372"
+      },
+      "root_license": {
+        "path": "LICENSE",
+        "blob_sha": "4c827fc32ce43ebdadc16de241277918e2690113",
+        "meaning": "MIT for source-authored work; government standard text/rights and currency independently require confirmation."
+      },
+      "historical_scanner": {
+        "state": "failed",
+        "finding_id": "EA2",
+        "severity": "MEDIUM",
+        "location": "SKILL.md:182",
+        "pattern": "Autonomous Decision Making",
+        "report_sha256": "19e1c5d60a372a5e12de94c6c57dff3495094381daefb13229f48d829109c4cc",
+        "receipt": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+        "static_interpretation": "Line is a reported distinction among Level 0/1/2 governance controls, not an instruction that the assistant itself may autonomously approve operational security deviations. Prior historical FAIL remains."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "external-authority-freshness",
+          "evidence": "SKILL.md Source and currency, references/ssp-profiles.md opening paragraph",
+          "finding": "Embeds a dated 2026-07-16 government control snapshot and numerical thresholds; its own instructions require live official-source checks, which were not performed during this pinned-package review.",
+          "effect": "Cannot issue current compliance certification or authoritative implementation baseline from pinned snapshot alone."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "agency-approval-boundary",
+          "evidence": "SKILL.md Step 1 and Step 4",
+          "finding": "Classification, Level 1 deviations, CII notifications and residual-risk approvals belong to agency officials, not a skill or model. Strong escalation prose does not substitute for explicit owner approval and source verification.",
+          "effect": "Treat result as read-only planning aid and defer compliance sign-off."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unbundled-workflow-dependencies",
+          "evidence": "SKILL.md After the baseline is known",
+          "finding": "References numerous sibling control-family skills outside the reviewed package. Their full content, licensing and scope were not inspected in this tranche.",
+          "effect": "Do not claim complete control implementation, run sibling instructions, or imply those packages passed this review."
+        }
+      ],
+      "case_readings": {
+        "positive": "With six classification inputs, provide a clearly provisional base-plus-overlay map and point to official sources.",
+        "non_trigger": "Do not use this package for generic code review or for implementing a control family's live infrastructure changes.",
+        "adversarial": "A user asks for a signed-off current baseline with missing data classification or unverified source versions: stop short of certification, ask the agency decision-maker and verify official current text."
+      },
+      "minimum_repair_before_unchanged": "Require fresh live official-source verification and agency authority for each real project; distinguish snapshot from current law/control text, bound sibling handoff, reconcile licensing.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "semantic_quality_state": "unverified",
+      "disposition": "reference-only; reject unchanged execution or installation",
+      "observed_agent_behavior": "not-run",
+      "new_scanner_run": "not-run",
+      "unchanged_use_approved": false
+    }
+  ]
+}
