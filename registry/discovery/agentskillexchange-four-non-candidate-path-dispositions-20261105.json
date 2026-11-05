@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-05",
+  "issue": 624,
+  "source_id": "agentskillexchange-skills",
+  "source_repository": "agentskillexchange/skills",
+  "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+  "license_status": "repository-root MIT text verified at blob 209de096e132714210be26717f24129dd2c15b95; third-party upstream ownership/terms NOT independently resolved, so no redistribution or unchanged-use clearance",
+  "source_parent": {
+    "path": "skills/docsbot-administration/SKILL.md",
+    "blob": "e46edf0f7be5b63dabea634458d94b9db9787a51",
+    "linked_three_subworkflows": true
+  },
+  "evidence_scope": "All four non-direct-shape source paths inspected by exact Git file SHA; parent guidance read. This is terminal SOURCE ROLE disposition, not individual complete-package quality/security/behavior acceptance.",
+  "denominator": {
+    "raw_skill_md_paths": 3200,
+    "structural_direct_shape_paths": 3196,
+    "non_direct_shape_paths_classified": 4,
+    "all_raw_paths_role_classified": 3200,
+    "eligible_distinct_denominator": null
+  },
+  "records": [
+    {
+      "path": "skills/docsbot-administration/references/bot-builder/SKILL.md",
+      "blob": "fe1a89bcf07cdf4d7b2db02cee18e6d1f83d252f",
+      "tree": "12249aa29eec4c265813a1eebffa8eb0a688582d",
+      "role": "nested_required_subworkflow",
+      "reason": "Root docsbot-administration SKILL explicitly links and describes this as a nested bot-creation reference workflow; not independently registered as a first-class candidate",
+      "trigger": "Create, configure, tune or hand off a DocsBot bot",
+      "external_tools": "Named DocsBot Admin MCP write actions require separately established scope, OAuth and action authority",
+      "source_role_disposition": "not_standalone_first_class",
+      "individual_10_dimension_review": false,
+      "security_scanner_state": "not_run_here",
+      "behavioral_state": "not_run_here",
+      "approved_for_use": false,
+      "license_clearance": false
+    },
+    {
+      "path": "skills/docsbot-administration/references/evals/SKILL.md",
+      "blob": "2b00ef17ab1ae27d355f13b306236d376c728fe5",
+      "tree": "495922b005e2cfea20addff1a81f87d621dbe8d4",
+      "role": "nested_conditional_subworkflow",
+      "reason": "Root DocsBot explicitly says to load only if the advertised Evals/instruction-history tools exist; not first-class as a standalone library item",
+      "trigger": "User explicitly requests available Evals or instruction-history procedures",
+      "external_tools": "Unadvertised Evals APIs must not be claimed or called; existing resource reads/writes still separately scoped",
+      "source_role_disposition": "not_standalone_first_class",
+      "individual_10_dimension_review": false,
+      "security_scanner_state": "not_run_here",
+      "behavioral_state": "not_run_here",
+      "approved_for_use": false,
+      "license_clearance": false
+    },
+    {
+      "path": "skills/docsbot-administration/references/response-quality/SKILL.md",
+      "blob": "3eef7f24990bfc51890b62d921744d22e2020f8f",
+      "tree": "f619bc5aa2ec9cb78d810ac4fc8db08bc753594e",
+      "role": "nested_required_subworkflow",
+      "reason": "Root DocsBot points to it as the response-quality reference tree, loading on specific log-diagnosis tasks; not independent first-class intake",
+      "trigger": "Analyze specific bot responses, question logs or retrieval gaps",
+      "external_tools": "Live DocsBot log/semantic-search and remediation writes require scoped authorization and privacy review",
+      "source_role_disposition": "not_standalone_first_class",
+      "individual_10_dimension_review": false,
+      "security_scanner_state": "not_run_here",
+      "behavioral_state": "not_run_here",
+      "approved_for_use": false,
+      "license_clearance": false
+    },
+    {
+      "path": "template/SKILL.md",
+      "blob": "6d440c7f50bdbdbe58bd9c6b7f4feba440840e38",
+      "tree": "398c2ce9d926ba93aad1bfa3673a6b18e1580a6c",
+      "role": "noncandidate_template",
+      "reason": "Placeholder title Your Skill Name, example upstream project and install snippets, not an actual usable skill with an independently pinned product identity",
+      "trigger": "Scaffold authoring reference only",
+      "external_tools": "Do not run example installation snippets or suggest this as an approved skill",
+      "source_role_disposition": "not_standalone_first_class",
+      "individual_10_dimension_review": false,
+      "security_scanner_state": "not_run_here",
+      "behavioral_state": "not_run_here",
+      "approved_for_use": false,
+      "license_clearance": false
+    }
+  ],
+  "next_action": "Retain nested subworkflow references for full parent package inspection; do not double count these as standalone approved skills. Continue the governed-review identity reconciliation and complete package/right comparisons."
+}
