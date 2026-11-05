@@ -1,0 +1,741 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-05",
+  "kind": "passive-pinned-same-leaf-scope-routing-crosswalk",
+  "reference_crosswalk": "registry/discovery/pinned-four-source-identity-crosswalk-20261102.json",
+  "manifest_evidence": [
+    {
+      "path": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
+      "historical_crosswalk_blob": "12199e7b5e71f9559c15c871e75221854a316d4e",
+      "current_manifest_blob": "60af50b4c1a30983cacf34b5357b2109e77d6ac7",
+      "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e"
+    },
+    {
+      "path": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
+      "historical_crosswalk_blob": "94721be03130978dc2137d1f4a3113b744a6132e",
+      "current_manifest_blob": "216daf7791ff42b9f5fb5029d6ddb451002ab581",
+      "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a"
+    },
+    {
+      "path": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-01.json",
+      "historical_crosswalk_blob": "32808a984313d10b5786f56f3815e9d87f17c341",
+      "current_manifest_blob": "32808a984313d10b5786f56f3815e9d87f17c341",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5"
+    },
+    {
+      "path": "registry/discovery/leads/j4flmao-agent-skills-982203e52afe-part-02.json",
+      "historical_crosswalk_blob": "0e3fb74804e5c84b758e28fba30e01aba7abd43f",
+      "current_manifest_blob": "0e3fb74804e5c84b758e28fba30e01aba7abd43f",
+      "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5"
+    }
+  ],
+  "manifest_drift_audit": {
+    "metadata_only_drift_count": 2,
+    "verified_historical_vs_current_entire_entries_equal": true,
+    "verified_pins_equal": true,
+    "details": [
+      {
+        "path": "registry/discovery/github-awesome-copilot-skill-paths-f11a4e441c5f.json",
+        "crosswalk_snapshot_blob": "12199e7b5e71f9559c15c871e75221854a316d4e",
+        "current_manifest_blob": "60af50b4c1a30983cacf34b5357b2109e77d6ac7",
+        "source_pin_match": true,
+        "entries_verified_unchanged_against_historical_blob": true,
+        "changed_only_review_accounting": true
+      },
+      {
+        "path": "registry/discovery/openai-plugins-skill-paths-0722921d5542.json",
+        "crosswalk_snapshot_blob": "94721be03130978dc2137d1f4a3113b744a6132e",
+        "current_manifest_blob": "216daf7791ff42b9f5fb5029d6ddb451002ab581",
+        "source_pin_match": true,
+        "entries_verified_unchanged_against_historical_blob": true,
+        "changed_only_review_accounting": true
+      }
+    ]
+  },
+  "counts": {
+    "groups_compared": 14,
+    "candidate_skill_md_files_read": 35,
+    "complementary_scope_groups": 11,
+    "related_overlap_groups": 3,
+    "proven_semantic_duplicate_merges": 0,
+    "terminal_review_decisions_added": 0,
+    "eligible_distinct_denominator": null,
+    "raw_skill_paths_in_pinned_four_source_inventory": 4813
+  },
+  "qualification_limits": {
+    "whole_bundled_packages_read": false,
+    "tree_sha_basis": "source manifests, not independent current upstream recomputation",
+    "license_and_rights_clearance": false,
+    "static_security_scanner": false,
+    "adversarial_host_observation": false,
+    "unchanged_use_approvals": 0
+  },
+  "groups": [
+    {
+      "leaf_name": "android",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom Contact Center, Meeting SDK, Video SDK and Virtual Agent each cover a different Android integration; community Android covers Kotlin/Compose engineering.",
+      "consumer_routing": "Choose a Zoom SDK/product or general native Android development.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/contact-center/android/SKILL.md",
+          "skill_md_blob_sha": "1f05cda05c4aed0c5fa089eebff64694519c2d64",
+          "recorded_containing_directory_tree_sha": "c222347f8350db99228066ca8a2cfecb42a84dd5",
+          "size_bytes": 1492,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/meeting-sdk/android/SKILL.md",
+          "skill_md_blob_sha": "bef2c76a5a50842b0145579a9997fe94327a4426",
+          "recorded_containing_directory_tree_sha": "b0488dc73a5e108601b4589b182a203987885291",
+          "size_bytes": 1618,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/video-sdk/android/SKILL.md",
+          "skill_md_blob_sha": "f2d84d66d3d549c84083da12a24984524f3faee7",
+          "recorded_containing_directory_tree_sha": "e61a5b87e5e5075d8f79698f542fcd6affe9c73f",
+          "size_bytes": 1272,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/virtual-agent/android/SKILL.md",
+          "skill_md_blob_sha": "26651b8b9e8b840c9e0171601084fbfd8ea1efbd",
+          "recorded_containing_directory_tree_sha": "93bfc06efd59875566c5c40dab79e899be529eb0",
+          "size_bytes": 1315,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/mobile/android/SKILL.md",
+          "skill_md_blob_sha": "4ab4eca9ef689b51bd3c357dde704ac84d24484f",
+          "recorded_containing_directory_tree_sha": "6fa2fb6fd512f62e47daf322930f56f7c138bbb6",
+          "size_bytes": 17074,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "ios",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom Contact Center, Meeting SDK, Video SDK and Virtual Agent each cover a different iOS integration; community iOS covers Swift/SwiftUI engineering.",
+      "consumer_routing": "Choose a Zoom SDK/product or general native iOS development.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/contact-center/ios/SKILL.md",
+          "skill_md_blob_sha": "00637c2b6c1105b90ac408b3f6b408a7c1376dcd",
+          "recorded_containing_directory_tree_sha": "995393a1680c64181df2166e314cb0bab6609ab4",
+          "size_bytes": 1443,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/meeting-sdk/ios/SKILL.md",
+          "skill_md_blob_sha": "8448e523876b585b680c8bc08a4c7d772ff03081",
+          "recorded_containing_directory_tree_sha": "b0ca9d58d7d61ad15e794a4d018453e1b7808214",
+          "size_bytes": 1233,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/video-sdk/ios/SKILL.md",
+          "skill_md_blob_sha": "054b5dd54009e306a3e7d7b6a345648aac2ce451",
+          "recorded_containing_directory_tree_sha": "bed31583b2cda1e4188a21fee45b62d8251ad165",
+          "size_bytes": 1217,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/virtual-agent/ios/SKILL.md",
+          "skill_md_blob_sha": "d7c31b3b142a8e6593bd7c5fc41d082c9639bf86",
+          "recorded_containing_directory_tree_sha": "ef8d6293c419f65b19fdd425af1ab7d3708b0020",
+          "size_bytes": 1245,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/mobile/ios/SKILL.md",
+          "skill_md_blob_sha": "0b07e187ab97227e341ced002792052603e23bd9",
+          "recorded_containing_directory_tree_sha": "2c72890a300eef05abeae392ced9d09da95be0da",
+          "size_bytes": 14873,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "react-native",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom Meeting SDK embeds meetings, Zoom Video SDK builds custom sessions, community React Native covers Expo, mobile architecture and performance.",
+      "consumer_routing": "Route meetings, custom video, or general React Native separately.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/meeting-sdk/react-native/SKILL.md",
+          "skill_md_blob_sha": "e2672bb622842edbd67dd5f9faeced02523fad8f",
+          "recorded_containing_directory_tree_sha": "024a0ed6af84d2982c22a0abab2faacfbe988237",
+          "size_bytes": 3684,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/video-sdk/react-native/SKILL.md",
+          "skill_md_blob_sha": "8572087f07e6e0774c0793203e6b6ce7570538cd",
+          "recorded_containing_directory_tree_sha": "1f5dc590777bfd1326bc63c1ac1d7a77a23ca3fc",
+          "size_bytes": 2786,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/mobile/react-native/SKILL.md",
+          "skill_md_blob_sha": "17c3c5d44208190c1c4161dae784876156639591",
+          "recorded_containing_directory_tree_sha": "a41a91615ee9a9b2701afead8be3d6078d1495d5",
+          "size_bytes": 8339,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "agentic-workflows",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "GitHub skill routes gh-aw GitHub Agentic Workflows; community skill designs generic LLM control flows, bounded loops and checkpoints.",
+      "consumer_routing": "Use gh-aw routing only for GitHub workflow tasks, not generic orchestration.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "github-awesome-copilot",
+          "repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_md_path": ".github/skills/agentic-workflows/SKILL.md",
+          "skill_md_blob_sha": "f11eaadd2e755a1c104a37bb3ab35795a2dcf057",
+          "recorded_containing_directory_tree_sha": "dade976f4086d43cf690af95c2af857c7b0c6108",
+          "size_bytes": 4458,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/ai/agentic-workflows/SKILL.md",
+          "skill_md_blob_sha": "dc9f99b5c7c5507c5dd516179763da5c9d3c9e56",
+          "recorded_containing_directory_tree_sha": "c22b270ec2524bb794a962186cc8807a54a6ebdf",
+          "size_bytes": 8640,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "setup",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "GitHub skill sets up Qdrant monitoring and alerts; Mixpanel plugin installs analysis dependencies and configures credentials.",
+      "consumer_routing": "Qdrant telemetry versus Mixpanel setup; installation/credentials need specific authority.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "github-awesome-copilot",
+          "repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "skill_md_path": "skills/qdrant-monitoring/setup/SKILL.md",
+          "skill_md_blob_sha": "6c468cc11da4a5ac88287886e66212edbdf61542",
+          "recorded_containing_directory_tree_sha": "5ab481b7326f940457b55d6524cc25967b7e167e",
+          "size_bytes": 3418,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/mixpanel-headless/skills/setup/SKILL.md",
+          "skill_md_blob_sha": "96fbb0890a41eb5e2256500e22f9bb07adccd7cd",
+          "recorded_containing_directory_tree_sha": "00968bec21ae79dd55304f17521d9d3db7955110",
+          "size_bytes": 7075,
+          "manifest_shape": "direct",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "supabase",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "related_overlap",
+      "scope_finding": "Both cover Supabase; the plugin emphasizes current vendor docs, Data API and verification, the community skill emphasizes schema, RLS and backend construction.",
+      "consumer_routing": "Compare whole packages and task-specific methods before ranking.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/supabase/skills/supabase/SKILL.md",
+          "skill_md_blob_sha": "198c9855058fb6db3e865b3f8b766d2f0156a2f1",
+          "recorded_containing_directory_tree_sha": "9911179cac6d704329e20c6d27b94175121a4160",
+          "size_bytes": 11265,
+          "manifest_shape": "direct",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/backend/universal/supabase/SKILL.md",
+          "skill_md_blob_sha": "89da9ae3fe03265079f44a73643fdaf9bbec520b",
+          "recorded_containing_directory_tree_sha": "d11e236e565332ac3a8be066fde8a60da997ea89",
+          "size_bytes": 18300,
+          "manifest_shape": "other-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "nextjs",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "related_overlap",
+      "scope_finding": "Both cover Next.js App Router; the plugin links deep framework references, community skill emphasizes app structure and Server/Client component decisions.",
+      "consumer_routing": "Compare whole packages and Next.js version fit before ranking.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/vercel/skills/nextjs/SKILL.md",
+          "skill_md_blob_sha": "ab252649c550cd34a5fac7e7a03d5c9f0a796767",
+          "recorded_containing_directory_tree_sha": "8a132d560ce8761cab8069f95b793a2a2d922660",
+          "size_bytes": 5328,
+          "manifest_shape": "direct",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/frontend/react/nextjs/SKILL.md",
+          "skill_md_blob_sha": "bab0c7cda0973c08e75ec46f0850b9757ef5827b",
+          "recorded_containing_directory_tree_sha": "436bebfa8e807f6ed9a052d6bb6df34e3963c586",
+          "size_bytes": 15194,
+          "manifest_shape": "other-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "observability",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Vercel plugin covers platform logs, Web Analytics, Speed Insights and drains; community skill covers stack-neutral logs/metrics/traces, OpenTelemetry and SLOs.",
+      "consumer_routing": "Vercel platform analytics versus production service observability.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/vercel/skills/observability/SKILL.md",
+          "skill_md_blob_sha": "39653194f418bab7fb0016f404b2720020d8f706",
+          "recorded_containing_directory_tree_sha": "ebfa75b7eda1b66d0f429d689e2649291ad1106a",
+          "size_bytes": 26510,
+          "manifest_shape": "direct",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/devops/observability/SKILL.md",
+          "skill_md_blob_sha": "db11c5691064fe850140a75ba1d60e20566ccf3b",
+          "recorded_containing_directory_tree_sha": "606d45d11f4e2170a3555d0ca78fe7529adaf1de",
+          "size_bytes": 18578,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "payments",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "related_overlap",
+      "scope_finding": "Both cover Stripe; Vercel plugin spans Marketplace, Checkout and subscription setup, community skill emphasizes billing lifecycle and reliable webhook state.",
+      "consumer_routing": "Distinguish checkout/setup from subscription reliability; retain both.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/vercel/skills/payments/SKILL.md",
+          "skill_md_blob_sha": "70b0fce3a7ea656d7d0be73c63786ba60b786b39",
+          "recorded_containing_directory_tree_sha": "5920ad073b882def65f1d55d61e3d9cdc7aab3c5",
+          "size_bytes": 10589,
+          "manifest_shape": "direct",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/ecommerce/payments/SKILL.md",
+          "skill_md_blob_sha": "a392ee9f082f620d10e172a85f76a0102f03afb2",
+          "recorded_containing_directory_tree_sha": "923823e5d034e2e9ea16db2e29fdf01645c6430f",
+          "size_bytes": 7934,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "electron",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom plugin embeds Meeting SDK in Electron; community skill covers desktop Electron IPC, app architecture and packaging.",
+      "consumer_routing": "Zoom Meeting SDK integration versus Electron engineering.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/meeting-sdk/electron/SKILL.md",
+          "skill_md_blob_sha": "a2c24ed1677122202f35cbf1ca23cc7f8a0b4d36",
+          "recorded_containing_directory_tree_sha": "e6373f1426c2301b4997409d86fdd5814e0e99d4",
+          "size_bytes": 2817,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/desktop/electron/SKILL.md",
+          "skill_md_blob_sha": "2074b373d73e50de789e268bbe2bd17e73f7c018",
+          "recorded_containing_directory_tree_sha": "3dbc9c14f18f8026a30cc719529cb16c65d397af",
+          "size_bytes": 17809,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "unreal",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom plugin embeds Meeting SDK wrappers in Unreal; community skill covers UE5 gameplay, rendering, networking and profiling.",
+      "consumer_routing": "Zoom integration versus Unreal game engineering.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/meeting-sdk/unreal/SKILL.md",
+          "skill_md_blob_sha": "f51063112ebad91ac838986f355ffc0b7e568185",
+          "recorded_containing_directory_tree_sha": "61d029020383eec6d473ee543823f6b8b9ce5f61",
+          "size_bytes": 1296,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/game/unreal/SKILL.md",
+          "skill_md_blob_sha": "230e01fbde250dec2839387a6becc0f66e6774c3",
+          "recorded_containing_directory_tree_sha": "ad5b41ee4abb5cffcb3a4081aac84dd7feea4219",
+          "size_bytes": 10641,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "flutter",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom plugin integrates custom Video SDK sessions in Flutter; community skill covers general Flutter state, tests and release.",
+      "consumer_routing": "Zoom Video SDK versus Flutter app engineering.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/video-sdk/flutter/SKILL.md",
+          "skill_md_blob_sha": "97923531b34c01eece57da3a868113967c4b492a",
+          "recorded_containing_directory_tree_sha": "ae407aa6d18b344c10c073a846508cc29a907c7a",
+          "size_bytes": 2885,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/mobile/flutter/SKILL.md",
+          "skill_md_blob_sha": "55e38b182fe2ee1f9e2da4887bc13bc4421190e3",
+          "recorded_containing_directory_tree_sha": "f72ce2856ca8ed893a1c53fb8a33311375ff7c5f",
+          "size_bytes": 9231,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "unity",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom plugin integrates Video SDK into Unity; community skill covers Unity gameplay, physics, graphics and profiling.",
+      "consumer_routing": "Zoom Video SDK versus Unity game engineering.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/video-sdk/unity/SKILL.md",
+          "skill_md_blob_sha": "8e35e74b4a41cc3e5cfbce1244a259bbca0bcfbe",
+          "recorded_containing_directory_tree_sha": "96ec1908d00d316f05dcdddc99c15acb05ba31ee",
+          "size_bytes": 1240,
+          "manifest_shape": "nested-or-internal",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/game/unity/SKILL.md",
+          "skill_md_blob_sha": "cc75fe1af72d7b41079929fe4c7ab94e35bd6140",
+          "recorded_containing_directory_tree_sha": "6e6a38069bd1fa4334f1b65ebc9b6e409d38f6db",
+          "size_bytes": 13609,
+          "manifest_shape": "direct-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    },
+    {
+      "leaf_name": "webhooks",
+      "evaluation": "pinned-SKILL.md-source-text-comparison",
+      "scope_relation": "complementary_scope",
+      "scope_finding": "Zoom plugin handles Zoom event subscriptions/signatures; community skill covers generic secure incoming/outgoing webhooks and delivery.",
+      "consumer_routing": "Zoom event setup versus generic backend webhooks.",
+      "duplicate_merge_authorized": false,
+      "candidates": [
+        {
+          "source_id": "openai-plugins",
+          "repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "skill_md_path": "plugins/zoom/skills/webhooks/SKILL.md",
+          "skill_md_blob_sha": "359243cc29a5747faeaed5595d507fa240e2ea53",
+          "recorded_containing_directory_tree_sha": "8b5972d854d3d5239f0a139e806b72f1d6781fb8",
+          "size_bytes": 1272,
+          "manifest_shape": "direct",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        },
+        {
+          "source_id": "j4flmao-agent-skills",
+          "repository": "j4flmao/agent-skills",
+          "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+          "skill_md_path": "skills/backend/universal/webhooks/SKILL.md",
+          "skill_md_blob_sha": "c9df1e8801e8f537e59382ba321714ab39766013",
+          "recorded_containing_directory_tree_sha": "0cee3fc42b99e7f884aa7796a8a621bb7b317919",
+          "size_bytes": 17438,
+          "manifest_shape": "other-shape",
+          "skill_md_read": true,
+          "complete_package_inspected": false,
+          "rights_cleared": false,
+          "security_qualified": false,
+          "behaviorally_validated": false
+        }
+      ]
+    }
+  ],
+  "required_next": "Full complete-package and rights inspection, source-specific quality/authority review, then separate scanner and host behavioral qualification; keep all 35 independent for now."
+}
