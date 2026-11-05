@@ -1,5 +1,9 @@
 # System State
 
+## Latest source review/repository status: November 5, 2026
+
+**0 open PRs and 4 open issues (#402, #544, #588, #599).** [Merged #703](https://github.com/Knapp-Kevin/skillz/pull/703) included 39 repaired first-party source packages. [44/44 current first-party review fingerprints](../registry/review-freshness/first-party-44-exact-source-20261105.json) match their original reviews. The [static-first freshness policy](static-review-and-freshness.md) replaces universal hosted scanning; historic scanner states and zero observed host approvals are preserved. Six bounded defect issues closed after implementation. Earlier counts below are historical.
+
 ## Current evidence-backed capability browse: November 5, 2026
 
 [The updated passive directory](../registry/capability-directory.json) now links **86 of 1,039** exact-version governed review IDs to **62 of 247** specific subdomains, leaving **953** without evidence-backed mappings. It separately exposes **50 existing Q8 Valuable Reference** methods as study-only entries in their canonical subdomains, spanning **33 of 33 domains**. Eight previously unmapped governed records were added from exact source and review fingerprints; rejected/unscanned and rights-sensitive records remain discoverable but not approved. This is **not** a new Q8 promotion, SkillSpector pass, SkillEvaluator pass, or host behavioral acceptance. [Full exact-source evidence](reviews/2026-11-05-q8-studies-eight-governed-capability-links.md). The historical coverage numbers below retain their original dates.
