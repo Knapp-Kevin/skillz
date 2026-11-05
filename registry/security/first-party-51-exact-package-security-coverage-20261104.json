@@ -4,7 +4,7 @@
   "kind": "first-party-complete-package-current-candidate-security-coverage",
   "source_repository": "Knapp-Kevin/skillz",
   "candidate_pr": 703,
-  "candidate_head": "49c35af59dcc6300a0523aedbece5bfa1fb9a477",
+  "candidate_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
   "main_sha_at_publication": "485a228cab75382f23d041ea45298e782452c590",
   "scanner_pin": "NVIDIA/SkillSpector@c7958a3268d9498644b22edb75d0f051bbc8cbfc v2.12.0",
   "scope": "Exactly 44 user-facing + 7 engine first-party skill packages on the current draft PR #703; DOES NOT include third-party corpus, skill directories without SKILL.md, or unchanged-use approvals.",
@@ -841,6 +841,6 @@
       "unchanged_use_approved": false
     }
   ],
-  "previous_candidate_head": "914d4e3d07c6b3a39c5636948f377c0c1c04684d",
+  "previous_candidate_head": "49c35af59dcc6300a0523aedbece5bfa1fb9a477",
   "last_reconciled_at": "2026-11-05"
 }
