@@ -4,7 +4,7 @@
   "kind": "first-party-complete-package-current-candidate-security-coverage",
   "source_repository": "Knapp-Kevin/skillz",
   "candidate_pr": 703,
-  "candidate_head": "b4b92ed5302f23e5d794b0684963989c85d28d84",
+  "candidate_head": "914d4e3d07c6b3a39c5636948f377c0c1c04684d",
   "main_sha_at_publication": "485a228cab75382f23d041ea45298e782452c590",
   "scanner_pin": "NVIDIA/SkillSpector@c7958a3268d9498644b22edb75d0f051bbc8cbfc v2.12.0",
   "scope": "Exactly 44 user-facing + 7 engine first-party skill packages on the current draft PR #703; DOES NOT include third-party corpus, skill directories without SKILL.md, or unchanged-use approvals.",
@@ -148,12 +148,12 @@
     {
       "package": "skills/career-radar",
       "skill": "career-radar",
-      "package_git_tree_sha": "e4d29b90f04aae0bcb02820855e164a409442260",
+      "package_git_tree_sha": "35055db24f786f8b3b57f78789e146eb0ee49b9c",
       "source_type": "first-party-user-facing",
       "repair_candidate": true,
       "scanner_state": "not-run-current-tree",
       "receipt": null,
-      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "reason": "Career Radar 1.1.4 fixed unauthorized prior-report access and possible private-profile egress via public web queries; new exact tree awaits pinned scanner and observed host tests.",
       "behavioral_state": "not-run",
       "unchanged_use_approved": false
     },
@@ -843,5 +843,7 @@
       "behavioral_state": "not-run",
       "unchanged_use_approved": false
     }
-  ]
+  ],
+  "previous_candidate_head": "b4b92ed5302f23e5d794b0684963989c85d28d84",
+  "last_reconciled_at": "2026-11-05"
 }
