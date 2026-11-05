@@ -16,7 +16,7 @@
   "by_pr": [
     {
       "pr": 703,
-      "head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "total": 39,
       "matched_pass": 14,
       "new_scans_needed": 25
@@ -26,7 +26,7 @@
     {
       "id": "deepseek-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/deepseek-pulse",
       "package_tree_sha": "8984411410ccae81474a93e53c28a180ff61ec25",
       "proposal_only": true,
@@ -47,7 +47,7 @@
     {
       "id": "gemini-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/gemini-pulse",
       "package_tree_sha": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
       "proposal_only": true,
@@ -68,7 +68,7 @@
     {
       "id": "github-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/github-pulse",
       "package_tree_sha": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
       "proposal_only": true,
@@ -84,7 +84,7 @@
     {
       "id": "glm-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/glm-pulse",
       "package_tree_sha": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
       "proposal_only": true,
@@ -105,7 +105,7 @@
     {
       "id": "governance-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/governance-pulse",
       "package_tree_sha": "506e6452333173778aa6e0e4e9a614b10cd12c58",
       "proposal_only": true,
@@ -121,7 +121,7 @@
     {
       "id": "hf-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/hf-pulse",
       "package_tree_sha": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
       "proposal_only": true,
@@ -137,7 +137,7 @@
     {
       "id": "inference-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/inference-pulse",
       "package_tree_sha": "3eba79599f77970dd91367df55f1325ded8f2149",
       "proposal_only": true,
@@ -153,7 +153,7 @@
     {
       "id": "kimi-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/kimi-pulse",
       "package_tree_sha": "049e00a74897ba13f8168e7f8ce2a896d9937e84",
       "proposal_only": true,
@@ -169,7 +169,7 @@
     {
       "id": "llama-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/llama-pulse",
       "package_tree_sha": "53dbd090ce88c406296ff84fce4faa61534044cd",
       "proposal_only": true,
@@ -190,7 +190,7 @@
     {
       "id": "mcp-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/mcp-pulse",
       "package_tree_sha": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
       "proposal_only": true,
@@ -206,7 +206,7 @@
     {
       "id": "memory-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/memory-pulse",
       "package_tree_sha": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
       "proposal_only": true,
@@ -222,7 +222,7 @@
     {
       "id": "mistral-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/mistral-pulse",
       "package_tree_sha": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
       "proposal_only": true,
@@ -243,7 +243,7 @@
     {
       "id": "openai-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/openai-pulse",
       "package_tree_sha": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
       "proposal_only": true,
@@ -264,7 +264,7 @@
     {
       "id": "perplexity-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/perplexity-pulse",
       "package_tree_sha": "2929295240f02db18afc52eeb44a8d3c30ec8346",
       "proposal_only": true,
@@ -285,7 +285,7 @@
     {
       "id": "qwen-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/qwen-pulse",
       "package_tree_sha": "e328cb591e98f994d2646bae448cb779c6adee06",
       "proposal_only": true,
@@ -306,7 +306,7 @@
     {
       "id": "xai-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/xai-pulse",
       "package_tree_sha": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
       "proposal_only": true,
@@ -327,7 +327,7 @@
     {
       "id": "agent-postmortem",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/agent-postmortem",
       "package_tree_sha": "cceb115c92467cd3be2a997484ef6756a47b6f58",
       "proposal_only": true,
@@ -348,7 +348,7 @@
     {
       "id": "brief-writer",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/brief-writer",
       "package_tree_sha": "3f45875f509b1a20fca4c1847c8122b549a76126",
       "proposal_only": true,
@@ -369,7 +369,7 @@
     {
       "id": "compare",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/compare",
       "package_tree_sha": "4ceefd2c39842ebb3e711a2f82d9840131588054",
       "proposal_only": true,
@@ -390,7 +390,7 @@
     {
       "id": "deep-dive",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/deep-dive",
       "package_tree_sha": "6119cf00ef09a1bb4097c28c3ed4aac8909b7037",
       "proposal_only": true,
@@ -411,7 +411,7 @@
     {
       "id": "fact-check",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/fact-check",
       "package_tree_sha": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
       "proposal_only": true,
@@ -432,7 +432,7 @@
     {
       "id": "automation-receipts",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/automation-receipts",
       "package_tree_sha": "39a8e08f7037fca28665b33edcc9d93314059c2d",
       "proposal_only": true,
@@ -451,7 +451,7 @@
     {
       "id": "task-surface",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/task-surface",
       "package_tree_sha": "951d5da3b04651e5612e8d1af811b39250672585",
       "proposal_only": true,
@@ -470,7 +470,7 @@
     {
       "id": "career-radar",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/career-radar",
       "package_tree_sha": "35055db24f786f8b3b57f78789e146eb0ee49b9c",
       "proposal_only": true,
@@ -486,7 +486,7 @@
     {
       "id": "daily-briefing",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/daily-briefing",
       "package_tree_sha": "6c73d9f034feaecad129769a9ec0afebabc397f6",
       "proposal_only": true,
@@ -502,7 +502,7 @@
     {
       "id": "handoff-writer",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/handoff-writer",
       "package_tree_sha": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
       "proposal_only": true,
@@ -522,7 +522,7 @@
     {
       "id": "inbox-triage",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/inbox-triage",
       "package_tree_sha": "d5796de1dbb5605e3ba8c2932ddf6860f972bef0",
       "proposal_only": true,
@@ -538,7 +538,7 @@
     {
       "id": "learning-plan",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/learning-plan",
       "package_tree_sha": "931fb2192a3cb1212643fe1df51d5e4bc3c70af4",
       "proposal_only": true,
@@ -554,7 +554,7 @@
     {
       "id": "mcp-vetting",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/mcp-vetting",
       "package_tree_sha": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
       "proposal_only": true,
@@ -570,7 +570,7 @@
     {
       "id": "permissions-review",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/permissions-review",
       "package_tree_sha": "8b8cbd95cbcb4f053c1070fdb4400c823593863f",
       "proposal_only": true,
@@ -586,7 +586,7 @@
     {
       "id": "repo-pulse",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/repo-pulse",
       "package_tree_sha": "452ecbe5dd3d51825cda94890a82f0ccdbf11d2d",
       "proposal_only": true,
@@ -602,7 +602,7 @@
     {
       "id": "smallbiz-ops",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/smallbiz-ops",
       "package_tree_sha": "304c1a49988aee8f446b5fa00700ff46a5e2358b",
       "proposal_only": true,
@@ -618,7 +618,7 @@
     {
       "id": "standup-writer",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/standup-writer",
       "package_tree_sha": "d6429bfea7bebe567aa52f7c5f1f6c44fd10086f",
       "proposal_only": true,
@@ -634,7 +634,7 @@
     {
       "id": "week-in-review",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/week-in-review",
       "package_tree_sha": "81646a594bf994e24899f7a086d86459cfaa5832",
       "proposal_only": true,
@@ -652,7 +652,7 @@
       "pr": 703,
       "origin_pr": 703,
       "origin_pr_head": "146f61ccfb73cee5a2305c0b2ded07820bb9c513",
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/decision-log",
       "package_tree_sha": "ca790304801fd1717841a8fab98bb4ebeed4c9bf",
       "proposal_only": true,
@@ -668,7 +668,7 @@
       "pr": 703,
       "origin_pr": 703,
       "origin_pr_head": "146f61ccfb73cee5a2305c0b2ded07820bb9c513",
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/devlog-draft",
       "package_tree_sha": "ba81b6da10b317b314d31264d7c5d9362d753702",
       "proposal_only": true,
@@ -684,7 +684,7 @@
       "pr": 703,
       "origin_pr": 703,
       "origin_pr_head": "146f61ccfb73cee5a2305c0b2ded07820bb9c513",
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/paper-digest",
       "package_tree_sha": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
       "proposal_only": true,
@@ -700,7 +700,7 @@
       "pr": 703,
       "origin_pr": 703,
       "origin_pr_head": "146f61ccfb73cee5a2305c0b2ded07820bb9c513",
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/agent-home-doctor",
       "package_tree_sha": "7e78ed3047b66c67c492eae1191853d6d7ce095e",
       "proposal_only": true,
@@ -716,7 +716,7 @@
       "pr": 703,
       "origin_pr": 703,
       "origin_pr_head": "49c35af59dcc6300a0523aedbece5bfa1fb9a477",
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
       "path": "skills/repo-doctor",
       "package_tree_sha": "cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7",
       "proposal_only": true,
@@ -744,7 +744,7 @@
   },
   "pr_consolidation_20261104": {
     "active_pr": 703,
-    "canonical_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+    "canonical_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
     "superseded_unmerged": [
       {
         "pr": 673,
@@ -776,8 +776,8 @@
     "unchanged_use_approvals": 0,
     "review": "docs/reviews/2026-11-04-pr703-three-repair-consolidation.md",
     "last_documentation_head": "5bb33282c1ee37640a6685c2c2092abf04b32c57",
-    "latest_main_integration_head": "b4b92ed5302f23e5d794b0684963989c85d28d84",
-    "main_integrated_commit": "e1f40ed6363486980a146c626b85c08de772fc77",
+    "latest_main_integration_head": "4099bd7c6936b5f3ac924f3002373e1716e85740",
+    "main_integrated_commit": "dcb07a77955868836321155d621901013183ca35",
     "last_source_repair_head": "49c35af59dcc6300a0523aedbece5bfa1fb9a477",
     "post_consolidation_new_packages": [
       "decision-log",
