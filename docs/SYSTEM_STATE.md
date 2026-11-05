@@ -1,5 +1,9 @@
 # System State
 
+## Current evidence-backed capability browse: November 5, 2026
+
+[The updated passive directory](../registry/capability-directory.json) now links **86 of 1,039** exact-version governed review IDs to **62 of 247** specific subdomains, leaving **953** without evidence-backed mappings. It separately exposes **50 existing Q8 Valuable Reference** methods as study-only entries in their canonical subdomains, spanning **33 of 33 domains**. Eight previously unmapped governed records were added from exact source and review fingerprints; rejected/unscanned and rights-sensitive records remain discoverable but not approved. This is **not** a new Q8 promotion, SkillSpector pass, SkillEvaluator pass, or host behavioral acceptance. [Full exact-source evidence](reviews/2026-11-05-q8-studies-eight-governed-capability-links.md). The historical coverage numbers below retain their original dates.
+
 ## Current qualification checkpoint: November 5, 2026
 
 The [bounded #624 pilot](reviews/2026-11-05-issue624-bounded-qualification-pilot.md) reconciles all 1,039 governed IDs separately from 4,813 raw paths in four exact source manifests. Of those raw paths, 4,809 already have candidate source-vetting decisions and the remaining four are documented nested/template roles. A three-package full static security-skill review produced two study-only references and one unchanged-use rejection, with **no new promoted, scanner-passed or behaviorally validated skills**. Concurrent source retrieval was 2.73–3.40× faster in a small paired test; end-to-end reviewer effort remains unmeasured. Ongoing source/capability work stays under #599/#588 and security backfill under #402.

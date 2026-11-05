@@ -1,5 +1,7 @@
 # Capability discovery matrix: tranche 1
 
+**Current downstream browse result, November 5, 2026:** The [populated directory](../registry/capability-directory.json) has **86/1,039** governed identities with evidence-backed domain/subdomain paths (62/247 subdomains), while all 50 existing Q8 study-only references are separately browseable across 33 domains. **953** governed IDs remain without qualified paths. The initial matrix below remains historical planning context, not a guarantee of mature or complete coverage. [Exact-source mapping evidence](reviews/2026-11-05-q8-studies-eight-governed-capability-links.md).
+
 **Status:** Proposed coverage targets, **not** a verified skill-to-capability crosswalk. Companion to [discovery-first charter](discovery-first-capability-ontology.md) and [#588](https://github.com/Knapp-Kevin/skillz/issues/588). This document defines the taxonomy, rather than linking skill identities. **For usable current links start at [capability quickstart](capability-quickstart.md), then [the live directory](../registry/capability-directory.json) and [review name finder](../registry/governed-review-name-index.json)**. The live directory seeds both first-party and third-party exact-version review identities with evidence links and separately labeled name-only leads; use its current linked-count fields rather than a dated number. The full governed review-record population is 1,039; the directory is still incomplete, and empty entries do not imply absence.
 
 ## Reading the matrix

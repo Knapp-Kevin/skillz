@@ -1,5 +1,9 @@
 # Skill Catalog Snapshot
 
+## Capability mapping release: November 5, 2026
+
+[The current capability directory](registry/capability-directory.json) has **86/1,039** exact-version governed identities with evidence-backed domain/subdomain links (**44 first-party, 42 third-party**), leaving **953 unmapped**. **62/247** subdomains have governed links. The **50 existing Q8 study-only methods** now appear in their matching subdomains across **33/33** domains, clearly separate from governed verified IDs and install approvals. No new security scan, behavioral acceptance or unchanged-use promotion. [Review and limitations](docs/reviews/2026-11-05-q8-studies-eight-governed-capability-links.md). Older counts below are historical checkpoints.
+
 ## Current qualification checkpoint: November 5, 2026
 
 [The bounded #624 evidence](docs/reviews/2026-11-05-issue624-bounded-qualification-pilot.md) accounts for 4,813 raw paths by source role, with 4,809 earlier source-vetting candidate decisions plus four nested/template dispositions. It separately enumerates 1,039 governed IDs and adds three fully inspected source-static security reviews (two study-only references, one unchanged-use rejection), **not** three newly admitted or ready-to-run skills. The curated shelf stays 50 Valuable References in 33 domains, with zero unchanged-use or behavioral approvals. Continued discovery is #599; deeper capability maturity is #588.

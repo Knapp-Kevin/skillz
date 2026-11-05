@@ -1,5 +1,9 @@
 # Skill Curation Queue
 
+## Latest capability mapping tranche: November 5, 2026
+
+[Exact-source evidence](docs/reviews/2026-11-05-q8-studies-eight-governed-capability-links.md): current [directory](registry/capability-directory.json) links **86/1,039** governed identities to capability paths (**953 unmapped**; **62/247** subdomains with exact governed links) and attaches all **50 existing Q8 study-only** methods to subdomains across **33/33** domains. Eight existing governed identities moved from lexical hints to evidence-backed routing without new admission or changed semantic scores; four are previously rejected and remain rejected. Continue broader identity mapping and maturity qualification under #588 and continuous discovery under #599. No new scanner, evaluator, behavioral or unchanged-use approval occurred.
+
 ## Current bounded qualification update: November 5, 2026
 
 [Issue #624 pilot evidence](docs/reviews/2026-11-05-issue624-bounded-qualification-pilot.md) covers all 4,813 four-source raw path roles (4,809 source-vetted candidate paths, four nested/template roles) and separately reconciles 1,039 governed review names. Three exact one-file security candidates received individual 10-dimension static reviews: **two reference-only, one reject unchanged**. No new package-security scans, behavioral passes, unchanged-use approvals, or eligible distinct denominator were inferred. Continue unresolved full-source duplication/rights and corpus review under #599; security backfill under #402.
