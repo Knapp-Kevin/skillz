@@ -3,19 +3,19 @@ skill_name: paper-digest
 source_id: local-skills
 local_path: "skills/paper-digest/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: b2abf289b265b3d4a8508bda4a35083fa7c35f8a
+content_blob_sha: 8691e648e6c96c986391bdbdf812616c34baef95
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New exact source statically re-reviewed, NOT pinned SkillSpector scanned or actual agent-host behavior. Unchanged use held.
 rubric: "docs/skill-verification.md"
-rubric_score: "19/20"
+rubric_score: "17/20"
 tags:
   use_case: [research, evaluation]
   lifecycle: [verification]
   characteristic: [evidence-first, source-driven, risk-aware, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "Strong claim-versus-framing analysis, replication search, baseline scrutiny, and admitted/unadmitted limitations; full-text availability sets an explicit confidence ceiling."
+notes: "2026-11-04 fresh full-current 17/20 semantic review: Restricted relevance context to supplied/explicitly authorized stack; no private profile or governance discovery during public paper digest. Previous 19/20 grade on older blob was insufficient to catch this authority/egress defect. Current exact SKILL.md 8691e648e6c96c986391bdbdf812616c34baef95, complete package Git tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0. External pinned scanner and real synthetic host tool-call behavior NOT RUN; security issue #402. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."

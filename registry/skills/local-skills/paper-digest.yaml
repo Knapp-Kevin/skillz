@@ -7,9 +7,9 @@ source_path: skills/paper-digest/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7ee1ea763d08ff426f9ac172ba17a9cb06babded
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/paper-digest/SKILL.md
 permission_tier: read-only
@@ -17,5 +17,5 @@ portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Strong claim-versus-framing analysis, replication search, baseline scrutiny, and admitted/unadmitted limitations; full-text availability sets an explicit confidence ceiling."
+import_eligibility: review-required
+rationale: "Current source 8691e648e6c96c986391bdbdf812616c34baef95, exact complete tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; static semantic 17/20 after P0 private-read/credential-prefix remediation. Restricted relevance context to supplied/explicitly authorized stack; no private profile or governance discovery during public paper digest. Prior score did not establish privacy safety. New pinned scanner and independent observed agent-host behavior NOT RUN. Until owner-qualified acceptance, no unchanged-use clearance. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."

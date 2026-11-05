@@ -3,13 +3,13 @@ skill_name: daily-briefing
 source_id: local-skills
 local_path: "skills/daily-briefing/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 64ee4849a7a06860d8f6ddbd23ae5d42591ffee1
+content_blob_sha: 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current 1.1.3 exact-source static review only. Changed full package requires pinned external scanner; adversarial agent-host behavioral acceptance not-run, unchanged-use held.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [synthesis, tool-routing, context-efficient, evidence-first]
   authority: [read-only]
   portability: [medium]
-notes: "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+notes: "Exact current Daily Briefing 1.1.3 source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9 (complete tree 6c73d9f034feaecad129769a9ec0afebabc397f6) now prohibits implicit private operator-profile/host-memory/governance discovery after its approval preflight. 2026-11-04 ten-axis 17/20 static semantic review, no source-level hard fail found. Pinned SkillSpector scan not-run-current-tree, independent agent-host behavior not-run and unchanged-use held; docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md."

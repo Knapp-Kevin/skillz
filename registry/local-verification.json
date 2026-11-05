@@ -12,10 +12,10 @@
       "skill_name": "agent-home-doctor",
       "local_path": "skills/agent-home-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d8b41939deec81ef67b96398ae54afee72075459",
+      "content_blob_sha": "3415f1f4bb72afc44266706be649c3950f809337",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "20/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "repository-maintenance",
@@ -38,13 +38,13 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-backed cleanup workflow after hardening: exact remediation plans require explicit approval before deletion, config edits, or moves; uncertainty is report-only."
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "agent-postmortem",
       "local_path": "skills/agent-postmortem/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fb8777d18a27a89f47f9e8a022385b480d49f7c0",
+      "content_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -70,13 +70,13 @@
           "high"
         ]
       },
-      "notes": "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured."
+      "notes": "2026-11-04 #686 exact source SHA dde789e87da090b92021b3e55304299244f62ac2; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "brief-writer",
       "local_path": "skills/brief-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0eb629e92e53a03c26df0ebef15662e1888c25b0",
+      "content_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -102,13 +102,13 @@
           "high"
         ]
       },
-      "notes": "Clear decision-first structure, anti-fabrication rules, reversibility framing, and compact output; effectiveness is design-credible but not behaviorally measured."
+      "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "career-radar",
       "local_path": "skills/career-radar/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a17f9b53b9ed22c2cd4f715effd73ec7585a316b",
+      "content_blob_sha": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -134,7 +134,7 @@
           "medium"
         ]
       },
-      "notes": "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+      "notes": "Exact 1.1.4 current source eb7565605a190e9ea3462bad57ac62aba88d3ecf, full Git tree 35055db24f786f8b3b57f78789e146eb0ee49b9c; source-only 18/20 evaluation and 8/8 structural regression checks after repairing prior private-notes lookup and outbound web-query egress. docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md. Scanner/current-tree security not-run, observed host behavior not-run, unchanged use HELD."
     },
     {
       "skill_name": "claude-pulse",
@@ -172,7 +172,7 @@
       "skill_name": "compare",
       "local_path": "skills/compare/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b933a8266b8eda18807de9b9717436c54af0362d",
+      "content_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -200,13 +200,13 @@
           "high"
         ]
       },
-      "notes": "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof."
+      "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "daily-briefing",
       "local_path": "skills/daily-briefing/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "64ee4849a7a06860d8f6ddbd23ae5d42591ffee1",
+      "content_blob_sha": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -231,16 +231,16 @@
           "medium"
         ]
       },
-      "notes": "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces."
+      "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held."
     },
     {
       "skill_name": "decision-log",
       "local_path": "skills/decision-log/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "56e5c574c295546c9e654a9e6a14a9814136f2f4",
+      "content_blob_sha": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "decision-support",
@@ -263,7 +263,7 @@
           "medium"
         ]
       },
-      "notes": "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+      "notes": "Fresh exact-source 18/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b, full package tree ca790304801fd1717841a8fab98bb4ebeed4c9bf; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "deck-outline",
@@ -302,7 +302,7 @@
       "skill_name": "deep-dive",
       "local_path": "skills/deep-dive/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b518f172abce491d979cf8f8ef854a61605b2790",
+      "content_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -329,16 +329,16 @@
           "high"
         ]
       },
-      "notes": "Strong multi-lane research plus active refutation of load-bearing claims, explicit confidence and source hierarchy; runtime source quality still depends on available search/fetch tools."
+      "notes": "2026-11-04 #686 exact source SHA 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e5778521bac5459432731814755dd2c4d60ff705",
+      "content_blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -360,16 +360,16 @@
           "high"
         ]
       },
-      "notes": "Portable source-driven vendor monitoring with standalone fallback; deliberately lightweight and less differentiated than analytical research skills."
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "devlog-draft",
       "local_path": "skills/devlog-draft/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "073f18ba2c2f7de21015cd072741c395335e9f2e",
+      "content_blob_sha": "d74ff133f69c8908c4acf296fb93313069082114",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "writing",
@@ -392,13 +392,13 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "fact-check",
       "local_path": "skills/fact-check/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e58dea59671c8a7c537e27403d6f52e466bf8d86",
+      "content_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "20/20",
@@ -425,7 +425,7 @@
           "high"
         ]
       },
-      "notes": "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict."
+      "notes": "2026-11-04 #686 exact source SHA d83c43282d525682f3e13b8296111d7fe7de46f0; prior 20/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
       "skill_name": "finance-review",
@@ -463,10 +463,10 @@
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bf2cc64aaaaa60dd3a15e94464a17d475f9bc80",
+      "content_blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -488,16 +488,16 @@
           "high"
         ]
       },
-      "notes": "Clear current-source vendor monitoring with standalone fallback; useful but intentionally narrow and dependent on external source availability."
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "github-pulse",
       "local_path": "skills/github-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+      "content_blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -519,16 +519,19 @@
           "high"
         ]
       },
-      "notes": "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
+      "notes": "2026-11-04 issue #402 current source 9c345c88cef5f4f97235facb6d3d7414ab820f1a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
     },
     {
       "skill_name": "glm-pulse",
       "local_path": "skills/glm-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3bfbb84c43a76413897b30ad675d1ba5d8b8a1de",
+      "content_blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -550,13 +553,13 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with multiple official/community surfaces and standalone fallback; differentiation is mainly source specialization."
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+      "content_blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -583,16 +586,19 @@
           "medium"
         ]
       },
-      "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific."
+      "notes": "2026-11-04 issue #402 current source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
     },
     {
       "skill_name": "handoff-writer",
       "local_path": "skills/handoff-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8a789ea0dd3b1c89ccac9d50727b06007abcf5c1",
+      "content_blob_sha": "733b8029063ff057051a61bc270cce138f324c7d",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "20/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "handoff",
@@ -616,16 +622,16 @@
           "high"
         ]
       },
-      "notes": "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."
+      "notes": "2026-11-04 exact Handoff Writer 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed and whole package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff. Current source-semantic 18/20 and 14/14 bounded source checks only; scanner and actual host behavior NOT RUN, no unchanged-use approval. See docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md."
     },
     {
       "skill_name": "hf-pulse",
       "local_path": "skills/hf-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
+      "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -647,16 +653,19 @@
           "high"
         ]
       },
-      "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+      "notes": "2026-11-04 issue #402 current source 149e577a9f72895b09aea43d607203d731db1bce static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
     },
     {
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c265af7280a9819ae1fc80292ba24a77c2b28ccd",
+      "content_blob_sha": "9326d7a691e40ff30a07a71738b13a04117206d6",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "productivity",
@@ -679,13 +688,13 @@
           "medium"
         ]
       },
-      "notes": "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+      "notes": "2026-11-04 current exact-source SHA 9326d7a691e40ff30a07a71738b13a04117206d6 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "inference-pulse",
       "local_path": "skills/inference-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -711,16 +720,19 @@
           "medium"
         ]
       },
-      "notes": "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+      "notes": "2026-11-04 issue #402 current source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
     },
     {
       "skill_name": "kimi-pulse",
       "local_path": "skills/kimi-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -742,16 +754,19 @@
           "high"
         ]
       },
-      "notes": "Portable vendor pulse with primary-weight/source emphasis and benchmark skepticism; intentionally narrow monitoring capability."
+      "notes": "2026-11-04 issue #402 current source 6625f147011dfd38ed2b9881eda2d5ea62e2ece4 static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
     },
     {
       "skill_name": "learning-plan",
       "local_path": "skills/learning-plan/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a544118bd121b354aec330f9a565a338868dd53e",
+      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "planning",
@@ -774,16 +789,16 @@
           "high"
         ]
       },
-      "notes": "Strong real-source verification, demonstrable checkpoints, and explicit slip protocol; schedule creation remains approval-gated and separate."
+      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run. 2026-11-05 reconciliation: the exact matching individual review is 18/20, not 19/20. No new semantic review occurred; the source and 2026-11-03 individual review date are unchanged."
     },
     {
       "skill_name": "llama-pulse",
       "local_path": "skills/llama-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc",
+      "content_blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -805,16 +820,16 @@
           "high"
         ]
       },
-      "notes": "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -838,13 +853,16 @@
           "medium"
         ]
       },
-      "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+      "notes": "2026-11-04 issue #402 current source 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
     },
     {
       "skill_name": "mcp-vetting",
       "local_path": "skills/mcp-vetting/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "806e79f593446ad15938249898e15230208f2d81",
+      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -870,16 +888,16 @@
           "high"
         ]
       },
-      "notes": "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling."
+      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run."
     },
     {
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "659441df0952f7db302835606068c812ed81d22f",
+      "content_blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -901,16 +919,16 @@
           "medium"
         ]
       },
-      "notes": "Useful agent-memory ecosystem monitoring with explicit relevance decision and generic fallback; project-specific benefit depends on a bound memory context."
+      "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held."
     },
     {
       "skill_name": "mistral-pulse",
       "local_path": "skills/mistral-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d2e092ee1cfdbd7127145926d48d6cf78b46ce1",
+      "content_blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -932,16 +950,16 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight."
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "openai-pulse",
       "local_path": "skills/openai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d6b98630525e16d392b3f50e67ae674332316310",
+      "content_blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -963,16 +981,16 @@
           "high"
         ]
       },
-      "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time."
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "paper-digest",
       "local_path": "skills/paper-digest/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b2abf289b265b3d4a8508bda4a35083fa7c35f8a",
+      "content_blob_sha": "8691e648e6c96c986391bdbdf812616c34baef95",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "research",
@@ -994,16 +1012,16 @@
           "high"
         ]
       },
-      "notes": "Strong claim-versus-framing analysis, replication search, baseline scrutiny, and admitted/unadmitted limitations; full-text availability sets an explicit confidence ceiling."
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "permissions-review",
       "local_path": "skills/permissions-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "60e1d546e713cfa5b289def082dd73e8b326f029",
+      "content_blob_sha": "18f46840032829963715ec23894f7826dbbfcb77",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "18/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "security",
@@ -1026,16 +1044,16 @@
           "medium"
         ]
       },
-      "notes": "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence."
+      "notes": "v1.0.1 exact-blob source static review: unsafe Bash(git *) example removed; Git read commands can launch repository-controlled helpers, so recommend only verified host-enforced exact argv/configuration restrictions or scoped metadata API. No pinned current-tree scanner pass, no independently observed agent-host behavior, no unchanged-use approval. See docs/reviews/2026-11-05-issue483-git-wildcard-permission-repair.md."
     },
     {
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ef8b1cfd50f464f91d02855eaad7d05032475493",
+      "content_blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -1057,16 +1075,16 @@
           "high"
         ]
       },
-      "notes": "Clear answer-engine vendor monitoring with API/model versus product separation and standalone fallback; narrow specialization limits differentiation."
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "qwen-pulse",
       "local_path": "skills/qwen-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e22ff1879ce563a76e733bc576bed80cf4cc5f12",
+      "content_blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -1088,13 +1106,13 @@
           "high"
         ]
       },
-      "notes": "Portable open-model vendor monitoring with license/tooling attention and standalone fallback; intentionally specialized."
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "repo-doctor",
       "local_path": "skills/repo-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bc7f360be091aac35d61652fe8a34ff7bee3060",
+      "content_blob_sha": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1119,16 +1137,16 @@
           "medium"
         ]
       },
-      "notes": "Useful one-shot repository diagnostics with evidence and proposed fixes, but assumes local git/gh tooling and some staleness heuristics are necessarily approximate."
+      "notes": "2026-11-05 source fed90fa0a664611e560bbc3ded630eb9e72253e1, tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7. Static 16/20, source assertions 9/9; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8d78a04e0993069bc3ecc283c756e420969a88d1",
+      "content_blob_sha": "9e6938b29e4c0748e4098bc53a96498f42784423",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -1151,13 +1169,13 @@
           "medium"
         ]
       },
-      "notes": "Action-first cross-repo monitoring with local-only fallback on GitHub-tool failure and no automatic mutation; depends on authenticated/local workspace tooling."
+      "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
       "skill_name": "smallbiz-ops",
       "local_path": "skills/smallbiz-ops/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "e33f99d0585d486a6bb3243aae9402bfc2cac0ec",
+      "content_blob_sha": "b7f20b33c81e647ec8ff95ef765beb75867870e2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1183,16 +1201,16 @@
           "high"
         ]
       },
-      "notes": "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+      "notes": "Current exact 1.1.3 source b7f20b33c81e647ec8ff95ef765beb75867870e2, package 304c1a49988aee8f446b5fa00700ff46a5e2358b, 18/20 fresh source-semantic review with explicitly scoped private source binding. See docs/reviews/2026-11-04-issue402-career-smallbiz-private-scope.md. Security and host behavior NOT RUN; unchanged use held."
     },
     {
       "skill_name": "standup-writer",
       "local_path": "skills/standup-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "a1cd8678794c90bbaf4f5f2a70d469576ec4b633",
+      "content_blob_sha": "21c216fbc46f516fecc0a562afbe652fbd436b95",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "productivity",
@@ -1214,13 +1232,13 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage."
+      "notes": "2026-11-05 source 21c216fbc46f516fecc0a562afbe652fbd436b95, tree d6429bfea7bebe567aa52f7c5f1f6c44fd10086f. Static 18/20, source assertions 7/7; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
       "skill_name": "task-surface",
       "local_path": "skills/task-surface/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "97f1ba0b23f3f70da1e39504a1966a3cebd79398",
+      "content_blob_sha": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1287,10 +1305,10 @@
       "skill_name": "week-in-review",
       "local_path": "skills/week-in-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "cd6671df6042d5a864850f6362d0947d61eb7357",
+      "content_blob_sha": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "17/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "productivity",
@@ -1312,16 +1330,16 @@
           "medium"
         ]
       },
-      "notes": "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources."
+      "notes": "Exact repaired 5fa0b34372aa28067f41ab19afacbe4430a31b4e (tree 81646a594bf994e24899f7a086d86459cfaa5832) static semantic 18/20; no implicit private workspace discovery; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security scan/host behavior not-run, unchanged-use held."
     },
     {
       "skill_name": "xai-pulse",
       "local_path": "skills/xai-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "ec172826db6d811dbea1985c8962ad342c310412",
+      "content_blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "16/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "monitoring",
@@ -1343,13 +1361,13 @@
           "high"
         ]
       },
-      "notes": "Portable vendor monitoring with extra skepticism toward noisy community signals; current web/source access is the main runtime dependency."
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "automation-receipts",
       "local_path": "skills/automation-receipts/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1d6c076f2888a0d6c8b2be1552717b96e14a341b",
+      "content_blob_sha": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",

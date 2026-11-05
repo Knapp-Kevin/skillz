@@ -7,9 +7,9 @@ source_path: skills/inbox-triage/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7e2bcc08807210a852772fa4fe86dd282203fb6e
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/inbox-triage/SKILL.md
 permission_tier: read-only
@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+import_eligibility: review-required
+rationale: "2026-11-04 exact new source 9326d7a691e40ff30a07a71738b13a04117206d6: Q15 ten-axis source-semantic review 18/20, with follow-up output-secret redaction inspected as a non-broadening safety amendment. External scanner and host-behavior tests NOT RUN; unchanged adoption remains held."

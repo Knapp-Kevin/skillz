@@ -3,19 +3,22 @@ skill_name: hf-pulse
 source_id: local-skills
 local_path: "skills/hf-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: de2d55b632e88deaa71aa145cf83293f5877381a
+content_blob_sha: 149e577a9f72895b09aea43d607203d731db1bce
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
-rubric_score: "16/20"
+rubric_score: "18/20"
+prior_reviewed_blob_sha: de2d55b632e88deaa71aa145cf83293f5877381a
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only collection changed manifest bytes; previous score historical. No new scanner or behavioral acceptance."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery]
   characteristic: [source-driven, retrieval-first, synthesis, tool-routing]
   authority: [read-only]
   portability: [high]
-notes: "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented."
+notes: "2026-11-04 current exact-version source semantic 18/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."

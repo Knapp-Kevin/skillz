@@ -3,19 +3,19 @@ skill_name: inbox-triage
 source_id: local-skills
 local_path: "skills/inbox-triage/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c265af7280a9819ae1fc80292ba24a77c2b28ccd
+content_blob_sha: 9326d7a691e40ff30a07a71738b13a04117206d6
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Exact-version source-only semantic review complete on 2026-11-04. External-host behavioral validation not-run, security qualification and unchanged-use clearance not established.
 rubric: "docs/skill-verification.md"
-rubric_score: "17/20"
+rubric_score: "18/20"
 tags:
   use_case: [productivity, communication]
   lifecycle: [operations]
   characteristic: [decomposition, tool-routing, human-review, risk-aware]
   authority: [read-only, generate-only]
   portability: [medium]
-notes: "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation."
+notes: "Current exact-version 9326d7a691e40ff30a07a71738b13a04117206d6 re-read after addition of sensitive-output guard; Q15 source-semantic grade 18/20 remains supported by unchanged trigger/procedure and strengthened privacy boundaries. This is static review only. External whole-package security and actual host behavior remain not-run."

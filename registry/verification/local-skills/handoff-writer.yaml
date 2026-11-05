@@ -3,19 +3,19 @@ skill_name: handoff-writer
 source_id: local-skills
 local_path: "skills/handoff-writer/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8a789ea0dd3b1c89ccac9d50727b06007abcf5c1
+content_blob_sha: 733b8029063ff057051a61bc270cce138f324c7d
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Exact current source and bundled exemplar statically reviewed 18/20 (14/14 bounded source checks). No host behavioral or final-tree SkillSpector execution.
 rubric: "docs/skill-verification.md"
-rubric_score: "20/20"
+rubric_score: "18/20"
 tags:
   use_case: [handoff, documentation, communication]
   lifecycle: [release, maintenance]
   characteristic: [evidence-first, traceable, context-efficient, risk-aware]
   authority: [generate-only]
   portability: [high]
-notes: "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only."
+notes: "Exact 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, example 273489b0756fb8fb31f657894fa7c4a9c25665ed, full package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff, documented in docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md. Static semantic VERIFIED only; scanner and independent behavior NOT RUN."

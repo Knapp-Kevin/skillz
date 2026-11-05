@@ -36,7 +36,7 @@ The issue is the pre-admission evidence workspace. Establish, when applicable:
 - controlled taxonomy tags;
 - overlap and differentiation against the existing governed corpus;
 - structured exact-version semantic review and score;
-- exact-version package-security state and scanner identity when the package is compatible with the governed scanner;
+- current exact-version **content/security review** with source fingerprint, date, risky instructions, permission/egress/dependency findings and disposition; record exact-version scanner identity/state **if optionally performed**, never invent a PASS;
 - active security findings and their dispositions, if any;
 - behavioral-evidence state, which remains `not-run` unless representative external evaluation actually occurred;
 - useful mechanisms for adaptation/extraction even when unchanged reuse is rejected;
@@ -82,7 +82,7 @@ When an existing governed skill lacks required provenance or exact-version metad
 4. do not count the record as companion-complete or statically complete until repaired;
 5. preserve the correction through normal repository history.
 
-This is entirely passive governance. The repository owns no scanner, CI job, script, test runner, scheduler, or background process, including for maintenance. An explicitly authorized external host may run the exact pinned SkillSpector version outside the repository, preserve complete package-bound reports, and fail closed on incomplete or adverse results.
+This is entirely passive governance. The repository owns no scanner, CI job, script, test runner, scheduler, or background process. **ChatGPT/maintainer review of exact static source and required package files is sufficient to complete the content-review stage**. A pinned scanner may be run externally only when useful and authorized; its reports remain honest, package-bound supplementary evidence. See [review freshness](static-review-and-freshness.md).
 
 ## Source-family issues versus individual-skill issues
 

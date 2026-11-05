@@ -7,9 +7,9 @@ source_path: skills/decision-log/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7ee1ea763d08ff426f9ac172ba17a9cb06babded
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/decision-log/SKILL.md
 permission_tier: mutating
@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+import_eligibility: review-required
+rationale: "Current source 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b, exact complete tree ca790304801fd1717841a8fab98bb4ebeed4c9bf; static semantic 18/20 after P0 private-read/credential-prefix remediation. Removed credential-prefix logging; required exact log/account authorization for reads and external evidence. Prior score did not establish privacy safety. New pinned scanner and independent observed agent-host behavior NOT RUN. Until owner-qualified acceptance, no unchanged-use clearance. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."

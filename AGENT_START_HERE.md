@@ -129,14 +129,14 @@ The repository exposes an open-ended reference and discovery ecosystem. Pinned e
 For unchanged third-party reuse:
 
 - exact matching `verified` or `validated` semantic records may be considered only when applicable package-security evidence is also acceptable;
-- scanner-compatible packages require security `passed` or explicitly `findings-reviewed` for new unchanged reuse;
+- use current exact-version static review and content-risk findings for unchanged consideration; external scanner PASS is optional, not a universal content-review gate, and any known credible adverse finding must be addressed;
 - security `not-run`, `failed`, `incomplete`, or `stale` material is adaptation/design evidence only until the security gap is resolved;
 - `unverified` and legacy `trusted-baseline` material are design evidence only;
 - `stale`, `rejected`, and `retired` material is excluded from normal unchanged selection;
 - quality state is eligibility evidence, not a command to reuse;
 - if exact identity is unavailable, say so and take the conservative path.
 
-`verified` and `validated` are semantic quality states. Package-security state is separate. See `docs/skill-verification.md` and `docs/security-scanning.md`.
+`verified` and `validated` are semantic quality states, not evidence of behavior. See [static review and changed-version freshness](docs/static-review-and-freshness.md) and optional scanner evidence in `docs/security-scanning.md`. A changed tracked package is marked for re-review; old evidence remains history.
 
 ## 4. User work is not `skillz` maintenance
 

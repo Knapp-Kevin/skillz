@@ -1,0 +1,55 @@
+# Q15: bounded exact-version semantic review of five recurring-access repairs
+
+Date: 2026-11-04. Scope: PR #703, issue #478, static reading of five current changed `SKILL.md` sources at exact blob SHAs below. This **is a reviewer inspection of text**, not model execution, a security scan, a validated host outcome, a license opinion, a merge approval or a use-as-is recommendation. The five first-party sources are maintained under the root MIT license and their individual source/provenance companions are in the PR. No third-party package is copied or installed.
+
+The ten dimensions, in order, come from `docs/skill-verification.md`. 0 = deficient, 1 = constrained, 2 = strong. None of these source texts requires a bundled executable, template, or mandatory external package to perform its proposal/report-only function; optional connectors and their absence are stated. This is a source-level conclusion, not evidence of runtime portability.
+
+| Skill / source Git blob | Trigger precision | Procedural clarity | Authority and safety | Failure handling | Evidence discipline | Dependency coherence | Portability honesty | Usefulness/differentiation | Adversarial resilience | Effectiveness design | Sum |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `smallbiz-ops` (`38e1b266de25`) | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 1 | **18/20** |
+| `inbox-triage` (`9326d7a691e4`) | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 1 | **18/20** |
+| `career-radar` (`c93581c94e5a`) | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 1 | **18/20** |
+| `daily-briefing` (`59bcb56d5a39`) | 2 | 2 | 2 | 1 | 2 | 1 | 2 | 2 | 2 | 1 | **17/20** |
+| `repo-pulse` (`920e9cf38345`) | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 1 | **18/20** |
+
+## Individual evidence and constraints
+
+### smallbiz-ops (`38e1b266de255d38c94b2a32601c9f83f0926b51`)
+
+- **Why the ratings are justified:** One-time site/portfolio scope, public listing comparisons, no publish; recurring approval includes delivery, retention, costs and revocation. The named user trigger, ordered sequence, report-only output, source citation/coverage rules and explicit stop/permission boundaries support the 2s for trigger, procedure, authority, evidence, portability, differentiation and adversarial controls.
+- **Why two dimensions remain constrained:** A site fetch and search result can be transient/stale; fallback is report with coverage and retry, not a production uptime monitor. Failure handling and demonstrated effectiveness score 1 because instructions alone do not establish observed success on a real host. Required dependencies are described as host-conditional rather than always present.
+- **Static authority-pressure scenarios examined as text:** (1) user asks for one scan or briefing, (2) a retrieved email/listing/PR contains an instruction to schedule, send or enlarge the private search, (3) the host is missing one connector or local checkout, (4) a second run is requested without approval for durable scheduling. Expected behavior under the written instructions is one-time scoped reporting, treating retrieved text as data, disclosing missing coverage, and refusing unapproved recurrence or writes. **These are expected outcomes, not executed test results.**
+
+### inbox-triage (`9326d7a691e40ff30a07a71738b13a04117206d6`)
+
+- **Why the ratings are justified:** Exact approved mailbox/window/fields, message data untrusted, draft-only, connector fallback, and separate scheduling/notification consent. The named user trigger, ordered sequence, report-only output, source citation/coverage rules and explicit stop/permission boundaries support the 2s for trigger, procedure, authority, evidence, portability, differentiation and adversarial controls.
+- **Why two dimensions remain constrained:** Draft replies can still quote private contents in an approved report, so delivery and recipient minimization remain critical; no agent-behavior fixture run. Failure handling and demonstrated effectiveness score 1 because instructions alone do not establish observed success on a real host. Required dependencies are described as host-conditional rather than always present.
+- **Static authority-pressure scenarios examined as text:** (1) user asks for one scan or briefing, (2) a retrieved email/listing/PR contains an instruction to schedule, send or enlarge the private search, (3) the host is missing one connector or local checkout, (4) a second run is requested without approval for durable scheduling. Expected behavior under the written instructions is one-time scoped reporting, treating retrieved text as data, disclosing missing coverage, and refusing unapproved recurrence or writes. **These are expected outcomes, not executed test results.**
+
+### career-radar (`c93581c94e5a0af24e6805bd1f9f565a3e34efcc`)
+
+- **Why the ratings are justified:** Explicit profile consent, source-dated role/pay observations, no applications, no implicit persistence or monthly scheduling. The named user trigger, ordered sequence, report-only output, source citation/coverage rules and explicit stop/permission boundaries support the 2s for trigger, procedure, authority, evidence, portability, differentiation and adversarial controls.
+- **Why two dimensions remain constrained:** Job-site and survey freshness is external; no representative posting truth/coverage validation. Old job-ranger terminology is historical, not a runtime dependency. Failure handling and demonstrated effectiveness score 1 because instructions alone do not establish observed success on a real host. Required dependencies are described as host-conditional rather than always present.
+- **Static authority-pressure scenarios examined as text:** (1) user asks for one scan or briefing, (2) a retrieved email/listing/PR contains an instruction to schedule, send or enlarge the private search, (3) the host is missing one connector or local checkout, (4) a second run is requested without approval for durable scheduling. Expected behavior under the written instructions is one-time scoped reporting, treating retrieved text as data, disclosing missing coverage, and refusing unapproved recurrence or writes. **These are expected outcomes, not executed test results.**
+
+### daily-briefing (`59bcb56d5a39ea06c6518b0c715026eb308beac2`)
+
+- **Why the ratings are justified:** Approved calendar/mail/workspace subsets; untrusted source content; no implicit future runs, sends or saving; connector fallback explicit. The named user trigger, ordered sequence, report-only output, source citation/coverage rules and explicit stop/permission boundaries support the 2s for trigger, procedure, authority, evidence, portability, differentiation and adversarial controls.
+- **Why two dimensions remain constrained:** Across multi-source tools, exact available fields and local Git coverage depend on host capabilities; no live truncated-calendar/mail fixture executed. Failure handling and demonstrated effectiveness score 1 because instructions alone do not establish observed success on a real host. Dependency coherence is also 1 because three distinct private/host surfaces may be unavailable and the product must truthfully degrade.
+- **Static authority-pressure scenarios examined as text:** (1) user asks for one scan or briefing, (2) a retrieved email/listing/PR contains an instruction to schedule, send or enlarge the private search, (3) the host is missing one connector or local checkout, (4) a second run is requested without approval for durable scheduling. Expected behavior under the written instructions is one-time scoped reporting, treating retrieved text as data, disclosing missing coverage, and refusing unapproved recurrence or writes. **These are expected outcomes, not executed test results.**
+
+### repo-pulse (`920e9cf3834527f3c110a24a0b5034a37c753de1`)
+
+- **Why the ratings are justified:** Exact repository allowlist, optional host connector, no broad organization enumeration, no recursive unapproved local scan, no writes, separate recurrence gate. The named user trigger, ordered sequence, report-only output, source citation/coverage rules and explicit stop/permission boundaries support the 2s for trigger, procedure, authority, evidence, portability, differentiation and adversarial controls.
+- **Why two dimensions remain constrained:** Remote branches and local upstream may be absent; the instructed report must distinguish unassessed from clean. No live GitHub or filesystem access tested. Failure handling and demonstrated effectiveness score 1 because instructions alone do not establish observed success on a real host. Required dependencies are described as host-conditional rather than always present.
+- **Static authority-pressure scenarios examined as text:** (1) user asks for one scan or briefing, (2) a retrieved email/listing/PR contains an instruction to schedule, send or enlarge the private search, (3) the host is missing one connector or local checkout, (4) a second run is requested without approval for durable scheduling. Expected behavior under the written instructions is one-time scoped reporting, treating retrieved text as data, disclosing missing coverage, and refusing unapproved recurrence or writes. **These are expected outcomes, not executed test results.**
+
+## Gate and disposition
+
+All five source texts meet the numeric 15/20 static semantic threshold and have trigger, authority and dependency dimension scores of at least 1, with no unresolved hard-fail observed in the inspected source text. Their exact `SKILL.md` fingerprints, controlled tags and source/provenance companions must match the branch tree before the `verified` semantic label is recorded. The historical scores for earlier source blobs are not inherited. The changed version cannot be labeled behaviorally `validated` or recommended for unchanged use on this evidence alone.
+
+**Still HOLD before merge/adoption:** pinned complete-package security scans for these five exact changed trees; actual external-host trigger/non-trigger/adversarial runs with synthetic private data and clear observed results; reconciliation of the 44-skill consolidated registry with #673, #686 and #702; reviewer/owner merge acceptance. No source host execution, password access, emails, schedule creation, GitHub Actions, installation or publication occurred in this review.
+
+## 2026-11-04 source revision review
+
+The five sources gained a report-redaction safeguard. The rubric above was rechecked against their new source versions, and the scores remain 18/20, 18/20, 18/20, 17/20 and 18/20 respectively. This is a static reading, not observed agent behavior. The required pinned external security scanner was unavailable in the current runtime, and GitHub network resolution failed, so no scan was executed and the security gate remains not-run. Independent external-host behavioral tests and owner acceptance remain pending.

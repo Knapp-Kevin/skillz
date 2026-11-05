@@ -13,7 +13,7 @@ One complete exemplar (per docs/skill-template.md §Capability floor rule 6: imi
 | Item | Status | Verified by |
 |------|--------|-------------|
 | Pool-exhaustion hypothesis | Disproven | gk-pool flat during incidents (annotation 14:02) |
-| Root cause (race in cache.py invalidate_and_refresh) | Confirmed | log line `stale write after purge key=user:412` @ 13:47:22 |
+| Root cause (race in cache.py invalidate_and_refresh) | Confirmed | redacted log evidence for a stale write at 13:47:22 |
 | Fix (wrap sequence in with_lock('cache:'+key)) | Designed, NOT applied | nothing — no code written, no test run |
 
 ## Decisions
@@ -27,7 +27,7 @@ One complete exemplar (per docs/skill-template.md §Capability floor rule 6: imi
 ## Landmines
 - Looks done, is not: the fix. Designed only — cache.py is unpatched.
 - Looks done, is not: pool investigation — already disproven; do not re-chase.
-- SECURITY: a live API token (sk-live-…) leaked into scratch notes. Value intentionally NOT reproduced here. Scrub the notes and rotate the token before anything else.
+- SECURITY: an API credential was exposed in scratch notes. No credential values, fragments, hashes, or private identifiers are repeated here. Review the exposure and rotate the credential through the authorized process. Scrub the notes and rotate the token before anything else.
 
 ## Pointers
 - cache.py — invalidate_and_refresh(), where the fix goes

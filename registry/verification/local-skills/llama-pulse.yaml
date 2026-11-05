@@ -3,19 +3,19 @@ skill_name: llama-pulse
 source_id: local-skills
 local_path: "skills/llama-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d5141bcfebcc4e9ccbba4cbfc9cf57564010b5dc
+content_blob_sha: c0c38b0dd182f1f588d1800b832b331c8572080e
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
 rubric: "docs/skill-verification.md"
-rubric_score: "16/20"
+rubric_score: "18/20"
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, retrieval-first, synthesis]
   authority: [read-only]
   portability: [high]
-notes: "License-aware open-weight vendor monitoring with standalone fallback; useful but intentionally specialized rather than deeply analytical."
+notes: "Current exact-version 2026-11-04 source/package semantic review 18/20: Llama open-weight licensing and tooling digest, bounded community search fallback; no host behavior test. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."

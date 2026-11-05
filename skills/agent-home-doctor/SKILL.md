@@ -13,7 +13,7 @@ metadata:
   category: Meta
   display-name: Agent Home Doctor
   emoji: "🩺"
-  version: 1.2.0
+  version: 1.2.1
 ---
 
 # Agent Home Doctor
@@ -22,8 +22,8 @@ An adaptive audit and cleanup framework for agent CLI home directories. Vendor l
 
 ## Execution Flow
 
-1. **Bind.** Enumerate dot-directories in the relevant profile root instead of relying on a hardcoded vendor list. Classify each discovered directory as agent CLI home, toolchain/package cache, app data, or unknown. Read operator retention/migration/never-touch conventions when available. If no retention policy exists, propose 30 days as a starting point but do not turn that proposal into deletion authority.
-2. **Inventory.** Build a top-level size/count map, then drill into offenders. Establish the never-touch set first: credentials/keys, memory/notes, user-authored skills/commands/hooks, active session state, downloaded model caches, and anything the operator marks.
+1. **Bind a specific approved root before any enumeration.** Ask for or use the exact agent CLI home directory and scope explicitly authorized by the user. Do not enumerate a whole user profile, sibling dot-directories, unrelated app data, other accounts, or private memory/config locations to discover agent homes. If the user asks for multiple agent homes, require an explicit allowlist of approved roots and process each separately; if none is authorized, propose candidate locations without opening them. Read retention/migration/never-touch conventions only when their exact files are included in the authorized read scope; otherwise ask or propose a policy for approval. A proposed 30-day retention is never deletion authority.
+2. **Inventory in scope only.** Build a top-level size/count map within the approved agent-home root; never recursively traverse linked paths or files that escape it. Do not open file contents when metadata alone is sufficient, and do not follow symlinks/junctions into private or unrelated directories. Establish the never-touch set first: credentials/keys, memory/notes, user-authored skills/commands/hooks, active session state, downloaded model caches, and anything the operator marks.
 3. **Diagnose against the pathology library:**
    - unbounded transcript/session/edit history beyond the bound/proposed retention period;
    - regenerable temp/cache material;
@@ -68,4 +68,4 @@ An adaptive audit and cleanup framework for agent CLI home directories. Vendor l
 - Locked directories: when an approved move cannot proceed, report the lock. Copy-to-backup-then-clear is itself a distinct mutating plan and requires approval; do not silently substitute it.
 - Recursive listings can obscure nesting. Confirm top-level versus nested paths before proposing a move.
 - Third-party applications living inside an agent home are report-only. Recommend the application's normal uninstall path rather than deleting its data.
-- Run per home directory. The pathology library is vendor-agnostic; the filesystem assumptions are not.
+- Run per explicitly authorized home directory only. Protect private path, account and credential metadata in the report; a repository/workspace cleanup request does not authorize broad home-directory inspection. The pathology library is vendor-agnostic; the filesystem assumptions are not.

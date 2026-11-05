@@ -3,19 +3,22 @@ skill_name: mcp-pulse
 source_id: local-skills
 local_path: "skills/mcp-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 41451ac34a4a660ec82cae2c4356d3afe4b49334
+content_blob_sha: 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
-rubric_score: "17/20"
+rubric_score: "18/20"
+prior_reviewed_blob_sha: 41451ac34a4a660ec82cae2c4356d3afe4b49334
+rubric_score_current_fingerprint: false
+requalification_reason: "Host-only source collection changed manifest fingerprint; prior semantic score is historical, not applicable unchanged."
 tags:
   use_case: [monitoring, security, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, risk-aware, synthesis, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+notes: "2026-11-04 current exact-version source semantic 18/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."

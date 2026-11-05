@@ -3,13 +3,13 @@ skill_name: repo-doctor
 source_id: local-skills
 local_path: "skills/repo-doctor/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8bc7f360be091aac35d61652fe8a34ff7bee3060
+content_blob_sha: fed90fa0a664611e560bbc3ded630eb9e72253e1
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-05
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: 9/9 exact-source structural assertions passed and sandboxed local Git helper-execution reproduction completed; no NVIDIA SkillSpector final-tree scan or independent agent-host behavioral qualification.
 rubric: "docs/skill-verification.md"
 rubric_score: "16/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, risk-aware, tool-assisted]
   authority: [read-only]
   portability: [medium]
-notes: "Useful one-shot repository diagnostics with evidence and proposed fixes, but assumes local git/gh tooling and some staleness heuristics are necessarily approximate."
+notes: "2026-11-05 exact repo-doctor source fed90fa0a664611e560bbc3ded630eb9e72253e1 complete package tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7, ten-axis static 16/20, 9/9 executed structural source checks. Unprotected Git status was observed to execute a repo-configured fsmonitor program in a synthetic local checkout; guarded status with core.fsmonitor disabled/trusted empty hook path did not. This is a Git CLI test, not a model-host behavioral test. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Scanner not-run-current-tree and unchanged reuse held."

@@ -1,5 +1,7 @@
 # Skill package security scanning
 
+**OPTIONAL evidence, 2026-11-05:** [Current static-review policy](static-review-and-freshness.md) governs qualification of passive source files. A paid/external scanner and agent-host behavior tests are **not** required to review static content or merge qualified source repairs. This document preserves the optional scanner contract and historical receipts; it does not promote any previously `not-run`, `incomplete` or `failed` scan to PASS. Investigate credible known findings before recommending unchanged adoption.
+
 ## Purpose
 
 `skillz` is **entirely passive**.
@@ -57,16 +59,11 @@ A semantic `verified` record does **not** imply `passed` security state.
 
 ## Eligibility rule
 
-For a SkillSpector-compatible exact package, new unchanged admission or refresh eligibility requires:
+For passive source publication and content review, require inspected exact package instructions/references, a decisive static quality/authority assessment, rights and source identity. An external scanner is optional, not a gate to merge these files.
 
-1. truthful provenance and exact identity;
-2. semantic state `verified` or `validated`;
-3. security state `passed` or `findings-reviewed`;
-4. acceptable license, dependencies, authority, privacy, portability, and user fit.
+For unchanged-use recommendations, require `verified` or `validated` on the **current** package, no known unresolved high-risk content findings, valid rights, compatible dependencies, privacy/authority limits and host fit. An optional scanner may add confidence, but `not-run` or `incomplete` alone is not proof the text is unsafe and is not a blanket publication blocker. Any `failed` scan with a credible unresolved finding must still be investigated, fixed or held before suggesting unchanged use. Never reuse a PASS from another tree or imply a reviewer witnessed host behavior.
 
-`not-run`, `failed`, `incomplete`, and `stale` do not satisfy unchanged-reuse eligibility.
-
-Existing historical semantic reviews remain valid as semantic evidence. They do not inherit a security pass. Existing packages must be backfilled rather than ceremonially re-reviewed.
+Current content changes require re-review; previous semantic and scanner results remain historical at their original fingerprints.
 
 ## Evidence record
 
@@ -113,7 +110,7 @@ Optional LLM-backed analysis requires separate authorization for any external da
 
 ## Backfill
 
-The current corpus predates this control. Backfill should prioritize:
+Optional supplementary scanning, when risk or availability warrants, may prioritize:
 
 1. first-party skills;
 2. currently `verified` or `validated` third-party packages with executable components or consequential authority;
@@ -132,4 +129,4 @@ A scanner failure is evidence of uncertainty, not evidence of safety.
 - package changed after scan -> `stale`;
 - accepted false positive or bounded residual risk -> `findings-reviewed` with explicit rationale.
 
-No average score, source reputation, or semantic-review score may override a fail-closed security state.
+No score or source reputation dismisses a credible unresolved security finding. When a scan is attempted, its incomplete/failed outcome is preserved honestly, without rewriting an exact-version static content-review outcome.

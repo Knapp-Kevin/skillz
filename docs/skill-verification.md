@@ -1,5 +1,7 @@
 # Skill Verification Standard
 
+**2026-11-05 owner decision:** The [static content and freshness policy](static-review-and-freshness.md) makes exact-package text review the primary qualification method. External scanner and executed host behavior are supplementary, not blanket requirements to review or publish passive skill files. A review does not grant tool permissions.
+
 Source reputation and skill quality are separate facts.
 
 A repository may be official, popular, or professionally maintained and still contain a skill that is narrow, stale, unsafe, poorly triggered, dependency-broken, or ineffective for our use. Availability alone never establishes trusted unchanged-selection eligibility.
@@ -114,7 +116,7 @@ No upstream source is auto-upgraded merely because a newer commit exists.
 
 ## Selection semantics
 
-- `verified`, `validated`: eligible for unchanged consideration only if fingerprint/identity, provenance, dependencies, authority, portability, user fit, and applicable package-security state also match. For scanner-compatible packages, security must be `passed` or explicitly `findings-reviewed` under `docs/security-scanning.md`.
+- `verified`, `validated`: eligible for unchanged *consideration* only if the current exact reviewed package, provenance, dependencies, authority, rights, portability, user fit and known content risks are acceptable. A scanner PASS is not a universal prerequisite for reviewing or merging passive content. Credible unresolved safety findings still block unchanged-use recommendations, and active operations require explicit host/user approval.
 - `unverified`: design evidence only by default.
 - `trusted-baseline`: legacy characterization only; blocked from unchanged selection until structured review replaces it.
 - `stale`, `rejected`, `retired`: excluded from normal unchanged selection.

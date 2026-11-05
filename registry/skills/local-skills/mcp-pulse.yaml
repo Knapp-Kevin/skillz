@@ -7,9 +7,9 @@ source_path: skills/mcp-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: e422b8397a73b40e1f0ee9f73629756f1edf489e
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/mcp-pulse/SKILL.md
 permission_tier: read-only
@@ -17,5 +17,6 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: eligible-with-complete-skill-folder
+import_eligibility: conditional-on-security-and-user-fit
 rationale: "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific."
+exact_version_requalification: "Current 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic grade 18/20, documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md. Current whole-package security SkillSpector and external-host behavior NOT RUN; unchanged adoption held."

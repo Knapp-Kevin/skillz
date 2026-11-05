@@ -7,9 +7,9 @@ source_path: skills/smallbiz-ops/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 8b1153e7a6b1ec2b5346379aa15135dd39c5b4c7
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/smallbiz-ops/SKILL.md
 permission_tier: read-only
@@ -17,5 +17,5 @@ portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+import_eligibility: review-required
+rationale: "Source b7f20b33c81e647ec8ff95ef765beb75867870e2 and complete current package tree 304c1a49988aee8f446b5fa00700ff46a5e2358b statically reviewed 18/20 at docs/reviews/2026-11-04-issue402-career-smallbiz-private-scope.md. Prior private-discovery ambiguity fixed. No scanner or observed agent-host behavioral acceptance and no unchanged-use approval."

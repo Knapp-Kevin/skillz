@@ -2,6 +2,8 @@
 
 # 🛠️ skillz
 
+**Current review model:** ChatGPT/maintainers review pinned static skills and supporting content directly, record the [exact reviewed revision and date](docs/static-review-and-freshness.md), and flag subsequent changes for re-review. Hosted scanning is optional supplementary evidence, not a blocker to reviewing this passive library. No review authorizes a skill's commands or private-data access.
+
 **Coverage update (November 5, 2026):** Our [capability directory](registry/capability-directory.json) now links **86 of 1,039 governed skill reviews** to evidence-backed capability paths, spanning **62 of 247 subdomains**. It also places **all 50 existing study-only Valuable References** in their matching subdomains across all 33 domains. **953 reviewed identities still need mapping**. A discoverable example is not approval to install or execute it. [Source-by-source qualification evidence](docs/reviews/2026-11-05-q8-studies-eight-governed-capability-links.md).
 
 **Qualification update, November 5, 2026:** All 4,813 pinned discovery paths have a structural role or source-vetting disposition, and all 1,039 governed review IDs are accounted for separately. A [three-package risk-reviewed pilot](docs/reviews/2026-11-05-issue624-bounded-qualification-pilot.md) found one unsafe unchanged-use candidate; its benchmark measured faster **evidence retrieval**, not faster semantic reviewing. No new installations or approvals.
@@ -302,7 +304,15 @@ Historical source-intake receipts and superseded progress checkpoints are retain
 4. **Decide.** Prefer `USE EXISTING`, `ADOPT`, `ADAPT`, `COMPOSE`, `CREATE` or `NO CHANGE` as warranted. Avoid skills that duplicate adequate host behavior.
 5. **Deliver only authorized work.** A generic link or `EXPLORE` request is read-only. After an explicit implementation request, produce complete user-host or portable skill artifacts. Do not silently install, write memory, transmit private data, schedule work or mutate the reference repository.
 
-**The repository itself is passive.** It has no repository-owned runtime, installer, crawler, scheduler, scanner, CI workflow or background agent. Any authorized execution happens in the consuming host. Skills developed for a user stay in that user's host/project or portable handoff unless repository maintenance was specifically requested.
+**The repository itself is passive for consumers.** It has no always-running service, installer, crawler, scheduler, scanner service, CI workflow or background agent. A few manual maintainer-only reporting and QA scripts generate the charts; they do not run during browsing, grant permissions or certify any skill as safe. User-specific implementations stay in the user's host or portable handoff unless repository maintenance is specifically requested.
+
+## Governance and active maintenance
+
+**Discovery is not permission to execute.** A skill can be discovered, reviewed for useful ideas, or selected as a Valuable Reference without being safe for unchanged adoption. Provenance/license, static quality, security scans, observed behavior and user authorization are separate acceptance gates. Incomplete or stale evidence is never a pass.
+
+**For agents and maintainers:** [Start here](AGENT_START_HERE.md) · [Governance](docs/GOVERNANCE_INDEX.md) · [Candidate intake](docs/candidate-intake.md) · [Security evidence](docs/security-scanning.md) · [Dated maintainer workboard](MAINTAINER_WORKBOARD.md). Controlled authority labels are `read-only`, `generate-only`, `mutating`, and `external-side-effect`. Even a read-only action requires approved account and data scope; one-time requests do not authorize recurring access.
+
+**Which counts are current?** The README and generated capability dashboard reflect the checked-out branch. Q8's **50 study methods in 33 domains are merged on main**; open pull requests contain proposed repairs, not merged skill approvals. Historical workboard snapshots are dated, not live dashboards; [open PRs](https://github.com/Knapp-Kevin/skillz/pulls) and [issues](https://github.com/Knapp-Kevin/skillz/issues) are the live work queue. Maintainers regenerate approved charts from pinned sources without running repository-owned background jobs.
 
 ## Reference map
 

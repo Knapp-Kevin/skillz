@@ -3,19 +3,22 @@ skill_name: inference-pulse
 source_id: local-skills
 local_path: "skills/inference-pulse/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: bc90e5248c04c408c8c5a44bea62b1d66a7fb143
+content_blob_sha: d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "17/20"
+prior_reviewed_blob_sha: bc90e5248c04c408c8c5a44bea62b1d66a7fb143
+rubric_score_current_fingerprint: false
+requalification_reason: "Changed manifest collection procedure; prior score is historical and requires exact-version re-review."
 tags:
   use_case: [monitoring, research]
   lifecycle: [discovery, maintenance]
   characteristic: [source-driven, synthesis, compatibility-aware, retrieval-first]
   authority: [read-only]
   portability: [medium]
-notes: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
+notes: "2026-11-04 current exact-version source semantic 17/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."

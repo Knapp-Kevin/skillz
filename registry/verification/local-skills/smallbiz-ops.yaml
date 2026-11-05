@@ -3,13 +3,13 @@ skill_name: smallbiz-ops
 source_id: local-skills
 local_path: "skills/smallbiz-ops/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e33f99d0585d486a6bb3243aae9402bfc2cac0ec
+content_blob_sha: b7f20b33c81e647ec8ff95ef765beb75867870e2
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current 1.1.3 source has 18/20 static review only. Exact current package security and external agent-host behavioral evidence not-run.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, source-driven, synthesis, risk-aware]
   authority: [read-only]
   portability: [high]
-notes: "Good bound-portfolio discipline, retry-before-down rule, source comparison, and proposal-only editing; external listing quality can be uneven."
+notes: "2026-11-04 complete current 1.1.3 source review 18/20; private-source binding now explicitly limited to approved user scope. New blob b7f20b33c81e647ec8ff95ef765beb75867870e2, full tree 304c1a49988aee8f446b5fa00700ff46a5e2358b. See docs/reviews/2026-11-04-issue402-career-smallbiz-private-scope.md. Pinned scanner and actual behavioral validation NOT RUN; unchanged use held."

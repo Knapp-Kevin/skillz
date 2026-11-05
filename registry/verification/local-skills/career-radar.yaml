@@ -3,13 +3,13 @@ skill_name: career-radar
 source_id: local-skills
 local_path: "skills/career-radar/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: a17f9b53b9ed22c2cd4f715effd73ec7585a316b
+content_blob_sha: eb7565605a190e9ea3462bad57ac62aba88d3ecf
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: Current 1.1.4 source received an eight-check executable instruction-structure regression and an 18/20 static reviewer assessment only. Pinned scanner/observed host behavior not run.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [retrieval-first, source-driven, synthesis, evidence-first]
   authority: [read-only]
   portability: [medium]
-notes: "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit."
+notes: "2026-11-05 current complete one-file Career Radar 1.1.4 package: source eb7565605a190e9ea3462bad57ac62aba88d3ecf, tree 35055db24f786f8b3b57f78789e146eb0ee49b9c; fixed unauthorized private prior-scan lookup and private-profile data egress through outbound search queries. Reassessed static 18/20, source checks 8/8; no pinned scanner or independent agent-host validation executed. See docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md; unchanged-use held."

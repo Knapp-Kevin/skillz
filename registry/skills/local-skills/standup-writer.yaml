@@ -7,15 +7,15 @@ source_path: skills/standup-writer/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 6c5c6bf8fe59917ead4473ec3ead63b1674ac1e3
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-05
 availability: in-repo
 local_path: skills/standup-writer/SKILL.md
 permission_tier: generate-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
-dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage."
+dependencies: "Authorized repository/task sources; optional calendar connector and host scheduler, neither mandatory"
+import_eligibility: review-required
+rationale: "2026-11-05 exact source 21c216fbc46f516fecc0a562afbe652fbd436b95, Git tree d6429bfea7bebe567aa52f7c5f1f6c44fd10086f: read-only Git CLI must not execute repo-controlled fsmonitor/hooks/helpers. 7/7 source structural checks and safe synthetic Git fixture observed; current static 18/20 only. Current-tree NVIDIA scanner and independent host-agent behavior NOT RUN; unchanged use held. docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md."
