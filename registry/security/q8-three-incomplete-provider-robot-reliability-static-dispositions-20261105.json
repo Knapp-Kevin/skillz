@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-incomplete-provider-robot-and-reliability-static-dispositions",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 3,
+    "incomplete_reviewed_to_date": 14,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 19,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 21,
+    "flagged_total": 40,
+    "owned_files_reviewed": 9,
+    "license_documents_read": 3,
+    "provider_manifest_reviewed": 1,
+    "source_changed_upstream_count": 1,
+    "behavioral_tests": 0,
+    "new_scans": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Adobe mockup, Rerun URDF and MATLAB reliability pinned full packages: 9 owned source files, Adobe plugin manifest, Rerun dual license texts, MathWorks restrictive root license. Adobe and MATLAB upstream current trees unchanged; Rerun current SKILL.md changed, old pin review retained and flagged update available. No source code, MATLAB, robot data, Adobe tool, commercial generation, remote share or app execution.",
+  "records": [
+    {
+      "id": "openai-plugins/adobe/adobe-create-mockups",
+      "source": {
+        "repository": "openai/plugins",
+        "pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+        "upstream_head_checked": "b767f8fa3be1a22b093127dd59956c91ecffca9d",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "plugins/adobe/skills/adobe-create-mockups",
+        "complete_package_git_tree_sha": "ee836ce313ba56f96118c9400b07c75486be75d9",
+        "skill_md_git_blob_sha": "2459e742e4e7e0c34140035f14b8d17dda9ad98c"
+      },
+      "owned_files": {
+        "SKILL.md": "2459e742e4e7e0c34140035f14b8d17dda9ad98c",
+        "agents/openai.yaml": "19f8b4ae32ad713bf8945cb4fafa98594be07dbd",
+        "assets/icon-large.svg": "5bdac296387556b62b1594e16c1f2445339e9f19",
+        "assets/icon-small.svg": "5bdac296387556b62b1594e16c1f2445339e9f19"
+      },
+      "license": {
+        "type": "UNRESOLVED",
+        "source": "SKILL.md frontmatter says Apache-2.0; neither root permission text nor plugin-local Apache license notice supplied at pin",
+        "plugin_manifest": "plugins/adobe/.codex-plugin/plugin.json",
+        "plugin_manifest_blob": "31c776a3b832a1fc7de627a945987fc71ad540ac",
+        "obligations": "Study pipeline logic only. Do not copy the package or Adobe logos unless controlling license and trademarks are independently cleared."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "P6",
+          "EA2"
+        ],
+        "reasons": {
+          "reference_missing": 2
+        },
+        "interpretation": "Historical prompt non-disclosure line does not establish covert extraction. The package's actual vendor tool and rights boundaries remain operationally meaningful.",
+        "report_sha256": "1de5993238927581ac134292b0173d92efd5500436bc25988d3c5ceeba24d053"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "unconsented-remote-storage-and-sharing",
+          "evidence": "SKILL.md:348-408",
+          "finding": "After generating requested images, the procedure unconditionally creates a Firefly Board, uploads/references outputs there, and requests a shareable URL. Pilot image approval is not explicit authorization for additional persistent board creation and potential shareability. asset_share_link omits access changes by default but a shared link is still a new disclosure workflow requiring consent."
+        },
+        {
+          "severity": "HIGH",
+          "type": "external-design-egress-and-paid-service",
+          "evidence": "SKILL.md:8-12,21-41,80-97,273-314",
+          "finding": "The method requires signed-in Adobe/Firefly generation and passes user-owned design/reference URLs to a vendor service, with potentially paid or limited credits and cloud retention. It has no explicit preflight decision for sensitive asset external upload or budget/credit consumption before generation."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "reproduction-rights-and-brand-marks",
+          "evidence": "SKILL.md:8; assets/icon-large.svg; plugins/adobe/.codex-plugin/plugin.json",
+          "finding": "Apache-2.0 is declared in frontmatter but package/root source rights and Adobe marks are not accompanied by a controlling permission notice at this pin; repository presence is not an unrestricted grant to redistribute source or logo files."
+        },
+        {
+          "severity": "LOW",
+          "type": "hidden-prompt-visibility",
+          "evidence": "SKILL.md:253-269,426-437",
+          "finding": "The instruction not to show prompts and never comment on quality should not override a user's explicit request to inspect prompts or discuss a defect. This was a static source judgment, not evidence of observed deception."
+        }
+      ],
+      "positive_safeguards": [
+        "Requires explicit approval of a pilot visual before bulk generation and directs no invention of board IDs or returned links.",
+        "Uses supplied referenceImage on every generation, controls brand text hallucination, and fails transparently if the tool cannot generate.",
+        "Does not explicitly broaden asset access permissions; changeAccess/accessLevel omitted unless user asks."
+      ],
+      "reasoned_cases": [
+        "A user requests three inline mug mockups only: that does not separately authorize a persistent cloud board and shareable link.",
+        "A private client brand asset must not be sent to Adobe solely because it was attached for discussion.",
+        "A cost-limited signed-in account needs a separate budget/credit gate before bulk generations.",
+        "No Adobe tool, paid job, sharing action or network operation was performed in this review."
+      ],
+      "remediation": "Before service use, disclose provider egress/retention and credit implications, require user approval for sensitive uploads and paid generation, separate board creation/share consent from mockup creation, and clarify actual source-license rights before copying.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct static source-review session",
+      "method": "complete exact pinned package and controlling rights text read as untrusted passive data; no source execution, external provider, uploaded private file or behavioral test",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 12,
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "quality_state": "unverified",
+      "consumer_disposition": "static reference only; unchanged use not approved",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "rerun-io-rerun/rerun-urdf",
+      "source": {
+        "repository": "rerun-io/rerun",
+        "pin": "6f39b09211b869d6e262083cfddefa392244088d",
+        "upstream_head_checked": "6f0057649fdcdec6b1101e2590dc7280a31f75d1",
+        "current_head_package_tree_matches_pin": false,
+        "current_head_package_tree_sha": "081a3c5f4ab3d5211f1761d8332e705945b5bc26",
+        "current_head_skill_md_git_blob_sha": "85c46e2c7fb546bf0bd34c1c7269e41bd5cc8feb",
+        "current_head_script_blob_unchanged": true,
+        "package_path": "skills/rerun-urdf",
+        "complete_package_git_tree_sha": "d975189711aed05aadcbc93426906631df481b7e",
+        "skill_md_git_blob_sha": "b5a634f97b0dd20a0bb92a6fe294635cebc219c3"
+      },
+      "owned_files": {
+        "SKILL.md": "b5a634f97b0dd20a0bb92a6fe294635cebc219c3",
+        "scripts/check_joint_mapping.py": "4c911ffb21ed1b001a5a01009cfec8654194707a"
+      },
+      "license": {
+        "type": "Apache-2.0 OR MIT (root dual license)",
+        "source": "LICENSE-APACHE and LICENSE-MIT",
+        "git_blobs": [
+          "11069edd79019f7dafbe3138841cf289209270dd",
+          "79a5d00638fcea84dd7c039c283838dee7707e77"
+        ],
+        "obligations": "Retain selected license's required notices if copying; this review copies no source."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "P9",
+          "P9",
+          "P9",
+          "P9",
+          "P9",
+          "P9",
+          "P9"
+        ],
+        "reasons": {},
+        "interpretation": "Historical scanner P9 detections reference external model/docs links and software downloads; these are declared dependencies, not proof of a malicious repository.",
+        "report_sha256": "3ed9476ebd8feae2d02cace91cc814f6c72c6c8dc2232d472745fbbdc16ec3a6"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "joint-validation-overpermissive-default",
+          "evidence": "scripts/check_joint_mapping.py:115-120,123-124,153-165",
+          "finding": "The --slack default is 2.0 in the chosen input unit. Without --degrees, it means 2.0 radians of tolerated joint-limit overshoot, a very large tolerance that can mark severely out-of-range mappings as fits* and suggest clamp=True, despite the guide's stated purpose of detecting wrong mapping."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "untrusted-joint-order-default",
+          "evidence": "SKILL.md:110-126; scripts/check_joint_mapping.py:129-141",
+          "finding": "The guidance says never assume sensor column order matches URDF joint order, yet helper defaults to URDF order when --joints is omitted. If counts match, it can provide reassuring limit fits for the wrong mapping. Require explicit names or reliable dataset metadata."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "nonfinite-input-and-limit-validation",
+          "evidence": "scripts/check_joint_mapping.py:66-105,145-166",
+          "finding": "The helper accepts unconstrained/unlimited joints and does not explicitly reject NaN, infinity or negative slack. Unlimited limits accept every candidate; nonfinite values can yield misleading diagnostics or no fitting candidate rather than identifying invalid measurement data."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unapproved-package-network-and-storage-actions",
+          "evidence": "SKILL.md:5,21-30,143-155,295-324",
+          "finding": "The skill advertises Bash/WebFetch, pip/uv package installation and a dataset register_asset example pointing to s3:// storage. These are not inherent authorization to install, read private robot data, or write remote assets; explicit host/network/storage scope required."
+        }
+      ],
+      "positive_safeguards": [
+        "Source strongly emphasizes ambiguous joint mapping, time/frame consistency, a connected transform tree and fail-loud diagnostics.",
+        "The helper is primarily read-only analysis of selected URDF/parquet files; it does not command physical robot actuators.",
+        "Original source and script Git fingerprints are pinned; current upstream SKILL.md changed and is flagged for separate re-review."
+      ],
+      "reasoned_cases": [
+        "With radians as the default unit, --slack=2.0 permits major limit excursions despite a diagnostic meant to identify bad mapping.",
+        "With equally sized joint arrays in different orders, omitted --joints does not establish correct physical identity.",
+        "A joint without finite limits yields many apparent candidate fits without verification; flag noninformative result.",
+        "The current upstream package tree differs from this reviewed pin, so source score must not transfer to newer content."
+      ],
+      "remediation": "Require explicit unit-aware small slack with justified bounds and validated nonnegative numeric input, require trusted joint names/order, reject nonfinite measurements and noninformative limits, request separate authorization for package installs and dataset writes, and re-review changed upstream SKILL.md.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct static source-review session",
+      "method": "complete exact pinned package and controlling rights text read as untrusted passive data; no source execution, external provider, uploaded private file or behavioral test",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 14,
+      "freshness": "reviewed-pinned-version-upstream-update-available",
+      "quality_state": "unverified",
+      "consumer_disposition": "static reference only; unchanged use not approved",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "matlab-matlab-agentic-toolkit/matlab-analyze-reliability",
+      "source": {
+        "repository": "matlab/matlab-agentic-toolkit",
+        "pin": "032b4b605999b1f4adecaac1efa1c9faad41adf6",
+        "upstream_head_checked": "2a7f215e965597acf6ed495beb9e7b8aff45a3be",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills-catalog/ai-and-statistics/matlab-analyze-reliability",
+        "complete_package_git_tree_sha": "c2476dd8fcc5144429d69a477f41ec0d91d76f25",
+        "skill_md_git_blob_sha": "ed98b6f3ce8ea52e8d3d6b3c19d515e88b3350ed"
+      },
+      "owned_files": {
+        "SKILL.md": "ed98b6f3ce8ea52e8d3d6b3c19d515e88b3350ed",
+        "manifest.yaml": "4f7354f80fef8b1c68b7b7a2af7050049682efb1",
+        "references/distribution-methods.md": "6b24c6b4b28dd51c19aa2915ec80ca738157ff1a"
+      },
+      "license": {
+        "type": "MathWorks proprietary field-of-use grant, BSD-like conditions (not standard BSD-3-Clause)",
+        "source": "LICENSE.md pinned root; skill frontmatter and manifest link separate online license",
+        "git_blob_sha": "7f17a1e8690cca1da0ec834b4e45a86126cdebde",
+        "obligations": "Root license condition 3 restricts software and all derivatives solely to use with MathWorks products/service offerings; linked PMRL terms were not independently reconciled, so copy/promotion outside permitted scope held."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "P4"
+        ],
+        "reasons": {},
+        "interpretation": "P4 relates to MATLAB execution guidance; it is ordinary declared analysis-tool use, not automatic permission to run untrusted input or a meaningful scanner clearance.",
+        "report_sha256": "018e5c3d5c1829fc49b8a0331ef8c95a4bccc79828aaa696ef05cf75f96ddc60"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "censoring-omitted-from-fit-comparison-examples",
+          "evidence": "SKILL.md:65-85,91-144,146-150",
+          "finding": "The skill supports right-censored lifetime data but its model-comparison fitdist examples call Weibull/lognormal/exponential without Censoring, while a separate section correctly passes Censoring. Applying the comparison recipe to censored observations as ordinary failures biases fitting, AIC and reliability predictions. Explicitly require consistent censoring across candidates and diagnostics."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "fitted-parameter-gof-validity",
+          "evidence": "SKILL.md:147-160",
+          "finding": "Uncensored K-S and chi-square goodness-of-fit examples are listed as formal tests after fitting parameters on the same failureTime sample, without a qualification about composite-null p-value calibration/estimated parameters. A returned h=0 does not independently establish a model is correct."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "restricted-license-and-executable-tool",
+          "evidence": "SKILL.md:5; manifest.yaml; root LICENSE.md:condition 3",
+          "finding": "Root MathWorks rights are restricted to MathWorks products despite a BSD-like form; frontmatter points to online PMRL license not reproduced in package. The required evaluate_matlab_code tool executes code and needs user-governed runtime access; neither a static score nor repository visibility grants installation/redistribution."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unverified-engineering-claims",
+          "evidence": "SKILL.md:Key Functions and fitting; manifest.yaml",
+          "finding": "MATLAB R2026a+ and Statistics Toolbox requirements are explicit, but no live MATLAB release/toolbox acceptance, fit diagnostics, input uncertainty/representativeness or engineering approval were observed. Do not label predicted MTTF/B10 as certified reliability."
+        }
+      ],
+      "positive_safeguards": [
+        "Correctly identifies failure-time distributions, life metrics, upper-tail survival and a dedicated censoring parameter.",
+        "Separates plotting, AIC comparison and formal tests and explicitly excludes tests on censored observations.",
+        "Manifest states required product/tool and a version floor rather than claiming universal portability."
+      ],
+      "reasoned_cases": [
+        "Censored samples require Censoring in each compared distribution fit; using the uncensored recipe silently treats censored rows as failures.",
+        "A p-value calculated after parameter estimation needs appropriate calibration; h=0 is not certification.",
+        "An unrestricted-source reuse claim contradicts root license condition 3, independent of headline BSD similarity.",
+        "No MATLAB program, toolbox, external service or engineering data was executed in this review."
+      ],
+      "remediation": "Update all fitted-model examples to carry censoring flags where applicable, qualify GOF tests with fitted-parameter caveats, reconcile root and online source terms, and require authorized MATLAB/toolbox qualification with representative data before operational assertions.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct static source-review session",
+      "method": "complete exact pinned package and controlling rights text read as untrusted passive data; no source execution, external provider, uploaded private file or behavioral test",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 13,
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "quality_state": "unverified",
+      "consumer_disposition": "static reference only; unchanged use not approved",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    }
+  ]
+}
