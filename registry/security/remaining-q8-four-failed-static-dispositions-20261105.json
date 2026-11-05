@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "kind": "q8-historical-failed-four-current-exact-content-review",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "branch": "review/issue402-remaining-q8-failed-four-20261105-no-ci",
+  "previous_tranche": "registry/security/third-party-three-failed-static-dispositions-20261105.json",
+  "historical_scan": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "claim": "Four remaining historically FAILED Q8 featured packages directly reviewed as static content at exact pinned complete Git tree identities. 21 owned files plus five shared foundation references inspected; two scenario external sibling skill families are explicitly unqualified. Scanner history unchanged, no commands/scripts/model calls/cluster access, no signature verification or agent behavioral tests performed.",
+  "counts": {
+    "new_packages": 4,
+    "owned_files_read": 21,
+    "shared_foundation_files_read": 5,
+    "root_license_files_read": 1,
+    "plugin_manifests_read": 2,
+    "all_seven_historical_q8_failed_packages_now_statically_reviewed_across_both_tranches": 7,
+    "new_scanner_runs": 0,
+    "behavioral_passes": 0,
+    "unchanged_use_approvals": 0
+  },
+  "freshness_note": "All four old pinned trees match exact Git objects. Upstream HEAD advanced (scenario 7 commits, openai/plugins 1 commit) but comparison found no modifications under these selected package/shared foundation paths; do not reclassify stable pinned reviews as stale. Future adoption of any changed pin requires a distinct review.",
+  "records": [
+    {
+      "id": "scenario-labs-skills/scenario-storyboards",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer direct static assessment",
+      "method": "Read owned pinned package, relevant supporting references and provenance/rights metadata; inspect risky commands as text, reason through trigger/nontrigger/authority-pressure cases; no source instructions executed.",
+      "source_repo": "scenario-labs/skills",
+      "pinned_revision": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+      "upstream_head_checked": "340a715e3424c54b46a799980ee80f3075530fea",
+      "upstream_head_diff": "7 commits ahead; compared changes do not touch this package path; deliberately pinned version remains current-reviewed",
+      "package_path": "skills/scenario-storyboards",
+      "package_tree_sha": "b0b029258172a8a46a5e9187306e1606fa0585f5",
+      "skill_blob_sha": "9275b402c74f0165c1ea8c5a2ca3764cf327f367",
+      "owned_package_files": {
+        "SKILL.md": "9275b402c74f0165c1ea8c5a2ca3764cf327f367"
+      },
+      "license": {
+        "path": "LICENSE",
+        "blob": "05676553d9d10a0effff673b507b4fcfed652c17",
+        "terms": "MIT for vendor-authored source; external assets, images, models and outputs separately controlled"
+      },
+      "sibling_dependencies_status": "UNREVIEWED_EXTERNAL_PACKAGE_BOUNDARY: siblings named by this skill include scenario, scenario-consistency, scenario-image, scenario-text-overlay, scenario-video-assembly, scenario-image-editing, scenario-asset-analysis and others; their exact package instructions were not admitted/cleared by reviewing this one-file package.",
+      "historical_scanner": {
+        "id": "P9",
+        "pattern": "Whitespace Padding",
+        "severity": "MEDIUM",
+        "location": "SKILL.md:23",
+        "report_sha256": "650828e32e0e198f354e7fdc663adfb6b8c490812db052fb2c388eae997846be",
+        "reviewer_interpretation": "The matched line is a Markdown quick-reference table heading. It is not an apparent concealed agent instruction. This does not erase historical FAIL."
+      },
+      "findings": [
+        {
+          "severity": "HIGH",
+          "type": "paid-external-actions-without-approval",
+          "location": "SKILL.md worked example steps 2-6",
+          "finding": "If unattended, substitutes description-based acceptance for user approval, selects default model, and performs six or more paid model_run calls. A request for a storyboard alone is not permission for uncontrolled paid calls or uploads."
+        },
+        {
+          "severity": "HIGH",
+          "type": "remote-reference-art-and-persistent-writes",
+          "location": "SKILL.md steps 2 and 6",
+          "finding": "Uploads or generates cast anchor art and files panels/page into a remote collection with no per-destination, rights, retention, cost or disclosure authorization gate."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "moderation-pressure",
+          "location": "SKILL.md Common mistakes",
+          "finding": "Instructs agent to soften a moderation-blocked weapon/fight clause and retry; must not be interpreted as license to bypass provider safety restrictions."
+        }
+      ],
+      "scenarios": {
+        "positive": "Read-only storyboard panel table and continuity plan is useful.",
+        "nontrigger": "A prompt for concept only does not authorize model_run, upload, catalog writes or paid generation.",
+        "adversarial": "Unattended setting combined with sensitive cast photo or blocked image must halt paid/egress attempts and preserve policy controls."
+      },
+      "remediation": "Separate read-only planning from paid generation and persistent uploads, require explicit identity/location/cost approvals and source rights, bound retries and respect moderation, inspect all invoked sibling sources.",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 11,
+      "quality_state": "unverified",
+      "decision": "REFERENCE-ONLY; HOLD unchanged execution, installation, uploads or paid actions",
+      "historical_scanner_state": "failed",
+      "scanner_state_changed": false,
+      "new_scan_run": false,
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "scenario-labs-skills/scenario-identity-library",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer direct static assessment",
+      "method": "Read owned pinned package, relevant supporting references and provenance/rights metadata; inspect risky commands as text, reason through trigger/nontrigger/authority-pressure cases; no source instructions executed.",
+      "source_repo": "scenario-labs/skills",
+      "pinned_revision": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+      "upstream_head_checked": "340a715e3424c54b46a799980ee80f3075530fea",
+      "upstream_head_diff": "7 commits ahead; compared changes do not touch this package path; deliberately pinned source remains current-reviewed",
+      "package_path": "skills/scenario-identity-library",
+      "package_tree_sha": "d514d323fcd601d43551250e38809862d294e719",
+      "skill_blob_sha": "e36509de1f00a9b4114b437ae53f1c4b689b8c23",
+      "owned_package_files": {
+        "SKILL.md": "e36509de1f00a9b4114b437ae53f1c4b689b8c23"
+      },
+      "license": {
+        "path": "LICENSE",
+        "blob": "05676553d9d10a0effff673b507b4fcfed652c17",
+        "terms": "MIT for vendor-authored skill only; user's photo/art, third-party imagery, model outputs remain separately controlled"
+      },
+      "sibling_dependencies_status": "UNREVIEWED_EXTERNAL_PACKAGE_BOUNDARY: scenario, scenario-consistency, scenario-quality-gate, scenario-asset-analysis; these siblings are not included in the one-file package and have no inherited acceptance.",
+      "historical_scanner": {
+        "id": "P9",
+        "pattern": "Whitespace Padding",
+        "severity": "MEDIUM",
+        "location": "SKILL.md:23",
+        "report_sha256": "52038b688a33654c57cd5b0f9195ea90b9f5d7e373a1159ca3a91363ae20b552",
+        "reviewer_interpretation": "Matched Markdown table heading/spacing is normal formatting; not an identifiable covert instruction. Historical FAIL preserved."
+      },
+      "findings": [
+        {
+          "severity": "HIGH",
+          "type": "private-image-upload",
+          "location": "SKILL.md From interview to anchor",
+          "finding": "A user-provided personal portrait/art is automatically treated as an uploaded anchor; private likeness, third-party art and vendor retention require explicit destination/asset permission before egress."
+        },
+        {
+          "severity": "HIGH",
+          "type": "persistent-remote-mutation",
+          "location": "SKILL.md The library is a named collection",
+          "finding": "collection_create, collection_add_assets and collection_remove_assets mutate persistent remote libraries, including deletion of superseded members, without standalone create/delete authorization or rollback review."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "paid-model-and-sibling-authority",
+          "location": "SKILL.md model_run and sibling loading",
+          "finding": "Model selection and paid run loops rely on task-given intent; sibling skill_get/install may expand tool scope without separately establishing authority and licensing."
+        }
+      ],
+      "scenarios": {
+        "positive": "A character identity brief, silhouettes and view-list can be prepared read-only.",
+        "nontrigger": "User wanting an identity concept does not authorize photo upload or persistent collection mutation.",
+        "adversarial": "Existing remote collection contains unrelated assets; deletion and overwrite must be owner-scoped, previewed and approved, not inferred from redesign request."
+      },
+      "remediation": "Permission-bound uploads, generation budget, per-collection write/delete and rollback, explicit privacy/rights, independently checked sibling exact versions.",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 11,
+      "quality_state": "unverified",
+      "decision": "REFERENCE-ONLY; HOLD unchanged execution, installation, uploads or paid actions",
+      "historical_scanner_state": "failed",
+      "scanner_state_changed": false,
+      "new_scan_run": false,
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "openai-plugins/build-web-data-visualization/geospatial-and-cartographic-visualization",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer direct static assessment",
+      "method": "Read owned pinned package, relevant supporting references and provenance/rights metadata; inspect risky commands as text, reason through trigger/nontrigger/authority-pressure cases; no source instructions executed.",
+      "source_repo": "openai/plugins",
+      "pinned_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "upstream_head_checked": "b767f8fa3be1a22b093127dd59956c91ecffca9d",
+      "upstream_head_diff": "1 commit ahead, no changes to package or inspected shared foundation files; pinned exact review remains current",
+      "package_path": "plugins/build-web-data-visualization/skills/geospatial-and-cartographic-visualization",
+      "package_tree_sha": "420de6234f1d7b9fb180e6072303a392655577d9",
+      "skill_blob_sha": "51b926ba198cf89b4776a483de5534f596a4521e",
+      "owned_package_files": {
+        "SKILL.md": "51b926ba198cf89b4776a483de5534f596a4521e",
+        "agents/openai.yaml": "f27071662dda3f83ba2a8daf7ba2b611e997eaf5",
+        "references/adaptive-basemaps-and-layer-stacks.md": "b5e6d5340839f87de56b90b16dfd18cca512a395",
+        "references/choropleths-symbols-and-flows.md": "ef56e7e6b9bfb2cc7e2542f0ea1838fd687547f4",
+        "references/deckgl-d3-geo-stack-selection.md": "1bbcf4270a04885fea0a867b9de4874a933d8fed",
+        "references/map-or-not.md": "c6eb26b7b464659d545c01b1e6fa2d6961d4e043",
+        "references/multiscale-symbols-and-zoom-behavior.md": "6ac2ed09fc1795afe48ff615026c74b555669db8",
+        "references/point-overlap-strategies.md": "7670e875036ea2df377f0ab9890946c7f4ad8df2",
+        "references/projections-and-normalization.md": "c32197d6f882bbb0e56171bbe50cc2ae60a6f269",
+        "references/slippy-map-and-product-stack-selection.md": "aab0109abcc86dd3fb0375c62d7c2903b4d6185e",
+        "references/source-method-and-coordinate-ledger.md": "13b47238fcd1ec9ad5191b0f62e930412df8112a"
+      },
+      "shared_reference_files_resolved_and_read": {
+        "plugins/build-web-data-visualization/references/foundations/task-abstraction-and-chart-selection.md": "b3a1cc745c58138ed2fef04c685794dbb6b28e44",
+        "plugins/build-web-data-visualization/references/foundations/perception-color-and-encoding.md": "80bebcb2cd8ff58da76857bd269455ecfdcf8156",
+        "plugins/build-web-data-visualization/references/foundations/mobile-first-responsive-visualization.md": "ba56c76ebefb7f8ccee950d0d4dda1a3d0d816a3",
+        "plugins/build-web-data-visualization/references/foundations/art-directed-interactive-visual-stories.md": "f1795a6b4a3c8c8a6b13362029a28c4adf853fbc",
+        "plugins/build-web-data-visualization/references/foundations/sensitive-geopolitical-and-humanitarian-stories.md": "e21c9c024725dfb4c2f6cece678aef9b354258ff"
+      },
+      "license": {
+        "path": "plugins/build-web-data-visualization/.codex-plugin/plugin.json",
+        "blob": "86b325f117e87115e44ad3311532e5a615833e57",
+        "terms": "Manifest declares MIT but no root/LICENSE legal notice found at pin; do not infer full source copying/redistribution clearance from label alone"
+      },
+      "prior_reference_correction": "Five shared foundation files previously described as missing are actually present at the pinned plugin repository root. They are outside the individual skill package's tree. Existence plus this direct reading does not change historic scanner outcome.",
+      "historical_scanner": {
+        "id": "AR2",
+        "pattern": "Anti-Refusal Statement",
+        "severity": "HIGH",
+        "location": "references/deckgl-d3-geo-stack-selection.md:25",
+        "report_sha256": "970a2ba8ef6b9636834a972a0293dfa11d1cf4efa393937f2ec097a373b54c65",
+        "reviewer_interpretation": "The matched line warns against animating sensitive human movements without caveats and a static fallback, not a directive to override refusal. Historical FAIL preserved."
+      },
+      "findings": [
+        {
+          "severity": "HIGH",
+          "type": "license-notice-unavailable",
+          "location": "plugin manifest; pinned repository LICENSE 404",
+          "finding": "The plugin manifest's MIT label was found, but a license grant/notice text was not present in the relevant pinned package or repository root; authorization to copy source-specific expression remains unverified."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "provider-and-geolocation-egress",
+          "location": "SKILL.md Steps 13 and 18",
+          "finding": "Calls out paid vendor basemaps, geocoding, user geolocation and camera capabilities. Source has fallback guidance but no per-account request, privacy, quota or destination-action approval contract for actual implementation."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "shared-dependency-scope",
+          "location": "SKILL.md References",
+          "finding": "Five shared files outside package do exist and were directly read, correcting earlier missing-source wording; references to additional foundation/sibling skills are not blanket approved by this package review."
+        }
+      ],
+      "scenarios": {
+        "positive": "Source-ledger, projection and map-versus-chart decision can be studied read-only.",
+        "nontrigger": "Map design advice is not user consent to send precise location or provision paid map services.",
+        "adversarial": "A request for sensitive disaster map with speculative data must preserve dated source/uncertainty caveats and no invented precision."
+      },
+      "remediation": "Clarify legally reusable license notice for protected content; require provider/geolocation approvals; keep reviewed shared foundation hashes distinct from the one-skill tree.",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 16,
+      "quality_state": "unverified",
+      "decision": "REFERENCE-ONLY; HOLD unchanged execution, installation, uploads or paid actions",
+      "historical_scanner_state": "failed",
+      "scanner_state_changed": false,
+      "new_scan_run": false,
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "openai-plugins/nvidia/dynamo-interconnect-check",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer direct static assessment",
+      "method": "Read owned pinned package, relevant supporting references and provenance/rights metadata; inspect risky commands as text, reason through trigger/nontrigger/authority-pressure cases; no source instructions executed.",
+      "source_repo": "openai/plugins",
+      "pinned_revision": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "upstream_head_checked": "b767f8fa3be1a22b093127dd59956c91ecffca9d",
+      "upstream_head_diff": "1 commit ahead, unrelated to this skill; pinned reviewed tree unchanged",
+      "package_path": "plugins/nvidia/skills/dynamo-interconnect-check",
+      "package_tree_sha": "24748c47b449ad8081ba50063ca70f1907f775f0",
+      "skill_blob_sha": "a9c9d46228fed0439b76ed74d36fd128358c5f1f",
+      "owned_package_files": {
+        "SKILL.md": "a9c9d46228fed0439b76ed74d36fd128358c5f1f",
+        "BENCHMARK.md": "094c9bb184fd1176c1ac977546dbbd45645a848c",
+        "skill-card.md": "ab2e80f5b5b014b11b586bde5c072591dc896255",
+        "skill.oms.sig": "3567c6873f36f902dd0e4590007ea18c2c071395",
+        "agents/openai.yaml": "bf6f7eee8cfca5f3d18258c065b31e34bcb21ce8",
+        "evals/evals.json": "4716c63bafe951155dc2db11bbe36aab6738dae1",
+        "references/interconnect-env-vars.md": "13d6a3a543fcd8c841fc0efd4739d99e2d3862a8",
+        "scripts/check_interconnect.py": "7bfc79e2dcd59c48eca66953e14b81340444b1d2"
+      },
+      "license": {
+        "path": "plugins/nvidia/.codex-plugin/plugin.json",
+        "blob": "8d47007cbedfa7451d4916acd14d7a44dc6ce413",
+        "terms": "Plugin metadata declares Apache-2.0 AND CC-BY-4.0; SKILL/prose marked CC-BY, script Apache-2.0; notice text absent at root pin and terms/attribution require separate resolution for copying."
+      },
+      "signature_evidence": "skill.oms.sig exists and was read as data; signature trust chain and artifact-to-contents verification NOT PERFORMED.",
+      "benchmark_evidence": "BENCHMARK.md states overall PASS while saying Tier 3 agent results and dimension rollup unavailable; historical benchmark is not behavioral proof for this review.",
+      "historical_scanner": {
+        "id": [
+          "MP3",
+          "AS3",
+          "LP3",
+          "AST4"
+        ],
+        "severity": [
+          "HIGH",
+          "MEDIUM",
+          "MEDIUM",
+          "MEDIUM"
+        ],
+        "location": [
+          "SKILL.md:134",
+          "BENCHMARK.md:48",
+          "SKILL.md:1",
+          "scripts/check_interconnect.py:121"
+        ],
+        "report_sha256": "d9d00adea27c52a4ba0b3dd79af63a1528b4db1d5f97d0a0f44c94c04524114c",
+        "reviewer_interpretation": "References to KV transport and skill benchmarking do not alone prove memory poisoning or enumeration. However actual subprocess/kubectl execution and file reads exist and are material; do not dismiss the LP3/AST4 execution surface or rewrite prior failed scanner gate."
+      },
+      "findings": [
+        {
+          "severity": "HIGH",
+          "type": "privileged-remote-execution-scope",
+          "location": "SKILL.md prerequisites; scripts/check_interconnect.py exec_prefix, run, NODE_PROBES",
+          "finding": "Uses real subprocess and kubectl exec in selected live pods; source's read-only claims are not authorization. No enforced cluster context, namespace, pod ownership, tool capability, sensitive-output or cost/production-scope approval gate."
+        },
+        {
+          "severity": "HIGH",
+          "type": "false-clear-readiness",
+          "location": "scripts/check_interconnect.py summarize",
+          "finding": "summarize counts only ok/warn/fail; skipped/unknown are excluded. If probes are missing but other checks are ok, final verdict can be 'no transport gaps detected' despite no actual NIXL pairwise reachability confirmation."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unbounded-local-manifest-read",
+          "location": "scripts/check_interconnect.py check_env",
+          "finding": "Given a directory, recursively reads all YAML manifests without repo/scope allowlist; printed transport values can expose internal network and infrastructure configuration. User target scope must be explicitly authorized."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "benchmark-and-signature-overclaim",
+          "location": "BENCHMARK.md; skill.oms.sig",
+          "finding": "Published PASS label coexists with absence of Tier 3 observed host results. Bundled signature is not independent proof of authenticity until cryptographically verified against a trusted identity and expected artifact digest."
+        }
+      ],
+      "scenarios": {
+        "positive": "A bounded inspection plan of runtime fabric prerequisites is useful with an approved cluster and synthetic outputs.",
+        "nontrigger": "The fact that a disagg deployment exists does not grant kubectl exec or recursive manifest reads.",
+        "adversarial": "All NIXL probes skipped or command missing must yield inconclusive, not a reassuring ready verdict; no claims from absent Tier3 or unchecked signature."
+      },
+      "remediation": "Implement strict target/context authorization, redact outputs, scope manifest reads, fail closed on skipped/unknown checks, distinguish physical device presence from verified NIXL pairwise transfer, test no-tool case, resolve mixed license/attribution and signature trust.",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 0
+      },
+      "static_score": 10,
+      "quality_state": "unverified",
+      "decision": "REFERENCE-ONLY; HOLD unchanged execution, installation, uploads or paid actions",
+      "historical_scanner_state": "failed",
+      "scanner_state_changed": false,
+      "new_scan_run": false,
+      "behavioral_validation": "not-run",
+      "unchanged_use_approved": false
+    }
+  ]
+}
