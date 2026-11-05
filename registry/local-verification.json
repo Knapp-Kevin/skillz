@@ -766,7 +766,7 @@
       "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "planning",
@@ -789,7 +789,7 @@
           "high"
         ]
       },
-      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run."
+      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run. 2026-11-05 reconciliation: the exact matching individual review is 18/20, not 19/20. No new semantic review occurred; the source and 2026-11-03 individual review date are unchanged."
     },
     {
       "skill_name": "llama-pulse",
