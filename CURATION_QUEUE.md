@@ -1,5 +1,9 @@
 # Skill Curation Queue
 
+## Current source security/freshness checkpoint: November 5, 2026
+
+**0 open PRs, 4 open issues** (#402, #544, #588, #599). [PR #703](https://github.com/Knapp-Kevin/skillz/pull/703) merged 39 passive source repairs and six bounded source-defect issues closed after implementation. [44/44 current first-party static reviewed versions](registry/review-freshness/first-party-44-exact-source-20261105.json) match exact fingerprints; unchanged pins retain dates, changed content requires re-review. [Current static review policy](docs/static-review-and-freshness.md) does not require hosted scans. Historical scanner findings and separate behavior/rights limitations remain truthful.
+
 ## Latest capability mapping tranche: November 5, 2026
 
 [Exact-source evidence](docs/reviews/2026-11-05-q8-studies-eight-governed-capability-links.md): current [directory](registry/capability-directory.json) links **86/1,039** governed identities to capability paths (**953 unmapped**; **62/247** subdomains with exact governed links) and attaches all **50 existing Q8 study-only** methods to subdomains across **33/33** domains. Eight existing governed identities moved from lexical hints to evidence-backed routing without new admission or changed semantic scores; four are previously rejected and remain rejected. Continue broader identity mapping and maturity qualification under #588 and continuous discovery under #599. No new scanner, evaluator, behavioral or unchanged-use approval occurred.
