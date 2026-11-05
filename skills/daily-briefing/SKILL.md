@@ -11,7 +11,7 @@ metadata:
   category: Productivity
   display-name: Daily Briefing
   emoji: "🌅"
-  version: 1.1.2
+  version: 1.1.3
 ---
 
 # Daily Briefing
@@ -24,7 +24,7 @@ Produce a single-screen morning brief that puts today's required decisions at th
 
 1. **Calendar.** Pull today's events only from the approved calendar scope through an authorized host connector. Note the first and last meeting, gaps long enough for focused work, and any event that implies preparation (a review, a call with an agenda, a deadline).
 2. **Email.** Scan unread mail only in the approved account and lookback window through an authorized host connector. Keep only messages worth acting on: direct asks, time-sensitive items, and mail from key contacts. Ignore newsletters and notifications.
-3. **Loose ends.** Gather yesterday's open threads from approved sources only: memory files and task lists in the authorized current project, and recent git activity across explicitly bound workspace repos via available local git commands (e.g. `git log --all --since=yesterday --oneline` per repo). Discover the bound workspace root(s) from the operator's profile, host memory, or a workspace governance note — the bound source wins over assumptions; if none is discoverable, ask once and offer an optional draft record; persist only after separate approval. Uncommitted work and half-finished branches count as loose ends.
+3. **Loose ends with explicit source authorization.** Gather yesterday's open threads only from task lists, notes, memory entries and Git repositories the user has explicitly supplied or authorized for this briefing, including the exact account/workspace and time window. A request for a morning brief never authorizes searching operator profiles, host memory, governance notes, private folders or GitHub organizations **to discover** workspace roots. If an approved checkout exists, use the host's permitted read-only Git tool (for example `git log --all --since=yesterday --oneline` for that approved repository) and note uncommitted or half-finished work only from approved local checkouts. If workspace roots, prior notes or task sources were not authorized, ask for their scope or omit that section and report the evidence gap; do not search other sources as a fallback. A proposed workspace binding is a draft only and must never be persisted without separate approval.
 4. **Rank.** Decisions the user must make today go first, then externally imposed deadlines, then carried-over work. Cap "Act on" at five items; everything else is FYI or dropped.
 5. **Present** in the Output Format below. One screen means one screen — trim, do not scroll.
 
