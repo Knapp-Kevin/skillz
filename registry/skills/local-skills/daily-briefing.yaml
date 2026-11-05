@@ -7,7 +7,7 @@ source_path: skills/daily-briefing/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 53a1ce07adff2552cd09d23030802c57eab2eaa2
+source_snapshot_revision: be9ed61f10b1688b0bd00ff5085dbfeeb93bf276
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
 availability: in-repo
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
 import_eligibility: review-required
-rationale: "2026-11-04 exact new source 59bcb56d5a39ea06c6518b0c715026eb308beac2: Q15 ten-axis source-semantic review 17/20, with follow-up output-secret redaction inspected as a non-broadening safety amendment. External scanner and host-behavior tests NOT RUN; unchanged adoption remains held."
+rationale: "Exact Daily Briefing 1.1.3 SKILL.md 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full Git package tree 6c73d9f034feaecad129769a9ec0afebabc397f6, repaired step 3 private-root discovery ambiguity. Current 17/20 source-semantic review at docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No external pinned scanner on current tree, no observed agent-host behavior, unchanged reuse held."

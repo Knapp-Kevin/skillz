@@ -206,7 +206,7 @@
       "skill_name": "daily-briefing",
       "local_path": "skills/daily-briefing/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "59bcb56d5a39ea06c6518b0c715026eb308beac2",
+      "content_blob_sha": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -231,7 +231,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 current exact-source SHA 59bcb56d5a39ea06c6518b0c715026eb308beac2 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
+      "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held."
     },
     {
       "skill_name": "decision-log",
