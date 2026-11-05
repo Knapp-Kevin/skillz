@@ -2,6 +2,8 @@
 
 # 🛠️ skillz
 
+**Repository status (Nov 5, 2026):** **0 open PRs, 4 open issues** after [#703 merged](https://github.com/Knapp-Kevin/skillz/pull/703). [44 first-party reviewed source versions](registry/review-freshness/first-party-44-exact-source-20261105.json) exactly match current text, with original review dates retained. Changed tracked text is queued for re-review; source review is not an installation/operation approval.
+
 **Current review model:** ChatGPT/maintainers review pinned static skills and supporting content directly, record the [exact reviewed revision and date](docs/static-review-and-freshness.md), and flag subsequent changes for re-review. Hosted scanning is optional supplementary evidence, not a blocker to reviewing this passive library. No review authorizes a skill's commands or private-data access.
 
 **Coverage update (November 5, 2026):** Our [capability directory](registry/capability-directory.json) now links **86 of 1,039 governed skill reviews** to evidence-backed capability paths, spanning **62 of 247 subdomains**. It also places **all 50 existing study-only Valuable References** in their matching subdomains across all 33 domains. **953 reviewed identities still need mapping**. A discoverable example is not approval to install or execute it. [Source-by-source qualification evidence](docs/reviews/2026-11-05-q8-studies-eight-governed-capability-links.md).
