@@ -1060,7 +1060,37 @@
         "governed_id": "cloudflare-skills/durable-objects",
         "governed_verification_path": "registry/verification/cloudflare-skills/durable-objects.yaml",
         "governed_package_tree_sha": "not-recorded",
-        "qualification": "SKILL.md bytes identical; package equality, rights and authority unverified"
+        "qualification": "Core instruction and reference files match by Git blobs, but complete package differs by OpenAI display metadata. Transfer historical core evidence as bounded context, not package-level security or unchanged-use approval.",
+        "full_package_comparison": {
+          "reviewed_at": "2026-11-04",
+          "official_cloudflare_pin": "f96bff754e428838818017f75817f0f9428acd48",
+          "official_package_tree_sha": "72810f48414f2e68d0aa65a8895f749c959dea91",
+          "openai_plugin_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "plugin_package_tree_sha": "cf3ced5c811c71da7d5dc546e7c526ffaf6571bc",
+          "exact_matching_core_file_paths": [
+            "SKILL.md",
+            "references/rules.md",
+            "references/testing.md",
+            "references/workers.md"
+          ],
+          "matching_core_files": 4,
+          "core_file_mismatches": 0,
+          "missing_core_files": 0,
+          "plugin_only_files": [
+            "agents/openai.yaml"
+          ],
+          "plugin_only_agent_wrapper_blob": "d0cf1c8b80d69a3a4c0213ac9c4ee3fbb471c484",
+          "complete_package_equal": false,
+          "wrapper_contents": "Only interface.display_name and interface.short_description; no tools or permission escalations in this file",
+          "upstream_core_license": "Apache-2.0",
+          "upstream_core_license_blob": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+          "plugin_metadata_license_label": "MIT",
+          "license_disposition": "source Apache-2.0 attribution/notice remains; plugin-level MIT metadata does not relicense core; no redistribution or unchanged-use clearance",
+          "existing_governed_quality_disposition": "verified-17-20-cloudflare-core-not-automatic-plugin-clearance",
+          "security_state": "not-run-for-plugin-exact-package",
+          "host_behavior": "not-run",
+          "approved_unchanged": false
+        }
       },
       {
         "discovery_source": "openai-plugins",
@@ -1071,13 +1101,54 @@
         "governed_id": "cloudflare-skills/workers-best-practices",
         "governed_verification_path": "registry/verification/cloudflare-skills/workers-best-practices.yaml",
         "governed_package_tree_sha": "7dd384e79c76d3e388dfe53e12e93642679ff1fd",
-        "qualification": "SKILL.md bytes identical but package trees differ; do not reuse full-package disposition"
+        "qualification": "Core instruction and reference files match by Git blobs, but complete package differs by OpenAI display metadata. Transfer historical core evidence as bounded context, not package-level security or unchanged-use approval.",
+        "full_package_comparison": {
+          "reviewed_at": "2026-11-04",
+          "official_cloudflare_pin": "f96bff754e428838818017f75817f0f9428acd48",
+          "official_package_tree_sha": "7dd384e79c76d3e388dfe53e12e93642679ff1fd",
+          "openai_plugin_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "plugin_package_tree_sha": "fbf60b5122db35fa71d21ef98ce1b3539ec9d3c0",
+          "exact_matching_core_file_paths": [
+            "SKILL.md",
+            "references/review.md",
+            "references/rules.md"
+          ],
+          "matching_core_files": 3,
+          "core_file_mismatches": 0,
+          "missing_core_files": 0,
+          "plugin_only_files": [
+            "agents/openai.yaml"
+          ],
+          "plugin_only_agent_wrapper_blob": "7c5f663cbe59ff03612c84addce3ede543ad20cb",
+          "complete_package_equal": false,
+          "wrapper_contents": "Only interface.display_name and interface.short_description; no tools or permission escalations in this file",
+          "upstream_core_license": "Apache-2.0",
+          "upstream_core_license_blob": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+          "plugin_metadata_license_label": "MIT",
+          "license_disposition": "source Apache-2.0 attribution/notice remains; plugin-level MIT metadata does not relicense core; no redistribution or unchanged-use clearance",
+          "existing_governed_quality_disposition": "rejected-unchanged-14-20-telemetry-and-secret-mutation-authority",
+          "security_state": "not-run-for-plugin-exact-package",
+          "host_behavior": "not-run",
+          "approved_unchanged": false
+        }
       }
     ],
     "nonmatches": "Other 43 governed companions did not share a SKILL.md blob or confirmed package-tree SHA with the raw paths of the same leaf name. This does not establish semantic uniqueness.",
     "eligible_denominator_delta": 0,
     "terminal_review_decision_delta": 0,
     "behavioral_validation": "not-run",
-    "rights_status": "per-package unresolved"
+    "rights_status": "per-package unresolved",
+    "package_mirror_recheck": {
+      "reviewed_at": "2026-11-04",
+      "evidence_document": "docs/discovery/2026-11-04-cloudflare-plugin-two-package-identity-and-rights.md",
+      "core_matching_mirrors": 2,
+      "core_matching_files_total": 7,
+      "complete_tree_matches": 0,
+      "plugin_only_wrapper_files": 2,
+      "additional_independent_method_promotions": 0,
+      "global_distinct_eligible_denominator": "unknown",
+      "change_to_governed_review_count": 0,
+      "change_to_review_grade_count": 0
+    }
   }
 }

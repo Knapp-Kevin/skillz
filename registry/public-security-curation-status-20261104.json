@@ -1,5 +1,5 @@
 {
-  "schema_version": "skillz-public-security-and-curation-v2",
+  "schema_version": "skillz-public-security-and-curation-v3",
   "as_of": "2026-11-04",
   "merged_main": {
     "domains": 33,
@@ -28,11 +28,11 @@
   },
   "approved_unchanged": 0,
   "behaviorally_validated": 0,
-  "open_prs_at_snapshot": 4,
-  "open_issues_at_snapshot": 12,
+  "open_prs_at_snapshot": 1,
+  "open_issues_at_snapshot": 11,
   "security_issue": 402,
   "non_additive": true,
-  "notes": "Q8 #693 merged as 50 study-only Valuable References across 33 domains on 2026-11-04; Q7 20/10 is historical. Security evidence is pinned to earlier exact package trees, not the newer repairs in #673/#686/#702/#703. Static pass is not unchanged-use approval. The 51 first-party/engine and 50 study-reference scan populations overlap and must not be added. Approved unchanged: 0. Behavioral validation: 0. Open security #402 remains unresolved.",
+  "notes": "November 4, 2026: The Q8 50 selected skills remain reference-only, not approved unchanged. P0 #402 security repairs have been consolidated into ONE open draft PR #703 (former #673/#686 closed unmerged after verified byte-identical transfer and canonical 44-skill registry reconciliation). 34 candidate exact Git package trees: 14 match historical pinned NVIDIA SkillSpector passes, 20 require new pinned scans, 0 actual behavioral validations, 0 unchanged-use approvals. No scanner run, source adoption, or security gate was waived by PR consolidation. Historical Q8/Q12 and first-party scan populations are overlapping and non-additive. Issue #589 closed only after its remaining work was assigned to #402/#588/#599; #544 remains open for upstream rights clarification.",
   "q8_merged_checkpoint": {
     "pr": 693,
     "source_head": "dfeb3ce191bd2242760c25a42115073799a1f5a0",
@@ -42,5 +42,23 @@
     "study_domains": 33,
     "exact_static_decisions": 5351,
     "review_queue": 1522
+  },
+  "repair_frontier": {
+    "source": "registry/security/active-first-party-repair-frontier-20261104.json",
+    "scope": "One canonical open DRAFT repair PR #703 contains all 34 distinct first-party packages. Former repair PRs #673 and #686 closed unmerged after exact 72-file blob transfer and 44-record registry integration; their Git commits are parents of #703. Historical #702 likewise transferred; scanner populations overlap.",
+    "changed_packages": 34,
+    "existing_exact_tree_static_pass": 14,
+    "needs_new_exact_tree_scan": 20,
+    "observed_behavior_pass": 0,
+    "unchanged_use_approvals": 0,
+    "by_pr": [
+      {
+        "pr": 703,
+        "head": "5bb33282c1ee37640a6685c2c2092abf04b32c57",
+        "total": 34,
+        "matched_pass": 14,
+        "new_scans_needed": 20
+      }
+    ]
   }
 }
