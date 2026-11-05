@@ -1,6 +1,14 @@
 # Maintainer Workboard
 
-## Current live checkpoint: November 5, 2026
+## CURRENT checkpoint: November 5, 2026, after #703 merge
+
+**0 open PRs and 4 open issues**: #402 (remaining exact-version content/security freshness), #544 (upstream license correction), #588 (capability coverage), #599 (continuous corpus discovery). PR #703 is merged at `33a03c7`; six implemented source-defect issues #415, #478, #481, #483, #491, #495 were closed after the merge.
+
+**Current policy:** [review exact static content and track freshness](docs/static-review-and-freshness.md), not mandatory hosted scanning. [44-skill dated review ledger](registry/review-freshness/first-party-44-exact-source-20261105.json) has 44/44 matching reviewed source fingerprints and 39/39 repaired package tree identities. Original dates remain; changed content is queued for re-review. Scanner/observed host/unchanged-use approval counts have not increased. Remaining work is genuine source content review, deeper capability mapping and upstream rights clarification.
+
+---
+
+## Historical checkpoint before #703 merge: November 5, 2026
 
 **OPEN: 1 PR, 10 issues.** This count is from the live GitHub inventory, not the historical November 3 workboard snapshot below. The sole active repair PR is [#703](https://github.com/Knapp-Kevin/skillz/pull/703), containing **39 first-party candidate repair packages**: the original 34 losslessly integrated from #673 (16), #686 (5), #703 (13), plus 5 newly identified source-level privacy/secret-fragment/Git-execution repairs. Daily Briefing was also tightened within its original package slot. Source PRs #673 and #686 were **closed unmerged only after 72/72 unique Git blobs, 44/44 verification records and 34/34 package trees were preserved** in #703. Their original commits are parents of the canonical integration commit. No security approvals or source content were discarded. See [the transfer ledger](docs/reviews/2026-11-04-pr703-three-repair-consolidation.md).
 
