@@ -1,6 +1,10 @@
 # Maintainer Workboard
 
-## Latest #402 targeted content-review checkpoint: November 5, 2026
+## Current #402 risk-content review checkpoint: November 5, 2026
+
+[New exact-source evidence](registry/security/q8-two-incomplete-dss-and-student-privacy-static-dispositions-20261105.json) ([findings](docs/reviews/2026-11-05-issue402-dss-and-submission-two.md)) adds full static reviews for SG DSS Accessibility and Submission Auditor, both 15/20 and unchanged-use held. The first cannot establish current government compliance or reproduction rights from dated/embedded control text; the second requires explicit student-data scope, untrusted-document instruction separation and professor acceptance before releasing any report. **Current total 18/40 historically flagged Q8 source packages: 7/7 FAILED plus 11/33 INCOMPLETE; 22 incomplete remain.** Historical scanner counts 10 PASS / 7 FAIL / 33 INCOMPLETE, no new scans or behavior tests, no current operational approvals. [README graphic](docs/assets/q8-direct-static-risk-review-progress.svg) now uses six exact review ledgers via a manifest without hardcoded reviewed counts.
+
+## Earlier #402 9/33 incomplete-source checkpoint: November 5, 2026
 
 **Completed:** [three full pinned static source reviews](registry/security/q8-three-incomplete-execution-and-rights-static-dispositions-20261105.json), with [source-specific risks](docs/reviews/2026-11-05-issue402-execution-and-rights-three.md): Audio Mastering data-preservation/verdict defects (10/20), Verify Agent Action evaluator execution contradiction (15/20), and Shopify Review Triage copied external guide rights ambiguity (16/20). Latest current totals **7/7 historical FAILED + 9/33 historical INCOMPLETE = 16/40**, leaving **24** in the current Q8 incomplete content set. Old SkillSpector results remain 10/7/33; no new scans, behavior tests, installations, copying-rights clearances or unchanged-use approvals. [Current README SVG](docs/assets/q8-direct-static-risk-review-progress.svg) is computed from a stable five-ledger manifest and validated against source Git blobs, package trees, original scanner receipt digests and ten-axis rubric sums. Broader #402 remains open.
 

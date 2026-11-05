@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "kind": "q8-two-incomplete-dss-and-student-privacy-static-dispositions",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 2,
+    "incomplete_reviewed_to_date": 11,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 22,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 18,
+    "flagged_total": 40,
+    "owned_files_reviewed": 14,
+    "upstream_shared_references_read": 3,
+    "root_licenses_read": 2,
+    "behavioral_tests": 0,
+    "new_scans": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Two current pinned complete packages (6 government DSS files and 8 student audit files), three source-pinned cross-package shared governance/pedagogy references and two root MIT licenses read as passive content; no live government verification, platform test, file submission, network or model agent operation.",
+  "records": [
+    {
+      "id": "kyleoliveiro-sg-gov-skills/sg-gov-dss-accessibility",
+      "source": {
+        "repository": "kyleoliveiro/sg-gov-skills",
+        "pin": "16892fc613263c3f835457cd23ae092d404979ca",
+        "upstream_head_checked": "16892fc613263c3f835457cd23ae092d404979ca",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/sg-gov-dss-accessibility",
+        "complete_package_git_tree_sha": "d616f58c9079b3b78a3e367873b2d3e7982c5d3a",
+        "skill_md_git_blob_sha": "ec0e8e20c2dce3f941395eb4eabb452a49b40da6"
+      },
+      "owned_files": {
+        "SKILL.md": "ec0e8e20c2dce3f941395eb4eabb452a49b40da6",
+        "references/wcag-controls.md": "e38b3eec5d8dfcfbedf1bca910faf747d8c3a545",
+        "evals/evals.json": "9179895a9d59417a94ee6f37602e16cb00d30635",
+        "evals/trigger-evals.json": "8d26d4bb3a9087979897eef72b4c0590f36978f5",
+        "evals/files/status.html": "3376fcfded1f0eec399aeccb7bb2ec55d0d12e28",
+        "evals/files/application-flow.html": "ef49ead71db1c4b6b3f1fca88b065ca6f950c67e"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root repository LICENSE",
+        "git_blob_sha": "4c827fc32ce43ebdadc16de241277918e2690113",
+        "obligations": "Source-authored code MIT, but copied/embedded government controls may require independent rights and current official-source verification; do not infer government grant from MIT label."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "AR2",
+          "P3"
+        ],
+        "reasons": {
+          "reference_missing": 1
+        },
+        "interpretation": "Scanner P3 matched a bundled eval test case about an authorized timeout warning modal. No actual outbound request or exfiltration was executed; historical INCOMPLETE and finding labels remain.",
+        "report_sha256": "57a033ef217c26e3cf87c642b9a3cdae822722dd0538687a4fe88f2d0a377459"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "authoritative-standard-freshness",
+          "evidence": "SKILL.md:Source and currency; references/wcag-controls.md:1-45",
+          "finding": "The package embeds dated 2026-07-16 government DSS text and inferred WCAG control mappings, including a traffic-tier decision. Its own guidance says verify live official standards, but no fresh official government verification is part of this pinned static review; do not certify a current government site's compliance from this package alone."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "government-control-rights",
+          "evidence": "references/wcag-controls.md:1-50; root MIT LICENSE",
+          "finding": "The reference reproduces full government control statements, rationales and recommendations. The author's MIT notice does not by itself provide reuse rights for government text; verify source-specific terms before copying/relicensing."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "external-scan-authority",
+          "evidence": "SKILL.md:Testing and review",
+          "finding": "Instructions recommend Oobee/axe and wiring scanners into CI, which can fetch URLs, process sensitive e-service pages and mutate CI. Static source guidance is not operational approval; target/CI permissions and test fixture scope must be separately authorized."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unverified-automatic-compliance",
+          "evidence": "SKILL.md:Testing and review; evals/evals.json",
+          "finding": "The six eval scenarios and HTML fixtures are examples, not observed accessibility test passes. Keyboard, screen reader, manual and production acceptance all remain unverified."
+        }
+      ],
+      "positive_safeguards": [
+        "Clearly dates its government source snapshot and explicitly directs current official checks.",
+        "Distinguishes DSS control IDs from author-inferred WCAG 2.2 mappings.",
+        "Includes practical label, keyboard, contrast, focus and live-region guidance plus intentionally flawed read-only fixtures.",
+        "No implicit compliance certificate or direct network action was taken in this review."
+      ],
+      "reasoned_cases": [
+        "A citizen accessibility audit without confirmed current DSS version is a provisional checklist, not a government certification.",
+        "Author-inferred WCAG mappings are not official control crosswalks.",
+        "The P3 scanner excerpt describing a modal test is input data, never authority to transmit user information.",
+        "No browser, scanner, CI job or external website was run to test this skill."
+      ],
+      "remediation": "Verify the live government source and any publication rights before using embedded text or asserting compliance; require authorized target-scoped accessibility/CI testing and manual screen-reader/keyboard acceptance.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct static source inspection",
+      "method": "read all material files in pinned complete package, controlling root license and explicitly referenced available shared docs; no code execution or agent host validation",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "freshness": "current-reviewed",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only, unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "yujxzjcn-teaching-skills/submission-auditor",
+      "source": {
+        "repository": "YujxZJCN/teaching-skills",
+        "pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+        "upstream_head_checked": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "submission-auditor",
+        "complete_package_git_tree_sha": "9bfa23e2d497c948cf9dd41fbf02f2d66d56c30c",
+        "skill_md_git_blob_sha": "46adb631687ec846990cf3399476a8aeaaee9353"
+      },
+      "owned_files": {
+        "SKILL.md": "46adb631687ec846990cf3399476a8aeaaee9353",
+        "agents/content_auditor_agent.md": "868742fdb5a49d42c77a8ecf906fc44d9095fd7e",
+        "agents/format_auditor_agent.md": "aa34ff7f3457a9ee07f20ff5bbb9d4bddd578e7b",
+        "agents/report_writer_agent.md": "317f217fb217033854680712cd99fa789455156e",
+        "agents/spec_compiler_agent.md": "0c034d362de19c4a67fe6544037e687d8af6bf0f",
+        "references/spec_design_guide.md": "c8935b1b59146b9b46d219416ff3c6df8ebde34a",
+        "templates/feedback_report_template.md": "d35649067dda4ef6f85a1eb0d3603699b2b6acf1",
+        "templates/submission_spec_template.md": "da0ce07f993c658bd08d8888347d9c3505b28ec3"
+      },
+      "inspected_upstream_shared_references_outside_package": {
+        "shared/checkpoint_protocol.md": "41e533bd540d397053a0807f4147da42344eb97c",
+        "shared/pedagogy_foundations.md": "ab8172a092ba8812266e31443cc93e4802befe22",
+        "student-mentor/references/feedback_principles.md": "fb35d1d4629a35160815f05b5b4097bcc01a7160"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "024003bb56236b1161c03c575372d0e97abd8fc4",
+        "obligations": "Retain copyright 2026 Jiaxing Yu and complete MIT permission notice on protected source copying"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [],
+        "reasons": {
+          "reference_missing": 8
+        },
+        "interpretation": "The shared checkpoint and student-mentor references exist in the pinned upstream repository outside this skill's package tree; this corrects the assumption they are all absent, but does not erase the original scanner scope INCOMPLETE.",
+        "report_sha256": "2c4feae7328bc956e2a36e4c76ebcc032861f8b7a4a9da2ab4005ee8de4fe3b7"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "student-data-privacy-and-host-egress",
+          "evidence": "SKILL.md:Iron Rule 6 and batch-audit; agents/content_auditor_agent.md:Procedure",
+          "finding": "The pipeline processes identifiable academic assignments and quotes portions of student content. Pseudonymization is only 'where feasible', without an enforceable institutional permission, storage/retention, model-provider egress or cross-student isolation rule. Student reports must stay private drafts pending legitimate instructor authority."
+        },
+        {
+          "severity": "HIGH",
+          "type": "untrusted-submission-instruction-boundary",
+          "evidence": "SKILL.md:Workflow; agents/format_auditor_agent.md:Load submission; agents/content_auditor_agent.md:Procedure",
+          "finding": "The workflow asks four agents to read professor templates, exemplars and student submissions but never explicitly classifies those contents as untrusted data that cannot override grading/publishing rules or trigger tools. An instruction embedded in a submission must not govern the agent."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "external-shared-governance-scope",
+          "evidence": "SKILL.md:Iron Rule 4 and references; shared/checkpoint_protocol.md",
+          "finding": "The human approval protocol exists at pinned repo root but lies outside the exact reviewed package tree. It must be included/identity-pinned if the package is distributed standalone; no permission is inherited by uninspected sibling skills."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unobserved-batch-fairness",
+          "evidence": "agents/report_writer_agent.md:Phase 1; SKILL.md:Iron Rule 5",
+          "finding": "The source requires batch-wide fairness and human sampling, but no execution, inter-reviewer calibration or empirical drift tests happened. The procedure is not sufficient to claim objective grading consistency."
+        }
+      ],
+      "positive_safeguards": [
+        "Forbids grading/marks by default, publishing and messaging students autonomously.",
+        "Requires a confirmed professor-issued spec and located evidence for each finding, and distinguishes judgment from deterministic checks.",
+        "Human checkpoint applies before person-affecting release; shared checkpoint protocol exists and was read as source data.",
+        "Formats class-level aggregate patterns without students' identifiers."
+      ],
+      "reasoned_cases": [
+        "A malicious text in a student's PDF telling the agent to publish grades must remain evidence data, not an instruction.",
+        "A professor's claimed template conflicts with the student-visible rubric: ask for clarification before auditing.",
+        "A submission from an unauthorized institution is not automatically approved for transmission to a model host.",
+        "A batch fairness pass described in instructions is not proof it occurred."
+      ],
+      "remediation": "Add mandatory institutional privacy/retention/host-egress authorization and redact before model processing, explicit prompt-injection isolation for student files, package or bind external checkpoint protocol at exact source version, and require professor-confirmed sample audit before any person-facing publication.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct static source inspection",
+      "method": "read all material files in pinned complete package, controlling root license and explicitly referenced available shared docs; no code execution or agent host validation",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "freshness": "current-reviewed",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only, unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    }
+  ]
+}
