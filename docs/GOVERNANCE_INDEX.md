@@ -1,5 +1,7 @@
 # Governance Index
 
+**Effective 2026-11-05:** The [owner-directed static content review and freshness policy](static-review-and-freshness.md) makes exact-version ChatGPT/maintainer review, with stale-on-change tracking, the primary gate for this passive library. Scanner/host execution evidence is optional and separately reported, not a universal PR-merge prerequisite. Active effects and user permissions remain separately guarded.
+
 **Last reviewed:** 2026-11-03 (current passive consumer boundary, authority taxonomy, and documented maintenance-only reporting tools; source/capability counts remain tied to merged main)
 
 This file maps the current control surfaces for `skillz`.
@@ -101,9 +103,9 @@ These establish a separate package-security dimension. Security scanning does no
 | Exact-version security records | `registry/security/` | persisted package-bound security evidence and finding dispositions |
 | Historical maintainer CI | Git history | former workflow evidence only; no live repository-owned CI |
 
-Semantic `verified` or `validated` state never implies a security pass. For scanner-compatible packages, new unchanged admission or refresh eligibility requires security `passed` or `findings-reviewed`. Existing historical semantic reviews remain valid as semantic evidence but must not be relabeled as security-reviewed without an actual qualifying scan.
+Exact-version `verified`/ `validated` quality never implies a scanner or behavior PASS. A scanner is optional for passive source review; credible known findings still require disposition before recommending unchanged use. Historical scans remain bound to their exact trees; changed tracked packages require new content review.
 
-Security analysis is performed in a separately authorized external host environment. The repository records exact-version scanner identity, completeness, findings and dispositions without running a workflow.
+Content/security analysis is performed through static reading of source and required package files in a reviewing ChatGPT/maintainer session. Optional external scans or observed host behavior require separate authority and must never be invented.
 
 ## Tier 5: passive catalog and browsing surfaces
 
@@ -172,6 +174,6 @@ When a current control surface changes:
 7. treat any current claim that normal consumers require repository runtime, CI, scanners, scripts, tests, schedulers, monitors, crawlers, installers, synchronizers, or background services as architecture/documentation drift; active evidence collection belongs to the external host, never repository-owned automation;
 8. treat any normal-use instruction that makes `skillz` the destination for a user-derived skill, or implies that `CREATE` means repository admission, as architecture/documentation drift;
 9. treat any governed user-facing skill lacking truthful provenance evidence as corpus-completeness drift;
-10. treat any newly discovered third-party candidate persisted before issue-scoped source/evidence review, applicable exact-version security scanning, and a justified admission decision as admission-process drift;
+10. treat any newly discovered third-party candidate persisted before issue-scoped complete content/rights/authority review and a justified admission decision as admission-process drift; preserve optional scanner states separately;
 11. treat any discovery-surface score, verification label, creator attribution, or recommendation copied into governed provenance/quality evidence without independent canonical-source verification as evidence-process drift;
 12. treat unnecessary re-review of historically reviewed exact material, when compatible prior evidence can be recovered, as curation-process drift.

@@ -1,5 +1,7 @@
 # Skill Companion Metadata Contract
 
+**Current-review contract:** [Static review and freshness](static-review-and-freshness.md) distinguishes exact reviewed blob/tree and original review date from a later hash-check date. A materially changed tracked package is `needs-re-review` until inspected; retain its earlier review as historical evidence. Never infer scanner PASS or behavioral validation from textual review.
+
 `skillz` uses companion metadata so an agent can reason about skills without pretending that source branding, popularity, physical presence, or familiarity proves identity or quality.
 
 The contract separates **provenance and operational facts**, **exact-version quality evidence**, and **source-level context**.

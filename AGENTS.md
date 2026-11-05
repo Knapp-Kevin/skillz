@@ -1,5 +1,7 @@
 # Agent Entry Contract
 
+**Exact content review (2026-11-05):** [Static review and freshness](docs/static-review-and-freshness.md) is the primary gate for passive instructions. Date and fingerprint the actual inspected package; retain prior reviewed revisions, flag changed current content `needs-re-review`, and do not claim external scanners or host tests were run. Tool commands, account access, installation, scheduling and side effects still require their own authority.
+
 `skillz` is an entirely passive skill library, source registry, review corpus, and instruction set. The external host agent performs all active work; it may deposit authorized review evidence here without introducing repository-owned automation.
 
 **Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** A generic “look at this repository” request uses [agent value discovery](docs/agent-value-discovery.md) and the host agent's own accessible memory/relevant task history to assess the user's recurring needs before deciding whether a full personal bootstrap is warranted. `skillz` does not process that memory. External connector access and skill installation remain subject to their own permissions.

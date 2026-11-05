@@ -1,5 +1,7 @@
 # Skill Curation Policy
 
+**Review currency:** [Static content review and changed-version lifecycle](static-review-and-freshness.md) is authoritative as of 2026-11-05. External scanners and observed host behavior are optional independent evidence, not universal preconditions to reviewing or publishing passive text.
+
 `skillz` is a library and reference corpus, not a dump and not a popularity contest.
 
 The repository deliberately separates **availability**, **provenance**, **individual characterization**, **semantic verification**, **package-security evidence**, **representative external behavioral/adversarial validation**, and **source context**. Those concepts must never collapse into one vague word such as "curated."
@@ -32,11 +34,11 @@ A skill is part of the governed individual surface only when the available evide
 6. controlled metadata tags;
 7. exact content fingerprint when establishable;
 8. an individual structured semantic review with a decisive quality state;
-9. applicable exact-version package-security evidence with a decisive security state.
+9. truthful disclosure of any optional exact-version scanner evidence and all known material content/authority findings.
 
 These requirements apply to existing and future governed user-facing skills. First-party authorship does not waive provenance; it changes what truthful provenance looks like.
 
-Only semantically `verified` or `validated` records with applicable security state `passed` or explicitly `findings-reviewed` are eligible for new unchanged third-party consideration. Eligibility is still not a command to reuse. User fit and current operational constraints decide the result.
+Only current exact-package `verified` or `validated` records without unresolved material safety findings are eligible for unchanged third-party consideration. Scanner execution is optional. Licensing, dependencies, user/host authority and operational fit still decide suitability; consideration is never permission to execute.
 
 This separation lets the repository remain broad without falsely asserting that hundreds of pinned upstream files have been individually proven.
 
@@ -46,7 +48,7 @@ This separation lets the repository remain broad without falsely asserting that 
 2. **Provenance:** Where did it come from, under what terms, and what exact source version was inspected?
 3. **Characterized:** What does it do, what assumptions does it carry, and what controlled tags describe it?
 4. **Verified:** Did this exact identity pass the structured semantic gate?
-5. **Package security:** Did an exact-version scanner establish complete coverage, and what findings or residual risk remain?
+5. **Content security:** Did a reviewer inspect the exact text and supporting files for dangerous instructions and unresolved risks? Record independent scanner evidence separately, if any.
 6. **Validated:** Did an authorized external host actually exercise representative trigger, non-trigger, and adversarial scenarios, preserve observations, and resolve material failures? Static readings alone remain semantic verification.
 7. **Source context:** What objective, dated evidence exists about source maintenance or visibility?
 
@@ -60,7 +62,7 @@ Source identity does not establish individual skill quality.
 - missing individual verification record -> reference/design evidence only;
 - `unverified` -> design evidence only;
 - legacy `trusted-baseline` -> design evidence only until individual structured review;
-- `verified` -> semantic quality eligible, but unchanged consideration still requires applicable package-security evidence plus identity and operational fit;
+- `verified` -> semantic quality eligible for consideration, but exact current identity, licensing, known risks, authority and operational fit still govern; scanner status remains separately visible;
 - `validated` -> verified exact material plus actual representative external behavioral/adversarial evidence; static scenario inspection alone is not behavioral validation, and package-security state remains separate;
 - `stale`, `rejected`, `retired` -> excluded from normal unchanged selection.
 
@@ -115,7 +117,7 @@ If the canonical fingerprint changes, treat the prior assessment as operationall
 
 ## Security evidence
 
-For scanner-compatible packages, exact-version package-security evidence is governed by [`security-scanning.md`](security-scanning.md) and persisted under `registry/security/`. Semantic verification never implies a security pass. Security `not-run`, `failed`, `incomplete`, or `stale` blocks new unchanged admission/refresh; `passed` or explicitly `findings-reviewed` satisfies only the package-security dimension.
+Optional scanner evidence remains governed by [security scanning](security-scanning.md) and persisted under `registry/security/`. Never relabel `not-run`, `incomplete` or stale previous-tree results. A missing scanner is not a blanket passive content-review blocker; credible known unsafe findings still bar unchanged-use recommendations until resolved.
 
 ## Candidate admission standard
 
@@ -124,7 +126,7 @@ Newly discovered third-party candidates are evaluated issue-first under [`candid
 This does not weaken the metadata standard. It means:
 
 - before admission, evidence lives on the candidate issue;
-- after admission, the exact admitted identity must have finalized provenance, verification, and applicable security evidence;
+- after admission, the exact admitted identity must have finalized provenance and exact-version static review, with truthful separate scanner/behavior fields;
 - rejected/reference-only candidates remain outside governed inventory unless the decision explicitly requires passive metadata for reference tracking.
 
 ## Component reuse and adaptation
@@ -187,7 +189,7 @@ When intentionally refreshing a reviewed skill:
 4. invalidate prior exact-version evidence when material content changed;
 5. re-check dependencies, licensing, scope, authority, and portability;
 6. repeat structured semantic verification when required;
-7. rerun applicable exact-version package-security scanning when package identity or relevant executable/supporting content changed;
+7. re-review changed package content and relevant supporting files, retaining prior scanner evidence for its exact original tree; optionally rerun a scanner if risk justifies it;
 8. refresh static scenario/adversarial semantic inspection as needed, and repeat actual external behavioral/adversarial evaluation before carrying forward a previous `validated` claim;
 9. update controlled tags when behavior changed;
 10. preserve prior history through Git.
@@ -198,9 +200,9 @@ No registered source is auto-upgraded merely because a newer commit exists.
 
 Use this order:
 
-**user fit -> exact-version quality -> operational fit (including applicable package-security gate) -> skill freshness -> provenance/source context**
+**user fit -> exact-version quality and content safety -> operational authority/rights fit -> freshness -> provenance/source context -> optional scanner/behavior evidence**
 
-For unchanged third-party reuse, `verified` and `validated` are the only current eligible semantic quality states, and scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed`.
+For unchanged third-party reuse, `verified` and `validated` are the eligible current semantic quality states, subject to known-risk remediation, rights and permission boundaries. A scanner PASS is not a blanket prerequisite for static content review.
 
 Popularity and official branding are discovery/provenance signals, not competence certificates.
 
