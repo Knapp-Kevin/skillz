@@ -95,6 +95,20 @@ The repository owns no CI workflow, runner, script, scheduled job or scanner pro
 
 A qualifying static assessment uses no LLM credentials, fails closed on active findings or incomplete analysis, and does not disclose private content or credentials to third parties without explicit authority. Host-generated reports are evidence only; do not imply a scan ran unless the host actually executed it. Historical CI results may be retained as dated evidence of their scanned versions, not as a current repository automation requirement.
 
+## Package boundaries and incomplete engine references
+
+Do not treat a repository-relative reference as if it were automatically bundled or scanned inside an engine skill. The [51-package first-party matrix](../registry/security/first-party-51-exact-package-security-coverage-20261104.json) reports **five engine procedures with incomplete historical scans**; the [exact reference-closure manifest](../registry/security/engine-five-reference-closure-20261104.json) pins **21 existing repository objects** at the reported missing-reference lines. Existing at the repository root **does not mean inspected** in an individual one-file engine package.
+
+When an external scanner reports `reference_missing`, `referenced_uninspected` or `static_parse_limit`:
+
+1. Identify the original complete package Git tree and the scanner's exact line, reference, analyzer and coverage exception.
+2. Resolve a repo-root target only at an exact pinned revision. Distinguish actual files, directories, and instructional placeholders. Never follow a referenced path into an unapproved private host directory or remote account.
+3. Determine whether the registered scanner's supported transitive/dependency mode can inspect all required references without changing the package being asserted. Record every target identity and observed coverage; do not equate a separately materialized closure bundle's tree with the original package's tree.
+4. Reproduce parser/analysis limits on the same exact source before changing instructions or considering an updated scanner. A newer upstream fix is a hypothesis until it reproduces; changes to the canonical scanner version require owner-reviewed governance.
+5. Retain `incomplete` until a real authorized rerun passes both findings and completeness gates, with a report digest, exact root/closure identities, reviewed exceptions and independent behavioral acceptance where required.
+
+For `engine/skills/skill-eval`, the historical pinned tool reported `static_patterns_tool_misuse` / `static_parse_limit` with **zero fully inspected files**. Reference existence alone cannot clear that failure. Do not change meaningful source instructions merely to silence a parser. The repo still owns no scanner runtime or CI.
+
 Optional LLM-backed analysis requires separate authorization for any external data transmission.
 
 ## Backfill
