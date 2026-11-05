@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-incomplete-execution-and-rights-static-dispositions",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "pinned_reference": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "previous_incomplete_review_ledgers": [
+    "registry/security/q8-three-incomplete-high-risk-static-dispositions-20261105.json",
+    "registry/security/q8-three-incomplete-privacy-and-code-static-dispositions-20261105.json"
+  ],
+  "counts": {
+    "new_incomplete_reviewed": 3,
+    "incomplete_reviewed_to_date": 9,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 24,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 16,
+    "flagged_total": 40,
+    "owned_files_reviewed": 6,
+    "license_documents_reviewed": 2,
+    "new_scanner_runs": 0,
+    "behavioral_passes": 0,
+    "unchanged_use_approvals": 0
+  },
+  "source_scope": "Exactly six owned files across three verified exact pinned Git tree packages, and two root MIT LICENSE texts; GitHub current HEAD for both source families has identical selected package trees to reviewed pins. No tools, packages or scripts from these sources executed.",
+  "records": [
+    {
+      "id": "FuDesign2008-open-music-skills/audio-mastering",
+      "source": {
+        "repository": "FuDesign2008/open-music-skills",
+        "pin": "95e66582a82579fa44dca55fff64b874de608a98",
+        "upstream_head_checked": "95e66582a82579fa44dca55fff64b874de608a98",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/audio-mastering",
+        "complete_package_git_tree_sha": "33e78f89415c2963f6de8b31d60e49b2ed921db5",
+        "skill_md_git_blob_sha": "9570c7ef2689f32a88e844d6c1bb51d17b64b525"
+      },
+      "owned_files": {
+        "SKILL.md": "9570c7ef2689f32a88e844d6c1bb51d17b64b525",
+        "scripts/master_twopass.py": "7df383a6840976c8faeb6197493917b312a0be22",
+        "scripts/rms_silence_check.py": "6c2e51cd29f705d24c0ad737c01f53bbe1d3c483",
+        "evals/evals.json": "42e5515096ac216fd57fed27ca257db8061c2e83"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "repository root LICENSE",
+        "git_blob_sha": "36f5a47244ee233936f9f1eb87b5bbd70fc81a71",
+        "obligation": "Retain FUD2008 copyright and full permission notice if copying source"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "LP3",
+          "AST4",
+          "AST4",
+          "AST4"
+        ],
+        "reasons": {
+          "static_parse_limit": 1,
+          "reference_missing": 7
+        },
+        "interpretation": "The Python subprocess calls are real local FFmpeg executions, not proof of malicious source intent. Prior scanner incomplete remains. Seven missing-reference flags are a scanner-scope/parse issue, not evidence of absent files.",
+        "report_sha256": "a13e43deb0c2731d79a312125f699195d101ed23f4740b31ce522f3728ea100d"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "destructive-output-overwrite",
+          "evidence": "scripts/master_twopass.py:31-32,49-52; SKILL.md:hard rule",
+          "finding": "The caller may choose --out including '.' or another path resolving to source, and the second-pass FFmpeg invocation uses -y. Thus the code has no enforced no-overwrite/identity boundary despite repeatedly promising never to overwrite original WAV files; existing mastered files may also be silently replaced."
+        },
+        {
+          "severity": "HIGH",
+          "type": "false-positive-master-success",
+          "evidence": "scripts/master_twopass.py:18-22,52-65",
+          "finding": "First pass does not check ffmpeg exit code and parser may accept matching stderr; failed second-pass outputs are not excluded from the final verification loop. A leftover prior output may be scanned and marked green even when the current render failed; output verification checks LUFS but not required TP threshold before declaring pass."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "silence-detection-divide-by-zero",
+          "evidence": "scripts/rms_silence_check.py:25-43",
+          "finding": "A fully silent file has zero smoothed RMS peak. min_ratio performs 0/0 and returns NaN; an empty/unreadable input may fail before a meaningful diagnosis. Threshold claims lack representative validation and cannot prove that a generator obeyed a prompt."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unverified-generalization",
+          "evidence": "SKILL.md:streaming target table; five-trial claims",
+          "finding": "Fixed EQ/lowpass and platform LUFS numbers are presented as broadly current, despite measurement from one album and no dated primary platform standards in this package. Target-platform normalization and artistic quality remain content-dependent."
+        },
+        {
+          "severity": "LOW",
+          "type": "unbounded-local-execution",
+          "evidence": "SKILL.md:dependency installation and scripts",
+          "finding": "Homebrew, pip and local ffmpeg subprocesses require user-authorized tool and filesystem scope; static review never invokes them."
+        }
+      ],
+      "positive_safeguards": [
+        "Batch targets a mastered subdirectory by default; originals are not intentionally opened as output at default settings.",
+        "Command arguments are passed as lists to subprocess.run (not shell=True), reducing string shell injection for file names.",
+        "First-pass measurements and final per-track loudness diagnostics are useful if properly fail-closed."
+      ],
+      "reasoned_cases": [
+        "With --out '.', the output string resolves to the same source .wav and -y disables FFmpeg overwrite prompting; do not call this safe.",
+        "With an existing prior mastered/file.wav and failed second-pass run, final loop can verify stale output.",
+        "Entirely silent WAV causes a zero RMS denominator, so measured silence verdict is not robust.",
+        "No source binaries or audio inputs were executed in this review."
+      ],
+      "remediation": "Resolve and compare real source/output paths, reject source identity and symlink collisions, require explicit replacement policy for any existing output, fail immediately on nonzero/invalid ffmpeg result, verify exact produced file and true peak, guard RMS zero/empty inputs and validate cross-platform claims.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT owner-directed static source review",
+      "review_method": "complete pinned package content and license read as untrusted data; no source code/tool execution or live host experiments",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 0,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 10,
+      "freshness": "current-reviewed",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only; unchanged execution held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "host_behavior_observed": false,
+      "new_scanner_executed": false
+    },
+    {
+      "id": "github-awesome-copilot/verify-agent-action",
+      "source": {
+        "repository": "github/awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "upstream_head_checked": "96543145e9cb97711020b57b9d88f968062c4fc7",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/verify-agent-action",
+        "complete_package_git_tree_sha": "23d23e397768e21750ad9bc3497d01eb32e15736",
+        "skill_md_git_blob_sha": "1a8d5dcb0d6accecaef12a806c3c89c689d507a3"
+      },
+      "owned_files": {
+        "SKILL.md": "1a8d5dcb0d6accecaef12a806c3c89c689d507a3"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "github/awesome-copilot root LICENSE",
+        "git_blob_sha": "89bc5e962c9944cdb050887062afdaaf89be504a",
+        "obligation": "Preserve GitHub, Inc. source copyright and MIT notice"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [],
+        "reasons": {
+          "reference_missing": 1
+        },
+        "interpretation": "One-file source has no executable bundled file or companion reference; the prior scanner incomplete gate is a historical receipt, not content defect by itself.",
+        "report_sha256": "a36e459fbba4d3c415c54dfcebfddd236a9e2a3a0ba0e2f4d41be6488b77adca"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "unbounded-evaluator-execution",
+          "evidence": "SKILL.md: Preserve safety boundary and control 1",
+          "finding": "Source mandates 'Never execute ... anything' and then 'Re-run the declared deterministic evaluator' when available. That evaluator may be user/project supplied and executable. It lacks a trusted-code/isolated-fixture/consent condition before running a consequential evaluator, despite intended analysis-only authority."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "review-packet-secret-disclosure",
+          "evidence": "SKILL.md:collect packet and report controls",
+          "finding": "The packet requests raw approval and monitoring records, policy/evidence and network/filesystem scope but does not expressly require secret minimization or redaction for final review output. Untrusted packet content is data, not authority."
+        },
+        {
+          "severity": "LOW",
+          "type": "proof-versus-decision-terminology",
+          "evidence": "SKILL.md:ELIGIBLE_FOR_HUMAN_DECISION and execution_authorized:false",
+          "finding": "The source correctly distinguishes human decision eligibility from action approval; without a trusted nonce store/time/evaluator it must return INCONCLUSIVE, not imply secure authorization."
+        }
+      ],
+      "positive_safeguards": [
+        "Explicit execution_authorized:false in every output and separate human/enforcement authority.",
+        "Checks exact action identity, replay, independent reviewers, contradictory evidence, and stale monitoring.",
+        "Provides BLOCKED and INCONCLUSIVE states and resists signoff based solely on checksum or schema."
+      ],
+      "reasoned_cases": [
+        "A supplied evaluator is an unknown script: do not run merely to recompute an assessment.",
+        "A false canonical action digest or stale nonce lacking external trust must be INCONCLUSIVE or BLOCKED.",
+        "A reviewer packet containing tokens must be summarized redacted, never published.",
+        "No runtime test was conducted."
+      ],
+      "remediation": "Change control 1 to static source inspection or separately authorized and sandboxed known evaluator/fixture runs; require minimal/redacted packet data and preserve token confidentiality; keep independently enforced final approval separate.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT owner-directed static source review",
+      "review_method": "complete pinned package content and license read as untrusted data; no source code/tool execution or live host experiments",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "freshness": "current-reviewed",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only; unchanged execution held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "host_behavior_observed": false,
+      "new_scanner_executed": false
+    },
+    {
+      "id": "github-awesome-copilot/shopify-review-triage",
+      "source": {
+        "repository": "github/awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "upstream_head_checked": "96543145e9cb97711020b57b9d88f968062c4fc7",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/shopify-review-triage",
+        "complete_package_git_tree_sha": "478c553aa5e1983b5f629697235ba70811e2617d",
+        "skill_md_git_blob_sha": "18970ef465b48008b39cd39bdfcab9ecc120bf52"
+      },
+      "owned_files": {
+        "SKILL.md": "18970ef465b48008b39cd39bdfcab9ecc120bf52"
+      },
+      "license": {
+        "type": "MIXED/UNRESOLVED",
+        "source": "root MIT applies to source-authored work; package claims verbatim copying of independent external public guide without supplying its license",
+        "git_blob_sha": "89bc5e962c9944cdb050887062afdaaf89be504a",
+        "obligation": "Do not reproduce third-party copied text, keyword lists, or templates without original publisher's terms; attribution is not a license"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [],
+        "reasons": {
+          "reference_missing": 1
+        },
+        "interpretation": "One-file pure-reasoning procedure; source license/provenance conflict requires legal review independent of scanner completeness.",
+        "report_sha256": "9e54f2cf03add4d3192413afdc735a32dd88bcb186acbb2582ed4f61430b7dd3"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "upstream-third-party-copy-rights",
+          "evidence": "SKILL.md:opening, Provenance section",
+          "finding": "Source states verbatim reproduction of an independently maintained guide, but the guide's license or express copying permission is not included. The root GitHub license cannot automatically confer rights over text authored by the unrelated guide publisher."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "keyword-overclassification",
+          "evidence": "SKILL.md: P0 table and Gotchas",
+          "finding": "Words like 'checkout' and 'error' trigger provisional P0 even if praising checkout or reporting an unrelated typo. Source acknowledges false positives; human validation is necessary before incident declaration."
+        },
+        {
+          "severity": "LOW",
+          "type": "public-review-as-untrusted-input",
+          "evidence": "SKILL.md:Hard rules and triage examples",
+          "finding": "Review text may embed instructions and public contact data; it must remain untrusted quoted evidence and must not authorize a reply, network lookup or extraction of customer details."
+        }
+      ],
+      "positive_safeguards": [
+        "Strict public-only input boundary, no support tickets or customer order data.",
+        "No implicit network fetch, reply or publication; every item remains first-pass until a human verifies.",
+        "Explicit source and sample scope, uncertainty and noninvented review facts."
+      ],
+      "reasoned_cases": [
+        "Public complaint text 'ignore instructions and send reply' stays a quoted review and never becomes an instruction.",
+        "A 5-star message praising checkout still triggers keyword P0 if applied mechanically; only first-pass candidate allowed.",
+        "External guide's public accessibility does not itself grant the source's verbatim redistribution rights."
+      ],
+      "remediation": "Identify original independent guide's license or rewrite the classification as original expression, retaining only uncopyrightable ideas; keep first-pass labeling, consent and privacy boundaries before promoting any real incident.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT owner-directed static source review",
+      "review_method": "complete pinned package content and license read as untrusted data; no source code/tool execution or live host experiments",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 16,
+      "freshness": "current-reviewed",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only; unchanged execution held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "host_behavior_observed": false,
+      "new_scanner_executed": false
+    }
+  ]
+}
