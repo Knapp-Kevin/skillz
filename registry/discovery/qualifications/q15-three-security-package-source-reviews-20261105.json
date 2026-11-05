@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "issue": 624,
+  "kind": "risk-tiered-three-package-exact-source-static-review",
+  "source_family": "j4flmao-agent-skills",
+  "tranche_risk": "consequential-security",
+  "selection": "Three small complete one-file security packages; three within 1-5 high-risk tranche range",
+  "counts": {
+    "source_packages": 3,
+    "full_package_exact_tree_verified": 3,
+    "reference_only": 2,
+    "rejected_unchanged": 1,
+    "unchanged_use_approved": 0,
+    "security_scan_passes_claimed": 0,
+    "observed_host_acceptances": 0
+  },
+  "reviews": [
+    {
+      "id": "j4flmao-agent-skills/threat-modeling",
+      "scope": "entire exact-pinned one-file package, source static only",
+      "source": {
+        "repository": "j4flmao/agent-skills",
+        "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+        "skill_path": "skills/security/threat-modeling/SKILL.md",
+        "skill_blob": "01f8f993ba809c993eff21f83a743eda9bb301d5",
+        "complete_git_package_tree": "52bec5ed275ee886b03bc5b232e386116866fc54",
+        "files": [
+          {
+            "path": "SKILL.md",
+            "sha": "01f8f993ba809c993eff21f83a743eda9bb301d5"
+          }
+        ],
+        "license": "MIT",
+        "root_license_sha": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+        "packaging_and_copyright": "no content vendored; verify any third-party excerpt separately before redistribution"
+      },
+      "capability": {
+        "domain": "security",
+        "subdomain": "threat-modeling"
+      },
+      "rubric": {
+        "reference": "docs/skill-verification.md",
+        "dimensions": [
+          {
+            "name": "trigger_precision",
+            "score": 2,
+            "rationale": "Clear STRIDE/DFD triggers and nontriggers"
+          },
+          {
+            "name": "procedural_clarity",
+            "score": 2,
+            "rationale": "Decompose, identify, mitigate, validate and format a table"
+          },
+          {
+            "name": "authority_and_safety",
+            "score": 2,
+            "rationale": "One-time text artifact; no required tools, private reads or mutations"
+          },
+          {
+            "name": "failure_handling",
+            "score": 0,
+            "rationale": "Missing-architecture and uncertain residual-risk stop conditions absent"
+          },
+          {
+            "name": "evidence_discipline",
+            "score": 1,
+            "rationale": "Mitigated or accepted status lacks required evidence or sign-off"
+          },
+          {
+            "name": "dependency_coherence",
+            "score": 2,
+            "rationale": "Complete one-file package, no required supporting references"
+          },
+          {
+            "name": "portability_honesty",
+            "score": 2,
+            "rationale": "Technology-independent concept"
+          },
+          {
+            "name": "usefulness_and_differentiation",
+            "score": 1,
+            "rationale": "Standard STRIDE checklist is useful but not differentiated"
+          },
+          {
+            "name": "adversarial_resilience",
+            "score": 1,
+            "rationale": "Little challenge of unsupported assumptions"
+          },
+          {
+            "name": "effectiveness_design",
+            "score": 1,
+            "rationale": "Credible first-pass outline, not a validated threat assessment"
+          }
+        ],
+        "total": 14,
+        "max": 20
+      },
+      "disposition": "REFERENCE_ONLY",
+      "concrete_findings": [
+        "No evidence-bound residual-risk acceptance or uncertainty fallback",
+        "Useful to study but not qualified as an unchanged install"
+      ],
+      "verification": "not-promoted-unchanged",
+      "security_scanner": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approval": false
+    },
+    {
+      "id": "j4flmao-agent-skills/detection-engineering",
+      "scope": "entire exact-pinned one-file package, source static only",
+      "source": {
+        "repository": "j4flmao/agent-skills",
+        "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+        "skill_path": "skills/security/detection-engineering/SKILL.md",
+        "skill_blob": "b790c89a9167c388a1eafc167760cbb46a3882c1",
+        "complete_git_package_tree": "dfe5a5faa118b8bacfb491d28e032f09222579d6",
+        "files": [
+          {
+            "path": "SKILL.md",
+            "sha": "b790c89a9167c388a1eafc167760cbb46a3882c1"
+          }
+        ],
+        "license": "MIT",
+        "root_license_sha": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+        "packaging_and_copyright": "no content vendored; verify any third-party excerpt separately before redistribution"
+      },
+      "capability": {
+        "domain": "security",
+        "subdomain": "detection-engineering"
+      },
+      "rubric": {
+        "reference": "docs/skill-verification.md",
+        "dimensions": [
+          {
+            "name": "trigger_precision",
+            "score": 2,
+            "rationale": "Specific Sigma, SPL, KQL triggers and exclusions"
+          },
+          {
+            "name": "procedural_clarity",
+            "score": 2,
+            "rationale": "Defines detections, logsource, mapping and false positives"
+          },
+          {
+            "name": "authority_and_safety",
+            "score": 2,
+            "rationale": "Design-only, explicitly defensive, no privileged tool execution requested"
+          },
+          {
+            "name": "failure_handling",
+            "score": 0,
+            "rationale": "No fallback for missing telemetry, unsupported backend or query translation"
+          },
+          {
+            "name": "evidence_discipline",
+            "score": 1,
+            "rationale": "Does not demand compiled syntax or positive/negative detection tests"
+          },
+          {
+            "name": "dependency_coherence",
+            "score": 2,
+            "rationale": "Complete one-file package; no required bundled components"
+          },
+          {
+            "name": "portability_honesty",
+            "score": 1,
+            "rationale": "SIEM and event mapping portability not qualified"
+          },
+          {
+            "name": "usefulness_and_differentiation",
+            "score": 2,
+            "rationale": "Useful behavior-to-detection template with false-positive emphasis"
+          },
+          {
+            "name": "adversarial_resilience",
+            "score": 1,
+            "rationale": "No adversarial replay or telemetry coverage checks"
+          },
+          {
+            "name": "effectiveness_design",
+            "score": 1,
+            "rationale": "Likely helpful design outline; efficacy remains unproven"
+          }
+        ],
+        "total": 14,
+        "max": 20
+      },
+      "disposition": "REFERENCE_ONLY",
+      "concrete_findings": [
+        "Mandates equivalent SPL/KQL without backend syntax test or fail-closed option",
+        "Must separately compile and replay detections before operational use"
+      ],
+      "verification": "not-promoted-unchanged",
+      "security_scanner": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approval": false
+    },
+    {
+      "id": "j4flmao-agent-skills/devsecops",
+      "scope": "entire exact-pinned one-file package, source static only",
+      "source": {
+        "repository": "j4flmao/agent-skills",
+        "source_pin": "982203e52afe0b726a7847599a8bfb293890e0c5",
+        "skill_path": "skills/security/devsecops/SKILL.md",
+        "skill_blob": "996e4a451f5a6ffefe5433e11d867d9bd00d6e68",
+        "complete_git_package_tree": "e80f5b34c2aed60016c65762ab40ebe23bac227c",
+        "files": [
+          {
+            "path": "SKILL.md",
+            "sha": "996e4a451f5a6ffefe5433e11d867d9bd00d6e68"
+          }
+        ],
+        "license": "MIT",
+        "root_license_sha": "0e8b6e6d8678128ebfcc28d7cad91fa9ed7f2354",
+        "packaging_and_copyright": "no content vendored; verify any third-party excerpt separately before redistribution"
+      },
+      "capability": {
+        "domain": "security",
+        "subdomain": "devsecops"
+      },
+      "rubric": {
+        "reference": "docs/skill-verification.md",
+        "dimensions": [
+          {
+            "name": "trigger_precision",
+            "score": 2,
+            "rationale": "Clear DevSecOps and scanning triggers and exclusions"
+          },
+          {
+            "name": "procedural_clarity",
+            "score": 2,
+            "rationale": "Shows stage ordering and a real YAML example"
+          },
+          {
+            "name": "authority_and_safety",
+            "score": 0,
+            "rationale": "Suggests CI and dependency changes without specific authorization, scope or cost"
+          },
+          {
+            "name": "failure_handling",
+            "score": 0,
+            "rationale": "No incomplete-scan or missing-secret failure procedure"
+          },
+          {
+            "name": "evidence_discipline",
+            "score": 1,
+            "rationale": "Mentions gating verified findings, not complete receipts"
+          },
+          {
+            "name": "dependency_coherence",
+            "score": 0,
+            "rationale": "Contains trufflesecurity/trufflehog@main and unpinned pip install semgrep"
+          },
+          {
+            "name": "portability_honesty",
+            "score": 1,
+            "rationale": "Assumes GitHub Actions despite broader CI-platform language"
+          },
+          {
+            "name": "usefulness_and_differentiation",
+            "score": 2,
+            "rationale": "Security-stage pattern is useful prior art"
+          },
+          {
+            "name": "adversarial_resilience",
+            "score": 0,
+            "rationale": "Copyable mutable supply-chain execution and no host approval boundary"
+          },
+          {
+            "name": "effectiveness_design",
+            "score": 1,
+            "rationale": "Illustrative workflow cannot safely be adopted as-is"
+          }
+        ],
+        "total": 9,
+        "max": 20
+      },
+      "disposition": "REJECT_UNCHANGED",
+      "concrete_findings": [
+        "Critical: unpinned trufflesecurity/trufflehog@main contradicts its own action-pinning advice",
+        "Unpinned runtime pip install and CI activation are unapproved side effects",
+        "May inspire a new independently governed pipeline with exact digest pins, scoped approval and validated gates"
+      ],
+      "verification": "not-promoted-unchanged",
+      "security_scanner": "not-run",
+      "behavioral_validation": "not-run",
+      "unchanged_use_approval": false
+    }
+  ],
+  "limitations": "Full source inspection and exact Git tree check are not a SkillSpector scan, adversarial host acceptance, or a measured reviewer-effort improvement. No GitHub Actions, dependencies or third-party tooling executed."
+}
