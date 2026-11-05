@@ -2,6 +2,8 @@
 
 # 🛠️ skillz
 
+**Qualification update, November 5, 2026:** All 4,813 pinned discovery paths have a structural role or source-vetting disposition, and all 1,039 governed review IDs are accounted for separately. A [three-package risk-reviewed pilot](docs/reviews/2026-11-05-issue624-bounded-qualification-pilot.md) found one unsafe unchanged-use candidate; its benchmark measured faster **evidence retrieval**, not faster semantic reviewing. No new installations or approvals.
+
 **Find better skills for your AI assistant.**
 
 A skill is a set of instructions that helps an AI assistant do a task well. **Skillz is a discovery library across 33 capability domains, not merely a list of featured or approved skills.** Start with what you need to accomplish, search methods across the wider indexed research, compare evidence and rights, then decide what is useful. You can explore without installing anything.
