@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Permissions Review
   emoji: "🔐"
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # Permissions Review
@@ -21,11 +21,11 @@ An on-demand inventory of the agent fleet's blast radius: every MCP server, allo
 ## Execution Flow
 
 1. **Bind authorized scope first.** Identify which agent/workspace, configuration, logs and connected tools the operator has authorized this review to inspect. Do not broaden private-data access merely because a tool can reach it. Inventory connected MCP servers within that scope and enumerate their complete tool surfaces. Classify each tool's effects using the controlled `registry/taxonomy.yaml` authority categories: `read-only`, `generate-only`, `mutating`, or `external-side-effect`. Separately record identity/access, destructive, money/cost, production, notification, credential and sensitive-data risks. Prioritize the server by its highest-consequence capability; missing tool inventory is `unknown`, not safe.
-2. **Review permission settings.** When authorized and available, inspect the host's applicable permission settings and hooks; Claude Code `settings.json` and `settings.local.json` are examples, not mandatory dependencies. Flag broad patterns (wildcards, whole-command allowances) and hooks that execute with write or network access.
+2. **Review permission settings.** When authorized and available, inspect the host's applicable permission settings and hooks; Claude Code `settings.json` and `settings.local.json` are examples, not mandatory dependencies. Flag broad patterns (wildcards, whole-command allowances) and hooks that execute with write or network access. **Never present `Bash(git *)` as a safe narrowing of `Bash(*)`.** Git is not a read-only command family: it can modify worktrees, refs, remotes and credentials, and even nominally read-only operations can execute external helpers, hooks, pagers, aliases or filters through command-line, environment or repository configuration. For any proposed exception, identify the exact host enforcement mechanism, executable, permitted subcommands and arguments, target checkout/account, configuration and environment controls, and whether untrusted repository content can trigger a child process. A prefix-only shell matcher is not a safe allowlist. If those conditions cannot be checked independently, recommend host-native scoped metadata APIs or keep shell execution denied.
 3. **Map reachable credentials without retrieving values.** Use authorized configuration metadata and documented credential references to identify which credential classes an agent may reach. Do not open secret stores, read token values, print credential-bearing URLs, or expand access to inspect a secret. Record what each credential class unlocks, never its value.
 4. **Ask "when was this last needed?" per item.** Check only authorized transcripts, logs, or history where available; redact personal and credential-bearing content; where no evidence exists, mark last-use unknown — unknown is a finding, not a pass.
 5. **Rank findings by consequence and exposure.** Prioritize unneeded or insufficiently gated identity/access, destructive, money-bearing, production, external-send or sensitive-data capabilities; then broad allowlist patterns, credentials with no identified consumer, and stale lower-consequence permissions. An authority category is descriptive, not a permission grant or numeric trust score. Unknown last-use or tool coverage is an evidence gap, not proof of safety or automatic authority to revoke.
-6. **Recommend tightenings.** For each finding, propose the specific change: the allowlist line to narrow, the server to disconnect, the credential to scope or remove. Never apply any of them — this is a report for a human to act on.
+6. **Recommend tightenings.** For each finding, propose the specific change: a command-specific, host-enforced restriction rather than a broad binary prefix; a scoped read-only API instead of an unrestricted shell where possible; the server to disconnect; or the credential to scope or remove. If a safe host-enforced command boundary is unavailable, recommend denial and explicitly say `NOT ASSESSED` rather than issuing a misleading shell allowlist. Never apply any of them; this is a report for a human to act on.
 
 ## Optional host-managed scheduling
 
@@ -47,7 +47,7 @@ An on-demand inventory of the agent fleet's blast radius: every MCP server, allo
 1. <finding> — risk: <why it matters> — evidence: <source>
 
 ## Recommended tightenings
-- <exact change to make, e.g. narrow "Bash(*)" to "Bash(git *)">
+- <specific safe change and enforcement evidence, e.g. deny broad shell execution; permit only an approved repository metadata API with repository/account arguments constrained by the host>
 ```
 
 ## Notes
