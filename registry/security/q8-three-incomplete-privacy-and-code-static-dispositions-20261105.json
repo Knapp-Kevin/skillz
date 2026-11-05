@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-incomplete-privacy-and-code-static-dispositions",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "previous_incomplete_review_ledger": "registry/security/q8-three-incomplete-high-risk-static-dispositions-20261105.json",
+  "counts": {
+    "new_incomplete_reviewed": 3,
+    "incomplete_reviewed_to_date": 6,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 27,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 13,
+    "flagged_total": 40,
+    "source_files_inspected": 13,
+    "behavioral_tests": 0,
+    "new_scans": 0,
+    "unchanged_approved": 0
+  },
+  "review_scope": "Three complete pinned packages (7 Daily Focus Board files, 5 Build Evidence Map files, 1 Email Voice file) and controlling MIT license evidence inspected. Tool execution, HTML app execution, external network verification, mailbox access, or server startup NOT performed. Exact source trees and current upstream HEAD tree parity verified. Scores are static, not behavioral evidence.",
+  "records": [
+    {
+      "id": "github-awesome-copilot/daily-focus-board",
+      "source": {
+        "repository": "github/awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "upstream_head_checked": "96543145e9cb97711020b57b9d88f968062c4fc7",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/daily-focus-board",
+        "complete_package_git_tree_sha": "b6816f5d51874b15b852090ad9d2880515dde640",
+        "skill_md_git_blob_sha": "ca4f9c93f966bc57ba2be7418dace757c4189b4b"
+      },
+      "owned_files": {
+        "SKILL.md": "ca4f9c93f966bc57ba2be7418dace757c4189b4b",
+        "assets/board.template.html": "d39a5f5e82bf0d90ce4af0431c3b9185d2b23232",
+        "examples/sample-board.html": "89d6323a5ea393b9f46ac1626ee3b279032be55d",
+        "references/customize.md": "3bcde66d80c9a8dc3d6c26004f1685d4ab2630dc",
+        "references/neurodivergent-design.md": "11d1ecbd1e63d7408657c7ce93096cc1cc0f6bff",
+        "references/tutorial.md": "a0774cb279744e9d427a3d7d81b2f7a906e03535",
+        "scripts/serve-board.ps1": "04cb2fc67b70631a2ca3cd3b7c01b152ec177a71"
+      },
+      "license": {
+        "type": "MIT",
+        "scope": "repository root",
+        "git_blob_sha": "89bc5e962c9944cdb050887062afdaaf89be504a",
+        "obligation": "Preserve GitHub, Inc. copyright/permission notice if copying source material"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "038f9d18160a131dc526c0f8c13c7f7f956712cfe3789c03ba78f4da0e0fab76",
+        "findings": [
+          "AE1",
+          "AR2",
+          "MP3"
+        ],
+        "reasons": {
+          "reference_missing": 2,
+          "obfuscated_instruction_text": 2,
+          "static_parse_limit": 2
+        },
+        "interpretation": "The source has an actual HTML app with persistent client state; scanner alarms tied to HTML/JS must not be presumed malicious without reviewing the code. Existing historical incomplete remains."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "privacy-retention-and-shared-local-origin",
+          "evidence": "assets/board.template.html:271-274,301,389-404; SKILL.md:serve section",
+          "finding": "Sensitive notes and parked thoughts are stored indefinitely under focus-board-<date> localStorage keys and only individually deleted; no retention time, full export/delete or profile-sharing safeguards are implemented. Running a local server on a directory shared with other files also changes what localhost can serve."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "false-carry-forward-behavior",
+          "evidence": "assets/board.template.html:271,403,413; SKILL.md:carryover claims",
+          "finding": "The 'not today' flag only changes same-day state and recap text; tomorrow's new dateKey loads a different localStorage bucket, so deferred tasks are not automatically imported next day. The copy describes carryover more strongly than the implementation supplies."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "personal-data-state-loss",
+          "evidence": "SKILL.md:How to drive and Honest limits; assets/board.template.html save()",
+          "finding": "The agent cannot read browser localStorage or guarantee carryover; a regenerated board under a different dateKey has disconnected state. Saving can silently swallow storage exceptions, so the user may not realize data did not persist."
+        },
+        {
+          "severity": "LOW",
+          "type": "host-and-process-assumptions",
+          "evidence": "scripts/serve-board.ps1:15-23; references/tutorial.md:18-35",
+          "finding": "The PowerShell helper starts a hidden Python process and prints a PID stop command. Scope and life-cycle are visible, but the host cannot assume it supports a browser canvas or can safely leave a personal HTTP server active."
+        }
+      ],
+      "positive_safeguards": [
+        "The main instruction escapes `<` when injecting JSON into a script and requires restricted task IDs.",
+        "HTML source uses esc/escAttr for user-controlled content in key rendering paths and binds the local HTTP listener to loopback.",
+        "Source explicitly discloses agent-localStorage disconnect and offers manual recap export."
+      ],
+      "reasoned_cases": [
+        "Positive: explicit tasks rendered locally with no external service.",
+        "Non-trigger: no browser/server launched without a user request and host authority.",
+        "Adversarial: sensitive personal note remains in localStorage after a new day; review requires retention/clear controls.",
+        "Carryover: mark a task 'not today', refresh with tomorrow's default dateKey; no automatic transfer code is present."
+      ],
+      "remediation": "Add a privacy/delete-all/retention control and explicit storage-failure warning; implement actual consented next-day carryover or change copy to say recap-only; use a dedicated non-sensitive local folder with explicit server stop.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "method": "direct complete exact-package static source and dependency inspection; reasoned adversarial cases only",
+      "reviewer": "ChatGPT maintainer session",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 14,
+      "consumer_disposition": "static reference-only; no unchanged-use authority",
+      "quality_state": "unverified",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "github-awesome-copilot/build-evidence-map",
+      "source": {
+        "repository": "github/awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "upstream_head_checked": "96543145e9cb97711020b57b9d88f968062c4fc7",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/build-evidence-map",
+        "complete_package_git_tree_sha": "e5de9060f2171ee6f1b6d7dae5e30402aad9eb4d",
+        "skill_md_git_blob_sha": "3d0ff9385a5603242e39989cbfc6e7a8d856d6cc"
+      },
+      "owned_files": {
+        "SKILL.md": "3d0ff9385a5603242e39989cbfc6e7a8d856d6cc",
+        "references/evidence-ladder.md": "82d6695a363181620c3bc2070564226796405476",
+        "references/map-schema.md": "ed642a8c0f3453b1bfd92b8dced797c6fe233cc5",
+        "scripts/contract.mjs": "e8dc076860e96a799fa8e12d2890487a4532ccb9",
+        "scripts/validate.mjs": "ed89ada2792ef2e3f1aec9d0bcc4c102fc89c94d"
+      },
+      "license": {
+        "type": "MIT",
+        "scope": "repository root",
+        "git_blob_sha": "89bc5e962c9944cdb050887062afdaaf89be504a",
+        "obligation": "Preserve GitHub, Inc. copyright and permission notice when copying"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "7c9828f3cb9a5e8cba8d889a0f3f12d46d2fc0d2956ad84764df9e0f7e94e0ec",
+        "findings": [
+          "AE1"
+        ],
+        "reasons": {
+          "reference_missing": 1,
+          "static_parse_limit": 1
+        },
+        "interpretation": "The two local validator scripts and linked schema/reference files exist in the pinned complete package. The old scan's incomplete state is preserved as historical evidence, not upgraded."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "timestamp-contract-incompatibility",
+          "evidence": "scripts/contract.mjs:retrievalDate / verification section; references/map-schema.md Optional verification",
+          "finding": "Schema allows retrievedAt as ISO UTC timestamp, but when verification is present the validator compares entire retrievedAt string to checkedAt.slice(0,10), which rejects otherwise-valid timestamp-form source dates. Exact byte source read, not executed regression."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "verification-metadata-authenticity",
+          "evidence": "scripts/contract.mjs: source.verification section; scripts/validate.mjs:receiptFor",
+          "finding": "The offline validator accepts well-shaped 'verified' metadata with 64-hex digests; it does not independently prove an external source fetch took place or compare claimed digest to freshly retrieved content. The source instructions forbid handwritten verification but the validator cannot establish its origin; a VALID graph/receipt must not be presented as verified truth."
+        },
+        {
+          "severity": "LOW",
+          "type": "external-tool-and-source-policy",
+          "evidence": "SKILL.md:8-9",
+          "finding": "Rendering depends on an optional separately installed doubt-ai@0.8.0, and source verification can issue HTTP requests; the SKILL correctly says not to auto-install or retrieve, but host permission still must be confirmed."
+        }
+      ],
+      "positive_safeguards": [
+        "Validator enforces exactly one position, directed acyclic reasoning, required cited sources, dated bounded locators and no invented confidence percentages.",
+        "The source explicitly distinguishes structural validation from source truth and requires permission for HTTP verification.",
+        "The included scripts use Node built-ins; no observed runtime execution was performed in this static review."
+      ],
+      "reasoned_cases": [
+        "Positive: structured source and counterevidence map built offline and labeled structurally valid only with actual validator receipt.",
+        "Non-trigger: a question about a topic does not authorize fetching sensitive URLs or installing rendering tools.",
+        "Adversarial: fake source verification record with syntactically valid hashes passes structural checks without cryptographic fetching proof.",
+        "Timestamp case: retrievedAt full ISO timestamp plus verification.checkedAt matching same day is incorrectly rejected."
+      ],
+      "remediation": "Align validation with documented timestamp formats; ensure any externally claimed source-verification status is backed by independently attestable retrieval evidence; preserve no-autofetch and no-autoinstall controls.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "method": "direct complete exact-package static source and dependency inspection; reasoned adversarial cases only",
+      "reviewer": "ChatGPT maintainer session",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 16,
+      "consumer_disposition": "static reference-only; no unchanged-use authority",
+      "quality_state": "unverified",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "agentskillexchange/email-voice",
+      "source": {
+        "repository": "agentskillexchange/skills",
+        "pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+        "upstream_head_checked": "f18dbf7310c5e4dd58aec81b6a5a72d453d56ef5",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/email-voice",
+        "complete_package_git_tree_sha": "11cd6421647e0551cf1579c663bd1478c94d5394",
+        "skill_md_git_blob_sha": "b36152d130ff9e3de7ddc41a3ae96b3b215fb176"
+      },
+      "owned_files": {
+        "SKILL.md": "b36152d130ff9e3de7ddc41a3ae96b3b215fb176"
+      },
+      "license": {
+        "type": "MIT",
+        "scope": "inline SKILL.md section",
+        "evidence": "SKILL.md:186-196",
+        "copyright": "Copyright (c) 2026 Rohit Motwani",
+        "obligation": "Retain embedded copyright and permission notice on copying"
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "be6cc14fb9530e4f9028730b8244f1a30511e0874b6f0210391d6147ea8de0c5",
+        "findings": [
+          "EA3"
+        ],
+        "reasons": {
+          "reference_missing": 1
+        },
+        "interpretation": "One complete passive Markdown file with an inline rights grant; historical scan incompleteness does not indicate a hidden dependency or observed malicious behavior."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "optional-installer-execution-boundary",
+          "evidence": "SKILL.md:20-26",
+          "finding": "Offers a ZIP download and optional npx skills@1.7.4 installation command. Installing from a remote package can run third-party code or copy files and is outside passive source reading; require a separate, explicit host/user-authorized installation decision."
+        },
+        {
+          "severity": "LOW",
+          "type": "private-mail-profiling-exposure",
+          "evidence": "SKILL.md:55-73,146-152",
+          "finding": "The authorized learning procedure can process 40-300 private sent email bodies plus held-out replies, so account, privacy, retention and cross-provider handling must stay limited to the user's chosen scope. The source substantially mitigates this with explicit consent, private checkpoints, budget caps and deidentified exports."
+        },
+        {
+          "severity": "LOW",
+          "type": "behavior-not-observed",
+          "evidence": "SKILL.md:113-129",
+          "finding": "Its held-out validation workflow is well defined but no real user mail, host connector or independent agent behavior was tested in this review; the source alone cannot establish 4/5 scores or that sender identity attribution works."
+        }
+      ],
+      "positive_safeguards": [
+        "Includes clear user-authorized Sent-only scope, excludes raw inbound material as style data, and avoids credential requests.",
+        "Reserves held-out threads, bounds email counts, discloses weak attribution, defaults to deidentified exports, and keeps profiles private.",
+        "Explicitly forbids sending mail or changing mailbox state merely because drafting or profile creation was requested."
+      ],
+      "reasoned_cases": [
+        "Positive: draft using a small explicitly supplied sample set without external sends or new mailbox access.",
+        "Non-trigger: user asking to compose an email does not implicitly approve reading 150 previous messages or remote installer execution.",
+        "Adversarial: a malicious instruction embedded in a sent mail is untrusted data, never permission to export a mailbox.",
+        "Missing email connector yields provisional sample-limited profile, not fabricated mailbox statistics or held-out results."
+      ],
+      "remediation": "Do not run optional installer without explicit permission and independent source verification; enforce host-provided consent/read scope and private storage policy; no source repair required for bounded read-only use.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "method": "direct complete exact-package static source and dependency inspection; reasoned adversarial cases only",
+      "reviewer": "ChatGPT maintainer session",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "static_score": 18,
+      "consumer_disposition": "static reference-only; no unchanged-use authority",
+      "quality_state": "unverified",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    }
+  ]
+}
