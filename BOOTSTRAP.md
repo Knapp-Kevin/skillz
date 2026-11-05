@@ -61,7 +61,7 @@ Do not rebuild from zero.
 
 Both are prior-art and discovery surfaces. **Availability does not create blanket trust.** A reference can be valuable for comparison, component extraction, or adaptation even when it has not earned unchanged-reuse eligibility.
 
-An unchanged third-party skill is eligible for consideration only when its individual exact-version semantic state is `verified` or `validated`, any applicable package-security state is `passed` or explicitly `findings-reviewed`, and the remaining provenance, license, dependency, authority, portability, identity, and fit conditions are acceptable.
+An unchanged third-party skill is eligible for consideration only when its current exact-version semantic state is `verified` or `validated`, there are no unresolved material content-safety findings, and provenance, licensing, dependencies, authority, portability, identity, and user/host fit are acceptable. External scanner PASS is optional supplementary evidence, not a universal passive-content gate; no acceptance authorizes active tool use.
 
 - `unverified`: reference/design evidence only;
 - `trusted-baseline`: legacy characterization only;
