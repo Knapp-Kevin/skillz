@@ -7,9 +7,9 @@ source_path: skills/agent-home-doctor/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7ee1ea763d08ff426f9ac172ba17a9cb06babded
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/agent-home-doctor/SKILL.md
 permission_tier: mutating
@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Strong evidence-backed cleanup workflow after hardening: exact remediation plans require explicit approval before deletion, config edits, or moves; uncertainty is report-only."
+import_eligibility: review-required
+rationale: "Current source 3415f1f4bb72afc44266706be649c3950f809337, exact complete tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; static semantic 17/20 after P0 private-read/credential-prefix remediation. Replaced wide home-dot-directory enumeration with explicit allowlist roots, symlink safety and scoped read/mutation. Prior score did not establish privacy safety. New pinned scanner and independent observed agent-host behavior NOT RUN. Until owner-qualified acceptance, no unchanged-use clearance. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."

@@ -7,9 +7,9 @@ source_path: skills/devlog-draft/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
+source_snapshot_revision: 7ee1ea763d08ff426f9ac172ba17a9cb06babded
 curated_at: 2026-08-30
-last_checked_at: 2026-08-30
+last_checked_at: 2026-11-04
 availability: in-repo
 local_path: skills/devlog-draft/SKILL.md
 permission_tier: generate-only
@@ -17,5 +17,5 @@ portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
-rationale: "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+import_eligibility: review-required
+rationale: "Current source d74ff133f69c8908c4acf296fb93313069082114, exact complete tree ba81b6da10b317b314d31264d7c5d9362d753702; static semantic 17/20 after P0 private-read/credential-prefix remediation. Removed implicit host-profile/memory root discovery; bound allowed repos/logs; made public-quote redaction explicit. Prior score did not establish privacy safety. New pinned scanner and independent observed agent-host behavior NOT RUN. Until owner-qualified acceptance, no unchanged-use clearance. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."

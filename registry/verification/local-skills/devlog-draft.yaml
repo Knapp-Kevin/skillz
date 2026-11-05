@@ -3,19 +3,19 @@ skill_name: devlog-draft
 source_id: local-skills
 local_path: "skills/devlog-draft/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 073f18ba2c2f7de21015cd072741c395335e9f2e
+content_blob_sha: d74ff133f69c8908c4acf296fb93313069082114
 characterized_at: 2026-08-30
-reviewed_at: 2026-08-30
+reviewed_at: 2026-11-04
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
+validation_note: New exact source statically re-reviewed, NOT pinned SkillSpector scanned or actual agent-host behavior. Unchanged use held.
 rubric: "docs/skill-verification.md"
-rubric_score: "19/20"
+rubric_score: "17/20"
 tags:
   use_case: [writing, communication, documentation]
   lifecycle: [planning]
   characteristic: [evidence-first, traceable, synthesis, human-review]
   authority: [generate-only]
   portability: [medium]
-notes: "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+notes: "2026-11-04 fresh full-current 17/20 semantic review: Removed implicit host-profile/memory root discovery; bound allowed repos/logs; made public-quote redaction explicit. Previous 19/20 grade on older blob was insufficient to catch this authority/egress defect. Current exact SKILL.md d74ff133f69c8908c4acf296fb93313069082114, complete package Git tree ba81b6da10b317b314d31264d7c5d9362d753702. External pinned scanner and real synthetic host tool-call behavior NOT RUN; security issue #402. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."

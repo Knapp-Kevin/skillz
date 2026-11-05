@@ -12,10 +12,10 @@
       "skill_name": "agent-home-doctor",
       "local_path": "skills/agent-home-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d8b41939deec81ef67b96398ae54afee72075459",
+      "content_blob_sha": "3415f1f4bb72afc44266706be649c3950f809337",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "20/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "repository-maintenance",
@@ -38,7 +38,7 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-backed cleanup workflow after hardening: exact remediation plans require explicit approval before deletion, config edits, or moves; uncertainty is report-only."
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "agent-postmortem",
@@ -237,10 +237,10 @@
       "skill_name": "decision-log",
       "local_path": "skills/decision-log/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "56e5c574c295546c9e654a9e6a14a9814136f2f4",
+      "content_blob_sha": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "18/20",
       "tags": {
         "use_case": [
           "decision-support",
@@ -263,7 +263,7 @@
           "medium"
         ]
       },
-      "notes": "Append-only, approval-gated decision capture with anti-backfill rules and explicit revisit semantics; local file mutation is well bounded."
+      "notes": "Fresh exact-source 18/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b, full package tree ca790304801fd1717841a8fab98bb4ebeed4c9bf; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "deck-outline",
@@ -366,10 +366,10 @@
       "skill_name": "devlog-draft",
       "local_path": "skills/devlog-draft/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "073f18ba2c2f7de21015cd072741c395335e9f2e",
+      "content_blob_sha": "d74ff133f69c8908c4acf296fb93313069082114",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "writing",
@@ -392,7 +392,7 @@
           "medium"
         ]
       },
-      "notes": "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value."
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "fact-check",
@@ -987,10 +987,10 @@
       "skill_name": "paper-digest",
       "local_path": "skills/paper-digest/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b2abf289b265b3d4a8508bda4a35083fa7c35f8a",
+      "content_blob_sha": "8691e648e6c96c986391bdbdf812616c34baef95",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "19/20",
+      "rubric_score": "17/20",
       "tags": {
         "use_case": [
           "research",
@@ -1012,7 +1012,7 @@
           "high"
         ]
       },
-      "notes": "Strong claim-versus-framing analysis, replication search, baseline scrutiny, and admitted/unadmitted limitations; full-text availability sets an explicit confidence ceiling."
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "permissions-review",
