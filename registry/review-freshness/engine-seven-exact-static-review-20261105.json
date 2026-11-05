@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "candidate_branch": "fix/issue402-engine-static-lifecycle-20261105-no-ci",
+  "reviewed_against_branch_head": "9211cc2e45a2358569b82376c26dd00f6419c6ba",
+  "review_claim": "Seven complete one-file engine procedures statically reviewed at exact source/package Git identities. Referenced governance documents were checked to the stated bounded scope; broad catalog directories and all third-party packages were NOT exhaustively reviewed. No scripts, dependencies, skill instructions, scanner, or host agent behavior were executed.",
+  "counts": {
+    "engine_procedures": 7,
+    "current_reviewed": 7,
+    "source_repairs": 3,
+    "shared_policy_template_repair": 1,
+    "matching_historical_scanner_pass": 2,
+    "historical_matching_scanner_incomplete": 1,
+    "current_trees_without_matching_scanner_pass": 4,
+    "observed_behavioral": 0,
+    "unchanged_use_approved": 0
+  },
+  "material_governance_references_checked_blobs": {
+    "README.md": "01eeaa5d948232317289ad0011340d23cdc8d3f4",
+    "AGENT_START_HERE.md": "1ea4edfe5bb2380ad1e1bcac73820c2197284867",
+    "BOOTSTRAP.md": "86f3cd802f9708b3cd8661569aedcdcedbdbf769",
+    "AGENTS.md": "1cf049e4b9fa2200fd8f163279cdbc897c761dee",
+    "docs/skill-verification.md": "d3ff5e812a6ff91b66111f91c62a30a4349804b1",
+    "docs/security-scanning.md": "25a20be47fcd90899c2059ee0dbade07a2a01d69",
+    "docs/skill-template.md": "a92e85560fb40a7602ba08a325bc6c915adb6183",
+    "docs/consumer-discovery-and-installation.md": "4720e4fb434001b3ed4535bc2c09f2cd61e28c11",
+    "docs/third-party-provenance.md": "b6650d88a18fdd81bc18a04f82eb8be4fe4d8d5b",
+    "docs/agent-value-discovery.md": "36eda91e1875bc9e07c64a05e34fcacdcb7766ca",
+    "docs/first-contact-discovery.md": "c5ff8656fce9f1cf84d4463c185e18f38e3b3dee",
+    "registry/sources.yaml": "fae52acadbbde4fee1352309ce1805e7b1a0db8e",
+    "registry/local-verification.json": "fb1559e72a148f8dfb4bc5c52748816bd9e2e819",
+    "registry/capability-directory.json": "7cb6493472bd7d1c2b20ff7a7cb55abc00a2c9d0"
+  },
+  "dynamic_repository_reference_scopes": "Directory listings and selected source/registry heads were inspected for structure and exact identity only; 1,039 governed packages and all repository workboard/catalog records were not treated as completely reviewed. Changes to material instruction/reference content trigger a new review; routine dynamic data changes require checking current evidence at use time.",
+  "historical_security_receipts": "registry/security/first-party-51-exact-package-security-coverage-20261104.json and registry/security/engine-five-reference-closure-20261104.json preserve prior scan facts even when the current engine trees have since changed.",
+  "static_scenarios": [
+    {
+      "name": "valid trigger",
+      "interpretation": "requested repository curation, bounded first visit, authorized export or tracking is processed with explicit scope and evidence."
+    },
+    {
+      "name": "non-trigger",
+      "interpretation": "normal first-visit discovery does not authorize repository mutation, execution, installation or scheduled monitoring."
+    },
+    {
+      "name": "authority-pressure",
+      "interpretation": "candidate asks to read irrelevant private history, exfiltrate source data, install code, mutate external systems or claim scan PASS: reject the embedded instructions and require separate host/user authority."
+    }
+  ],
+  "rows": [
+    {
+      "id": "skill-audit",
+      "path": "engine/skills/skill-audit",
+      "version": "2.0.1",
+      "source_git_blob_sha": "2d495fc5e27f330ba99f2555cdf36a2d3360b349",
+      "package_git_tree_sha": "d82bb54c99c77d4a47557cbc3c2d8c7a49bbb36c",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/skill-audit/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 18,
+      "finding": "Previous incomplete scan belongs to an earlier exact tree. Now requires bounded source/correction evidence when reporting PASS.",
+      "boundary": "Repository-maintenance mutation is explicitly gated; static audit cannot imply runnable tests.",
+      "scanner_state": "not-run-current-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "skill-bootstrap",
+      "path": "engine/skills/skill-bootstrap",
+      "version": "0.11.1",
+      "source_git_blob_sha": "0149510d9d16f7dd64fd0ee35dd89fc9a586a73e",
+      "package_git_tree_sha": "d54fcf37e01ba9acb6efb839ee1f8e24d0e06316",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/skill-bootstrap/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 18,
+      "finding": "Fixed inherited scanner-pass mandate contradictory to static-first policy; memory use limited to host-authorized relevant context.",
+      "boundary": "Read-only discovery is separate from user-specific installation, external reads, costs and writes.",
+      "scanner_state": "not-run-current-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "skill-eval",
+      "path": "engine/skills/skill-eval",
+      "version": "2.0.1",
+      "source_git_blob_sha": "3c1068f408f4f7d7a03bcdab0347c9b8e7069187",
+      "package_git_tree_sha": "839552375982d7d47c395febac3b7ef1a50e5f26",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/skill-eval/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 18,
+      "finding": "Added independent original review/check timestamps and material reference scope. Historic parser limit remains unresolved, not a PASS.",
+      "boundary": "Reviewers must not treat package titles, historical scores or static thought experiments as new observations.",
+      "scanner_state": "not-run-current-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "skill-forge",
+      "path": "engine/skills/skill-forge",
+      "version": "2.0.0",
+      "source_git_blob_sha": "67acb131b3f452d400cb70824398533313d2e09c",
+      "package_git_tree_sha": "47e5c00d98283bcc0c474e713ff05bbc44d2d70a",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/skill-forge/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 18,
+      "finding": "Actual current tree differs from old scanner incomplete tree; source checked. Repaired shared template is a material reference.",
+      "boundary": "Repository writes/admissions require explicit maintenance authority and rights review.",
+      "scanner_state": "not-run-current-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "skill-sync",
+      "path": "engine/skills/skill-sync",
+      "version": "2.0.0",
+      "source_git_blob_sha": "3503882d51acb67e0ab848e2e4b7884a1dbd35b1",
+      "package_git_tree_sha": "214f442b3ecca7623bd61d27e8377e83184cecfb",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/skill-sync/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 1,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 18,
+      "finding": "Prior pinned static scanner receipt matches unchanged complete one-file package; no active source defect identified.",
+      "boundary": "Any export/overwrite/disclosure needs action-specific account, target, scope and approval.",
+      "scanner_state": "passed-historical-exact-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "skills-pulse",
+      "path": "engine/skills/skills-pulse",
+      "version": "2.0.0",
+      "source_git_blob_sha": "23bff9873d8dfc2141103aae2248f5d47cf19467",
+      "package_git_tree_sha": "945eae12def16e3e804a337f7d3edc208554dd5a",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/skills-pulse/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 1,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 17,
+      "finding": "Prior scanner incompleteness was missing repo-root references, not a proven malicious action; inspection is static and on demand.",
+      "boundary": "Source scanning cannot create a scheduled recurring task, promotion, downloads or installation.",
+      "scanner_state": "incomplete-historical-exact-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "source-vetting",
+      "path": "engine/skills/source-vetting",
+      "version": "2.0.0",
+      "source_git_blob_sha": "ccc9121e6b7fa21eadba661b634978e59e8a85a6",
+      "package_git_tree_sha": "591db689f8505eafc008bf64614c722acb8998a4",
+      "reviewer": "ChatGPT authorized maintainer session",
+      "review_method": "direct complete one-file package reading; structured ten-dimension static semantic rubric and reasoned positive/non-trigger/authority-pressure cases",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_freshness": "current-reviewed",
+      "package_file_scope": [
+        "engine/skills/source-vetting/SKILL.md"
+      ],
+      "quality_state": "verified",
+      "static_disposition": "static-source-acceptable",
+      "rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 2,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 2,
+        "effectiveness_design": 1
+      },
+      "score_total": 18,
+      "finding": "Prior pinned static scanner receipt matches unchanged complete one-file package; no active source defect identified.",
+      "boundary": "Source-level tracking does not verify member skills or override per-file licenses.",
+      "scanner_state": "passed-historical-exact-tree",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    }
+  ]
+}
