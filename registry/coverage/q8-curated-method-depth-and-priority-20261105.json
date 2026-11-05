@@ -1,0 +1,1072 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-05",
+  "kind": "curated-method-shelf-coverage-depth-snapshot",
+  "source": {
+    "path": "registry/consumer-positive-references-q8-20261103.json",
+    "git_blob_sha": "7c958db0b939a4d363ed8b2c17862ff00f18b5cd",
+    "as_of": "2026-11-03"
+  },
+  "scope": "Q8 curated 50-method Valuable Reference sample ONLY; never infer all-corpus absence, mature coverage, complete capabilities, qualified use or unique eligible skills",
+  "totals": {
+    "domains": 33,
+    "methods": 50,
+    "single_example_domains": 26,
+    "security_passed": 10,
+    "security_failed": 7,
+    "security_incomplete": 33
+  },
+  "domains": [
+    {
+      "domain": "3d-cad-animation",
+      "display_name": "3D / CAD / animation",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "3d-modeling"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "dcc-mcp-dcc-mcp-blender/dcc-blender-assembly-pitfalls",
+          "title": "Blender Assembly Pitfalls",
+          "subdomain": "3d-modeling",
+          "source_repository": "dcc-mcp/dcc-mcp-blender",
+          "source_pin": "8d8027fe4377b4d399d545869fc11b80e04ff785",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "agent-mcp-development",
+      "display_name": "Agent / MCP development",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "permissions"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "github-awesome-copilot/verify-agent-action",
+          "title": "Verify Agent Action",
+          "subdomain": "permissions",
+          "source_repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "analytics",
+      "display_name": "Analytics",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "visualization"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 1,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "openai-plugins/build-web-data-visualization/geospatial-and-cartographic-visualization",
+          "title": "Geospatial and Cartographic Visualization",
+          "subdomain": "visualization",
+          "source_repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "business",
+      "display_name": "Business",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "business-models"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 1,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "peterbamuhigire-business-plan-skills/ecommerce-unit-economics",
+          "title": "Cross-border Unit Economics",
+          "subdomain": "business-models",
+          "source_repository": "peterbamuhigire/business-plan-skills",
+          "source_pin": "00a85b14b0770951a4c8dd0f8505b2bbaf7bfc95",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "cloud-devops",
+      "display_name": "Cloud / DevOps",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "sre"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "scitix-siclaw/networkpolicy-debug",
+          "title": "NetworkPolicy Debug",
+          "subdomain": "sre",
+          "source_repository": "scitix/siclaw",
+          "source_pin": "ceee3f49f8bdc9223c0a2b0afec33253f95616f9",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "communication",
+      "display_name": "Communication",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "interpersonal"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "agentskillexchange/email-voice",
+          "title": "Email Voice",
+          "subdomain": "interpersonal",
+          "source_repository": "agentskillexchange/skills",
+          "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "education",
+      "display_name": "Education",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "assessment"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "yujxzjcn-teaching-skills/submission-auditor",
+          "title": "Submission Auditor",
+          "subdomain": "assessment",
+          "source_repository": "YujxZJCN/teaching-skills",
+          "source_pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "fiction-narrative-worldbuilding",
+      "display_name": "Fiction / narrative / worldbuilding",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "continuity"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "bladecoder-narrative-skills/continuity-check",
+          "title": "Continuity Check",
+          "subdomain": "continuity",
+          "source_repository": "bladecoder/narrative-skills",
+          "source_pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "finance",
+      "display_name": "Finance",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "budgeting"
+      ],
+      "security_gate_counts": {
+        "passed": 1,
+        "failed": 0,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "dh2211-nonprofit-agents/npo-budget-narrative",
+          "title": "Nonprofit Budget Narrative",
+          "subdomain": "budgeting",
+          "source_repository": "dh2211/nonprofit-agents",
+          "source_pin": "e1a247b8743d53e12677774bf67f6453b7f692b1",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "game-design",
+      "display_name": "Game design",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "playtesting"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "bladecoder-narrative-skills/if-playtest-review",
+          "title": "IF Playtest Review",
+          "subdomain": "playtesting",
+          "source_repository": "bladecoder/narrative-skills",
+          "source_pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "law",
+      "display_name": "Law",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "regulatory-analysis"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 1,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "kyleoliveiro-sg-gov-skills/sg-gov-ssp-navigator",
+          "title": "Singapore SSP Navigator",
+          "subdomain": "regulatory-analysis",
+          "source_repository": "kyleoliveiro/sg-gov-skills",
+          "source_pin": "16892fc613263c3f835457cd23ae092d404979ca",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "marketing",
+      "display_name": "Marketing",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "positioning"
+      ],
+      "security_gate_counts": {
+        "passed": 1,
+        "failed": 0,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "peterod99-consultant-skills/singular-positioning-clarity",
+          "title": "Singular Positioning Clarity",
+          "subdomain": "positioning",
+          "source_repository": "peterod99/consultant-skills",
+          "source_pin": "ee82a9dfe327a734e815a590aaaf92327d111d85",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "medicine",
+      "display_name": "Medicine",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "evidence-appraisal"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "huang-sir1-radiology-skills/radiology-consensus-guideline",
+          "title": "Radiology Consensus Guideline",
+          "subdomain": "evidence-appraisal",
+          "source_repository": "huang-sir1/radiology-skills",
+          "source_pin": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "memory-context",
+      "display_name": "Memory / context",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "provenance"
+      ],
+      "security_gate_counts": {
+        "passed": 1,
+        "failed": 0,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "agentskillexchange/read-ledger",
+          "title": "Read Ledger",
+          "subdomain": "provenance",
+          "source_repository": "agentskillexchange/skills",
+          "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "ml-accelerators",
+      "display_name": "ML accelerators and compute",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "accelerator-fabrics"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 1,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "openai-plugins/nvidia/dynamo-interconnect-check",
+          "title": "Dynamo Interconnect Check",
+          "subdomain": "accelerator-fabrics",
+          "source_repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "planning",
+      "display_name": "Planning",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "project-scheduling"
+      ],
+      "security_gate_counts": {
+        "passed": 1,
+        "failed": 0,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "openai-plugins/build-web-data-visualization/gantt-chart-visualization",
+          "title": "Gantt Chart Visualization",
+          "subdomain": "project-scheduling",
+          "source_repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "product",
+      "display_name": "Product",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "prioritization"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "github-awesome-copilot/shopify-review-triage",
+          "title": "Shopify Review Triage",
+          "subdomain": "prioritization",
+          "source_repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "sales",
+      "display_name": "Sales",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "pipeline"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "rvanshur-vertical-gtm-skills/gtm-deal-pulse",
+          "title": "GTM Deal Pulse",
+          "subdomain": "pipeline",
+          "source_repository": "rvanshur/vertical-gtm-skills",
+          "source_pin": "a9ee9d3547e1df59fe5b170b7fefc4ecff57350b",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "security",
+      "display_name": "Security",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "application-security"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "github-awesome-copilot/mcp-implementation-security-review",
+          "title": "MCP Implementation Security Review",
+          "subdomain": "application-security",
+          "source_repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "software-engineering",
+      "display_name": "Software engineering",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "maintenance"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "agentskillexchange/clean-closed-issue-worktrees",
+          "title": "Clean Closed Issue Worktrees",
+          "subdomain": "maintenance",
+          "source_repository": "agentskillexchange/skills",
+          "source_pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "technical-writing",
+      "display_name": "Technical writing",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "documentation-ia"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "danielrosehill-claude-transcription-plugin/split-transcript",
+          "title": "Split Transcript by Intent",
+          "subdomain": "documentation-ia",
+          "source_repository": "danielrosehill/Claude-Transcription-Plugin",
+          "source_pin": "d19d6df5792490b477d9ea6fd4f7eebb0434dc9d",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "testing",
+      "display_name": "Testing",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "performance"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 1,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "kunitoki-sonic-skills/audio-performance-debug",
+          "title": "Audio Performance Debug",
+          "subdomain": "performance",
+          "source_repository": "kunitoki/sonic-skills",
+          "source_pin": "8b6dcfe89030d7de9ba9d6afcc2d927fb11fe7fa",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "time-productivity",
+      "display_name": "Time / productivity",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "focus"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "github-awesome-copilot/daily-focus-board",
+          "title": "Daily Focus Board",
+          "subdomain": "focus",
+          "source_repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "ux-ui",
+      "display_name": "UX / UI",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "accessibility"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "kyleoliveiro-sg-gov-skills/sg-gov-dss-accessibility",
+          "title": "Singapore DSS Accessibility",
+          "subdomain": "accessibility",
+          "source_repository": "kyleoliveiro/sg-gov-skills",
+          "source_pin": "16892fc613263c3f835457cd23ae092d404979ca",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "video-film",
+      "display_name": "Video / film",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "screenwriting"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "yujxzjcn-teaching-skills/media-scripter",
+          "title": "Media Scripter",
+          "subdomain": "screenwriting",
+          "source_repository": "YujxZJCN/teaching-skills",
+          "source_pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "visual-design",
+      "display_name": "Visual design",
+      "curated_method_count": 1,
+      "subtopics_represented": [
+        "graphic-design"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "openai-plugins/adobe/adobe-create-mockups",
+          "title": "Adobe Create Mockups",
+          "subdomain": "graphic-design",
+          "source_repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "single-example"
+    },
+    {
+      "domain": "audio-voice-sound",
+      "display_name": "Audio / voice / sound",
+      "curated_method_count": 2,
+      "subtopics_represented": [
+        "acoustics",
+        "mastering"
+      ],
+      "security_gate_counts": {
+        "passed": 1,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "FuDesign2008-open-music-skills/audio-mastering",
+          "title": "Audio Mastering (AI tracks)",
+          "subdomain": "mastering",
+          "source_repository": "FuDesign2008/open-music-skills",
+          "source_pin": "95e66582a82579fa44dca55fff64b874de608a98",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "koltyj-REW-mcp/room-acoustics",
+          "title": "Room Acoustics (REW)",
+          "subdomain": "acoustics",
+          "source_repository": "koltyj/REW-mcp",
+          "source_pin": "1d1f7543b0d8a8b4cab80fb4ea683e9b7b7851e5",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    },
+    {
+      "domain": "career",
+      "display_name": "Career",
+      "curated_method_count": 2,
+      "subtopics_represented": [
+        "job-search",
+        "portfolios"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 2
+      },
+      "methods": [
+        {
+          "id": "wexxwuther-job-hunter/job-search",
+          "title": "Ghost-job-aware Job Search",
+          "subdomain": "job-search",
+          "source_repository": "wexxwuther/job-hunter",
+          "source_pin": "8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "BRAINS-Certified-BRAINS-resume-skill/brains-resume",
+          "title": "Neurodivergence-aware Resume",
+          "subdomain": "portfolios",
+          "source_repository": "BRAINS-Certified/BRAINS-resume-skill",
+          "source_pin": "d8763b8bdaddd0345288fdb4b4fdd2a652677bdc",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    },
+    {
+      "domain": "research",
+      "display_name": "Research",
+      "curated_method_count": 2,
+      "subtopics_represented": [
+        "reproducibility",
+        "synthesis"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 2
+      },
+      "methods": [
+        {
+          "id": "github-awesome-copilot/build-evidence-map",
+          "title": "Build Evidence Map",
+          "subdomain": "synthesis",
+          "source_repository": "github/awesome-copilot",
+          "source_pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "huang-sir1-radiology-skills/radiology-reproducibility",
+          "title": "Radiology Reproducibility",
+          "subdomain": "reproducibility",
+          "source_repository": "huang-sir1/radiology-skills",
+          "source_pin": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    },
+    {
+      "domain": "illustration",
+      "display_name": "Illustration",
+      "curated_method_count": 3,
+      "subtopics_represented": [
+        "character-environment",
+        "concept-art",
+        "sequential-art"
+      ],
+      "security_gate_counts": {
+        "passed": 1,
+        "failed": 2,
+        "incomplete": 0
+      },
+      "methods": [
+        {
+          "id": "jeffreytse-grimoire-core/design-concept-art-brief",
+          "title": "design-concept-art-brief",
+          "subdomain": "concept-art",
+          "source_repository": "jeffreytse/grimoire-core",
+          "source_pin": "7ff5861b00836cb0d675c00a09a26d143722579e",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        },
+        {
+          "id": "scenario-labs-skills/scenario-storyboards",
+          "title": "scenario-storyboards",
+          "subdomain": "sequential-art",
+          "source_repository": "scenario-labs/skills",
+          "source_pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        },
+        {
+          "id": "scenario-labs-skills/scenario-identity-library",
+          "title": "scenario-identity-library",
+          "subdomain": "character-environment",
+          "source_repository": "scenario-labs/skills",
+          "source_pin": "7f4b801c7248d51b093ec365aceb114bd06139e6",
+          "security_gate": "failed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    },
+    {
+      "domain": "robotics-iot",
+      "display_name": "Robotics / IoT",
+      "curated_method_count": 3,
+      "subtopics_represented": [
+        "motion-planning",
+        "perception"
+      ],
+      "security_gate_counts": {
+        "passed": 2,
+        "failed": 0,
+        "incomplete": 1
+      },
+      "methods": [
+        {
+          "id": "yaniswav-TopicForge/inspect-ros2-robot",
+          "title": "Inspect ROS2 Robot",
+          "subdomain": "perception",
+          "source_repository": "yaniswav/TopicForge",
+          "source_pin": "9de14cec12447b2f505342803c7a6bfcb100cb5d",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        },
+        {
+          "id": "rerun-io-rerun/rerun-urdf",
+          "title": "Rerun URDF Ingestion",
+          "subdomain": "perception",
+          "source_repository": "rerun-io/rerun",
+          "source_pin": "6f39b09211b869d6e262083cfddefa392244088d",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "robium-ai-robium/navigation",
+          "title": "Nav2 Navigation Debugging",
+          "subdomain": "motion-planning",
+          "source_repository": "robium-ai/robium",
+          "source_pin": "ce944953d11ccdbd32613c4746389bc78a24e8c5",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    },
+    {
+      "domain": "science",
+      "display_name": "Science",
+      "curated_method_count": 3,
+      "subtopics_represented": [
+        "experimental-design",
+        "scientific-communication"
+      ],
+      "security_gate_counts": {
+        "passed": 0,
+        "failed": 0,
+        "incomplete": 3
+      },
+      "methods": [
+        {
+          "id": "tucca-cellag-caail/caail",
+          "title": "Cellular Agriculture AI Library query",
+          "subdomain": "scientific-communication",
+          "source_repository": "tucca-cellag/caail",
+          "source_pin": "5db336dbe013e06187a63724ef66bfd7c39c24fc",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "openai-plugins/boltz-api-cli/boltz-protein-design",
+          "title": "Boltz Protein Design",
+          "subdomain": "experimental-design",
+          "source_repository": "openai/plugins",
+          "source_pin": "0722921d5542fc593105c27bd52630babd8b8c2a",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "matlab-matlab-agentic-toolkit/matlab-analyze-reliability",
+          "title": "MATLAB Reliability Analysis",
+          "subdomain": "experimental-design",
+          "source_repository": "matlab/matlab-agentic-toolkit",
+          "source_pin": "032b4b605999b1f4adecaac1efa1c9faad41adf6",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    },
+    {
+      "domain": "music-composition",
+      "display_name": "Music composition",
+      "curated_method_count": 9,
+      "subtopics_represented": [
+        "arranging",
+        "electronic-composition",
+        "harmony",
+        "melody",
+        "notation",
+        "orchestration",
+        "rhythm",
+        "scoring"
+      ],
+      "security_gate_counts": {
+        "passed": 2,
+        "failed": 0,
+        "incomplete": 7
+      },
+      "methods": [
+        {
+          "id": "grapeot-opus-video-audio-skill/video-scoring-audio",
+          "title": "video-scoring-audio",
+          "subdomain": "scoring",
+          "source_repository": "grapeot/opus-video-audio-skill",
+          "source_pin": "0abc18d22d6baf9e55d4fce9a01d29e2528ee426",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-harmony",
+          "title": "mc-harmony",
+          "subdomain": "harmony",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-melody",
+          "title": "mc-melody",
+          "subdomain": "melody",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-rhythm-groove",
+          "title": "mc-rhythm-groove",
+          "subdomain": "rhythm",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-rhythm-section",
+          "title": "mc-rhythm-section",
+          "subdomain": "rhythm",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-orchestration",
+          "title": "mc-orchestration",
+          "subdomain": "orchestration",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "passed",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-arrangement-arch",
+          "title": "mc-arrangement-arch",
+          "subdomain": "arranging",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-symbolic-score",
+          "title": "mc-symbolic-score",
+          "subdomain": "notation",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        },
+        {
+          "id": "jtydhr88-music-composition-skills/mc-style-edm",
+          "title": "mc-style-edm",
+          "subdomain": "electronic-composition",
+          "source_repository": "jtydhr88/music-composition-skills",
+          "source_pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+          "security_gate": "incomplete",
+          "behavior": "not-run"
+        }
+      ],
+      "priority_bucket": "multi-example"
+    }
+  ],
+  "next_research_tranche": [
+    {
+      "domain": "testing",
+      "goal": "Find independently useful general test-planning, regression and evidence-to-requirement methods; current starter example focuses on audio performance",
+      "why": "Current positive shelf has a single narrow example, not proof corpus lacks testing skills"
+    },
+    {
+      "domain": "security",
+      "goal": "Find candidate threat-modeling, secret-handling and agent prompt-injection review methods",
+      "why": "Current shelf contains one MCP security review method; independently qualify sensitive authority"
+    },
+    {
+      "domain": "game-design",
+      "goal": "Find game-systems balancing, level-design, playtest synthesis and game accessibility methods",
+      "why": "Current shelf contains one interactive-fiction playtest example"
+    },
+    {
+      "domain": "ux-ui",
+      "goal": "Find user research, usability evaluation, interaction prototyping and inclusive design methods",
+      "why": "Current shelf contains one accessibility-focused reference"
+    },
+    {
+      "domain": "3d-cad-animation",
+      "goal": "Find 3D asset QA, CAD assembly, parametric modeling and animation verification methods",
+      "why": "Current shelf contains one Blender assembly-method reference"
+    },
+    {
+      "domain": "education",
+      "goal": "Find lesson design, learning assessment, tutoring evaluation and accessibility methods",
+      "why": "Current shelf contains one submission-audit reference"
+    },
+    {
+      "domain": "software-engineering",
+      "goal": "Find code comprehension, migration, maintainability and implementation verification methods",
+      "why": "Current shelf contains one worktree-cleanup reference"
+    },
+    {
+      "domain": "finance",
+      "goal": "Find financial planning, budgeting, financial controls and risk analysis methods with rights/safety controls",
+      "why": "Current shelf contains one nonprofit budget narrative reference"
+    },
+    {
+      "domain": "law",
+      "goal": "Find legal research, contract-review and compliance workflow references with explicit jurisdiction and professional boundaries",
+      "why": "Current shelf contains one Singapore-specific method"
+    },
+    {
+      "domain": "medicine",
+      "goal": "Find clinical evidence-appraisal, medical literature synthesis and documentation safety methods without practicing medicine",
+      "why": "Current shelf contains one radiology consensus guideline method"
+    }
+  ],
+  "admission_contract": "Identify candidate sources and complete package/rights/authority evidence; preserve independent #402 scanner and observed behavior gates; no ranking by publisher or filename.",
+  "does_not_change": {
+    "eligible_distinct_denominator": true,
+    "global_capability_maturity": true,
+    "unchanged_use_approvals": true,
+    "public_corpus_counts": true
+  }
+}
