@@ -1,5 +1,9 @@
 # Maintainer Workboard
 
+## Latest #402 source-review tranche: November 5, 2026
+
+**Work done:** [three additional historically incomplete Q8 packages](registry/security/q8-three-incomplete-high-risk-static-dispositions-20261105.json) have independently pinned direct static reviews, with [source-risk details](docs/reviews/2026-11-05-issue402-three-high-risk-incomplete-q8.md): worktree cleanup unsafe Git config/plan integrity, MCP active attack-test authorization, and Kubernetes CNI/hostNetwork source inaccuracies. Together with earlier failed-source tranches this is **7/7 historical FAILED + 3/33 historical INCOMPLETE**, while keeping all historical scanner results and unchanged-use holds intact. **30** incomplete Q8 featured methods remain for this targeted content-risk review, in addition to the broader corpus. The [README status graphic](docs/assets/q8-direct-static-risk-review-progress.svg) and [reproducible generator](scripts/build-q8-static-review-progress.mjs) now depict direct content review separately from historical scans. No new capability admissions or behavioral claims.
+
 ## CURRENT checkpoint: November 5, 2026, after #703 merge
 
 **0 open PRs and 4 open issues**: #402 (remaining exact-version content/security freshness), #544 (upstream license correction), #588 (capability coverage), #599 (continuous corpus discovery). PR #703 is merged at `33a03c7`; six implemented source-defect issues #415, #478, #481, #483, #491, #495 were closed after the merge.

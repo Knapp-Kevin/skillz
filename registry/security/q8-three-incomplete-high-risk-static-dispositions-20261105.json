@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "kind": "Q8-three-incomplete-high-risk-direct-static-review",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "pinned_reference": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "historic_population": {
+    "total_featured": 50,
+    "passed": 10,
+    "failed": 7,
+    "incomplete": 33
+  },
+  "prior_direct_static_failed_reviews": 7,
+  "new_direct_static_incomplete_reviews": 3,
+  "remaining_historical_incomplete_without_this_tranche_direct_static_review": 30,
+  "source_scope": "Nine owned package files across three exact pinned package trees, plus two root license texts, reviewed as passive data. No source scripts executed, no Git/cluster probe or offensive payload sent. All source blobs and package Git trees checked against historical register and pinned upstream Git; subsequent HEADs checked for package tree equality.",
+  "negative_claims": [
+    "No prior scanner incomplete turned to pass",
+    "No behavioral pass",
+    "No unchanged-use approval",
+    "No host authorization inherited from source skill",
+    "No external request or command executed from these packages",
+    "Historical Q8 scanner population unchanged"
+  ],
+  "records": [
+    {
+      "id": "agentskillexchange/clean-closed-issue-worktrees",
+      "reviewed_at": "2026-11-05",
+      "last_fingerprint_checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer: bounded direct static package review",
+      "method": "Read pinned skill and owned material text/source files, check exact Git object tree and controlling license, interpret scanner findings in source context; no installation, execution, scanner, agent behavior, cluster action or filesystem mutation of source",
+      "source": {
+        "repository": "agentskillexchange/skills",
+        "pin": "a6017b4af9d0298b7be3af7a6ec7485943d2c3e7",
+        "upstream_head_checked": "f18dbf7310c5e4dd58aec81b6a5a72d453d56ef5",
+        "upstream_current_package_tree_identical": true,
+        "package_path": "skills/clean-closed-issue-worktrees",
+        "complete_package_git_tree_sha": "e269b139683861dda6c1cbe66af57f817db7bd30",
+        "skill_md_git_blob_sha": "55cf1652f2492a3bbfd3517e09b2e652ee805894"
+      },
+      "owned_files": {
+        "SKILL.md": "55cf1652f2492a3bbfd3517e09b2e652ee805894",
+        "LICENSE.txt": "1cb9a73146e5637ffbe342a242397dbd23750b1c",
+        "agents/openai.yaml": "d2a8a2af4c48a7803b49e1032a648a7adbedec0c",
+        "references/evidence-schema.md": "5054d2b205a06e9bf9521d1ae460b5355f60759b",
+        "references/harness-detection.md": "9e9197f63c032c7476d2ed6c7773dca2653dbaba",
+        "references/provider-access.md": "6cfa9b1ef08edb1f524654b89f9f685052983812",
+        "scripts/worktree_cleanup.py": "86aec61298dc1ee7cc552b342e141b89b6878b06"
+      },
+      "license": {
+        "source": "package LICENSE.txt",
+        "type": "MIT",
+        "notice": "Copyright (c) 2026 Haoran Yu; preserve notice on copying"
+      },
+      "historical_scan": {
+        "source": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+        "report_sha256": "4f5942be532cad85c099feac2b53cd79f2eb808870e7229052388e736e6ce170",
+        "state": "incomplete",
+        "reasons": {
+          "obfuscated_instruction_text": 2,
+          "reference_missing": 4,
+          "static_parse_limit": 1
+        },
+        "finding_ids": [
+          "AE1",
+          "PE3",
+          "E2",
+          "LP3",
+          "AST4"
+        ],
+        "finding_interpretation": "Subprocess and environment copying are real observable execution surfaces, not necessarily deliberate credential theft. Bundled references exist in the complete tree; previous scanner incompleteness is not a new security pass."
+      },
+      "material_risks": [
+        {
+          "severity": "HIGH",
+          "type": "ambient-git-execution",
+          "evidence": "scripts/worktree_cleanup.py:87-112, 187-200",
+          "assessment": "The script calls git subprocesses while inheriting os.environ and reading arbitrary repository configuration; git fsmonitor/external config helpers can run in these ostensibly read-only calls. No trusted config/environment isolation is established."
+        },
+        {
+          "severity": "HIGH",
+          "type": "plan-not-bound-to-approval",
+          "evidence": "scripts/worktree_cleanup.py:599-680,726-751; references/evidence-schema.md:plan lifecycle",
+          "assessment": "Execution confirms random plan_id from mutable plan JSON, not a cryptographic digest of confirmed paths, authority, branch deletion policy and evidence. A modified plan with same ID can alter authorized destructive targets."
+        },
+        {
+          "severity": "HIGH",
+          "type": "untrusted-remote-state",
+          "evidence": "scripts/worktree_cleanup.py:496-536,688-735",
+          "assessment": "Closed issue/merged PR evidence is supplied in agent-authored JSON and shape-checked rather than independently revalidated against remote provider at execute. SKILL.md asks agent to re-query but script itself cannot enforce that claim."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "safety-check-completeness",
+          "evidence": "scripts/worktree_cleanup.py:688-725",
+          "assessment": "Re-scan rechecks key local invariants but does not repeat validate_remote_evidence or explicit backup-orphan/authorization choices from the confirmation turn. This makes the claimed full plan revalidation broader than enforced."
+        }
+      ],
+      "static_tests_reasoned": [
+        "Positive: a read-only worktree inventory with explicit Git identity and no deletion is useful, if Git configuration is trusted.",
+        "Non-trigger: request for audit does not authorize any worktree or branch deletion.",
+        "Adversarial: attacker changes temporary plan paths but preserves plan_id; script does not detect a content/approval signature.",
+        "Adversarial: malicious checkout config or GIT_CONFIG_* could cause supposedly read-only Git subprocesses to execute a helper."
+      ],
+      "remediation": "Use a trusted Git execution sandbox/config/environment, independently bind remote evidence to an approved exact target plan, store a content digest/signature distinct from random plan ID and revalidate authority/remote state at execution; add adversarial tests before execution.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 11,
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only, unchanged execution held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "github-awesome-copilot/mcp-implementation-security-review",
+      "reviewed_at": "2026-11-05",
+      "last_fingerprint_checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer: bounded direct static package review",
+      "method": "Read pinned skill and owned material text/source files, check exact Git object tree and controlling license, interpret scanner findings in source context; no installation, execution, scanner, agent behavior, cluster action or filesystem mutation of source",
+      "source": {
+        "repository": "github/awesome-copilot",
+        "pin": "f11a4e441c5ff061b4f8ae37952be8c602e4034e",
+        "upstream_head_checked": "96543145e9cb97711020b57b9d88f968062c4fc7",
+        "upstream_current_package_tree_identical": true,
+        "package_path": "skills/mcp-implementation-security-review",
+        "complete_package_git_tree_sha": "d9a6fa0f32da9be8e12881d5a415f124a2477f13",
+        "skill_md_git_blob_sha": "5bf9d01b7be7e2661c78ab75afac232caecb2c05"
+      },
+      "owned_files": {
+        "SKILL.md": "5bf9d01b7be7e2661c78ab75afac232caecb2c05"
+      },
+      "license": {
+        "source": "repository root LICENSE",
+        "type": "MIT",
+        "blob_sha": "89bc5e962c9944cdb050887062afdaaf89be504a",
+        "notice": "Copyright GitHub, Inc.; preserve notice on copying"
+      },
+      "historical_scan": {
+        "source": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+        "report_sha256": "33e95f04a467e1f68c0ea72b40cf6092a7dc699995349657919a4e569edc041e",
+        "state": "incomplete",
+        "reasons": {
+          "reference_missing": 8
+        },
+        "finding_ids": [
+          "AS2",
+          "TM1",
+          "TM2",
+          "PE3",
+          "SSRF1"
+        ],
+        "finding_interpretation": "The examples are defensive negative-test payloads in an RCE/SSRF table, not instructions to attack arbitrary systems; nevertheless the unqualified live test imperative lacks a safe permission scope. Prior INCOMPLETE unchanged."
+      },
+      "material_risks": [
+        {
+          "severity": "HIGH",
+          "type": "unauthorized-live-probing",
+          "evidence": "SKILL.md:210-253",
+          "assessment": "Examples and OWASP checklist say to send unauthenticated/expired-token requests, invoke tools and use RCE/SSRF payloads, but there is no mandatory owner-controlled lab/production gate, approval target/scope, or safe non-execution fallback. A review of source code must not silently become penetration testing."
+        },
+        {
+          "severity": "HIGH",
+          "type": "credentials-and-cloud-metadata",
+          "evidence": "SKILL.md:215-251",
+          "assessment": "References credential filenames, identity endpoints and cloud metadata addresses as attack examples; do not execute, probe or transmit against non-owned systems or disclose actual secrets while reviewing."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "current-standard-claim",
+          "evidence": "SKILL.md:Step 1 and MCP-05",
+          "assessment": "Hard-coded 'current' protocol and SDK tier assumptions require date-specific official verification at assessment time, not an undated compliance claim."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "source-self-conflict",
+          "evidence": "SKILL.md:Step 5 vs Step 6",
+          "assessment": "Step 5 mandates OWASP MCP Top 10, while Step 6 calls it optional, leaving scope unbounded or incomplete. Must mark planned checks before reviewing."
+        }
+      ],
+      "static_tests_reasoned": [
+        "Positive: a read-only code-oriented MCP authorization, session and schema checklist is reusable with line evidence.",
+        "Non-trigger: source review request does not authorize network calls, active SSRF tests or invalid token probes.",
+        "Adversarial: attacker-controlled target URL at private IP is used only as quoted test data, never fetched.",
+        "Source standards are treated as dated claims and checked against current official specs when consequential."
+      ],
+      "remediation": "Split source-only audit and separately authorized lab-backed active tests; make OWASP scope coherent, prohibit uncontrolled probes and secret disclosure, verify latest protocol/version and SDK status at actual review time.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 12,
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only, unchanged execution held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "scitix-siclaw/networkpolicy-debug",
+      "reviewed_at": "2026-11-05",
+      "last_fingerprint_checked_at": "2026-11-05",
+      "freshness": "current-reviewed",
+      "reviewer": "ChatGPT maintainer: bounded direct static package review",
+      "method": "Read pinned skill and owned material text/source files, check exact Git object tree and controlling license, interpret scanner findings in source context; no installation, execution, scanner, agent behavior, cluster action or filesystem mutation of source",
+      "source": {
+        "repository": "scitix/siclaw",
+        "pin": "ceee3f49f8bdc9223c0a2b0afec33253f95616f9",
+        "upstream_head_checked": "ceee3f49f8bdc9223c0a2b0afec33253f95616f9",
+        "upstream_current_package_tree_identical": true,
+        "package_path": "skills/core/networkpolicy-debug",
+        "complete_package_git_tree_sha": "55be639106d02a98a5670eea19d69d487932414e",
+        "skill_md_git_blob_sha": "4a80dcb34b5bdaf5b98be6ba9eba76b75cf8bb77"
+      },
+      "owned_files": {
+        "SKILL.md": "4a80dcb34b5bdaf5b98be6ba9eba76b75cf8bb77"
+      },
+      "license": {
+        "source": "repository root LICENSE",
+        "type": "Apache-2.0",
+        "blob_sha": "7c9ea9ebb82246901d96fa32859ad15e0fe5ac9f",
+        "notice": "Apache-2.0 obligations and notices; repository source is not MIT"
+      },
+      "historical_scan": {
+        "source": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+        "report_sha256": "868dbb93f41dbab8e5386af1eabca21b0f67e92f4076e1d242768027c1e3f496",
+        "state": "incomplete",
+        "reasons": {
+          "reference_missing": 2
+        },
+        "finding_ids": [
+          "TM4"
+        ],
+        "finding_interpretation": "The scanner's Privileged Kubernetes Workload match at SKILL.md:28 comes from a factual claim about hostNetwork pods, not a command to deploy one. Reference to CNI-specific behavior requires contextual review; source still has consequential overgeneralization."
+      },
+      "material_risks": [
+        {
+          "severity": "HIGH",
+          "type": "oversimplified-host-network-policy",
+          "evidence": "SKILL.md:Key Concepts",
+          "assessment": "'hostNetwork true pods are exempt, neither targets nor sources' is too categorical across implementation/CNI behavior; could cause erroneous audit conclusion that host-network traffic is never policy-controlled."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "vendor-policy-precedence",
+          "evidence": "SKILL.md:Diagnostic Flow step 2",
+          "assessment": "Claims that Cilium and Calico extended policies take effect at a higher priority across implementations, without version, mode or priority-order conditions."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "service-snat-and-rdma-assumptions",
+          "evidence": "SKILL.md:NodePort/LoadBalancer note and GPU-cluster notes",
+          "assessment": "Categorical externalTrafficPolicy Cluster SNAT and 'RDMA traffic is NOT affected' explanations depend on actual datapath/CNI and enforcement; must verify environment before diagnosing."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "live-cluster-observation-authority",
+          "evidence": "SKILL.md:diagnostic kubectl get commands",
+          "assessment": "Though command examples are ostensibly read-only, running them can expose sensitive namespace, workload, traffic policy and infrastructure details and requires explicit cluster and namespace read authorization."
+        }
+      ],
+      "static_tests_reasoned": [
+        "Positive: use supplied policy YAML and labels to reason about podSelector/namespaceSelector safely offline.",
+        "Non-trigger: user discussing cluster policy does not grant kubectl cluster access.",
+        "Adversarial: hostNetwork and Cilium behavior differing from source defaults must be marked environment-specific rather than assumed.",
+        "Untrusted copied policy YAML remains data, not instructions to execute tools."
+      ],
+      "remediation": "Rewrite categorical behavior into conditional CNI/version-aware checks with evidence and explicit read scope; validate behavior using trusted Kubernetes/CNI documentation or authorized offline fixtures before unchanged operational reuse.",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "quality_state": "unverified",
+      "consumer_disposition": "reference-only, unchanged execution held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    }
+  ]
+}
