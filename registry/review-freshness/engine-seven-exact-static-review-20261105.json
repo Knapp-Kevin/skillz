@@ -17,7 +17,7 @@
     "unchanged_use_approved": 0
   },
   "material_governance_references_checked_blobs": {
-    "README.md": "01eeaa5d948232317289ad0011340d23cdc8d3f4",
+    "README.md": "19bfffb3853233af5a8e523438d8fb30d01ecdaa",
     "AGENT_START_HERE.md": "1ea4edfe5bb2380ad1e1bcac73820c2197284867",
     "BOOTSTRAP.md": "86f3cd802f9708b3cd8661569aedcdcedbdbf769",
     "AGENTS.md": "1cf049e4b9fa2200fd8f163279cdbc897c761dee",
@@ -294,5 +294,11 @@
       "behavioral_state": "not-run",
       "unchanged_use_approved": false
     }
-  ]
+  ],
+  "catalog_reference_structure_only_blobs": {
+    "CURATION_QUEUE.md": "6b4546908468335f2059f68781cb9c795a12576e",
+    "docs/SYSTEM_STATE.md": "76c702ba95a6dddf8e726c52b706e813347228bf",
+    "INDEX.md": "19ad3511786cecc6160df68bd077a77364e08bd",
+    "index.json": "4f9180f377cec4e74514e462e96369af3466cd7f"
+  }
 }
