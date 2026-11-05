@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-04",
+  "kind": "engine-incomplete-package-reference-closure",
+  "repository": "Knapp-Kevin/skillz",
+  "main_revision": "a1265ddf5370b716c519b50cc41f8f49848f96ba",
+  "root_git_tree_sha": "3352535bd858acf051ec4b285c53010fe044c126",
+  "scanner_pin": "NVIDIA SkillSpector 2.12.0 @ c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+  "claims": "Existence of referenced Git objects only; NO scanner execution, full-content inspection, behavioral test, or acceptance.",
+  "counts": {
+    "incomplete_engine_packages": 5,
+    "reported_reference_line_events": 14,
+    "reference_mentions": 29,
+    "distinct_repo_objects": 21,
+    "blob_targets": 17,
+    "tree_targets": 4,
+    "new_scanner_passes": 0
+  },
+  "references": {
+    "README.md": {
+      "type": "file",
+      "git_blob_sha": "a88c9cb7c38781fca525b4d527eb4b891e8b9082"
+    },
+    "AGENT_START_HERE.md": {
+      "type": "file",
+      "git_blob_sha": "f275bfdea9eac7fe5c6b418f06e3af7d7250c190"
+    },
+    "BOOTSTRAP.md": {
+      "type": "file",
+      "git_blob_sha": "0088a30ae79295861d6cd263ad59f310e8268225"
+    },
+    "AGENTS.md": {
+      "type": "file",
+      "git_blob_sha": "2bd820beef46d0b8e2d563c0a6c4acfdb9c2fa21"
+    },
+    "engine/skills/skill-bootstrap/SKILL.md": {
+      "type": "file",
+      "git_blob_sha": "b4fa7eaa7b2eadb4d85580897815c054baf88711"
+    },
+    "registry/capability-directory.json": {
+      "type": "file",
+      "git_blob_sha": "28fad878846ff44a4d0167725db191c506ad8773"
+    },
+    "docs/consumer-discovery-and-installation.md": {
+      "type": "file",
+      "git_blob_sha": "715b744424bce8ed89b2df49dd9f2fe67fad63bb"
+    },
+    "registry/sources.yaml": {
+      "type": "file",
+      "git_blob_sha": "fae52acadbbde4fee1352309ce1805e7b1a0db8e"
+    },
+    "registry/local-verification.json": {
+      "type": "file",
+      "git_blob_sha": "86a325eb47c6feabcac1fc9843ee4610c4a9904c"
+    },
+    "docs/third-party-provenance.md": {
+      "type": "file",
+      "git_blob_sha": "b6650d88a18fdd81bc18a04f82eb8be4fe4d8d5b"
+    },
+    "docs/skill-verification.md": {
+      "type": "file",
+      "git_blob_sha": "3d34c82a05a0c46d8259a6a9d526aaf0c3d864ec"
+    },
+    "docs/security-scanning.md": {
+      "type": "file",
+      "git_blob_sha": "76dce3d507f1af8c74a0d259693f5e9d0d56bc8c"
+    },
+    "docs/skill-template.md": {
+      "type": "file",
+      "git_blob_sha": "9776e4c19cfc80d47f29a8a8bf7cbece43e2e694"
+    },
+    "docs/SYSTEM_STATE.md": {
+      "type": "file",
+      "git_blob_sha": "69d74db4fac0441fdac0d3129d2a2d45ffb61e49"
+    },
+    "CURATION_QUEUE.md": {
+      "type": "file",
+      "git_blob_sha": "ac733ab1fbf03aad0652492659391f4998e4c727"
+    },
+    "INDEX.md": {
+      "type": "file",
+      "git_blob_sha": "fb5d0c4c9ca71251364b4912a4869400a199af17"
+    },
+    "index.json": {
+      "type": "file",
+      "git_blob_sha": "7cd0c069c10d4284e7b1800964c1d312aa85f9cb"
+    },
+    "skills/": {
+      "type": "directory",
+      "git_tree_sha": "f3b3b1360a33ed55681243f434db7a602a01070d"
+    },
+    "registry/skills/": {
+      "type": "directory",
+      "git_tree_sha": "6b192bee6cd9fa0e1cf0ac1799b3bc0fa1fa6907"
+    },
+    "registry/verification/": {
+      "type": "directory",
+      "git_tree_sha": "5f02fe08df983463b59135fc7d34b68d84f43b"
+    },
+    "skills/sources/": {
+      "type": "directory",
+      "git_tree_sha": "1b0f6c86a29db7b85d6d9706805f1bc2d386fcf9"
+    }
+  },
+  "packages": [
+    {
+      "id": "skill-audit",
+      "path": "engine/skills/skill-audit",
+      "source_blob_sha": "65a5dfa1aa915ab18bcec1764adfdbacd14cf874",
+      "package_tree_sha": "5ea7fa7d93e24d1380657531b686b56a05b9ff26",
+      "prior_state": "incomplete",
+      "reference_events": [
+        {
+          "line": 25,
+          "paths": [
+            {
+              "path": "README.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "AGENT_START_HERE.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "BOOTSTRAP.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "AGENTS.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "engine/skills/skill-bootstrap/SKILL.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill-bootstrap",
+      "path": "engine/skills/skill-bootstrap",
+      "source_blob_sha": "b4fa7eaa7b2eadb4d85580897815c054baf88711",
+      "package_tree_sha": "b1b9a0e79053041a04c6f259c8597f84ba57d3bf",
+      "prior_state": "incomplete",
+      "reference_events": [
+        {
+          "line": 136,
+          "paths": [
+            {
+              "path": "registry/capability-directory.json",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "docs/consumer-discovery-and-installation.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 142,
+          "paths": [
+            {
+              "path": "registry/skills/",
+              "kind": "directory",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "registry/verification/",
+              "kind": "directory",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "registry/sources.yaml",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "skills/sources/",
+              "kind": "directory",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "skills/",
+              "kind": "directory",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 150,
+          "paths": [
+            {
+              "path": "registry/local-verification.json",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 195,
+          "paths": [
+            {
+              "path": "docs/third-party-provenance.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill-eval",
+      "path": "engine/skills/skill-eval",
+      "source_blob_sha": "0b97075aade486d0018f217723586c242f65a712",
+      "package_tree_sha": "9f5f63652b7e058b58e71c7e44171ab5088c3823",
+      "prior_state": "incomplete",
+      "reference_events": [
+        {
+          "line": 32,
+          "paths": [
+            {
+              "path": "docs/skill-verification.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 48,
+          "paths": [
+            {
+              "path": "docs/skill-verification.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 49,
+          "paths": [
+            {
+              "path": "docs/security-scanning.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        }
+      ],
+      "additional_unresolved": {
+        "analyzer": "static_patterns_tool_misuse",
+        "reason": "static_parse_limit",
+        "fully_inspected_files": 0,
+        "cause": "UNKNOWN; reproduce at pinned scanner, do not assume later upstream parser fix applies"
+      }
+    },
+    {
+      "id": "skill-forge",
+      "path": "engine/skills/skill-forge",
+      "source_blob_sha": "b12e399d6b8577ec54d3e3057a80657929cf0eeb",
+      "package_tree_sha": "2d027ea38da73b7122a024cbd94ca591ba1f4e32",
+      "prior_state": "incomplete",
+      "reference_events": [
+        {
+          "line": 22,
+          "paths": [
+            {
+              "path": "engine/skills/skill-bootstrap/SKILL.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 29,
+          "paths": [
+            {
+              "path": "docs/skill-template.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 32,
+          "paths": [
+            {
+              "path": "docs/skill-verification.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 34,
+          "paths": [
+            {
+              "path": "docs/security-scanning.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        },
+        {
+          "line": 36,
+          "paths": [
+            {
+              "path": "README.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "docs/SYSTEM_STATE.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "CURATION_QUEUE.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "INDEX.md",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "index.json",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills-pulse",
+      "path": "engine/skills/skills-pulse",
+      "source_blob_sha": "23bff9873d8dfc2141103aae2248f5d47cf19467",
+      "package_tree_sha": "945eae12def16e3e804a337f7d3edc208554dd5a",
+      "prior_state": "incomplete",
+      "reference_events": [
+        {
+          "line": 24,
+          "paths": [
+            {
+              "path": "registry/sources.yaml",
+              "kind": "file",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "registry/skills/",
+              "kind": "directory",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            },
+            {
+              "path": "registry/verification/",
+              "kind": "directory",
+              "exists_at_repo_root": true,
+              "outside_original_single_file_package": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gates": [
+    "At external host obtain exact source revision and all repository references without private data.",
+    "Do not treat repository-root existence as content scanned; materialization changes package identity and cannot transfer a pass.",
+    "Run pinned scanner --no-llm --fail-on-findings --fail-on-incomplete, with supported dependency handling and recorded input/report digests.",
+    "Investigate skill-eval static_patterns_tool_misuse parse limit with reproducible exact input, not scanner evasion.",
+    "Retain all five INCOMPLETE until full coverage, findings review and independent host behavior are observed."
+  ]
+}

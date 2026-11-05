@@ -1,0 +1,846 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-04",
+  "kind": "first-party-complete-package-current-candidate-security-coverage",
+  "source_repository": "Knapp-Kevin/skillz",
+  "candidate_pr": 703,
+  "candidate_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+  "main_sha_at_publication": "485a228cab75382f23d041ea45298e782452c590",
+  "scanner_pin": "NVIDIA/SkillSpector@c7958a3268d9498644b22edb75d0f051bbc8cbfc v2.12.0",
+  "scope": "Exactly 44 user-facing + 7 engine first-party skill packages on the current draft PR #703; DOES NOT include third-party corpus, skill directories without SKILL.md, or unchanged-use approvals.",
+  "counts": {
+    "first_party_user_facing": 44,
+    "first_party_engine": 7,
+    "total": 51,
+    "matching_historical_pinned_pass": 21,
+    "current_tree_not_run": 25,
+    "historical_exact_tree_incomplete": 5,
+    "observed_behavioral": 0,
+    "approved_unchanged_use": 0
+  },
+  "engine_incomplete": [
+    {
+      "package": "engine/skills/skill-audit",
+      "package_git_tree_sha": "5ea7fa7d93e24d1380657531b686b56a05b9ff26",
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 1,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:25"
+      ]
+    },
+    {
+      "package": "engine/skills/skill-bootstrap",
+      "package_git_tree_sha": "b1b9a0e79053041a04c6f259c8597f84ba57d3bf",
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 4,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:136",
+        "SKILL.md:142",
+        "SKILL.md:150",
+        "SKILL.md:195"
+      ]
+    },
+    {
+      "package": "engine/skills/skill-eval",
+      "package_git_tree_sha": "9f5f63652b7e058b58e71c7e44171ab5088c3823",
+      "incomplete_reasons": {
+        "static_parse_limit": {
+          "count": 1,
+          "meaning": "A file exceeded a static parse limit; partial coverage."
+        },
+        "reference_missing": {
+          "count": 3,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:32",
+        "SKILL.md:48",
+        "SKILL.md:49",
+        "SKILL.md:None"
+      ]
+    },
+    {
+      "package": "engine/skills/skill-forge",
+      "package_git_tree_sha": "2d027ea38da73b7122a024cbd94ca591ba1f4e32",
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 5,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:22",
+        "SKILL.md:29",
+        "SKILL.md:32",
+        "SKILL.md:34",
+        "SKILL.md:36"
+      ]
+    },
+    {
+      "package": "engine/skills/skills-pulse",
+      "package_git_tree_sha": "945eae12def16e3e804a337f7d3edc208554dd5a",
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 1,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:24"
+      ]
+    }
+  ],
+  "gates": {
+    "existing_matching_pinned_pass": "Historical static security evidence ONLY, not new test, not behavioral acceptance.",
+    "incomplete": "Fail closed; incomplete reference or parse coverage, requires repair/recheck at exact same or newly updated tree, findings adjudicated.",
+    "not_run": "Requires pinned complete-tree scanner on authorized host, then independent adversarial agent behavior."
+  },
+  "rows": [
+    {
+      "package": "skills/agent-home-doctor",
+      "skill": "agent-home-doctor",
+      "package_git_tree_sha": "7e78ed3047b66c67c492eae1191853d6d7ce095e",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/agent-postmortem",
+      "skill": "agent-postmortem",
+      "package_git_tree_sha": "cceb115c92467cd3be2a997484ef6756a47b6f58",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/brief-writer",
+      "skill": "brief-writer",
+      "package_git_tree_sha": "3f45875f509b1a20fca4c1847c8122b549a76126",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/career-radar",
+      "skill": "career-radar",
+      "package_git_tree_sha": "35055db24f786f8b3b57f78789e146eb0ee49b9c",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Career Radar 1.1.4 fixed unauthorized prior-report access and possible private-profile egress via public web queries; new exact tree awaits pinned scanner and observed host tests.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/claude-pulse",
+      "skill": "claude-pulse",
+      "package_git_tree_sha": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "ba7ea19bd60fcc203f16eef70bc2cf02332325e0ce96cfca7d0632db14c8bb9a"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/compare",
+      "skill": "compare",
+      "package_git_tree_sha": "4ceefd2c39842ebb3e711a2f82d9840131588054",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/daily-briefing",
+      "skill": "daily-briefing",
+      "package_git_tree_sha": "6c73d9f034feaecad129769a9ec0afebabc397f6",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/decision-log",
+      "skill": "decision-log",
+      "package_git_tree_sha": "ca790304801fd1717841a8fab98bb4ebeed4c9bf",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/deck-outline",
+      "skill": "deck-outline",
+      "package_git_tree_sha": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "c2fa66c490064c894ff049838c0d60a4aeb62e878f9fb1338cfb6d615de090e7"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/deep-dive",
+      "skill": "deep-dive",
+      "package_git_tree_sha": "6119cf00ef09a1bb4097c28c3ed4aac8909b7037",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/deepseek-pulse",
+      "skill": "deepseek-pulse",
+      "package_git_tree_sha": "8984411410ccae81474a93e53c28a180ff61ec25",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/devlog-draft",
+      "skill": "devlog-draft",
+      "package_git_tree_sha": "ba81b6da10b317b314d31264d7c5d9362d753702",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/fact-check",
+      "skill": "fact-check",
+      "package_git_tree_sha": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/finance-review",
+      "skill": "finance-review",
+      "package_git_tree_sha": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "ba9e787b7349596727d68a688777a26eae6251eaf9b3444877b0b7ce6816ad2d"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/gemini-pulse",
+      "skill": "gemini-pulse",
+      "package_git_tree_sha": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/github-pulse",
+      "skill": "github-pulse",
+      "package_git_tree_sha": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/glm-pulse",
+      "skill": "glm-pulse",
+      "package_git_tree_sha": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/governance-pulse",
+      "skill": "governance-pulse",
+      "package_git_tree_sha": "506e6452333173778aa6e0e4e9a614b10cd12c58",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/handoff-writer",
+      "skill": "handoff-writer",
+      "package_git_tree_sha": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/hf-pulse",
+      "skill": "hf-pulse",
+      "package_git_tree_sha": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/inbox-triage",
+      "skill": "inbox-triage",
+      "package_git_tree_sha": "d5796de1dbb5605e3ba8c2932ddf6860f972bef0",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/inference-pulse",
+      "skill": "inference-pulse",
+      "package_git_tree_sha": "3eba79599f77970dd91367df55f1325ded8f2149",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/kimi-pulse",
+      "skill": "kimi-pulse",
+      "package_git_tree_sha": "049e00a74897ba13f8168e7f8ce2a896d9937e84",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/learning-plan",
+      "skill": "learning-plan",
+      "package_git_tree_sha": "931fb2192a3cb1212643fe1df51d5e4bc3c70af4",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/llama-pulse",
+      "skill": "llama-pulse",
+      "package_git_tree_sha": "53dbd090ce88c406296ff84fce4faa61534044cd",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/mcp-pulse",
+      "skill": "mcp-pulse",
+      "package_git_tree_sha": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/mcp-vetting",
+      "skill": "mcp-vetting",
+      "package_git_tree_sha": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/memory-pulse",
+      "skill": "memory-pulse",
+      "package_git_tree_sha": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/mistral-pulse",
+      "skill": "mistral-pulse",
+      "package_git_tree_sha": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/openai-pulse",
+      "skill": "openai-pulse",
+      "package_git_tree_sha": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/paper-digest",
+      "skill": "paper-digest",
+      "package_git_tree_sha": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/permissions-review",
+      "skill": "permissions-review",
+      "package_git_tree_sha": "8b8cbd95cbcb4f053c1070fdb4400c823593863f",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/perplexity-pulse",
+      "skill": "perplexity-pulse",
+      "package_git_tree_sha": "2929295240f02db18afc52eeb44a8d3c30ec8346",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/qwen-pulse",
+      "skill": "qwen-pulse",
+      "package_git_tree_sha": "e328cb591e98f994d2646bae448cb779c6adee06",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/repo-doctor",
+      "skill": "repo-doctor",
+      "package_git_tree_sha": "cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false,
+      "reason": "Repo Doctor 1.0.1 replaced unsafe git status instruction after isolated execution repro; previous PASS applied only to old tree c2529253b35b5f90d58500091a0d1efbb1c14c2b; current exact tree unscanned."
+    },
+    {
+      "package": "skills/repo-pulse",
+      "skill": "repo-pulse",
+      "package_git_tree_sha": "452ecbe5dd3d51825cda94890a82f0ccdbf11d2d",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "New exact source requires pinned scanner/observed agent-host testing after local Git execution containment repair.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/smallbiz-ops",
+      "skill": "smallbiz-ops",
+      "package_git_tree_sha": "304c1a49988aee8f446b5fa00700ff46a5e2358b",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/standup-writer",
+      "skill": "standup-writer",
+      "package_git_tree_sha": "d6429bfea7bebe567aa52f7c5f1f6c44fd10086f",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "New exact source requires pinned scanner/observed agent-host testing after local Git execution containment repair.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/task-surface",
+      "skill": "task-surface",
+      "package_git_tree_sha": "951d5da3b04651e5612e8d1af811b39250672585",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/todo-harvester",
+      "skill": "todo-harvester",
+      "package_git_tree_sha": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "c5f3714e62738e5e367e11ac6f84e9c1068624c740433b051a36a5e4ac31bb94"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/week-in-review",
+      "skill": "week-in-review",
+      "package_git_tree_sha": "81646a594bf994e24899f7a086d86459cfaa5832",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/xai-pulse",
+      "skill": "xai-pulse",
+      "package_git_tree_sha": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "historical-pinned-exact-tree",
+        "record_source": "registry/security/active-first-party-repair-frontier-20261104.json"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/automation-receipts",
+      "skill": "automation-receipts",
+      "package_git_tree_sha": "39a8e08f7037fca28665b33edcc9d93314059c2d",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "skills/session-continuity",
+      "skill": "session-continuity",
+      "package_git_tree_sha": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "e65c892adaa3b6b778212f644e071ad1dd3351437a94ce6a130cacc4a6a54b47"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/skill-audit",
+      "skill": "skill-audit",
+      "package_git_tree_sha": "5ea7fa7d93e24d1380657531b686b56a05b9ff26",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "incomplete",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "0d8835f5b892f01ecf3e5d96e37bc72b324656c5e3ca11a9310ea7c33e1e7654"
+      },
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 1,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:25"
+      ],
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/skill-bootstrap",
+      "skill": "skill-bootstrap",
+      "package_git_tree_sha": "b1b9a0e79053041a04c6f259c8597f84ba57d3bf",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "incomplete",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "ea0d86454ef65d67409f018051cdcccd4370116b71086043215c57ce723bca49"
+      },
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 4,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:136",
+        "SKILL.md:142",
+        "SKILL.md:150",
+        "SKILL.md:195"
+      ],
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/skill-eval",
+      "skill": "skill-eval",
+      "package_git_tree_sha": "9f5f63652b7e058b58e71c7e44171ab5088c3823",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "incomplete",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "568eea29f65fbe73d959e2cb1f5aca470122dd69daf09b85042e3b5808edfd70"
+      },
+      "incomplete_reasons": {
+        "static_parse_limit": {
+          "count": 1,
+          "meaning": "A file exceeded a static parse limit; partial coverage."
+        },
+        "reference_missing": {
+          "count": 3,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:32",
+        "SKILL.md:48",
+        "SKILL.md:49",
+        "SKILL.md:None"
+      ],
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/skill-forge",
+      "skill": "skill-forge",
+      "package_git_tree_sha": "2d027ea38da73b7122a024cbd94ca591ba1f4e32",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "incomplete",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "cff70859466a9632a6b90606bb511b89577011c3a64f5eb72380e8069d658970"
+      },
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 5,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:22",
+        "SKILL.md:29",
+        "SKILL.md:32",
+        "SKILL.md:34",
+        "SKILL.md:36"
+      ],
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/skill-sync",
+      "skill": "skill-sync",
+      "package_git_tree_sha": "214f442b3ecca7623bd61d27e8377e83184cecfb",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "3f9c199a8625e1d52242e071ec5d3114beef7bfd4a7975f82777d90a4f8a08b8"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/skills-pulse",
+      "skill": "skills-pulse",
+      "package_git_tree_sha": "945eae12def16e3e804a337f7d3edc208554dd5a",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "incomplete",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "4af29c41693b10635d501b0fb0e74250e6bd2c1820e91d94092799d417a6bd2a"
+      },
+      "incomplete_reasons": {
+        "reference_missing": {
+          "count": 1,
+          "meaning": "Package text names a local path not bundled in the package (user files, runtime outputs or sibling paths). SkillSpector fails closed; the referenced content was not scanned."
+        }
+      },
+      "incomplete_locations": [
+        "SKILL.md:24"
+      ],
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    },
+    {
+      "package": "engine/skills/source-vetting",
+      "skill": "source-vetting",
+      "package_git_tree_sha": "591db689f8505eafc008bf64614c722acb8998a4",
+      "source_type": "first-party-engine",
+      "repair_candidate": false,
+      "scanner_state": "passed-historical-exact-tree",
+      "receipt": {
+        "kind": "prior-main-exact-tree",
+        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
+        "report_sha256": "f74b29a1149696d7cb324450cede66c8738a98be50470a5ae32e50cb939af73d"
+      },
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false
+    }
+  ],
+  "previous_candidate_head": "49c35af59dcc6300a0523aedbece5bfa1fb9a477",
+  "last_reconciled_at": "2026-11-05"
+}
