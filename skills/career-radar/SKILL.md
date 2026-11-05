@@ -12,7 +12,7 @@ metadata:
   category: Productivity
   display-name: Career Radar
   emoji: "🛰️"
-  version: 1.1.3
+  version: 1.1.4
 ---
 
 # Career Radar
@@ -27,7 +27,7 @@ A periodic market scan that answers three questions for the operator's bound pro
 2. **Scan postings:** web-search 4–6 query variants around the profile's core terms (e.g., for a platform-engineering profile: "AI platform engineer remote", "agent infrastructure architect", "LLM platform engineering jobs") across job boards and company career pages surfaced in results. Collect titles, seniority, comp when listed, and posting dates.
 3. **Scan rates:** web-search recent salary/rate surveys and comp threads for the role cluster. Prefer sources dated within 12 months; note the date on every figure.
 4. **Cluster** the postings by role type (e.g. platform engineering, agent infrastructure, AI governance/safety, solutions architecture) with a rate range per cluster.
-5. **Extract demand signals:** keywords repeating across postings, newly appearing titles, requirements shifting (e.g. eval harnesses, MCP, agent orchestration), and clusters growing or shrinking versus the previous scan if one exists in notes.
+5. **Extract demand signals without expanding source access:** identify repeated keywords, newly appearing titles and changing requirements (e.g. eval harnesses, MCP, agent orchestration). Compare growth or decline with a previous scan **only if that exact earlier report was provided by the user or the user separately authorized its specific note/source, account and date range for this run**. Never search host memory, private notes, unrelated workspaces or connected accounts to locate prior reports. If no approved comparison exists, label growth/decline as `not established` rather than inventing a trend.
 6. **Compare against positioning:** where the profile is ahead of demand, where it lags, and 2–3 concrete positioning suggestions (terms to adopt, artifacts to surface).
 7. **Present** in the Output Format below, citing sources for every rate figure.
 
