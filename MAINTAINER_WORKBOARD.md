@@ -1,6 +1,10 @@
 # Maintainer Workboard
 
-## Latest #402 source-review tranche: November 5, 2026
+## Current #402 targeted content-review checkpoint: November 5, 2026
+
+The latest [three complete pinned-source reviews](registry/security/q8-three-incomplete-privacy-and-code-static-dispositions-20261105.json) ([findings](docs/reviews/2026-11-05-issue402-next-three-incomplete-q8.md)) add Daily Focus Board (private note retention and next-day carryover gap), Build Evidence Map (timestamp/verification claim defects), and Email Voice (well-bounded private sampling with separate install/connector approval). Source reviews, not runtime tests. Q8 risk-content frontier: **13/40** historically FAILED/INCOMPLETE sources independently statically reviewed: **7/7 FAILED, 6/33 INCOMPLETE**, with **27** incomplete packages still to inspect in this tranche. Historial scan results remain 10 PASS / 7 FAIL / 33 INCOMPLETE; no positive execution clearance. The README [generated chart](docs/assets/q8-direct-static-risk-review-progress.svg) and stronger hash/rubric-checking [renderer](scripts/build-q8-static-review-progress.mjs) reflect this status; issue #402 is still open. No capability admissions or change to existing domain counts.
+
+## Earlier #402 3/33 source-review tranche: November 5, 2026
 
 **Work done:** [three additional historically incomplete Q8 packages](registry/security/q8-three-incomplete-high-risk-static-dispositions-20261105.json) have independently pinned direct static reviews, with [source-risk details](docs/reviews/2026-11-05-issue402-three-high-risk-incomplete-q8.md): worktree cleanup unsafe Git config/plan integrity, MCP active attack-test authorization, and Kubernetes CNI/hostNetwork source inaccuracies. Together with earlier failed-source tranches this is **7/7 historical FAILED + 3/33 historical INCOMPLETE**, while keeping all historical scanner results and unchanged-use holds intact. **30** incomplete Q8 featured methods remain for this targeted content-risk review, in addition to the broader corpus. The [README status graphic](docs/assets/q8-direct-static-risk-review-progress.svg) and [reproducible generator](scripts/build-q8-static-review-progress.mjs) now depict direct content review separately from historical scans. No new capability admissions or behavioral claims.
 
