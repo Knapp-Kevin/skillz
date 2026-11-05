@@ -25,6 +25,10 @@ function evaluate(historic,first,last,next,extra){
     const tree=base.complete_package_git_tree_sha||base.package_tree_sha||r.complete_package_tree_sha||r.package_tree_sha;
     const state=r.historical_scanner_state||r.historical_scanner?.state||"failed";
     if(!prior||prior.gate_state!==state||prior.source.skill_md_blob_sha!==blob||prior.source.package_tree_sha!==tree||r.unchanged_use_approved!==false)throw Error("Source identity/status or action approval mismatch: "+r.id);
+    const digest=r.historical_scan?.report_sha256||r.historical_scanner?.report_sha256;
+    if(digest!==prior.evidence?.report_sha256)throw Error("Historical scanner digest mismatch: "+r.id);
+    const rubric=r.static_rubric||r.rubric,score=r.static_score??r.score_total;
+    if(!rubric||Object.keys(rubric).length!==10||!Object.values(rubric).every(n=>Number.isInteger(n)&&n>=0&&n<=2)||Object.values(rubric).reduce((a,b)=>a+b,0)!==score)throw Error("Invalid ten-axis static review rubric: "+r.id);
   }
   return {FAILED_DONE:first.records.length+last.records.length,FAILED_TOTAL:7,INCOMPLETE_DONE:next.records.length+extra.records.length,INCOMPLETE_TOTAL:33,LEFT:33-next.records.length-extra.records.length,ADJUDICATED:merged.length,FLAGGED_TOTAL:40,FAIL_FILL:470,INCOMPLETE_FILL:Math.round((next.records.length+extra.records.length)/33*470)};
 }
@@ -35,7 +39,9 @@ const m=evaluate(a,b,c,d,e),expected=render(m),dest=resolve(root,"docs/assets/q8
 if(process.argv.includes("--self-test")){
   const corrupt=structuredClone(a);corrupt.records[0].gate_state="passed";let rejected=false;try{evaluate(corrupt,b,c,d,e)}catch{rejected=true};if(!rejected)throw Error("Inflated scanner count accepted");
   const duplicated=structuredClone(d);duplicated.records[0].id=b.records[0].id;rejected=false;try{evaluate(a,b,c,duplicated,e)}catch{rejected=true};if(!rejected)throw Error("Duplicate review accepted");
-  console.log("self-test passed: scanner count, IDs, exact trees and no approvals");
+  const forged=structuredClone(e);forged.records[0].historical_scan.report_sha256="0".repeat(64);rejected=false;try{evaluate(a,b,c,d,forged)}catch{rejected=true};if(!rejected)throw Error("Forged scanner receipt accepted");
+  const badScore=structuredClone(e);badScore.records[0].static_score+=1;rejected=false;try{evaluate(a,b,c,d,badScore)}catch{rejected=true};if(!rejected)throw Error("Inconsistent review rubric accepted");
+  console.log("self-test passed: original scanner totals, unique IDs, exact Git trees, scanner receipt digests, ten-axis rubric and no approvals");
 }else if(process.argv.includes("--check")){
   if(readFileSync(dest,"utf8")!==expected)throw Error("Generated review graphic differs from source evidence");
   console.log("check passed");
