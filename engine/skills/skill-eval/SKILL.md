@@ -9,7 +9,7 @@ metadata:
   category: Meta
   display-name: Skill Eval
   emoji: "⚖️"
-  version: 2.0.0
+  version: 2.0.1
   repo-bound: true
 ---
 
@@ -25,7 +25,7 @@ metadata:
    - source/repository;
    - canonical path;
    - revision or other exact identity when available;
-   - content fingerprint when the repository records one;
+   - complete package Git tree and SKILL.md blob fingerprints when establishable (do not confuse the two);
    - applicable license and attribution.
 2. Read the complete skill package, including any skill-owned scripts, references, templates, examples, fixtures, or other components that materially affect behavior.
 3. Identify the capability the skill claims to provide and its expected triggers/non-triggers.
@@ -46,15 +46,20 @@ metadata:
    These are reviewer interpretations, not observed host behavior.
 6. Separate whole-skill quality from component value. A skill unsuitable for unchanged reuse may still contain a useful mechanism, provided its constraints and provenance follow that mechanism.
 7. Assign a rubric score and decisive disposition using `docs/skill-verification.md`. `verified` requires an exact-version structured semantic review with no hard fail and the rubric thresholds met. `validated` additionally requires **actual representative external host-executed behavioral/adversarial evidence bound to that exact package**. Static scenarios, plans, and written acceptance cases never qualify.
-8. Record behavioral validation as `not-run` when no qualifying execution evidence exists. Keep package-security state separate under `docs/security-scanning.md`; a semantic pass never implies a scanner pass or unchanged-use eligibility.
+8. Record behavioral validation as `not-run` when no qualifying execution evidence exists. Keep package-security state separate under `docs/security-scanning.md`; a semantic pass never implies a scanner pass or unchanged-use eligibility. A historical `incomplete` scan stays `incomplete` even if a complete direct content review succeeds.
 9. Record material caveats, including missing evidence, honestly. Do not convert unknowns into a positive assumption.
-10. Update the appropriate exact-version review/provenance records and controlled tags only when authorized.
+10. Record the original `reviewed_at` and the separate latest exact-identity `checked_at`, together with `current-reviewed`, `needs-re-review`, `not-yet-reviewed`, or `source-unavailable` freshness. A changed material file requires an actual new review; never transfer the previous grade by filename or mutate its historical date.
+11. Update the appropriate exact-version review/provenance records and controlled tags only when authorized. If a referenced directory is too large to inspect in full, list the bounded scope reviewed and do not imply all contents were read.
 
 ## Output
 
 ```text
 Skill: <name>
-Exact identity: <revision/fingerprint or not established>
+Exact identity: <revision, SKILL.md blob, complete package tree, or not established>
+Reviewed at: <date of actual semantic review>
+Checked at: <latest exact-identity verification, if any>
+Freshness: current-reviewed | needs-re-review | not-yet-reviewed | source-unavailable
+Material references inspected: <exact files and any bounded directory scope>
 Capability: <one sentence>
 Rubric score: <score>
 Quality state: verified | validated | unverified | stale | rejected | retired

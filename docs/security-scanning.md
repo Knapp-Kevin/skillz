@@ -6,7 +6,7 @@
 
 `skillz` is **entirely passive**.
 
-The repository has no scripts, tests, CI workflows, or other active machinery. An authorized external host can use its own tools to assess exact skill packages and record the resulting evidence here before admission or unchanged reuse.
+Reading or installing a skill from this repository does not invoke a runtime, CI workflow, scanner daemon or automatic external process. Optional repository maintainer scripts (for example, documentation/dashboard generators) are separate from a skill's passive text and require their own authorized execution when used. An authorized external host can assess exact skill packages and record the resulting evidence here without making those tools a prerequisite for publication or unchanged-reuse consideration.
 
 Security scanning is a distinct evidence dimension. It does not replace provenance, licensing, semantic quality review, authority review, portability review, behavioral evidence, or user-fit judgment.
 

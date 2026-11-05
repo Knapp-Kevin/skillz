@@ -9,7 +9,7 @@ metadata:
   category: Meta
   display-name: Skill Audit
   emoji: "🔍"
-  version: 2.0.0
+  version: 2.0.1
   repo-bound: true
 ---
 
@@ -34,7 +34,7 @@ metadata:
 5. Look for stale paths, deleted folders, obsolete runtime/CI/test language, contradictory counts, or old terminology that could mislead an agent.
 6. Read important changed instructions adversarially for likely overreach, ambiguity, false certainty, or needless ceremony.
 7. Correct material findings directly when authorized.
-8. Report only unresolved material findings. If none remain, report `PASS` as a semantic review judgment.
+8. Report the exact files reviewed, material corrections actually made, evidence for those corrections, and any unresolved findings or unavailable references. If no material findings remain, report `PASS` explicitly as a bounded **static semantic review judgment**, never as a scanner or observed host-behavior pass.
 
 ## Negative rules
 

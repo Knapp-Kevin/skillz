@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.11.0
+  version: 0.11.1
 ---
 
 # Skill Bootstrap
@@ -182,8 +182,8 @@ Check, as far as the host can truthfully establish:
 Rules:
 
 - `verified` or `validated` plus matching exact identity may satisfy the semantic quality dimension;
-- scanner-compatible packages additionally require security `passed` or explicitly `findings-reviewed` under the repository's current package-security policy for unchanged reuse;
-- security `not-run`, `failed`, `incomplete`, or `stale` remains adaptation/design evidence only until the security gap is resolved;
+- Assess any existing exact-package scanner results separately as supplementary evidence under `docs/security-scanning.md`. A `passed` receipt does not override actual content findings or grant tool authority; a `not-run` or `incomplete` receipt alone is not a blanket reason to reject an otherwise fully reviewed passive skill.
+- Investigate `failed`, `incomplete`, or `stale` scanner reports for credible unresolved content, dependency, privacy, or authority findings. Hold unchanged-use recommendations when material risks cannot be resolved by reading the exact complete source; do not silently treat a historical scan as current or claim `passed` without execution.
 - `unverified` and legacy `trusted-baseline` are design evidence only;
 - `stale`, `rejected`, and `retired` are excluded from normal unchanged selection;
 - never invent an exact identity match.
@@ -381,7 +381,7 @@ Do not end at recommendations if complete artifacts can be produced.
 - Extract mechanisms without importing unnecessary ceremony.
 - Preserve required skill-owned components unless there is a specific reason to change them.
 - Component reuse does not bypass provenance, licensing, dependencies, authority, or rejection reasons.
-- `verified` and `validated` are the only current unchanged-reuse semantic quality states; applicable package-security evidence is an additional independent gate.
+- `verified` and `validated` are the only current unchanged-reuse semantic quality states; assess available package-security evidence independently. Scanning is optional, but credible unresolved content risks bar unchanged-use recommendations.
 - Never fabricate identity, review state, installation, artifacts, or evidence.
 - Do not mine unrelated private connectors.
 - During normal bootstrap, `skillz` is read-only and never the destination for generated or adapted user skills.
