@@ -1,5 +1,33 @@
 {
   "schema_version": 1,
+  "static_review_and_hygiene_20261105": {
+    "date": "2026-11-05",
+    "source_pr": 703,
+    "merged_sha": "33a03c7b744f8f2484aebfa00c761d9e38c2fac6",
+    "open_prs": 0,
+    "open_issues": 4,
+    "open_issue_numbers": [
+      402,
+      544,
+      588,
+      599
+    ],
+    "completed_source_issues": [
+      415,
+      478,
+      481,
+      483,
+      491,
+      495
+    ],
+    "policy": "docs/static-review-and-freshness.md",
+    "review_currency": "registry/review-freshness/first-party-44-exact-source-20261105.json",
+    "first_party_current_static_reviews": 44,
+    "repaired_source_package_trees_merged": 39,
+    "new_scanner_passes": 0,
+    "new_observed_host_validations": 0,
+    "new_unchanged_use_approvals": 0
+  },
   "current_capability_mapping_20261105": {
     "as_of": "2026-11-05",
     "source": "registry/capability-directory.json",
