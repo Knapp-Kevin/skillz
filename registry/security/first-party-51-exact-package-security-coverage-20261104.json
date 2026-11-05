@@ -4,7 +4,7 @@
   "kind": "first-party-complete-package-current-candidate-security-coverage",
   "source_repository": "Knapp-Kevin/skillz",
   "candidate_pr": 703,
-  "candidate_head": "914d4e3d07c6b3a39c5636948f377c0c1c04684d",
+  "candidate_head": "49c35af59dcc6300a0523aedbece5bfa1fb9a477",
   "main_sha_at_publication": "485a228cab75382f23d041ea45298e782452c590",
   "scanner_pin": "NVIDIA/SkillSpector@c7958a3268d9498644b22edb75d0f051bbc8cbfc v2.12.0",
   "scope": "Exactly 44 user-facing + 7 engine first-party skill packages on the current draft PR #703; DOES NOT include third-party corpus, skill directories without SKILL.md, or unchanged-use approvals.",
@@ -12,8 +12,8 @@
     "first_party_user_facing": 44,
     "first_party_engine": 7,
     "total": 51,
-    "matching_historical_pinned_pass": 22,
-    "current_tree_not_run": 24,
+    "matching_historical_pinned_pass": 21,
+    "current_tree_not_run": 25,
     "historical_exact_tree_incomplete": 5,
     "observed_behavioral": 0,
     "approved_unchanged_use": 0
@@ -551,27 +551,24 @@
     {
       "package": "skills/repo-doctor",
       "skill": "repo-doctor",
-      "package_git_tree_sha": "c2529253b35b5f90d58500091a0d1efbb1c14c2b",
-      "source_type": "first-party-user-facing",
-      "repair_candidate": false,
-      "scanner_state": "passed-historical-exact-tree",
-      "receipt": {
-        "kind": "prior-main-exact-tree",
-        "record_source": "registry/security/external-host-skillspector-first-party-20261103.json",
-        "report_sha256": "156ecb387dbe7d5b101e40505ba1d75455d2e4e44d072cc27373dd17cc4f959a"
-      },
-      "behavioral_state": "not-run",
-      "unchanged_use_approved": false
-    },
-    {
-      "package": "skills/repo-pulse",
-      "skill": "repo-pulse",
-      "package_git_tree_sha": "536d02c3c8ffed77f4acb9a90145a0a0e5c2197b",
+      "package_git_tree_sha": "cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7",
       "source_type": "first-party-user-facing",
       "repair_candidate": true,
       "scanner_state": "not-run-current-tree",
       "receipt": null,
-      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "behavioral_state": "not-run",
+      "unchanged_use_approved": false,
+      "reason": "Repo Doctor 1.0.1 replaced unsafe git status instruction after isolated execution repro; previous PASS applied only to old tree c2529253b35b5f90d58500091a0d1efbb1c14c2b; current exact tree unscanned."
+    },
+    {
+      "package": "skills/repo-pulse",
+      "skill": "repo-pulse",
+      "package_git_tree_sha": "452ecbe5dd3d51825cda94890a82f0ccdbf11d2d",
+      "source_type": "first-party-user-facing",
+      "repair_candidate": true,
+      "scanner_state": "not-run-current-tree",
+      "receipt": null,
+      "reason": "New exact source requires pinned scanner/observed agent-host testing after local Git execution containment repair.",
       "behavioral_state": "not-run",
       "unchanged_use_approved": false
     },
@@ -590,12 +587,12 @@
     {
       "package": "skills/standup-writer",
       "skill": "standup-writer",
-      "package_git_tree_sha": "7fb796c1d7bb976d6cfaeaf09e62878a90c9050b",
+      "package_git_tree_sha": "d6429bfea7bebe567aa52f7c5f1f6c44fd10086f",
       "source_type": "first-party-user-facing",
       "repair_candidate": true,
       "scanner_state": "not-run-current-tree",
       "receipt": null,
-      "reason": "Changed complete package tree, requires pinned SkillSpector and independent host behavior.",
+      "reason": "New exact source requires pinned scanner/observed agent-host testing after local Git execution containment repair.",
       "behavioral_state": "not-run",
       "unchanged_use_approved": false
     },
@@ -844,6 +841,6 @@
       "unchanged_use_approved": false
     }
   ],
-  "previous_candidate_head": "b4b92ed5302f23e5d794b0684963989c85d28d84",
+  "previous_candidate_head": "914d4e3d07c6b3a39c5636948f377c0c1c04684d",
   "last_reconciled_at": "2026-11-05"
 }
