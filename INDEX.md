@@ -1,5 +1,9 @@
 # Skill Catalog Snapshot
 
+## Current repository and content-review checkpoint: November 5, 2026
+
+**0 open PRs, 4 open issues** (#402, #544, #588, #599). [Merged #703](https://github.com/Knapp-Kevin/skillz/pull/703) shipped 39 reviewed source repairs, with [44/44 exact first-party static reviews current](registry/review-freshness/first-party-44-exact-source-20261105.json). The [freshness contract](docs/static-review-and-freshness.md) preserves original review dates and flags changed versions. No new scanner/behavioral/use approval; 86/1,039 capability links and 50 Q8 study references unchanged.
+
 ## Capability mapping release: November 5, 2026
 
 [The current capability directory](registry/capability-directory.json) has **86/1,039** exact-version governed identities with evidence-backed domain/subdomain links (**44 first-party, 42 third-party**), leaving **953 unmapped**. **62/247** subdomains have governed links. The **50 existing Q8 study-only methods** now appear in their matching subdomains across **33/33** domains, clearly separate from governed verified IDs and install approvals. No new security scan, behavioral acceptance or unchanged-use promotion. [Review and limitations](docs/reviews/2026-11-05-q8-studies-eight-governed-capability-links.md). Older counts below are historical checkpoints.
