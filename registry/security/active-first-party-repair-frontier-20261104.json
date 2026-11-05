@@ -570,9 +570,9 @@
     {
       "id": "permissions-review",
       "pr": 703,
-      "pr_head": "34a65b095235c024416b26416eb18ea9f2a3e4c8",
+      "pr_head": "8216ab5f17bee27e59cd3599746fd65e0165dfec",
       "path": "skills/permissions-review",
-      "package_tree_sha": "8b8cbd95cbcb4f053c1070fdb4400c823593863f",
+      "package_tree_sha": "e942297c3e343ad5af388b23604987a9bb49322d",
       "proposal_only": true,
       "security_state": "not-run-current-tree",
       "security_evidence": null,
@@ -788,5 +788,6 @@
     ],
     "original_34_preserved": true,
     "latest_source_repair_head": "914d4e3d07c6b3a39c5636948f377c0c1c04684d"
-  }
+  },
+  "last_reconciled_pr_head": "a139d3c0be29c6383154b597559b99d126d425cd"
 }
