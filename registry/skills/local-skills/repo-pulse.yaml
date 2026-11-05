@@ -7,9 +7,9 @@ source_path: skills/repo-pulse/SKILL.md
 source_class: first-party
 license: MIT
 relationship: first-party
-source_snapshot_revision: c8bf7e063529066956dc8d7d52d0540b7b7708ef
+source_snapshot_revision: 744d78d477e802d698bfca31f3687e5316e6a1f6
 curated_at: 2026-08-30
-last_checked_at: 2026-11-04
+last_checked_at: 2026-11-05
 availability: in-repo
 local_path: skills/repo-pulse/SKILL.md
 permission_tier: read-only
@@ -18,4 +18,4 @@ review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
 import_eligibility: review-required
-rationale: "2026-11-04 exact new source 920e9cf3834527f3c110a24a0b5034a37c753de1: Q15 ten-axis source-semantic review 18/20, with follow-up output-secret redaction inspected as a non-broadening safety amendment. External scanner and host-behavior tests NOT RUN; unchanged adoption remains held."
+rationale: "2026-11-05 exact source 9e6938b29e4c0748e4098bc53a96498f42784423, Git tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d: read-only Git CLI must not execute repo-controlled fsmonitor/hooks/helpers. 8/8 source structural checks and safe synthetic Git fixture observed; current static 18/20 only. Current-tree NVIDIA scanner and independent host-agent behavior NOT RUN; unchanged use held. docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md."

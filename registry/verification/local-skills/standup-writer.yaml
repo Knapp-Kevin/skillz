@@ -3,13 +3,13 @@ skill_name: standup-writer
 source_id: local-skills
 local_path: "skills/standup-writer/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 1812e0ca5845df2563bd888066c8674979bc1a34
+content_blob_sha: 21c216fbc46f516fecc0a562afbe652fbd436b95
 characterized_at: 2026-08-30
-reviewed_at: 2026-11-04
+reviewed_at: 2026-11-05
 verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
-validation_note: Static 18/20 exact-current-package review only. This changed package has no matching external security scanner report and no observed agent-host behavioral validation.
+validation_note: 7/7 exact-source structural assertions passed and sandboxed local Git helper-execution reproduction completed; no NVIDIA SkillSpector final-tree scan or independent agent-host behavioral qualification.
 rubric: "docs/skill-verification.md"
 rubric_score: "18/20"
 tags:
@@ -18,4 +18,4 @@ tags:
   characteristic: [evidence-first, synthesis, traceable, tool-routing]
   authority: [generate-only, external-side-effect]
   portability: [medium]
-notes: "Private root/profile discovery was removed; user-approved source binding now precedes access. Exact source 1812e0ca5845df2563bd888066c8674979bc1a34 / Git package 7fb796c1d7bb976d6cfaeaf09e62878a90c9050b has static 18/20 review at docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Scanner and host behavior not-run; unchanged use held."
+notes: "2026-11-05 exact standup-writer source 21c216fbc46f516fecc0a562afbe652fbd436b95 complete package tree d6429bfea7bebe567aa52f7c5f1f6c44fd10086f, ten-axis static 18/20, 7/7 executed structural source checks. Unprotected Git status was observed to execute a repo-configured fsmonitor program in a synthetic local checkout; guarded status with core.fsmonitor disabled/trusted empty hook path did not. This is a Git CLI test, not a model-host behavioral test. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Scanner not-run-current-tree and unchanged reuse held."

@@ -1112,7 +1112,7 @@
       "skill_name": "repo-doctor",
       "local_path": "skills/repo-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8bc7f360be091aac35d61652fe8a34ff7bee3060",
+      "content_blob_sha": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "16/20",
@@ -1137,13 +1137,13 @@
           "medium"
         ]
       },
-      "notes": "Useful one-shot repository diagnostics with evidence and proposed fixes, but assumes local git/gh tooling and some staleness heuristics are necessarily approximate."
+      "notes": "2026-11-05 source fed90fa0a664611e560bbc3ded630eb9e72253e1, tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7. Static 16/20, source assertions 9/9; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
       "skill_name": "repo-pulse",
       "local_path": "skills/repo-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "920e9cf3834527f3c110a24a0b5034a37c753de1",
+      "content_blob_sha": "9e6938b29e4c0748e4098bc53a96498f42784423",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1169,7 +1169,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-04 current exact-source SHA 920e9cf3834527f3c110a24a0b5034a37c753de1 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
+      "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
       "skill_name": "smallbiz-ops",
@@ -1207,7 +1207,7 @@
       "skill_name": "standup-writer",
       "local_path": "skills/standup-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1812e0ca5845df2563bd888066c8674979bc1a34",
+      "content_blob_sha": "21c216fbc46f516fecc0a562afbe652fbd436b95",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1232,7 +1232,7 @@
           "medium"
         ]
       },
-      "notes": "Exact repaired 1812e0ca5845df2563bd888066c8674979bc1a34 (tree 7fb796c1d7bb976d6cfaeaf09e62878a90c9050b) static semantic 18/20; no implicit private workspace discovery; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security scan/host behavior not-run, unchanged-use held."
+      "notes": "2026-11-05 source 21c216fbc46f516fecc0a562afbe652fbd436b95, tree d6429bfea7bebe567aa52f7c5f1f6c44fd10086f. Static 18/20, source assertions 7/7; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
       "skill_name": "task-surface",
