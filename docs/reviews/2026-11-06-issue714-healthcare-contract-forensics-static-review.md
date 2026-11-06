@@ -1,80 +1,64 @@
-# Issue #714: Healthcare Contract Forensics, exact-package static review
+# Issue #714: current authored Healthcare Contract Forensics package review
 
-**Review date:** 2026-11-06
-**Reviewer method:** Maintainer-directed, direct static reading of independently written source instructions and all included supporting text/data, plus separate decimal arithmetic check of fictional fixture.
-**Finding:** **19/20 semantic static VERIFIED** for this exact seven-file passive package; **observed agent-host behavioral validation NOT RUN**, **external scanner NOT RUN**, no permission to process PHI or use unchanged in a regulated production workflow.
+**Reviewed:** 2026-11-06, exact 9-file first-party authored package on [draft PR #715](https://github.com/Knapp-Kevin/skillz/pull/715).
 
-## Source identity and license
+**Review verdict: structured semantic static review 19/20.** Observed agent-host behavioral testing **NOT RUN**; no external scanner run; no public legal certification or real savings evidence; unchanged use with confidential contracts/PHI **not cleared**.
 
-- Origin: [issue #714](https://github.com/Knapp-Kevin/skillz/issues/714); motivating [Mark Cuban LinkedIn post](https://www.linkedin.com/posts/mark-cuban-06a0755b_if-you-are-not-running-all-your-healthcare-share-7524530312345882624-FzV3/).
-- First-party, independently authored under repository MIT license. Similar generic concepts were compared, but no third-party skill text, proprietary agreement, real insurer contract, paid data or private health records were copied into the package. Synthetic fixture is invented.
-- Canonical source: \`skills/healthcare-contract-forensics/SKILL.md\`; exact Git blob \`6ea8dda7b85b399a252f9b97295d54e536a3f897\`.
-- **Full seven-file package tree SHA:** \`3974f153ac39bd27895c4f0365ee50e0ef1527a9\` (separate Git tree created from the included file blobs, not a partial path listing).
-- Review snapshot is this exact new work on the isolated issue branch. The final PR merge/rebase source commit must be recorded separately when it exists; this static source identity is content-based.
+## Exact source, copyright and rights
 
-## Material files statically inspected
+- Canonical folder: [`skills/authored/healthcare-contract-forensics/`](../../../skills/authored/healthcare-contract-forensics/).
+- Skill entrypoint Git blob `02d7d645d6a6856d01165e01da9014f9cf43309c`.
+- Full 9-file package Git tree SHA `0d1d9f2838691fcf7963472ea8b62c52b2a273ed`, assembled from the exact blobs below. Moving the package to `skills/authored/` does not alter package-relative Git tree identities.
+- First-party MIT (SPDX `MIT`), copyright (c) 2026 Kevin Knapp, repository [LICENSE](../../../LICENSE). No third-party original skill text, real healthcare contracts, protected records or patient PHI are vendored.
+- Exact version facts also recorded in the [authored skills license index](../../../registry/authored-skills-index.json), [provenance companion](../../../registry/skills/local-skills/healthcare-contract-forensics.yaml), [verification companion](../../../registry/verification/local-skills/healthcare-contract-forensics.yaml), and [local summary](../../../registry/local-verification.json).
+- Historical 7-file tree `3974f153ac39bd27895c4f0365ee50e0ef1527a9` and old SKILL blob `6ea8dda7b85b399a252f9b97295d54e536a3f897` are **superseded** and not valid current verification pins.
 
-| Path relative to skill root | Blob SHA | Role |
+## Full package: static content identity
+
+| Path under `skills/authored/healthcare-contract-forensics/` | Git blob SHA | Role |
 |---|---|---|
-| SKILL.md | 6ea8dda7b85b399a252f9b97295d54e536a3f897 | Triggers, scope, workflow, stop rules |
-| references/clause-review.md | 3b5a0ff7ce050978c01f2fd192a185ade1c6e328 | Economic/legal question categories |
-| references/financial-reconciliation.md | 6aae771da94e243280e70cdefa578fb06b3297dd | Arithmetic and admissibility rules |
-| references/report-template.md | 0b005dcf746c3c36c680c6dad905c144249f8e07 | Evidence-led report contract |
-| examples/synthetic-pbm-case.md | da1b5d44140a05f9d702e8a7c06a66f6da1a96b7 | Fictional clauses and invoice |
-| examples/claims-synthetic.csv | d4b01ddbed0a860f4676171383c6df1878bf363b | Four fictitious claim status rows |
-| examples/expected-case-review.md | e5f626830242ddf3e381dfb52f7ca538e75f2cfb | Ground-truth interpretations, failure tests |
+| SKILL.md | 02d7d645d6a6856d01165e01da9014f9cf43309c | Precise triggers, read-only authority, workflow and fail-closed behavior |
+| references/clause-review.md | 9ea8e183bfa04b712a36db2e66b4e65e50385da3 | Definitions, economics, opposing readings, law-source navigation |
+| references/financial-reconciliation.md | 52f370555cfb15af8dccf5fe5eb774ec72ba2b70 | Decimal arithmetic, units, reconciliation stop criteria |
+| references/report-template.md | a67caf18f3ee305ceba4a75c7419f1ea9ce29dc1 | Evidence ledger/report output contract |
+| examples/synthetic-pbm-case.md | b8c50e998c426747926267d4090ec6191c2ee4d1 | Fictional master, amendment, fees and manufacturer ledger |
+| examples/claims-synthetic.csv | d4b01ddbed0a860f4676171383c6df1878bf363b | Four invented claims, incl. reversed status |
+| examples/expected-case-review.md | 6dfd4fe54cdf2bcc0d0140902d82a1bd8813f5f0 | Base-case arithmetic and non-overclaim interpretation |
+| examples/filled-report-synthetic.md | 006d2b924565e7ba00c5ea82ae3d731a21c63bd2 | Filled fictional source-linked report, **not** model output |
+| examples/negative-scenarios.md | a8c92f4e4f1a17ed892dddf537d0047ccd29e379 | Nine fictional adversarial/counterfactual cases |
 
-Relative file links were checked against this exact manifest. There are **no scripts, network requests, runtime dependencies, installers or active model adapters inside the skill package**.
+All skill-relative reference links were checked against these nine blobs; no scripts, binaries, network calls or model-host adapters are bundled. Five previously malformed Markdown files were corrected for escaped backticks.
 
-## Evidence behind independent creation
+## Review score and evidence
 
-**Discovery scope correction (owner, 2026-11-06):** The **1,039** governed names (2026-11-01) are a *small reviewed-name index*, not a corpus search. The independent G1–G3 snapshot records **61,326 pinned package identity records across 942 repositories**, and additional separately maintained source-family indexes exist. Searching 1,039 names cannot establish the absence of a more relevant specialist skill. See the [full-corpus search contract](../discovery/full-corpus-search-contract.md).
-
-**Expanded, still incomplete discovery evidence:** A source-pinned G1 `legal-contract-review` method-alternatives ledger (2026-11-03) records **7 examined rows, six on-family**, including independent methods for grounded contract markup, tracked changes, legal-document evaluation and contract version disputes. The ledger reports root-license observations such as Apache-2.0 and MIT for some sources, but also **no observed root license** for `HHHHHejia/awesome-legal-aiagent-skills` and `majiayu000/claude-skill-registry-data`. That absence is *not* permission to copy; source/package-specific rights, nested terms and original authorship require verification. This is a study of ledger evidence, **not** a fresh full-package read and **not** a complete cross-family sweep. Do not treat the original no-name-match as a novel-skill determination. Existing evidence-based adjacent methods include:
-- \`anthropic-knowledge-work-plugins/review-contract\`: 18/20 verified static, generic contract workflow.
-- \`.../legal-risk-assessment\`: 13/20 rejected unchanged for generic threshold/legal-action overreach.
-- \`.../audit-support\`: 10/20 rejected unchanged for outdated prescriptive audit concepts.
-- \`.../compliance-check\`: 10/20 rejected unchanged due to stale/static legal reference risks.
-- \`local-skills/finance-review\`: 19/20 static verified, scoped statement digest rather than contract audit.
-
-Relevant mechanisms (source location, alternate interpretation, arithmetic workpaper, risk/authority controls) are unprotected ideas and were expressed independently. **CREATE** is the disposition. A wider all-family source-pinned discovery sweep remains a **specific open acceptance item** before concluding no specialist alternative exists; do not claim exhaustive market novelty. No third-party protected content was copied into this independently authored skill, so the missing wider rights audit does not imply that its original source text has an unlicensed third-party dependency.
-
-**Completed supplementary index-breadth receipt (2026-11-06):** [61,326 G1–G3 package identity path records searched across 14 shards, plus four source capability indices and Q1–Q5 ledgers](2026-11-06-issue714-broad-discovery-and-license-receipt.md). This found 233 lexical leads, five exact-pinned candidate skill bodies inspected with root-license checks, and no copied third-party content. **This is not** an exhaustive semantic reading of all 61,326 files or a claim that no better specialist exists. Further full-package candidate review and actual host behavior remain open.
-
-## Static quality rubric (ten dimensions)
-
-| Dimension | Score | Reason |
+| Static rubric dimension | Score | Evidence |
 |---|---:|---|
-| Trigger precision | 2 | Employer/PBM contracting is explicit; diagnosis, personal plan selection and generic legal queries excluded |
-| Procedure | 2 | Inventory -> definitions -> adversarial interpretations -> reconciliation -> report |
-| Authority/safety | 2 | Approved input scope, PHI stop gate, no egress, no vendor action, untrusted contract text |
-| Failure handling | 2 | Missing exhibits, OCR, unmatched claims, missing rates, law uncertainty block affected claims |
-| Evidence discipline | 2 | Source IDs, exact clauses/rows, counterevidence, value-state distinctions |
-| Dependency coherence | 2 | Seven files account for all required references, host math/parser conditional |
-| Portability honesty | 1 | Different hosts vary in local PDF parsing, accurate decimal tools and regulated data controls |
-| Differentiation | 2 | PBM-defined rebates, retained fees, affiliate disclosure, claims-level reconciliation and negotiation |
-| Adversarial resilience | 2 | Explicit opposing readings, injection, overclaim and reversal counterexamples |
-| Effectiveness design | 2 | Financial ledger and answer key make outcomes inspectable, not just persuasive text |
-| **Total** | **19/20** | **Static semantic review only** |
+| Trigger precision | 2 | Employer/PBM contract analysis triggered, personal plan shopping excluded |
+| Procedure and workflow | 2 | Bound authority → source map → defined economics → opposing reading → reconciliation → report |
+| Authority and confidentiality | 2 | Limited explicitly authorized reads, no vendor action or PHI egress |
+| Failure and uncertainty | 2 | Missing precedence, duplicate claims, OCR, absent rates and unsupported statutes block conclusions |
+| Source traceability | 2 | Section/row/contract version citations and contrary readings |
+| Package completeness | 2 | All 9 files, report and fixture referenced/resolved |
+| Portability honesty | 1 | Real hosts vary in PDF parsers, decimal arithmetic and confidentiality controls |
+| Domain usefulness | 2 | PBM exclusions, affiliate remuneration, claim settlement and negotiating questions |
+| Adversarial design | 2 | Injection, false benchmarks, later fees, sensitive data, missing contract and duplication |
+| Evaluation readiness | 2 | Filled report, source-linked answer key and precise expected-failure scenarios |
+| **Total** | **19/20** | **STATIC ONLY; NO OBSERVED HOST RUN** |
 
-## Arithmetic check and non-claims
+**Executed deterministic arithmetic/structural inspection (not model behavior):** parsed base synthetic CSV, confirmed 4 rows and 3 settled claims, expected $6.00 fee vs observed $7.25 yields +$1.25; $360 sponsor vs $310 pharmacy paid yields $50 observation; $50 defined rebates and $20 manufacturer service fees that are explicitly **excluded** from defined rebates. Later-amendment scenario at $2.50 × 3 = $7.50 gives **−$0.25** relative to $7.25 invoice. A duplicated `RX-002` in the counterfactual input triggers an unresolved count gate. All SKILL-relative links resolved; all nine variant IDs present; backtick formatting corrected. An initial overly literal phrase assertion against the worked example was rechecked by equivalent meaning: it explicitly says no overpayment proved and the amount is not recoverable on existing evidence. No production-billing validation, model accuracy metric or baseline superiority was established.
 
-Using the supplied invented claim rows, independent decimal calculation confirmed: three qualifying settled claims, $6.00 expected administration fee, $7.25 invoice fee, **+$1.25 arithmetic variance**; $360 sponsor charges vs $310 pharmacy settlements = **$50 observed price difference**; defined rebates **$50**, unrelated manufacturer admin fees **$20**. These checks validate arithmetic of fixture inputs only; **they do not measure LLM compliance with the skill or a baseline prompt**.
+**Candidate and rights review:** [61,326 G1–G3 path identity receipt](2026-11-06-issue714-broad-discovery-and-license-receipt.md) and [four fully enumerated candidate-package inspections](2026-11-06-issue714-package-candidate-comparison.md). The broader search found 233 lexical leads; reading four adjacent complete packages established differing domains and authority needs, **not** proof that no more suitable skill exists. Third-party material was **not copied**. Root licenses observed at inspected source pins do not clear every nested asset.
 
-The contract explicitly excludes manufacturer admin fees from defined Rebates and permits plan-to-pharmacy charge differences. Thus neither $20 nor $50 is an established unauthorized retention/overpayment. Preserve that alternative reading and don't assert illegal behavior.
+## Legal-context and behavioral boundaries
 
-## Regulatory review and staleness
+Current-law claims must be refreshed against the correct effective date, plan year, jurisdiction and primary source. The supplied 2025 fictional fixture is not determined unlawful by a later PBM disclosure rule. The exact source contains no authority to email contracts, infer PHI access, run a script or accuse a vendor of misconduct. An **external host** still needs independent tested enforcement.
 
-Checked primary public source leads 2026-11-06: [DOL PBM disclosure rule](https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/fact-sheets/pharmacy-benefit-manager-fee-disclosure-final-rule), [Federal Register 91 FR 69092](https://www.govinfo.gov/app/details/FR-2026-11-02/2026-22306), [HHS de-identification](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html), and [CMS Transparency in Coverage 2026](https://www.cms.gov/newsroom/fact-sheets/transparency-coverage-final-rules-cms-9882-f). DOL rule effective 2027-01-04, applicable to plan years starting 2027-07-01 for covered arrangements; therefore **not a basis for a March 2025 compliance assertion**. Sources are dated navigation references, not immutable legal requirements. Any actual audit must fresh-check primary authority and counsel.
+## Outstanding evidence
 
-## Findings / deliberate limitations
+- Run actual trigger/nontrigger/injection/OCR/duplicate/PHI/adversarial tests with the exact 9-file fingerprint on a selected authorized host.
+- Run a matched baseline prompt comparison, capture transcripts and source citation precision rather than assume superiority.
+- Verify any consequential regulation, applicable plan type, rights and dates with current primary authority and qualified counsel.
+- Reconcile authored index and regenerated domain/dashboard counts before claiming a synchronized total.
+- Independent reviewer/owner decision before draft PR merge or user-facing production promotion.
 
-- **Material limitation:** Even correct synthetic arithmetic cannot establish a right to recover or a breach without complete contract and adjustment history.
-- **Material limitation:** A one-time static review of instructional content is not actual host behavior with prompt injections or PHI.
-- **Material limitation:** Member insurance-plan comparisons involve plan evidence and personal needs, not identical contract auditing. Keep separate until separately designed and validated.
-- **Privacy:** Real documents may contain confidential prices and health details. The skill prohibits incidental external uploads and unapproved PHI reads; a specific runtime still must implement lawful and appropriate controls.
-- **Corpus tracking:** Historic README/dashboard counts, governed name index and capability-directory snapshot predate this addition. Do not re-date or rewrite prior census evidence to fabricate a synchronized current corpus statistic. Index integration can occur in a separate genuine regeneration/update.
-
-## Next qualification
-
-Use an authorized external host on these invented files, run explicit trigger, non-trigger, injected-note, missing-document and baseline-vs-skill comparisons, record inputs/transcripts/actions and exact package fingerprint. Resolve observed failures before marking \`validated\`. No claims of superiority, monetized savings, endorsement by Cuban, operational clearance or security scanner PASS are supported now.
+The fact that this skill is marked `verified-static` does not mean behavioral or security validation, and the repository holds passive documents rather than active protection controls.

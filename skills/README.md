@@ -16,9 +16,13 @@ Humans can start with [`categories/`](categories/):
 
 Category folders are a human navigation layer. Canonical active local skill content is the discovered `SKILL.md` material under `skills/`.
 
+## Canonical authored skills
+
+All new first-party custom packages belong under [authored/](authored/) and are listed with explicit SPDX licensing and exact package identities in [the authored-skill index](../registry/authored-skills-index.json). Existing historical first-party skills remain in place until separately migrated.
+
 ## New domain-specific first-party example
 
-[Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) supports bounded employer/PBM agreement review, with a [fictional reconciliation exercise](healthcare-contract-forensics/examples/synthetic-pbm-case.md) and [exact-package static review](../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md). Its semantic static status is **verified 19/20**; external model behavior and financial recovery are **not validated**. The historical dashboard remains a dated snapshot until fully regenerated.
+[Healthcare Contract Forensics](authored/healthcare-contract-forensics/SKILL.md) supports bounded employer/PBM agreement review, with a [fictional reconciliation exercise](authored/healthcare-contract-forensics/examples/synthetic-pbm-case.md) and [exact-package static review](../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md). Its semantic static status is **verified 19/20**; external model behavior and financial recovery are **not validated**. The historical dashboard remains a dated snapshot until fully regenerated.
 
 ## Counting boundary
 
