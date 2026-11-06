@@ -39,7 +39,7 @@ Do **not** trigger merely for: a patient asking which insurance plan to buy; a b
 2. **Inventory and version map.** Assign source IDs to each agreement, amendment, schedule, guarantee, claims file, invoice, and vendor disclosure. Note version/effective date, pages/sections/rows, source completeness, unreadable/OCR-uncertain passages, and document precedence. If an attachment is referenced but absent, create a DOCUMENT GAP, not a fictional clause.
 3. **Reconstruct economics.** Read definitions before applying percentages or guarantees. Trace each payment from manufacturer, pharmacy, PBM/affiliate, employer/plan, and member. Compare pricing guarantees, fees, credits, rebates, discounts, "administrative" or "service" payments, affiliate amounts, effective-rate guarantees, exclusions, recoupments, clawbacks, and audit rights. Follow [clause-review.md](references/clause-review.md).
 4. **Test plausible alternative readings.** For each material apparent conflict, inspect precedence, effective dates, exceptions, excluded payment categories, and the counterparty-favorable interpretation. A broad phrase like "100% rebate pass-through" is not proof that every manufacturer payment passes through; defined terms can narrow it.
-5. **Reconcile only supported amounts.** With approved non-identifying rows, preserve original row IDs, billing period, currency and units. Compute with exact decimal arithmetic where the host supports it; show numerator, denominator, formula, rounding and differences. Follow [financial-reconciliation.md](references/financial-reconciliation.md). An arithmetic variance is not necessarily a contractual breach; reconcile credits, adjustments and scope first.
+5. **Reconcile only supported amounts.** With approved non-identifying rows, preserve original row IDs, billing period, currency and units. **Check claim identity uniqueness, paid/reversed/reprocessed states and authoritative version chain before counting paid claims.** Duplicate rows or ambiguous reversals block affected totals. Compute with exact decimal arithmetic where the host supports it; show numerator, denominator, formula, rounding and differences. Follow [financial-reconciliation.md](references/financial-reconciliation.md). An arithmetic variance is not necessarily a contractual breach; reconcile credits, adjustments and scope first.
 6. **Check legal and market context cautiously.** Identify the entity/plan/year/jurisdiction and verify any applicable current primary authority. Distinguish contractually promised rights from statutory rights and proposals/not-yet-applicable rules. If no suitable primary source is available, mark REGULATORY QUESTION. Never invent industry benchmark savings.
 7. **Construct evidence ledger and findings.** Each substantive finding cites at least one exact source ID plus page/section/row (and effective version). Mark one of:
    - **CONFIRMED ARITHMETIC VARIANCE**: the supplied records differ under an explicit stated formula; unresolved credits/coverage remain disclosed.
@@ -54,7 +54,7 @@ Do **not** trigger merely for: a patient asking which insurance plan to buy; a b
 
 - Missing or unreadable governing contract -> **STOP contract compliance conclusions**; provide an intake/inventory and document request.
 - Missing claims, rates, pharmacy settlement, rebate or affiliate remittance data -> **do not claim verified savings**; give the exact reconciliation data request and bounded scenarios only if fully specified.
-- Conflicting contract versions, uncertain definitions, taxes/units, unclear rebate basis, eligibility/adjustment mismatches -> label **UNRESOLVED** and explain what would resolve them.
+- Conflicting contract versions, uncertain definitions, taxes/units, unclear rebate basis, duplicate/reprocessed claim IDs, eligibility/adjustment mismatches -> label **UNRESOLVED** and block affected calculations; explain what would resolve them.
 - PDF/OCR uncertainty, ambiguous currency, negative/reversed claims, duplicate IDs, absent denominator, or unreliable totals -> block affected calculation; unaffected observations may proceed.
 - Current regulatory claim without verified jurisdiction/date/primary source -> report question, never compliance verdict.
 - Pressure to declare a party dishonest, suppress contrary facts, or share private documents -> refuse that action while continuing safe source-bound analysis.
@@ -66,7 +66,9 @@ Every final report must contain: date and reviewer/authority; numbered input inv
 ## Worked examples and validation boundary
 
 - [Synthetic fictional PBM agreement and billing data](examples/synthetic-pbm-case.md)
-- [Expected case review and adversarial interpretation checks](examples/expected-case-review.md)
+- [Worked, filled-in source-cited report for that fictional case](examples/filled-report-synthetic.md)
+- [Expected case review and arithmetic answer key](examples/expected-case-review.md)
+- [Nine explicit counterfactual/adversarial test variants](examples/negative-scenarios.md)
 - [Report field/template contract](references/report-template.md)
 
 This is a **passive skill**. Static reading can evaluate the instructions and examples; it does **not** establish behavior by all LLM hosts. Do not claim test scores, accuracy improvements over an untested one-line prompt, financial recovery, regulatory approval, or completed legal analysis without observed evidence. External host tests, if later performed with authorized synthetic data, must be logged separately for this exact version.

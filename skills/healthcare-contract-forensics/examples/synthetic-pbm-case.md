@@ -5,7 +5,7 @@
 **Operator role:** employer-side plan sponsor reviewer.
 **Review period:** March 2025 claims and January–March 2025 rebate ledger.
 **Jurisdiction and plan type:** illustrative U.S. self-insured ERISA employer plan; no legal conclusion is assumed.
-**Authorized files:** this document and \`claims-synthetic.csv\`; no private accounts, network services, or actual contracts.
+**Authorized files:** this document and `claims-synthetic.csv`; no private accounts, network services, or actual contracts.
 
 ## Source C-01, Master Pharmacy Benefit Agreement, signed 2024-12-15, effective 2025-01-01
 
@@ -35,7 +35,7 @@
 
 - **Line 1: Claim administration fees:** $7.25.
 - **Line 2: Adjustment/credit entries:** none shown.
-- **Notes:** Invokes C-01 §4.1; all listed records are included in \`claims-synthetic.csv\`.
+- **Notes:** Invokes C-01 §4.1; all listed records are included in `claims-synthetic.csv`.
 
 ## Source R-01, Q1 2025 manufacturer ledger, delivered 2025-05-12
 
@@ -46,8 +46,8 @@
 
 ## Evidence map / resolution limits
 
-- \`C-01\` sections 1.1, 2.1, 3.2, 4.1, 5.3, 7.1; \`S-01\` §A.1; \`A-01\` §§A1.1–A1.2; \`I-01\` lines 1–2; \`R-01\` lines 1–4.
-- \`D-01\` means each row from \`claims-synthetic.csv\`.
+- `C-01` sections 1.1, 2.1, 3.2, 4.1, 5.3, 7.1; `S-01` §A.1; `A-01` §§A1.1–A1.2; `I-01` lines 1–2; `R-01` lines 1–4.
+- `D-01` means each row from `claims-synthetic.csv`.
 - The invoice does **not** include an adjustment; nevertheless undisclosed out-of-period credits/offsets cannot be ruled out, so a variance is not yet a recoverable amount.
 - The raw affiliate payment reports, definitive claim adjudication audit, and final settlement evidence are missing.
 - Every claim and amount is invented. Report values describe this exercise only.

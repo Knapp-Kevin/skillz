@@ -6,7 +6,7 @@ Use as a **question library**, not an assertion that any provision is unlawful o
 - Identify parties and affiliates; business model; sponsor/plan versus administrator obligations; relevant policy/renewal/termination windows.
 - Capture master agreement, statements of work, pharmacy schedules, guarantee/settlement exhibits, data use and confidentiality terms, amendments, supersession, and incorporation by reference.
 - Build a **precedence graph** using only stated order-of-precedence clauses and effective dates; where unclear record ambiguity.
-- Extract exactly defined \`rebate\`, \`discount\`, \`fee\`, \`administrative payment\`, \`aggregate guarantee\`, \`brand\`, \`generic\`, \`specialty\`, \`biosimilar\`, \`ingredient cost\`, \`dispensing fee\`, \`net cost\`, \`spread\`, and \`affiliate\` where present. No definition is inferred from everyday English.
+- Extract exactly defined `rebate`, `discount`, `fee`, `administrative payment`, `aggregate guarantee`, `brand`, `generic`, `specialty`, `biosimilar`, `ingredient cost`, `dispensing fee`, `net cost`, `spread`, and `affiliate` where present. No definition is inferred from everyday English.
 
 ## Compensation and incentives
 | Theme | What to compare | Data required to confirm |
@@ -24,7 +24,7 @@ Use as a **question library**, not an assertion that any provision is unlawful o
 1. Quote only short minimum excerpts in external reports and cite source ID, page, section, version. Store larger exact text in the authorized private source only.
 2. Distinguish **economic opacity** (a payment excluded by definition) from **breach** (a contractual promise contradicted by transaction evidence). Some arrangements may lawfully permit retained compensation; the question is whether that is disclosed and acceptable to the plan.
 3. Do not automatically interpret the difference between sponsor charge and pharmacy reimbursement as hidden misconduct. The difference can include agreed margins, taxes, discounts, timing and different data bases.
-4. No "100% rebate pass-through" finding without reading defined \`rebates\`, exclusions, aggregation, credited time and affiliate treatment.
+4. No "100% rebate pass-through" finding without reading defined `rebates`, exclusions, aggregation, credited time and affiliate treatment.
 5. Model the opposing interpretation: a later specific exhibit, explicit carve-out, or offset could resolve a perceived conflict. Preserve it in the finding.
 6. If identifying healthcare data is encountered, minimize or stop as prescribed in the core skill. Never repeat person-level rows in a public report.
 

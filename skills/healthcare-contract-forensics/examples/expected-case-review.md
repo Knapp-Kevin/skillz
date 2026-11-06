@@ -4,7 +4,7 @@
 
 ## Baseline arithmetic: full included claim set
 
-\`D-01\` rows 1–3 are \`SETTLED\`; row 4 is \`REVERSED\` and excluded.
+`D-01` rows 1–3 are `SETTLED`; row 4 is `REVERSED` and excluded.
 - Settled claim count = **3**.
 - Admin fee = 3 × $2.00 = **$6.00** from C-01 §4.1, S-01 §A.1; A-01 §A1.2 confirms unchanged rate.
 - Invoice I-01 line 1 says **$7.25**; arithmetic variance = $7.25 - $6.00 = **+$1.25**. Classification **CONFIRMED ARITHMETIC VARIANCE**, *not* established breach, wrongdoing, a refund or legal recovery. Request invoice detail, all credit memos and authoritative counts.
