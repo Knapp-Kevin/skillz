@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-incomplete-jobsearch-blender-ink-static-dispositions",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 3,
+    "incomplete_reviewed_to_date": 17,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 16,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 24,
+    "flagged_total": 40,
+    "owned_files_reviewed": 24,
+    "root_licenses_read": 3,
+    "behavioral_tests": 0,
+    "new_scans": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Job Search complete 21-file pinned subpackage (scripts, tests, references and eval fixtures), one-file Blender skill and two-file Ink playtest review, plus three controlling MIT root notices read as passive text; no source tool executions, applicant data or Blender/Ink runtime. BRAINS resume root package comprises 373 files and is explicitly NOT counted in this tranche.",
+  "records": [
+    {
+      "id": "wexxwuther-job-hunter/job-search",
+      "source": {
+        "repository": "wexxwuther/job-hunter",
+        "pin": "8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5",
+        "upstream_head_checked": "8c03dd4c6b7af3583c8878aa2ed66d3adc54e0e5",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "job-search",
+        "complete_package_git_tree_sha": "9b240990f9b56f145cca59e658ed99a72e3cc7ff",
+        "skill_md_git_blob_sha": "690dadeec6b579a2c43fe51717de84b4f4069fcc"
+      },
+      "owned_files": {
+        "CHANGELOG.md": "85182c54eb1ab937df6eca1ac7a91fd1c7f18a91",
+        "SKILL.md": "690dadeec6b579a2c43fe51717de84b4f4069fcc",
+        "_meta.json": "95014ba14cd323410ba7d0dc786ac286a15b17ca",
+        "docs/continuity/README.md": "20ab1f4a033dd2529c3a092233ed35a401038c9d",
+        "evals/outcome-evals.json": "b4a703cc17044dad06b3a9237bcdd84601e9e392",
+        "evals/trigger-evals.json": "4bd89178e429454ad04bc2b63a9496adf7ef6de6",
+        "references/board-access-notes.md": "abe1725725b7859fcaff1e3e0e6fa0370682b0ef",
+        "references/match-quality-rubric.md": "ef9e002c8c5f52b12b5fb8b4bf3fdb0110dde4db",
+        "references/niche-boards-by-industry.md": "7cda14e1c3a41e62f6cc1d98c0340586c1f96d2b",
+        "references/posting-legitimacy-rubric.md": "160bc4f668c19f7ebb6376c67ea79de5e74f66e7",
+        "references/state-workforce-commissions.md": "ac1ff322598cd02cb4f71f1c751c4a3304568a01",
+        "references/workspace-contract.md": "fd451f8a5e2b92aabd5ab5a2284ee65fb10046a8",
+        "scripts/build_search_queries.py": "37ee7ac8e4fa5a2871dfeea0e0c36a3fe6ad1a8e",
+        "scripts/dedupe_postings.py": "4acd79ceb6295de2729fcd7e94d7af91b5946f1d",
+        "scripts/expand_role_synonyms.py": "5dd2fdd3cc7568a5f9d2ed493db70a98294b8871",
+        "scripts/normalize_salary.py": "6a021698a084444872867c427ac7aef41f3c6c46",
+        "scripts/score_posting.py": "ff56f4b3150dccd604ec119cc63ae0c4e81437e5",
+        "tests/test_build_search_queries.py": "df995ce9b3e916f58f6f125577646321df888450",
+        "tests/test_expand_role_synonyms.py": "1c598442f69f9c05a9e0fc445fd2c6c48b54b30c",
+        "tests/test_member_meta.py": "19d03a9c258336f17a89e87dc2362c53bd8fe332",
+        "tests/test_score_posting.py": "4bf29af911857c4c045eabe918d3c5d5ecf8f251"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "6a562c6df2c0907740b3b817e4eabb1229474293",
+        "obligation": "Preserve Greg Borden copyright and MIT notice in copied source."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "LP1",
+          "EA2",
+          "AST4",
+          "AST4",
+          "AST4"
+        ],
+        "reasons": {
+          "reference_missing": 5
+        },
+        "interpretation": "Top-of-file Python scanner flag does not by itself prove malware. Three subprocess flags are in local pytest CLI tests. The pinned source has all 21 owned files; family references to siblings outside the package remain separate and do not authorize host behavior.",
+        "report_sha256": "1e2e331c62be72fa3f9713b784ad43c6a7bd0d415bba1bf8e4a56b09210643ad"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "salary-magnitude-misparse",
+          "evidence": "scripts/normalize_salary.py:96-107,127-171 and module example line 7",
+          "finding": "Input like '180-220k' is listed as supported, but parser reads 180 and 220k as separate amounts without propagating shared suffix: resulting min 180 and max 220000. This can distort pay-floor filters and market-median conclusions."
+        },
+        {
+          "severity": "HIGH",
+          "type": "unsafe-score-validation-and-candidate-decision",
+          "evidence": "scripts/score_posting.py:112-137,150-186; tests/test_score_posting.py:127-185",
+          "finding": "The scorer coerces Python floats including NaN/infinity without isfinite validation; _clamp comparisons do not reject NaN, allowing nonfinite weighted scores or meaningless recommendations. Regression tests cover numeric range but not nonfinite inputs."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "incorrect-seniority-deduplication",
+          "evidence": "scripts/dedupe_postings.py:95-140",
+          "finding": "Normalizing job titles deletes 'senior', 'lead', 'staff', 'principal' and grade tokens. Same company, location and base title can merge distinct seniority-level openings into one posting, hiding a potentially better legitimate opportunity."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "user-profile-and-web-output-authority",
+          "evidence": "SKILL.md:49-75, 206-224; references/workspace-contract.md:6-24,62-77",
+          "finding": "Skill reads private resume/profile and workspace decisions, writes scored postings and tells host to render HTML from untrusted public posting text. No explicit data-minimization, HTML escaping, or approval of local destination is enforced by these source instructions. Search results must remain untrusted, and no auto-apply/messaging authority follows."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unverified-ghost-job-certainty-and-test-results",
+          "evidence": "references/posting-legitimacy-rubric.md:8-11,18-76,120-147; evals/outcome-evals.json",
+          "finding": "Rubric says direct ATS and recent dates are 'legitimate by default' and combines heuristics with quoted market prevalence. A posted listing is not proof of funded vacancy; the bundled outcome eval assertions are largely passed=false, not observed host acceptance."
+        }
+      ],
+      "positive_safeguards": [
+        "Separates vacancy legitimacy from candidate match and maintains company/board source attribution and dated link checks.",
+        "Respects explicit user criteria, excludes auto-applying/sending, carries severe job scam red flags, and warns about private employer ATS information.",
+        "Uses subprocess tests only for local scoring CLI tests and bounded Python scripts; no obvious malicious network calls in the owned executable files.",
+        "Includes targeted tests for score weights and query-builder construction, though those do not cover identified corner cases."
+      ],
+      "reasoned_cases": [
+        "Input 180-220k: regex parses first amount as 180 and second as 220000, not the advertised 180000-220000 range.",
+        "Python float('nan') accepted by _coerce_float and unchanged by _clamp; nonfinite weighted result is not a valid job score.",
+        "Senior Engineer and Principal Engineer at same company and location normalize to same title key, risking a false duplicate.",
+        "Posting HTML supplied by a job board must be escaped and never used as agent instructions or automatic apply permission."
+      ],
+      "remediation": "Propagate suffix units across salary ranges with fixtures, reject nonfinite scores, preserve seniority in dedupe identity or require a separate unique job ID, safely escape HTML and obtain workspace/data-source permission, and keep legitimacy as probabilistic evidence rather than verified funding.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct source-content review",
+      "method": "complete exact pinned package files and controlling license read as passive text; executable source never run; reasoned misuse test cases only",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 12,
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference only, not approved for unchanged agent operation",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "dcc-mcp-dcc-mcp-blender/dcc-blender-assembly-pitfalls",
+      "source": {
+        "repository": "dcc-mcp/dcc-mcp-blender",
+        "pin": "8d8027fe4377b4d399d545869fc11b80e04ff785",
+        "upstream_head_checked": "f617553bfe8f08b7f5003a893260445dee6972bd",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/dcc-blender-assembly-pitfalls",
+        "complete_package_git_tree_sha": "f83613f8b12120860df008b04bd4e8b1dd131d22",
+        "skill_md_git_blob_sha": "32bbb06a433361cc80f569b4b4d80ce8687cc63c"
+      },
+      "owned_files": {
+        "SKILL.md": "32bbb06a433361cc80f569b4b4d80ce8687cc63c"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "6a4b18e6e58344c3bc6e182116dd13357678c097",
+        "obligation": "Retain Long Hao MIT notice when copying source."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [
+          "AR2"
+        ],
+        "reasons": {
+          "reference_missing": 1
+        },
+        "interpretation": "An AR2 scanner finding at 190 does not establish malware. The included Blender verification block can destructively clear a scene and is a real source-side risk in a nonisolated host.",
+        "report_sha256": "54a162873b78aa601587adb540496a1ace7c28337970387384d0b507a84464a9"
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "unbounded-destructive-scene-reset",
+          "evidence": "SKILL.md:280-290,324-328,360-364",
+          "finding": "Runnable verification calls clear_scene() with bpy.ops.object.select_all and bpy.ops.object.delete, deleting all current-scene objects. The documented shell example uses --factory-startup in a separate headless process, which mitigates the standard path, but adapting/running it inside a user's open .blend context can destroy existing work without permission or backup."
+        },
+        {
+          "severity": "HIGH",
+          "type": "incorrect-polygon-volume-and-false-pass",
+          "evidence": "SKILL.md:424-435",
+          "finding": "Signed-volume sum takes only vertices [0],[1],[2] of each polygon, excluding the second triangle of quad and polygon faces. It may substantially undercount signed volume and provide unreliable normals/volume checks while reporting PASS. The source's '24 checks, 0 failed' output is an unreplicated historical claim."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "negative-scale-accepted",
+          "evidence": "SKILL.md:436-440",
+          "finding": "Applied-scale check tests abs(abs(s)-1), accepting scale (-1,1,1) even though the stated pass rule is scale==(1,1,1); negative scale/mirrors can alter handedness and face winding."
+        },
+        {
+          "severity": "LOW",
+          "type": "external-execution-and-file-scope",
+          "evidence": "SKILL.md:3-29,280-290",
+          "finding": "The allowed-tools Bash and direct Blender interpreter example require explicit scope to run and separate scratch scenes; source instructions alone do not grant authority to write or export a user scene."
+        }
+      ],
+      "positive_safeguards": [
+        "Provides a clear connection-map method and mathematical checks for mesh dimension/orientation/joins.",
+        "The example deliberately uses --background --factory-startup, mitigating destruction when run unchanged as a new isolated Blender process.",
+        "No external service, credential harvest or remote write is embedded in the one-file skill."
+      ],
+      "reasoned_cases": [
+        "Running the sample in a live user scene deletes all objects; the documented factory-startup CLI avoids that only when followed exactly.",
+        "A Blender quad has four vertices but volume formula consumes only three; actual signed volume differs from the checked value.",
+        "Scale -1 on an axis satisfies abs(abs(s)-1)<1e-6 despite requiring scale (1,1,1)."
+      ],
+      "remediation": "Clearly prohibit executing the sample in an active .blend scene; require empty isolated temporary scene and explicit backup for any scene mutation; triangulate polygons or use a trusted evaluated-mesh volume API; reject negative scale; verify expected volume/geometry numerically.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct source-content review",
+      "method": "complete exact pinned package files and controlling license read as passive text; executable source never run; reasoned misuse test cases only",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 12,
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference only, not approved for unchanged agent operation",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bladecoder-narrative-skills/if-playtest-review",
+      "source": {
+        "repository": "bladecoder/narrative-skills",
+        "pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+        "upstream_head_checked": "c0948f7970178b72bb9561030372e75d303d37b3",
+        "current_head_package_tree_matches_pin": true,
+        "package_path": "skills/if/if-playtest-review",
+        "complete_package_git_tree_sha": "6c6b9028d81ed25a5504052de5c541913a1b4b16",
+        "skill_md_git_blob_sha": "e703f3c525fd62ba10cd887686d7eafa84dde13f"
+      },
+      "owned_files": {
+        "SKILL.md": "e703f3c525fd62ba10cd887686d7eafa84dde13f",
+        "agents/openai.yaml": "568e465a11ee4bd154f20d43c0ff9cedbdc06b49"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "6218ab7ce333ac012513c331f9df84b8550982dd",
+        "obligation": "Retain Rafael García Moreno copyright/permission notice on protected text copies."
+      },
+      "historical_scan": {
+        "state": "incomplete",
+        "findings": [],
+        "reasons": {
+          "reference_missing": 1
+        },
+        "interpretation": "Reference is the target Ink project, not an embedded executable package dependency. The source contains no owned script or stealth install instruction; historical scanner incompleteness remains.",
+        "report_sha256": "85d136cb28a120caabbb79abd8cf05d46022891e79c7f3fd61d18c6a6ebcef37"
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "unbounded-write-and-overwrite",
+          "evidence": "SKILL.md:15-31,42-48",
+          "finding": "Skill says write or update two review documents in 06_playtest/ without requiring explicit output path or overwrite/merge consent, potentially replacing existing user review notes."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "optional-compiler-authority",
+          "evidence": "SKILL.md:40-43",
+          "finding": "Optional inklecate compile run is proposed whenever available, without distinguishing read-only static checking from a permitted local subprocess and generated output. Requires explicit host/runtime scope and path controls."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "coverage-and-termination",
+          "evidence": "SKILL.md:30-43,48-56",
+          "finding": "The skill asks to check all route orderings and deadlocks but supplies no explicit state-space bound, deterministic route selection or time budget. In large branching IF, 'complete route coverage' is not defensible without observed traversal and reported frontier limits."
+        },
+        {
+          "severity": "LOW",
+          "type": "untrusted-project-data",
+          "evidence": "SKILL.md:12-31",
+          "finding": "Ink source and in-world dialogue may contain prompt-shaped text; treat as data, not authority to write outside the review directory."
+        }
+      ],
+      "positive_safeguards": [
+        "Clearly separates analysis/review from rewriting source Ink, unless the user separately requests a rewrite.",
+        "Requires specific file and knot evidence, distinguishes dead ends and optional lines, and asks for critical path and progression checks.",
+        "No network, account access, user messaging or bundle-owned executable code is present."
+      ],
+      "reasoned_cases": [
+        "Existing 06_playtest/route_matrix.md must be preserved or a user-approved merge performed, not silently overwritten.",
+        "An interactive fiction knot's 'ignore all rules' text remains story data.",
+        "An impossible route cannot be declared absent based solely on a few sampled playthroughs; report untested frontier."
+      ],
+      "remediation": "Require approved report destination and overwrite policy, consented sandbox compiler checks, explicit traversal/depth budget and sample coverage ledger, and no execution of instructions within story text.",
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "reviewer": "ChatGPT direct source-content review",
+      "method": "complete exact pinned package files and controlling license read as passive text; executable source never run; reasoned misuse test cases only",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "quality_state": "unverified",
+      "consumer_disposition": "reference only, not approved for unchanged agent operation",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false,
+      "unchanged_use_approved": false
+    }
+  ]
+}
