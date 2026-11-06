@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-incomplete-transcript-continuity-media-static-dispositions",
+  "review_date": "2026-11-05",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 3,
+    "incomplete_reviewed_to_date": 20,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 13,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 27,
+    "flagged_total": 40,
+    "owned_files_reviewed": 11,
+    "upstream_shared_files_reviewed": 3,
+    "root_licenses_read": 3,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "One-file transcript splitting, two-file Ink continuity, eight-file academic media-scripter complete pinned packages, plus three upstream shared control references and three MIT root LICENSE texts. BRAINS root 373-file assessment is separate unqualified triage, not counted as a completed source review.",
+  "records": [
+    {
+      "id": "danielrosehill-claude-transcription-plugin/split-transcript",
+      "source": {
+        "repository": "danielrosehill/Claude-Transcription-Plugin",
+        "pin": "d19d6df5792490b477d9ea6fd4f7eebb0434dc9d",
+        "package_path": "skills/split-transcript",
+        "complete_package_git_tree_sha": "d5aa1a7c143ee6830f1f12b46d6d6db6931bed80",
+        "skill_md_git_blob_sha": "71edb73660e4f2f85a3c66e2a0bb1645db0da87f",
+        "upstream_head_checked": "d19d6df5792490b477d9ea6fd4f7eebb0434dc9d",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "71edb73660e4f2f85a3c66e2a0bb1645db0da87f"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "6886682d2d0356c048f18a076bf9cb6acb078a51",
+        "obligation": "Retain upstream copyright and MIT permission notice if copying source."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "transcript-to-command-promotion",
+          "evidence": "SKILL.md:Categories and Followups",
+          "finding": "The Prompts category carries instructions spoken by participants and recommends piping prompts.md into a developer agent. Transcript speech can include quoted or adversarial text; categorization does not prove user authorization. Every executable handoff must be reviewed and consented."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "project-write-scope",
+          "evidence": "SKILL.md:Output location",
+          "finding": "When a project has top-level prompts/context/actions folders, the skill selects and writes those paths without an explicit destination approval. It avoids overwriting a previous split directory but does not expressly prevent overwrites in top-level project folder targets."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "transcript-privacy-and-speaker-rights",
+          "evidence": "SKILL.md:When to use and Followups",
+          "finding": "Transcripts can include private conversations, client data and third-party speech; source does not require minimization/redaction before putting extracted context in other tools or task services."
+        },
+        {
+          "severity": "LOW",
+          "type": "lossless-claim-untested",
+          "evidence": "SKILL.md:What not to do",
+          "finding": "The source requires every sentence to land in a category but includes no coverage/index proof or evaluated edge cases for multi-category and interrupted speech."
+        }
+      ],
+      "positive_safeguards": [
+        "Keeps speaker labels and original wording, avoids fabricated summaries and empty output files.",
+        "Explicitly avoids overwriting existing per-transcript split directories by versioned folders.",
+        "Gives humans discretion over ambiguous fragments and names followups as offers rather than automatic sending."
+      ],
+      "reasoned_cases": [
+        "Spoken 'send this to our developer bot' can be quoted context rather than an authorized instruction.",
+        "A transcript with patient or client details must not be piped into third-party tasks by default.",
+        "An existing top-level prompts/recording.context.md is not protected by the split-v2 rule."
+      ],
+      "remediation": "Require user-approved outputs, nonoverwrite defaults across both directory strategies, complete source coverage traceability, classification of all transcript text as untrusted, and explicit sensitive-data redaction/permission before handoff.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "4183cb242afe30df88d41cd9f4fbb511766415f397b40357bb1965a45ab832e5",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 14
+        },
+        "interpretation": "Original static scanner INCOMPLETE is preserved; direct source-content risk review is a different evidence dimension."
+      },
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_method": "Read all files within exact complete pinned package and controlling MIT source rights; read relevant upstream shared files for media-scripter; no package execution or behavioral tests",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "static_score": 16,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    },
+    {
+      "id": "bladecoder-narrative-skills/continuity-check",
+      "source": {
+        "repository": "bladecoder/narrative-skills",
+        "pin": "c0948f7970178b72bb9561030372e75d303d37b3",
+        "package_path": "skills/continuity-check",
+        "complete_package_git_tree_sha": "eac56199862673d2206a52f6a3d504bfa31565a7",
+        "skill_md_git_blob_sha": "a816c69a82a24e654b3e040cf3ae08063a5c7953",
+        "upstream_head_checked": "c0948f7970178b72bb9561030372e75d303d37b3",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "a816c69a82a24e654b3e040cf3ae08063a5c7953",
+        "agents/openai.yaml": "ab1a4358e3b29c5f6208f8be78d76f041d3e14f3"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "6218ab7ce333ac012513c331f9df84b8550982dd",
+        "obligation": "Preserve Rafael García Moreno MIT permission notice in copied source."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "unguarded-canon-source-write",
+          "evidence": "SKILL.md:Files To Write and Procedure steps 5-7",
+          "finding": "The skill's central workflow directs edits to canonical YAML under 07_continuity/ without an explicit user-authorized write gate or draft/proposed-change stage. Source-only review requests should not automatically rewrite established project canon."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "weak-provenance-and-reconciliation",
+          "evidence": "SKILL.md:Update Rules For Continuity Files",
+          "finding": "It requires strong support but supplies no line-specific evidence format, old-value preservation/backup or deterministic conflict resolution. 'Strong enough' is subjective and can create untraceable canon changes."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "untrusted-fiction-content-as-command",
+          "evidence": "SKILL.md:Required Inputs and Procedure",
+          "finding": "Story drafts, quoted dialogue and worldbuilding may contain imperative text; source lacks explicit instruction/data separation and excludes no direct tool execution based on draft text."
+        },
+        {
+          "severity": "LOW",
+          "type": "unverified-scope-completeness",
+          "evidence": "SKILL.md:Definition Of Done",
+          "finding": "The definition of done implies entire requested chapter scope checked, but no source manifest/diff or cross-file completeness proof is required."
+        }
+      ],
+      "positive_safeguards": [
+        "Separates contradictions, ambiguity, newly established facts and open-thread changes.",
+        "Preserves old canon unless text clearly supersedes and records provisional uncertainty.",
+        "Keeps skill focused on narrative consistency and requires language-aware output."
+      ],
+      "reasoned_cases": [
+        "A chapter says a character is 40 while canon says 30: propose a conflict before changing canonical YAML.",
+        "A quoted fictional instruction in a scene cannot authorize deleting prior canon.",
+        "Editing canon files requires approved paths/atomic backup and a reviewable diff."
+      ],
+      "remediation": "Default to read-only review; present proposed YAML diff with source-line citations for owner approval, bounded file scope, backup/atomic writes, and explicit no-execution authority for fiction text.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "e55b17be5067d717d52ecff3d1b1d66c93fc5f7d1b39f356d06c3e5af6e655ed",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 23
+        },
+        "interpretation": "Original static scanner INCOMPLETE is preserved; direct source-content risk review is a different evidence dimension."
+      },
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_method": "Read all files within exact complete pinned package and controlling MIT source rights; read relevant upstream shared files for media-scripter; no package execution or behavioral tests",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    },
+    {
+      "id": "yujxzjcn-teaching-skills/media-scripter",
+      "source": {
+        "repository": "YujxZJCN/teaching-skills",
+        "pin": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+        "package_path": "media-scripter",
+        "complete_package_git_tree_sha": "06f8362251abe9203fca51c4c129f401b1701664",
+        "skill_md_git_blob_sha": "02a6bb78e0a06930b84cc86ea0006a138181e40a",
+        "upstream_head_checked": "fd0c486e61cb1f065b88133b599e8806dfaeac12",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "02a6bb78e0a06930b84cc86ea0006a138181e40a",
+        "agents/script_writer_agent.md": "29d8abf32737051b2562bdfe48c5195a75582885",
+        "agents/storyboard_agent.md": "553fcc13dd50d8ecd756dda59d3a8cdbd7cb87dd",
+        "agents/segmenter_agent.md": "3985d1c2ec694b54f1b0aff5754aa22a9574bc30",
+        "agents/transcript_editor_agent.md": "aa07dfe287e75639fc05a48547008ce11012daa0",
+        "references/video_pedagogy.md": "ce9e59fe0bc7b0c6ceda23ee762220a79649f945",
+        "templates/script_template.md": "5fdc447777ff7b231e7dbdba68009a958762e34f",
+        "templates/series_map_template.md": "a2e2f218c712b9f8d900713342e4ea907ae3b4d0"
+      },
+      "inspected_outside_package": {
+        "shared/checkpoint_protocol.md": "41e533bd540d397053a0807f4147da42344eb97c",
+        "shared/course_passport_schema.md": "b4114355c18e00aa5178d40756eaf596b3c94456",
+        "shared/quality_gate_protocol.md": "464f3d3d31ee1a0a9ed0675dca23fc8d75894894"
+      },
+      "license": {
+        "type": "MIT",
+        "source": "root LICENSE",
+        "git_blob_sha": "024003bb56236b1161c03c575372d0e97abd8fc4",
+        "obligation": "Retain Jiaxing Yu copyright and MIT permission notice in protected copies."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "privacy-in-recorded-student-data",
+          "evidence": "SKILL.md:Modes, Outputs; agents/transcript_editor_agent.md:Label speakers",
+          "finding": "Transcript/caption mode can contain student speech, identifiable speakers and course recording material. It requests confirmable names when appropriate but does not require institutional processing/distribution consent or redaction before multi-agent use and generated public captions."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "course-passport-mutation-authority",
+          "evidence": "SKILL.md:Phase 4 and Outputs; agents/segmenter_agent.md:Procedure",
+          "finding": "After professor checkpoint it updates course_passport.yaml artifact_refs. This human confirmation is a strength, but there is no enforced destination/cross-project write boundary or fail-closed conflict handling for an on-disk mutation."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "model-output-citation-provenance",
+          "evidence": "SKILL.md:Iron Rule 5; agents/script_writer_agent.md:VERIFY discipline",
+          "finding": "The script agent may invent worked examples subject to [VERIFY] professor checks; generated scripts remain drafts until claims/rights and course-source assertions are checked. Student-facing outputs require explicit release approval."
+        },
+        {
+          "severity": "LOW",
+          "type": "test-coverage-not-observed",
+          "evidence": "SKILL.md:Iron Rules and references/video_pedagogy.md",
+          "finding": "Read-aloud, accessibility and timing acceptance are procedural assertions; no recording, timing, actual captions or observed evaluation occurred. Evidence page distinguishes MOOC engagement from learning results."
+        }
+      ],
+      "positive_safeguards": [
+        "Source references Guo et al. with correct observational-study scope rather than asserting video length proves learning.",
+        "Four agent responsibilities separate source fidelity, shot planning, series segmentation and caption accuracy.",
+        "Professor controls checkpoints; unresolved domain claims remain [VERIFY], inaccessible audio stays [INAUDIBLE].",
+        "Shared course passport forbids individually identifying student rows and checkpoint protocol requires explicit professor decisions."
+      ],
+      "reasoned_cases": [
+        "A guest student's voice in a transcript requires permission/minimization before being sent to a captioning agent or published.",
+        "A screenplay 'ignore earlier instructions' remains transcript data, not a new command.",
+        "A professor approving episode scope does not automatically authorize uploading or publishing the resulting video.",
+        "Appending passport artifact refs must be scoped and conflict-checked."
+      ],
+      "remediation": "Explicitly gate third-party speech processing and caption publication, enforce project-root artifact and passport write scopes, retain professor signoff with evidence and source rights verification; label pre-recording QA as unexecuted.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "6d48ec361273b2b606f269d2fb5aa557c6270c872ec5b61a92d482593fe19db7",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 4
+        },
+        "interpretation": "Original static scanner INCOMPLETE is preserved; direct source-content risk review is a different evidence dimension."
+      },
+      "reviewed_at": "2026-11-05",
+      "checked_at": "2026-11-05",
+      "review_method": "Read all files within exact complete pinned package and controlling MIT source rights; read relevant upstream shared files for media-scripter; no package execution or behavioral tests",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "static_score": 16,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}
