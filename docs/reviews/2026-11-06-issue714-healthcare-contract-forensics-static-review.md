@@ -39,6 +39,8 @@ Relative file links were checked against this exact manifest. There are **no scr
 
 Relevant mechanisms (source location, alternate interpretation, arithmetic workpaper, risk/authority controls) are unprotected ideas and were expressed independently. **CREATE** is the disposition. A wider all-family source-pinned discovery sweep remains a **specific open acceptance item** before concluding no specialist alternative exists; do not claim exhaustive market novelty. No third-party protected content was copied into this independently authored skill, so the missing wider rights audit does not imply that its original source text has an unlicensed third-party dependency.
 
+**Completed supplementary index-breadth receipt (2026-11-06):** [61,326 G1–G3 package identity path records searched across 14 shards, plus four source capability indices and Q1–Q5 ledgers](2026-11-06-issue714-broad-discovery-and-license-receipt.md). This found 233 lexical leads, five exact-pinned candidate skill bodies inspected with root-license checks, and no copied third-party content. **This is not** an exhaustive semantic reading of all 61,326 files or a claim that no better specialist exists. Further full-package candidate review and actual host behavior remain open.
+
 ## Static quality rubric (ten dimensions)
 
 | Dimension | Score | Reason |
