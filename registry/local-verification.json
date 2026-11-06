@@ -659,6 +659,41 @@
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
     },
     {
+      "skill_name": "healthcare-contract-forensics",
+      "local_path": "skills/healthcare-contract-forensics/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "6ea8dda7b85b399a252f9b97295d54e536a3f897",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "evaluation",
+          "business-operations",
+          "verification"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "risk-aware",
+          "human-review",
+          "safety-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-06 issue #714, seven-file full-tree 3974f153ac39bd27895c4f0365ee50e0ef1527a9. Independent first-party static review 19/20; source 6ea8dda7b85b399a252f9b97295d54e536a3f897. Fictional case arithmetic independently checked; real model-host behavior, baseline comparison and external scanner NOT RUN. No unchanged production use or PHI egress approval. docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md."
+    },
+    {
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",

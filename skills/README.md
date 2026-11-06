@@ -16,6 +16,10 @@ Humans can start with [`categories/`](categories/):
 
 Category folders are a human navigation layer. Canonical active local skill content is the discovered `SKILL.md` material under `skills/`.
 
+## New domain-specific first-party example
+
+[Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) supports bounded employer/PBM agreement review, with a [fictional reconciliation exercise](healthcare-contract-forensics/examples/synthetic-pbm-case.md) and [exact-package static review](../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md). Its semantic static status is **verified 19/20**; external model behavior and financial recovery are **not validated**. The historical dashboard remains a dated snapshot until fully regenerated.
+
 ## Counting boundary
 
 Every active user-facing local skill counts, but `skills/` is not the whole reference ecosystem.

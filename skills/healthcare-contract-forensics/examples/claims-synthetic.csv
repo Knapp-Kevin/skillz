@@ -1,0 +1,5 @@
+source_row,claim_id,status,service_month,sponsor_plan_charge_usd,pharmacy_payment_usd,defined_rebate_usd,manufacturer_admin_fee_usd
+1,RX-001,SETTLED,2025-03,120.00,96.00,20.00,8.00
+2,RX-002,SETTLED,2025-03,200.00,176.00,30.00,12.00
+3,RX-003,SETTLED,2025-03,40.00,38.00,0.00,0.00
+4,RX-004,REVERSED,2025-03,0.00,0.00,0.00,0.00
