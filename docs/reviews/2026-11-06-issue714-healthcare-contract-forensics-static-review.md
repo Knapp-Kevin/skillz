@@ -28,14 +28,16 @@ Relative file links were checked against this exact manifest. There are **no scr
 
 ## Evidence behind independent creation
 
-The live governed name index contains 1,039 records as of its 2026-11-01 snapshot; a bounded search for PBM, healthcare, insurance, medical and contract identified no dedicated healthcare-contract forensics named package. This is **not** a complete examination of the wider discovery and pinned source frontiers. Existing evidence-based adjacent methods include:
+**Discovery scope correction (owner, 2026-11-06):** The **1,039** governed names (2026-11-01) are a *small reviewed-name index*, not a corpus search. The independent G1–G3 snapshot records **61,326 pinned package identity records across 942 repositories**, and additional separately maintained source-family indexes exist. Searching 1,039 names cannot establish the absence of a more relevant specialist skill. See the [full-corpus search contract](../discovery/full-corpus-search-contract.md).
+
+**Expanded, still incomplete discovery evidence:** A source-pinned G1 `legal-contract-review` method-alternatives ledger (2026-11-03) records **7 examined rows, six on-family**, including independent methods for grounded contract markup, tracked changes, legal-document evaluation and contract version disputes. The ledger reports root-license observations such as Apache-2.0 and MIT for some sources, but also **no observed root license** for `HHHHHejia/awesome-legal-aiagent-skills` and `majiayu000/claude-skill-registry-data`. That absence is *not* permission to copy; source/package-specific rights, nested terms and original authorship require verification. This is a study of ledger evidence, **not** a fresh full-package read and **not** a complete cross-family sweep. Do not treat the original no-name-match as a novel-skill determination. Existing evidence-based adjacent methods include:
 - \`anthropic-knowledge-work-plugins/review-contract\`: 18/20 verified static, generic contract workflow.
 - \`.../legal-risk-assessment\`: 13/20 rejected unchanged for generic threshold/legal-action overreach.
 - \`.../audit-support\`: 10/20 rejected unchanged for outdated prescriptive audit concepts.
 - \`.../compliance-check\`: 10/20 rejected unchanged due to stale/static legal reference risks.
 - \`local-skills/finance-review\`: 19/20 static verified, scoped statement digest rather than contract audit.
 
-Relevant mechanisms (source location, alternate interpretation, arithmetic workpaper, risk/authority controls) are unprotected ideas and were expressed independently. **CREATE** is the disposition. A wider domain + source-pinned discovery sweep remains a separately identifiable work item; do not claim exhaustive market novelty.
+Relevant mechanisms (source location, alternate interpretation, arithmetic workpaper, risk/authority controls) are unprotected ideas and were expressed independently. **CREATE** is the disposition. A wider all-family source-pinned discovery sweep remains a **specific open acceptance item** before concluding no specialist alternative exists; do not claim exhaustive market novelty. No third-party protected content was copied into this independently authored skill, so the missing wider rights audit does not imply that its original source text has an unlicensed third-party dependency.
 
 ## Static quality rubric (ten dimensions)
 
