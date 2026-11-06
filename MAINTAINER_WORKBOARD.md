@@ -1,6 +1,10 @@
 # Maintainer Workboard
 
-## Current #402 risk-content review checkpoint: November 5, 2026
+## Current #402 reviewed-pin risk and freshness checkpoint: November 5, 2026
+
+[Latest three static source reviews](registry/security/q8-three-incomplete-provider-robot-reliability-static-dispositions-20261105.json) ([findings](docs/reviews/2026-11-05-issue402-provider-robot-reliability-three.md)) cover Adobe Firefly cloud-sharing/cost authority, Rerun URDF joint-mapping validation, and MATLAB censored reliability models/restrictive licensing. Their 12/20, 14/20, 13/20 scores apply **only to exact pinned source content**. The Rerun upstream SKILL blob and complete package tree have moved, while its Python helper has not; **queue re-review** of the newer source instead of carrying forward the old score. Historical scanner states unchanged. **21/40 flagged Q8 pins directly reviewed: 7/7 historical FAILED + 14/33 historical INCOMPLETE, 19 incomplete first reviews remain**, plus Rerun latest-source re-review and wider #402 corpus. No hosted scan, real agent pass or install approval. [README chart](docs/assets/q8-direct-static-risk-review-progress.svg) now displays a one-package upstream-change warning.
+
+## Earlier #402 11/33 incomplete-source review checkpoint: November 5, 2026
 
 [New exact-source evidence](registry/security/q8-two-incomplete-dss-and-student-privacy-static-dispositions-20261105.json) ([findings](docs/reviews/2026-11-05-issue402-dss-and-submission-two.md)) adds full static reviews for SG DSS Accessibility and Submission Auditor, both 15/20 and unchanged-use held. The first cannot establish current government compliance or reproduction rights from dated/embedded control text; the second requires explicit student-data scope, untrusted-document instruction separation and professor acceptance before releasing any report. **Current total 18/40 historically flagged Q8 source packages: 7/7 FAILED plus 11/33 INCOMPLETE; 22 incomplete remain.** Historical scanner counts 10 PASS / 7 FAIL / 33 INCOMPLETE, no new scans or behavior tests, no current operational approvals. [README graphic](docs/assets/q8-direct-static-risk-review-progress.svg) now uses six exact review ledgers via a manifest without hardcoded reviewed counts.
 
