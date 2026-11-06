@@ -1,6 +1,7 @@
 schema_version: 1
 skill_name: healthcare-contract-forensics
 display_name: "Healthcare Contract Forensics"
+skill_version: 1.1.0
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/healthcare-contract-forensics/SKILL.md
@@ -20,4 +21,4 @@ authored_index_path: registry/authored-skills-index.json
 dependency_status: host-capability-conditional
 dependencies: "Only specifically authorized employer/PBM agreement files and optional redacted tabular financial data; host PDF/CSV parsing and precise decimal arithmetic when reconciliation is needed; current authoritative sources and qualified legal/plan review for consequential conclusions. Supporting references and synthetic fixtures are bundled."
 import_eligibility: review-required
-rationale: "First-party independent creation for issue #714, following cross-domain study of contract, risk, audit and compliance methods without copying rejected text. Nine-file MIT-authored full package tree 0d1d9f2838691fcf7963472ea8b62c52b2a273ed; exact SKILL.md blob 02d7d645d6a6856d01165e01da9014f9cf43309c. Static 19/20 semantic review and arithmetic check only; model-host behavioral comparison not-run. Contractual and sensitive-data scope must be approved; no vendor outreach or PHI egress implied."
+rationale: "First-party independent creation for issue #714, following cross-domain study of contract, risk, audit and compliance methods without copying rejected text. Ten-file MIT-authored full package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; exact SKILL.md blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static 19/20 semantic review, quote-match/financial traceability checks and synthetic arithmetic only; model-host behavioral comparison not-run. Contractual and sensitive-data scope must be approved; no vendor outreach or PHI egress implied."

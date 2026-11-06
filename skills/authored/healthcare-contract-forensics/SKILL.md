@@ -12,7 +12,7 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: Business
   display-name: Healthcare Contract Forensics
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Healthcare Contract Forensics
@@ -41,14 +41,14 @@ Do **not** trigger merely for: a patient asking which insurance plan to buy; a b
 4. **Test plausible alternative readings.** For each material apparent conflict, inspect precedence, effective dates, exceptions, excluded payment categories, and the counterparty-favorable interpretation. A broad phrase like "100% rebate pass-through" is not proof that every manufacturer payment passes through; defined terms can narrow it.
 5. **Reconcile only supported amounts.** With approved non-identifying rows, preserve original row IDs, billing period, currency and units. **Check claim identity uniqueness, paid/reversed/reprocessed states and authoritative version chain before counting paid claims.** Duplicate rows or ambiguous reversals block affected totals. Compute with exact decimal arithmetic where the host supports it; show numerator, denominator, formula, rounding and differences. Follow [financial-reconciliation.md](references/financial-reconciliation.md). An arithmetic variance is not necessarily a contractual breach; reconcile credits, adjustments and scope first.
 6. **Check legal and market context cautiously.** Identify the entity/plan/year/jurisdiction and verify any applicable current primary authority. Distinguish contractually promised rights from statutory rights and proposals/not-yet-applicable rules. If no suitable primary source is available, mark REGULATORY QUESTION. Never invent industry benchmark savings.
-7. **Construct evidence ledger and findings.** Each substantive finding cites at least one exact source ID plus page/section/row (and effective version). Mark one of:
+7. **Construct clause scrutiny cards, evidence ledger and findings.** For each material clause or observed discrepancy, first show: **(a)** governing source ID, document title, effective version, precise page/section/row and, **when the host supports it and the reader is authorized**, a direct link/citation to that original file/page (otherwise a clear filename and locator); **(b)** a short **verbatim excerpt checked against the authorized original wording**, quoted separately from your explanation, or `QUOTE UNVERIFIED` if the text/OCR/source is missing; **(c)** a plain-language explanation of precisely what deserves scrutiny; **(d)** **financial impact** with direction, currency, eligible unit and period, cited data and formula, labeled `VERIFIED ARITHMETIC`, `MODELED SCENARIO`, or `NOT QUANTIFIED`, explicitly distinguished from legally owed money or recoverable savings; **(e)** applicable amendments, exclusions, contrary language and the counterparty-favorable reading; and **(f)** a specific document/data verification request **and a negotiation question**. Never invent a quote, merge incompatible versions, annualize from unproven volumes, or publish confidential contract language without authorization. Then classify:
    - **CONFIRMED ARITHMETIC VARIANCE**: the supplied records differ under an explicit stated formula; unresolved credits/coverage remain disclosed.
    - **POTENTIAL ECONOMIC RISK**: supported plausible cost or incentive concern, not established overpayment.
    - **CONTRACTUAL AMBIGUITY**: multiple material interpretations remain plausible after precedence analysis.
    - **DOCUMENT GAP**: necessary source absent/unreadable or version unknown.
    - **INSUFFICIENT EVIDENCE**: allegation or figure cannot be established; no forced conclusion.
    For each, state evidence *for* and *against*, missing verification, financial value (verified / modeled / not quantified), impact, confidence, and a concrete vendor/counsel question. Do not use "fraud", "illegal", "theft", or "ripping you off" as factual conclusions.
-8. **Deliver a decision-ready report.** Use [report-template.md](references/report-template.md): short executive take, scope/limitations, findings by priority, reproducible reconciliations, requested records, negotiation questions, and review/escalation owners. A draft clause change is a discussion proposal requiring counsel, not an executed change.
+8. **Deliver a negotiation-ready report.** Use [report-template.md](references/report-template.md): a short executive take; ranked **clause scrutiny cards showing the actual, source-checked wording next to why it matters, bounded dollars and next action**; a findings register; reproducible reconciliations; requested records; and negotiation questions/review owners. If a passage cannot be verified exactly, say so prominently rather than creating a plausible-sounding quotation. A draft clause change is a discussion proposal requiring counsel, not an executed change.
 
 ## Required failure behavior
 
@@ -61,7 +61,7 @@ Do **not** trigger merely for: a patient asking which insurance plan to buy; a b
 
 ## Output contract
 
-Every final report must contain: date and reviewer/authority; numbered input inventory with source version; explicit scope and exclusions; a three-to-five-sentence executive take; a findings register (stable IDs, classification, severity, exact citations, both readings, monetary evidence state, verification task); a reconciliation table with formulas (if eligible); requests for additional evidence; prioritized negotiation/counsel questions; privacy handling note; and an honest completion/blocked summary. Use plain, readable language with technical explanations only where needed.
+Every final report must contain: date and reviewer/authority; numbered input inventory with source version; explicit scope and exclusions; a three-to-five-sentence executive take; **three to five top clause scrutiny cards (or fewer if the evidence supports fewer)** with **short verified original quote, precise citation, simple explanation, bounded financial impact, counter-reading, verification request, and specific negotiation question**; a findings register (stable IDs, classification, severity, exact citations, both readings, monetary evidence state, verification task); a reconciliation table with formulas (if eligible); privacy handling note; and an honest completion/blocked summary. If evidence does not support a quote, use `QUOTE UNVERIFIED` and do not fabricate one. Keep quotes only in appropriately authorized/private outputs. Use plain, readable language with technical explanations only where needed.
 
 ## Worked examples and validation boundary
 
