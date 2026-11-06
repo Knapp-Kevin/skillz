@@ -17,4 +17,4 @@ The existing first-party `skills/<slug>/` entries are not automatically moved or
 
 [Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) | [Package record](../../registry/authored-skills-index.json) | [Review and licensing evidence](../../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md).
 
-This remains **draft/behaviorally unvalidated**; being present in this directory is not an instruction to install or process regulated/private data.
+This remains **statically reviewed and behaviorally unvalidated**; being present in this directory is not an instruction to install or process regulated/private data.

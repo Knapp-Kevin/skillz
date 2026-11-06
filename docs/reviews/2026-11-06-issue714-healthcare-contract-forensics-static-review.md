@@ -1,16 +1,16 @@
 # Issue #714: current authored Healthcare Contract Forensics package review
 
-**Reviewed:** 2026-11-06, exact 9-file first-party authored package on [draft PR #715](https://github.com/Knapp-Kevin/skillz/pull/715).
+**Reviewed:** 2026-11-06, exact 9-file first-party authored package on [PR #715](https://github.com/Knapp-Kevin/skillz/pull/715).
 
 **Review verdict: structured semantic static review 19/20.** Observed agent-host behavioral testing **NOT RUN**; no external scanner run; no public legal certification or real savings evidence; unchanged use with confidential contracts/PHI **not cleared**.
 
 ## Exact source, copyright and rights
 
-- Canonical folder: [`skills/authored/healthcare-contract-forensics/`](../../../skills/authored/healthcare-contract-forensics/).
+- Canonical folder: [`skills/authored/healthcare-contract-forensics/`](../../skills/authored/healthcare-contract-forensics/).
 - Skill entrypoint Git blob `02d7d645d6a6856d01165e01da9014f9cf43309c`.
 - Full 9-file package Git tree SHA `0d1d9f2838691fcf7963472ea8b62c52b2a273ed`, assembled from the exact blobs below. Moving the package to `skills/authored/` does not alter package-relative Git tree identities.
-- First-party MIT (SPDX `MIT`), copyright (c) 2026 Kevin Knapp, repository [LICENSE](../../../LICENSE). No third-party original skill text, real healthcare contracts, protected records or patient PHI are vendored.
-- Exact version facts also recorded in the [authored skills license index](../../../registry/authored-skills-index.json), [provenance companion](../../../registry/skills/local-skills/healthcare-contract-forensics.yaml), [verification companion](../../../registry/verification/local-skills/healthcare-contract-forensics.yaml), and [local summary](../../../registry/local-verification.json).
+- First-party MIT (SPDX `MIT`), copyright (c) 2026 Kevin Knapp, repository [LICENSE](../../LICENSE). No third-party original skill text, real healthcare contracts, protected records or patient PHI are vendored.
+- Exact version facts also recorded in the [authored skills license index](../../registry/authored-skills-index.json), [provenance companion](../../registry/skills/local-skills/healthcare-contract-forensics.yaml), [verification companion](../../registry/verification/local-skills/healthcare-contract-forensics.yaml), and [local summary](../../registry/local-verification.json).
 - Historical 7-file tree `3974f153ac39bd27895c4f0365ee50e0ef1527a9` and old SKILL blob `6ea8dda7b85b399a252f9b97295d54e536a3f897` are **superseded** and not valid current verification pins.
 
 ## Full package: static content identity
@@ -59,6 +59,6 @@ Current-law claims must be refreshed against the correct effective date, plan ye
 - Run a matched baseline prompt comparison, capture transcripts and source citation precision rather than assume superiority.
 - Verify any consequential regulation, applicable plan type, rights and dates with current primary authority and qualified counsel.
 - Reconcile authored index and regenerated domain/dashboard counts before claiming a synchronized total.
-- Independent reviewer/owner decision before draft PR merge or user-facing production promotion.
+- Independent reviewer/owner decision before PR merge or user-facing production promotion.
 
 The fact that this skill is marked `verified-static` does not mean behavioral or security validation, and the repository holds passive documents rather than active protection controls.
