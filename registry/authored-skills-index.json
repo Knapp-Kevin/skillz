@@ -24,16 +24,17 @@
       "license_verified_at": "2026-11-06",
       "provenance_path": "registry/skills/local-skills/healthcare-contract-forensics.yaml",
       "verification_path": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
-      "skill_blob_sha": "02d7d645d6a6856d01165e01da9014f9cf43309c",
-      "package_tree_sha": "0d1d9f2838691fcf7963472ea8b62c52b2a273ed",
-      "package_file_count": 9,
+      "skill_blob_sha": "5a304a552678ad88f4fa239abf28fe52b20bbab6",
+      "package_tree_sha": "587d29e9a1275efcb8f20437bbc5479d36d1f5b3",
+      "package_file_count": 10,
       "review_status": "verified-static",
       "review_score": "19/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
-      "rights_note": "No third-party skills, confidential contracts, or real PHI copied; source comparison and separate license receipts at docs/reviews/2026-11-06-issue714-package-candidate-comparison.md.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/715"
+      "rights_note": "Independent MIT-authored package with public README, exact-quote clause scrutiny cards and fictional fixtures; no third-party skill text or real PHI copied. Source comparisons at docs/reviews/2026-11-06-issue714-package-candidate-comparison.md.",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/715",
+      "package_version": "1.1.0"
     }
   ]
 }

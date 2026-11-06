@@ -8,6 +8,20 @@ Use the following fields exactly or with equivalent human-readable labels. A tem
 - **Document inventory:** `ID | name | exact effective version | pages/rows available | completeness / OCR state | confidentiality handling`
 - **Exclusions:** Jurisdiction, missing schedules, unavailable transactions, regulatory topics, etc.
 
+## Priority clause scrutiny cards (required for material findings)
+
+Present **three to five ranked cards, or fewer if fewer are supported**. Keep each card short and suitable for a benefits manager to verify. Each card must tie an observed issue to its **governing text** and a concrete next step, not merely list a clause number.
+
+**HCF-### — Clause / issue title (priority high/medium/low)**
+
+- **Original wording (verified, short excerpt):** “...” — source ID, exact document name, signed/effective version, page/section/line **and an authorized direct source/page link or host file citation when available** (otherwise provide filename and precise locator). Do not create a link that grants new access or publicly expose confidential URLs. Quote *only* words seen in the authorized original source. When unreadable, ambiguous, missing or only described secondhand, print `QUOTE UNVERIFIED` and request source access; do not reconstruct or copy from a prior answer. Keep any private quote inside the authorized report.
+- **Why it deserves scrutiny:** Explain what the words permit, exclude or obligate and why that matters for the reviewer, in ordinary language; identify amendment precedence and any reasonable opposite reading.
+- **Financial impact and evidence state:** `VERIFIED ARITHMETIC`, `MODELED SCENARIO`, or `NOT QUANTIFIED`. For numbers, state USD/other currency, exact covered period, basis (per claim/per member etc.), applicable formula, input source IDs/rows, sign/direction and exclusions. Separate **observed amount** from **verified recovery**. Never turn an observed margin into theft, presume unprovided rebates, or annualize without measured volume.
+- **Verification request:** Exactly what document, settlement count, credit/adjustment, or competing wording would confirm or refute the concern and who should check it.
+- **Negotiation question:** One concrete, non-accusatory question or potential term to discuss with the vendor and counsel, with reference to the same clause.
+
+**Card-level acceptance check:** Every purported quote must match the governing supplied document after checking signed amendments and OCR reliability. Every quantified impact must reproduce from cited numbers and state its scope and uncertainty. Every card needs a verification action and a connected negotiation question. If any condition fails, downgrade the card to a document request/unknown impact instead of a confident finding.
+
 ## Findings register
 | ID | Priority | Classification | Question/observation | Source ID / precise location | Counter-reading / evidence against | Value basis | Confidence | Next verification owner |
 |---|---|---|---|---|---|---|---|---|

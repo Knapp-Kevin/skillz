@@ -662,7 +662,7 @@
       "skill_name": "healthcare-contract-forensics",
       "local_path": "skills/authored/healthcare-contract-forensics/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "02d7d645d6a6856d01165e01da9014f9cf43309c",
+      "content_blob_sha": "5a304a552678ad88f4fa239abf28fe52b20bbab6",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -691,7 +691,7 @@
           "medium"
         ]
       },
-      "notes": "2026-11-06 issue #714: current 9-file authored MIT skill, exact package tree 0d1d9f2838691fcf7963472ea8b62c52b2a273ed; SKILL blob 02d7d645d6a6856d01165e01da9014f9cf43309c. Static structured score 19/20, deterministic synthetic arithmetic and structural checks, no actual host behavioral or baseline-prompt test, no scanner claim or production approval. Four full source-pinned adjacent packages inspected without import. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md."
+      "notes": "2026-11-06 issue #714: current v1.1.0 10-file MIT-authored package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; SKILL blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static structured 19/20; deterministic 4/4 clause-card completeness and 8/8 original-excerpt matches, plus synthetic currency arithmetic. Human-facing README added for shared folder. External host behavior, baseline comparison and scanner NOT RUN; no production/PHI clearance. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-commenter-acceptance-audit.md."
     },
     {
       "skill_name": "inbox-triage",

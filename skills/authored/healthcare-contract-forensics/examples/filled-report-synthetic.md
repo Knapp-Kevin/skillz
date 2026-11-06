@@ -16,6 +16,44 @@
 
 The fictional March invoice lists $7.25 in administration fees when the provided contract and three settled claims support an expected $6.00, creating a **+$1.25 arithmetic variance** requiring invoice verification. The PBM reports $20 in manufacturer service fees excluded from the agreement's defined rebates, so the issue is **transparency and negotiation**, not a proven failure to remit defined rebates. The $50 difference between plan charges and pharmacy payments is permitted by the provided agreement, so it is **not a proven overpayment or theft**. The amendment adds access to annual aggregate manufacturer-fee summaries but does not require delivery of raw affiliate invoices. The sponsor should request billing detail, applicable credit memos, independent settlement records and the newly available annual report before deciding on legal or financial action.
 
+## Clause-by-clause scrutiny for negotiation
+
+The following quotes are **short, directly checked excerpts from the fictional input text** in `synthetic-pbm-case.md`. In a real engagement they belong in an authorized private report, not an automatically public post. This is a worked demonstration, not an observed model-host result.
+
+**Open the original fictional evidence:** [contract, amendments, invoice and ledger](synthetic-pbm-case.md) (C-01, S-01, A-01, I-01, R-01) and [claims CSV](claims-synthetic.csv) (D-01). The section and row citations in the cards below point into these two source files.
+
+### HCF-001: Settled-claim administration fee (medium)
+
+- **Original wording:** “$2.00 per settled paid prescription claim” and “excluding reversed or rejected claims” — **C-01 §4.1**, effective 2025-01-01. **S-01 §A.1** confirms $2.00 and **A-01 §A1.2**, effective 2025-03-01, says “No change to the §4.1/S-01 administration-fee rate” **I-01 line 1** shows $7.25.
+- **Why scrutinize:** The formula only charges for settled claims. A reversed claim must not enter the denominator, and the later amendment does not change the rate.
+- **Financial impact:** **VERIFIED ARITHMETIC on supplied synthetic records, March 2025 USD only.** **3 × $2.00 = $6.00** from **D-01 rows 1–3** (exclude reversed row 4); **$7.25 − $6.00 = +$1.25** invoice variance. **Not established owed back or recoverable** until claims counts, credits and true-ups are verified. No extrapolation or annual savings estimate.
+- **Verify:** Sponsor billing analyst requests March settled-claim IDs, credit memos, exclusions and final paid-claim denominator.
+- **Negotiation question:** Can the PBM supply an auditable per-claim calculation and a defined credit/true-up process for charges inconsistent with §4.1?
+
+### HCF-002: What “100%” rebate pass-through actually includes (medium)
+
+- **Original wording:** “100% of Rebates” — **C-01 §2.1**; but “Rebates exclude separate administrative, data, consulting and service fees paid to PBM or affiliates” — **C-01 §1.1**, both effective 2025-01-01. **A-01 §A1.2** retains those definitions. **R-01 lines 1–3** report the credits and fees.
+- **Why scrutinize:** The broad-sounding percentage is narrowed by a defined-term exclusion. The arrangement may align with the contract but leaves a commercial incentive and disclosure question.
+- **Financial impact:** **NOT QUANTIFIED as economic harm.** R-01 and D-01 report **$50 defined rebates credited** and **$20 separate manufacturer administration/service fees** for the illustrative Q1 2025 period. The $20 is an **observed category**, not a contractual rebate shortfall or a proven $20 recovery.
+- **Verify:** Benefits lead seeks remittance evidence, manufacturer fee classifications, all applicable amendments and the annual aggregate report permitted under A-01 §A1.1.
+- **Negotiation question:** Could the rebate definition or reporting obligation expressly cover all manufacturer-related compensation, including affiliate service/data fees, with exceptions disclosed and priced?
+
+### HCF-003: Sponsor charges versus pharmacy reimbursements (low)
+
+- **Original wording:** “the PBM may retain the difference” — **C-01 §3.2**, effective 2025-01-01, referring to differences between sponsor charges and amounts paid to pharmacies.
+- **Why scrutinize:** The two amounts need not be identical under this agreement. Understanding how those prices are calculated can matter in negotiations even without a breach.
+- **Financial impact:** **VERIFIED ARITHMETIC of a difference, NOT QUANTIFIED as loss.** D-01 rows 1–3 show **$360 sponsor charges − $310 pharmacy payments = $50** in March 2025 USD. The contract expressly allows a difference; **$50 is neither verified overpayment nor recoverable savings**.
+- **Verify:** Benefits procurement requests matched claim-level price components, applicable guarantees, netting adjustments and true-up evidence.
+- **Negotiation question:** Would a transparent pricing schedule with separately disclosed PBM compensation and an independently auditable claim reconciliation be acceptable?
+
+### HCF-004: Limits on manufacturer-fee audit access (medium)
+
+- **Original wording:** “Raw affiliate manufacturer-service invoices are not expressly provided under this section.” — **C-01 §5.3**, effective 2025-01-01. **A-01 §A1.1**, effective 2025-03-01, adds “annual aggregate summaries” of certain manufacturer payments, not the underlying invoices.
+- **Why scrutinize:** Annual summaries provide some visibility, but the records available may not let the sponsor independently test all related-party remuneration. The amendment improves access; it must not be overlooked.
+- **Financial impact:** **NOT QUANTIFIED.** No reliable amount of avoidable cost follows from this access limitation alone. The known $20 manufacturer-fee category is not automatically an audit loss.
+- **Verify:** Sponsor fiduciary and counsel request the available annual summary, data definitions and a specific description of the records omitted from audit access.
+- **Negotiation question:** Can the parties agree on independent third-party verification of affiliate compensation and a defined process to resolve discrepancies without unnecessary disclosure of other clients' data?
+
 ## Findings register
 
 | ID | Priority | Status | Exact source(s) and observation | Counter-reading / evidence against | Monetary value status | Confidence in bounded finding | Verification owner |
