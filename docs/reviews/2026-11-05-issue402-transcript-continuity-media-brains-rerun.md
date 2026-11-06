@@ -1,0 +1,49 @@
+# Issue #402: Three bounded Q8 reviews, a Rerun refresh, and a BRAINS root-package risk inventory
+
+**Date:** 2026-11-05. This checkpoint distinguishes completed direct content reviews of **three exact pinned source packages**, a **new exact-version static re-review** of the updated Rerun URDF package, and a **partial high-priority risk triage** of the large BRAINS Resume package. These are different evidence categories. No third-party script, agent, browser, model, Blender session, student content, uploaded file, network access or runtime scanner was executed.
+
+## Completed direct pinned source reviews
+
+| Package | Pinned package Git tree | Score | Decision |
+|---|---|---:|---|
+| [Split Transcript](https://github.com/danielrosehill/Claude-Transcription-Plugin/tree/d19d6df5792490b477d9ea6fd4f7eebb0434dc9d/skills/split-transcript) | `d5aa1a7c143ee6830f1f12b46d6d6db6931bed80` | 16/20 | Reference only; content is untrusted and output files/handoffs require consent |
+| [Continuity Check](https://github.com/bladecoder/narrative-skills/tree/c0948f7970178b72bb9561030372e75d303d37b3/skills/continuity-check) | `eac56199862673d2206a52f6a3d504bfa31565a7` | 15/20 | Reference only; canon writes need an approved proposed-diff step |
+| [Media Scripter](https://github.com/YujxZJCN/teaching-skills/tree/fd0c486e61cb1f065b88133b599e8806dfaeac12/media-scripter) | `06f8362251abe9203fca51c4c129f401b1701664` | 16/20 | Reference only; recorded student speech/privacy and passport write boundaries outstanding |
+
+All **11 owned source files** were read in these three complete packages, as were the applicable root MIT license notices and three relevant pinned academic shared governance references. Exact main skill blobs, source trees, score rubrics, historical scanner receipts, separate permissions and detailed findings are in [the machine review ledger](../../registry/security/q8-three-incomplete-transcript-continuity-media-static-dispositions-20261105.json).
+
+**Split Transcript:** The source correctly preserves speakers and original wording and uses `.split-v2` folders when prior per-transcript output exists. However, it offers to pipe spoken instructions into developer tools and task services without a distinct review/permission and private-data filtering gate. Its alternative project-root `prompts/` and `context/` destinations do not inherit the same explicit nonoverwrite safety. Text spoken by others is data, not agent authority. Score **16/20**.
+
+**Continuity Check:** The method makes a useful distinction between contradiction, ambiguity, new canon and unresolved threads, and defaults to preserving established facts. But the normal workflow writes canonical YAML and chapter-review files based on the agent's judgment, without owner approval or a reviewable old/new diff. A check-only request must not silently rewrite canon. Require evidence-linked proposed patches, approved file scope and atomic writes. Score **15/20**.
+
+**Media Scripter:** Four agents carefully separate scripting, shot planning, segmentation and caption accuracy. It retains `[VERIFY]` markers, identifies inaudible words instead of guessing, distinguishes video engagement data from proven learning and includes professor checkpoints. Risks remain for identifiable student voices in lecture recordings/captions, source rights for student-facing published material, unauthorized project passport edits and unobserved read-aloud tests. Caption/transcript generation is not itself publication approval. Score **16/20**.
+
+## Rerun URDF: newer source reviewed at its own identity
+
+The earlier review covered pinned Rerun URDF tree `d975189711aed05aadcbc93426906631df481b7e` and reported a newer tree. A complete re-read and old/new comparison now records the updated **353-line** `SKILL.md` at blob `85c46e2c7fb546bf0bd34c1c7269e41bd5cc8feb`, package Git tree `081a3c5f4ab3d5211f1761d8332e705945b5bc26`, upstream commit `6f0057649fdcdec6b1101e2590dc7280a31f75d1`. The helper `scripts/check_joint_mapping.py` blob remains `4c911ffb21ed1b001a5a01009cfec8654194707a`, unchanged from the fully reviewed historical pin.
+
+**Exact delta:** two added lines near line 321 instruct an S3-compatible store (R2, MinIO) to supply `object_store_config=` with its registered store name when publishing an asset. This is data-source configuration advice, not authority to access credentials or write to a bucket. The prior significant findings remain: 2.0 radians default slack, omitted-joint-name fallback, nonfinite input concerns and runtime/network/storage approval. Static source-quality score remains **14/20** for the updated source; no new scanner pass, execution or unchanged-use approval is claimed.
+
+[Separate exact update/freshness review](../../registry/review-freshness/q8-rerun-urdf-upstream-static-refresh-20261105.json) closes **one observed source-review freshness hold** without changing the historical Q8 scanner or historical pin review. The README graphic counts **one updated-source re-review completed**, **zero previously known outstanding source updates**; future source changes still require new checks. Current-source static review is not current-source host qualification.
+
+## BRAINS Resume: 373 pinned files indexed, 36 material files risk-inspected, NOT cleared
+
+The Q8 recorded complete package for `BRAINS-Certified/BRAINS-resume-skill` is the entire repository root at `d8763b8bdaddd0345288fdb4b4fdd2a652677bdc`, Git tree `c22ace992dc202c79c2de28fc4565d4fbd977e71`. It includes **373 file blobs**, with **113 Python application scripts** and **133 Python tests**. Treating `SKILL.md` alone as the package would understate the security review scope. The [file-by-file exact Git fingerprint inventory and bounded risk triage](../../registry/security/brains-resume-373-file-fingerprint-inventory-and-risk-triage-20261105.json) records all 373 path/blob/size pairs, 36 inspected material files, 337 index-only files and **eight source-evidenced risk findings**. The 337 indexed-only entries are **not** asserted to be reviewed.
+
+Most significant source-derived findings:
+
+- **Incorrect privacy promise.** `SKILL.md:235,270,278` claims no outbound network requests or storage beyond conversation. `scripts/parsers/jd_url_fetch.py:33–56` permits `http://`, `https://` and `file://` and calls `urllib.request.urlopen` without host, redirect, local-resource or response-size policy. The parser may be appropriate in a separately authorized job-description-fetch workflow, but not alongside an unconditional no-network claim.
+- **Upload path and overwrite risk.** `scripts/dashboard/file_input.py:26–52` writes `upload_dir / upload.name` without enforcing resolved-path containment, basename restriction, exclusive create or maximum file size. If a directly supplied upload-like object has an absolute or traversal-bearing name, the helper's own contract does not prevent writing outside the intended uploads directory. This was not reproduced in a live Streamlit host.
+- **Candidate-scoping inconsistency.** `scripts/dashboard/data.py:55–88` queries all résumé/cover-letter/JD paths without `candidate_id` restriction; `scripts/dashboard/file_input.py:55–118` exposes these values in a generic dropdown. Other tabs explicitly use the active candidate, making multi-candidate local confidentiality boundaries inconsistent.
+- **Sensitive retention disclosures.** `scripts/tracker/migrations/0008_disclosure_sessions.py` and `scripts/tracker/disclosure.py` persist candidate-linked disclosure choices/factors in SQLite. `scripts/generators/disclosure_worksheet.py` also renders Markdown/PDF. `scripts/dashboard/handoff.py` copies commands to the clipboard and logs them locally. These contradict claims that nothing is stored beyond the conversation without an accurate and specific retention/consent notice.
+- **Version/install mismatch.** `SKILL.md` says **1.4.0**, `pyproject.toml` **2.2.0**, and README **2.3.0**; installers create Python environments and Claude profile links. Installed-runtime and governance assertions cannot be inferred from these mismatched version declarations.
+
+**Positive aspects:** The user retains veto over disability-identity disclosure suggestions, one LinkedIn ZIP parser skips third-party personal-data files, and multiple dashboard views deliberately filter by the active candidate. These intentions do not erase contradictory and unbounded code paths.
+
+**Decision: HOLD, partial triage only.** The BRAINS package is **not added to the completed reviewed Q8 count**. Review the remaining 337 indexed-only files, establish all executable and sensitive-data boundaries, and, if behavioral claims are later needed, test with separately permitted synthetic data. No source scripts, installers, private files or external services were run by this review.
+
+## Accurate global progress
+
+With **three fully reviewed pinned source packages**, the historically flagged Q8 risk frontier reaches **27/40 = 7/7 historically FAILED + 20/33 historically INCOMPLETE**, leaving **13 first-time incomplete direct reviews**. Historical NVIDIA SkillSpector Q8 outcomes remain **10 PASS / 7 FAIL / 33 INCOMPLETE**, without any upgraded historical status. The Rerun current-source re-review is an **additional source refresh**, not a newly counted Q8 historical pin. BRAINS remains explicitly incomplete and uncounted.
+
+The [README progress SVG](../../docs/assets/q8-direct-static-risk-review-progress.svg) derives reviewed-pin counts from nine evidence ledgers and the Rerun source-refresh resolution from a **separate verified refresh ledger**. The broader governed third-party corpus, the thirteen remaining featured initial reviews, and BRAINS deep audit remain open under #402. No skill was admitted, no source rights automatically cleared, and no human or host execution approval was issued. Existing capability-domain visualizations should remain unchanged.

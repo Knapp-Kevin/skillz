@@ -1,0 +1,2501 @@
+{
+  "schema_version": 1,
+  "kind": "source-index-and-bounded-security-triage-not-full-package-review",
+  "review_date": "2026-11-05",
+  "source": {
+    "repository": "BRAINS-Certified/BRAINS-resume-skill",
+    "pin": "d8763b8bdaddd0345288fdb4b4fdd2a652677bdc",
+    "complete_root_package_tree_sha": "c22ace992dc202c79c2de28fc4565d4fbd977e71",
+    "skill_md_blob_sha": "de50da2f4556a33e4239421939b88bd98d0b57a2",
+    "current_source_identity": "pinned tree at latest observed default branch, source-level current matching only"
+  },
+  "q8_id": "BRAINS-Certified-BRAINS-resume-skill/brains-resume",
+  "issue": 402,
+  "verdict": "HOLD_UNCHANGED_USE",
+  "full_source_review_complete": false,
+  "reviewed_source_pin": false,
+  "historical_scanner": "incomplete (report 3bc3e14fe678bc8451fdfcc43ebf19287883b49b7c9946700b609361e8ba767c; not rerun)",
+  "counts": {
+    "indexed": 373,
+    "content_risk_read": 36,
+    "indexed_only": 337,
+    "application_scripts": 113,
+    "tests": 133,
+    "behavioral_tests_executed": 0,
+    "unchanged_use_approvals": 0,
+    "completed_exact_source_reviews_increment": 0
+  },
+  "groups": {
+    ".github": {
+      "files": 12,
+      "bytes": 10389,
+      "content_read": 0
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 786,
+      "content_read": 0
+    },
+    ".gitleaks.toml": {
+      "files": 1,
+      "bytes": 452,
+      "content_read": 0
+    },
+    ".markdownlint.json": {
+      "files": 1,
+      "bytes": 382,
+      "content_read": 0
+    },
+    ".streamlit": {
+      "files": 1,
+      "bytes": 391,
+      "content_read": 0
+    },
+    ".vale.ini": {
+      "files": 1,
+      "bytes": 1261,
+      "content_read": 0
+    },
+    ".vale": {
+      "files": 10,
+      "bytes": 6866,
+      "content_read": 0
+    },
+    "CHANGELOG.md": {
+      "files": 1,
+      "bytes": 27198,
+      "content_read": 1
+    },
+    "CODE_OF_CONDUCT.md": {
+      "files": 1,
+      "bytes": 2509,
+      "content_read": 0
+    },
+    "CONTRIBUTING.md": {
+      "files": 1,
+      "bytes": 4517,
+      "content_read": 0
+    },
+    "LICENSE": {
+      "files": 1,
+      "bytes": 1072,
+      "content_read": 1
+    },
+    "README.md": {
+      "files": 1,
+      "bytes": 17926,
+      "content_read": 1
+    },
+    "SECURITY.md": {
+      "files": 1,
+      "bytes": 1667,
+      "content_read": 0
+    },
+    "SKILL.md": {
+      "files": 1,
+      "bytes": 29638,
+      "content_read": 1
+    },
+    "STATUS.yml": {
+      "files": 1,
+      "bytes": 1206,
+      "content_read": 0
+    },
+    "assets": {
+      "files": 2,
+      "bytes": 54648,
+      "content_read": 0
+    },
+    "commands": {
+      "files": 16,
+      "bytes": 11145,
+      "content_read": 0
+    },
+    "dist": {
+      "files": 1,
+      "bytes": 0,
+      "content_read": 0
+    },
+    "docs": {
+      "files": 37,
+      "bytes": 1729104,
+      "content_read": 0
+    },
+    "install": {
+      "files": 3,
+      "bytes": 6627,
+      "content_read": 2
+    },
+    "pyproject.toml": {
+      "files": 1,
+      "bytes": 1247,
+      "content_read": 1
+    },
+    "references": {
+      "files": 22,
+      "bytes": 177042,
+      "content_read": 2
+    },
+    "requirements-dev.txt": {
+      "files": 1,
+      "bytes": 52,
+      "content_read": 0
+    },
+    "requirements.txt": {
+      "files": 1,
+      "bytes": 87,
+      "content_read": 1
+    },
+    "scripts": {
+      "files": 113,
+      "bytes": 421198,
+      "content_read": 24
+    },
+    "templates": {
+      "files": 8,
+      "bytes": 220336,
+      "content_read": 0
+    },
+    "tests": {
+      "files": 133,
+      "bytes": 367044,
+      "content_read": 2
+    }
+  },
+  "material_findings": [
+    {
+      "severity": "HIGH",
+      "type": "privacy-contract-network-contradiction",
+      "evidence": [
+        "SKILL.md:235,270,278",
+        "scripts/parsers/jd_url_fetch.py:33-56",
+        "tests/parsers/test_jd_url_fetch.py:55-65"
+      ],
+      "finding": "Onboarding promises no outbound network requests or storage/transmission beyond conversation. Bundled fetch_jd_from_url calls urllib.request.urlopen on arbitrary http/https/file URLs. Scheme checks do not impose destination, redirect, host or size restrictions. It can open a URL and read full response into memory when invoked; avoid describing package as network-inert.",
+      "confidence": "source-confirmed; no network or file reads executed from package"
+    },
+    {
+      "severity": "HIGH",
+      "type": "upload-path-traversal-or-overwrite-if-untrusted-filename",
+      "evidence": [
+        "scripts/dashboard/file_input.py:26-52",
+        "tests/dashboard/test_file_input.py:31-43"
+      ],
+      "finding": "resolve_path builds upload_dir / upload.name and writes bytes without basename/path canonicalization, containment, exclusive create, size limit or collision rule. A forged or path-containing filename can point outside the intended directory or replace an existing local file; Streamlit's normal UI may sanitize some names, but this directly callable helper does not enforce that boundary.",
+      "confidence": "source-confirmed missing containment; no crafted upload executed"
+    },
+    {
+      "severity": "HIGH",
+      "type": "cross-candidate-file-list-disclosure",
+      "evidence": [
+        "scripts/dashboard/data.py:55-88",
+        "scripts/dashboard/file_input.py:55-118",
+        "scripts/tracker/query.py:19-60"
+      ],
+      "finding": "Cached lists of resume, cover letter and JD paths read all records without candidate_id filtering, and the shared file picker presents those paths regardless of active candidate. Other tab views scope by active candidate, so this creates a multi-candidate privacy consistency problem on a shared local installation. This is not evidence of remote network exfiltration.",
+      "confidence": "source-confirmed SQL is unscoped; no live multi-user demonstration"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "sensitive-disclosure-persistence-inaccurately-disclosed",
+      "evidence": [
+        "SKILL.md:221-235,268-278",
+        "scripts/tracker/migrations/0008_disclosure_sessions.py:14-33",
+        "scripts/tracker/disclosure.py:62-105",
+        "scripts/generators/disclosure_worksheet.py:192-210",
+        "references/workflows/disclosure.md:69-113"
+      ],
+      "finding": "The application deliberately persists candidate-linked neurodivergence disclosure strength and factors in local SQLite and optional Markdown/PDF, while SKILL onboarding claims nothing is stored beyond conversation. The user's disclosure preference is sensitive and deserves accurate explicit persistence/retention/copy/share notice and intentional saving; not evidence of a demonstrated remote leak.",
+      "confidence": "source-confirmed persistence paths; no sensitive data generated"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "handoff-private-content-retention",
+      "evidence": [
+        "scripts/dashboard/handoff.py:18-61",
+        "scripts/dashboard/tabs/jds.py:69-93"
+      ],
+      "finding": "The dashboard copies slash-command arguments to OS clipboard and logs them under ~/.brains-resume/handoffs by default, potentially retaining job/candidate/filename/brief data beyond a chat. Handoff/logging consent and retention controls are not consistently expressed in onboarding.",
+      "confidence": "source-confirmed; no clipboard call run"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "version-and-compatibility-misrepresentation",
+      "evidence": [
+        "SKILL.md:4",
+        "pyproject.toml:7",
+        "README.md:15-16,49"
+      ],
+      "finding": "Pinned SKILL declares 1.4.0, Python project declares 2.2.0, README says 2.3.0 shipped. Instructions can misdescribe current functions, migration scopes and data flow; require version coherence before consumer adoption.",
+      "confidence": "source-confirmed"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "installation-side-effects",
+      "evidence": [
+        "install/install.sh:28-63",
+        "install/install.ps1:47-80",
+        "scripts/dashboard/launch.py:20-42"
+      ],
+      "finding": "Installers create Python environments, install dependencies and place links/commands in the user's Claude profile. Dashboard launcher runs Streamlit on localhost. Static skill discovery/inspection is not authorization to run these scripts or change account/app settings.",
+      "confidence": "source-confirmed"
+    },
+    {
+      "severity": "LOW",
+      "type": "badge-not-independent-security-certification",
+      "evidence": [
+        "README.md:17,25"
+      ],
+      "finding": "BRAINS Certified Gold is the author's own ecosystem badge and does not independently attest safety, accessibility, security or privacy practices.",
+      "confidence": "source-confirmed"
+    }
+  ],
+  "positive_safeguards": [
+    "User-controlled neurodivergence disclosure framing and veto rules in SKILL.md.",
+    "LinkedIn ZIP parser explicitly skips third-party Connections/Invitations/Messages by file names.",
+    "Candidate-scoped SQL exists in several individual tabs, indicating intent to isolate candidate records even though global cached pickers break consistency.",
+    "JD analyzer explicitly gates persistence via a Save button in one workflow.",
+    "MIT root LICENSE covers source-author rights; publisher mark and claims remain separately considered."
+  ],
+  "needed_next": "Finish content/security inspection of remaining indexed-only package files, prioritizing runtime scripts, tests, installers, dataflow and consent; verify path and candidate isolation with authorized local synthetic tests separately, adjudicate original SKILL privacy claims, update any copied-content rights, then only issue an exact package static score after full material source review. Do not count this triage as a completed Q8 package.",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "blob_sha": "06481584101f0bf44529574a10b00a4099df01d7",
+      "bytes": 282,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/certification-request.yml",
+      "blob_sha": "834dbfbb890591e6cac233b74c80869b9ff5fd98",
+      "bytes": 1626,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "blob_sha": "b41297bdf300dca936b9a79111259b01fc80f0cc",
+      "bytes": 309,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "blob_sha": "fb284a26f93dda5512787b55150fce9d2cf57079",
+      "bytes": 563,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "blob_sha": "e8ffc40ea341b34d517bfcc9b626469f119a3b02",
+      "bytes": 585,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "blob_sha": "6f529f95aeef73b9a3bd68faed30841e0dd04927",
+      "bytes": 1196,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/gitleaks.yml",
+      "blob_sha": "addbf0e90d9c44588671cee415eefb4d813ce56e",
+      "bytes": 1271,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/markdownlint.yml",
+      "blob_sha": "93559388849ef9610aee62be9792cbeee2949462",
+      "bytes": 466,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/readability.yml",
+      "blob_sha": "8ef552717547d9d87b832c5286b4dd5500a8f144",
+      "bytes": 1117,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/scorecard.yml",
+      "blob_sha": "e996fdb9a7b17fc879bfca8b33860dccc7119b74",
+      "bytes": 967,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/trivy.yml",
+      "blob_sha": "795b1b6ac26110c05efb935a4bb2cbad977ac71b",
+      "bytes": 1353,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".github/workflows/vale.yml",
+      "blob_sha": "b9949290e5ddc78de1343db9446fbf25356b4043",
+      "bytes": 654,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".gitignore",
+      "blob_sha": "e9f2a1273cebff16437d0a9ccff9a77aafba896c",
+      "bytes": 786,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".gitleaks.toml",
+      "blob_sha": "c37f49814f2649422509de2ad59aaa0490180fb6",
+      "bytes": 452,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".markdownlint.json",
+      "blob_sha": "c0a0b215b74c99a6f6b26f9fad6d33657a4f7ac2",
+      "bytes": 382,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".streamlit/config.toml",
+      "blob_sha": "69f680ef19b135000aafdc55695414a0a966c9ba",
+      "bytes": 391,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale.ini",
+      "blob_sha": "d58dbc2d83b70fb80f362cedd3ce62658b3a00a9",
+      "bytes": 1261,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/BrandCapitalization.yml",
+      "blob_sha": "f2afff768af3f162d31212951b482e43ecb6b863",
+      "bytes": 261,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/DeficitFraming.yml",
+      "blob_sha": "8bad28b00c549e742b1821fac902ae63627c0418",
+      "bytes": 749,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/DoDontTerms.yml",
+      "blob_sha": "b648fc136d55665aa89ad640fdc345826d2247d6",
+      "bytes": 1654,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/NearParaphrase.yml",
+      "blob_sha": "416df1500e594f10ae44bdaddfd9fc9f731ab704",
+      "bytes": 638,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/PassiveOveruse.yml",
+      "blob_sha": "34e5789ddf6ee85ab50cacb8d09b3ff1bafd5e2b",
+      "bytes": 247,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/ProtectedPhrases.yml",
+      "blob_sha": "a46a91f16ae38a42bde7981d9b38dacf75522fea",
+      "bytes": 1235,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/PuzzlePiece.yml",
+      "blob_sha": "75040152907021045e87519a8bc61020f4693b5b",
+      "bytes": 420,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/README.md",
+      "blob_sha": "d0b75d8561d642d207b910b3bb02bfb0686d71c0",
+      "bytes": 1404,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/SentenceLength.yml",
+      "blob_sha": "d3df5bcd253ce9ac50e5da99eec6af15858e493e",
+      "bytes": 168,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": ".vale/styles/BRAINS/meta.json",
+      "blob_sha": "e4b6beb653fc0aa3450768bc631496c52eaed25e",
+      "bytes": 90,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "blob_sha": "afe9f1f91cc44900a94336d6dbfb8f95b49833a8",
+      "bytes": 27198,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "blob_sha": "05bc89ab0f6127d7cdacf28b7e9df95bfe6f895a",
+      "bytes": 2509,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "blob_sha": "45be0a25d2125d84de06cc078fef724e690a904b",
+      "bytes": 4517,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "LICENSE",
+      "blob_sha": "0ec8df5e3c611999596c6397b83a81194a9825f8",
+      "bytes": 1072,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "afef81303828cacd918897c42f14f0d4108524dd",
+      "bytes": 17926,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "SECURITY.md",
+      "blob_sha": "893471e2b92272e0ebf5951895d0fc97597ef97d",
+      "bytes": 1667,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "SKILL.md",
+      "blob_sha": "de50da2f4556a33e4239421939b88bd98d0b57a2",
+      "bytes": 29638,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "STATUS.yml",
+      "blob_sha": "fd251688b22275aa39fc51680b4767179d3edcbb",
+      "bytes": 1206,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "assets/brains-mark-dark-bg.png",
+      "blob_sha": "33bfc42f7d8fead2a14ce19ec873ed3db6adcdfd",
+      "bytes": 27123,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "assets/brains-mark-light-bg.png",
+      "blob_sha": "9bb9c03b2460772caf596b63ebf404c0041cd312",
+      "bytes": 27525,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-career-change.md",
+      "blob_sha": "688e728e5a613d65ccd0da2004d83f18ae19368a",
+      "bytes": 408,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-check.md",
+      "blob_sha": "9b1c8f23d6580a4de1b7206f43e5b858e2a45fda",
+      "bytes": 375,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-consolidate.md",
+      "blob_sha": "7e7ccefc0ee545bcf2dea722a3fa2ecfd436af1b",
+      "bytes": 468,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-cover-letter.md",
+      "blob_sha": "7339cd8f86c3d85a5e26db2261d47b6532cb707b",
+      "bytes": 349,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-create.md",
+      "blob_sha": "1841cbd09ecca4678cac2419e2f86f2c7ba003de",
+      "bytes": 270,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-dashboard.md",
+      "blob_sha": "b51ff08f4365273a29710f1aa3c2ce8382d75b37",
+      "bytes": 985,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-deai.md",
+      "blob_sha": "4cfdca1c98d8c4f4cbb72b849a7234596f47afc0",
+      "bytes": 2305,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-disclosure.md",
+      "blob_sha": "b3025657557eb1eac6e077c163579bcb76933696",
+      "bytes": 314,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-edit.md",
+      "blob_sha": "fe1060fec831dd1b68365eef23151c8a0ad16b32",
+      "bytes": 380,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-jd-analyze.md",
+      "blob_sha": "2f73a6542fb991fbc255c6148cfdc86a06f9927a",
+      "bytes": 482,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-linkedin-improve.md",
+      "blob_sha": "e6da3a0c4c885d3fee70e0ba24064af96fdc2b0a",
+      "bytes": 491,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-linkedin.md",
+      "blob_sha": "6b60d6417be89724bd9532af380a64292989a7df",
+      "bytes": 396,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-precheck.md",
+      "blob_sha": "7954b9d9a16ddcb00d4a47e6d9b96648bd0489f1",
+      "bytes": 497,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-review.md",
+      "blob_sha": "dcbfe9621b4008a40aac44792218c4c675b54906",
+      "bytes": 432,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-tailor.md",
+      "blob_sha": "a05735c26172afabb9a4a8855625cd636db09d15",
+      "bytes": 363,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "commands/brains-track.md",
+      "blob_sha": "10aa0167d575f6c2df0f43e439e50a8a4132132c",
+      "bytes": 2630,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "dist/.gitkeep",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/claude-project-setup.md",
+      "blob_sha": "27133cb292a779ae60384afb0f15474cae566845",
+      "bytes": 5001,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-11-plan-1-foundation-and-review-workflow.md",
+      "blob_sha": "ed27770b402031e0ae0c69c95360705e1570310a",
+      "bytes": 83605,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-12-plan-2-complete-workflows-and-packaging.md",
+      "blob_sha": "8dd1d673c431ef5326796d650f92d58b473cb065",
+      "bytes": 130979,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-13-plan-3-phase-2-templates-linkedin-consolidation.md",
+      "blob_sha": "d22bf1ef022b0b60b7bb591cf6de59cc26b28fe4",
+      "bytes": 134025,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-13-plan-4-phase-4-tracker-jd-analyzer.md",
+      "blob_sha": "277a365c58f0c2f502545ef77adfe50834d35d20",
+      "bytes": 129819,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-14-plan-5a-v1-2-1-ai-signal-validator.md",
+      "blob_sha": "7ac661484f7a43fdee05e082339c240f4dd36bce",
+      "bytes": 54748,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-14-plan-5b-v1-3-0-streamlit-dashboard.md",
+      "blob_sha": "74bbe018d098f5d97f8b8b5f7a22ee30ba20861f",
+      "bytes": 101799,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-15-plan-6-v1-4-0-dashboard-workflows.md",
+      "blob_sha": "16802945642019257dd297f04b7a7575a9a10622",
+      "bytes": 79728,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-18-plan-7-v1-5-0-jd-folders-artifact-uids.md",
+      "blob_sha": "495e3233c96348552f5f2bd4295e3ad3ac585227",
+      "bytes": 101539,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-19-multi-candidate-approach-b.md",
+      "blob_sha": "ead9bbb8fe536ca103a9b9ba14170a11ccebc4fa",
+      "bytes": 95137,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-19-multi-candidate-approach-c.md",
+      "blob_sha": "a2c54855cea5c1491a89b41c3842f2c53109ea2a",
+      "bytes": 53494,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-19-resume-drift-analytics-implementation.md",
+      "blob_sha": "24020a0f9abf824c772adb5f7b00e2b502b16e8a",
+      "bytes": 181886,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-20-dashboard-orchestration-phase-1.md",
+      "blob_sha": "7aa60c39c291b97dd6155ef152df6d49ed3e875f",
+      "bytes": 45523,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-20-dashboard-orchestration-phase-2.md",
+      "blob_sha": "9f0c636c66d96d97b3d8647bf386c848e6f32565",
+      "bytes": 62635,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-05-20-dashboard-orchestration-phase-3.md",
+      "blob_sha": "825de65ab5a7eb960e850833f3b7b61d72ca900e",
+      "bytes": 37637,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/plans/2026-06-08-disclosure-framework-polish.md",
+      "blob_sha": "05d9e280f6ac2595f5d5ad3b2b645388f2290e43",
+      "bytes": 14906,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-11-brains-resume-skill-design.md",
+      "blob_sha": "ead51122dda184dbcd4707713ce20deaea80966d",
+      "bytes": 23977,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-13-phase-2-templates-linkedin-consolidation-design.md",
+      "blob_sha": "fed33ae589d7b14b5181bed572fd974d8f6f8f92",
+      "bytes": 23903,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-13-phase-4-tracker-jd-analyzer-design.md",
+      "blob_sha": "75469090b65f2aa6073b123aeafad7f7ff2fd670",
+      "bytes": 28639,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-14-v1-2-1-ai-signal-validator-design.md",
+      "blob_sha": "69aba94eef6d6a00caad968a5e9510bd5cb3f6d9",
+      "bytes": 14615,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-14-v1-3-0-streamlit-dashboard-design.md",
+      "blob_sha": "f40ff17a91b360bfd0c91944c239dda84640bd32",
+      "bytes": 26830,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-15-v1-4-0-dashboard-workflows-design.md",
+      "blob_sha": "69e33cec20818809576595e01d6a0011b6bc7928",
+      "bytes": 21790,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-18-v1-5-0-jd-folders-artifact-uids-design.md",
+      "blob_sha": "5840c5a8822adfeaf696acb51913154828d3d95b",
+      "bytes": 22776,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-19-resume-drift-analytics-design.md",
+      "blob_sha": "039e597ebba82f6d094e1f36d916ebcf46de9409",
+      "bytes": 48615,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/specs/2026-05-20-dashboard-orchestration-design.md",
+      "blob_sha": "7d4746ac386ed509c96876a0a86d8b2dfc3b0ad9",
+      "bytes": 15761,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/_make_ats_fixtures.py",
+      "blob_sha": "a8b9fd3bd27fe2304bd5320519b8be4f2b095d93",
+      "bytes": 1271,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/_make_complex_resume_docx.py",
+      "blob_sha": "37d622d9a744974838811e63cd0ff8df89ebc883",
+      "bytes": 1495,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/_make_synthetic_linkedin_zip.py",
+      "blob_sha": "bddf6ed88b38743b173a10eee8325ed169f5b5c1",
+      "bytes": 2885,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/_make_synthetic_resume_basic.py",
+      "blob_sha": "4a9de53ae5fa80127f10c6fedf56fcef72c74d29",
+      "bytes": 1129,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/_make_synthetic_resume_basic_docx.py",
+      "blob_sha": "7d1f35a1f5a26fcbd38bf86c147e5929cdcfe57b",
+      "bytes": 866,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/ats_clean.docx",
+      "blob_sha": "40a18a8fb6d304c3f79013be067846bd86705880",
+      "bytes": 35402,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/ats_with_header.docx",
+      "blob_sha": "8831348064998d89fc6a9a3c5e12a0789e998d37",
+      "bytes": 35903,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/ats_with_table.docx",
+      "blob_sha": "54d9d31a72223b1b02a0d45273dd4701b7dae1db",
+      "bytes": 35450,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/complex_resume_basic.docx",
+      "blob_sha": "3eb865fedef7b75162d257f867d0493b004b001b",
+      "bytes": 35555,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/synthetic_linkedin_export.zip",
+      "blob_sha": "770be009672e2b74cfdf043818133cc4df66010d",
+      "bytes": 2399,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/synthetic_resume_basic.docx",
+      "blob_sha": "e775c31482ccc9f96871baec1fc3e1163a59e715",
+      "bytes": 35516,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "docs/testing/fixtures/synthetic_resume_basic.pdf",
+      "blob_sha": "0cc417c98780cbc67e6eacd93bf7af71df3395b5",
+      "bytes": 1866,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "install/install.cmd",
+      "blob_sha": "c50a7e42c0fdbfab96e1976b05e2608fd063da21",
+      "bytes": 505,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "install/install.ps1",
+      "blob_sha": "dd5670146356bfe7bd7972f073e8a270b191f839",
+      "bytes": 3628,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "install/install.sh",
+      "blob_sha": "6a3fad6d187b68601bf8b665174033c38e42780f",
+      "bytes": 2494,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "pyproject.toml",
+      "blob_sha": "91084c409e44d3da9b77fd2d0e15c24b27ee06c6",
+      "bytes": 1247,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "references/ai-signal-patterns.md",
+      "blob_sha": "e509142ba3816053d134d8420a629ada9f43de32",
+      "bytes": 6770,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/ats-rules.md",
+      "blob_sha": "458c023e3069f64393952ed682b9b27747b626e1",
+      "bytes": 5896,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/brand-application.md",
+      "blob_sha": "3811d27f8e88d05dcc3bdd488df0c8c8dec08b0e",
+      "bytes": 6841,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/disclosure-decision-tree.md",
+      "blob_sha": "6c9287a8c87027029bf30730243fe3016f29c1e0",
+      "bytes": 10957,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/language-do-dont.md",
+      "blob_sha": "b9116ce0d420eaea8aea9e820dd093d80c8ed7d9",
+      "bytes": 7097,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/nd-bias-patterns.md",
+      "blob_sha": "8ff303c5eaf5bd19454e57522af9e88f0e1a5056",
+      "bytes": 19447,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/resume-anatomy.md",
+      "blob_sha": "97f336e19bd88f4bc13aeee292d08f81cbe49afb",
+      "bytes": 9925,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/template-selection.md",
+      "blob_sha": "ea766f215268fde0eed267bc566fcafbd17586b5",
+      "bytes": 7781,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/bias-check.md",
+      "blob_sha": "76aaa66559addec84b1fdd2ac706e09f165457f3",
+      "bytes": 4992,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/career-change.md",
+      "blob_sha": "39ae77960b19ca446cae851d17096c319e4ece30",
+      "bytes": 6208,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/consolidate.md",
+      "blob_sha": "5bcc3a10f26813e1f4c97259cfc85d16277ff427",
+      "bytes": 8121,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/cover-letter.md",
+      "blob_sha": "e3432da20073e871c7f3a5577f1a4c9201696f86",
+      "bytes": 10101,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/create.md",
+      "blob_sha": "e5c368e950eb58b0222c79ffb01e0c88ff3f1681",
+      "bytes": 8253,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/disclosure.md",
+      "blob_sha": "9fff085d2bc8a64f0b164ffa8c6994eb63e70fd0",
+      "bytes": 6502,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "references/workflows/edit.md",
+      "blob_sha": "c1f2a7e797d1d6b773f4ab640fdff70f03fe986b",
+      "bytes": 7895,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/import.md",
+      "blob_sha": "f8fbbbd3dfad86c3d00d47036698c3674e735d2d",
+      "bytes": 6030,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/jd-analyze.md",
+      "blob_sha": "c0688143b707f63d72638afa92a7b0dac4307547",
+      "bytes": 4708,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "references/workflows/linkedin-improve.md",
+      "blob_sha": "3f42e0505bdc6198e3f80af3017ecf3fe2b76a68",
+      "bytes": 9248,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/linkedin-ingest.md",
+      "blob_sha": "2439bea73ab83f40a81073edd41047ff32397af5",
+      "bytes": 6361,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/pre-application-check.md",
+      "blob_sha": "c7fffe0ae553abe13a9cd7f4530d5950c3c1de0b",
+      "bytes": 5283,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/review.md",
+      "blob_sha": "72b7451b398947f9051518a1d5c31621ee74625a",
+      "bytes": 7553,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "references/workflows/tailor.md",
+      "blob_sha": "443b6541fd556700abf173edebf9313076034f20",
+      "bytes": 11073,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "blob_sha": "3ea084e5452c09e75e2ace8adc483935361e92c6",
+      "bytes": 52,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "requirements.txt",
+      "blob_sha": "ad871504c7910afef907e6da005c71d0f467fe24",
+      "bytes": 87,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/__init__.py",
+      "blob_sha": "33cc2dedb1e3058d396d53a606406cb3969e5bce",
+      "bytes": 303,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/app.py",
+      "blob_sha": "739e88505403a637f4ab0a1108e4e75883565be9",
+      "bytes": 2249,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/data.py",
+      "blob_sha": "e53b088888a8bf178d5d23d893d8c51c6e814ea8",
+      "bytes": 3526,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/file_input.py",
+      "blob_sha": "6d45fc580eed57a2c5986c84158722ab8ea68713",
+      "bytes": 3810,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/handoff.py",
+      "blob_sha": "0111db0811eadfcc7aa3d1c6746c759e4c05ebdd",
+      "bytes": 2212,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/launch.py",
+      "blob_sha": "649d110853443005171944e9c137907947d92c68",
+      "bytes": 1479,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/prep/__init__.py",
+      "blob_sha": "6d57f958003d7457496b5ac576db5178eda872e2",
+      "bytes": 213,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/prep/drift_sparkline.py",
+      "blob_sha": "94170a3f1a47a2b1dce37522892d816703452049",
+      "bytes": 1598,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/prep/sparkline.py",
+      "blob_sha": "f3d6f62b4f52a1061deacee407d6e6615dcd1627",
+      "bytes": 3294,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/prep/trends.py",
+      "blob_sha": "9e7179b8b5ce5fcdb4f3d2ed1822d741dd26a249",
+      "bytes": 1719,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/sidebar.py",
+      "blob_sha": "0974f4777ca9d8778741cb9ccf4068ab4ece2cac",
+      "bytes": 7026,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/style.py",
+      "blob_sha": "223338bd414611db07b854ae51c5d81b8acb1484",
+      "bytes": 3615,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/__init__.py",
+      "blob_sha": "9de855b75d27a87ecc497da9020e2ee20e838502",
+      "bytes": 158,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/analytics.py",
+      "blob_sha": "5fc73cecc3a3cbdd4993ef0265acbfaf15e340ff",
+      "bytes": 3196,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/applications.py",
+      "blob_sha": "cf51fcd497787b58c390598ee20442abba12c09d",
+      "bytes": 4029,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/cover_letters.py",
+      "blob_sha": "85cd7cef7160e893614f1bf709bd911f8d9dfc0b",
+      "bytes": 4949,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/tabs/drift.py",
+      "blob_sha": "7cb43b688f625e3a647ee28911f3421c97af0c41",
+      "bytes": 6751,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/home.py",
+      "blob_sha": "9881802585f1c7c069116ced8136950d486b09fd",
+      "bytes": 1564,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/jds.py",
+      "blob_sha": "562ac6edf1002b3fbb72a7c0bfb1b3e5147fb625",
+      "bytes": 5104,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/tabs/pacing.py",
+      "blob_sha": "7b9b9a69f121e50ffc9b3bbc95c5f7e07b34dcd6",
+      "bytes": 3400,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/tabs/resumes.py",
+      "blob_sha": "cf48a3512d000da4e93ce4d7a2d405807bcf4448",
+      "bytes": 10614,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/widgets/__init__.py",
+      "blob_sha": "315237773a0dbb9e41242f21b90036005c933cfe",
+      "bytes": 77,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/catalog.py",
+      "blob_sha": "d04af8d1d9a855f8185ee15d58121ad761c9f419",
+      "bytes": 3578,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/customize.py",
+      "blob_sha": "f59c6aaa329365082d0a073891e755a5650ba07d",
+      "bytes": 2261,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/layout.py",
+      "blob_sha": "84e1880b942fd3c1666367eb4797d66a61e7f32c",
+      "bytes": 2122,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/onboarding.py",
+      "blob_sha": "59ee194d917d0fc867c47e279535f04244eef96a",
+      "bytes": 4590,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/pipeline.py",
+      "blob_sha": "56062c2adc67a47e55283da8d7ad81180b1764a5",
+      "bytes": 2955,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/playbook_widgets.py",
+      "blob_sha": "6b3394d21d0ccd812643d90306108b3039e1810e",
+      "bytes": 3118,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/quick_launch.py",
+      "blob_sha": "7bf81700f6b8f2cee7fcaa39580772fb4485b600",
+      "bytes": 823,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/tiles.py",
+      "blob_sha": "80f8082e8f3944168112661c0fcd7bd9a8a70e1c",
+      "bytes": 4733,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/widgets/worklist.py",
+      "blob_sha": "95f069c3a7de9194e188276cedc940d975703eaa",
+      "bytes": 2320,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/__init__.py",
+      "blob_sha": "4a95b8327c71d3015df6df65689412f9f93dd4f9",
+      "bytes": 317,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/_card.py",
+      "blob_sha": "b31be054d019e2e5f1d07956e11e13cffc5edeaa",
+      "bytes": 948,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/career_change.py",
+      "blob_sha": "99496dcf9f28cebb66c1d12e6528a40a1efb5272",
+      "bytes": 832,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/check.py",
+      "blob_sha": "50dd0be78bec0ec2c81b62b92783d6b80d947acf",
+      "bytes": 5572,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/consolidate.py",
+      "blob_sha": "bd46a06cff41e59ad27dbc19b8cad50370f14e07",
+      "bytes": 1771,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/cover_letter.py",
+      "blob_sha": "bdb01cb910d92bc0c45c0c417ddf49bfbf035480",
+      "bytes": 3401,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/create.py",
+      "blob_sha": "6c7aee021801a88cf33190e35e14cd1c71bb7985",
+      "bytes": 3454,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/deai.py",
+      "blob_sha": "9743781c47747513253e8380f0f77f97663a3848",
+      "bytes": 3733,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/disclosure.py",
+      "blob_sha": "df83856a631d4db00646d71b9732d15c1401cb42",
+      "bytes": 11312,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/workflows/edit.py",
+      "blob_sha": "399caa5eaffd2d7c96b8e7f07fa2f99eb8e70155",
+      "bytes": 4054,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/workflows/import_.py",
+      "blob_sha": "d60705e782acc7daaa9deb402a2b201dd529d938",
+      "bytes": 5487,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/workflows/jd_analyze.py",
+      "blob_sha": "1f878d983a7924931b7c6a661cf96f54b19d65b7",
+      "bytes": 4820,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/workflows/linkedin.py",
+      "blob_sha": "26e4b29d2e5d62e9252af296b8eab8925cec86a4",
+      "bytes": 970,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/linkedin_improve.py",
+      "blob_sha": "be755a04d0a6f89f38045981ac59f8d90653eb6f",
+      "bytes": 932,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/precheck.py",
+      "blob_sha": "7e5d5f4259bfa1235e129f3e35a69f125be23d80",
+      "bytes": 968,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/review.py",
+      "blob_sha": "e07e3ec76a1caab702987d33b5b2ec0310067f20",
+      "bytes": 1961,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/dashboard/workflows/tailor.py",
+      "blob_sha": "9ee37f2c75565f8bd0a6b89ff6a90819e964e8c1",
+      "bytes": 3247,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/dashboard/workflows/track.py",
+      "blob_sha": "2032d686220c1c4cfff5a29f6dfb0eb58b209bc9",
+      "bytes": 1857,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/__init__.py",
+      "blob_sha": "3494d99f75392a7c51b4026ad207394e5b5d170f",
+      "bytes": 819,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/baseline.py",
+      "blob_sha": "f9d84e642b8594ff0445b16999945514ac581356",
+      "bytes": 4061,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/compute.py",
+      "blob_sha": "7b26193cabafb524dc81e03b614e4349662de4ca",
+      "bytes": 14314,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/extract_facts.py",
+      "blob_sha": "77a7e4a15bce0153b6882269401b93e3ff6a0e0c",
+      "bytes": 6485,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/formatters.py",
+      "blob_sha": "ace4091b606f420428862ca292bb37121ae2c67c",
+      "bytes": 3380,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/lineage.py",
+      "blob_sha": "24b21e83ccdeb6ef821c8a2b56e2c5e07949458d",
+      "bytes": 4118,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/drift/snapshot_from_workflow.py",
+      "blob_sha": "c5cd85a3ab95bb991244a3d03f585a37ef561720",
+      "bytes": 9487,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/generators/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/generators/coaching_report_to_pdf.py",
+      "blob_sha": "2c08007dbb0839192b1dac965acab700a3895319",
+      "bytes": 8290,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/generators/cover_letter_to_docx.py",
+      "blob_sha": "08a335a5139a1e5483fd435b76dbaf3432ab739f",
+      "bytes": 2290,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/generators/cover_letter_to_pdf.py",
+      "blob_sha": "5c2ae8080ebd5899d292f4cb7c90c40b80acbc75",
+      "bytes": 4624,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/generators/disclosure_worksheet.py",
+      "blob_sha": "c067068f3b2c2772b991f93605b79999e41711c5",
+      "bytes": 18510,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/generators/resume_to_docx.py",
+      "blob_sha": "3f98f4f9f9276aa5a4ca5b4b7f45a08a3cf9c941",
+      "bytes": 3583,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/generators/resume_to_pdf.py",
+      "blob_sha": "8372f2149c0e2c96b85aabafe1ecef2995e59943",
+      "bytes": 7120,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/outputs/__init__.py",
+      "blob_sha": "cfbe8887dde28c40109db1eb7748e4b9042b1d95",
+      "bytes": 81,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/outputs/io.py",
+      "blob_sha": "4bb8ac2a66baaf306e9176360672b6bd173ceb6c",
+      "bytes": 7012,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/outputs/naming.py",
+      "blob_sha": "ad092d7395217718c4f0dcb52606cb7d6d44e9af",
+      "bytes": 4530,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/outputs/tagging.py",
+      "blob_sha": "a23569972bc06d88636c6ac3e783c5579ffcb8ca",
+      "bytes": 9672,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/packaging/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/_make_cover_letter_template_formal_business.py",
+      "blob_sha": "a72b471da1268ef387f86759e7d543c420500726",
+      "bytes": 1755,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/_make_cover_letter_template_modern_clean.py",
+      "blob_sha": "a1c14b5e0fbd3cb3d308bd40fff030ad02e7f9da",
+      "bytes": 1950,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/_make_resume_template_chronological.py",
+      "blob_sha": "8283c9c61d764ef803956c6a49e4bd37709d4114",
+      "bytes": 1795,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/_make_resume_template_executive.py",
+      "blob_sha": "bdddb8dc7b6d9e95127ba60cfe616fcc9e3e6f9b",
+      "bytes": 1916,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/_make_resume_template_functional.py",
+      "blob_sha": "9765311abed27e1c3ff9ed0c5546a53a03bdb880",
+      "bytes": 1945,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/_make_resume_template_hybrid.py",
+      "blob_sha": "3ca1213910f5220257e24133dcc5659d16cdfa5a",
+      "bytes": 1911,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/packaging/build_project_bundle.py",
+      "blob_sha": "e967f9182eb406c48174ea8d4c3808bf9402d20f",
+      "bytes": 2267,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/parsers/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/parsers/docx_to_text.py",
+      "blob_sha": "4656f57bf6703aecb98fcd3e1d12acb26751a1e5",
+      "bytes": 3488,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/parsers/jd_url_fetch.py",
+      "blob_sha": "c5c9fed727808592124b5cba5df51636f6982aae",
+      "bytes": 2023,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/parsers/linkedin_zip.py",
+      "blob_sha": "e1416627d7906ca0564e8385c35be2b44222af33",
+      "bytes": 2786,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/parsers/pdf_to_text.py",
+      "blob_sha": "7798e12673e69709fb40b647ac1fe86d2715ecd4",
+      "bytes": 2679,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/playbooks/__init__.py",
+      "blob_sha": "64b4b7c0fae5d1434fcfe3fca662d9e3fc27ba2a",
+      "bytes": 81,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/playbooks/definitions.py",
+      "blob_sha": "ba9787f13121d4fbf8772aeb8fc4d7ac9f11b2f5",
+      "bytes": 3317,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/playbooks/models.py",
+      "blob_sha": "418fd6b1f0a047cabdd11f3c2fb8d9bc719cb801",
+      "bytes": 1607,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/playbooks/predicates.py",
+      "blob_sha": "fa4de8e0e0846da7a6fdb386b731d02d07335900",
+      "bytes": 1997,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/playbooks/runner.py",
+      "blob_sha": "24d745890cb269e065ebcc877bf2294f5901b69b",
+      "bytes": 1701,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/playbooks/runs.py",
+      "blob_sha": "085760fe4f53ebca1d8648f6241db69d523763bb",
+      "bytes": 4502,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/readability_check.py",
+      "blob_sha": "2b69bb641b01c97c084ffbdf19de0ac425ac77d0",
+      "bytes": 4451,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/__init__.py",
+      "blob_sha": "9661fae08a179b3fd1b5d94177842a0bf8eae1e7",
+      "bytes": 58,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/_post_migration.py",
+      "blob_sha": "1d50a95b8c2f44747f95bc9fb58bc02573869e45",
+      "bytes": 10277,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/add.py",
+      "blob_sha": "5abf03313af107b5ac6f5a97925edb651a73bab9",
+      "bytes": 7042,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/tracker/candidates.py",
+      "blob_sha": "6682860295b812732e1dbb32d73b9a4291e9463a",
+      "bytes": 7558,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/tracker/db.py",
+      "blob_sha": "8db571a2ebd0e6d57f2bed2fa16b2865d31b90c7",
+      "bytes": 3139,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/tracker/disclosure.py",
+      "blob_sha": "ca5f243410d8afef062ddeb4940a377f16f97e2d",
+      "bytes": 5457,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/tracker/migrations/0001_initial_schema.py",
+      "blob_sha": "cbd6023efb6c68b7a0cbb10b944b0c23d5d74205",
+      "bytes": 2656,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0002_artifact_uids.py",
+      "blob_sha": "681f6873b2c84a665cd5d5642673403d62eadd3c",
+      "bytes": 1263,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0003_for_candidate.py",
+      "blob_sha": "4cd3b77e16d0f8230aa1a537eef42ce65f4e9505",
+      "bytes": 646,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0004_drift_analytics.py",
+      "blob_sha": "37ae06b7c27fff1df73120ebbfd07bc8a46d53e5",
+      "bytes": 2814,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0005_candidates_table.py",
+      "blob_sha": "0073c2b4ece1d2343d93031f681d6f034a2663e7",
+      "bytes": 2362,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0006_dashboard_orchestration.py",
+      "blob_sha": "de638733693b551e1837aeed395ddbdc2e471e9b",
+      "bytes": 1363,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0007_candidate_intent.py",
+      "blob_sha": "17bfd989fc726043b17f7b0831e94ff0dde63e2a",
+      "bytes": 1217,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/migrations/0008_disclosure_sessions.py",
+      "blob_sha": "9bbf03bb3f4a1c4bbab807918682ab5e5e068b92",
+      "bytes": 1273,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/tracker/migrations/__init__.py",
+      "blob_sha": "2a8bce6ffc53b39863549cbed4cac463b52dd82c",
+      "bytes": 55,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/models.py",
+      "blob_sha": "240d53502e7d6c93696a06875c622cc0e2918f16",
+      "bytes": 4677,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/profile.py",
+      "blob_sha": "bd05680ede569904bfe128147f3702ab32d8332f",
+      "bytes": 1709,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/tracker/query.py",
+      "blob_sha": "f7c5a13f3b7780bd4a62273b5eba38560a00c12e",
+      "bytes": 17150,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "scripts/validators/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/validators/ai_signal_check.py",
+      "blob_sha": "631fef155c18f4ccd2f661acab909cdd8c8b0aed",
+      "bytes": 10654,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/validators/ats_check.py",
+      "blob_sha": "e0b631c4a2730f0f59fd983ab83ca2132aab4d56",
+      "bytes": 2183,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/validators/bias_scan.py",
+      "blob_sha": "391fc693e0ecc939bac5fa90e1d55d7848cc94a5",
+      "bytes": 8534,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/validators/consolidation_check.py",
+      "blob_sha": "baff1adef7d0839cc399293855406a433bac50e0",
+      "bytes": 11563,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/validators/integrity_check.py",
+      "blob_sha": "c6fa7400a67bcbfcda4115695bf0ede0bd59fecf",
+      "bytes": 4745,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "scripts/validators/jd_analyzer.py",
+      "blob_sha": "0017f38139a7ebb3b8dd75ca2432fbe04d86d1b2",
+      "bytes": 9234,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/coaching_report.md",
+      "blob_sha": "45b5fbfa31ad5ce999024b11fc1dfcf46b4f7d9b",
+      "bytes": 545,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/cover-letter/formal-business.docx",
+      "blob_sha": "d9b20383c46063b6514cfbc688b1ef12c8b7531c",
+      "bytes": 35455,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/cover-letter/modern-clean.docx",
+      "blob_sha": "19056d680cab4c95a30ef05582df27108a176040",
+      "bytes": 35428,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/disclosure_worksheet.md",
+      "blob_sha": "1ec1cc7561150ceb8dfaf3c56c756c08374248ef",
+      "bytes": 6880,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/resume/chronological.docx",
+      "blob_sha": "a7272cf86a8344ab32af5cb043bb7446847331da",
+      "bytes": 35499,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/resume/executive.docx",
+      "blob_sha": "2fe2d5ef7dfb3abcc5765c06d8bcff81e9e7b148",
+      "bytes": 35515,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/resume/functional.docx",
+      "blob_sha": "de1d95d07ede93497978745ab7bb1482d00cdb38",
+      "bytes": 35511,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "templates/resume/hybrid.docx",
+      "blob_sha": "61ced1e1feba4c75ecfc334dcb4a5e6d5a77c625",
+      "bytes": 35503,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/prep/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/prep/test_drift_sparkline.py",
+      "blob_sha": "1e2a97693fe3444d9b35de2b5f6340ade5eeeb54",
+      "bytes": 3001,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/prep/test_sparkline.py",
+      "blob_sha": "e888071c205c08ffa369b2f2aa28693b7fde17ba",
+      "bytes": 2385,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/prep/test_trends.py",
+      "blob_sha": "1a8a100f1f2e09cc11865b9a1026b1d83bb10117",
+      "bytes": 2220,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/tabs/test_drift_tab_render.py",
+      "blob_sha": "51b3263baf640c9a065ec2a1787d6dd2d0430c36",
+      "bytes": 2444,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/tabs/test_home_onboarding.py",
+      "blob_sha": "9147b1cf1f7fae12d3df3e620eb0c8d890e5ca9e",
+      "bytes": 1642,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/tabs/test_home_tab.py",
+      "blob_sha": "01dd2ce451031fb7b0dea9f4f50c32e96d2151f0",
+      "bytes": 1274,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_app_home.py",
+      "blob_sha": "a62f5d16dd3cb2f9690a2e2f17abbdd0d1e97507",
+      "bytes": 1415,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_app_import.py",
+      "blob_sha": "5b0f4607aebfbd8f0b245f55d8c7e8870613b49d",
+      "bytes": 847,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_data.py",
+      "blob_sha": "138f941974d82bdccb896bd31b7fa798cbf386b2",
+      "bytes": 2584,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_file_input.py",
+      "blob_sha": "d6eeb7aa9965e673e9cd50d912bc12fb601d1e68",
+      "bytes": 2601,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "tests/dashboard/test_handoff.py",
+      "blob_sha": "364fbd6d266b5bc184f71610b42e6d290e1f4c85",
+      "bytes": 2741,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_name_modal_smoke.py",
+      "blob_sha": "2c21b0d9e70085194e92c0b217483b64f19bcea8",
+      "bytes": 1147,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_resumes_tab.py",
+      "blob_sha": "53acff9cedb22af32f328612d09c8fbaf26938dd",
+      "bytes": 1921,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_sidebar_candidate_picker.py",
+      "blob_sha": "95546fae9f3252821a3bbeca18faaf74e1ccae1a",
+      "bytes": 1561,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/test_workflows_card.py",
+      "blob_sha": "2081e6fc2fcce4a975287bf6bd0542b258a9e884",
+      "bytes": 7134,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_catalog.py",
+      "blob_sha": "8b3146a179b17d32d8e8967b025db3629adf5553",
+      "bytes": 2001,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_customize.py",
+      "blob_sha": "4cd07ed3e57df1efecbd0beda53a19e6a000358b",
+      "bytes": 1028,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_layout.py",
+      "blob_sha": "78da413f5a4965c0a8741e58cbca489c6103db9c",
+      "bytes": 1733,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_onboarding.py",
+      "blob_sha": "12ec8f1d3cd8d811ced1e9c385106cdf67f55f58",
+      "bytes": 1829,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_pipeline.py",
+      "blob_sha": "ea990b9e32ea9c63bc3074a27064096c31c0e079",
+      "bytes": 2012,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_playbook_widgets.py",
+      "blob_sha": "c389d77e1dc5a03c7c7a0db69b130b4385ca1322",
+      "bytes": 1442,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_quick_launch.py",
+      "blob_sha": "56e51f0774b35b0ee3f4f60076ad2e140a41425d",
+      "bytes": 381,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_tiles.py",
+      "blob_sha": "34216e307af8dd93c6b7533a11152252cbb4f5a5",
+      "bytes": 1920,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/widgets/test_worklist.py",
+      "blob_sha": "4c34741adce9920d6d5ff7995e8ee53fc67c63e8",
+      "bytes": 1851,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/workflows/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/workflows/test_disclosure.py",
+      "blob_sha": "9fde92833d5027d477e3ea5d33c66ac959a2d66a",
+      "bytes": 7249,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/workflows/test_drift_integration.py",
+      "blob_sha": "0371867741fcd5eb90d35a23c268b95e8742493b",
+      "bytes": 2046,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/dashboard/workflows/test_import.py",
+      "blob_sha": "263e5c49b02817c6931d1c13338f4e5443ffb92b",
+      "bytes": 4140,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_baseline.py",
+      "blob_sha": "0bd3096c603bd74f13f7ee89d93afdad89af3bd1",
+      "bytes": 4904,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_compute_identity.py",
+      "blob_sha": "518b007692fb6300cdc422ff1d53715bb0fe7044",
+      "bytes": 1478,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_compute_list_object_classes.py",
+      "blob_sha": "d847599f1ea9bf6e9d8e9b9312e37a1e05fee700",
+      "bytes": 6172,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_compute_overall.py",
+      "blob_sha": "fabc5049ad8d2899e62547c8e481196c840f5db3",
+      "bytes": 4315,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_compute_set_classes.py",
+      "blob_sha": "660efa18f2375a386122dd34a6c34a0711dcc423",
+      "bytes": 2023,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_compute_writer.py",
+      "blob_sha": "b44b5e15a8af9c7ba349294fcb2ab967ae4f3546",
+      "bytes": 4257,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_extract_facts.py",
+      "blob_sha": "fa51980ef70e88ad7cbca19027bb8fe4310d6afe",
+      "bytes": 4040,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_formatters.py",
+      "blob_sha": "d38e830e9b8bc97cd8e05d48a50916888739ba74",
+      "bytes": 4355,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_lineage.py",
+      "blob_sha": "45ec10d4939428164356ee835cba574f22115147",
+      "bytes": 6032,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/drift/test_snapshot_from_workflow.py",
+      "blob_sha": "08c5337501434a96faf19337e975db916f947a84",
+      "bytes": 3538,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/__init__.py",
+      "blob_sha": "18ef0e301c3eff31c854918812f507551bd05a3a",
+      "bytes": 21,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/ai_signal_fixtures.py",
+      "blob_sha": "24108b7ea41efab8061bf5d79281cf65a82889ea",
+      "bytes": 5829,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/bias_fixtures.py",
+      "blob_sha": "d99c896bdadd5e0fec8bc2ed4c52e1e106d17773",
+      "bytes": 1551,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/career_change_fixtures.py",
+      "blob_sha": "73cbdd03bf03fabd5fdff78d9e4f8d07ce7e0b0b",
+      "bytes": 1397,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/consolidation_fixtures.py",
+      "blob_sha": "399d24afeea7972e384d063cafa3c7cbd28506ef",
+      "bytes": 5738,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/integrity_fixtures.py",
+      "blob_sha": "b3d9ec6b89d52b6835ea48cf59c1703dae2dcdde",
+      "bytes": 1281,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/fixtures/jd_analyzer_fixtures.py",
+      "blob_sha": "08fa83662b61f4cd9e1933d4ce109bd724d34ed0",
+      "bytes": 2661,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/test_coaching_report_to_pdf.py",
+      "blob_sha": "f2c567ddc4bb87a90c86fa7d67fb2bc5c43cd23a",
+      "bytes": 4757,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/test_cover_letter_to_docx.py",
+      "blob_sha": "185de454f8ecb1fe11b629477464c9673ac306e4",
+      "bytes": 3757,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/test_cover_letter_to_pdf.py",
+      "blob_sha": "1e9b08dc11e0b3f67e0cc7f8a37c4ee41bc6d015",
+      "bytes": 2765,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/test_disclosure_worksheet.py",
+      "blob_sha": "aa7253801819919c6277273c5a29407316bc7fdf",
+      "bytes": 9693,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/test_resume_to_docx.py",
+      "blob_sha": "56d33f1cc34aebf8dd70fce5efe42290ee3f22d6",
+      "bytes": 4569,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/generators/test_resume_to_pdf.py",
+      "blob_sha": "a1ef750d1469e747c5755271069175a5f61ce4fe",
+      "bytes": 3508,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/outputs/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/outputs/test_io.py",
+      "blob_sha": "d7d0bc98e80ba4d2f58be9c35bdc0d7a16e3d700",
+      "bytes": 10631,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/outputs/test_naming.py",
+      "blob_sha": "76b788f5fcdeb34b953542823553d305a03130d7",
+      "bytes": 7660,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/outputs/test_tagging.py",
+      "blob_sha": "9c80743b1e9e5ccb1f7a2427536d80b8e8ee225b",
+      "bytes": 7402,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/parsers/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/parsers/test_docx_to_text.py",
+      "blob_sha": "7fe9c867ba10c1c88df7ba41be2da5a72499f1c5",
+      "bytes": 2384,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/parsers/test_jd_url_fetch.py",
+      "blob_sha": "e5ef12ede79bf04ca7e3b0395ddc449cf2ae876a",
+      "bytes": 2109,
+      "inspection": "risk-content-read"
+    },
+    {
+      "path": "tests/parsers/test_linkedin_zip.py",
+      "blob_sha": "014d890c66f988ee508cf30ab0bb099465f3bde0",
+      "bytes": 2578,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/parsers/test_pdf_to_text.py",
+      "blob_sha": "1ef6b45418782f5905553266b9c69b9d277d6800",
+      "bytes": 1168,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/test_definitions.py",
+      "blob_sha": "3453b237236529728bb76ab41e69a6b61147d098",
+      "bytes": 1761,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/test_integration.py",
+      "blob_sha": "08fa295ca3899b3cce05d0d210a032b42a43ad26",
+      "bytes": 2525,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/test_models.py",
+      "blob_sha": "09ded57ea543b0625602d49280c5933441cac19a",
+      "bytes": 1326,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/test_predicates.py",
+      "blob_sha": "2c316f1845d7ddd09b3c51ebf8e05dbaf4f8cfaf",
+      "bytes": 3658,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/test_runner.py",
+      "blob_sha": "61cfeb2f3fadbe229582581fe4f31d0ed855955f",
+      "bytes": 2981,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/playbooks/test_runs.py",
+      "blob_sha": "b86b82d58c0158a018c1df48f4ce232d24f4339f",
+      "bytes": 3552,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_ai_signal_patterns_reference.py",
+      "blob_sha": "8e91f2069f6311938c65fec950d75b95029d9152",
+      "bytes": 1231,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_template_selection_reference.py",
+      "blob_sha": "55d3a4f726792737b7e85e70bc0254e6c3262dbc",
+      "bytes": 2294,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_workflow_consolidate.py",
+      "blob_sha": "034fb96dcc312f32d13d96d6a387cc9c3a8e7fde",
+      "bytes": 1258,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_workflow_deai_integration.py",
+      "blob_sha": "ae9e9c45b3490ad5667f4fe1b3e3e96eed779a03",
+      "bytes": 1460,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_workflow_jd_analyze.py",
+      "blob_sha": "29385b7367046b3cfaff17fbf27a296a43f97da9",
+      "bytes": 1487,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_workflow_linkedin_improve.py",
+      "blob_sha": "d9d8c0743ed72962b9043c9bdc511ee8b34bf59d",
+      "bytes": 1047,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_workflow_pre_application_check.py",
+      "blob_sha": "0f2afd7aed2aeb78b961714cba2ca8be31ec1e74",
+      "bytes": 1164,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/references/test_workflow_tracker_optin.py",
+      "blob_sha": "a1d492e22b327a3dd42592f6d0c7bca87770162e",
+      "bytes": 830,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/test_cover_letter_template.py",
+      "blob_sha": "1bad029cce6970260ef7b5d28c8fd9557d88308e",
+      "bytes": 1000,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/test_cover_letter_template_modern_clean.py",
+      "blob_sha": "5f0666f84e9d39db29d3e15ccf70ec434de441c0",
+      "bytes": 1238,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/test_resume_chronological_template.py",
+      "blob_sha": "cef2ae0f4d7e71bb12bf997abef5448962d56ced",
+      "bytes": 912,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/test_resume_template_executive.py",
+      "blob_sha": "5fb6020eaf8b608258489539e3cb4afb382f4da2",
+      "bytes": 1159,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/test_resume_template_functional.py",
+      "blob_sha": "52961905ce4f13b0fafac6bec17267c773687f5e",
+      "bytes": 1188,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/templates/test_resume_template_hybrid.py",
+      "blob_sha": "13b35ac1dbf6f9f3cc69c2efffdb4bab797914af",
+      "bytes": 831,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_bias_check_workflow.py",
+      "blob_sha": "715a404e7c27980e162965dd6def71982867c879",
+      "bytes": 1984,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_career_change_workflow.py",
+      "blob_sha": "94eef9bbfbaab86595d0b07624e53a5272790f7e",
+      "bytes": 1483,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_consolidate_workflow.py",
+      "blob_sha": "7bbb5fa99a3417ef85e53a963a306d7a0d8605f9",
+      "bytes": 2557,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_cover_letter_workflow.py",
+      "blob_sha": "8b7a37574e22b64a8fc7e0d321b788a78ac62641",
+      "bytes": 1602,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_create_workflow.py",
+      "blob_sha": "346830d50d77b53a7daf5cc54e1087cb93ea0bfa",
+      "bytes": 1288,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_deai_workflow.py",
+      "blob_sha": "b287980d152d8937603d936736d3e0ec00580ba8",
+      "bytes": 1861,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_disclosure_preference_propagation.py",
+      "blob_sha": "d29a95341dea3b97cf90fd327acb1b173df66a86",
+      "bytes": 4735,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_drift_end_to_end.py",
+      "blob_sha": "788c9fe849cc20fd21787ee2eb29365e7078fa09",
+      "bytes": 6998,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_edit_workflow.py",
+      "blob_sha": "6fbf612669b29eebdc7283e1566addd2f023e67d",
+      "bytes": 1732,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_jd_analyze_workflow.py",
+      "blob_sha": "e5d8e2c46d0c5dfd8f801904e05e9d93afcece0e",
+      "bytes": 1926,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_linkedin_improve_workflow.py",
+      "blob_sha": "8c831c9b8cee173784257f131f3d94a84eca8b0e",
+      "bytes": 3655,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_linkedin_workflow.py",
+      "blob_sha": "45aafe34cd31d40df7374e2e742277cff545136e",
+      "bytes": 843,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_multi_candidate.py",
+      "blob_sha": "fdd216e0d3047fc0c6cb16f46413fe68d913fad3",
+      "bytes": 2802,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_outputs.py",
+      "blob_sha": "2d449075b99b810e46bb6ae0b0b2b9e81a85dfa7",
+      "bytes": 2782,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_precheck_workflow.py",
+      "blob_sha": "42d13b575a95b2543e14904fff2ce73499312874",
+      "bytes": 1953,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_review_workflow.py",
+      "blob_sha": "c9b705b5d727ca665656a6936bccdff9c13c64c0",
+      "bytes": 2372,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_tailor_workflow.py",
+      "blob_sha": "ad25524cee5570f1bfd8bf4a4b0160525b33f370",
+      "bytes": 1467,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_track_workflow.py",
+      "blob_sha": "37760055fb941b0c7d8bc6cc1e31c47a8ceab6b0",
+      "bytes": 2137,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/test_smoke_two_candidate_session.py",
+      "blob_sha": "09ba1685906bd3859e865e68973a59e4d7b00230",
+      "bytes": 2746,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0002_artifact_uids.py",
+      "blob_sha": "0c3dc14f0630df0af24eb1abb90683b288721030",
+      "bytes": 3078,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0003_for_candidate.py",
+      "blob_sha": "51d4f47f21036716aa378e7f5c50bc6290f05aaf",
+      "bytes": 1601,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0004_drift_analytics.py",
+      "blob_sha": "7c3a78080d5804a56164b8888f9a65a5134d5c57",
+      "bytes": 7506,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0005_candidates_table.py",
+      "blob_sha": "ac26bc7c0b16c0c267aba29394c915679e886147",
+      "bytes": 2774,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0006_dashboard_orchestration.py",
+      "blob_sha": "0a4fc2d3d1854131952aa0f388a1978203058067",
+      "bytes": 3088,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0007_candidate_intent.py",
+      "blob_sha": "cd73ff0d76ab1421dabafa1af51a0a2c39ff82aa",
+      "bytes": 2000,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/migrations/test_0008_disclosure_sessions.py",
+      "blob_sha": "b2e79c643b6bbd8596ab0e7d4eadaeb3315d4404",
+      "bytes": 4091,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_add.py",
+      "blob_sha": "c0fc13384043a878617dec57e6f9484f67b3dbc1",
+      "bytes": 17127,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_candidate_intent.py",
+      "blob_sha": "b1de1c741a0cf5f0aea5da198f82e3470c80d7bd",
+      "bytes": 2232,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_candidates.py",
+      "blob_sha": "305a2fa58631b18e3ac4fe7ad1109dcf61f343d7",
+      "bytes": 2452,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_db.py",
+      "blob_sha": "c9244b25652a1ca930490a4d277065f1f2ed79f9",
+      "bytes": 3937,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_disclosure.py",
+      "blob_sha": "373a6212418f9269facf1cf6166cd92815bfe4b9",
+      "bytes": 5103,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_models.py",
+      "blob_sha": "c8afd7ae2a8d307c8b8061fabe5f6339d73bc54f",
+      "bytes": 4496,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_post_migration.py",
+      "blob_sha": "bbc1d73d25c327a92a1e5ccd4e9568f9dcf59db3",
+      "bytes": 5755,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_profile.py",
+      "blob_sha": "ab5cf662238b7cf541da5e1b8aa70ec14617c31d",
+      "bytes": 4275,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/tracker/test_query.py",
+      "blob_sha": "12f542466bf1ecb895c8abc9a65ffe200a3a4346",
+      "bytes": 14476,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/__init__.py",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/test_ai_signal_check.py",
+      "blob_sha": "c830ee21b6ae4e90fd2ab20a9bdd2e973b5e061c",
+      "bytes": 4443,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/test_ats_check.py",
+      "blob_sha": "305c279206375b2537648c8acea281fc1d395598",
+      "bytes": 1152,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/test_bias_scan.py",
+      "blob_sha": "9e7592fd46654c75811c05ed0cf4208abdc6607c",
+      "bytes": 2491,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/test_consolidation_check.py",
+      "blob_sha": "0d880b9c9dc8628b249aeaeeed35ec33c77083f7",
+      "bytes": 2885,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/test_integrity_check.py",
+      "blob_sha": "e9c7fe749363f8f6bf577cad1eb6e86870dbc5f1",
+      "bytes": 1698,
+      "inspection": "git-object-index-only"
+    },
+    {
+      "path": "tests/validators/test_jd_analyzer.py",
+      "blob_sha": "7c7e7744699a63ceca243e5e2f12da247b3cc496",
+      "bytes": 5437,
+      "inspection": "git-object-index-only"
+    }
+  ]
+}

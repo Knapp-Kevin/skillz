@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "kind": "q8-upstream-pinned-package-refresh-static-review",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "reviewed_at": "2026-11-05",
+  "checked_at": "2026-11-05",
+  "source_id": "rerun-io-rerun/rerun-urdf",
+  "source_repository": "rerun-io/rerun",
+  "package_path": "skills/rerun-urdf",
+  "historical_source": {
+    "pin": "6f39b09211b869d6e262083cfddefa392244088d",
+    "package_tree_sha": "d975189711aed05aadcbc93426906631df481b7e",
+    "skill_md_git_blob_sha": "b5a634f97b0dd20a0bb92a6fe294635cebc219c3",
+    "scanner_report_sha256": "3ed9476ebd8feae2d02cace91cc814f6c72c6c8dc2232d472745fbbdc16ec3a6",
+    "scanner_gate": "incomplete"
+  },
+  "refreshed_source": {
+    "revision": "6f0057649fdcdec6b1101e2590dc7280a31f75d1",
+    "complete_package_tree_sha": "081a3c5f4ab3d5211f1761d8332e705945b5bc26",
+    "skill_md_git_blob_sha": "85c46e2c7fb546bf0bd34c1c7269e41bd5cc8feb",
+    "files": {
+      "SKILL.md": "85c46e2c7fb546bf0bd34c1c7269e41bd5cc8feb",
+      "scripts/check_joint_mapping.py": "4c911ffb21ed1b001a5a01009cfec8654194707a"
+    }
+  },
+  "scope": "Complete new 353-line SKILL.md reviewed against original 351-line pinned SKILL.md; identical supporting script blob inspected during prior review and source identity reverified. Difference is two added lines near line 321 on S3-compatible providers, setting object_store_config. No script or external service executed.",
+  "change": {
+    "first_changed_line": 321,
+    "old_lines_replaced": 0,
+    "new_lines_added": 2,
+    "verbatim_topic": "For a bucket on an S3-compatible provider outside AWS (Cloudflare R2, MinIO, …), also pass object_store_config= with the store's name on the Hub deployment.",
+    "material_behavior_change": "Adds an external object-store configuration instruction, not an explicit new permission grant."
+  },
+  "current_static_review": {
+    "score_20": 14,
+    "method": "prior full material package review plus exact new full SKILL.md re-read and two-line changed-region adjudication; code blob identical to prior reviewed pin",
+    "previous_findings_retained": [
+      "HIGH: --slack default 2.0 radians overpermissive",
+      "MEDIUM: omitted --joints silently assumes URDF order",
+      "MEDIUM: nonfinite values/limits not rejected",
+      "MEDIUM: package install and remote asset writes need independent permission"
+    ],
+    "new_finding": "MEDIUM: S3-compatible object_store_config= guidance requires explicit configured remote access, credentials minimization and no implicit upload or bucket write authorization.",
+    "freshness_disposition": "newer upstream source statically reviewed at exact tree, but not installed or behaviorally qualified",
+    "unchanged_use_approved": false,
+    "host_behavior_observed": false,
+    "scanner_for_current_tree": "not-run",
+    "permissions_for_external_object_store": "not-granted"
+  },
+  "reconciliation": {
+    "historical_q8_review_count_effect": 0,
+    "source_review_refresh_count_effect": 1,
+    "historical_scanner_receipt_reused_for_current_tree": false,
+    "prior_incomplete_preserved": true
+  },
+  "notes": "A new Git tree receives an independent exact source review. No claim of current-source scanner PASS, runtime validation, or safe access to robot or object-store data."
+}
