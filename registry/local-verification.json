@@ -659,6 +659,41 @@
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
     },
     {
+      "skill_name": "healthcare-contract-forensics",
+      "local_path": "skills/authored/healthcare-contract-forensics/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "02d7d645d6a6856d01165e01da9014f9cf43309c",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "evaluation",
+          "business-operations",
+          "verification"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "risk-aware",
+          "human-review",
+          "safety-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-06 issue #714: current 9-file authored MIT skill, exact package tree 0d1d9f2838691fcf7963472ea8b62c52b2a273ed; SKILL blob 02d7d645d6a6856d01165e01da9014f9cf43309c. Static structured score 19/20, deterministic synthetic arithmetic and structural checks, no actual host behavioral or baseline-prompt test, no scanner claim or production approval. Four full source-pinned adjacent packages inspected without import. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md."
+    },
+    {
       "skill_name": "inbox-triage",
       "local_path": "skills/inbox-triage/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",

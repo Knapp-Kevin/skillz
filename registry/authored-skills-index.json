@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "description": "Canonical index of original first-party authored skill packages. Separate from discovered third-party inventory, static review counts, and installation approvals.",
+  "collection_root": "skills/authored",
+  "source_repository": "https://github.com/Knapp-Kevin/skillz",
+  "default_license_spdx": "MIT",
+  "default_license_file": "LICENSE",
+  "default_license_scope": "Repository-owned original material only; third-party or separately licensed components retain their own terms. See each record for overrides.",
+  "copyright_holder": "Kevin Knapp",
+  "license_policy": "All newly authored skills require an explicit SPDX license ID, publisher/rightsholder, license evidence path, exact source fingerprint, complete package tree and rights review. Default MIT is permissive, not a no-cost guarantee or share-alike license.",
+  "skills": [
+    {
+      "id": "healthcare-contract-forensics",
+      "display_name": "Healthcare Contract Forensics",
+      "source_class": "first-party-authored",
+      "origin_issue": "https://github.com/Knapp-Kevin/skillz/issues/714",
+      "package_path": "skills/authored/healthcare-contract-forensics",
+      "entrypoint": "skills/authored/healthcare-contract-forensics/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "LICENSE",
+      "license_inheritance": "Root repository MIT covers original content in this package; no third-party protected source incorporated.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-06",
+      "provenance_path": "registry/skills/local-skills/healthcare-contract-forensics.yaml",
+      "verification_path": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
+      "skill_blob_sha": "02d7d645d6a6856d01165e01da9014f9cf43309c",
+      "package_tree_sha": "0d1d9f2838691fcf7963472ea8b62c52b2a273ed",
+      "package_file_count": 9,
+      "review_status": "verified-static",
+      "review_score": "19/20",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "No third-party skills, confidential contracts, or real PHI copied; source comparison and separate license receipts at docs/reviews/2026-11-06-issue714-package-candidate-comparison.md.",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/715"
+    }
+  ]
+}

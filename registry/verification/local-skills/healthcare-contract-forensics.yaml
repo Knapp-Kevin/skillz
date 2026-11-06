@@ -1,0 +1,25 @@
+schema_version: 1
+skill_name: healthcare-contract-forensics
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: LICENSE
+copyright_holder: Kevin Knapp
+local_path: "skills/authored/healthcare-contract-forensics/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 02d7d645d6a6856d01165e01da9014f9cf43309c
+complete_package_tree_sha: 0d1d9f2838691fcf7963472ea8b62c52b2a273ed
+characterized_at: 2026-11-06
+reviewed_at: 2026-11-06
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: "Static review of all nine skill/package files; fictional fixture arithmetic independently checked with decimal arithmetic. No actual host-executed trigger/non-trigger/adversarial runs or baseline prompt comparison; no scanner claim, savings claim or unchanged-use approval."
+rubric: "docs/skill-verification.md"
+rubric_score: "19/20"
+tags:
+  use_case: [decision-support, evaluation, business-operations, verification]
+  lifecycle: [discovery, verification]
+  characteristic: [evidence-first, traceable, risk-aware, human-review, safety-bounded]
+  authority: [read-only]
+  portability: [medium]
+notes: "Issue #714 independent first-party work. Score 2,2,2,2,2,2,1,2,2,2 for trigger, procedure, authority, failure, evidence, dependency, portability, usefulness, adversarial, effectiveness. Portability 1 because optional PDF parsing/decimal tools and applicable source access vary by host. Exact complete package tree and all nine file identities are in docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md; static reasoning is not observed behavior. Published reference rules are navigation leads, never self-updating regulatory authority. Sensitive data and privacy gates still require actual host enforcement and user approval."
