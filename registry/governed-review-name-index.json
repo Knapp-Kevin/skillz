@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-01",
-  "purpose": "Searchable historical name index for 1,039 governed exact-version verification companions. This is NOT the Skillz corpus size, a full-source search, or a discovery completion gate; search the wider G1-G3 and additional source-family manifests per docs/discovery/full-corpus-search-contract.md. Name lookup alone does not establish fit, safety, rights or behavioral validation.",
+  "snapshot_date": "2026-11-08",
+  "purpose": "Governed exact-version review-name index for 47 first-party and 995 third-party entries, totaling 1,042. This is a bounded reviewed name catalog, not the whole Skillz discovery universe. Search external discovery records as well.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "Live Git object tree inspected at fe05919c0cf062a5eb7107ac04e0e2bbe15c417e",
   "record_counts": {
-    "first_party": 44,
+    "first_party": 47,
     "third_party": 995,
-    "total": 1039
+    "total": 1042
   },
   "first_party_ids": [
     "local-skills/agent-home-doctor",
@@ -15,6 +15,7 @@
     "local-skills/automation-receipts",
     "local-skills/brief-writer",
     "local-skills/career-radar",
+    "local-skills/character-motivation-interview",
     "local-skills/claude-pulse",
     "local-skills/compare",
     "local-skills/daily-briefing",
@@ -30,6 +31,7 @@
     "local-skills/glm-pulse",
     "local-skills/governance-pulse",
     "local-skills/handoff-writer",
+    "local-skills/healthcare-contract-forensics",
     "local-skills/hf-pulse",
     "local-skills/inbox-triage",
     "local-skills/inference-pulse",
@@ -40,6 +42,7 @@
     "local-skills/mcp-vetting",
     "local-skills/memory-pulse",
     "local-skills/mistral-pulse",
+    "local-skills/narrative-scene-gap-audit",
     "local-skills/openai-pulse",
     "local-skills/paper-digest",
     "local-skills/permissions-review",
@@ -1055,5 +1058,14 @@
   "conservative_name_search_rule": "Search by task verbs, mechanism terms, abbreviations, synonyms; verify actual SKILL.md semantics. Missing name tokens are not evidence of missing capability. IDs are per-source review records, not deduplicated skill identities. Candidate-only companions and cross-source mirrors may occur.",
   "statuses": "Unknown in this index; read per-ID verification and provenance companions. An existing record may be verified, rejected, candidate-only, not-run or reference-only. A review record is not approved for install.",
   "source_neutrality": "Both lists are searchable; first-party and third-party have equal discoverability and must be ranked only after user fit, evidence, legal and safety checks.",
-  "corpus_scope_warning": "Dated governed review companions only. 2026-11-03 G1-G3 snapshot separately counted 61,326 package identity records across 942 repositories; those are versioned identities, not unique usable skills. All accessible source-family indexes and pinned manuscripts must be searched for a task before an absence or novelty claim."
+  "corpus_scope_warning": "Dated governed review companions only. 2026-11-03 G1-G3 snapshot separately counted 61,326 package identity records across 942 repositories; those are versioned identities, not unique usable skills. All accessible source-family indexes and pinned manuscripts must be searched for a task before an absence or novelty claim.",
+  "authored_extension_20261108": {
+    "date": "2026-11-08",
+    "ids": [
+      "local-skills/healthcare-contract-forensics",
+      "local-skills/narrative-scene-gap-audit",
+      "local-skills/character-motivation-interview"
+    ],
+    "routing": "registry/discovery/authored-capability-routing-20261108.json"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-02",
+  "snapshot_date": "2026-11-08",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 12,
+      "linked_reviewed_examples": 11,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 33,
       "evidence_preview": [
@@ -1990,7 +1990,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 23,
+      "linked_reviewed_examples": 22,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2833,7 +2833,7 @@
     {
       "domain": "game-design",
       "display_name": "Game design",
-      "linked_reviewed_examples": 2,
+      "linked_reviewed_examples": 4,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 1,
       "evidence_preview": [
@@ -2855,6 +2855,28 @@
           "review_evidence_path": "registry/verification/jwynia-agent-skills/game-facilitator.yaml",
           "source_class": "external-provenance",
           "path": "game-design/tabletop-games",
+          "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/narrative-scene-gap-audit",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/narrative-scene-gap-audit.yaml",
+          "source_class": "first-party-authored",
+          "path": "game-design/narrative-design",
+          "capability_example": "Audit linear game story beat causality, not interactive branching behavior",
+          "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/character-motivation-interview",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/character-motivation-interview.yaml",
+          "source_class": "first-party-authored",
+          "path": "game-design/narrative-design",
+          "capability_example": "Interview game story characters on motivation, stakes and narrative choices",
           "unchanged_use_approved": false
         }
       ],
@@ -2896,8 +2918,8 @@
     {
       "domain": "fiction-narrative-worldbuilding",
       "display_name": "Fiction / narrative / worldbuilding",
-      "linked_reviewed_examples": 4,
-      "subdomains_with_linked_examples": 4,
+      "linked_reviewed_examples": 6,
+      "subdomains_with_linked_examples": 7,
       "name_only_candidate_count": 21,
       "evidence_preview": [
         {
@@ -2938,6 +2960,28 @@
           "review_evidence_path": "registry/verification/jwynia-agent-skills/interactive-fiction.yaml",
           "source_class": "external-provenance",
           "path": "fiction-narrative-worldbuilding/interactive-fiction",
+          "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/narrative-scene-gap-audit",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/narrative-scene-gap-audit.yaml",
+          "source_class": "first-party-authored",
+          "path": "fiction-narrative-worldbuilding/plotting",
+          "capability_example": "Audit a story scene sequence for missing causal steps, setup and payoff",
+          "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/character-motivation-interview",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/character-motivation-interview.yaml",
+          "source_class": "first-party-authored",
+          "path": "fiction-narrative-worldbuilding/character",
+          "capability_example": "Develop fictional motivations and relationships while distinguishing canon from suggestions",
           "unchanged_use_approved": false
         }
       ],
@@ -3177,8 +3221,8 @@
     {
       "domain": "video-film",
       "display_name": "Video / film",
-      "linked_reviewed_examples": 1,
-      "subdomains_with_linked_examples": 1,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 0,
       "evidence_preview": [
         {
@@ -3190,6 +3234,28 @@
           "source_class": "external-provenance",
           "path": "video-film/preproduction",
           "capability_example": "marketing video planning"
+        },
+        {
+          "id": "local-skills/narrative-scene-gap-audit",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/narrative-scene-gap-audit.yaml",
+          "source_class": "first-party-authored",
+          "path": "video-film/screenwriting",
+          "capability_example": "Audit screenwriting scene causality, continuity and setup/payoff",
+          "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/character-motivation-interview",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/character-motivation-interview.yaml",
+          "source_class": "first-party-authored",
+          "path": "video-film/screenwriting",
+          "capability_example": "Build screenwriting character scene objectives and credible choices",
+          "unchanged_use_approved": false
         }
       ],
       "name_only_preview": [],
@@ -3494,7 +3560,7 @@
     {
       "domain": "memory-context",
       "display_name": "Memory / context",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 2,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 12,
       "evidence_preview": [
@@ -3591,8 +3657,8 @@
     {
       "domain": "business",
       "display_name": "Business",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 2,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 7,
       "evidence_preview": [
         {
@@ -3614,6 +3680,17 @@
           "source_class": "local-provenance",
           "path": "business/governance",
           "capability_example": "Monitor governance changes and distinguish binding policy from noise"
+        },
+        {
+          "id": "local-skills/healthcare-contract-forensics",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "19/20",
+          "review_evidence_path": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
+          "source_class": "first-party-authored",
+          "path": "business/risk",
+          "capability_example": "Identify healthcare/PBM contractual cost and governance risks",
+          "unchanged_use_approved": false
         }
       ],
       "name_only_preview": [
@@ -3740,7 +3817,7 @@
     {
       "domain": "career",
       "display_name": "Career",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 2,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 0,
       "evidence_preview": [
@@ -3914,7 +3991,7 @@
     {
       "domain": "law",
       "display_name": "Law",
-      "linked_reviewed_examples": 2,
+      "linked_reviewed_examples": 3,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 3,
       "evidence_preview": [
@@ -3936,6 +4013,17 @@
           "review_evidence_path": "registry/verification/anthropic-knowledge-work-plugins/compliance-check.yaml",
           "source_class": "external-provenance",
           "path": "law/regulatory-analysis",
+          "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/healthcare-contract-forensics",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "19/20",
+          "review_evidence_path": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
+          "source_class": "first-party-authored",
+          "path": "law/contracts",
+          "capability_example": "Examine evidence-backed healthcare/PBM contract clauses, rebates and audit rights",
           "unchanged_use_approved": false
         }
       ],
@@ -3976,6 +4064,17 @@
           "source_class": "local-provenance",
           "path": "finance/reporting",
           "capability_example": "Review financial statements and trace conclusions to reported rows"
+        },
+        {
+          "id": "local-skills/healthcare-contract-forensics",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "19/20",
+          "review_evidence_path": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
+          "source_class": "first-party-authored",
+          "path": "finance/reporting",
+          "capability_example": "Reconcile healthcare/PBM contract financial amounts to approved source rows",
+          "unchanged_use_approved": false
         }
       ],
       "name_only_preview": [
@@ -4158,7 +4257,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1039,
+  "governed_identity_denominator": 1042,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -22960,15 +23059,27 @@
           "id": "narrative-design",
           "name": "narrative design",
           "capabilities": [
-            "Diagnose branching player choices, state constraints and reconvergence"
+            "Diagnose branching player choices, state constraints and reconvergence",
+            "Audit linear game story beat causality, not interactive branching behavior",
+            "Interview game story characters on motivation, stakes and narrative choices"
           ],
           "matched_skill_ids": [
-            "jwynia-agent-skills/interactive-fiction"
+            "jwynia-agent-skills/interactive-fiction",
+            "local-skills/narrative-scene-gap-audit",
+            "local-skills/character-motivation-interview"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "narrative design",
-            "Game design narrative design"
+            "Game design narrative design",
+            "narrative scene gap audit",
+            "Audit",
+            "linear",
+            "game",
+            "story",
+            "character motivation interview",
+            "Interview",
+            "characters"
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -23090,15 +23201,22 @@
           "id": "plotting",
           "name": "plotting",
           "capabilities": [
-            "Plan and analyze story plot structure"
+            "Plan and analyze story plot structure",
+            "Audit a story scene sequence for missing causal steps, setup and payoff"
           ],
           "matched_skill_ids": [
-            "danjdewhurst-story-skills/plot-structure"
+            "danjdewhurst-story-skills/plot-structure",
+            "local-skills/narrative-scene-gap-audit"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "plotting",
-            "Fiction / narrative / worldbuilding plotting"
+            "Fiction / narrative / worldbuilding plotting",
+            "narrative scene gap audit",
+            "Audit",
+            "a",
+            "story",
+            "scene"
           ],
           "name_only_review_candidate_ids": [
             "danjdewhurst-story-skills/premise-workshop"
@@ -23134,12 +23252,21 @@
         {
           "id": "editing",
           "name": "editing",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Review structural scene gaps and offer minimal source-linked revision options"
+          ],
+          "matched_skill_ids": [
+            "local-skills/narrative-scene-gap-audit"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "editing",
-            "Fiction / narrative / worldbuilding editing"
+            "Fiction / narrative / worldbuilding editing",
+            "narrative scene gap audit",
+            "Review",
+            "structural",
+            "scene",
+            "gaps"
           ],
           "name_only_review_candidate_ids": [
             "danjdewhurst-story-skills/editorial-review",
@@ -23156,12 +23283,21 @@
         {
           "id": "character",
           "name": "character",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Develop fictional motivations and relationships while distinguishing canon from suggestions"
+          ],
+          "matched_skill_ids": [
+            "local-skills/character-motivation-interview"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "character",
-            "Fiction / narrative / worldbuilding character"
+            "Fiction / narrative / worldbuilding character",
+            "character motivation interview",
+            "Develop",
+            "fictional",
+            "motivations",
+            "and"
           ],
           "name_only_review_candidate_ids": [
             "danjdewhurst-story-skills/character-management",
@@ -23234,12 +23370,21 @@
         {
           "id": "continuity",
           "name": "continuity",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Detect source-cited narrative timeline and continuity conflicts"
+          ],
+          "matched_skill_ids": [
+            "local-skills/narrative-scene-gap-audit"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "continuity",
-            "Fiction / narrative / worldbuilding continuity"
+            "Fiction / narrative / worldbuilding continuity",
+            "narrative scene gap audit",
+            "Detect",
+            "source-cited",
+            "narrative",
+            "timeline"
           ],
           "name_only_review_candidate_ids": [
             "danjdewhurst-story-skills/revision-continuity",
@@ -24451,12 +24596,25 @@
         {
           "id": "screenwriting",
           "name": "screenwriting",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Audit screenwriting scene causality, continuity and setup/payoff",
+            "Build screenwriting character scene objectives and credible choices"
+          ],
+          "matched_skill_ids": [
+            "local-skills/narrative-scene-gap-audit",
+            "local-skills/character-motivation-interview"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "screenwriting",
-            "Video / film screenwriting"
+            "Video / film screenwriting",
+            "narrative scene gap audit",
+            "Audit",
+            "scene",
+            "causality,",
+            "character motivation interview",
+            "Build",
+            "character"
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
@@ -26943,12 +27101,21 @@
         {
           "id": "risk",
           "name": "risk",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Identify healthcare/PBM contractual cost and governance risks"
+          ],
+          "matched_skill_ids": [
+            "local-skills/healthcare-contract-forensics"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "risk",
-            "Business risk"
+            "Business risk",
+            "healthcare contract forensics",
+            "Identify",
+            "healthcare/PBM",
+            "contractual",
+            "cost"
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/legal-risk-assessment"
@@ -28736,15 +28903,22 @@
           "id": "contracts",
           "name": "contracts",
           "capabilities": [
-            "Review contracts against an organization playbook, escalating legal reliance to qualified counsel"
+            "Review contracts against an organization playbook, escalating legal reliance to qualified counsel",
+            "Examine evidence-backed healthcare/PBM contract clauses, rebates and audit rights"
           ],
           "matched_skill_ids": [
-            "anthropic-knowledge-work-plugins/review-contract"
+            "anthropic-knowledge-work-plugins/review-contract",
+            "local-skills/healthcare-contract-forensics"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "contracts",
-            "Law contracts"
+            "Law contracts",
+            "healthcare contract forensics",
+            "Examine",
+            "evidence-backed",
+            "healthcare/PBM",
+            "contract"
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -29377,15 +29551,22 @@
           "id": "reporting",
           "name": "reporting",
           "capabilities": [
-            "Review financial statements and trace conclusions to reported rows"
+            "Review financial statements and trace conclusions to reported rows",
+            "Reconcile healthcare/PBM contract financial amounts to approved source rows"
           ],
           "matched_skill_ids": [
-            "local-skills/finance-review"
+            "local-skills/finance-review",
+            "local-skills/healthcare-contract-forensics"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "reporting",
-            "Finance reporting"
+            "Finance reporting",
+            "healthcare contract forensics",
+            "Reconcile",
+            "healthcare/PBM",
+            "contract",
+            "financial"
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/close-management"
@@ -31063,6 +31244,33 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/character-motivation-interview",
+      "source_id": "local-skills",
+      "skill_name": "character-motivation-interview",
+      "content_blob_sha": "4e488f21f4b0807047a3b93d9a5368bd03a0aabe",
+      "complete_package_tree_sha": "a8d9937069d666203c7c3b4739117cd56516ad07",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/character",
+        "video-film/screenwriting",
+        "game-design/narrative-design"
+      ],
+      "evidence_path": "registry/verification/local-skills/character-motivation-interview.yaml",
+      "skill_path": "skills/authored/character-motivation-interview/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/character-motivation-interview.yaml",
+      "source_license": "MIT first-party original material",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "generate-only"
+      ],
+      "link_basis": "individual pinned exact-package first-party static review and bounded capability fit",
+      "restriction": "Discoverable reference; not behaviorally tested or approved for unchanged operation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/claude-pulse",
       "source_id": "local-skills",
       "skill_name": "claude-pulse",
@@ -31465,6 +31673,33 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/healthcare-contract-forensics",
+      "source_id": "local-skills",
+      "skill_name": "healthcare-contract-forensics",
+      "content_blob_sha": "5a304a552678ad88f4fa239abf28fe52b20bbab6",
+      "complete_package_tree_sha": "587d29e9a1275efcb8f20437bbc5479d36d1f5b3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "19/20",
+      "capability_paths": [
+        "law/contracts",
+        "business/risk",
+        "finance/reporting"
+      ],
+      "evidence_path": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
+      "skill_path": "skills/authored/healthcare-contract-forensics/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/healthcare-contract-forensics.yaml",
+      "source_license": "MIT first-party original material",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "individual pinned exact-package first-party static review and bounded capability fit",
+      "restriction": "Discoverable reference; not behaviorally tested or approved for unchanged operation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/hf-pulse",
       "source_id": "local-skills",
       "skill_name": "hf-pulse",
@@ -31730,6 +31965,35 @@
       "notes": "Portable vendor monitoring with open-versus-hosted distinction and standalone fallback; intentionally lightweight.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
+    },
+    {
+      "id": "local-skills/narrative-scene-gap-audit",
+      "source_id": "local-skills",
+      "skill_name": "narrative-scene-gap-audit",
+      "content_blob_sha": "eee96013b7a9736294f7cb145c6b03d2682e828c",
+      "complete_package_tree_sha": "4ef4522e420386527af26d1c292c756d2d8a7968",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/plotting",
+        "fiction-narrative-worldbuilding/continuity",
+        "fiction-narrative-worldbuilding/editing",
+        "video-film/screenwriting",
+        "game-design/narrative-design"
+      ],
+      "evidence_path": "registry/verification/local-skills/narrative-scene-gap-audit.yaml",
+      "skill_path": "skills/authored/narrative-scene-gap-audit/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/narrative-scene-gap-audit.yaml",
+      "source_license": "MIT first-party original material",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "individual pinned exact-package first-party static review and bounded capability fit",
+      "restriction": "Discoverable reference; not behaviorally tested or approved for unchanged operation",
+      "unchanged_use_approved": false
     },
     {
       "id": "local-skills/openai-pulse",
@@ -32185,13 +32449,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 86,
+  "identity_level_capability_links_mapped": 89,
   "third_party_identity_links_remaining": 953,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 44,
-    "known_total_governed_review_records": 1039,
+    "known_first_party_skill_records": 47,
+    "known_total_governed_review_records": 1042,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -32247,18 +32511,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 44,
+  "first_party_identity_links_mapped": 47,
   "third_party_identity_links_mapped": 42,
   "unmapped_review_identity_count": 953,
   "navigation_population": {
-    "mapped_first_party_distinct": 44,
+    "mapped_first_party_distinct": 47,
     "mapped_third_party_distinct": 42,
-    "mapped_total_distinct": 86,
-    "subdomains_with_evidence_linked_examples": 62,
+    "mapped_total_distinct": 89,
+    "subdomains_with_evidence_linked_examples": 67,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Evidence-linked examples cover an evolving mix of first-party and third-party exact-version review records, with separate name-only lexical hints. Counts are a dated snapshot, not limits or eligibility claims. A mapping describes a specific procedure, not an entire professional specialty.",
+    "note": "November 8 current crosswalk: 89 mapped distinct of 1,042 reviewed names (47 first-party, 995 third-party); 953 remaining unmapped; 67/247 subdomains linked. Static/source evidence only.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -32402,5 +32666,27 @@
     ],
     "safety_contract": "A mapping is not approval to execute, install, or share private data. Rejected reviews and failing/incomplete scanner states remain blocked.",
     "verification_basis": "Named pinned source SKILL.md Git blobs individually read and matched exact previous verification/provenance companions in this execution; Q8 references are indexed from Q8 exact published source ledger. No new scanner/behavioral test was executed."
+  },
+  "authored_capability_extension_20261108": {
+    "date": "2026-11-08",
+    "source": "registry/authored-skills-index.json",
+    "evidence": "registry/discovery/authored-capability-routing-20261108.json",
+    "ids": [
+      "local-skills/healthcare-contract-forensics",
+      "local-skills/narrative-scene-gap-audit",
+      "local-skills/character-motivation-interview"
+    ],
+    "routes_added": 11,
+    "reviewed_authored_identities_added": 3,
+    "prior_mapped_identities": 86,
+    "current_mapped_identities": 89,
+    "prior_reviewed_population": 1039,
+    "current_reviewed_population": 1042,
+    "prior_linked_subdomains": 62,
+    "current_linked_subdomains": 67,
+    "unmapped_identity_count": 953,
+    "behavioral_validations_added": 0,
+    "unchanged_use_approvals_added": 0,
+    "external_source_material_imported": false
   }
 }
