@@ -1,5 +1,7 @@
 # Capability dashboard maintenance
 
+**2026-11-08 authored capability routing:** Three authored original first-party skills were indexed in the separate canonical [capability directory](../registry/capability-directory.json) (89/1,042 mapped, 67/247 linked subdomains). These navigation links do **not** add any Q8 curated study-only method, any original November 2/3 research audit entry, or any behavioral/installation approval. Preserve the generated dashboard's dated 50-study-method snapshots; update graphics only when their actual ledgers change. [Authored routing receipt](../registry/discovery/authored-capability-routing-20261108.json).
+
 The README dashboard is **generated, not hand-redrawn**. It offers a polished SVG summary, an expandable 33-domain table, and a CSV that GitHub and spreadsheet apps can open. The older date-stamped graphs remain historical evidence.
 
 **Single source of truth:** `registry/capability-dashboard-sources.json` points to the current, explicitly dated research audit, the current selected-method catalog, and the separate qualification pipeline. Do not edit generated rows or draw another chart manually. Research-link coverage includes rejected-only leads; Valuable References are study methods, not unchanged-use approvals. The global eligible count is still unknown.
