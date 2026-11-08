@@ -60,7 +60,7 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently authored Skillz MIT text, inspired only by general ideas disclosed on a public all-rights-reserved reference site; see docs/discovery/2026-11-08-writer-story-tools-reference.md.",
-      "source_pr": "pending on feature branch",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/718",
       "package_version": "1.0.0"
     },
     {
@@ -87,7 +87,7 @@
       "host_authority": "generate-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently authored Skillz MIT text, inspired only by general ideas disclosed on a public all-rights-reserved reference site; see docs/discovery/2026-11-08-writer-story-tools-reference.md.",
-      "source_pr": "pending on feature branch",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/718",
       "package_version": "1.0.0"
     }
   ]
