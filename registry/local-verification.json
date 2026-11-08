@@ -1461,6 +1461,72 @@
         ]
       },
       "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
+    },
+    {
+      "skill_name": "narrative-scene-gap-audit",
+      "local_path": "skills/authored/narrative-scene-gap-audit/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "eee96013b7a9736294f7cb145c6b03d2682e828c",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "writing",
+          "evaluation",
+          "research"
+        ],
+        "lifecycle": [
+          "planning",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "human-review",
+          "safety-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-08 exact static review of three-file first-party MIT authored package (tree 4ef4522e420386527af26d1c292c756d2d8a7968). 18/20 static semantic evidence; Original source-linked scene chronology and causal gap review; does not modify manuscripts, import app source, or assume access to private drafts. Tested agent-host behavior NOT RUN. Root license applies only to original text; external Writer Story Tools applications remain independent rights-restricted references."
+    },
+    {
+      "skill_name": "character-motivation-interview",
+      "local_path": "skills/authored/character-motivation-interview/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "4e488f21f4b0807047a3b93d9a5368bd03a0aabe",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "writing",
+          "communication",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "human-review",
+          "safety-bounded"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-08 exact static review of three-file first-party MIT authored package (tree a8d9937069d666203c7c3b4739117cd56516ad07). 18/20 static semantic evidence; Original interview-driven fictional character development; separates canon from suggestions without overwriting source or diagnosing real people. Tested agent-host behavior NOT RUN. Root license applies only to original text; external Writer Story Tools applications remain independent rights-restricted references."
     }
   ]
 }

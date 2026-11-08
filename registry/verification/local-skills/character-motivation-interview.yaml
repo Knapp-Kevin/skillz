@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: character-motivation-interview
+skill_version: 1.0.0
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: LICENSE
+copyright_holder: Kevin Knapp
+local_path: "skills/authored/character-motivation-interview/SKILL.md"
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4e488f21f4b0807047a3b93d9a5368bd03a0aabe
+complete_package_tree_sha: a8d9937069d666203c7c3b4739117cd56516ad07
+characterized_at: 2026-11-08
+reviewed_at: 2026-11-08
+verification_status: verified
+verification_basis: "individual-structured-static-review"
+validation_status: not-run
+validation_note: "All three original authored package files read and statically reviewed; synthetic expected-output cases are NOT host-executed validation. No scanner, privacy audit, or unchanged-use approval."
+rubric: "docs/skill-verification.md"
+rubric_score: "18/20"
+tags:
+  use_case: [writing, communication, planning]
+  lifecycle: [planning, verification]
+  characteristic: [evidence-first, traceable, safety-bounded, human-review]
+  authority: [generate-only]
+  portability: [high]
+notes: "Original MIT first-party instructions; source content untrusted; writer retains canonical authority. Exact content/package SHA and full review documented at docs/reviews/2026-11-08-writer-story-tools-original-skills-static-review.md. External Writer Story Tools content not redistributed."

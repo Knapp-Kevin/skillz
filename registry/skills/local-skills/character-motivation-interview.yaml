@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: character-motivation-interview
+display_name: "Character Motivation Interview"
+skill_version: 1.0.0
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/authored/character-motivation-interview/SKILL.md
+source_class: first-party
+license: MIT
+relationship: first-party
+curated_at: 2026-11-08
+last_checked_at: 2026-11-08
+availability: in-repo
+local_path: skills/authored/character-motivation-interview/SKILL.md
+permission_tier: generate-only
+portability: high
+review_status: verified-structured
+copyright_holder: Kevin Knapp
+license_evidence_path: LICENSE
+authored_index_path: registry/authored-skills-index.json
+dependency_status: host-capability-conditional
+dependencies: "Only writer-provided text and any specifically authorized files; no mandatory external service, executable script, or application. Optional host file operations require their own authority."
+import_eligibility: review-required
+rationale: "Original interview-driven fictional character development; separates canon from suggestions without overwriting source or diagnosing real people. Static source reviewed at SKILL.md blob 4e488f21f4b0807047a3b93d9a5368bd03a0aabe, complete three-file package tree a8d9937069d666203c7c3b4739117cd56516ad07; semantic static review 18/20; agent-host behavioral validation NOT RUN. External reference is separately owned with no redistribution rights granted."
+external_reference: https://writer-story-tools.mdlafilms.workers.dev/
+rights_evidence_path: docs/discovery/2026-11-08-writer-story-tools-reference.md
