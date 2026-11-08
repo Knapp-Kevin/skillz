@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "source": "registry/authored-skills-index.json",
+  "destination": "registry/capability-directory.json",
+  "reviewed_authored_packages": 3,
+  "distinct_authored_skill_identities": 3,
+  "capability_path_links": 11,
+  "current_governed_review_population": {
+    "first_party": 47,
+    "third_party": 995,
+    "total": 1042,
+    "mapped_distinct": 89,
+    "unmapped_distinct": 953
+  },
+  "current_subdomains": {
+    "total": 247,
+    "with_evidence_linked": 67
+  },
+  "source_method": "Compared exact already-reviewed SKILL.md and package tree Git identities in authored index and verification companions; source names do not imply suitability.",
+  "nonclaims": [
+    "No behaviorally validated agent runs",
+    "No imported third-party application code",
+    "No new unchanged-use approval",
+    "Historical Q8 50-study-method shelf remains unchanged"
+  ],
+  "routes": [
+    {
+      "id": "local-skills/healthcare-contract-forensics",
+      "display_name": "Healthcare Contract Forensics",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/healthcare-contract-forensics",
+      "entrypoint": "skills/authored/healthcare-contract-forensics/SKILL.md",
+      "skill_md_git_blob_sha": "5a304a552678ad88f4fa239abf28fe52b20bbab6",
+      "complete_package_tree_sha": "587d29e9a1275efcb8f20437bbc5479d36d1f5b3",
+      "provenance_path": "registry/skills/local-skills/healthcare-contract-forensics.yaml",
+      "static_review_evidence": "registry/verification/local-skills/healthcare-contract-forensics.yaml",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "rights": {
+        "original_material_spdx": "MIT",
+        "license_file": "LICENSE",
+        "external_reference_only": false
+      },
+      "review": {
+        "static": "verified-static",
+        "score": "19/20",
+        "behavioral_validation": "not-run",
+        "unchanged_use_approved": false
+      },
+      "capability_paths": [
+        "law/contracts",
+        "business/risk",
+        "finance/reporting"
+      ],
+      "qualification_boundary": "Evidence-backed discovery mapping; not host testing, app installation or permission to access files."
+    },
+    {
+      "id": "local-skills/narrative-scene-gap-audit",
+      "display_name": "Narrative Scene Gap Audit",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/narrative-scene-gap-audit",
+      "entrypoint": "skills/authored/narrative-scene-gap-audit/SKILL.md",
+      "skill_md_git_blob_sha": "eee96013b7a9736294f7cb145c6b03d2682e828c",
+      "complete_package_tree_sha": "4ef4522e420386527af26d1c292c756d2d8a7968",
+      "provenance_path": "registry/skills/local-skills/narrative-scene-gap-audit.yaml",
+      "static_review_evidence": "registry/verification/local-skills/narrative-scene-gap-audit.yaml",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "rights": {
+        "original_material_spdx": "MIT",
+        "license_file": "LICENSE",
+        "external_reference_only": true
+      },
+      "review": {
+        "static": "verified-static",
+        "score": "18/20",
+        "behavioral_validation": "not-run",
+        "unchanged_use_approved": false
+      },
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/plotting",
+        "fiction-narrative-worldbuilding/continuity",
+        "fiction-narrative-worldbuilding/editing",
+        "video-film/screenwriting",
+        "game-design/narrative-design"
+      ],
+      "qualification_boundary": "Evidence-backed discovery mapping; not host testing, app installation or permission to access files."
+    },
+    {
+      "id": "local-skills/character-motivation-interview",
+      "display_name": "Character Motivation Interview",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/character-motivation-interview",
+      "entrypoint": "skills/authored/character-motivation-interview/SKILL.md",
+      "skill_md_git_blob_sha": "4e488f21f4b0807047a3b93d9a5368bd03a0aabe",
+      "complete_package_tree_sha": "a8d9937069d666203c7c3b4739117cd56516ad07",
+      "provenance_path": "registry/skills/local-skills/character-motivation-interview.yaml",
+      "static_review_evidence": "registry/verification/local-skills/character-motivation-interview.yaml",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "rights": {
+        "original_material_spdx": "MIT",
+        "license_file": "LICENSE",
+        "external_reference_only": true
+      },
+      "review": {
+        "static": "verified-static",
+        "score": "18/20",
+        "behavioral_validation": "not-run",
+        "unchanged_use_approved": false
+      },
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/character",
+        "video-film/screenwriting",
+        "game-design/narrative-design"
+      ],
+      "qualification_boundary": "Evidence-backed discovery mapping; not host testing, app installation or permission to access files."
+    }
+  ]
+}

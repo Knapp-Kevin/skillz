@@ -34,7 +34,13 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independent MIT-authored package with public README, exact-quote clause scrutiny cards and fictional fixtures; no third-party skill text or real PHI copied. Source comparisons at docs/reviews/2026-11-06-issue714-package-candidate-comparison.md.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/715",
-      "package_version": "1.1.0"
+      "package_version": "1.1.0",
+      "capability_paths": [
+        "law/contracts",
+        "business/risk",
+        "finance/reporting"
+      ],
+      "capability_mapping_ref": "registry/discovery/authored-capability-routing-20261108.json"
     },
     {
       "id": "narrative-scene-gap-audit",
@@ -61,7 +67,15 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently authored Skillz MIT text, inspired only by general ideas disclosed on a public all-rights-reserved reference site; see docs/discovery/2026-11-08-writer-story-tools-reference.md.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/718",
-      "package_version": "1.0.0"
+      "package_version": "1.0.0",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/plotting",
+        "fiction-narrative-worldbuilding/continuity",
+        "fiction-narrative-worldbuilding/editing",
+        "video-film/screenwriting",
+        "game-design/narrative-design"
+      ],
+      "capability_mapping_ref": "registry/discovery/authored-capability-routing-20261108.json"
     },
     {
       "id": "character-motivation-interview",
@@ -88,7 +102,13 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently authored Skillz MIT text, inspired only by general ideas disclosed on a public all-rights-reserved reference site; see docs/discovery/2026-11-08-writer-story-tools-reference.md.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/718",
-      "package_version": "1.0.0"
+      "package_version": "1.0.0",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/character",
+        "video-film/screenwriting",
+        "game-design/narrative-design"
+      ],
+      "capability_mapping_ref": "registry/discovery/authored-capability-routing-20261108.json"
     }
   ]
 }
