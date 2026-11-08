@@ -13,8 +13,12 @@ This is the **canonical home for newly authored first-party skills** produced fo
 
 The existing first-party `skills/<slug>/` entries are not automatically moved or relicensed. Move them only as separate, reviewed maintenance work with compatible index/registry updates.
 
-## Current authored package
+## Current authored packages
 
 [Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) | [Package record](../../registry/authored-skills-index.json) | [Review and licensing evidence](../../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md).
 
-This remains **statically reviewed and behaviorally unvalidated**; being present in this directory is not an instruction to install or process regulated/private data.
+[Narrative Scene Gap Audit](narrative-scene-gap-audit/SKILL.md) | [Synthetic acceptance cases](narrative-scene-gap-audit/examples/acceptance-cases.md) | [Exact-source review](../../docs/reviews/2026-11-08-writer-story-tools-original-skills-static-review.md).
+
+[Character Motivation Interview](character-motivation-interview/SKILL.md) | [Synthetic acceptance cases](character-motivation-interview/examples/acceptance-cases.md) | [Exact-source review](../../docs/reviews/2026-11-08-writer-story-tools-original-skills-static-review.md).
+
+**November 8, 2026:** Three original MIT-authored packages are indexed in this collection. All three have bounded static reviews and no executed agent-host behavioral validation. The writing workflows are not copies of [Writer Story Tools](https://writer-story-tools.mdlafilms.workers.dev/), whose external applications remain all-rights-reserved; see [source and rights findings](../../docs/discovery/2026-11-08-writer-story-tools-reference.md). Repository presence is not an installation or external-account authorization.
