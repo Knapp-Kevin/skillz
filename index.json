@@ -3,22 +3,21 @@
   "current_capability_mapping_20261109": {
     "as_of": "2026-11-09",
     "source": "registry/capability-directory.json",
-    "source_evidence": "registry/discovery/narrative-18-exact-source-capability-routing-20261109.json",
+    "source_evidence": "registry/discovery/bm629-14-exact-source-technical-ux-routing-20261109.json",
     "reviewed_identity_population": 1042,
-    "mapped_distinct_review_identities": 107,
+    "mapped_distinct_review_identities": 121,
     "mapped_first_party": 47,
-    "mapped_third_party": 60,
-    "unmapped_review_identities": 935,
-    "subdomains_with_evidence": 68,
+    "mapped_third_party": 74,
+    "unmapped_review_identities": 921,
+    "subdomains_with_evidence": 74,
     "subdomains_total": 247,
-    "new_distinct_review_identity_links": 18,
-    "new_capability_path_links": 22,
-    "prior_verified_review_dispositions": 16,
-    "prior_rejected_unchanged_review_dispositions": 2,
-    "false_positive_lexical_hints_removed": 3,
+    "new_distinct_review_identity_links": 14,
+    "new_capability_path_links": 20,
+    "prior_verified_review_dispositions": 11,
+    "prior_rejected_unchanged_review_dispositions": 3,
     "new_behaviorally_validated_packages": 0,
     "new_unchanged_use_approvals": 0,
-    "note": "Historical Q8 50 study references and 2026-11-05 first-party/security counts are separate dated populations. This current mapping snapshot does not certify installation, safety or behavioral results."
+    "note": "Retains previous narrative snapshot in historical_capability_mapping_narrative_20261109. This is current source-evidence navigation, not a qualification, installation, or maturity claim."
   },
   "static_review_and_hygiene_20261105": {
     "date": "2026-11-05",
@@ -70,7 +69,7 @@
   },
   "snapshot_date": "2026-11-02",
   "repository_mode": "passive-skill-knowledge-resource",
-  "snapshot_scope": "Current passive catalog with separate dated Q4 history and a November 3 Q1\u2013Q5 candidate-review reconciliation. No inferred approved-skill counts.",
+  "snapshot_scope": "Current passive catalog with separate dated Q4 history and a November 3 Q1–Q5 candidate-review reconciliation. No inferred approved-skill counts.",
   "curation_effort_public_snapshot_20261102": {
     "date": "2026-11-02",
     "accounting_basis": "exact pinned path ledger and published Q1-Q3 review receipts; normalized literal REJECT unchanged variants",
@@ -5417,5 +5416,25 @@
     "grant_workbook_acceptance_status": "See merged PR #696 (q7_original_pinned_workbook_engine_acceptance_20261103); original bytes unchanged, source still HOLD.",
     "all_33_domains_featured": true,
     "widened_sources_qualified": "registry/discovery/q8-reference-only-qualification-batch4-widened-20261104.json"
+  },
+  "historical_capability_mapping_narrative_20261109": {
+    "as_of": "2026-11-09",
+    "source": "registry/capability-directory.json",
+    "source_evidence": "registry/discovery/narrative-18-exact-source-capability-routing-20261109.json",
+    "reviewed_identity_population": 1042,
+    "mapped_distinct_review_identities": 107,
+    "mapped_first_party": 47,
+    "mapped_third_party": 60,
+    "unmapped_review_identities": 935,
+    "subdomains_with_evidence": 68,
+    "subdomains_total": 247,
+    "new_distinct_review_identity_links": 18,
+    "new_capability_path_links": 22,
+    "prior_verified_review_dispositions": 16,
+    "prior_rejected_unchanged_review_dispositions": 2,
+    "false_positive_lexical_hints_removed": 3,
+    "new_behaviorally_validated_packages": 0,
+    "new_unchanged_use_approvals": 0,
+    "note": "Historical Q8 50 study references and 2026-11-05 first-party/security counts are separate dated populations. This current mapping snapshot does not certify installation, safety or behavioral results."
   }
 }
