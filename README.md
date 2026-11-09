@@ -6,7 +6,7 @@
 
 **Earlier narrative-mapping checkpoint (November 9, 2026):** The [canonical directory](registry/capability-directory.json) now connects **107 of 1,042** governed exact-version review identities to capability domains (**47 first-party + 60 third-party**), across **68 of 247** subdomains. **935** reviewed identities still need evidence-backed mapping. The latest work added [18 exact-reviewed fiction and narrative methods](docs/reviews/2026-11-09-narrative-18-verified-capability-links.md), including **16 previously verified** and **2 rejected for unchanged use**; their rejected status remains visible. **Three unrelated AWS cloud setup names** were also removed from fiction/worldbuilding search hints. [Machine-readable evidence](registry/discovery/narrative-18-exact-source-capability-routing-20261109.json). This is source navigation, not proof of a host behavior test or permission to install.
 
-![Current Skillz capability mapping, generated from the canonical directory on November 9, 2026: 107 of 1,042 review identities mapped and 68 of 247 subdomains linked.](docs/assets/current-capability-mapping.svg)
+![Current Skillz capability mapping, generated from the canonical directory on November 9, 2026: 121 of 1,042 review identities mapped and 74 of 247 subdomains linked.](docs/assets/current-capability-mapping.svg)
 
 [Regenerate/verify this current chart](scripts/build-current-routing-graphic.mjs) · Earlier research/qualification charts below are dated snapshots with different denominators.
 
