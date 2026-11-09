@@ -356,5 +356,15 @@
       "bm629-agent-skills/user-research-prior-art-survey"
     ],
     "honest_limit": "The index exposes evidence-linked capability candidates. It does not authorize installing them or executing their commands, browsers, network requests or project writes."
+  },
+  "upstream_pinned_tree_verification": {
+    "repo": "bm629/agent-skills",
+    "revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "observed_git_tree_sha": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "source_SKILL_blobs_verified_at_revision": 14,
+    "complete_package_tree_shas_verified_at_revision": 14,
+    "identity_mismatches": 0,
+    "tree_truncated": false,
+    "scope": "Pinned exact revision only; did not query current upstream HEAD or rerun security/behavior tests"
   }
 }

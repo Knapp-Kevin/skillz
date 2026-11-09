@@ -41,3 +41,7 @@ The previous structured static dispositions were **11 verified and 3 rejected un
 ## Public outputs
 
 The README's [live capability graphic](../assets/current-capability-mapping.svg) is regenerated from `registry/capability-directory.json` using the [existing renderer](../../scripts/build-current-routing-graphic.mjs). The **prior graphic was byte-compared against this exact renderer** before generating the new one. Other dated, different-scope research and scanner graphics remain historical and are not conflated with current source mapping.
+
+## Exact Git identity verification (pinned upstream tree)
+
+Fetched the **GitHub tree at `f6a700ea94a16cf8e0b5e563d4d48d85503e41f6`**, then checked every listed `skills/<slug>/SKILL.md` Git blob and every entire package subtree SHA. **14/14 SKILL.md blobs match, 14/14 package trees match, zero mismatches, tree not truncated.** This proves source-pin consistency, **not** that the upstream's latest head is unchanged or that the prior static rubric was rerun.
