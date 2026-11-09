@@ -1,6 +1,8 @@
 # Capability dashboard maintenance
 
-## Current capability crosswalk graphic (2026-11-09)
+**November 9, 2026 current routing update:** The [source-derived chart](assets/current-capability-mapping.svg) now displays **121/1,042** exact-reviewed identities mapped, **74/247** subdomains with evidence links, and **921** unmapped reviewed identities. This reflects the [14-source technical/UX mapping tranche](../registry/discovery/bm629-14-exact-source-technical-ux-routing-20261109.json). The authoring/rendering code was exercised as an isolated JavaScript render function and its previous output was byte-compared with the already committed SVG. The standalone Node CLI on a local checkout has **not** been run in this session. The earlier 107-linked note below describes the prior state and remains a dated checkpoint.
+
+## Earlier narrative-tranche graphic checkpoint (2026-11-09)
 
 The top-of-README [current routing SVG](assets/current-capability-mapping.svg) is generated directly from `registry/capability-directory.json`, independent of the historical research-link and Q8 selected-method graphics. It counts **107 of 1,042** distinct exact-reviewed identities mapped and **68 of 247** subdomains with at least one evidence link, leaving **935** reviewed names unmapped. It never treats an exact static review as an installation, security, or behavioral approval. Use Node.js 20+ locally during *authorized repository maintenance*:
 

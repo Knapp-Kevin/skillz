@@ -16,9 +16,9 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 11,
+      "linked_reviewed_examples": 15,
       "subdomains_with_linked_examples": 3,
-      "name_only_candidate_count": 33,
+      "name_only_candidate_count": 28,
       "evidence_preview": [
         {
           "id": "vercel-agent-skills/vercel-composition-patterns",
@@ -69,6 +69,54 @@
           "source_class": "local-provenance",
           "path": "software-engineering/maintenance",
           "capability_example": "Compare code against standards and specification evidence"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-architecture-doc",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-architecture-doc.yaml",
+          "source_class": "external-provenance",
+          "path": "software-engineering/architecture",
+          "capability_example": "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-architecture-doc",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-architecture-doc.yaml",
+          "source_class": "external-provenance",
+          "path": "software-engineering/architecture",
+          "capability_example": "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-technical-design",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-technical-design.yaml",
+          "source_class": "external-provenance",
+          "path": "software-engineering/architecture",
+          "capability_example": "Plan feature-level implementation design with traceable requirements, alternatives and failure paths",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-technical-design",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-technical-design.yaml",
+          "source_class": "external-provenance",
+          "path": "software-engineering/architecture",
+          "capability_example": "Assess feature technical designs for implementability, failure handling, testing and rollout",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
         }
       ],
       "name_only_preview": [
@@ -1990,7 +2038,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 22,
+      "linked_reviewed_examples": 24,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2043,6 +2091,30 @@
           "source_class": "local-provenance",
           "path": "research/source-discovery",
           "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
+        },
+        {
+          "id": "bm629-agent-skills/user-research-prior-art-survey",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "14/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/user-research-prior-art-survey.yaml",
+          "source_class": "external-provenance",
+          "path": "research/literature-review",
+          "capability_example": "Survey published HCI and UX prior art; rejected unchanged for missing private-context disclosure gate on external queries",
+          "unchanged_use_approved": false,
+          "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects."
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "15/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-user-research-prior-art-survey.yaml",
+          "source_class": "external-provenance",
+          "path": "research/synthesis",
+          "capability_example": "Review user-research search evidence, provenance, source methods and honest uncertainty",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
         }
       ],
       "name_only_preview": [
@@ -2467,9 +2539,9 @@
     {
       "domain": "ux-ui",
       "display_name": "UX / UI",
-      "linked_reviewed_examples": 3,
-      "subdomains_with_linked_examples": 2,
-      "name_only_candidate_count": 11,
+      "linked_reviewed_examples": 9,
+      "subdomains_with_linked_examples": 5,
+      "name_only_candidate_count": 5,
       "evidence_preview": [
         {
           "id": "bm629-agent-skills/authoring-user-flows",
@@ -2500,13 +2572,85 @@
           "source_class": "external-provenance",
           "path": "ux-ui/interaction-design",
           "capability_example": "signup flow design"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-design-system",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-design-system.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/design-systems",
+          "capability_example": "Author semantic design tokens, accessible component standards, interaction patterns and versioned governance",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-design-system",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-design-system.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/design-systems",
+          "capability_example": "Review design-system token semantics, component contracts, accessibility and lifecycle consistency",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-hi-fi",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "14/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-hi-fi.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/prototyping",
+          "capability_example": "Produce rendered high-fidelity UI prototypes; rejected unchanged for unsandboxed rendering, potential egress and screenshot exposure",
+          "unchanged_use_approved": false,
+          "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects."
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-hi-fi",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "14/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-hi-fi.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/prototyping",
+          "capability_example": "Review rendered UI prototypes; rejected unchanged for unisolated code execution and output disclosure",
+          "unchanged_use_approved": false,
+          "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects."
+        },
+        {
+          "id": "bm629-agent-skills/user-research-prior-art-survey",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "14/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/user-research-prior-art-survey.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/user-research",
+          "capability_example": "Survey published HCI and UX prior art; rejected unchanged for missing private-context disclosure gate on external queries",
+          "unchanged_use_approved": false,
+          "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects."
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "15/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-user-research-prior-art-survey.yaml",
+          "source_class": "external-provenance",
+          "path": "ux-ui/user-research",
+          "capability_example": "Review user-research search evidence, provenance, source methods and honest uncertainty",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
         }
       ],
       "name_only_preview": [
         "anthropic-knowledge-work-plugins/customer-research",
-        "bm629-agent-skills/reviewing-user-research-prior-art-survey",
         "corey-haines-marketing-skills/customer-research",
-        "bm629-agent-skills/user-research-prior-art-survey"
+        "bm629-agent-skills/reviewing-user-flows",
+        "mattpocock-skills/prototype"
       ],
       "coverage": "partial exact-version static review links; not security/behavioral approval",
       "search_hint": "UX / UI capability",
@@ -3229,9 +3373,9 @@
     {
       "domain": "technical-writing",
       "display_name": "Technical writing",
-      "linked_reviewed_examples": 1,
-      "subdomains_with_linked_examples": 1,
-      "name_only_candidate_count": 23,
+      "linked_reviewed_examples": 7,
+      "subdomains_with_linked_examples": 4,
+      "name_only_candidate_count": 15,
       "evidence_preview": [
         {
           "id": "bm629-agent-skills/authoring-api-reference",
@@ -3242,13 +3386,85 @@
           "source_class": "external-provenance",
           "path": "technical-writing/api-docs",
           "capability_example": "Author an API reference traceable to a supplied contract"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-user-guide",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-user-guide.yaml",
+          "source_class": "external-provenance",
+          "path": "technical-writing/tutorials",
+          "capability_example": "Draft goal-oriented end-user tutorials, how-tos and feature references using actual UI labels",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-user-guide",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-user-guide.yaml",
+          "source_class": "external-provenance",
+          "path": "technical-writing/tutorials",
+          "capability_example": "Review end-user guide accuracy, accessibility, task coverage and reference usability",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-developer-guide",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-developer-guide.yaml",
+          "source_class": "external-provenance",
+          "path": "technical-writing/tutorials",
+          "capability_example": "Write developer onboarding, first-success tutorials, integration recipes and troubleshooting grounded in current APIs",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-developer-guide",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-developer-guide.yaml",
+          "source_class": "external-provenance",
+          "path": "technical-writing/tutorials",
+          "capability_example": "Review developer guide install/integrate paths, real runnable samples and API-reference links",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/authoring-architecture-doc",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/authoring-architecture-doc.yaml",
+          "source_class": "external-provenance",
+          "path": "technical-writing/architecture-records",
+          "capability_example": "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "bm629-agent-skills/reviewing-architecture-doc",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/bm629-agent-skills/reviewing-architecture-doc.yaml",
+          "source_class": "external-provenance",
+          "path": "technical-writing/architecture-records",
+          "capability_example": "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
         }
       ],
       "name_only_preview": [
         "bm629-agent-skills/authoring-api-spec",
-        "bm629-agent-skills/authoring-developer-guide",
         "bm629-agent-skills/reviewing-api-reference",
-        "bm629-agent-skills/reviewing-api-spec"
+        "bm629-agent-skills/reviewing-api-spec",
+        "anthropic-skills/academy-guide"
       ],
       "coverage": "partial exact-version static review links; not security/behavioral approval",
       "search_hint": "Technical writing capability",
@@ -9605,23 +9821,36 @@
           "name": "architecture",
           "capabilities": [
             "Evaluate codebase architecture and design tradeoffs",
-            "Review React component composition patterns within a pinned static reference"
+            "Review React component composition patterns within a pinned static reference",
+            "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
+            "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+            "Plan feature-level implementation design with traceable requirements, alternatives and failure paths",
+            "Assess feature technical designs for implementability, failure handling, testing and rollout"
           ],
           "matched_skill_ids": [
             "vercel-agent-skills/vercel-composition-patterns",
-            "mattpocock-skills/codebase-design"
+            "mattpocock-skills/codebase-design",
+            "bm629-agent-skills/authoring-architecture-doc",
+            "bm629-agent-skills/reviewing-architecture-doc",
+            "bm629-agent-skills/authoring-technical-design",
+            "bm629-agent-skills/reviewing-technical-design"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "architecture",
-            "Software engineering architecture"
+            "Software engineering architecture",
+            "authoring architecture doc",
+            "authoring-architecture-doc",
+            "reviewing architecture doc",
+            "reviewing-architecture-doc",
+            "authoring technical design",
+            "authoring-technical-design",
+            "reviewing technical design",
+            "reviewing-technical-design"
           ],
           "name_only_review_candidate_ids": [
-            "bm629-agent-skills/authoring-architecture-doc",
             "cole-medin-skills/plan-architecture",
-            "bm629-agent-skills/authoring-technical-design",
-            "bm629-agent-skills/python-monorepo-architecture",
-            "bm629-agent-skills/reviewing-architecture-doc"
+            "bm629-agent-skills/python-monorepo-architecture"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 11,
@@ -11307,9 +11536,7 @@
           ],
           "name_only_review_candidate_ids": [
             "addyosmani-agent-skills/git-workflow-and-versioning",
-            "bm629-agent-skills/authoring-developer-guide",
             "mattpocock-skills/git-guardrails-claude-code",
-            "bm629-agent-skills/reviewing-developer-guide",
             "mattpocock-skills/setup-pre-commit"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -18823,15 +19050,19 @@
           "id": "literature-review",
           "name": "literature review",
           "capabilities": [
-            "Appraise papers and replication evidence; not a complete systematic review"
+            "Appraise papers and replication evidence; not a complete systematic review",
+            "Survey published HCI and UX prior art; rejected unchanged for missing private-context disclosure gate on external queries"
           ],
           "matched_skill_ids": [
-            "local-skills/paper-digest"
+            "local-skills/paper-digest",
+            "bm629-agent-skills/user-research-prior-art-survey"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "literature review",
-            "Research literature review"
+            "Research literature review",
+            "user research prior art survey",
+            "user-research-prior-art-survey"
           ],
           "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "lexical-title-hints-only; not semantic capability verification, package security or license approval",
@@ -19487,16 +19718,20 @@
           "id": "synthesis",
           "name": "synthesis",
           "capabilities": [
-            "Compare competing evidence and synthesize a bounded research finding"
+            "Compare competing evidence and synthesize a bounded research finding",
+            "Review user-research search evidence, provenance, source methods and honest uncertainty"
           ],
           "matched_skill_ids": [
             "local-skills/compare",
-            "local-skills/deep-dive"
+            "local-skills/deep-dive",
+            "bm629-agent-skills/reviewing-user-research-prior-art-survey"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "synthesis",
-            "Research synthesis"
+            "Research synthesis",
+            "reviewing user research prior art survey",
+            "reviewing-user-research-prior-art-survey"
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/brief",
@@ -21430,18 +21665,26 @@
         {
           "id": "user-research",
           "name": "user research",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Survey published HCI and UX prior art; rejected unchanged for missing private-context disclosure gate on external queries",
+            "Review user-research search evidence, provenance, source methods and honest uncertainty"
+          ],
+          "matched_skill_ids": [
+            "bm629-agent-skills/user-research-prior-art-survey",
+            "bm629-agent-skills/reviewing-user-research-prior-art-survey"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "user research",
-            "UX / UI user research"
+            "UX / UI user research",
+            "user research prior art survey",
+            "user-research-prior-art-survey",
+            "reviewing user research prior art survey",
+            "reviewing-user-research-prior-art-survey"
           ],
           "name_only_review_candidate_ids": [
             "anthropic-knowledge-work-plugins/customer-research",
-            "bm629-agent-skills/reviewing-user-research-prior-art-survey",
-            "corey-haines-marketing-skills/customer-research",
-            "bm629-agent-skills/user-research-prior-art-survey"
+            "corey-haines-marketing-skills/customer-research"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 4,
@@ -21648,17 +21891,25 @@
         {
           "id": "prototyping",
           "name": "prototyping",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Produce rendered high-fidelity UI prototypes; rejected unchanged for unsandboxed rendering, potential egress and screenshot exposure",
+            "Review rendered UI prototypes; rejected unchanged for unisolated code execution and output disclosure"
+          ],
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-hi-fi",
+            "bm629-agent-skills/reviewing-hi-fi"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "prototyping",
-            "UX / UI prototyping"
+            "UX / UI prototyping",
+            "authoring hi fi",
+            "authoring-hi-fi",
+            "reviewing hi fi",
+            "reviewing-hi-fi"
           ],
           "name_only_review_candidate_ids": [
-            "bm629-agent-skills/authoring-hi-fi",
-            "mattpocock-skills/prototype",
-            "bm629-agent-skills/reviewing-hi-fi"
+            "mattpocock-skills/prototype"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 3,
@@ -21845,17 +22096,24 @@
         {
           "id": "design-systems",
           "name": "design systems",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
-          "search_hints": [
-            "design systems",
-            "UX / UI design systems"
+          "capabilities": [
+            "Author semantic design tokens, accessible component standards, interaction patterns and versioned governance",
+            "Review design-system token semantics, component contracts, accessibility and lifecycle consistency"
           ],
-          "name_only_review_candidate_ids": [
+          "matched_skill_ids": [
             "bm629-agent-skills/authoring-design-system",
             "bm629-agent-skills/reviewing-design-system"
           ],
+          "coverage_status": "partial-linked-evidence",
+          "search_hints": [
+            "design systems",
+            "UX / UI design systems",
+            "authoring design system",
+            "authoring-design-system",
+            "reviewing design system",
+            "reviewing-design-system"
+          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2,
           "source_vetted_candidate_examples": [
@@ -23725,10 +23983,8 @@
           ],
           "name_only_review_candidate_ids": [
             "bm629-agent-skills/authoring-api-spec",
-            "bm629-agent-skills/authoring-developer-guide",
             "bm629-agent-skills/reviewing-api-reference",
-            "bm629-agent-skills/reviewing-api-spec",
-            "bm629-agent-skills/reviewing-developer-guide"
+            "bm629-agent-skills/reviewing-api-spec"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 6,
@@ -23788,19 +24044,33 @@
         {
           "id": "tutorials",
           "name": "tutorials",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Draft goal-oriented end-user tutorials, how-tos and feature references using actual UI labels",
+            "Review end-user guide accuracy, accessibility, task coverage and reference usability",
+            "Write developer onboarding, first-success tutorials, integration recipes and troubleshooting grounded in current APIs",
+            "Review developer guide install/integrate paths, real runnable samples and API-reference links"
+          ],
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-user-guide",
+            "bm629-agent-skills/reviewing-user-guide",
+            "bm629-agent-skills/authoring-developer-guide",
+            "bm629-agent-skills/reviewing-developer-guide"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "tutorials",
-            "Technical writing tutorials"
+            "Technical writing tutorials",
+            "authoring user guide",
+            "authoring-user-guide",
+            "reviewing user guide",
+            "reviewing-user-guide",
+            "authoring developer guide",
+            "authoring-developer-guide",
+            "reviewing developer guide",
+            "reviewing-developer-guide"
           ],
           "name_only_review_candidate_ids": [
-            "anthropic-skills/academy-guide",
-            "bm629-agent-skills/authoring-developer-guide",
-            "bm629-agent-skills/authoring-user-guide",
-            "bm629-agent-skills/reviewing-developer-guide",
-            "bm629-agent-skills/reviewing-user-guide"
+            "anthropic-skills/academy-guide"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5,
@@ -23843,20 +24113,27 @@
           "id": "reference-manuals",
           "name": "reference manuals",
           "capabilities": [
-            "Create source-linked command reference examples without executing them"
+            "Create source-linked command reference examples without executing them",
+            "Draft goal-oriented end-user tutorials, how-tos and feature references using actual UI labels",
+            "Review end-user guide accuracy, accessibility, task coverage and reference usability"
           ],
-          "matched_skill_ids": [],
-          "coverage_status": "source-vetted-candidates-only",
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-user-guide",
+            "bm629-agent-skills/reviewing-user-guide"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "reference manuals",
-            "Technical writing reference manuals"
+            "Technical writing reference manuals",
+            "authoring user guide",
+            "authoring-user-guide",
+            "reviewing user guide",
+            "reviewing-user-guide"
           ],
           "name_only_review_candidate_ids": [
-            "bm629-agent-skills/authoring-user-guide",
             "david-ondrej-skills/brain-to-docs",
             "mattpocock-skills/grill-with-docs",
-            "microsoft-skills/microsoft-docs",
-            "bm629-agent-skills/reviewing-user-guide"
+            "microsoft-skills/microsoft-docs"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5,
@@ -23930,20 +24207,25 @@
           "id": "architecture-records",
           "name": "architecture records",
           "capabilities": [
-            "Draft a proposed ADR with alternatives and consequences before authorized persistence"
+            "Draft a proposed ADR with alternatives and consequences before authorized persistence",
+            "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
+            "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization"
           ],
-          "matched_skill_ids": [],
-          "coverage_status": "source-vetted-candidates-only",
+          "matched_skill_ids": [
+            "bm629-agent-skills/authoring-architecture-doc",
+            "bm629-agent-skills/reviewing-architecture-doc"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "architecture records",
-            "Technical writing architecture records"
+            "Technical writing architecture records",
+            "authoring architecture doc",
+            "authoring-architecture-doc",
+            "reviewing architecture doc",
+            "reviewing-architecture-doc"
           ],
           "name_only_review_candidate_ids": [
-            "addyosmani-agent-skills/documentation-and-adrs",
-            "bm629-agent-skills/authoring-architecture-doc",
-            "bm629-agent-skills/authoring-technical-design",
-            "bm629-agent-skills/reviewing-architecture-doc",
-            "bm629-agent-skills/reviewing-technical-design"
+            "addyosmani-agent-skills/documentation-and-adrs"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5,
@@ -31022,6 +31304,111 @@
       "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
     },
     {
+      "id": "bm629-agent-skills/authoring-architecture-doc",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-architecture-doc",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "a725d42406117d81e231a70415188236d5eb6feb",
+      "complete_package_tree_sha": "63d12131f46f8a36cb1c574b861ca776fe11b449",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "16/20",
+      "capability_paths": [
+        "technical-writing/architecture-records",
+        "software-engineering/architecture"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-architecture-doc.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-architecture-doc.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/authoring-design-system",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-design-system",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "4fcb71f77d443023668b76a8a9237ad1821cb3c6",
+      "complete_package_tree_sha": "9b248e2c1ecd6cecdaaed497a1856d90eb637d19",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "16/20",
+      "capability_paths": [
+        "ux-ui/design-systems"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-design-system.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-design-system.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/authoring-developer-guide",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-developer-guide",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "b398179bc8f486917276d24d2e51ff3bc3ab41db",
+      "complete_package_tree_sha": "f8250b159b1929c2aff13ce35985176152fb14ec",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "16/20",
+      "capability_paths": [
+        "technical-writing/tutorials"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-developer-guide.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-developer-guide.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/authoring-hi-fi",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-hi-fi",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "ea345e3e371a709f682b9f1e84227eb421b4fbfe",
+      "complete_package_tree_sha": "ade033481abf104128c499bfa470b4bfb45059ac",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "rubric_score": "14/20",
+      "capability_paths": [
+        "ux-ui/prototyping"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-hi-fi.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-hi-fi.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects.",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "bm629-agent-skills/authoring-prd",
       "source_id": "bm629-agent-skills",
       "skill_name": "authoring-prd",
@@ -31038,6 +31425,32 @@
       "link_basis": "individual existing exact-version static verified record plus narrow task fit",
       "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
       "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "bm629-agent-skills/authoring-technical-design",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-technical-design",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "b5f414c338aca6b429c2f8fd2cbe9594622e905c",
+      "complete_package_tree_sha": "53f812c2efd883bf9d1a99d6437f4d0dbe8fa076",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "capability_paths": [
+        "software-engineering/architecture"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-technical-design.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-technical-design.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
     },
     {
       "id": "bm629-agent-skills/authoring-test-plan",
@@ -31086,6 +31499,245 @@
       "behavioral_tested_in_this_tranche": false,
       "security_scan_run_in_this_tranche": false,
       "review_notes_excerpt": "Rubric [trigger, procedure, authority, failure, evidence, dependencies, portability, usefulness, adversarial, effectiveness] = [2, 2, 2, 1, 2, 2, 1, 2, 1, 1] (16/20). Derives navigable task/interaction graphs from authorized PRD goals and personas, including branches, recovery, accessibility, screens index and scoped amendments. Depicting pay/send/delete confirmation is a design instruction, not authority to execute those actions. Optional capability_record adds boundary cons"
+    },
+    {
+      "id": "bm629-agent-skills/authoring-user-guide",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "authoring-user-guide",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "d2e35d05eb06fbec0981fb48b265dbb814f946ee",
+      "complete_package_tree_sha": "0d9eb65a21c52c2028d76e370569d179bb01db30",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "capability_paths": [
+        "technical-writing/tutorials",
+        "technical-writing/reference-manuals"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/authoring-user-guide.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/authoring-user-guide.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-architecture-doc",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-architecture-doc",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "2cbafdf0b8ca06ead40c71518f58eaaeb8f16b26",
+      "complete_package_tree_sha": "add562c2998495af6ddb35a20f230c68b0540d0f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "capability_paths": [
+        "technical-writing/architecture-records",
+        "software-engineering/architecture"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-architecture-doc.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-architecture-doc.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-design-system",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-design-system",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "810f7c2fe684cba14022852f46c5d7a097818fa5",
+      "complete_package_tree_sha": "4430ad5d069c6d611a41debb29f99dc868690e60",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "16/20",
+      "capability_paths": [
+        "ux-ui/design-systems"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-design-system.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-design-system.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-developer-guide",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-developer-guide",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "e03ef02d32aa5a473957156eaac5f75c22f6a70f",
+      "complete_package_tree_sha": "5a5f4daf6bfd52a9987f36cd774542916302bcea",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "capability_paths": [
+        "technical-writing/tutorials"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-developer-guide.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-developer-guide.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "generate"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-hi-fi",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-hi-fi",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "3bacaaf008a3e48954b80db3099e783f687b5abb",
+      "complete_package_tree_sha": "3fe2c648b247bb6672df6d04d6b82556bdf98480",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "rubric_score": "14/20",
+      "capability_paths": [
+        "ux-ui/prototyping"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-hi-fi.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-hi-fi.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-technical-design",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-technical-design",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "52a4eae308b86f89970e0b70d891dc5b489d8e45",
+      "complete_package_tree_sha": "d3adae37d5fcff01bc26785beab1976319fc2883",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "capability_paths": [
+        "software-engineering/architecture"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-technical-design.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-technical-design.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "read"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-user-guide",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-user-guide",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "118b10b741fd73ac4588ab843e79cf024a4f2004",
+      "complete_package_tree_sha": "afbbeaa32f2128388e737d8197ecadadf6d24793",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "capability_paths": [
+        "technical-writing/tutorials",
+        "technical-writing/reference-manuals"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-user-guide.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-user-guide.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "read"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-user-research-prior-art-survey",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "69de5c70be0157135ab0583a5df7563c0b25bc99",
+      "complete_package_tree_sha": "29f648fb0896e3725ae7aa1723bc2a994957aded",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "15/20",
+      "capability_paths": [
+        "ux-ui/user-research",
+        "research/synthesis"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-user-research-prior-art-survey.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-user-research-prior-art-survey.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/user-research-prior-art-survey",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "user-research-prior-art-survey",
+      "source_snapshot_revision": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+      "content_blob_sha": "b118c3444df28405daf2d8ab579f25e5d49cc8f6",
+      "complete_package_tree_sha": "58b99e47ae4a87129df0c010c0381b5726aadc68",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "rubric_score": "14/20",
+      "capability_paths": [
+        "ux-ui/user-research",
+        "research/literature-review"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/user-research-prior-art-survey.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/user-research-prior-art-survey.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "authority_tags": [
+        "external-side-effect"
+      ],
+      "link_basis": "Exact pinned primary SKILL.md inspected 2026-11-09; prior structured static-review and package provenance companions checked. No full-package rereview or current-upstream check.",
+      "license_resolution": "Provenance indicates MIT, but verify full package rights, licenses and notices before copying or modification",
+      "security_resolution": "Prior static review status retained; no scanner/host evidence added",
+      "restriction": "REJECT unchanged; indexed for discovery/critique only. Review companion records unresolved authority/security defects.",
+      "unchanged_use_approved": false
     },
     {
       "id": "cole-medin-skills/opportunity-scan",
@@ -33148,8 +33800,8 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 107,
-  "third_party_identity_links_remaining": 935,
+  "identity_level_capability_links_mapped": 121,
+  "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
@@ -33211,17 +33863,17 @@
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
   "first_party_identity_links_mapped": 47,
-  "third_party_identity_links_mapped": 60,
-  "unmapped_review_identity_count": 935,
+  "third_party_identity_links_mapped": 74,
+  "unmapped_review_identity_count": 921,
   "navigation_population": {
     "mapped_first_party_distinct": 47,
-    "mapped_third_party_distinct": 60,
-    "mapped_total_distinct": 107,
-    "subdomains_with_evidence_linked_examples": 68,
+    "mapped_third_party_distinct": 74,
+    "mapped_total_distinct": 121,
+    "subdomains_with_evidence_linked_examples": 74,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "2026-11-09 107/1042 reviewed identities evidence-mapped; 47 first-party and 60 third-party, 935 remain unmapped. Historical snapshots remain separately dated. No observed behavioral qualifications or unchanged-use approvals.",
+    "note": "2026-11-09 current: 121/1,042 exact-reviewed identities mapped (47 first party, 74 third party), 921 unmapped, 74/247 subdomains with evidence links. Three newly surfaced previously rejected UI/research entries remain unchanged-use blocked; no behavioral approvals.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -33413,5 +34065,30 @@
     "behavioral_tests_run": 0,
     "scanner_results_added": 0,
     "unchanged_use_approvals_added": 0
+  },
+  "technical_ux_extension_20261109": {
+    "date": "2026-11-09",
+    "evidence": "registry/discovery/bm629-14-exact-source-technical-ux-routing-20261109.json",
+    "base_commit": "eca20fcc9dc6e749a1690cb1e3f027b3cd88bdc8",
+    "source_pin": "f6a700ea94a16cf8e0b5e563d4d48d85503e41f6",
+    "prior_mapped": 107,
+    "current_mapped": 121,
+    "reviewed_population": 1042,
+    "prior_unmapped": 935,
+    "current_unmapped": 921,
+    "first_party_mapped": 47,
+    "prior_third_party_mapped": 60,
+    "current_third_party_mapped": 74,
+    "prior_linked_subdomains": 68,
+    "current_linked_subdomains": 74,
+    "new_distinct_reviewed_identities": 14,
+    "new_capability_links": 20,
+    "prior_static_verified": 11,
+    "prior_static_rejected_unchanged": 3,
+    "primary_skill_blobs_read": 14,
+    "behavioral_tests_run": 0,
+    "unchanged_use_approvals": 0,
+    "full_package_static_rereviews": 0,
+    "disclaimer": "Source-pinned SKILL.md and existing review/provenance inspected; no implicit installation, source update/freshness acceptance, runtime egress, or license clearance."
   }
 }
