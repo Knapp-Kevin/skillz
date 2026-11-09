@@ -1,5 +1,17 @@
 # Capability dashboard maintenance
 
+## Current capability crosswalk graphic (2026-11-09)
+
+The top-of-README [current routing SVG](assets/current-capability-mapping.svg) is generated directly from `registry/capability-directory.json`, independent of the historical research-link and Q8 selected-method graphics. It counts **107 of 1,042** distinct exact-reviewed identities mapped and **68 of 247** subdomains with at least one evidence link, leaving **935** reviewed names unmapped. It never treats an exact static review as an installation, security, or behavioral approval. Use Node.js 20+ locally during *authorized repository maintenance*:
+
+```sh
+node scripts/build-current-routing-graphic.mjs --check
+node scripts/build-current-routing-graphic.mjs
+node scripts/build-current-routing-graphic.mjs --check
+```
+
+Review the SVG's legibility and numerical consistency before merging. The [exact 18-source content receipt](../registry/discovery/narrative-18-exact-source-capability-routing-20261109.json) is the new mapping evidence. Do not rewrite the earlier dated Q8 50-method reference chart unless its *own* source ledgers change.
+
 **2026-11-08 authored capability routing:** Three authored original first-party skills were indexed in the separate canonical [capability directory](../registry/capability-directory.json) (89/1,042 mapped, 67/247 linked subdomains). These navigation links do **not** add any Q8 curated study-only method, any original November 2/3 research audit entry, or any behavioral/installation approval. Preserve the generated dashboard's dated 50-study-method snapshots; update graphics only when their actual ledgers change. [Authored routing receipt](../registry/discovery/authored-capability-routing-20261108.json).
 
 The README dashboard is **generated, not hand-redrawn**. It offers a polished SVG summary, an expandable 33-domain table, and a CSV that GitHub and spreadsheet apps can open. The older date-stamped graphs remain historical evidence.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-08",
+  "snapshot_date": "2026-11-09",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -2918,9 +2918,9 @@
     {
       "domain": "fiction-narrative-worldbuilding",
       "display_name": "Fiction / narrative / worldbuilding",
-      "linked_reviewed_examples": 6,
-      "subdomains_with_linked_examples": 7,
-      "name_only_candidate_count": 21,
+      "linked_reviewed_examples": 24,
+      "subdomains_with_linked_examples": 8,
+      "name_only_candidate_count": 1,
       "evidence_preview": [
         {
           "id": "danjdewhurst-story-skills/plot-structure",
@@ -2983,13 +2983,226 @@
           "path": "fiction-narrative-worldbuilding/character",
           "capability_example": "Develop fictional motivations and relationships while distinguishing canon from suggestions",
           "unchanged_use_approved": false
+        },
+        {
+          "id": "danjdewhurst-story-skills/premise-workshop",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/premise-workshop.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/plotting",
+          "capability_example": "Test a fiction premise and logline, stakes, form and story premise before project creation",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/discovery-drafting",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/discovery-drafting.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/prose",
+          "capability_example": "Draft fiction without an outline and retrospectively reconcile story canon",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/editorial-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/editorial-review.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/editing",
+          "capability_example": "Prepare human editorial and authenticity review, rights questions and collaboration workflows",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/line-editing",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/line-editing.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/editing",
+          "capability_example": "Propose line edits, copyedits and read-aloud passes while preserving author voice",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/revision-continuity",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/revision-continuity.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/continuity",
+          "capability_example": "Audit story chronology, character state and named revision passes before polishing",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/character-management",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/character-management.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/character",
+          "capability_example": "Build and maintain character profiles, relationships and character timelines",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/worldbuilding",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/worldbuilding.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/setting-lore",
+          "capability_example": "Develop fictional locations, cultures, systems, trade routes and setting chronology",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/series-continuity",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/series-continuity.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/continuity",
+          "capability_example": "Keep character and world canon consistent across sequels, prequels and companion books",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "danjdewhurst-story-skills/scene-craft",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/danjdewhurst-story-skills/scene-craft.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/plotting",
+          "capability_example": "Plan story scenes and sequels, POV, subtext, opening hooks and cause-effect escalation",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/drafting",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "13/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/drafting.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/prose",
+          "capability_example": "Diagnose first-draft stalls; rejected unchanged for unsupported neuroscience and evidence claims",
+          "unchanged_use_approved": false,
+          "restriction": "REJECT unchanged. Discovery/research-only; evidence and safety defects in verification companion."
+        },
+        {
+          "id": "jwynia-agent-skills/prose-style",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/prose-style.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/prose",
+          "capability_example": "Diagnose diction, sentence rhythm and point-of-view consistency after structure is settled",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/novel-revision",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/novel-revision.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/editing",
+          "capability_example": "Plan manuscript revisions across conceptual, structural and scene layers without cascading breakage",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/revision",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/revision.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/editing",
+          "capability_example": "Sequence developmental, line and copyediting passes with distinct completion criteria",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/character-arc",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/character-arc.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/character",
+          "capability_example": "Design and troubleshoot positive, tragic and static fictional character arcs",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/character-naming",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "13/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/character-naming.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/character",
+          "capability_example": "Generate fiction cast names; rejected unchanged for weak cultural provenance and unverifiable randomness assumptions",
+          "unchanged_use_approved": false,
+          "restriction": "REJECT unchanged. Discovery/research-only; evidence and safety defects in verification companion."
+        },
+        {
+          "id": "jwynia-agent-skills/dialogue",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/dialogue.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/dialogue",
+          "capability_example": "Diagnose fictional dialogue voices, context, subtext and character objectives",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/oblique-worldbuilding",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "16/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/oblique-worldbuilding.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/setting-lore",
+          "capability_example": "Reveal fictional setting through in-world documents with limited perspectives",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
+        },
+        {
+          "id": "jwynia-agent-skills/systemic-worldbuilding",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/jwynia-agent-skills/systemic-worldbuilding.yaml",
+          "source_class": "external-provenance",
+          "path": "fiction-narrative-worldbuilding/setting-lore",
+          "capability_example": "Trace consequences of speculative changes to societies, technology and setting systems",
+          "unchanged_use_approved": false,
+          "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply."
         }
       ],
       "name_only_preview": [
-        "danjdewhurst-story-skills/premise-workshop",
-        "jwynia-agent-skills/drafting",
-        "danjdewhurst-story-skills/discovery-drafting",
-        "danjdewhurst-story-skills/scene-craft"
+        "jwynia-agent-skills/dialogue"
       ],
       "coverage": "partial exact-version static review links; not security/behavioral approval",
       "search_hint": "Fiction / narrative / worldbuilding capability",
@@ -3005,6 +3218,12 @@
           "security_gate": "incomplete",
           "approved_for_use": false
         }
+      ],
+      "name_only_search_note": "Current preview excludes exact source-reviewed items promoted to matched_skill_ids and three cloud-configuration false positives. Historical raw name_only_review_hits_in_scope counts are not refreshed by this narrow tranche.",
+      "false_positive_name_hint_exclusions_20261109": [
+        "aws-agent-toolkit/setting-up-cloudtrail-multi-region",
+        "aws-agent-toolkit/setting-up-cloudwatch-alarm-notifications",
+        "aws-agent-toolkit/setting-up-ec2-instance-profiles"
       ]
     },
     {
@@ -23202,11 +23421,15 @@
           "name": "plotting",
           "capabilities": [
             "Plan and analyze story plot structure",
-            "Audit a story scene sequence for missing causal steps, setup and payoff"
+            "Audit a story scene sequence for missing causal steps, setup and payoff",
+            "Test a fiction premise and logline, stakes, form and story premise before project creation",
+            "Plan story scenes and sequels, POV, subtext, opening hooks and cause-effect escalation"
           ],
           "matched_skill_ids": [
             "danjdewhurst-story-skills/plot-structure",
-            "local-skills/narrative-scene-gap-audit"
+            "local-skills/narrative-scene-gap-audit",
+            "danjdewhurst-story-skills/premise-workshop",
+            "danjdewhurst-story-skills/scene-craft"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -23216,11 +23439,14 @@
             "Audit",
             "a",
             "story",
-            "scene"
+            "scene",
+            "premise workshop",
+            "premise",
+            "workshop",
+            "scene craft",
+            "craft"
           ],
-          "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/premise-workshop"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2,
           "agentskillexchange_source_vetted_entries": 1,
@@ -23230,22 +23456,38 @@
           "id": "prose",
           "name": "prose",
           "capabilities": [
-            "Existing static-reviewed reference for prose"
+            "Existing static-reviewed reference for prose",
+            "Draft fiction without an outline and retrospectively reconcile story canon",
+            "Propose line edits, copyedits and read-aloud passes while preserving author voice",
+            "Plan story scenes and sequels, POV, subtext, opening hooks and cause-effect escalation",
+            "Diagnose first-draft stalls; rejected unchanged for unsupported neuroscience and evidence claims",
+            "Diagnose diction, sentence rhythm and point-of-view consistency after structure is settled"
           ],
           "matched_skill_ids": [
-            "danjdewhurst-story-skills/chapter-writing"
+            "danjdewhurst-story-skills/chapter-writing",
+            "danjdewhurst-story-skills/discovery-drafting",
+            "danjdewhurst-story-skills/line-editing",
+            "danjdewhurst-story-skills/scene-craft",
+            "jwynia-agent-skills/drafting",
+            "jwynia-agent-skills/prose-style"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "prose",
-            "Fiction / narrative / worldbuilding prose"
+            "Fiction / narrative / worldbuilding prose",
+            "discovery drafting",
+            "discovery",
+            "drafting",
+            "line editing",
+            "line",
+            "editing",
+            "scene craft",
+            "scene",
+            "craft",
+            "prose style",
+            "style"
           ],
-          "name_only_review_candidate_ids": [
-            "jwynia-agent-skills/drafting",
-            "danjdewhurst-story-skills/discovery-drafting",
-            "danjdewhurst-story-skills/scene-craft",
-            "jwynia-agent-skills/prose-style"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5
         },
@@ -23253,10 +23495,22 @@
           "id": "editing",
           "name": "editing",
           "capabilities": [
-            "Review structural scene gaps and offer minimal source-linked revision options"
+            "Review structural scene gaps and offer minimal source-linked revision options",
+            "Prepare human editorial and authenticity review, rights questions and collaboration workflows",
+            "Propose line edits, copyedits and read-aloud passes while preserving author voice",
+            "Audit story chronology, character state and named revision passes before polishing",
+            "Diagnose diction, sentence rhythm and point-of-view consistency after structure is settled",
+            "Plan manuscript revisions across conceptual, structural and scene layers without cascading breakage",
+            "Sequence developmental, line and copyediting passes with distinct completion criteria"
           ],
           "matched_skill_ids": [
-            "local-skills/narrative-scene-gap-audit"
+            "local-skills/narrative-scene-gap-audit",
+            "danjdewhurst-story-skills/editorial-review",
+            "danjdewhurst-story-skills/line-editing",
+            "danjdewhurst-story-skills/revision-continuity",
+            "jwynia-agent-skills/prose-style",
+            "jwynia-agent-skills/novel-revision",
+            "jwynia-agent-skills/revision"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -23266,15 +23520,22 @@
             "Review",
             "structural",
             "scene",
-            "gaps"
+            "gaps",
+            "editorial review",
+            "editorial",
+            "review",
+            "line editing",
+            "line",
+            "revision continuity",
+            "revision",
+            "continuity",
+            "prose style",
+            "prose",
+            "style",
+            "novel revision",
+            "novel"
           ],
-          "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/editorial-review",
-            "jwynia-agent-skills/novel-revision",
-            "danjdewhurst-story-skills/line-editing",
-            "danjdewhurst-story-skills/revision-continuity",
-            "jwynia-agent-skills/revision"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 5,
           "agentskillexchange_source_vetted_entries": 3,
@@ -23284,10 +23545,16 @@
           "id": "character",
           "name": "character",
           "capabilities": [
-            "Develop fictional motivations and relationships while distinguishing canon from suggestions"
+            "Develop fictional motivations and relationships while distinguishing canon from suggestions",
+            "Build and maintain character profiles, relationships and character timelines",
+            "Design and troubleshoot positive, tragic and static fictional character arcs",
+            "Generate fiction cast names; rejected unchanged for weak cultural provenance and unverifiable randomness assumptions"
           ],
           "matched_skill_ids": [
-            "local-skills/character-motivation-interview"
+            "local-skills/character-motivation-interview",
+            "danjdewhurst-story-skills/character-management",
+            "jwynia-agent-skills/character-arc",
+            "jwynia-agent-skills/character-naming"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -23297,12 +23564,15 @@
             "Develop",
             "fictional",
             "motivations",
-            "and"
+            "and",
+            "character management",
+            "management",
+            "character arc",
+            "arc",
+            "character naming",
+            "naming"
           ],
           "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/character-management",
-            "jwynia-agent-skills/character-arc",
-            "jwynia-agent-skills/character-naming",
             "jwynia-agent-skills/dialogue"
           ],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
@@ -23311,16 +23581,18 @@
         {
           "id": "dialogue",
           "name": "dialogue",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Diagnose fictional dialogue voices, context, subtext and character objectives"
+          ],
+          "matched_skill_ids": [
+            "jwynia-agent-skills/dialogue"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "dialogue",
             "Fiction / narrative / worldbuilding dialogue"
           ],
-          "name_only_review_candidate_ids": [
-            "jwynia-agent-skills/dialogue"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 1
         },
@@ -23328,24 +23600,28 @@
           "id": "setting-lore",
           "name": "setting/lore",
           "capabilities": [
-            "Diagnose a fictional setting's cultures, systems, and internal consequences"
+            "Diagnose a fictional setting's cultures, systems, and internal consequences",
+            "Develop fictional locations, cultures, systems, trade routes and setting chronology",
+            "Reveal fictional setting through in-world documents with limited perspectives",
+            "Trace consequences of speculative changes to societies, technology and setting systems"
           ],
           "matched_skill_ids": [
-            "jwynia-agent-skills/worldbuilding"
+            "jwynia-agent-skills/worldbuilding",
+            "danjdewhurst-story-skills/worldbuilding",
+            "jwynia-agent-skills/oblique-worldbuilding",
+            "jwynia-agent-skills/systemic-worldbuilding"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "setting/lore",
-            "Fiction / narrative / worldbuilding setting/lore"
+            "Fiction / narrative / worldbuilding setting/lore",
+            "worldbuilding",
+            "oblique worldbuilding",
+            "oblique",
+            "systemic worldbuilding",
+            "systemic"
           ],
-          "name_only_review_candidate_ids": [
-            "aws-agent-toolkit/setting-up-cloudtrail-multi-region",
-            "danjdewhurst-story-skills/worldbuilding",
-            "jwynia-agent-skills/oblique-worldbuilding",
-            "aws-agent-toolkit/setting-up-cloudwatch-alarm-notifications",
-            "aws-agent-toolkit/setting-up-ec2-instance-profiles",
-            "jwynia-agent-skills/systemic-worldbuilding"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 7
         },
@@ -23371,10 +23647,14 @@
           "id": "continuity",
           "name": "continuity",
           "capabilities": [
-            "Detect source-cited narrative timeline and continuity conflicts"
+            "Detect source-cited narrative timeline and continuity conflicts",
+            "Audit story chronology, character state and named revision passes before polishing",
+            "Keep character and world canon consistent across sequels, prequels and companion books"
           ],
           "matched_skill_ids": [
-            "local-skills/narrative-scene-gap-audit"
+            "local-skills/narrative-scene-gap-audit",
+            "danjdewhurst-story-skills/revision-continuity",
+            "danjdewhurst-story-skills/series-continuity"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -23384,12 +23664,13 @@
             "Detect",
             "source-cited",
             "narrative",
-            "timeline"
+            "timeline",
+            "revision continuity",
+            "revision",
+            "series continuity",
+            "series"
           ],
-          "name_only_review_candidate_ids": [
-            "danjdewhurst-story-skills/revision-continuity",
-            "danjdewhurst-story-skills/series-continuity"
-          ],
+          "name_only_review_candidate_ids": [],
           "name_only_candidate_basis": "filename-token discovery hint, with precision exclusions where apparent. This is NOT semantic suitability, security/rights acceptance, or install approval. Read review and source evidence.",
           "name_only_review_hits_in_scope": 2,
           "curated_q8_study_references": [
@@ -31010,6 +31291,99 @@
       "review_notes_excerpt": "Rubric: trigger precision 2, procedural clarity 2, authority and safety 2, failure handling 2, evidence discipline 2, dependency coherence 1, portability honesty 1, usefulness/differentiation 2, adversarial resilience 2, effectiveness design 2. Complete package tree reviewed; behavioral validation not run. Issue #387.\" "
     },
     {
+      "id": "danjdewhurst-story-skills/character-management",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "character-management",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "7c927ca9a3772af6723cb4deb9c80976cd23111e",
+      "complete_package_tree_sha": "484fa867f53aa2f0de0849b2812e1457f44e4085",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/character"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/character-management.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/character-management.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/discovery-drafting",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "discovery-drafting",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "f4df71552c2a0860ad43bd925c50b287f902395b",
+      "complete_package_tree_sha": "0c26b03b7b2b3f319b62bb5ac5b10e98e4d0580e",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/prose"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/discovery-drafting.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/discovery-drafting.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/editorial-review",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "editorial-review",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "43c6cd2a68884c7e6430d01010e3aaa316fa4ae1",
+      "complete_package_tree_sha": "d07b96fa8a35b782307984a6d69e3f7ab282a442",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/editing"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/editorial-review.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/editorial-review.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/line-editing",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "line-editing",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "c2716fdc33d654bb4976d6d6934d3f3ecc044e16",
+      "complete_package_tree_sha": "e0c1cb107bfe838b72c0e858d20682abd5e50364",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/editing",
+        "fiction-narrative-worldbuilding/prose"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/line-editing.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/line-editing.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "danjdewhurst-story-skills/plot-structure",
       "source_id": "danjdewhurst-story-skills",
       "skill_name": "plot-structure",
@@ -31026,6 +31400,123 @@
       "link_basis": "individual existing exact-version static verified record plus narrow task fit",
       "license_resolution": "Not established by crosswalk: inspect per-package controlling terms and notices",
       "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
+    },
+    {
+      "id": "danjdewhurst-story-skills/premise-workshop",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "premise-workshop",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "45249e44c8d6b54ea5e5c00289c8b3b0583b9f2c",
+      "complete_package_tree_sha": "a8f26ca8409ba8bb62555c55c1a27db47189058f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/plotting"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/premise-workshop.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/premise-workshop.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/revision-continuity",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "revision-continuity",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "de657596fec21085429d9218cc5a3a8a9d480c18",
+      "complete_package_tree_sha": "2ebd3fb7a3107b707c41b233a86512b19951b8f6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/continuity",
+        "fiction-narrative-worldbuilding/editing"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/revision-continuity.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/revision-continuity.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/scene-craft",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "scene-craft",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "9052a835ca9d2a73d479a9481deb9c0a13c1165c",
+      "complete_package_tree_sha": "2df7b38e5e07b1f997414d3809626cda79449f16",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/plotting",
+        "fiction-narrative-worldbuilding/prose"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/scene-craft.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/scene-craft.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/series-continuity",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "series-continuity",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "f3c04d7ad0d2e7967f15a5af48e017d6fde7daf8",
+      "complete_package_tree_sha": "642a07505b808f0c565efe2b90ed670592b9d4bd",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/continuity"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/series-continuity.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/series-continuity.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "danjdewhurst-story-skills/worldbuilding",
+      "source_id": "danjdewhurst-story-skills",
+      "skill_name": "worldbuilding",
+      "source_snapshot_revision": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "content_blob_sha": "2f8244937e31ff30e640de0623ab0b24f89b6ee3",
+      "complete_package_tree_sha": "a40fa9bcbf1670fabe80b2ec851a4aa02d45a494",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/setting-lore"
+      ],
+      "evidence_path": "registry/verification/danjdewhurst-story-skills/worldbuilding.yaml",
+      "provenance_path": "registry/skills/danjdewhurst-story-skills/worldbuilding.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
     },
     {
       "id": "david-ondrej-skills/teach",
@@ -31061,6 +31552,98 @@
       "restriction": "reference/analysis only; unchanged adoption NOT eligible"
     },
     {
+      "id": "jwynia-agent-skills/character-arc",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "character-arc",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "64be1ee9e1b51c5c80fca2171f4e65edf9c8d60b",
+      "complete_package_tree_sha": "2c2307e4cb2f8bb77931ed95b4af6c928ea332cd",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/character"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/character-arc.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/character-arc.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/character-naming",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "character-naming",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "29b2a2cdff50b85cd321e007eb7eab4159a31a9b",
+      "complete_package_tree_sha": "15b80e43f725fc90b8ed9a045bc00bbd40b312a8",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "static_score": "13/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/character"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/character-naming.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/character-naming.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "REJECT unchanged. Discovery/research-only; evidence and safety defects in verification companion.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/dialogue",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "dialogue",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "fcccfad1a39a7d8ad3ebd5d2ff1a64ec5f985f15",
+      "complete_package_tree_sha": "33724e2317ae093d4db0988d2ab243cb69d2898e",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/dialogue"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/dialogue.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/dialogue.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/drafting",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "drafting",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "22cc7c57b0b6328ee7e1fe536a9174b6ceef8824",
+      "complete_package_tree_sha": "2ee33df283a4ec6f0deca370ce83fdad886d1098",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "static_score": "13/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/prose"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/drafting.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/drafting.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "REJECT unchanged. Discovery/research-only; evidence and safety defects in verification companion.",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "jwynia-agent-skills/game-facilitator",
       "source_id": "jwynia-agent-skills",
       "skill_name": "game-facilitator",
@@ -31088,6 +31671,122 @@
       ],
       "evidence_path": "registry/verification/jwynia-agent-skills/interactive-fiction.yaml",
       "license_resolution": "consult registry/skills companion; not established by this capability mapping"
+    },
+    {
+      "id": "jwynia-agent-skills/novel-revision",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "novel-revision",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "7142f6c96ff5347d1594361942276984a082ba11",
+      "complete_package_tree_sha": "90100c09998de7e86033db8bf02fcdac496a9fcd",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "16/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/editing"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/novel-revision.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/novel-revision.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/oblique-worldbuilding",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "oblique-worldbuilding",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "1fa00168f8bec2635b16af256844c22e234e7992",
+      "complete_package_tree_sha": "65dda21468bdeb72b2de5781e0661403a20e3e57",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "16/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/setting-lore"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/oblique-worldbuilding.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/oblique-worldbuilding.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/prose-style",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "prose-style",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "076d4fbd0847ccc1c3f61cf97557a09cc9f71925",
+      "complete_package_tree_sha": "dddeec7961592581d54463ea955aefda99761a12",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/prose",
+        "fiction-narrative-worldbuilding/editing"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/prose-style.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/prose-style.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/revision",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "revision",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "f91e88bdc8ae435ff58c8dfda2fa09974939effa",
+      "complete_package_tree_sha": "80e98afc0ad2367c1fac6dec26a32bef010760a2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "16/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/editing"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/revision.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/revision.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "jwynia-agent-skills/systemic-worldbuilding",
+      "source_id": "jwynia-agent-skills",
+      "skill_name": "systemic-worldbuilding",
+      "source_snapshot_revision": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32",
+      "content_blob_sha": "2f4ab1083f583989c8fd105ec722688b082d8e3b",
+      "complete_package_tree_sha": "e4d96729e6a2486be90d7767b137b7172a33a849",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "fiction-narrative-worldbuilding/setting-lore"
+      ],
+      "evidence_path": "registry/verification/jwynia-agent-skills/systemic-worldbuilding.yaml",
+      "provenance_path": "registry/skills/jwynia-agent-skills/systemic-worldbuilding.yaml",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Previously individually structured exact-source review plus independently read exact pinned SKILL.md and narrow capability match (2026-11-09). Full package remains governed by earlier review; no new qualification.",
+      "license_resolution": "Upstream provenance reports MIT; confirm package/child rights and notices before copying or use",
+      "security_resolution": "Existing static disposition persists; no new scanner or live host test",
+      "restriction": "Reference/discovery only; separate authority, security, rights, and behavior gates apply.",
+      "unchanged_use_approved": false
     },
     {
       "id": "jwynia-agent-skills/worldbuilding",
@@ -32449,8 +33148,8 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 89,
-  "third_party_identity_links_remaining": 953,
+  "identity_level_capability_links_mapped": 107,
+  "third_party_identity_links_remaining": 935,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
@@ -32512,17 +33211,17 @@
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
   "first_party_identity_links_mapped": 47,
-  "third_party_identity_links_mapped": 42,
-  "unmapped_review_identity_count": 953,
+  "third_party_identity_links_mapped": 60,
+  "unmapped_review_identity_count": 935,
   "navigation_population": {
     "mapped_first_party_distinct": 47,
-    "mapped_third_party_distinct": 42,
-    "mapped_total_distinct": 89,
-    "subdomains_with_evidence_linked_examples": 67,
+    "mapped_third_party_distinct": 60,
+    "mapped_total_distinct": 107,
+    "subdomains_with_evidence_linked_examples": 68,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "November 8 current crosswalk: 89 mapped distinct of 1,042 reviewed names (47 first-party, 995 third-party); 953 remaining unmapped; 67/247 subdomains linked. Static/source evidence only.",
+    "note": "2026-11-09 107/1042 reviewed identities evidence-mapped; 47 first-party and 60 third-party, 935 remain unmapped. Historical snapshots remain separately dated. No observed behavioral qualifications or unchanged-use approvals.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -32688,5 +33387,31 @@
     "behavioral_validations_added": 0,
     "unchanged_use_approvals_added": 0,
     "external_source_material_imported": false
+  },
+  "creative_capability_extension_20261109": {
+    "date": "2026-11-09",
+    "evidence": "registry/discovery/narrative-18-exact-source-capability-routing-20261109.json",
+    "source_pins": {
+      "danjdewhurst_story_skills": "b113a8298ae5deb37929a5b1d0cc1536d98a508c",
+      "jwynia_agent_skills": "e02ec7e226a6e4f8419fd3b88a1d8e472d421b32"
+    },
+    "mapped_before": 89,
+    "mapped_after": 107,
+    "third_party_mapped_before": 42,
+    "third_party_mapped_after": 60,
+    "governed_review_population": 1042,
+    "unmapped_before": 953,
+    "unmapped_after": 935,
+    "linked_subdomains_before": 67,
+    "linked_subdomains_after": 68,
+    "distinct_identities_added": 18,
+    "verified_source_dispositions": 16,
+    "rejected_unchanged_source_dispositions": 2,
+    "cross_domain_links_added": 22,
+    "false_positive_lexical_hints_removed": 3,
+    "source_blob_read_scope": "18 exact pinned primary SKILL.md source blobs inspected, existing verification/provenance companions checked. Prior full-package static review decisions retained unchanged.",
+    "behavioral_tests_run": 0,
+    "scanner_results_added": 0,
+    "unchanged_use_approvals_added": 0
   }
 }

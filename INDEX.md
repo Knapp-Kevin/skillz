@@ -1,5 +1,7 @@
 # Skill Catalog Snapshot
 
+**Current navigation checkpoint (November 9, 2026):** [The canonical capability directory](registry/capability-directory.json) now links **107 of 1,042** governed exact-version review identities (**47 first-party, 60 third-party**) to **68/247** subdomains, leaving **935** unmapped. A [new 18-identity creative writing tranche](docs/reviews/2026-11-09-narrative-18-verified-capability-links.md) preserves 16 verified and **2 rejected-unchanged** source decisions and removes three AWS false-positive fiction hits. [Current chart](docs/assets/current-capability-mapping.svg). The November 5 checkpoint below remains historical; no new behavioral or unchanged-use approval.
+
 ## Current repository and content-review checkpoint: November 5, 2026
 
 **0 open PRs, 4 open issues** (#402, #544, #588, #599). [Merged #703](https://github.com/Knapp-Kevin/skillz/pull/703) shipped 39 reviewed source repairs, with [44/44 exact first-party static reviews current](registry/review-freshness/first-party-44-exact-source-20261105.json). The [freshness contract](docs/static-review-and-freshness.md) preserves original review dates and flags changed versions. No new scanner/behavioral/use approval; 86/1,039 capability links and 50 Q8 study references unchanged.

@@ -1,5 +1,7 @@
 # System State
 
+**Current November 9 capability checkpoint:** [Canonical directory](../registry/capability-directory.json) now maps **107/1,042** governed review identities (47 first-party + 60 third-party) across **68/247** subdomains, with **935** still unmapped. [Exact-source 18-method creative tranche](reviews/2026-11-09-narrative-18-verified-capability-links.md), [machine receipt](../registry/discovery/narrative-18-exact-source-capability-routing-20261109.json), and [current source-derived mapping graphic](assets/current-capability-mapping.svg) distinguish this updated navigation stage from dated Q8 study and scanner snapshots. Sixteen old static-verified and two old rejected-unchanged records were mapped, not regraded. No host behavioral tests, license permissions, or unchanged-use approvals were added; old November 5 security/freshness checkpoint below is historical.
+
 ## Latest source review/repository status: November 5, 2026
 
 **0 open PRs and 4 open issues (#402, #544, #588, #599).** [Merged #703](https://github.com/Knapp-Kevin/skillz/pull/703) included 39 repaired first-party source packages. [44/44 current first-party review fingerprints](../registry/review-freshness/first-party-44-exact-source-20261105.json) match their original reviews. The [static-first freshness policy](static-review-and-freshness.md) replaces universal hosted scanning; historic scanner states and zero observed host approvals are preserved. Six bounded defect issues closed after implementation. Earlier counts below are historical.

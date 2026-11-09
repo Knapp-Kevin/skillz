@@ -1,5 +1,25 @@
 {
   "schema_version": 1,
+  "current_capability_mapping_20261109": {
+    "as_of": "2026-11-09",
+    "source": "registry/capability-directory.json",
+    "source_evidence": "registry/discovery/narrative-18-exact-source-capability-routing-20261109.json",
+    "reviewed_identity_population": 1042,
+    "mapped_distinct_review_identities": 107,
+    "mapped_first_party": 47,
+    "mapped_third_party": 60,
+    "unmapped_review_identities": 935,
+    "subdomains_with_evidence": 68,
+    "subdomains_total": 247,
+    "new_distinct_review_identity_links": 18,
+    "new_capability_path_links": 22,
+    "prior_verified_review_dispositions": 16,
+    "prior_rejected_unchanged_review_dispositions": 2,
+    "false_positive_lexical_hints_removed": 3,
+    "new_behaviorally_validated_packages": 0,
+    "new_unchanged_use_approvals": 0,
+    "note": "Historical Q8 50 study references and 2026-11-05 first-party/security counts are separate dated populations. This current mapping snapshot does not certify installation, safety or behavioral results."
+  },
   "static_review_and_hygiene_20261105": {
     "date": "2026-11-05",
     "source_pr": 703,
