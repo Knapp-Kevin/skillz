@@ -1,5 +1,7 @@
 # Skill Curation Queue
 
+**Current capability mapping and open backlog (November 9, 2026):** [Creative-writing exact-source tranche](docs/reviews/2026-11-09-narrative-18-verified-capability-links.md) linked **18** previously unmapped reviewed identities across **22** capability routes; **935/1,042** governed review identities remain unmapped, and **68/247** subdomains now have evidence links. **16 prior VERIFIED, 2 prior REJECTED** (drafting neuroscience/evidence and character naming provenance/randomness). They remain discovery-only and unchanged-use rejected. Three AWS “setting-up” lexical false positives removed from fiction. [Machine receipt](registry/discovery/narrative-18-exact-source-capability-routing-20261109.json). No new scanner, behavioral validation, or use approval; source discovery beyond governed records remains open.
+
 ## Current source security/freshness checkpoint: November 5, 2026
 
 **0 open PRs, 4 open issues** (#402, #544, #588, #599). [PR #703](https://github.com/Knapp-Kevin/skillz/pull/703) merged 39 passive source repairs and six bounded source-defect issues closed after implementation. [44/44 current first-party static reviewed versions](registry/review-freshness/first-party-44-exact-source-20261105.json) match exact fingerprints; unchanged pins retain dates, changed content requires re-review. [Current static review policy](docs/static-review-and-freshness.md) does not require hosted scans. Historical scanner findings and separate behavior/rights limitations remain truthful.
