@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="410" viewBox="0 0 1000 410" role="img" aria-labelledby="chartTitle chartDesc">
+<title id="chartTitle">Skillz current capability mapping: 107 of 1042 reviewed skill identities mapped and 68 of 247 subdomains linked</title>
+<desc id="chartDesc">Current as of 2026-11-09. 47 first-party and 60 third-party reviewed skill identities linked to capability areas. 935 reviewed identities still need mapping. This shows discoverability, not install or behavioral approval.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091727"/><stop offset="1" stop-color="#18253e"/></linearGradient><linearGradient id="routeFill" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2aa7b2"/><stop offset="1" stop-color="#7a79dd"/></linearGradient></defs>
+<rect x="1" y="1" width="998" height="408" rx="20" fill="url(#bg)" stroke="#354761" stroke-width="2"/>
+<text x="64" y="49" fill="#5fcad5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="2" font-weight="800">SKILLZ · CAPABILITY NAVIGATION</text>
+<text x="64" y="87" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="750">Where the reviewed skills map</text>
+<text x="934" y="49" fill="#acb9ce" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" text-anchor="end">Updated 2026-11-09</text>
+<text x="64" y="117" fill="#a5b7cb" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Links to evidence, not approvals to install, execute, or share data.</text>
+<text x="64" y="165" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="650">Reviewed skill identities mapped</text>
+<text x="935" y="165" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" text-anchor="end" font-weight="700">107 / 1,042</text>
+<rect x="64" y="184" width="752" height="16" rx="8" fill="#25344a"/>
+<rect x="64" y="184" width="77.22" height="16" rx="8" fill="url(#routeFill)"/>
+<text x="835" y="199" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">10.3%</text>
+<text x="64" y="253" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="650">Subdomains with evidence links</text>
+<text x="935" y="253" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" text-anchor="end" font-weight="700">68 / 247</text>
+<rect x="64" y="272" width="752" height="16" rx="8" fill="#25344a"/>
+<rect x="64" y="272" width="207.03" height="16" rx="8" fill="url(#routeFill)"/>
+<text x="835" y="287" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">27.5%</text>
+<line x1="64" y1="326" x2="935" y2="326" stroke="#3c4d63"/>
+<text x="64" y="358" fill="#dce7f7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600">47 first-party + 60 external reviewed identities mapped</text>
+<text x="64" y="385" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">935 reviewed identities remain unmapped · study-only references tracked separately</text>
+</svg>
