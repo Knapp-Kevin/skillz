@@ -2,6 +2,9 @@
 
 # 🛠️ skillz
 
+**Skill Mason catalog handoff (November 17, 2026):** [The complete pinned inventory/export](registry/exports/skill-mason-v1/README.md) exposes **61,326 G1–G3 path observations across 942 repositories**, the separately overlapping **4,813-path frontier**, all **170 discovery artifacts**, and **all 1,043 paired-companion review records**. The 1,043 figure is a governed review subset, **not the library size**. All 921 unmapped review records remain present. Exact source hashes, original evidence and review/rights/authority limits are preserved; import readiness does not establish generation eligibility. [Readiness evidence](docs/reviews/2026-11-17-skill-mason-catalog-readiness.md).
+
+
 **November 17, 2026 capability-quality checkpoint:** The new original [Develop a Melodic Motif](skills/authored/develop-melodic-motif/SKILL.md) package adds a bounded tool-independent melody workflow, original examples and explicit constraint checks. Complete-package static review: **18/20**; one observed text-agent pilot: **incomplete behavioral qualification**, with no audition or production-effectiveness claim. Current navigation is **122/1,043 reviewed identities** (**48 first-party + 74 third-party mapped**), **921 unmapped**, **75/247 linked subdomains**. [Review and comparison](docs/reviews/2026-11-17-melody-and-capability-scope.md) · [Outcome register](registry/capability-outcome-register.json) · [13 new proposed domains / 65 subdomains and four music extensions](registry/capability-scope-extensions-20261117.json). The 25 earlier provisional domains remain tracked; proposals do not count as qualified coverage. All older checkpoints below are historical.
 
 
