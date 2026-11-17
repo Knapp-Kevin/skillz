@@ -1527,6 +1527,41 @@
         ]
       },
       "notes": "2026-11-08 exact static review of three-file first-party MIT authored package (tree a8d9937069d666203c7c3b4739117cd56516ad07). 18/20 static semantic evidence; Original interview-driven fictional character development; separates canon from suggestions without overwriting source or diagnosing real people. Tested agent-host behavior NOT RUN. Root license applies only to original text; external Writer Story Tools applications remain independent rights-restricted references."
+    },
+    {
+      "skill_name": "develop-melodic-motif",
+      "local_path": "skills/authored/develop-melodic-motif/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "daa9645531208e3f1df730792b984ac2afac5a03",
+      "complete_package_tree_sha": "3342392bab431158deae93792dc87efe23e45397",
+      "verification_status": "verified",
+      "validation_status": "incomplete",
+      "behavioral_evidence_path": "docs/evals/2026-11-17-melody-motif-bounded-pilot.md",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "music-composition",
+          "planning",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "design",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "safety-bounded",
+          "human-review"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete original three-file MIT package inspected; no required executable or account. Source comparison and dimensional rationales in docs/reviews/2026-11-17-melody-and-capability-scope.md. No security scanner execution or unchanged-use approval."
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Skill Companion Metadata Contract
 
+**Behavioral state precision:** Use `validation_status: incomplete` when an exact-version observed pilot exists but does not satisfy representative validation. Link the actual case, host/scope and limitations. Reserve `not-run` for no observed execution, and `validated` for acceptance under the verification standard. A bounded text-only case does not establish musical, professional or production effectiveness.
+
 **Machine readability:** Companions must be valid YAML with unique mapping keys. Quote prose containing YAML syntax such as `: `, or use a block scalar. Companions must be paired and declare matching source/skill identities; aliases may differ from upstream names. [`scripts/qa/check-registry-yaml.py`](../scripts/qa/check-registry-yaml.py) is an explicitly invoked offline maintainer check (Python 3 and PyYAML), not a consumer prerequisite or behavioral test.
 
 **Current-review contract:** [Static review and freshness](static-review-and-freshness.md) distinguishes exact reviewed blob/tree and original review date from a later hash-check date. A materially changed tracked package is `needs-re-review` until inspected; retain its earlier review as historical evidence. Never infer scanner PASS or behavioral validation from textual review.

@@ -23,9 +23,9 @@ Current first-party authority and pulse repairs are tracked in [#415](https://gi
 
 The current published reference surface includes:
 
-- **47 first-party user-facing skills** under `skills/`, with 47/47 provenance companions;
+- **48 first-party user-facing skills** under `skills/`, with 48/48 provenance companions;
 - **12 intact pinned third-party corpora** under `skills/sources/<source-id>/`, contributing to the broad 500+ reference surface;
-- **995 persisted third-party exact-version semantic review companions**, with individual dispositions and limits (1,042 total including first-party).
+- **995 persisted third-party exact-version semantic review companions**, with individual dispositions and limits (1,043 total including first-party).
 
 These figures describe inventory and persisted evidence, **not** universal security approval or behavioral validation. Exact source-family denominators and current decisions belong to the living curation ledger.
 

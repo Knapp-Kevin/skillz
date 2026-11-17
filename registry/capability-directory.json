@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-09",
+  "snapshot_date": "2026-11-17",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -3580,12 +3580,38 @@
     {
       "domain": "music-composition",
       "display_name": "Music composition",
-      "linked_reviewed_examples": 0,
-      "subdomains_with_linked_examples": 0,
+      "linked_reviewed_examples": 1,
+      "subdomains_with_linked_examples": 1,
       "name_only_candidate_count": 0,
-      "evidence_preview": [],
+      "evidence_preview": [
+        {
+          "id": "local-skills/develop-melodic-motif",
+          "source_id": "local-skills",
+          "skill_name": "develop-melodic-motif",
+          "content_blob_sha": "daa9645531208e3f1df730792b984ac2afac5a03",
+          "complete_package_tree_sha": "3342392bab431158deae93792dc87efe23e45397",
+          "verification_status": "verified",
+          "validation_status": "incomplete",
+          "static_score": "18/20",
+          "capability_paths": [
+            "music-composition/melody"
+          ],
+          "evidence_path": "registry/verification/local-skills/develop-melodic-motif.yaml",
+          "skill_path": "skills/authored/develop-melodic-motif/SKILL.md",
+          "provenance_path": "registry/skills/local-skills/develop-melodic-motif.yaml",
+          "source_license": "MIT original instructions and example events",
+          "source_role": "first-party",
+          "source_class": "first-party-authored",
+          "authority_tags": [
+            "generate-only"
+          ],
+          "link_basis": "Exact complete-package static review and bounded constrained-melody outcome",
+          "restriction": "Text-only pilot incomplete; no production musical effectiveness or installation approval",
+          "unchanged_use_approved": false
+        }
+      ],
       "name_only_preview": [],
-      "coverage": "partial unassessed",
+      "coverage": "partial-linked-evidence; one bounded melody method, not complete music coverage",
       "search_hint": "Music composition capability",
       "not_found_means": "unknown; broaden to name index and discovery manifests",
       "source_vetted_reference_count": 0,
@@ -4692,7 +4718,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1042,
+  "governed_identity_denominator": 1043,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -24658,9 +24684,13 @@
         {
           "id": "melody",
           "name": "melody",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Develop a constrained melodic motif into explicit note-event phrase alternatives with timing, range and locked-material checks"
+          ],
+          "matched_skill_ids": [
+            "local-skills/develop-melodic-motif"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "melody",
             "Music composition melody"
@@ -33798,15 +33828,40 @@
       "link_basis": "existing exact-version static review and narrow procedural reference fit",
       "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
+    },
+    {
+      "id": "local-skills/develop-melodic-motif",
+      "source_id": "local-skills",
+      "skill_name": "develop-melodic-motif",
+      "content_blob_sha": "daa9645531208e3f1df730792b984ac2afac5a03",
+      "complete_package_tree_sha": "3342392bab431158deae93792dc87efe23e45397",
+      "verification_status": "verified",
+      "validation_status": "incomplete",
+      "static_score": "18/20",
+      "capability_paths": [
+        "music-composition/melody"
+      ],
+      "evidence_path": "registry/verification/local-skills/develop-melodic-motif.yaml",
+      "skill_path": "skills/authored/develop-melodic-motif/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/develop-melodic-motif.yaml",
+      "source_license": "MIT original instructions and example events",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "generate-only"
+      ],
+      "link_basis": "Exact complete-package static review and bounded constrained-melody outcome",
+      "restriction": "Text-only pilot incomplete; no production musical effectiveness or installation approval",
+      "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 121,
+  "identity_level_capability_links_mapped": 122,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 47,
-    "known_total_governed_review_records": 1042,
+    "known_first_party_skill_records": 48,
+    "known_total_governed_review_records": 1043,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -33862,18 +33917,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 47,
+  "first_party_identity_links_mapped": 48,
   "third_party_identity_links_mapped": 74,
   "unmapped_review_identity_count": 921,
   "navigation_population": {
-    "mapped_first_party_distinct": 47,
+    "mapped_first_party_distinct": 48,
     "mapped_third_party_distinct": 74,
-    "mapped_total_distinct": 121,
-    "subdomains_with_evidence_linked_examples": 74,
+    "mapped_total_distinct": 122,
+    "subdomains_with_evidence_linked_examples": 75,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "2026-11-09 current: 121/1,042 exact-reviewed identities mapped (47 first party, 74 third party), 921 unmapped, 74/247 subdomains with evidence links. Three newly surfaced previously rejected UI/research entries remain unchanged-use blocked; no behavioral approvals.",
+    "note": "2026-11-17: 122/1,043 reviewed identities linked, 75/247 subdomains; one new original constrained-melody package with incomplete text-agent pilot, not full music-domain qualification.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -34090,5 +34145,11 @@
     "unchanged_use_approvals": 0,
     "full_package_static_rereviews": 0,
     "disclaimer": "Source-pinned SKILL.md and existing review/provenance inspected; no implicit installation, source update/freshness acceptance, runtime egress, or license clearance."
-  }
+  },
+  "taxonomy_scope_extensions": {
+    "path": "registry/capability-scope-extensions-20261117.json",
+    "status": "proposed-not-qualified",
+    "note": "13 new proposed domains and 65 subdomains plus four music subdomain proposals, alongside 25 older provisional domains; no automatic promotion."
+  },
+  "essential_outcome_register": "registry/capability-outcome-register.json"
 }

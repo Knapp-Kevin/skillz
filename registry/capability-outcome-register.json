@@ -1,0 +1,2967 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-17",
+  "scope": "Recognized directory subdomains; scope extensions remain separate until qualified.",
+  "coverage_rule": "A linked review is navigation evidence, not proof an essential workflow is served. Null means not assessed.",
+  "rows": [
+    {
+      "path": "software-engineering/frontend",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Review React component composition patterns within a pinned static reference"
+      ],
+      "governed_review_links": [
+        "vercel-agent-skills/vercel-composition-patterns",
+        "anthropic-skills/frontend-design"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/backend",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Inspect C# async code for deadlocks, cancellation and return-type conventions",
+        "Extract optional .NET architecture and code-review checks",
+        "Extract timezone/DST code patterns after validating current tzdata"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/mobile",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/desktop",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/apis",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/architecture",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Evaluate codebase architecture and design tradeoffs",
+        "Review React component composition patterns within a pinned static reference",
+        "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
+        "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+        "Plan feature-level implementation design with traceable requirements, alternatives and failure paths",
+        "Assess feature technical designs for implementability, failure handling, testing and rollout"
+      ],
+      "governed_review_links": [
+        "vercel-agent-skills/vercel-composition-patterns",
+        "mattpocock-skills/codebase-design",
+        "bm629-agent-skills/authoring-architecture-doc",
+        "bm629-agent-skills/reviewing-architecture-doc",
+        "bm629-agent-skills/authoring-technical-design",
+        "bm629-agent-skills/reviewing-technical-design"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/refactoring",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/build-tooling",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/developer-experience",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Draft evidence-grounded AGENTS.md guidance without unauthorized root writes",
+        "Validate conventional branch names separately from checkout or remote pull",
+        "Draft change-intent commit messages without inventing rationale or executing commits"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "software-engineering/maintenance",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Compare code against standards and specification evidence",
+        "Review code quality using severity, tests and evidence rather than rubber-stamping",
+        "Diagnose repository problems, monitor changes, and triage technical debt with evidence"
+      ],
+      "governed_review_links": [
+        "local-skills/agent-home-doctor",
+        "local-skills/agent-postmortem",
+        "local-skills/github-pulse",
+        "local-skills/repo-doctor",
+        "local-skills/repo-pulse",
+        "local-skills/todo-harvester",
+        "addyosmani-agent-skills/code-review-and-quality",
+        "mattpocock-skills/code-review"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/unit-integration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Design NUnit fixture and parameterized unit tests",
+        "Compare TUnit lifecycle, assertions and migration patterns",
+        "Design xUnit facts, theories and fixture isolation",
+        "Design JUnit Jupiter parameterized and nested tests",
+        "Review Jest mocking, async tests and snapshot assertions"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/end-to-end",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Reference browser QA methods; unchanged skill rejected due unapproved setup and side effects",
+        "Inspect browser snapshots and network failures with explicit session and action scope"
+      ],
+      "governed_review_links": [
+        "addyosmani-agent-skills/browser-testing-with-devtools"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/performance",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/accessibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/compatibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/fuzz-property-testing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/regression",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "testing/test-strategy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for test strategy"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-test-plan"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/agent-architecture",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/tool-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for tool design"
+      ],
+      "governed_review_links": [
+        "anthropic-skills/mcp-builder"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/mcp-clients-servers",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Track MCP ecosystem changes; client/server implementation requires a separate fit check"
+      ],
+      "governed_review_links": [
+        "local-skills/mcp-pulse"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/orchestration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/permissions",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Inspect MCP integrations and agent access permissions before connection"
+      ],
+      "governed_review_links": [
+        "local-skills/mcp-vetting",
+        "local-skills/permissions-review"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/evaluation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Reference evaluation methods; default external LLM judge/trace egress not approved",
+        "Analyze failed agent sessions and propose falsifiable improvements",
+        "Compare prompt-injection, bias and privacy risks in a supplied prompt"
+      ],
+      "governed_review_links": [
+        "local-skills/agent-postmortem",
+        "google-agents-cli/google-agents-cli-eval"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/agent-observability",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Verify claimed automation status against durable run evidence"
+      ],
+      "governed_review_links": [
+        "local-skills/automation-receipts"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "agent-mcp-development/multi-agent-collaboration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/cloud-architecture",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Azure AI service integration architecture"
+      ],
+      "governed_review_links": [
+        "microsoft-skills/azure-ai"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/infrastructure-as-code",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for infrastructure as code"
+      ],
+      "governed_review_links": [
+        "aws-agent-toolkit/aws-cdk"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/ci-cd",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/containers",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/orchestration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/deployment",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/sre",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "cloud-devops/cost-optimization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/application-security",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for application security"
+      ],
+      "governed_review_links": [
+        "addyosmani-agent-skills/security-and-hardening"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/identity-access",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Review permissions and least-privilege exposure without accessing secret values"
+      ],
+      "governed_review_links": [
+        "local-skills/permissions-review"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/threat-modeling",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/vulnerability-management",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Plan safety-aware repository hygiene; not a vulnerability scanner"
+      ],
+      "governed_review_links": [
+        "local-skills/agent-home-doctor"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/supply-chain",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
+      ],
+      "governed_review_links": [
+        "local-skills/mcp-vetting"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/incident-response",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "security/privacy-engineering",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/literature-review",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Appraise papers and replication evidence; not a complete systematic review",
+        "Survey published HCI and UX prior art; rejected unchanged for missing private-context disclosure gate on external queries"
+      ],
+      "governed_review_links": [
+        "local-skills/paper-digest",
+        "bm629-agent-skills/user-research-prior-art-survey"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/source-discovery",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Discover sources and monitor technical developments using dated primary evidence"
+      ],
+      "governed_review_links": [
+        "local-skills/claude-pulse",
+        "local-skills/deep-dive",
+        "local-skills/deepseek-pulse",
+        "local-skills/gemini-pulse",
+        "local-skills/github-pulse",
+        "local-skills/glm-pulse",
+        "local-skills/governance-pulse",
+        "local-skills/hf-pulse",
+        "local-skills/inference-pulse",
+        "local-skills/kimi-pulse",
+        "local-skills/llama-pulse",
+        "local-skills/mcp-pulse",
+        "local-skills/memory-pulse",
+        "local-skills/mistral-pulse",
+        "local-skills/openai-pulse",
+        "local-skills/perplexity-pulse",
+        "local-skills/qwen-pulse",
+        "local-skills/xai-pulse"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/synthesis",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Compare competing evidence and synthesize a bounded research finding",
+        "Review user-research search evidence, provenance, source methods and honest uncertainty"
+      ],
+      "governed_review_links": [
+        "local-skills/compare",
+        "local-skills/deep-dive",
+        "bm629-agent-skills/reviewing-user-research-prior-art-survey"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/systematic-review",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/fact-checking",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Decompose claims and verify each subclaim against primary dated sources"
+      ],
+      "governed_review_links": [
+        "local-skills/fact-check",
+        "archieindian-superpowers/fact-check-before-trust"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/field-methods",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "research/reproducibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "planning/strategic-planning",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "planning/project-scheduling",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for project scheduling",
+        "Translate approved implementation phases into proposed issue breakdowns"
+      ],
+      "governed_review_links": [
+        "addyosmani-agent-skills/planning-and-task-breakdown"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "planning/resource-allocation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "planning/roadmapping",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "planning/decision-frameworks",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Compare options, frame decisions, and record outcomes with explicit authority",
+        "Time-box a technical uncertainty with evidence and a decision receipt"
+      ],
+      "governed_review_links": [
+        "local-skills/brief-writer",
+        "local-skills/compare",
+        "local-skills/decision-log"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "planning/risk-planning",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/positioning",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/branding",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/content",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "social media content planning"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/social"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/seo",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "read-only SEO audit",
+        "structured data schema recommendations"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/seo-audit",
+        "corey-haines-marketing-skills/schema"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/paid-acquisition",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for paid acquisition"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/ad-creative"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/growth",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/lifecycle",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "SMS lifecycle communication"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/sms"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/attribution",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "marketing/market-research",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/discovery",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for discovery"
+      ],
+      "governed_review_links": [
+        "cole-medin-skills/opportunity-scan"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/requirements",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Draft a problem-first product requirements document with non-goals and acceptance measures",
+        "Convert a supplied feature specification into one deduplicated proposed GitHub issue",
+        "Map genuinely unmet requirements to proposed individual GitHub issues",
+        "Draft structured AI-readable requirements and acceptance criteria"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-prd"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/product-strategy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/prioritization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/experimentation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/product-analytics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/launch",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "product/lifecycle",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/user-research",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Survey published HCI and UX prior art; rejected unchanged for missing private-context disclosure gate on external queries",
+        "Review user-research search evidence, provenance, source methods and honest uncertainty"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/user-research-prior-art-survey",
+        "bm629-agent-skills/reviewing-user-research-prior-art-survey"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/interaction-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "signup flow design"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/signup",
+        "bm629-agent-skills/authoring-user-flows"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/information-architecture",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "website information architecture"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/site-architecture"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/prototyping",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Produce rendered high-fidelity UI prototypes; rejected unchanged for unsandboxed rendering, potential egress and screenshot exposure",
+        "Review rendered UI prototypes; rejected unchanged for unisolated code execution and output disclosure"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-hi-fi",
+        "bm629-agent-skills/reviewing-hi-fi"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/accessibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/usability-testing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ux-ui/design-systems",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Author semantic design tokens, accessible component standards, interaction patterns and versioned governance",
+        "Review design-system token semantics, component contracts, accessibility and lifecycle consistency"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-design-system",
+        "bm629-agent-skills/reviewing-design-system"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/graphic-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for graphic design"
+      ],
+      "governed_review_links": [
+        "anthropic-skills/canvas-design"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/typography",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/layout",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/color",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/identity-systems",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/information-visualization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "visual-design/motion-graphics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "illustration/concept-art",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "illustration/editorial",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "illustration/scientific",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "illustration/character-environment",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "illustration/sequential-art",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "illustration/digital-traditional-media",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Create original algorithmic visuals using seeded p5.js sketches and iterative visual verification"
+      ],
+      "governed_review_links": [
+        "anthropic-skills/algorithmic-art"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/3d-modeling",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/sculpting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/rigging",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/procedural-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/cad",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/simulation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/rendering",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/animation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "3d-cad-animation/technical-drawing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/mechanics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/level-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/systems-balancing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/narrative-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Diagnose branching player choices, state constraints and reconvergence",
+        "Audit linear game story beat causality, not interactive branching behavior",
+        "Interview game story characters on motivation, stakes and narrative choices"
+      ],
+      "governed_review_links": [
+        "jwynia-agent-skills/interactive-fiction",
+        "local-skills/narrative-scene-gap-audit",
+        "local-skills/character-motivation-interview"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/economy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/playtesting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/accessibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "game-design/tabletop-games",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Study player-agency-driven tabletop facilitation; do not copy automatic canon-writing behavior"
+      ],
+      "governed_review_links": [
+        "jwynia-agent-skills/game-facilitator"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/plotting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Plan and analyze story plot structure",
+        "Audit a story scene sequence for missing causal steps, setup and payoff",
+        "Test a fiction premise and logline, stakes, form and story premise before project creation",
+        "Plan story scenes and sequels, POV, subtext, opening hooks and cause-effect escalation"
+      ],
+      "governed_review_links": [
+        "danjdewhurst-story-skills/plot-structure",
+        "local-skills/narrative-scene-gap-audit",
+        "danjdewhurst-story-skills/premise-workshop",
+        "danjdewhurst-story-skills/scene-craft"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/prose",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Existing static-reviewed reference for prose",
+        "Draft fiction without an outline and retrospectively reconcile story canon",
+        "Propose line edits, copyedits and read-aloud passes while preserving author voice",
+        "Plan story scenes and sequels, POV, subtext, opening hooks and cause-effect escalation",
+        "Diagnose first-draft stalls; rejected unchanged for unsupported neuroscience and evidence claims",
+        "Diagnose diction, sentence rhythm and point-of-view consistency after structure is settled"
+      ],
+      "governed_review_links": [
+        "danjdewhurst-story-skills/chapter-writing",
+        "danjdewhurst-story-skills/discovery-drafting",
+        "danjdewhurst-story-skills/line-editing",
+        "danjdewhurst-story-skills/scene-craft",
+        "jwynia-agent-skills/drafting",
+        "jwynia-agent-skills/prose-style"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/editing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Review structural scene gaps and offer minimal source-linked revision options",
+        "Prepare human editorial and authenticity review, rights questions and collaboration workflows",
+        "Propose line edits, copyedits and read-aloud passes while preserving author voice",
+        "Audit story chronology, character state and named revision passes before polishing",
+        "Diagnose diction, sentence rhythm and point-of-view consistency after structure is settled",
+        "Plan manuscript revisions across conceptual, structural and scene layers without cascading breakage",
+        "Sequence developmental, line and copyediting passes with distinct completion criteria"
+      ],
+      "governed_review_links": [
+        "local-skills/narrative-scene-gap-audit",
+        "danjdewhurst-story-skills/editorial-review",
+        "danjdewhurst-story-skills/line-editing",
+        "danjdewhurst-story-skills/revision-continuity",
+        "jwynia-agent-skills/prose-style",
+        "jwynia-agent-skills/novel-revision",
+        "jwynia-agent-skills/revision"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/character",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Develop fictional motivations and relationships while distinguishing canon from suggestions",
+        "Build and maintain character profiles, relationships and character timelines",
+        "Design and troubleshoot positive, tragic and static fictional character arcs",
+        "Generate fiction cast names; rejected unchanged for weak cultural provenance and unverifiable randomness assumptions"
+      ],
+      "governed_review_links": [
+        "local-skills/character-motivation-interview",
+        "danjdewhurst-story-skills/character-management",
+        "jwynia-agent-skills/character-arc",
+        "jwynia-agent-skills/character-naming"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/dialogue",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Diagnose fictional dialogue voices, context, subtext and character objectives"
+      ],
+      "governed_review_links": [
+        "jwynia-agent-skills/dialogue"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/setting-lore",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Diagnose a fictional setting's cultures, systems, and internal consequences",
+        "Develop fictional locations, cultures, systems, trade routes and setting chronology",
+        "Reveal fictional setting through in-world documents with limited perspectives",
+        "Trace consequences of speculative changes to societies, technology and setting systems"
+      ],
+      "governed_review_links": [
+        "jwynia-agent-skills/worldbuilding",
+        "danjdewhurst-story-skills/worldbuilding",
+        "jwynia-agent-skills/oblique-worldbuilding",
+        "jwynia-agent-skills/systemic-worldbuilding"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/interactive-fiction",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Evaluate meaningful agency and reachable endings in interactive stories"
+      ],
+      "governed_review_links": [
+        "jwynia-agent-skills/interactive-fiction"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "fiction-narrative-worldbuilding/continuity",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Detect source-cited narrative timeline and continuity conflicts",
+        "Audit story chronology, character state and named revision passes before polishing",
+        "Keep character and world canon consistent across sequels, prequels and companion books"
+      ],
+      "governed_review_links": [
+        "local-skills/narrative-scene-gap-audit",
+        "danjdewhurst-story-skills/revision-continuity",
+        "danjdewhurst-story-skills/series-continuity"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/api-docs",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Author an API reference traceable to a supplied contract",
+        "Review C# XML documentation completeness and formatting",
+        "Review Java API Javadoc tags and inherited documentation"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-api-reference"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/tutorials",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Draft goal-oriented end-user tutorials, how-tos and feature references using actual UI labels",
+        "Review end-user guide accuracy, accessibility, task coverage and reference usability",
+        "Write developer onboarding, first-success tutorials, integration recipes and troubleshooting grounded in current APIs",
+        "Review developer guide install/integrate paths, real runnable samples and API-reference links"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-user-guide",
+        "bm629-agent-skills/reviewing-user-guide",
+        "bm629-agent-skills/authoring-developer-guide",
+        "bm629-agent-skills/reviewing-developer-guide"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/reference-manuals",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Create source-linked command reference examples without executing them",
+        "Draft goal-oriented end-user tutorials, how-tos and feature references using actual UI labels",
+        "Review end-user guide accuracy, accessibility, task coverage and reference usability"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-user-guide",
+        "bm629-agent-skills/reviewing-user-guide"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/architecture-records",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Draft a proposed ADR with alternatives and consequences before authorized persistence",
+        "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
+        "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization"
+      ],
+      "governed_review_links": [
+        "bm629-agent-skills/authoring-architecture-doc",
+        "bm629-agent-skills/reviewing-architecture-doc"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/release-notes",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/documentation-ia",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Preserve plaintext meaning while converting formatting to Markdown"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "technical-writing/localization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/harmony",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/melody",
+      "outcome_definition_status": "partial",
+      "essential_outcomes": [
+        {
+          "id": "constrained-motif-development",
+          "input": "Musical brief, explicit meter/range/duration and optional locked note events",
+          "output": "Seed, two traceable variations and assembled phrase with event-level checks",
+          "acceptance": [
+            "Preserve locked events",
+            "Meet declared meter, pitch and monophony constraints or identify exact conflicts",
+            "Separate score checks from unobserved musical effect",
+            "Do not follow instructions embedded in musical data"
+          ],
+          "method_ids": [
+            "local-skills/develop-melodic-motif"
+          ],
+          "static_qualification": "verified-exact-package",
+          "behavioral_qualification": "incomplete-one-text-pilot",
+          "coverage_limit": "One bounded proposed essential outcome; other melody workflows and actual musical effectiveness unestablished"
+        }
+      ],
+      "existing_capability_statements": [],
+      "governed_review_links": [
+        "local-skills/develop-melodic-motif"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Evaluate additional independent melody methods and run varied meter, pickup, tie, harmony and actual audition cases before broader effectiveness claims."
+    },
+    {
+      "path": "music-composition/rhythm",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/orchestration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/arranging",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/notation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/scoring",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "music-composition/electronic-composition",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/recording",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/editing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/mixing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/mastering",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/sound-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/speech-voice",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Study batch/streaming speech-to-text; do not send recordings without consent, privacy and budget gates"
+      ],
+      "governed_review_links": [
+        "microsoft-skills/azure-ai-transcription-py"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/acoustics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "audio-voice-sound/accessibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/screenwriting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Audit screenwriting scene causality, continuity and setup/payoff",
+        "Build screenwriting character scene objectives and credible choices"
+      ],
+      "governed_review_links": [
+        "local-skills/narrative-scene-gap-audit",
+        "local-skills/character-motivation-interview"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/preproduction",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "marketing video planning"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/video"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/cinematography",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/lighting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/editing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/color",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/vfx",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/captions",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "video-film/delivery",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/interpersonal",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/presentations",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Outline a coherent slide narrative before slide production"
+      ],
+      "governed_review_links": [
+        "local-skills/deck-outline"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/facilitation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/negotiation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/conflict-resolution",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/public-speaking",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "communication/organizational-communication",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Write evidence-backed updates, handoffs, briefs, and standups"
+      ],
+      "governed_review_links": [
+        "local-skills/brief-writer",
+        "local-skills/devlog-draft",
+        "local-skills/handoff-writer",
+        "local-skills/standup-writer"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/descriptive-analytics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/dashboards",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Reference dashboard workflows; unchanged output may leak private data and use CDN code"
+      ],
+      "governed_review_links": [
+        "anthropic-knowledge-work-plugins/build-dashboard"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/experimentation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/causal-inference",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/forecasting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/visualization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "analytics/measurement",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/personal-planning",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Prepare daily and weekly planning briefs and grounded learning plans"
+      ],
+      "governed_review_links": [
+        "local-skills/daily-briefing",
+        "local-skills/learning-plan",
+        "local-skills/week-in-review"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/task-systems",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Triage incoming tasks and coordinate approved task pointers"
+      ],
+      "governed_review_links": [
+        "local-skills/inbox-triage",
+        "local-skills/task-surface"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/focus",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/habit-formation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/scheduling",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/workload",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "time-productivity/collaboration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/retrieval",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Recover relevant prior-session decisions with provenance and freshness checks"
+      ],
+      "governed_review_links": [
+        "local-skills/session-continuity"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/summarization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/long-term-memory",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Use existing host memory for scoped continuity; persistent capture requires approval"
+      ],
+      "governed_review_links": [
+        "local-skills/session-continuity"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/provenance",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/context-compression",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Reference context-budget techniques; autonomous writes/restarts are not approved"
+      ],
+      "governed_review_links": [
+        "archieindian-superpowers/context-window-management"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/privacy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "memory-context/forgetting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/business-models",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/strategy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/operations",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Monitor bounded small-business operating questions without autonomous changes"
+      ],
+      "governed_review_links": [
+        "local-skills/smallbiz-ops"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/governance",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Monitor governance changes and distinguish binding policy from noise"
+      ],
+      "governed_review_links": [
+        "local-skills/governance-pulse"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/risk",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Identify healthcare/PBM contractual cost and governance risks"
+      ],
+      "governed_review_links": [
+        "local-skills/healthcare-contract-forensics"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/organizational-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "business/procurement",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/prospecting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/qualification",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/pipeline",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/account-management",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/proposals",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "sales enablement collateral"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/sales-enablement"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/negotiation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "sales/sales-operations",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "revenue operations"
+      ],
+      "governed_review_links": [
+        "corey-haines-marketing-skills/revops"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/job-search",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Research current career-market opportunities; not automatic job applications"
+      ],
+      "governed_review_links": [
+        "local-skills/career-radar"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/portfolios",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/interviews",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/professional-development",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Prepare a learning plan with measurable checkpoints",
+        "Backfill evidence-backed engineering accomplishments without fabricated metrics"
+      ],
+      "governed_review_links": [
+        "local-skills/learning-plan"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/networking",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/compensation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "career/career-transitions",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Evaluate changing career directions with current market evidence"
+      ],
+      "governed_review_links": [
+        "local-skills/career-radar"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/subject-instruction",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/tutoring",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Study retrieval practice, spaced learning and feedback; do not adopt unapproved workspace writes"
+      ],
+      "governed_review_links": [
+        "david-ondrej-skills/teach"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/assessment",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/curriculum",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/accessibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/classroom-management",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "education/learning-technology",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Find current Claude Academy course resources with source checks; not a general tutor"
+      ],
+      "governed_review_links": [
+        "anthropic-skills/academy-guide"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/experimental-design",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/laboratory-methods",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/physics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/chemistry",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/earth-sciences",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/reproducibility",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "science/scientific-communication",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/clinical-information-literacy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/specialties",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/diagnostics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/therapeutics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/patient-communication",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/clinical-workflows",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "medicine/evidence-appraisal",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/legal-research",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/contracts",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Review contracts against an organization playbook, escalating legal reliance to qualified counsel",
+        "Examine evidence-backed healthcare/PBM contract clauses, rebates and audit rights"
+      ],
+      "governed_review_links": [
+        "anthropic-knowledge-work-plugins/review-contract",
+        "local-skills/healthcare-contract-forensics"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/litigation-support",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/legislation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/regulatory-analysis",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Study issue-spotting but retrieve current jurisdictional law; source's fixed GDPR deadlines are unsafe"
+      ],
+      "governed_review_links": [
+        "anthropic-knowledge-work-plugins/compliance-check"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/legal-drafting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "law/jurisdictional-comparison",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/financial-planning",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/corporate-finance",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/investments",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/risk",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/valuation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/budgeting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/reporting",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Review financial statements and trace conclusions to reported rows",
+        "Reconcile healthcare/PBM contract financial amounts to approved source rows"
+      ],
+      "governed_review_links": [
+        "local-skills/finance-review",
+        "local-skills/healthcare-contract-forensics"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "finance/financial-literacy",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Explain statement changes and financial context without investment or tax advice"
+      ],
+      "governed_review_links": [
+        "local-skills/finance-review"
+      ],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/perception",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/control",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/motion-planning",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/embedded-integration",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/sensing",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/industrial-automation",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "robotics-iot/safety",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/gpu-kernels",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Design and diagnose CUDA kernels, memory tiling, synchronization and profiler evidence",
+        "Inspect and author PTX/inline assembly with register and synchronization diagnostics",
+        "Interpret SASS instructions and Nsight per-instruction stall evidence",
+        "Write and benchmark Triton fused GPU kernels against PyTorch baselines"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/attention-kernels",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Choose FlashAttention/SDPA implementations and verify kernel selection"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/model-quantization",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Select INT4/INT8/FP8/FP4 model quantization and evaluate accuracy tradeoffs"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/inference-serving",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Estimate paged KV-cache capacity and tune vLLM serving concurrency",
+        "Build and validate TensorRT inference engines and dynamic shape profiles"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/distributed-training",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Plan DDP, FSDP, ZeRO and parallelism against GPU memory and collective costs"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/accelerator-fabrics",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Diagnose RDMA, RoCEv2, GPUDirect and NCCL fabric transport"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    },
+    {
+      "path": "ml-accelerators/accelerator-architecture",
+      "outcome_definition_status": "needs-workflow-decomposition",
+      "essential_outcomes": [],
+      "existing_capability_statements": [
+        "Reason about TPU MXU tiling, JAX sharding and compilation performance"
+      ],
+      "governed_review_links": [],
+      "qualified_essential_outcome_count": null,
+      "qualification_status": "not-established-from-navigation-links",
+      "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
+    }
+  ]
+}

@@ -13,10 +13,10 @@ Track discovery leads, complete-package inspection, static disposition, dependen
 | Phase | Required result | Status |
 |---|---|---|
 | 1. Ingestion | Parseable, paired, unambiguous companions with preservation receipt | [Completed for 2,084 files](reviews/2026-11-17-companion-yaml-ingestion-repair.md) |
-| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | Pending; 121/1,042 identities mapped |
-| 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | Pending; existing capability descriptions are inputs, not accepted coverage |
+| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; 122/1,043 identities mapped |
+| 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; one bounded melody outcome defined; remaining workflow decomposition pending |
 | 4. Balanced qualification | Equal effort for discovery and complete-package evaluation; decisive evidence-bound dispositions | Pending ongoing tranches |
-| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Pending comparison; use `skills/authored/<slug>/` and authored admission/index requirements |
+| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | One original constrained-melody package delivered; continue comparison-led authorship under `skills/authored/<slug>/` |
 | 6. Application readiness | Export distinguishes references, eligible packages and unmet outcomes; application demonstrates each promised workflow | Not established |
 
 The audit recovered supplementary structured pointers for **35 of 51** subdomains without explicit directory pointers. Reconcile their pins and route meanings before linking them. The other 16 remain mapping/qualification gaps, not proof of absent methods. Preserve rejected dispositions and separate candidate/study references from governed matches.
@@ -40,3 +40,7 @@ Within each bounded tranche, allocate equal effort to discovery and evaluation a
 Record domain/subdomain, outcome, essential/optional decision, exact candidate identities, inspected package boundaries, comparison rationale, rights/asset restrictions, dependencies, portability, authority/privacy limits, static disposition, unresolved gaps, original review date and later freshness checks. Include failure criteria and a next action for unmet outcomes. Record observed application results only when actually executed.
 
 New third-party admission follows issue-first intake. Formatting repair is not candidate admission. Do not bulk-copy candidates, create a new repository or advertise complete domain packs before scope and rights are established.
+
+## November 17 progress
+
+[Exact review and source comparison](reviews/2026-11-17-melody-and-capability-scope.md): original melody package with incomplete text-agent pilot; [all 247 recognized outcome work units](../registry/capability-outcome-register.json); [13 new proposed domains, 65 subdomains and four music extensions](../registry/capability-scope-extensions-20261117.json). The 25 older provisional domains remain separate and unqualified. Continuous maintenance now explicitly tracks discovery/evaluation balance and non-degradation.

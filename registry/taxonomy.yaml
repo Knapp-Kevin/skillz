@@ -5,6 +5,7 @@ version: 1
 
 dimensions:
   use_case:
+    - music-composition
     - agent-development
     - api-design
     - architecture
