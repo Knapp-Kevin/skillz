@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-17",
+  "status": "proposed-scope-not-qualified-coverage",
+  "recognized_domains_source": "registry/capability-directory.json",
+  "existing_provisional_domains_source": "registry/discovery/capability-domain-expansion-20261102.json",
+  "recognized_domains": 33,
+  "existing_provisional_domains": 25,
+  "new_proposed_domains": 13,
+  "promotion_rule": "Taxonomic definitions only. Review overlap, exact methods, rights and outcome acceptance before canonical qualification. No new source or usable skill count is implied.",
+  "domains": [
+    {
+      "id": "general-ai-ml",
+      "name": "General AI and machine learning",
+      "status": "proposed-needs-qualification",
+      "boundary": "Model/data lifecycle and evaluation; accelerator internals remain in ml-accelerators.",
+      "adjacent_domains": [
+        "ml-accelerators",
+        "analytics",
+        "agent-mcp-development"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "problem-formulation",
+          "essential_outcome": "Turn a task and constraints into a measurable model-versus-non-model decision",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "dataset-design",
+          "essential_outcome": "Produce a provenance-aware dataset and split specification with leakage checks",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "training-adaptation",
+          "essential_outcome": "Plan reproducible training or adaptation with baselines and rollback",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "model-evaluation",
+          "essential_outcome": "Compare models using task-specific held-out criteria and uncertainty",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "retrieval-augmentation",
+          "essential_outcome": "Design retrieval and grounding evaluation with source/error traces",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "mathematics-statistics",
+      "name": "Mathematics, statistics and optimization",
+      "status": "proposed-needs-qualification",
+      "boundary": "Formal quantitative reasoning; applied dashboards and business reporting remain in analytics.",
+      "adjacent_domains": [
+        "analytics",
+        "science"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "algebra-linear-algebra",
+          "essential_outcome": "Solve a stated algebraic problem with dimensions and independent substitution checks",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "calculus-numerical-methods",
+          "essential_outcome": "Derive or approximate a quantity with stated assumptions and error bounds",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "probability-inference",
+          "essential_outcome": "Estimate uncertainty with an explicit sampling model and limitations",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "experimental-statistics",
+          "essential_outcome": "Choose and check statistical comparisons against design and assumptions",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "optimization",
+          "essential_outcome": "Formulate objectives and constraints and verify feasibility of a proposed solution",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "databases-data-architecture",
+      "name": "Databases and data architecture",
+      "status": "proposed-needs-qualification",
+      "boundary": "Data models, storage contracts and lifecycle; movement pipelines remain in data-engineering.",
+      "adjacent_domains": [
+        "software-engineering",
+        "data-engineering",
+        "memory-context"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "data-modeling",
+          "essential_outcome": "Produce schemas with cardinality, constraints and intended query patterns",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "query-correctness",
+          "essential_outcome": "Review queries against fixtures, nulls, duplicates and boundary cases",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "transactions-consistency",
+          "essential_outcome": "Specify concurrency and integrity behavior for an operation",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "migration-recovery",
+          "essential_outcome": "Plan reversible schema/data migration with verification and recovery",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "storage-lifecycle",
+          "essential_outcome": "Define retention, deletion, backup and access boundaries",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "people-operations",
+      "name": "People and workforce operations",
+      "status": "proposed-needs-qualification",
+      "boundary": "Organization-side workforce processes; individual job search remains in career.",
+      "adjacent_domains": [
+        "business",
+        "career",
+        "law"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "role-design",
+          "essential_outcome": "Define a role and evidence-based evaluation criteria",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "hiring-process",
+          "essential_outcome": "Design a consistent accessible selection workflow with privacy bounds",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "onboarding",
+          "essential_outcome": "Build a role-specific onboarding plan with observable readiness checks",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "performance-development",
+          "essential_outcome": "Prepare evidence-grounded feedback and development actions",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "workforce-policy",
+          "essential_outcome": "Map people-policy obligations to jurisdiction, dates and qualified review",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "customer-service",
+      "name": "Customer support and service operations",
+      "status": "proposed-needs-qualification",
+      "boundary": "Case resolution and service quality; prospecting and revenue acquisition remain in sales.",
+      "adjacent_domains": [
+        "communication",
+        "sales",
+        "product"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "case-triage",
+          "essential_outcome": "Classify a service case by evidence, urgency and permitted access",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "troubleshooting",
+          "essential_outcome": "Produce reproducible diagnostic steps with escalation and stop conditions",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "knowledge-management",
+          "essential_outcome": "Turn resolved cases into source-checked reusable support guidance",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "service-recovery",
+          "essential_outcome": "Draft bounded customer remediation within actual authority",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "support-quality",
+          "essential_outcome": "Evaluate case handling against resolution, accessibility and privacy criteria",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "accounting-tax-audit",
+      "name": "Accounting, tax and audit",
+      "status": "proposed-needs-qualification",
+      "boundary": "Recorded transactions, reporting controls and jurisdictional obligations; investments remain in finance.",
+      "adjacent_domains": [
+        "finance",
+        "law",
+        "business"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "bookkeeping-reconciliation",
+          "essential_outcome": "Reconcile transaction evidence and explain unmatched items",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "financial-close",
+          "essential_outcome": "Plan a close checklist with balances, adjustments and signoff boundaries",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "tax-research",
+          "essential_outcome": "Trace a tax question to current jurisdictional sources without invented advice",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "internal-controls",
+          "essential_outcome": "Map a control objective to evidence, failure conditions and responsibility",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "audit-support",
+          "essential_outcome": "Prepare source-linked schedules and exception records without certifying an audit",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "systems-engineering-quality",
+      "name": "Systems engineering, reliability and quality",
+      "status": "proposed-needs-qualification",
+      "boundary": "Cross-disciplinary requirements and assurance; code implementation remains in software-engineering.",
+      "adjacent_domains": [
+        "software-engineering",
+        "manufacturing-industrial",
+        "robotics-iot"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "requirements-traceability",
+          "essential_outcome": "Connect stakeholder needs to requirements, verification and unresolved gaps",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "interface-contracts",
+          "essential_outcome": "Define component boundaries, interfaces and failure behavior",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "reliability-analysis",
+          "essential_outcome": "Evaluate failure scenarios with explicit assumptions and evidence limits",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "verification-validation",
+          "essential_outcome": "Design acceptance evidence appropriate to actual intended use",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "configuration-change",
+          "essential_outcome": "Assess change impact and maintain controlled baselines and rollback",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "public-health",
+      "name": "Public health and population evidence",
+      "status": "proposed-needs-qualification",
+      "boundary": "Population-level evidence and program design; individual clinical decisions remain in medicine.",
+      "adjacent_domains": [
+        "medicine",
+        "science",
+        "public-sector-civic"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "population-data",
+          "essential_outcome": "Assess population data denominators, bias and privacy",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "epidemiology",
+          "essential_outcome": "Appraise observational associations with confounding and uncertainty",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "prevention-programs",
+          "essential_outcome": "Design an evidence-grounded prevention program and evaluation plan",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "health-communication",
+          "essential_outcome": "Draft accessible risk communication with uncertainty and primary sources",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "health-policy",
+          "essential_outcome": "Compare population policy options with equity and implementation limits",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "behavioral-social-science",
+      "name": "Behavioral and social science methods",
+      "status": "proposed-needs-qualification",
+      "boundary": "Study of behavior and social systems; clinical diagnosis and manipulative targeting are excluded.",
+      "adjacent_domains": [
+        "research",
+        "education",
+        "communication"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "study-design",
+          "essential_outcome": "Choose a behavioral study design and consent/data boundaries",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "measurement",
+          "essential_outcome": "Operationalize a construct and assess validity limits",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "qualitative-analysis",
+          "essential_outcome": "Code supplied qualitative data while preserving disagreement and provenance",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "behavior-change",
+          "essential_outcome": "Design consent-based interventions with measurable outcomes and limits",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "social-systems",
+          "essential_outcome": "Analyze social mechanisms without inferring individual traits from group stereotypes",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "responsible-ai",
+      "name": "Responsible AI and model governance",
+      "status": "proposed-needs-qualification",
+      "boundary": "Accountability and impact across AI lifecycles; technical model assessment remains in general-ai-ml.",
+      "adjacent_domains": [
+        "general-ai-ml",
+        "security",
+        "law"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "impact-assessment",
+          "essential_outcome": "Map intended use, affected stakeholders and plausible harms",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "fairness-evaluation",
+          "essential_outcome": "Define context-relevant fairness checks with tradeoffs and limitations",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "model-documentation",
+          "essential_outcome": "Produce source-grounded model/data documentation with unknowns",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "human-oversight",
+          "essential_outcome": "Specify decision rights, escalation and contestability",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "ai-policy-assurance",
+          "essential_outcome": "Map current applicable obligations to evidence without claiming certification",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "computer-use",
+      "name": "Computer and application operation",
+      "status": "proposed-needs-qualification",
+      "boundary": "Host interaction and action verification; application-specific professional judgments live in their domains.",
+      "adjacent_domains": [
+        "agent-mcp-development",
+        "documents-office",
+        "security"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "browser-workflows",
+          "essential_outcome": "Complete an authorized browser task with observable state and result verification",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "desktop-workflows",
+          "essential_outcome": "Operate an authorized desktop workflow with focus and recovery checks",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "file-operations",
+          "essential_outcome": "Plan or perform scoped file transformations with identity and overwrite protection",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "application-integration",
+          "essential_outcome": "Map a user workflow to supported APIs or UI capabilities and authority",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "interaction-recovery",
+          "essential_outcome": "Recover from stale state, partial completion or tool errors without duplicate side effects",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "personal-administration",
+      "name": "Personal and household administration",
+      "status": "proposed-needs-qualification",
+      "boundary": "Everyday coordination and records; specialist legal, medical and financial judgment stays in those domains.",
+      "adjacent_domains": [
+        "time-productivity",
+        "finance",
+        "communication"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "calendar-coordination",
+          "essential_outcome": "Prepare a conflict-aware schedule using authorized availability",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "correspondence",
+          "essential_outcome": "Draft or route correspondence with explicit recipient and disclosure boundaries",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "household-records",
+          "essential_outcome": "Organize supplied household records with retention and privacy constraints",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "purchase-comparison",
+          "essential_outcome": "Compare a purchase against budget, current evidence and total cost",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "service-navigation",
+          "essential_outcome": "Prepare an administrative application or service checklist without invented eligibility",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    },
+    {
+      "id": "travel-hospitality",
+      "name": "Travel and hospitality planning",
+      "status": "proposed-needs-qualification",
+      "boundary": "Itineraries, visitor logistics and service operations; transport assurance remains in aviation-transport.",
+      "adjacent_domains": [
+        "personal-administration",
+        "logistics-supply-chain",
+        "accessibility-inclusion"
+      ],
+      "default_inputs": "Task-specific brief and authorized source material; retrieve current primary sources when the outcome requires them.",
+      "default_acceptance": [
+        "Deliver the stated output with traceable inputs, assumptions and constraints.",
+        "Check correctness against relevant fixtures, evidence and user criteria; record unavailable checks.",
+        "Respect action/data authority and applicable rights; preserve unresolved findings."
+      ],
+      "subdomains": [
+        {
+          "id": "itineraries",
+          "essential_outcome": "Plan a feasible dated itinerary against budget, travel times and preferences",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "entry-requirements",
+          "essential_outcome": "Verify current entry requirements from official sources for the stated traveler",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "booking-comparison",
+          "essential_outcome": "Compare current booking terms, total costs and cancellation constraints",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "accessible-travel",
+          "essential_outcome": "Verify practical access requirements with source/date and unresolved questions",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        },
+        {
+          "id": "disruption-recovery",
+          "essential_outcome": "Prepare alternatives after a disruption without unauthorized cancellations or bookings",
+          "qualification": "unassessed",
+          "qualified_method_ids": []
+        }
+      ]
+    }
+  ],
+  "existing_domain_subdomain_proposals": [
+    {
+      "domain": "music-composition",
+      "subdomains": [
+        {
+          "id": "form-structure",
+          "outcome": "Develop a coherent sectional structure under a composition brief"
+        },
+        {
+          "id": "counterpoint",
+          "outcome": "Design and inspect interacting melodic voices under stated stylistic constraints"
+        },
+        {
+          "id": "lyric-prosody",
+          "outcome": "Align supplied authorized lyrics with stress, syllables and musical phrasing"
+        },
+        {
+          "id": "music-analysis",
+          "outcome": "Analyze supplied musical material with source-linked observations and uncertainty"
+        }
+      ],
+      "status": "proposed-needs-comparison-and-qualification"
+    }
+  ]
+}

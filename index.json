@@ -1,24 +1,5 @@
 {
   "schema_version": 1,
-  "current_capability_mapping_20261109": {
-    "as_of": "2026-11-09",
-    "source": "registry/capability-directory.json",
-    "source_evidence": "registry/discovery/bm629-14-exact-source-technical-ux-routing-20261109.json",
-    "reviewed_identity_population": 1042,
-    "mapped_distinct_review_identities": 121,
-    "mapped_first_party": 47,
-    "mapped_third_party": 74,
-    "unmapped_review_identities": 921,
-    "subdomains_with_evidence": 74,
-    "subdomains_total": 247,
-    "new_distinct_review_identity_links": 14,
-    "new_capability_path_links": 20,
-    "prior_verified_review_dispositions": 11,
-    "prior_rejected_unchanged_review_dispositions": 3,
-    "new_behaviorally_validated_packages": 0,
-    "new_unchanged_use_approvals": 0,
-    "note": "Retains previous narrative snapshot in historical_capability_mapping_narrative_20261109. This is current source-evidence navigation, not a qualification, installation, or maturity claim."
-  },
   "static_review_and_hygiene_20261105": {
     "date": "2026-11-05",
     "source_pr": 703,
@@ -1039,8 +1020,8 @@
     "receipt": "docs/reviews/2026-10-31-bm629-final-five-static.md"
   },
   "counts": {
-    "first_party_skills": 44,
-    "first_party_provenance_complete": 44,
+    "first_party_skills": 48,
+    "first_party_provenance_complete": 48,
     "first_party_historical_exact_tree_security_passed": 23,
     "first_party_historical_exact_tree_security_incomplete": 20,
     "first_party_historical_exact_tree_security_failed": 1,
@@ -1048,7 +1029,7 @@
     "pinned_external_corpora": 12,
     "registered_source_identities": 25,
     "persisted_third_party_exact_version_reviews": 995,
-    "total_verification_records": 1039,
+    "total_verification_records": 1043,
     "candidate_only_exact_version_reviews": 131,
     "jwynia_agent_skills_selectively_reviewed_units": 54,
     "jwynia_agent_skills_fiction_denominator": 54,
@@ -1206,6 +1187,9 @@
       "career-radar",
       "finance-review",
       "smallbiz-ops"
+    ],
+    "creative-music": [
+      "develop-melodic-motif"
     ]
   },
   "source_roles": {
@@ -5436,5 +5420,39 @@
     "new_behaviorally_validated_packages": 0,
     "new_unchanged_use_approvals": 0,
     "note": "Historical Q8 50 study references and 2026-11-05 first-party/security counts are separate dated populations. This current mapping snapshot does not certify installation, safety or behavioral results."
+  },
+  "historical_capability_mapping_20261109": {
+    "as_of": "2026-11-09",
+    "source": "registry/capability-directory.json",
+    "source_evidence": "registry/discovery/bm629-14-exact-source-technical-ux-routing-20261109.json",
+    "reviewed_identity_population": 1042,
+    "mapped_distinct_review_identities": 121,
+    "mapped_first_party": 47,
+    "mapped_third_party": 74,
+    "unmapped_review_identities": 921,
+    "subdomains_with_evidence": 74,
+    "subdomains_total": 247,
+    "new_distinct_review_identity_links": 14,
+    "new_capability_path_links": 20,
+    "prior_verified_review_dispositions": 11,
+    "prior_rejected_unchanged_review_dispositions": 3,
+    "new_behaviorally_validated_packages": 0,
+    "new_unchanged_use_approvals": 0,
+    "note": "Retains previous narrative snapshot in historical_capability_mapping_narrative_20261109. This is current source-evidence navigation, not a qualification, installation, or maturity claim."
+  },
+  "current_capability_mapping_20261117": {
+    "as_of": "2026-11-17",
+    "source": "registry/capability-directory.json",
+    "reviewed_identity_population": 1043,
+    "mapped_distinct_review_identities": 122,
+    "mapped_first_party": 48,
+    "mapped_third_party": 74,
+    "unmapped_review_identities": 921,
+    "subdomains_with_evidence": 75,
+    "subdomains_total": 247,
+    "new_authored_package": "develop-melodic-motif",
+    "behavioral_status": "incomplete-one-text-only-pilot",
+    "new_unchanged_use_approvals": 0,
+    "scope_extensions": "registry/capability-scope-extensions-20261117.json"
   }
 }

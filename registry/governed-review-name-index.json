@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-08",
-  "purpose": "Governed exact-version review-name index for 47 first-party and 995 third-party entries, totaling 1,042. This is a bounded reviewed name catalog, not the whole Skillz discovery universe. Search external discovery records as well.",
+  "snapshot_date": "2026-11-17",
+  "purpose": "Governed review-name lookup: 48 first-party plus 995 third-party identities, 1,043 total. Not the open-ended discovery corpus or a universal coverage claim.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
-  "source_snapshot": "Live Git object tree inspected at fe05919c0cf062a5eb7107ac04e0e2bbe15c417e",
+  "source_snapshot": "Source/navigation baseline 48d35fc2aa0a6b3cd8ae09c94be67213e68fbd49 plus exact new package fingerprints in authored index",
   "record_counts": {
-    "first_party": 47,
+    "first_party": 48,
     "third_party": 995,
-    "total": 1042
+    "total": 1043
   },
   "first_party_ids": [
     "local-skills/agent-home-doctor",
@@ -23,6 +23,7 @@
     "local-skills/deck-outline",
     "local-skills/deep-dive",
     "local-skills/deepseek-pulse",
+    "local-skills/develop-melodic-motif",
     "local-skills/devlog-draft",
     "local-skills/fact-check",
     "local-skills/finance-review",

@@ -109,6 +109,35 @@
         "game-design/narrative-design"
       ],
       "capability_mapping_ref": "registry/discovery/authored-capability-routing-20261108.json"
+    },
+    {
+      "id": "develop-melodic-motif",
+      "display_name": "Develop a Melodic Motif",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/develop-melodic-motif",
+      "entrypoint": "skills/authored/develop-melodic-motif/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/develop-melodic-motif/LICENSE",
+      "license_inheritance": "Original first-party instructions and original musical event examples; no third-party material incorporated.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-17",
+      "provenance_path": "registry/skills/local-skills/develop-melodic-motif.yaml",
+      "verification_path": "registry/verification/local-skills/develop-melodic-motif.yaml",
+      "skill_blob_sha": "daa9645531208e3f1df730792b984ac2afac5a03",
+      "package_tree_sha": "3342392bab431158deae93792dc87efe23e45397",
+      "package_file_count": 3,
+      "review_status": "verified-static",
+      "review_score": "18/20",
+      "behavioral_validation": "incomplete",
+      "host_authority": "generate-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Independent expression and examples; no global novelty or resemblance clearance claimed.",
+      "package_version": "1.0.0",
+      "capability_paths": [
+        "music-composition/melody"
+      ],
+      "capability_mapping_ref": "docs/reviews/2026-11-17-melody-and-capability-scope.md"
     }
   ]
 }

@@ -1,0 +1,40 @@
+schema_version: 1
+skill_name: develop-melodic-motif
+skill_version: 1.0.0
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/develop-melodic-motif/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/develop-melodic-motif/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: daa9645531208e3f1df730792b984ac2afac5a03
+complete_package_tree_sha: 3342392bab431158deae93792dc87efe23e45397
+characterized_at: '2026-11-17'
+reviewed_at: '2026-11-17'
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: incomplete
+validation_note: One independent text-only holdout pilot observed; no representative multi-case/model, singer or audio acceptance.
+  Incomplete is not validated.
+behavioral_evidence_path: docs/evals/2026-11-17-melody-motif-bounded-pilot.md
+rubric: docs/skill-verification.md
+rubric_score: 18/20
+tags:
+  use_case:
+  - music-composition
+  - planning
+  - evaluation
+  lifecycle:
+  - design
+  - verification
+  characteristic:
+  - evidence-first
+  - traceable
+  - safety-bounded
+  - human-review
+  authority:
+  - generate-only
+  portability:
+  - high
+notes: Complete original three-file MIT package inspected; no required executable or account. Source comparison and dimensional
+  rationales in docs/reviews/2026-11-17-melody-and-capability-scope.md. No security scanner execution or unchanged-use approval.
