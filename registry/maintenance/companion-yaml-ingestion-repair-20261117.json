@@ -1,0 +1,896 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-17",
+  "baseline_commit": "660da7ca95503a3756179cc3a725d4b667e110b3",
+  "scope": "governed YAML ingestion only; no skill source execution or requalification",
+  "provenance_records": 1042,
+  "verification_records": 1042,
+  "before_syntax_failures": 139,
+  "after_syntax_failures": 0,
+  "duplicate_key_records_repaired": 6,
+  "formerly_parseable_records_semantically_unchanged": 1945,
+  "scalar_text_preservation_checks": 139,
+  "negative_and_positive_fixtures": [
+    "quoted_colon",
+    "raw_colon",
+    "duplicate",
+    "nested_duplicate",
+    "unsafe_tag",
+    "valid-path-alias",
+    "pair-identity-mismatch",
+    "missing-companion",
+    "empty-corpus"
+  ],
+  "files": [
+    {
+      "path": "registry/skills/addyosmani-agent-skills/browser-testing-with-devtools.yaml",
+      "before_sha256": "d936453fb728683963ff498da3c88a3ba3f33aaf3ef6794a6926c39139abf542",
+      "after_sha256": "b70e64e5eb70cbc1300a48426063143c700ca3a1b8ebfd22675b00978d6aaf94",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/addyosmani-agent-skills/observability-and-instrumentation.yaml",
+      "before_sha256": "c459b487f87a96c119f98c0f44663a0f0380e58c6394080e107b884ea573fa9a",
+      "after_sha256": "6ba40c8e1f24fc10270f91a80197efff5130636c37913bf3211278cf69830d8a",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/brainstorming.yaml",
+      "before_sha256": "a4cbbd85aa14d635c9da9eba50c63b33432b96cf6bff8f5a0d7b864d33ccb85f",
+      "after_sha256": "825a691e56cb0a8a91723bea4c47db1ba399366faa14bd9c562ca440f705f01d",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/community-skill-radar.yaml",
+      "before_sha256": "046e86b9c17ef722ecaa6ce42adf452304a239e14d46f9e702b1468947efa58b",
+      "after_sha256": "86a0b862afd863ba573c553bae6d946e9b0b632b4eff2fa02aef283990af006d",
+      "correction": "comment-superseded-duplicate-license-status"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/morning-briefing.yaml",
+      "before_sha256": "e07881b0b57862f3dd1c546a088f264633d7fadffd25eb3cc06bd5f8c5e185d7",
+      "after_sha256": "6f5cd0c1f8df925d63c634a8144ee57b0f79cbb8f1b89c8df382d8b05fd8c76c",
+      "correction": "comment-superseded-duplicate-license-status"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/obsidian-sync.yaml",
+      "before_sha256": "86c6a2bed7729121f856042ee9fbbc51382e3967f0794680bb4b29fe1c6350c9",
+      "after_sha256": "8c4cf1137b6677a2fbef92acdedba2a9c9dccdadba1c2623ca2dffd8fea6acbb",
+      "correction": "comment-superseded-duplicate-license-status"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/pull-request-feedback-loop.yaml",
+      "before_sha256": "e4c3d2ec230fb49d15280a4883de98494fcf8f2dfca14a53d5228b150407fd95",
+      "after_sha256": "b4a9a6a5a772e6cb92f6508bc11da525f627deb6727ca0975a3c6ee0a48e1774",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/secrets-hygiene.yaml",
+      "before_sha256": "58fa0ad1270fc28059cd2b51dc7b90a2f9035fa2761c97c0a464ceee7aadaca6",
+      "after_sha256": "eabfb3276682923ee0db0c380421592e274f81d1c1c0a2689570b813d12f1ee4",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/skill-compatibility-checker.yaml",
+      "before_sha256": "db2ce4ceb7a666d54a41dba389cf78349ce7ffa31b49862c91ec45dcbdcad2ac",
+      "after_sha256": "8869867577ad95d9fd5fa970f0eb09009336e9c83159d9a0f4038bb87936984a",
+      "correction": "comment-superseded-duplicate-license-status"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/skill-doctor.yaml",
+      "before_sha256": "f40ceb165107b7e1314f6788735b2e73d7d072c402908c2146292faf54ccf5c0",
+      "after_sha256": "09fb9a573ec893fd49e65fb2a3731d9fc54e44bd26beb1151a76d53db24a8ded",
+      "correction": "comment-superseded-duplicate-license-status"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/skill-effectiveness-auditor.yaml",
+      "before_sha256": "92acd5ec6a27586056b236f88597910deb63174776772fdda007b5fcfd694f6a",
+      "after_sha256": "79497640151f72f306a8605836f46d535125178197ed5ba266001f61de6fc86a",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/tool-description-optimizer.yaml",
+      "before_sha256": "b9aa75c5d1282c49f4afd167bc9295a850f5203a520daed4a47e6d66ed35ee1a",
+      "after_sha256": "782c9eed507a48604b39367dcdab14d8b942437812f5a3591faf4bf36b48762d",
+      "correction": "comment-superseded-duplicate-license-status"
+    },
+    {
+      "path": "registry/skills/archieindian-superpowers/verification-before-completion.yaml",
+      "before_sha256": "d7182777e500fc23f9ee9e96ec089be7a27646ace7754374e8fdf9e4de436bd3",
+      "after_sha256": "c7809ab685e3f6f2aa888b4eeb900955ddc23ed4bc5c2cac2ef9429c986f0d47",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/aws-transform.yaml",
+      "before_sha256": "bbc615b4c5d10bb22f196231973ab2f95b08775d064a40b24077f322b73e2bb6",
+      "after_sha256": "d77ec6130867ee049d995564bbfe3a7c7e096a4daceb558b07836f9b5b5572a8",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/connecting-lambda-to-dynamodb.yaml",
+      "before_sha256": "d552b652d51de6f15cd3ad0ae83df8b2dfcbc97cba94387123f0fb5d3b2ca427",
+      "after_sha256": "02d250b3e9738b39f44603b387a1901386509ac38de5a8fd5e62065679e5c370",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/creating-secrets-using-best-practices.yaml",
+      "before_sha256": "e87c49e4a5863217e411c8bece48ec492edccdf150a1b86ea449bca781ad8aec",
+      "after_sha256": "9d338a07d177eb2f94227ec4ba8657b438fe4ef12ab73ca41f03c8aa54b489bf",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/debugging-lambda-timeouts.yaml",
+      "before_sha256": "2781df08903fbebeeec1d3c8e0eb02c3276376eaa5dca772966c2e9c0633e05f",
+      "after_sha256": "e6ab6752a919ccff12d6bcaa1bade3dcc5229214adf50fbf8e01eb0976abfbd9",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/directconnect.yaml",
+      "before_sha256": "422ab2cacce5539bffa0bb0bed1828a510c51dddfcf7d86edcb322cdc9a7b876",
+      "after_sha256": "4001a548cc6adf93297a6dc2d4fbb0467ff15ce3532cc3c5c5b404b281c19f99",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/querying-aws-cloudwatch.yaml",
+      "before_sha256": "c05955375355761ad58d0f86907a11735f84b53a151475e51f66204ece372847",
+      "after_sha256": "fe001a6a0175e89182e05fb589317ca0a26568547d8cf5a554a7bfc3f334250c",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/querying-aws-sagemaker-catalog.yaml",
+      "before_sha256": "bff8d85a56b5f1429c929b919b0e388e703c53e459c42bd7433247e87161f9a9",
+      "after_sha256": "32eee366209f7ac2b5d7b86c202cf73f9d474dde7afd7002276938732602abb5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/rds-db2.yaml",
+      "before_sha256": "5f6ab60e5c035ba9c80e0b27e2ff6a1274d1fc49482195339dd4f54dc536ada7",
+      "after_sha256": "4cafb58bf692808b95aff75d4a438e92e14822279cd38fc7710321cbab1c9989",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/rds-oracle.yaml",
+      "before_sha256": "5dde4bd9561a4ddbd77258f4e2fd2990456ed60587540520ce3319b3752526bb",
+      "after_sha256": "fc7841b730bbc03716a70baa356e2225bd204fb1244dada41a44bf491848015f",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/rds-oss.yaml",
+      "before_sha256": "03ebd481a1401d159fd9d21a491e680c01e78e4d3778d85f5c3d40d4e5fe98df",
+      "after_sha256": "799173d62a6d34e5877103f8a60c6afff79fdfb4d747ae3e829f170dddec1d19",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/aws-agent-toolkit/troubleshooting-application-failures.yaml",
+      "before_sha256": "e465f7ea17d201e376181a1851403b2bfbf3579f4b9bccc4ce47b664c55ed73d",
+      "after_sha256": "8087732245859c039cded41a49f52c30d23c3260635d6318264961004a4ce5c2",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/cline-skills/attorney-assist.yaml",
+      "before_sha256": "4912e429f9969340493b5421e22ce030ff3d574147731ddb8a3897918fbafe9b",
+      "after_sha256": "f161a660ecb5f0fc7ce522c3858409b1737841059e2b5e9a13d350cfef651fbd",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/cline-skills/dataproc-skills.yaml",
+      "before_sha256": "5e7687a3d484ac886fff2b21a1f055264af469f04218769a9aebb23fe0809019",
+      "after_sha256": "bc36499966aca88df54e05abe76e4887d0e1af857978c377f61186d907e5ec85",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/cline-skills/sentry-cli.yaml",
+      "before_sha256": "33d66e4ca499d14cacbedab0165aca7f7c3c6ecdb63e85af264953a9b5b9f7c9",
+      "after_sha256": "e1bed4852d8cea91b19544dac71cbf07bf3cfa8570d82f931a2e64c4d99048cb",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/cloudflare-skills/sandbox-migrate-to-next.yaml",
+      "before_sha256": "4769dcbd61c64821d5de1f92ca3e77fa4ce43fa5009c2300cf725be5f3ba866f",
+      "after_sha256": "2b3ad6cb4bc538417db9a77347db4e881095f01e490edb2e9511f28632567d81",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/cloudflare-skills/sandbox-next.yaml",
+      "before_sha256": "273fcbb327357176aaca5306f02b7b7a7f9b12ce0723a19a4e3b05c9a91aad6a",
+      "after_sha256": "4ab4399bd89cb788d5065af462de44e9714e5290bcbf99af906add0f62d40867",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/cole-medin-skills/opportunity-scan.yaml",
+      "before_sha256": "7f73015a676f1312225a73a58ab6f90fa8ec8ffc98a8dd1e05831b4b31cb654f",
+      "after_sha256": "3e362a85a3ef687a90efd6e179d3c3e34820ebee5496840989794c3fe5bd8748",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/corey-haines-marketing-skills/ab-testing.yaml",
+      "before_sha256": "91b7d22bb33a54010000e7a58cabecc5cfae7efc2e72d65587a445bb89957ab5",
+      "after_sha256": "e7f0eb154ebc76a77e690764850777a20c24cf941ca7e6e10df3a28bc388b2df",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/corey-haines-marketing-skills/ads.yaml",
+      "before_sha256": "0f1a750ebba169def5242d1b5fcd7e9e7bbe8d2f67c93c977e977bb2bac00fa0",
+      "after_sha256": "89b70e7a510a145557961ae2f0313bad6294aff2541cb7401ad479afe4b7cf6d",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/corey-haines-marketing-skills/ai-seo.yaml",
+      "before_sha256": "5730f7d730ec048c1cabc0c8287b27ffebbd40513a49d2453f7f3194c42ac487",
+      "after_sha256": "7cd49875497fd21967710f2c915484075fa57e5d8ef70ee98ff8eacc980f3f6a",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/corey-haines-marketing-skills/aso.yaml",
+      "before_sha256": "f1b7998a6d600686c1aa3f489f60dcdc9bfb73a188e852ec1a875fbab1b97e37",
+      "after_sha256": "337c39f51dbeb0f899df657c17170700b68450e478d5b3911b0114a4d503f389",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/david-ondrej-skills/before-building.yaml",
+      "before_sha256": "54331c051d5f4ed401e5b4ddaa31220e7470c95696dad45b9484f31db6179235",
+      "after_sha256": "934a8b7b7414d128f73d2d30f5f6a641b027b18d50bbdd251a8f7e80a79e43e2",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/david-ondrej-skills/decisions.yaml",
+      "before_sha256": "24c8f668866fef96209db82471e09a657d558ec66e3f85d979efd7830645b304",
+      "after_sha256": "f5a1c6872933655d6377a66d56897a1e63fd25e337c9a1f0dfe39939692e43d8",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/david-ondrej-skills/setup-help.yaml",
+      "before_sha256": "1726e56c3c3bf6c753ac3cf41c127799c247ac96f42fc7fac814dc7125bdcc8b",
+      "after_sha256": "894d1d3cd2b5420bf49c42785d697f93a26bb7d65704e6558fc4ba01f4da9125",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/david-ondrej-skills/teach.yaml",
+      "before_sha256": "6ad990141e03aeefd4c8b5dedf3fc918af40ccda01f2271422338eb565c3c85f",
+      "after_sha256": "e3f1fb20424222731e7e43f2e5363c9e0210c6774a2e1dd6ab1e63fafddb7ff0",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/jwynia-agent-skills/character-naming.yaml",
+      "before_sha256": "7b77fa87e0aefe4a26d414446deb8fcfabb2e383c72192f3d664a81c3bf9bd8d",
+      "after_sha256": "47ba3c13a2c885cbd620543a3deb5e02d4433f218092948367641ff9ae64e8ff",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/jwynia-agent-skills/game-facilitator.yaml",
+      "before_sha256": "1a5de6b99e62a3b2a44b8e1c3d495fb5d39ce1e36cf18676be208bc068c309d5",
+      "after_sha256": "a46a80f9a0fce8ee9dd726e39655dcfa3905f907b76509cf1da0f6b12dc3a3bd",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/jwynia-agent-skills/reverse-outliner.yaml",
+      "before_sha256": "54fd0de8892dd3a810a2a650f4ebed1a5d5dc13d1e5ec8289359666000030757",
+      "after_sha256": "f8ee3eb50c197595f0ee198095a5a85a3f655d3bb7452bbe27cdae389cfb1d74",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/jwynia-agent-skills/shared-world.yaml",
+      "before_sha256": "ee5d875706752a6709586040f878ca83a7c28eb4b2041d1cd41cd52607007d17",
+      "after_sha256": "54c87af8a4e09a370bd7fb2c11541b06e505dbf4b80e593db44d28966ad1e055",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-azure-skills/airunway-aks-setup.yaml",
+      "before_sha256": "abf6dd11bfd31bc0958963414296773c6703c54480f6da9ca0cfc28bb85f696b",
+      "after_sha256": "67c36398b25cf5bf7951e8474bbfa67a5cddda9621c6997b4a6c537ea1d46ba2",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-azure-skills/azure-cloud-migrate.yaml",
+      "before_sha256": "5434137347940a2fe34ee6d8f6f12d5826a4f647f62b4095d955faa86cc1530c",
+      "after_sha256": "d519070858a3a19d1efce2b516756f65e4c6a8f0d6e5235659a930fcc633ea2b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-azure-skills/azure-deploy.yaml",
+      "before_sha256": "9a4c92a543d814c44fe6254b1dee7562f8bb0e177e94bef8f19497c94e470681",
+      "after_sha256": "bb00390634e4dac4ccaeb0810d06717cf05d3bdbaad93aa4a08611d13af2e879",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-azure-skills/azure-enterprise-infra-planner.yaml",
+      "before_sha256": "25780547a8567aaca97262dcb37f97f78171b4f7c9086cccec31cc4565d7c724",
+      "after_sha256": "3dc5dd6a3dfe37217dd7bc13f7759ae879266f27f278dbe46c1bc92cf5c4d1b5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-azure-skills/azure-rbac.yaml",
+      "before_sha256": "da004728cf97c6a99d46235e439ed3918e83d69715f7b282c73791f3e311a2a0",
+      "after_sha256": "a84bd276f71b253491cffd62b7453d7e2672df458bd1c985d4871a76c708b4f7",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-azure-skills/microsoft-foundry-deploy-model.yaml",
+      "before_sha256": "ca291319d4930df82b0becbd7ab5727b62a0f29cfc785ee452fd750b4162dec4",
+      "after_sha256": "8e3a186731954d319190660cc7d3df35bf5fdb872ada04bed36877418652bf79",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/airunway-aks-setup.yaml",
+      "before_sha256": "be55cf81f144fd5f23290d6b16311e089a5806c1f7a809f170e3dd6b6879c06f",
+      "after_sha256": "8825ee4ecd6a426bc4d05fcf735363bfdada9400ab3f3cff8a52ba55ce848668",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-ai-openai-dotnet.yaml",
+      "before_sha256": "524a6e16c92271e26068deeda3955bc6950f1d659c654ce9cb09a8d406ae8ff3",
+      "after_sha256": "8ce0bf04fa5bc26bddc710d15ba0f927400418618fbc04d1711152dce4aff156",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-cloud-migrate.yaml",
+      "before_sha256": "b1f819cc690c94d8c4dc4e40c5b3e8324429855b216aa06a1418abe1b16aa1de",
+      "after_sha256": "3583b7d55a7178a9a29aab0df11a755d7f7e531cc4d4212257d4bb140df53759",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-communication-chat-java.yaml",
+      "before_sha256": "841b2a2d2018347fb3950c0fcb18d3bf21a49469f4252a263152f923766aa763",
+      "after_sha256": "477065ca5a839f9b275c815701d905aac57f025897633949c2e401000019e2c3",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-deploy.yaml",
+      "before_sha256": "73c73fcb632a27539478e76b8e84c80c03989ea069666e816d092c49de20583a",
+      "after_sha256": "d64ff7db6274ad1d4dc17891f3028bb24b78c33de5bb34472a83dff183aad1b4",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-enterprise-infra-planner.yaml",
+      "before_sha256": "b69a9bdfab010e4c0c4828b811c86ed4c295b79420215dcec950aca528ce1202",
+      "after_sha256": "50132cdeb5290f8fb47c96181aea88bc7569413af4a44e9c515b7a3f2f7bf359",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-mgmt-apimanagement-dotnet.yaml",
+      "before_sha256": "9a4e7d112874f9abc437e699297ad4ee705ab6a5f8d72734e7d117b98d29ec86",
+      "after_sha256": "59ea8c8d60a66f55c978c72cb625b506bb600687f0c91e11666a4b4dd38cbe45",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-rbac.yaml",
+      "before_sha256": "c71ce6dcff213116cce504c52a7c9ff15c7080e522732f9ca75e3a8ea830118e",
+      "after_sha256": "c12824431bbfc1d80620c699d94f2444be5a86583d7c534272498a0a77cccc0b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-reliability.yaml",
+      "before_sha256": "37e2ea3374b5c61bef7e906e192b4d7013027d673c3a7fb4d6ac526b2c9d456d",
+      "after_sha256": "b3cb6c6f154ee6c94a1a7dad0fdd5b56aa263f9a1ffb9fb08ee8e2f2837d87ae",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-resource-manager-sql-dotnet.yaml",
+      "before_sha256": "60654a1072cf740e36b1c36795ac855cd85de7966a55c208ab428f937338fce4",
+      "after_sha256": "d183ffe6c60805da9f852f1896433ce79c5129670df135cbab6ca636addeac14",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/azure-security-keyvault-keys-dotnet.yaml",
+      "before_sha256": "91828288802cc549b80a7bfcf74c0d60199327c9bdeeb5cc2d4be2d4b2867947",
+      "after_sha256": "56d6b685885df96d22b5d2110fef18ae2aaa565aa96359a7122b97e739933593",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/cloud-solution-architect.yaml",
+      "before_sha256": "8eb7e577a77eea07635b22e7a50ec38a80d772d5e94c2f3829a2dd45ed693dfd",
+      "after_sha256": "3f93162a7d8f8353a0e307dc41a243f33603853990fa3f436850d8c30bc6b7ab",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/frontend-ui-dark-ts.yaml",
+      "before_sha256": "f1a8635ae66b4b7b8b56381cb5c29822253bfcc11355074c022f2353389ae300",
+      "after_sha256": "3dfae129c680809a3f70cc775ec35075b81100de73d3a66feaa591ce7cb9450c",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/microsoft-foundry-deploy-model.yaml",
+      "before_sha256": "f1d4ba7229858bb4ea074e6cc400c34a920a0c629fcb7bbb8a9f4ba98d2b9e44",
+      "after_sha256": "ab941a38beb3cf84edc0f579e80465cd964844b97095b5d7cacaf5f83917052f",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/microsoft-skills/skill-creator.yaml",
+      "before_sha256": "6c492cb3449d7a8d4db146f0a92ec708074a1ec11e8b61b94c5d7ae5e1d1ca35",
+      "after_sha256": "d7e014c77718b428e24cf5594eade9d6ca81b9036cfa0ae48d81320fdb87e7dc",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/skills/vercel-agent-skills/vercel-optimize.yaml",
+      "before_sha256": "0f59240bf979d61d99c8c1a56669b70d67174ab08d2d23da5804db743ac0cdad",
+      "after_sha256": "9c9595d2580dbe932d6afe1ba4b8eba63e8d6eadc0f41de6cf6a3016591f7e53",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/aws-blocks.yaml",
+      "before_sha256": "2debbb77cc70254c81d65f1b9dc751a0151c8651faa135e1f7c1d82a20c0a71d",
+      "after_sha256": "28afc12183e487ec663ec882db3b48574b76546123efc17610368d6ffa31b7fa",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/aws-sdk-js-v3-usage.yaml",
+      "before_sha256": "720b9ea51eda833ab2751c1e1bcfcd500b87e7b74734468c110e622d22378e3b",
+      "after_sha256": "453fee25fea8610e3be4a8e49f8ecc4f89027c06eac2272776f733119e144f8b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/aws-sdk-python-usage.yaml",
+      "before_sha256": "304c54a675152a167923f2d6c44d0bcf9c1830f89f94ee0a9f02f2600689b9cc",
+      "after_sha256": "c6c9b5a883a19f149634ba32d292538e5fe2e2ce9278e020dc3e56a57f3ef036",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/aws-sdk-swift-usage.yaml",
+      "before_sha256": "527c4784fb94c3cc95fc09c09f8e1477086a9c978c7a659a3dc0026cb263f1e6",
+      "after_sha256": "e7f34e477f19fd00003ed7dae6b7adef09c7d5caa0fcf0a770b176e3a5a1615e",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/debugging-lambda-timeouts.yaml",
+      "before_sha256": "fe3974df9f5348c99509725fe25d0514ce581f6a35a2921c56f5a1c7246f4e7d",
+      "after_sha256": "01e6109d573500fa625c97a85b2dbad8761d22261a2aa8d616d7ecc596d1f7d6",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/ingesting-into-data-lake.yaml",
+      "before_sha256": "d69baef426b4651cce5ac6788e7220cf3c48cc5a4274dc6db11ccd3f15b88571",
+      "after_sha256": "cec99cfdefdf13ca6a8fc341f5c655d0d7bac87f0aee7f3aa4a5b46e3e699cc0",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/querying-aws-cloudwatch.yaml",
+      "before_sha256": "a702cb747a8113c47709dbc3f5d36da972456619d73e63b39b1ba8efbb33d8c0",
+      "after_sha256": "f23f10a1fb2675bcde4a3ccf5894e3632097dc9c047f3261a9ab507185cfb37b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/aws-agent-toolkit/securing-s3-buckets.yaml",
+      "before_sha256": "bc664eed5c520078bbb81a94f40ccce62b1437da197a1b0a6cbf37dfae152f4c",
+      "after_sha256": "8129fb512eb270fba7cc47f1ff24e69fd40a40209d66bbae4fb852b949804527",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/convex-design.yaml",
+      "before_sha256": "32d638370b79239212926eea4db2d140b5a5f7b19a2e0c022bdf956548448bd1",
+      "after_sha256": "45156a07341c4f6961e87f8f0c3a8f4c6615eec9877a1dac64e9c3d0060a3abe",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/dataproc-skills.yaml",
+      "before_sha256": "d73455b33186597c70d6da4a33bb38191d64a4703033fc47c9615eeb4a1cbbe1",
+      "after_sha256": "9084bd12a87051239c4769596f592be836e5012bd71597e10f3d1f308c8f2856",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/endor-setup.yaml",
+      "before_sha256": "cc415af4e5df2e17dd4f93ceb1fff5fa563f55fd66e4e86a213fbc1f7b220687",
+      "after_sha256": "72fb9b79be5b8d468e70d1474b5125b1acd5b8ce295a66e9f3f8a4528e189508",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/exa-search.yaml",
+      "before_sha256": "94e75f3e9a38466e868aa0ebdfd14ef22ec2ef9e96bd4d1bf4e7851fd6b36d2e",
+      "after_sha256": "f337088a2020bcac490daff43e5a8d608581a02dfd4733c9cfff768725d60b8c",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/firestore-data.yaml",
+      "before_sha256": "787ce5fb7257250322ffbfec2debb093de5b07f020b0f62d51f21d840d0a4507",
+      "after_sha256": "07ad64d79d8f78e2b89eb54f0ebaa58f669a7cee73d0db244990df9e1d1fe226",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/gcp-to-aws.yaml",
+      "before_sha256": "a8edce5a48dc4899e3baa0fcb7769d455ec3d739a070a434a8e77b5926859101",
+      "after_sha256": "85dc0e56758110687ba1c37ff3fd75e32dfded52cf2176521709f57abad02e14",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/linear-sdk-scripting.yaml",
+      "before_sha256": "123779c03c6aae42cfbaa94b852ac6e00f9b349d2735aa28ec5992d422fe24fd",
+      "after_sha256": "5af0fa8897376441a513f811da3b647afb63e31fa9f9e3cde702dae1c680e2f2",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/math-olympiad.yaml",
+      "before_sha256": "d9235ab5daba62a9cf0fcf944254fae659d18bc82f843d63fe611be82aa5910d",
+      "after_sha256": "2f508e0b943d2f054c32c9d5e6058374e9ad9d26854d5e18c6adb882cc3726ae",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/mintlify.yaml",
+      "before_sha256": "ce092eb118f04e46760b499182b9556231cd7698a1cb22b282adf6f48f516d3f",
+      "after_sha256": "a8224eb7d320975875b5042b5b712885714eba93867847a1af0dfd9544f15b86",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/sap-fiori-add-visual-filter.yaml",
+      "before_sha256": "14fd8d3bbadaf00a74420583f2ea37f0a3674641d7df50372f1b792c35fabe05",
+      "after_sha256": "ceea616e4e24501bc36f8629e141dca9423d620456d9d7a3dd3ff4bc47007857",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/save-to-spotify.yaml",
+      "before_sha256": "70a83ee1d9ea59d6ce018332dd7fc909452e8a302435e80b5f78724b92b0ce0b",
+      "after_sha256": "50000e994bea6df45b8f7bf15243256b0f2c01eb3ecdeb09f9004b5709567f19",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/site-specification.yaml",
+      "before_sha256": "0af29775f030cd75e5d7bde74561bb79635cc9a2a503cf6ed1fba52488dc1686",
+      "after_sha256": "4776085cdeb993f8b94df39bca45cced1f964c271ff8e0c76582e215f8c723a0",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/teamcity-cli.yaml",
+      "before_sha256": "965e2e06ae0d0b4d964c311054ada490db50f0f52cbf092076f0c44000afd41b",
+      "after_sha256": "25e6bd3a502861bdd069a0b606647f1979ed4c823233fba9906c34ad9888270b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/ui5-typescript-conversion.yaml",
+      "before_sha256": "affef72d676b6893c6ab624e32a2a68247be8a6187fb43bbd6c176a4c310f122",
+      "after_sha256": "b2a346a7daa5ea0dab90d12b42d1128fe802f9db1bd1d83b096b29ab397f7a0b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cline-skills/use-railway.yaml",
+      "before_sha256": "4b3c262f329bbc7ea3fecab2aa1c2483cafacebf9ae46bf9578ec40b1346da50",
+      "after_sha256": "0edc1a0a1f09a6e228f74d2f7ba198256236374a9d13d83d8ee3206faad290c1",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cloudflare-skills/cloudflare-email-service.yaml",
+      "before_sha256": "8cb0afd9474f0d3f2aed2f1a85e9b669f2ca0b1f92fe3b210b37d1f1ab28c64f",
+      "after_sha256": "d9a7e38e270be88459075b4db536985e063c9101e70ca400cb3ea3cdbc98858e",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cloudflare-skills/cloudflare-one-migrations.yaml",
+      "before_sha256": "66785c164ae0b94824d6c63c36ac3d8358d3209b10361f844e995902eae36238",
+      "after_sha256": "b7de1ef8ff9f15934797d537073009937383e5ac4941eee04ccf13df76ebd768",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/cloudflare-skills/cloudflare-one.yaml",
+      "before_sha256": "5fc12dbae1c2499e3fa029009084c335fd8aa70c2516e3e702bea1459ed89fe0",
+      "after_sha256": "b1acdcb361b634bfe212ed344174b1410ac94ad391f276d23a0006c88cd412cb",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/airunway-aks-setup.yaml",
+      "before_sha256": "1286c8331088c931b41a71806a1f1b6fa75d72effa0078c9f927ef16f71033de",
+      "after_sha256": "a901591bf0ce6dd23915a2f9ceaca01e26ae86caa4c5cfb3110ce11c4d618aef",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-cloud-migrate.yaml",
+      "before_sha256": "ae05167113bbe9efa2b48fd3b888a99de191e81c48419030a2eac6cce567d014",
+      "after_sha256": "b55b01ff65982cceae8f57191897a856a3244c42d1e0c61d0cdc0d29127e47a7",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-compliance.yaml",
+      "before_sha256": "3fa283c8ae2e399074041ecf6972ed6a824a9117a6e3a2392be5ac6ca8b14369",
+      "after_sha256": "fd757875762128aece1273a9d177a6ee2229e724bc1c951c742d349bfd5bb6a7",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-compute.yaml",
+      "before_sha256": "555452e57b550614fc9812a70d8d8e29d25114e5767aa7499067094efd6bec72",
+      "after_sha256": "dbf40dcd1f982ec8e247684ca69d77c8a5009887978fe8311dfee39cf5c27ab4",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-cost.yaml",
+      "before_sha256": "ec9ea7eaa79c750afb11abaa4cf44f76467c45d964b1e49f8479fddf2c9c63e2",
+      "after_sha256": "628af3aa398c275fce91379df526d05573aa688f6228222a125bfde59278b2c5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-enterprise-infra-planner.yaml",
+      "before_sha256": "c2c8eba4cb9f17e9a608b46636eab63e80ff8a1baaa40dbfacfbf98464c11ddf",
+      "after_sha256": "fff51b54332aa027a52b8d9e1cb4405a773c7b0d5d5fcb765f7304cb7d502888",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-kubernetes-automatic-readiness.yaml",
+      "before_sha256": "f74c6cf25cdbacbb5c2f4a9855cbc6486b4c5dda3f602f7afff12ebbe63326a6",
+      "after_sha256": "b41ab2f6a7f3b281c0a466df61db472991f5e412a47156b0b58d0d695764c179",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-reliability.yaml",
+      "before_sha256": "88c18c0b8b5e3b6206f32317f414d7974056ea77092787b176fd18b3c5a4d7d7",
+      "after_sha256": "4430b36463284817bad78f25b82e66ea432879d254e9b5a6978d54aca4f59e3d",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-resource-lookup.yaml",
+      "before_sha256": "1ed0e691a5e233a6d64b3b00fac3d76221f20d2a15fde7f58164b0a4a99953ae",
+      "after_sha256": "b47214f7e5ee4b1c0ca02979c40db998faa8a97fc3f592bbe56160d80f86c8c7",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-resource-visualizer.yaml",
+      "before_sha256": "bfdafd8b73eefae3bcc9a860d0187441dd0797a6ebf38ed05c1e605e96c0783b",
+      "after_sha256": "b47f425a507f0742f51be30676580945a27d94ed1331c80a238e75b9fa8f2731",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-storage.yaml",
+      "before_sha256": "47fa19d333ed37fbed30f18a3e70ff24bd6b3760040ea2d52c6ba0fef4c359da",
+      "after_sha256": "dbd1933d251f246f1bb8c0497072831a4c28f5e5f35b2e1b754feeeb02e4d00c",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/azure-upgrade.yaml",
+      "before_sha256": "6dfab974dff5dd61cc28948becb1cf5f6c9d729ee70aa9271d26ddb96d33d329",
+      "after_sha256": "37329cc8dd29adc856301c1d08087cf79de58eddb29c2c7c5ee9b33519749029",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/entra-app-registration.yaml",
+      "before_sha256": "bebb9615e6308824b1c2440fdec7b441fa61a8ae56cf8f28cd1b143e60adc6cc",
+      "after_sha256": "21cd058af7a3306da1294a58703df4f11a90370c0fb7c2d0b24c28c7e71623fd",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-azure-skills/microsoft-foundry-deploy-model.yaml",
+      "before_sha256": "27913edfc92f29f53da218bbc96f3115c45c44d007a10bddfda0f42d80c28d17",
+      "after_sha256": "4cd91d37b1bc663207764d01cb05631dbffd9ff294f68150082dc327f5963d38",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/airunway-aks-setup.yaml",
+      "before_sha256": "5f5e80e1ce1e339926a402f91e510af14de20559f67338c19407e017ccf48237",
+      "after_sha256": "a2885f977fa1066a85d6fc1db089bf53c5843e94a82593991a58f0a27e7d8e84",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-ai-agents-persistent-dotnet.yaml",
+      "before_sha256": "556134d5a6a6de5cc8cd5843893274c55e6b98d5a5cdf9228a04d8034b345fc0",
+      "after_sha256": "649d0985d59fdeb02be74487b23f9394a78f6021b0161f12f0422fb6af40b806",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-ai-projects-dotnet.yaml",
+      "before_sha256": "4c6bd8b8169bb88f7bb378129eca3754e01f43c2435ab02fc2113ac4655e190d",
+      "after_sha256": "3022c2b048a82be4ab7ca4069f5a934309f2c24d0c24fd4685d531ab493fff76",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-cloud-migrate.yaml",
+      "before_sha256": "25a1bf8494b6b5f40d4ed6b4f914e8ccb3bed4c9fbf298b85ce73a4018bfb747",
+      "after_sha256": "3fc6c99e026db5ca35420431e5fe0507e1470b59b93f9287b2d53d004ffec51f",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-communication-chat-java.yaml",
+      "before_sha256": "64b8c0620757b5830255bf29a5d01305bc65239298ca398b567044a5e1f47233",
+      "after_sha256": "989f1c6d949367252804b59adefec9ad59a696a73063830593b0b8061d2b209c",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-communication-sms-java.yaml",
+      "before_sha256": "3bc671c8da93305e6cbfd81ef748be7df5ff39cca9d92c4e179ba331ba6e0fbd",
+      "after_sha256": "0cc16f25384c7b6c1999c3c3e2f08dc9bb2ad0f7117012f5f00877af0581c835",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-compliance.yaml",
+      "before_sha256": "890ee76d49df1be9c1aadc0caf50abfc3b35bf2a042c37a5cd8473bc10f2f999",
+      "after_sha256": "6d7b1d561b6030fe8cd4bb66082337c2e55654ede7d4f1b851bd7963ca8698b2",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-compute.yaml",
+      "before_sha256": "92adaed84248067c2d1f0bde413428c5af293484290c6549a02733f44dd39c21",
+      "after_sha256": "d430736f2ad8f49e586640e61ac38c695f5dde1b261b6a685d92203a545003e5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-cost.yaml",
+      "before_sha256": "dee8c51922599733ead5742ee347e747b37882d84dffc3acd6194d314ff79ce3",
+      "after_sha256": "e1230ab1dc83e7869323100c497d7b9a0de4fa16e66ec44322181ac48d518fcb",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-deploy.yaml",
+      "before_sha256": "aa5d653c204502e85dc3eecaba3ac00a1e9b66e7b8df8c9f683be5088ba7f06b",
+      "after_sha256": "a2048d20cd93c189e94c62d7d88f35a2e10dd28bc2a2e32581fd6646e77fb7dd",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-enterprise-infra-planner.yaml",
+      "before_sha256": "25bea01e476ce585c5349bf54833712936c80183a9b548b32b3c63a7527083bf",
+      "after_sha256": "1250f4b44a348475c4f53333a0b6a76702a62ab9c1a5e5438ac35b5de22491ef",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-eventgrid-dotnet.yaml",
+      "before_sha256": "6ece11053a2165aebf36d5e9fa745e7da0d76ecbe4422c59b5014f826bc47bd0",
+      "after_sha256": "8cc607fc76b5b32a882af4e16d15d27e681e0d5a6e6ffd3a9bca3671bf92e417",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-kubernetes-automatic-readiness.yaml",
+      "before_sha256": "b9e0118c58eb3f8454770f25bdd5905f48ed081e34bfe830c0a67954b0b93211",
+      "after_sha256": "fd3aa7d93ba874d07a9966ddd8d4d21b62dc17b311ef66cc5a6193930a944640",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-monitor-ingestion-java.yaml",
+      "before_sha256": "ae69b128580ab2d52571271b3b46239b6a086c76469b86cae3299b7f055ddf1f",
+      "after_sha256": "83f88169a757e6444cca0a100744cc20d457aeac898afe71745ecbe87c7a9817",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-monitor-opentelemetry-exporter-java.yaml",
+      "before_sha256": "42951c0f72f76fec09eece96cd931039541e411d1c6f25f0df6f73f75f36d293",
+      "after_sha256": "af2521cd47a300cacec76d7a41167d27b82be22c50e7a5562326a8a3e38375b0",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-quotas.yaml",
+      "before_sha256": "33d0270bb93a8f6cb87cbafdd4dfe5a749c0edc2c1c7a18daa0c7814ee29f242",
+      "after_sha256": "c66e35ce2f5a2956a4ad6ba862a5dd8302e4047b15a0e8a25750dd7192505ede",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-reliability.yaml",
+      "before_sha256": "e7b527850b9fdfb238dda30ab4d3fee3906832d37423d52e17bdb4e0dffc8757",
+      "after_sha256": "e154d9202bd6972e3a0771607cd3b4ade3e861ff1c5a50c8e6b7246583a9223b",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-resource-lookup.yaml",
+      "before_sha256": "f48993a858778e4c83ddfc2fc1ddad10fe2fbc6e4788c2a38d6c070b004a94df",
+      "after_sha256": "ab3ffd2cfd2d587824cf57ef7a03597cc2422dfa7ace3359d87e568fa29e7555",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-resource-visualizer.yaml",
+      "before_sha256": "2383ef7f9acabbb46e1f5a123389c9e22e993eadcdad6391f981ecf21175e76c",
+      "after_sha256": "ffdb845eb69b1d2525a24657a83963c75411ef8f64a35d697bba5cd269c66907",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-security-keyvault-keys-java.yaml",
+      "before_sha256": "455ffe4765c78df2c4183fed5c662859b7eae3598e1b13abbcab384586c5f7d7",
+      "after_sha256": "c8922b08e45a1be5fe48c2bc3dbc91d70a3c8a05c69a64711a7946c1bad0dd1f",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-security-keyvault-secrets-java.yaml",
+      "before_sha256": "b2edc9a5fb594526367de50c1f24989985a569d253ef216d5dbe6c18b83944fd",
+      "after_sha256": "ed4600881763de5b691ac075a205faa5ca50f676ed9a266ea0a5105fe39c57a0",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-storage-blob-java.yaml",
+      "before_sha256": "21cbd3d506d460f626aa7ecb301c039ff2812b5dd1e63a63d883c4a491a0ad2d",
+      "after_sha256": "886bb936ceeeb8e577176d9e16d9147217444628072100a37407adb13a638f5f",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-storage.yaml",
+      "before_sha256": "8d1f41172bd8fe28b9cbd103b8d69a7b036ec48817befb6889510096931aa52a",
+      "after_sha256": "c4247012415527bfa2a15bec1f7110f28c072ae6b972546a97d3fe08c43d4385",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/azure-upgrade.yaml",
+      "before_sha256": "d297c0853aa9da589b9f5a9cee426a5a978d0b1ccc8a5911f9ba244e61293940",
+      "after_sha256": "670432ab2b197c421c0d28c3df04182432bdfbbc1cd287f46804187aea2de349",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/cloud-solution-architect.yaml",
+      "before_sha256": "c5b094f6b747c9c453102ed0b8e5bf72bf1e0859ed09c5978bce535d3581028d",
+      "after_sha256": "8fed722ce4bde6d4d4023e7a0ff675dc715163b5d008d38d52e73db2d19c6146",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/frontend-design-review.yaml",
+      "before_sha256": "5f0806a95b914cdc0ade3ff0b7f0508a033e8dc6d98693a46787588b61805771",
+      "after_sha256": "097e5993bb4929ad29ce307c8fe080c48f8c977c078c934d47a27eb715eec83d",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/frontend-ui-dark-ts.yaml",
+      "before_sha256": "d35fce9e340bf8e6f41309f7ebdacde3af856f5fd5917116e85261b4ec5ae498",
+      "after_sha256": "58bdc2e203e11c95c478a080a4cd9b1a31d69cddbb982a1e139132bb35c868d5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/m365-agents-ts.yaml",
+      "before_sha256": "177293e790462653873c5ee3ccd8fcd0b9204791a9bc5629c22bf5be6d346ace",
+      "after_sha256": "e3f87bcafaffb113d949436b2a5b1bdce00194094339f6d13c5437c8e60324a5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/microsoft-foundry-deploy-model.yaml",
+      "before_sha256": "f2951803c0d4850d88cde41a3ca5eb3bd32d0aecd548ea47476170aa44aca323",
+      "after_sha256": "638a52620c91142f8fac4b86b86f7f69e36b309ba9123d924beddb85fb4d4f54",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/react-flow-node-ts.yaml",
+      "before_sha256": "9b4116da52ebbd1e747febe717ab174111677f7e4f2fa60949e914df2d26ddd5",
+      "after_sha256": "96c8c12b9eeab95c62cc93f86d9cab260ade6b8c4827a519d38514da0aad6007",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/teams-app-developer.yaml",
+      "before_sha256": "72b9c7023a4374fa2a350f9a959c05a2f4118180a566f86c4a55bbffbd6cd7a8",
+      "after_sha256": "a5243004d62af4ddb847964e9b993183aef7bc04920dbb0603151e31857fab75",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/wiki-architect.yaml",
+      "before_sha256": "71d8da2bd91192b8d2af756f364ce2655a52ec2aa1b68723bac7594782cf5586",
+      "after_sha256": "c386097a78e7e8fbfefb16c56f4cb2d3b7f2e7ec925f6ec0d2e9c3ea9aa9f024",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/wiki-changelog.yaml",
+      "before_sha256": "13efa9278a98a5d19b9ec51b727775e0395ca1cb8c5e88ab44900c8c24a700f7",
+      "after_sha256": "7f796e77f464f89ef3244ee27538fec525f3e10a4d0c5b5118185779e7c1607c",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/wiki-llms-txt.yaml",
+      "before_sha256": "8d7c093b983e70cdd6da3ced0f0bdb6a82f802098d2129fb841678f85dc99b26",
+      "after_sha256": "039ea0ba53f1e70e3b775447827b2e5972ba717d174cd69e490f54de00d284d1",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/wiki-onboarding.yaml",
+      "before_sha256": "9431607958923c2dbe08be02a46da8ce3ef72ee55fd4c865f3038baf3b407192",
+      "after_sha256": "5f7d2b81a8e43a542142b8c4799bb4fa4177a0fbf5365fc7be986ede24478d55",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/wiki-page-writer.yaml",
+      "before_sha256": "de4351961bc407bbbe3ec05131aeb03c4ad6594519ffde6b1fd161b25f3678a8",
+      "after_sha256": "6b1dd77a586db21d685d9b788422625773dff81d7494c5d1493ceab5115e2313",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/microsoft-skills/zustand-store-ts.yaml",
+      "before_sha256": "b57a73cfb62349ac88568214384e0aefd85a2eef0e977a9b3e340293cf2b7caa",
+      "after_sha256": "9f6c3cfffa37c00e4ba8d364bfe3818aab4474aad533ec5358be4d13f8df1c97",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/vercel-agent-skills/vercel-cli-with-tokens.yaml",
+      "before_sha256": "70f0a0b282ab365b2c95fd4d88db6c4de364c6082fa650da14365936a382f9ed",
+      "after_sha256": "a6f4bd4a8f0ce52273ba8045d4c61e8b7cc6ae113ab6af0f58b2678da959c4d5",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/vercel-agent-skills/vercel-optimize.yaml",
+      "before_sha256": "094021386e0db0813a07c65c905d082581915b9851943c66b091271b999b5685",
+      "after_sha256": "448954854936d38e1af81fad8d8b39a8aa40201fd3b38a27eeb2faea232f0194",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/vercel-agent-skills/web-design-guidelines.yaml",
+      "before_sha256": "c5100c16addf1fe5ed29975251f9c74908338218748ff78d9c1f3c9e302eab85",
+      "after_sha256": "3ce4cf65b5b1a6c91868ba96d758f6af609fb3b03ad70aa64be64610dbe4654d",
+      "correction": "quote-single-scalar-without-text-change"
+    },
+    {
+      "path": "registry/verification/vercel-agent-skills/writing-guidelines.yaml",
+      "before_sha256": "520f75d4b2fbd2734520e526a909b1a08590862ebcd056d7024048153f6e9492",
+      "after_sha256": "837d1e7c470a232bc3901fa6e0b391f1fbd3b353155a0d672f29a866d8289a04",
+      "correction": "quote-single-scalar-without-text-change"
+    }
+  ]
+}

@@ -20,7 +20,7 @@ review_status: curated-vendored
 dependency_status: source-intact
 dependencies:
   - Node.js and npx
-  - '@toolbox-sdk/server@1.1.0' fetched/executed by bundled scripts
+  - "'@toolbox-sdk/server@1.1.0' fetched/executed by bundled scripts"
   - Google Cloud Dataproc credentials and project/region context
   - bundled get/list scripts
 import_eligibility: already-vendored
