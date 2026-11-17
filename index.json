@@ -5454,5 +5454,16 @@
     "behavioral_status": "incomplete-one-text-only-pilot",
     "new_unchanged_use_approvals": 0,
     "scope_extensions": "registry/capability-scope-extensions-20261117.json"
+  },
+  "skill_mason_catalog_handoff_20261117": {
+    "manifest": "registry/exports/skill-mason-v1/manifest.json",
+    "source_commit": "31a8c518dd97b7828adcc728202fa41388a306d7",
+    "governed_subset_records": 1043,
+    "g1_g3_path_observations": 61326,
+    "g1_g3_repositories": 942,
+    "separate_four_source_paths": 4813,
+    "discovery_artifacts": 170,
+    "counting_rule": "Overlapping populations; governed subset is not corpus size.",
+    "readiness": "inventory ingestion only; composition eligibility separately assessed"
   }
 }
