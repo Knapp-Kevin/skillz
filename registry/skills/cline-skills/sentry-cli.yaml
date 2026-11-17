@@ -24,4 +24,4 @@ dependencies:
   - network access
   - bundled command references
 import_eligibility: already-vendored
-rationale: Pinned Sentry CLI and bundled command references are retained intact as operational prior art. REJECT unchanged: automatic private diagnostics and consequential release, alert and arbitrary API operations lack action-specific read/write authority, and bundled auth commands can print raw stored tokens. Preserve bounded output, semantic exit codes and diagnostic command mapping for scoped adaptation; never infer authorization from CLI availability or org/project autodetection.
+rationale: "Pinned Sentry CLI and bundled command references are retained intact as operational prior art. REJECT unchanged: automatic private diagnostics and consequential release, alert and arbitrary API operations lack action-specific read/write authority, and bundled auth commands can print raw stored tokens. Preserve bounded output, semantic exit codes and diagnostic command mapping for scoped adaptation; never infer authorization from CLI availability or org/project autodetection."

@@ -21,4 +21,4 @@ review_status: curated-source-reviewed
 dependency_status: source-intact
 dependencies: upstream repo-level references directory preserved in vendored source
 import_eligibility: already-vendored
-rationale: Question-first observability, structured logging, bounded metric cardinality and tracing remain valuable as ADAPT/EXTRACT/CHECKLIST evidence. Unchanged use is blocked: the pinned procedure directs production instrumentation/telemetry and new paging/ticket alerts, then temporary threshold changes and test-fired notifications, without distinct approval for destination, data fields, retention, alert recipients, costs or external effects.
+rationale: "Question-first observability, structured logging, bounded metric cardinality and tracing remain valuable as ADAPT/EXTRACT/CHECKLIST evidence. Unchanged use is blocked: the pinned procedure directs production instrumentation/telemetry and new paging/ticket alerts, then temporary threshold changes and test-fired notifications, without distinct approval for destination, data fields, retention, alert recipients, costs or external effects."

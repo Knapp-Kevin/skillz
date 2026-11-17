@@ -18,7 +18,7 @@ permission_tier: mutating
 portability: low
 review_status: curated-external
 dependency_status: host-runtime-and-filesystem-required
-relationships: Extremely valuable canon/persistent-world prior art: explicit canon statuses, source tracking, contributor roles, conflict resolution, world-bible structure, and Canon Authority. High-priority Celestara adaptation candidate.
+relationships: "Extremely valuable canon/persistent-world prior art: explicit canon statuses, source tracking, contributor roles, conflict resolution, world-bible structure, and Canon Authority. High-priority Celestara adaptation candidate."
 dependencies: Exact package includes four Deno scripts and four templates. SKILL also references export-reference.ts and link-validator.ts absent from the exact tree. More importantly, add-entry.ts accepts status established directly without verifying Canon Authority, bypassing the written governance model.
 import_eligibility: rejected-unchanged-reference
 rationale: Conceptually strong but unchanged runtime fails the authority hard gate because a helper can establish canon without authorization. Static score 14/20; retain as primary Celestara canon-governance adaptation prior art. Behavioral validation not run.

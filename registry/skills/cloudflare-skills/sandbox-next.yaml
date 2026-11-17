@@ -18,6 +18,6 @@ permission_tier: mutate-on-explicit-user-request
 portability: low
 review_status: verified-structured
 dependency_status: external-current-docs-and-types-required
-dependencies: @cloudflare/sandbox@next and matching preview container image; current Sandbox 1.0 preview docs; installed preview types; bundled quick-reference/examples
+dependencies: "@cloudflare/sandbox@next and matching preview container image; current Sandbox 1.0 preview docs; installed preview types; bundled quick-reference/examples"
 import_eligibility: already-vendored
 rationale: Strong preview-line Sandbox implementation gate that prevents stable/next API mixing, explains process and terminal lifetime semantics, keeps live credentials out of sandbox environment, retrieves current docs and types, and provides pre-ship checks.

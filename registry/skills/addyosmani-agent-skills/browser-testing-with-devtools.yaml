@@ -21,4 +21,4 @@ review_status: curated-source-reviewed
 dependency_status: host-tool-dependent
 dependencies: browser DevTools or equivalent browser automation capability
 import_eligibility: already-vendored
-rationale: Isolated profiles, prompt-injection boundaries and DevTools verification remain useful ADAPT/EXTRACT/CHECKLIST material. Unchanged use is blocked: installation config executes unpinned npx -y chrome-devtools-mcp@latest and persists MCP settings without approval; browser workflows trigger page actions and network PATCH writes without binding the target environment, account and side effects. JavaScript-only confirmation does not govern all UI interactions.
+rationale: "Isolated profiles, prompt-injection boundaries and DevTools verification remain useful ADAPT/EXTRACT/CHECKLIST material. Unchanged use is blocked: installation config executes unpinned npx -y chrome-devtools-mcp@latest and persists MCP settings without approval; browser workflows trigger page actions and network PATCH writes without binding the target environment, account and side effects. JavaScript-only confirmation does not govern all UI interactions."

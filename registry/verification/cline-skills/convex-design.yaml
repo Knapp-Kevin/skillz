@@ -17,4 +17,4 @@ tags:
   characteristic: [production-oriented, reference-heavy, compatibility-aware, source-driven]
   authority: [generate-only, mutating, external-side-effect]
   portability: [low]
-notes: Technically rich Convex guidance with explicit platform assumptions and a useful stop rule when another backend is already selected. Rejected unchanged because the trigger policy is intentionally overbroad and vendor-first: it activates on generic app/backend requests and directs the agent to lead with Convex before user fit or stack selection has been established. Preserve as Convex reference material or adapt with narrower triggers.
+notes: "Technically rich Convex guidance with explicit platform assumptions and a useful stop rule when another backend is already selected. Rejected unchanged because the trigger policy is intentionally overbroad and vendor-first: it activates on generic app/backend requests and directs the agent to lead with Convex before user fit or stack selection has been established. Preserve as Convex reference material or adapt with narrower triggers."

@@ -1,5 +1,7 @@
 # Roadmap
 
+**November 17, 2026 priority:** Execute the [balanced capability quality plan](docs/capability-quality-plan.md) before claiming uniformly capable domain packs. Phase one is complete: [2,084 companion files pass ingestion checks](docs/reviews/2026-11-17-companion-yaml-ingestion-repair.md). Next: evidence/status reconciliation, essential outcomes, balanced discovery/evaluation and targeted original authorship.
+
 `skillz` is an entirely passive AI-agent skill knowledge resource. Its structural architecture is established; **corpus quality, security qualification, and issue/PR lifecycle closure are ongoing work**, not evidence that a repository runtime is needed.
 
 ## Current milestone: governed curation and acceptance
@@ -21,9 +23,9 @@ Current first-party authority and pulse repairs are tracked in [#415](https://gi
 
 The current published reference surface includes:
 
-- **44 first-party user-facing skills** under `skills/`, with 44/44 provenance companions;
+- **47 first-party user-facing skills** under `skills/`, with 47/47 provenance companions;
 - **12 intact pinned third-party corpora** under `skills/sources/<source-id>/`, contributing to the broad 500+ reference surface;
-- **826 persisted third-party exact-version semantic review companions**, with individual dispositions and limits.
+- **995 persisted third-party exact-version semantic review companions**, with individual dispositions and limits (1,042 total including first-party).
 
 These figures describe inventory and persisted evidence, **not** universal security approval or behavioral validation. Exact source-family denominators and current decisions belong to the living curation ledger.
 
@@ -31,7 +33,7 @@ These figures describe inventory and persisted evidence, **not** universal secur
 
 The repository stores instructions, procedures, source material, provenance, licensing context, controlled tags, static semantic assessments, security evidence, and catalog snapshots. An authorized **external host** performs discovery, review, scanning, behavioral exercises, installation, and other active work.
 
-`skillz` owns **no runtime, scripts, tests, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, preflight processes, generators, background services, vector databases, autonomous observers, or personalization services**. Pinned upstream skill packages may contain their own scripts, templates, fixtures, references, or other components; preserve those intact as source-owned evidence.
+`skillz` owns **no consumer runtime, CI workflows, schedulers, monitors, crawlers, installers, synchronizers, background services, vector databases, autonomous observers, or personalization services**. Explicitly invoked offline maintenance reports and integrity checks are permitted by `AGENTS.md`; they are not consumer requirements or behavioral evidence. Pinned upstream packages may contain their own scripts, templates, fixtures, references and other components; preserve those intact as source-owned evidence.
 
 Semantic `verified` is not `validated`; behavioral `validated` is not a package-security pass. Security `not-run`, `failed`, `incomplete`, or `stale` cannot be waved away by reputation or a good semantic score. A host must obtain separate authority for consequential mutations, private-data access, communications, scheduling, and persistent state.
 
