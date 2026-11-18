@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-17",
+  "snapshot_date": "2026-11-18",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -3373,8 +3373,8 @@
     {
       "domain": "technical-writing",
       "display_name": "Technical writing",
-      "linked_reviewed_examples": 7,
-      "subdomains_with_linked_examples": 4,
+      "linked_reviewed_examples": 8,
+      "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 15,
       "evidence_preview": [
         {
@@ -3458,6 +3458,16 @@
           "capability_example": "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
           "unchanged_use_approved": false,
           "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "local-skills/file-lifecycle-curator",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
+          "source_class": "first-party-authored",
+          "path": "technical-writing/documentation-ia",
+          "capability_example": "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals"
         }
       ],
       "name_only_preview": [
@@ -4021,8 +4031,8 @@
     {
       "domain": "memory-context",
       "display_name": "Memory / context",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 3,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 12,
       "evidence_preview": [
         {
@@ -4044,6 +4054,26 @@
           "source_class": "external-provenance",
           "path": "memory-context/context-compression",
           "capability_example": "Reference context-budget techniques; autonomous writes/restarts are not approved"
+        },
+        {
+          "id": "local-skills/file-lifecycle-curator",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
+          "source_class": "first-party-authored",
+          "path": "memory-context/retrieval",
+          "capability_example": "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes"
+        },
+        {
+          "id": "local-skills/file-lifecycle-curator",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
+          "source_class": "first-party-authored",
+          "path": "memory-context/summarization",
+          "capability_example": "Summarize authorized file contents with extraction coverage, source locators and explicit uncertainty"
         }
       ],
       "name_only_preview": [
@@ -4718,7 +4748,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1043,
+  "governed_identity_denominator": 1044,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -24421,10 +24451,13 @@
           "id": "documentation-ia",
           "name": "documentation IA",
           "capabilities": [
-            "Preserve plaintext meaning while converting formatting to Markdown"
+            "Preserve plaintext meaning while converting formatting to Markdown",
+            "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals"
           ],
-          "matched_skill_ids": [],
-          "coverage_status": "source-vetted-candidates-only",
+          "matched_skill_ids": [
+            "local-skills/file-lifecycle-curator"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "documentation IA",
             "Technical writing documentation IA"
@@ -26883,10 +26916,12 @@
           "id": "retrieval",
           "name": "retrieval",
           "capabilities": [
-            "Recover relevant prior-session decisions with provenance and freshness checks"
+            "Recover relevant prior-session decisions with provenance and freshness checks",
+            "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes"
           ],
           "matched_skill_ids": [
-            "local-skills/session-continuity"
+            "local-skills/session-continuity",
+            "local-skills/file-lifecycle-curator"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -27042,9 +27077,13 @@
         {
           "id": "summarization",
           "name": "summarization",
-          "capabilities": [],
-          "matched_skill_ids": [],
-          "coverage_status": "unassessed",
+          "capabilities": [
+            "Summarize authorized file contents with extraction coverage, source locators and explicit uncertainty"
+          ],
+          "matched_skill_ids": [
+            "local-skills/file-lifecycle-curator"
+          ],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "summarization",
             "Memory / context summarization"
@@ -33853,15 +33892,42 @@
       "link_basis": "Exact complete-package static review and bounded constrained-melody outcome",
       "restriction": "Text-only pilot incomplete; no production musical effectiveness or installation approval",
       "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/file-lifecycle-curator",
+      "source_id": "local-skills",
+      "skill_name": "file-lifecycle-curator",
+      "content_blob_sha": "63577971773ae0d923f6d38165c13c34f36b8f72",
+      "complete_package_tree_sha": "12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "memory-context/retrieval",
+        "memory-context/summarization",
+        "technical-writing/documentation-ia"
+      ],
+      "evidence_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
+      "skill_path": "skills/authored/file-lifecycle-curator/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
+      "source_license": "Original five-file MIT package",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Reviewed complete five-file package; metadata/index/summaries, keyword tags, dry-run organization and archive planning. Proposed new domain remains pending.",
+      "restriction": "File actions, sharing, permanent index creation and archiving require host capabilities and explicit scope; behavioral validation not-run",
+      "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 122,
+  "identity_level_capability_links_mapped": 123,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 48,
-    "known_total_governed_review_records": 1043,
+    "known_first_party_skill_records": 49,
+    "known_total_governed_review_records": 1044,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -33917,18 +33983,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 48,
+  "first_party_identity_links_mapped": 49,
   "third_party_identity_links_mapped": 74,
   "unmapped_review_identity_count": 921,
   "navigation_population": {
-    "mapped_first_party_distinct": 48,
+    "mapped_first_party_distinct": 49,
     "mapped_third_party_distinct": 74,
-    "mapped_total_distinct": 122,
-    "subdomains_with_evidence_linked_examples": 75,
+    "mapped_total_distinct": 123,
+    "subdomains_with_evidence_linked_examples": 77,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "2026-11-17: 122/1,043 reviewed identities linked, 75/247 subdomains; one new original constrained-melody package with incomplete text-agent pilot, not full music-domain qualification.",
+    "note": "2026-11-18: original first-party File Lifecycle Curator mapped into three existing adjacent subdomains; proposed file-information-management domain pending separate qualification. Mapping is navigation, not production/archive permission.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },

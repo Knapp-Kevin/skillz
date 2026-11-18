@@ -7,6 +7,7 @@ This directory contains the first-party/local user-facing portion of the `skillz
 Humans can start with [`categories/`](categories/):
 
 - [Planning & Productivity](categories/planning-productivity/)
+- [File & Information Management](categories/file-information-management/) — inventory, keywords, metadata decks, summaries, organization and archives.
 - [Writing & Communication](categories/writing-communication/)
 - [Research & Analysis](categories/research-analysis/)
 - [Software & Repositories](categories/software-repositories/)

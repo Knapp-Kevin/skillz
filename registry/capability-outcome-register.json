@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-17",
+  "as_of": "2026-11-18",
   "scope": "Recognized directory subdomains; scope extensions remain separate until qualified.",
   "coverage_rule": "A linked review is navigation evidence, not proof an essential workflow is served. Null means not assessed.",
   "rows": [
@@ -1555,9 +1555,12 @@
       "outcome_definition_status": "needs-workflow-decomposition",
       "essential_outcomes": [],
       "existing_capability_statements": [
-        "Preserve plaintext meaning while converting formatting to Markdown"
+        "Preserve plaintext meaning while converting formatting to Markdown",
+        "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals"
       ],
-      "governed_review_links": [],
+      "governed_review_links": [
+        "local-skills/file-lifecycle-curator"
+      ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
       "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."
@@ -2097,10 +2100,12 @@
       "outcome_definition_status": "needs-workflow-decomposition",
       "essential_outcomes": [],
       "existing_capability_statements": [
-        "Recover relevant prior-session decisions with provenance and freshness checks"
+        "Recover relevant prior-session decisions with provenance and freshness checks",
+        "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes"
       ],
       "governed_review_links": [
-        "local-skills/session-continuity"
+        "local-skills/session-continuity",
+        "local-skills/file-lifecycle-curator"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -2110,8 +2115,12 @@
       "path": "memory-context/summarization",
       "outcome_definition_status": "needs-workflow-decomposition",
       "essential_outcomes": [],
-      "existing_capability_statements": [],
-      "governed_review_links": [],
+      "existing_capability_statements": [
+        "Summarize authorized file contents with extraction coverage, source locators and explicit uncertainty"
+      ],
+      "governed_review_links": [
+        "local-skills/file-lifecycle-curator"
+      ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
       "next_action": "Define essential inputs, outputs and acceptance criteria; compare exact complete packages before claiming coverage."

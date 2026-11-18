@@ -1,0 +1,47 @@
+schema_version: 1
+skill_name: file-lifecycle-curator
+skill_version: 1.0.0
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/file-lifecycle-curator/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 63577971773ae0d923f6d38165c13c34f36b8f72
+complete_package_tree_sha: 12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84
+characterized_at: '2026-11-18'
+reviewed_at: '2026-11-18'
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+validation_note: >-
+  Synthetic scenarios were statically inspected only; no host/model tool behavior,
+  file move, archive creation, restoration, ingestion, OCR or search backend tested.
+rubric: docs/skill-verification.md
+rubric_score: 18/20
+tags:
+  use_case:
+  - file-information-management
+  - knowledge-organization
+  - document-summarization
+  - retrieval
+  lifecycle:
+  - intake
+  - organization
+  - maintenance
+  - archiving
+  characteristic:
+  - evidence-first
+  - traceable
+  - reversible-by-design
+  - safety-bounded
+  - human-review
+  authority:
+  - read-only
+  portability:
+  - high
+notes: >-
+  Complete original five-file text package inspected. Permission changes,
+  relocation, indexing persistence, external egress and deletions require fresh
+  action-specific authority. Host behavioral validation, security scanner, restore
+  and production utility NOT RUN. See docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md.

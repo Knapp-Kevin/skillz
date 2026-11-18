@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-18",
+  "status": "proposed-scope-not-canonical",
+  "id": "file-information-management",
+  "name": "File and Information Management",
+  "owner_artifact": "skills/authored/file-lifecycle-curator/SKILL.md",
+  "review": "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md",
+  "boundary": "General file inventory, document indexing, metadata/keyword organization, duplicate handling, reorganization and archive preparation. Does not replace enterprise records-management compliance, regulated legal retention advice, security incident response, backup engineering, filesystem permissions administration, or host storage execution.",
+  "adjacent_recognized_routes": [
+    "memory-context/retrieval",
+    "memory-context/summarization",
+    "technical-writing/documentation-ia",
+    "ux-ui/information-architecture"
+  ],
+  "qualification": "File taxonomy is a proposed new domain pending comparison with recognized/other provisional domains and exact third-party packages; one statically verified package is not an exhaustive capability qualification.",
+  "subdomains": [
+    {
+      "id": "inventory",
+      "essential_outcome": "Inventory an explicitly authorized collection with stable record IDs, observed attributes, scope gaps and source receipts",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "content-extraction",
+      "essential_outcome": "Extract authorized document text and coverage diagnostics without executing untrusted content",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "metadata-decks",
+      "essential_outcome": "Produce source-grounded file-level metadata cards and machine-readable records with privacy controls",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "keyword-tagging",
+      "essential_outcome": "Normalize controlled-vocabulary keywords and document confidence, synonyms and exceptions",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "classification-organization",
+      "essential_outcome": "Build and validate meaning-aware categorization and reversible organizational proposals",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "summarization",
+      "essential_outcome": "Produce content-grounded short/detailed summaries with evidence locators and extraction limits",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "indexing-search",
+      "essential_outcome": "Construct provenance-aware searchable indexes and verify actual retrieval capability",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "deduplication-versioning",
+      "essential_outcome": "Distinguish byte-exact duplicates, near duplicates and version relationships without unsafe consolidation",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "archival-retention",
+      "essential_outcome": "Recommend, prepare and independently verify recoverable archives without assuming deletion authority",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "lifecycle-operations",
+      "essential_outcome": "Stage authority-scoped change plans with drift/collision/ACL checks, receipts and rollback boundaries",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    }
+  ],
+  "canonical_promotion_required": true,
+  "behavioral_evidence": "not-run",
+  "discovery_evaluation_gap": "Search and inspect third-party complete packages; maintain separate discovery/evaluation evidence."
+}
