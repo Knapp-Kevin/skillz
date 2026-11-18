@@ -6,7 +6,7 @@ A **record** corresponds to one source file or one explicitly identified version
 
 The following is a descriptive template, not a claim that an index database was created:
 
-\`\`\`json
+```json
 {
   "schema_version": "1.0",
   "record_id": "src-a:doc-002:v1",
@@ -37,21 +37,21 @@ The following is a descriptive template, not a claim that an index database was 
   "archive": {"recommendation": "not-assessed", "destination": null, "action_state": "not-proposed"},
   "limitations": ["file bytes and full contents not observed"]
 }
-\`\`\`
+```
 
 ## Required rules
 
 - **Identity:** Record IDs must remain stable within the declared source namespace; do not derive cross-user global IDs from a private path. Keep original locator immutable in the plan. Include an authorized source link only when one exists; no invented URL.
-- **Fingerprint:** Mark \`complete-byte-verified\`, \`source-provided-unverified\`, \`partial\`, or \`not-computed\`. A partial checksum, size or filename is not EXACT identity. Hashes do not replace a safe content or version comparison in collision-sensitive operations.
+- **Fingerprint:** Mark `complete-byte-verified`, `source-provided-unverified`, `partial`, or `not-computed`. A partial checksum, size or filename is not EXACT identity. Hashes do not replace a safe content or version comparison in collision-sensitive operations.
 - **Content:** Separate one-line description, detailed summary, quoted source snippet and inference. Record extraction coverage and citation locator; unknown should stay unknown.
 - **Tag taxonomy:** Normalized lowercase, Unicode normalization where tools support it, singular/plural and synonym reconciliation; avoid making sensitive tags discoverable to broader audiences. Use a small human-reviewed vocabulary, optional subject subcategories, and an exceptions queue. Do not combine multiple inconsistent taxonomies silently.
-- **Evidence:** Observed fields need source IDs; inferred fields need confidence and justification. A title/date in body text is not necessarily file author or creation date. A \`modified_at\` timestamp is not a retention decision.
+- **Evidence:** Observed fields need source IDs; inferred fields need confidence and justification. A title/date in body text is not necessarily file author or creation date. A `modified_at` timestamp is not a retention decision.
 - **Security:** Record ACL/visibility only if available and authorized. Metadata/search indexes inherit at least source visibility constraints; expanding access is a separately approved action. Indexing should not leak raw secrets into public titles, cards or logs.
 - **Lifecycle:** Treat proposed location, staged operation, executed operation and verified read-back as distinct fields. Update an archive disposition only when an authorized retention policy exists. Preserve tombstone/supersession references only within approved storage and retention rules.
 
 ## A metadata deck card
 
-\`\`\`text
+```text
 FILE: <record_id> — <display_name>
 SOURCE: <observed locator or redacted label> | VERSION: <observed / unknown>
 TYPE: <observed / inferred> | COVERAGE: <readable / partial / inaccessible>
@@ -62,6 +62,6 @@ RELATED: <verified record IDs + relationship>
 DUPLICATE: <EXACT / LIKELY / RELATED / UNRESOLVED + basis>
 RETENTION: <policy / unknown / hold> | ARCHIVE: <proposal only or actual receipt>
 NEXT ACTION: <optional permissioned proposal>
-\`\`\`
+```
 
 A deck is a readable view of the index, not an irreversible alteration to source files. If the card or index is exported, include the generation scope, observed snapshot, redaction status and data-owner permission.
