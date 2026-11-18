@@ -4,14 +4,14 @@ Read this before presenting a physical reorganization, export, archive or any cl
 
 ## Action-state vocabulary
 
-- \`PROPOSED\`: a plan only; no authority or mutation.
-- \`APPROVED\`: user/owner approved a specific scope and action class; still not executed.
-- \`EXECUTED\`: tool reported performing an operation; not yet integrity-verified.
-- \`VERIFIED\`: a read-back or source/destination inspection supports the expected effect.
-- \`FAILED\`: attempted operation did not satisfy success criteria.
-- \`BLOCKED\`: authority, source, collision, storage, privacy or retention prerequisite unresolved.
-- \`ROLLED_BACK\`: rollback action was performed and its result checked; never infer from a suggested undo.
-- \`UNKNOWN\`: no reliable observation.
+- `PROPOSED`: a plan only; no authority or mutation.
+- `APPROVED`: user/owner approved a specific scope and action class; still not executed.
+- `EXECUTED`: tool reported performing an operation; not yet integrity-verified.
+- `VERIFIED`: a read-back or source/destination inspection supports the expected effect.
+- `FAILED`: attempted operation did not satisfy success criteria.
+- `BLOCKED`: authority, source, collision, storage, privacy or retention prerequisite unresolved.
+- `ROLLED_BACK`: rollback action was performed and its result checked; never infer from a suggested undo.
+- `UNKNOWN`: no reliable observation.
 
 Do not collapse these states into "done."
 
@@ -31,7 +31,7 @@ For every proposed file mutation or archive batch, report the following before s
 | Approval | Named scope, approval timestamp/context, operation class and explicit exceptions |
 | Result | Per-record attempted status, observed tool receipt, integrity/ACL read-back and follow-up |
 
-\`Copy\` is not automatically safe: unintended disclosure to the destination is a side effect. A persistent index and embeddings can likewise expose private content.
+`Copy` is not automatically safe: unintended disclosure to the destination is a side effect. A persistent index and embeddings can likewise expose private content.
 
 ## Before applying an approved batch
 
