@@ -13,7 +13,7 @@
     "technical-writing/documentation-ia",
     "ux-ui/information-architecture"
   ],
-  "qualification": "Two independently authored static-reviewed reference skills cover separate within-collection and federated-source processes. Taxonomy/domain and essential outcomes remain proposed until overlap, exact package comparisons and representative behavior are qualified.",
+  "qualification": "Two exact v1.1 MIT skill packages have individually verified static text and an in-package federated handoff specification, but 14 taxonomy outcomes remain proposed and require full independent suitability, rights, host behavioral and operational evaluation. 12/12 deterministic oracle examples do not establish model behavior.",
   "subdomains": [
     {
       "id": "inventory",
@@ -143,7 +143,7 @@
     }
   ],
   "canonical_promotion_required": true,
-  "behavioral_evidence": "not-run in Skillz; external implementer results not yet incorporated",
+  "behavioral_evidence": "not-run: no agent-host or actual connector acceptance recorded",
   "discovery_evaluation_gap": "Compare full third-party packages/rights against each new scoped essential outcome; do not treat skill count or static review as full workflow acceptance.",
   "companion_artifacts": [
     "skills/authored/file-lifecycle-curator/SKILL.md",
@@ -153,5 +153,22 @@
     "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md",
     "docs/reviews/2026-11-18-federated-source-catalog-static-review.md",
     "docs/reviews/2026-11-18-file-information-management-gap-audit.md"
-  ]
+  ],
+  "current_packages": [
+    {
+      "id": "local-skills/file-lifecycle-curator",
+      "version": "1.1.0",
+      "entry_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
+      "tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
+      "validation_status": "not-run"
+    },
+    {
+      "id": "local-skills/federated-source-catalog",
+      "version": "1.1.0",
+      "entry_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
+      "tree_sha": "1267d05abf3524ccee86748fa134b525f4d83289",
+      "validation_status": "not-run"
+    }
+  ],
+  "current_static_review": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
 }
