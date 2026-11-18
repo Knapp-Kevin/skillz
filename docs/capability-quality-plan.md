@@ -13,10 +13,10 @@ Track discovery leads, complete-package inspection, static disposition, dependen
 | Phase | Required result | Status |
 |---|---|---|
 | 1. Ingestion | Parseable, paired, unambiguous companions with preservation receipt | [Completed for 2,084 files](reviews/2026-11-17-companion-yaml-ingestion-repair.md) |
-| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; 122/1,043 identities mapped |
-| 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; one bounded melody outcome defined; remaining workflow decomposition pending |
+| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; 126/1,047 governed identities mapped (101 static verified + 25 rejected); 921 unmapped, links not outcome acceptance |
+| 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; six partially decomposed subdomains with eight bounded outcomes including file-management governance; 241 still require decomposition |
 | 4. Balanced qualification | Equal effort for discovery and complete-package evaluation; decisive evidence-bound dispositions | Pending ongoing tranches |
-| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | One original constrained-melody package delivered; continue comparison-led authorship under `skills/authored/<slug>/` |
+| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Original melody and four file/information-management packages now exist; compare pinned exact-source alternatives before any additional authorship under `skills/authored/<slug>/` |
 | 6. Application readiness | Export distinguishes references, eligible packages and unmet outcomes; application demonstrates each promised workflow | Not established |
 
 The audit recovered supplementary structured pointers for **35 of 51** subdomains without explicit directory pointers. Reconcile their pins and route meanings before linking them. The other 16 remain mapping/qualification gaps, not proof of absent methods. Preserve rejected dispositions and separate candidate/study references from governed matches.
@@ -44,3 +44,9 @@ New third-party admission follows issue-first intake. Formatting repair is not c
 ## November 17 progress
 
 [Exact review and source comparison](reviews/2026-11-17-melody-and-capability-scope.md): original melody package with incomplete text-agent pilot; [all 247 recognized outcome work units](../registry/capability-outcome-register.json); [13 new proposed domains, 65 subdomains and four music extensions](../registry/capability-scope-extensions-20261117.json). The 25 older provisional domains remain separate and unqualified. Continuous maintenance now explicitly tracks discovery/evaluation balance and non-degradation.
+
+## November 18 scoped information-management review
+
+[Exact pinned comparison and first-party static review](reviews/2026-11-18-taxonomy-reference-integrity-static-review.md): new original [Metadata Taxonomy Steward](../skills/authored/metadata-taxonomy-steward/SKILL.md) and [Reference Integrity Auditor](../skills/authored/reference-integrity-auditor/SKILL.md), each 18/20 static only and behavioral validation NOT RUN. Independent bounded comparison included four previously reviewed, pinned external entrypoints; unchanged-use rejection and licensing restrictions remain intact. They map to existing recognized taxonomy/IA and maintenance/provenance routes but add **no newly covered subdomain**. The separate 16-proposed-subdomain file/information-management proposal stays noncanonical.
+
+The [November 18 capability-gap audit](reviews/2026-11-18-capability-discovery-evaluation-gap-priorities.md) and [outcome register](../registry/capability-outcome-register.json) distinguish historical broad discovery/evaluation frontiers from currently reviewed identities. Define actual subdomain outcomes, map source evidence, and test independently. Never use a source-name match or a static 18/20 score as production acceptance.
