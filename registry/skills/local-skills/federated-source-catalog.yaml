@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: federated-source-catalog
 display_name: Federated Source Catalog
-skill_version: 1.0.0
+skill_version: 1.1.0
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/federated-source-catalog/SKILL.md
@@ -22,14 +22,14 @@ dependencies: >-
   Text-only catalog planning requires supplied source details. Live federation
   requires independently connected, authorized host source tools. No bundled
   OAuth/client, storage, index, sync, watcher, or deletion runtime.
-content_blob_sha: 4d028afe00921af05f8258e0c7f50707d2ebb68c
-complete_package_tree_sha: 130b199cc7c5549d8905196d62f54617198d1976
+content_blob_sha: 5f4859515de5d073a939d439f1d75e1084d4404e
+complete_package_tree_sha: 1267d05abf3524ccee86748fa134b525f4d83289
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Complete original six-file MIT package independently static-reviewed
+  Complete original eight-file MIT package independently static-reviewed
   2026-11-18 at 18/20. Enforces per-source scope, current viewer access,
   no implicit cross-provider storage, source completeness receipts,
   stable revision provenance and prompt-injection boundaries. Host/connector
   behavior and operational security scanning not run. See
-  docs/reviews/2026-11-18-federated-source-catalog-static-review.md.
+  docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
