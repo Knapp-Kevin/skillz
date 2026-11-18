@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-17",
-  "purpose": "Governed review-name lookup: 48 first-party plus 995 third-party identities, 1,043 total. Not the open-ended discovery corpus or a universal coverage claim.",
+  "snapshot_date": "2026-11-18",
+  "purpose": "Governed review-name lookup: 52 first-party plus 995 third-party exact-version review identities, 1,047 total as of 2026-11-18. Not the open-ended discovery corpus or a universal quality/eligibility claim.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
-  "source_snapshot": "Source/navigation baseline 48d35fc2aa0a6b3cd8ae09c94be67213e68fbd49 plus exact new package fingerprints in authored index",
+  "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 48,
+    "first_party": 52,
     "third_party": 995,
-    "total": 1043
+    "total": 1047
   },
   "first_party_ids": [
     "local-skills/agent-home-doctor",
@@ -26,6 +26,8 @@
     "local-skills/develop-melodic-motif",
     "local-skills/devlog-draft",
     "local-skills/fact-check",
+    "local-skills/federated-source-catalog",
+    "local-skills/file-lifecycle-curator",
     "local-skills/finance-review",
     "local-skills/gemini-pulse",
     "local-skills/github-pulse",
@@ -42,6 +44,7 @@
     "local-skills/mcp-pulse",
     "local-skills/mcp-vetting",
     "local-skills/memory-pulse",
+    "local-skills/metadata-taxonomy-steward",
     "local-skills/mistral-pulse",
     "local-skills/narrative-scene-gap-audit",
     "local-skills/openai-pulse",
@@ -49,6 +52,7 @@
     "local-skills/permissions-review",
     "local-skills/perplexity-pulse",
     "local-skills/qwen-pulse",
+    "local-skills/reference-integrity-auditor",
     "local-skills/repo-doctor",
     "local-skills/repo-pulse",
     "local-skills/session-continuity",
@@ -1068,5 +1072,17 @@
       "local-skills/character-motivation-interview"
     ],
     "routing": "registry/discovery/authored-capability-routing-20261108.json"
+  },
+  "authored_extension_20261118": {
+    "date": "2026-11-18",
+    "ids": [
+      "local-skills/federated-source-catalog",
+      "local-skills/file-lifecycle-curator",
+      "local-skills/metadata-taxonomy-steward",
+      "local-skills/reference-integrity-auditor"
+    ],
+    "companion_review": "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md",
+    "provenance": "registry/authored-skills-index.json",
+    "qualification": "All four referenced authored packages are independently static-reviewed in exact versions; host behavior NOT RUN. File lifecycle and federated catalog are v1.1; taxonomy and reference integrity are v1.0."
   }
 }

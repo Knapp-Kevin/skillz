@@ -123,12 +123,32 @@
     },
     {
       "path": "software-engineering/maintenance",
-      "outcome_definition_status": "needs-workflow-decomposition",
-      "essential_outcomes": [],
+      "outcome_definition_status": "partial",
+      "essential_outcomes": [
+        {
+          "id": "repository-document-reference-health",
+          "input": "Approved repository document tree at observed commit and authorized read-only link resolution",
+          "output": "Typed link health register, affected-document list and version-scoped repair proposals",
+          "acceptance": [
+            "Tie each source path and relative URL resolution to its actual observed repository commit",
+            "Distinguish mutable branch drift, same-title targets and provider aliases",
+            "Report unknown/unprobed external URLs separately, without automatically making network requests",
+            "Disallow link rewrites or PR creation without explicit approval and independent verification",
+            "Never label a node globally orphaned from only a bounded repository graph"
+          ],
+          "method_ids": [
+            "local-skills/reference-integrity-auditor"
+          ],
+          "static_qualification": "verified-exact-four-file-static-review",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "Document-link maintenance only; not general code/asset dependency analysis or a tested link checker."
+        }
+      ],
       "existing_capability_statements": [
         "Compare code against standards and specification evidence",
         "Review code quality using severity, tests and evidence rather than rubber-stamping",
-        "Diagnose repository problems, monitor changes, and triage technical debt with evidence"
+        "Diagnose repository problems, monitor changes, and triage technical debt with evidence",
+        "Detect stale and broken repository-document references and propose bounded revision-preserving fixes"
       ],
       "governed_review_links": [
         "local-skills/agent-home-doctor",
@@ -138,7 +158,8 @@
         "local-skills/repo-pulse",
         "local-skills/todo-harvester",
         "addyosmani-agent-skills/code-review-and-quality",
-        "mattpocock-skills/code-review"
+        "mattpocock-skills/code-review",
+        "local-skills/reference-integrity-auditor"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -538,7 +559,8 @@
       "outcome_definition_status": "needs-workflow-decomposition",
       "essential_outcomes": [],
       "existing_capability_statements": [
-        "Discover sources and monitor technical developments using dated primary evidence"
+        "Discover sources and monitor technical developments using dated primary evidence",
+        "Study bounded cloud data catalog search but do not execute unapproved downloaded dependencies"
       ],
       "governed_review_links": [
         "local-skills/claude-pulse",
@@ -558,7 +580,8 @@
         "local-skills/openai-pulse",
         "local-skills/perplexity-pulse",
         "local-skills/qwen-pulse",
-        "local-skills/xai-pulse"
+        "local-skills/xai-pulse",
+        "cline-skills/knowledge-catalog-discovery"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -570,12 +593,14 @@
       "essential_outcomes": [],
       "existing_capability_statements": [
         "Compare competing evidence and synthesize a bounded research finding",
-        "Review user-research search evidence, provenance, source methods and honest uncertainty"
+        "Review user-research search evidence, provenance, source methods and honest uncertainty",
+        "Synthesize attributed cross-source findings without treating confidence/recency heuristic as universal authority"
       ],
       "governed_review_links": [
         "local-skills/compare",
         "local-skills/deep-dive",
-        "bm629-agent-skills/reviewing-user-research-prior-art-survey"
+        "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+        "anthropic-knowledge-work-plugins/knowledge-synthesis"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -930,13 +955,34 @@
     },
     {
       "path": "ux-ui/information-architecture",
-      "outcome_definition_status": "needs-workflow-decomposition",
-      "essential_outcomes": [],
+      "outcome_definition_status": "partial",
+      "essential_outcomes": [
+        {
+          "id": "cross-collection-taxonomy-navigation",
+          "input": "Two differently labeled authorized collections and intended discovery audience",
+          "output": "Cross-collection category naming/canonical tag proposal with preserved original labels and usability/collision criteria",
+          "acceptance": [
+            "Propose a stable controlled vocabulary and reversible crosswalk without changing provider-native values",
+            "Distinguish synonyms from homonyms and ambiguous/unsupported mappings",
+            "Preserve a user's authorized source scope and hide confidential taxonomy terms and counts",
+            "List candidate user navigation tests and effect measures; mark them unobserved",
+            "Avoid inventing source owners, terms or actual navigation improvements"
+          ],
+          "method_ids": [
+            "local-skills/metadata-taxonomy-steward"
+          ],
+          "static_qualification": "verified-exact-four-file-static-review",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "Cross-collection taxonomy IA only, not complete website information architecture or user-tested navigation."
+        }
+      ],
       "existing_capability_statements": [
-        "website information architecture"
+        "website information architecture",
+        "Design documented metadata vocabulary and cross-source navigation labels with explicit user/audience and term ownership"
       ],
       "governed_review_links": [
-        "corey-haines-marketing-skills/site-architecture"
+        "corey-haines-marketing-skills/site-architecture",
+        "local-skills/metadata-taxonomy-steward"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -1530,11 +1576,13 @@
       "existing_capability_statements": [
         "Draft a proposed ADR with alternatives and consequences before authorized persistence",
         "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
-        "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization"
+        "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+        "Record and maintain architecture decisions with repository-local conventions and supersession evidence"
       ],
       "governed_review_links": [
         "bm629-agent-skills/authoring-architecture-doc",
-        "bm629-agent-skills/reviewing-architecture-doc"
+        "bm629-agent-skills/reviewing-architecture-doc",
+        "addyosmani-agent-skills/documentation-and-adrs"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -1572,16 +1620,38 @@
           "static_qualification": "verified-exact-v1.1-text-only",
           "behavioral_qualification": "not-run",
           "coverage_limit": "One bounded document-library information-architecture outcome; user-tested navigation, actual search accuracy, organization impact and broader documentation-IA methods unestablished"
+        },
+        {
+          "id": "versioned-document-metadata-taxonomy",
+          "input": "Two or more authorized source vocabularies, original labels and namespaces, intended viewers, controlled definition/owner and proposed change",
+          "output": "Versioned canonical term dictionary, alias crosswalk, conflict/cycle ledger, sample before/after map and non-mutating migration plan",
+          "acceptance": [
+            "Retain each provider's native labels and source scope separately from the canonical term key",
+            "Detect homonym conflicts, alias and parent cycles, and ambiguous translations rather than silently merging",
+            "Keep source/private metadata and document counts out of results to unauthorized audiences",
+            "Version accepted definitions and dependent search/tag consumer changes with reversible plans and unknown owners identified",
+            "Do not write labels, index caches, or provider settings without separate exact-batch approval"
+          ],
+          "method_ids": [
+            "local-skills/metadata-taxonomy-steward"
+          ],
+          "static_qualification": "verified-exact-four-file-static-review",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "A limited vocabulary governance outcome; actual retag migration accuracy, broad provider interoperability and user navigation gains unmeasured."
         }
       ],
       "existing_capability_statements": [
         "Preserve plaintext meaning while converting formatting to Markdown",
         "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals",
-        "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries"
+        "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries",
+        "Govern versioned file/document metadata vocabularies and cross-source label aliases without destructive retagging",
+        "Review supplied project documentation for dependency integrity, version skew and cross-document consistency"
       ],
       "governed_review_links": [
         "local-skills/file-lifecycle-curator",
-        "local-skills/federated-source-catalog"
+        "local-skills/federated-source-catalog",
+        "local-skills/metadata-taxonomy-steward",
+        "bm629-agent-skills/reviewing-document-set"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -2144,12 +2214,14 @@
       "existing_capability_statements": [
         "Recover relevant prior-session decisions with provenance and freshness checks",
         "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes",
-        "Locate and cite currently accessible files and records across authorized connector scopes with transparent source coverage"
+        "Locate and cite currently accessible files and records across authorized connector scopes with transparent source coverage",
+        "Study connector source inventory and rate-limit information, but reject its unbounded search scope unchanged"
       ],
       "governed_review_links": [
         "local-skills/session-continuity",
         "local-skills/file-lifecycle-curator",
-        "local-skills/federated-source-catalog"
+        "local-skills/federated-source-catalog",
+        "anthropic-knowledge-work-plugins/source-management"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -2205,13 +2277,33 @@
           "static_qualification": "verified-exact-v1.1-text-only",
           "behavioral_qualification": "not-run",
           "coverage_limit": "One source-provenance outcome; end-to-end graph accuracy, ongoing lineage across transformations and runtime permission isolation not established"
+        },
+        {
+          "id": "bounded-cross-source-reference-integrity",
+          "input": "Authorized source/target graph scope, current viewer, source revisions, explicit link types and optional proposed move",
+          "output": "Per-edge evidence and status, bounded affected-dependents graph, orphan candidates, authorization gaps and non-mutating repair proposals",
+          "acceptance": [
+            "Resolve relative paths, anchors and source-native references only using supported authorized target semantics",
+            "Never equate a 403 or missing connector with a proven broken link or absent target",
+            "Preserve revision and permissions of both endpoints, hiding inaccessible target existence and edges",
+            "Mark orphan as candidate unless an explicit complete approved graph scope is proven",
+            "Keep suggested rewrites proposals only; never mutate links or run unapproved web probes"
+          ],
+          "method_ids": [
+            "local-skills/reference-integrity-auditor"
+          ],
+          "static_qualification": "verified-exact-four-file-static-review",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "Text-level reference integrity workflow; source-specific active resolver, user ACL isolation and graph completeness remain untested."
         }
       ],
       "existing_capability_statements": [
-        "Reconcile source-native file IDs, snapshots, permissions and cross-source relationships without false identity merges"
+        "Reconcile source-native file IDs, snapshots, permissions and cross-source relationships without false identity merges",
+        "Audit typed citation and document reference edges across authorized source identities with conservative broken/stale/unknown statuses"
       ],
       "governed_review_links": [
-        "local-skills/federated-source-catalog"
+        "local-skills/federated-source-catalog",
+        "local-skills/reference-integrity-auditor"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",

@@ -1,5 +1,8 @@
 # Skillz capability gaps and evidence priorities: November 18, 2026
 
+**Current follow-through (later November 18):** Two identified candidate gaps are now independently authored as exact MIT source packages: [Metadata Taxonomy Steward](../../skills/authored/metadata-taxonomy-steward/SKILL.md) and [Reference Integrity Auditor](../../skills/authored/reference-integrity-auditor/SKILL.md). [Bounded five-source comparison and exact static review](2026-11-18-taxonomy-reference-integrity-static-review.md) records each at 18/20 static, behavior NOT RUN. Five exact-pinned third-party reviews were also linked to existing recognized routes (3 verified, 2 rejected unchanged); these are evidence mapping, not eligibility. **Current canonical accounting is 1,047 reviewed, 131 mapped (104 static verified + 27 rejected), 916 unmapped, 78/247 recognized subdomains linked, and six partially decomposed subdomains / 241 remaining.** The earlier table below is the **before-change baseline**, not the latest state. File & Information Management now has 16 *proposed* subdomains, none promoted to canonical status. Further source comparison and host-agent testing remain open, owned by Skillz; outside testers are not required.
+
+
 **Method:** Independent read-only analysis of live `main` source records and both original v1.1 file-management skill packages, followed by three bounded outcome-definition additions to `registry/capability-outcome-register.json` on this branch. This audit is not a behavioral-agent test, external-source full-corpus re-crawl or live multi-provider permission audit.
 
 ## Current recognized coverage (updated in this change)

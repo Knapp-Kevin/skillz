@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: metadata-taxonomy-steward
+skill_version: 1.0.0
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/metadata-taxonomy-steward/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/metadata-taxonomy-steward/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 9d52d909a8e1dbc2c63748085b62bfa56c268989
+complete_package_tree_sha: 341bf5f8751333db8896f01c51f614b4acc6ad0d
+characterized_at: '2026-11-18'
+reviewed_at: '2026-11-18'
+verification_status: verified
+verification_basis: independent-complete-package-static-review
+validation_status: not-run
+validation_note: >-
+  Text and JSON fixture reviewed, links resolved, source identities pinned.
+  Synthetic example cases are NOT observed host-agent execution, connector
+  permission isolation, bulk indexing or file/tag mutation tests.
+rubric: docs/skill-verification.md
+rubric_score: 18/20
+tags:
+  use_case: [taxonomy-governance, file-information-management, metadata]
+  lifecycle: [planning, maintenance]
+  characteristic: [evidence-first, privacy-bounded, traceable, human-review]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Version controlled canonical terms, provider-native labels, directional aliases, conflict/parent cycles, preservation of private metadata; no writeback or host-agent behavioral evidence. Comparison limited to four pinned adjacent third-party entrypoints
+  and existing governed complete-package review ledgers, not global corpus
+  uniqueness. docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md

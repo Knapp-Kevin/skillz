@@ -1637,6 +1637,72 @@
         ]
       },
       "notes": "2026-11-18 v1.1 independently reviewed complete 8-file MIT source package, including optional federated handoff with native ID, principal, revision kind/value, viewer scope, limited extraction and no mutation. H01-H12 first-party deterministic oracle contract checks 12/12 (not a model-agent test). Host behavior, connector and permission isolation NOT RUN. docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
+    },
+    {
+      "skill_name": "metadata-taxonomy-steward",
+      "local_path": "skills/authored/metadata-taxonomy-steward/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9d52d909a8e1dbc2c63748085b62bfa56c268989",
+      "complete_package_tree_sha": "341bf5f8751333db8896f01c51f614b4acc6ad0d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "metadata-taxonomy-steward"
+        ],
+        "lifecycle": [
+          "maintenance",
+          "evaluation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Versioned controlled vocabulary, source-native tag crosswalk, ambiguity and sensitive labels; read-only taxonomy change plans. Exact original 4-file static review at docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md. Third-party adjacent-source comparison bounded, model/host behavior and connector acceptance NOT RUN."
+    },
+    {
+      "skill_name": "reference-integrity-auditor",
+      "local_path": "skills/authored/reference-integrity-auditor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
+      "complete_package_tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "reference-integrity-auditor"
+        ],
+        "lifecycle": [
+          "maintenance",
+          "evaluation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Cross-source citation/link health, stale/hidden target evidence, orphan scope and revision-bound repair proposals. Exact original 4-file static review at docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md. Third-party adjacent-source comparison bounded, model/host behavior and connector acceptance NOT RUN."
     }
   ]
 }
