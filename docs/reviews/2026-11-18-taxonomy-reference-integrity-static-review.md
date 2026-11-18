@@ -49,6 +49,12 @@ Reference Integrity Auditor governs **dependency edge resolution, broken-link ev
 
 No static hard-fail was identified within the bounded read-only scope. Security scanning of host tool actions, real cross-user ACL enforcement, ability to resolve cloud shortcuts and link anchors, actual tag migrations, ontology quality/user benefit, and restore/rollback remain **NOT RUN**.
 
+## Actual discovery and mapping reconciliation in this tranche
+
+Five exact-pinned third-party reviewed identities from the comparison were linked into existing canonical route records with **their original review dispositions preserved**: source-management (**REJECT**), knowledge-synthesis (**VERIFIED**), documentation-and-adrs (**VERIFIED**), knowledge-catalog-discovery (**REJECT**), reviewing-document-set (**VERIFIED**). Their required companion review identities and upstream blobs were already recorded by Skillz; this tranche independently re-read the five corresponding pinned SKILL.md entrypoints and verified byte identities.
+
+The [review-name index](../../registry/governed-review-name-index.json) was separately reconciled to **52 first-party + 995 third-party = 1,047** exact-version identities. The canonical [capability directory](../../registry/capability-directory.json) now links **131** identities (**52 first-party + 79 third-party**), **916** remain unmapped and **78/247** recognized subdomains have at least one governed evidence link. Of 131 mapped, **104 static verified / 27 rejected**; **130 behavioral not-run / 1 incomplete**. No actual eligible/production use implied. The new two authored skills strengthen existing route methods, not a new canonical domain.
+
 ## Qualification and next steps
 
 Both skills are **discoverable, first-party, static-reviewed reference methods**. This is *not* a claim of installed or safe-to-run external code, legal classification authority or behavioral acceptance. Separate actual host-agent synthetic input/output tests with action traces, different audience fixtures and source-specific privacy checks before asserting effectiveness. The broader third-party discovery/evaluation program remains open.
