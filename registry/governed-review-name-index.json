@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Governed review-name lookup: 52 first-party plus 995 third-party exact-version review identities, 1,047 total as of 2026-11-18. Not the open-ended discovery corpus or a universal quality/eligibility claim.",
+  "purpose": "Governed review name lookup: 56 current first-party and 995 third-party exact-version review identities (1051 total), dated 2026-11-18; original authorship of the 44 historical frostwulf.zo.computer root files remains unresolved. Not execution approval.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 52,
+    "first_party": 56,
     "third_party": 995,
-    "total": 1047
+    "total": 1051
   },
   "first_party_ids": [
     "local-skills/agent-home-doctor",
@@ -16,10 +16,12 @@
     "local-skills/brief-writer",
     "local-skills/career-radar",
     "local-skills/character-motivation-interview",
+    "local-skills/claim-evidence-adjudicator",
     "local-skills/claude-pulse",
     "local-skills/compare",
     "local-skills/daily-briefing",
     "local-skills/decision-log",
+    "local-skills/decision-record-steward",
     "local-skills/deck-outline",
     "local-skills/deep-dive",
     "local-skills/deepseek-pulse",
@@ -55,8 +57,10 @@
     "local-skills/reference-integrity-auditor",
     "local-skills/repo-doctor",
     "local-skills/repo-pulse",
+    "local-skills/research-methods-appraiser",
     "local-skills/session-continuity",
     "local-skills/smallbiz-ops",
+    "local-skills/source-debt-triage",
     "local-skills/standup-writer",
     "local-skills/task-surface",
     "local-skills/todo-harvester",
@@ -1084,5 +1088,15 @@
     "companion_review": "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md",
     "provenance": "registry/authored-skills-index.json",
     "qualification": "All four referenced authored packages are independently static-reviewed in exact versions; host behavior NOT RUN. File lifecycle and federated catalog are v1.1; taxonomy and reference integrity are v1.0."
+  },
+  "frostwulf_independent_replacement_20261118": {
+    "status": "4 new exact-package statically reviewed independent packages; 44 legacy files retained; 40 replacements remain",
+    "review": "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+    "ids": [
+      "local-skills/claim-evidence-adjudicator",
+      "local-skills/research-methods-appraiser",
+      "local-skills/source-debt-triage",
+      "local-skills/decision-record-steward"
+    ]
   }
 }
