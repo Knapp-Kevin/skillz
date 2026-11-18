@@ -5,6 +5,8 @@
 
 ## Current discovery, evaluation and capability gaps
 
+**Name-based lookup also reconciled:** [Governed Review Name Index](registry/governed-review-name-index.json) now contains all **1,047** governed records (**52 first-party + 995 third-party**) instead of the stale 1,043-record inventory, including all four File & Information Management first-party methods. Searchability remains distinct from skill suitability or permission to run.
+
 **Five additional exact-pinned third-party reviews were mapped** into existing recognized routes after source comparison: Anthropic source management (**rejected**), Anthropic knowledge synthesis (**verified**), Addy Osmani documentation/ADRs (**verified**), Cline knowledge catalog discovery (**rejected**), and BM629 document-set review (**verified**). Rejected unchanged-use decisions remain enforceable; source navigation does not grant permission to execute. Current mapped totals: **131/1,047** (**52 first-party + 79 third-party**) and **916 unmapped**, across **78/247** linked subdomains. [Bounded source comparison](docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md).
 
 **Latest focused authorship (November 18):** The source-reviewed File & Information Management collection now contains **four complementary first-party skills**, with **two new original MIT four-file packages**, each at **18/20 static review** and **behavioral validation NOT RUN**. Their bounded evidence links strengthen existing recognized capability routes. A separate [16-subdomain taxonomy proposal](registry/discovery/file-information-management-domain-proposal-20261118.json) remains proposed, not canonical. Older two-skill checkpoint paragraphs below are historical.
