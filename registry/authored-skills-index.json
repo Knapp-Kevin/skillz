@@ -171,6 +171,40 @@
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
       "capability_mapping_ref": "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md"
+    },
+    {
+      "id": "federated-source-catalog",
+      "display_name": "Federated Source Catalog",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/federated-source-catalog",
+      "entrypoint": "skills/authored/federated-source-catalog/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/federated-source-catalog/LICENSE",
+      "license_inheritance": "Bundled MIT covers independently authored original instructions, reference contracts and synthetic examples only.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-18",
+      "provenance_path": "registry/skills/local-skills/federated-source-catalog.yaml",
+      "verification_path": "registry/verification/local-skills/federated-source-catalog.yaml",
+      "skill_blob_sha": "4d028afe00921af05f8258e0c7f50707d2ebb68c",
+      "package_tree_sha": "130b199cc7c5549d8905196d62f54617198d1976",
+      "package_file_count": 6,
+      "review_status": "verified-static",
+      "review_score": "18/20",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original MIT source. No provider API code, copied external skill text, private data, or credential. Real connector access and shared index permissions require separate host authority and operational evidence.",
+      "package_version": "1.0.0",
+      "capability_paths": [
+        "memory-context/retrieval",
+        "memory-context/provenance",
+        "technical-writing/documentation-ia"
+      ],
+      "proposed_capability_domain": "file-information-management",
+      "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
+      "capability_mapping_ref": "docs/reviews/2026-11-18-federated-source-catalog-static-review.md",
+      "related_authored_skill": "file-lifecycle-curator"
     }
   ]
 }

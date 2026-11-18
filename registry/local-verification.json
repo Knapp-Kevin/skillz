@@ -1599,6 +1599,44 @@
         ]
       },
       "notes": "Exact complete five-file first-party MIT package statically reviewed on 2026-11-18 at 18/20. Default no writes; authorization and read-back required for any file effects. Host behavior, archive/restore, live indexing, security scan and production utility NOT RUN. docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md"
+    },
+    {
+      "skill_name": "federated-source-catalog",
+      "local_path": "skills/authored/federated-source-catalog/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "4d028afe00921af05f8258e0c7f50707d2ebb68c",
+      "complete_package_tree_sha": "130b199cc7c5549d8905196d62f54617198d1976",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "connector-federation",
+          "knowledge-organization",
+          "retrieval"
+        ],
+        "lifecycle": [
+          "discovery",
+          "intake",
+          "retrieval",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "privacy-bounded",
+          "safety-bounded",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete first-party MIT six-file package reviewed on 2026-11-18 at 18/20 against exact tree; host behavior and connector acceptance not-run. Source-native IDs/revisions, per-viewer access checks, source completeness, no unapproved persistent index, copy, sync, archive or deletion. docs/reviews/2026-11-18-federated-source-catalog-static-review.md"
     }
   ]
 }

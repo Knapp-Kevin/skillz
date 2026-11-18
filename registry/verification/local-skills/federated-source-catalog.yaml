@@ -1,0 +1,49 @@
+schema_version: 1
+skill_name: federated-source-catalog
+skill_version: 1.0.0
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/federated-source-catalog/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/federated-source-catalog/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4d028afe00921af05f8258e0c7f50707d2ebb68c
+complete_package_tree_sha: 130b199cc7c5549d8905196d62f54617198d1976
+characterized_at: '2026-11-18'
+reviewed_at: '2026-11-18'
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+validation_note: >-
+  Synthetic text expectations inspected; no connector, private data, cross-user
+  access test, index persistence, permission revocation, source delta or
+  host-agent behavior executed or independently measured.
+rubric: docs/skill-verification.md
+rubric_score: 18/20
+tags:
+  use_case:
+  - file-information-management
+  - connector-federation
+  - knowledge-organization
+  - retrieval
+  lifecycle:
+  - discovery
+  - intake
+  - retrieval
+  - maintenance
+  characteristic:
+  - evidence-first
+  - traceable
+  - privacy-bounded
+  - safety-bounded
+  - human-review
+  authority:
+  - read-only
+  portability:
+  - high
+notes: >-
+  Exact complete original six-file MIT text package. Separate per-principal
+  authorization and source-native identity. No implied permission to create
+  shared indexes, export data, sync systems or execute file modifications.
+  Static 18/20; behavioral validation not run. See
+  docs/reviews/2026-11-18-federated-source-catalog-static-review.md.
