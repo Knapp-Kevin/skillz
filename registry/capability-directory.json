@@ -33925,8 +33925,8 @@
       "id": "local-skills/file-lifecycle-curator",
       "source_id": "local-skills",
       "skill_name": "file-lifecycle-curator",
-      "content_blob_sha": "63577971773ae0d923f6d38165c13c34f36b8f72",
-      "complete_package_tree_sha": "12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84",
+      "content_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
+      "complete_package_tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33944,16 +33944,16 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Reviewed complete five-file package; metadata/index/summaries, keyword tags, dry-run organization and archive planning. Proposed new domain remains pending.",
-      "restriction": "File actions, sharing, permanent index creation and archiving require host capabilities and explicit scope; behavioral validation not-run",
+      "link_basis": "2026-11-18 v1.1 exact complete-package static review includes optional source identity + authorization-preserving federated handoff; behavior not run.",
+      "restriction": "No live connector/host behavioral acceptance, shared index ACL enforcement or file mutation; cross-source handoff specified but host execution NOT RUN.",
       "unchanged_use_approved": false
     },
     {
       "id": "local-skills/federated-source-catalog",
       "source_id": "local-skills",
       "skill_name": "federated-source-catalog",
-      "content_blob_sha": "4d028afe00921af05f8258e0c7f50707d2ebb68c",
-      "complete_package_tree_sha": "130b199cc7c5549d8905196d62f54617198d1976",
+      "content_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
+      "complete_package_tree_sha": "1267d05abf3524ccee86748fa134b525f4d83289",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33971,8 +33971,8 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Exact six-file static review; per-source federation, revisions, access-isolated retrieval and source-completeness boundaries. Domain proposal not canonical.",
-      "restriction": "Host behavior, permissions, cross-tenant isolation, persistent indexing and real connector access not validated; no implicit source writes, copy, sync or egress.",
+      "link_basis": "2026-11-18 v1.1 exact complete-package static review includes optional source identity + authorization-preserving federated handoff; behavior not run.",
+      "restriction": "No live connector/host behavioral acceptance, shared index ACL enforcement or file mutation; cross-source handoff specified but host execution NOT RUN.",
       "unchanged_use_approved": false
     }
   ],
