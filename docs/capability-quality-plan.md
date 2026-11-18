@@ -41,6 +41,12 @@ Record domain/subdomain, outcome, essential/optional decision, exact candidate i
 
 New third-party admission follows issue-first intake. Formatting repair is not candidate admission. Do not bulk-copy candidates, create a new repository or advertise complete domain packs before scope and rights are established.
 
+## Future Skill Mason export identity repair (candidate, #726)
+
+A separately reviewed exporter change repairs a historical mixed Git-tree/Git-blob fingerprint omission. The previous published handoff stays pinned and immutable. Future export proposals must reconcile every explicit `SKILL.md` blob SHA-1 and complete package Git tree SHA-1 across provenance and verification companions rather than preferring one source when claims conflict. Known `git-tree-and-blob-sha1` records have both identities; the older generator did not always export the dedicated blob because it overlooked `skill_blob_sha`.
+
+The maintenance-only offline test `python3 -m unittest discover -s scripts/qa -p 'test-skill-mason-export-identity.py' -v` covers the real Anthropic frontend-design review, known fingerprint algorithms, forged/conflicting aliases and absent trees. It requires the same Python/PyYAML dependencies as the exporter. Tests are not a rights, host or publication grant. The patch must not replace the historical `registry/exports/skill-mason-v1` bytes or bypass the acceptance and version-delta requirements of a future separately pinned handoff.
+
 ## November 17 progress
 
 [Exact review and source comparison](reviews/2026-11-17-melody-and-capability-scope.md): original melody package with incomplete text-agent pilot; [all 247 recognized outcome work units](../registry/capability-outcome-register.json); [13 new proposed domains, 65 subdomains and four music extensions](../registry/capability-scope-extensions-20261117.json). The 25 older provisional domains remain separate and unqualified. Continuous maintenance now explicitly tracks discovery/evaluation balance and non-degradation.
