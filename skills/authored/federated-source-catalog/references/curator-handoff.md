@@ -41,7 +41,7 @@ the presence of an OAuth client, search API, remote storage or evaluator.
 4. **Preserve typed provenance.** Map
    `catalog_id -> record_id`,
    `native_locator -> source_locator`,
-   `revision.kind/value -> source_context.revision_kind/source_revision`,
+   source record `revision.kind/value -> handoff.source.revision_kind/revision_value -> curator.source_context.revision_kind/source_revision`,
    and `principal_scope/approved_root/native_resource_id -> source_context`.
    Keep content `read_status`, `extraction_coverage` and
    citations. Never deduce identity from title/path or silently
