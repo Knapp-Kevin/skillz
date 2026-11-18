@@ -23,7 +23,7 @@
 | Pending consumer qualification | **1,522 reference-only candidates** | **November 3** source-specific queue, not today's measured count or all undiscovered work |
 | Governed exact-version review inventory | **1,055** (60 first-party, 995 third-party) | **November 18** identity records; not approvals to execute |
 | Capability-linked governed identities | **139** (112 static verified, **27 rejected**); **916 unmapped** | Rejected skills remain visible as evidence, not recommended methods |
-| Recognized capability mapping | **33 domains / 247 subdomains**; **80** with governed links; **167** without governed links (12 source-vetted candidates only, 157 unassessed) | Discoverability does not establish essential-outcome coverage |
+| Recognized capability mapping | **33 domains / 247 subdomains**; **80** with governed links; **167** without governed links (source-vetted-only vs unassessed breakdown pending exact-route reconciliation) | Discoverability does not establish essential-outcome coverage |
 | Essential workflow definitions | **6 partially specified**; **241 of 247 still need decomposition** | Defined work now includes document information architecture, permission-bounded retrieval, provenance, taxonomy stewardship, cross-library navigation and repository link health; none is behaviorally qualified |
 | Behavioral evidence for 139 mapped identities | **138 not-run, 1 incomplete** | No fully accepted host-agent behavior in this mapped set |
 

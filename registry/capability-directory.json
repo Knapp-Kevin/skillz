@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 19,
+      "linked_reviewed_examples": 18,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -2134,7 +2134,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 30,
+      "linked_reviewed_examples": 28,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -3204,7 +3204,7 @@
     {
       "domain": "fiction-narrative-worldbuilding",
       "display_name": "Fiction / narrative / worldbuilding",
-      "linked_reviewed_examples": 30,
+      "linked_reviewed_examples": 24,
       "subdomains_with_linked_examples": 8,
       "name_only_candidate_count": 1,
       "evidence_preview": [
@@ -3515,7 +3515,7 @@
     {
       "domain": "technical-writing",
       "display_name": "Technical writing",
-      "linked_reviewed_examples": 14,
+      "linked_reviewed_examples": 12,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 15,
       "evidence_preview": [
@@ -4185,7 +4185,7 @@
     {
       "domain": "memory-context",
       "display_name": "Memory / context",
-      "linked_reviewed_examples": 9,
+      "linked_reviewed_examples": 6,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 12,
       "evidence_preview": [
@@ -4514,7 +4514,7 @@
     {
       "domain": "career",
       "display_name": "Career",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 2,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 0,
       "evidence_preview": [
@@ -4748,7 +4748,7 @@
     {
       "domain": "finance",
       "display_name": "Finance",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 2,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 2,
       "evidence_preview": [
