@@ -2,6 +2,30 @@
 
 This is the **canonical home for newly authored first-party skills** produced for this repository: `skills/authored/<skill-name>/`. It distinguishes maintainer-owned original work from the external discovery/reference corpus under `skills/sources/` and historical first-party skills at `skills/<name>/`. "Authored" denotes accountability for source and rights, **not** a claim that a human personally typed every instruction or that AI assistance was absent.
 
+## 2026-11-18: Independently redesigned legacy capabilities
+
+A known repository and Zo Computer account does not prove that the owner
+wrote every historic `frostwulf.zo.computer` instruction. Those **44 legacy
+root-level skills are retained** while original replacements receive their
+own rights and review records. Do not move-and-relabel protected text.
+
+Eight complete new packages have individual MIT LICENSE, original SKILL.md,
+and synthetic challenge cases. Their exact identities and 17–18/20 static
+reviews are recorded in [the authored index](../../registry/authored-skills-index.json).
+No live behavior or broad originality certificate is claimed.
+
+- [Claim Evidence Adjudicator](claim-evidence-adjudicator/SKILL.md) · [synthetic cases](claim-evidence-adjudicator/examples/synthetic-cases.md)
+- [Research Methods Appraiser](research-methods-appraiser/SKILL.md) · [synthetic cases](research-methods-appraiser/examples/synthetic-cases.md)
+- [Source Debt Triage](source-debt-triage/SKILL.md) · [synthetic cases](source-debt-triage/examples/synthetic-cases.md)
+- [Decision Record Steward](decision-record-steward/SKILL.md) · [synthetic cases](decision-record-steward/examples/synthetic-cases.md)
+- [Agent Workspace Footprint Assessor](agent-workspace-footprint-assessor/SKILL.md) · [synthetic cases](agent-workspace-footprint-assessor/examples/synthetic-cases.md)
+- [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) · [synthetic cases](connector-capability-risk-review/examples/synthetic-cases.md)
+- [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) · [synthetic cases](privilege-exposure-mapper/examples/synthetic-cases.md)
+- [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) · [synthetic cases](scheduled-work-proof-auditor/examples/synthetic-cases.md)
+
+[Forty-four-source migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
+· [Draft PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
+
 ## New skill package requirements
 
 **Required capability indexing:** A new first-party authored package is not complete merely because its files live under `skills/authored/<slug>/`. It must be indexed in `registry/authored-skills-index.json`, `registry/governed-review-name-index.json`, and the canonical `registry/capability-directory.json` under its evidence-backed domain/subdomain routes. The latter must include one canonical `skill_records` identity and `matched_skill_ids` links for every applicable domain; update browse previews and derived counts without counting cross-links as extra skills. Run `node scripts/qa/check-authored-capability-links.mjs` during authorized local repository maintenance. [November 8 example and exact evidence](../../registry/discovery/authored-capability-routing-20261108.json). This is discovery, not host permission or proof of behavioral validation.

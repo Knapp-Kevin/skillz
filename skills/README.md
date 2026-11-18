@@ -19,6 +19,8 @@ Category folders are a human navigation layer. Canonical active local skill cont
 
 ## Canonical authored skills
 
+**Historical attribution is not rights proof.** All 44 historic `frostwulf.zo.computer` root entrypoints remain retained for comparison while eight new original packages are separately reviewed and indexed under [`authored/`](authored/). No historic license, originality or behavior clearance is inferred from account control. [Current migration ledger](../registry/migration/frostwulf-independent-replacement-ledger-20261118.json).
+
 All new first-party custom packages belong under [authored/](authored/) and are listed with explicit SPDX licensing and exact package identities in [the authored-skill index](../registry/authored-skills-index.json). Existing historical first-party skills remain in place until separately migrated.
 
 ## New domain-specific first-party example
