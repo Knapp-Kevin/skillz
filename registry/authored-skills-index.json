@@ -138,6 +138,39 @@
         "music-composition/melody"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-17-melody-and-capability-scope.md"
+    },
+    {
+      "id": "file-lifecycle-curator",
+      "display_name": "File Lifecycle Curator",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/file-lifecycle-curator",
+      "entrypoint": "skills/authored/file-lifecycle-curator/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/file-lifecycle-curator/LICENSE",
+      "license_inheritance": "All five package files contain independently authored original text; bundled MIT applies only to that original material.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-18",
+      "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
+      "verification_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
+      "skill_blob_sha": "63577971773ae0d923f6d38165c13c34f36b8f72",
+      "package_tree_sha": "07dc52b1c0ca796cc075a7e9ddd8bf824fa4ccbd",
+      "package_file_count": 5,
+      "review_status": "verified-static",
+      "review_score": "18/20",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "No third-party skill text, source code or copyrighted example files copied; proposed metadata decks and organization plans are generated without implicit storage, upload, move or deletion authority.",
+      "package_version": "1.0.0",
+      "capability_paths": [
+        "memory-context/retrieval",
+        "memory-context/summarization",
+        "technical-writing/documentation-ia"
+      ],
+      "proposed_capability_domain": "file-information-management",
+      "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
+      "capability_mapping_ref": "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md"
     }
   ]
 }
