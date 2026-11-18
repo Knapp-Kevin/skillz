@@ -45,6 +45,8 @@ Reference Integrity Auditor governs **dependency edge resolution, broken-link ev
 
 **Actual source checks:** All eight package files fetched from the branch; SKILL entry links resolve, both JSON examples parse, content is passive Markdown/LICENSE, source SHA and complete tree identities were computed from the actual Git objects. Synthetic T01–T12 and R01–R14 are **examples, not executed host-agent passes**.
 
+**Additional first-party deterministic policy-oracle check:** 12/12 synthetic decisions matched expected outcomes on input flags for taxonomy homonyms/alias cycles/parent cycles/private labels/no-write/revision drift, and link permission-denied, complete missing target, branch drift, unsafe redirects, partial graph and bounded orphan semantics. The test ran against a temporary JS oracle of the documented rules, **not an agent host, the SKILL files as executable code, or actual third-party data**; therefore behavioral validation remains NOT RUN. These assertions do not prove recall, precision, usability or enforce permissions in production.
+
 No static hard-fail was identified within the bounded read-only scope. Security scanning of host tool actions, real cross-user ACL enforcement, ability to resolve cloud shortcuts and link anchors, actual tag migrations, ontology quality/user benefit, and restore/rollback remain **NOT RUN**.
 
 ## Qualification and next steps
