@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: file-lifecycle-curator
 display_name: File Lifecycle Curator
-skill_version: 1.0.0
+skill_version: 1.1.0
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/file-lifecycle-curator/SKILL.md
@@ -22,13 +22,13 @@ dependencies: >-
   Authorized inputs for source inspection. Inventory, tagging, metadata decks, planning
   and excerpt-limited indexing are text-only; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
-content_blob_sha: 63577971773ae0d923f6d38165c13c34f36b8f72
-complete_package_tree_sha: 12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84
+content_blob_sha: 4d9387a3698252c7f92c0a4cbed415f789155c79
+complete_package_tree_sha: 31f63a762ead720db8c390017c235e6602f3ffd8
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Original five-file MIT package, exact-version statically inspected on 2026-11-18
+  Original seven-file MIT package, exact-version statically inspected on 2026-11-18
   at 18/20 with no hard-fail; no executable files. It differentiates observed and
   inferred metadata, plans from authorized changes, and archive from deletion.
   Representative host behavioral validation and operational security scanning not run.
-  See docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md.
+  See docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
