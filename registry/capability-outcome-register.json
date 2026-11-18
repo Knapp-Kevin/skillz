@@ -559,7 +559,8 @@
       "outcome_definition_status": "needs-workflow-decomposition",
       "essential_outcomes": [],
       "existing_capability_statements": [
-        "Discover sources and monitor technical developments using dated primary evidence"
+        "Discover sources and monitor technical developments using dated primary evidence",
+        "Study bounded cloud data catalog search but do not execute unapproved downloaded dependencies"
       ],
       "governed_review_links": [
         "local-skills/claude-pulse",
@@ -579,7 +580,8 @@
         "local-skills/openai-pulse",
         "local-skills/perplexity-pulse",
         "local-skills/qwen-pulse",
-        "local-skills/xai-pulse"
+        "local-skills/xai-pulse",
+        "cline-skills/knowledge-catalog-discovery"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -591,12 +593,14 @@
       "essential_outcomes": [],
       "existing_capability_statements": [
         "Compare competing evidence and synthesize a bounded research finding",
-        "Review user-research search evidence, provenance, source methods and honest uncertainty"
+        "Review user-research search evidence, provenance, source methods and honest uncertainty",
+        "Synthesize attributed cross-source findings without treating confidence/recency heuristic as universal authority"
       ],
       "governed_review_links": [
         "local-skills/compare",
         "local-skills/deep-dive",
-        "bm629-agent-skills/reviewing-user-research-prior-art-survey"
+        "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+        "anthropic-knowledge-work-plugins/knowledge-synthesis"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -1572,11 +1576,13 @@
       "existing_capability_statements": [
         "Draft a proposed ADR with alternatives and consequences before authorized persistence",
         "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
-        "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization"
+        "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+        "Record and maintain architecture decisions with repository-local conventions and supersession evidence"
       ],
       "governed_review_links": [
         "bm629-agent-skills/authoring-architecture-doc",
-        "bm629-agent-skills/reviewing-architecture-doc"
+        "bm629-agent-skills/reviewing-architecture-doc",
+        "addyosmani-agent-skills/documentation-and-adrs"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -1638,12 +1644,14 @@
         "Preserve plaintext meaning while converting formatting to Markdown",
         "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals",
         "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries",
-        "Govern versioned file/document metadata vocabularies and cross-source label aliases without destructive retagging"
+        "Govern versioned file/document metadata vocabularies and cross-source label aliases without destructive retagging",
+        "Review supplied project documentation for dependency integrity, version skew and cross-document consistency"
       ],
       "governed_review_links": [
         "local-skills/file-lifecycle-curator",
         "local-skills/federated-source-catalog",
-        "local-skills/metadata-taxonomy-steward"
+        "local-skills/metadata-taxonomy-steward",
+        "bm629-agent-skills/reviewing-document-set"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
@@ -2206,12 +2214,14 @@
       "existing_capability_statements": [
         "Recover relevant prior-session decisions with provenance and freshness checks",
         "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes",
-        "Locate and cite currently accessible files and records across authorized connector scopes with transparent source coverage"
+        "Locate and cite currently accessible files and records across authorized connector scopes with transparent source coverage",
+        "Study connector source inventory and rate-limit information, but reject its unbounded search scope unchanged"
       ],
       "governed_review_links": [
         "local-skills/session-continuity",
         "local-skills/file-lifecycle-curator",
-        "local-skills/federated-source-catalog"
+        "local-skills/federated-source-catalog",
+        "anthropic-knowledge-work-plugins/source-management"
       ],
       "qualified_essential_outcome_count": null,
       "qualification_status": "not-established-from-navigation-links",
