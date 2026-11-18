@@ -7,7 +7,7 @@
 | Skill | Git blob for SKILL.md | Complete package tree | Package files |
 |---|---|---|---:|
 | File Lifecycle Curator v1.1.0 | `4d9387a3698252c7f92c0a4cbed415f789155c79` | `31f63a762ead720db8c390017c235e6602f3ffd8` | 7 |
-| Federated Source Catalog v1.1.0 | `5f4859515de5d073a939d439f1d75e1084d4404e` | `1267d05abf3524ccee86748fa134b525f4d83289` | 8 |
+| Federated Source Catalog v1.1.0 | `5f4859515de5d073a939d439f1d75e1084d4404e` | `b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1` | 8 |
 
 **Complete source boundary:** Curator: `SKILL.md`, `LICENSE`, `references/metadata-contract.md`, `references/operation-and-archive-rules.md`, `references/federated-intake.md`, `examples/synthetic-corpus-and-cases.md`, `examples/federated-intake-cases.md`. Federation: `SKILL.md`, `LICENSE`, `references/federated-record-contract.md`, `references/provider-adapter-matrix.md`, `references/authority-and-freshness.md`, `references/curator-handoff.md`, `examples/federated-cases.md`, `examples/federated-handoff-cases.md`. All are original MIT text, no bundled executable, OAuth client, service, account or external copied asset.
 
