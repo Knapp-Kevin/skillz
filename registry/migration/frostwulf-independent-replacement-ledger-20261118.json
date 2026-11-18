@@ -8,7 +8,7 @@
   "counts": {
     "legacy_candidates": 44,
     "independent_drafts": 4,
-    "independent_drafts_reviewed": 0,
+    "independent_drafts_reviewed": 4,
     "legacy_removed": 0
   },
   "rows": [
@@ -90,7 +90,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/decision-record-steward/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -135,7 +135,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/claim-evidence-adjudicator/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -297,7 +297,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/research-methods-appraiser/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -387,7 +387,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/source-debt-triage/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -408,5 +408,6 @@
       "replacement_status": "capability_outcome_design_pending",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     }
-  ]
+  ],
+  "review_evidence": "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md"
 }
