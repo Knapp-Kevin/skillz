@@ -7,9 +7,12 @@
   "policy": "Replacement work must originate from independently specified capability requirements and unique expression. Do not copy distinctive legacy text, source examples, code or protected assets. Maintain legacy files until every replacement is separately reviewed, indexed and accepted.",
   "counts": {
     "legacy_candidates": 44,
-    "independent_drafts": 8,
+    "independent_drafts": 9,
     "independent_drafts_reviewed": 8,
-    "legacy_removed": 0
+    "legacy_removed": 0,
+    "legacy_functions_addressed": 25,
+    "consolidated_legacy_functions": 17,
+    "replacement_packages": 9
   },
   "rows": [
     {
@@ -62,9 +65,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "anthropic-claude"
     },
     {
       "legacy_entrypoint": "skills/compare/SKILL.md",
@@ -116,9 +120,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "deepseek-models"
     },
     {
       "legacy_entrypoint": "skills/devlog-draft/SKILL.md",
@@ -152,36 +157,40 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "google-gemini"
     },
     {
       "legacy_entrypoint": "skills/github-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "github-discovery"
     },
     {
       "legacy_entrypoint": "skills/glm-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "glm-zai"
     },
     {
       "legacy_entrypoint": "skills/governance-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "ai-governance"
     },
     {
       "legacy_entrypoint": "skills/handoff-writer/SKILL.md",
@@ -197,9 +206,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "huggingface-ecosystem"
     },
     {
       "legacy_entrypoint": "skills/inbox-triage/SKILL.md",
@@ -215,18 +225,20 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "local-inference"
     },
     {
       "legacy_entrypoint": "skills/kimi-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "moonshot-kimi"
     },
     {
       "legacy_entrypoint": "skills/learning-plan/SKILL.md",
@@ -242,18 +254,20 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "meta-llama"
     },
     {
       "legacy_entrypoint": "skills/mcp-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "mcp-protocol"
     },
     {
       "legacy_entrypoint": "skills/mcp-vetting/SKILL.md",
@@ -269,27 +283,30 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "agent-memory"
     },
     {
       "legacy_entrypoint": "skills/mistral-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "mistral-models"
     },
     {
       "legacy_entrypoint": "skills/openai-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "openai-developer"
     },
     {
       "legacy_entrypoint": "skills/paper-digest/SKILL.md",
@@ -314,18 +331,20 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "perplexity-search"
     },
     {
       "legacy_entrypoint": "skills/qwen-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "alibaba-qwen"
     },
     {
       "legacy_entrypoint": "skills/repo-doctor/SKILL.md",
@@ -404,9 +423,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_status": "original_consolidated_profile_draft_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_profile": "xai-grok"
     }
   ],
   "review_evidence": [
