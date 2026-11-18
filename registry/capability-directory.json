@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 15,
+      "linked_reviewed_examples": 16,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -2539,7 +2539,7 @@
     {
       "domain": "ux-ui",
       "display_name": "UX / UI",
-      "linked_reviewed_examples": 9,
+      "linked_reviewed_examples": 10,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 5,
       "evidence_preview": [
@@ -3373,7 +3373,7 @@
     {
       "domain": "technical-writing",
       "display_name": "Technical writing",
-      "linked_reviewed_examples": 9,
+      "linked_reviewed_examples": 10,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 15,
       "evidence_preview": [
@@ -4031,7 +4031,7 @@
     {
       "domain": "memory-context",
       "display_name": "Memory / context",
-      "linked_reviewed_examples": 4,
+      "linked_reviewed_examples": 5,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 12,
       "evidence_preview": [
@@ -4094,6 +4094,16 @@
           "source_class": "first-party-authored",
           "path": "memory-context/provenance",
           "capability_example": "Reconcile source-native file IDs, snapshots, permissions and cross-source relationships without false identity merges"
+        },
+        {
+          "id": "local-skills/reference-integrity-auditor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/reference-integrity-auditor.yaml",
+          "source_class": "first-party-authored",
+          "path": "memory-context/provenance",
+          "capability_example": "Audit revision-bound citation and relationship links across authorized sources without hidden-target disclosure"
         }
       ],
       "name_only_preview": [
@@ -4768,7 +4778,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1045,
+  "governed_identity_denominator": 1047,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -12189,7 +12199,8 @@
           "capabilities": [
             "Compare code against standards and specification evidence",
             "Review code quality using severity, tests and evidence rather than rubber-stamping",
-            "Diagnose repository problems, monitor changes, and triage technical debt with evidence"
+            "Diagnose repository problems, monitor changes, and triage technical debt with evidence",
+            "Identify bounded broken/stale repository-document references and propose version-aware, reversible repairs"
           ],
           "matched_skill_ids": [
             "local-skills/agent-home-doctor",
@@ -12199,7 +12210,8 @@
             "local-skills/repo-pulse",
             "local-skills/todo-harvester",
             "addyosmani-agent-skills/code-review-and-quality",
-            "mattpocock-skills/code-review"
+            "mattpocock-skills/code-review",
+            "local-skills/reference-integrity-auditor"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -21918,10 +21930,12 @@
           "id": "information-architecture",
           "name": "information architecture",
           "capabilities": [
-            "website information architecture"
+            "website information architecture",
+            "Define a controlled cross-library vocabulary and navigation labeling convention without overwriting source-native tags"
           ],
           "matched_skill_ids": [
-            "corey-haines-marketing-skills/site-architecture"
+            "corey-haines-marketing-skills/site-architecture",
+            "local-skills/metadata-taxonomy-steward"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -24473,11 +24487,13 @@
           "capabilities": [
             "Preserve plaintext meaning while converting formatting to Markdown",
             "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals",
-            "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries"
+            "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries",
+            "Govern a source-preserving, versioned document metadata tag taxonomy with synonym conflict and migration proposals"
           ],
           "matched_skill_ids": [
             "local-skills/file-lifecycle-curator",
-            "local-skills/federated-source-catalog"
+            "local-skills/federated-source-catalog",
+            "local-skills/metadata-taxonomy-steward"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -27290,10 +27306,12 @@
           "id": "provenance",
           "name": "provenance",
           "capabilities": [
-            "Reconcile source-native file IDs, snapshots, permissions and cross-source relationships without false identity merges"
+            "Reconcile source-native file IDs, snapshots, permissions and cross-source relationships without false identity merges",
+            "Audit revision-bound citation and relationship links across authorized sources without hidden-target disclosure"
           ],
           "matched_skill_ids": [
-            "local-skills/federated-source-catalog"
+            "local-skills/federated-source-catalog",
+            "local-skills/reference-integrity-auditor"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -33974,15 +33992,67 @@
       "link_basis": "2026-11-18 v1.1 exact complete-package static review includes optional source identity + authorization-preserving federated handoff; behavior not run.",
       "restriction": "No live connector/host behavioral acceptance, shared index ACL enforcement or file mutation; cross-source handoff specified but host execution NOT RUN.",
       "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/metadata-taxonomy-steward",
+      "source_id": "local-skills",
+      "skill_name": "metadata-taxonomy-steward",
+      "content_blob_sha": "9d52d909a8e1dbc2c63748085b62bfa56c268989",
+      "complete_package_tree_sha": "341bf5f8751333db8896f01c51f614b4acc6ad0d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "technical-writing/documentation-ia",
+        "ux-ui/information-architecture"
+      ],
+      "evidence_path": "registry/verification/local-skills/metadata-taxonomy-steward.yaml",
+      "skill_path": "skills/authored/metadata-taxonomy-steward/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/metadata-taxonomy-steward.yaml",
+      "source_license": "Original four-file MIT package",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Versioned controlled vocabulary with original source labels, alias conflict detection, privacy and no automatic retagging. Exact static review: docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "Host behavior, active provider link/label resolution and per-viewer isolation are not run. No implicit source writes, cross-tenant share or egress.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/reference-integrity-auditor",
+      "source_id": "local-skills",
+      "skill_name": "reference-integrity-auditor",
+      "content_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
+      "complete_package_tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "memory-context/provenance",
+        "software-engineering/maintenance"
+      ],
+      "evidence_path": "registry/verification/local-skills/reference-integrity-auditor.yaml",
+      "skill_path": "skills/authored/reference-integrity-auditor/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/reference-integrity-auditor.yaml",
+      "source_license": "Original four-file MIT package",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Read-only bounded reference edge audit; link/anchor/ACL status and orphan candidates require actual authorized provider resolution. Exact static review: docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "Host behavior, active provider link/label resolution and per-viewer isolation are not run. No implicit source writes, cross-tenant share or egress.",
+      "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 124,
+  "identity_level_capability_links_mapped": 126,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 50,
-    "known_total_governed_review_records": 1045,
+    "known_first_party_skill_records": 52,
+    "known_total_governed_review_records": 1047,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34038,18 +34108,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 50,
+  "first_party_identity_links_mapped": 52,
   "third_party_identity_links_mapped": 74,
   "unmapped_review_identity_count": 921,
   "navigation_population": {
-    "mapped_first_party_distinct": 50,
+    "mapped_first_party_distinct": 52,
     "mapped_third_party_distinct": 74,
-    "mapped_total_distinct": 124,
+    "mapped_total_distinct": 126,
     "subdomains_with_evidence_linked_examples": 78,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "2026-11-18: Federated Source Catalog adds a distinct reviewed first-party identity mapped to three existing recognized routes. File information management expansion remains proposed; static review is not host validation.",
+    "note": "2026-11-18: two exact-reviewed first-party, read-only taxonomy stewardship and reference integrity outcomes mapped into recognized adjacent routes; proposed file management subdomains remain outside canonical coverage. Behavioral validation NOT RUN.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
