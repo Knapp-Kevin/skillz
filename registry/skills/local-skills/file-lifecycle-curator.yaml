@@ -23,7 +23,7 @@ dependencies: >-
   and excerpt-limited indexing are text-only; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
 content_blob_sha: 63577971773ae0d923f6d38165c13c34f36b8f72
-complete_package_tree_sha: 07dc52b1c0ca796cc075a7e9ddd8bf824fa4ccbd
+complete_package_tree_sha: 12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
