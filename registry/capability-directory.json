@@ -2038,7 +2038,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 24,
+      "linked_reviewed_examples": 26,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2115,6 +2115,16 @@
           "capability_example": "Review user-research search evidence, provenance, source methods and honest uncertainty",
           "unchanged_use_approved": false,
           "restriction": "Reference/discovery only; no implied runtime, installation, or external-action approval"
+        },
+        {
+          "id": "anthropic-knowledge-work-plugins/knowledge-synthesis",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/anthropic-knowledge-work-plugins/knowledge-synthesis.yaml",
+          "source_class": "external-provenance",
+          "path": "research/synthesis",
+          "capability_example": "Synthesize source-grounded retrieved knowledge with explicit disagreement, attribution, duplicate-aware context and heuristic confidence."
         }
       ],
       "name_only_preview": [
@@ -3373,7 +3383,7 @@
     {
       "domain": "technical-writing",
       "display_name": "Technical writing",
-      "linked_reviewed_examples": 10,
+      "linked_reviewed_examples": 12,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 15,
       "evidence_preview": [
@@ -4031,7 +4041,7 @@
     {
       "domain": "memory-context",
       "display_name": "Memory / context",
-      "linked_reviewed_examples": 5,
+      "linked_reviewed_examples": 6,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 12,
       "evidence_preview": [
@@ -4104,6 +4114,16 @@
           "source_class": "first-party-authored",
           "path": "memory-context/provenance",
           "capability_example": "Audit revision-bound citation and relationship links across authorized sources without hidden-target disclosure"
+        },
+        {
+          "id": "anthropic-knowledge-work-plugins/source-management",
+          "verification_status": "rejected",
+          "validation_status": "not-run",
+          "static_score": "13/20",
+          "review_evidence_path": "registry/verification/anthropic-knowledge-work-plugins/source-management.yaml",
+          "source_class": "external-provenance",
+          "path": "memory-context/retrieval",
+          "capability_example": "Characterize connected enterprise-search sources and rate-limit behavior as a rejected unchanged-use reference; never treat all connected sources as automatically authorized."
         }
       ],
       "name_only_preview": [
@@ -19178,7 +19198,8 @@
           "id": "source-discovery",
           "name": "source discovery",
           "capabilities": [
-            "Discover sources and monitor technical developments using dated primary evidence"
+            "Discover sources and monitor technical developments using dated primary evidence",
+            "Study provider-specific Google Cloud data-catalog metadata lookup as a rejected unchanged-use discovery reference."
           ],
           "matched_skill_ids": [
             "local-skills/claude-pulse",
@@ -19198,7 +19219,8 @@
             "local-skills/openai-pulse",
             "local-skills/perplexity-pulse",
             "local-skills/qwen-pulse",
-            "local-skills/xai-pulse"
+            "local-skills/xai-pulse",
+            "cline-skills/knowledge-catalog-discovery"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -19807,12 +19829,14 @@
           "name": "synthesis",
           "capabilities": [
             "Compare competing evidence and synthesize a bounded research finding",
-            "Review user-research search evidence, provenance, source methods and honest uncertainty"
+            "Review user-research search evidence, provenance, source methods and honest uncertainty",
+            "Synthesize source-grounded retrieved knowledge with explicit disagreement, attribution, duplicate-aware context and heuristic confidence."
           ],
           "matched_skill_ids": [
             "local-skills/compare",
             "local-skills/deep-dive",
-            "bm629-agent-skills/reviewing-user-research-prior-art-survey"
+            "bm629-agent-skills/reviewing-user-research-prior-art-survey",
+            "anthropic-knowledge-work-plugins/knowledge-synthesis"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -24299,11 +24323,13 @@
           "capabilities": [
             "Draft a proposed ADR with alternatives and consequences before authorized persistence",
             "Document whole-system architecture boundaries, components, ADRs, NFR targets and tradeoffs",
-            "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization"
+            "Check architecture decisions, linked immutable ADRs, component boundaries and NFR realization",
+            "Maintain source-local architecture decision rationale, supersession links and documentation conventions with no implicit external changes."
           ],
           "matched_skill_ids": [
             "bm629-agent-skills/authoring-architecture-doc",
-            "bm629-agent-skills/reviewing-architecture-doc"
+            "bm629-agent-skills/reviewing-architecture-doc",
+            "addyosmani-agent-skills/documentation-and-adrs"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -24488,12 +24514,14 @@
             "Preserve plaintext meaning while converting formatting to Markdown",
             "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals",
             "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries",
-            "Govern a source-preserving, versioned document metadata tag taxonomy with synonym conflict and migration proposals"
+            "Govern a source-preserving, versioned document metadata tag taxonomy with synonym conflict and migration proposals",
+            "Review supplied coherent document sets for cross-document traceability, version skew and dependency integrity without external link crawling."
           ],
           "matched_skill_ids": [
             "local-skills/file-lifecycle-curator",
             "local-skills/federated-source-catalog",
-            "local-skills/metadata-taxonomy-steward"
+            "local-skills/metadata-taxonomy-steward",
+            "bm629-agent-skills/reviewing-document-set"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -26956,12 +26984,14 @@
           "capabilities": [
             "Recover relevant prior-session decisions with provenance and freshness checks",
             "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes",
-            "Locate and cite currently accessible files and records across authorized connector scopes with transparent source coverage"
+            "Locate and cite currently accessible files and records across authorized connector scopes with transparent source coverage",
+            "Characterize connected enterprise-search sources and rate-limit behavior as a rejected unchanged-use reference; never treat all connected sources as automatically authorized."
           ],
           "matched_skill_ids": [
             "local-skills/session-continuity",
             "local-skills/file-lifecycle-curator",
-            "local-skills/federated-source-catalog"
+            "local-skills/federated-source-catalog",
+            "anthropic-knowledge-work-plugins/source-management"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -34044,9 +34074,115 @@
       "link_basis": "Read-only bounded reference edge audit; link/anchor/ACL status and orphan candidates require actual authorized provider resolution. Exact static review: docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
       "restriction": "Host behavior, active provider link/label resolution and per-viewer isolation are not run. No implicit source writes, cross-tenant share or egress.",
       "unchanged_use_approved": false
+    },
+    {
+      "id": "anthropic-knowledge-work-plugins/source-management",
+      "source_id": "anthropic-knowledge-work-plugins",
+      "skill_name": "source-management",
+      "content_blob_sha": "8df82355b33469e034ad6db962e0d5606314dd4",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "static_score": "13/20",
+      "capability_paths": [
+        "memory-context/retrieval"
+      ],
+      "evidence_path": "registry/verification/anthropic-knowledge-work-plugins/source-management.yaml",
+      "skill_path": "source-pinned:registry/skills/anthropic-knowledge-work-plugins/source-management.yaml",
+      "provenance_path": "registry/skills/anthropic-knowledge-work-plugins/source-management.yaml",
+      "source_license": "See source pinned provenance/rights record; do not assume reuse rights.",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Pinned third-party SKILL.md readback and exact matching SHA; existing full-package Skillz review in registry/verification/anthropic-knowledge-work-plugins/source-management.yaml. Bounded comparison in docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "REJECT unchanged: automatically includes new connected sources, priority affects ranking not source boundary; do not enable broad search or install.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "anthropic-knowledge-work-plugins/knowledge-synthesis",
+      "source_id": "anthropic-knowledge-work-plugins",
+      "skill_name": "knowledge-synthesis",
+      "content_blob_sha": "a5e816fb52c4d2055513eeaea446e79b81aa54f2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "research/synthesis"
+      ],
+      "evidence_path": "registry/verification/anthropic-knowledge-work-plugins/knowledge-synthesis.yaml",
+      "skill_path": "source-pinned:registry/skills/anthropic-knowledge-work-plugins/knowledge-synthesis.yaml",
+      "provenance_path": "registry/skills/anthropic-knowledge-work-plugins/knowledge-synthesis.yaml",
+      "source_license": "See source pinned provenance/rights record; do not assume reuse rights.",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Pinned third-party SKILL.md readback and exact matching SHA; existing full-package Skillz review in registry/verification/anthropic-knowledge-work-plugins/knowledge-synthesis.yaml. Bounded comparison in docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "Static verified only, no host behavior; source authority and fixed recency bands must be checked against actual task/context.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "addyosmani-agent-skills/documentation-and-adrs",
+      "source_id": "addyosmani-agent-skills",
+      "skill_name": "documentation-and-adrs",
+      "content_blob_sha": "7faf52c9558fa60faf7362cf473cf24784f9209b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "19/20",
+      "capability_paths": [
+        "technical-writing/architecture-records"
+      ],
+      "evidence_path": "registry/verification/addyosmani-agent-skills/documentation-and-adrs.yaml",
+      "skill_path": "source-pinned:registry/skills/addyosmani-agent-skills/documentation-and-adrs.yaml",
+      "provenance_path": "registry/skills/addyosmani-agent-skills/documentation-and-adrs.yaml",
+      "source_license": "See source pinned provenance/rights record; do not assume reuse rights.",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Pinned third-party SKILL.md readback and exact matching SHA; existing full-package Skillz review in registry/verification/addyosmani-agent-skills/documentation-and-adrs.yaml. Bounded comparison in docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "Static verified only, no host behavior; repository documentation is a separate scoped authoring action.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "cline-skills/knowledge-catalog-discovery",
+      "source_id": "cline-skills",
+      "skill_name": "knowledge-catalog-discovery",
+      "content_blob_sha": "c52e0128ff3df369ec55766fae5bd215e5a03461",
+      "verification_status": "rejected",
+      "validation_status": "not-run",
+      "static_score": "14/20",
+      "capability_paths": [
+        "research/source-discovery"
+      ],
+      "evidence_path": "registry/verification/cline-skills/knowledge-catalog-discovery.yaml",
+      "skill_path": "source-pinned:registry/skills/cline-skills/knowledge-catalog-discovery.yaml",
+      "provenance_path": "registry/skills/cline-skills/knowledge-catalog-discovery.yaml",
+      "source_license": "See source pinned provenance/rights record; do not assume reuse rights.",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Pinned third-party SKILL.md readback and exact matching SHA; existing full-package Skillz review in registry/verification/cline-skills/knowledge-catalog-discovery.yaml. Bounded comparison in docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "REJECT unchanged: source-owned scripts may fetch/execute npx dependencies and access host environment without explicit approval; source metadata discovery only.",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "bm629-agent-skills/reviewing-document-set",
+      "source_id": "bm629-agent-skills",
+      "skill_name": "reviewing-document-set",
+      "content_blob_sha": "fbd64ac2414ea068272c48c8b0a57c68d93ef1dc",
+      "complete_package_tree_sha": "93d2e275ef65610d586d0c5200fcde4ed749ac1d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "technical-writing/documentation-ia"
+      ],
+      "evidence_path": "registry/verification/bm629-agent-skills/reviewing-document-set.yaml",
+      "skill_path": "source-pinned:registry/skills/bm629-agent-skills/reviewing-document-set.yaml",
+      "provenance_path": "registry/skills/bm629-agent-skills/reviewing-document-set.yaml",
+      "source_license": "See source pinned provenance/rights record; do not assume reuse rights.",
+      "source_role": "third-party",
+      "source_class": "external-provenance",
+      "link_basis": "Pinned third-party SKILL.md readback and exact matching SHA; existing full-package Skillz review in registry/verification/bm629-agent-skills/reviewing-document-set.yaml. Bounded comparison in docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
+      "restriction": "Verified static only; requires finished provided documents; not a provider-aware reference resolver or link repair executor.",
+      "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 126,
+  "identity_level_capability_links_mapped": 131,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
@@ -34109,17 +34245,17 @@
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
   "first_party_identity_links_mapped": 52,
-  "third_party_identity_links_mapped": 74,
-  "unmapped_review_identity_count": 921,
+  "third_party_identity_links_mapped": 79,
+  "unmapped_review_identity_count": 916,
   "navigation_population": {
     "mapped_first_party_distinct": 52,
     "mapped_third_party_distinct": 74,
-    "mapped_total_distinct": 126,
+    "mapped_total_distinct": 131,
     "subdomains_with_evidence_linked_examples": 78,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "2026-11-18: two exact-reviewed first-party, read-only taxonomy stewardship and reference integrity outcomes mapped into recognized adjacent routes; proposed file management subdomains remain outside canonical coverage. Behavioral validation NOT RUN.",
+    "note": "2026-11-18 evidence update: two original first-party methods and five exact-pinned external reviewed methods mapped to existing canonical routes; 2 rejected external methods remain discoverable only, not approved. No host behavior or new canonical subdomain coverage.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
