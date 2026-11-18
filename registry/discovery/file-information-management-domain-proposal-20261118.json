@@ -13,7 +13,7 @@
     "technical-writing/documentation-ia",
     "ux-ui/information-architecture"
   ],
-  "qualification": "Two exact v1.1 MIT skill packages have individually verified static text and an in-package federated handoff specification, but 14 taxonomy outcomes remain proposed and require full independent suitability, rights, host behavioral and operational evaluation. 12/12 deterministic oracle examples do not establish model behavior.",
+  "qualification": "Four complementary first-party passive skill packages are exact-version static-reviewed: within-collection curator, multi-source catalog, metadata taxonomy governance and reference-integrity audit. Sixteen proposed file-management subdomains remain noncanonical and behaviorally unqualified, without provider runtime or write authority.",
   "subdomains": [
     {
       "id": "inventory",
@@ -140,19 +140,40 @@
         "local-skills/federated-source-catalog"
       ],
       "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "metadata-taxonomy-stewardship",
+      "essential_outcome": "Maintain stable, versioned cross-source metadata terms, aliases, semantic conflicts, source-native labels and authorized migration proposals",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/metadata-taxonomy-steward"
+      ],
+      "acceptance": "Preserve source terms and permissions; detect conflicting aliases and cycles; version changes; independently evaluate provider mapping and no silent retagging."
+    },
+    {
+      "id": "reference-integrity-impact",
+      "essential_outcome": "Audit typed document and connector reference edges, revision-bound target resolution, broken/unknown links, bounded orphan candidates and non-destructive repair proposals",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/reference-integrity-auditor"
+      ],
+      "acceptance": "Differentiate broken vs inaccessible/unknown; bound graph scope, preserve revision/source ACL and prevent exfiltration or unapproved edits."
     }
   ],
   "canonical_promotion_required": true,
   "behavioral_evidence": "not-run: no agent-host or actual connector acceptance recorded",
-  "discovery_evaluation_gap": "Compare full third-party packages/rights against each new scoped essential outcome; do not treat skill count or static review as full workflow acceptance.",
+  "discovery_evaluation_gap": "Four pinned third-party entrypoints were independently re-read for bounded overlap; broader exact-source comparison, licensing/admission, behavior and effective source denominator remain incomplete. No global uniqueness claim.",
   "companion_artifacts": [
     "skills/authored/file-lifecycle-curator/SKILL.md",
-    "skills/authored/federated-source-catalog/SKILL.md"
+    "skills/authored/federated-source-catalog/SKILL.md",
+    "skills/authored/metadata-taxonomy-steward/SKILL.md",
+    "skills/authored/reference-integrity-auditor/SKILL.md"
   ],
   "reviews": [
     "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md",
     "docs/reviews/2026-11-18-federated-source-catalog-static-review.md",
-    "docs/reviews/2026-11-18-file-information-management-gap-audit.md"
+    "docs/reviews/2026-11-18-file-information-management-gap-audit.md",
+    "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md"
   ],
   "current_packages": [
     {
@@ -167,6 +188,20 @@
       "version": "1.1.0",
       "entry_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
       "tree_sha": "b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1",
+      "validation_status": "not-run"
+    },
+    {
+      "id": "local-skills/metadata-taxonomy-steward",
+      "version": "1.0.0",
+      "entry_blob_sha": "9d52d909a8e1dbc2c63748085b62bfa56c268989",
+      "tree_sha": "341bf5f8751333db8896f01c51f614b4acc6ad0d",
+      "validation_status": "not-run"
+    },
+    {
+      "id": "local-skills/reference-integrity-auditor",
+      "version": "1.0.0",
+      "entry_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
+      "tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
       "validation_status": "not-run"
     }
   ],
