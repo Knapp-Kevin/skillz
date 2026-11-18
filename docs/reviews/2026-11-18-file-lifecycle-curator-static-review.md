@@ -4,19 +4,19 @@
 
 ## Exact reviewed identity
 
-- Entry: \`skills/authored/file-lifecycle-curator/SKILL.md\`.
-- Entry blob: \`63577971773ae0d923f6d38165c13c34f36b8f72\`.
-- Complete package Git tree: \`07dc52b1c0ca796cc075a7e9ddd8bf824fa4ccbd\`.
-- Inspected files (5): \`SKILL.md\`, \`LICENSE\`, \`references/metadata-contract.md\`, \`references/operation-and-archive-rules.md\`, \`examples/synthetic-corpus-and-cases.md\`.
+- Entry: `skills/authored/file-lifecycle-curator/SKILL.md`.
+- Entry blob: `63577971773ae0d923f6d38165c13c34f36b8f72`.
+- Complete package Git tree: `07dc52b1c0ca796cc075a7e9ddd8bf824fa4ccbd`.
+- Inspected files (5): `SKILL.md`, `LICENSE`, `references/metadata-contract.md`, `references/operation-and-archive-rules.md`, `examples/synthetic-corpus-and-cases.md`.
 - Required external tools/services/accounts: **none for textual plans and source-bound reasoning**. Live file reading, storage writes, OCR, hashing, indexing, cloud actions, archive creation, restore tests and persistent search are host-dependent and not included as hidden dependencies.
 - License: bundled original MIT notice; only newly authored package material is covered. No source claiming rights to third-party documents.
 - Behavioral tests: **NOT RUN**. Static expected cases are not proof of agent behavior, archive recovery or indexing accuracy.
 
 ## Boundary and comparison
 
-The existing governed Skillz inventory has adjacent skills for \`paper-digest\` (research-paper summarization), \`repo-doctor\` (repository health), \`inbox-triage\` (message work) and \`session-continuity\` (memory retrieval). The existing recognized capability directory has \`memory-context/retrieval\`, \`memory-context/summarization\` and \`technical-writing/documentation-ia\`. None of those *mapped outcomes* establishes a governed end-to-end file inventory, metadata card/deck, deduplication, archive preparation and staged reorganization contract.
+The existing governed Skillz inventory has adjacent skills for `paper-digest` (research-paper summarization), `repo-doctor` (repository health), `inbox-triage` (message work) and `session-continuity` (memory retrieval). The existing recognized capability directory has `memory-context/retrieval`, `memory-context/summarization` and `technical-writing/documentation-ia`. None of those *mapped outcomes* establishes a governed end-to-end file inventory, metadata card/deck, deduplication, archive preparation and staged reorganization contract.
 
-This is an assessment of **mapped and inspected nearby evidence only**. It is not an exhaustive negative claim about the 921 previously unmapped exact-review identities, other third-party sources, or full ecosystem coverage. Proposed \`file-information-management\` domain is explicitly pending overlap/qualification review in \`registry/discovery/file-information-management-domain-proposal-20261118.json\`.
+This is an assessment of **mapped and inspected nearby evidence only**. It is not an exhaustive negative claim about the 921 previously unmapped exact-review identities, other third-party sources, or full ecosystem coverage. Proposed `file-information-management` domain is explicitly pending overlap/qualification review in `registry/discovery/file-information-management-domain-proposal-20261118.json`.
 
 ## Rubric
 
