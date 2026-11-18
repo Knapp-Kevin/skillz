@@ -1552,8 +1552,28 @@
     },
     {
       "path": "technical-writing/documentation-ia",
-      "outcome_definition_status": "needs-workflow-decomposition",
-      "essential_outcomes": [],
+      "outcome_definition_status": "partial",
+      "essential_outcomes": [
+        {
+          "id": "source-grounded-file-library-information-architecture",
+          "input": "Explicitly authorized file collection or read-only federated source inventory, intended navigation audience, and known privacy/retention constraints",
+          "output": "Documented source-aware classification and naming plan, normalized keyword taxonomy, sample metadata deck, and catalog map with source identity and permission boundaries",
+          "acceptance": [
+            "Distinguish source-native object IDs and current paths, preserve original source and per-file provenance",
+            "Represent category, keyword/tag basis, unknown content and incomplete extraction without inventing conclusions",
+            "Keep proposed organization separate from executed moves or permission changes; disclose collisions and link breakage",
+            "When federated, preserve source principal/root, revision kind and permitted viewer in the handoff and output",
+            "Provide a small reviewed navigability example rather than claiming production adoption"
+          ],
+          "method_ids": [
+            "local-skills/file-lifecycle-curator",
+            "local-skills/federated-source-catalog"
+          ],
+          "static_qualification": "verified-exact-v1.1-text-only",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "One bounded document-library information-architecture outcome; user-tested navigation, actual search accuracy, organization impact and broader documentation-IA methods unestablished"
+        }
+      ],
       "existing_capability_statements": [
         "Preserve plaintext meaning while converting formatting to Markdown",
         "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals",
@@ -2099,8 +2119,28 @@
     },
     {
       "path": "memory-context/retrieval",
-      "outcome_definition_status": "needs-workflow-decomposition",
-      "essential_outcomes": [],
+      "outcome_definition_status": "partial",
+      "essential_outcomes": [
+        {
+          "id": "permission-bounded-cross-source-document-retrieval",
+          "input": "Scoped information question, authorized source roster, current viewer, source-search capabilities and permitted output audience",
+          "output": "Cited, provenance-bound candidates and per-source query/coverage receipt showing matched, missing, inaccessible, stale and unsearched sources",
+          "acceptance": [
+            "Use only genuinely connected authorized source actions; no invented file or current-access claims",
+            "Keep source provider/resource ID, observed revision, original locator and evidence locator distinct",
+            "Disclose pagination, truncation, rate-limit and missing-reader gaps; never turn PARTIAL into exhaustive zero",
+            "Suppress titles, counts, tags, inferred edges and cached snippets when current viewer access is not established",
+            "Show whether matching was native search, excerpt/metadata filter or a proposed index; do not claim full-text/semantic service without proof"
+          ],
+          "method_ids": [
+            "local-skills/federated-source-catalog",
+            "local-skills/file-lifecycle-curator"
+          ],
+          "static_qualification": "verified-exact-v1.1-text-only",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "Only bounded authorized document retrieval; no measured top-k relevance or deployed search/index, and broader personal memory recall is distinct"
+        }
+      ],
       "existing_capability_statements": [
         "Recover relevant prior-session decisions with provenance and freshness checks",
         "Retrieve authorized documents using source-grounded metadata, normalized keyword tags and freshness-aware file indexes",
@@ -2145,8 +2185,28 @@
     },
     {
       "path": "memory-context/provenance",
-      "outcome_definition_status": "needs-workflow-decomposition",
-      "essential_outcomes": [],
+      "outcome_definition_status": "partial",
+      "essential_outcomes": [
+        {
+          "id": "cross-source-file-identity-and-derived-metadata-provenance",
+          "input": "Records from one or more approved connectors with native IDs, observed source version, principal/root, viewer access, content extraction scope and candidate relationships",
+          "output": "Relationship-aware source map and optional authorized enrichment handoff preserving identities, versions, ACL/audience boundaries and inference evidence",
+          "acceptance": [
+            "Distinguish native object identity, mutable path, revision type/value and format-specific exports",
+            "Do not treat similar filenames, exports, shortcut targets or provider hash-like fields as exact same bytes",
+            "Carry source catalog ID, native ID, principal/root, viewer authorization and extraction coverage through curator enrichment",
+            "Block stale/mismatched principals or versions and preserve any authorized standalone workflow",
+            "Separate observed relationships from hypothetical links and suppress any edge revealing a forbidden endpoint"
+          ],
+          "method_ids": [
+            "local-skills/federated-source-catalog",
+            "local-skills/file-lifecycle-curator"
+          ],
+          "static_qualification": "verified-exact-v1.1-text-only",
+          "behavioral_qualification": "not-run",
+          "coverage_limit": "One source-provenance outcome; end-to-end graph accuracy, ongoing lineage across transformations and runtime permission isolation not established"
+        }
+      ],
       "existing_capability_statements": [
         "Reconcile source-native file IDs, snapshots, permissions and cross-source relationships without false identity merges"
       ],

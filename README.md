@@ -2,6 +2,28 @@
 
 # 🛠️ skillz
 
+
+## Current discovery, evaluation and capability gaps
+
+**Verified against governed records on November 18, 2026.** Discovery and evaluation cover *different populations*, and older broad-corpus campaigns are explicitly dated. The [current capability directory](registry/capability-directory.json), [outcome register](registry/capability-outcome-register.json) and [independent gap audit](docs/reviews/2026-11-18-capability-discovery-evaluation-gap-priorities.md) are the primary status sources.
+
+| Workstream | Latest established count | Evidence boundary |
+|---|---:|---|
+| Broad pinned source **discovery** | **61,326 package-identity observations** across 942 repositories; 57,715 distinct package-tree SHA observations | **Last published G1–G3 snapshot (November 3)**; not 61,326 unique eligible skills or a November 18 re-crawl |
+| Candidate **static evaluation** | **5,351 exact (source, pin, path) decisions**: 3,773 rejected unchanged, 1,574 reference-only, 4 deferred | **Last published pipeline (November 3)**, distinct from governed review identities |
+| Pending consumer qualification | **1,522 reference-only candidates** | **November 3** source-specific queue, not today's measured count or all undiscovered work |
+| Governed exact-version review inventory | **1,045** (50 first-party, 995 third-party) | **November 18** identity records; not approvals to execute |
+| Capability-linked governed identities | **124** (99 static verified, **25 rejected**); **921 unmapped** | Rejected skills remain visible as evidence, not recommended methods |
+| Recognized capability mapping | **33 domains / 247 subdomains**; **78** with governed links; **169** without governed links (12 source-vetted candidates only, 157 unassessed) | Discoverability does not establish essential-outcome coverage |
+| Essential workflow definitions | **4 partially specified**; **243 of 247 still need decomposition** | Three November 18 additions address document information architecture, permission-bounded retrieval and source provenance; none is behaviorally qualified |
+| Behavioral evidence for 124 mapped identities | **123 not-run, 1 incomplete** | No fully accepted host-agent behavior in this mapped set |
+
+The **eligible distinct global skill denominator remains unknown** because source overlap, revisions, rights, licensing and semantic duplicates are not reconciled. Discovery and complete-package evaluation must receive balanced, **separately measured** effort; counting newly found paths does not prove quality or review parity. Preserve rejects, unknowns and partial results. Avoid promoting proposed domains or claiming readiness from a static rubric.
+
+**Next directed attention:** (1) define and challenge essential outcomes, (2) crosswalk the 921 unmapped reviewed identities with exact evidence, (3) run our own bounded host-agent behavior tests, and (4) compare third-party methods before adding genuinely distinct file-management skills. The [gap audit](docs/reviews/2026-11-18-capability-discovery-evaluation-gap-priorities.md) evaluates **Metadata Taxonomy Steward**, **Reference & Relationship Integrity Auditor**, and **Information Ownership & Lifecycle Stewardship** as scoped candidates, not preapproved new packages. [Coverage issue #588](https://github.com/Knapp-Kevin/skillz/issues/588) · [discovery and review issue #599](https://github.com/Knapp-Kevin/skillz/issues/599) · [historical qualification pipeline](registry/qualification-pipeline-20261103.json).
+
+---
+
 **2026-11-18 independent file-pack v1.1 update:** [File Lifecycle Curator](skills/authored/file-lifecycle-curator/SKILL.md) **v1.1.0** and [Federated Source Catalog](skills/authored/federated-source-catalog/SKILL.md) **v1.1.0** now carry matching optional source-native ID/revision, principal/root, viewer-authority and excerpt-coverage handoff contracts within their own MIT packages. The [first-party exact-package static review](docs/reviews/2026-11-18-file-pack-v1-1-static-review.md) records 18/20 for each and **12/12 isolated deterministic contract-oracle decisions**, **not** agent-host behavioral PASS. No outside tester result is required. Behavioral connector/ACL/restore acceptance remains NOT RUN. Existing [capability directory](registry/capability-directory.json) totals remain **124/1,045 mapped**, **78/247 subdomains linked**, **921 unmapped** because these are existing skill versions, not new identities. Previous v1.0 reviews and the [composition proposal](docs/reviews/2026-11-18-file-pack-composition-contract.md) remain historical.
 
 **Historical v1.0 independent quality review (November 18, 2026):** [Owner-led adversarial assessment](docs/reviews/2026-11-18-owner-led-file-pack-adversarial-review.md) confirms both five/six-file packages have valid source-link, index identity and JSON-example structure, but flags a **P0 composed-workflow schema handoff gap**. The [proposed federation-to-curator composition contract](docs/reviews/2026-11-18-file-pack-composition-contract.md) specifies mapping and 12 test cases. Our own assessment is the evidence authority; outside implementation reports or verbal feedback are optional, not gates. This is static/structural review, **not observed host-agent behavior**. The two v1.0 package source trees and their recorded grades remain unchanged while the composed workflow is held unqualified.
