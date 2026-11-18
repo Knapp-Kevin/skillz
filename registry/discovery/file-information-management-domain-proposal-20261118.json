@@ -13,7 +13,7 @@
     "technical-writing/documentation-ia",
     "ux-ui/information-architecture"
   ],
-  "qualification": "File taxonomy is a proposed new domain pending comparison with recognized/other provisional domains and exact third-party packages; one statically verified package is not an exhaustive capability qualification.",
+  "qualification": "Two independently authored static-reviewed reference skills cover separate within-collection and federated-source processes. Taxonomy/domain and essential outcomes remain proposed until overlap, exact package comparisons and representative behavior are qualified.",
   "subdomains": [
     {
       "id": "inventory",
@@ -104,9 +104,54 @@
         "local-skills/file-lifecycle-curator"
       ],
       "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "source-federation",
+      "essential_outcome": "Enumerate explicitly authorized connector scopes with capability and completeness receipts",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "cross-source-identity",
+      "essential_outcome": "Reconcile provider-native identities, revisions, shortcuts, exports and version relationships without unsafe merging",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "permission-aware-federated-retrieval",
+      "essential_outcome": "Retrieve and cite cross-source results without leaking private metadata, result counts or relationships between viewers",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "connector-freshness-revocation",
+      "essential_outcome": "Track per-source observation windows, invalidation, revocation, delta gaps and source-recheck requirements",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
     }
   ],
   "canonical_promotion_required": true,
-  "behavioral_evidence": "not-run",
-  "discovery_evaluation_gap": "Search and inspect third-party complete packages; maintain separate discovery/evaluation evidence."
+  "behavioral_evidence": "not-run in Skillz; external implementer results not yet incorporated",
+  "discovery_evaluation_gap": "Compare full third-party packages/rights against each new scoped essential outcome; do not treat skill count or static review as full workflow acceptance.",
+  "companion_artifacts": [
+    "skills/authored/file-lifecycle-curator/SKILL.md",
+    "skills/authored/federated-source-catalog/SKILL.md"
+  ],
+  "reviews": [
+    "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md",
+    "docs/reviews/2026-11-18-federated-source-catalog-static-review.md",
+    "docs/reviews/2026-11-18-file-information-management-gap-audit.md"
+  ]
 }
