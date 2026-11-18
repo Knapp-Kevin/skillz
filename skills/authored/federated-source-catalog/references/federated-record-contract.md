@@ -25,6 +25,7 @@ illustration, not evidence of actual access or persistent index storage.
   "summary": {"state": "not-run", "text": null, "citations": []},
   "relationships": [{"target_catalog_id": "session-a:github-a:doc-007", "type": "REFERENCE", "basis": "source mentions target", "confidence": "unconfirmed"}],
   "freshness": {"state": "observation-only", "verified_at": null},
+  "curator_handoff": {"state": "not-run", "contract_version": "1.1"},
   "actions": {"persist": "not-authorized", "copy": "not-authorized", "sync": "not-authorized"}
 }
 ```
@@ -58,6 +59,10 @@ illustration, not evidence of actual access or persistent index storage.
 10. Missing data stays UNKNOWN/null. Keep observation timestamp,
     extraction coverage, access-check evidence and source errors
     attached to every result.
+
+## Curator handoff contract (v1.1)
+
+A catalog record may be passed downstream only with an explicit scoped [outbound handoff](curator-handoff.md) containing `catalog_id`, `native_resource_id`, a source revision kind/value, principal/root, actual viewer permission basis, extraction coverage and the intended output audience. The curator may map `catalog_id` to `record_id`, and the source native locator to `source_locator`, but must preserve a separate `source_context` for identity, permission and revision type. Incomplete, revoked or mismatched access results in BLOCKED/NOT-RUN, not an inferred summary. See [synthetic handoff cases](../examples/federated-handoff-cases.md). A `curator_handoff.state` of `not-run` in this example is not evidence an agent host was exercised.
 
 ## Search result contract
 

@@ -12,12 +12,14 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
   display-name: File Lifecycle Curator
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # File Lifecycle Curator
 
 Make an authorized collection of files easier to **find, understand, maintain and recover** without sacrificing source identity, privacy, evidence or user control. A file inventory, index, summary, keyword/tag taxonomy, metadata deck and archive plan are distinct deliverables. Do not treat any of them as proof that file operations ran.
+
+**Optional federated intake (v1.1):** When selected records arrive from [Federated Source Catalog](../federated-source-catalog/SKILL.md), enforce the [identity and authorization handoff](references/federated-intake.md) *before* processing private content. Retain original catalog ID, native resource ID, principal/root, source revision kind/value, current viewer authority and extraction coverage. The [synthetic intake cases](examples/federated-intake-cases.md) are acceptance definitions, not observed host tests. Standalone authorized-file work remains supported without a connector or persistent index.
 
 ## Activation and boundaries
 
@@ -44,7 +46,7 @@ Set a stable snapshot policy. A changing source or inaccessible file is recorded
 
 ### 2. Inventory without changing source data
 
-For each eligible file, capture a stable source-scoped record ID and observed locator, path/name, file type, source system, relevant version, size/date when available, readable state, and access/visibility limits. Record original path separately from any proposed destination. Identify symlinks, aliases, shortcuts, shared folders, links, containers and mount boundaries before following them; do not recursively cross boundaries without permission. Never interpret identical filenames as duplicate content.
+For each eligible file, capture a stable source-scoped record ID and observed locator, path/name, file type, source system, relevant version, size/date when available, readable state, and access/visibility limits. Record original path separately from any proposed destination. For federated input, keep the original `catalog_id` as `record_id` or record a verifiable one-to-one alias; preserve native IDs, source principal/root, revision type/value, observation time and current viewer permission in an optional `source_context` rather than replacing these with a filename or path. Identify symlinks, aliases, shortcuts, shared folders, links, containers and mount boundaries before following them; do not recursively cross boundaries without permission. Never interpret identical filenames as duplicate content.
 
 Use a cryptographic content hash **only when the complete bytes have actually been read or a trusted source-provided digest is explicitly identified**. If bytes are not accessible, use a provisional identity, mark fingerprint unavailable, and do not assert exact duplicates. Preserve source IDs across resumed batches. Do not include secrets or raw private content in logs.
 
@@ -58,7 +60,7 @@ Assign **one primary category**, optionally multiple cross-cutting subjects, and
 
 For readable documents produce, as relevant, a 1-sentence description, 3-5 sentence summary, key topics, key entities only when appropriate, temporal scope, version/revision cues, action items attributed to the source, and uncertainty. For tables and media summarize only inspected dimensions; do not claim to have heard audio or viewed frames without that access. Link every nontrivial finding to file ID and a real page/section/row locator where available.
 
-A **metadata deck** is a collection of consistent human-readable per-file cards that expose useful fields and direct provenance, not a decorative presentation or a substitute for the machine-readable index. Cards must omit/redact sensitive fields as required. Use the structured fields in [metadata-contract.md](references/metadata-contract.md); publish both source links and card summaries only to authorized audiences.
+A **metadata deck** is a collection of consistent human-readable per-file cards that expose useful fields and direct provenance, not a decorative presentation or a substitute for the machine-readable index. For federated cards, preserve source identity, version and authorized viewer context; category/tag/summary/graph edges can disclose private source existence and must be filtered before display. Cards must omit/redact sensitive fields as required. Use the structured fields in [metadata-contract.md](references/metadata-contract.md); publish both source links and card summaries only to authorized audiences.
 
 ### 5. Build a searchable, verifiable index
 

@@ -1567,8 +1567,8 @@
       "skill_name": "file-lifecycle-curator",
       "local_path": "skills/authored/file-lifecycle-curator/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "63577971773ae0d923f6d38165c13c34f36b8f72",
-      "complete_package_tree_sha": "12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84",
+      "content_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
+      "complete_package_tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1598,14 +1598,14 @@
           "high"
         ]
       },
-      "notes": "Exact complete five-file first-party MIT package statically reviewed on 2026-11-18 at 18/20. Default no writes; authorization and read-back required for any file effects. Host behavior, archive/restore, live indexing, security scan and production utility NOT RUN. docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md"
+      "notes": "2026-11-18 v1.1 independently reviewed complete 7-file MIT source package, including optional federated handoff with native ID, principal, revision kind/value, viewer scope, limited extraction and no mutation. H01-H12 first-party deterministic oracle contract checks 12/12 (not a model-agent test). Host behavior, connector and permission isolation NOT RUN. docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
     },
     {
       "skill_name": "federated-source-catalog",
       "local_path": "skills/authored/federated-source-catalog/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4d028afe00921af05f8258e0c7f50707d2ebb68c",
-      "complete_package_tree_sha": "130b199cc7c5549d8905196d62f54617198d1976",
+      "content_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
+      "complete_package_tree_sha": "b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1636,7 +1636,7 @@
           "high"
         ]
       },
-      "notes": "Complete first-party MIT six-file package reviewed on 2026-11-18 at 18/20 against exact tree; host behavior and connector acceptance not-run. Source-native IDs/revisions, per-viewer access checks, source completeness, no unapproved persistent index, copy, sync, archive or deletion. docs/reviews/2026-11-18-federated-source-catalog-static-review.md"
+      "notes": "2026-11-18 v1.1 independently reviewed complete 8-file MIT source package, including optional federated handoff with native ID, principal, revision kind/value, viewer scope, limited extraction and no mutation. H01-H12 first-party deterministic oracle contract checks 12/12 (not a model-agent test). Host behavior, connector and permission isolation NOT RUN. docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
     }
   ]
 }

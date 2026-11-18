@@ -153,16 +153,16 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
       "verification_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
-      "skill_blob_sha": "63577971773ae0d923f6d38165c13c34f36b8f72",
-      "package_tree_sha": "12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84",
-      "package_file_count": 5,
+      "skill_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
+      "package_tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
+      "package_file_count": 7,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
-      "rights_note": "No third-party skill text, source code or copyrighted example files copied; proposed metadata decks and organization plans are generated without implicit storage, upload, move or deletion authority.",
-      "package_version": "1.0.0",
+      "rights_note": "No third-party skill text, source code or copyrighted example files copied; proposed metadata decks and organization plans are generated without implicit storage, upload, move or deletion authority. v1.1 adds optional read-only federated handoff preserving source native identity, revision and viewer scope; behavioral acceptance not run.",
+      "package_version": "1.1.0",
       "capability_paths": [
         "memory-context/retrieval",
         "memory-context/summarization",
@@ -170,7 +170,7 @@
       ],
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
-      "capability_mapping_ref": "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md"
+      "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
     },
     {
       "id": "federated-source-catalog",
@@ -186,16 +186,16 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/federated-source-catalog.yaml",
       "verification_path": "registry/verification/local-skills/federated-source-catalog.yaml",
-      "skill_blob_sha": "4d028afe00921af05f8258e0c7f50707d2ebb68c",
-      "package_tree_sha": "130b199cc7c5549d8905196d62f54617198d1976",
-      "package_file_count": 6,
+      "skill_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
+      "package_tree_sha": "b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1",
+      "package_file_count": 8,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
-      "rights_note": "Original MIT source. No provider API code, copied external skill text, private data, or credential. Real connector access and shared index permissions require separate host authority and operational evidence.",
-      "package_version": "1.0.0",
+      "rights_note": "Original MIT source. No provider API code, copied external skill text, private data, or credential. Real connector access and shared index permissions require separate host authority and operational evidence. v1.1 adds optional read-only federated handoff preserving source native identity, revision and viewer scope; behavioral acceptance not run.",
+      "package_version": "1.1.0",
       "capability_paths": [
         "memory-context/retrieval",
         "memory-context/provenance",
@@ -203,7 +203,7 @@
       ],
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
-      "capability_mapping_ref": "docs/reviews/2026-11-18-federated-source-catalog-static-review.md",
+      "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md",
       "related_authored_skill": "file-lifecycle-curator"
     }
   ]

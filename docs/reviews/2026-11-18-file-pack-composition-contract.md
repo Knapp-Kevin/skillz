@@ -1,5 +1,8 @@
 # File pack integration contract: federated discovery to per-file enrichment
 
+**v1.1 follow-through (2026-11-18):** The proposed mapping described here has been incorporated into independently static-reviewed [Curator v1.1](../../skills/authored/file-lifecycle-curator/SKILL.md) and [Federated Catalog v1.1](../../skills/authored/federated-source-catalog/SKILL.md), each with in-package references and synthetic cases. See [current exact-version review](2026-11-18-file-pack-v1-1-static-review.md). This document is retained as **historical proposal/decision evidence**; actual host-agent composed execution, permission isolation and connector behavior remain **NOT RUN**.
+
+
 **Status:** Proposed interoperability contract, reviewed 2026-11-18. Applies to
 future qualified composition of File Lifecycle Curator v1.0.0 and Federated
 Source Catalog v1.0.0. It does **not** silently revise those exact-version

@@ -1,5 +1,8 @@
 # Independent first-party adversarial review: file and federated skill packs
 
+**Follow-up disposition (2026-11-18):** The IR-01 missing normative cross-skill mapping was addressed in the two v1.1 source packages; [independent v1.1 exact-package review](2026-11-18-file-pack-v1-1-static-review.md) records the new hashes, 18/20 static each, and 12/12 deterministic synthetic oracle checks. This older v1.0 review remains historical. Real composed model behavior, connector/ACL isolation and archive execution are **NOT RUN**. Independent first-party review remains the acceptance path, never outside tester feedback.
+
+
 **Date:** 2026-11-18. **Reviewer:** ChatGPT performing the Skillz first-party source review. **Disposition:** Individual v1.0.0 packages retain their existing exact-version *static-reviewed* labels. **Cross-skill end-to-end composition: HOLD pending normative handoff contract and independent observed acceptance.** This review is itself independently performed, not supplied by an outside implementer.
 
 ## Owner acceptance policy
