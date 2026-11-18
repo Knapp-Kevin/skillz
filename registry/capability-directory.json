@@ -2134,7 +2134,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 28,
+      "linked_reviewed_examples": 29,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2245,6 +2245,18 @@
           "capability_example": "Experimental-design and reproducibility ladder review of research claims.",
           "unchanged_use_approved": false,
           "restriction": "Exact-package static-review only; legacy rights and host behavioral approval not established."
+        },
+        {
+          "id": "local-skills/technology-change-intelligence",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/technology-change-intelligence.yaml",
+          "source_class": "local-provenance",
+          "path": "research/source-discovery",
+          "capability_example": "Dated technology-change intelligence over 17 original topic profiles",
+          "unchanged_use_approved": false,
+          "restriction": "Read-only reference; no external agent behavior established"
         }
       ],
       "name_only_preview": [
@@ -4954,7 +4966,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1055,
+  "governed_identity_denominator": 1056,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -19373,7 +19385,8 @@
           "name": "source discovery",
           "capabilities": [
             "Discover sources and monitor technical developments using dated primary evidence",
-            "Study provider-specific Google Cloud data-catalog metadata lookup as a rejected unchanged-use discovery reference."
+            "Study provider-specific Google Cloud data-catalog metadata lookup as a rejected unchanged-use discovery reference.",
+            "Compare dated vendor, protocol, research and regulatory changes across 17 explicit topic profiles with primary-source evidence, corrections and migration consequences."
           ],
           "matched_skill_ids": [
             "local-skills/claude-pulse",
@@ -19394,7 +19407,8 @@
             "local-skills/perplexity-pulse",
             "local-skills/qwen-pulse",
             "local-skills/xai-pulse",
-            "cline-skills/knowledge-catalog-discovery"
+            "cline-skills/knowledge-catalog-discovery",
+            "local-skills/technology-change-intelligence"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -20004,13 +20018,15 @@
           "capabilities": [
             "Compare competing evidence and synthesize a bounded research finding",
             "Review user-research search evidence, provenance, source methods and honest uncertainty",
-            "Synthesize source-grounded retrieved knowledge with explicit disagreement, attribution, duplicate-aware context and heuristic confidence."
+            "Synthesize source-grounded retrieved knowledge with explicit disagreement, attribution, duplicate-aware context and heuristic confidence.",
+            "Compare dated vendor, protocol, research and regulatory changes across 17 explicit topic profiles with primary-source evidence, corrections and migration consequences."
           ],
           "matched_skill_ids": [
             "local-skills/compare",
             "local-skills/deep-dive",
             "bm629-agent-skills/reviewing-user-research-prior-art-survey",
-            "anthropic-knowledge-work-plugins/knowledge-synthesis"
+            "anthropic-knowledge-work-plugins/knowledge-synthesis",
+            "local-skills/technology-change-intelligence"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -34414,6 +34430,32 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/technology-change-intelligence",
+      "source_id": "local-skills",
+      "skill_name": "technology-change-intelligence",
+      "content_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
+      "complete_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "research/source-discovery",
+        "research/synthesis"
+      ],
+      "evidence_path": "registry/verification/local-skills/technology-change-intelligence.yaml",
+      "skill_path": "skills/authored/technology-change-intelligence/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/technology-change-intelligence.yaml",
+      "source_license": "MIT for newly authored text only; legacy rights unknown",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Source-specific complete package static review, 17 profile IDs, authority boundary and synthetic cases; observed host behavior not run",
+      "restriction": "Reference-only; no monitoring or private data access enabled",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/todo-harvester",
       "source_id": "local-skills",
       "skill_name": "todo-harvester",
@@ -34576,13 +34618,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 139,
+  "identity_level_capability_links_mapped": 140,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 60,
-    "known_total_governed_review_records": 1055,
+    "known_first_party_skill_records": 61,
+    "known_total_governed_review_records": 1056,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34638,18 +34680,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 60,
+  "first_party_identity_links_mapped": 61,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 60,
+    "mapped_first_party_distinct": 61,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 139,
+    "mapped_total_distinct": 140,
     "subdomains_with_evidence_linked_examples": 80,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Eight new original static-reviewed source packages, historical rights unresolved, behavior NOT RUN, legacy still retained.",
+    "note": "Nine original first-party replacement packages, including 17 individually routed topic profiles, statically reviewed. No historic sources removed. Behavior not run.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -34882,14 +34924,17 @@
       "local-skills/agent-workspace-footprint-assessor",
       "local-skills/connector-capability-risk-review",
       "local-skills/privilege-exposure-mapper",
-      "local-skills/scheduled-work-proof-auditor"
+      "local-skills/scheduled-work-proof-auditor",
+      "local-skills/technology-change-intelligence"
     ],
     "legacy_source_count": 44,
+    "legacy_capabilities_addressed": 25,
     "legacy_retired": 0,
-    "reviews": [
+    "status": "nine original packages static-reviewed; no observed host behavior",
+    "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
-      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md"
-    ],
-    "status": "eight new originals statically reviewed, no observed host behavior"
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
+      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md"
+    ]
   }
 }

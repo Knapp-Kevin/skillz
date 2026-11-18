@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Governed review name lookup: 60 first-party + 995 third-party exact-version identities = 1055 as of 2026-11-18. Legacy Frostwulf authorship unproven and new independent replacements not yet externally behavior-tested.",
+  "purpose": "Governed review names: 61 first-party and 995 external exact-version identities (1056 total). Legacy Frostwulf underlying authorship remains unknown. Registration is not use approval.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 60,
+    "first_party": 61,
     "third_party": 995,
-    "total": 1055
+    "total": 1056
   },
   "first_party_ids": [
     "local-skills/agent-home-doctor",
@@ -67,6 +67,7 @@
     "local-skills/source-debt-triage",
     "local-skills/standup-writer",
     "local-skills/task-surface",
+    "local-skills/technology-change-intelligence",
     "local-skills/todo-harvester",
     "local-skills/week-in-review",
     "local-skills/xai-pulse"
@@ -1094,12 +1095,14 @@
     "qualification": "All four referenced authored packages are independently static-reviewed in exact versions; host behavior NOT RUN. File lifecycle and federated catalog are v1.1; taxonomy and reference integrity are v1.0."
   },
   "frostwulf_independent_replacement_20261118": {
-    "status": "8 new complete-package statically reviewed replacements; 44 legacy sources retained; 36 remaining",
-    "reviews": [
+    "status": "9 new original packages reviewed, 25 historical function entries addressed by profile or dedicated replacement; 44 legacy files retained; 19 capabilities outstanding",
+    "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
-      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md"
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
+      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md"
     ],
-    "ids": [
+    "profile_count": 17,
+    "new_skill_ids": [
       "local-skills/claim-evidence-adjudicator",
       "local-skills/research-methods-appraiser",
       "local-skills/source-debt-triage",
@@ -1107,7 +1110,8 @@
       "local-skills/agent-workspace-footprint-assessor",
       "local-skills/connector-capability-risk-review",
       "local-skills/privilege-exposure-mapper",
-      "local-skills/scheduled-work-proof-auditor"
+      "local-skills/scheduled-work-proof-auditor",
+      "local-skills/technology-change-intelligence"
     ]
   }
 }

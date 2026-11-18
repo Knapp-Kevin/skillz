@@ -1959,6 +1959,39 @@
         ]
       },
       "notes": "Complete three-file original MIT package; direct maintainer static review 17/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+    },
+    {
+      "skill_name": "technology-change-intelligence",
+      "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
+      "complete_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "technology-intelligence"
+        ],
+        "lifecycle": [
+          "research",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bound",
+          "evidence-first",
+          "dated",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Original six-file MIT package with 17 routed profiles. docs/reviews/2026-11-18-technology-change-intelligence-static-review.md. Behavioral validation NOT RUN; underlying legacy rights unresolved."
     }
   ]
 }

@@ -5468,10 +5468,11 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "eight-of-forty-four-new-originals-static-only; no-legacy-retirements",
+    "status": "9 new packages, 25 legacy capabilities addressed, 44 historical retained, 19 uncovered",
     "review_files": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
-      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md"
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
+      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md"
     ],
     "ledger": "registry/migration/frostwulf-independent-replacement-ledger-20261118.json",
     "behavior": "not-run"

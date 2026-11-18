@@ -515,6 +515,37 @@
         "time-productivity/scheduling"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json"
+    },
+    {
+      "id": "technology-change-intelligence",
+      "display_name": "Technology Change Intelligence",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/technology-change-intelligence",
+      "entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/technology-change-intelligence/LICENSE",
+      "license_inheritance": "Original six-file source, scenario and profile material only; 17 historical comparator skills have uncertain underlying authorship and are not relicensed.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-18",
+      "provenance_path": "registry/skills/local-skills/technology-change-intelligence.yaml",
+      "verification_path": "registry/verification/local-skills/technology-change-intelligence.yaml",
+      "skill_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
+      "package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "package_file_count": 6,
+      "review_status": "verified-static",
+      "review_score": "18/20",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Independently written new six-file package, 17 topic profiles; no old pulse sources, source JSON or text imported. Seventeen corresponding seven-word text comparisons zero matching windows. Neither legal originality nor actual host behavior proven.",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
+      "package_version": "1.0.0",
+      "capability_paths": [
+        "research/source-discovery",
+        "research/synthesis"
+      ],
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-pulse-consolidation-20261118.json"
     }
   ]
 }
