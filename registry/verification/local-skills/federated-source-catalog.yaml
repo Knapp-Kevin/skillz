@@ -1,20 +1,23 @@
 schema_version: 1
 skill_name: federated-source-catalog
-skill_version: 1.0.0
+skill_version: 1.1.0
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/federated-source-catalog/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/federated-source-catalog/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4d028afe00921af05f8258e0c7f50707d2ebb68c
-complete_package_tree_sha: 130b199cc7c5549d8905196d62f54617198d1976
+content_blob_sha: 5f4859515de5d073a939d439f1d75e1084d4404e
+complete_package_tree_sha: 1267d05abf3524ccee86748fa134b525f4d83289
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-18'
 verification_status: verified
 verification_basis: individual-structured-static-review
 validation_status: not-run
 validation_note: >-
+  The H01-H12 synthetic policy oracle passed 12/12 *oracle rule checks* in first-party
+  offline evaluation; this does not execute the skill in an agent host or test
+  connector permissions. Behavior still NOT RUN.
   Synthetic text expectations inspected; no connector, private data, cross-user
   access test, index persistence, permission revocation, source delta or
   host-agent behavior executed or independently measured.
@@ -42,8 +45,8 @@ tags:
   portability:
   - high
 notes: >-
-  Exact complete original six-file MIT text package. Separate per-principal
+  Exact complete original eight-file MIT text package; v1.1 outbound curator handoff statically reviewed. Separate per-principal
   authorization and source-native identity. No implied permission to create
   shared indexes, export data, sync systems or execute file modifications.
   Static 18/20; behavioral validation not run. See
-  docs/reviews/2026-11-18-federated-source-catalog-static-review.md.
+  docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
