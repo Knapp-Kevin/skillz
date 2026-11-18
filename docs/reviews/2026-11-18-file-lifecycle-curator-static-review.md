@@ -6,7 +6,7 @@
 
 - Entry: `skills/authored/file-lifecycle-curator/SKILL.md`.
 - Entry blob: `63577971773ae0d923f6d38165c13c34f36b8f72`.
-- Complete package Git tree: `07dc52b1c0ca796cc075a7e9ddd8bf824fa4ccbd`.
+- Complete package Git tree: `12e7f8d07bdd1553f7ed78e377ebc7b5e9742a84`.
 - Inspected files (5): `SKILL.md`, `LICENSE`, `references/metadata-contract.md`, `references/operation-and-archive-rules.md`, `examples/synthetic-corpus-and-cases.md`.
 - Required external tools/services/accounts: **none for textual plans and source-bound reasoning**. Live file reading, storage writes, OCR, hashing, indexing, cloud actions, archive creation, restore tests and persistent search are host-dependent and not included as hidden dependencies.
 - License: bundled original MIT notice; only newly authored package material is covered. No source claiming rights to third-party documents.
