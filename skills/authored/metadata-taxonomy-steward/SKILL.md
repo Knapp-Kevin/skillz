@@ -120,7 +120,7 @@ distinct meanings remain distinct; unresolved terms remain visible;
 version changes record why and by whose authority. Compare at least
 one negative/ambiguous example before declaring a mapping unambiguous.
 
-Apply [synthetic taxonomy cases](examples/taxonomy-cases.md) as
+Apply [synthetic taxonomy cases](examples/synthetic-taxonomy-cases.md) as
 text-level reasoning expectations, not evidence of executed host behavior.
 
 ### 6. Deliver and stop
