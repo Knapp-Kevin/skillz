@@ -7,7 +7,7 @@
   "policy": "Replacement work must originate from independently specified capability requirements and unique expression. Do not copy distinctive legacy text, source examples, code or protected assets. Maintain legacy files until every replacement is separately reviewed, indexed and accepted.",
   "counts": {
     "legacy_candidates": 44,
-    "independent_drafts": 4,
+    "independent_drafts": 8,
     "independent_drafts_reviewed": 4,
     "legacy_removed": 0
   },
@@ -17,8 +17,8 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
+      "replacement_entrypoint": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -35,8 +35,8 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
+      "replacement_entrypoint": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -260,8 +260,8 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
+      "replacement_entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -305,8 +305,8 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
+      "replacement_entrypoint": "skills/authored/privilege-exposure-mapper/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
