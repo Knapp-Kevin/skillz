@@ -54,6 +54,56 @@ def safe_path(root, relative):
     return result
 
 
+def _source_git_identity(provenance, verification):
+    """Normalize explicitly recorded Git blob/tree claims; never invent rights.
+
+    Only the known v1 Git fingerprint algorithms define what content_blob_sha
+    means. An alias disagreement is a refusal, not first-nonempty-wins.
+    """
+    algorithm = verification["fingerprint_algorithm"]
+    recorded = verification["content_blob_sha"]
+
+    def collect(kind, candidates):
+        known = []
+        for label, value in candidates:
+            if value is None or value == "":
+                continue
+            if not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{40}", value):
+                raise ValueError(f"invalid {kind} Git object claim: {label}")
+            known.append((label, value))
+        if len({value for _, value in known}) > 1:
+            raise ValueError(f"contradictory {kind} Git object claims: " +
+                             ", ".join(label for label, _ in known))
+        return known[0][1] if known else None
+
+    blob = [
+        ("verification.skill_md_blob_sha", verification.get("skill_md_blob_sha")),
+        ("verification.skill_blob_sha", verification.get("skill_blob_sha")),
+        ("provenance.skill_md_blob_sha", provenance.get("skill_md_blob_sha")),
+        ("provenance.skill_blob_sha", provenance.get("skill_blob_sha")),
+    ]
+    tree = [
+        ("verification.complete_package_tree_sha",
+         verification.get("complete_package_tree_sha")),
+        ("verification.package_tree_sha", verification.get("package_tree_sha")),
+        ("provenance.complete_package_tree_sha",
+         provenance.get("complete_package_tree_sha")),
+        ("provenance.package_tree_sha", provenance.get("package_tree_sha")),
+    ]
+    if algorithm in ("git-blob-sha1", "git-tree-and-blob-sha1"):
+        blob.append(("verification.content_blob_sha", recorded))
+    elif algorithm == "git-tree-sha1":
+        tree.append(("verification.content_blob_sha", recorded))
+    # Unknown algorithms are preserved as recorded evidence but never
+    # coerced into a Git SHA-1 or asserted as package identity.
+    entry_blob = collect("SKILL.md blob", blob)
+    package_tree = collect("package tree", tree)
+    if algorithm == "git-tree-and-blob-sha1" and (
+            entry_blob is None or package_tree is None):
+        raise ValueError("combined tree/blob review missing exact source identities")
+    return entry_blob, package_tree
+
+
 def build(root, commit, tree):
     if not all(re.fullmatch(r"[0-9a-f]{40}", v) for v in (commit, tree)):
         raise ValueError("explicit exact Git commit and tree are required")
@@ -112,12 +162,7 @@ def build(root, commit, tree):
         record_id = provenance_path[len("registry/skills/"):-5]
         source_class = "first-party" if record_id.startswith("local-skills/") else "third-party"
         algorithm = v["fingerprint_algorithm"]
-        entry_blob = v.get("skill_md_blob_sha") or p.get("skill_md_blob_sha")
-        package_tree = v.get("complete_package_tree_sha") or v.get("package_tree_sha") or p.get("complete_package_tree_sha") or p.get("package_tree_sha")
-        if algorithm == "git-blob-sha1":
-            entry_blob = entry_blob or v["content_blob_sha"]
-        elif algorithm == "git-tree-sha1":
-            package_tree = package_tree or v["content_blob_sha"]
+        entry_blob, package_tree = _source_git_identity(p, v)
         local_package = None
         local_entrypoint_match = "not-assessed"
         local_path = v.get("local_path") or p.get("local_path")
