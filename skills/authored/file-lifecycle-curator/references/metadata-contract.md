@@ -13,6 +13,7 @@ The following is a descriptive template, not a claim that an index database was 
   "source_id": "src-a",
   "source_locator": "approved-root/docs/meeting-brief.txt",
   "source_revision": null,
+  "source_context": null,
   "display_name": "meeting-brief.txt",
   "observed_media_type": "text/plain",
   "detected_media_type": null,
@@ -41,6 +42,7 @@ The following is a descriptive template, not a claim that an index database was 
 
 ## Required rules
 
+- **Federated extension (v1.1):** When records are selected by Federated Source Catalog, populate `source_context` with `catalog_id`, `provider`, `principal_scope`, `approved_root`, `native_resource_id`, `revision_kind`, `observed_at`, `coverage_state`, `viewer_check` and permitted audience. Keep the original `catalog_id` as `record_id` or an explicitly recorded one-to-one alias. This object is **null for standalone files** without federated context. Never represent stale permission checks as active authorization. Preserve current viewer checks and extraction evidence through cards/derived indexes. See [federated-intake.md](federated-intake.md) and [the synthetic intake cases](../examples/federated-intake-cases.md).
 - **Identity:** Record IDs must remain stable within the declared source namespace; do not derive cross-user global IDs from a private path. Keep original locator immutable in the plan. Include an authorized source link only when one exists; no invented URL.
 - **Fingerprint:** Mark `complete-byte-verified`, `source-provided-unverified`, `partial`, or `not-computed`. A partial checksum, size or filename is not EXACT identity. Hashes do not replace a safe content or version comparison in collision-sensitive operations.
 - **Content:** Separate one-line description, detailed summary, quoted source snippet and inference. Record extraction coverage and citation locator; unknown should stay unknown.
