@@ -13,7 +13,7 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
   display-name: Federated Source Catalog
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Federated Source Catalog
@@ -29,6 +29,8 @@ owns per-collection organization, source-grounded summaries, metadata decks,
 keyword tags, duplicate/version analysis and archive proposals. Compose them
 only when that skill, source data and authority are actually available.
 Neither skill adds filesystem or connector tooling to the host.
+
+**v1.1 composition gate:** Before enriching any federated record, use the [outbound handoff contract](references/curator-handoff.md) and the [original synthetic H01-H12 cases](examples/federated-handoff-cases.md). Preserve each source's native object, revision type/value, principal/root, intended viewer, actual read check and evidence locators across the handoff; a file path or index title is not sufficient identity. The optional curator remains independently usable and cannot inherit a blanket connector authorization.
 
 ## Activate and decline
 
@@ -165,8 +167,7 @@ are an **observation window**, not an atomic globally consistent snapshot.
 ### 6. Delegate per-file enrichment without expanding access
 
 When the user wants summaries, keywords, or metadata decks for selected
-files, pass only authorized text or excerpts and minimal source metadata
-to File Lifecycle Curator. Preserve catalog IDs, native IDs, revisions
+files, build a **v1.1 bounded handoff envelope** using [curator-handoff.md](references/curator-handoff.md) and pass only authorized text or excerpts and minimal identity, principal/root, permission, revision and extraction evidence to File Lifecycle Curator. Require the viewer check and same source revision across discovery and read before sending any confidential content. Unknown or changed source identity blocks the handoff, rather than silently dropping fields. Preserve catalog IDs, native IDs, revisions
 and evidence locators in returned cards. If the host lacks that skill or a
 content reader, return a clear enrichment plan with `NOT-READ` states.
 
