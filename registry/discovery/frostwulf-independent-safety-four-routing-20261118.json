@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "review": "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
+  "authorship": "legacy underlying copyright unknown",
+  "records": [
+    {
+      "new_skill": "local-skills/agent-workspace-footprint-assessor",
+      "legacy_reference": "skills/agent-home-doctor/SKILL.md",
+      "skill_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
+      "complete_tree": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "capabilities": [
+        "software-engineering/maintenance",
+        "agent-mcp-development/agent-observability"
+      ],
+      "grade": "17/20",
+      "behavior": "not-run"
+    },
+    {
+      "new_skill": "local-skills/connector-capability-risk-review",
+      "legacy_reference": "skills/mcp-vetting/SKILL.md",
+      "skill_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
+      "complete_tree": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "capabilities": [
+        "agent-mcp-development/mcp-clients-servers",
+        "security/supply-chain"
+      ],
+      "grade": "18/20",
+      "behavior": "not-run"
+    },
+    {
+      "new_skill": "local-skills/privilege-exposure-mapper",
+      "legacy_reference": "skills/permissions-review/SKILL.md",
+      "skill_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
+      "complete_tree": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "capabilities": [
+        "security/identity-access",
+        "agent-mcp-development/permissions"
+      ],
+      "grade": "18/20",
+      "behavior": "not-run"
+    },
+    {
+      "new_skill": "local-skills/scheduled-work-proof-auditor",
+      "legacy_reference": "skills/automation-receipts/SKILL.md",
+      "skill_sha": "eccc5704701e8bba391bece41da7d74bba156403",
+      "complete_tree": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "capabilities": [
+        "agent-mcp-development/agent-observability",
+        "time-productivity/scheduling"
+      ],
+      "grade": "17/20",
+      "behavior": "not-run"
+    }
+  ]
+}

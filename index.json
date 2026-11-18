@@ -5468,15 +5468,12 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "4 new original packages statically reviewed; 44 legacy sources retained",
-    "review": "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
-    "ledger": "registry/migration/frostwulf-independent-replacement-ledger-20261118.json",
-    "new_package_ids": [
-      "claim-evidence-adjudicator",
-      "research-methods-appraiser",
-      "source-debt-triage",
-      "decision-record-steward"
+    "status": "eight-of-forty-four-new-originals-static-only; no-legacy-retirements",
+    "review_files": [
+      "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md"
     ],
-    "host_behavior": "not-run"
+    "ledger": "registry/migration/frostwulf-independent-replacement-ledger-20261118.json",
+    "behavior": "not-run"
   }
 }

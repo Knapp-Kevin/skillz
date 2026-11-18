@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 18,
+      "linked_reviewed_examples": 19,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -129,6 +129,18 @@
           "capability_example": "Evidence-bound triage of code maintenance markers, risk and partial search coverage.",
           "unchanged_use_approved": false,
           "restriction": "Exact-package static-review only; legacy rights and host behavioral approval not established."
+        },
+        {
+          "id": "local-skills/agent-workspace-footprint-assessor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/agent-workspace-footprint-assessor.yaml",
+          "source_class": "local-provenance",
+          "path": "software-engineering/maintenance",
+          "capability_example": "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
         }
       ],
       "name_only_preview": [
@@ -1126,7 +1138,7 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 7,
+      "linked_reviewed_examples": 11,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 17,
       "evidence_preview": [
@@ -1179,6 +1191,54 @@
           "source_class": "local-provenance",
           "path": "agent-mcp-development/agent-observability",
           "capability_example": "Verify claimed automation status against durable run evidence"
+        },
+        {
+          "id": "local-skills/agent-workspace-footprint-assessor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/agent-workspace-footprint-assessor.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/agent-observability",
+          "capability_example": "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/connector-capability-risk-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/connector-capability-risk-review.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/mcp-clients-servers",
+          "capability_example": "Pinned connector tool-effect and data-flow analysis before any independent connection decision.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/privilege-exposure-mapper",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/privilege-exposure-mapper.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/permissions",
+          "capability_example": "Effective principal-to-action privilege graph and safely proposed least-privilege deltas.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/scheduled-work-proof-auditor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/scheduled-work-proof-auditor.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/agent-observability",
+          "capability_example": "Separates configured, attempted, completed, materialized and delivered scheduled work.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
         }
       ],
       "name_only_preview": [
@@ -1918,7 +1978,7 @@
     {
       "domain": "security",
       "display_name": "Security",
-      "linked_reviewed_examples": 4,
+      "linked_reviewed_examples": 6,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 7,
       "evidence_preview": [
@@ -1961,6 +2021,30 @@
           "source_class": "local-provenance",
           "path": "security/supply-chain",
           "capability_example": "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
+        },
+        {
+          "id": "local-skills/connector-capability-risk-review",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/connector-capability-risk-review.yaml",
+          "source_class": "local-provenance",
+          "path": "security/supply-chain",
+          "capability_example": "Pinned connector tool-effect and data-flow analysis before any independent connection decision.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/privilege-exposure-mapper",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/privilege-exposure-mapper.yaml",
+          "source_class": "local-provenance",
+          "path": "security/identity-access",
+          "capability_example": "Effective principal-to-action privilege graph and safely proposed least-privilege deltas.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
         }
       ],
       "name_only_preview": [
@@ -3992,8 +4076,8 @@
     {
       "domain": "time-productivity",
       "display_name": "Time / productivity",
-      "linked_reviewed_examples": 5,
-      "subdomains_with_linked_examples": 2,
+      "linked_reviewed_examples": 6,
+      "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 16,
       "evidence_preview": [
         {
@@ -4045,6 +4129,18 @@
           "source_class": "local-provenance",
           "path": "time-productivity/task-systems",
           "capability_example": "Triage incoming tasks and coordinate approved task pointers"
+        },
+        {
+          "id": "local-skills/scheduled-work-proof-auditor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/scheduled-work-proof-auditor.yaml",
+          "source_class": "local-provenance",
+          "path": "time-productivity/scheduling",
+          "capability_example": "Separates configured, attempted, completed, materialized and delivered scheduled work.",
+          "unchanged_use_approved": false,
+          "restriction": "No external host behavior or permission to connect/mutate."
         }
       ],
       "name_only_preview": [
@@ -4858,7 +4954,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1051,
+  "governed_identity_denominator": 1055,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -12281,7 +12377,8 @@
             "Review code quality using severity, tests and evidence rather than rubber-stamping",
             "Diagnose repository problems, monitor changes, and triage technical debt with evidence",
             "Identify bounded broken/stale repository-document references and propose version-aware, reversible repairs",
-            "Evidence-bound triage of code maintenance markers, risk and partial search coverage."
+            "Evidence-bound triage of code maintenance markers, risk and partial search coverage.",
+            "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion."
           ],
           "matched_skill_ids": [
             "local-skills/agent-home-doctor",
@@ -12293,7 +12390,8 @@
             "addyosmani-agent-skills/code-review-and-quality",
             "mattpocock-skills/code-review",
             "local-skills/reference-integrity-auditor",
-            "local-skills/source-debt-triage"
+            "local-skills/source-debt-triage",
+            "local-skills/agent-workspace-footprint-assessor"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -14300,10 +14398,12 @@
           "id": "mcp-clients-servers",
           "name": "MCP clients/servers",
           "capabilities": [
-            "Track MCP ecosystem changes; client/server implementation requires a separate fit check"
+            "Track MCP ecosystem changes; client/server implementation requires a separate fit check",
+            "Pinned connector tool-effect and data-flow analysis before any independent connection decision."
           ],
           "matched_skill_ids": [
-            "local-skills/mcp-pulse"
+            "local-skills/mcp-pulse",
+            "local-skills/connector-capability-risk-review"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -14755,11 +14855,13 @@
           "id": "permissions",
           "name": "permissions",
           "capabilities": [
-            "Inspect MCP integrations and agent access permissions before connection"
+            "Inspect MCP integrations and agent access permissions before connection",
+            "Effective principal-to-action privilege graph and safely proposed least-privilege deltas."
           ],
           "matched_skill_ids": [
             "local-skills/mcp-vetting",
-            "local-skills/permissions-review"
+            "local-skills/permissions-review",
+            "local-skills/privilege-exposure-mapper"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -15157,10 +15259,14 @@
           "id": "agent-observability",
           "name": "agent observability",
           "capabilities": [
-            "Verify claimed automation status against durable run evidence"
+            "Verify claimed automation status against durable run evidence",
+            "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion.",
+            "Separates configured, attempted, completed, materialized and delivered scheduled work."
           ],
           "matched_skill_ids": [
-            "local-skills/automation-receipts"
+            "local-skills/automation-receipts",
+            "local-skills/agent-workspace-footprint-assessor",
+            "local-skills/scheduled-work-proof-auditor"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -18194,10 +18300,12 @@
           "id": "identity-access",
           "name": "identity/access",
           "capabilities": [
-            "Review permissions and least-privilege exposure without accessing secret values"
+            "Review permissions and least-privilege exposure without accessing secret values",
+            "Effective principal-to-action privilege graph and safely proposed least-privilege deltas."
           ],
           "matched_skill_ids": [
-            "local-skills/permissions-review"
+            "local-skills/permissions-review",
+            "local-skills/privilege-exposure-mapper"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -18846,10 +18954,12 @@
           "id": "supply-chain",
           "name": "supply chain",
           "capabilities": [
-            "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
+            "Review MCP tool provenance, data flows, dependencies, and trust boundaries",
+            "Pinned connector tool-effect and data-flow analysis before any independent connection decision."
           ],
           "matched_skill_ids": [
-            "local-skills/mcp-vetting"
+            "local-skills/mcp-vetting",
+            "local-skills/connector-capability-risk-review"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -26917,8 +27027,12 @@
         {
           "id": "scheduling",
           "name": "scheduling",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Separates configured, attempted, completed, materialized and delivered scheduled work."
+          ],
+          "matched_skill_ids": [
+            "local-skills/scheduled-work-proof-auditor"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "scheduling",
@@ -32838,6 +32952,32 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/agent-workspace-footprint-assessor",
+      "source_id": "local-skills",
+      "skill_name": "agent-workspace-footprint-assessor",
+      "content_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
+      "complete_package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "software-engineering/maintenance",
+        "agent-mcp-development/agent-observability"
+      ],
+      "evidence_path": "registry/verification/local-skills/agent-workspace-footprint-assessor.yaml",
+      "skill_path": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/agent-workspace-footprint-assessor.yaml",
+      "source_license": "Original new MIT text only, legacy rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Exact complete-package maintainer static review, behavior not run",
+      "restriction": "No external connection or sensitive operation permitted by reference-only review",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/automation-receipts",
       "source_id": "local-skills",
       "skill_name": "automation-receipts",
@@ -33024,6 +33164,32 @@
       "notes": "Strong precommitted-criteria discipline, explicit missing-data handling, weighted evidence, and counter-argument requirement; scoring remains a decision aid rather than proof.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
+    },
+    {
+      "id": "local-skills/connector-capability-risk-review",
+      "source_id": "local-skills",
+      "skill_name": "connector-capability-risk-review",
+      "content_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
+      "complete_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "agent-mcp-development/mcp-clients-servers",
+        "security/supply-chain"
+      ],
+      "evidence_path": "registry/verification/local-skills/connector-capability-risk-review.yaml",
+      "skill_path": "skills/authored/connector-capability-risk-review/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/connector-capability-risk-review.yaml",
+      "source_license": "Original new MIT text only, legacy rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Exact complete-package maintainer static review, behavior not run",
+      "restriction": "No external connection or sensitive operation permitted by reference-only review",
+      "unchanged_use_approved": false
     },
     {
       "id": "local-skills/daily-briefing",
@@ -33933,6 +34099,32 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/privilege-exposure-mapper",
+      "source_id": "local-skills",
+      "skill_name": "privilege-exposure-mapper",
+      "content_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
+      "complete_package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "security/identity-access",
+        "agent-mcp-development/permissions"
+      ],
+      "evidence_path": "registry/verification/local-skills/privilege-exposure-mapper.yaml",
+      "skill_path": "skills/authored/privilege-exposure-mapper/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/privilege-exposure-mapper.yaml",
+      "source_license": "Original new MIT text only, legacy rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Exact complete-package maintainer static review, behavior not run",
+      "restriction": "No external connection or sensitive operation permitted by reference-only review",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/qwen-pulse",
       "source_id": "local-skills",
       "skill_name": "qwen-pulse",
@@ -34060,6 +34252,32 @@
       ],
       "link_basis": "2026-11-18 exact complete-package maintainer static review, no host behavioral qualification",
       "restriction": "Reference-only, no implicit source/tool permissions",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/scheduled-work-proof-auditor",
+      "source_id": "local-skills",
+      "skill_name": "scheduled-work-proof-auditor",
+      "content_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
+      "complete_package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "agent-mcp-development/agent-observability",
+        "time-productivity/scheduling"
+      ],
+      "evidence_path": "registry/verification/local-skills/scheduled-work-proof-auditor.yaml",
+      "skill_path": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/scheduled-work-proof-auditor.yaml",
+      "source_license": "Original new MIT text only, legacy rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Exact complete-package maintainer static review, behavior not run",
+      "restriction": "No external connection or sensitive operation permitted by reference-only review",
       "unchanged_use_approved": false
     },
     {
@@ -34358,13 +34576,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 135,
+  "identity_level_capability_links_mapped": 139,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 56,
-    "known_total_governed_review_records": 1051,
+    "known_first_party_skill_records": 60,
+    "known_total_governed_review_records": 1055,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34420,18 +34638,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 56,
+  "first_party_identity_links_mapped": 60,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 56,
+    "mapped_first_party_distinct": 60,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 135,
-    "subdomains_with_evidence_linked_examples": 79,
+    "mapped_total_distinct": 139,
+    "subdomains_with_evidence_linked_examples": 80,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Four new original packages statically reviewed and mapped 2026-11-18; no legacy rights conclusion, no retired legacy package or host behavior validation.",
+    "note": "Eight new original static-reviewed source packages, historical rights unresolved, behavior NOT RUN, legacy still retained.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -34660,12 +34878,18 @@
       "local-skills/claim-evidence-adjudicator",
       "local-skills/research-methods-appraiser",
       "local-skills/source-debt-triage",
-      "local-skills/decision-record-steward"
+      "local-skills/decision-record-steward",
+      "local-skills/agent-workspace-footprint-assessor",
+      "local-skills/connector-capability-risk-review",
+      "local-skills/privilege-exposure-mapper",
+      "local-skills/scheduled-work-proof-auditor"
     ],
     "legacy_source_count": 44,
     "legacy_retired": 0,
-    "review": "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
-    "status": "static-only-new-packages",
-    "behavioral_validation": "not-run"
+    "reviews": [
+      "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md"
+    ],
+    "status": "eight new originals statically reviewed, no observed host behavior"
   }
 }

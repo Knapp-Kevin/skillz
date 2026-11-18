@@ -1831,6 +1831,134 @@
         ]
       },
       "notes": "2026-11-18 direct maintainer complete-package static review: docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No external host behavior or copyright certification."
+    },
+    {
+      "skill_name": "agent-workspace-footprint-assessor",
+      "local_path": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
+      "complete_package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete three-file original MIT package; direct maintainer static review 17/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+    },
+    {
+      "skill_name": "connector-capability-risk-review",
+      "local_path": "skills/authored/connector-capability-risk-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
+      "complete_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete three-file original MIT package; direct maintainer static review 18/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+    },
+    {
+      "skill_name": "privilege-exposure-mapper",
+      "local_path": "skills/authored/privilege-exposure-mapper/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
+      "complete_package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete three-file original MIT package; direct maintainer static review 18/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+    },
+    {
+      "skill_name": "scheduled-work-proof-auditor",
+      "local_path": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
+      "complete_package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete three-file original MIT package; direct maintainer static review 17/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
     }
   ]
 }

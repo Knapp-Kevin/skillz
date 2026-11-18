@@ -8,7 +8,7 @@
   "counts": {
     "legacy_candidates": 44,
     "independent_drafts": 8,
-    "independent_drafts_reviewed": 4,
+    "independent_drafts_reviewed": 8,
     "legacy_removed": 0
   },
   "rows": [
@@ -18,7 +18,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -36,7 +36,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -261,7 +261,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -306,7 +306,7 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/privilege-exposure-mapper/SKILL.md",
-      "replacement_status": "original_draft_static_review_pending",
+      "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
       "legacy_disposition": "retain_pending_replacement_acceptance"
     },
     {
@@ -409,5 +409,8 @@
       "legacy_disposition": "retain_pending_replacement_acceptance"
     }
   ],
-  "review_evidence": "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md"
+  "review_evidence": [
+    "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+    "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md"
+  ]
 }
