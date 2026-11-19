@@ -15,7 +15,7 @@
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
     "legacy_retirements_approved": 0,
-    "historical_entrypoints_pinned": 21
+    "historical_entrypoints_pinned": 28
   },
   "entries": [
     {
@@ -823,7 +823,7 @@
     },
     {
       "legacy_entrypoint": "skills/deepseek-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -891,11 +891,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/devlog-draft/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "d74ff133f69c8908c4acf296fb93313069082114",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -963,7 +964,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/fact-check/SKILL.md",
@@ -1035,7 +1037,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/finance-review/SKILL.md",
@@ -1107,11 +1110,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/gemini-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1179,7 +1183,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/github-pulse/SKILL.md",
@@ -1251,11 +1256,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/glm-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1323,11 +1329,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/governance-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1395,7 +1402,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/handoff-writer/SKILL.md",
@@ -1467,11 +1475,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/hf-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "149e577a9f72895b09aea43d607203d731db1bce",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1539,11 +1548,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/inbox-triage/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "9326d7a691e40ff30a07a71738b13a04117206d6",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1611,7 +1621,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/inference-pulse/SKILL.md",
