@@ -43,7 +43,7 @@ and downstream reference-migration acceptance remain NOT RUN.
 [The migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
 and [functional/retirement gap audit](../../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
 define the unresolved gate. No 44-file deletion has occurred.
-[Draft PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
+[PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
 
 ## New skill package requirements
 

@@ -1,6 +1,6 @@
 # Frostwulf replacement equivalence and retirement gates
 
-Date: 2026-11-18. Draft [PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
+Date: 2026-11-18. [PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
 
 ## Outcome reached
 
@@ -138,4 +138,4 @@ evidence of full behavioral parity or consumer-safe retirement.
 - Legacy source files deleted: **0**.
 - Host behavioral validation for the 21 replacements: **NOT RUN**.
 
-Counts are **draft-branch state**, not published `main`.
+Counts are the **exact PR #736 review snapshot**. Verify later `main` revisions before reusing the figures.
