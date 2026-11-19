@@ -4,7 +4,7 @@ Skills for keeping agent environments understandable, bounded, recoverable, and 
 
 - [`agent-home-doctor`](../../agent-home-doctor/) — audit and clean agent CLI home directories.
 - [Agent Failure Boundary Analysis](../../authored/agent-failure-boundary-analysis/SKILL.md) — evidence-based incident diagnosis, explicit uncertainty, bounded lessons and approved handoff (replaces historical `agent-postmortem`).
-- [`automation-receipts`](../../automation-receipts/) — require durable receipts before treating automation or delegated work as completed.
+- [Scheduled Work Proof Auditor](../../authored/scheduled-work-proof-auditor/SKILL.md) — distinguish configured, executed, produced and delivered work (replaces `automation-receipts`).
 - [`mcp-vetting`](../../mcp-vetting/) — security-review an MCP server before connection.
 - [`permissions-review`](../../permissions-review/) — periodically review what agents and connected tools can access.
 - [`session-continuity`](../../session-continuity/) — recover relevant durable context before work and persist only authorized, minimal continuity records.
