@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Claim Evidence Adjudicator
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -29,6 +29,14 @@ as separate claims instead of guessing the intended interpretation.
 
 ## Adjudication protocol
 
+Prefer directly consulted original datasets, filings, research methods,
+firsthand records or official announcements over commentary whenever
+accessible within the approved scope. A secondary summary is never
+quietly reclassified as independent or primary evidence. If original
+evidence is unavailable, preserve the gap and cap confidence. Record
+both the source publication date and the time period the claim covers.
+
+
 1. Create a claim ledger. Assign C1, C2, etc. to separable factual propositions.
    Label each as numerical, historical, attribution, causal, comparative,
    prospective or definitional. Mark the claims whose truth is necessary for
@@ -44,20 +52,28 @@ as separate claims instead of guessing the intended interpretation.
    alone does not prove causation.
 4. Assign each proposition SUPPORTED, REFUTED, CONTEXT_MISSING, CONFLICTED
    or UNRESOLVED, with confidence justified separately. A blocked document
-   lookup is UNRESOLVED, never negative evidence.
+   lookup is UNRESOLVED, never negative evidence. Use the public-facing
+   labels `needs context` for CONTEXT_MISSING and `unverifiable` for
+   UNRESOLVED where a reader requests those terms. An unverified allegation
+   stays UNRESOLVED, even if several copied pages repeat it.
 5. Synthesize based on the load-bearing claims, not a vote among citations.
    Mark an overall verdict supported, refuted, mixed or undetermined, and
    expose any conflicting source rather than silently picking a winner.
 6. Perform a trace check: a claim marked supported must have a consulted,
    date-compatible locator. Verify the answer has not confused publication
-   date with event date, or introduced unsafe excerpts.
+   date with event date, or introduced unsafe excerpts. Never invent a
+   quotation, document citation or retrieval timestamp to fill a report.
 
 ## Delivery
 
 Present a decision summary and a table with:
 `claim ID | exact proposition | finding | source locator | limitation | confidence`.
 Then include a source-dependency note, contradictions, date of review, and
-the smallest new evidence that would plausibly change the finding.
+the smallest new evidence that would plausibly change the finding. Clearly
+separate observed evidence, reviewer inference and unknown facts. When a
+specific claim is literally true only for a sample or a restricted time
+window, label it `needs context` instead of promoting it to a broader
+population conclusion.
 
 ## Constraints and incomplete work
 
