@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations & Security
   display-name: Privilege Exposure Mapper
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -55,13 +55,63 @@ inventory completeness. An unreadable policy is UNKNOWN, not DENIED.
    revocation, disconnect, secret rotation, config edit, scheduled
    review or notification requires separate exact-scope authorization.
 
+## Agent host surface inspection
+
+For a request to review *agent permissions*, do not restrict the
+assessment to abstract OAuth scopes or token classes. Within the
+specifically approved host/workspace, enumerate the complete
+version-bound connector/MCP tool inventory, host permission lists,
+execution hooks, delegated agent identities and reachable credential
+**classes**. Distinguish documented tool names from the actual
+inspected runtime/manifest inventory; incomplete enumeration is
+SURFACE_INCOMPLETE. Classify each tool using the controlled
+`read-only / generate-only / mutating / external-side-effect`
+taxonomy, and separately flag file deletion, account administration,
+payments, private exports, notifications, production changes and
+process execution. The most consequential available sibling tool
+sets the connector's risk ceiling.
+
+For host policies and hooks, identify each allow/deny rule, effective
+principal, target account/resource, argument limitations, and
+independently observable enforcement. Record whether a hook, command,
+alias, filter, pager, filesystem-monitor callback or helper can
+execute under a nominally read-only invocation. **Do not propose
+`Bash(git *)` or any prefix-only binary wildcard as a safe narrowing
+of an unrestricted shell.** Git can write refs, trigger subprocesses,
+read private data and change remote state. A proposed allowlist must
+specify the host-enforced executable, permitted subcommands and
+arguments, locked repo/account target, environment/config boundary,
+and subprocess policy. Where such enforcement cannot be established,
+keep shell access denied and propose a narrowly scoped, host-native
+repository metadata tool instead.
+
+For every grant, investigate the most recent justified business
+need from **only the authorized**, appropriately redacted policy
+history or activity metadata. A missing last-use receipt is
+LAST_USE_UNKNOWN, not unused. Include a usable, ranked tightening
+proposal with the specific object to narrow, likely workflow
+breakage, rollback and how to demonstrate legitimate behavior
+continues after independent owner approval. Report-only requests
+authorize **no actual revocation, disconnection, secret rotation,
+config edit, recurring schedule or outbound message**.
+
+Optional periodic permission audits are merely a suggested
+external-host workflow. A recurring job may be created only after
+a separate approval of frequency/timezone, start and expiry,
+future authorized private sources, account scope, recipients and
+delivery, data retention, cost and revocation method. A one-time
+permissions review never supplies continuing access authority.
+Provide a reusable manual audit checklist when no suitable
+approved scheduler exists.
+
 ## Deliverable schema
 
 `principal | resource/action | enforceable boundary | purpose |
 last-use evidence | impact | confidence | proposed narrower grant |
 owner decision | post-change test`.
-Add completeness limits and explicitly state whether risky composite paths
-were assessed. Never issue broad shell wildcard allowlists as a "safer"
+Add completeness limits, a connector/tool coverage inventory,
+allowlist and hook findings, credential-class reachability, and
+explicitly state whether risky composite paths were assessed. Never issue broad shell wildcard allowlists as a "safer"
 alternative; prefer specific host APIs with verifiable argument restrictions.
 
 ## Security and uncertainty
