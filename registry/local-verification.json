@@ -1815,8 +1815,8 @@
       "skill_name": "professional-market-evidence-scout",
       "local_path": "skills/authored/professional-market-evidence-scout/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
-      "complete_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "content_blob_sha": "5c1003c2bd3d13d972eff6fd52dd47ec03d327d2",
+      "complete_package_tree_sha": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1841,7 +1841,10 @@
           "high"
         ]
       },
-      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+      "notes": "Exact v1.2 source and complete package verified after crosswalk for career-radar. Controlled synthetic case record docs/evals/receipts/2026-11-19-career-handoff-controlled.json; no independent host A/B or 1.5x evidence.",
+      "previous_content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
+      "previous_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "statement-variance-reviewer",
@@ -1879,8 +1882,8 @@
       "skill_name": "context-continuation-contract",
       "local_path": "skills/authored/context-continuation-contract/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
-      "complete_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "content_blob_sha": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "complete_package_tree_sha": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1905,7 +1908,10 @@
           "high"
         ]
       },
-      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+      "notes": "Exact v1.2 source and complete package verified after crosswalk for handoff-writer. Controlled synthetic case record docs/evals/receipts/2026-11-19-career-handoff-controlled.json; no independent host A/B or 1.5x evidence.",
+      "previous_content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "previous_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "evidence-narrative-composer",
