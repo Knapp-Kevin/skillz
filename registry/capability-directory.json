@@ -1140,7 +1140,7 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 10,
+      "linked_reviewed_examples": 9,
       "subdomains_with_linked_examples": 6,
       "name_only_candidate_count": 17,
       "evidence_preview": [
@@ -1153,16 +1153,6 @@
           "source_class": "local-provenance",
           "path": "agent-mcp-development/mcp-clients-servers",
           "capability_example": "Track MCP ecosystem changes; client/server implementation requires a separate fit check"
-        },
-        {
-          "id": "local-skills/mcp-vetting",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/mcp-vetting.yaml",
-          "source_class": "local-provenance",
-          "path": "agent-mcp-development/permissions",
-          "capability_example": "Inspect MCP integrations and agent access permissions before connection"
         },
         {
           "id": "local-skills/agent-workspace-footprint-assessor",
@@ -1986,7 +1976,7 @@
     {
       "domain": "security",
       "display_name": "Security",
-      "linked_reviewed_examples": 6,
+      "linked_reviewed_examples": 5,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 7,
       "evidence_preview": [
@@ -2009,16 +1999,6 @@
           "source_class": "local-provenance",
           "path": "security/vulnerability-management",
           "capability_example": "Plan safety-aware repository hygiene; not a vulnerability scanner"
-        },
-        {
-          "id": "local-skills/mcp-vetting",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/mcp-vetting.yaml",
-          "source_class": "local-provenance",
-          "path": "security/supply-chain",
-          "capability_example": "Review MCP tool provenance, data flows, dependencies, and trust boundaries"
         },
         {
           "id": "local-skills/connector-capability-risk-review",
@@ -5146,7 +5126,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1063,
+  "governed_identity_denominator": 1062,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -15051,7 +15031,6 @@
             "Effective principal-to-action privilege graph and safely proposed least-privilege deltas."
           ],
           "matched_skill_ids": [
-            "local-skills/mcp-vetting",
             "local-skills/privilege-exposure-mapper"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -19156,7 +19135,6 @@
             "Pinned connector tool-effect and data-flow analysis before any independent connection decision."
           ],
           "matched_skill_ids": [
-            "local-skills/mcp-vetting",
             "local-skills/connector-capability-risk-review"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -33425,8 +33403,8 @@
       "id": "local-skills/connector-capability-risk-review",
       "source_id": "local-skills",
       "skill_name": "connector-capability-risk-review",
-      "content_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
-      "complete_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "content_blob_sha": "7c19817cf91804c430b94364550aa50eda731fb1",
+      "complete_package_tree_sha": "26b1fa68302ce1fb088748edd98d9702b85de23d",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33445,7 +33423,8 @@
       ],
       "link_basis": "Exact complete-package maintainer static review, behavior not run",
       "restriction": "No external connection or sensitive operation permitted by reference-only review",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "notes": "Exact v1.2 source/tree verified after explicit review-as-of and pre-connection trigger remediation. Behavior not run in independent agent host; owner accepted five bounded offline emulations only."
     },
     {
       "id": "local-skills/context-continuation-contract",
@@ -34189,33 +34168,6 @@
         "research"
       ],
       "notes": "Protocol/security-first monitoring with migration-impact framing and explicit intake handoff; some local integration references are environment-specific.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
-      "id": "local-skills/mcp-vetting",
-      "source_id": "local-skills",
-      "skill_name": "mcp-vetting",
-      "content_blob_sha": "806e79f593446ad15938249898e15230208f2d81",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "agent-mcp-development/permissions",
-        "security/supply-chain"
-      ],
-      "evidence_path": "registry/verification/local-skills/mcp-vetting.yaml",
-      "skill_path": "skills/mcp-vetting/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/mcp-vetting.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "security",
-        "evaluation"
-      ],
-      "notes": "Strong static pre-connection security review covering provenance, tool surface, data flow, injection, and version pinning with explicit unknown handling.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
@@ -35040,13 +34992,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 147,
+  "identity_level_capability_links_mapped": 146,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 68,
-    "known_total_governed_review_records": 1063,
+    "known_first_party_skill_records": 67,
+    "known_total_governed_review_records": 1062,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -35103,18 +35055,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 68,
+  "first_party_identity_links_mapped": 67,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 68,
+    "mapped_first_party_distinct": 67,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 147,
+    "mapped_total_distinct": 146,
     "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Five individually assessed owner-risk-accepted historical retirements; 39 active originals; no independently observed model-host parity or exhaustive consumer scan.",
+    "note": "Six historical sources retired under explicit limited controlled evidence, 38 original active; no full host A/B or exhaustive consumer proof.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35364,7 +35316,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 5,
+    "legacy_retired": 6,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35372,6 +35324,6 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 39
+    "legacy_remaining": 38
   }
 }
