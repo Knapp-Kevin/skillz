@@ -206,62 +206,112 @@
   "status": "CONTROLLED_WITH_PRIMARY_SOURCES_ONLY",
   "retirement": "HOLD_PENDING_CONSUMER_REFERENCE_AND_OWNER_ACCEPTANCE",
   "deterministic_mutation_probe": {
-    "execution": "actual JavaScript regex checks on saved successor response and five locally mutated variants",
-    "variants": [
+    "execution": "Executed JavaScript predicates on the committed successor output and six deliberately degraded variants, 2026-11-19",
+    "baseline_success": 10,
+    "baseline_total": 10,
+    "probes": [
       {
-        "mutation": "remove_primary_sources",
-        "failed_checks": [
-          "primary_sources"
+        "id": "remove_primary_sources",
+        "expected_failed_rule": "source_provenance",
+        "actually_failed": [
+          "source_provenance",
+          "honest_source_limits"
         ],
-        "expected_checks": [
-          "primary_sources"
-        ],
-        "detected": true,
-        "expected_detected": true
+        "detected": true
       },
       {
-        "mutation": "remove_migration_route",
-        "failed_checks": [
+        "id": "remove_migration_route",
+        "expected_failed_rule": "api_retirement",
+        "actually_failed": [
           "api_retirement",
-          "routing"
+          "routing",
+          "no_request_change"
         ],
-        "expected_checks": [
-          "api_retirement"
-        ],
-        "detected": true,
-        "expected_detected": true
+        "detected": true
       },
       {
-        "mutation": "remove_sdk_type_discrimination",
-        "failed_checks": [
+        "id": "remove_sdk_type_discrimination",
+        "expected_failed_rule": "sdk_type_boundary",
+        "actually_failed": [
           "sdk_type_boundary"
         ],
-        "expected_checks": [
-          "sdk_type_boundary"
+        "detected": true
+      },
+      {
+        "id": "remove_sse_release_event",
+        "expected_failed_rule": "sse_release_event",
+        "actually_failed": [
+          "sse_release_event"
         ],
-        "detected": true,
-        "expected_detected": true
+        "detected": true
       },
       {
-        "mutation": "remove_sse_fix",
-        "failed_checks": [],
-        "expected_checks": [],
-        "detected": false,
-        "expected_detected": false,
-        "limitation": "This generic or cross-section mutation may evade unanchored regex; semantic reviewer still required."
+        "id": "remove_coverage_limits",
+        "expected_failed_rule": "honest_source_limits",
+        "actually_failed": [
+          "honest_source_limits"
+        ],
+        "detected": true
       },
       {
-        "mutation": "remove_review_limits",
-        "failed_checks": [],
-        "expected_checks": [],
-        "detected": false,
-        "expected_detected": false,
-        "limitation": "This generic or cross-section mutation may evade unanchored regex; semantic reviewer still required."
+        "id": "invent_universal_api_failure",
+        "expected_failed_rule": "no_unsupported_universal_breakage",
+        "actually_failed": [
+          "no_unsupported_universal_breakage"
+        ],
+        "detected": true
       }
     ],
-    "detectable_fixture_corruptions": 3,
-    "detected_of_expected": 3,
-    "unanchored_weakness": "The nine regex predicates are smoke checks, not semantic scoring; a removed source status or duplicated event could still pass. Never promote parity based on these tests."
+    "detected_mutations": 6,
+    "missed_mutations": 0,
+    "critical_limit": "This proves the hand-built smoke assertions detect these six edits, not semantically independent quality, broad hallucinations, behavioral parity or 1.5x. Predicates were designed after seeing this one output and can overfit. Current case still non-isolated."
   },
-  "notes": "The observed live source reads were public developer documentation and SDK changelog only. This receipt is one source-grounded read-only case; five prior xAI case emulations were against v1.2.3 and remain historical. Rights, independent scoring, full consumer references and exact v1.2.4 five-case execution are not established."
+  "notes": "The original nine loose regexes missed two intentionally degraded variants. The narrower section-scoped checks caught all six tested mutants. Those tests are useful falsification evidence but were authored after observing the answer, so still not independent/blind quality scoring.",
+  "deterministic_output_checks_v2": {
+    "source": "Actual JS predicate execution in this conversation",
+    "rules": [
+      {
+        "id": "api_retirement",
+        "pass": true
+      },
+      {
+        "id": "routing",
+        "pass": true
+      },
+      {
+        "id": "no_request_change",
+        "pass": true
+      },
+      {
+        "id": "sdk_identity",
+        "pass": true
+      },
+      {
+        "id": "sdk_type_boundary",
+        "pass": true
+      },
+      {
+        "id": "sse_release_event",
+        "pass": true
+      },
+      {
+        "id": "source_provenance",
+        "pass": true
+      },
+      {
+        "id": "honest_source_limits",
+        "pass": true
+      },
+      {
+        "id": "actionable_verification",
+        "pass": true
+      },
+      {
+        "id": "no_unsupported_universal_breakage",
+        "pass": true
+      }
+    ],
+    "all_pass": true,
+    "mutation_strength": "6/6"
+  }
 }
