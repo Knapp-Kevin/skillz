@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: personal-operations-control-board
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/personal-operations-control-board/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/personal-operations-control-board/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 6ec82d3e34e2bd5adea16838d9ba49955106b893
-complete_package_tree_sha: 9ab584fac422cbaaea81d12fdc832945c9661bf4
+content_blob_sha: 485eec5425782c0310413de3a355a844ff856a25
+complete_package_tree_sha: 8a2036ee370e1918da0964b7dbeff91b0edf8a07
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
@@ -21,9 +21,11 @@ tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]
   characteristic: [traceable, privacy-bounded, authority-aware]
-  authority: [read-only]
+  authority: [read-only, mutating]
   portability: [high]
 notes: >-
-  Current three-file v1.1 package static reviewed at 18/20 with source details in
-  docs/reviews/2026-11-18-operations-replacement-parity-remediation.md.
-  Behavior NOT RUN, legacy host parity and 1.5x effectiveness NOT PROVEN; earlier review historical.
+  Current v1.2 exact three-file source static review 18/20:
+  docs/reviews/2026-11-18-operations-pulse-v1-2-correction.md.
+  Default read-only/draft-only; independently approved coordination task/repository writes are mutating.
+  Historical v1.1 source review superseded, host behavior NOT_RUN,
+  1.5x effectiveness NOT_PROVEN.
