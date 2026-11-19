@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: evidence-narrative-composer
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/evidence-narrative-composer/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-narrative-composer/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d67e8824ab340014f5379f32fc8e02df3220d18a
-complete_package_tree_sha: 6e356d294bab2483fd4a938c24fd5e5b0b2ad34a
+content_blob_sha: 1e8cb987017c06dd12b995ed22055dc6b3367b45
+complete_package_tree_sha: 2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
@@ -16,7 +16,7 @@ verification_basis: maintainer-complete-package-static-review
 validation_status: not-run
 validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
 rubric: docs/skill-verification.md
-rubric_score: "17/20"
+rubric_score: "18/20"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]
@@ -24,6 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Develop evidence-linked presentations or development narratives without invented outcomes. Direct static semantic review 17/20. Three-file package
-  hashed and references verified. Host execution NOT RUN, real-world
-  effectiveness and historic rights not established. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md
+  Exact three-file v1.1 static review 18/20, independently authored functional
+  remediation; docs/reviews/2026-11-18-narrative-and-work-period-parity-v1-1.md.
+  Original v1.0 review remains historical. Host execution NOT RUN,
+  parity and 1.5x improvement NOT PROVEN.

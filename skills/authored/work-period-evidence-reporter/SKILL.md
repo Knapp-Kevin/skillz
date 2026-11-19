@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Communication
   display-name: Work Period Evidence Reporter
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -51,12 +51,83 @@ messaging content is not implicitly in scope.
    proposal. Do not send, publish or create task records
    without separate authorization and actual action receipts.
 
+## Daily standup mode
+
+A request for a standup is a **daily update** with a specific structure,
+not a generic narrative status report.
+
+Choose an explicit local timezone and a bounded reporting interval,
+normally the previous workday through the reporting date unless the
+user provided a different period. Use the prior standup timestamp only
+if that record was supplied or specifically authorized for the run.
+Do not browse private memory or workspaces to hunt for it.
+
+Prepare the actual deliverable under these stable, human-scannable
+sections:
+
+- **Did:** evidence-backed work accomplished during the interval.
+  Preserve commit/revision or task evidence and distinguish a merged
+  change from deployed or customer-accepted functionality.
+- **Doing:** source-backed active work or stated next actions; do not
+  infer active coding from an old branch or assigned issue alone.
+- **Blocked:** actual reported blockers, needed decision or
+  dependency, and who can unblock when established. If no blocker
+  source was available, use BLOCKERS_NOT_ASSESSED rather than
+  claiming there are none.
+- **Needs confirmation:** ambiguous ownership, conflicting task
+  status, incomplete source scope or a possible accomplishment
+  without an adequate receipt.
+
+The report can be concise, but those distinctions may not be
+flattened into a single accomplishments list. Group related commits
+into meaningful outcomes without claiming somebody else's work.
+
+If local repository queries are necessary, a normal-looking Git
+command can still execute repository-controlled configuration such
+as filesystem monitoring helpers. Prefer approved read-only
+repository APIs; only use local Git when the host has independently
+established a containment profile that disables unsafe helpers,
+external pagers and implicit index writes. Never interpolate
+untrusted repository content into executable arguments. If local
+safety cannot be established, mark that evidence NOT_ASSESSED.
+
+## Weekly retrospective mode
+
+Specify an actual Monday-to-report interval, or another explicitly
+chosen work period. Reconcile prior plans only from the selected
+authorized prior review, task records or user-provided starting list.
+Inspect changes and releases with exact source/commit identity.
+Distinguish deployed, tagged, merged, drafted and truly verified
+shipped outcomes.
+
+Use these mandatory sections:
+
+- **Shipped:** completed deliverables with the strongest actual
+  receipt, including where live user acceptance is still unknown.
+- **Stalled:** planned work that did not reach its acceptance state;
+  state observed blockers, reprioritization or insufficient evidence.
+  Do not invent psychological motives or rewrite ambiguous reasons
+  as fact.
+- **Decisions:** decision, time/owner if observed, reason or
+  evidence; a calendar event by itself never proves a decision.
+- **Carry-forward:** ranked, small next-period starting list with
+  owner, next concrete action, blocker/acceptance condition and
+  canonical source pointer where known.
+
+The carry-forward list must be independently usable as the next
+workday's planning input without another summary pass. Offer a
+portable copy/paste handoff. Saving it in a task store, note,
+memory system or calendar is separately authorized and requires
+destination-specific readback to claim persisted state. The weekly
+review is not a scheduled task and does not initiate a future run.
+
 ## Output contracts
-Daily: interval, observed achievements, active focus, blockers and
-decisions needed, uncertain evidence, source references.
-Weekly: outcomes with acceptance evidence, work not yet shipped,
-new facts/decisions, issues needing direction, proposed priorities.
-The report should fit the audience without inventing status.
+Daily: dated interval, Did / Doing / Blocked / Needs confirmation,
+with evidence handles, source coverage and separate proof of shipping.
+Weekly: dated interval, Shipped / Stalled / Decisions / Carry-forward,
+with acceptances, frank uncertainty, prioritized next-period actions,
+and a portable planning handoff. The report should fit the audience
+without inventing status, source access or saved tasks.
 
 ## Boundaries
 No cross-project hidden scanning, external posting, project edits,
