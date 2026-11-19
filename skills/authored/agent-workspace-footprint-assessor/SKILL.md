@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations & Security
   display-name: Agent Workspace Footprint Assessor
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -51,10 +51,14 @@ metadata before requesting any content.
    any moves or deletes. High-risk items such as keys, memory, notebooks,
    active conversation state, user-authored extensions and model assets
    default to protected and are excluded from bulk actions.
-7. On separately authorized action, capture before-state, apply only the
-   named change, verify both source and recovery destination, and report
-   measured impact. If proof fails, stop. No invented success or fallback
-   delete after a move failure.
+7. On separately authorized action, recapture the exact object identity,
+   size, type and content digest when permitted, and compare them with the
+   approved proposal. Revalidate path containment without following any
+   newly introduced symlink/junction before mutation; a changed source,
+   unverified recovery destination or changed approval scope is a STOP,
+   not permission to improvise. Apply only the named change, verify both
+   source and recovery destination, and report measured impact. If proof
+   fails, stop. No invented success or fallback delete after a move failure.
 
 ## Failure-classification and reversible maintenance plan
 
@@ -106,17 +110,39 @@ an operation. If a move encounters a lock or failure, stop and
 report its actual state; a copy-then-delete alternative needs its
 own proposed plan and authorization.
 
+High-risk protected areas remain excluded unless the owner separately
+revises the explicit protection policy and approves the exact proposed
+operation. Do not infer this policy change from generic cleanup intent.
+The presence of a permitted host filesystem tool does not satisfy the
+owner's approval requirement.
+
 The report must distinguish paths **proposed**, paths **approved**,
 operations **attempted**, results **verified by readback**, and
 reclaimed bytes **actually observed**. Avoid disclosing private
 absolute home paths, account handles or credential-bearing
 filenames when using human-readable evidence identifiers.
 
+## Context and agent-runtime cost assessment
+
+For agent-home cleanup requests, include a separate **context-cost impact**
+section in the report. Explain whether the diagnosed storage growth is
+actually contributing to material loaded into an agent's prompt, retrieval
+index or runtime, rather than assuming disk bytes translate into model
+tokens. Record observed context-window/token usage, history-inclusion rules,
+load frequencies and any measured ingestion overhead only when authorized
+receipts exist. Otherwise mark `CONTEXT_COST_UNKNOWN`, with a safe way to
+measure it before and after a separately approved intervention. Distinguish
+estimated disk reclaim, observed disk reclaim, reduced context material,
+and actual user-visible performance or monetary savings. Never advise
+removing protected memory or active session material simply to chase
+unverified token savings.
+
 ## Deliverable
 
 A bounded inventory and trend statement, a list of protected surfaces,
-high-confidence storage drivers, pathology classifications and tiered
-remediation plan, and a proposed action matrix:
+high-confidence storage drivers, pathology classifications, explicit
+context-cost impact (measured or UNKNOWN), tiered remediation plan, and a
+proposed action matrix:
 `object | evidence | estimated reclaim | reversibility | risk |
 explicit approval needed | verification`.
 Separate observations, estimates and operations performed.
