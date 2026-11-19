@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Business Operations
   display-name: Business Presence Observatory
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -50,9 +50,64 @@ contact customers.
    details, accounts, hosting, emails or payment configuration
    require separate owner approval.
 
+## Multi-site monthly operations view
+
+For a portfolio upkeep request, bind only the individually specified
+business sites and markets or a specifically authorized portfolio
+record. Do not discover a private portfolio merely because a
+browser, profile memory or CMS connector is available.
+
+For each approved site, provide separate observations for:
+- **Reachability and visible page health:** actual fetch attempt,
+  returned status or error, date/time, visible broken assets and
+  accessible customer route. A single failed fetch is not proof a
+  site is persistently DOWN; perform a safe independent retry
+  where possible and label intermittent or uncertain results.
+- **Content currency:** dated offers, business announcements,
+  current service descriptions, outdated legal/copyright indicators
+  and expired event or seasonal content. A copyright year alone is
+  not definitive evidence of a neglected business.
+- **Directory and listing consistency:** compare owner-confirmed
+  business address, phone, service area and opening hours against
+  what each independently accessed public directory currently
+  shows. Distinguish a search snippet, an actual listing and the
+  authoritative owner-supplied business fact. A mismatch is
+  a verification item, not authority to overwrite the directory.
+- **Core customer experience:** navigation, contact route, booking
+  journey, usable mobile layout and form availability only to
+  the extent safely observable. Never submit a real inquiry,
+  booking, payment or test message without separate authorization.
+  If interaction cannot be safely tested, report NOT_TESTED,
+  not PASS.
+- **Upcoming seasonal needs:** for the next four to six local
+  calendar weeks, identify only actually applicable holidays,
+  closure hours, promotions, renewal notices and service demand
+  changes. Mark business-specific applicability UNKNOWN where
+  its location, service or policies are not established. A
+  generic holiday checklist must not masquerade as a verified
+  upcoming obligation.
+
+Present a **portfolio-level status grid**:
+`business/site | market | reachability and check time |
+content freshness | owner/listing mismatch | customer journey |
+coverage/unknowns`. Follow with a ranked,
+**ready-to-review action queue** containing the safe proposed
+copy/change, urgency, actual evidence, affected site, owner
+question, approval required and post-change test. Prioritize
+customer-visible loss and wrong contact/hours ahead of cosmetic
+improvements where supported by evidence.
+
+The one-time monthly mode **does not create a recurrence**.
+Any future automation or outbound delivery requires its own
+verified host capability and independently authorized frequency,
+dates, future private access, recipients, retention, costs and
+cancellation control. Do not publish site changes, create listing
+accounts or contact customers from the passive review.
+
 ## Result
-Evidence-bound site/location matrix; journey PASS/FAIL/UNKNOWN
-with test scope; public facts in conflict; prioritized repairs,
+Evidence-bound site/location matrix; monthly portfolio reachability,
+listing-drift and seasonal view; journey PASS/FAIL/UNKNOWN/NOT_TESTED
+with test scope; public facts in conflict; prioritized proposed repairs,
 owner questions, retest conditions and uninspected surfaces.
 
 ## Safety
