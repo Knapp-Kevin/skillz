@@ -26,7 +26,7 @@ This is a static design change, not measured cross-model validation.
 
 The maintainer controlled the historical Zo Computer account but has **not**
 established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
-entrypoints. Eighteen bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar`, `handoff-writer`, `standup-writer`, `week-in-review`, `deck-outline`, `devlog-draft`, `deep-dive`, `learning-plan` and `smallbiz-ops`, are retired from the active tree through owner-authorized controlled acceptance. The other 26 remain active; none may be silently moved or relicensed.
+entrypoints. Twenty-two bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar`, `handoff-writer`, `standup-writer`, `week-in-review`, `deck-outline`, `devlog-draft`, `deep-dive`, `learning-plan`, `smallbiz-ops`, `daily-briefing`, `finance-review`, `inbox-triage` and `task-surface`, are retired from the active tree through owner-authorized controlled acceptance. The other 22 remain active; none may be silently moved or relicensed.
 
 **21 original packages now cover the intended function categories of all 44
 legacy entries at the design level.** Some are explicitly multi-mode,
