@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Education
   display-name: Learning Evidence Progression
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -76,6 +76,12 @@ course access is unavailable, explicitly use
 `SOURCE_NOT_VERIFIED` and avoid claiming the curriculum is
 fully resourced.
 
+For build-from-scratch software goals, an authorized curated project
+or tutorial index can suggest candidate exercises, but every linked source
+must still be inspected for existence and instructional relevance before
+it is presented as VERIFIED. A discovery list is not evidence that its
+individual tutorial works or is currently accessible.
+
 ## Slipped-week recovery protocol
 
 When checkpoint evidence indicates the learner did not complete
@@ -98,8 +104,14 @@ The learner can select a different approved recovery choice;
 report the tradeoff and updated timeline instead of imposing an
 unasked-for schedule. A missed test is not silently marked passed.
 Optional weekly check-ins remain reusable manual prompts unless
-the user separately authorizes an actual external scheduler,
-future data access, recipients, retention/cost and revocation.
+the user separately authorizes an actual external scheduler.
+For any recurring host schedule, require an exact approved cadence and
+time zone, first and last eligible date or explicit expiry/cancellation
+rule, future account/source access and data minimization, target recipients
+and delivery channel, retention, cost ceiling, and an inspect/pause/revoke
+path. A one-shot learning-plan request never grants any of this authority.
+If no approved scheduler is available, return a reusable check-in prompt
+marked `SCHEDULE_NOT_CREATED`; never suggest that future delivery is active.
 No automatic enrollment, calendar write or progress persistence.
 
 ## Deliverable
