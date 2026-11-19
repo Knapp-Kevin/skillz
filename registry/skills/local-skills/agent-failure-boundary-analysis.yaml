@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
 content_blob_sha: 4a114972587060c79ee6df852526a0a047abd3c2
-complete_package_tree_sha: null # Changed package; exact current tree not yet recorded
+complete_package_tree_sha: 426391a3bea7e75f364fe86da8845dee2718f8a5
 historical_comparators: "skills/agent-postmortem/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
