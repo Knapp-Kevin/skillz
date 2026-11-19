@@ -19,5 +19,5 @@
 <text x="835" y="287" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">36.0%</text>
 <line x1="64" y1="326" x2="935" y2="326" stroke="#3c4d63"/>
 <text x="64" y="358" fill="#dce7f7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600">73 first-party + 79 external reviewed identities mapped</text>
-<text x="64" y="385" fill="#9fb1c8" font-family="Inter,Segoe,Arial,sans-serif" font-size="16">916 reviewed identities remain unmapped · study-only references tracked separately</text>
+<text x="64" y="385" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">916 reviewed identities remain unmapped · study-only references tracked separately</text>
 </svg>
