@@ -197,7 +197,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 ## First-party source-family appendix: skills by purpose
 
 ### Planning & Productivity
-`daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, [Learning Evidence Progression](skills/authored/learning-evidence-progression/SKILL.md), `task-surface`, [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
+[Personal Operations Control Board](skills/authored/personal-operations-control-board/SKILL.md) (daily brief, inbox and task board), [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), [Learning Evidence Progression](skills/authored/learning-evidence-progression/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
 
 ### Writing & Communication
 `brief-writer`, [Evidence Narrative Composer](skills/authored/evidence-narrative-composer/SKILL.md) (deck outlines + devlogs), [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
@@ -215,7 +215,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `claude-pulse`, `deepseek-pulse`, `gemini-pulse`, `github-pulse`, `glm-pulse`, `governance-pulse`, `hf-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `mistral-pulse`, `openai-pulse`, `perplexity-pulse`, `qwen-pulse`, `xai-pulse`
 
 ### Business & Career
-[Professional Market Evidence Scout](skills/authored/professional-market-evidence-scout/SKILL.md), `finance-review`, [Business Presence Observatory](skills/authored/business-presence-observatory/SKILL.md)
+[Professional Market Evidence Scout](skills/authored/professional-market-evidence-scout/SKILL.md), [Statement Variance Reviewer](skills/authored/statement-variance-reviewer/SKILL.md), [Business Presence Observatory](skills/authored/business-presence-observatory/SKILL.md)
 
 ## Registered source roles
 

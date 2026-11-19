@@ -107,37 +107,6 @@
       "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
-      "skill_name": "daily-briefing",
-      "local_path": "skills/daily-briefing/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "planning"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "synthesis",
-          "tool-routing",
-          "context-efficient",
-          "evidence-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held."
-    },
-    {
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -167,38 +136,6 @@
         ]
       },
       "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "finance-review",
-      "local_path": "skills/finance-review/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "86bdf2f9d6ebca2932612212882f6a915709203d",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "business-operations",
-          "decision-support",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "risk-aware",
-          "tool-routing"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Read-only statement analysis now resolves safe host parsing directly, preserves row traceability, and avoids dependency on a rejected vendored spreadsheet skill."
     },
     {
       "skill_name": "gemini-pulse",
@@ -400,38 +337,6 @@
         ]
       },
       "notes": "2026-11-06 issue #714: current v1.1.0 10-file MIT-authored package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; SKILL blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static structured 19/20; deterministic 4/4 clause-card completeness and 8/8 original-excerpt matches, plus synthetic currency arithmetic. Human-facing README added for shared folder. External host behavior, baseline comparison and scanner NOT RUN; no production/PHI clearance. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-commenter-acceptance-audit.md."
-    },
-    {
-      "skill_name": "inbox-triage",
-      "local_path": "skills/inbox-triage/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9326d7a691e40ff30a07a71738b13a04117206d6",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "communication"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "decomposition",
-          "tool-routing",
-          "human-review",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only",
-          "generate-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 current exact-source SHA 9326d7a691e40ff30a07a71738b13a04117206d6 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
     },
     {
       "skill_name": "inference-pulse",
@@ -786,41 +691,6 @@
         ]
       },
       "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
-    },
-    {
-      "skill_name": "task-surface",
-      "local_path": "skills/task-surface/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "planning",
-          "orchestration"
-        ],
-        "lifecycle": [
-          "planning",
-          "operations"
-        ],
-        "characteristic": [
-          "contract-first",
-          "orchestration",
-          "human-review",
-          "traceable",
-          "risk-aware"
-        ],
-        "authority": [
-          "mutating",
-          "external-side-effect"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material."
     },
     {
       "skill_name": "xai-pulse",
@@ -2556,6 +2426,164 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-19-smallbiz-controlled-portfolio.json"
+    },
+    {
+      "skill_name": "daily-briefing",
+      "local_path": "skills/daily-briefing/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "planning"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "synthesis",
+          "tool-routing",
+          "context-efficient",
+          "evidence-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/daily-briefing/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "finance-review",
+      "local_path": "skills/finance-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "86bdf2f9d6ebca2932612212882f6a915709203d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "business-operations",
+          "decision-support",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "risk-aware",
+          "tool-routing"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Read-only statement analysis now resolves safe host parsing directly, preserves row traceability, and avoids dependency on a rejected vendored spreadsheet skill.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/statement-variance-reviewer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/finance-review/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "inbox-triage",
+      "local_path": "skills/inbox-triage/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9326d7a691e40ff30a07a71738b13a04117206d6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "communication"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "decomposition",
+          "tool-routing",
+          "human-review",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only",
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 current exact-source SHA 9326d7a691e40ff30a07a71738b13a04117206d6 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/inbox-triage/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "task-surface",
+      "local_path": "skills/task-surface/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "planning",
+          "orchestration"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "contract-first",
+          "orchestration",
+          "human-review",
+          "traceable",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/task-surface/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
     }
   ]
 }

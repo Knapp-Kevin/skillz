@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/task-surface/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently established)
 relationship: first-party
 source_snapshot_revision: 1fdcd3e52b1a8cd3c99d2230c1f7d08449f8fdf5
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
-availability: in-repo
+availability: retired-historical
 local_path: skills/task-surface/SKILL.md
 permission_tier: mutating
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "Authorized host GitHub/API/CLI access for approved writes; otherwise complete portable issue and governance handoffs"
-import_eligibility: conditional-on-security-and-user-fit
+import_eligibility: retired-not-selectable
 rationale: "2026-10-29 exact-version semantic review: separates proposal from GitHub repository creation, README push, labels, issue writes and cross-repository transitions; binds each to explicit owner, destination, content, visibility and action approval. Behavioral not-run; final-package security pending."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/task-surface/SKILL.md
+replacement_id: local-skills/personal-operations-control-board
+consumer_audit: "Known active routes reconciled; exhaustive repository consumer search not proven."
