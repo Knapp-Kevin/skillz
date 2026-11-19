@@ -1132,7 +1132,6 @@
   "first_party_categories": {
     "planning-productivity": [
       "daily-briefing",
-      "decision-log",
       "inbox-triage",
       "learning-plan",
       "task-surface",
@@ -1157,7 +1156,6 @@
     ],
     "agent-operations-security": [
       "agent-home-doctor",
-      "automation-receipts",
       "mcp-vetting",
       "permissions-review",
       "session-continuity"
@@ -5466,7 +5464,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 independent packages static-reviewed; two narrow historical removals, 42 active originals; no measured functional superiority",
+    "status": "21 independent packages static-reviewed; four historical entrypoints retired, 40 active; no measured 1.5x quality gain",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5498,7 +5496,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 2,
-    "retirement_status": "two owner-accepted controlled-emulation retirements on main after merge; independent host parity not proven"
+    "legacy_retired": 4,
+    "retirement_status": "four individually documented owner-accepted controlled procedure retirements; paired host parity not proven"
   }
 }

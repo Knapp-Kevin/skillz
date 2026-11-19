@@ -197,7 +197,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 ## First-party source-family appendix: skills by purpose
 
 ### Planning & Productivity
-`daily-briefing`, `decision-log`, `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`
+`daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`
 
 ### Writing & Communication
 `brief-writer`, `deck-outline`, `devlog-draft`, `handoff-writer`, `standup-writer`
@@ -209,7 +209,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `repo-doctor`, `repo-pulse`; current original replacement: [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)
 
 ### Agent Operations & Security
-`agent-home-doctor`, [Agent Failure Boundary Analysis](skills/authored/agent-failure-boundary-analysis/SKILL.md) (postmortems), `automation-receipts`, `mcp-vetting`, `permissions-review`, `session-continuity`
+`agent-home-doctor`, [Agent Failure Boundary Analysis](skills/authored/agent-failure-boundary-analysis/SKILL.md) (postmortems), [Scheduled Work Proof Auditor](skills/authored/scheduled-work-proof-auditor/SKILL.md), `mcp-vetting`, `permissions-review`, `session-continuity`
 
 ### Monitoring & Intelligence
 `claude-pulse`, `deepseek-pulse`, `gemini-pulse`, `github-pulse`, `glm-pulse`, `governance-pulse`, `hf-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `mistral-pulse`, `openai-pulse`, `perplexity-pulse`, `qwen-pulse`, `xai-pulse`
