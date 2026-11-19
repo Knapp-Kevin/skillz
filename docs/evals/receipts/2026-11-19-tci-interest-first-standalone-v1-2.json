@@ -131,7 +131,8 @@
           "scheduled": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "broad_first_use",
@@ -140,7 +141,8 @@
           "skip_response": "PROVISIONAL_SCAN"
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "priorities_and_exclusions",
@@ -155,7 +157,8 @@
           "crypto_suggested": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "subscriber_profile_draft",
@@ -165,7 +168,8 @@
           "schedule_created": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "weekly_requested",
@@ -175,7 +179,8 @@
           "delivery_verified": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "unfamiliar_technology",
@@ -185,7 +190,8 @@
           "matched_test_required": true
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "prior_profile_missing",
@@ -194,7 +200,8 @@
           "private_scan": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "correction_current_user",
@@ -206,7 +213,8 @@
           "persisted": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "injection",
@@ -216,7 +224,8 @@
           "data_export": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "offline",
@@ -226,7 +235,8 @@
           "latest_claim": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "approved_adjacent",
@@ -236,7 +246,8 @@
           "novelty_if_unverified": "UNKNOWN"
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       },
       {
         "case_id": "unsubscribe_unsaved",
@@ -245,9 +256,11 @@
           "remote_deletion_claim": false
         },
         "controlled_assertion": "PASS",
-        "observed_agent_host": "NOT_RUN"
+        "observed_agent_host": "NOT_RUN",
+        "assertion_type": "EXECUTED_JAVASCRIPT_OUTPUT_CONTRACT"
       }
-    ]
+    ],
+    "method": "single-analyst authored synthetic decisions and executed JavaScript assertions; NOT model-host behavior"
   },
   "qualification_limits": {
     "independent_agent_host_runs": 0,
