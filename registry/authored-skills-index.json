@@ -378,22 +378,27 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/decision-record-steward.yaml",
       "verification_path": "registry/verification/local-skills/decision-record-steward.yaml",
-      "skill_blob_sha": "ef0ae9791df3cbf69b0f9445807240188a17f130",
-      "package_tree_sha": "992a7db63ea585fc939802dfac1f3cd76abe98a3",
+      "skill_blob_sha": "d9005c5c1b3fbed122a52d106104dbee02b5a165",
+      "package_tree_sha": "56b32d80412fbae75f05914e992156f081d8ce05",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
-      "host_authority": "read-only",
+      "host_authority": "mutating",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently drafted text and original synthetic examples. Legacy comparator: skills/decision-log/SKILL.md; its underlying authorship and rights are not proven. Seven-word overlap absent in compared source pairs, not a copyright determination.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/747",
+      "package_version": "1.1.0",
       "capability_paths": [
         "planning/decision-frameworks",
         "business/governance"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-four-capability-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-four-capability-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "ef0ae9791df3cbf69b0f9445807240188a17f130",
+      "previous_reviewed_package_tree_sha": "992a7db63ea585fc939802dfac1f3cd76abe98a3",
+      "review_note": "Exact current three-file static source review docs/reviews/2026-11-18-decision-connector-parity-v1-1.md; host behavior and 1.5x effectiveness not proven.",
+      "default_authority": "read-only",
+      "authority_note": "Optional approved append/create of decision record; never automatic, verified readback required."
     },
     {
       "id": "agent-workspace-footprint-assessor",
@@ -445,8 +450,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/connector-capability-risk-review.yaml",
       "verification_path": "registry/verification/local-skills/connector-capability-risk-review.yaml",
-      "skill_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
-      "package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "skill_blob_sha": "8a926f202b9fa94e06ca29a7b86826445d1a08ab",
+      "package_tree_sha": "864c622d0276f4efbe47d5b5ba21b23efbebbf29",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -454,13 +459,16 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independent new text; historical comparator skills/mcp-vetting/SKILL.md has uncertain original authorship and rights. Seven-word overlap comparison 0, not proof of legal distinctness.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/747",
+      "package_version": "1.1.0",
       "capability_paths": [
         "agent-mcp-development/mcp-clients-servers",
         "security/supply-chain"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
+      "previous_reviewed_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "review_note": "Exact current three-file static source review docs/reviews/2026-11-18-decision-connector-parity-v1-1.md; host behavior and 1.5x effectiveness not proven."
     },
     {
       "id": "privilege-exposure-mapper",

@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Planning & Productivity
   display-name: Decision Record Steward
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -42,11 +42,67 @@ maker **actually authorized** from an analyst's proposed reasoning.
 7. After any approved mutation, read back the record and verify its identity,
    content and revision. Report a failed write as failed.
 
+## Durable decision-log operation
+
+When the user specifically requests decision logging or a
+lightweight decision record, offer a recognizable, complete entry
+with a verified local-calendar date, one-sentence approved choice,
+owner, decision context, actually considered alternatives, the
+recorded reason, the intended scope and a revisit date or
+`REVISIT_NOT_SET`. Never infer rejected alternatives or attribute
+the analyst's argument to the decider.
+
+If the user has named a specific approved record store, use that
+destination only. A suggested relative Markdown path is a
+**proposal**, not permission to explore file systems or create a
+repository. Present the exact entry and destination for review
+before any write. A new record must be **append-only**: do not
+overwrite prior decisions, silently insert text into older entries
+or erase history to reconcile conflicts. If an earlier decision was
+replaced, create a new entry referencing its identity, with the
+actor/date and actual supersession authority.
+
+An approved append or initial log creation requires a real
+independently controlled host write capability, target authorization
+and a post-write readback of record identity, content and revision.
+An API acknowledgement without accessible durable record evidence
+is ATTEMPTED, not SAVED. If write capability is unavailable,
+return a ready-to-copy entry and `PERSISTENCE_NOT_VERIFIED`.
+This mode has **optional mutating authority** by explicit approval,
+while drafting and reviewing remain read-only.
+
+## Decision revisit views
+
+For a request to review upcoming decisions, bind the approved
+log, relevant interval and actual timezone/current date. Parse
+**owner-approved explicit revisit dates** separately from
+conditional review triggers. Show at least these distinct groups:
+
+- **Overdue:** active records with dated review windows already
+  elapsed, preserving original decision ID and due date.
+- **Upcoming:** active dated records due within the requested
+  planning horizon; absent user instruction, present the next
+  30 local-calendar days as an explicitly chosen default.
+- **Event-dependent:** decisions whose review is triggered by a
+  defined condition, only if that condition is actually evidenced.
+- **Unscheduled or uncertain:** entries with no authorized date,
+  unreadable metadata, disputed owner or unresolved status.
+- **Superseded:** retain as historical trace, excluding from the
+  active due queue unless a specific residual obligation exists.
+
+A past deadline is not proof a decision has been revisited; a
+missing revisit date is not grounds to invent one. The effective
+time of a decision and its review deadline are different fields.
+The view itself cannot create reminders, scheduled tasks, owner
+messages or new deadlines. An event-based rule remains a
+condition, not a guessed due date.
+
 ## Portable output
 
 `decision_id; status; owner; decision; effective_at; scope; source;
 rationale_confirmed; alternatives_recorded; conditions; completion_test;
-revisit_trigger; supersedes; uncertainty; evidence`.
+revisit_trigger; revisit_by_date_or_NOT_SET; supersedes;
+uncertainty; evidence; persistence_status`.
 For a revisit audit, show active, superseded, contested and due-by-event
 records separately, using the view authorized for that audience.
 
