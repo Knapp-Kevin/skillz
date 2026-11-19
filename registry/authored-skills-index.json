@@ -409,22 +409,27 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/agent-workspace-footprint-assessor.yaml",
       "verification_path": "registry/verification/local-skills/agent-workspace-footprint-assessor.yaml",
-      "skill_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
-      "package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "skill_blob_sha": "64e86c622b7242a6f0cd7f4489ce2525473fcfb2",
+      "package_tree_sha": "8437369eaa92cecd6ce036ce4733f8e132f8caee",
       "package_file_count": 3,
       "review_status": "verified-static",
-      "review_score": "17/20",
+      "review_score": "18/20",
       "behavioral_validation": "not-run",
-      "host_authority": "read-only",
+      "host_authority": "mutating",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independent new text; historical comparator skills/agent-home-doctor/SKILL.md has uncertain original authorship and rights. Seven-word overlap comparison 0, not proof of legal distinctness.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/746",
+      "package_version": "1.1.0",
       "capability_paths": [
         "software-engineering/maintenance",
         "agent-mcp-development/agent-observability"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
+      "previous_reviewed_package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "review_note": "Exact three-file v1.1 static source review docs/reviews/2026-11-18-agent-home-privilege-parity-v1-1.md; behavioral parity and 1.5x NOT PROVEN",
+      "default_authority": "read-only",
+      "authority_note": "Optional filesystem move/delete/config edit only after exact-object user consent and suitable host operation; never from audit request."
     },
     {
       "id": "connector-capability-risk-review",
@@ -471,8 +476,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/privilege-exposure-mapper.yaml",
       "verification_path": "registry/verification/local-skills/privilege-exposure-mapper.yaml",
-      "skill_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
-      "package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "skill_blob_sha": "2e07c2ff66fd6af2a55866d5b96c3bb877fb138f",
+      "package_tree_sha": "0bcb42382d152636c4b9f7c6c70367eb52633740",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -480,13 +485,16 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independent new text; historical comparator skills/permissions-review/SKILL.md has uncertain original authorship and rights. Seven-word overlap comparison 0, not proof of legal distinctness.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/746",
+      "package_version": "1.1.0",
       "capability_paths": [
         "security/identity-access",
         "agent-mcp-development/permissions"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
+      "previous_reviewed_package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "review_note": "Exact three-file v1.1 static source review docs/reviews/2026-11-18-agent-home-privilege-parity-v1-1.md; behavioral parity and 1.5x NOT PROVEN"
     },
     {
       "id": "scheduled-work-proof-auditor",
