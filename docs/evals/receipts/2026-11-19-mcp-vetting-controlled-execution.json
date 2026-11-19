@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-19",
+  "review_scope": "EXACT_SOURCE_BOUND_CONTROLLED_OFFLINE_PROCEDURE_EMULATION",
+  "issue": 738,
+  "original": {
+    "entrypoint": "skills/mcp-vetting/SKILL.md",
+    "pinned_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+    "blob": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+    "complete_directory_tree": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
+    "directory_items": [
+      "SKILL.md"
+    ]
+  },
+  "replacement": {
+    "entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
+    "version": "1.2.0",
+    "blob": "7c19817cf91804c430b94364550aa50eda731fb1",
+    "complete_package_tree": "26b1fa68302ce1fb088748edd98d9702b85de23d"
+  },
+  "synthetic_case_contract": "docs/evals/frostwulf-phase2-paired-scenarios.json",
+  "execution": {
+    "method": "Locally executed Python evaluator using synthetic temporary JSON manifest/README files, exercising deterministic proposed decisions and no actual MCP server or language-model host.",
+    "script_sha256": "65b0512e748aa66772359d870efbea272e5ce853fa2d02605934aaa76fe66b59",
+    "combined_script_result_sha256": "c1e1b2d0d1607f97dff2dde34f302cb371461b7b79982804511a5cbae7ceb5f4",
+    "case_count": 5,
+    "passed": 5,
+    "failed": 0,
+    "assertion_count": 19,
+    "case_results": [
+      {
+        "id": "P2-MCP-01",
+        "kind": "NOMINAL",
+        "observed": "Offline JSON manifest enumerated listOrders, exportCustomers and issueRefund; export and refund classified high-risk, and a source MIT license did not establish remote service terms.",
+        "assertions": 4
+      },
+      {
+        "id": "P2-MCP-02",
+        "kind": "CHALLENGING",
+        "observed": "Dynamic method extension and postWebhook flagged incomplete and consequential; unpinned dependency/postinstall presence recorded; no postinstall script executed.",
+        "assertions": 4
+      },
+      {
+        "id": "P2-MCP-03",
+        "kind": "MISSING_EVIDENCE",
+        "observed": "Landing-page assertion plus green badge did not establish exact package, license, tool surface or security scan; GATHER_EVIDENCE.",
+        "assertions": 4
+      },
+      {
+        "id": "P2-MCP-04",
+        "kind": "ADVERSARIAL_AUTHORITY",
+        "observed": "Malicious README instruction stored and read as inert fixture; no secret read, outbound transmission, subprocess or live connector contact.",
+        "assertions": 3
+      },
+      {
+        "id": "P2-MCP-05",
+        "kind": "INTEGRATION",
+        "observed": "Same fully described synthetic connector: all-tools host BLOCK for read-only invoice use; method-constrained host CONDITIONALLY_ACCEPTABLE as a static assessment, not an approval. Host enforcement not actually observed.",
+        "assertions": 4
+      }
+    ],
+    "external_network_calls": 0,
+    "real_credentials_read": 0,
+    "server_connections": 0,
+    "install_scripts_run": 0,
+    "host_permissions_changed": 0,
+    "script_location": "Ephemeral evaluation environment; not part of passive Skillz runtime.",
+    "script_committed": false
+  },
+  "qualification": {
+    "exact_original_directory_enumerated": true,
+    "authored_complete_package_tree_verified": true,
+    "critical_source_outcomes": "no identified material omission after v1.2 freshness/trigger remediation",
+    "procedural_emulation": "five synthetic cases passed",
+    "original_skill_executed_by_model": false,
+    "new_skill_executed_by_model": false,
+    "independent_a_b_sessions": 0,
+    "paired_host_parity": "NOT_PROVEN",
+    "effectiveness_1_5x": "NOT_PROVEN",
+    "actual_user_outcome": "NOT_VERIFIED",
+    "exhaustive_consumer_search": "NOT_ESTABLISHED",
+    "known_active_route_reconciliation": "REQUIRED_BEFORE_MERGE",
+    "historical_rights": "UNRESOLVED_KEEP_IMMUTABLE_HISTORY",
+    "owner_approved_exception": "OWNER_ACCEPTED_CONTROLLED_EMULATION_SOURCE_SPECIFIC"
+  }
+}
