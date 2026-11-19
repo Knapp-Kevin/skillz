@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Technology Change Intelligence
-  version: 1.2.2
+  version: 1.2.3
   license: MIT
 ---
 
@@ -96,7 +96,7 @@ For each selected named profile, use the bundled [specialist source-acquisition 
 
 ## Required report
 
-For selected profiles, preserve the distinct sections plus the specialist closure from `references/specialist-execution-gates.md`: a supported decision now, relevant target verdict when authorized, specific safe verification next, patterns or contradictions if evidenced, and lane-by-lane `NOT_CHECKED` disclosure. A generic event table by itself is insufficient.
+For selected profiles, preserve the distinct sections plus the specialist closure from `references/specialist-execution-gates.md`: a supported decision now, relevant target verdict when authorized, specific safe verification next, patterns or contradictions if evidenced, and lane-by-lane `NOT_CHECKED` disclosure. A generic event table by itself is insufficient. For a broad GitHub repository discovery digest, put a compact categorized candidate scan first: one evidence-qualified line per repository by default, then up to three investigation leads. Carry source dates, status and licensing uncertainty in those lines or a concise appendix; do not duplicate a bulky event table before the user-facing digest. On a request for deep analysis, preserve full evidence without an artificial output cap.
 
 
 Header: `user-stated interests or one-off topic; route (profile or AD_HOC_TOPIC); profile status (EPHEMERAL / DRAFT_UNSAVED / user-confirmed-in-session / verified persisted); observed_at; event_window; intended decision; source access limitations`.
