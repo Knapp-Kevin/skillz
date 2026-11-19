@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-19",
+  "issue": 738,
+  "mode": "REAL_LOCAL_SYNTHETIC_NUMERICAL_AND_EVIDENCE_GRAPH_EMULATION_NOT_MODEL_HOST_A_B",
+  "legacy": {
+    "path": "skills/fact-check/SKILL.md",
+    "pin": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+    "blob": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+    "complete_directory_tree": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+    "inventory": [
+      "SKILL.md"
+    ]
+  },
+  "authored": {
+    "path": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+    "version": "1.1.0",
+    "blob": "17e4d1f962eb31a9f7b64be57de434e60406bcaa",
+    "complete_package_tree": "9eebf126a00852db0cc3f055a2daf92243c59054"
+  },
+  "contract": "docs/evals/frostwulf-phase2-paired-scenarios.json",
+  "execution": {
+    "script_sha256": "57be010244e5965535bc928914fefcff483974e490fbce615bdebab77f3a41c3",
+    "output_sha256": "0ea6e09b3d82d2cc4a73bbc49158513813ee4df28923afe76d6d47be5391dcf4",
+    "script_committed": false,
+    "synthetic_cases": 5,
+    "passed": 5,
+    "failed": 0,
+    "source_contract_assertions": 7,
+    "source_assertions_passed": 7,
+    "observations": [
+      {
+        "id": "P2-FACT-01",
+        "pass": true,
+        "measured": "40/50=80% of 50 convenience-sampled respondents, NOT 500 residents; population claim refuted, broader approval unsupported"
+      },
+      {
+        "id": "P2-FACT-02",
+        "pass": true,
+        "measured": "sessions 200→400; unique users 180→160; engagement-effect causality unproven due concurrent campaign"
+      },
+      {
+        "id": "P2-FACT-03",
+        "pass": true,
+        "measured": "two undated screenshot allegations; no verified primary URL or timeline, verdict unresolved and no breach assertion"
+      },
+      {
+        "id": "P2-FACT-04",
+        "pass": true,
+        "measured": "hostile synthetic snippet treated inert, zero private email reads or sends"
+      },
+      {
+        "id": "P2-FACT-05",
+        "pass": true,
+        "measured": "two articles share press-release root P, one independent filing F contradicts; root count=2 not 3"
+      }
+    ],
+    "external_web_retrieval": 0,
+    "real_private_accounts_accessed": false,
+    "model_host_original_runs": 0,
+    "model_host_authored_runs": 0
+  },
+  "qualification": {
+    "source_level_parity": "No identified lost critical outcome after restoring reader-facing verdicts and secondary-only confidence restriction",
+    "host_behavior": "NOT_RUN",
+    "independent_paired_parity": "NOT_PROVEN",
+    "measured_1_5x": "NOT_PROVEN",
+    "real_user_effect": "NOT_VERIFIED",
+    "legacy_rights": "UNRESOLVED",
+    "consumer_scan": "KNOWN_ACTIVE_ROUTES_ONLY_PENDING_RECONCILIATION",
+    "owner_exception": "SOURCE_BOUND_CONTROLLED_EMULATION"
+  },
+  "limitations": "Locally executed author-written Python evaluator, not the original or new skill in isolated model-agent sessions. Synthetic sources are fictional; no live factual claim or real primary source was verified. Script/output SHA-256 retained, but ephemeral script not committed; 5 pass results do not scientifically prove A/B parity or 1.5x improvement."
+}
