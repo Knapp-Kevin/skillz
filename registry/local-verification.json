@@ -1267,11 +1267,11 @@
       "skill_name": "technology-change-intelligence",
       "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
-      "complete_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "content_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
+      "complete_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "rubric_score": "18/20",
+      "rubric_score": "19/20",
       "tags": {
         "use_case": [
           "research",
@@ -1294,7 +1294,10 @@
           "high"
         ]
       },
-      "notes": "Original six-file MIT package with 17 routed profiles. docs/reviews/2026-11-18-technology-change-intelligence-static-review.md. Behavioral validation NOT RUN; underlying legacy rights unresolved."
+      "notes": "v1.2 nine-file standalone first-party TCI package. Source-specific subscriber intake, 17 existing profiles preserved, open-ended ad-hoc topic discovery; 17/17 structural assertions, 12 synthetic analyst decision cases; links all package local. Static review: docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md. No verified account, subscribers, recurrence, model-host parity, 1.5x improvement or rights transfer.",
+      "previous_content_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
+      "previous_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "agent-failure-boundary-analysis",

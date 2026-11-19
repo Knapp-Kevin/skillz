@@ -23,6 +23,10 @@ repository's `docs/`, a live URL or sibling skills. See
 [diagnostic decision scaffold](ci-guard/components/diagnostic-paths.md).
 This is a static design change, not measured cross-model validation.
 
+## 2026-11-19: Technology Change Intelligence v1.2 subscriber-interest intake
+
+[Technology Change Intelligence v1.2](technology-change-intelligence/SKILL.md) now opens broad discovery requests with one useful interest-and-purpose question, immediately serves specific one-off requests, allows portable **unsaved** preference drafts, and covers unfamiliar technologies through a bundled `AD_HOC_TOPIC` route. Existing 17 specialist profile contracts remain intact. [Exact nine-file offline-closure review](../../docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md) recorded 17/17 source/link checks and 12/12 analyst synthetic decision assertions. **No** real account, recurring subscription, memory write, scheduled delivery, host-model parity or proven improvement is claimed. Source-rights and user authorization limits are unchanged.
+
 ## 2026-11-19: CI assurance and focused delivery components
 
 - [CI Guard](ci-guard/SKILL.md) (v1.2, original MIT): three specialist components for threat/detection analysis and CI placement/experiments, plus ten adversarial scenarios. Indexed under `cloud-devops/ci-cd` and `software-engineering/maintenance`.
@@ -50,7 +54,7 @@ are under MIT; exact source and tree fingerprints are in the
 - [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) · agent-mcp-development/mcp-clients-servers, security/supply-chain · 18/20 static, host behavior NOT RUN
 - [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) · security/identity-access, agent-mcp-development/permissions · 18/20 static, host behavior NOT RUN
 - [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) · agent-mcp-development/agent-observability, time-productivity/scheduling · 17/20 static, host behavior NOT RUN
-- [Technology Change Intelligence](technology-change-intelligence/SKILL.md) · research/source-discovery, research/synthesis · 18/20 static, host behavior NOT RUN
+- [Technology Change Intelligence v1.2](technology-change-intelligence/SKILL.md) · research/source-discovery, research/synthesis · 19/20 exact-package static, host behavior NOT RUN
 - [Agent Failure Boundary Analysis](agent-failure-boundary-analysis/SKILL.md) · agent-mcp-development/evaluation, security/incident-response · 18/20 static, host behavior NOT RUN
 - [Decision Tradeoff Workbench](decision-tradeoff-workbench/SKILL.md) · planning/decision-frameworks, business/strategy · 18/20 static, host behavior NOT RUN
 - [Research Question Dossier](research-question-dossier/SKILL.md) · research/synthesis, research/source-discovery · 18/20 static, host behavior NOT RUN
@@ -65,7 +69,7 @@ are under MIT; exact source and tree fingerprints are in the
 - [Work Period Evidence Reporter v1.2](work-period-evidence-reporter/SKILL.md) · communication/organizational-communication, time-productivity/collaboration · 18/20 static, 10 controlled synthetic report cases, host A/B NOT RUN
 
 All 21 packages passed bounded direct **static text/package review**
-(17–18/20); host-agent behavior, independent functional equivalence,
+(17–19/20); host-agent behavior, independent functional equivalence,
 and downstream reference-migration acceptance remain NOT RUN.
 [The migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
 and [functional/retirement gap audit](../../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
