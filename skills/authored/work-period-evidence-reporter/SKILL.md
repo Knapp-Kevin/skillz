@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Communication
   display-name: Work Period Evidence Reporter
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -128,6 +128,44 @@ Weekly: dated interval, Shipped / Stalled / Decisions / Carry-forward,
 with acceptances, frank uncertainty, prioritized next-period actions,
 and a portable planning handoff. The report should fit the audience
 without inventing status, source access or saved tasks.
+
+## Explicit work-period handoff and optional schedule boundary
+
+For the weekly mode, format the final **Carry-forward** list as a reusable
+Monday starting list suitable for direct intake by the first approved
+daily-briefing or planning workflow. Preserve each item's verified owner,
+current evidence/status, next concrete action, priority, acceptance gate,
+and unresolved blocker. A portable handoff is an output artifact, not a
+promise that a separate planner has consumed it. Never create a second
+persistent copy, calendar event or memory record merely to make a
+handoff "durable".
+
+For a daily standup request, default the interval to **the beginning of
+the previous local workday through the reporting moment**, unless the
+user supplies another interval or an authorized earlier standup marker.
+Never assume yesterday's records were actually consulted. Separate
+completed work from activity in a branch, and put ambiguous work into
+Needs confirmation, not Did.
+
+Scheduling remains optional and must not be initiated by merely asking
+for one daily or weekly report. If the user explicitly asks for a
+recurring report, return a **host-managed scheduling proposal**, not an
+unverified "scheduled" claim. Before an external host can create or
+modify a real recurring task, obtain separate exact approval for:
+frequency and timezone; start/expiry; future authorized project, repo,
+task and calendar sources; recipients and delivery destination; retention;
+cost/usage; and pause/revocation controls. Persistent source access
+and sending are separate grants, even if the report format is approved.
+Only a host with a real independently governed scheduler can execute
+such an approved request; report actual persisted scheduler identity
+and readback before claiming the automation exists. When not actually
+configured, write SCHEDULING_NOT_CONFIGURED.
+
+When an output is requested for an external channel such as Slack,
+provide a ready-to-review draft only. Sending or posting requires
+separate explicit approval and an available authorized host action.
+Never infer that the audience permits exposing private calendar events,
+secret-bearing commit text or third-party personnel details.
 
 ## Boundaries
 No cross-project hidden scanning, external posting, project edits,
