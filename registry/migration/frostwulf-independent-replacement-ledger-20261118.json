@@ -7,12 +7,12 @@
   "policy": "Replacement work must originate from independently specified capability requirements and unique expression. Do not copy distinctive legacy text, source examples, code or protected assets. Maintain legacy files until every replacement is separately reviewed, indexed and accepted.",
   "counts": {
     "legacy_candidates": 44,
-    "independent_drafts": 15,
+    "independent_drafts": 21,
     "independent_drafts_reviewed": 9,
     "legacy_removed": 0,
-    "legacy_functions_addressed": 33,
+    "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
-    "replacement_packages": 15
+    "replacement_packages": 21
   },
   "rows": [
     {
@@ -88,9 +88,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/decision-log/SKILL.md",
@@ -106,9 +107,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/deep-dive/SKILL.md",
@@ -135,9 +137,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/fact-check/SKILL.md",
@@ -223,9 +226,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/inference-pulse/SKILL.md",
@@ -252,9 +256,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/learning-evidence-progression/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "one_to_one"
     },
     {
       "legacy_entrypoint": "skills/llama-pulse/SKILL.md",
@@ -358,18 +363,20 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/session-continuity/SKILL.md",
@@ -386,27 +393,30 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/business-presence-observatory/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "one_to_one"
     },
     {
       "legacy_entrypoint": "skills/standup-writer/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/task-surface/SKILL.md",
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/todo-harvester/SKILL.md",
@@ -422,9 +432,10 @@
       "legacy_attribution": "frostwulf.zo.computer",
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
-      "replacement_entrypoint": null,
-      "replacement_status": "capability_outcome_design_pending",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "replacement_status": "original_draft_static_review_pending",
+      "legacy_disposition": "retain_pending_replacement_acceptance",
+      "replacement_mode": "multiple_bounded_modes"
     },
     {
       "legacy_entrypoint": "skills/xai-pulse/SKILL.md",
