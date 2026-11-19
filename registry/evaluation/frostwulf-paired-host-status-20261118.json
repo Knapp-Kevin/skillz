@@ -9,17 +9,18 @@
     "historical_entrypoints": 44,
     "authored_replacements": 21,
     "required_paired_case_slots": 220,
-    "scenario_contracts_designed": 20,
-    "scenario_contracts_not_designed": 200,
+    "scenario_contracts_designed": 65,
+    "scenario_contracts_not_designed": 155,
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 0
+    "legacy_retirements_approved": 0,
+    "historical_entrypoints_pinned": 44
   },
   "entries": [
     {
       "legacy_entrypoint": "skills/agent-home-doctor/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "3415f1f4bb72afc44266706be649c3950f809337",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -75,7 +76,20 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/agent-postmortem/SKILL.md",
@@ -135,11 +149,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/automation-receipts/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -152,54 +179,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-automation-receipts-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-AUTOMATION-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-AUTOMATION-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-automation-receipts-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-AUTOMATION-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-AUTOMATION-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-automation-receipts-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-AUTOMATION-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-AUTOMATION-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-automation-receipts-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-AUTOMATION-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-AUTOMATION-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-automation-receipts-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-AUTOMATION-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-AUTOMATION-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/brief-writer/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -255,11 +295,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/career-radar/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/professional-market-evidence-scout/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -315,11 +368,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/claude-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -375,11 +441,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/compare/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -435,11 +514,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/daily-briefing/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -495,7 +587,20 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/decision-log/SKILL.md",
@@ -555,11 +660,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/deck-outline/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "63c943992417148d010551238a15259d4968cb55",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -615,11 +733,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/deep-dive/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/research-question-dossier/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -675,11 +806,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/deepseek-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -735,11 +879,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/devlog-draft/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "d74ff133f69c8908c4acf296fb93313069082114",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -795,11 +952,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/fact-check/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "d83c43282d525682f3e13b8296111d7fe7de46f0",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/claim-evidence-adjudicator/SKILL.md",
       "replacement_package_version": "1.0.0",
@@ -812,54 +982,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-fact-check-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FACT-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FACT-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-fact-check-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FACT-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FACT-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-fact-check-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FACT-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FACT-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-fact-check-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FACT-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FACT-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-fact-check-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FACT-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FACT-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/finance-review/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "86bdf2f9d6ebca2932612212882f6a915709203d",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/statement-variance-reviewer/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -872,54 +1055,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-finance-review-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FINANCE-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FINANCE-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-finance-review-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FINANCE-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FINANCE-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-finance-review-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FINANCE-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FINANCE-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-finance-review-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FINANCE-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FINANCE-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-finance-review-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-FINANCE-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-FINANCE-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/gemini-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -975,7 +1171,20 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/github-pulse/SKILL.md",
@@ -1035,11 +1244,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/glm-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1095,11 +1317,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/governance-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1155,11 +1390,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/handoff-writer/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "733b8029063ff057051a61bc270cce138f324c7d",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1172,54 +1420,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-handoff-writer-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-HANDOFF-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-HANDOFF-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-handoff-writer-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-HANDOFF-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-HANDOFF-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-handoff-writer-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-HANDOFF-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-HANDOFF-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-handoff-writer-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-HANDOFF-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-HANDOFF-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-handoff-writer-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-HANDOFF-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-HANDOFF-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/hf-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "149e577a9f72895b09aea43d607203d731db1bce",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1275,11 +1536,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/inbox-triage/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "9326d7a691e40ff30a07a71738b13a04117206d6",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1335,11 +1609,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/inference-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1395,11 +1682,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/kimi-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1455,11 +1755,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/learning-plan/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/learning-evidence-progression/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1515,11 +1828,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/llama-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "c0c38b0dd182f1f588d1800b832b331c8572080e",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1575,11 +1901,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/mcp-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1635,11 +1974,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/mcp-vetting/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1652,54 +2004,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-mcp-vetting-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-MCP-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-MCP-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-mcp-vetting-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-MCP-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-MCP-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-mcp-vetting-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-MCP-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-MCP-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-mcp-vetting-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-MCP-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-MCP-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-mcp-vetting-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-MCP-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-MCP-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/memory-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1755,11 +2120,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/mistral-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1815,11 +2193,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/openai-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1875,11 +2266,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/paper-digest/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "8691e648e6c96c986391bdbdf812616c34baef95",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/research-methods-appraiser/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1892,54 +2296,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-paper-digest-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PAPER-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PAPER-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-paper-digest-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PAPER-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PAPER-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-paper-digest-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PAPER-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PAPER-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-paper-digest-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PAPER-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PAPER-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-paper-digest-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PAPER-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PAPER-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/permissions-review/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "18f46840032829963715ec23894f7826dbbfcb77",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/privilege-exposure-mapper/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -1952,54 +2369,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-permissions-review-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PERMISSIONS-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PERMISSIONS-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-permissions-review-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PERMISSIONS-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PERMISSIONS-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-permissions-review-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PERMISSIONS-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PERMISSIONS-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-permissions-review-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PERMISSIONS-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PERMISSIONS-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-permissions-review-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-PERMISSIONS-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-PERMISSIONS-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/perplexity-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "06906792509a41a3a9cbb641e02f47e9fb458a69",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2055,11 +2485,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/qwen-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2115,11 +2558,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/repo-doctor/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2132,54 +2588,67 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-repo-doctor-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-REPO-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-REPO-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-repo-doctor-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-REPO-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-REPO-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-repo-doctor-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-REPO-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-REPO-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-repo-doctor-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-REPO-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-REPO-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-repo-doctor-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-REPO-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-REPO-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "9e6938b29e4c0748e4098bc53a96498f42784423",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2235,11 +2704,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/session-continuity/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "93b8f0be84bdb39153386c27b46294233c39bb8b",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2295,11 +2777,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/smallbiz-ops/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "b7f20b33c81e647ec8ff95ef765beb75867870e2",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/business-presence-observatory/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2355,11 +2850,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/standup-writer/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "21c216fbc46f516fecc0a562afbe652fbd436b95",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2415,11 +2923,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/task-surface/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2432,50 +2953,63 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-task-surface-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-TASK-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-TASK-01",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-task-surface-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-TASK-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-TASK-02",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-task-surface-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-TASK-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-TASK-03",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-task-surface-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-TASK-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-TASK-04",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-task-surface-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P2-TASK-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase2-paired-scenarios.json#P2-TASK-05",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/todo-harvester/SKILL.md",
@@ -2535,11 +3069,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/week-in-review/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2595,11 +3142,24 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/xai-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -2655,7 +3215,23 @@
           "parity": "UNKNOWN",
           "improvement_ratio": null
         }
-      ]
+      ],
+      "retirement_qualification": {
+        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN",
+        "security_no_regression": "NOT_PROVEN",
+        "actual_user_outcome": "NOT_VERIFIED",
+        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
+        "consumer_ref_integrity": "NOT_CHECKED",
+        "owner_evidence_acceptance": "NOT_ESTABLISHED",
+        "eligible_for_retirement": false,
+        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     }
-  ]
+  ],
+  "phase2_fixture": "docs/evals/frostwulf-phase2-paired-scenarios.json",
+  "retirement_policy": "docs/evals/frostwulf-per-source-retirement-gates.md",
+  "historical_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
 }
