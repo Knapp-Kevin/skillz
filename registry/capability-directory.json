@@ -4096,40 +4096,10 @@
     {
       "domain": "time-productivity",
       "display_name": "Time / productivity",
-      "linked_reviewed_examples": 7,
+      "linked_reviewed_examples": 4,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 16,
       "evidence_preview": [
-        {
-          "id": "local-skills/daily-briefing",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/daily-briefing.yaml",
-          "source_class": "local-provenance",
-          "path": "time-productivity/personal-planning",
-          "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
-        },
-        {
-          "id": "local-skills/inbox-triage",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/inbox-triage.yaml",
-          "source_class": "local-provenance",
-          "path": "time-productivity/task-systems",
-          "capability_example": "Triage incoming tasks and coordinate approved task pointers"
-        },
-        {
-          "id": "local-skills/task-surface",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/task-surface.yaml",
-          "source_class": "local-provenance",
-          "path": "time-productivity/task-systems",
-          "capability_example": "Triage incoming tasks and coordinate approved task pointers"
-        },
         {
           "id": "local-skills/scheduled-work-proof-auditor",
           "verification_status": "verified",
@@ -4822,20 +4792,10 @@
     {
       "domain": "finance",
       "display_name": "Finance",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 2,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 2,
       "evidence_preview": [
-        {
-          "id": "local-skills/finance-review",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/finance-review.yaml",
-          "source_class": "local-provenance",
-          "path": "finance/reporting",
-          "capability_example": "Review financial statements and trace conclusions to reported rows"
-        },
         {
           "id": "local-skills/healthcare-contract-forensics",
           "verification_status": "verified",
@@ -5040,7 +5000,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1051,
+  "governed_identity_denominator": 1047,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -26972,7 +26932,6 @@
             "Create a scope-bound daily and inbox action board with explicit write approval."
           ],
           "matched_skill_ids": [
-            "local-skills/daily-briefing",
             "local-skills/personal-operations-control-board",
             "local-skills/learning-evidence-progression"
           ],
@@ -26999,8 +26958,6 @@
             "Create a scope-bound daily and inbox action board with explicit write approval."
           ],
           "matched_skill_ids": [
-            "local-skills/inbox-triage",
-            "local-skills/task-surface",
             "local-skills/personal-operations-control-board"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -30587,7 +30544,6 @@
             "Reconcile authorized statement rows before claiming period variance or anomalies."
           ],
           "matched_skill_ids": [
-            "local-skills/finance-review",
             "local-skills/healthcare-contract-forensics",
             "local-skills/statement-variance-reviewer"
           ],
@@ -30662,7 +30618,7 @@
             "Explain statement changes and financial context without investment or tax advice"
           ],
           "matched_skill_ids": [
-            "local-skills/finance-review"
+            "local-skills/statement-variance-reviewer"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -33304,32 +33260,6 @@
       "notes": "Exact new v1.2 full package verified; synthetic source-bound assessment only, no independently observed model-host behavior or measured 1.5x improvement."
     },
     {
-      "id": "local-skills/daily-briefing",
-      "source_id": "local-skills",
-      "skill_name": "daily-briefing",
-      "content_blob_sha": "64ee4849a7a06860d8f6ddbd23ae5d42591ffee1",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "time-productivity/personal-planning"
-      ],
-      "evidence_path": "registry/verification/local-skills/daily-briefing.yaml",
-      "skill_path": "skills/daily-briefing/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/daily-briefing.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "productivity",
-        "planning"
-      ],
-      "notes": "Action-first synthesis with explicit source authority and read-only messaging/calendar boundary; usefulness depends on host access to several context surfaces.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/decision-record-steward",
       "source_id": "local-skills",
       "skill_name": "decision-record-steward",
@@ -33513,34 +33443,6 @@
       "unchanged_use_approved": false
     },
     {
-      "id": "local-skills/finance-review",
-      "source_id": "local-skills",
-      "skill_name": "finance-review",
-      "content_blob_sha": "86bdf2f9d6ebca2932612212882f6a915709203d",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "finance/reporting",
-        "finance/financial-literacy"
-      ],
-      "evidence_path": "registry/verification/local-skills/finance-review.yaml",
-      "skill_path": "skills/finance-review/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/finance-review.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "business-operations",
-        "decision-support",
-        "evaluation"
-      ],
-      "notes": "Read-only statement analysis now resolves safe host parsing directly, preserves row traceability, and avoids dependency on a rejected vendored spreadsheet skill.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/gemini-pulse",
       "source_id": "local-skills",
       "skill_name": "gemini-pulse",
@@ -33697,33 +33599,6 @@
         "research"
       ],
       "notes": "Good cross-vendor open-model monitoring with tool fallback and explicit trending-not-quality rule; scope is intentionally digest-oriented.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
-      "id": "local-skills/inbox-triage",
-      "source_id": "local-skills",
-      "skill_name": "inbox-triage",
-      "content_blob_sha": "c265af7280a9819ae1fc80292ba24a77c2b28ccd",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "time-productivity/task-systems"
-      ],
-      "evidence_path": "registry/verification/local-skills/inbox-triage.yaml",
-      "skill_path": "skills/inbox-triage/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/inbox-triage.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only",
-        "generate-only"
-      ],
-      "use_case_tags": [
-        "productivity",
-        "communication"
-      ],
-      "notes": "Clear four-pile classification, urgency handling, and strict no-send/no-archive boundary; requires connected Gmail read capability and user review for any later mutation.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
@@ -34373,7 +34248,8 @@
       "static_score": "17/20",
       "capability_paths": [
         "finance/reporting",
-        "finance/budgeting"
+        "finance/budgeting",
+        "finance/financial-literacy"
       ],
       "evidence_path": "registry/verification/local-skills/statement-variance-reviewer.yaml",
       "skill_path": "skills/authored/statement-variance-reviewer/SKILL.md",
@@ -34387,34 +34263,6 @@
       "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
-    },
-    {
-      "id": "local-skills/task-surface",
-      "source_id": "local-skills",
-      "skill_name": "task-surface",
-      "content_blob_sha": "97f1ba0b23f3f70da1e39504a1966a3cebd79398",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "time-productivity/task-systems"
-      ],
-      "evidence_path": "registry/verification/local-skills/task-surface.yaml",
-      "skill_path": "skills/task-surface/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/task-surface.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "mutating",
-        "external-side-effect"
-      ],
-      "use_case_tags": [
-        "productivity",
-        "planning",
-        "orchestration"
-      ],
-      "notes": "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
       "id": "local-skills/technology-change-intelligence",
@@ -34607,13 +34455,13 @@
       "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 135,
+  "identity_level_capability_links_mapped": 131,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 56,
-    "known_total_governed_review_records": 1051,
+    "known_first_party_skill_records": 52,
+    "known_total_governed_review_records": 1047,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34670,18 +34518,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 56,
+  "first_party_identity_links_mapped": 52,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 56,
+    "mapped_first_party_distinct": 52,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 135,
+    "mapped_total_distinct": 131,
     "subdomains_with_evidence_linked_examples": 88,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "18 individually risk-accepted controlled historical retirements; 26 active historical originals. Independent host parity and exhaustive consumer scan unproven.",
+    "note": "22 separately risk-accepted controlled historical retirements and 22 historical originals active. Host A/B parity and exhaustive consumer scanning not proven.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -34931,7 +34779,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 18,
+    "legacy_retired": 22,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -34939,7 +34787,7 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 26
+    "legacy_remaining": 22
   },
   "delivery_effectiveness_extension_20261119": {
     "date": "2026-11-19",
