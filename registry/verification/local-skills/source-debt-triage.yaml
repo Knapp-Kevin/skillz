@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: source-debt-triage
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/source-debt-triage/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/source-debt-triage/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 79ab882e03287c47b6c62dea44c5f20001d32f2d
-complete_package_tree_sha: d6a7246d40172b41e20a93025ccc4efa91aa41e2
+content_blob_sha: fdd0f7d5b4e3996e6bd440751385ee537ca100c0
+complete_package_tree_sha: bb92a4ea4130ca50c0b110d96ab439f1498d741f
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
@@ -24,6 +24,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Original instruction text and synthetic cases, complete three-file identity
-  confirmed. Legacy comparator rights and original authorship unproven.
-  docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No global novelty or external behavior claim.
+  Exact three-file v1.1 static review 18/20: docs/reviews/2026-11-18-source-debt-parity-v1-1.md.
+  Original predecessor is retained; #737 retirement HOLD remains in force.
+  Host behavior not run; 1.5x effectiveness not proven.
