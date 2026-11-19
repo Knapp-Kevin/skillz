@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 11,
+    "legacy_removed": 13,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 33
+    "legacy_remaining": 31
   },
   "rows": [
     {
@@ -526,8 +526,20 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "5_analyst_emulated_source_bound_report_cases_passed_per_original_not_independent_model_host",
+      "retirement_snapshot_commit": "e410dd6dc4280d34504a22c6fdbe3a3f18833dd9",
+      "retirement_source_blob": "21c216fbc46f516fecc0a562afbe652fbd436b95",
+      "retirement_source_tree": "d6429bfea7bebe567aa52f7c5f1f6c44fd10086f",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/e410dd6dc4280d34504a22c6fdbe3a3f18833dd9/skills/standup-writer/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json",
+      "retirement_review": "docs/reviews/2026-11-19-work-period-two-mode-retirement.md",
+      "retirement_scope": "COMPLETE_ONE_FILE_HISTORICAL_TREE_PINNED",
+      "current_active_reference": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
+      "retirement_behavioral_claim": "SELF_ADJUDICATED_SYNTHETIC_REPORTS_NOT_INDEPENDENT_HOST_AB; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/task-surface/SKILL.md",
@@ -566,8 +578,20 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "5_analyst_emulated_source_bound_report_cases_passed_per_original_not_independent_model_host",
+      "retirement_snapshot_commit": "e410dd6dc4280d34504a22c6fdbe3a3f18833dd9",
+      "retirement_source_blob": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
+      "retirement_source_tree": "81646a594bf994e24899f7a086d86459cfaa5832",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/e410dd6dc4280d34504a22c6fdbe3a3f18833dd9/skills/week-in-review/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json",
+      "retirement_review": "docs/reviews/2026-11-19-work-period-two-mode-retirement.md",
+      "retirement_scope": "COMPLETE_ONE_FILE_HISTORICAL_TREE_PINNED",
+      "current_active_reference": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
+      "retirement_behavioral_claim": "SELF_ADJUDICATED_SYNTHETIC_REPORTS_NOT_INDEPENDENT_HOST_AB; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/xai-pulse/SKILL.md",
