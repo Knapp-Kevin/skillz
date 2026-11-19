@@ -9,8 +9,8 @@
     "historical_entrypoints": 44,
     "authored_replacements": 21,
     "required_paired_case_slots": 220,
-    "scenario_contracts_designed": 145,
-    "scenario_contracts_not_designed": 75,
+    "scenario_contracts_designed": 220,
+    "scenario_contracts_not_designed": 0,
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
@@ -37,45 +37,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-agent-home-doctor-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-AGENT_HOME_DOCTOR-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-AGENT_HOME_DOCTOR-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-agent-home-doctor-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-AGENT_HOME_DOCTOR-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-AGENT_HOME_DOCTOR-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-agent-home-doctor-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-AGENT_HOME_DOCTOR-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-AGENT_HOME_DOCTOR-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-agent-home-doctor-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-AGENT_HOME_DOCTOR-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-AGENT_HOME_DOCTOR-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-agent-home-doctor-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-AGENT_HOME_DOCTOR-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-AGENT_HOME_DOCTOR-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -256,45 +256,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-brief-writer-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-BRIEF_WRITER-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-BRIEF_WRITER-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-brief-writer-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-BRIEF_WRITER-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-BRIEF_WRITER-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-brief-writer-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-BRIEF_WRITER-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-BRIEF_WRITER-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-brief-writer-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-BRIEF_WRITER-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-BRIEF_WRITER-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-brief-writer-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-BRIEF_WRITER-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-BRIEF_WRITER-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -329,45 +329,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-career-radar-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-CAREER_RADAR-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-CAREER_RADAR-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-career-radar-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-CAREER_RADAR-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-CAREER_RADAR-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-career-radar-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-CAREER_RADAR-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-CAREER_RADAR-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-career-radar-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-CAREER_RADAR-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-CAREER_RADAR-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-career-radar-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-CAREER_RADAR-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-CAREER_RADAR-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -479,45 +479,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-compare-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-COMPARE-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-COMPARE-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-compare-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-COMPARE-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-COMPARE-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-compare-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-COMPARE-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-COMPARE-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-compare-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-COMPARE-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-COMPARE-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-compare-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-COMPARE-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-COMPARE-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -552,45 +552,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-daily-briefing-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DAILY_BRIEFING-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-DAILY_BRIEFING-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-daily-briefing-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DAILY_BRIEFING-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-DAILY_BRIEFING-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-daily-briefing-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DAILY_BRIEFING-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-DAILY_BRIEFING-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-daily-briefing-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DAILY_BRIEFING-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-DAILY_BRIEFING-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-daily-briefing-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DAILY_BRIEFING-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4a-general-paired-scenarios.json#P4-DAILY_BRIEFING-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -699,45 +699,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-deck-outline-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DECK_OUTLINE-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DECK_OUTLINE-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-deck-outline-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DECK_OUTLINE-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DECK_OUTLINE-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-deck-outline-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DECK_OUTLINE-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DECK_OUTLINE-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-deck-outline-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DECK_OUTLINE-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DECK_OUTLINE-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-deck-outline-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DECK_OUTLINE-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DECK_OUTLINE-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -772,45 +772,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-deep-dive-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEEP_DIVE-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEEP_DIVE-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-deep-dive-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEEP_DIVE-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEEP_DIVE-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-deep-dive-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEEP_DIVE-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEEP_DIVE-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-deep-dive-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEEP_DIVE-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEEP_DIVE-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-deep-dive-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEEP_DIVE-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEEP_DIVE-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -922,45 +922,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-devlog-draft-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEVLOG_DRAFT-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEVLOG_DRAFT-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-devlog-draft-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEVLOG_DRAFT-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEVLOG_DRAFT-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-devlog-draft-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEVLOG_DRAFT-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEVLOG_DRAFT-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-devlog-draft-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEVLOG_DRAFT-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEVLOG_DRAFT-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-devlog-draft-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-DEVLOG_DRAFT-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-DEVLOG_DRAFT-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -1599,45 +1599,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-inbox-triage-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-INBOX_TRIAGE-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-INBOX_TRIAGE-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-inbox-triage-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-INBOX_TRIAGE-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-INBOX_TRIAGE-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-inbox-triage-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-INBOX_TRIAGE-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-INBOX_TRIAGE-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-inbox-triage-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-INBOX_TRIAGE-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-INBOX_TRIAGE-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-inbox-triage-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-INBOX_TRIAGE-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-INBOX_TRIAGE-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -1827,45 +1827,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-learning-plan-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-LEARNING_PLAN-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-LEARNING_PLAN-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-learning-plan-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-LEARNING_PLAN-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-LEARNING_PLAN-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-learning-plan-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-LEARNING_PLAN-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-LEARNING_PLAN-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-learning-plan-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-LEARNING_PLAN-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-LEARNING_PLAN-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-learning-plan-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-LEARNING_PLAN-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json#P4-LEARNING_PLAN-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -2732,45 +2732,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-repo-pulse-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-REPO_PULSE-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-REPO_PULSE-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-repo-pulse-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-REPO_PULSE-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-REPO_PULSE-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-repo-pulse-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-REPO_PULSE-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-REPO_PULSE-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-repo-pulse-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-REPO_PULSE-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-REPO_PULSE-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-repo-pulse-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-REPO_PULSE-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-REPO_PULSE-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -2806,45 +2806,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-session-continuity-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SESSION_CONTINUITY-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SESSION_CONTINUITY-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-session-continuity-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SESSION_CONTINUITY-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SESSION_CONTINUITY-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-session-continuity-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SESSION_CONTINUITY-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SESSION_CONTINUITY-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-session-continuity-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SESSION_CONTINUITY-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SESSION_CONTINUITY-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-session-continuity-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SESSION_CONTINUITY-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SESSION_CONTINUITY-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -2879,45 +2879,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-smallbiz-ops-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SMALLBIZ_OPS-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SMALLBIZ_OPS-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-smallbiz-ops-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SMALLBIZ_OPS-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SMALLBIZ_OPS-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-smallbiz-ops-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SMALLBIZ_OPS-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SMALLBIZ_OPS-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-smallbiz-ops-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SMALLBIZ_OPS-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SMALLBIZ_OPS-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-smallbiz-ops-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-SMALLBIZ_OPS-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-SMALLBIZ_OPS-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -2952,45 +2952,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-standup-writer-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-STANDUP_WRITER-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-STANDUP_WRITER-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-standup-writer-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-STANDUP_WRITER-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-STANDUP_WRITER-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-standup-writer-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-STANDUP_WRITER-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-STANDUP_WRITER-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-standup-writer-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-STANDUP_WRITER-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-STANDUP_WRITER-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-standup-writer-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-STANDUP_WRITER-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-STANDUP_WRITER-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -3172,45 +3172,45 @@
       "cases": [
         {
           "kind": "NOMINAL",
-          "case_id": "PENDING-week-in-review-1",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-WEEK_IN_REVIEW-1",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-WEEK_IN_REVIEW-1",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "CHALLENGING",
-          "case_id": "PENDING-week-in-review-2",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-WEEK_IN_REVIEW-2",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-WEEK_IN_REVIEW-2",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "MISSING_EVIDENCE",
-          "case_id": "PENDING-week-in-review-3",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-WEEK_IN_REVIEW-3",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-WEEK_IN_REVIEW-3",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "ADVERSARIAL_AUTHORITY",
-          "case_id": "PENDING-week-in-review-4",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-WEEK_IN_REVIEW-4",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-WEEK_IN_REVIEW-4",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
         },
         {
           "kind": "INTEGRATION",
-          "case_id": "PENDING-week-in-review-5",
-          "design_status": "NOT_DESIGNED",
-          "case_contract_ref": null,
+          "case_id": "P4-WEEK_IN_REVIEW-5",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json#P4-WEEK_IN_REVIEW-5",
           "host_execution": "NOT_RUN",
           "parity": "UNKNOWN",
           "improvement_ratio": null
@@ -3313,5 +3313,11 @@
   "historical_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
   "known_historical_pulse_source_list_reference": "registry/evaluation/frostwulf-pulse-source-manifests-20261118.json",
   "phase3_fixture": "docs/evals/frostwulf-phase3-technology-pulse-paired-scenarios.json",
-  "last_repin_note": "Two newly reviewed v1.2 authored packages replace previously pinned v1.1 for five historic modes. Ten predesigned phase-two case contracts were re-pinned, not run; historical phase-two static integrity review is retained as evidence for its earlier exact state."
+  "last_repin_note": "Two newly reviewed v1.2 authored packages replace previously pinned v1.1 for five historic modes. Ten predesigned phase-two case contracts were re-pinned, not run; historical phase-two static integrity review is retained as evidence for its earlier exact state.",
+  "phase4_fixtures": [
+    "docs/evals/frostwulf-phase4a-general-paired-scenarios.json",
+    "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json",
+    "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json"
+  ],
+  "design_coverage_status": "COMPLETE_SOURCE_LEVEL_CONTRACTS_NOT_HOST_EXECUTED"
 }
