@@ -558,8 +558,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/technology-change-intelligence.yaml",
       "verification_path": "registry/verification/local-skills/technology-change-intelligence.yaml",
-      "skill_blob_sha": "2df52cd76f95cedbfea7a0dde0576c196371077a",
-      "package_tree_sha": "2c0e27ea8df81a067d60f5e5d4c61f43f308c44a",
+      "skill_blob_sha": "da2ed091777ed05e7ac94454439c3404c824408d",
+      "package_tree_sha": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
       "package_file_count": 11,
       "review_status": "verified-static",
       "review_score": "19/20",
@@ -568,7 +568,7 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently written new six-file package, 17 topic profiles; no old pulse sources, source JSON or text imported. Seventeen corresponding seven-word text comparisons zero matching windows. Neither legal originality nor actual host behavior proven.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/742",
-      "package_version": "1.2.3",
+      "package_version": "1.2.4",
       "capability_paths": [
         "research/source-discovery",
         "research/synthesis"
@@ -576,7 +576,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md",
       "previous_reviewed_skill_blob_sha": "ed57df330a5cf88eec055afc8f1d325247c44742",
       "previous_reviewed_package_tree_sha": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
-      "review_note": "v1.2.3 concise Github discovery rule; exact 11-file static and controlled in-chat output review docs/reviews/2026-11-19-tci-github-density-v1-2-3.md. 85 cases designed; no independent host outcomes or 1.5x."
+      "review_note": "v1.2.4 current exact source static review; MCP capability inventory required before gap/duplicate classification. docs/reviews/2026-11-19-tci-mcp-capability-gate-v1-2-4.md; 85 older-version in-chat emulations do not prove current host parity."
     },
     {
       "id": "agent-failure-boundary-analysis",

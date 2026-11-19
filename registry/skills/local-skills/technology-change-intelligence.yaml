@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: technology-change-intelligence
 display_name: "Technology Change Intelligence"
-skill_version: "1.2.3"
+skill_version: "1.2.4"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/technology-change-intelligence/SKILL.md
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: host-read-only-research
 dependencies: "Complete eleven-file offline standalone package. Public web/repo data optional via authorized host; no backend, subscriber account, private memory or scheduler required."
-content_blob_sha: 2df52cd76f95cedbfea7a0dde0576c196371077a
-complete_package_tree_sha: 2c0e27ea8df81a067d60f5e5d4c61f43f308c44a
+content_blob_sha: da2ed091777ed05e7ac94454439c3404c824408d
+complete_package_tree_sha: 4514fd326d170a49be9f43fcfdcbcd4e2983f8fb
 historical_origin_status: "17 frostwulf.zo.computer pulse sources have unknown underlying human authorship and rights."
 historical_comparison: registry/migration/frostwulf-independent-replacement-ledger-20261118.json
 rights_resolution: "Only separately drafted new source/fixture and profiles under MIT; no copied historical sources or source lists."
 import_eligibility: review-required
-rationale: "v1.2.3 standalone 11-file package static 19/20; concise GitHub discovery style restored, no independent host A/B. docs/reviews/2026-11-19-tci-github-density-v1-2-3.md; historical Pulse originals stay HOLD."
+rationale: "v1.2.4 11-file source review 19/20; MCP gap/duplicate claims require approved capability baseline, no host A/B; docs/reviews/2026-11-19-tci-mcp-capability-gate-v1-2-4.md."
