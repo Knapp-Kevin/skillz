@@ -138,39 +138,6 @@
       "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held."
     },
     {
-      "skill_name": "deep-dive",
-      "local_path": "skills/deep-dive/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "research",
-          "web-search"
-        ],
-        "lifecycle": [
-          "discovery",
-          "verification"
-        ],
-        "characteristic": [
-          "retrieval-first",
-          "source-driven",
-          "evidence-first",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
       "skill_name": "deepseek-pulse",
       "local_path": "skills/deepseek-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -534,38 +501,6 @@
       "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "learning-plan",
-      "local_path": "skills/learning-plan/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "planning",
-          "research",
-          "productivity"
-        ],
-        "lifecycle": [
-          "planning"
-        ],
-        "characteristic": [
-          "source-driven",
-          "evidence-first",
-          "test-gated",
-          "human-review"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run. 2026-11-05 reconciliation: the exact matching individual review is 18/20, not 19/20. No new semantic review occurred; the source and 2026-11-03 individual review date are unchanged."
     },
     {
       "skill_name": "llama-pulse",
@@ -2535,6 +2470,85 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "skill_name": "deep-dive",
+      "local_path": "skills/deep-dive/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "web-search"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "retrieval-first",
+          "source-driven",
+          "evidence-first",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/research-question-dossier",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/deep-dive/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
+    },
+    {
+      "skill_name": "learning-plan",
+      "local_path": "skills/learning-plan/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "planning",
+          "research",
+          "productivity"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "source-driven",
+          "evidence-first",
+          "test-gated",
+          "human-review"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run. 2026-11-05 reconciliation: the exact matching individual review is 18/20, not 19/20. No new semantic review occurred; the source and 2026-11-03 individual review date are unchanged.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/learning-evidence-progression",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/learning-plan/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
     }
   ]
 }

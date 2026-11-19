@@ -5453,7 +5453,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 independent authored packages static reviewed; 15 historical original retirements with scoped controlled emulations; 29 active original entrypoints; no independent paired model-host proof",
+    "status": "21 independently authored packages static reviewed; 17 source-bound historical retirements with controlled emulation; 27 active originals; no independent paired model-host proof",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5485,7 +5485,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 15,
+    "legacy_retired": 17,
     "retirement_status": "fifteen owner-accepted source-bound controlled cases, with no measured 1.5x effectiveness"
   }
 }

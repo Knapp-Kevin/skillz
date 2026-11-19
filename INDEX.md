@@ -197,13 +197,13 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 ## First-party source-family appendix: skills by purpose
 
 ### Planning & Productivity
-`daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, `learning-plan`, `task-surface`, [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
+`daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, [Learning Evidence Progression](skills/authored/learning-evidence-progression/SKILL.md), `task-surface`, [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
 
 ### Writing & Communication
 `brief-writer`, [Evidence Narrative Composer](skills/authored/evidence-narrative-composer/SKILL.md) (deck outlines + devlogs), [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
 
 ### Research & Analysis
-`compare`, `deep-dive`, [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
+`compare`, [Research Question Dossier](skills/authored/research-question-dossier/SKILL.md), [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
 
 ### Software & Repositories
 `repo-doctor`, `repo-pulse`; current original replacement: [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)

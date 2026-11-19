@@ -882,7 +882,9 @@
       "package_version": "1.1.0",
       "capability_paths": [
         "education/curriculum",
-        "education/assessment"
+        "education/assessment",
+        "career/professional-development",
+        "time-productivity/personal-planning"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",

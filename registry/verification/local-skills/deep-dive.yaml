@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Exact-blob static source refresh only. Independent adversarial behavior not-run; external exact-tree SkillSpector 5/5 pass evidence recorded separately on draft #693 is not unchanged-use approval.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Retains prior 19/20 static semantic rationale; repaired source scopes private reads, forbids secret fragments and rejects untrusted retrieved instructions. No host behavioral acceptance performed."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/deep-dive/SKILL.md
+replacement_id: local-skills/research-question-dossier
+retirement_note: "Full historical single-file tree pinned; five analyst synthetic decisions passed, no independent model-host A/B or 1.5x gain; historical rights and exhaustive consumer scan remain unresolved."
