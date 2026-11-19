@@ -33,9 +33,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/deepseek-pulse/SKILL.md",
@@ -60,9 +60,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/gemini-pulse/SKILL.md",
@@ -87,9 +87,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/github-pulse/SKILL.md",
@@ -114,9 +114,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/glm-pulse/SKILL.md",
@@ -141,9 +141,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/governance-pulse/SKILL.md",
@@ -168,9 +168,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/hf-pulse/SKILL.md",
@@ -195,9 +195,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/inference-pulse/SKILL.md",
@@ -222,9 +222,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/kimi-pulse/SKILL.md",
@@ -249,9 +249,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/llama-pulse/SKILL.md",
@@ -276,9 +276,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/mcp-pulse/SKILL.md",
@@ -303,9 +303,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/memory-pulse/SKILL.md",
@@ -330,9 +330,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/mistral-pulse/SKILL.md",
@@ -357,9 +357,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/openai-pulse/SKILL.md",
@@ -384,9 +384,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/perplexity-pulse/SKILL.md",
@@ -411,9 +411,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/qwen-pulse/SKILL.md",
@@ -438,9 +438,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     },
     {
       "historical_entrypoint": "skills/xai-pulse/SKILL.md",
@@ -465,9 +465,9 @@
       ],
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
-      "current_authored_replacement_tree_sha1": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "current_authored_replacement_tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.1_85_CASES_NOT_RUN"
+      "replacement_case_requalification": "REQUIRED_v1.2.2_85_CASES_NOT_RUN"
     }
   ],
   "source_integrity_evidence": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
