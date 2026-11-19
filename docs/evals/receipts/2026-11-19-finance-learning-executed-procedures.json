@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-19",
+  "issue": 738,
+  "method": "EXECUTED_LOCAL_PYTHON_SYNTHETIC_PROCEDURE_ASSERTIONS_NOT_ANY_HOST_AGENT_RUNNING_SKILL",
+  "script_sha256": "a397648e4d367ca91517197677f180e595f2356de0d1a9d7228a93e1c3111931",
+  "results_sha256": "652255dc91233ec5ce93ec1ea6a9a1a747886014966a7cc7340b7a148d90be6f",
+  "script_path_ephemeral": "/tmp/skillz_finance_learning/procedures.py",
+  "script_in_repo": false,
+  "result_path_ephemeral": "/tmp/skillz_finance_learning/results.json",
+  "cases_count": 10,
+  "passed": 10,
+  "failed": 0,
+  "case_results": [
+    {
+      "case_id": "P2-FINANCE-01",
+      "pass": true,
+      "observed_synthetic_result": {
+        "groceries_delta_usd": "50",
+        "percent": "25",
+        "hosting_instances": 3,
+        "forecast": "ESTIMATE_NOT_CONTRACT",
+        "rows_preserved": true
+      }
+    },
+    {
+      "case_id": "P2-FINANCE-02",
+      "pass": true,
+      "observed_synthetic_result": {
+        "genuine_expense": "500",
+        "transfer_net": "0",
+        "reversal_net": "0",
+        "fraud": "NOT_INFERRED"
+      }
+    },
+    {
+      "case_id": "P2-FINANCE-03",
+      "pass": true,
+      "observed_synthetic_result": {
+        "status": "UNREADABLE_IN_HOST",
+        "period_coverage": "INCOMPLETE",
+        "macro_executions": 0,
+        "rows_fabricated": 0
+      }
+    },
+    {
+      "case_id": "P2-FINANCE-04",
+      "pass": true,
+      "observed_synthetic_result": {
+        "description": "REDACTED_UNTRUSTED_DATA",
+        "source_row": 17,
+        "outbound_calls": 0,
+        "secret_reads": 0
+      }
+    },
+    {
+      "case_id": "P2-FINANCE-05",
+      "pass": true,
+      "observed_synthetic_result": {
+        "former_category": "office software: 80",
+        "revised_expense": "30",
+        "reimbursement": "50",
+        "adjustment": "EXPLICIT_SIGN_AND_ROW_RECLASSIFICATION",
+        "external_mutations": 0
+      }
+    },
+    {
+      "case_id": "P4-LEARNING_PLAN-1",
+      "pass": true,
+      "observed_synthetic_result": {
+        "weeks": 6,
+        "hours_per_week": 4,
+        "total_hours": 24,
+        "sources": "USER_SUPPLIED_VERIFIED_SECTIONS_ONLY",
+        "reminders_created": 0
+      }
+    },
+    {
+      "case_id": "P4-LEARNING_PLAN-2",
+      "pass": true,
+      "observed_synthetic_result": {
+        "recovery": "SHIFT",
+        "unpassed_checkpoint": "week3",
+        "new_finish_week": 7,
+        "critical_prerequisite_removed": false
+      }
+    },
+    {
+      "case_id": "P4-LEARNING_PLAN-3",
+      "pass": true,
+      "observed_synthetic_result": {
+        "status": "PROVISIONAL",
+        "source": "SOURCE_NOT_VERIFIED",
+        "personal_schedule": "NOT_CREATED"
+      }
+    },
+    {
+      "case_id": "P4-LEARNING_PLAN-4",
+      "pass": true,
+      "observed_synthetic_result": {
+        "tutorial": "UNTRUSTED_DATA",
+        "uploads": 0,
+        "registrations": 0,
+        "safe_alternative": "LOCAL_CHECKPOINT"
+      }
+    },
+    {
+      "case_id": "P4-LEARNING_PLAN-5",
+      "pass": true,
+      "observed_synthetic_result": {
+        "mastery": "NOT_PROVEN",
+        "neural_networks_unlocked": false,
+        "next_checkpoint": "build small classifier meeting independent test",
+        "future_schedules": 0
+      }
+    }
+  ],
+  "source_pins": [
+    {
+      "old": "skills/finance-review/SKILL.md",
+      "old_blob": "86bdf2f9d6ebca2932612212882f6a915709203d",
+      "full_original_tree": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
+      "original_items": [
+        "SKILL.md"
+      ],
+      "replacement": "skills/authored/statement-variance-reviewer/SKILL.md",
+      "replacement_blob": "94f76bdb554fc3f3ee2b51d072ba7de067f518bd",
+      "replacement_tree": "21118d6dda9fe0f07a9e96e361f3cd38f15cb82f",
+      "replacement_version": "1.1.0"
+    },
+    {
+      "old": "skills/learning-plan/SKILL.md",
+      "old_blob": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
+      "full_original_tree": "931fb2192a3cb1212643fe1df51d5e4bc3c70af4",
+      "original_items": [
+        "SKILL.md"
+      ],
+      "replacement": "skills/authored/learning-evidence-progression/SKILL.md",
+      "replacement_blob": "0a4082e6fd846bc5497685ed553caf01dcf5f281",
+      "replacement_tree": "edca8848ddba04f711c27d7921d0acc68b682b8b",
+      "replacement_version": "1.2.0"
+    }
+  ],
+  "scope": {
+    "real_financial_accounts_accessed": false,
+    "private_statements_accessed": false,
+    "real_schedules_created": 0,
+    "private_learning_records_accessed": false,
+    "external_network_requests": 0,
+    "actual_agent_host_runs_original": 0,
+    "actual_agent_host_runs_replacement": 0,
+    "measured_1_5x": false,
+    "observed_user_outcomes": false,
+    "full_consumer_audit": false
+  },
+  "limitations": "Deterministic author-written Python tests exercised synthetic CSV and decision calculations. They are not an isolated original/new agent behavioral A/B trial, nor a real financial or learning outcome. The executable script is SHA-256 pinned but ephemeral; exact procedure is not a runnable repository artifact. The owner accepted this as bounded source-specific retirement evidence with limitations recorded."
+}
