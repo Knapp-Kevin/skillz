@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: context-continuation-contract
 display_name: "Context Continuation Contract"
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/context-continuation-contract/SKILL.md
@@ -10,8 +10,8 @@ license: MIT
 relationship: newly-authored-original
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/context-continuation-contract/LICENSE
-curated_at: "2026-11-18"
-last_checked_at: "2026-11-18"
+curated_at: "2026-11-19"
+last_checked_at: "2026-11-19"
 availability: in-repo
 local_path: skills/authored/context-continuation-contract/SKILL.md
 permission_tier: mutating
@@ -20,11 +20,13 @@ optional_action_boundary: "Host continuity-record persistence only after specifi
 portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
-dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 41bec236390d73bdecae389508156b5a784c1b54
-complete_package_tree_sha: c779e8414ea60ae28d7942b0311e518485e480f0
+dependencies: "Four-file text package; optional scoped host access, no bundled runtime"
+content_blob_sha: 6ae4e50ad1baa1e8addc16eeab1c27a4de364982
+complete_package_tree_sha: d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a
 historical_comparators: "skills/handoff-writer/SKILL.md; skills/session-continuity/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Exact three-file v1.1 static review 18/20. Default read-only; optional separately authorized memory mutation with readback. docs/reviews/2026-11-18-context-continuation-parity-v1-1.md. Behavior NOT RUN."
+rationale: "Exact three-file v1.1 static review 18/20. Default read-only; optional separately authorized memory mutation with readback. docs/reviews/2026-11-19-context-continuation-parity-v1-1.md. Behavior NOT RUN."
+
+review_20261119: "Exact new v1.2 package pinned and source-level review under issue #738. Five offline emulations and no independent host A/B or measured 1.5x gain."
