@@ -2,7 +2,7 @@
 
 Skills for keeping agent environments understandable, bounded, recoverable, and evidence-backed.
 
-- [`agent-home-doctor`](../../agent-home-doctor/) — audit and clean agent CLI home directories.
+- [Agent Workspace Footprint Assessor](../../authored/agent-workspace-footprint-assessor/SKILL.md) — bounded agent-home audit and owner-gated reversible maintenance (replaces `agent-home-doctor`).
 - [Agent Failure Boundary Analysis](../../authored/agent-failure-boundary-analysis/SKILL.md) — evidence-based incident diagnosis, explicit uncertainty, bounded lessons and approved handoff (replaces historical `agent-postmortem`).
 - [Scheduled Work Proof Auditor](../../authored/scheduled-work-proof-auditor/SKILL.md) — distinguish configured, executed, produced and delivered work (replaces `automation-receipts`).
 - [Connector Capability Risk Review](../../authored/connector-capability-risk-review/SKILL.md) — assess version-bound MCP server surfaces and host-enforced connection controls (replaces `mcp-vetting`).
