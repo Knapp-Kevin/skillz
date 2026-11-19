@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 19,
+      "linked_reviewed_examples": 18,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -5206,7 +5206,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1068,
+  "governed_identity_denominator": 1067,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -12639,7 +12639,6 @@
             "local-skills/github-pulse",
             "local-skills/repo-doctor",
             "local-skills/repo-pulse",
-            "local-skills/todo-harvester",
             "addyosmani-agent-skills/code-review-and-quality",
             "mattpocock-skills/code-review",
             "local-skills/reference-integrity-auditor",
@@ -35051,32 +35050,6 @@
       "unchanged_use_approved": false
     },
     {
-      "id": "local-skills/todo-harvester",
-      "source_id": "local-skills",
-      "skill_name": "todo-harvester",
-      "content_blob_sha": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "software-engineering/maintenance"
-      ],
-      "evidence_path": "registry/verification/local-skills/todo-harvester.yaml",
-      "skill_path": "skills/todo-harvester/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/todo-harvester.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "repository-maintenance",
-        "evaluation"
-      ],
-      "notes": "Strong read-only debt-marker triage using blame age plus surrounding-code verification before stale classification; output stays proposal-only.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/week-in-review",
       "source_id": "local-skills",
       "skill_name": "week-in-review",
@@ -35239,13 +35212,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 152,
+  "identity_level_capability_links_mapped": 151,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 73,
-    "known_total_governed_review_records": 1068,
+    "known_first_party_skill_records": 72,
+    "known_total_governed_review_records": 1067,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -35281,7 +35254,8 @@
     "success_definition": "Snapshot-specific: complete identity enumeration plus individual evidence-backed terminal review states; ecosystem-wide: breadth, freshness, capability access, legal/operational usability, discovery backlog and new-intake throughput; no fixed all-time skill count",
     "consumer_contract": "docs/consumer-discovery-and-installation.md",
     "registered_source_identities_observed": 25,
-    "discovery_scope_note": "Four current discovery-only source snapshots list 4813 raw SKILL.md paths, 4537 direct-shape; not a deduplicated eligible package denominator, not a fixed volume target"
+    "discovery_scope_note": "Four current discovery-only source snapshots list 4813 raw SKILL.md paths, 4537 direct-shape; not a deduplicated eligible package denominator, not a fixed volume target",
+    "retired_legacy_first_party_record_count": 1
   },
   "discovery_manifests": {
     "entry": "registry/discovery/dynamic-four-source-frontier-20261101.json",
@@ -35301,18 +35275,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 73,
+  "first_party_identity_links_mapped": 72,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 73,
+    "mapped_first_party_distinct": 72,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 152,
+    "mapped_total_distinct": 151,
     "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "21 newly authored first-party original packages statically reviewed across 44 historical capability references; no legacy retirement or host acceptance. Rejected external sources remain discoverable but blocked for unchanged use.",
+    "note": "One historical root skill staged for removal, retained as immutable history with original replacement. Behavior not run; other 43 remain.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35562,13 +35536,14 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 0,
+    "legacy_retired": 1,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
-    ]
+    ],
+    "legacy_remaining": 43
   }
 }

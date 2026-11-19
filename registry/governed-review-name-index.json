@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Governed exact-version skill names as of 2026-11-18: 1068 records (73 first-party, 995 third-party). Historical frostwulf.zo.computer skills remain rights-uncertain; new original replacements are distinct identities. Name registration is not permission.",
+  "purpose": "Current governed review names: 1067 exact identities; retired historical identities are preserved separately, excluded from normal selection.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 73,
+    "first_party": 72,
     "third_party": 995,
-    "total": 1068
+    "total": 1067
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -79,7 +79,6 @@
     "local-skills/statement-variance-reviewer",
     "local-skills/task-surface",
     "local-skills/technology-change-intelligence",
-    "local-skills/todo-harvester",
     "local-skills/week-in-review",
     "local-skills/work-period-evidence-reporter",
     "local-skills/xai-pulse"
@@ -1137,5 +1136,14 @@
       "local-skills/business-presence-observatory",
       "local-skills/work-period-evidence-reporter"
     ]
-  }
+  },
+  "retired_legacy_ids": [
+    {
+      "id": "local-skills/todo-harvester",
+      "source_commit": "c95b31e6d0955f00c5ae14bb59ceee821de20b2c",
+      "source_blob": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+      "replacement_id": "local-skills/source-debt-triage",
+      "host_parity": "not-run"
+    }
+  ]
 }

@@ -14,12 +14,14 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 0,
+    "legacy_retirements_approved": 1,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 0
+    "historical_full_package_trees_verified": 0,
+    "retired_under_owner_accepted_procedure": 1,
+    "retirements_strict_full_host_evidence": 0
   },
   "entries": [
     {
@@ -3095,7 +3097,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_ON_MAIN_BY_OWNER_CONTROLLED_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3147,15 +3149,29 @@
         "full_original_package_tree_verified": "NOT_ESTABLISHED",
         "paired_host_case_coverage": "NOT_RUN",
         "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "security_no_regression": "NO_CRITICAL_SAFETY_FAILURE_IN_FIVE_CONTROLLED_CASES_NOT_MODEL_HOST_VALIDATED",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_ORIGINAL_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_CANONICAL_ACTIVE_REFERENCES_RECONCILED_FULL_REPO_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_EXPLICITLY_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE",
+        "eligible_for_retirement": true,
+        "reason": "Narrow owner-accepted controlled-emulation exception under docs/evals/frostwulf-per-source-retirement-gates.md; full original Git tree and exhaustive consumer search still unverified.",
+        "qualification_basis": "OWNER_ACCEPTED_CONTROLLED_EMULATION_WITH_EXPLICIT_UNVERIFIED_GATES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "mode": "REAL_SYNTHETIC_GIT_COMMANDS_PLUS_DETERMINISTIC_EMULATION",
+        "receipt": "docs/evals/receipts/2026-11-18-todo-harvester-controlled-procedure.json",
+        "case_checks_passed": 5,
+        "case_checks_total": 5,
+        "independent_model_host_runs": 0,
+        "quality_ratio_1_5x": "NOT_PROVEN",
+        "legacy_original_preserved_at_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+        "scope": "exact active SKILL.md only",
+        "confidence_boundary": "NARROW_PROCEDURAL_CASES_ONLY"
+      }
     },
     {
       "legacy_entrypoint": "skills/week-in-review/SKILL.md",
@@ -3319,5 +3335,6 @@
     "docs/evals/frostwulf-phase4b-research-communication-paired-scenarios.json",
     "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json"
   ],
-  "design_coverage_status": "COMPLETE_SOURCE_LEVEL_CONTRACTS_NOT_HOST_EXECUTED"
+  "design_coverage_status": "COMPLETE_SOURCE_LEVEL_CONTRACTS_NOT_HOST_EXECUTED",
+  "retirement_receipt_notice": "One original entrypoint retired under explicit owner-accepted controlled synthetic procedure tests; no independent model host execution, exhaustive consumer scan or 1.5x evidence. All other originals remain HOLD."
 }

@@ -8,6 +8,55 @@ The owner permits removing previous `skills/` entrypoints **once the replacement
 
 **Not every consolidation yields equivalent source modes.** The 17 former topic-pulse skills must each be accepted under their own profile. A passing `github-discovery` profile does not validate `openai-developer`, `mcp-protocol` or any other profile. A combined source can be retired piecemeal only when the exact original's functionality, trigger and negative behavior were separately covered.
 
+## Owner-approved controlled-emulation exception, November 18, 2026
+
+The owner has explicitly revised the acceptance method: independently observable
+external model-host execution is **preferred but not mandatory** when unavailable.
+A specific source may be retired after a documented, source-bound **controlled
+emulation and/or real procedure test** demonstrates essential outputs and safety
+requirements sufficiently for an owner's informed decision. The report must
+distinguish actual commands executed, deterministic source/fixture checks,
+analyst-emulated outputs, and independent model executions. Do not invent a
+model-run ID or treat any emulation as proof of an observed model-host A/B pair.
+
+This is a narrow **owner risk-acceptance path**, not permission to silently
+waive every safety and integrity requirement for the remaining 44-source
+migration. For a proposed retirement:
+
+- Pin the exact old entrypoint and all actually known supporting files;
+  preserve immutable Git history and rights notices. If the full original
+  directory cannot be enumerated, **only remove the exact inspected active
+  entrypoint**. Do not sweep unknown siblings or claim package completeness.
+- Execute representative synthetic tasks wherever an authorized safe
+  environment exists, with real local operations for data collection when
+  feasible; independently document essential outcomes, adversarial refusals,
+  unknowns and any critical loss. Emulation counts as controlled acceptance
+  only in the specific scope its tests actually covered.
+- Reconcile the **known** canonical name index, capabilities, local
+  verification, category navigation and active README references before
+  removal. If exhaustive source-tree/code-search coverage is unavailable,
+  record the **consumer audit as partial** and obtain specific informed
+  owner risk acceptance; retain immutable source links for rollback. Never
+  describe a partial scan as complete.
+- Require no known active broken route, no unwaived critical safety
+  regression, and explicit owner authorization to take the narrowly
+  scoped irreversible Git-tree deletion step. Retention in Git history
+  makes this reversibly deployable by a new commit, not a legal license grant.
+- Preserve behavioral state as NOT_RUN when there were no independent
+  host/model executions. Mark procedural/emulated qualification in a
+  *separate receipt*. Mark 1.5× improvement NOT_PROVEN unless measured
+  with the governed comparable scoring method.
+- Record any exception as `OWNER_ACCEPTED_CONTROLLED_EMULATION` and
+  identify unresolved original-package and consumer-coverage limits.
+  Scope the exception per historical entrypoint; it is **not**
+  a blanket qualification for all remaining sources.
+
+The initial exception covers `skills/todo-harvester/SKILL.md` only,
+supported by [five controlled checks](../evals/receipts/2026-11-18-todo-harvester-controlled-procedure.json)
+and [independently pinned source/active-navigation review](../reviews/2026-11-18-todo-controlled-procedure-retirement.md).
+A future stricter host-observed parity result may supersede this limited
+acceptance but must not be invented retroactively.
+
 ## Non-compensatory retirement checklist
 
 All of the following must be recorded **for the exact historical entrypoint**, not merely its replacement package:
@@ -33,7 +82,7 @@ No local Git command is assumed safe merely because it is read-only: system/glob
 
 ## Earliest retirement pilot
 
-The old `skills/todo-harvester/` package and separate draft [PR #737](https://github.com/Knapp-Kevin/skillz/pull/737) are **not qualified to delete** merely because `source-debt-triage` has stronger v1.1 source instructions. Specifically, full original package enumeration, five observed paired outcomes, a source-consumer complete scan and per-source owner acceptance have not yet been evidenced. Keep #737 draft/HOLD; do not change it as part of evaluation fixture development.
+The old `skills/todo-harvester/` pilot [PR #737](https://github.com/Knapp-Kevin/skillz/pull/737) was a stale HOLD based on the earlier, strict independent-host-only policy. A newer, controlled-emulation evaluation has been performed and separately documented under the owner-approved exception above. This qualifies **only the exact active SKILL.md for a narrowly scoped retirement** after canonical route checks; full old package enumeration and exhaustive consumer scan are not established, and no claim of model-host parity or 1.5× gain follows. Other historical entries remain held pending their own evaluations.
 
 ## State semantics
 
