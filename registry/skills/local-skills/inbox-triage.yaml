@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/inbox-triage/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently established)
 relationship: first-party
 source_snapshot_revision: 7e2bcc08807210a852772fa4fe86dd282203fb6e
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
-availability: in-repo
+availability: retired-historical
 local_path: skills/inbox-triage/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: review-required
+import_eligibility: retired-not-selectable
 rationale: "2026-11-04 exact new source 9326d7a691e40ff30a07a71738b13a04117206d6: Q15 ten-axis source-semantic review 18/20, with follow-up output-secret redaction inspected as a non-broadening safety amendment. External scanner and host-behavior tests NOT RUN; unchanged adoption remains held."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/inbox-triage/SKILL.md
+replacement_id: local-skills/personal-operations-control-board
+consumer_audit: "Known active routes reconciled; exhaustive repository consumer search not proven."
