@@ -1485,8 +1485,8 @@
       "skill_name": "claim-evidence-adjudicator",
       "local_path": "skills/authored/claim-evidence-adjudicator/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
-      "complete_package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "content_blob_sha": "524507190260732cb28ac40ad0865672de5c2980",
+      "complete_package_tree_sha": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1511,7 +1511,10 @@
           "high"
         ]
       },
-      "notes": "2026-11-18 direct maintainer complete-package static review: docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No external host behavior or copyright certification."
+      "notes": "Exact v1.1 source and three-element package re-pinned after source-level research-claim parity repairs; five offline synthetic cases for historical Fact Check, no independent agent-host A/B or 1.5x gain.",
+      "previous_content_blob_sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
+      "previous_package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "research-methods-appraiser",
