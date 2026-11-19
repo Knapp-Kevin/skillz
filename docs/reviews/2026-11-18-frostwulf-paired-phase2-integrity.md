@@ -4,7 +4,7 @@ Review date: November 18, 2026 (owner local). Issue [#738](https://github.com/Kn
 
 ## Factual changes
 
-- Eight? **No**: precisely **nine** additional historical workflows have received five unique detailed scenario contracts each: permissions review, MCP vetting, scheduled-work receipts, session handoff, repository health, monthly finance review, task coordination, paper digest and fact-checking.
+- Precisely **nine** additional historical workflows have received five unique detailed scenario contracts each: permissions review, MCP vetting, scheduled-work receipts, session handoff, repository health, monthly finance review, task coordination, paper digest and fact-checking.
 - Both independent phase fixture groups now provide **65 designed of 220 total paired case slots**. Their ledger tracks **155 not designed**; all 220 retain `NOT_RUN`.
 - Every one of the 44 historical SKILL.md entrypoints was individually fetched through the connected repository at immutable commit `319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0`. The exact 40-hex Git blob SHA for each is stored in the ledger. Existing known pins in the new scenario contracts were compared and did not conflict.
 - All 44 replacement package trees and corresponding SKILL blobs continue to match the unchanged current authored index, which represents 21 unique packages.
