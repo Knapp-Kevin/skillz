@@ -215,7 +215,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `claude-pulse`, `deepseek-pulse`, `gemini-pulse`, `github-pulse`, `glm-pulse`, `governance-pulse`, `hf-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `mistral-pulse`, `openai-pulse`, `perplexity-pulse`, `qwen-pulse`, `xai-pulse`
 
 ### Business & Career
-[Professional Market Evidence Scout](skills/authored/professional-market-evidence-scout/SKILL.md), `finance-review`, `smallbiz-ops`
+[Professional Market Evidence Scout](skills/authored/professional-market-evidence-scout/SKILL.md), `finance-review`, [Business Presence Observatory](skills/authored/business-presence-observatory/SKILL.md)
 
 ## Registered source roles
 
