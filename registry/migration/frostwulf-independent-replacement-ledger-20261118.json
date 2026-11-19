@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 6,
+    "legacy_removed": 7,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 38
+    "legacy_remaining": 37
   },
   "rows": [
     {
@@ -23,7 +23,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
       "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "retirement_status": "nine_synthetic_temporary_filesystem_cases_passed_context_cost_restored_not_host_AB",
+      "retirement_snapshot_commit": "369f6fd853b79eaf666c89da893429ba5156bc2e",
+      "retirement_source_blob": "3415f1f4bb72afc44266706be649c3950f809337",
+      "retirement_source_tree": "7e78ed3047b66c67c492eae1191853d6d7ce095e",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/369f6fd853b79eaf666c89da893429ba5156bc2e/skills/agent-home-doctor/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json",
+      "retirement_review": "docs/reviews/2026-11-19-agent-home-controlled-retirement.md",
+      "retirement_scope": "verified_full_single_file_original",
+      "current_active_reference": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
+      "consumer_scan_status": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
+      "retirement_behavioral_claim": "REAL_EPHEMERAL_FILESYSTEM_PROCEDURES_NOT_INDEPENDENT_HOST_SKILL_AB; 1.5x_not_proven"
     },
     {
       "legacy_entrypoint": "skills/agent-postmortem/SKILL.md",
