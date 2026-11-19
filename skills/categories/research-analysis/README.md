@@ -4,5 +4,5 @@ Skills for gathering evidence, comparing options, checking claims, and interpret
 
 - [`compare`](../../compare/) — compare tools, models, vendors, or approaches against explicit criteria.
 - [`deep-dive`](../../deep-dive/) — build a multi-source research dossier.
-- [`fact-check`](../../fact-check/) — decompose and verify claims against primary evidence.
-- [`paper-digest`](../../paper-digest/) — extract claims, methods, evidence quality, and limitations from a research paper.
+- [Claim Evidence Adjudicator](../../authored/claim-evidence-adjudicator/SKILL.md) — test factual claims with primary-source tracing, contradiction records and explicit uncertainty (replaces `fact-check`).
+- [Research Methods Appraiser](../../authored/research-methods-appraiser/SKILL.md) — critique research methods, evidence and reproducibility with a practitioner digest (replaces `paper-digest`).
