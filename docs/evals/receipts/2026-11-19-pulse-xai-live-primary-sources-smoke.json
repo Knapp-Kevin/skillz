@@ -204,5 +204,64 @@
     "xai original eligible for retirement from this receipt alone"
   ],
   "status": "CONTROLLED_WITH_PRIMARY_SOURCES_ONLY",
-  "retirement": "HOLD_PENDING_CONSUMER_REFERENCE_AND_OWNER_ACCEPTANCE"
+  "retirement": "HOLD_PENDING_CONSUMER_REFERENCE_AND_OWNER_ACCEPTANCE",
+  "deterministic_mutation_probe": {
+    "execution": "actual JavaScript regex checks on saved successor response and five locally mutated variants",
+    "variants": [
+      {
+        "mutation": "remove_primary_sources",
+        "failed_checks": [
+          "primary_sources"
+        ],
+        "expected_checks": [
+          "primary_sources"
+        ],
+        "detected": true,
+        "expected_detected": true
+      },
+      {
+        "mutation": "remove_migration_route",
+        "failed_checks": [
+          "api_retirement",
+          "routing"
+        ],
+        "expected_checks": [
+          "api_retirement"
+        ],
+        "detected": true,
+        "expected_detected": true
+      },
+      {
+        "mutation": "remove_sdk_type_discrimination",
+        "failed_checks": [
+          "sdk_type_boundary"
+        ],
+        "expected_checks": [
+          "sdk_type_boundary"
+        ],
+        "detected": true,
+        "expected_detected": true
+      },
+      {
+        "mutation": "remove_sse_fix",
+        "failed_checks": [],
+        "expected_checks": [],
+        "detected": false,
+        "expected_detected": false,
+        "limitation": "This generic or cross-section mutation may evade unanchored regex; semantic reviewer still required."
+      },
+      {
+        "mutation": "remove_review_limits",
+        "failed_checks": [],
+        "expected_checks": [],
+        "detected": false,
+        "expected_detected": false,
+        "limitation": "This generic or cross-section mutation may evade unanchored regex; semantic reviewer still required."
+      }
+    ],
+    "detectable_fixture_corruptions": 3,
+    "detected_of_expected": 3,
+    "unanchored_weakness": "The nine regex predicates are smoke checks, not semantic scoring; a removed source status or duplicated event could still pass. Never promote parity based on these tests."
+  },
+  "notes": "The observed live source reads were public developer documentation and SDK changelog only. This receipt is one source-grounded read-only case; five prior xAI case emulations were against v1.2.3 and remain historical. Rights, independent scoring, full consumer references and exact v1.2.4 five-case execution are not established."
 }
