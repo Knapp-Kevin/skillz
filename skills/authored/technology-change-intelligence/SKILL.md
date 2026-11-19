@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Technology Change Intelligence
-  version: 1.2.3
+  version: 1.2.4
   license: MIT
 ---
 
@@ -54,7 +54,7 @@ be silently combined into one unlabelled period.
 
 ## Specialist outcome preservation
 
-For any named profile, also load the bundled [specialist execution gates](references/specialist-execution-gates.md). These are **decision procedures**, not merely suggested headings: they require exact interface/artifact discrimination, source-lane coverage, a source-backed next check and an applicability verdict when an expressly supplied runtime target or redacted project summary is in scope. In particular, local-inference reports must end with a target-specific relevance verdict or explicitly say `GENERIC_ONLY`. GitHub discovery must distinguish newly created from newly accelerating repositories and disclose missing prior-candidate deduplication. Governance and memory project comparisons require supplied authorized context. Connected read-only search tools are optional, never assumed to exist or to grant private scope.
+For any named profile, also load the bundled [specialist execution gates](references/specialist-execution-gates.md). These are **decision procedures**, not merely suggested headings: they require exact interface/artifact discrimination, source-lane coverage, a source-backed next check and an applicability verdict when an expressly supplied runtime target or redacted project summary is in scope. In particular, local-inference reports must end with a target-specific relevance verdict or explicitly say `GENERIC_ONLY`. GitHub discovery must distinguish newly created from newly accelerating repositories and disclose missing prior-candidate deduplication. Governance and memory project comparisons require supplied authorized context. MCP server novelty/duplication judgments additionally require an explicitly supplied or separately authorized existing-capability inventory; absent that inventory, overlap with installed connectors is `NOT_CHECKED`, not inferred from general host access. Connected read-only search tools are optional, never assumed to exist or to grant private scope.
 
 ## Evidence workflow
 
