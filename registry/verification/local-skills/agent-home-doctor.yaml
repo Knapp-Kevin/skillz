@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 3415f1f4bb72afc44266706be649c3950f809337
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New exact source statically re-reviewed, NOT pinned SkillSpector scanned or actual agent-host behavior. Unchanged use held.
@@ -19,3 +20,8 @@ tags:
   authority: [mutating]
   portability: [medium]
 notes: "2026-11-04 fresh full-current 17/20 semantic review: Replaced wide home-dot-directory enumeration with explicit allowlist roots, symlink safety and scoped read/mutation. Previous 20/20 grade on older blob was insufficient to catch this authority/egress defect. Current exact SKILL.md 3415f1f4bb72afc44266706be649c3950f809337, complete package Git tree 7e78ed3047b66c67c492eae1191853d6d7ce095e. External pinned scanner and real synthetic host tool-call behavior NOT RUN; security issue #402. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/369f6fd853b79eaf666c89da893429ba5156bc2e/skills/agent-home-doctor/SKILL.md
+replacement_id: local-skills/agent-workspace-footprint-assessor
+retirement_note: "Exact historical one-file tree fully verified; nine temporary filesystem procedure cases pass. No independently observed original/new model host behavior or measured 1.5x improvement. Rights still unproven."

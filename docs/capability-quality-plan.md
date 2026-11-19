@@ -13,10 +13,10 @@ Track discovery leads, complete-package inspection, static disposition, dependen
 | Phase | Required result | Status |
 |---|---|---|
 | 1. Ingestion | Parseable, paired, unambiguous companions with preservation receipt | [Completed for 2,084 files](reviews/2026-11-17-companion-yaml-ingestion-repair.md) |
-| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; November 18 source-review checkpoint 146/1,062 governed identities mapped (119 verified-static + 27 rejected); 916 unmapped, links are not essential-outcome or host-behavior acceptance |
+| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; November 18 source-review checkpoint 145/1,061 governed identities mapped (118 verified-static + 27 rejected); 916 unmapped, links are not essential-outcome or host-behavior acceptance |
 | 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; six partially decomposed subdomains with eight bounded outcomes including file-management governance; 241 still require decomposition |
 | 4. Balanced qualification | Equal effort for discovery and complete-package evaluation; decisive evidence-bound dispositions | Pending ongoing tranches |
-| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Original melody, four file/information-management methods and 21 newly drafted independent historical-function replacements are now statically registered; six sources (`todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`) retired after separately documented owner-approved controlled checks; 38 others retained. No independent host A/B or exhaustive consumer scan claimed. Maintain source comparison, rights and behavior boundaries before further authorship or deletion under `skills/authored/<slug>/` |
+| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Original melody, four file/information-management methods and 21 newly drafted independent historical-function replacements are now statically registered; seven sources (`todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`) retired after separately documented owner-approved controlled checks; 37 others retained. No independent host A/B or exhaustive consumer scan claimed. Maintain source comparison, rights and behavior boundaries before further authorship or deletion under `skills/authored/<slug>/` |
 | 6. Application readiness | Export distinguishes references, eligible packages and unmet outcomes; application demonstrates each promised workflow | Not established |
 
 The audit recovered supplementary structured pointers for **35 of 51** subdomains without explicit directory pointers. Reconcile their pins and route meanings before linking them. The other 16 remain mapping/qualification gaps, not proof of absent methods. Preserve rejected dispositions and separate candidate/study references from governed matches.
@@ -62,7 +62,7 @@ cover all 44 historical functions in an outcome-design crosswalk**.
 Every new package is a standalone rights-scoped original source with
 static review, exact package tree, governed identity and existing canonical
 capability routing. Host-executed behavior and true functional equivalence
-are explicitly **NOT ESTABLISHED**. Six narrowly scoped historical source retirements have explicit receipts; no independent paired host parity or 1.5× improvement has been proven.
+are explicitly **NOT ESTABLISHED**. Seven narrowly scoped historical source retirements have explicit receipts; no independent paired host parity or 1.5× improvement has been proven.
 
 Work after drafting is **replacement acceptance, not automatic deletion**:
 review behavior of any replacement requiring live services or writes;
