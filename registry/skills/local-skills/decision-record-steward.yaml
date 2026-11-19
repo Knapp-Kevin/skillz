@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: decision-record-steward
 display_name: "Decision Record Steward"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/decision-record-steward/SKILL.md
@@ -14,15 +14,17 @@ curated_at: "2026-11-18"
 last_checked_at: "2026-11-18"
 availability: in-repo
 local_path: skills/authored/decision-record-steward/SKILL.md
-permission_tier: read-only
+permission_tier: mutating
+default_permission_tier: read-only
+optional_action_boundary: "Approved append/create only in owner-designated decision log, with readback"
 portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Host access to scoped sources as authorized; no bundled runtime or credentials"
-content_blob_sha: ef0ae9791df3cbf69b0f9445807240188a17f130
-complete_package_tree_sha: 992a7db63ea585fc939802dfac1f3cd76abe98a3
+content_blob_sha: d9005c5c1b3fbed122a52d106104dbee02b5a165
+complete_package_tree_sha: 56b32d80412fbae75f05914e992156f081d8ce05
 historical_comparator: skills/decision-log/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"
 import_eligibility: review-required
-rationale: "Complete-package maintainer static review 18/20; behavior NOT RUN. docs/reviews/2026-11-18-frostwulf-first-four-static-review.md."
+rationale: "Exact current v1.1 source package static reviewed 18/20; docs/reviews/2026-11-18-decision-connector-parity-v1-1.md. Host behavior NOT RUN."
