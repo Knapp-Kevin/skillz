@@ -41,38 +41,6 @@
       "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
-      "skill_name": "career-radar",
-      "local_path": "skills/career-radar/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "career",
-          "research",
-          "monitoring"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "retrieval-first",
-          "source-driven",
-          "synthesis",
-          "evidence-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Exact 1.1.4 current source eb7565605a190e9ea3462bad57ac62aba88d3ecf, full Git tree 35055db24f786f8b3b57f78789e146eb0ee49b9c; source-only 18/20 evaluation and 8/8 structural regression checks after repairing prior private-notes lookup and outbound web-query egress. docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md. Scanner/current-tree security not-run, observed host behavior not-run, unchanged use HELD."
-    },
-    {
       "skill_name": "claude-pulse",
       "local_path": "skills/claude-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -461,39 +429,6 @@
       "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
       "rubric_score_current_fingerprint": false,
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "handoff-writer",
-      "local_path": "skills/handoff-writer/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "733b8029063ff057051a61bc270cce138f324c7d",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "handoff",
-          "documentation",
-          "communication"
-        ],
-        "lifecycle": [
-          "release",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "context-efficient",
-          "risk-aware"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 exact Handoff Writer 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed and whole package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff. Current source-semantic 18/20 and 14/14 bounded source checks only; scanner and actual host behavior NOT RUN, no unchanged-use approval. See docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md."
     },
     {
       "skill_name": "hf-pulse",
@@ -1815,8 +1750,8 @@
       "skill_name": "professional-market-evidence-scout",
       "local_path": "skills/authored/professional-market-evidence-scout/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
-      "complete_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "content_blob_sha": "5c1003c2bd3d13d972eff6fd52dd47ec03d327d2",
+      "complete_package_tree_sha": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1841,7 +1776,10 @@
           "high"
         ]
       },
-      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+      "notes": "Exact v1.2 source and complete package verified after crosswalk for career-radar. Controlled synthetic case record docs/evals/receipts/2026-11-19-career-handoff-controlled.json; no independent host A/B or 1.5x evidence.",
+      "previous_content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
+      "previous_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "statement-variance-reviewer",
@@ -1879,8 +1817,8 @@
       "skill_name": "context-continuation-contract",
       "local_path": "skills/authored/context-continuation-contract/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
-      "complete_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "content_blob_sha": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "complete_package_tree_sha": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1905,7 +1843,10 @@
           "high"
         ]
       },
-      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+      "notes": "Exact v1.2 source and complete package verified after crosswalk for handoff-writer. Controlled synthetic case record docs/evals/receipts/2026-11-19-career-handoff-controlled.json; no independent host A/B or 1.5x evidence.",
+      "previous_content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "previous_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "evidence-narrative-composer",
@@ -2098,6 +2039,38 @@
         ]
       },
       "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "ci-guard",
+      "local_path": "skills/authored/ci-guard/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
+      "complete_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "ci-assurance",
+          "development-effectiveness",
+          "evidence-audit"
+        ],
+        "lifecycle": [
+          "evaluation"
+        ],
+        "characteristic": [
+          "traceable",
+          "risk-proportionate",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Source- and package-pinned 2026-11-19 maintainer static review; see registry/verification/local-skills/ci-guard.yaml. No external host behavior or CI-effectiveness measurement."
     }
   ],
   "retired_legacy_records": [
@@ -2449,6 +2422,85 @@
       "historical_rights": "not established",
       "behavioral_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "skill_name": "career-radar",
+      "local_path": "skills/career-radar/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "career",
+          "research",
+          "monitoring"
+        ],
+        "lifecycle": [
+          "discovery"
+        ],
+        "characteristic": [
+          "retrieval-first",
+          "source-driven",
+          "synthesis",
+          "evidence-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Exact 1.1.4 current source eb7565605a190e9ea3462bad57ac62aba88d3ecf, full Git tree 35055db24f786f8b3b57f78789e146eb0ee49b9c; source-only 18/20 evaluation and 8/8 structural regression checks after repairing prior private-notes lookup and outbound web-query egress. docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md. Scanner/current-tree security not-run, observed host behavior not-run, unchanged use HELD.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/professional-market-evidence-scout",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/9a3d7d73330a711c612f27ae4184a44ddf4ac3cc/skills/career-radar/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
+    },
+    {
+      "skill_name": "handoff-writer",
+      "local_path": "skills/handoff-writer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "733b8029063ff057051a61bc270cce138f324c7d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "handoff",
+          "documentation",
+          "communication"
+        ],
+        "lifecycle": [
+          "release",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "context-efficient",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 exact Handoff Writer 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed and whole package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff. Current source-semantic 18/20 and 14/14 bounded source checks only; scanner and actual host behavior NOT RUN, no unchanged-use approval. See docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/context-continuation-contract",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/9a3d7d73330a711c612f27ae4184a44ddf4ac3cc/skills/handoff-writer/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
     }
   ]
 }

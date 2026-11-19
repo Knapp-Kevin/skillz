@@ -694,8 +694,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/professional-market-evidence-scout.yaml",
       "verification_path": "registry/verification/local-skills/professional-market-evidence-scout.yaml",
-      "skill_blob_sha": "66d344acbcdf62390efd37f059a76622d90bfcfd",
-      "package_tree_sha": "d0cf2ad1131a0b8a152a22e112a6494f2c1f8a1c",
+      "skill_blob_sha": "5c1003c2bd3d13d972eff6fd52dd47ec03d327d2",
+      "package_tree_sha": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -704,15 +704,15 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): career-radar. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/749",
-      "package_version": "1.1.0",
+      "package_version": "1.2.0",
       "capability_paths": [
         "career/job-search",
         "career/compensation"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
-      "previous_reviewed_skill_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
-      "previous_reviewed_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
-      "review_note": "Current three-file static review docs/reviews/2026-11-18-business-market-parity-v1-1.md; observed host behavior and 1.5x improvement not established."
+      "previous_reviewed_skill_blob_sha": "66d344acbcdf62390efd37f059a76622d90bfcfd",
+      "previous_reviewed_package_tree_sha": "d0cf2ad1131a0b8a152a22e112a6494f2c1f8a1c",
+      "review_note": "Exact v1.2 source/package independently reviewed 2026-11-19 vs historical career-radar. Restored optional recurring scan consent and salary survey source scope. Five offline synthetic procedural emulations; no model-host parity or measured gain."
     },
     {
       "id": "statement-variance-reviewer",
@@ -762,9 +762,9 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/context-continuation-contract.yaml",
       "verification_path": "registry/verification/local-skills/context-continuation-contract.yaml",
-      "skill_blob_sha": "41bec236390d73bdecae389508156b5a784c1b54",
-      "package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
-      "package_file_count": 3,
+      "skill_blob_sha": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "package_tree_sha": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
+      "package_file_count": 4,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
@@ -772,17 +772,17 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): handoff-writer, session-continuity. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/744",
-      "package_version": "1.1.0",
+      "package_version": "1.2.0",
       "capability_paths": [
         "memory-context/context-compression",
         "agent-mcp-development/multi-agent-collaboration"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
-      "previous_reviewed_skill_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
-      "previous_reviewed_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "previous_reviewed_skill_blob_sha": "41bec236390d73bdecae389508156b5a784c1b54",
+      "previous_reviewed_package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
       "default_authority": "read-only",
       "authority_note": "An optional durable-continuity record write is allowed only after verifying current or applicable standing destination-specific user authorization; no automatic writes.",
-      "review_note": "Reviewed current three-file exact package: docs/reviews/2026-11-18-context-continuation-parity-v1-1.md. No observed host behavior, 1.5x NOT_PROVEN."
+      "review_note": "Exact v1.2 source/package independently reviewed 2026-11-19 vs historical handoff-writer. Added original complete zero-context handoff example preserving historic supporting-file function. Five offline synthetic procedural emulations; no model-host parity or measured gain."
     },
     {
       "id": "evidence-narrative-composer",

@@ -12,7 +12,7 @@ This is the **canonical home for newly authored first-party skills** produced fo
 
 The maintainer controlled the historical Zo Computer account but has **not**
 established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
-entrypoints. Nine bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check` and `paper-digest`, are retired from the active tree through owner-authorized controlled acceptance. The other 35 remain active; none may be silently moved or relicensed.
+entrypoints. Eleven bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar` and `handoff-writer`, are retired from the active tree through owner-authorized controlled acceptance. The other 33 remain active; none may be silently moved or relicensed.
 
 **21 original packages now cover the intended function categories of all 44
 legacy entries at the design level.** Some are explicitly multi-mode,
@@ -73,3 +73,5 @@ The existing first-party `skills/<slug>/` entries are not automatically moved or
 [Character Motivation Interview](character-motivation-interview/SKILL.md) | [Synthetic acceptance cases](character-motivation-interview/examples/acceptance-cases.md) | [Exact-source review](../../docs/reviews/2026-11-08-writer-story-tools-original-skills-static-review.md).
 
 **November 8, 2026:** Three original MIT-authored packages are indexed in this collection. All three have bounded static reviews and no executed agent-host behavioral validation. The writing workflows are not copies of [Writer Story Tools](https://writer-story-tools.mdlafilms.workers.dev/), whose external applications remain all-rights-reserved; see [source and rights findings](../../docs/discovery/2026-11-08-writer-story-tools-reference.md). Repository presence is not an installation or external-account authorization.
+
+[Career Radar qualification](../../docs/reviews/2026-11-19-career-radar-controlled-retirement.md) and [complete-package Handoff Writer qualification](../../docs/reviews/2026-11-19-handoff-writer-controlled-retirement.md) document the tenth and eleventh replacements.
