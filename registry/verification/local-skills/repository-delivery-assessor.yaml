@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: repository-delivery-assessor
+skill_version: "1.0.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/repository-delivery-assessor/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2e4b24f1a3e764a90f9dcdc2804267fccbb15d41
+complete_package_tree_sha: 5a896b31e8019645207dc73316e09534c004dfd2
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Audit repository and portfolio delivery by user-facing acceptance, not issue count. Direct static semantic review 18/20. Three-file package
+  hashed and references verified. Host execution NOT RUN, real-world
+  effectiveness and historic rights not established. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md

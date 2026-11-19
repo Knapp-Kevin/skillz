@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 18,
+      "linked_reviewed_examples": 19,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -141,6 +141,18 @@
           "capability_example": "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion.",
           "unchanged_use_approved": false,
           "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/repository-delivery-assessor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/repository-delivery-assessor.yaml",
+          "source_class": "local-provenance",
+          "path": "software-engineering/maintenance",
+          "capability_example": "Audit repository and portfolio delivery by user-facing acceptance, not issue count.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -1138,8 +1150,8 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 11,
-      "subdomains_with_linked_examples": 5,
+      "linked_reviewed_examples": 13,
+      "subdomains_with_linked_examples": 6,
       "name_only_candidate_count": 17,
       "evidence_preview": [
         {
@@ -1239,6 +1251,30 @@
           "capability_example": "Separates configured, attempted, completed, materialized and delivered scheduled work.",
           "unchanged_use_approved": false,
           "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/agent-failure-boundary-analysis",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/agent-failure-boundary-analysis.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/evaluation",
+          "capability_example": "Reconstruct causally discriminating agent incidents and explicit boundary violations.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/context-continuation-contract",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/context-continuation-contract.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/multi-agent-collaboration",
+          "capability_example": "Package or resume verified context without transferring hidden authority or stale assertions.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -1452,8 +1488,8 @@
     {
       "domain": "cloud-devops",
       "display_name": "Cloud / DevOps",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 2,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
         {
@@ -1475,6 +1511,18 @@
           "source_class": "external-provenance",
           "path": "cloud-devops/infrastructure-as-code",
           "capability_example": "Existing static-reviewed reference for infrastructure as code"
+        },
+        {
+          "id": "local-skills/repository-delivery-assessor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/repository-delivery-assessor.yaml",
+          "source_class": "local-provenance",
+          "path": "cloud-devops/ci-cd",
+          "capability_example": "Audit repository and portfolio delivery by user-facing acceptance, not issue count.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -1978,8 +2026,8 @@
     {
       "domain": "security",
       "display_name": "Security",
-      "linked_reviewed_examples": 6,
-      "subdomains_with_linked_examples": 4,
+      "linked_reviewed_examples": 7,
+      "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 7,
       "evidence_preview": [
         {
@@ -2045,6 +2093,18 @@
           "capability_example": "Effective principal-to-action privilege graph and safely proposed least-privilege deltas.",
           "unchanged_use_approved": false,
           "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/agent-failure-boundary-analysis",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/agent-failure-boundary-analysis.yaml",
+          "source_class": "local-provenance",
+          "path": "security/incident-response",
+          "capability_example": "Reconstruct causally discriminating agent incidents and explicit boundary violations.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -2134,7 +2194,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 29,
+      "linked_reviewed_examples": 30,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2257,6 +2317,18 @@
           "capability_example": "Dated technology-change intelligence over 17 original topic profiles",
           "unchanged_use_approved": false,
           "restriction": "Read-only reference; no external agent behavior established"
+        },
+        {
+          "id": "local-skills/research-question-dossier",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/research-question-dossier.yaml",
+          "source_class": "local-provenance",
+          "path": "research/synthesis",
+          "capability_example": "Build a question-specific and source-root-aware research explanation with rival hypotheses.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -2340,7 +2412,7 @@
     {
       "domain": "planning",
       "display_name": "Planning",
-      "linked_reviewed_examples": 5,
+      "linked_reviewed_examples": 6,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 8,
       "evidence_preview": [
@@ -2395,6 +2467,18 @@
           "capability_example": "Decision-authority tracking, supersession and revision-safe decision records.",
           "unchanged_use_approved": false,
           "restriction": "Exact-package static-review only; legacy rights and host behavioral approval not established."
+        },
+        {
+          "id": "local-skills/decision-tradeoff-workbench",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/decision-tradeoff-workbench.yaml",
+          "source_class": "local-provenance",
+          "path": "planning/decision-frameworks",
+          "capability_example": "Compare alternatives with hard gates, uncertainty and sensitivity before a decision brief.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -2469,7 +2553,7 @@
     {
       "domain": "marketing",
       "display_name": "Marketing",
-      "linked_reviewed_examples": 5,
+      "linked_reviewed_examples": 7,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 25,
       "evidence_preview": [
@@ -2522,6 +2606,30 @@
           "source_class": "external-provenance",
           "path": "marketing/lifecycle",
           "capability_example": "SMS lifecycle communication"
+        },
+        {
+          "id": "local-skills/evidence-narrative-composer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/evidence-narrative-composer.yaml",
+          "source_class": "local-provenance",
+          "path": "marketing/content",
+          "capability_example": "Develop evidence-linked presentations or development narratives without invented outcomes.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/business-presence-observatory",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/business-presence-observatory.yaml",
+          "source_class": "local-provenance",
+          "path": "marketing/seo",
+          "capability_example": "Inspect business site accuracy and customer journey with bounded publication authority.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -3903,7 +4011,7 @@
     {
       "domain": "communication",
       "display_name": "Communication",
-      "linked_reviewed_examples": 5,
+      "linked_reviewed_examples": 8,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 8,
       "evidence_preview": [
@@ -3956,6 +4064,42 @@
           "source_class": "local-provenance",
           "path": "communication/organizational-communication",
           "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
+        },
+        {
+          "id": "local-skills/evidence-narrative-composer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/evidence-narrative-composer.yaml",
+          "source_class": "local-provenance",
+          "path": "communication/presentations",
+          "capability_example": "Develop evidence-linked presentations or development narratives without invented outcomes.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/personal-operations-control-board",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/personal-operations-control-board.yaml",
+          "source_class": "local-provenance",
+          "path": "communication/organizational-communication",
+          "capability_example": "Create a scope-bound daily and inbox action board with explicit write approval.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/work-period-evidence-reporter",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/work-period-evidence-reporter.yaml",
+          "source_class": "local-provenance",
+          "path": "communication/organizational-communication",
+          "capability_example": "Report daily or weekly outcomes from attributable evidence rather than activity inflation.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -4088,8 +4232,8 @@
     {
       "domain": "time-productivity",
       "display_name": "Time / productivity",
-      "linked_reviewed_examples": 6,
-      "subdomains_with_linked_examples": 3,
+      "linked_reviewed_examples": 8,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 16,
       "evidence_preview": [
         {
@@ -4153,6 +4297,30 @@
           "capability_example": "Separates configured, attempted, completed, materialized and delivered scheduled work.",
           "unchanged_use_approved": false,
           "restriction": "No external host behavior or permission to connect/mutate."
+        },
+        {
+          "id": "local-skills/personal-operations-control-board",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/personal-operations-control-board.yaml",
+          "source_class": "local-provenance",
+          "path": "time-productivity/task-systems",
+          "capability_example": "Create a scope-bound daily and inbox action board with explicit write approval.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/work-period-evidence-reporter",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/work-period-evidence-reporter.yaml",
+          "source_class": "local-provenance",
+          "path": "time-productivity/collaboration",
+          "capability_example": "Report daily or weekly outcomes from attributable evidence rather than activity inflation.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -4197,7 +4365,7 @@
     {
       "domain": "memory-context",
       "display_name": "Memory / context",
-      "linked_reviewed_examples": 6,
+      "linked_reviewed_examples": 7,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 12,
       "evidence_preview": [
@@ -4280,6 +4448,18 @@
           "source_class": "external-provenance",
           "path": "memory-context/retrieval",
           "capability_example": "Characterize connected enterprise-search sources and rate-limit behavior as a rejected unchanged-use reference; never treat all connected sources as automatically authorized."
+        },
+        {
+          "id": "local-skills/context-continuation-contract",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/context-continuation-contract.yaml",
+          "source_class": "local-provenance",
+          "path": "memory-context/context-compression",
+          "capability_example": "Package or resume verified context without transferring hidden authority or stale assertions.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -4354,8 +4534,8 @@
     {
       "domain": "business",
       "display_name": "Business",
-      "linked_reviewed_examples": 4,
-      "subdomains_with_linked_examples": 3,
+      "linked_reviewed_examples": 6,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 7,
       "evidence_preview": [
         {
@@ -4400,6 +4580,30 @@
           "capability_example": "Decision-authority tracking, supersession and revision-safe decision records.",
           "unchanged_use_approved": false,
           "restriction": "Exact-package static-review only; legacy rights and host behavioral approval not established."
+        },
+        {
+          "id": "local-skills/decision-tradeoff-workbench",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/decision-tradeoff-workbench.yaml",
+          "source_class": "local-provenance",
+          "path": "business/strategy",
+          "capability_example": "Compare alternatives with hard gates, uncertainty and sensitivity before a decision brief.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/business-presence-observatory",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/business-presence-observatory.yaml",
+          "source_class": "local-provenance",
+          "path": "business/operations",
+          "capability_example": "Inspect business site accuracy and customer journey with bounded publication authority.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -4526,8 +4730,8 @@
     {
       "domain": "career",
       "display_name": "Career",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 3,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 0,
       "evidence_preview": [
         {
@@ -4549,6 +4753,18 @@
           "source_class": "local-provenance",
           "path": "career/professional-development",
           "capability_example": "Prepare a learning plan with measurable checkpoints"
+        },
+        {
+          "id": "local-skills/professional-market-evidence-scout",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/professional-market-evidence-scout.yaml",
+          "source_class": "local-provenance",
+          "path": "career/job-search",
+          "capability_example": "Deduplicate dated role evidence and assess market fit with explicit compensation units.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [],
@@ -4595,8 +4811,8 @@
     {
       "domain": "education",
       "display_name": "Education",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 2,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 4,
       "evidence_preview": [
         {
@@ -4618,6 +4834,18 @@
           "source_class": "external-provenance",
           "path": "education/learning-technology",
           "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/learning-evidence-progression",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/learning-evidence-progression.yaml",
+          "source_class": "local-provenance",
+          "path": "education/curriculum",
+          "capability_example": "Decompose prerequisites into externally observable learning evidence and adaptation rules.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -4760,8 +4988,8 @@
     {
       "domain": "finance",
       "display_name": "Finance",
-      "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 2,
+      "linked_reviewed_examples": 3,
+      "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 2,
       "evidence_preview": [
         {
@@ -4784,6 +5012,18 @@
           "path": "finance/reporting",
           "capability_example": "Reconcile healthcare/PBM contract financial amounts to approved source rows",
           "unchanged_use_approved": false
+        },
+        {
+          "id": "local-skills/statement-variance-reviewer",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "17/20",
+          "review_evidence_path": "registry/verification/local-skills/statement-variance-reviewer.yaml",
+          "source_class": "local-provenance",
+          "path": "finance/reporting",
+          "capability_example": "Reconcile authorized statement rows before claiming period variance or anomalies.",
+          "unchanged_use_approved": false,
+          "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
         }
       ],
       "name_only_preview": [
@@ -4966,7 +5206,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1056,
+  "governed_identity_denominator": 1068,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -12390,7 +12630,8 @@
             "Diagnose repository problems, monitor changes, and triage technical debt with evidence",
             "Identify bounded broken/stale repository-document references and propose version-aware, reversible repairs",
             "Evidence-bound triage of code maintenance markers, risk and partial search coverage.",
-            "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion."
+            "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion.",
+            "Audit repository and portfolio delivery by user-facing acceptance, not issue count."
           ],
           "matched_skill_ids": [
             "local-skills/agent-home-doctor",
@@ -12403,7 +12644,8 @@
             "mattpocock-skills/code-review",
             "local-skills/reference-integrity-auditor",
             "local-skills/source-debt-triage",
-            "local-skills/agent-workspace-footprint-assessor"
+            "local-skills/agent-workspace-footprint-assessor",
+            "local-skills/repository-delivery-assessor"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -15004,11 +15246,13 @@
           "capabilities": [
             "Reference evaluation methods; default external LLM judge/trace egress not approved",
             "Analyze failed agent sessions and propose falsifiable improvements",
-            "Compare prompt-injection, bias and privacy risks in a supplied prompt"
+            "Compare prompt-injection, bias and privacy risks in a supplied prompt",
+            "Reconstruct causally discriminating agent incidents and explicit boundary violations."
           ],
           "matched_skill_ids": [
             "local-skills/agent-postmortem",
-            "google-agents-cli/google-agents-cli-eval"
+            "google-agents-cli/google-agents-cli-eval",
+            "local-skills/agent-failure-boundary-analysis"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -15435,8 +15679,12 @@
         {
           "id": "multi-agent-collaboration",
           "name": "multi-agent collaboration",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Package or resume verified context without transferring hidden authority or stale assertions."
+          ],
+          "matched_skill_ids": [
+            "local-skills/context-continuation-contract"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "multi-agent collaboration",
@@ -16128,8 +16376,12 @@
         {
           "id": "ci-cd",
           "name": "CI/CD",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Audit repository and portfolio delivery by user-facing acceptance, not issue count."
+          ],
+          "matched_skill_ids": [
+            "local-skills/repository-delivery-assessor"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "CI/CD",
@@ -19110,8 +19362,12 @@
         {
           "id": "incident-response",
           "name": "incident response",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Reconstruct causally discriminating agent incidents and explicit boundary violations."
+          ],
+          "matched_skill_ids": [
+            "local-skills/agent-failure-boundary-analysis"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "incident response",
@@ -19386,7 +19642,8 @@
           "capabilities": [
             "Discover sources and monitor technical developments using dated primary evidence",
             "Study provider-specific Google Cloud data-catalog metadata lookup as a rejected unchanged-use discovery reference.",
-            "Compare dated vendor, protocol, research and regulatory changes across 17 explicit topic profiles with primary-source evidence, corrections and migration consequences."
+            "Compare dated vendor, protocol, research and regulatory changes across 17 explicit topic profiles with primary-source evidence, corrections and migration consequences.",
+            "Build a question-specific and source-root-aware research explanation with rival hypotheses."
           ],
           "matched_skill_ids": [
             "local-skills/claude-pulse",
@@ -19408,7 +19665,8 @@
             "local-skills/qwen-pulse",
             "local-skills/xai-pulse",
             "cline-skills/knowledge-catalog-discovery",
-            "local-skills/technology-change-intelligence"
+            "local-skills/technology-change-intelligence",
+            "local-skills/research-question-dossier"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -20019,14 +20277,16 @@
             "Compare competing evidence and synthesize a bounded research finding",
             "Review user-research search evidence, provenance, source methods and honest uncertainty",
             "Synthesize source-grounded retrieved knowledge with explicit disagreement, attribution, duplicate-aware context and heuristic confidence.",
-            "Compare dated vendor, protocol, research and regulatory changes across 17 explicit topic profiles with primary-source evidence, corrections and migration consequences."
+            "Compare dated vendor, protocol, research and regulatory changes across 17 explicit topic profiles with primary-source evidence, corrections and migration consequences.",
+            "Build a question-specific and source-root-aware research explanation with rival hypotheses."
           ],
           "matched_skill_ids": [
             "local-skills/compare",
             "local-skills/deep-dive",
             "bm629-agent-skills/reviewing-user-research-prior-art-survey",
             "anthropic-knowledge-work-plugins/knowledge-synthesis",
-            "local-skills/technology-change-intelligence"
+            "local-skills/technology-change-intelligence",
+            "local-skills/research-question-dossier"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -20685,13 +20945,15 @@
           "capabilities": [
             "Compare options, frame decisions, and record outcomes with explicit authority",
             "Time-box a technical uncertainty with evidence and a decision receipt",
-            "Decision-authority tracking, supersession and revision-safe decision records."
+            "Decision-authority tracking, supersession and revision-safe decision records.",
+            "Compare alternatives with hard gates, uncertainty and sensitivity before a decision brief."
           ],
           "matched_skill_ids": [
             "local-skills/brief-writer",
             "local-skills/compare",
             "local-skills/decision-log",
-            "local-skills/decision-record-steward"
+            "local-skills/decision-record-steward",
+            "local-skills/decision-tradeoff-workbench"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -20907,10 +21169,12 @@
           "id": "content",
           "name": "content",
           "capabilities": [
-            "social media content planning"
+            "social media content planning",
+            "Develop evidence-linked presentations or development narratives without invented outcomes."
           ],
           "matched_skill_ids": [
-            "corey-haines-marketing-skills/social"
+            "corey-haines-marketing-skills/social",
+            "local-skills/evidence-narrative-composer"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -21041,11 +21305,13 @@
           "name": "SEO",
           "capabilities": [
             "read-only SEO audit",
-            "structured data schema recommendations"
+            "structured data schema recommendations",
+            "Inspect business site accuracy and customer journey with bounded publication authority."
           ],
           "matched_skill_ids": [
             "corey-haines-marketing-skills/seo-audit",
-            "corey-haines-marketing-skills/schema"
+            "corey-haines-marketing-skills/schema",
+            "local-skills/business-presence-observatory"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -25815,10 +26081,12 @@
           "id": "presentations",
           "name": "presentations",
           "capabilities": [
-            "Outline a coherent slide narrative before slide production"
+            "Outline a coherent slide narrative before slide production",
+            "Develop evidence-linked presentations or development narratives without invented outcomes."
           ],
           "matched_skill_ids": [
-            "local-skills/deck-outline"
+            "local-skills/deck-outline",
+            "local-skills/evidence-narrative-composer"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -26003,13 +26271,17 @@
           "id": "organizational-communication",
           "name": "organizational communication",
           "capabilities": [
-            "Write evidence-backed updates, handoffs, briefs, and standups"
+            "Write evidence-backed updates, handoffs, briefs, and standups",
+            "Create a scope-bound daily and inbox action board with explicit write approval.",
+            "Report daily or weekly outcomes from attributable evidence rather than activity inflation."
           ],
           "matched_skill_ids": [
             "local-skills/brief-writer",
             "local-skills/devlog-draft",
             "local-skills/handoff-writer",
-            "local-skills/standup-writer"
+            "local-skills/standup-writer",
+            "local-skills/personal-operations-control-board",
+            "local-skills/work-period-evidence-reporter"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -26878,12 +27150,14 @@
           "id": "personal-planning",
           "name": "personal planning",
           "capabilities": [
-            "Prepare daily and weekly planning briefs and grounded learning plans"
+            "Prepare daily and weekly planning briefs and grounded learning plans",
+            "Create a scope-bound daily and inbox action board with explicit write approval."
           ],
           "matched_skill_ids": [
             "local-skills/daily-briefing",
             "local-skills/learning-plan",
-            "local-skills/week-in-review"
+            "local-skills/week-in-review",
+            "local-skills/personal-operations-control-board"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -26904,11 +27178,13 @@
           "id": "task-systems",
           "name": "task systems",
           "capabilities": [
-            "Triage incoming tasks and coordinate approved task pointers"
+            "Triage incoming tasks and coordinate approved task pointers",
+            "Create a scope-bound daily and inbox action board with explicit write approval."
           ],
           "matched_skill_ids": [
             "local-skills/inbox-triage",
-            "local-skills/task-surface"
+            "local-skills/task-surface",
+            "local-skills/personal-operations-control-board"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -27116,8 +27392,12 @@
         {
           "id": "collaboration",
           "name": "collaboration",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Report daily or weekly outcomes from attributable evidence rather than activity inflation."
+          ],
+          "matched_skill_ids": [
+            "local-skills/work-period-evidence-reporter"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "collaboration",
@@ -27614,10 +27894,12 @@
           "id": "context-compression",
           "name": "context compression",
           "capabilities": [
-            "Reference context-budget techniques; autonomous writes/restarts are not approved"
+            "Reference context-budget techniques; autonomous writes/restarts are not approved",
+            "Package or resume verified context without transferring hidden authority or stale assertions."
           ],
           "matched_skill_ids": [
-            "archieindian-superpowers/context-window-management"
+            "archieindian-superpowers/context-window-management",
+            "local-skills/context-continuation-contract"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -27794,8 +28076,12 @@
         {
           "id": "strategy",
           "name": "strategy",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Compare alternatives with hard gates, uncertainty and sensitivity before a decision brief."
+          ],
+          "matched_skill_ids": [
+            "local-skills/decision-tradeoff-workbench"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "strategy",
@@ -27844,10 +28130,12 @@
           "id": "operations",
           "name": "operations",
           "capabilities": [
-            "Monitor bounded small-business operating questions without autonomous changes"
+            "Monitor bounded small-business operating questions without autonomous changes",
+            "Inspect business site accuracy and customer journey with bounded publication authority."
           ],
           "matched_skill_ids": [
-            "local-skills/smallbiz-ops"
+            "local-skills/smallbiz-ops",
+            "local-skills/business-presence-observatory"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -28329,10 +28617,12 @@
           "id": "job-search",
           "name": "job search",
           "capabilities": [
-            "Research current career-market opportunities; not automatic job applications"
+            "Research current career-market opportunities; not automatic job applications",
+            "Deduplicate dated role evidence and assess market fit with explicit compensation units."
           ],
           "matched_skill_ids": [
-            "local-skills/career-radar"
+            "local-skills/career-radar",
+            "local-skills/professional-market-evidence-scout"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -28513,8 +28803,12 @@
         {
           "id": "compensation",
           "name": "compensation",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Deduplicate dated role evidence and assess market fit with explicit compensation units."
+          ],
+          "matched_skill_ids": [
+            "local-skills/professional-market-evidence-scout"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "compensation",
@@ -28648,8 +28942,12 @@
         {
           "id": "assessment",
           "name": "assessment",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Decompose prerequisites into externally observable learning evidence and adaptation rules."
+          ],
+          "matched_skill_ids": [
+            "local-skills/learning-evidence-progression"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "assessment",
@@ -28699,8 +28997,12 @@
         {
           "id": "curriculum",
           "name": "curriculum",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Decompose prerequisites into externally observable learning evidence and adaptation rules."
+          ],
+          "matched_skill_ids": [
+            "local-skills/learning-evidence-progression"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "curriculum",
@@ -30423,8 +30725,12 @@
         {
           "id": "budgeting",
           "name": "budgeting",
-          "capabilities": [],
-          "matched_skill_ids": [],
+          "capabilities": [
+            "Reconcile authorized statement rows before claiming period variance or anomalies."
+          ],
+          "matched_skill_ids": [
+            "local-skills/statement-variance-reviewer"
+          ],
           "coverage_status": "unassessed",
           "search_hints": [
             "budgeting",
@@ -30464,11 +30770,13 @@
           "name": "reporting",
           "capabilities": [
             "Review financial statements and trace conclusions to reported rows",
-            "Reconcile healthcare/PBM contract financial amounts to approved source rows"
+            "Reconcile healthcare/PBM contract financial amounts to approved source rows",
+            "Reconcile authorized statement rows before claiming period variance or anomalies."
           ],
           "matched_skill_ids": [
             "local-skills/finance-review",
-            "local-skills/healthcare-contract-forensics"
+            "local-skills/healthcare-contract-forensics",
+            "local-skills/statement-variance-reviewer"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -32914,6 +33222,32 @@
       "security_resolution": "Must inspect separate package-security evidence; static verification is not approval"
     },
     {
+      "id": "local-skills/agent-failure-boundary-analysis",
+      "source_id": "local-skills",
+      "skill_name": "agent-failure-boundary-analysis",
+      "content_blob_sha": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
+      "complete_package_tree_sha": "529d15ce1636092920e810c75097594a195c7315",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "agent-mcp-development/evaluation",
+        "security/incident-response"
+      ],
+      "evidence_path": "registry/verification/local-skills/agent-failure-boundary-analysis.yaml",
+      "skill_path": "skills/authored/agent-failure-boundary-analysis/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/agent-failure-boundary-analysis.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/agent-home-doctor",
       "source_id": "local-skills",
       "skill_name": "agent-home-doctor",
@@ -33046,6 +33380,32 @@
       "notes": "Clear decision-first structure, anti-fabrication rules, reversibility framing, and compact output; effectiveness is design-credible but not behaviorally measured.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
+    },
+    {
+      "id": "local-skills/business-presence-observatory",
+      "source_id": "local-skills",
+      "skill_name": "business-presence-observatory",
+      "content_blob_sha": "87f586fe378dfabc2055fc7efe0589e99d212cbf",
+      "complete_package_tree_sha": "20a2d534e0b4a29e7dd2423aefbb6980f972968f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "business/operations",
+        "marketing/seo"
+      ],
+      "evidence_path": "registry/verification/local-skills/business-presence-observatory.yaml",
+      "skill_path": "skills/authored/business-presence-observatory/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/business-presence-observatory.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
     },
     {
       "id": "local-skills/career-radar",
@@ -33208,6 +33568,32 @@
       "unchanged_use_approved": false
     },
     {
+      "id": "local-skills/context-continuation-contract",
+      "source_id": "local-skills",
+      "skill_name": "context-continuation-contract",
+      "content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "complete_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "memory-context/context-compression",
+        "agent-mcp-development/multi-agent-collaboration"
+      ],
+      "evidence_path": "registry/verification/local-skills/context-continuation-contract.yaml",
+      "skill_path": "skills/authored/context-continuation-contract/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/context-continuation-contract.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/daily-briefing",
       "source_id": "local-skills",
       "skill_name": "daily-briefing",
@@ -33283,6 +33669,32 @@
       ],
       "link_basis": "2026-11-18 exact complete-package maintainer static review, no host behavioral qualification",
       "restriction": "Reference-only, no implicit source/tool permissions",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/decision-tradeoff-workbench",
+      "source_id": "local-skills",
+      "skill_name": "decision-tradeoff-workbench",
+      "content_blob_sha": "671d0bdd130414c8a71c86059e21489123f08c4d",
+      "complete_package_tree_sha": "45b00d78352674b6e705704deb96af114ba4c830",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "planning/decision-frameworks",
+        "business/strategy"
+      ],
+      "evidence_path": "registry/verification/local-skills/decision-tradeoff-workbench.yaml",
+      "skill_path": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/decision-tradeoff-workbench.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },
     {
@@ -33416,6 +33828,32 @@
       "notes": "Strong evidence-to-narrative discipline, explicit hypothesis/proof separation, and draft-only boundary; requires accessible workspace history for full value.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
+    },
+    {
+      "id": "local-skills/evidence-narrative-composer",
+      "source_id": "local-skills",
+      "skill_name": "evidence-narrative-composer",
+      "content_blob_sha": "d67e8824ab340014f5379f32fc8e02df3220d18a",
+      "complete_package_tree_sha": "6e356d294bab2483fd4a938c24fd5e5b0b2ad34a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "communication/presentations",
+        "marketing/content"
+      ],
+      "evidence_path": "registry/verification/local-skills/evidence-narrative-composer.yaml",
+      "skill_path": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/evidence-narrative-composer.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
     },
     {
       "id": "local-skills/fact-check",
@@ -33793,6 +34231,32 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/learning-evidence-progression",
+      "source_id": "local-skills",
+      "skill_name": "learning-evidence-progression",
+      "content_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
+      "complete_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "education/curriculum",
+        "education/assessment"
+      ],
+      "evidence_path": "registry/verification/local-skills/learning-evidence-progression.yaml",
+      "skill_path": "skills/authored/learning-evidence-progression/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/learning-evidence-progression.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/learning-plan",
       "source_id": "local-skills",
       "skill_name": "learning-plan",
@@ -34115,6 +34579,33 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/personal-operations-control-board",
+      "source_id": "local-skills",
+      "skill_name": "personal-operations-control-board",
+      "content_blob_sha": "04ed03841366f854d642e8ebcafd9d39023608c6",
+      "complete_package_tree_sha": "7dab6d9a2d31e59a84b5979d20398efea223dc17",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "time-productivity/task-systems",
+        "time-productivity/personal-planning",
+        "communication/organizational-communication"
+      ],
+      "evidence_path": "registry/verification/local-skills/personal-operations-control-board.yaml",
+      "skill_path": "skills/authored/personal-operations-control-board/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/personal-operations-control-board.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/privilege-exposure-mapper",
       "source_id": "local-skills",
       "skill_name": "privilege-exposure-mapper",
@@ -34138,6 +34629,32 @@
       ],
       "link_basis": "Exact complete-package maintainer static review, behavior not run",
       "restriction": "No external connection or sensitive operation permitted by reference-only review",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/professional-market-evidence-scout",
+      "source_id": "local-skills",
+      "skill_name": "professional-market-evidence-scout",
+      "content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
+      "complete_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "career/job-search",
+        "career/compensation"
+      ],
+      "evidence_path": "registry/verification/local-skills/professional-market-evidence-scout.yaml",
+      "skill_path": "skills/authored/professional-market-evidence-scout/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/professional-market-evidence-scout.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },
     {
@@ -34245,6 +34762,32 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/repository-delivery-assessor",
+      "source_id": "local-skills",
+      "skill_name": "repository-delivery-assessor",
+      "content_blob_sha": "2e4b24f1a3e764a90f9dcdc2804267fccbb15d41",
+      "complete_package_tree_sha": "5a896b31e8019645207dc73316e09534c004dfd2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "software-engineering/maintenance",
+        "cloud-devops/ci-cd"
+      ],
+      "evidence_path": "registry/verification/local-skills/repository-delivery-assessor.yaml",
+      "skill_path": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/repository-delivery-assessor.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/research-methods-appraiser",
       "source_id": "local-skills",
       "skill_name": "research-methods-appraiser",
@@ -34268,6 +34811,32 @@
       ],
       "link_basis": "2026-11-18 exact complete-package maintainer static review, no host behavioral qualification",
       "restriction": "Reference-only, no implicit source/tool permissions",
+      "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/research-question-dossier",
+      "source_id": "local-skills",
+      "skill_name": "research-question-dossier",
+      "content_blob_sha": "be5e60add3642754ac89d9d28c51077f13515ed9",
+      "complete_package_tree_sha": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "research/synthesis",
+        "research/source-discovery"
+      ],
+      "evidence_path": "registry/verification/local-skills/research-question-dossier.yaml",
+      "skill_path": "skills/authored/research-question-dossier/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/research-question-dossier.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },
     {
@@ -34402,6 +34971,32 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
+      "id": "local-skills/statement-variance-reviewer",
+      "source_id": "local-skills",
+      "skill_name": "statement-variance-reviewer",
+      "content_blob_sha": "5ab4cc773e90213e2d769142ea0b4741f657ca5e",
+      "complete_package_tree_sha": "08ecf062b07b632d5d5eef1cefa61abb658d5f48",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "17/20",
+      "capability_paths": [
+        "finance/reporting",
+        "finance/budgeting"
+      ],
+      "evidence_path": "registry/verification/local-skills/statement-variance-reviewer.yaml",
+      "skill_path": "skills/authored/statement-variance-reviewer/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/statement-variance-reviewer.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "local-skills/task-surface",
       "source_id": "local-skills",
       "skill_name": "task-surface",
@@ -34506,6 +35101,32 @@
       "notes": "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
+    },
+    {
+      "id": "local-skills/work-period-evidence-reporter",
+      "source_id": "local-skills",
+      "skill_name": "work-period-evidence-reporter",
+      "content_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
+      "complete_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "communication/organizational-communication",
+        "time-productivity/collaboration"
+      ],
+      "evidence_path": "registry/verification/local-skills/work-period-evidence-reporter.yaml",
+      "skill_path": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/work-period-evidence-reporter.yaml",
+      "source_license": "Original first-party MIT files only; legacy source rights unresolved",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
+      "unchanged_use_approved": false
     },
     {
       "id": "local-skills/xai-pulse",
@@ -34618,13 +35239,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 140,
+  "identity_level_capability_links_mapped": 152,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 61,
-    "known_total_governed_review_records": 1056,
+    "known_first_party_skill_records": 73,
+    "known_total_governed_review_records": 1068,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34680,18 +35301,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 61,
+  "first_party_identity_links_mapped": 73,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 61,
+    "mapped_first_party_distinct": 73,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 140,
-    "subdomains_with_evidence_linked_examples": 80,
+    "mapped_total_distinct": 152,
+    "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Nine original first-party replacement packages, including 17 individually routed topic profiles, statically reviewed. No historic sources removed. Behavior not run.",
+    "note": "21 newly authored first-party original packages statically reviewed across 44 historical capability references; no legacy retirement or host acceptance. Rejected external sources remain discoverable but blocked for unchanged use.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -34925,16 +35546,29 @@
       "local-skills/connector-capability-risk-review",
       "local-skills/privilege-exposure-mapper",
       "local-skills/scheduled-work-proof-auditor",
-      "local-skills/technology-change-intelligence"
+      "local-skills/technology-change-intelligence",
+      "local-skills/agent-failure-boundary-analysis",
+      "local-skills/decision-tradeoff-workbench",
+      "local-skills/research-question-dossier",
+      "local-skills/professional-market-evidence-scout",
+      "local-skills/statement-variance-reviewer",
+      "local-skills/context-continuation-contract",
+      "local-skills/evidence-narrative-composer",
+      "local-skills/personal-operations-control-board",
+      "local-skills/learning-evidence-progression",
+      "local-skills/repository-delivery-assessor",
+      "local-skills/business-presence-observatory",
+      "local-skills/work-period-evidence-reporter"
     ],
     "legacy_source_count": 44,
-    "legacy_capabilities_addressed": 25,
+    "legacy_capabilities_addressed": 44,
     "legacy_retired": 0,
-    "status": "nine original packages static-reviewed; no observed host behavior",
+    "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
-      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md"
+      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ]
   }
 }

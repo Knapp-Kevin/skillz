@@ -1992,6 +1992,390 @@
         ]
       },
       "notes": "Original six-file MIT package with 17 routed profiles. docs/reviews/2026-11-18-technology-change-intelligence-static-review.md. Behavioral validation NOT RUN; underlying legacy rights unresolved."
+    },
+    {
+      "skill_name": "agent-failure-boundary-analysis",
+      "local_path": "skills/authored/agent-failure-boundary-analysis/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
+      "complete_package_tree_sha": "529d15ce1636092920e810c75097594a195c7315",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "decision-tradeoff-workbench",
+      "local_path": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "671d0bdd130414c8a71c86059e21489123f08c4d",
+      "complete_package_tree_sha": "45b00d78352674b6e705704deb96af114ba4c830",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "research-question-dossier",
+      "local_path": "skills/authored/research-question-dossier/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "be5e60add3642754ac89d9d28c51077f13515ed9",
+      "complete_package_tree_sha": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "professional-market-evidence-scout",
+      "local_path": "skills/authored/professional-market-evidence-scout/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
+      "complete_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "statement-variance-reviewer",
+      "local_path": "skills/authored/statement-variance-reviewer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5ab4cc773e90213e2d769142ea0b4741f657ca5e",
+      "complete_package_tree_sha": "08ecf062b07b632d5d5eef1cefa61abb658d5f48",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "context-continuation-contract",
+      "local_path": "skills/authored/context-continuation-contract/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "complete_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "evidence-narrative-composer",
+      "local_path": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d67e8824ab340014f5379f32fc8e02df3220d18a",
+      "complete_package_tree_sha": "6e356d294bab2483fd4a938c24fd5e5b0b2ad34a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "personal-operations-control-board",
+      "local_path": "skills/authored/personal-operations-control-board/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "04ed03841366f854d642e8ebcafd9d39023608c6",
+      "complete_package_tree_sha": "7dab6d9a2d31e59a84b5979d20398efea223dc17",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "learning-evidence-progression",
+      "local_path": "skills/authored/learning-evidence-progression/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
+      "complete_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "repository-delivery-assessor",
+      "local_path": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "2e4b24f1a3e764a90f9dcdc2804267fccbb15d41",
+      "complete_package_tree_sha": "5a896b31e8019645207dc73316e09534c004dfd2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "business-presence-observatory",
+      "local_path": "skills/authored/business-presence-observatory/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "87f586fe378dfabc2055fc7efe0589e99d212cbf",
+      "complete_package_tree_sha": "20a2d534e0b4a29e7dd2423aefbb6980f972968f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "work-period-evidence-reporter",
+      "local_path": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
+      "complete_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
     }
   ]
 }

@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: context-continuation-contract
+skill_version: "1.0.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/context-continuation-contract/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/context-continuation-contract/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4a2af8971576581adf3d768cc6878549c5cac511
+complete_package_tree_sha: 3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Package or resume verified context without transferring hidden authority or stale assertions. Direct static semantic review 18/20. Three-file package
+  hashed and references verified. Host execution NOT RUN, real-world
+  effectiveness and historic rights not established. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md
