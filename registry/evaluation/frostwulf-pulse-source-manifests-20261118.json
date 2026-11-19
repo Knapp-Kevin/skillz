@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-18",
+  "historical_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+  "scope": "Seventeen legacy topic pulses mapped into one original authored technology-change-intelligence package with separate profiles",
+  "manifest_type": "PARTIAL_SUPPORT_FILE_PINNING_NOT_FULL_GIT_TREE",
+  "counts": {
+    "profiles": 17,
+    "pinned_bundled_source_json": 16,
+    "inline_source_lists": 1,
+    "full_package_trees_verified": 0,
+    "host_behavior_observed": 0
+  },
+  "non_exhaustive_warning": "SKILL.md plus a known source-list file does not certify absence of other support files. Full untruncated tree enumeration is required before host A/B execution or retirement.",
+  "rows": [
+    {
+      "historical_entrypoint": "skills/claude-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
+      "source_list_mode": "INLINE_IN_SKILL_MD",
+      "known_source_manifest_path": null,
+      "known_source_manifest_git_blob_sha1": null,
+      "source_manifest_json_parse_verified": false,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/deepseek-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/deepseek-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "0acf86aa545c6c519ee95e364226badca5f32bda",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/gemini-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/gemini-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "02a7017d93b20f13392bdb0343d22ad3d5ebf440",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/github-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/github-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "bfdce4b0e819ceab937b1b92d31313cde11595f4",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/glm-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/glm-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "741b61992356dc6a7ee2063fe54765b93fc3c039",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/governance-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/governance-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "ea931e8cb3adaebe7a8819bfa27af2902b356b76",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/hf-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "149e577a9f72895b09aea43d607203d731db1bce",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/hf-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "e29fd6def1f6bf38d93ba3a8864b9fd264388e38",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/inference-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/inference-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/kimi-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/kimi-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "d3916d9e018cdb00a7ce529933c4c95310aedb92",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/llama-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "c0c38b0dd182f1f588d1800b832b331c8572080e",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/llama-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "14b89191a00a7e1ffccb28ab47c32b1a5a84acdb",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/mcp-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/mcp-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "586ae9bffc9ff8112d4e460aa878b6ebe4015172",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/memory-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/memory-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "d05ad098fcb822b1af81798cae1321d135f3f042",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/mistral-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/mistral-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "760e8d731d00ff99ac8eb7405ab7da9390745c43",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/openai-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/openai-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "7453e54b0fd67f2fbf6ca8bad4e6f0e569b59a3b",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/perplexity-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "06906792509a41a3a9cbb641e02f47e9fb458a69",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/perplexity-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "a7dc203a87bbb6eab1ccbbe40583c5f90eb74d46",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/qwen-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/qwen-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "304be9866f211cec086f5479af9d872cac7d84b4",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "historical_entrypoint": "skills/xai-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/xai-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "f3608fb81efd181a91ecf2c72b73930e073ab67f",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN"
+    }
+  ]
+}
