@@ -725,22 +725,27 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/context-continuation-contract.yaml",
       "verification_path": "registry/verification/local-skills/context-continuation-contract.yaml",
-      "skill_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
-      "package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "skill_blob_sha": "41bec236390d73bdecae389508156b5a784c1b54",
+      "package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
-      "host_authority": "read-only",
+      "host_authority": "mutating",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): handoff-writer, session-continuity. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/744",
+      "package_version": "1.1.0",
       "capability_paths": [
         "memory-context/context-compression",
         "agent-mcp-development/multi-agent-collaboration"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "previous_reviewed_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "default_authority": "read-only",
+      "authority_note": "An optional durable-continuity record write is allowed only after verifying current or applicable standing destination-specific user authorization; no automatic writes.",
+      "review_note": "Reviewed current three-file exact package: docs/reviews/2026-11-18-context-continuation-parity-v1-1.md. No observed host behavior, 1.5x NOT_PROVEN."
     },
     {
       "id": "evidence-narrative-composer",
