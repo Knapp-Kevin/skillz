@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-19",
-  "purpose": "Governed active reviewed exact versions: 1056 (61 first-party and 995 external); 13 historical legacy identities are archived, not selectable.",
+  "purpose": "Current 1054 governed exact-version identities (59 first-party, 995 third-party); 15 historical retired entrypoints in archive only.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 61,
+    "first_party": 59,
     "third_party": 995,
-    "total": 1056
+    "total": 1054
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -24,11 +24,9 @@
     "local-skills/daily-briefing",
     "local-skills/decision-record-steward",
     "local-skills/decision-tradeoff-workbench",
-    "local-skills/deck-outline",
     "local-skills/deep-dive",
     "local-skills/deepseek-pulse",
     "local-skills/develop-melodic-motif",
-    "local-skills/devlog-draft",
     "local-skills/evidence-narrative-composer",
     "local-skills/federated-source-catalog",
     "local-skills/file-lifecycle-curator",
@@ -1240,6 +1238,24 @@
       "replacement_id": "local-skills/work-period-evidence-reporter",
       "host_parity": "not-run",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json"
+    },
+    {
+      "id": "local-skills/deck-outline",
+      "source_commit": "efd33e05141b81250420eca249364c82fa429558",
+      "source_blob": "63c943992417148d010551238a15259d4968cb55",
+      "source_tree": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "id": "local-skills/devlog-draft",
+      "source_commit": "efd33e05141b81250420eca249364c82fa429558",
+      "source_blob": "d74ff133f69c8908c4acf296fb93313069082114",
+      "source_tree": "ba81b6da10b317b314d31264d7c5d9362d753702",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
     }
   ],
   "delivery_effectiveness_extension_20261119": {
