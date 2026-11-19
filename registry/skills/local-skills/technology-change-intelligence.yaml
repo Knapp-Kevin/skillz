@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: technology-change-intelligence
 display_name: "Technology Change Intelligence"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/technology-change-intelligence/SKILL.md
@@ -18,11 +18,11 @@ permission_tier: read-only
 portability: high
 review_status: verified-static
 dependency_status: host-read-only-research
-dependencies: "Original six-file text package. Public web/repo data optional via explicitly authorized host; no bundled runtime or scheduler."
-content_blob_sha: 0ed4d1ff60f510a33f7d638032c3009e556ae608
-complete_package_tree_sha: b38b79e11ae1acca2ff753734c3c22c3d00f15af
+dependencies: "Original seven-file text package. Public web/repo data optional via explicitly authorized host; no bundled runtime or scheduler."
+content_blob_sha: ed57df330a5cf88eec055afc8f1d325247c44742
+complete_package_tree_sha: 3b6983ed4189ff93cecdccf55f6f086f7743617d
 historical_origin_status: "17 frostwulf.zo.computer pulse sources have unknown underlying human authorship and rights."
 historical_comparison: registry/migration/frostwulf-independent-replacement-ledger-20261118.json
 rights_resolution: "Only separately drafted new source/fixture and profiles under MIT; no copied historical sources or source lists."
 import_eligibility: review-required
-rationale: "Exact six-file complete-package review 18/20; 17 profiles checked; observed host behavior not-run. docs/reviews/2026-11-18-technology-change-intelligence-static-review.md"
+rationale: "Exact seven-file v1.1 complete-package review 18/20, all 17 topic report contracts reviewed; behavior not-run. docs/reviews/2026-11-18-technology-change-profile-parity-v1-1.md"
