@@ -561,22 +561,25 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/agent-failure-boundary-analysis.yaml",
       "verification_path": "registry/verification/local-skills/agent-failure-boundary-analysis.yaml",
-      "skill_blob_sha": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
-      "package_tree_sha": "529d15ce1636092920e810c75097594a195c7315",
+      "skill_blob_sha": "4a114972587060c79ee6df852526a0a047abd3c2",
+      "package_tree_sha": null,
       "package_file_count": 3,
-      "review_status": "verified-static",
-      "review_score": "18/20",
+      "review_status": "needs-re-review",
+      "review_score": null,
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): agent-postmortem. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/739",
+      "package_version": "1.1.0",
       "capability_paths": [
         "agent-mcp-development/evaluation",
         "security/incident-response"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
+      "previous_reviewed_package_tree_sha": "529d15ce1636092920e810c75097594a195c7315",
+      "review_note": "Source-level remediation staged; current complete package tree and updated exact-version review pending. Previous 18/20 applies only to historical version 1.0.0; behavior and 1.5x improvement not measured."
     },
     {
       "id": "decision-tradeoff-workbench",
