@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Research Methods Appraiser
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -51,6 +51,48 @@ ABSTRACT_ONLY. Never imply a code release was run merely because a URL exists.
 7. Verify that claims in the report resolve to tables, text, figures or
    source documents actually inspected. Keep author-disclosed weaknesses
    separate from reviewer-inferred weaknesses.
+
+## Practitioner-oriented paper digest
+
+When the user requests a summary, paper digest, arXiv/PDF review or
+plain-language interpretation, do not replace the digest with a
+methodology-only critique. Produce a practical, concise report **in
+addition to** the rigorous evidence assessment.
+
+1. **Actual contribution versus promotion:** In ordinary language,
+   describe the narrow result established by the measured population,
+   baseline and conditions. Contrast it with the author's abstract or
+   headline only when actual inspected evidence supports that contrast.
+2. **Method explained for a practitioner:** Explain what was built,
+   changed or measured, how the control/baseline worked, and why the
+   experiment might produce the result. Define essential terms once.
+   Avoid mathematical jargon that adds no decision value, but retain
+   actual uncertainty and meaningful setup conditions.
+3. **Two limitation inventories:** Distinguish limitations *the
+   authors themselves acknowledged* (with a section/source pointer)
+   from independently *identified reviewer concerns* (with the
+   inference and supporting basis). A missing limitation section
+   does not establish that the paper has no weaknesses, and an
+   inferred flaw is not an author admission.
+4. **Replication and implementation:** Say which code, model,
+   artifacts and reproduction attempts were actually inspected.
+   Differentiate NOT_FOUND_WITHIN_SEARCHED_SOURCES from
+   REPLICATION_NOT_ASSESSED; never make a global claim that no one
+   replicated a paper without a defensible complete search.
+5. **Applicability verdict:** Given only a user-supplied or
+   separately authorized technical environment, state whether
+   this work is suitable for TEST, WATCH, DECLINE or
+   INSUFFICIENT_EVIDENCE, with the decisive constraints and next
+   minimally scoped experiment. Without scoped deployment context,
+   give general implications and label personalized relevance
+   NOT_ASSESSED, not an invented user-stack evaluation.
+
+The resulting digest includes the paper identity and as-of date,
+actual result, method in plain language, claim/evidence matrix,
+the two limitation inventories, replication status and a practical
+verdict. If only an abstract is accessible, do not pretend to have
+inspected methods, figures or supporting appendices; show
+ABSTRACT_ONLY prominently.
 
 ## Expected artifact
 
