@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 11,
+    "legacy_retirements_approved": 13,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 10,
-    "retired_under_owner_accepted_procedure": 11,
+    "historical_full_package_trees_verified": 12,
+    "retired_under_owner_accepted_procedure": 13,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -3074,13 +3074,13 @@
       "legacy_blob_sha1": "21c216fbc46f516fecc0a562afbe652fbd436b95",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
-      "replacement_package_tree_sha1": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "1f009236ab80aba49095a55229a6109504035096",
+      "replacement_package_tree_sha1": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_REPORTS",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3129,18 +3129,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_ONE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "SOURCE_LEVEL_OUTCOMES_PRESERVED; FIVE_SELF_ADJUDICATED_REPORT_CASES_PASS; INDEPENDENT_BEHAVIOR_NOT_PROVEN",
+        "security_no_regression": "NO_KNOWN_CRITICAL_VIOLATION_IN_FIVE_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_UNPROVEN_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ROUTES_RECONCILED_FULL_REPOSITORY_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Narrow source-bound owner-accepted emulation only; quality 1.5x and independent original/replacement A/B remain unproven.",
+        "qualification_basis": "OWNER_ACCEPTED_SYNTHETIC_REPORT_EVALUATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "SINGLE_ANALYST_SYNTHETIC_REPORT_CONSTRUCTION_AND_DETERMINISTIC_ORACLES",
+        "original_full_tree_sha1": "d6429bfea7bebe567aa52f7c5f1f6c44fd10086f",
+        "replacement_full_tree_sha1": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/task-surface/SKILL.md",
@@ -3308,13 +3321,13 @@
       "legacy_blob_sha1": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
-      "replacement_package_tree_sha1": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "1f009236ab80aba49095a55229a6109504035096",
+      "replacement_package_tree_sha1": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_REPORTS",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3363,18 +3376,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_ONE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "SOURCE_LEVEL_OUTCOMES_PRESERVED; FIVE_SELF_ADJUDICATED_REPORT_CASES_PASS; INDEPENDENT_BEHAVIOR_NOT_PROVEN",
+        "security_no_regression": "NO_KNOWN_CRITICAL_VIOLATION_IN_FIVE_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_UNPROVEN_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ROUTES_RECONCILED_FULL_REPOSITORY_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Narrow source-bound owner-accepted emulation only; quality 1.5x and independent original/replacement A/B remain unproven.",
+        "qualification_basis": "OWNER_ACCEPTED_SYNTHETIC_REPORT_EVALUATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "SINGLE_ANALYST_SYNTHETIC_REPORT_CONSTRUCTION_AND_DETERMINISTIC_ORACLES",
+        "original_full_tree_sha1": "81646a594bf994e24899f7a086d86459cfaa5832",
+        "replacement_full_tree_sha1": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/xai-pulse/SKILL.md",

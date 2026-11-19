@@ -1134,14 +1134,12 @@
       "daily-briefing",
       "inbox-triage",
       "learning-plan",
-      "task-surface",
-      "week-in-review"
+      "task-surface"
     ],
     "writing-communication": [
       "brief-writer",
       "deck-outline",
-      "devlog-draft",
-      "standup-writer"
+      "devlog-draft"
     ],
     "research-analysis": [
       "compare",
@@ -5457,7 +5455,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 separately original authored replacements statically reviewed, eleven source-bound original retirements, 33 active originals; host A/B and 1.5x unproven",
+    "status": "21 authored packages static-reviewed; 13 individually qualified controlled retirements; 31 original entries remain active; independent host A/B not proven",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5489,7 +5487,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 11,
-    "retirement_status": "eleven owner-accepted controlled/emulated source retirement decisions; model-host outcomes not proven"
+    "legacy_retired": 13,
+    "retirement_status": "13 owner-accepted source-bound controlled emulation retirements, no measured 1.5x behavioral benefit"
   }
 }

@@ -971,8 +971,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/work-period-evidence-reporter.yaml",
       "verification_path": "registry/verification/local-skills/work-period-evidence-reporter.yaml",
-      "skill_blob_sha": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
-      "package_tree_sha": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "skill_blob_sha": "1f009236ab80aba49095a55229a6109504035096",
+      "package_tree_sha": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -981,15 +981,15 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): standup-writer, week-in-review. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/743",
-      "package_version": "1.1.0",
+      "package_version": "1.2.0",
       "capability_paths": [
         "communication/organizational-communication",
         "time-productivity/collaboration"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
-      "previous_reviewed_skill_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
-      "previous_reviewed_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
-      "review_note": "Exact three-file current-package static review: docs/reviews/2026-11-18-narrative-and-work-period-parity-v1-1.md. Prior v1.0 static evidence historical. Host behavior not run and 1.5x effectiveness not proven."
+      "previous_reviewed_skill_blob_sha": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
+      "previous_reviewed_package_tree_sha": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "review_note": "2026-11-19 exact package tree review docs/reviews/2026-11-19-work-period-two-mode-retirement.md: restored Monday handoff and optional separately-approved scheduling; 10 synthetic report cases; independent LLM-host A/B NOT RUN; 1.5x not proven."
     },
     {
       "id": "ci-guard",

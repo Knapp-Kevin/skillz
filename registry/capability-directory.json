@@ -3925,7 +3925,7 @@
     {
       "domain": "communication",
       "display_name": "Communication",
-      "linked_reviewed_examples": 7,
+      "linked_reviewed_examples": 6,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 8,
       "evidence_preview": [
@@ -3955,16 +3955,6 @@
           "validation_status": "not-run",
           "static_score": null,
           "review_evidence_path": "registry/verification/local-skills/devlog-draft.yaml",
-          "source_class": "local-provenance",
-          "path": "communication/organizational-communication",
-          "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
-        },
-        {
-          "id": "local-skills/standup-writer",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/standup-writer.yaml",
           "source_class": "local-provenance",
           "path": "communication/organizational-communication",
           "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
@@ -4136,7 +4126,7 @@
     {
       "domain": "time-productivity",
       "display_name": "Time / productivity",
-      "linked_reviewed_examples": 8,
+      "linked_reviewed_examples": 7,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 16,
       "evidence_preview": [
@@ -4156,16 +4146,6 @@
           "validation_status": "not-run",
           "static_score": null,
           "review_evidence_path": "registry/verification/local-skills/learning-plan.yaml",
-          "source_class": "local-provenance",
-          "path": "time-productivity/personal-planning",
-          "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
-        },
-        {
-          "id": "local-skills/week-in-review",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/week-in-review.yaml",
           "source_class": "local-provenance",
           "path": "time-productivity/personal-planning",
           "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
@@ -5100,7 +5080,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1058,
+  "governed_identity_denominator": 1056,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -26162,7 +26142,6 @@
           "matched_skill_ids": [
             "local-skills/brief-writer",
             "local-skills/devlog-draft",
-            "local-skills/standup-writer",
             "local-skills/personal-operations-control-board",
             "local-skills/work-period-evidence-reporter"
           ],
@@ -27039,7 +27018,6 @@
           "matched_skill_ids": [
             "local-skills/daily-briefing",
             "local-skills/learning-plan",
-            "local-skills/week-in-review",
             "local-skills/personal-operations-control-board"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -34563,32 +34541,6 @@
       "unchanged_use_approved": false
     },
     {
-      "id": "local-skills/standup-writer",
-      "source_id": "local-skills",
-      "skill_name": "standup-writer",
-      "content_blob_sha": "a1cd8678794c90bbaf4f5f2a70d469576ec4b633",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "communication/organizational-communication"
-      ],
-      "evidence_path": "registry/verification/local-skills/standup-writer.yaml",
-      "skill_path": "skills/standup-writer/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/standup-writer.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "generate-only"
-      ],
-      "use_case_tags": [
-        "productivity",
-        "communication"
-      ],
-      "notes": "Strong evidence-only worklog construction with an explicit unclear bucket and no automatic posting; requires workspace/git/calendar access for complete coverage.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/statement-variance-reviewer",
       "source_id": "local-skills",
       "skill_name": "statement-variance-reviewer",
@@ -34669,37 +34621,11 @@
       "unchanged_use_approved": false
     },
     {
-      "id": "local-skills/week-in-review",
-      "source_id": "local-skills",
-      "skill_name": "week-in-review",
-      "content_blob_sha": "cd6671df6042d5a864850f6362d0947d61eb7357",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "time-productivity/personal-planning"
-      ],
-      "evidence_path": "registry/verification/local-skills/week-in-review.yaml",
-      "skill_path": "skills/week-in-review/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/week-in-review.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "generate-only"
-      ],
-      "use_case_tags": [
-        "productivity",
-        "planning"
-      ],
-      "notes": "Evidence-backed weekly retrospective with explicit shipped-versus-stalled distinction and approval-gated carry-forward persistence; requires several workspace sources.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/work-period-evidence-reporter",
       "source_id": "local-skills",
       "skill_name": "work-period-evidence-reporter",
-      "content_blob_sha": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
-      "complete_package_tree_sha": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "content_blob_sha": "1f009236ab80aba49095a55229a6109504035096",
+      "complete_package_tree_sha": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34718,7 +34644,8 @@
       ],
       "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "notes": "Current original v1.2 package independently authored, complete tree pinned, two report modes structurally exercised with ten synthetic outputs; no independent host A/B or measured benefit."
     },
     {
       "id": "local-skills/xai-pulse",
@@ -34858,13 +34785,13 @@
       "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 142,
+  "identity_level_capability_links_mapped": 140,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 63,
-    "known_total_governed_review_records": 1058,
+    "known_first_party_skill_records": 61,
+    "known_total_governed_review_records": 1056,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34921,18 +34848,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 63,
+  "first_party_identity_links_mapped": 61,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 63,
+    "mapped_first_party_distinct": 61,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 142,
+    "mapped_total_distinct": 140,
     "subdomains_with_evidence_linked_examples": 88,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Eleven source-bound historical retirements; CI Guard retained, 33 originals active; no independent model-host parity, 1.5x, or exhaustive consumer scan proven.",
+    "note": "13 historical legacy retirements under individually bounded controlled emulation; 31 active historical originals; no full host A/B or exhaustive consumer scan.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35182,7 +35109,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 11,
+    "legacy_retired": 13,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35190,7 +35117,7 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 33
+    "legacy_remaining": 31
   },
   "delivery_effectiveness_extension_20261119": {
     "date": "2026-11-19",
