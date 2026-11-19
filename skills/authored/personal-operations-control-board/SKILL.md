@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Productivity
   display-name: Personal Operations Control Board
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -57,6 +57,90 @@ user profiles because they are connected to the host.
    incomplete source coverage, safe drafts and proposed writes clearly
    separated from executed work. Never claim action occurred based
    on a suggested table row.
+
+## One-screen daily briefing mode
+
+A request for a morning/daily brief **must** preserve an action-first
+single-screen output, not merely a large task board. Bind an explicit
+local date and time zone. Accept only separately authorized calendar
+events for today, unread messages in a specific mailbox/lookback window,
+and yesterday's open items from specified task/repository/memory sources.
+Do not infer an account, root directory, inbox or prior day from general
+connector availability.
+
+Keep the following user-visible sections in this order:
+
+1. **Today's Shape:** first and last evidenced commitments, preparation
+   needs and realistic focus-work gaps. Unknown calendars receive
+   CALENDAR_NOT_CHECKED, not the claim that the day is free.
+2. **Act On (maximum five):** decisions requiring the user, true near-term
+   deadlines and bounded follow-ups. Each must explain why today and
+   retain a safe source pointer. Do not present an inferred deadline
+   as confirmed. A day with no evidenced urgent actions should say so.
+3. **Loose Ends Carried Over:** yesterday's unresolved items only when
+   a specifically approved prior source actually establishes them.
+   Do not invent a prior briefing, task or remembered commitment.
+4. **FYI:** short non-actionable awareness items, omitted when none
+   are supported.
+
+The final briefing must remain genuinely readable on one screen.
+If more than five important actions exist, show the five selected
+by explicit decision urgency and separately mention omitted backlog
+coverage, without pretending all items were assessed. Avoid copying
+entire email messages or private calendar details into a shareable
+summary. A morning briefing request **does not** create a schedule,
+send a digest or store a recurring task.
+
+## Four-pile inbox triage mode
+
+An inbox triage request expects a message-by-message actionable
+classification, not only an aggregated task ledger. Use exactly
+these user-visible piles: **Act, Delegate, Read Later, Archive**.
+Retain the internal standardized action labels
+RESPONSE_REQUIRED / DELEGATION_CANDIDATE / REFERENCE / NO_ACTION /
+UNKNOWN as supplementary metadata, not a replacement for the
+original four human-readable piles.
+
+For each bounded, actually inspected message provide a privacy-safe
+reference, class, **one-line classification reason**, verified
+deadline or urgency/UNKNOWN, and next action when relevant.
+Flag time-sensitive items and mail from **user-confirmed** priority
+contacts separately. An unknown sender is not a key contact merely
+because a message claims importance. Distinguish content needing
+manual review from evidence of an actual action deadline.
+
+For every **Act** item requiring a reply, prepare a complete
+**ready-to-review draft reply** to the extent that the approved
+source supplies the needed facts. If the message lacks
+critical information, use DRAFT_BLOCKED with the precise missing
+fact and a safe clarifying question. Do not fabricate promises,
+prices, dates or stakeholder intent to complete a draft.
+Messages assigned to Delegate should have a proposed assignee
+only if source/owner authority supports one; otherwise
+ASSIGNEE_UNKNOWN. Read Later and Archive are **recommendations**,
+not executed mailbox changes.
+
+The triage output is:
+`scoped inbox/as-of | priority flags | Act | Delegate |
+Read Later | Archive | drafted replies | source gaps |
+separately proposed actions`.
+Do not silently omit a pile containing inspected messages, and
+never move, archive, label, delete, send, forward or create a
+recurring digest from a read-only triage request. Any later
+mailbox mutation requires named message(s), operation, account,
+user approval, qualified host capability and readback. Drafting
+a reply does not grant permission to send it.
+
+## Authority classification
+
+By default, daily briefing and inbox triage are strictly
+**read-only or draft-only**. The coordination-workspace
+establishment and task-store update modes describe separate,
+explicitly authorized **mutating** host operations. Therefore
+the package's **maximum declared authority is MUTATING**, with
+a read-only default. Registry and verification records must
+reflect that maximum. The text never grants execution authority
+by itself; approval and host enforcement remain separate.
 
 ## Coordination workspace design and operation
 
@@ -110,6 +194,8 @@ functions are optional **host-authorized** operations, not automatic
 permissions bundled into the skill.
 
 ## Output
+Use the mandatory one-screen briefing and four-pile inbox contracts
+above in their respective modes. Coordination mode otherwise emits
 `As-of; observed source windows; calendar constraints; next actions;
 pending replies; items waiting on others; conflicts; unknowns;
 proposed mutations (not executed)`.
