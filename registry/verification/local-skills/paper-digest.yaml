@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 8691e648e6c96c986391bdbdf812616c34baef95
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New exact source statically re-reviewed, NOT pinned SkillSpector scanned or actual agent-host behavior. Unchanged use held.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "2026-11-04 fresh full-current 17/20 semantic review: Restricted relevance context to supplied/explicitly authorized stack; no private profile or governance discovery during public paper digest. Previous 19/20 grade on older blob was insufficient to catch this authority/egress defect. Current exact SKILL.md 8691e648e6c96c986391bdbdf812616c34baef95, complete package Git tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0. External pinned scanner and real synthetic host tool-call behavior NOT RUN; security issue #402. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/paper-digest/SKILL.md
+replacement_id: local-skills/research-methods-appraiser
+retirement_note: "Five real synthetic Python procedure checks passed; no independent model agent A/B, 1.5x gain, or comprehensive consumer inventory. Historical rights unresolved."

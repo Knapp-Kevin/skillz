@@ -1146,9 +1146,7 @@
     ],
     "research-analysis": [
       "compare",
-      "deep-dive",
-      "fact-check",
-      "paper-digest"
+      "deep-dive"
     ],
     "software-repositories": [
       "repo-doctor",
@@ -5461,7 +5459,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 original replacements, seven historical entries retired by source-bound controlled acceptance, 37 remain; host A/B unproven",
+    "status": "21 original packages statically reviewed; nine source-bound historical retirements, 35 active originals; no independent model A/B or measured 1.5x",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5493,7 +5491,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 7,
-    "retirement_status": "seven per-source owner-accepted procedure/emulation retirements; no proven 1.5x gain"
+    "legacy_retired": 9,
+    "retirement_status": "nine per-source owner-accepted controlled/emulated retirements; unproven model-host parity"
   }
 }

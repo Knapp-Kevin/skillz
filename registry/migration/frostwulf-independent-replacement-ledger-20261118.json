@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 7,
+    "legacy_removed": 9,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 37
+    "legacy_remaining": 35
   },
   "rows": [
     {
@@ -198,7 +198,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/claim-evidence-adjudicator/SKILL.md",
       "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "retirement_status": "five_executed_synthetic_research_procedures_passed_not_LLM_host_AB",
+      "retirement_snapshot_commit": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+      "retirement_source_blob": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "retirement_source_tree": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/fact-check/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json",
+      "retirement_review": "docs/reviews/2026-11-19-fact-check-controlled-retirement.md",
+      "retirement_scope": "verified_complete_one_file_original",
+      "current_active_reference": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+      "consumer_scan_status": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "retirement_owner_authorization": "owner_approved_source_bound_procedure_emulation_2026_11_18",
+      "retirement_behavioral_claim": "PYTHON_SYNTHETIC_PROCEDURE_NOT_SKILL_MODEL_HOST; QUALITY_1_5X_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/finance-review/SKILL.md",
@@ -388,7 +400,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/research-methods-appraiser/SKILL.md",
       "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "retirement_status": "five_executed_synthetic_research_procedures_passed_not_LLM_host_AB",
+      "retirement_snapshot_commit": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+      "retirement_source_blob": "8691e648e6c96c986391bdbdf812616c34baef95",
+      "retirement_source_tree": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/paper-digest/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json",
+      "retirement_review": "docs/reviews/2026-11-19-paper-digest-controlled-retirement.md",
+      "retirement_scope": "verified_complete_one_file_original",
+      "current_active_reference": "skills/authored/research-methods-appraiser/SKILL.md",
+      "consumer_scan_status": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "retirement_owner_authorization": "owner_approved_source_bound_procedure_emulation_2026_11_18",
+      "retirement_behavioral_claim": "PYTHON_SYNTHETIC_PROCEDURE_NOT_SKILL_MODEL_HOST; QUALITY_1_5X_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/permissions-review/SKILL.md",

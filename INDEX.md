@@ -203,7 +203,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `brief-writer`, `deck-outline`, `devlog-draft`, `handoff-writer`, `standup-writer`
 
 ### Research & Analysis
-`compare`, `deep-dive`, `fact-check`, `paper-digest`
+`compare`, `deep-dive`, [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
 
 ### Software & Repositories
 `repo-doctor`, `repo-pulse`; current original replacement: [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)
