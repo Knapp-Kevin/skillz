@@ -1,18 +1,17 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Current governed review names: 1067 exact identities; retired historical identities are preserved separately, excluded from normal selection.",
+  "purpose": "Current governed review names: 1066 active exact identities; two retired historical identities preserved separately, excluded from normal selection.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 72,
+    "first_party": 71,
     "third_party": 995,
-    "total": 1067
+    "total": 1066
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
     "local-skills/agent-home-doctor",
-    "local-skills/agent-postmortem",
     "local-skills/agent-workspace-footprint-assessor",
     "local-skills/automation-receipts",
     "local-skills/brief-writer",
@@ -1144,6 +1143,14 @@
       "source_blob": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
       "replacement_id": "local-skills/source-debt-triage",
       "host_parity": "not-run"
+    },
+    {
+      "id": "local-skills/agent-postmortem",
+      "source_commit": "44a81f39173098eb754090ea83e3a076940d7a6b",
+      "source_blob": "dde789e87da090b92021b3e55304299244f62ac2",
+      "replacement_id": "local-skills/agent-failure-boundary-analysis",
+      "host_parity": "not-run",
+      "controlled_report_review": "docs/reviews/2026-11-19-agent-postmortem-controlled-retirement.md"
     }
   ]
 }

@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 18,
+      "linked_reviewed_examples": 17,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -56,16 +56,6 @@
           "validation_status": "not-run",
           "static_score": null,
           "review_evidence_path": "registry/verification/local-skills/agent-home-doctor.yaml",
-          "source_class": "local-provenance",
-          "path": "software-engineering/maintenance",
-          "capability_example": "Compare code against standards and specification evidence"
-        },
-        {
-          "id": "local-skills/agent-postmortem",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/agent-postmortem.yaml",
           "source_class": "local-provenance",
           "path": "software-engineering/maintenance",
           "capability_example": "Compare code against standards and specification evidence"
@@ -1150,7 +1140,7 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 13,
+      "linked_reviewed_examples": 12,
       "subdomains_with_linked_examples": 6,
       "name_only_candidate_count": 17,
       "evidence_preview": [
@@ -1183,16 +1173,6 @@
           "source_class": "local-provenance",
           "path": "agent-mcp-development/permissions",
           "capability_example": "Inspect MCP integrations and agent access permissions before connection"
-        },
-        {
-          "id": "local-skills/agent-postmortem",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/agent-postmortem.yaml",
-          "source_class": "local-provenance",
-          "path": "agent-mcp-development/evaluation",
-          "capability_example": "Reference evaluation methods; default external LLM judge/trace egress not approved"
         },
         {
           "id": "local-skills/automation-receipts",
@@ -5206,7 +5186,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1067,
+  "governed_identity_denominator": 1066,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -12635,7 +12615,6 @@
           ],
           "matched_skill_ids": [
             "local-skills/agent-home-doctor",
-            "local-skills/agent-postmortem",
             "local-skills/github-pulse",
             "local-skills/repo-doctor",
             "local-skills/repo-pulse",
@@ -15249,7 +15228,6 @@
             "Reconstruct causally discriminating agent incidents and explicit boundary violations."
           ],
           "matched_skill_ids": [
-            "local-skills/agent-postmortem",
             "google-agents-cli/google-agents-cli-eval",
             "local-skills/agent-failure-boundary-analysis"
           ],
@@ -33274,33 +33252,6 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
-      "id": "local-skills/agent-postmortem",
-      "source_id": "local-skills",
-      "skill_name": "agent-postmortem",
-      "content_blob_sha": "fb8777d18a27a89f47f9e8a022385b480d49f7c0",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "agent-mcp-development/evaluation",
-        "software-engineering/maintenance"
-      ],
-      "evidence_path": "registry/verification/local-skills/agent-postmortem.yaml",
-      "skill_path": "skills/agent-postmortem/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/agent-postmortem.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "evaluation",
-        "agent-development"
-      ],
-      "notes": "Strong earliest-determining-point analysis with explicit evidence/inference boundaries and proposal-only governance handoff; behavioral outcome improvement remains unmeasured.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/agent-workspace-footprint-assessor",
       "source_id": "local-skills",
       "skill_name": "agent-workspace-footprint-assessor",
@@ -35212,13 +35163,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 151,
+  "identity_level_capability_links_mapped": 150,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 72,
-    "known_total_governed_review_records": 1067,
+    "known_first_party_skill_records": 71,
+    "known_total_governed_review_records": 1066,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -35275,18 +35226,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 72,
+  "first_party_identity_links_mapped": 71,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 72,
+    "mapped_first_party_distinct": 71,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 151,
+    "mapped_total_distinct": 150,
     "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "One historical root skill staged for removal, retained as immutable history with original replacement. Behavior not run; other 43 remain.",
+    "note": "Two source-bound retirements; historical source evidence preserved; host parity and exhaustive consumer scan unproven.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35536,7 +35487,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 1,
+    "legacy_retired": 2,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35544,6 +35495,6 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 43
+    "legacy_remaining": 42
   }
 }
