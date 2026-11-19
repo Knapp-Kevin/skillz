@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/learning-plan/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: d24345903a14c2ad814e1e365953a9a857f03e21
 curated_at: 2026-08-30
 last_checked_at: 2026-11-03
-availability: in-repo
+availability: retired-historical
 local_path: skills/learning-plan/SKILL.md
 permission_tier: generate-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "Optional external-host scheduling capability; no mandatory scheduler, CLI, or account connection"
-import_eligibility: conditional-on-security-and-user-fit
+import_eligibility: retired-not-selectable
 rationale: "Source-verified curriculum and checkpoint/slip protocol; one-shot planning separated from explicitly approved recurring check-ins, private-source access and delivery."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/learning-plan/SKILL.md
+replacement_id: local-skills/learning-evidence-progression
+consumer_audit: "Known active routes reconciled; full repository search incomplete; owner-approved bounded controlled emulation."
