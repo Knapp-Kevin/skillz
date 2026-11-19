@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Technology Change Intelligence
-  version: 1.2.1
+  version: 1.2.2
   license: MIT
 ---
 
@@ -57,6 +57,9 @@ be silently combined into one unlabelled period.
 For any named profile, also load the bundled [specialist execution gates](references/specialist-execution-gates.md). These are **decision procedures**, not merely suggested headings: they require exact interface/artifact discrimination, source-lane coverage, a source-backed next check and an applicability verdict when an expressly supplied runtime target or redacted project summary is in scope. In particular, local-inference reports must end with a target-specific relevance verdict or explicitly say `GENERIC_ONLY`. GitHub discovery must distinguish newly created from newly accelerating repositories and disclose missing prior-candidate deduplication. Governance and memory project comparisons require supplied authorized context. Connected read-only search tools are optional, never assumed to exist or to grant private scope.
 
 ## Evidence workflow
+
+For each selected named profile, use the bundled [specialist source-acquisition playbook](references/specialist-source-acquisition.md) to plan actual authoritative-source reads, date-bounded discovery, cross-checks and per-lane coverage receipts. The playbook is **local and optional for lightweight user-supplied-source tasks**; it does not require a network, specific connector, token, remote policy, or a fixed number of searches. A model with broader authorized tools may follow deeper implementation and independent-evidence lanes. A constrained model must still distinguish consulted evidence from `NOT_CHECKED` and return a useful scoped result. The existing specialist decision gates and source provenance rules remain binding.
+
 
 1. **Define the subscriber-relevant question:** actual stated interests or explicit one-off topic, applicable specialized profile(s) **or AD_HOC_TOPIC**, source availability, time window, purpose, jurisdiction where material and approved source scope. Default to public read-only evidence and in-session profile status only. If interests are unknown, do not claim a personalized ranking.
 2. **Collect from source classes, not magic URLs.** The profile's
