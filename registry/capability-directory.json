@@ -2128,7 +2128,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 28,
+      "linked_reviewed_examples": 27,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2138,16 +2138,6 @@
           "validation_status": "not-run",
           "static_score": null,
           "review_evidence_path": "registry/verification/local-skills/claude-pulse.yaml",
-          "source_class": "local-provenance",
-          "path": "research/source-discovery",
-          "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
-        },
-        {
-          "id": "local-skills/deep-dive",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/deep-dive.yaml",
           "source_class": "local-provenance",
           "path": "research/source-discovery",
           "capability_example": "Discover sources and monitor technical developments using dated primary evidence"
@@ -4121,16 +4111,6 @@
           "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
         },
         {
-          "id": "local-skills/learning-plan",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/learning-plan.yaml",
-          "source_class": "local-provenance",
-          "path": "time-productivity/personal-planning",
-          "capability_example": "Prepare daily and weekly planning briefs and grounded learning plans"
-        },
-        {
           "id": "local-skills/inbox-triage",
           "verification_status": "verified",
           "validation_status": "not-run",
@@ -4185,6 +4165,16 @@
           "capability_example": "Report daily or weekly outcomes from attributable evidence rather than activity inflation.",
           "unchanged_use_approved": false,
           "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/learning-evidence-progression",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/learning-evidence-progression.yaml",
+          "source_class": "local-provenance",
+          "path": "time-productivity/personal-planning",
+          "capability_example": "Plan weekly learning workload with demonstrable checkpoints and recovery"
         }
       ],
       "name_only_preview": [
@@ -4599,16 +4589,6 @@
       "name_only_candidate_count": 0,
       "evidence_preview": [
         {
-          "id": "local-skills/learning-plan",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/learning-plan.yaml",
-          "source_class": "local-provenance",
-          "path": "career/professional-development",
-          "capability_example": "Prepare a learning plan with measurable checkpoints"
-        },
-        {
           "id": "local-skills/professional-market-evidence-scout",
           "verification_status": "verified",
           "validation_status": "not-run",
@@ -4619,6 +4599,16 @@
           "capability_example": "Deduplicate dated role evidence and assess market fit with explicit compensation units.",
           "unchanged_use_approved": false,
           "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/learning-evidence-progression",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/learning-evidence-progression.yaml",
+          "source_class": "local-provenance",
+          "path": "career/professional-development",
+          "capability_example": "Plan professional skill acquisition using source-checked lessons and applied checkpoints"
         }
       ],
       "name_only_preview": [],
@@ -5060,7 +5050,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1054,
+  "governed_identity_denominator": 1052,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -19493,7 +19483,6 @@
           ],
           "matched_skill_ids": [
             "local-skills/claude-pulse",
-            "local-skills/deep-dive",
             "local-skills/deepseek-pulse",
             "local-skills/gemini-pulse",
             "local-skills/github-pulse",
@@ -20128,7 +20117,6 @@
           ],
           "matched_skill_ids": [
             "local-skills/compare",
-            "local-skills/deep-dive",
             "bm629-agent-skills/reviewing-user-research-prior-art-survey",
             "anthropic-knowledge-work-plugins/knowledge-synthesis",
             "local-skills/technology-change-intelligence",
@@ -26995,8 +26983,8 @@
           ],
           "matched_skill_ids": [
             "local-skills/daily-briefing",
-            "local-skills/learning-plan",
-            "local-skills/personal-operations-control-board"
+            "local-skills/personal-operations-control-board",
+            "local-skills/learning-evidence-progression"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -28595,7 +28583,7 @@
             "Backfill evidence-backed engineering accomplishments without fabricated metrics"
           ],
           "matched_skill_ids": [
-            "local-skills/learning-plan"
+            "local-skills/learning-evidence-progression"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -33405,33 +33393,6 @@
       "unchanged_use_approved": false
     },
     {
-      "id": "local-skills/deep-dive",
-      "source_id": "local-skills",
-      "skill_name": "deep-dive",
-      "content_blob_sha": "b518f172abce491d979cf8f8ef854a61605b2790",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "research/synthesis",
-        "research/source-discovery"
-      ],
-      "evidence_path": "registry/verification/local-skills/deep-dive.yaml",
-      "skill_path": "skills/deep-dive/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/deep-dive.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "research",
-        "web-search"
-      ],
-      "notes": "Strong multi-lane research plus active refutation of load-bearing claims, explicit confidence and source hierarchy; runtime source quality still depends on available search/fetch tools.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/deepseek-pulse",
       "source_id": "local-skills",
       "skill_name": "deepseek-pulse",
@@ -33840,7 +33801,9 @@
       "static_score": "18/20",
       "capability_paths": [
         "education/curriculum",
-        "education/assessment"
+        "education/assessment",
+        "career/professional-development",
+        "time-productivity/personal-planning"
       ],
       "evidence_path": "registry/verification/local-skills/learning-evidence-progression.yaml",
       "skill_path": "skills/authored/learning-evidence-progression/SKILL.md",
@@ -33854,34 +33817,6 @@
       "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
-    },
-    {
-      "id": "local-skills/learning-plan",
-      "source_id": "local-skills",
-      "skill_name": "learning-plan",
-      "content_blob_sha": "a544118bd121b354aec330f9a565a338868dd53e",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "career/professional-development",
-        "time-productivity/personal-planning"
-      ],
-      "evidence_path": "registry/verification/local-skills/learning-plan.yaml",
-      "skill_path": "skills/learning-plan/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/learning-plan.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "generate-only"
-      ],
-      "use_case_tags": [
-        "planning",
-        "research",
-        "productivity"
-      ],
-      "notes": "Strong real-source verification, demonstrable checkpoints, and explicit slip protocol; schedule creation remains approval-gated and separate.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
       "id": "local-skills/llama-pulse",
@@ -34709,13 +34644,13 @@
       "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 138,
+  "identity_level_capability_links_mapped": 136,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 59,
-    "known_total_governed_review_records": 1054,
+    "known_first_party_skill_records": 57,
+    "known_total_governed_review_records": 1052,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34772,18 +34707,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 59,
+  "first_party_identity_links_mapped": 57,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 59,
+    "mapped_first_party_distinct": 57,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 138,
+    "mapped_total_distinct": 136,
     "subdomains_with_evidence_linked_examples": 88,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "15 individually risk-accepted controlled historical retirements; 29 historical originals active. Independent model-host parity and exhaustive consumer scan unproven.",
+    "note": "17 individually risk-accepted controlled historical retirements; 27 original entrypoints active. Independent host parity and exhaustive consumer search not proven.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35033,7 +34968,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 15,
+    "legacy_retired": 17,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35041,7 +34976,7 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 29
+    "legacy_remaining": 27
   },
   "delivery_effectiveness_extension_20261119": {
     "date": "2026-11-19",
