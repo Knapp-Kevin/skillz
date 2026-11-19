@@ -6,7 +6,7 @@ This is the **canonical home for newly authored first-party skills** produced fo
 
 The maintainer controlled the historical Zo Computer account but has **not**
 established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
-entrypoints. One low-risk entrypoint, `todo-harvester`, is staged for retirement on the separate pilot branch. The other 43 remain intact; none may be silently moved or relicensed.
+entrypoints. One bounded historical entrypoint, `todo-harvester`, is retired from the active tree through owner-authorized controlled emulation. The other 43 remain active; none may be silently moved or relicensed.
 
 **21 original packages now cover the intended function categories of all 44
 legacy entries at the design level.** Some are explicitly multi-mode,
@@ -42,7 +42,7 @@ All 21 packages passed bounded direct **static text/package review**
 and downstream reference-migration acceptance remain NOT RUN.
 [The migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
 and [functional/retirement gap audit](../../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
-define the unresolved gate. One old source deletion is proposed on a retirement pilot branch, with consumer audit HOLD. The original PR #736 had no deletions.
+define the unresolved gate. The exact old `todo-harvester/SKILL.md` is retired under the [controlled procedure evidence](../../docs/reviews/2026-11-18-todo-controlled-procedure-retirement.md). Historical Git remains; external model-host parity and exhaustive consumer scan are unproven. PR #736 had no deletions.
 [PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
 
 ## New skill package requirements
