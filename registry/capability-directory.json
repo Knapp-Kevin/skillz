@@ -2104,20 +2104,10 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 30,
+      "linked_reviewed_examples": 29,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
-        {
-          "id": "local-skills/paper-digest",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/paper-digest.yaml",
-          "source_class": "local-provenance",
-          "path": "research/literature-review",
-          "capability_example": "Appraise papers and replication evidence; not a complete systematic review"
-        },
         {
           "id": "local-skills/claude-pulse",
           "verification_status": "verified",
@@ -5106,7 +5096,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1061,
+  "governed_identity_denominator": 1059,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -19492,7 +19482,6 @@
             "Experimental-design and reproducibility ladder review of research claims."
           ],
           "matched_skill_ids": [
-            "local-skills/paper-digest",
             "bm629-agent-skills/user-research-prior-art-survey",
             "local-skills/research-methods-appraiser"
           ],
@@ -20329,7 +20318,6 @@
             "Evidence-linked contested-claim adjudication with source independence and explicit uncertainty."
           ],
           "matched_skill_ids": [
-            "local-skills/fact-check",
             "archieindian-superpowers/fact-check-before-trust",
             "local-skills/claim-evidence-adjudicator"
           ],
@@ -33276,8 +33264,8 @@
       "id": "local-skills/claim-evidence-adjudicator",
       "source_id": "local-skills",
       "skill_name": "claim-evidence-adjudicator",
-      "content_blob_sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
-      "complete_package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "content_blob_sha": "524507190260732cb28ac40ad0865672de5c2980",
+      "complete_package_tree_sha": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33295,7 +33283,8 @@
       ],
       "link_basis": "2026-11-18 exact complete-package maintainer static review, no host behavioral qualification",
       "restriction": "Reference-only, no implicit source/tool permissions",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "notes": "v1.1 original MIT source, exact package re-pinned with explicit primary-source and context-verdict semantics; static review only; five controlled synthetic research cases, no measured host parity or 1.5x quality gain."
     },
     {
       "id": "local-skills/claude-pulse",
@@ -33639,33 +33628,6 @@
       "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
-    },
-    {
-      "id": "local-skills/fact-check",
-      "source_id": "local-skills",
-      "skill_name": "fact-check",
-      "content_blob_sha": "e58dea59671c8a7c537e27403d6f52e466bf8d86",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "research/fact-checking"
-      ],
-      "evidence_path": "registry/verification/local-skills/fact-check.yaml",
-      "skill_path": "skills/fact-check/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/fact-check.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "research",
-        "decision-support",
-        "web-search"
-      ],
-      "notes": "Excellent subclaim decomposition, primary-source tracing, unverifiable/needs-context states, and conflict handling with no forced binary verdict.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
       "id": "local-skills/federated-source-catalog",
@@ -34254,32 +34216,6 @@
         "research"
       ],
       "notes": "Official-first vendor digest with explicit deprecation/pricing priority and standalone fallback; current-source freshness is required at execution time.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
-      "id": "local-skills/paper-digest",
-      "source_id": "local-skills",
-      "skill_name": "paper-digest",
-      "content_blob_sha": "b2abf289b265b3d4a8508bda4a35083fa7c35f8a",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "research/literature-review"
-      ],
-      "evidence_path": "registry/verification/local-skills/paper-digest.yaml",
-      "skill_path": "skills/paper-digest/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/paper-digest.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "research",
-        "evaluation"
-      ],
-      "notes": "Strong claim-versus-framing analysis, replication search, baseline scrutiny, and admitted/unadmitted limitations; full-text availability sets an explicit confidence ceiling.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
@@ -34944,13 +34880,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 145,
+  "identity_level_capability_links_mapped": 143,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 66,
-    "known_total_governed_review_records": 1061,
+    "known_first_party_skill_records": 64,
+    "known_total_governed_review_records": 1059,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -35007,18 +34943,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 66,
+  "first_party_identity_links_mapped": 64,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 66,
+    "mapped_first_party_distinct": 64,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 145,
+    "mapped_total_distinct": 143,
     "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Seven source-bound historical retirements, 37 active original entrypoints; host A/B and exhaustive consumer proof unavailable.",
+    "note": "Nine individually risk-accepted historical retirements, 35 original active sources; independent model-host A/B and full consumer search not proven.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35268,7 +35204,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 7,
+    "legacy_retired": 9,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35276,6 +35212,6 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 37
+    "legacy_remaining": 35
   }
 }
