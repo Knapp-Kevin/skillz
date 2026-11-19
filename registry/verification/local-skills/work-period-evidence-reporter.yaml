@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: work-period-evidence-reporter
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/work-period-evidence-reporter/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/work-period-evidence-reporter/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6
-complete_package_tree_sha: 75a2ef507564aa4c4a827b7f15a6e3b21cbd5697
+content_blob_sha: dd0bc7714997c7deb0c66dbc1dc9714514082dee
+complete_package_tree_sha: d9da08e777e8c5ad23f4c91f5def189b4ca29bc2
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
@@ -24,6 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Report daily or weekly outcomes from attributable evidence rather than activity inflation. Direct static semantic review 18/20. Three-file package
-  hashed and references verified. Host execution NOT RUN, real-world
-  effectiveness and historic rights not established. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md
+  Exact three-file v1.1 static review 18/20, independently authored functional
+  remediation; docs/reviews/2026-11-18-narrative-and-work-period-parity-v1-1.md.
+  Original v1.0 review remains historical. Host execution NOT RUN,
+  parity and 1.5x improvement NOT PROVEN.
