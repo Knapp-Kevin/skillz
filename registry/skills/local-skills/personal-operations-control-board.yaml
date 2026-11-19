@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: personal-operations-control-board
 display_name: "Personal Operations Control Board"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/personal-operations-control-board/SKILL.md
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 04ed03841366f854d642e8ebcafd9d39023608c6
-complete_package_tree_sha: 7dab6d9a2d31e59a84b5979d20398efea223dc17
+content_blob_sha: 6ec82d3e34e2bd5adea16838d9ba49955106b893
+complete_package_tree_sha: 9ab584fac422cbaaea81d12fdc832945c9661bf4
 historical_comparators: "skills/daily-briefing/SKILL.md; skills/inbox-triage/SKILL.md; skills/task-surface/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Create a scope-bound daily and inbox action board with explicit write approval. Static 17/20; no host acceptance. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+rationale: "V1.1 exact-package static review 18/20; source-level parity remediation. Behavior NOT RUN and 1.5x NOT PROVEN. docs/reviews/2026-11-18-operations-replacement-parity-remediation.md"
