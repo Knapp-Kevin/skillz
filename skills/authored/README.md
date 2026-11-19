@@ -12,7 +12,7 @@ This is the **canonical home for newly authored first-party skills** produced fo
 
 The maintainer controlled the historical Zo Computer account but has **not**
 established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
-entrypoints. Thirteen bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar`, `handoff-writer`, `standup-writer` and `week-in-review`, are retired from the active tree through owner-authorized controlled acceptance. The other 31 remain active; none may be silently moved or relicensed.
+entrypoints. Fifteen bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar`, `handoff-writer`, `standup-writer`, `week-in-review`, `deck-outline` and `devlog-draft`, are retired from the active tree through owner-authorized controlled acceptance. The other 29 remain active; none may be silently moved or relicensed.
 
 **21 original packages now cover the intended function categories of all 44
 legacy entries at the design level.** Some are explicitly multi-mode,

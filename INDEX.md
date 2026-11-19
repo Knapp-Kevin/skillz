@@ -200,7 +200,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, `learning-plan`, `task-surface`, [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
 
 ### Writing & Communication
-`brief-writer`, `deck-outline`, `devlog-draft`, [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
+`brief-writer`, [Evidence Narrative Composer](skills/authored/evidence-narrative-composer/SKILL.md) (deck outlines + devlogs), [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
 
 ### Research & Analysis
 `compare`, `deep-dive`, [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
