@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "historical_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
   "scope": "Seventeen legacy topic pulses mapped into one original authored technology-change-intelligence package with separate profiles",
-  "manifest_type": "PARTIAL_SUPPORT_FILE_PINNING_NOT_FULL_GIT_TREE",
+  "manifest_type": "COMPLETE_UNTRUNCATED_GIT_PACKAGE_TREE_PINNING",
   "counts": {
     "profiles": 17,
     "pinned_bundled_source_json": 16,
     "inline_source_lists": 1,
-    "full_package_trees_verified": 0,
-    "host_behavior_observed": 0
+    "full_package_trees_verified": 17,
+    "host_behavior_observed": 0,
+    "paired_case_slots_declared": 85
   },
-  "non_exhaustive_warning": "SKILL.md plus a known source-list file does not certify absence of other support files. Full untruncated tree enumeration is required before host A/B execution or retirement.",
+  "non_exhaustive_warning": "Full source Git package trees ARE now verified for all 17 historical Pulses at the recorded live main revision, including each known bundled or inline source list. This does NOT prove live source access, per-profile functional parity, real subscriber behavior, copyright clearance, or 1.5x gain. Prior synthetic fixture replacement-tree fingerprints refer to an older authored package and need requalification for v1.2.",
   "rows": [
     {
       "historical_entrypoint": "skills/claude-pulse/SKILL.md",
@@ -20,9 +21,20 @@
       "known_source_manifest_path": null,
       "known_source_manifest_git_blob_sha1": null,
       "source_manifest_json_parse_verified": false,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/deepseek-pulse/SKILL.md",
@@ -31,9 +43,24 @@
       "known_source_manifest_path": "skills/deepseek-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "0acf86aa545c6c519ee95e364226badca5f32bda",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "8984411410ccae81474a93e53c28a180ff61ec25",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "0acf86aa545c6c519ee95e364226badca5f32bda"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/gemini-pulse/SKILL.md",
@@ -42,9 +69,24 @@
       "known_source_manifest_path": "skills/gemini-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "02a7017d93b20f13392bdb0343d22ad3d5ebf440",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "02a7017d93b20f13392bdb0343d22ad3d5ebf440"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/github-pulse/SKILL.md",
@@ -53,9 +95,24 @@
       "known_source_manifest_path": "skills/github-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "bfdce4b0e819ceab937b1b92d31313cde11595f4",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "bfdce4b0e819ceab937b1b92d31313cde11595f4"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/glm-pulse/SKILL.md",
@@ -64,9 +121,24 @@
       "known_source_manifest_path": "skills/glm-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "741b61992356dc6a7ee2063fe54765b93fc3c039",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "741b61992356dc6a7ee2063fe54765b93fc3c039"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/governance-pulse/SKILL.md",
@@ -75,9 +147,24 @@
       "known_source_manifest_path": "skills/governance-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "ea931e8cb3adaebe7a8819bfa27af2902b356b76",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "506e6452333173778aa6e0e4e9a614b10cd12c58",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "ea931e8cb3adaebe7a8819bfa27af2902b356b76"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/hf-pulse/SKILL.md",
@@ -86,9 +173,24 @@
       "known_source_manifest_path": "skills/hf-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "e29fd6def1f6bf38d93ba3a8864b9fd264388e38",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "149e577a9f72895b09aea43d607203d731db1bce"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "e29fd6def1f6bf38d93ba3a8864b9fd264388e38"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/inference-pulse/SKILL.md",
@@ -97,9 +199,24 @@
       "known_source_manifest_path": "skills/inference-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "3eba79599f77970dd91367df55f1325ded8f2149",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/kimi-pulse/SKILL.md",
@@ -108,9 +225,24 @@
       "known_source_manifest_path": "skills/kimi-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "d3916d9e018cdb00a7ce529933c4c95310aedb92",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "049e00a74897ba13f8168e7f8ce2a896d9937e84",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "d3916d9e018cdb00a7ce529933c4c95310aedb92"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/llama-pulse/SKILL.md",
@@ -119,9 +251,24 @@
       "known_source_manifest_path": "skills/llama-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "14b89191a00a7e1ffccb28ab47c32b1a5a84acdb",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "53dbd090ce88c406296ff84fce4faa61534044cd",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "14b89191a00a7e1ffccb28ab47c32b1a5a84acdb"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/mcp-pulse/SKILL.md",
@@ -130,9 +277,24 @@
       "known_source_manifest_path": "skills/mcp-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "586ae9bffc9ff8112d4e460aa878b6ebe4015172",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "586ae9bffc9ff8112d4e460aa878b6ebe4015172"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/memory-pulse/SKILL.md",
@@ -141,9 +303,24 @@
       "known_source_manifest_path": "skills/memory-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "d05ad098fcb822b1af81798cae1321d135f3f042",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "d05ad098fcb822b1af81798cae1321d135f3f042"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/mistral-pulse/SKILL.md",
@@ -152,9 +329,24 @@
       "known_source_manifest_path": "skills/mistral-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "760e8d731d00ff99ac8eb7405ab7da9390745c43",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "760e8d731d00ff99ac8eb7405ab7da9390745c43"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/openai-pulse/SKILL.md",
@@ -163,9 +355,24 @@
       "known_source_manifest_path": "skills/openai-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "7453e54b0fd67f2fbf6ca8bad4e6f0e569b59a3b",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "7453e54b0fd67f2fbf6ca8bad4e6f0e569b59a3b"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/perplexity-pulse/SKILL.md",
@@ -174,9 +381,24 @@
       "known_source_manifest_path": "skills/perplexity-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "a7dc203a87bbb6eab1ccbbe40583c5f90eb74d46",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "2929295240f02db18afc52eeb44a8d3c30ec8346",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "a7dc203a87bbb6eab1ccbbe40583c5f90eb74d46"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/qwen-pulse/SKILL.md",
@@ -185,9 +407,24 @@
       "known_source_manifest_path": "skills/qwen-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "304be9866f211cec086f5479af9d872cac7d84b4",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "e328cb591e98f994d2646bae448cb779c6adee06",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "304be9866f211cec086f5479af9d872cac7d84b4"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     },
     {
       "historical_entrypoint": "skills/xai-pulse/SKILL.md",
@@ -196,9 +433,25 @@
       "known_source_manifest_path": "skills/xai-pulse/sources.json",
       "known_source_manifest_git_blob_sha1": "f3608fb81efd181a91ecf2c72b73930e073ab67f",
       "source_manifest_json_parse_verified": true,
-      "complete_package_tree_status": "NOT_ESTABLISHED",
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
       "rights": "NOT_ESTABLISHED",
-      "execution": "NOT_RUN"
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "f3608fb81efd181a91ecf2c72b73930e073ab67f"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION"
     }
-  ]
+  ],
+  "source_integrity_evidence": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
 }
