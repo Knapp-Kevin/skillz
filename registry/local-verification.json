@@ -986,38 +986,6 @@
       "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
-      "skill_name": "permissions-review",
-      "local_path": "skills/permissions-review/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "18f46840032829963715ec23894f7826dbbfcb77",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "security",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "traceable",
-          "human-review"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "v1.0.1 exact-blob source static review: unsafe Bash(git *) example removed; Git read commands can launch repository-controlled helpers, so recommend only verified host-enforced exact argv/configuration restrictions or scoped metadata API. No pinned current-tree scanner pass, no independently observed agent-host behavior, no unchanged-use approval. See docs/reviews/2026-11-05-issue483-git-wildcard-permission-repair.md."
-    },
-    {
       "skill_name": "perplexity-pulse",
       "local_path": "skills/perplexity-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2405,6 +2373,45 @@
       "historical_rights": "not established",
       "behavioral_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "skill_name": "permissions-review",
+      "local_path": "skills/permissions-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "18f46840032829963715ec23894f7826dbbfcb77",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "security",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "v1.0.1 exact-blob source static review: unsafe Bash(git *) example removed; Git read commands can launch repository-controlled helpers, so recommend only verified host-enforced exact argv/configuration restrictions or scoped metadata API. No pinned current-tree scanner pass, no independently observed agent-host behavior, no unchanged-use approval. See docs/reviews/2026-11-05-issue483-git-wildcard-permission-repair.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/privilege-exposure-mapper",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/94a34d59ad5d3a9844b602d353084f5dd08791c8/skills/permissions-review/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
     }
   ]
 }

@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 4,
+    "legacy_removed": 5,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 40
+    "legacy_remaining": 39
   },
   "rows": [
     {
@@ -373,7 +373,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/privilege-exposure-mapper/SKILL.md",
       "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "retirement_status": "five_real_synthetic_security_policy_graph_tests_passed_no_host_AB",
+      "retirement_snapshot_commit": "94a34d59ad5d3a9844b602d353084f5dd08791c8",
+      "retirement_source_blob": "18f46840032829963715ec23894f7826dbbfcb77",
+      "retirement_source_tree": "e942297c3e343ad5af388b23604987a9bb49322d",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/94a34d59ad5d3a9844b602d353084f5dd08791c8/skills/permissions-review/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json",
+      "retirement_review": "docs/reviews/2026-11-19-permissions-review-controlled-retirement.md",
+      "retirement_scope": "single_source_file_complete_tree_verified",
+      "current_active_reference": "skills/authored/privilege-exposure-mapper/SKILL.md",
+      "consumer_scan_status": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SEARCH_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-delete-2026-11-18",
+      "retirement_behavioral_claim": "DETERMINISTIC_POLICY_GRAPH_SIMULATION_ONLY; 1.5x_not_proven"
     },
     {
       "legacy_entrypoint": "skills/perplexity-pulse/SKILL.md",

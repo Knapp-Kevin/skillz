@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Governed active names: 1064 exact source identities; four historical retired names retained separately.",
+  "purpose": "Governed active names: 1063 exact identities; five historical names archived rather than selectable.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 69,
+    "first_party": 68,
     "third_party": 995,
-    "total": 1064
+    "total": 1063
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -56,7 +56,6 @@
     "local-skills/narrative-scene-gap-audit",
     "local-skills/openai-pulse",
     "local-skills/paper-digest",
-    "local-skills/permissions-review",
     "local-skills/perplexity-pulse",
     "local-skills/personal-operations-control-board",
     "local-skills/privilege-exposure-mapper",
@@ -1167,6 +1166,15 @@
       "replacement_id": "local-skills/decision-record-steward",
       "host_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "id": "local-skills/permissions-review",
+      "source_commit": "94a34d59ad5d3a9844b602d353084f5dd08791c8",
+      "source_blob": "18f46840032829963715ec23894f7826dbbfcb77",
+      "source_tree": "e942297c3e343ad5af388b23604987a9bb49322d",
+      "replacement_id": "local-skills/privilege-exposure-mapper",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
     }
   ]
 }

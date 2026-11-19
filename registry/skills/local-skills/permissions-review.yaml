@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/permissions-review/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 8216ab5f17bee27e59cd3599746fd65e0165dfec
 curated_at: 2026-08-30
 last_checked_at: 2026-11-05
-availability: in-repo
+availability: retired-historical
 local_path: skills/permissions-review/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "Authorized host configuration/log metadata and optional external scheduler; no mandatory Claude Code, secret-store access, or MCP distribution; controlled authority taxonomy at registry/taxonomy.yaml"
-import_eligibility: review-required
+import_eligibility: retired-not-selectable
 rationale: "Version-bound scope audit classifies tool effects by current controlled authority categories and consequential risks. v1.0.1 rejects the unsafe Bash(git *) permission-wildcard example and requires verifiable host-enforced argv/configuration restrictions or a scoped metadata API. Source-only correction; pinned security scan and observed agent behavior not run; no unchanged-use approval."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/94a34d59ad5d3a9844b602d353084f5dd08791c8/skills/permissions-review/SKILL.md
+replacement_id: local-skills/privilege-exposure-mapper
+consumer_audit: "Known canonical active references reconciled; repository-wide scan incomplete; owner accepted scoped procedural evaluation."
