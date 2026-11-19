@@ -1,3 +1,10 @@
+> **Current status note:** This document preserves the original four-candidate
+> kickoff evidence. The live draft PR has since advanced to 21 newly written
+> and statically reviewed packages covering all 44 historical function
+> categories, without retirement or observed host validation. See
+> [current ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
+> and [gap/retirement audit](2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md).
+
 # Legacy Frostwulf skill origin and independent replacements
 
 Status as of 2026-11-18: **44 inventoried, 4 independent draft replacements, 0 retired.**

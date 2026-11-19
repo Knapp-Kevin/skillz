@@ -53,8 +53,28 @@ A separate exact-review mapping tranche linked five prior third-party skill iden
 
 The [November 18 capability-gap audit](reviews/2026-11-18-capability-discovery-evaluation-gap-priorities.md) and [outcome register](../registry/capability-outcome-register.json) distinguish historical broad discovery/evaluation frontiers from currently reviewed identities. Define actual subdomain outcomes, map source evidence, and test independently. Never use a source-name match or a static 18/20 score as production acceptance.
 
-## 2026-11-18: separate legacy-origin replacement lane (PR #736)
 
-An inventory of 44 historical root skills with the attribution `frostwulf.zo.computer` does not prove that the operator originally authored their text. Hold their rights status unresolved; do not silently relicense, paraphrase line by line, or delete them. Eight new independently specified and MIT-licensed capability packages are statically reviewed (not host-validated) and provisionally mapped as distinct exact-source identities. The remaining 36 require individually scoped new designs, exact package review and authority testing as necessary. [Migration ledger](../registry/migration/frostwulf-independent-replacement-ledger-20261118.json).
+## 2026-11-18: independent legacy-origin replacement lane (PR #736)
 
-This replacement lane **does not displace balanced third-party discovery, quality evaluation, essential-outcome decomposition or unmapped-review reconciliation**. Track replacement count, evidence, rights clearance, reference health and deletion decisions separately from discovered package totals. Avoid promoting a proposed capability taxonomy just because an original replacement was added. Use actual complete package SHA and current status for each entry; preserve rejected and historical source records.
+All 44 root-level `frostwulf.zo.computer` entrypoints are inventoried,
+but account ownership is not authorship evidence. **21 newly written packages
+cover all 44 historical functions in an outcome-design crosswalk**.
+Every new package is a standalone rights-scoped original source with
+static review, exact package tree, governed identity and existing canonical
+capability routing. Host-executed behavior and true functional equivalence
+are explicitly **NOT ESTABLISHED**. No historic source is removed.
+
+Work after drafting is **replacement acceptance, not automatic deletion**:
+review behavior of any replacement requiring live services or writes;
+check unresolved features in consolidated modes; trace consumers and exact
+source links; re-point citations and active routes; preserve immutable
+historical review records; and verify no discovery or security coverage
+regression when retiring each source. Use the [independent gap and retirement
+audit](../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
+and [44-entry ledger](../registry/migration/frostwulf-independent-replacement-ledger-20261118.json).
+
+This lane does not displace broad third-party discovery, essential-workflow
+decomposition, or the **916 reviewed but unmapped** third-party identities.
+Do not count 44 replacements as 44 new distinct skill packages: **21
+packages** are added, while historical review records are temporarily retained.
+Proposed taxonomy domains are not promoted by these changes.

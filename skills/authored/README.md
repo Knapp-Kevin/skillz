@@ -4,27 +4,46 @@ This is the **canonical home for newly authored first-party skills** produced fo
 
 ## 2026-11-18: Independently redesigned legacy capabilities
 
-A known repository and Zo Computer account does not prove that the owner
-wrote every historic `frostwulf.zo.computer` instruction. Those **44 legacy
-root-level skills are retained** while original replacements receive their
-own rights and review records. Do not move-and-relabel protected text.
+The maintainer controlled the historical Zo Computer account but has **not**
+established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
+entrypoints. They remain intact and must not be silently moved or relicensed.
 
-Eight complete new packages have individual MIT LICENSE, original SKILL.md,
-and synthetic challenge cases. Their exact identities and 17–18/20 static
-reviews are recorded in [the authored index](../../registry/authored-skills-index.json).
-No live behavior or broad originality certificate is claimed.
+**21 original packages now cover the intended function categories of all 44
+legacy entries at the design level.** Some are explicitly multi-mode,
+and 17 old monitoring categories became one common intelligence procedure
+with 17 specialized profiles. New original text and synthetic fixtures
+are under MIT; exact source and tree fingerprints are in the
+[authored index](../../registry/authored-skills-index.json).
 
-- [Claim Evidence Adjudicator](claim-evidence-adjudicator/SKILL.md) · [synthetic cases](claim-evidence-adjudicator/examples/synthetic-cases.md)
-- [Research Methods Appraiser](research-methods-appraiser/SKILL.md) · [synthetic cases](research-methods-appraiser/examples/synthetic-cases.md)
-- [Source Debt Triage](source-debt-triage/SKILL.md) · [synthetic cases](source-debt-triage/examples/synthetic-cases.md)
-- [Decision Record Steward](decision-record-steward/SKILL.md) · [synthetic cases](decision-record-steward/examples/synthetic-cases.md)
-- [Agent Workspace Footprint Assessor](agent-workspace-footprint-assessor/SKILL.md) · [synthetic cases](agent-workspace-footprint-assessor/examples/synthetic-cases.md)
-- [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) · [synthetic cases](connector-capability-risk-review/examples/synthetic-cases.md)
-- [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) · [synthetic cases](privilege-exposure-mapper/examples/synthetic-cases.md)
-- [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) · [synthetic cases](scheduled-work-proof-auditor/examples/synthetic-cases.md)
+- [Claim Evidence Adjudicator](claim-evidence-adjudicator/SKILL.md) · research/fact-checking · 18/20 static, host behavior NOT RUN
+- [Research Methods Appraiser](research-methods-appraiser/SKILL.md) · research/literature-review, research/reproducibility · 18/20 static, host behavior NOT RUN
+- [Source Debt Triage](source-debt-triage/SKILL.md) · software-engineering/maintenance · 18/20 static, host behavior NOT RUN
+- [Decision Record Steward](decision-record-steward/SKILL.md) · planning/decision-frameworks, business/governance · 18/20 static, host behavior NOT RUN
+- [Agent Workspace Footprint Assessor](agent-workspace-footprint-assessor/SKILL.md) · software-engineering/maintenance, agent-mcp-development/agent-observability · 17/20 static, host behavior NOT RUN
+- [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) · agent-mcp-development/mcp-clients-servers, security/supply-chain · 18/20 static, host behavior NOT RUN
+- [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) · security/identity-access, agent-mcp-development/permissions · 18/20 static, host behavior NOT RUN
+- [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) · agent-mcp-development/agent-observability, time-productivity/scheduling · 17/20 static, host behavior NOT RUN
+- [Technology Change Intelligence](technology-change-intelligence/SKILL.md) · research/source-discovery, research/synthesis · 18/20 static, host behavior NOT RUN
+- [Agent Failure Boundary Analysis](agent-failure-boundary-analysis/SKILL.md) · agent-mcp-development/evaluation, security/incident-response · 18/20 static, host behavior NOT RUN
+- [Decision Tradeoff Workbench](decision-tradeoff-workbench/SKILL.md) · planning/decision-frameworks, business/strategy · 18/20 static, host behavior NOT RUN
+- [Research Question Dossier](research-question-dossier/SKILL.md) · research/synthesis, research/source-discovery · 18/20 static, host behavior NOT RUN
+- [Professional Market Evidence Scout](professional-market-evidence-scout/SKILL.md) · career/job-search, career/compensation · 17/20 static, host behavior NOT RUN
+- [Statement Variance Reviewer](statement-variance-reviewer/SKILL.md) · finance/reporting, finance/budgeting · 17/20 static, host behavior NOT RUN
+- [Context Continuation Contract](context-continuation-contract/SKILL.md) · memory-context/context-compression, agent-mcp-development/multi-agent-collaboration · 18/20 static, host behavior NOT RUN
+- [Evidence Narrative Composer](evidence-narrative-composer/SKILL.md) · communication/presentations, marketing/content · 17/20 static, host behavior NOT RUN
+- [Personal Operations Control Board](personal-operations-control-board/SKILL.md) · time-productivity/task-systems, time-productivity/personal-planning, communication/organizational-communication · 17/20 static, host behavior NOT RUN
+- [Learning Evidence Progression](learning-evidence-progression/SKILL.md) · education/curriculum, education/assessment · 18/20 static, host behavior NOT RUN
+- [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) · software-engineering/maintenance, cloud-devops/ci-cd · 18/20 static, host behavior NOT RUN
+- [Business Presence Observatory](business-presence-observatory/SKILL.md) · business/operations, marketing/seo · 17/20 static, host behavior NOT RUN
+- [Work Period Evidence Reporter](work-period-evidence-reporter/SKILL.md) · communication/organizational-communication, time-productivity/collaboration · 18/20 static, host behavior NOT RUN
 
-[Forty-four-source migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
-· [Draft PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
+All 21 packages passed bounded direct **static text/package review**
+(17–18/20); host-agent behavior, independent functional equivalence,
+and downstream reference-migration acceptance remain NOT RUN.
+[The migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
+and [functional/retirement gap audit](../../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
+define the unresolved gate. No 44-file deletion has occurred.
+[Draft PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
 
 ## New skill package requirements
 
