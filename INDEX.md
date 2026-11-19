@@ -197,10 +197,10 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 ## First-party source-family appendix: skills by purpose
 
 ### Planning & Productivity
-`daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`
+`daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, `learning-plan`, `task-surface`, [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
 
 ### Writing & Communication
-`brief-writer`, `deck-outline`, `devlog-draft`, [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), `standup-writer`
+`brief-writer`, `deck-outline`, `devlog-draft`, [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
 
 ### Research & Analysis
 `compare`, `deep-dive`, [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)

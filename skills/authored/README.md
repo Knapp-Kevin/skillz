@@ -12,7 +12,7 @@ This is the **canonical home for newly authored first-party skills** produced fo
 
 The maintainer controlled the historical Zo Computer account but has **not**
 established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
-entrypoints. Eleven bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar` and `handoff-writer`, are retired from the active tree through owner-authorized controlled acceptance. The other 33 remain active; none may be silently moved or relicensed.
+entrypoints. Thirteen bounded historical entrypoints, `todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar`, `handoff-writer`, `standup-writer` and `week-in-review`, are retired from the active tree through owner-authorized controlled acceptance. The other 31 remain active; none may be silently moved or relicensed.
 
 **21 original packages now cover the intended function categories of all 44
 legacy entries at the design level.** Some are explicitly multi-mode,
@@ -41,7 +41,7 @@ are under MIT; exact source and tree fingerprints are in the
 - [Learning Evidence Progression](learning-evidence-progression/SKILL.md) · education/curriculum, education/assessment · 18/20 static, host behavior NOT RUN
 - [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) · software-engineering/maintenance, cloud-devops/ci-cd · 18/20 static, host behavior NOT RUN
 - [Business Presence Observatory](business-presence-observatory/SKILL.md) · business/operations, marketing/seo · 17/20 static, host behavior NOT RUN
-- [Work Period Evidence Reporter](work-period-evidence-reporter/SKILL.md) · communication/organizational-communication, time-productivity/collaboration · 18/20 static, host behavior NOT RUN
+- [Work Period Evidence Reporter v1.2](work-period-evidence-reporter/SKILL.md) · communication/organizational-communication, time-productivity/collaboration · 18/20 static, 10 controlled synthetic report cases, host A/B NOT RUN
 
 All 21 packages passed bounded direct **static text/package review**
 (17–18/20); host-agent behavior, independent functional equivalence,

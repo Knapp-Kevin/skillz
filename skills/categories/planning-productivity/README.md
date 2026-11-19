@@ -7,6 +7,6 @@ Skills for organizing work, making decisions, coordinating responsibilities, and
 - [`inbox-triage`](../../inbox-triage/) — classify inbox work and draft replies without sending.
 - [`learning-plan`](../../learning-plan/) — build a structured skill-acquisition plan.
 - [`task-surface`](../../task-surface/) — coordinate responsibilities scattered across repos and systems.
-- [`week-in-review`](../../week-in-review/) — produce a weekly retrospective from evidence.
+- [Work Period Evidence Reporter](../../authored/work-period-evidence-reporter/SKILL.md) — evidence-backed Shipped / Stalled / Decisions / Monday Carry-forward review (replaces `week-in-review`).
 
 Related repository-maintenance work such as TODO harvesting lives under [Software & Repositories](../software-repositories/).
