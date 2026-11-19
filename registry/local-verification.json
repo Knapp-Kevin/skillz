@@ -41,38 +41,6 @@
       "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
-      "skill_name": "agent-postmortem",
-      "local_path": "skills/agent-postmortem/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "evaluation",
-          "agent-development"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "decomposition",
-          "traceable",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA dde789e87da090b92021b3e55304299244f62ac2; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
       "skill_name": "brief-writer",
       "local_path": "skills/brief-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2384,6 +2352,45 @@
       "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/c95b31e6d0955f00c5ae14bb59ceee821de20b2c/skills/todo-harvester/SKILL.md",
       "historical_rights": "unproven",
       "behavioral_parity": "not-run"
+    },
+    {
+      "skill_name": "agent-postmortem",
+      "local_path": "skills/agent-postmortem/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "evaluation",
+          "agent-development"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "decomposition",
+          "traceable",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA dde789e87da090b92021b3e55304299244f62ac2; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/agent-failure-boundary-analysis",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/44a81f39173098eb754090ea83e3a076940d7a6b/skills/agent-postmortem/SKILL.md",
+      "historical_rights": "unproven",
+      "behavioral_parity": "not-run",
+      "controlled_acceptance_receipt": "docs/evals/receipts/2026-11-19-agent-postmortem-controlled-report-evaluation.json"
     }
   ]
 }

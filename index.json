@@ -1157,7 +1157,6 @@
     ],
     "agent-operations-security": [
       "agent-home-doctor",
-      "agent-postmortem",
       "automation-receipts",
       "mcp-vetting",
       "permissions-review",
@@ -5467,7 +5466,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 new original packages static-reviewed, 44 function crosswalks, zero legacy source deletions",
+    "status": "21 independent packages static-reviewed; two narrow historical removals, 42 active originals; no measured functional superiority",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5499,7 +5498,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 1,
-    "retirement_status": "pilot branch, HOLD until full consumer audit"
+    "legacy_retired": 2,
+    "retirement_status": "two owner-accepted controlled-emulation retirements on main after merge; independent host parity not proven"
   }
 }

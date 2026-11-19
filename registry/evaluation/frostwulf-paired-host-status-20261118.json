@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 1,
+    "legacy_retirements_approved": 2,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 0,
-    "retired_under_owner_accepted_procedure": 1,
+    "historical_full_package_trees_verified": 1,
+    "retired_under_owner_accepted_procedure": 2,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -108,7 +108,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_TEXTUAL_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -157,18 +157,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_CONTROLLED_CONTRACT_CASES_PASS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_FIVE_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_FULL_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_REPLACEMENT",
+        "eligible_for_retirement": true,
+        "reason": "Narrow owner-accepted controlled-emulation exception; no independent host parity or 1.5x improvement.",
+        "qualification_basis": "OWNER_ACCEPTED_CONTROLLED_EMULATION_NO_INDEPENDENT_MODEL_A_B",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-agent-postmortem-controlled-report-evaluation.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "SINGLE_ANALYST_TEXTUAL_EMULATION",
+        "original_full_tree_sha1": "cceb115c92467cd3be2a997484ef6756a47b6f58",
+        "replacement_full_tree_sha1": "426391a3bea7e75f364fe86da8845dee2718f8a5",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/automation-receipts/SKILL.md",

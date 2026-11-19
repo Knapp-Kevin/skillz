@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: dde789e87da090b92021b3e55304299244f62ac2
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Exact-blob static source refresh only. Independent adversarial behavior not-run; external exact-tree SkillSpector 5/5 pass evidence recorded separately on draft #693 is not unchanged-use approval.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Retains prior 19/20 static semantic rationale; repaired source scopes private reads, forbids secret fragments and rejects untrusted retrieved instructions. No host behavioral acceptance performed."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/44a81f39173098eb754090ea83e3a076940d7a6b/skills/agent-postmortem/SKILL.md
+replacement_id: local-skills/agent-failure-boundary-analysis
+retirement_note: "Historical blob and prior static review retained. Five self-adjudicated synthetic scenario oracles passed; independent paired host behavior and measured 1.5x gain not proven. Owner accepted narrow controlled-emulation risk."
