@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-19",
-  "purpose": "Current 1052 governed exact-version identities (57 first-party, 995 third-party); 17 historical retired entrypoints in archive only.",
+  "purpose": "Current 1051 governed exact-version identities (56 first-party, 995 third-party); 18 retired historical entrypoints in archive only.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 57,
+    "first_party": 56,
     "third_party": 995,
-    "total": 1052
+    "total": 1051
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -60,7 +60,6 @@
     "local-skills/research-question-dossier",
     "local-skills/scheduled-work-proof-auditor",
     "local-skills/session-continuity",
-    "local-skills/smallbiz-ops",
     "local-skills/source-debt-triage",
     "local-skills/statement-variance-reviewer",
     "local-skills/task-surface",
@@ -1272,6 +1271,15 @@
       "replacement_id": "local-skills/learning-evidence-progression",
       "host_parity": "not-run",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
+    },
+    {
+      "id": "local-skills/smallbiz-ops",
+      "source_commit": "df12a9d2f27278d8cf8853905787e9373a1ca185",
+      "source_blob": "b7f20b33c81e647ec8ff95ef765beb75867870e2",
+      "source_tree": "304c1a49988aee8f446b5fa00700ff46a5e2358b",
+      "replacement_id": "local-skills/business-presence-observatory",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-smallbiz-controlled-portfolio.json"
     }
   ],
   "delivery_effectiveness_extension_20261119": {
