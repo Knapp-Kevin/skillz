@@ -24,4 +24,4 @@ rationale: "Strong read-only debt-marker triage using blame age plus surrounding
 retired_at: "2026-11-18"
 historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/c95b31e6d0955f00c5ae14bb59ceee821de20b2c/skills/todo-harvester/SKILL.md
 replacement_id: local-skills/source-debt-triage
-consumer_audit: "Partial source audit; pilot HOLD"
+consumer_audit: "Known canonical active references reconciled; exhaustive repository scan not proven; owner accepted bounded emulation-based retirement"
