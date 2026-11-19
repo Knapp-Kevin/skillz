@@ -1267,8 +1267,8 @@
       "skill_name": "technology-change-intelligence",
       "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d6d022c2d9f20adfe4256cf09fadb6816303587b",
-      "complete_package_tree_sha": "4e92122e2bf68926df743a4393ef166a42fadba9",
+      "content_blob_sha": "2df52cd76f95cedbfea7a0dde0576c196371077a",
+      "complete_package_tree_sha": "2c0e27ea8df81a067d60f5e5d4c61f43f308c44a",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -1294,9 +1294,9 @@
           "high"
         ]
       },
-      "notes": "v1.2.2 eleven-file source-acquisition playbook; 17/17 route coverage, 12/12 local links, 85 designed scenario IDs pinned, no observed paired model-host behavior. Review: docs/reviews/2026-11-19-tci-source-acquisition-v1-2-2.md. Rights unknown for old sources, no new retirement.",
-      "previous_content_blob_sha": "cd15d677c2560821185277d68aab89396602dc1f",
-      "previous_package_tree_sha": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "notes": "v1.2.3 eleven-file package, one-line-per-repository GitHub concise scan restored. 15 historical-v1.2.2 controlled pairs and two v1.2.3 single-host outputs; no independent A/B, no 1.5x. Static review: docs/reviews/2026-11-19-tci-github-density-v1-2-3.md",
+      "previous_content_blob_sha": "d6d022c2d9f20adfe4256cf09fadb6816303587b",
+      "previous_package_tree_sha": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "reviewed_at": "2026-11-19"
     },
     {
