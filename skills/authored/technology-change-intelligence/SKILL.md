@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Technology Change Intelligence
-  version: 1.2.0
+  version: 1.2.1
   license: MIT
 ---
 
@@ -52,6 +52,10 @@ it is unavailable, state the date-bound limitation instead of inventing
 "today's latest" findings. A 7-day profile and a 30-day profile must not
 be silently combined into one unlabelled period.
 
+## Specialist outcome preservation
+
+For any named profile, also load the bundled [specialist execution gates](references/specialist-execution-gates.md). These are **decision procedures**, not merely suggested headings: they require exact interface/artifact discrimination, source-lane coverage, a source-backed next check and an applicability verdict when an expressly supplied runtime target or redacted project summary is in scope. In particular, local-inference reports must end with a target-specific relevance verdict or explicitly say `GENERIC_ONLY`. GitHub discovery must distinguish newly created from newly accelerating repositories and disclose missing prior-candidate deduplication. Governance and memory project comparisons require supplied authorized context. Connected read-only search tools are optional, never assumed to exist or to grant private scope.
+
 ## Evidence workflow
 
 1. **Define the subscriber-relevant question:** actual stated interests or explicit one-off topic, applicable specialized profile(s) **or AD_HOC_TOPIC**, source availability, time window, purpose, jurisdiction where material and approved source scope. Default to public read-only evidence and in-session profile status only. If interests are unknown, do not claim a personalized ranking.
@@ -88,6 +92,9 @@ be silently combined into one unlabelled period.
    only if two or more profiles were requested.
 
 ## Required report
+
+For selected profiles, preserve the distinct sections plus the specialist closure from `references/specialist-execution-gates.md`: a supported decision now, relevant target verdict when authorized, specific safe verification next, patterns or contradictions if evidenced, and lane-by-lane `NOT_CHECKED` disclosure. A generic event table by itself is insufficient.
+
 
 Header: `user-stated interests or one-off topic; route (profile or AD_HOC_TOPIC); profile status (EPHEMERAL / DRAFT_UNSAVED / user-confirmed-in-session / verified persisted); observed_at; event_window; intended decision; source access limitations`.
 
