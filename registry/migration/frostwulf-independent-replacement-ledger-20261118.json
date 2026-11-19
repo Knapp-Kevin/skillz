@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 18,
+    "legacy_removed": 22,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 26
+    "legacy_remaining": 22
   },
   "rows": [
     {
@@ -139,8 +139,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "five_analyst_synthetic_decisions_passed_no_model_host_parity",
+      "retirement_snapshot_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "retirement_source_tree": "6c73d9f034feaecad129769a9ec0afebabc397f6",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/daily-briefing/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json",
+      "retirement_scope": "COMPLETE_GIT_PACKAGE_TREE_VERIFIED",
+      "current_active_reference": "skills/authored/personal-operations-control-board/SKILL.md",
+      "retirement_review": "docs/reviews/2026-11-19-daily-briefing-controlled-retirement.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-risk-exception",
+      "retirement_behavioral_claim": "NOT_INDEPENDENT_AGENT_HOST_PARITY; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/decision-log/SKILL.md",
@@ -267,8 +278,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/statement-variance-reviewer/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "one_to_one"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "one_to_one",
+      "retirement_status": "five_analyst_synthetic_decisions_passed_no_model_host_parity",
+      "retirement_snapshot_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "retirement_source_tree": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/finance-review/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json",
+      "retirement_scope": "COMPLETE_GIT_PACKAGE_TREE_VERIFIED",
+      "current_active_reference": "skills/authored/statement-variance-reviewer/SKILL.md",
+      "retirement_review": "docs/reviews/2026-11-19-finance-review-controlled-retirement.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-risk-exception",
+      "retirement_behavioral_claim": "NOT_INDEPENDENT_AGENT_HOST_PARITY; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/gemini-pulse/SKILL.md",
@@ -349,8 +371,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "five_analyst_synthetic_decisions_passed_no_model_host_parity",
+      "retirement_snapshot_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "retirement_source_tree": "d5796de1dbb5605e3ba8c2932ddf6860f972bef0",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/inbox-triage/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json",
+      "retirement_scope": "COMPLETE_GIT_PACKAGE_TREE_VERIFIED",
+      "current_active_reference": "skills/authored/personal-operations-control-board/SKILL.md",
+      "retirement_review": "docs/reviews/2026-11-19-inbox-triage-controlled-retirement.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-risk-exception",
+      "retirement_behavioral_claim": "NOT_INDEPENDENT_AGENT_HOST_PARITY; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/inference-pulse/SKILL.md",
@@ -608,8 +641,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "five_analyst_synthetic_decisions_passed_no_model_host_parity",
+      "retirement_snapshot_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "retirement_source_tree": "951d5da3b04651e5612e8d1af811b39250672585",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/task-surface/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json",
+      "retirement_scope": "COMPLETE_GIT_PACKAGE_TREE_VERIFIED",
+      "current_active_reference": "skills/authored/personal-operations-control-board/SKILL.md",
+      "retirement_review": "docs/reviews/2026-11-19-task-surface-controlled-retirement.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-risk-exception",
+      "retirement_behavioral_claim": "NOT_INDEPENDENT_AGENT_HOST_PARITY; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/todo-harvester/SKILL.md",
