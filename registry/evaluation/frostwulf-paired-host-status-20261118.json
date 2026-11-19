@@ -1,0 +1,2661 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-18",
+  "issue": 738,
+  "source_migration_ledger_path": "registry/migration/frostwulf-independent-replacement-ledger-20261118.json",
+  "source_authored_index_path": "registry/authored-skills-index.json",
+  "protocol": "docs/evals/frostwulf-paired-evaluation-protocol.md",
+  "counts": {
+    "historical_entrypoints": 44,
+    "authored_replacements": 21,
+    "required_paired_case_slots": 220,
+    "scenario_contracts_designed": 20,
+    "scenario_contracts_not_designed": 200,
+    "host_executions_observed": 0,
+    "parity_proven": 0,
+    "improvement_1_5x_proven": 0,
+    "legacy_retirements_approved": 0
+  },
+  "entries": [
+    {
+      "legacy_entrypoint": "skills/agent-home-doctor/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "64e86c622b7242a6f0cd7f4489ce2525473fcfb2",
+      "replacement_package_tree_sha1": "8437369eaa92cecd6ce036ce4733f8e132f8caee",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-agent-home-doctor-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-agent-home-doctor-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-agent-home-doctor-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-agent-home-doctor-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-agent-home-doctor-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/agent-postmortem/SKILL.md",
+      "legacy_blob_sha1": "dde789e87da090b92021b3e55304299244f62ac2",
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/agent-failure-boundary-analysis/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "4a114972587060c79ee6df852526a0a047abd3c2",
+      "replacement_package_tree_sha1": "426391a3bea7e75f364fe86da8845dee2718f8a5",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "P1-INCIDENT-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-INCIDENT-01",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "P1-INCIDENT-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-INCIDENT-02",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "P1-INCIDENT-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-INCIDENT-03",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "P1-INCIDENT-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-INCIDENT-04",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "P1-INCIDENT-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-INCIDENT-05",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/automation-receipts/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "22fe02a8dc2b021c4badaeb1028f3e492ad8e12b",
+      "replacement_package_tree_sha1": "bd9254ce997d807b1bfe91c820b820fd51ae9cfc",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-automation-receipts-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-automation-receipts-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-automation-receipts-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-automation-receipts-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-automation-receipts-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/brief-writer/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
+      "replacement_package_tree_sha1": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-brief-writer-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-brief-writer-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-brief-writer-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-brief-writer-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-brief-writer-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/career-radar/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/professional-market-evidence-scout/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "66d344acbcdf62390efd37f059a76622d90bfcfd",
+      "replacement_package_tree_sha1": "d0cf2ad1131a0b8a152a22e112a6494f2c1f8a1c",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-career-radar-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-career-radar-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-career-radar-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-career-radar-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-career-radar-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/claude-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-claude-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-claude-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-claude-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-claude-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-claude-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/compare/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
+      "replacement_package_tree_sha1": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-compare-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-compare-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-compare-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-compare-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-compare-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/daily-briefing/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "6ec82d3e34e2bd5adea16838d9ba49955106b893",
+      "replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-daily-briefing-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-daily-briefing-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-daily-briefing-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-daily-briefing-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-daily-briefing-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/decision-log/SKILL.md",
+      "legacy_blob_sha1": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/decision-record-steward/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "d9005c5c1b3fbed122a52d106104dbee02b5a165",
+      "replacement_package_tree_sha1": "56b32d80412fbae75f05914e992156f081d8ce05",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "P1-DECISION-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DECISION-01",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "P1-DECISION-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DECISION-02",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "P1-DECISION-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DECISION-03",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "P1-DECISION-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DECISION-04",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "P1-DECISION-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DECISION-05",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/deck-outline/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "1e8cb987017c06dd12b995ed22055dc6b3367b45",
+      "replacement_package_tree_sha1": "2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-deck-outline-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-deck-outline-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-deck-outline-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-deck-outline-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-deck-outline-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/deep-dive/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/research-question-dossier/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "a3901f753726fa4ffc2605277608b5244ad1a5b0",
+      "replacement_package_tree_sha1": "dd2872a6d5802ed55b29c3d5a1d01b0dc2730e2c",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-deep-dive-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-deep-dive-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-deep-dive-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-deep-dive-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-deep-dive-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/deepseek-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-deepseek-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-deepseek-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-deepseek-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-deepseek-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-deepseek-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/devlog-draft/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "1e8cb987017c06dd12b995ed22055dc6b3367b45",
+      "replacement_package_tree_sha1": "2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-devlog-draft-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-devlog-draft-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-devlog-draft-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-devlog-draft-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-devlog-draft-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/fact-check/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+      "replacement_package_version": "1.0.0",
+      "replacement_skill_blob_sha1": "63864e5ed30deee2be15c3044ddb87fd641145a0",
+      "replacement_package_tree_sha1": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-fact-check-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-fact-check-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-fact-check-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-fact-check-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-fact-check-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/finance-review/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/statement-variance-reviewer/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "94f76bdb554fc3f3ee2b51d072ba7de067f518bd",
+      "replacement_package_tree_sha1": "21118d6dda9fe0f07a9e96e361f3cd38f15cb82f",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-finance-review-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-finance-review-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-finance-review-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-finance-review-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-finance-review-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/gemini-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-gemini-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-gemini-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-gemini-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-gemini-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-gemini-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/github-pulse/SKILL.md",
+      "legacy_blob_sha1": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "P1-PULSE-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-PULSE-01",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "P1-PULSE-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-PULSE-02",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "P1-PULSE-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-PULSE-03",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "P1-PULSE-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-PULSE-04",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "P1-PULSE-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-PULSE-05",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/glm-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-glm-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-glm-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-glm-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-glm-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-glm-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/governance-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-governance-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-governance-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-governance-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-governance-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-governance-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/handoff-writer/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "41bec236390d73bdecae389508156b5a784c1b54",
+      "replacement_package_tree_sha1": "c779e8414ea60ae28d7942b0311e518485e480f0",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-handoff-writer-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-handoff-writer-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-handoff-writer-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-handoff-writer-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-handoff-writer-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/hf-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-hf-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-hf-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-hf-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-hf-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-hf-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/inbox-triage/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "6ec82d3e34e2bd5adea16838d9ba49955106b893",
+      "replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-inbox-triage-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-inbox-triage-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-inbox-triage-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-inbox-triage-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-inbox-triage-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/inference-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-inference-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-inference-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-inference-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-inference-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-inference-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/kimi-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-kimi-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-kimi-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-kimi-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-kimi-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-kimi-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/learning-plan/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/learning-evidence-progression/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "fcde18a06e403a24501bbe4fe804ef7f54e4a081",
+      "replacement_package_tree_sha1": "ca43eef9f7eb1b4ba5c4acef3c6c023d275037c1",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-learning-plan-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-learning-plan-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-learning-plan-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-learning-plan-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-learning-plan-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/llama-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-llama-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-llama-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-llama-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-llama-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-llama-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/mcp-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-mcp-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-mcp-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-mcp-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-mcp-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-mcp-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/mcp-vetting/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "8a926f202b9fa94e06ca29a7b86826445d1a08ab",
+      "replacement_package_tree_sha1": "864c622d0276f4efbe47d5b5ba21b23efbebbf29",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-mcp-vetting-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-mcp-vetting-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-mcp-vetting-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-mcp-vetting-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-mcp-vetting-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/memory-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-memory-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-memory-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-memory-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-memory-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-memory-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/mistral-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-mistral-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-mistral-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-mistral-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-mistral-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-mistral-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/openai-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-openai-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-openai-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-openai-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-openai-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-openai-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/paper-digest/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/research-methods-appraiser/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73",
+      "replacement_package_tree_sha1": "ee212b2da6863e8dc172ea95b67c6eb190603835",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-paper-digest-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-paper-digest-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-paper-digest-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-paper-digest-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-paper-digest-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/permissions-review/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/privilege-exposure-mapper/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "2e07c2ff66fd6af2a55866d5b96c3bb877fb138f",
+      "replacement_package_tree_sha1": "0bcb42382d152636c4b9f7c6c70367eb52633740",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-permissions-review-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-permissions-review-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-permissions-review-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-permissions-review-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-permissions-review-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/perplexity-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-perplexity-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-perplexity-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-perplexity-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-perplexity-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-perplexity-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/qwen-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-qwen-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-qwen-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-qwen-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-qwen-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-qwen-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/repo-doctor/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "8f142859fac2420657377453f5b531d80c31dbb4",
+      "replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-repo-doctor-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-repo-doctor-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-repo-doctor-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-repo-doctor-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-repo-doctor-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "8f142859fac2420657377453f5b531d80c31dbb4",
+      "replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-repo-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-repo-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-repo-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-repo-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-repo-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/session-continuity/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "41bec236390d73bdecae389508156b5a784c1b54",
+      "replacement_package_tree_sha1": "c779e8414ea60ae28d7942b0311e518485e480f0",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-session-continuity-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-session-continuity-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-session-continuity-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-session-continuity-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-session-continuity-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/smallbiz-ops/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/business-presence-observatory/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "e310487e4a170b1ac6f6345d31f336d47887a495",
+      "replacement_package_tree_sha1": "fcfc6c359733c49daa58954e5d79af231e7677db",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-smallbiz-ops-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-smallbiz-ops-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-smallbiz-ops-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-smallbiz-ops-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-smallbiz-ops-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/standup-writer/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
+      "replacement_package_tree_sha1": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-standup-writer-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-standup-writer-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-standup-writer-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-standup-writer-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-standup-writer-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/task-surface/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "6ec82d3e34e2bd5adea16838d9ba49955106b893",
+      "replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-task-surface-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-task-surface-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-task-surface-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-task-surface-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-task-surface-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/todo-harvester/SKILL.md",
+      "legacy_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/source-debt-triage/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "fdd0f7d5b4e3996e6bd440751385ee537ca100c0",
+      "replacement_package_tree_sha1": "bb92a4ea4130ca50c0b110d96ab439f1498d741f",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "P1-DEBT-01",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DEBT-01",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "P1-DEBT-02",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DEBT-02",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "P1-DEBT-03",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DEBT-03",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "P1-DEBT-04",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DEBT-04",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "P1-DEBT-05",
+          "design_status": "DESIGNED",
+          "case_contract_ref": "docs/evals/frostwulf-phase1-paired-scenarios.json#P1-DEBT-05",
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/week-in-review/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
+      "replacement_package_tree_sha1": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-week-in-review-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-week-in-review-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-week-in-review-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-week-in-review-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-week-in-review-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    },
+    {
+      "legacy_entrypoint": "skills/xai-pulse/SKILL.md",
+      "legacy_blob_sha1": null,
+      "legacy_origin_rights": "NOT_ESTABLISHED",
+      "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "replacement_package_tree_sha1": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
+      "static_review_state": "verified-static",
+      "host_validation_state": "NOT_RUN",
+      "critical_outcome_status": "NOT_PROVEN",
+      "retirement": "HOLD",
+      "cases": [
+        {
+          "kind": "NOMINAL",
+          "case_id": "PENDING-xai-pulse-1",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "CHALLENGING",
+          "case_id": "PENDING-xai-pulse-2",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "MISSING_EVIDENCE",
+          "case_id": "PENDING-xai-pulse-3",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "ADVERSARIAL_AUTHORITY",
+          "case_id": "PENDING-xai-pulse-4",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        },
+        {
+          "kind": "INTEGRATION",
+          "case_id": "PENDING-xai-pulse-5",
+          "design_status": "NOT_DESIGNED",
+          "case_contract_ref": null,
+          "host_execution": "NOT_RUN",
+          "parity": "UNKNOWN",
+          "improvement_ratio": null
+        }
+      ]
+    }
+  ]
+}
