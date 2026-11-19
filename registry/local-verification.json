@@ -1267,8 +1267,8 @@
       "skill_name": "technology-change-intelligence",
       "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "cd15d677c2560821185277d68aab89396602dc1f",
-      "complete_package_tree_sha": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
+      "content_blob_sha": "d6d022c2d9f20adfe4256cf09fadb6816303587b",
+      "complete_package_tree_sha": "4e92122e2bf68926df743a4393ef166a42fadba9",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -1294,9 +1294,9 @@
           "high"
         ]
       },
-      "notes": "v1.2.1 ten-file standalone package. 17 specialist decision gates and 85 designed paired case oracles structurally reconciled, 11/11 bundled links; five analyst-written synthetic examples. Static review: docs/reviews/2026-11-19-tci-specialist-gates-v1-2-1.md. No independent host A/B runs, rights clearance, subscriber persistence, or 1.5x measured improvement.",
-      "previous_content_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
-      "previous_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "notes": "v1.2.2 eleven-file source-acquisition playbook; 17/17 route coverage, 12/12 local links, 85 designed scenario IDs pinned, no observed paired model-host behavior. Review: docs/reviews/2026-11-19-tci-source-acquisition-v1-2-2.md. Rights unknown for old sources, no new retirement.",
+      "previous_content_blob_sha": "cd15d677c2560821185277d68aab89396602dc1f",
+      "previous_package_tree_sha": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
       "reviewed_at": "2026-11-19"
     },
     {

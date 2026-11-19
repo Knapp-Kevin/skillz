@@ -558,9 +558,9 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/technology-change-intelligence.yaml",
       "verification_path": "registry/verification/local-skills/technology-change-intelligence.yaml",
-      "skill_blob_sha": "cd15d677c2560821185277d68aab89396602dc1f",
-      "package_tree_sha": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
-      "package_file_count": 10,
+      "skill_blob_sha": "d6d022c2d9f20adfe4256cf09fadb6816303587b",
+      "package_tree_sha": "4e92122e2bf68926df743a4393ef166a42fadba9",
+      "package_file_count": 11,
       "review_status": "verified-static",
       "review_score": "19/20",
       "behavioral_validation": "not-run",
@@ -568,7 +568,7 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently written new six-file package, 17 topic profiles; no old pulse sources, source JSON or text imported. Seventeen corresponding seven-word text comparisons zero matching windows. Neither legal originality nor actual host behavior proven.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/742",
-      "package_version": "1.2.1",
+      "package_version": "1.2.2",
       "capability_paths": [
         "research/source-discovery",
         "research/synthesis"
@@ -576,7 +576,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md",
       "previous_reviewed_skill_blob_sha": "ed57df330a5cf88eec055afc8f1d325247c44742",
       "previous_reviewed_package_tree_sha": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
-      "review_note": "Exact v1.2.1 10-file static specialist contract and 85-card design audit: docs/reviews/2026-11-19-tci-specialist-gates-v1-2-1.md; no observed model-host parity or measured 1.5x."
+      "review_note": "Exact 11-file v1.2.2 acquisition playbook source review, 17/17 specialist lanes, 12/12 portable links and 85 designed scenario contracts: docs/reviews/2026-11-19-tci-source-acquisition-v1-2-2.md. Model-host parity and 1.5x not measured."
     },
     {
       "id": "agent-failure-boundary-analysis",
