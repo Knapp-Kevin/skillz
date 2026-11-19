@@ -44,6 +44,12 @@ Use the numerical score *only* for compatible, actually observed completed pairs
 
 The target ratio `new / old >= 1.5` is conditional on a **nonzero, comparable historical baseline**. Do not cherry-pick only the easy or winning cases, assign arbitrary zero scores to the old method, or substitute token length for usefulness. A better average does not excuse a critical loss. If 1.5× is not statistically supportable, record `NOT_PROVEN` or `BELOW_TARGET`, with raw observations.
 
+**Bounded-score ceiling correction:** The weighted 0–4 outcome score is normalized to 0–100; if the historical paired baseline is already greater than 66⅔, no replacement can mathematically reach 1.5× on this **bounded** score. Explicitly calculate and disclose the maximum attainable ratio `100 / observed_old_baseline` and label the 1.5× score goal `CEILING_UNATTAINABLE` when applicable, not a safety or functional parity FAIL. Do not lower the historical score, shift criteria, suppress strong legacy cases or invent extra score headroom to force the target.
+
+If the owner separately cares about measured 1.5× **task success rate**, **critical error reduction**, **time-to-correct-outcome** or other operational improvement, predeclare its own numerator/denominator, sample size, matched environment, direction of improvement and uncertainty before evaluation. These quantities are *not interchangeable* with the bounded composite score. A larger throughput ratio or fewer tokens alone cannot prove better work. Record both outcome quality and time/cost independently; report impossible/uncertain targets as such.
+
+**Retirement distinction:** Functional parity plus non-regression safety and complete source/consumer qualification is the minimum evidence basis for retiring an original; a desired improvement ratio is a separate quality objective. If the score target is unattainable, not proven or below target, preserve that fact and obtain explicit owner acceptance of the replacement tradeoff before retirement, rather than marking equivalence as failure or silently relaxing the requirement.
+
 ## Receipt fields and review state
 
 Each external host receipt, if later uploaded with scoped approval, must include:
