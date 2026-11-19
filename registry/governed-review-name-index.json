@@ -1,17 +1,16 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Governed active names: 1062 exact identities; six historical names retained only in archival records.",
+  "purpose": "1061 active governed exact-source names; seven historical identities archived, not selectable.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 67,
+    "first_party": 66,
     "third_party": 995,
-    "total": 1062
+    "total": 1061
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
-    "local-skills/agent-home-doctor",
     "local-skills/agent-workspace-footprint-assessor",
     "local-skills/brief-writer",
     "local-skills/business-presence-observatory",
@@ -1183,6 +1182,15 @@
       "replacement_id": "local-skills/connector-capability-risk-review",
       "host_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
+    },
+    {
+      "id": "local-skills/agent-home-doctor",
+      "source_commit": "369f6fd853b79eaf666c89da893429ba5156bc2e",
+      "source_blob": "3415f1f4bb72afc44266706be649c3950f809337",
+      "source_tree": "7e78ed3047b66c67c492eae1191853d6d7ce095e",
+      "replacement_id": "local-skills/agent-workspace-footprint-assessor",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json"
     }
   ]
 }
