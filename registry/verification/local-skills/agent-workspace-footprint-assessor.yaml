@@ -1,16 +1,16 @@
 schema_version: 1
 skill_name: agent-workspace-footprint-assessor
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/agent-workspace-footprint-assessor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/agent-workspace-footprint-assessor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 64e86c622b7242a6f0cd7f4489ce2525473fcfb2
-complete_package_tree_sha: 8437369eaa92cecd6ce036ce4733f8e132f8caee
-characterized_at: "2026-11-18"
-reviewed_at: "2026-11-18"
+content_blob_sha: d790e403e59319df5b148b93f4b24e8971c0e692
+complete_package_tree_sha: 0dbad84eadc96648879fdf2f279b07137d28d76c
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
 verification_status: verified
 verification_basis: maintainer-complete-package-static-review
 validation_status: not-run
@@ -24,7 +24,9 @@ tags:
   authority: [read-only, mutating]
   portability: [high]
 notes: >-
-  Current v1.1 exact three-file source static review 18/20:
-  docs/reviews/2026-11-18-agent-home-privilege-parity-v1-1.md.
+  Current v1.2 exact three-file source static review 18/20:
+  docs/reviews/2026-11-19-agent-home-privilege-parity-v1-1.md.
   Default read-only; optional consented filesystem mutation requires host authority.
   Behavioral comparison NOT RUN; 1.5x target NOT PROVEN.
+
+review_update: "2026-11-19 v1.2 verified static; see docs/reviews/2026-11-19-agent-home-controlled-retirement.md; host behavior and 1.5x not proven."

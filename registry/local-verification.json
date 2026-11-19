@@ -1645,8 +1645,8 @@
       "skill_name": "agent-workspace-footprint-assessor",
       "local_path": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
-      "complete_package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "content_blob_sha": "d790e403e59319df5b148b93f4b24e8971c0e692",
+      "complete_package_tree_sha": "0dbad84eadc96648879fdf2f279b07137d28d76c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "17/20",
@@ -1671,7 +1671,10 @@
           "high"
         ]
       },
-      "notes": "Complete three-file original MIT package; direct maintainer static review 17/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+      "notes": "v1.2 full package inspected after context-cost reporting and mutation-boundary repair. 9 controlled real temporary filesystem operations and seven static assertions; these are not host-agent behavior tests or measured 1.5x.",
+      "previous_content_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
+      "previous_package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "connector-capability-risk-review",
