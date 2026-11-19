@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Claim Evidence Adjudicator
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -44,7 +44,13 @@ as separate claims instead of guessing the intended interpretation.
    alone does not prove causation.
 4. Assign each proposition SUPPORTED, REFUTED, CONTEXT_MISSING, CONFLICTED
    or UNRESOLVED, with confidence justified separately. A blocked document
-   lookup is UNRESOLVED, never negative evidence.
+   lookup is UNRESOLVED, never negative evidence. For a reader-facing
+   summary, explicitly translate UNRESOLVED to **unverifiable on the
+   available evidence**, and CONTEXT_MISSING to **technically true or
+   partly supported but needs context**, never silently treat either as
+   confirmed or refuted. If only secondary accounts are accessible,
+   identify their shared evidentiary roots and cap confidence below HIGH
+   unless original primary corroboration is actually inspected.
 5. Synthesize based on the load-bearing claims, not a vote among citations.
    Mark an overall verdict supported, refuted, mixed or undetermined, and
    expose any conflicting source rather than silently picking a winner.
@@ -58,6 +64,12 @@ Present a decision summary and a table with:
 `claim ID | exact proposition | finding | source locator | limitation | confidence`.
 Then include a source-dependency note, contradictions, date of review, and
 the smallest new evidence that would plausibly change the finding.
+Provide a source register with publication or revision date, event date when
+different, actual accessed locator, and PRIMARY / SECONDARY /
+NOT_CONSULTED classification. Do not manufacture a source entry merely
+because a claim or press summary mentions it. State the overall result
+in ordinary words, including **unverifiable** and **needs context**
+where they are the accurate reader-facing dispositions.
 
 ## Constraints and incomplete work
 
