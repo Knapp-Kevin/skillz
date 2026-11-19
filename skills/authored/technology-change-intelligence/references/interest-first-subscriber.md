@@ -19,7 +19,7 @@ Collect only what affects a useful, scoped result. Candidate dimensions:
 - **Priority and boundaries:** must-watch, secondary, explicitly excluded; a broad preference does not negate an explicit exclusion.
 - **Evidence and depth:** concise actionable signal or technical deep dive; desired balance of release facts, security, ecosystem, research and independent evaluation.
 - **Update window and audience:** a requested date range and the intended reader; if unspecified, use the target profile's default window and report the actual interval examined.
-- **Opportunity radar (optional):** user approval to surface adjacent and unfamiliar topics; if not approved, keep strictly to requested topics. Adjacent discoveries are clearly marked and never displace essential breaking/security items.
+- **Opportunity radar (optional):** user approval to surface adjacent and unfamiliar topics; if not approved, keep strictly to requested topics. Adjacent discoveries are clearly marked and never displace essential breaking/security items. **Explicit exclusions override adjacent discovery**, even when a high-scoring vendor appears in both an included topic and an excluded one.
 
 Do not demand answers to all dimensions. One useful topic and a purpose, or even a named topic alone, is enough to begin. Do not require a form, sign-up, login, payment, or stored profile for any one-off report.
 
