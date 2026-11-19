@@ -10,8 +10,8 @@
 <text x="64" y="165" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="650">Reviewed skill identities mapped</text>
 <text x="935" y="165" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" text-anchor="end" font-weight="700">147 / 1,063</text>
 <rect x="64" y="184" width="752" height="16" rx="8" fill="#25344a"/>
-<rect x="64" y="184" width="104.05" height="16" rx="8" fill="url(#routeFill)"/>
-<text x="835" y="199" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">14.2%</text>
+<rect x="64" y="184" width="103.99" height="16" rx="8" fill="url(#routeFill)"/>
+<text x="835" y="199" fill="#9fb1c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="600">13.8%</text>
 <text x="64" y="253" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="650">Subdomains with evidence links</text>
 <text x="935" y="253" fill="#edf4ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" text-anchor="end" font-weight="700">89 / 247</text>
 <rect x="64" y="272" width="752" height="16" rx="8" fill="#25344a"/>
