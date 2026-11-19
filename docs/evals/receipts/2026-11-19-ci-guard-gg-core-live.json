@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-19",
+  "scope": "single external ChatGPT-host guided application against real repository",
+  "skill": {
+    "repository": "Knapp-Kevin/skillz",
+    "id": "ci-guard",
+    "version": "1.0.0",
+    "skill_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
+    "complete_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1"
+  },
+  "target": {
+    "repository": "MythologIQ-Labs-LLC/GG-CORE",
+    "revision": "183409cf7908c479475d3c8d7991d07482260bcb",
+    "workflows": [
+      {
+        "path": ".github/workflows/rust.yml",
+        "sha": "49005580b28487a8de0814d3f36d8bf31761b1bb"
+      },
+      {
+        "path": ".github/workflows/codeql.yml",
+        "sha": "8eb27350d106db2189017ecdf2e3bbdae16ecde6"
+      },
+      {
+        "path": ".github/workflows/release.yml",
+        "sha": "1f6a9553cb2478bbea3b9d8aef0ae8b1ba4af316"
+      },
+      {
+        "path": ".github/workflows/onnx-readiness-contract.yml",
+        "sha": "730dca793dfc028013d0c6245fe161cf30a5d7a4"
+      },
+      {
+        "path": ".github/workflows/packaged-ipc-perf-contract.yml",
+        "sha": "140a83069189afeb78ae8f1d46407b2820d7f900"
+      }
+    ],
+    "perf_gate_blob_sha": "65f3c51d81903dc71cb9ed820ea6b72c09c1172a",
+    "active_ruleset_id": 14213663,
+    "branch_protection_api": "403 forbidden; not assessed"
+  },
+  "live_runs": {
+    "rust_main": 44568256590,
+    "codeql_main": 44568256644,
+    "rust_pr": 44566019508,
+    "rust_format_negative": 44565701714
+  },
+  "observed_performance": {
+    "n_success_rust": 9,
+    "n_success_codeql": 9,
+    "rust_pipeline_minutes": {
+      "p50": 9.72,
+      "p90": 19.95
+    },
+    "codeql_pipeline_minutes": {
+      "p50": 11.18,
+      "p90": 11.8
+    },
+    "rust_benchmark_job_minutes": {
+      "p50": 9.65,
+      "p90": 10.05
+    },
+    "gguf_feature_job_minutes": {
+      "p50": 7.95,
+      "p90": 9.3
+    },
+    "windows_default_test_job_minutes": {
+      "p50": 2.88,
+      "p90": 3.05
+    },
+    "sample_caveat": "success-only recent bounded sample; includes queue and repeated attempts, not statistically representative billed runner cost"
+  },
+  "actual_log_observations": [
+    {
+      "job_id": 135707834243,
+      "run_id": 44566019508,
+      "criterion_missing_base_sample_messages": 88,
+      "comparator": "PASS after baseline restored"
+    },
+    {
+      "job_id": 135715877279,
+      "run_id": 44568256590,
+      "criterion_missing_base_sample_messages": 88,
+      "comparator": "PR compare not run on main; job PASS"
+    }
+  ],
+  "controlled_comparator_emulation": {
+    "method": "logic-transcription of directly inspected Python comparator, not execution of source Python",
+    "threshold": 2,
+    "noise_floor_ns": 1000,
+    "tests": [
+      {
+        "id": "uniform-3x",
+        "median_shift": 3,
+        "result": "PASS",
+        "expected_by_source": true
+      },
+      {
+        "id": "single-3x",
+        "median_shift": 1,
+        "result": "FAIL",
+        "expected_by_source": true
+      },
+      {
+        "id": "missing-baseline",
+        "result": "PASS",
+        "expected_by_source": true
+      },
+      {
+        "id": "only-unmatched-new-benches",
+        "result": "PASS",
+        "expected_by_source": true
+      }
+    ],
+    "pass": 4,
+    "total": 4
+  },
+  "decisions": [
+    {
+      "area": "CodeQL and cargo-deny",
+      "disposition": "KEEP",
+      "confidence": "high for configured purpose, not independently seeded threat coverage"
+    },
+    {
+      "area": "native platform tests",
+      "disposition": "KEEP",
+      "confidence": "high for coverage, does not qualify installed P0"
+    },
+    {
+      "area": "performance comparison evidence",
+      "disposition": "REPAIR",
+      "confidence": "high for source-defined false-comparison states"
+    },
+    {
+      "area": "benchmark placement",
+      "disposition": "VERIFY_THEN_SIMPLIFY",
+      "confidence": "medium; benefit unmeasured"
+    },
+    {
+      "area": "native P0 acceptance",
+      "disposition": "KEEP_AND_VERIFY",
+      "confidence": "high; issue 219/PR 226 native HOLD"
+    }
+  ],
+  "authority": {
+    "target_modified": false,
+    "skillz_repository_receipt_write": true,
+    "workflow_dispatched": false,
+    "commands_executed_in_target": false,
+    "branches_or_rules_changed": false,
+    "external_host_independent_ab": false
+  },
+  "qualification": {
+    "source_based_findings": "pass",
+    "read_only_live_application": "completed",
+    "host_behavioral_validation": "single assisted use; formal validation not conferred",
+    "actual_risk_reduction": "not measured",
+    "actual_pipeline_savings": "not measured",
+    "release_acceptance": "not assessed"
+  },
+  "review_path": "docs/evals/2026-11-19-ci-guard-gg-core-live-application.md"
+}
