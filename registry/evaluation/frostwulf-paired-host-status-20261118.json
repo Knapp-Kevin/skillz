@@ -542,9 +542,9 @@
       "legacy_blob_sha1": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "6ec82d3e34e2bd5adea16838d9ba49955106b893",
-      "replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "485eec5425782c0310413de3a355a844ff856a25",
+      "replacement_package_tree_sha1": "8a2036ee370e1918da0964b7dbeff91b0edf8a07",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
@@ -608,7 +608,8 @@
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "prior_replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4"
     },
     {
       "legacy_entrypoint": "skills/decision-log/SKILL.md",
@@ -1588,9 +1589,9 @@
       "legacy_blob_sha1": "9326d7a691e40ff30a07a71738b13a04117206d6",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "6ec82d3e34e2bd5adea16838d9ba49955106b893",
-      "replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "485eec5425782c0310413de3a355a844ff856a25",
+      "replacement_package_tree_sha1": "8a2036ee370e1918da0964b7dbeff91b0edf8a07",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
@@ -1654,7 +1655,8 @@
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "prior_replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4"
     },
     {
       "legacy_entrypoint": "skills/inference-pulse/SKILL.md",
@@ -2646,9 +2648,9 @@
       "legacy_blob_sha1": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "8f142859fac2420657377453f5b531d80c31dbb4",
-      "replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "9261eadd5df37e4265f8913c538c0a379cf2f8f4",
+      "replacement_package_tree_sha1": "a0d217f8f48399acb95d3a8f263f26fb87eda4f1",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
@@ -2712,16 +2714,17 @@
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "prior_replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778"
     },
     {
       "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
       "legacy_blob_sha1": "9e6938b29e4c0748e4098bc53a96498f42784423",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "8f142859fac2420657377453f5b531d80c31dbb4",
-      "replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "9261eadd5df37e4265f8913c538c0a379cf2f8f4",
+      "replacement_package_tree_sha1": "a0d217f8f48399acb95d3a8f263f26fb87eda4f1",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
@@ -2785,7 +2788,8 @@
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "prior_replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778"
     },
     {
       "legacy_entrypoint": "skills/session-continuity/SKILL.md",
@@ -3011,9 +3015,9 @@
       "legacy_blob_sha1": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "6ec82d3e34e2bd5adea16838d9ba49955106b893",
-      "replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "485eec5425782c0310413de3a355a844ff856a25",
+      "replacement_package_tree_sha1": "8a2036ee370e1918da0964b7dbeff91b0edf8a07",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
@@ -3077,7 +3081,8 @@
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "prior_replacement_package_tree_sha1": "9ab584fac422cbaaea81d12fdc832945c9661bf4"
     },
     {
       "legacy_entrypoint": "skills/todo-harvester/SKILL.md",
@@ -3307,5 +3312,6 @@
   "retirement_policy": "docs/evals/frostwulf-per-source-retirement-gates.md",
   "historical_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
   "known_historical_pulse_source_list_reference": "registry/evaluation/frostwulf-pulse-source-manifests-20261118.json",
-  "phase3_fixture": "docs/evals/frostwulf-phase3-technology-pulse-paired-scenarios.json"
+  "phase3_fixture": "docs/evals/frostwulf-phase3-technology-pulse-paired-scenarios.json",
+  "last_repin_note": "Two newly reviewed v1.2 authored packages replace previously pinned v1.1 for five historic modes. Ten predesigned phase-two case contracts were re-pinned, not run; historical phase-two static integrity review is retained as evidence for its earlier exact state."
 }
