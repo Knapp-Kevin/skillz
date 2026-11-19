@@ -206,7 +206,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `compare`, `deep-dive`, `fact-check`, `paper-digest`
 
 ### Software & Repositories
-`repo-doctor`, `repo-pulse`, `todo-harvester`
+`repo-doctor`, `repo-pulse`; current original replacement: [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)
 
 ### Agent Operations & Security
 `agent-home-doctor`, `agent-postmortem`, `automation-receipts`, `mcp-vetting`, `permissions-review`, `session-continuity`
