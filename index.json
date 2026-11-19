@@ -1153,8 +1153,7 @@
     ],
     "software-repositories": [
       "repo-doctor",
-      "repo-pulse",
-      "todo-harvester"
+      "repo-pulse"
     ],
     "agent-operations-security": [
       "agent-home-doctor",
@@ -5499,6 +5498,8 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "host_behavior": "not-run"
+    "host_behavior": "not-run",
+    "legacy_retired": 1,
+    "retirement_status": "pilot branch, HOLD until full consumer audit"
   }
 }
