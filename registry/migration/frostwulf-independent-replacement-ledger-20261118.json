@@ -426,11 +426,18 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/source-debt-triage/SKILL.md",
       "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "staged-retired-on-pilot-branch",
-      "retirement_status": "consumer-audit-not-complete",
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "retirement_status": "owner_risk_accepted_procedural_tests_5_of_5_full_host_parity_not_proven",
       "retirement_snapshot_commit": "c95b31e6d0955f00c5ae14bb59ceee821de20b2c",
       "retirement_source_blob": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
-      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/c95b31e6d0955f00c5ae14bb59ceee821de20b2c/skills/todo-harvester/SKILL.md"
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/c95b31e6d0955f00c5ae14bb59ceee821de20b2c/skills/todo-harvester/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-18-todo-harvester-controlled-procedure.json",
+      "retirement_review": "docs/reviews/2026-11-18-todo-controlled-procedure-retirement.md",
+      "retirement_scope": "exact_known_SKILL_md_only",
+      "current_active_reference": "skills/authored/source-debt-triage/SKILL.md",
+      "consumer_scan_status": "KNOWN_ACTIVE_REGISTRIES_RECONCILED_EXHAUSTIVE_SEARCH_NOT_PROVEN",
+      "retirement_owner_authorization": "explicit-owner-directed-controlled-emulation-and-delete-2026-11-18",
+      "retirement_behavioral_claim": "NO_INDEPENDENT_MODEL_A_B; quality_ratio_not_proven"
     },
     {
       "legacy_entrypoint": "skills/week-in-review/SKILL.md",
