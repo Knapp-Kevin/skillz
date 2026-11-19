@@ -3,9 +3,9 @@
 **Load only when needed.** This component helps an agent distinguish
 misleading CI outcomes, find a failing boundary, or select a defensible
 optimization. It is not mandatory for a well-grounded direct execution.
-Read the [repository-wide capability-adaptive standard](../../../../docs/capability-adaptive-skill-execution.md)
-when the Skillz repository is available; the rules below remain independently
-usable when the package is installed alone.
+All governing rules needed for offline execution are in
+[the package entrypoint](../SKILL.md). This component requires no
+repository-level document, external network request or sibling package.
 
 ## Minimal evidence card
 

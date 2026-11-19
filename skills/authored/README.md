@@ -12,13 +12,20 @@ low-context guidance and stronger-method freedom explicit. No blanket
 model-tier caps or mandatory modules; same safety and evidence floor.
 Prior exact-version review scores remain historical until re-reviewed.
 
-[CI Guard v1.1](ci-guard/SKILL.md) includes an optional
+**Standalone install invariant:** a downloaded `skills/authored/<skill-name>/`
+folder must carry all required execution rules and support files, including
+the capability-adaptive behavior relevant to that skill. Repository-wide
+policy is for maintainers; offline users must not need this README, the
+repository's `docs/`, a live URL or sibling skills. See
+[offline package closure](../../docs/capability-adaptive-skill-execution.md#offline-standalone-package-closure).
+
+[CI Guard v1.2](ci-guard/SKILL.md) includes an optional
 [diagnostic decision scaffold](ci-guard/components/diagnostic-paths.md).
 This is a static design change, not measured cross-model validation.
 
 ## 2026-11-19: CI assurance and focused delivery components
 
-- [CI Guard](ci-guard/SKILL.md) (v1.1, original MIT): three specialist components for threat/detection analysis and CI placement/experiments, plus ten adversarial scenarios. Indexed under `cloud-devops/ci-cd` and `software-engineering/maintenance`.
+- [CI Guard](ci-guard/SKILL.md) (v1.2, original MIT): three specialist components for threat/detection analysis and CI placement/experiments, plus ten adversarial scenarios. Indexed under `cloud-devops/ci-cd` and `software-engineering/maintenance`.
 - [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) (v1.3): retains repository diagnosis and multi-repo pulse behavior; adds three optional modules: [issue resolution](repository-delivery-assessor/components/issue-resolution.md), [momentum](repository-delivery-assessor/components/delivery-momentum.md), and [delivery evidence](repository-delivery-assessor/components/delivery-evidence.md).
 - [Static review and controlled evaluation](../../docs/reviews/2026-11-19-ci-guard-delivery-components.md). External host validation and measured CI savings not established.
 

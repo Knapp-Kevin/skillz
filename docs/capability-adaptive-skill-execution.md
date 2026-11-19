@@ -114,6 +114,40 @@ depth; **model size does not authorize skipping required protections**.
   prevents responsible continuation. Don't turn every execution into a new
   standards committee.
 
+## Offline, standalone package closure
+
+This document is the **maintainer's canonical authoring and review rule**, not
+a runtime dependency. A user installing any single authored skill directory,
+without a Skillz checkout or network access, must still be able to perform
+all of that skill's advertised supported procedures within the host's actual
+tools and permissions. The entrypoint must carry the essential execution
+contract and point only to **bundled** components for required details.
+Copy the *complete package*, including necessary scripts, fixtures,
+references, templates and license notices, not just `SKILL.md` when its
+capability depends on other files.
+
+For a standalone package:
+
+- Resolve every required relative reference **inside the distributed
+  directory**. A relative path escaping the skill's root cannot be a
+  mandatory instruction or dependency.
+- Other installed skills, repository-wide standards, online articles and
+  project files may appear as **optional informational citations or explicit
+  handoffs**. They must not be necessary to understand the skill's rules,
+  execute its minimum supported outcome, or enforce its safeguards.
+- An optional cross-skill referral must have an in-package usable fallback
+  or a clearly stated scope boundary. Never infer that sibling packages,
+  live network access or a central policy file were installed.
+- On each material revision/export, examine package closure offline:
+  entrypoint alone for the minimum route, plus only the bundled components
+  relevant to guided work. Flag unresolved required links and never label
+  an incomplete export self-contained.
+
+This applies to **all authored skills**, not just CI Guard, to new packages,
+and to individually remediated existing packages. Do not bulk-rewrite
+third-party material or overwrite prior exact-version verification records
+for a link-only inventory.
+
 ## Anti-patterns and corrections
 
 | Weak instruction | Better instruction |

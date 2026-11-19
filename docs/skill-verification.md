@@ -47,7 +47,7 @@ A skill cannot be promoted to `verified` while any of these are unresolved:
 1. hidden or unbounded authority escalation;
 2. mutation or external side effects without a clear trigger/consent boundary;
 3. prompt-injection-like instructions that try to override higher-priority policy or unrelated user intent;
-4. missing or broken required references, templates, scripts, package files, or host capabilities;
+4. missing or broken required references, templates, scripts, package files, or host capabilities, **including mandatory files or normative rules located outside a standalone distributed skill package**;
 5. unclear provenance or unresolved license obligations;
 6. instructions that encourage fabricated evidence, hidden gaps, or false completion claims;
 7. materially unsafe failure behavior;
@@ -128,6 +128,16 @@ Review the skill as the package it actually is.
 If the skill owns scripts, references, templates, fixtures, examples, JSON, assets, or other supporting files, those may be necessary parts of the capability. Do not discard them merely because the engine itself is passive or because they are executable/non-Markdown.
 
 Dependency coherence includes checking that required supporting components exist, are described accurately, and do not silently introduce unacceptable authority, portability, licensing, or host assumptions.
+
+**Offline package-closure review:** Evaluate the entrypoint and each required
+reference as though the **single skill directory** were copied to an isolated
+offline agent. All required operational and governance instructions must be
+present inside it; a link to repository-wide documentation cannot impose a
+runtime rule. Cross-skill links and online material may remain optional
+informational citations or explicit handoffs with a documented in-package
+fallback or boundary. Do not mistake a valid GitHub URL for a locally bundled
+dependency. Record entrypoint-only closure separately from a complete-package
+audit; do not mark uninspected components as passed.
 
 ## Fingerprint invalidation
 

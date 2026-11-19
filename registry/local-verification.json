@@ -1693,8 +1693,8 @@
       "skill_name": "ci-guard",
       "local_path": "skills/authored/ci-guard/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
-      "complete_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
+      "content_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
+      "complete_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1719,9 +1719,9 @@
           "high"
         ]
       },
-      "notes": "Six-file v1.1 exact-package static review; capability-adaptive direct/guided/fallback examples. docs/reviews/2026-11-19-capability-adaptive-ci-guard-v1-1.md. Formal cross-model behavioral validation not run.",
-      "previous_content_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
-      "previous_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+      "notes": "Six-file CI Guard v1.2 exact-package static review. Runtime policy is bundled: seven relative Markdown links across the complete six-file package all resolve locally, none escapes the package or needs network. docs/reviews/2026-11-19-ci-guard-offline-package-closure.md. M7 offline scenario is static; v1.1 GG-CORE host trial is historical. Cross-model validation NOT RUN.",
+      "previous_content_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
+      "previous_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
       "reviewed_at": "2026-11-19"
     }
   ],
