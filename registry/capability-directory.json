@@ -3901,7 +3901,7 @@
     {
       "domain": "communication",
       "display_name": "Communication",
-      "linked_reviewed_examples": 8,
+      "linked_reviewed_examples": 7,
       "subdomains_with_linked_examples": 2,
       "name_only_candidate_count": 8,
       "evidence_preview": [
@@ -3931,16 +3931,6 @@
           "validation_status": "not-run",
           "static_score": null,
           "review_evidence_path": "registry/verification/local-skills/devlog-draft.yaml",
-          "source_class": "local-provenance",
-          "path": "communication/organizational-communication",
-          "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
-        },
-        {
-          "id": "local-skills/handoff-writer",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/handoff-writer.yaml",
           "source_class": "local-provenance",
           "path": "communication/organizational-communication",
           "capability_example": "Write evidence-backed updates, handoffs, briefs, and standups"
@@ -4620,20 +4610,10 @@
     {
       "domain": "career",
       "display_name": "Career",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 2,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 0,
       "evidence_preview": [
-        {
-          "id": "local-skills/career-radar",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/career-radar.yaml",
-          "source_class": "local-provenance",
-          "path": "career/job-search",
-          "capability_example": "Research current career-market opportunities; not automatic job applications"
-        },
         {
           "id": "local-skills/learning-plan",
           "verification_status": "verified",
@@ -5096,7 +5076,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1059,
+  "governed_identity_denominator": 1057,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -26154,7 +26134,6 @@
           "matched_skill_ids": [
             "local-skills/brief-writer",
             "local-skills/devlog-draft",
-            "local-skills/handoff-writer",
             "local-skills/standup-writer",
             "local-skills/personal-operations-control-board",
             "local-skills/work-period-evidence-reporter"
@@ -28497,7 +28476,6 @@
             "Deduplicate dated role evidence and assess market fit with explicit compensation units."
           ],
           "matched_skill_ids": [
-            "local-skills/career-radar",
             "local-skills/professional-market-evidence-scout"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -28700,9 +28678,7 @@
           "capabilities": [
             "Evaluate changing career directions with current market evidence"
           ],
-          "matched_skill_ids": [
-            "local-skills/career-radar"
-          ],
+          "matched_skill_ids": [],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "career transitions",
@@ -33206,34 +33182,6 @@
       "unchanged_use_approved": false
     },
     {
-      "id": "local-skills/career-radar",
-      "source_id": "local-skills",
-      "skill_name": "career-radar",
-      "content_blob_sha": "a17f9b53b9ed22c2cd4f715effd73ec7585a316b",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "career/job-search",
-        "career/career-transitions"
-      ],
-      "evidence_path": "registry/verification/local-skills/career-radar.yaml",
-      "skill_path": "skills/career-radar/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/career-radar.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "career",
-        "research",
-        "monitoring"
-      ],
-      "notes": "Useful recurring market scan with source/date requirements and read-only boundary; depends on current web access and a bound professional profile for best fit.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/character-motivation-interview",
       "source_id": "local-skills",
       "skill_name": "character-motivation-interview",
@@ -33371,8 +33319,8 @@
       "id": "local-skills/context-continuation-contract",
       "source_id": "local-skills",
       "skill_name": "context-continuation-contract",
-      "content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
-      "complete_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "content_blob_sha": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "complete_package_tree_sha": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33391,7 +33339,8 @@
       ],
       "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "notes": "Exact independently authored v1.2 complete package pinned; restored historic support-mode behavior under bounded controlled synthetic test, no agent-host parity or measured 1.5x effectiveness."
     },
     {
       "id": "local-skills/daily-briefing",
@@ -33815,33 +33764,6 @@
         "security"
       ],
       "notes": "Useful separation of binding obligations from drafts/noise plus read-only optional local drift review; some bound-product context is environment-specific.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
-      "id": "local-skills/handoff-writer",
-      "source_id": "local-skills",
-      "skill_name": "handoff-writer",
-      "content_blob_sha": "8a789ea0dd3b1c89ccac9d50727b06007abcf5c1",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "communication/organizational-communication"
-      ],
-      "evidence_path": "registry/verification/local-skills/handoff-writer.yaml",
-      "skill_path": "skills/handoff-writer/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/handoff-writer.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "generate-only"
-      ],
-      "use_case_tags": [
-        "handoff",
-        "documentation",
-        "communication"
-      ],
-      "notes": "Excellent zero-context handoff contract with evidence-backed state, exact next actions, anti-secret rules, and explicit unknown/inference handling. Current exact version is statically verified only.",
       "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
@@ -34302,8 +34224,8 @@
       "id": "local-skills/professional-market-evidence-scout",
       "source_id": "local-skills",
       "skill_name": "professional-market-evidence-scout",
-      "content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
-      "complete_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "content_blob_sha": "5c1003c2bd3d13d972eff6fd52dd47ec03d327d2",
+      "complete_package_tree_sha": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -34322,7 +34244,8 @@
       ],
       "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
-      "unchanged_use_approved": false
+      "unchanged_use_approved": false,
+      "notes": "Exact independently authored v1.2 complete package pinned; restored historic support-mode behavior under bounded controlled synthetic test, no agent-host parity or measured 1.5x effectiveness."
     },
     {
       "id": "local-skills/qwen-pulse",
@@ -34880,13 +34803,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 143,
+  "identity_level_capability_links_mapped": 141,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 64,
-    "known_total_governed_review_records": 1059,
+    "known_first_party_skill_records": 62,
+    "known_total_governed_review_records": 1057,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34943,18 +34866,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 64,
+  "first_party_identity_links_mapped": 62,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 64,
+    "mapped_first_party_distinct": 62,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 143,
+    "mapped_total_distinct": 141,
     "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Nine individually risk-accepted historical retirements, 35 original active sources; independent model-host A/B and full consumer search not proven.",
+    "note": "Eleven individually source-bound owner-accepted historical retirements; 33 original entrypoints active. No independently observed model-host parity or exhaustive consumer scan.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35204,7 +35127,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 9,
+    "legacy_retired": 11,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35212,6 +35135,6 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 35
+    "legacy_remaining": 33
   }
 }
