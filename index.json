@@ -1156,7 +1156,6 @@
     ],
     "agent-operations-security": [
       "agent-home-doctor",
-      "mcp-vetting",
       "session-continuity"
     ],
     "monitoring-intelligence": [
@@ -5463,7 +5462,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 authored replacement packages static reviewed, five source-bound legacy retirements, 39 originals active; no observed A/B or 1.5x gain",
+    "status": "21 independently authored replacements static-reviewed; six bounded original retirements, 38 active originals; 1.5x not established",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5495,7 +5494,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 5,
-    "retirement_status": "five owner-risk-accepted source-bound procedure evaluations; independent paired host behavior not established"
+    "legacy_retired": 6,
+    "retirement_status": "six separately recorded owner-accepted controlled/emulated retirements, independent A/B behavior not proven"
   }
 }

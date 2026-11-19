@@ -830,38 +830,6 @@
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
     },
     {
-      "skill_name": "mcp-vetting",
-      "local_path": "skills/mcp-vetting/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "security",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "source-driven",
-          "traceable",
-          "human-review"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run."
-    },
-    {
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2415,6 +2383,45 @@
       "historical_rights": "not established",
       "behavioral_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
+    },
+    {
+      "skill_name": "mcp-vetting",
+      "local_path": "skills/mcp-vetting/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "security",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "source-driven",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/connector-capability-risk-review",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/120b038d230b77930208f2108c34f169f297dcf9/skills/mcp-vetting/SKILL.md",
+      "historical_rights": "unproven",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
     }
   ]
 }

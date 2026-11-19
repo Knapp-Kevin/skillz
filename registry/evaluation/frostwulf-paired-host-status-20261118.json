@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 5,
+    "legacy_retirements_approved": 6,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 4,
-    "retired_under_owner_accepted_procedure": 5,
+    "historical_full_package_trees_verified": 5,
+    "retired_under_owner_accepted_procedure": 6,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -2085,13 +2085,13 @@
       "legacy_blob_sha1": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "8a926f202b9fa94e06ca29a7b86826445d1a08ab",
-      "replacement_package_tree_sha1": "864c622d0276f4efbe47d5b5ba21b23efbebbf29",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "7c19817cf91804c430b94364550aa50eda731fb1",
+      "replacement_package_tree_sha1": "26b1fa68302ce1fb088748edd98d9702b85de23d",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_STATIC_SECURITY_PROCEDURE",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -2140,18 +2140,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_SYNTHETIC_SECURITY_ORACLE_CASES_PASS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_FIVE_CONTROLLED_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_IMMUTABLE_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Narrow owner-accepted controlled procedure path; no isolated original/new host A/B or measured gain.",
+        "qualification_basis": "OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_SECURITY_PROCEDURE",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "OFFLINE_PYTHON_JSON_SYNTHETIC_EVALUATOR",
+        "original_full_tree_sha1": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
+        "replacement_full_tree_sha1": "26b1fa68302ce1fb088748edd98d9702b85de23d",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/memory-pulse/SKILL.md",
