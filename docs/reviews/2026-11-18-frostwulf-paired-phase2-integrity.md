@@ -12,7 +12,7 @@ Review date: November 18, 2026 (owner local). Issue [#738](https://github.com/Kn
 
 ## Independent deterministic audit actually executed
 
-The maintainer agent parsed the newly committed JSON via a short ephemeral external-host script. It inspected structural schema, unique source and case IDs, five challenge types per source, cross-links to exact fixture inputs and current authored index, source pin equality, required/prohibited oracle lists, planned-only host statuses, and retirement flags. This script was **not** committed as an active Skillz runtime and did not execute any historical skill code.
+The maintainer agent parsed the newly committed JSON via a short ephemeral external-host script. Phase 1 and phase 2 now both use `status: DESIGNED` on case contracts and reserve `design_status` for the per-source ledger. It inspected structural schema, unique source and case IDs, five challenge types per source, cross-links to exact fixture inputs and current authored index, source pin equality, required/prohibited oracle lists, planned-only host statuses, and retirement flags. This script was **not** committed as an active Skillz runtime and did not execute any historical skill code.
 
 | Assertion | Actual result |
 | --- | --- |
@@ -30,7 +30,7 @@ The maintainer agent parsed the newly committed JSON via a short ephemeral exter
 | Original entrypoints qualified for retirement | 0, HOLD |
 | Structural integrity errors from final checker | 0 |
 
-Source identities at final branch review: `registry/evaluation/frostwulf-paired-host-status-20261118.json` Git blob `27f863fc7d52f0751957c3cda6a72a4913d291b4`; phase 1 `b49a37ed66b39c20fc1eb96d6b8490d72f39e4b4`; phase 2 `5c43d6fcb559bebe2e690e86ad4fed14a2c97615`; authored index `4003cf8794189ca346301fc507f14d71655df867`. These source identities apply **before any further changes to the ledger**.
+Source identities at final branch review: `registry/evaluation/frostwulf-paired-host-status-20261118.json` Git blob `27f863fc7d52f0751957c3cda6a72a4913d291b4`; phase 1 `b49a37ed66b39c20fc1eb96d6b8490d72f39e4b4`; phase 2 `cac81602cccb4a8d74fc2243ba8a879a163e914d`; authored index `4003cf8794189ca346301fc507f14d71655df867`. These source identities apply **before any further changes to the ledger**.
 
 ## Explicit blockers
 
