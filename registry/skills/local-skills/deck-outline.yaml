@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/deck-outline/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
 curated_at: 2026-08-30
 last_checked_at: 2026-08-30
-availability: in-repo
+availability: retired-historical
 local_path: skills/deck-outline/SKILL.md
 permission_tier: generate-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
+import_eligibility: retired-not-selectable
 rationale: "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/deck-outline/SKILL.md
+replacement_id: local-skills/evidence-narrative-composer
+consumer_audit: "Known canonical active routes reconciled; full repository search incomplete; owner-approved bounded controlled emulation."
