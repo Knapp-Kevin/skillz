@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: context-continuation-contract
 display_name: "Context Continuation Contract"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/context-continuation-contract/SKILL.md
@@ -14,15 +14,17 @@ curated_at: "2026-11-18"
 last_checked_at: "2026-11-18"
 availability: in-repo
 local_path: skills/authored/context-continuation-contract/SKILL.md
-permission_tier: read-only
+permission_tier: mutating
+default_permission_tier: read-only
+optional_action_boundary: "Host continuity-record persistence only after specific user authorization and verified destination"
 portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 4a2af8971576581adf3d768cc6878549c5cac511
-complete_package_tree_sha: 3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64
+content_blob_sha: 41bec236390d73bdecae389508156b5a784c1b54
+complete_package_tree_sha: c779e8414ea60ae28d7942b0311e518485e480f0
 historical_comparators: "skills/handoff-writer/SKILL.md; skills/session-continuity/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Package or resume verified context without transferring hidden authority or stale assertions. Static 18/20; no host acceptance. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+rationale: "Exact three-file v1.1 static review 18/20. Default read-only; optional separately authorized memory mutation with readback. docs/reviews/2026-11-18-context-continuation-parity-v1-1.md. Behavior NOT RUN."
