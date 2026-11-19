@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations & Security
   display-name: Connector Capability Risk Review
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -16,9 +16,19 @@ metadata:
 
 Determine whether a **specific connector revision, host and proposed use**
 has an acceptable trust boundary. The answer is about a configuration
-under stated controls, not the reputation of its publisher.
+under stated controls, not the reputation of its publisher. Invoke this
+review before a new connection or a material change to a connection's
+revision, tool set, permissions or destinations, not for routine use of
+an already authorized connection or generic catalog discovery.
 
 ## Minimum evidence
+
+Record the review date/time and time zone, exact immutable artifact or
+server revision, named integration host, intended user workflow, and
+scope of evidence actually inspected. If the version or review timestamp
+is unavailable, mark it UNKNOWN and explain how the uncertainty limits
+reliance on the finding; do not fabricate a date or package digest.
+
 
 Require an immutable package/release identity when available, complete
 tool and resource declaration, proposed authentication scopes, network
@@ -120,11 +130,18 @@ explicitly requested.
 
 ## Output
 
-Report pinned source identity, publisher and verified license/terms,
-inspection coverage, operation/effect matrix, data-flow sketch,
+Report review date/time (or explicit UNKNOWN), pinned source identity,
+publisher and verified license/terms, inspected package boundaries,
+operation/effect matrix, data-flow sketch,
 static/security/host evidence statuses, safeguards verified vs asserted,
 outstanding risks, decision and specific checks needed before any
-independent approval.
+independent approval. For interoperability with shorter legacy reports,
+state the equivalent outcome without concealing conditions:
+CONDITIONALLY ACCEPTABLE corresponds to a restricted recommendation only
+when all static conditions hold; GATHER EVIDENCE means evidence-incomplete
+and never a permission to connect; BLOCK means do not connect the proposed
+configuration. Include a safe source locator for each material finding,
+plus explicitly withheld private evidence and unexamined support files.
 Provide a change-invalidates-review rule: release, scope, tool schema,
 destination or host enforcement changes require new assessment.
 
