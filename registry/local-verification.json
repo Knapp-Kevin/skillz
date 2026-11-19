@@ -1916,8 +1916,8 @@
       "skill_name": "learning-evidence-progression",
       "local_path": "skills/authored/learning-evidence-progression/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
-      "complete_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "content_blob_sha": "0a4082e6fd846bc5497685ed553caf01dcf5f281",
+      "complete_package_tree_sha": "edca8848ddba04f711c27d7921d0acc68b682b8b",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1942,7 +1942,10 @@
           "high"
         ]
       },
-      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+      "notes": "Exact authored v1.2 source and package reviewed; static original-learning-plan crosswalk, controlled offline cases 5/5, no independent agent-host execution or measured 1.5x.",
+      "previous_content_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
+      "previous_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "repository-delivery-assessor",

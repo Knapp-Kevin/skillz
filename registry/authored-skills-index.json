@@ -869,8 +869,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/learning-evidence-progression.yaml",
       "verification_path": "registry/verification/local-skills/learning-evidence-progression.yaml",
-      "skill_blob_sha": "fcde18a06e403a24501bbe4fe804ef7f54e4a081",
-      "package_tree_sha": "ca43eef9f7eb1b4ba5c4acef3c6c023d275037c1",
+      "skill_blob_sha": "0a4082e6fd846bc5497685ed553caf01dcf5f281",
+      "package_tree_sha": "edca8848ddba04f711c27d7921d0acc68b682b8b",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -879,15 +879,15 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): learning-plan. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/748",
-      "package_version": "1.1.0",
+      "package_version": "1.2.0",
       "capability_paths": [
         "education/curriculum",
         "education/assessment"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
-      "previous_reviewed_skill_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
-      "previous_reviewed_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
-      "review_note": "Current exact three-file static review docs/reviews/2026-11-18-statement-learning-parity-v1-1.md; no host behavior and >=1.5x NOT PROVEN."
+      "previous_reviewed_skill_blob_sha": "fcde18a06e403a24501bbe4fe804ef7f54e4a081",
+      "previous_reviewed_package_tree_sha": "ca43eef9f7eb1b4ba5c4acef3c6c023d275037c1",
+      "review_note": "2026-11-19 complete source-level original comparison; restores explicit future scheduler cadence/timezone/start/end/data/cost/recipient/revoke controls and curated-source verification. Ten offline synthetic procedures across two modes, no independently observed model behavior or measured 1.5x."
     },
     {
       "id": "repository-delivery-assessor",
