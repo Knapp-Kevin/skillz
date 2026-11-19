@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Career
   display-name: Professional Market Evidence Scout
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -45,10 +45,65 @@ CV stores, work inboxes or profiles as a default.
    goals. Separate market observations from a positioning hypothesis
    and identify sample bias or employer-status uncertainty.
 
+## Role-market radar and positioning view
+
+For a broad career-market scan rather than a single job decision,
+produce a bounded **role-cluster view** with actual distinct
+postings observed, defensible compensation ranges and recurring
+requirements. Derive approximately four to six search concepts
+only from job-family, region and capability attributes that the
+user supplied or explicitly approved for this purpose. Remove
+private employer identifiers, internal project names, exact
+non-public work history, personal contact details and sensitive
+compensation terms from outbound searches. An authorized private
+profile read is **not** permission to export its text in a query.
+If a query remains identifying, generalize it or request approval
+of its precise terms before submitting.
+
+For each role cluster distinguish:
+`role type | unique employer openings observed |
+posting date/window | employee/contract/fractional |
+seniority and duties | explicit salary/rate plus units |
+source and verification state | sample limitations`.
+Never transform annual compensation into an hourly value without
+stating the assumed paid hours, location/currency and absence of
+benefits or contractor overhead. Contradictory surveys or ads
+should remain separately sourced ranges, not averaged into a
+fabricated precision figure. A listing viewed today is not proof
+of accepting applicants today unless its current status was
+verified at the employer-controlled destination.
+
+Summarize **demand signals** from repeated verified job
+requirements, genuinely new role classes, and changing skill
+expectations. Claims of growth or decline require an
+**authorized earlier comparable report** with matching markets,
+definitions, sample frames and dates. Without it report
+TREND_NOT_ESTABLISHED; the fact that many postings exist
+today does not demonstrate growth.
+
+For an approved user-provided capability profile, separately
+explain:
+- **Established fit:** abilities or evidence already matched
+  by actual role requirements.
+- **Documented gaps:** qualifications the advertisements
+  demand but the provided profile does not establish; absent
+  evidence in a resume is not evidence the individual lacks
+  the ability.
+- **Practical positioning options:** two or three concrete
+  evidence-backed changes to portfolio examples, technical
+  terminology or demonstrated artifacts, with no unsupported
+  credentials or job-market claims.
+
+Default to a one-time public read-only market report. Optional
+future scans, profile persistence, notifications, applications
+or recruiter contact are different host workflows that require
+their own exact approval and permitted data scopes.
+
 ## Output
-Dated source/sample coverage; deduplicated role table; distribution
-by work arrangement, skill demands and defensible compensation units;
-confirmed vs unknown match; suggested small positioning experiments.
+Dated source/sample coverage; deduplicated role clusters with unique
+openings, defensible compensation units and sample bias; demand signals
+and prior-trend status; established versus unverified capability fit;
+two or three actionable positioning suggestions.
 No claim that a posting is still hiring unless current availability
 was actually checked.
 
