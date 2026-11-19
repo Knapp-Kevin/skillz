@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-19",
+  "repo": "Knapp-Kevin/skillz",
+  "source_branch_head": "8e5dfdd3d5d3fa17b6cfc4b06a0ecdc2d7fa65e5",
+  "complete_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+  "entrypoint_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
+  "source_files": [
+    {
+      "path": "LICENSE",
+      "blob_sha": "023abdb34298b27580d1d303084aca942050585e"
+    },
+    {
+      "path": "SKILL.md",
+      "blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8"
+    },
+    {
+      "path": "examples/synthetic-acceptance.md",
+      "blob_sha": "a1665350ffa22ca33a21437e1565b80660471878"
+    },
+    {
+      "path": "references/comparative-analysis.md",
+      "blob_sha": "5670f1f6694398ef6973f77c0f3e5a3c2d48655d"
+    },
+    {
+      "path": "references/event-evidence-contract.md",
+      "blob_sha": "9c4fbc9ce6d13db648c29e643988abe098f8cdc9"
+    },
+    {
+      "path": "references/interest-first-subscriber.md",
+      "blob_sha": "7511d941fc60d1f7c8764a7b070cfb754f5f118d"
+    },
+    {
+      "path": "references/open-topic-discovery.md",
+      "blob_sha": "26cba884ab5708897c83bdfb2b31b1e13f8fb2c9"
+    },
+    {
+      "path": "references/profile-catalog.json",
+      "blob_sha": "f6dfb97fbfd30439b696b492c26634e0846ddc8c"
+    },
+    {
+      "path": "references/profile-report-contracts.md",
+      "blob_sha": "2cb68a0e08ecb7188a6a335190ce148356606f88"
+    }
+  ],
+  "structural_checks": {
+    "passed": 17,
+    "total": 17,
+    "checks": {
+      "nine_files": true,
+      "ten_closed_local_links": true,
+      "seventeen_presets": true,
+      "seventeen_report_contracts": true,
+      "one_broad_entry_question": true,
+      "specific_request_no_forced_onboarding": true,
+      "provisional_without_answer": true,
+      "profile_unsaved": true,
+      "exclusions": true,
+      "no_scheduler": true,
+      "missing_profile_no_fabrication": true,
+      "unfamiliar_topic_supported": true,
+      "offline_no_fake_freshness": true,
+      "stronger_models_not_capped": true,
+      "prompt_injection_refused": true,
+      "remote_deletion_not_assumed": true,
+      "event_source_contract_preserved": true
+    },
+    "local_links": [
+      {
+        "from": "SKILL.md",
+        "to": "references/interest-first-subscriber.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/open-topic-discovery.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/profile-catalog.json",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/profile-report-contracts.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/event-evidence-contract.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/profile-report-contracts.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/comparative-analysis.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "references/profile-report-contracts.md",
+        "pass": true
+      },
+      {
+        "from": "SKILL.md",
+        "to": "examples/synthetic-acceptance.md",
+        "pass": true
+      },
+      {
+        "from": "references/open-topic-discovery.md",
+        "to": "references/profile-report-contracts.md",
+        "pass": true
+      }
+    ]
+  },
+  "bounded_synthetic_analyst_decisions": {
+    "passed": 12,
+    "total": 12,
+    "decisions": [
+      {
+        "case_id": "specific_glm",
+        "emulated_decision": {
+          "route": "glm-zai",
+          "mode": "ONE_TIME",
+          "onboarding_required": false,
+          "scheduled": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "broad_first_use",
+        "emulated_decision": {
+          "question_count": 1,
+          "skip_response": "PROVISIONAL_SCAN"
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "priorities_and_exclusions",
+        "emulated_decision": {
+          "topics": [
+            "agent-memory",
+            "local-inference"
+          ],
+          "excluded": [
+            "crypto"
+          ],
+          "crypto_suggested": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "subscriber_profile_draft",
+        "emulated_decision": {
+          "state": "DRAFT_UNSAVED",
+          "persisted": false,
+          "schedule_created": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "weekly_requested",
+        "emulated_decision": {
+          "proposed": true,
+          "authorized_host_schedule": false,
+          "delivery_verified": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "unfamiliar_technology",
+        "emulated_decision": {
+          "route": "AD_HOC_TOPIC",
+          "topic": "photonic acceleration",
+          "matched_test_required": true
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "prior_profile_missing",
+        "emulated_decision": {
+          "status": "PROFILE_UNAVAILABLE",
+          "private_scan": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "correction_current_user",
+        "emulated_decision": {
+          "current_exclusions": [
+            "pricing"
+          ],
+          "adjacent_enabled": false,
+          "persisted": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "injection",
+        "emulated_decision": {
+          "requested_changes": "UNTRUSTED",
+          "preference_mutation": false,
+          "data_export": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "offline",
+        "emulated_decision": {
+          "input": "SUPPLIED_ARTIFACT",
+          "freshness": "NOT_CHECKED",
+          "latest_claim": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "approved_adjacent",
+        "emulated_decision": {
+          "adjacent_opt_in": true,
+          "must_watch_preserved": true,
+          "novelty_if_unverified": "UNKNOWN"
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      },
+      {
+        "case_id": "unsubscribe_unsaved",
+        "emulated_decision": {
+          "profile": "DRAFT_UNSAVED",
+          "remote_deletion_claim": false
+        },
+        "controlled_assertion": "PASS",
+        "observed_agent_host": "NOT_RUN"
+      }
+    ]
+  },
+  "qualification_limits": {
+    "independent_agent_host_runs": 0,
+    "real_interest_profiles_persisted": 0,
+    "recurring_deliveries_tested": 0,
+    "external_current_sources_checked": 0,
+    "profile_host_parity": "NOT_PROVEN",
+    "improvement_1_5x": "NOT_PROVEN"
+  }
+}
