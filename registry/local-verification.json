@@ -1920,8 +1920,8 @@
       "skill_name": "ci-guard",
       "local_path": "skills/authored/ci-guard/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
-      "complete_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+      "content_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
+      "complete_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1946,7 +1946,10 @@
           "high"
         ]
       },
-      "notes": "Source- and package-pinned 2026-11-19 maintainer static review; see registry/verification/local-skills/ci-guard.yaml. No external host behavior or CI-effectiveness measurement."
+      "notes": "Six-file v1.1 exact-package static review; capability-adaptive direct/guided/fallback examples. docs/reviews/2026-11-19-capability-adaptive-ci-guard-v1-1.md. Formal cross-model behavioral validation not run.",
+      "previous_content_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
+      "previous_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+      "reviewed_at": "2026-11-19"
     }
   ],
   "retired_legacy_records": [

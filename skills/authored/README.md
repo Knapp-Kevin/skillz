@@ -2,9 +2,23 @@
 
 This is the **canonical home for newly authored first-party skills** produced for this repository: `skills/authored/<skill-name>/`. It distinguishes maintainer-owned original work from the external discovery/reference corpus under `skills/sources/` and historical first-party skills at `skills/<name>/`. "Authored" denotes accountability for source and rights, **not** a claim that a human personally typed every instruction or that AI assistance was absent.
 
+## Capability-adaptive execution applies to all skills
+
+[The canonical standard](../../docs/capability-adaptive-skill-execution.md)
+governs every reviewed skill, existing and future, not just CI Guard.
+The [authoring template](../../docs/skill-template.md) and
+[verification standard](../../docs/skill-verification.md) make
+low-context guidance and stronger-method freedom explicit. No blanket
+model-tier caps or mandatory modules; same safety and evidence floor.
+Prior exact-version review scores remain historical until re-reviewed.
+
+[CI Guard v1.1](ci-guard/SKILL.md) includes an optional
+[diagnostic decision scaffold](ci-guard/components/diagnostic-paths.md).
+This is a static design change, not measured cross-model validation.
+
 ## 2026-11-19: CI assurance and focused delivery components
 
-- [CI Guard](ci-guard/SKILL.md) (v1.0, original MIT): two specialist components for threat/detection analysis and CI placement/experiments, plus ten adversarial scenarios. Indexed under `cloud-devops/ci-cd` and `software-engineering/maintenance`.
+- [CI Guard](ci-guard/SKILL.md) (v1.1, original MIT): three specialist components for threat/detection analysis and CI placement/experiments, plus ten adversarial scenarios. Indexed under `cloud-devops/ci-cd` and `software-engineering/maintenance`.
 - [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) (v1.3): retains repository diagnosis and multi-repo pulse behavior; adds three optional modules: [issue resolution](repository-delivery-assessor/components/issue-resolution.md), [momentum](repository-delivery-assessor/components/delivery-momentum.md), and [delivery evidence](repository-delivery-assessor/components/delivery-evidence.md).
 - [Static review and controlled evaluation](../../docs/reviews/2026-11-19-ci-guard-delivery-components.md). External host validation and measured CI savings not established.
 

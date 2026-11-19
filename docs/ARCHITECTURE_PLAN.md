@@ -113,6 +113,14 @@ Default unchanged-reuse eligibility:
 
 Controlled tag overlap can rank eligible candidates, but the bootstrap agent must still decide whether actual user fit calls for `ADOPT`, `ADAPT`, `SUPPLEMENT`, `COMPOSE`, `CREATE`, or no formal skill.
 
+[Capability-adaptive execution](capability-adaptive-skill-execution.md)
+governs the use and review of every selected skill: useful minimal
+instructions, optional deeper reasoning support, equivalent stronger
+methods and no restrictions merely from a model's name. Safety,
+provenance, authorization and outcome evidence remain unchanged.
+This standard does not automatically certify old snapshots or modify
+external licensed skill sources.
+
 ## First-visit and returning-user orchestration
 
 The repository URL is sufficient invocation context for first-visit bootstrap when no more specific task is given.

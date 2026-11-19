@@ -1005,22 +1005,24 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
-      "skill_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
-      "package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
-      "package_file_count": 5,
+      "skill_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
+      "package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
+      "package_file_count": 6,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Original GitHub Actions CI control-evaluation procedure, two modular references and synthetic cases. No external skill text imported.",
-      "package_version": "1.0.0",
+      "package_version": "1.1.0",
       "capability_paths": [
         "cloud-devops/ci-cd",
         "software-engineering/maintenance"
       ],
-      "capability_mapping_ref": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
-      "review_note": "Static rubric 18/20, controlled emulation; no observed external host behavior or measured improvement."
+      "capability_mapping_ref": "docs/reviews/2026-11-19-capability-adaptive-ci-guard-v1-1.md",
+      "review_note": "v1.1 six-file static review of direct/guided/fallback adaptive decision support, M1-M6 scenarios. No external cross-model execution or observed uplift.",
+      "previous_reviewed_skill_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
+      "previous_reviewed_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1"
     }
   ]
 }

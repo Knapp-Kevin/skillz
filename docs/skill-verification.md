@@ -83,6 +83,34 @@ Promotion to `verified` requires:
 - controlled characterization tags;
 - reviewer notes explaining material limitations.
 
+## Capability-adaptive review for all skills
+
+[Capability-Adaptive Skill Execution](capability-adaptive-skill-execution.md)
+applies to **every governed skill**, including unmodified legacy and
+third-party sources. Apply it within the existing ten-dimension rubric,
+not as another gate or score.
+
+- **Clarity:** can a limited-context agent take a safe useful next step,
+  with optional examples for ambiguous junctions?
+- **Authority/failure:** can an agent execute any authorized work
+  regardless of model name, and recover honestly from missing sources
+  or permissions?
+- **Portability:** can an equivalent trusted tool or method replace
+  an example-specific command?
+- **Effectiveness/resilience:** can capable agents finish work without
+  unnecessary module rituals, steps, output caps or model-tier rules?
+  All paths must still protect real security and evidence requirements.
+
+Review one limited-context ambiguous task, one better-method task and
+one missing-permission case; explicitly look for false-success claims.
+Static scenario reading is not observed cross-model performance or parity.
+
+The standard is applicable now to selection and review, **not** proof
+that every existing exact version complies. Correct material violations
+when discovered; otherwise revisit at the next meaningful revision.
+Don't bulk-churn unchanged package fingerprints or silently modify
+external licensed content merely to echo inherited policy.
+
 ## Static scenarios versus external behavioral validation
 
 Static scenario/adversarial **reading** can strengthen `verified` semantic evidence. It may inspect intended trigger and non-trigger cases, pressure on authority boundaries, ambiguous sequencing, dependencies, and unnecessary workflow burden. Record these as reviewer interpretation, not observed agent behavior.

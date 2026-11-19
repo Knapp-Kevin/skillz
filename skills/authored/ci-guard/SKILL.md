@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -34,6 +34,33 @@ When a request is about issue aging, cross-repo delivery, or objective drift
 rather than CI controls, route to the authored Repository Delivery Assessor.
 When CI is part of an issue closure, evaluate CI here but leave lifecycle
 disposition to its issue-resolution component.
+
+## Capability-adaptive execution
+
+Use the [repository-wide standard](../../../docs/capability-adaptive-skill-execution.md)
+as the governing design rule. All agents must preserve the same security,
+authorization, exact-revision evidence and outcome requirements, regardless
+of model size or host. **Do not** decide whether an agent may implement based
+on its model name, nor force competent agents to follow every checklist.
+
+- **Direct:** when mechanism and evidence are clear, perform the authorized
+  fix or analysis with suitable tools, verify the real failure boundary and
+  finish. Combine or replace procedural steps with an equivalent stronger
+  method when justified.
+- **Guided:** when a decision is ambiguous, load only the relevant
+  [diagnostic scaffold](components/diagnostic-paths.md),
+  [assurance mechanism](components/assurance-matrix.md) or
+  [placement experiment](components/placement-and-experiment.md).
+  Use explicit alternatives and discriminating tests, not more paperwork.
+- **Fallback:** if the host lacks a required source, tool or permission,
+  finish the safe supported part, label inaccessible conclusions
+  `NOT_ASSESSED`, and give the precise remaining dependency.
+
+A model can switch paths as evidence evolves. The output contract is
+a **minimum**, not a ceiling on useful findings or authorized delivery.
+No arbitrary model-tier cap, fixed action count, universal module sequence
+or mandatory report length applies. The only hard stops are actual authority,
+safety, evidence and risk requirements.
 
 ## Inputs and evidence boundary
 
@@ -109,7 +136,7 @@ sources | existing gate baseline`. Show a check matrix:
 `check | trigger/required? | failure detected | detection evidence |
 observed result/head | median/p90 or UNKNOWN | unique coverage |
 disposition`. Summarize the true critical path separately from runner
-cost. Rank no more than three highest-value changes initially.
+cost. Prioritize the highest-value changes initially; include additional findings or execute additional authorized work when they materially advance the outcome.
 
 For each proposed change report `evidence | exact edit | benefit/confidence |
 risk | negative test | rollback | owner | acceptance`. Conclude with
