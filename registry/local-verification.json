@@ -138,39 +138,6 @@
       "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held."
     },
     {
-      "skill_name": "deck-outline",
-      "local_path": "skills/deck-outline/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "63c943992417148d010551238a15259d4968cb55",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "communication",
-          "writing",
-          "planning"
-        ],
-        "lifecycle": [
-          "planning",
-          "design"
-        ],
-        "characteristic": [
-          "synthesis",
-          "evidence-first",
-          "human-review",
-          "context-efficient"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill."
-    },
-    {
       "skill_name": "deep-dive",
       "local_path": "skills/deep-dive/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -233,38 +200,6 @@
         ]
       },
       "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "devlog-draft",
-      "local_path": "skills/devlog-draft/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d74ff133f69c8908c4acf296fb93313069082114",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "writing",
-          "communication",
-          "documentation"
-        ],
-        "lifecycle": [
-          "planning"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "synthesis",
-          "human-review"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "finance-review",
@@ -2518,6 +2453,85 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json"
+    },
+    {
+      "skill_name": "deck-outline",
+      "local_path": "skills/deck-outline/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "63c943992417148d010551238a15259d4968cb55",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "communication",
+          "writing",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning",
+          "design"
+        ],
+        "characteristic": [
+          "synthesis",
+          "evidence-first",
+          "human-review",
+          "context-efficient"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/deck-outline/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "skill_name": "devlog-draft",
+      "local_path": "skills/devlog-draft/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d74ff133f69c8908c4acf296fb93313069082114",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "writing",
+          "communication",
+          "documentation"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "synthesis",
+          "human-review"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/devlog-draft/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
     }
   ]
 }
