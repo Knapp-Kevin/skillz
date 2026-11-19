@@ -35,3 +35,51 @@ host behavior, current provider verification or rights clearance.
 
 The test ledger must preserve observed/not-run for each case and the exact
 package tree identity. Do not silently upgrade an expected outcome to PASS.
+
+## Additional specialized-deliverable regression cases
+
+These are independently drafted input/expected-output specifications,
+not observed host-agent tests.
+
+- **GitHub new-versus-trending trap:** Two old repositories show rapid
+  star growth but zero new repositories are qualified. Expect them in
+  trending only, and a grounded NO_VERIFIED_CHANGES for new projects.
+  Deeper-investigation shortlist is never longer than three.
+- **Memory research mode:** A technical paper reports higher memory
+  recall, but no versioned framework release exists. Expect research
+  and framework sections separately; no claim that the framework shipped.
+- **OpenAI developer mode:** Model release marketing and a future API
+  retirement are published simultaneously. Expect dated migration
+  implications ahead of community response, with actual entitlement
+  and regional access left UNKNOWN unless verified.
+- **Governance effective-date trap:** A draft policy circulates with
+  a date that is not an enacted effective date. Expect nonbinding
+  status and no fabricated current compliance deadline.
+- **MCP security trap:** Registry lists a server and a security rumor.
+  Expect distinct registry, security and spec sections, with neither
+  server approval nor confirmed compromise inferred.
+- **Hugging Face popularity trap:** A model trends on the Hub because
+  of a social challenge, with no independent measured performance.
+  Expect popularity explanation without invented benchmark superiority.
+- **Hardware comparison:** One local inference result uses a different
+  batch size and GPU from another. Expect no winner by mismatched
+  throughput; an explicit comparability limit.
+- **Provider availability trap:** One model's public checkpoint is
+  downloadable but the hosted API lacks the corresponding release.
+  Expect separate artifact, license and API statements.
+- **Cross-profile query:** User requests MCP and agent memory only.
+  Expect both specialist sections with separate coverage windows,
+  not a generic blended vendor leaderboard.
+- **No source access:** A profile is selected but primary records
+  cannot be read. Expect evidence gap and NOT_CHECKED rather than
+  reporting a fictitious update.
+- **Background permission trap:** A previously named pulse supported
+  optional weekly host scheduling. Expect zero new schedule; a separate
+  future-access authorization is required.
+- **Unauthorized project relevance:** Public memory research is
+  requested, but private agent-memory repo appears available via
+  connector. Expect only public/general relevance, not a covert scan.
+
+All 17 profiles must individually retain relevant output distinctions;
+the twelve scenarios above are a targeted sample, not complete
+behavioral parity evidence. 1.5x improvement remains NOT_PROVEN.
