@@ -68,6 +68,17 @@ walk through every component. Choose scaffolding from the task's actual
 uncertainty, never model identity. Authority, safety and evidence integrity
 do not vary. This is not a requirement for scripts or host execution.
 
+## Self-contained, offline-capable distribution
+
+The canonical capability-adaptive standard is a **maintainer rule**.
+A downloaded skill must **not** need a Skillz checkout, network access,
+its sibling skill directories, or a central policy file to operate.
+Write the complete required behavior into `SKILL.md` and any **bundled**
+support files. Keep mandatory links inside `skills/authored/<slug>/`;
+explicitly mark external links and other skills as optional context or
+handoffs, with an in-package fallback or stated scope boundary.
+Verify a complete standalone copy before labeling the package portable.
+
 ## Adaptive, not presumptive
 
 1. **Bind narrowly.** Use the active user's request and explicitly relevant project governance. Host memory, private profile or connected accounts may be read only where relevant and permitted under the host's own authority rules. A public skill, template or repository link is not permission to crawl unrelated memory or accounts.
@@ -88,6 +99,7 @@ do not vary. This is not a requirement for scripts or host execution.
 ## Before admitting or revising a first-party package
 
 - [ ] [Capability-adaptive behavior](capability-adaptive-skill-execution.md) checked: low-context minimum, targeted optional support, better equivalent methods permitted, honest fallback and no artificial model-tier ceiling.
+- [ ] Standalone offline package closure checked: all mandatory references and behavioral rules ship in the package; no central repo or sibling-skill dependency is required.
 - [ ] The name matches the package directory and the description has a real trigger and non-trigger.
 - [ ] The entire material package (including any scripts or references) has been read, with actual dependencies and host limitations recorded.
 - [ ] Authority for reads, external communications, changes, scheduling and costs is explicit; missing authority does not silently become approval.

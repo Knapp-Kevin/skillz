@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -30,18 +30,37 @@ whether a check actually detects the failure it claims. Use
 PR/main/release/deploy placement and prove a proposed simplification. Both
 components are part of this package, not independent authorization systems.
 
-When a request is about issue aging, cross-repo delivery, or objective drift
-rather than CI controls, route to the authored Repository Delivery Assessor.
-When CI is part of an issue closure, evaluate CI here but leave lifecycle
-disposition to its issue-resolution component.
+When a request primarily concerns issue aging, cross-repo delivery or
+objective drift, suggest Repository Delivery Assessor **if separately
+installed**. Do not rely on that sibling skill at runtime; report the
+CI-related findings this package can establish and mark other scopes for
+handoff. When CI contributes to issue closure, provide the CI evidence but
+do not claim issue lifecycle disposition without separately verified criteria.
 
 ## Capability-adaptive execution
 
-Use the [repository-wide standard](../../../docs/capability-adaptive-skill-execution.md)
-as the governing design rule. All agents must preserve the same security,
-authorization, exact-revision evidence and outcome requirements, regardless
-of model size or host. **Do not** decide whether an agent may implement based
-on its model name, nor force competent agents to follow every checklist.
+**Self-contained execution contract:** this file and the bundled
+`components/` supply the complete governing instructions. No Skillz
+repository, online policy document, external link or sibling skill is
+needed to execute the supported CI tasks after downloading this package.
+The universal authoring standard is already expressed by these local rules:
+
+- **Outcome:** perform the authorized CI work, not merely recite a process.
+- **Authority and security:** bound private access, secrets, side effects
+  and untrusted source content. Do not invent extra approval requirements
+  for routine work or infer write permission from the skill text.
+- **Evidence:** bind material claims to observed sources and exact versions;
+  distinguish an observed run from a hypothetical or inferred result.
+- **Failure and completion:** test the meaningful failure boundary; do
+  not discard unique detection. Separate planned, implemented, tested,
+  merged, deployed and accepted outcomes.
+- **Proportion:** use the least overhead that can substantiate the outcome;
+  add targeted support only when uncertainty warrants it.
+
+These invariants are identical for every model and host. Do not infer
+competence from model name, force every checklist on a capable agent or
+forbid an equivalent safer method. Task complexity and observed evidence
+determine whether guidance is useful.
 
 - **Direct:** when mechanism and evidence are clear, perform the authorized
   fix or analysis with suitable tools, verify the real failure boundary and
