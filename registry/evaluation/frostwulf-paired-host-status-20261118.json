@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 4,
+    "legacy_retirements_approved": 5,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 3,
-    "retired_under_owner_accepted_procedure": 4,
+    "historical_full_package_trees_verified": 4,
+    "retired_under_owner_accepted_procedure": 5,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -2468,7 +2468,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SECURITY_PROCEDURE",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -2517,18 +2517,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_SECURITY_SYNTHETIC_ORACLE_CASES_PASS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_VIOLATION_IN_FIVE_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_FULL_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Named owner-accepted synthetic security procedure exception; no independently isolated A/B, no measured 1.5x.",
+        "qualification_basis": "OWNER_ACCEPTED_CONTROLLED_SECURITY_PROCEDURE_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "EPHEMERAL_PYTHON_POLICY_GRAPH_EMULATION",
+        "original_full_tree_sha1": "e942297c3e343ad5af388b23604987a9bb49322d",
+        "replacement_full_tree_sha1": "0bcb42382d152636c4b9f7c6c70367eb52633740",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/perplexity-pulse/SKILL.md",
