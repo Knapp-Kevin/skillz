@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 17,
+    "legacy_retirements_approved": 18,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 16,
-    "retired_under_owner_accepted_procedure": 17,
+    "historical_full_package_trees_verified": 17,
+    "retired_under_owner_accepted_procedure": 18,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -3034,8 +3034,8 @@
       "replacement_package_tree_sha1": "fcfc6c359733c49daa58954e5d79af231e7677db",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
-      "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "critical_outcome_status": "SOURCE_LEVEL_CONTROLLED_CASES_ONLY_NOT_LIVE_PORTFOLIO_OR_HOST_PARITY",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_PORTFOLIO",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3084,16 +3084,17 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_UNTRUNCATED_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_BY_INDEPENDENT_HOST",
+        "security_no_regression": "CONTROLLED_NEGATIVE_CASES_PASS_ONLY",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "consumer_ref_integrity": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+        "owner_evidence_acceptance": "BOUNDED_EMULATION_EXCEPTION",
+        "eligible_for_retirement": true,
+        "reason": "Five synthetic analyst site-audit outputs passed. Original and authored complete Git trees verified. No live site availability, independent host A/B, 1.5x or exhaustive consumer proof.",
+        "controlled_receipt": "docs/evals/receipts/2026-11-19-smallbiz-controlled-portfolio.json"
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
@@ -3520,5 +3521,5 @@
     "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json"
   ],
   "design_coverage_status": "COMPLETE_SOURCE_LEVEL_CONTRACTS_NOT_HOST_EXECUTED",
-  "retirement_receipt_notice": "17 original entrypoints retired under individual owner-accepted controlled emulation; 27 active; independent host parity and 1.5x unproven."
+  "retirement_receipt_notice": "18 original entrypoints retired via separately documented owner-accepted controlled emulations; 26 active. No independent host A/B or proven 1.5x quality."
 }
