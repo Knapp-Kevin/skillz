@@ -2012,8 +2012,8 @@
       "skill_name": "work-period-evidence-reporter",
       "local_path": "skills/authored/work-period-evidence-reporter/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
-      "complete_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "content_blob_sha": "1f009236ab80aba49095a55229a6109504035096",
+      "complete_package_tree_sha": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -2038,7 +2038,10 @@
           "high"
         ]
       },
-      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+      "notes": "Current v1.2 exact three-file original package statically reviewed, previously missing weekly handoff and optional scheduling requirements restored. Ten analyst-emulated synthetic report scenarios passed, independently observed agent-host parity and 1.5x not proven.",
+      "previous_content_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
+      "previous_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "ci-guard",
