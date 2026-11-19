@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Career
   display-name: Professional Market Evidence Scout
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -36,12 +36,17 @@ CV stores, work inboxes or profiles as a default.
 4. Normalize compensation only with a stated currency date and
    work-hours assumption. Exclude unconfirmed, commission-only and
    one-off compensation outliers from a claimed median or label them.
-5. Cluster roles by actual duty patterns and experience expectation,
+5. For supplementary compensation surveys, record the survey date,
+   region, covered employer population and pay basis. A public forum
+   quote is illustrative rather than a representative rate benchmark;
+   never export private resume or earnings data into a query to find
+   a salary comparison.
+6. Cluster roles by actual duty patterns and experience expectation,
    rather than collapsing different titles into an invented universal
    seniority ladder.
-6. Produce fit and gap evidence for the authorized capability profile.
+7. Produce fit and gap evidence for the authorized capability profile.
    An absent skill on a CV does not prove the person lacks it.
-7. Rank concrete opportunities by hard eligibility, recency and user
+8. Rank concrete opportunities by hard eligibility, recency and user
    goals. Separate market observations from a positioning hypothesis
    and identify sample bias or employer-status uncertainty.
 
@@ -98,6 +103,21 @@ Default to a one-time public read-only market report. Optional
 future scans, profile persistence, notifications, applications
 or recruiter contact are different host workflows that require
 their own exact approval and permitted data scopes.
+
+## Recurring scan consent boundary
+
+A request for today's market scan cannot be treated as permission to
+store a profile or start monthly monitoring. When recurring work is
+explicitly requested, prepare a proposal showing recurrence and local
+time zone, intended start/end or expiration, exact authorized profile
+attributes, future approved source accounts and access limits, maximum
+cost, permitted audience and delivery channel, retention, and a clear
+pause/revocation route. Never embed private profile text or credentials
+inside the scheduler prompt. The external host must separately confirm
+the scope and offer a cancellable scheduler before any creation; if not,
+return a manual repeat checklist marked NOT_CONFIGURED. Any application,
+contact with an employer or third-party publication remains outside the
+scan's authority even when recurrence is approved.
 
 ## Output
 Dated source/sample coverage; deduplicated role clusters with unique
