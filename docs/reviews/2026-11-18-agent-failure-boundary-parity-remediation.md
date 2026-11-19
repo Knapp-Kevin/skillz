@@ -61,11 +61,9 @@ governance edit.
   identified functional omissions at instruction level.
 - **Behavioral parity: NOT_RUN.** No measured improvement ratio can
   be calculated, and 1.5x is **NOT_PROVEN**.
-- Static review of the complete PR package, governed version indexes,
-  current branch tree and new companion freshness remains required
-  before labeling this version CURRENT-REVIEWED.
+- Complete static source-package review was performed on the three pinned files. Structured rubric: trigger 2, procedure 2, authority 2, failure 2, evidence 2, dependency 2, portability 1, usefulness 2, adversarial 2, effectiveness design 1 = **18/20**. Portability is constrained by available host evidence sources; effectiveness is design-only until observed. No hard-fail defect identified in this static review. Index and companion records must match these exact identities at the final PR head.
 - The remaining 20 packages and full 44-source migration still require
   independent pairwise review under #738.
 - Do not retire or delete legacy entries from this report.
 
-Disposition: **SOURCE REMEDIATION PROPOSED, ACCEPTANCE PENDING**.
+Disposition: **CURRENT STATIC SOURCE REVIEW 18/20**, behavior NOT_RUN and 1.5x NOT_PROVEN. Merge/integration and exact-head consumer/index checks remain separate.
