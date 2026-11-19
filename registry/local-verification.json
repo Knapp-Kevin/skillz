@@ -1267,8 +1267,8 @@
       "skill_name": "technology-change-intelligence",
       "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
-      "complete_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "content_blob_sha": "cd15d677c2560821185277d68aab89396602dc1f",
+      "complete_package_tree_sha": "86bd91835ed9091a3813c51573ae6c33cc1cb01b",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -1294,9 +1294,9 @@
           "high"
         ]
       },
-      "notes": "v1.2 nine-file standalone first-party TCI package. Source-specific subscriber intake, 17 existing profiles preserved, open-ended ad-hoc topic discovery; 17/17 structural assertions, 12 synthetic analyst decision cases; links all package local. Static review: docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md. No verified account, subscribers, recurrence, model-host parity, 1.5x improvement or rights transfer.",
-      "previous_content_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
-      "previous_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "notes": "v1.2.1 ten-file standalone package. 17 specialist decision gates and 85 designed paired case oracles structurally reconciled, 11/11 bundled links; five analyst-written synthetic examples. Static review: docs/reviews/2026-11-19-tci-specialist-gates-v1-2-1.md. No independent host A/B runs, rights clearance, subscriber persistence, or 1.5x measured improvement.",
+      "previous_content_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
+      "previous_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
       "reviewed_at": "2026-11-19"
     },
     {

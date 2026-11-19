@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: technology-change-intelligence
 display_name: "Technology Change Intelligence"
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/technology-change-intelligence/SKILL.md
@@ -18,11 +18,11 @@ permission_tier: read-only
 portability: high
 review_status: verified-static
 dependency_status: host-read-only-research
-dependencies: "Original nine-file offline standalone package. Public web/repo data optional via authorized host; no backend, subscriber account, private memory or scheduler required."
-content_blob_sha: f10bc601da39c4e0021d51dd29ff863801f5b6e8
-complete_package_tree_sha: 3d8636c4f9306081b8e1048478b6a3cc39ac04be
+dependencies: "Complete ten-file offline standalone package. Public web/repo data optional via authorized host; no backend, subscriber account, private memory or scheduler required."
+content_blob_sha: cd15d677c2560821185277d68aab89396602dc1f
+complete_package_tree_sha: 86bd91835ed9091a3813c51573ae6c33cc1cb01b
 historical_origin_status: "17 frostwulf.zo.computer pulse sources have unknown underlying human authorship and rights."
 historical_comparison: registry/migration/frostwulf-independent-replacement-ledger-20261118.json
 rights_resolution: "Only separately drafted new source/fixture and profiles under MIT; no copied historical sources or source lists."
 import_eligibility: review-required
-rationale: "v1.2 nine-file complete-package static review 19/20, interest-first consent and ad-hoc topics, 17 profile contracts retained; 17 structural and 12 synthetic contract checks. docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md; host behavior not-run"
+rationale: "v1.2.1 ten-file complete-package static review 19/20, 17 specialist execution gates, 85 designed scenario cards, 11/11 portable links. docs/reviews/2026-11-19-tci-specialist-gates-v1-2-1.md; host behavior and historic parity not-run"
