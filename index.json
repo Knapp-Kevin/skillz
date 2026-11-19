@@ -1141,7 +1141,6 @@
       "brief-writer",
       "deck-outline",
       "devlog-draft",
-      "handoff-writer",
       "standup-writer"
     ],
     "research-analysis": [
@@ -1175,7 +1174,6 @@
       "xai-pulse"
     ],
     "business-career": [
-      "career-radar",
       "finance-review",
       "smallbiz-ops"
     ],
@@ -5459,7 +5457,7 @@
   },
   "frostwulf_independent_replacement_20261118": {
     "date": "2026-11-18",
-    "status": "21 original packages statically reviewed; nine source-bound historical retirements, 35 active originals; no independent model A/B or measured 1.5x",
+    "status": "21 separately original authored replacements statically reviewed, eleven source-bound original retirements, 33 active originals; host A/B and 1.5x unproven",
     "new_package_ids": [
       "claim-evidence-adjudicator",
       "research-methods-appraiser",
@@ -5491,7 +5489,7 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "host_behavior": "not-run",
-    "legacy_retired": 9,
-    "retirement_status": "nine per-source owner-accepted controlled/emulated retirements; unproven model-host parity"
+    "legacy_retired": 11,
+    "retirement_status": "eleven owner-accepted controlled/emulated source retirement decisions; model-host outcomes not proven"
   }
 }

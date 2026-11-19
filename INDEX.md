@@ -200,7 +200,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `daily-briefing`, [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), `inbox-triage`, `learning-plan`, `task-surface`, `week-in-review`
 
 ### Writing & Communication
-`brief-writer`, `deck-outline`, `devlog-draft`, `handoff-writer`, `standup-writer`
+`brief-writer`, `deck-outline`, `devlog-draft`, [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), `standup-writer`
 
 ### Research & Analysis
 `compare`, `deep-dive`, [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
@@ -215,7 +215,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 `claude-pulse`, `deepseek-pulse`, `gemini-pulse`, `github-pulse`, `glm-pulse`, `governance-pulse`, `hf-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `mistral-pulse`, `openai-pulse`, `perplexity-pulse`, `qwen-pulse`, `xai-pulse`
 
 ### Business & Career
-`career-radar`, `finance-review`, `smallbiz-ops`
+[Professional Market Evidence Scout](skills/authored/professional-market-evidence-scout/SKILL.md), `finance-review`, `smallbiz-ops`
 
 ## Registered source roles
 
