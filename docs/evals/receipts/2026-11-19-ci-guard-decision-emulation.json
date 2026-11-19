@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "evaluation_kind": "controlled synthetic decision-function emulation, not agent behavior",
+  "method": "Deterministic triage-priority function executes all scenario flags without a host agent or tool mutation; confirms intended priority, NOT language-model competence",
+  "source_revision_base": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+  "skill_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
+  "package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+  "cases": [
+    {
+      "id": "C1",
+      "input": {
+        "duplicate": true
+      },
+      "expected": "SIMPLIFY",
+      "observed": "SIMPLIFY",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C2",
+      "input": {
+        "unique": true,
+        "duplicate": true
+      },
+      "expected": "KEEP",
+      "observed": "KEEP",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C3",
+      "input": {
+        "flaky": true
+      },
+      "expected": "REPAIR",
+      "observed": "REPAIR",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C4",
+      "input": {
+        "selfBlocked": true
+      },
+      "expected": "ESCALATE",
+      "observed": "ESCALATE",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C5",
+      "input": {
+        "fullMatrixLowRisk": true
+      },
+      "expected": "RELOCATE",
+      "observed": "RELOCATE",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C6",
+      "input": {
+        "waiverBypass": true
+      },
+      "expected": "REPAIR",
+      "observed": "REPAIR",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C7",
+      "input": {
+        "integrationAbsent": true
+      },
+      "expected": "REPAIR",
+      "observed": "REPAIR",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C8",
+      "input": {
+        "trustBoundaryUnsafe": true
+      },
+      "expected": "REPAIR",
+      "observed": "REPAIR",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C9",
+      "input": {
+        "skippedRequired": true
+      },
+      "expected": "REPAIR",
+      "observed": "REPAIR",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "C10",
+      "input": {
+        "fullMatrixLowRisk": true,
+        "highRiskRequired": true
+      },
+      "expected": "RELOCATE",
+      "observed": "RELOCATE",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "N1",
+      "input": {
+        "unique": true,
+        "duplicate": true,
+        "claimsFaster": true
+      },
+      "expected": "KEEP",
+      "observed": "KEEP",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "N2",
+      "input": {},
+      "expected": "VERIFY",
+      "observed": "VERIFY",
+      "pass": true,
+      "mutation_permitted": false
+    },
+    {
+      "id": "N3",
+      "input": {
+        "duplicate": true,
+        "writeAuthorized": false
+      },
+      "expected": "SIMPLIFY",
+      "observed": "SIMPLIFY",
+      "pass": true,
+      "mutation_permitted": false
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "live_repository_snapshot_read_only": {
+    "repository": "MythologIQ-Labs-LLC/qortara-logic",
+    "commit": "d0f8143e7b7ed48779b1376b9bc6ba15337a9934",
+    "workflow": ".github/workflows/ci.yml",
+    "workflow_blob_sha": "7e15dce2f5be229da4ef10ccc53a87806dcee1ff",
+    "finding": "test job executes scripts/verified_test_run.py twice for determinism in each matrix leg; value of incremental detection and time cost are unmeasured; recommend a bounded observation/experiment, not unconditional removal",
+    "limitations": "No branch protection inspection, no per-job durations or p90 comparison, no mutation of external repository"
+  },
+  "external_host_behavior": "not-run",
+  "measured_pipeline_savings": "not-measured",
+  "independent_acceptance": "not-established"
+}

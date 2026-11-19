@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-18",
+  "snapshot_date": "2026-11-19",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -16,7 +16,7 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 16,
+      "linked_reviewed_examples": 17,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -133,6 +133,18 @@
           "capability_example": "Audit repository and portfolio delivery by user-facing acceptance, not issue count.",
           "unchanged_use_approved": false,
           "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/ci-guard",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/ci-guard.yaml",
+          "source_class": "local-provenance",
+          "path": "software-engineering/maintenance",
+          "capability_example": "Risk-based CI assurance review with negative controls and bounded optimization",
+          "unchanged_use_approved": false,
+          "restriction": "Exact-package static review only, no host acceptance or measured pipeline savings."
         }
       ],
       "name_only_preview": [
@@ -1428,7 +1440,7 @@
     {
       "domain": "cloud-devops",
       "display_name": "Cloud / DevOps",
-      "linked_reviewed_examples": 3,
+      "linked_reviewed_examples": 4,
       "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 28,
       "evidence_preview": [
@@ -1463,6 +1475,18 @@
           "capability_example": "Audit repository and portfolio delivery by user-facing acceptance, not issue count.",
           "unchanged_use_approved": false,
           "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/ci-guard",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/ci-guard.yaml",
+          "source_class": "local-provenance",
+          "path": "cloud-devops/ci-cd",
+          "capability_example": "Risk-based CI assurance review with negative controls and bounded optimization",
+          "unchanged_use_approved": false,
+          "restriction": "Exact-package static review only, no host acceptance or measured pipeline savings."
         }
       ],
       "name_only_preview": [
@@ -1967,7 +1991,7 @@
       "domain": "security",
       "display_name": "Security",
       "linked_reviewed_examples": 4,
-      "subdomains_with_linked_examples": 5,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 7,
       "evidence_preview": [
         {
@@ -2104,7 +2128,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 29,
+      "linked_reviewed_examples": 28,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -5096,7 +5120,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1059,
+  "governed_identity_denominator": 1060,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -12521,7 +12545,8 @@
             "Identify bounded broken/stale repository-document references and propose version-aware, reversible repairs",
             "Evidence-bound triage of code maintenance markers, risk and partial search coverage.",
             "Scoped storage review with protected agent artifacts, reversible maintenance and measured completion.",
-            "Audit repository and portfolio delivery by user-facing acceptance, not issue count."
+            "Audit repository and portfolio delivery by user-facing acceptance, not issue count.",
+            "Focus CI control effectiveness without duplicating repository delivery and issue acceptance."
           ],
           "matched_skill_ids": [
             "local-skills/github-pulse",
@@ -12532,7 +12557,8 @@
             "local-skills/reference-integrity-auditor",
             "local-skills/source-debt-triage",
             "local-skills/agent-workspace-footprint-assessor",
-            "local-skills/repository-delivery-assessor"
+            "local-skills/repository-delivery-assessor",
+            "local-skills/ci-guard"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -16260,10 +16286,12 @@
           "id": "ci-cd",
           "name": "CI/CD",
           "capabilities": [
-            "Audit repository and portfolio delivery by user-facing acceptance, not issue count."
+            "Audit repository and portfolio delivery by user-facing acceptance, not issue count.",
+            "Measure true CI detection, trust boundaries, required-status reliability and risk-proportionate test placement."
           ],
           "matched_skill_ids": [
-            "local-skills/repository-delivery-assessor"
+            "local-skills/repository-delivery-assessor",
+            "local-skills/ci-guard"
           ],
           "coverage_status": "unassessed",
           "search_hints": [
@@ -33101,8 +33129,8 @@
       "id": "local-skills/agent-failure-boundary-analysis",
       "source_id": "local-skills",
       "skill_name": "agent-failure-boundary-analysis",
-      "content_blob_sha": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
-      "complete_package_tree_sha": "529d15ce1636092920e810c75097594a195c7315",
+      "content_blob_sha": "4a114972587060c79ee6df852526a0a047abd3c2",
+      "complete_package_tree_sha": "426391a3bea7e75f364fe86da8845dee2718f8a5",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33183,8 +33211,8 @@
       "id": "local-skills/business-presence-observatory",
       "source_id": "local-skills",
       "skill_name": "business-presence-observatory",
-      "content_blob_sha": "87f586fe378dfabc2055fc7efe0589e99d212cbf",
-      "complete_package_tree_sha": "20a2d534e0b4a29e7dd2423aefbb6980f972968f",
+      "content_blob_sha": "e310487e4a170b1ac6f6345d31f336d47887a495",
+      "complete_package_tree_sha": "fcfc6c359733c49daa58954e5d79af231e7677db",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -33371,8 +33399,8 @@
       "id": "local-skills/context-continuation-contract",
       "source_id": "local-skills",
       "skill_name": "context-continuation-contract",
-      "content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
-      "complete_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "content_blob_sha": "41bec236390d73bdecae389508156b5a784c1b54",
+      "complete_package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33423,8 +33451,8 @@
       "id": "local-skills/decision-record-steward",
       "source_id": "local-skills",
       "skill_name": "decision-record-steward",
-      "content_blob_sha": "ef0ae9791df3cbf69b0f9445807240188a17f130",
-      "complete_package_tree_sha": "992a7db63ea585fc939802dfac1f3cd76abe98a3",
+      "content_blob_sha": "d9005c5c1b3fbed122a52d106104dbee02b5a165",
+      "complete_package_tree_sha": "56b32d80412fbae75f05914e992156f081d8ce05",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33449,8 +33477,8 @@
       "id": "local-skills/decision-tradeoff-workbench",
       "source_id": "local-skills",
       "skill_name": "decision-tradeoff-workbench",
-      "content_blob_sha": "671d0bdd130414c8a71c86059e21489123f08c4d",
-      "complete_package_tree_sha": "45b00d78352674b6e705704deb96af114ba4c830",
+      "content_blob_sha": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
+      "complete_package_tree_sha": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33607,8 +33635,8 @@
       "id": "local-skills/evidence-narrative-composer",
       "source_id": "local-skills",
       "skill_name": "evidence-narrative-composer",
-      "content_blob_sha": "d67e8824ab340014f5379f32fc8e02df3220d18a",
-      "complete_package_tree_sha": "6e356d294bab2483fd4a938c24fd5e5b0b2ad34a",
+      "content_blob_sha": "1e8cb987017c06dd12b995ed22055dc6b3367b45",
+      "complete_package_tree_sha": "2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -33981,8 +34009,8 @@
       "id": "local-skills/learning-evidence-progression",
       "source_id": "local-skills",
       "skill_name": "learning-evidence-progression",
-      "content_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
-      "complete_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "content_blob_sha": "fcde18a06e403a24501bbe4fe804ef7f54e4a081",
+      "complete_package_tree_sha": "ca43eef9f7eb1b4ba5c4acef3c6c023d275037c1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34249,8 +34277,8 @@
       "id": "local-skills/personal-operations-control-board",
       "source_id": "local-skills",
       "skill_name": "personal-operations-control-board",
-      "content_blob_sha": "04ed03841366f854d642e8ebcafd9d39023608c6",
-      "complete_package_tree_sha": "7dab6d9a2d31e59a84b5979d20398efea223dc17",
+      "content_blob_sha": "485eec5425782c0310413de3a355a844ff856a25",
+      "complete_package_tree_sha": "8a2036ee370e1918da0964b7dbeff91b0edf8a07",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -34276,8 +34304,8 @@
       "id": "local-skills/privilege-exposure-mapper",
       "source_id": "local-skills",
       "skill_name": "privilege-exposure-mapper",
-      "content_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
-      "complete_package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "content_blob_sha": "2e07c2ff66fd6af2a55866d5b96c3bb877fb138f",
+      "complete_package_tree_sha": "0bcb42382d152636c4b9f7c6c70367eb52633740",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34302,8 +34330,8 @@
       "id": "local-skills/professional-market-evidence-scout",
       "source_id": "local-skills",
       "skill_name": "professional-market-evidence-scout",
-      "content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
-      "complete_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "content_blob_sha": "66d344acbcdf62390efd37f059a76622d90bfcfd",
+      "complete_package_tree_sha": "d0cf2ad1131a0b8a152a22e112a6494f2c1f8a1c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -34432,8 +34460,8 @@
       "id": "local-skills/repository-delivery-assessor",
       "source_id": "local-skills",
       "skill_name": "repository-delivery-assessor",
-      "content_blob_sha": "2e4b24f1a3e764a90f9dcdc2804267fccbb15d41",
-      "complete_package_tree_sha": "5a896b31e8019645207dc73316e09534c004dfd2",
+      "content_blob_sha": "75c09e83d13a388e591f384f8029090edbe0bc50",
+      "complete_package_tree_sha": "58662de287377f9b479d80cfa92e454413f9dc0e",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34450,7 +34478,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "link_basis": "Pinned v1.3 six-file authored package with issue/momentum/evidence components; static reviewed; host behavior not run.",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },
@@ -34458,8 +34486,8 @@
       "id": "local-skills/research-methods-appraiser",
       "source_id": "local-skills",
       "skill_name": "research-methods-appraiser",
-      "content_blob_sha": "fa02b51c8a7985d24b1fdf3e01167c668a9aba79",
-      "complete_package_tree_sha": "28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b",
+      "content_blob_sha": "022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73",
+      "complete_package_tree_sha": "ee212b2da6863e8dc172ea95b67c6eb190603835",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34484,8 +34512,8 @@
       "id": "local-skills/research-question-dossier",
       "source_id": "local-skills",
       "skill_name": "research-question-dossier",
-      "content_blob_sha": "be5e60add3642754ac89d9d28c51077f13515ed9",
-      "complete_package_tree_sha": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "content_blob_sha": "a3901f753726fa4ffc2605277608b5244ad1a5b0",
+      "complete_package_tree_sha": "dd2872a6d5802ed55b29c3d5a1d01b0dc2730e2c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34510,8 +34538,8 @@
       "id": "local-skills/scheduled-work-proof-auditor",
       "source_id": "local-skills",
       "skill_name": "scheduled-work-proof-auditor",
-      "content_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
-      "complete_package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "content_blob_sha": "22fe02a8dc2b021c4badaeb1028f3e492ad8e12b",
+      "complete_package_tree_sha": "bd9254ce997d807b1bfe91c820b820fd51ae9cfc",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -34590,8 +34618,8 @@
       "id": "local-skills/source-debt-triage",
       "source_id": "local-skills",
       "skill_name": "source-debt-triage",
-      "content_blob_sha": "79ab882e03287c47b6c62dea44c5f20001d32f2d",
-      "complete_package_tree_sha": "d6a7246d40172b41e20a93025ccc4efa91aa41e2",
+      "content_blob_sha": "fdd0f7d5b4e3996e6bd440751385ee537ca100c0",
+      "complete_package_tree_sha": "bb92a4ea4130ca50c0b110d96ab439f1498d741f",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34641,8 +34669,8 @@
       "id": "local-skills/statement-variance-reviewer",
       "source_id": "local-skills",
       "skill_name": "statement-variance-reviewer",
-      "content_blob_sha": "5ab4cc773e90213e2d769142ea0b4741f657ca5e",
-      "complete_package_tree_sha": "08ecf062b07b632d5d5eef1cefa61abb658d5f48",
+      "content_blob_sha": "94f76bdb554fc3f3ee2b51d072ba7de067f518bd",
+      "complete_package_tree_sha": "21118d6dda9fe0f07a9e96e361f3cd38f15cb82f",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "17/20",
@@ -34695,8 +34723,8 @@
       "id": "local-skills/technology-change-intelligence",
       "source_id": "local-skills",
       "skill_name": "technology-change-intelligence",
-      "content_blob_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
-      "complete_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+      "content_blob_sha": "ed57df330a5cf88eec055afc8f1d325247c44742",
+      "complete_package_tree_sha": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34747,8 +34775,8 @@
       "id": "local-skills/work-period-evidence-reporter",
       "source_id": "local-skills",
       "skill_name": "work-period-evidence-reporter",
-      "content_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
-      "complete_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "content_blob_sha": "dd0bc7714997c7deb0c66dbc1dc9714514082dee",
+      "complete_package_tree_sha": "d9da08e777e8c5ad23f4c91f5def189b4ca29bc2",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34878,15 +34906,42 @@
       "link_basis": "existing exact-version static review and narrow procedural reference fit",
       "license_resolution": "Consult source/package controlling terms, restrictions and NOTICE before copying or adaptation",
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
+    },
+    {
+      "id": "local-skills/ci-guard",
+      "source_id": "local-skills",
+      "skill_name": "ci-guard",
+      "source_snapshot_revision": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
+      "content_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
+      "complete_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "cloud-devops/ci-cd",
+        "software-engineering/maintenance"
+      ],
+      "evidence_path": "registry/verification/local-skills/ci-guard.yaml",
+      "skill_path": "skills/authored/ci-guard/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
+      "source_license": "MIT; original first-party only",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Pinned original five-file package with controlled fixture and complete-package static review; host behavior not run.",
+      "restriction": "Read-only reference. External CI changes, token/branch-rule edits, merging and deployment need separate authorization.",
+      "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 143,
+  "identity_level_capability_links_mapped": 144,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 64,
-    "known_total_governed_review_records": 1059,
+    "known_first_party_skill_records": 65,
+    "known_total_governed_review_records": 1060,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34923,7 +34978,7 @@
     "consumer_contract": "docs/consumer-discovery-and-installation.md",
     "registered_source_identities_observed": 25,
     "discovery_scope_note": "Four current discovery-only source snapshots list 4813 raw SKILL.md paths, 4537 direct-shape; not a deduplicated eligible package denominator, not a fixed volume target",
-    "retired_legacy_first_party_record_count": 1
+    "retired_legacy_first_party_record_count": 9
   },
   "discovery_manifests": {
     "entry": "registry/discovery/dynamic-four-source-frontier-20261101.json",
@@ -34943,14 +34998,14 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 64,
+  "first_party_identity_links_mapped": 65,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 64,
+    "mapped_first_party_distinct": 65,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 143,
-    "subdomains_with_evidence_linked_examples": 89,
+    "mapped_total_distinct": 144,
+    "subdomains_with_evidence_linked_examples": 88,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
@@ -35213,5 +35268,32 @@
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
     "legacy_remaining": 35
+  },
+  "delivery_effectiveness_extension_20261119": {
+    "date": "2026-11-19",
+    "new_skill": "local-skills/ci-guard",
+    "extended_skill": "local-skills/repository-delivery-assessor",
+    "review": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
+    "metadata_fingerprint_reconciliation": [
+      "research-methods-appraiser",
+      "source-debt-triage",
+      "decision-record-steward",
+      "privilege-exposure-mapper",
+      "scheduled-work-proof-auditor",
+      "technology-change-intelligence",
+      "agent-failure-boundary-analysis",
+      "decision-tradeoff-workbench",
+      "research-question-dossier",
+      "professional-market-evidence-scout",
+      "statement-variance-reviewer",
+      "context-continuation-contract",
+      "evidence-narrative-composer",
+      "personal-operations-control-board",
+      "learning-evidence-progression",
+      "repository-delivery-assessor",
+      "business-presence-observatory",
+      "work-period-evidence-reporter"
+    ],
+    "external_host_validation": "not-run"
   }
 }

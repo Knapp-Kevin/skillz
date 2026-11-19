@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: ci-guard
+skill_version: "1.0.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/ci-guard/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/ci-guard/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698
+complete_package_tree_sha: 05b7339ef03657a74d675cf795650434513083f1
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Controlled scenario procedure review and deterministic triage emulation only; no independent external agent-host evaluation or observed delivery improvement."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [ci-assurance, development-effectiveness, evidence-audit]
+  lifecycle: [evaluation]
+  characteristic: [traceable, risk-proportionate, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  CI guard control inventory, threat detection and placement. Full source and fixture review recorded in
+  docs/reviews/2026-11-19-ci-guard-delivery-components.md.
+  No host functional parity, security scan, or 1.5x benefit established.

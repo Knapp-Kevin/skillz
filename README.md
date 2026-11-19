@@ -3,6 +3,10 @@
 # 🛠️ skillz
 
 
+## CI Guard and delivery effectiveness (November 19, 2026)
+
+[CI Guard](skills/authored/ci-guard/SKILL.md) provides risk-proportionate CI control review, verified detection analysis and bounded optimization. The existing [Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) gains reusable issue-resolution, momentum and delivery-evidence components rather than three redundant top-level skills. [Static review and controlled decision emulation](docs/reviews/2026-11-19-ci-guard-delivery-components.md) distinguish design checks from observed host and pipeline results. No historical skill was retired.
+
 ## Current discovery, evaluation and capability gaps
 
 **Eighth and ninth controlled source retirements (November 19, 2026):** [Fact Check](https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/fact-check/SKILL.md) and [Paper Digest](https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/paper-digest/SKILL.md) have source-bound independent replacements [Claim Evidence Adjudicator v1.1](skills/authored/claim-evidence-adjudicator/SKILL.md) and [Research Methods Appraiser v1.1](skills/authored/research-methods-appraiser/SKILL.md). The [ten executed synthetic research procedure cases](docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json) passed, and the exact old and new package trees, historical rights and independent [Fact Check review](docs/reviews/2026-11-19-fact-check-controlled-retirement.md) and [Paper Digest review](docs/reviews/2026-11-19-paper-digest-controlled-retirement.md) are recorded. **No model-host A/B, observed production outcome, whole-repository consumer scan or measured 1.5× quality gain.** On merge, nine historical originals are retired and 35 remain.
