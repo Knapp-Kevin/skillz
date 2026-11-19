@@ -9,38 +9,6 @@
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
   "skills": [
     {
-      "skill_name": "agent-home-doctor",
-      "local_path": "skills/agent-home-doctor/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3415f1f4bb72afc44266706be649c3950f809337",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "repository-maintenance",
-          "security"
-        ],
-        "lifecycle": [
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "safety-bounded",
-          "human-review",
-          "traceable"
-        ],
-        "authority": [
-          "mutating"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
-    },
-    {
       "skill_name": "brief-writer",
       "local_path": "skills/brief-writer/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2425,6 +2393,45 @@
       "historical_rights": "unproven",
       "behavioral_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
+    },
+    {
+      "skill_name": "agent-home-doctor",
+      "local_path": "skills/agent-home-doctor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "3415f1f4bb72afc44266706be649c3950f809337",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "repository-maintenance",
+          "security"
+        ],
+        "lifecycle": [
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "safety-bounded",
+          "human-review",
+          "traceable"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/agent-workspace-footprint-assessor",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/369f6fd853b79eaf666c89da893429ba5156bc2e/skills/agent-home-doctor/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json"
     }
   ]
 }
