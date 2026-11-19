@@ -1,19 +1,18 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Current governed review names: 1066 active exact identities; two retired historical identities preserved separately, excluded from normal selection.",
+  "purpose": "Governed active names: 1064 exact source identities; four historical retired names retained separately.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 71,
+    "first_party": 69,
     "third_party": 995,
-    "total": 1066
+    "total": 1064
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
     "local-skills/agent-home-doctor",
     "local-skills/agent-workspace-footprint-assessor",
-    "local-skills/automation-receipts",
     "local-skills/brief-writer",
     "local-skills/business-presence-observatory",
     "local-skills/career-radar",
@@ -24,7 +23,6 @@
     "local-skills/connector-capability-risk-review",
     "local-skills/context-continuation-contract",
     "local-skills/daily-briefing",
-    "local-skills/decision-log",
     "local-skills/decision-record-steward",
     "local-skills/decision-tradeoff-workbench",
     "local-skills/deck-outline",
@@ -1151,6 +1149,24 @@
       "replacement_id": "local-skills/agent-failure-boundary-analysis",
       "host_parity": "not-run",
       "controlled_report_review": "docs/reviews/2026-11-19-agent-postmortem-controlled-retirement.md"
+    },
+    {
+      "id": "local-skills/automation-receipts",
+      "source_commit": "52a6b0419630091e04a53b04161d200ab5ef3f38",
+      "source_blob": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
+      "source_tree": "39a8e08f7037fca28665b33edcc9d93314059c2d",
+      "replacement_id": "local-skills/scheduled-work-proof-auditor",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "id": "local-skills/decision-log",
+      "source_commit": "52a6b0419630091e04a53b04161d200ab5ef3f38",
+      "source_blob": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
+      "source_tree": "ca790304801fd1717841a8fab98bb4ebeed4c9bf",
+      "replacement_id": "local-skills/decision-record-steward",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
     }
   ]
 }
