@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: technology-change-intelligence
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/technology-change-intelligence/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/technology-change-intelligence/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: ed57df330a5cf88eec055afc8f1d325247c44742
-complete_package_tree_sha: 3b6983ed4189ff93cecdccf55f6f086f7743617d
-characterized_at: "2026-11-18"
-reviewed_at: "2026-11-18"
+content_blob_sha: f10bc601da39c4e0021d51dd29ff863801f5b6e8
+complete_package_tree_sha: 3d8636c4f9306081b8e1048478b6a3cc39ac04be
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
 verification_status: verified
 verification_basis: maintainer-complete-package-static-review
 validation_status: not-run
-validation_note: "35 synthetic scenarios (23 prior and 12 new) have expected outcomes only; no external host or current source verification."
+validation_note: "v1.2 adds 12 interest-first scenarios; 12 controlled analyst outputs were checked by executed JavaScript assertions plus 17 structural checks, but no independent agent-host execution, live subscriber or current external source verification."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "19/20"
 tags:
   use_case: [technology-intelligence, source-discovery, news-analysis]
   lifecycle: [research, evaluation]
@@ -24,7 +24,10 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Seven-file v1.1 complete package statically reviewed at 18/20, including
-  independently authored deliverable contracts for each of 17 profiles.
-  docs/reviews/2026-11-18-technology-change-profile-parity-v1-1.md.
-  No host behavior, paired legacy parity, or 1.5x improvement proven.
+  Complete nine-file standalone v1.2 package static review at 19/20. All
+  mandatory Markdown references resolve within package; 17 previously authored
+  profile contracts remain distinct; unrestricted ad-hoc topic route and
+  explicit user-interest intake are privacy- and authority-bounded.
+  docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md.
+  Actual host/subscription behavior, historical Pulse parity, and 1.5x
+  improvement remain NOT_PROVEN.
