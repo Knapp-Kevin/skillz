@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: technology-change-intelligence
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/technology-change-intelligence/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/technology-change-intelligence/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 0ed4d1ff60f510a33f7d638032c3009e556ae608
-complete_package_tree_sha: b38b79e11ae1acca2ff753734c3c22c3d00f15af
+content_blob_sha: ed57df330a5cf88eec055afc8f1d325247c44742
+complete_package_tree_sha: 3b6983ed4189ff93cecdccf55f6f086f7743617d
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
 verification_basis: maintainer-complete-package-static-review
 validation_status: not-run
-validation_note: "23 synthetic scenarios have expected outcomes only. No external host execution, web-source freshness check, automation, or observed runtime."
+validation_note: "35 synthetic scenarios (23 prior and 12 new) have expected outcomes only; no external host or current source verification."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,7 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Original six-file bundle; 17 distinct provider/topic profiles, no bundled
-  runtime. Literal overlap check with 17 legacy skills found zero common
-  seven-token windows, not proof of legal or worldwide originality.
-  docs/reviews/2026-11-18-technology-change-intelligence-static-review.md
+  Seven-file v1.1 complete package statically reviewed at 18/20, including
+  independently authored deliverable contracts for each of 17 profiles.
+  docs/reviews/2026-11-18-technology-change-profile-parity-v1-1.md.
+  No host behavior, paired legacy parity, or 1.5x improvement proven.
