@@ -450,5 +450,18 @@
       "host_execution": "NOT_RUN",
       "paired_score": null
     }
-  ]
+  ],
+  "historical_supporting_file_preflight": {
+    "require_complete_original_package_inventory": true,
+    "verified_dependencies": [
+      {
+        "legacy_entrypoint": "skills/github-pulse/SKILL.md",
+        "path": "skills/github-pulse/sources.json",
+        "git_blob_sha1": "bfdce4b0e819ceab937b1b92d31313cde11595f4",
+        "role": "Historical source/query register; resolve the complete original package before actual paired run"
+      }
+    ],
+    "full_original_package_trees_status": "NOT_ESTABLISHED_FOR_PHASE1",
+    "effect": "A verified entrypoint blob alone does not establish a complete original package. Host runner must establish full tree/source set before comparative behavior results."
+  }
 }
