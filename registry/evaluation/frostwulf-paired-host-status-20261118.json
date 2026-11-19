@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 9,
+    "legacy_retirements_approved": 11,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 8,
-    "retired_under_owner_accepted_procedure": 9,
+    "historical_full_package_trees_verified": 10,
+    "retired_under_owner_accepted_procedure": 11,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -360,13 +360,13 @@
       "legacy_blob_sha1": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/professional-market-evidence-scout/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "66d344acbcdf62390efd37f059a76622d90bfcfd",
-      "replacement_package_tree_sha1": "d0cf2ad1131a0b8a152a22e112a6494f2c1f8a1c",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "5c1003c2bd3d13d972eff6fd52dd47ec03d327d2",
+      "replacement_package_tree_sha1": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_MODE_AND_PACKAGE_REVIEW",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -415,18 +415,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "SOURCE_LEVEL_CROSSWALK_AND_FIVE_SYNTHETIC_CASES_PASS; AGENT_HOST_PARITY_NOT_PROVEN",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_KEEP_HISTORY",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_FULL_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_ACCEPTED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Exact original complete-package scope and independently authored replacement mode verified by source-level review, owner-accepted synthetic checks; no model-host A/B or 1.5x improvement.",
+        "qualification_basis": "OWNER_RISK_ACCEPTED_SOURCE_BOUND_CONTROLLED_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "IN_MEMORY_PYTHON_SYNTHETIC_DECISION_ASSERTIONS",
+        "original_full_tree_sha1": "35055db24f786f8b3b57f78789e146eb0ee49b9c",
+        "replacement_full_tree_sha1": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/claude-pulse/SKILL.md",
@@ -1506,13 +1519,13 @@
       "legacy_blob_sha1": "733b8029063ff057051a61bc270cce138f324c7d",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "41bec236390d73bdecae389508156b5a784c1b54",
-      "replacement_package_tree_sha1": "c779e8414ea60ae28d7942b0311e518485e480f0",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "replacement_package_tree_sha1": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_MODE_AND_PACKAGE_REVIEW",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -1561,18 +1574,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_TWO_FILE_COMPLETE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "SOURCE_LEVEL_CROSSWALK_AND_FIVE_SYNTHETIC_CASES_PASS; AGENT_HOST_PARITY_NOT_PROVEN",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_KEEP_HISTORY",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_FULL_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_ACCEPTED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Exact original complete-package scope and independently authored replacement mode verified by source-level review, owner-accepted synthetic checks; no model-host A/B or 1.5x improvement.",
+        "qualification_basis": "OWNER_RISK_ACCEPTED_SOURCE_BOUND_CONTROLLED_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "IN_MEMORY_PYTHON_SYNTHETIC_DECISION_ASSERTIONS",
+        "original_full_tree_sha1": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
+        "replacement_full_tree_sha1": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/hf-pulse/SKILL.md",

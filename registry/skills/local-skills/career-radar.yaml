@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/career-radar/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 3ac9a96d768d7802dd1d8e800c0549097233e7ce
 curated_at: 2026-08-30
 last_checked_at: 2026-11-05
-availability: in-repo
+availability: retired-historical
 local_path: skills/career-radar/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: review-required
+import_eligibility: retired-not-selectable
 rationale: "Current 1.1.4 source eb7565605a190e9ea3462bad57ac62aba88d3ecf, complete package Git tree 35055db24f786f8b3b57f78789e146eb0ee49b9c. Private notes cannot be discovered without exact authorized read scope, and profile-derived private data cannot be transmitted in public search queries. Static source review 18/20; eight exact-source structural assertions passed. Pinned SkillSpector scan, real hostile-host tool behavior and unchanged-use approval NOT established. See docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/9a3d7d73330a711c612f27ae4184a44ddf4ac3cc/skills/career-radar/SKILL.md
+replacement_id: local-skills/professional-market-evidence-scout
+consumer_audit: "Known active registry routes reconciled; exhaustive scan unproven; original full package identity preserved."

@@ -1,20 +1,19 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Active exact-version governed names 1059; nine retired historical IDs separately preserved for immutable reference.",
+  "purpose": "Active governed names 1057; eleven retired historical source identities retained only as provenance.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 64,
+    "first_party": 62,
     "third_party": 995,
-    "total": 1059
+    "total": 1057
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
     "local-skills/agent-workspace-footprint-assessor",
     "local-skills/brief-writer",
     "local-skills/business-presence-observatory",
-    "local-skills/career-radar",
     "local-skills/character-motivation-interview",
     "local-skills/claim-evidence-adjudicator",
     "local-skills/claude-pulse",
@@ -37,7 +36,6 @@
     "local-skills/github-pulse",
     "local-skills/glm-pulse",
     "local-skills/governance-pulse",
-    "local-skills/handoff-writer",
     "local-skills/healthcare-contract-forensics",
     "local-skills/hf-pulse",
     "local-skills/inbox-triage",
@@ -1207,6 +1205,24 @@
       "replacement_id": "local-skills/research-methods-appraiser",
       "host_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "id": "local-skills/career-radar",
+      "source_commit": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
+      "source_blob": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
+      "source_tree": "35055db24f786f8b3b57f78789e146eb0ee49b9c",
+      "replacement_id": "local-skills/professional-market-evidence-scout",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
+    },
+    {
+      "id": "local-skills/handoff-writer",
+      "source_commit": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
+      "source_blob": "733b8029063ff057051a61bc270cce138f324c7d",
+      "source_tree": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
+      "replacement_id": "local-skills/context-continuation-contract",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
     }
   ]
 }
