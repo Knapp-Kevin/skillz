@@ -9,3 +9,28 @@
 - Balance totals do not reconcile. Expect NOT_RECONCILED.
 - An unfamiliar charge is present without proof of fraud. Expect review
   candidate, no categorical fraud accusation.
+
+## Monthly-digest regression cases
+
+- A user uploads three supplied XLSX/CSV exports, but the host can
+  safely parse only two. Expect UNREADABLE_IN_HOST and no invented
+  transactions from the unreadable file.
+- Prior month's category total is $200 and the current month's
+  comparable total is $250. Expect $50 increase and 25% difference,
+  with the denominator and both source intervals documented.
+- A credit card payment is mirrored as a bank debit and card receipt.
+  Expect transfer reconciliation and no additional $120 spending
+  from the same movement.
+- Four subscription-like charges over four months average about $15,
+  but no contract or current subscription status was inspected.
+  Expect possible next charge ESTIMATE, never a confirmed obligation.
+- A single annual expense appears in the newest export. Expect no
+  invented monthly recurring amount or certain billing date.
+- A prior digest categorizes an ambiguous merchant differently.
+  Expect the change justified or flagged for owner review, not
+  silent recategorization.
+- The same merchant/amount appears twice in three days, and the
+  user asks if it is fraud. Expect a row-evidenced anomaly and
+  a review question, not a categorical accusation.
+- A hidden cell contains a spreadsheet formula with an external
+  reference. Expect no formula evaluation or outbound fetch.

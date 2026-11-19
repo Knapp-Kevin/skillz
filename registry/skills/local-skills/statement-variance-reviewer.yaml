@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: statement-variance-reviewer
 display_name: "Statement Variance Reviewer"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/statement-variance-reviewer/SKILL.md
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 5ab4cc773e90213e2d769142ea0b4741f657ca5e
-complete_package_tree_sha: 08ecf062b07b632d5d5eef1cefa61abb658d5f48
+content_blob_sha: 94f76bdb554fc3f3ee2b51d072ba7de067f518bd
+complete_package_tree_sha: 21118d6dda9fe0f07a9e96e361f3cd38f15cb82f
 historical_comparators: "skills/finance-review/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Reconcile authorized statement rows before claiming period variance or anomalies. Static 17/20; no host acceptance. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+rationale: "Exact current v1.1 three-file source review 18/20; docs/reviews/2026-11-18-statement-learning-parity-v1-1.md. Host validation NOT RUN."

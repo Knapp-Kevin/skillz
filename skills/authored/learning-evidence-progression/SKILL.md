@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Education
   display-name: Learning Evidence Progression
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -47,10 +47,65 @@ Do not infer educational or medical limitations from private memory.
    output. Offer a next experiment to resolve uncertainty; no
    automatic reminders, enrollments or calendar edits.
 
+## Concrete weekly curriculum contract
+
+For a requested multiweek learning plan, preserve a **week-by-week
+allocation** within the learner's actual available hours. First
+obtain or label as UNKNOWN the desired end capability, demonstrated
+starting level and weekly time capacity. When essential inputs are
+unknown, offer a clearly provisional limited outline rather than
+an invented personal schedule.
+
+For each week, record:
+`week | prerequisite assumed | named source and verified section |
+estimated learning time | worked practice | independent checkpoint |
+pass criteria | contingency`.
+A checkpoint must produce inspectable evidence such as a functioning
+small project, a solved problem with explanation or an unaided
+technical argument, not merely completing chapters or viewing
+a video. Give specific pass/fail acceptance criteria that a learner
+can apply without a hidden evaluator.
+
+The source register must identify title, author/publisher, version
+or as-of date, safe access link when available, exact topic coverage
+and verified/not-verified status. Do not fabricate a named textbook,
+course, chapter or video. Verification requires actually opening
+or otherwise inspecting a reputable source in the authorized host;
+a plausible title in model memory is not a source check. If web or
+course access is unavailable, explicitly use
+`SOURCE_NOT_VERIFIED` and avoid claiming the curriculum is
+fully resourced.
+
+## Slipped-week recovery protocol
+
+When checkpoint evidence indicates the learner did not complete
+a planned milestone, choose among three **distinct and explicit**
+adjustments, preserving prerequisites and evidence requirements:
+
+- **Compress:** remove optional readings or redundant practice
+  while retaining the minimum skill experiment and its pass rule.
+  Choose when the time gap is small and core skills are secure.
+- **Shift:** move the unfinished checkpoint and dependencies
+  forward in sequence. Choose when the goal and workload remain
+  feasible but the calendar was disrupted; show the changed
+  completion horizon.
+- **Rescope:** negotiate a smaller terminal skill or outcome when
+  available time or equipment cannot support the original scope.
+  Identify which capability is postponed and do not describe
+  partial learning as full mastery.
+
+The learner can select a different approved recovery choice;
+report the tradeoff and updated timeline instead of imposing an
+unasked-for schedule. A missed test is not silently marked passed.
+Optional weekly check-ins remain reusable manual prompts unless
+the user separately authorizes an actual external scheduler,
+future data access, recipients, retention/cost and revocation.
+No automatic enrollment, calendar write or progress persistence.
+
 ## Deliverable
-Goal; prerequisite map; verified source register; sequenced units;
-practice and rubric; milestones; recovery rule; open access or
-evaluation gaps. Mark any inaccessible resource NOT_VERIFIED.
+Goal; prerequisite map; verified source register; week-by-week
+schedule with hours, practice and pass criteria; milestones;
+compress/shift/rescope recovery rule; open access or evaluation gaps. Mark any inaccessible resource NOT_VERIFIED.
 
 ## Authority
 No purchases, registration, file creation, personal health analysis,
