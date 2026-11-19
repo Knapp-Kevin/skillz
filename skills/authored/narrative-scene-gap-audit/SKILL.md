@@ -10,7 +10,8 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: Fiction / narrative / worldbuilding
   display-name: Narrative Scene Gap Audit
-  version: 1.0.0
+  version: 1.0.1
+  license: MIT
 ---
 
 # Narrative Scene Gap Audit
@@ -66,4 +67,4 @@ Run the examples in [examples/acceptance-cases.md](examples/acceptance-cases.md)
 
 ## Provenance
 
-Original Skillz instruction text, MIT-licensed under the repository's LICENSE. General capability inspiration came from the public descriptions of [Writer Story Tools](https://writer-story-tools.mdlafilms.workers.dev/), specifically its [Story Timeline](https://writer-story-tools.mdlafilms.workers.dev/timeline/). Jan-David Soutar's site says all rights reserved. No site content or code is redistributed. See [source/rights note](../../../docs/discovery/2026-11-08-writer-story-tools-reference.md).
+Original Skillz instruction text, MIT-licensed under the repository's LICENSE. General capability inspiration came from the public descriptions of [Writer Story Tools](https://writer-story-tools.mdlafilms.workers.dev/), specifically its [Story Timeline](https://writer-story-tools.mdlafilms.workers.dev/timeline/). Jan-David Soutar's site says all rights reserved. No site content or code is redistributed. See [source/rights note](../../../docs/discovery/2026-11-08-writer-story-tools-reference.md) is an optional maintainer citation, not an offline requirement. The local [MIT license](LICENSE) covers only original Skillz content.

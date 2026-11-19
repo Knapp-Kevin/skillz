@@ -12,7 +12,8 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: Business
   display-name: Healthcare Contract Forensics
-  version: 1.1.0
+  version: 1.1.1
+  license: MIT
 ---
 
 # Healthcare Contract Forensics

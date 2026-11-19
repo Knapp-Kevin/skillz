@@ -71,3 +71,7 @@
 - A GitHub run shows green checks on an older head. Reject current acceptance.
 - A CI optimization request with measurable pipeline details routes to
   CI Guard rather than duplicating deep analysis here.
+
+## Standalone offline referral scenario (static contract)
+
+- Only the complete Repository Delivery Assessor directory is installed offline; CI Guard is absent. An authorized repository check summary is supplied. Expect a bounded delivery assessment using local instructions and observed checks, an optional handoff for deeper provider CI assurance, and `NOT_ASSESSED` where evidence is insufficient. Do **not** refuse the entire assessment merely because a sibling skill is unavailable. This is not evidence of independently observed host execution.

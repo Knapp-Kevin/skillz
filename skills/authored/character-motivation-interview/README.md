@@ -5,3 +5,5 @@ Independently authored MIT Skillz workflow for structured fictional-character de
 This skill does not store state, log in to a service, recreate a visual wheel interface, diagnose real people, or grant access to private project files. Host-model behavior has **not** been executed or qualified.
 
 Related external inspiration: [Character Wheels](https://writer-story-tools.mdlafilms.workers.dev/wheels/) by Jan-David Soutar. The website and application remain all rights reserved and are not part of this MIT package.
+
+The [bundled MIT license](LICENSE) covers original Skillz work only. The outside inspiration link is informative and is not required to use this package offline.

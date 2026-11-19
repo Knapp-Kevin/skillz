@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Repository Delivery Assessor
-  version: 1.3.0
+  version: 1.3.1
   license: MIT
 ---
 
@@ -184,11 +184,15 @@ See [original scenarios](examples/acceptance.md).
 
 ## Targeted delivery-effectiveness components (v1.3)
 
-For a specific **CI assurance/efficiency** question, delegate the detailed
-control inventory, risk boundary, placement experiment and rollback to
-[CI Guard](../ci-guard/SKILL.md). Keep this assessor focused on the
-repository-wide outcome and cross-check CI Guard conclusions against the
-current acceptance goal. Avoid repeating its pipeline analysis.
+For a specific **CI assurance/efficiency** question, use
+[CI Guard](../ci-guard/SKILL.md) **only if that separate skill is installed
+and authorized**. Without it, this package can still bind the repository
+revision, record observed failing/skipped checks, explain delivery blockers
+and distinguish green CI from user-outcome acceptance. Do not claim an
+unperformed provider-specific CI control audit; label deeper assurance or
+placement analysis NOT_ASSESSED and provide a bounded optional handoff.
+The core repository-delivery procedure and its three bundled components do
+not depend on the sibling package or a network-accessible Skillz checkout.
 
 Choose one internal component when deeper treatment is needed, and do not
 run all three by default:

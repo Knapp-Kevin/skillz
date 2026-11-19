@@ -41,9 +41,11 @@ This example is **entirely fictional**. The supplied [worked report](examples/fi
 
 ## Trust, privacy and status
 
-- **Version:** 1.1.0. **License:** [MIT](../../../LICENSE), for original first-party content.
+- **Version:** 1.1.1. **License:** [MIT](LICENSE), for original first-party content.
 - **Status:** statically reviewed; **external agent-host behavior and improvement over a one-line prompt have not been validated**. This is reference-only and **not production-qualified** for confidential healthcare documents.
 - **Data:** Do not put identifiable member claims, confidential contract material or PHI into an unapproved host. The skill is read-only by default and does not send files or contact vendors.
 - **Decision boundary:** A suspicious-looking financial arrangement may be expressly permitted by its signed contract. Observed differences are not necessarily breaches, recoverable overpayments or savings. Significant decisions require qualified legal/plan review.
 
 [Original issue and qualification tracker](https://github.com/Knapp-Kevin/skillz/issues/714) · [Full package static review](../../../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md)
+
+These external review links are optional provenance context. All runtime instructions, synthetic cases, the original-content MIT license and locally needed references ship in this folder; a copied package remains usable offline with authorized supplied data.

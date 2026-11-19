@@ -10,7 +10,8 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: Fiction / narrative / worldbuilding
   display-name: Character Motivation Interview
-  version: 1.0.0
+  version: 1.0.1
+  license: MIT
 ---
 
 # Character Motivation Interview
@@ -67,4 +68,4 @@ See [examples/acceptance-cases.md](examples/acceptance-cases.md) for expected ou
 
 ## Rights and provenance
 
-Original Skillz MIT-licensed instructions, independently written with general inspiration from the public [Character Wheels](https://writer-story-tools.mdlafilms.workers.dev/wheels/) description. The external tool by Jan-David Soutar remains all rights reserved; do not copy its prompts, visual wheel, questions, UI or application code. [Research and rights record](../../../docs/discovery/2026-11-08-writer-story-tools-reference.md).
+Original Skillz MIT-licensed instructions, independently written with general inspiration from the public [Character Wheels](https://writer-story-tools.mdlafilms.workers.dev/wheels/) description. The external tool by Jan-David Soutar remains all rights reserved; do not copy its prompts, visual wheel, questions, UI or application code. [Research and rights record](../../../docs/discovery/2026-11-08-writer-story-tools-reference.md) is an optional maintainer citation, not an offline dependency. The bundled [MIT license](LICENSE) covers only original Skillz content.

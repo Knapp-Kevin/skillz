@@ -5,3 +5,5 @@ First-party, MIT-licensed **read-only editorial procedure**. Give an agent an au
 Expected result: a scene-ID-cited gap register with confidence, smallest repairs, questions for the author, and explicit preserved mysteries. **No manuscript edits, project sync, browsing of private apps, or observed model-host testing are implied by this package.**
 
 Related inspiration: [Story Timeline](https://writer-story-tools.mdlafilms.workers.dev/timeline/) by Jan-David Soutar. The external application and its content are not included or licensed by Skillz. Our procedure is independent original work.
+
+The [bundled MIT license](LICENSE) applies only to the original Skillz package. External inspiration links are optional citations, never required for offline execution.
