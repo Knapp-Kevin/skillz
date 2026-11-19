@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-19",
+  "issue": 738,
+  "execution_class": "LIVE_PRIMARY_SOURCE_READ_AND_CURRENT_IN_CHAT_PROCEDURE_EXECUTION_NOT_ISOLATED_HOST_AB",
+  "route": "xai-grok",
+  "window": {
+    "start": "2026-11-01",
+    "end": "2026-11-19"
+  },
+  "source_inputs": [
+    {
+      "class": "publisher_api_release_notes",
+      "url": "https://docs.x.ai/developers/release-notes",
+      "event_date": "2026-11-02",
+      "status": "CONSULTED_VIA_PUBLIC_WEB",
+      "claims": "retired image aliases route to image-2.0-low; no request shape change; lower price; gRPC response model differs"
+    },
+    {
+      "class": "official_typescript_sdk_changelog",
+      "repo": "xai-org/xai-sdk-ts",
+      "path": "CHANGELOG.md",
+      "url": "https://github.com/xai-org/xai-sdk-ts/blob/main/CHANGELOG.md",
+      "git_blob_sha1": "3d97c5d823ba764a0e3466068cdb2449f08bad7c",
+      "event_date": "2026-11-17",
+      "status": "CONSULTED_VIA_GITHUB_CONNECTOR",
+      "claims": "v0.2.9 KnownImageModelId narrowed while arbitrary model strings remain typed; SSE CRLF parser fix"
+    }
+  ],
+  "legacy_entrypoint": "skills/xai-pulse/SKILL.md",
+  "legacy_blob_sha1": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
+  "legacy_tree_sha1": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+  "successor_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
+  "successor_blob_sha1": "da2ed091777ed05e7ac94454439c3404c824408d",
+  "successor_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+  "method": "Same model authored two source-bound outputs from a shared packet after reading both instructions. Deterministic explicit checks executed below. No independent model context, blind assessor, external code executed, actual subscriber session or provider API authenticated.",
+  "original_output": "# xAI Pulse — verified primary-source sample, Nov 1–19 2026\n## Releases & API changes\n- Nov 2: xAI developer release notes say grok-imagine-image-quality and grok-imagine-image-pro requests now resolve through grok-imagine-image-2.0-low; request shape unchanged, cost lowered, gRPC response model value changes. Check consumers that pin response model names.\n## Repo / SDK activity\n- Nov 17: xai-sdk-ts 0.2.9 removes the retired image quality slug from KnownImageModelId but still accepts free-form strings via ImageModelId. This is a TypeScript typing update, not proof that old string requests stop working. 0.2.9 also fixes SSE CRLF parsing that could split event and data.\n## Community reception\n- No independent, version-matched technical community reproduction verified in this bounded scan; sentiment is NOT_CHECKED.\n## Notable patterns\n- Retirement fallback and SDK typing should be checked separately; an API routing change is not a universal SDK breaking change.\n## Sources\n- Official xAI API release notes (Nov 2), https://docs.x.ai/developers/release-notes\n- xai-org/xai-sdk-ts CHANGELOG (Nov 17, Git blob 3d97c5d823ba764a0e3466068cdb2449f08bad7c), https://github.com/xai-org/xai-sdk-ts/blob/main/CHANGELOG.md\nNo SDK version, deployment, billing settings or private account inspected.",
+  "successor_output": "# Technology Change Intelligence — xai-grok route, verified primary-source sample\nInterest: xAI developer API migration and SDK compatibility. Review window: Nov 1–19, 2026. Profile in-session only, no subscription or persistent preference.\n## Important developer changes\n1. XAI-2026-11-02 | API model retirement | Effective Nov 2 | grok-imagine-image-quality and grok-imagine-image-pro now route to grok-imagine-image-2.0-low. Requests need no shape change. Response model identity on gRPC may be grok-imagine-image-2.0-low and usage.cost_in_usd_ticks reflects reduced price. **Decision:** check hard-coded model assertions and spend dashboards; do not assume previous image quality or response model identity.\n2. XAI-2026-11-17 | TypeScript SDK 0.2.9 | KnownImageModelId removes the retired slug, but ImageModelId still accepts arbitrary strings: TypeScript type narrowing, not a verified server-side request rejection. **Decision:** if compiling against SDK 0.2.9, verify model literal typings; do not misstate the SDK update as an API runtime break.\n3. XAI-2026-11-17 | TypeScript SDK 0.2.9 | SSE parser fix for CRLF event-stream line endings, preventing event/data splitting. **Decision:** for SSE consumers, replay CRLF, LF, multiline data and event type fixture cases and verify no dropped events before updating.\n## Verification next\nIn an authorized disposable client, pin 0.2.9 vs previous SDK and check TypeScript compile behavior, SSE CRLF event parsing, model response normalization and cost ledger. Roll back on unexpected API/SDK mismatch. No install or real API request was made here.\n## Coverage and source provenance\nCONSULTED: xAI developer release notes for Nov 2 at https://docs.x.ai/developers/release-notes; xai-org/xai-sdk-ts CHANGELOG version 0.2.9 (blob 3d97c5d823ba764a0e3466068cdb2449f08bad7c) at https://github.com/xai-org/xai-sdk-ts/blob/main/CHANGELOG.md. NOT_CHECKED: current price table numerical amounts; independent benchmarks; region/account entitlements; Reddit/community replication; installed runtime and user-specific integrations. Historical original source used as comparator only, rights unresolved.\nDecision now: API change warrants targeted compatibility verification, not an automatic upgrade, install, API-key access, subscription or deployment.",
+  "deterministic_source_assertions": [
+    {
+      "id": "sdk_0_2_9_exact_date",
+      "ok": true
+    },
+    {
+      "id": "sdk_deleted_type_not_runtime",
+      "ok": true
+    },
+    {
+      "id": "sdk_sse_crlf_fix",
+      "ok": true
+    },
+    {
+      "id": "source_current_successor",
+      "ok": true
+    },
+    {
+      "id": "source_current_legacy",
+      "ok": true
+    }
+  ],
+  "deterministic_output_checks": {
+    "criteria": [
+      {
+        "id": "api_retirement",
+        "critical": true
+      },
+      {
+        "id": "routing",
+        "critical": true
+      },
+      {
+        "id": "not_entirely_breaking",
+        "critical": true
+      },
+      {
+        "id": "sdk_identity",
+        "critical": true
+      },
+      {
+        "id": "sdk_type_boundary",
+        "critical": true
+      },
+      {
+        "id": "sse_fix",
+        "critical": false
+      },
+      {
+        "id": "primary_sources",
+        "critical": true
+      },
+      {
+        "id": "no_live_host_proof",
+        "critical": true
+      },
+      {
+        "id": "developer_action",
+        "critical": true
+      }
+    ],
+    "original": [
+      {
+        "id": "api_retirement",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "routing",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "not_entirely_breaking",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "sdk_identity",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "sdk_type_boundary",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "sse_fix",
+        "critical": false,
+        "pass": true
+      },
+      {
+        "id": "primary_sources",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "no_live_host_proof",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "developer_action",
+        "critical": true,
+        "pass": true
+      }
+    ],
+    "successor": [
+      {
+        "id": "api_retirement",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "routing",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "not_entirely_breaking",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "sdk_identity",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "sdk_type_boundary",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "sse_fix",
+        "critical": false,
+        "pass": true
+      },
+      {
+        "id": "primary_sources",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "no_live_host_proof",
+        "critical": true,
+        "pass": true
+      },
+      {
+        "id": "developer_action",
+        "critical": true,
+        "pass": true
+      }
+    ],
+    "original_pass": 9,
+    "successor_pass": 9,
+    "all_critical_original": true,
+    "all_critical_successor": true
+  },
+  "allowed_claim": "One live source-grounded, same-session controlled procedural smoke test with repeatable structural checks",
+  "disallowed_claims": [
+    "independent paired host test",
+    "statistically proven 1.5x effectiveness",
+    "user outcome verified",
+    "xai original eligible for retirement from this receipt alone"
+  ],
+  "status": "CONTROLLED_WITH_PRIMARY_SOURCES_ONLY",
+  "retirement": "HOLD_PENDING_CONSUMER_REFERENCE_AND_OWNER_ACCEPTANCE"
+}
