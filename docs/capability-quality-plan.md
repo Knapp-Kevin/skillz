@@ -13,10 +13,10 @@ Track discovery leads, complete-package inspection, static disposition, dependen
 | Phase | Required result | Status |
 |---|---|---|
 | 1. Ingestion | Parseable, paired, unambiguous companions with preservation receipt | [Completed for 2,084 files](reviews/2026-11-17-companion-yaml-ingestion-repair.md) |
-| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; November 18 source-review checkpoint 152/1,068 governed identities mapped (125 verified-static + 27 rejected); 916 unmapped, links are not essential-outcome or host-behavior acceptance |
+| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; November 18 source-review checkpoint 151/1,067 governed identities mapped (124 verified-static + 27 rejected); 916 unmapped, links are not essential-outcome or host-behavior acceptance |
 | 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; six partially decomposed subdomains with eight bounded outcomes including file-management governance; 241 still require decomposition |
 | 4. Balanced qualification | Equal effort for discovery and complete-package evaluation; decisive evidence-bound dispositions | Pending ongoing tranches |
-| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Original melody, four file/information-management methods and 21 newly drafted independent historical-function replacements are now statically registered; none of the 44 legacy sources retired. Maintain source comparison, rights and behavior boundaries before further authorship or deletion under `skills/authored/<slug>/` |
+| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Original melody, four file/information-management methods and 21 newly drafted independent historical-function replacements are now statically registered; one source (`todo-harvester`) staged for retirement in a separate draft pilot branch; 43 others retained. Maintain source comparison, rights and behavior boundaries before further authorship or deletion under `skills/authored/<slug>/` |
 | 6. Application readiness | Export distinguishes references, eligible packages and unmet outcomes; application demonstrates each promised workflow | Not established |
 
 The audit recovered supplementary structured pointers for **35 of 51** subdomains without explicit directory pointers. Reconcile their pins and route meanings before linking them. The other 16 remain mapping/qualification gaps, not proof of absent methods. Preserve rejected dispositions and separate candidate/study references from governed matches.
@@ -62,7 +62,7 @@ cover all 44 historical functions in an outcome-design crosswalk**.
 Every new package is a standalone rights-scoped original source with
 static review, exact package tree, governed identity and existing canonical
 capability routing. Host-executed behavior and true functional equivalence
-are explicitly **NOT ESTABLISHED**. No historic source is removed.
+are explicitly **NOT ESTABLISHED**. One historical source deletion is staged for independent acceptance, not yet merged.
 
 Work after drafting is **replacement acceptance, not automatic deletion**:
 review behavior of any replacement requiring live services or writes;
