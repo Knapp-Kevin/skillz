@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 5,
+    "legacy_removed": 6,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 39
+    "legacy_remaining": 38
   },
   "rows": [
     {
@@ -325,7 +325,19 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/connector-capability-risk-review/SKILL.md",
       "replacement_status": "original_complete_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "retirement_status": "five_offline_synthetic_MCP_security_cases_passed_not_host_execution",
+      "retirement_snapshot_commit": "120b038d230b77930208f2108c34f169f297dcf9",
+      "retirement_source_blob": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+      "retirement_source_tree": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/120b038d230b77930208f2108c34f169f297dcf9/skills/mcp-vetting/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json",
+      "retirement_review": "docs/reviews/2026-11-19-mcp-vetting-controlled-retirement.md",
+      "retirement_scope": "verified_full_single_file_original_package",
+      "current_active_reference": "skills/authored/connector-capability-risk-review/SKILL.md",
+      "consumer_scan_status": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
+      "retirement_behavioral_claim": "REAL_OFFLINE_JSON_PROCEDURE_EMULATION_NOT_ORIGINAL_NEW_AGENT_AB; 1.5x_not_proven"
     },
     {
       "legacy_entrypoint": "skills/memory-pulse/SKILL.md",

@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "Governed active names: 1063 exact identities; five historical names archived rather than selectable.",
+  "purpose": "Governed active names: 1062 exact identities; six historical names retained only in archival records.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 68,
+    "first_party": 67,
     "third_party": 995,
-    "total": 1063
+    "total": 1062
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -49,7 +49,6 @@
     "local-skills/learning-plan",
     "local-skills/llama-pulse",
     "local-skills/mcp-pulse",
-    "local-skills/mcp-vetting",
     "local-skills/memory-pulse",
     "local-skills/metadata-taxonomy-steward",
     "local-skills/mistral-pulse",
@@ -1175,6 +1174,15 @@
       "replacement_id": "local-skills/privilege-exposure-mapper",
       "host_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
+    },
+    {
+      "id": "local-skills/mcp-vetting",
+      "source_commit": "120b038d230b77930208f2108c34f169f297dcf9",
+      "source_blob": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+      "source_tree": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
+      "replacement_id": "local-skills/connector-capability-risk-review",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
     }
   ]
 }

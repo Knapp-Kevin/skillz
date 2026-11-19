@@ -830,38 +830,6 @@
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
     },
     {
-      "skill_name": "mcp-vetting",
-      "local_path": "skills/mcp-vetting/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "security",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "source-driven",
-          "traceable",
-          "human-review"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run."
-    },
-    {
       "skill_name": "memory-pulse",
       "local_path": "skills/memory-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -1709,8 +1677,8 @@
       "skill_name": "connector-capability-risk-review",
       "local_path": "skills/authored/connector-capability-risk-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
-      "complete_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "content_blob_sha": "7c19817cf91804c430b94364550aa50eda731fb1",
+      "complete_package_tree_sha": "26b1fa68302ce1fb088748edd98d9702b85de23d",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "18/20",
@@ -1735,7 +1703,10 @@
           "high"
         ]
       },
-      "notes": "Complete three-file original MIT package; direct maintainer static review 18/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+      "notes": "Exact current v1.2 new MIT package pinned and statically reassessed after review timestamp, source-scope and legacy verdict mapping improvements; docs/reviews/2026-11-19-mcp-vetting-controlled-retirement.md. Five offline Python synthetic procedure cases pass, not a model-host behavior test.",
+      "previous_content_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
+      "previous_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "reviewed_at": "2026-11-19"
     },
     {
       "skill_name": "privilege-exposure-mapper",
@@ -2412,6 +2383,45 @@
       "historical_rights": "not established",
       "behavioral_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
+    },
+    {
+      "skill_name": "mcp-vetting",
+      "local_path": "skills/mcp-vetting/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "security",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "source-driven",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/connector-capability-risk-review",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/120b038d230b77930208f2108c34f169f297dcf9/skills/mcp-vetting/SKILL.md",
+      "historical_rights": "unproven",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
     }
   ]
 }
