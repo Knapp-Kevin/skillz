@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: research-methods-appraiser
 display_name: "Research Methods Appraiser"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/research-methods-appraiser/SKILL.md
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Host access to scoped sources as authorized; no bundled runtime or credentials"
-content_blob_sha: fa02b51c8a7985d24b1fdf3e01167c668a9aba79
-complete_package_tree_sha: 28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b
+content_blob_sha: 022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73
+complete_package_tree_sha: ee212b2da6863e8dc172ea95b67c6eb190603835
 historical_comparator: skills/paper-digest/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"
 import_eligibility: review-required
-rationale: "Complete-package maintainer static review 18/20; behavior NOT RUN. docs/reviews/2026-11-18-frostwulf-first-four-static-review.md."
+rationale: "Exact current v1.1 package static reviewed 18/20; source-specific functional remediation in docs/reviews/2026-11-18-research-parity-v1-1.md. No host validation."

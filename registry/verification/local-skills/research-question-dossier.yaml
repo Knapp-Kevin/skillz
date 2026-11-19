@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: research-question-dossier
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/research-question-dossier/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/research-question-dossier/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: be5e60add3642754ac89d9d28c51077f13515ed9
-complete_package_tree_sha: 6b20ef72ae84c263685f471d7967387c3ae98153
+content_blob_sha: a3901f753726fa4ffc2605277608b5244ad1a5b0
+complete_package_tree_sha: dd2872a6d5802ed55b29c3d5a1d01b0dc2730e2c
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
@@ -24,6 +24,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Build a question-specific and source-root-aware research explanation with rival hypotheses. Direct static semantic review 18/20. Three-file package
-  hashed and references verified. Host execution NOT RUN, real-world
-  effectiveness and historic rights not established. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md
+  Current original three-file v1.1 source static review 18/20, with
+  independently written functional corrections: docs/reviews/2026-11-18-research-parity-v1-1.md.
+  Host tests and paired legacy behavior not run, 1.5x not proven.

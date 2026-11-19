@@ -314,8 +314,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/research-methods-appraiser.yaml",
       "verification_path": "registry/verification/local-skills/research-methods-appraiser.yaml",
-      "skill_blob_sha": "fa02b51c8a7985d24b1fdf3e01167c668a9aba79",
-      "package_tree_sha": "28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b",
+      "skill_blob_sha": "022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73",
+      "package_tree_sha": "ee212b2da6863e8dc172ea95b67c6eb190603835",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -323,13 +323,16 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently drafted text and original synthetic examples. Legacy comparator: skills/paper-digest/SKILL.md; its underlying authorship and rights are not proven. Seven-word overlap absent in compared source pairs, not a copyright determination.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/745",
+      "package_version": "1.1.0",
       "capability_paths": [
         "research/literature-review",
         "research/reproducibility"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-four-capability-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-four-capability-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "fa02b51c8a7985d24b1fdf3e01167c668a9aba79",
+      "previous_reviewed_package_tree_sha": "28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b",
+      "review_note": "Current v1.1 source-based three-file review in docs/reviews/2026-11-18-research-parity-v1-1.md. No observed host parity or measured 1.5x gain."
     },
     {
       "id": "source-debt-triage",
@@ -632,8 +635,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/research-question-dossier.yaml",
       "verification_path": "registry/verification/local-skills/research-question-dossier.yaml",
-      "skill_blob_sha": "be5e60add3642754ac89d9d28c51077f13515ed9",
-      "package_tree_sha": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "skill_blob_sha": "a3901f753726fa4ffc2605277608b5244ad1a5b0",
+      "package_tree_sha": "dd2872a6d5802ed55b29c3d5a1d01b0dc2730e2c",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -641,13 +644,16 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): deep-dive. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/745",
+      "package_version": "1.1.0",
       "capability_paths": [
         "research/synthesis",
         "research/source-discovery"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "be5e60add3642754ac89d9d28c51077f13515ed9",
+      "previous_reviewed_package_tree_sha": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "review_note": "Current v1.1 source-based three-file review in docs/reviews/2026-11-18-research-parity-v1-1.md. No observed host parity or measured 1.5x gain."
     },
     {
       "id": "professional-market-evidence-scout",
