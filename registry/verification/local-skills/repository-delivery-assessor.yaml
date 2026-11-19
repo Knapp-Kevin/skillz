@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: repository-delivery-assessor
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-delivery-assessor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 8f142859fac2420657377453f5b531d80c31dbb4
-complete_package_tree_sha: d77f373e2825c2eee23cfe60937afc83a547e778
+content_blob_sha: 9261eadd5df37e4265f8913c538c0a379cf2f8f4
+complete_package_tree_sha: a0d217f8f48399acb95d3a8f263f26fb87eda4f1
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: verified
@@ -24,6 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Current three-file v1.1 package static reviewed at 18/20 with source details in
-  docs/reviews/2026-11-18-operations-replacement-parity-remediation.md.
-  Behavior NOT RUN, legacy host parity and 1.5x effectiveness NOT PROVEN; earlier review historical.
+  Current v1.2 exact three-file source static review 18/20:
+  docs/reviews/2026-11-18-operations-pulse-v1-2-correction.md.
+  Read-only portfolio and multi-repo pulse; no direct writes.
+  Historical v1.1 source review superseded, host behavior NOT_RUN,
+  1.5x effectiveness NOT_PROVEN.
