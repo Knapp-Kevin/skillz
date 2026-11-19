@@ -562,7 +562,7 @@
       "provenance_path": "registry/skills/local-skills/agent-failure-boundary-analysis.yaml",
       "verification_path": "registry/verification/local-skills/agent-failure-boundary-analysis.yaml",
       "skill_blob_sha": "4a114972587060c79ee6df852526a0a047abd3c2",
-      "package_tree_sha": null,
+      "package_tree_sha": "426391a3bea7e75f364fe86da8845dee2718f8a5",
       "package_file_count": 3,
       "review_status": "needs-re-review",
       "review_score": null,
