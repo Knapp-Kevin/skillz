@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: agent-failure-boundary-analysis
 display_name: "Agent Failure Boundary Analysis"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: e9e59007a37e2c234c4ccf89e13858fd253cfed9
-complete_package_tree_sha: 529d15ce1636092920e810c75097594a195c7315
+content_blob_sha: 4a114972587060c79ee6df852526a0a047abd3c2
+complete_package_tree_sha: 426391a3bea7e75f364fe86da8845dee2718f8a5
 historical_comparators: "skills/agent-postmortem/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Reconstruct causally discriminating agent incidents and explicit boundary violations. Static 18/20; no host acceptance. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+rationale: "V1.1 complete-package static review 18/20 (docs/reviews/2026-11-18-agent-failure-boundary-parity-remediation.md); behavioral parity and 1.5x NOT PROVEN. Prior v1.0 review historical."
