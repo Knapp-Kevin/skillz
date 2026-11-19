@@ -3,6 +3,15 @@
 # 🛠️ skillz
 
 
+**All Skillz skills follow one [capability-adaptive execution standard](docs/capability-adaptive-skill-execution.md).**
+Provide explicit help when a model needs it, while allowing better
+equivalent methods and complete authorized work when it doesn't.
+Safety, permissions and truthful evidence never depend on model tier.
+The [template](docs/skill-template.md) and
+[semantic review](docs/skill-verification.md) apply this to existing
+and future skills without pretending historic models have already
+passed behavioral tests.
+
 ## CI Guard and delivery effectiveness (November 19, 2026)
 
 [CI Guard](skills/authored/ci-guard/SKILL.md) provides risk-proportionate CI control review, verified detection analysis and bounded optimization. The existing [Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) gains reusable issue-resolution, momentum and delivery-evidence components rather than three redundant top-level skills. [Static review and controlled decision emulation](docs/reviews/2026-11-19-ci-guard-delivery-components.md) distinguish design checks from observed host and pipeline results. No historical skill was retired.

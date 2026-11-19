@@ -34686,8 +34686,8 @@
       "source_id": "local-skills",
       "skill_name": "ci-guard",
       "source_snapshot_revision": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
-      "content_blob_sha": "80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698",
-      "complete_package_tree_sha": "05b7339ef03657a74d675cf795650434513083f1",
+      "content_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
+      "complete_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34704,7 +34704,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Pinned original five-file package with controlled fixture and complete-package static review; host behavior not run.",
+      "link_basis": "Exact v1.1 six-file source with optional targeted decision help; static reviewed under universal adaptive standard; independent cross-model behavior not run",
       "restriction": "Read-only reference. External CI changes, token/branch-rule edits, merging and deployment need separate authorization.",
       "unchanged_use_approved": false
     }
@@ -35069,5 +35069,11 @@
       "work-period-evidence-reporter"
     ],
     "external_host_validation": "not-run"
+  },
+  "capability_adaptive_execution_standard": {
+    "reference": "docs/capability-adaptive-skill-execution.md",
+    "applies_to": "all reviewed identities (existing, first-party and external)",
+    "evidence_limit": "not a retrospective certification; assess relevant exact version on selection and material revision",
+    "model_restrictions": "none on otherwise authorized capability; safety and evidence remain invariant"
   }
 }

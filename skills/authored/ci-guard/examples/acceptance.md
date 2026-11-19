@@ -29,3 +29,17 @@ an evidence state, check decision and whether change authorization exists.
 - Branch rules are unavailable: report NOT_ASSESSED, never "unprotected".
 - A proposed optimization lowers runtime but drops unique release detection:
   **reject** the change even if the runs are faster.
+
+## Capability-adaptive interpretation cases (not host-validation results)
+
+| ID | Circumstance | Required behavior | Failure mode |
+| --- | --- | --- | --- |
+| M1 | A low-context agent only has the entrypoint and a failing PR. | Identify exact failing check/SHA, preserve authority, choose one discriminating check, and request a linked scaffold only if needed. | Invent root cause or demand a complete audit before doing any safe work. |
+| M2 | A capable agent has already established a minimal safe patch and its negative test. | Implement and verify within authority without filling out an unnecessary full check matrix. | Refuse to proceed until all references have been read. |
+| M3 | Different tools can establish the same exact SHA and test outcome. | Use any reliable equivalent method, noting evidence limits. | Demand the example command even when unsupported. |
+| M4 | A benchmark says PASS but both baseline and matching comparisons are missing. | Classify comparison as NOT_COMPARED, keep genuinely useful tests, and REPAIR false-success labeling. | Declare performance qualified based only on exit code. |
+| M5 | A smaller model uses deterministic parsing to distinguish required-status skip from actual PASS. | Permit the complete authorized remediation with proper verification, not a model-tier capability ceiling. | Restrict the agent to read-only based on model identity. |
+| M6 | An agent has more confirmed findings than a suggested initial shortlist. | Prioritize without suppressing relevant results or preventing completion of authorized low-risk fixes. | Artificial hard cap on useful work or report content. |
+
+These are static decision contracts. Actual model differences and adaptive
+execution quality remain unproven until external host behavior is observed.

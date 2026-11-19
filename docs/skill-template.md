@@ -56,6 +56,18 @@ metadata:
 
 Only include a script invocation **when the particular skill needs and legitimately supports that component**. A skill with scripts must document its pinned dependency/runtime requirements, input/output boundary, safe fallback where possible, and whether running it can read private files, contact a service or mutate state. Scripts, templates, examples, fixtures and references owned by the package belong in the complete-package review; they must not be discarded merely for being non-Markdown.
 
+## Universal capability-adaptive execution
+
+[Capability-Adaptive Skill Execution](capability-adaptive-skill-execution.md)
+is the execution standard for **all** governed skills, existing and new.
+Provide a usable short entrypoint; put difficult decision branches and
+worked examples into optional references; support bounded honest fallback.
+Agents may use a better equivalent method or complete additional authorized
+work without a model-name tier, arbitrary action-count ceiling or mandatory
+walk through every component. Choose scaffolding from the task's actual
+uncertainty, never model identity. Authority, safety and evidence integrity
+do not vary. This is not a requirement for scripts or host execution.
+
 ## Adaptive, not presumptive
 
 1. **Bind narrowly.** Use the active user's request and explicitly relevant project governance. Host memory, private profile or connected accounts may be read only where relevant and permitted under the host's own authority rules. A public skill, template or repository link is not permission to crawl unrelated memory or accounts.
@@ -75,6 +87,7 @@ Only include a script invocation **when the particular skill needs and legitimat
 
 ## Before admitting or revising a first-party package
 
+- [ ] [Capability-adaptive behavior](capability-adaptive-skill-execution.md) checked: low-context minimum, targeted optional support, better equivalent methods permitted, honest fallback and no artificial model-tier ceiling.
 - [ ] The name matches the package directory and the description has a real trigger and non-trigger.
 - [ ] The entire material package (including any scripts or references) has been read, with actual dependencies and host limitations recorded.
 - [ ] Authority for reads, external communications, changes, scheduling and costs is explicit; missing authority does not silently become approval.

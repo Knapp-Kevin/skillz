@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
-dependencies: "Two component files and ten adversarial cases; complete 5-file original text package, no bundled runtime"
-content_blob_sha: 80d9cc0eec15dae1d23c0e0bb24ff6b69c9fd698
-complete_package_tree_sha: 05b7339ef03657a74d675cf795650434513083f1
+dependencies: "Three optional components and source/adaptive cases; complete six-file text package, no bundled runtime"
+content_blob_sha: 29de6cb583efaca3edac1ea39fa557909b17807b
+complete_package_tree_sha: 6c9075636b92c6bddd601bcfdb8f975131a93ec1
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "Static exact-package review 18/20; docs/reviews/2026-11-19-ci-guard-delivery-components.md. Controlled cases do not establish model-host behavior."
+rationale: "Exact v1.1 static review 18/20; docs/reviews/2026-11-19-capability-adaptive-ci-guard-v1-1.md. Cross-model behavior not established."
