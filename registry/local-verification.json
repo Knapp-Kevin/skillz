@@ -299,39 +299,6 @@
       "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
-      "skill_name": "fact-check",
-      "local_path": "skills/fact-check/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "20/20",
-      "tags": {
-        "use_case": [
-          "research",
-          "decision-support",
-          "web-search"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "decomposition",
-          "source-driven",
-          "traceable",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA d83c43282d525682f3e13b8296111d7fe7de46f0; prior 20/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
       "skill_name": "finance-review",
       "local_path": "skills/finance-review/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -889,37 +856,6 @@
         ]
       },
       "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "paper-digest",
-      "local_path": "skills/paper-digest/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8691e648e6c96c986391bdbdf812616c34baef95",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "research",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "source-driven",
-          "risk-aware",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
     },
     {
       "skill_name": "perplexity-pulse",
@@ -2435,6 +2371,84 @@
       "historical_rights": "not established",
       "behavioral_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json"
+    },
+    {
+      "skill_name": "fact-check",
+      "local_path": "skills/fact-check/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "20/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "decision-support",
+          "web-search"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "decomposition",
+          "source-driven",
+          "traceable",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA d83c43282d525682f3e13b8296111d7fe7de46f0; prior 20/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/claim-evidence-adjudicator",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/fact-check/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "skill_name": "paper-digest",
+      "local_path": "skills/paper-digest/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "8691e648e6c96c986391bdbdf812616c34baef95",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "source-driven",
+          "risk-aware",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/research-methods-appraiser",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/paper-digest/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
     }
   ]
 }

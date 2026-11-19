@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-18",
-  "purpose": "1061 active governed exact-source names; seven historical identities archived, not selectable.",
+  "purpose": "Active exact-version governed names 1059; nine retired historical IDs separately preserved for immutable reference.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 66,
+    "first_party": 64,
     "third_party": 995,
-    "total": 1061
+    "total": 1059
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -30,7 +30,6 @@
     "local-skills/develop-melodic-motif",
     "local-skills/devlog-draft",
     "local-skills/evidence-narrative-composer",
-    "local-skills/fact-check",
     "local-skills/federated-source-catalog",
     "local-skills/file-lifecycle-curator",
     "local-skills/finance-review",
@@ -53,7 +52,6 @@
     "local-skills/mistral-pulse",
     "local-skills/narrative-scene-gap-audit",
     "local-skills/openai-pulse",
-    "local-skills/paper-digest",
     "local-skills/perplexity-pulse",
     "local-skills/personal-operations-control-board",
     "local-skills/privilege-exposure-mapper",
@@ -1191,6 +1189,24 @@
       "replacement_id": "local-skills/agent-workspace-footprint-assessor",
       "host_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json"
+    },
+    {
+      "id": "local-skills/fact-check",
+      "source_commit": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+      "source_blob": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "source_tree": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+      "replacement_id": "local-skills/claim-evidence-adjudicator",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "id": "local-skills/paper-digest",
+      "source_commit": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+      "source_blob": "8691e648e6c96c986391bdbdf812616c34baef95",
+      "source_tree": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
+      "replacement_id": "local-skills/research-methods-appraiser",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
     }
   ]
 }

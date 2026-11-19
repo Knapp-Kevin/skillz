@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 7,
+    "legacy_retirements_approved": 9,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 6,
-    "retired_under_owner_accepted_procedure": 7,
+    "historical_full_package_trees_verified": 8,
+    "retired_under_owner_accepted_procedure": 9,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -1039,13 +1039,13 @@
       "legacy_blob_sha1": "d83c43282d525682f3e13b8296111d7fe7de46f0",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/claim-evidence-adjudicator/SKILL.md",
-      "replacement_package_version": "1.0.0",
-      "replacement_skill_blob_sha1": "63864e5ed30deee2be15c3044ddb87fd641145a0",
-      "replacement_package_tree_sha1": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "replacement_package_version": "1.1.0",
+      "replacement_skill_blob_sha1": "524507190260732cb28ac40ad0865672de5c2980",
+      "replacement_package_tree_sha1": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_RESEARCH_PROCEDURE",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -1094,18 +1094,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "SOURCE_LEVEL_CROSSWALK_NO_CRITICAL_OMISSION_IDENTIFIED; FIVE_SYNTHETIC_ORACLES_PASS; MODEL_PARITY_NOT_PROVEN",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_ACCEPTED_BOUNDED_EMULATION_PER_SOURCE",
+        "eligible_for_retirement": true,
+        "reason": "Named owner-accepted controlled procedure qualification, no measured 1.5x or model-host A/B.",
+        "qualification_basis": "OWNER_RISK_ACCEPTED_SOURCE_BOUND_CONTROLLED_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "ACTUAL_OFFLINE_PYTHON_SYNTHETIC_METHODS",
+        "original_full_tree_sha1": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+        "replacement_full_tree_sha1": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/finance-review/SKILL.md",
@@ -2421,7 +2434,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_RESEARCH_PROCEDURE",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -2470,18 +2483,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "SOURCE_LEVEL_CROSSWALK_NO_CRITICAL_OMISSION_IDENTIFIED; FIVE_SYNTHETIC_ORACLES_PASS; MODEL_PARITY_NOT_PROVEN",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_ACCEPTED_BOUNDED_EMULATION_PER_SOURCE",
+        "eligible_for_retirement": true,
+        "reason": "Named owner-accepted controlled procedure qualification, no measured 1.5x or model-host A/B.",
+        "qualification_basis": "OWNER_RISK_ACCEPTED_SOURCE_BOUND_CONTROLLED_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "ACTUAL_OFFLINE_PYTHON_SYNTHETIC_METHODS",
+        "original_full_tree_sha1": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
+        "replacement_full_tree_sha1": "ee212b2da6863e8dc172ea95b67c6eb190603835",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/permissions-review/SKILL.md",

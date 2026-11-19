@@ -5,17 +5,23 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/fact-check/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 7970edf438afb67cee91d87fe79174623800d0cb
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
-availability: in-repo
+availability: retired-historical
 local_path: skills/fact-check/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
+import_eligibility: retired-not-selectable
 rationale: "2026-11-04 authority repair source identity tied to PR #686 commit 7970edf438af. Previous 20/20 static grade retained, external scanner evidence separately recorded at #693, executed adversarial validation not-run; unchanged adoption not approved."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/fact-check/SKILL.md
+replacement_id: local-skills/claim-evidence-adjudicator
+consumer_audit: "Known canonical routes reconciled; exhaustive repository scan unproven."
