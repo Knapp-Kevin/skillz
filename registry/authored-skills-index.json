@@ -521,22 +521,25 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/scheduled-work-proof-auditor.yaml",
       "verification_path": "registry/verification/local-skills/scheduled-work-proof-auditor.yaml",
-      "skill_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
-      "package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "skill_blob_sha": "22fe02a8dc2b021c4badaeb1028f3e492ad8e12b",
+      "package_tree_sha": "bd9254ce997d807b1bfe91c820b820fd51ae9cfc",
       "package_file_count": 3,
       "review_status": "verified-static",
-      "review_score": "17/20",
+      "review_score": "18/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independent new text; historical comparator skills/automation-receipts/SKILL.md has uncertain original authorship and rights. Seven-word overlap comparison 0, not proof of legal distinctness.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/751",
+      "package_version": "1.1.0",
       "capability_paths": [
         "agent-mcp-development/agent-observability",
         "time-productivity/scheduling"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
+      "previous_reviewed_package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "review_note": "Reviewed exact three-file v1.1 source and receipt contracts; docs/reviews/2026-11-18-scheduled-and-claim-final-source-audit.md. No host tests or 1.5x evidence."
     },
     {
       "id": "technology-change-intelligence",
