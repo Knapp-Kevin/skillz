@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 13,
+    "legacy_removed": 15,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 31
+    "legacy_remaining": 29
   },
   "rows": [
     {
@@ -170,8 +170,20 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "5_synthetic_report_outputs_passed_limited_oracle_no_host_AB",
+      "retirement_snapshot_commit": "efd33e05141b81250420eca249364c82fa429558",
+      "retirement_source_blob": "63c943992417148d010551238a15259d4968cb55",
+      "retirement_source_tree": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/deck-outline/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json",
+      "retirement_review": "docs/reviews/2026-11-19-deck-devlog-controlled-retirement.md",
+      "retirement_scope": "COMPLETE_SINGLE_FILE_HISTORICAL_SOURCE_VERIFIED",
+      "current_active_reference": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_FULL_REPO_SEARCH_UNPROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
+      "retirement_behavioral_claim": "ONE_ANALYST_SYNTHETIC_OUTPUT_CONSTRUCTION_AND_EXECUTABLE_ASSERTIONS_NO_INDEPENDENT_HOST_AB; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/deep-dive/SKILL.md",
@@ -200,8 +212,20 @@
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
       "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "legacy_disposition": "retired_active_source_via_owner_authorized_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retirement_status": "5_synthetic_report_outputs_passed_limited_oracle_no_host_AB",
+      "retirement_snapshot_commit": "efd33e05141b81250420eca249364c82fa429558",
+      "retirement_source_blob": "d74ff133f69c8908c4acf296fb93313069082114",
+      "retirement_source_tree": "ba81b6da10b317b314d31264d7c5d9362d753702",
+      "retirement_historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/devlog-draft/SKILL.md",
+      "retirement_evidence": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json",
+      "retirement_review": "docs/reviews/2026-11-19-deck-devlog-controlled-retirement.md",
+      "retirement_scope": "COMPLETE_SINGLE_FILE_HISTORICAL_SOURCE_VERIFIED",
+      "current_active_reference": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "consumer_scan_status": "KNOWN_CANONICAL_ROUTES_RECONCILED_FULL_REPO_SEARCH_UNPROVEN",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
+      "retirement_behavioral_claim": "ONE_ANALYST_SYNTHETIC_OUTPUT_CONSTRUCTION_AND_EXECUTABLE_ASSERTIONS_NO_INDEPENDENT_HOST_AB; 1.5x_NOT_PROVEN"
     },
     {
       "legacy_entrypoint": "skills/fact-check/SKILL.md",

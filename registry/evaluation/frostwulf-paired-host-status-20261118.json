@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 13,
+    "legacy_retirements_approved": 15,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 12,
-    "retired_under_owner_accepted_procedure": 13,
+    "historical_full_package_trees_verified": 14,
+    "retired_under_owner_accepted_procedure": 15,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -762,7 +762,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_OUTPUTS",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -811,18 +811,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "STATIC_OUTPUTS_PRESERVED; FIVE_CONTROLLED_CASES_PASS; NOT_INDEPENDENT_BEHAVIORAL_PARITY",
+        "security_no_regression": "NO_OBSERVED_CRITICAL_VIOLATION_IN_FIVE_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_UNPROVEN_SOURCE_IMMUTABLY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_UNPROVEN",
+        "owner_evidence_acceptance": "OWNER_ACCEPTED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Per-source owner-accepted synthetic output evidence, no independently run model host or measured 1.5x quality.",
+        "qualification_basis": "OWNER_ACCEPTED_SYNTHETIC_OUTPUT_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "ONE_ANALYST_CASE_OUTPUT_AND_DETERMINISTIC_ASSERTIONS",
+        "original_full_tree_sha1": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
+        "replacement_full_tree_sha1": "2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/deep-dive/SKILL.md",
@@ -985,7 +998,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_OUTPUTS",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -1034,18 +1047,31 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_SINGLE_FILE_TREE_PINNED",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "STATIC_OUTPUTS_PRESERVED; FIVE_CONTROLLED_CASES_PASS; NOT_INDEPENDENT_BEHAVIORAL_PARITY",
+        "security_no_regression": "NO_OBSERVED_CRITICAL_VIOLATION_IN_FIVE_SYNTHETIC_CASES",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_UNPROVEN_SOURCE_IMMUTABLY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_UNPROVEN",
+        "owner_evidence_acceptance": "OWNER_ACCEPTED_BOUNDED_CONTROLLED_EMULATION",
+        "eligible_for_retirement": true,
+        "reason": "Per-source owner-accepted synthetic output evidence, no independently run model host or measured 1.5x quality.",
+        "qualification_basis": "OWNER_ACCEPTED_SYNTHETIC_OUTPUT_EMULATION",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json",
+        "case_count": 5,
+        "case_assertions_passed": 5,
+        "mode": "ONE_ANALYST_CASE_OUTPUT_AND_DETERMINISTIC_ASSERTIONS",
+        "original_full_tree_sha1": "ba81b6da10b317b314d31264d7c5d9362d753702",
+        "replacement_full_tree_sha1": "2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/fact-check/SKILL.md",
