@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations & Security
   display-name: Connector Capability Risk Review
-  version: 1.0.0
+  version: 1.1.0
   license: MIT
 ---
 
@@ -59,11 +59,72 @@ completeness.
    user/host policy, and no unresolved critical issue. Never turn this
    assessment itself into connection permission.
 
+## Source, rights and connection acceptance
+
+Before evaluating a proposed MCP server as connectable, establish
+the precise package or remote endpoint, publisher or maintainer,
+version-bound artifact identity, and where relevant the **license
+and redistribution terms**. Distinguish an observed license file
+or provider contract from a claim that the code is open-source.
+Check whether the required client/server integration, dependent
+binaries and commercial/redistribution uses are actually permitted.
+Unknown terms are `RIGHTS_NOT_ESTABLISHED`, never assumed approved.
+
+Inventory all available tool names, argument schemas, resources,
+prompts, dynamic discovery routes and install/startup callbacks from
+the **same pinned version**. Classify each using the repository's
+controlled `read-only / generate-only / mutating /
+external-side-effect` vocabulary. A plugin with one innocuous read
+and one money-moving action must not be called read-only overall.
+Document which operations are only publisher-advertised versus
+verified in exact source or a complete manifest. Missing inventory
+means `TOOL_SURFACE_INCOMPLETE` and blocks unchanged connection
+recommendation.
+
+The review must keep **three evidence gates separate**:
+
+1. **Static source and legal scope:** exact source provenance,
+   licenses/terms, declared tool methods, SDK dependencies, update
+   path and untrusted content handling.
+2. **Security inspection:** whether a complete exact-package
+   scanner/independent security acceptance was actually executed,
+   what it covered, the revision and outcome. If no such result
+   exists, say `SECURITY_SCAN_NOT_RUN`, not "passed".
+3. **Product-host functional qualification:** observed tool calls,
+   identity/account separation, permission enforcement and negative
+   cases in an authorized contained host. If not exercised, mark
+   `HOST_BEHAVIOR_NOT_RUN` rather than treating a static promise
+   as effective enforcement.
+
+A `CONDITIONALLY_ACCEPTABLE` static finding remains just that
+and must preserve its **conditions, residual risks and separate
+connection authority**. Critical unresolved host action gates,
+opaque effects or secret egress incompatible with the requested
+use produce BLOCK. Missing inventory or rights evidence produces
+GATHER_EVIDENCE. An available registry listing, reputation score
+or existing connection in another account is not qualification.
+
+For each proposed connection, specify the minimum allowed
+principal/account, action list, repository/object boundary,
+data-export/recipient controls, cost bound, credential storage class,
+approved destination, update policy, host-side refusal rule and
+independent test required before production use. Never open the
+connection, execute a manifest hook, install dependencies, fetch
+credentials or simulate a real call as part of passive vetting.
+
+Keep third-party **corpus intake** separate from connection safety.
+A source security report neither admits a discovered skill into
+Skillz nor changes its exact-source review state. Refer new skill
+intake to the repository's governed review process only when
+explicitly requested.
+
 ## Output
 
-Report pinned source identity, inspection coverage, operation/effect matrix,
-data-flow sketch, safeguards verified vs asserted, outstanding risks,
-decision and specific checks needed before any independent approval.
+Report pinned source identity, publisher and verified license/terms,
+inspection coverage, operation/effect matrix, data-flow sketch,
+static/security/host evidence statuses, safeguards verified vs asserted,
+outstanding risks, decision and specific checks needed before any
+independent approval.
 Provide a change-invalidates-review rule: release, scope, tool schema,
 destination or host enforcement changes require new assessment.
 
