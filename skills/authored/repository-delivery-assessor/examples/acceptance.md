@@ -55,3 +55,19 @@
 - A one-time weekly repository digest is requested. Expect
   report-only output and no automatic scheduler, PR comment,
   branch cleanup or merge.
+
+## Focused component regression and routing
+
+- An issue has 160 comments but its owner and acceptance remain clear. Treat
+  count as non-evidence of neglect.
+- An issue is closed by a commit message with no install/deploy proof. Do not
+  claim the defect resolved in production.
+- Two issues are duplicates, one contains unique rollback details. Preserve
+  details in the canonical issue before any authorized disposition.
+- Four CI audits precede no change in the user-visible deliverable. Invoke
+  objective/momentum component and select bounded next engineering action.
+- New critical vulnerability interrupts planned feature delivery. Preserve
+  the security repair, not label it unnecessary drift.
+- A GitHub run shows green checks on an older head. Reject current acceptance.
+- A CI optimization request with measurable pipeline details routes to
+  CI Guard rather than duplicating deep analysis here.

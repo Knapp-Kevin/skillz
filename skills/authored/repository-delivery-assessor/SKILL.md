@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Repository Delivery Assessor
-  version: 1.2.0
+  version: 1.3.0
   license: MIT
 ---
 
@@ -181,3 +181,28 @@ in output. A green GitHub check is not release qualification.
 
 ## Adversarial cases
 See [original scenarios](examples/acceptance.md).
+
+## Targeted delivery-effectiveness components (v1.3)
+
+For a specific **CI assurance/efficiency** question, delegate the detailed
+control inventory, risk boundary, placement experiment and rollback to
+[CI Guard](../ci-guard/SKILL.md). Keep this assessor focused on the
+repository-wide outcome and cross-check CI Guard conclusions against the
+current acceptance goal. Avoid repeating its pipeline analysis.
+
+Choose one internal component when deeper treatment is needed, and do not
+run all three by default:
+
+- [Issue resolution stewardship](components/issue-resolution.md) when the
+  actual job is issue/PR lifecycle, verified resolution and accurate closure.
+- [Objective and delivery momentum](components/delivery-momentum.md) when
+  process work is crowding out an approved deliverable.
+- [Delivery evidence validation](components/delivery-evidence.md) when a
+  claimed fix/merge/release/deployment/user outcome needs staged proof.
+
+These focused components share this skill's existing scope, safety rules,
+read-only default and action authorization boundaries. They are **not**
+three extra always-on audits. Use the smallest relevant method and state a
+stopping condition; never create a new process merely to coordinate them.
+Decision hints `ADVANCE / REPAIR / SIMPLIFY / VERIFY / ESCALATE / PARK /
+CLOSE` are advice, not permission to bypass repository rules.

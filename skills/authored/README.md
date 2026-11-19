@@ -2,6 +2,12 @@
 
 This is the **canonical home for newly authored first-party skills** produced for this repository: `skills/authored/<skill-name>/`. It distinguishes maintainer-owned original work from the external discovery/reference corpus under `skills/sources/` and historical first-party skills at `skills/<name>/`. "Authored" denotes accountability for source and rights, **not** a claim that a human personally typed every instruction or that AI assistance was absent.
 
+## 2026-11-19: CI assurance and focused delivery components
+
+- [CI Guard](ci-guard/SKILL.md) (v1.0, original MIT): two specialist components for threat/detection analysis and CI placement/experiments, plus ten adversarial scenarios. Indexed under `cloud-devops/ci-cd` and `software-engineering/maintenance`.
+- [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) (v1.3): retains repository diagnosis and multi-repo pulse behavior; adds three optional modules: [issue resolution](repository-delivery-assessor/components/issue-resolution.md), [momentum](repository-delivery-assessor/components/delivery-momentum.md), and [delivery evidence](repository-delivery-assessor/components/delivery-evidence.md).
+- [Static review and controlled evaluation](../../docs/reviews/2026-11-19-ci-guard-delivery-components.md). External host validation and measured CI savings not established.
+
 ## 2026-11-18: Independently redesigned legacy capabilities
 
 The maintainer controlled the historical Zo Computer account but has **not**

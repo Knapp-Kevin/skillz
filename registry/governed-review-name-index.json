@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-18",
+  "snapshot_date": "2026-11-19",
   "purpose": "Active exact-version governed names 1059; nine retired historical IDs separately preserved for immutable reference.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 64,
+    "first_party": 65,
     "third_party": 995,
-    "total": 1059
+    "total": 1060
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -16,6 +16,7 @@
     "local-skills/business-presence-observatory",
     "local-skills/career-radar",
     "local-skills/character-motivation-interview",
+    "local-skills/ci-guard",
     "local-skills/claim-evidence-adjudicator",
     "local-skills/claude-pulse",
     "local-skills/compare",
@@ -1208,5 +1209,19 @@
       "host_parity": "not-run",
       "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
     }
-  ]
+  ],
+  "delivery_effectiveness_extension_20261119": {
+    "date": "2026-11-19",
+    "ids": [
+      "local-skills/ci-guard"
+    ],
+    "component_paths": [
+      "skills/authored/repository-delivery-assessor/components/issue-resolution.md",
+      "skills/authored/repository-delivery-assessor/components/delivery-momentum.md",
+      "skills/authored/repository-delivery-assessor/components/delivery-evidence.md"
+    ],
+    "review": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
+    "behavioral_validation": "not-run",
+    "note": "CI Guard standalone, three focused components under the existing delivery assessor"
+  }
 }
