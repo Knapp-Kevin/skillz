@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: research-question-dossier
 display_name: "Research Question Dossier"
-skill_version: "1.0.0"
+skill_version: "1.1.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/research-question-dossier/SKILL.md
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: be5e60add3642754ac89d9d28c51077f13515ed9
-complete_package_tree_sha: 6b20ef72ae84c263685f471d7967387c3ae98153
+content_blob_sha: a3901f753726fa4ffc2605277608b5244ad1a5b0
+complete_package_tree_sha: dd2872a6d5802ed55b29c3d5a1d01b0dc2730e2c
 historical_comparators: "skills/deep-dive/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Build a question-specific and source-root-aware research explanation with rival hypotheses. Static 18/20; no host acceptance. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+rationale: "Exact current v1.1 package static reviewed 18/20; source-specific functional remediation in docs/reviews/2026-11-18-research-parity-v1-1.md. No host validation."
