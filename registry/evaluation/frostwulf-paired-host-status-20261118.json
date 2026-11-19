@@ -14,12 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 0
+    "legacy_retirements_approved": 0,
+    "historical_entrypoints_pinned": 21
   },
   "entries": [
     {
       "legacy_entrypoint": "skills/agent-home-doctor/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "3415f1f4bb72afc44266706be649c3950f809337",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -87,7 +88,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/agent-postmortem/SKILL.md",
@@ -159,7 +161,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/automation-receipts/SKILL.md",
@@ -231,11 +234,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/brief-writer/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -303,11 +307,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/career-radar/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/professional-market-evidence-scout/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -375,11 +380,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/claude-pulse/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -447,11 +453,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/compare/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -519,11 +526,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/daily-briefing/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/personal-operations-control-board/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -591,7 +599,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/decision-log/SKILL.md",
@@ -663,11 +672,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/deck-outline/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "63c943992417148d010551238a15259d4968cb55",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/evidence-narrative-composer/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -735,11 +745,12 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/deep-dive/SKILL.md",
-      "legacy_blob_sha1": null,
+      "legacy_blob_sha1": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/research-question-dossier/SKILL.md",
       "replacement_package_version": "1.1.0",
@@ -807,7 +818,8 @@
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
         "reason": "No observed paired host acceptance and complete source/consumer evidence."
-      }
+      },
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
     {
       "legacy_entrypoint": "skills/deepseek-pulse/SKILL.md",
@@ -3187,5 +3199,6 @@
     }
   ],
   "phase2_fixture": "docs/evals/frostwulf-phase2-paired-scenarios.json",
-  "retirement_policy": "docs/evals/frostwulf-per-source-retirement-gates.md"
+  "retirement_policy": "docs/evals/frostwulf-per-source-retirement-gates.md",
+  "historical_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
 }
