@@ -1140,7 +1140,7 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 11,
+      "linked_reviewed_examples": 10,
       "subdomains_with_linked_examples": 6,
       "name_only_candidate_count": 17,
       "evidence_preview": [
@@ -1160,16 +1160,6 @@
           "validation_status": "not-run",
           "static_score": null,
           "review_evidence_path": "registry/verification/local-skills/mcp-vetting.yaml",
-          "source_class": "local-provenance",
-          "path": "agent-mcp-development/permissions",
-          "capability_example": "Inspect MCP integrations and agent access permissions before connection"
-        },
-        {
-          "id": "local-skills/permissions-review",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/permissions-review.yaml",
           "source_class": "local-provenance",
           "path": "agent-mcp-development/permissions",
           "capability_example": "Inspect MCP integrations and agent access permissions before connection"
@@ -1996,7 +1986,7 @@
     {
       "domain": "security",
       "display_name": "Security",
-      "linked_reviewed_examples": 7,
+      "linked_reviewed_examples": 6,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 7,
       "evidence_preview": [
@@ -2009,16 +1999,6 @@
           "source_class": "external-provenance",
           "path": "security/application-security",
           "capability_example": "Existing static-reviewed reference for application security"
-        },
-        {
-          "id": "local-skills/permissions-review",
-          "verification_status": "verified",
-          "validation_status": "not-run",
-          "static_score": null,
-          "review_evidence_path": "registry/verification/local-skills/permissions-review.yaml",
-          "source_class": "local-provenance",
-          "path": "security/identity-access",
-          "capability_example": "Review permissions and least-privilege exposure without accessing secret values"
         },
         {
           "id": "local-skills/agent-home-doctor",
@@ -5166,7 +5146,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1064,
+  "governed_identity_denominator": 1063,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -15072,7 +15052,6 @@
           ],
           "matched_skill_ids": [
             "local-skills/mcp-vetting",
-            "local-skills/permissions-review",
             "local-skills/privilege-exposure-mapper"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -18524,7 +18503,6 @@
             "Effective principal-to-action privilege graph and safely proposed least-privilege deltas."
           ],
           "matched_skill_ids": [
-            "local-skills/permissions-review",
             "local-skills/privilege-exposure-mapper"
           ],
           "coverage_status": "partial-linked-evidence",
@@ -34402,33 +34380,6 @@
       "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
     },
     {
-      "id": "local-skills/permissions-review",
-      "source_id": "local-skills",
-      "skill_name": "permissions-review",
-      "content_blob_sha": "60e1d546e713cfa5b289def082dd73e8b326f029",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "capability_paths": [
-        "security/identity-access",
-        "agent-mcp-development/permissions"
-      ],
-      "evidence_path": "registry/verification/local-skills/permissions-review.yaml",
-      "skill_path": "skills/permissions-review/SKILL.md",
-      "provenance_path": "registry/skills/local-skills/permissions-review.yaml",
-      "source_license": "MIT (first-party)",
-      "source_role": "first-party",
-      "authority_tags": [
-        "read-only"
-      ],
-      "use_case_tags": [
-        "security",
-        "evaluation"
-      ],
-      "notes": "Strong read-only blast-radius review and least-privilege recommendations without exposing credential values; host config/log availability can limit last-use evidence.",
-      "link_basis": "individual-structured-static-review-and-conservative-capability-fit",
-      "license_resolution": "First-party MIT; inspect LICENSE and actual package for use obligations; no behavioral approval implied"
-    },
-    {
       "id": "local-skills/perplexity-pulse",
       "source_id": "local-skills",
       "skill_name": "perplexity-pulse",
@@ -35089,13 +35040,13 @@
       "security_resolution": "Separate security evidence required; unchanged reuse rejected where verification_status is rejected"
     }
   ],
-  "identity_level_capability_links_mapped": 148,
+  "identity_level_capability_links_mapped": 147,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 69,
-    "known_total_governed_review_records": 1064,
+    "known_first_party_skill_records": 68,
+    "known_total_governed_review_records": 1063,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -35152,18 +35103,18 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 69,
+  "first_party_identity_links_mapped": 68,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 69,
+    "mapped_first_party_distinct": 68,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 148,
+    "mapped_total_distinct": 147,
     "subdomains_with_evidence_linked_examples": 89,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "Four narrowly risk-accepted controlled historical retirements; 40 original active sources; full A/B model host parity and exhaustive consumer scan not proven.",
+    "note": "Five individually assessed owner-risk-accepted historical retirements; 39 active originals; no independently observed model-host parity or exhaustive consumer scan.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },
@@ -35413,7 +35364,7 @@
     ],
     "legacy_source_count": 44,
     "legacy_capabilities_addressed": 44,
-    "legacy_retired": 4,
+    "legacy_retired": 5,
     "status": "21 new original packages statically reviewed, functional equivalence not validated",
     "review_paths": [
       "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
@@ -35421,6 +35372,6 @@
       "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
       "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
     ],
-    "legacy_remaining": 40
+    "legacy_remaining": 39
   }
 }
