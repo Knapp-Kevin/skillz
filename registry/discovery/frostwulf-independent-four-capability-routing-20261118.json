@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "review": "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+  "legacy_origin": "unproven",
+  "new_source_rights": "MIT for new original expressions only",
+  "status": "4 of 44 legacy functions redesigned; legacy retained; no executed host behavior",
+  "records": [
+    {
+      "id": "local-skills/claim-evidence-adjudicator",
+      "legacy_reference": "skills/fact-check/SKILL.md",
+      "path": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+      "sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
+      "package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "capability_paths": [
+        "research/fact-checking"
+      ],
+      "static_grade": "18/20",
+      "behavior": "not-run"
+    },
+    {
+      "id": "local-skills/research-methods-appraiser",
+      "legacy_reference": "skills/paper-digest/SKILL.md",
+      "path": "skills/authored/research-methods-appraiser/SKILL.md",
+      "sha": "fa02b51c8a7985d24b1fdf3e01167c668a9aba79",
+      "package_tree_sha": "28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b",
+      "capability_paths": [
+        "research/literature-review",
+        "research/reproducibility"
+      ],
+      "static_grade": "18/20",
+      "behavior": "not-run"
+    },
+    {
+      "id": "local-skills/source-debt-triage",
+      "legacy_reference": "skills/todo-harvester/SKILL.md",
+      "path": "skills/authored/source-debt-triage/SKILL.md",
+      "sha": "79ab882e03287c47b6c62dea44c5f20001d32f2d",
+      "package_tree_sha": "d6a7246d40172b41e20a93025ccc4efa91aa41e2",
+      "capability_paths": [
+        "software-engineering/maintenance"
+      ],
+      "static_grade": "18/20",
+      "behavior": "not-run"
+    },
+    {
+      "id": "local-skills/decision-record-steward",
+      "legacy_reference": "skills/decision-log/SKILL.md",
+      "path": "skills/authored/decision-record-steward/SKILL.md",
+      "sha": "ef0ae9791df3cbf69b0f9445807240188a17f130",
+      "package_tree_sha": "992a7db63ea585fc939802dfac1f3cd76abe98a3",
+      "capability_paths": [
+        "planning/decision-frameworks",
+        "business/governance"
+      ],
+      "static_grade": "18/20",
+      "behavior": "not-run"
+    }
+  ]
+}

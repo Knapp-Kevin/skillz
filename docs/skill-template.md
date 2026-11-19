@@ -1,6 +1,8 @@
 # Skill template
 
-Use this as a **starting point** when an authorized maintainer adds or revises a first-party user-facing skill under `skills/<name>/`. It is an example, not an executable installer, universal runtime contract, or requirement that every skill contain scripts, scheduled jobs, or a host-specific model tier. See [static review and freshness](static-review-and-freshness.md) and [skill verification](skill-verification.md).
+Use this as a **starting point** when an authorized maintainer adds or revises a first-party user-facing skill under `skills/authored/<name>/`. It is an example, not an executable installer, universal runtime contract, or requirement that every skill contain scripts, scheduled jobs, or a host-specific model tier. See [static review and freshness](static-review-and-freshness.md) and [skill verification](skill-verification.md).
+
+**First-party destination:** place complete new packages only under `skills/authored/<slug>/`, record source/license/complete tree and governed review links, and keep legacy or rights-uncertain files outside the authored collection until independently rebuilt. This template is not authority to move-and-relabel another author's text. See [the 2026-11-18 historical-origin migration audit](reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md).
 
 ## Copy and adapt
 

@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: source-debt-triage
+skill_version: "1.0.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/source-debt-triage/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/source-debt-triage/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 79ab882e03287c47b6c62dea44c5f20001d32f2d
+complete_package_tree_sha: d6a7246d40172b41e20a93025ccc4efa91aa41e2
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [code-debt]
+  lifecycle: [evaluation]
+  characteristic: [evidence-first, privacy-bounded, traceable]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Original instruction text and synthetic cases, complete three-file identity
+  confirmed. Legacy comparator rights and original authorship unproven.
+  docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No global novelty or external behavior claim.

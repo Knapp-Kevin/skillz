@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: research-methods-appraiser
+skill_version: "1.0.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/research-methods-appraiser/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/research-methods-appraiser/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: fa02b51c8a7985d24b1fdf3e01167c668a9aba79
+complete_package_tree_sha: 28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [research-appraisal]
+  lifecycle: [evaluation]
+  characteristic: [evidence-first, privacy-bounded, traceable]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Original instruction text and synthetic cases, complete three-file identity
+  confirmed. Legacy comparator rights and original authorship unproven.
+  docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No global novelty or external behavior claim.

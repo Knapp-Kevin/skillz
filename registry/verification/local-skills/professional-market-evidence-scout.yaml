@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: professional-market-evidence-scout
+skill_version: "1.0.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/professional-market-evidence-scout/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/professional-market-evidence-scout/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 266072c0044c023674718c3775b50104b95b3a66
+complete_package_tree_sha: d001d19ebd8231042b0bcb24a7af58b991be7aee
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "17/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Deduplicate dated role evidence and assess market fit with explicit compensation units. Direct static semantic review 17/20. Three-file package
+  hashed and references verified. Host execution NOT RUN, real-world
+  effectiveness and historic rights not established. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md

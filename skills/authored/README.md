@@ -2,6 +2,49 @@
 
 This is the **canonical home for newly authored first-party skills** produced for this repository: `skills/authored/<skill-name>/`. It distinguishes maintainer-owned original work from the external discovery/reference corpus under `skills/sources/` and historical first-party skills at `skills/<name>/`. "Authored" denotes accountability for source and rights, **not** a claim that a human personally typed every instruction or that AI assistance was absent.
 
+## 2026-11-18: Independently redesigned legacy capabilities
+
+The maintainer controlled the historical Zo Computer account but has **not**
+established authorship or copyright for all 44 legacy `frostwulf.zo.computer`
+entrypoints. They remain intact and must not be silently moved or relicensed.
+
+**21 original packages now cover the intended function categories of all 44
+legacy entries at the design level.** Some are explicitly multi-mode,
+and 17 old monitoring categories became one common intelligence procedure
+with 17 specialized profiles. New original text and synthetic fixtures
+are under MIT; exact source and tree fingerprints are in the
+[authored index](../../registry/authored-skills-index.json).
+
+- [Claim Evidence Adjudicator](claim-evidence-adjudicator/SKILL.md) · research/fact-checking · 18/20 static, host behavior NOT RUN
+- [Research Methods Appraiser](research-methods-appraiser/SKILL.md) · research/literature-review, research/reproducibility · 18/20 static, host behavior NOT RUN
+- [Source Debt Triage](source-debt-triage/SKILL.md) · software-engineering/maintenance · 18/20 static, host behavior NOT RUN
+- [Decision Record Steward](decision-record-steward/SKILL.md) · planning/decision-frameworks, business/governance · 18/20 static, host behavior NOT RUN
+- [Agent Workspace Footprint Assessor](agent-workspace-footprint-assessor/SKILL.md) · software-engineering/maintenance, agent-mcp-development/agent-observability · 17/20 static, host behavior NOT RUN
+- [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) · agent-mcp-development/mcp-clients-servers, security/supply-chain · 18/20 static, host behavior NOT RUN
+- [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) · security/identity-access, agent-mcp-development/permissions · 18/20 static, host behavior NOT RUN
+- [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) · agent-mcp-development/agent-observability, time-productivity/scheduling · 17/20 static, host behavior NOT RUN
+- [Technology Change Intelligence](technology-change-intelligence/SKILL.md) · research/source-discovery, research/synthesis · 18/20 static, host behavior NOT RUN
+- [Agent Failure Boundary Analysis](agent-failure-boundary-analysis/SKILL.md) · agent-mcp-development/evaluation, security/incident-response · 18/20 static, host behavior NOT RUN
+- [Decision Tradeoff Workbench](decision-tradeoff-workbench/SKILL.md) · planning/decision-frameworks, business/strategy · 18/20 static, host behavior NOT RUN
+- [Research Question Dossier](research-question-dossier/SKILL.md) · research/synthesis, research/source-discovery · 18/20 static, host behavior NOT RUN
+- [Professional Market Evidence Scout](professional-market-evidence-scout/SKILL.md) · career/job-search, career/compensation · 17/20 static, host behavior NOT RUN
+- [Statement Variance Reviewer](statement-variance-reviewer/SKILL.md) · finance/reporting, finance/budgeting · 17/20 static, host behavior NOT RUN
+- [Context Continuation Contract](context-continuation-contract/SKILL.md) · memory-context/context-compression, agent-mcp-development/multi-agent-collaboration · 18/20 static, host behavior NOT RUN
+- [Evidence Narrative Composer](evidence-narrative-composer/SKILL.md) · communication/presentations, marketing/content · 17/20 static, host behavior NOT RUN
+- [Personal Operations Control Board](personal-operations-control-board/SKILL.md) · time-productivity/task-systems, time-productivity/personal-planning, communication/organizational-communication · 17/20 static, host behavior NOT RUN
+- [Learning Evidence Progression](learning-evidence-progression/SKILL.md) · education/curriculum, education/assessment · 18/20 static, host behavior NOT RUN
+- [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) · software-engineering/maintenance, cloud-devops/ci-cd · 18/20 static, host behavior NOT RUN
+- [Business Presence Observatory](business-presence-observatory/SKILL.md) · business/operations, marketing/seo · 17/20 static, host behavior NOT RUN
+- [Work Period Evidence Reporter](work-period-evidence-reporter/SKILL.md) · communication/organizational-communication, time-productivity/collaboration · 18/20 static, host behavior NOT RUN
+
+All 21 packages passed bounded direct **static text/package review**
+(17–18/20); host-agent behavior, independent functional equivalence,
+and downstream reference-migration acceptance remain NOT RUN.
+[The migration ledger](../../registry/migration/frostwulf-independent-replacement-ledger-20261118.json)
+and [functional/retirement gap audit](../../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
+define the unresolved gate. No 44-file deletion has occurred.
+[PR #736](https://github.com/Knapp-Kevin/skillz/pull/736).
+
 ## New skill package requirements
 
 **Required capability indexing:** A new first-party authored package is not complete merely because its files live under `skills/authored/<slug>/`. It must be indexed in `registry/authored-skills-index.json`, `registry/governed-review-name-index.json`, and the canonical `registry/capability-directory.json` under its evidence-backed domain/subdomain routes. The latter must include one canonical `skill_records` identity and `matched_skill_ids` links for every applicable domain; update browse previews and derived counts without counting cross-links as extra skills. Run `node scripts/qa/check-authored-capability-links.mjs` during authorized local repository maintenance. [November 8 example and exact evidence](../../registry/discovery/authored-capability-routing-20261108.json). This is discovery, not host permission or proof of behavioral validation.
