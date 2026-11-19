@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "repo": "Knapp-Kevin/skillz",
+  "commit": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+  "purpose": "COMPLETE_HISTORICAL_GIT_SOURCE_PACKAGE_PINNING_NOT_PARITY",
+  "historical_profiles": 17,
+  "complete_trees_verified": 17,
+  "original_entrypoint_pins": 17,
+  "bundled_manifest_pins": 16,
+  "inline_lists": 1,
+  "profile_case_slots": 85,
+  "existing_new_profile_count": 17,
+  "source_package_rows": [
+    {
+      "name": "claude-pulse",
+      "complete_package_tree_sha": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "INLINE_IN_SKILL_MD",
+      "specialized_profile": "anthropic-claude",
+      "specialized_section": "Compatibility and effective dates",
+      "case_ids": [
+        "P3-CLAUDE-1",
+        "P3-CLAUDE-2",
+        "P3-CLAUDE-3",
+        "P3-CLAUDE-4",
+        "P3-CLAUDE-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "deepseek-pulse",
+      "complete_package_tree_sha": "8984411410ccae81474a93e53c28a180ff61ec25",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "0acf86aa545c6c519ee95e364226badca5f32bda"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "deepseek-models",
+      "specialized_section": "Weights, terms and reproducibility",
+      "case_ids": [
+        "P3-DEEPSEEK-1",
+        "P3-DEEPSEEK-2",
+        "P3-DEEPSEEK-3",
+        "P3-DEEPSEEK-4",
+        "P3-DEEPSEEK-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "gemini-pulse",
+      "complete_package_tree_sha": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "02a7017d93b20f13392bdb0343d22ad3d5ebf440"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "google-gemini",
+      "specialized_section": "Developer migration risks",
+      "case_ids": [
+        "P3-GEMINI-1",
+        "P3-GEMINI-2",
+        "P3-GEMINI-3",
+        "P3-GEMINI-4",
+        "P3-GEMINI-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "github-pulse",
+      "complete_package_tree_sha": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "bfdce4b0e819ceab937b1b92d31313cde11595f4"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "github-discovery",
+      "specialized_section": "Promising repositories with verification gaps",
+      "case_ids": [
+        "P1-PULSE-01",
+        "P1-PULSE-02",
+        "P1-PULSE-03",
+        "P1-PULSE-04",
+        "P1-PULSE-05"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "glm-pulse",
+      "complete_package_tree_sha": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "741b61992356dc6a7ee2063fe54765b93fc3c039"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "glm-zai",
+      "specialized_section": "Publisher identity and model terms",
+      "case_ids": [
+        "P3-GLM-1",
+        "P3-GLM-2",
+        "P3-GLM-3",
+        "P3-GLM-4",
+        "P3-GLM-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "governance-pulse",
+      "complete_package_tree_sha": "506e6452333173778aa6e0e4e9a614b10cd12c58",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "ea931e8cb3adaebe7a8819bfa27af2902b356b76"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "ai-governance",
+      "specialized_section": "Binding obligations and scope",
+      "case_ids": [
+        "P3-GOVERNANCE-1",
+        "P3-GOVERNANCE-2",
+        "P3-GOVERNANCE-3",
+        "P3-GOVERNANCE-4",
+        "P3-GOVERNANCE-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "hf-pulse",
+      "complete_package_tree_sha": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "149e577a9f72895b09aea43d607203d731db1bce"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "e29fd6def1f6bf38d93ba3a8864b9fd264388e38"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "huggingface-ecosystem",
+      "specialized_section": "Artifact provenance and practical tests",
+      "case_ids": [
+        "P3-HF-1",
+        "P3-HF-2",
+        "P3-HF-3",
+        "P3-HF-4",
+        "P3-HF-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "inference-pulse",
+      "complete_package_tree_sha": "3eba79599f77970dd91367df55f1325ded8f2149",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "local-inference",
+      "specialized_section": "Measured integration impact",
+      "case_ids": [
+        "P3-INFERENCE-1",
+        "P3-INFERENCE-2",
+        "P3-INFERENCE-3",
+        "P3-INFERENCE-4",
+        "P3-INFERENCE-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "kimi-pulse",
+      "complete_package_tree_sha": "049e00a74897ba13f8168e7f8ce2a896d9937e84",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "d3916d9e018cdb00a7ce529933c4c95310aedb92"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "moonshot-kimi",
+      "specialized_section": "Agent capability versus demonstration",
+      "case_ids": [
+        "P3-KIMI-1",
+        "P3-KIMI-2",
+        "P3-KIMI-3",
+        "P3-KIMI-4",
+        "P3-KIMI-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "llama-pulse",
+      "complete_package_tree_sha": "53dbd090ce88c406296ff84fce4faa61534044cd",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "14b89191a00a7e1ffccb28ab47c32b1a5a84acdb"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "meta-llama",
+      "specialized_section": "Model use-rights and deployment fit",
+      "case_ids": [
+        "P3-LLAMA-1",
+        "P3-LLAMA-2",
+        "P3-LLAMA-3",
+        "P3-LLAMA-4",
+        "P3-LLAMA-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "mcp-pulse",
+      "complete_package_tree_sha": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "586ae9bffc9ff8112d4e460aa878b6ebe4015172"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "mcp-protocol",
+      "specialized_section": "Protocol compatibility and threat posture",
+      "case_ids": [
+        "P3-MCP-1",
+        "P3-MCP-2",
+        "P3-MCP-3",
+        "P3-MCP-4",
+        "P3-MCP-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "memory-pulse",
+      "complete_package_tree_sha": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "d05ad098fcb822b1af81798cae1321d135f3f042"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "agent-memory",
+      "specialized_section": "Memory mechanisms and qualification evidence",
+      "case_ids": [
+        "P3-MEMORY-1",
+        "P3-MEMORY-2",
+        "P3-MEMORY-3",
+        "P3-MEMORY-4",
+        "P3-MEMORY-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "mistral-pulse",
+      "complete_package_tree_sha": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "760e8d731d00ff99ac8eb7405ab7da9390745c43"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "mistral-models",
+      "specialized_section": "Availability and deployment rights",
+      "case_ids": [
+        "P3-MISTRAL-1",
+        "P3-MISTRAL-2",
+        "P3-MISTRAL-3",
+        "P3-MISTRAL-4",
+        "P3-MISTRAL-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "openai-pulse",
+      "complete_package_tree_sha": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "7453e54b0fd67f2fbf6ca8bad4e6f0e569b59a3b"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "openai-developer",
+      "specialized_section": "Developer compatibility changes",
+      "case_ids": [
+        "P3-OPENAI-1",
+        "P3-OPENAI-2",
+        "P3-OPENAI-3",
+        "P3-OPENAI-4",
+        "P3-OPENAI-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "perplexity-pulse",
+      "complete_package_tree_sha": "2929295240f02db18afc52eeb44a8d3c30ec8346",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "a7dc203a87bbb6eab1ccbbe40583c5f90eb74d46"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "perplexity-search",
+      "specialized_section": "Retrieval API versus consumer product",
+      "case_ids": [
+        "P3-PERPLEXITY-1",
+        "P3-PERPLEXITY-2",
+        "P3-PERPLEXITY-3",
+        "P3-PERPLEXITY-4",
+        "P3-PERPLEXITY-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "qwen-pulse",
+      "complete_package_tree_sha": "e328cb591e98f994d2646bae448cb779c6adee06",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "304be9866f211cec086f5479af9d872cac7d84b4"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "alibaba-qwen",
+      "specialized_section": "Checkpoint fit and licensing",
+      "case_ids": [
+        "P3-QWEN-1",
+        "P3-QWEN-2",
+        "P3-QWEN-3",
+        "P3-QWEN-4",
+        "P3-QWEN-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    },
+    {
+      "name": "xai-pulse",
+      "complete_package_tree_sha": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+      "files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "f3608fb81efd181a91ecf2c72b73930e073ab67f"
+        }
+      ],
+      "original_frozen_revision": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "entrypoint_matches_pin": true,
+      "source_manifest_matches_pin": true,
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "specialized_profile": "xai-grok",
+      "specialized_section": "Verified API impact over social noise",
+      "case_ids": [
+        "P3-XAI-1",
+        "P3-XAI-2",
+        "P3-XAI-3",
+        "P3-XAI-4",
+        "P3-XAI-5"
+      ],
+      "case_count": 5,
+      "fixture_replacement_trees": [
+        "3b6983ed4189ff93cecdccf55f6f086f7743617d"
+      ],
+      "current_replacement_tree": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "replacement_version_requalification": "REQUIRED",
+      "per_profile_behavioral_parity": "NOT_PROVEN",
+      "retirement": "HOLD"
+    }
+  ],
+  "limits": {
+    "historical_rights": "UNKNOWN",
+    "host_execution": 0,
+    "per_profile_behavior": "NOT_VERIFIED",
+    "improvement_1_5x": "NOT_PROVEN",
+    "note": "Previously registered test cases usually refer to prior authored package tree. Current TCI v1.2 source needs fresh per-profile qualification. Source tree proofs do not establish behavioral parity or current source freshness."
+  }
+}
