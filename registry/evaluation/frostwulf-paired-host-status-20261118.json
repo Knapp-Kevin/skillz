@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 15,
+    "legacy_retirements_approved": 17,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
-    "historical_full_package_trees_verified": 14,
-    "retired_under_owner_accepted_procedure": 15,
+    "historical_full_package_trees_verified": 16,
+    "retired_under_owner_accepted_procedure": 17,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -847,8 +847,8 @@
       "replacement_package_tree_sha1": "dd2872a6d5802ed55b29c3d5a1d01b0dc2730e2c",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
-      "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "critical_outcome_status": "SOURCE_LEVEL_CONTROLLED_CHECKS_ONLY_NOT_INDEPENDENT_HOST_PARITY",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_DECISIONS",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -897,16 +897,17 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_UNTRUNCATED_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_BY_INDEPENDENT_HOST",
+        "security_no_regression": "CONTROLLED_NEGATIVE_CASES_PASS_ONLY",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "consumer_ref_integrity": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+        "owner_evidence_acceptance": "BOUNDED_EMULATION_EXCEPTION",
+        "eligible_for_retirement": true,
+        "reason": "Five synthetic analyst output decisions passed; original/replacement trees verified. No independent host parity, 1.5x measurement, exhaustive consumer proof.",
+        "controlled_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
@@ -1941,8 +1942,8 @@
       "replacement_package_tree_sha1": "ca43eef9f7eb1b4ba5c4acef3c6c023d275037c1",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
-      "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "critical_outcome_status": "SOURCE_LEVEL_CONTROLLED_CHECKS_ONLY_NOT_INDEPENDENT_HOST_PARITY",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SYNTHETIC_DECISIONS",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -1991,16 +1992,17 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_UNTRUNCATED_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_BY_INDEPENDENT_HOST",
+        "security_no_regression": "CONTROLLED_NEGATIVE_CASES_PASS_ONLY",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "consumer_ref_integrity": "KNOWN_CANONICAL_ROUTES_RECONCILED_EXHAUSTIVE_NOT_PROVEN",
+        "owner_evidence_acceptance": "BOUNDED_EMULATION_EXCEPTION",
+        "eligible_for_retirement": true,
+        "reason": "Five synthetic analyst output decisions passed; original/replacement trees verified. No independent host parity, 1.5x measurement, exhaustive consumer proof.",
+        "controlled_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
     },
@@ -3518,5 +3520,5 @@
     "docs/evals/frostwulf-phase4c-operations-continuity-paired-scenarios.json"
   ],
   "design_coverage_status": "COMPLETE_SOURCE_LEVEL_CONTRACTS_NOT_HOST_EXECUTED",
-  "retirement_receipt_notice": "One original entrypoint retired under explicit owner-accepted controlled synthetic procedure tests; no independent model host execution, exhaustive consumer scan or 1.5x evidence. All other originals remain HOLD."
+  "retirement_receipt_notice": "17 original entrypoints retired under individual owner-accepted controlled emulation; 27 active; independent host parity and 1.5x unproven."
 }
