@@ -284,8 +284,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/claim-evidence-adjudicator.yaml",
       "verification_path": "registry/verification/local-skills/claim-evidence-adjudicator.yaml",
-      "skill_blob_sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
-      "package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "skill_blob_sha": "17e4d1f962eb31a9f7b64be57de434e60406bcaa",
+      "package_tree_sha": "9eebf126a00852db0cc3f055a2daf92243c59054",
       "package_file_count": 3,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -294,11 +294,14 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Independently drafted text and original synthetic examples. Legacy comparator: skills/fact-check/SKILL.md; its underlying authorship and rights are not proven. Seven-word overlap absent in compared source pairs, not a copyright determination.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/736",
-      "package_version": "1.0.0",
+      "package_version": "1.1.0",
       "capability_paths": [
         "research/fact-checking"
       ],
-      "capability_mapping_ref": "registry/discovery/frostwulf-independent-four-capability-routing-20261118.json"
+      "capability_mapping_ref": "registry/discovery/frostwulf-independent-four-capability-routing-20261118.json",
+      "previous_reviewed_skill_blob_sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
+      "previous_reviewed_package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "review_note": "2026-11-19 exact-package static comparison docs/reviews/2026-11-19-fact-check-controlled-retirement.md: reader-facing verdict and secondary-only confidence repairs, five offline synthetic trials; independent host A/B not run."
     },
     {
       "id": "research-methods-appraiser",
