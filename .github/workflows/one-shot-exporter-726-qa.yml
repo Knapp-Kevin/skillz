@@ -20,8 +20,8 @@ jobs:
           /tmp/skillz-export-qa-venv/bin/pip install --disable-pip-version-check --no-input PyYAML==6.0.3
       - name: Execute exact fixture and full population tests
         run: |
-          /tmp/skillz-export-qa-venv/bin/python -m unittest discover -s scripts/qa -p 'test-skill-mason-catalog.py' -v
-          /tmp/skillz-export-qa-venv/bin/python -m unittest discover -s scripts/qa -p 'test-skill-mason-export-identity.py' -v
+          /tmp/skillz-export-qa-venv/bin/python scripts/qa/test-skill-mason-catalog.py -v
+          /tmp/skillz-export-qa-venv/bin/python scripts/qa/test-skill-mason-export-identity.py -v
       - name: Build full checked-out corpus and qualify immutable candidate
         run: |
           /tmp/skillz-export-qa-venv/bin/python - <<'PY'
