@@ -1,0 +1,67 @@
+{
+  "schema_version": "skillz/unverified-presenter-prompting-leads/1",
+  "source": "https://youtu.be/c_McosB62a4?is=jYSsb1K1uceB7SCN",
+  "source_type": "OWNER_SUPPLIED_PRESENTER_SUMMARY_NOT_INDEPENDENTLY_VERIFIED",
+  "original_issue": "https://github.com/Knapp-Kevin/skillz/issues/722",
+  "reported_model_name": "Fable 5.2",
+  "model_identity_verified": false,
+  "vendor_attribution_verified": false,
+  "video_content_independently_verified": false,
+  "compatibility_evidence": "THIRD_PARTY_CLAIM",
+  "host_context": "UNKNOWN",
+  "effectiveness": "UNKNOWN",
+  "source_date": "2026-11-10",
+  "guidance_leads": [
+    {
+      "id": 1,
+      "facet": "effort-cost",
+      "claim": "Prefer higher effort for some tasks; presenter claims benefit per dollar."
+    },
+    {
+      "id": 2,
+      "facet": "verification-completion",
+      "claim": "Explicitly verify outputs with real tests rather than self-attestation."
+    },
+    {
+      "id": 3,
+      "facet": "verification-completion",
+      "claim": "Specify finish conditions for long tasks; completion remains unproven until observed."
+    },
+    {
+      "id": 4,
+      "facet": "legacy-instruction",
+      "claim": "Review inherited CLAUDE.md and earlier-model instructions for obsolete constraints."
+    },
+    {
+      "id": 5,
+      "facet": "effort-cost",
+      "claim": "Presenter claims effort and requested brevity affect cost differently; not verified."
+    },
+    {
+      "id": 6,
+      "facet": "reasoning-output",
+      "claim": "Request conclusions and evidence rather than hidden internal reasoning."
+    },
+    {
+      "id": 7,
+      "facet": "authority-delegation",
+      "claim": "Ownership wording may influence behavior, but never grants ownership or permissions."
+    },
+    {
+      "id": 8,
+      "facet": "authority-delegation",
+      "claim": "Do not mandate unnecessary subagent delegation; capability and permissions govern."
+    },
+    {
+      "id": 9,
+      "facet": "progress-style",
+      "claim": "Request progress milestones during long interactive work without implying background execution."
+    },
+    {
+      "id": 10,
+      "facet": "progress-style",
+      "claim": "Specify output style and length independently of reasoning effort."
+    }
+  ],
+  "note": "Unverified research leads only; not attached to a governed skill, not host evaluation results, not official vendor documentation or instructions for any installed skill."
+}
