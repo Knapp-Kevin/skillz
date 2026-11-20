@@ -9,14 +9,12 @@ The following original entrypoints remain available only while each source's con
 - [`claude-pulse`](../../claude-pulse/) — Anthropic and Claude updates.
 - [`gemini-pulse`](../../gemini-pulse/) — Gemini and DeepMind developments.
 - [`github-pulse`](../../github-pulse/) — trending and notable GitHub repositories.
-- [`glm-pulse`](../../glm-pulse/) — Zhipu / GLM developments.
 - [`governance-pulse`](../../governance-pulse/) — AI governance, standards, and policy developments.
 - [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
 - [`kimi-pulse`](../../kimi-pulse/) — Moonshot AI / Kimi developments.
 - [`llama-pulse`](../../llama-pulse/) — Meta AI / Llama developments.
 - [`mcp-pulse`](../../mcp-pulse/) — Model Context Protocol ecosystem activity.
 - [`memory-pulse`](../../memory-pulse/) — agent-memory and context-engineering developments.
-- [`mistral-pulse`](../../mistral-pulse/) — Mistral AI developments.
 - [`openai-pulse`](../../openai-pulse/) — OpenAI product, API, SDK, and model developments.
 - [`perplexity-pulse`](../../perplexity-pulse/) — Perplexity product and API developments.
 
@@ -27,3 +25,5 @@ The xAI/Grok route now lives only in the active [Technology Change Intelligence]
 The historical paths above are retained for source-bound comparison, not endorsed as new installations. Individual retirements must reconcile these links. The repository's own maintenance procedures live under `engine/skills/`, separate from user-facing skills.
 
 The historical [Qwen](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse) and [DeepSeek](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse) packages are now archived, not active installation choices. Use the `alibaba-qwen` and `deepseek-models` profiles inside the independently authored Technology Change Intelligence package above.
+
+The historical [GLM/Z.ai](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse) and [Mistral](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse) entrypoints are archived for evidence only. Use the `glm-zai` and `mistral-models` profiles in the authored Technology Change Intelligence skill.
