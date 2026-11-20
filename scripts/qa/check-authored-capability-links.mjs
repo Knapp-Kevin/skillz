@@ -66,13 +66,14 @@ for (const d of directory.domains) {
 // The authored routing check must also refuse resurrection of an archived skill.
 const retirement = auditRetiredRoutes(root);
 if (!retirement.ok) fail('retired source/navigation drift: ' + retirement.problems.join('; '));
-const retiredNames = new Set(retirement.historicalIds ?? []);
-// IDs are derived from the immutable source ledger, never from fuzzy file names.
+// Resolve exact historical IDs from the canonical retirement ledger.
+const retiredNames = new Set();
 const oldEntries = load('registry/migration/frostwulf-independent-replacement-ledger-20261118.json').rows;
 for (const item of oldEntries) {
-  const match = /^skills\\/([^/]+)\\/SKILL\\.md$/.exec(item.legacy_entrypoint ?? '');
-  if (!match) fail('invalid historical source in complete-scan input');
-  retiredNames.add(match[1]);
+  const parts = (item.legacy_entrypoint ?? '').split('/');
+  if (parts.length !== 3 || parts[0] !== 'skills' || !parts[1] || parts[2] !== 'SKILL.md')
+    fail('invalid historical source in complete-scan input');
+  retiredNames.add(parts[1]);
 }
 const consumer = auditRetiredSkillConsumers(root, retiredNames);
 if (!consumer.ok) fail('active retired skill consumer links: ' + consumer.problems.join('; '));
