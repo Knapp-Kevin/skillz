@@ -34286,7 +34286,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Eleven-file source-specific standalone offline-closure review, 17 unchanged specialized profile/report contracts, new interest-first and ad-hoc topic modes; 17 structural checks + 12 executed analyst-output contract checks; no actual host behavior.",
+      "link_basis": "Eleven-file v1.2.5 standalone static review; 16 unchanged named profiles and a restored 30-day GitHub discovery horizon; 17 original report contracts preserved. Earlier structural and analyst-output checks do not prove independent host behavior.",
       "restriction": "Reference-only; no service, saved subscriber, persistent memory, recurring monitoring or private data access enabled",
       "unchanged_use_approved": false
     },
