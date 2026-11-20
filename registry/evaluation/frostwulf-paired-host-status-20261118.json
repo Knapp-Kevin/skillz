@@ -548,6 +548,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -1050,6 +1060,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -1390,6 +1410,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -1485,6 +1515,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -1578,6 +1618,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -1672,6 +1722,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -1851,6 +1911,16 @@
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN",
         "controlled_sources": "MODEL_DATASET_LIBRARY_SPACE_PAPER_METADATA; NOT_FULL_TREND_SCAN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2020,6 +2090,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2114,6 +2194,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2282,6 +2372,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2376,6 +2476,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2556,6 +2666,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2649,6 +2769,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -2743,6 +2873,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -3009,6 +3149,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -3102,6 +3252,16 @@
         "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     },
     {
@@ -3898,6 +4058,16 @@
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN",
         "known_consumer_audit": "42_READABLE_HIGH_PRIORITY_NAVIGATION_AND_REGISTRY_FILES_SCANNED_PARTIAL; GITHUB_SEARCH_INCOMPLETE"
+      },
+      "current_replacement_pin": {
+        "as_of": "2026-11-20",
+        "package_version": "1.2.5",
+        "entrypoint_git_blob_sha1": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+        "complete_package_git_tree_sha1": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+        "targeted_change": "github-discovery default 14 to 30; other 16 profiles unchanged",
+        "host_execution": "NOT_RUN",
+        "historical_controlled_acceptance_remains": "1.2.4",
+        "current_behavioral_parity": "NOT_PROVEN"
       }
     }
   ],

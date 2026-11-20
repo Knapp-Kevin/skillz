@@ -77,7 +77,7 @@
         "GitHub pulse",
         "trending repositories"
       ],
-      "window_days": 14,
+      "window_days": 30,
       "source_lanes": [
         "repository release and commit history",
         "source identity and license",

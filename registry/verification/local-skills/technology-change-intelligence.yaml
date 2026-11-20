@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: technology-change-intelligence
-skill_version: "1.2.4"
+skill_version: "1.2.5"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/technology-change-intelligence/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/technology-change-intelligence/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: da2ed091777ed05e7ac94454439c3404c824408d
-complete_package_tree_sha: 4514fd326d170a49be9f43fcfdcbcd4e2983f8fb
+content_blob_sha: 7a2a66d3de1147cb83fa42176d501b81b6338770
+complete_package_tree_sha: 7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7
 characterized_at: "2026-11-19"
-reviewed_at: "2026-11-19"
+reviewed_at: "2026-11-20"
 verification_status: verified
 verification_basis: maintainer-complete-package-static-review
 validation_status: not-run
-validation_note: "v1.2.4 MCP overlap authority gate; controlled single-context example, 85 earlier-version emulations not a host pass."
+validation_note: "v1.2.5 MCP overlap authority gate; controlled single-context example, 85 earlier-version emulations not a host pass."
 rubric: docs/skill-verification.md
 rubric_score: "19/20"
 tags:
@@ -24,10 +24,12 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Complete eleven-file standalone v1.2.4 package static review at 19/20. All
+  Targeted eleven-file standalone v1.2.5 source review, prior 19/20 static rubric retained; GitHub discovery default restored to 30 days. All
   mandatory Markdown references resolve within package; 17 previously authored
   profile contracts remain distinct; unrestricted ad-hoc topic route and
   explicit user-interest intake are privacy- and authority-bounded.
   docs/reviews/2026-11-19-tci-mcp-capability-gate-v1-2-4.md.
   Actual host/subscription behavior, historical Pulse parity, and 1.5x
   improvement remain NOT_PROVEN.
+
+latest_targeted_review: docs/reviews/2026-11-20-tci-github-30day-and-qa-canonical-pin.md

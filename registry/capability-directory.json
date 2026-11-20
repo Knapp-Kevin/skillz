@@ -34268,8 +34268,8 @@
       "id": "local-skills/technology-change-intelligence",
       "source_id": "local-skills",
       "skill_name": "technology-change-intelligence",
-      "content_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
-      "complete_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "content_blob_sha": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+      "complete_package_tree_sha": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "19/20",
@@ -34286,7 +34286,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Nine-file source-specific standalone offline-closure review, 17 unchanged specialized profile/report contracts, new interest-first and ad-hoc topic modes; 17 structural checks + 12 executed analyst-output contract checks; no actual host behavior.",
+      "link_basis": "Eleven-file independently authored Technology Change Intelligence v1.2.5, 17 profiles, 30-day GitHub discovery default, known trust and retrieval boundaries; targeted static source review only. Earlier v1.2.4 cases are not current host executions.",
       "restriction": "Reference-only; no service, saved subscriber, persistent memory, recurring monitoring or private data access enabled",
       "unchanged_use_approved": false
     },
@@ -34432,8 +34432,8 @@
       "source_id": "local-skills",
       "skill_name": "ci-guard",
       "source_snapshot_revision": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
-      "content_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
-      "complete_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
+      "content_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
+      "complete_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34450,7 +34450,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Exact v1.1 six-file source with optional targeted decision help; static reviewed under universal adaptive standard; independent cross-model behavior not run",
+      "link_basis": "Independent first-party CI Guard v1.2.0 six-file exact package and 18/20 static review; existing offline references close, current host A/B not run. Source pins reconciled against authored index without changing CI Guard itself.",
       "restriction": "Read-only reference. External CI changes, token/branch-rule edits, merging and deployment need separate authorization.",
       "unchanged_use_approved": false
     }

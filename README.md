@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## GitHub discovery 30-day default restored (November 20, 2026)
+
+The independently authored [Technology Change Intelligence v1.2.5](skills/authored/technology-change-intelligence/SKILL.md) restores the original GitHub Pulse **30-day** on-demand discovery default instead of v1.2.4's 14 days. User-specified windows still override the default; unknown source coverage is disclosed rather than asserted. The [source and exact-pin review](docs/reviews/2026-11-20-tci-github-30day-and-qa-canonical-pin.md) also repairs stale canonical capability links for Technology Change Intelligence and CI Guard. Historical v1.2.4 retirement receipts remain untouched. No independent host A/B, customer outcome or measured 1.5× gain is claimed.
+
 ## Historical TODO Harvester tree verified after retirement (November 20, 2026)
 
 [Exact one-file original Git package receipt](docs/evals/receipts/2026-11-20-todo-post-retirement-complete-package-tree.json) verifies the previously unenumerated TODO Harvester source tree at immutable commit `c95b31e6d0955f00c5ae14bb59ceee821de20b2c`. All 44 historical package identities now have full-tree verification recorded. This is **post-retirement source integrity**, not retroactive proof of historical pre-deletion review, observed host parity, measured 1.5× quality or resolved copyright.
