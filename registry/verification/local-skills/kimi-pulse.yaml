@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 6625f147011dfd38ed2b9881eda2d5ea62e2ece4
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
@@ -22,3 +23,11 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "2026-11-04 current exact-version source semantic 18/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: moonshot-kimi
+retirement_receipt: docs/evals/receipts/2026-11-20-kimi-v124-source-bound-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

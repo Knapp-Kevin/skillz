@@ -215,71 +215,6 @@
       "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
     },
     {
-      "skill_name": "kimi-pulse",
-      "local_path": "skills/kimi-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 6625f147011dfd38ed2b9881eda2d5ea62e2ece4 static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "llama-pulse",
-      "local_path": "skills/llama-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
       "skill_name": "mcp-pulse",
       "local_path": "skills/mcp-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2414,6 +2349,87 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "kimi-pulse",
+      "local_path": "skills/kimi-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source 6625f147011dfd38ed2b9881eda2d5ea62e2ece4 static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "moonshot-kimi",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-kimi-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "llama-pulse",
+      "local_path": "skills/llama-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "meta-llama",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/llama-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-llama-v124-source-bound-retirement.json"
     }
   ]
 }
