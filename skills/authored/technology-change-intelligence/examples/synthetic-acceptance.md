@@ -106,3 +106,11 @@ These **new** bounded cases test the skill's subscriber methodology and open-top
 ## Capability scope
 
 The bundled methodology permits a minimal evidence-grounded route and a richer cross-domain route without model-tier gates. Both obey identical privacy and source-integrity constraints. The reference profile catalog must remain complete and each legacy pulse's unique report contract must still be assessed separately before historical retirement.
+
+## GitHub discovery 30-day regression (v1.2.5)
+
+- User asks for a generic on-demand GitHub Pulse on November 20, 2026 without a date: analyze **October 21–November 20, 2026** as the stated 30-day date horizon; don't silently narrow to a 14-day scan. A named interval overrides that default.
+- Case A: a new repository created October 30, last pushed November 2 and a separately older repository pushed November 19 are distinct types. Include the former in a 30-day creation candidate population when its sources are actually read; never classify the latter as newly created.
+- Case B: a user requests November 13–20 explicitly. Honor that 7-day interval and label it rather than reverting to 30 days.
+- Case C: if public search tools cannot cover the full 30-day window, say `30_DAY_COVERAGE_NOT_CHECKED` for the missing portion. Do not imply a 30-day audit was executed just because that is the default.
+- In all cases, preserve source licensing uncertainty, unknown prior-candidate deduplication, cap deeper investigation suggestions at three, and perform no registry write or scheduling.
