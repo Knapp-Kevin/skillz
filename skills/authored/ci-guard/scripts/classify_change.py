@@ -62,10 +62,32 @@ def changed_paths(repo: Path, base: str, head: str) -> list[str]:
         if actual.lower() != ref.lower():
             raise ClassificationError("Unverified commit object: " + ref)
     raw = git(repo, "diff", "--no-ext-diff", "--no-renames",
-              "--name-only", "-z", base, head)
-    files = [p.decode("utf-8", errors="strict") for p in raw.split(b"\0") if p]
+              "--raw", "-z", base, head)
+    # Raw --no-renames format: :oldmode newmode oldoid newoid status NUL path NUL.
+    # Both sides of a rename are evaluated. A symlink, submodule, executable
+    # bit or unknown file mode must never be misclassified as docs-only.
+    chunks = raw.split(b"\0")
+    if chunks and chunks[-1] == b"":
+        chunks.pop()
+    if len(chunks) % 2:
+        raise ClassificationError("Malformed raw diff; refuse reduced checks")
+    files = []
+    nonregular = False
+    for i in range(0, len(chunks), 2):
+        header, path = chunks[i], chunks[i + 1]
+        meta = header.decode("ascii", errors="strict").split()
+        if len(meta) != 5 or not meta[0].startswith(":"):
+            raise ClassificationError("Malformed raw change record")
+        before_mode, after_mode, status = meta[0][1:], meta[1], meta[4]
+        if status not in {"A", "M", "D", "T"}:
+            nonregular = True
+        if any(mode not in {"000000", "100644"} for mode in (before_mode, after_mode)):
+            nonregular = True
+        files.append(path.decode("utf-8", errors="strict"))
     if len(files) > MAX_FILES:
         return ["__TOO_MANY_CHANGED_FILES__"]
+    if nonregular:
+        files.append("__NONREGULAR_FILE_OR_MODE__")
     return files
 
 
