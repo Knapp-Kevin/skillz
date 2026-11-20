@@ -4545,7 +4545,7 @@
       "domain": "career",
       "display_name": "Career",
       "linked_reviewed_examples": 2,
-      "subdomains_with_linked_examples": 4,
+      "subdomains_with_linked_examples": 3,
       "name_only_candidate_count": 0,
       "evidence_preview": [
         {
@@ -34525,11 +34525,11 @@
     "mapped_first_party_distinct": 52,
     "mapped_third_party_distinct": 79,
     "mapped_total_distinct": 131,
-    "subdomains_with_evidence_linked_examples": 88,
+    "subdomains_with_evidence_linked_examples": 87,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
-    "note": "22 separately risk-accepted controlled historical retirements and 22 historical originals active. Host A/B parity and exhaustive consumer scanning not proven.",
+    "note": "44 historical entrypoints retired under owner-accepted source-specific procedures; none active. Independent paired host A/B and 1.5x effectiveness remain not proven.",
     "q8_study_method_examples": 50,
     "q8_study_methods_domains": 33
   },

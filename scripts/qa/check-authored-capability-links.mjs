@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { auditRetiredRoutes } from './check-retired-skill-routes.mjs';
+import { auditRetiredSkillConsumers } from './check-retired-skill-consumers.mjs';
 
 const root = process.cwd();
 const load = (p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
@@ -65,5 +66,19 @@ for (const d of directory.domains) {
 // The authored routing check must also refuse resurrection of an archived skill.
 const retirement = auditRetiredRoutes(root);
 if (!retirement.ok) fail('retired source/navigation drift: ' + retirement.problems.join('; '));
+// Resolve exact historical IDs from the canonical retirement ledger.
+const retiredNames = new Set();
+const oldEntries = load('registry/migration/frostwulf-independent-replacement-ledger-20261118.json').rows;
+for (const item of oldEntries) {
+  const parts = (item.legacy_entrypoint ?? '').split('/');
+  if (parts.length !== 3 || parts[0] !== 'skills' || !parts[1] || parts[2] !== 'SKILL.md')
+    fail('invalid historical source in complete-scan input');
+  retiredNames.add(parts[1]);
+}
+const consumer = auditRetiredSkillConsumers(root, retiredNames);
+if (!consumer.ok) fail('active retired skill consumer links: ' + consumer.problems.join('; '));
+if (consumer.unclassifiedTextFiles !== 0)
+  fail('full-scan coverage incomplete: ' + consumer.unclassifiedTextFiles + ' oversized/binary text candidates');
 console.log('Historical routing OK:', retirement.historical, 'retired,', retirement.checkedLinks, 'active navigation links');
+console.log('Full consumer audit OK:', consumer.filesEnumerated, 'files,', consumer.textFiles, 'text files,', consumer.markdownLinksInspected, 'Markdown links; active retired links', consumer.activeLegacyRouteLinks.length);
 console.log('Authored routing OK:', authored.length, 'authored,', records.size, 'mapped identities,', linkedSubs, 'linked subdomains');
