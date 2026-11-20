@@ -7,7 +7,7 @@
     "cloud-devops/ci-cd": [
       {
         "skill_identity": "local-skills/ci-guard",
-        "profile_revision": "2026-11-20.1",
+        "profile_revision": "2026-11-20.2",
         "observed_effectiveness": "UNKNOWN"
       }
     ],
