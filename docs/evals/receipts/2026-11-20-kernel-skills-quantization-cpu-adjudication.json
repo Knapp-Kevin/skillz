@@ -1,0 +1,75 @@
+{
+  "acceptance": {
+    "capability_mapping_approved": false,
+    "cuda_compiled": false,
+    "gpu_execution_observed": false,
+    "hardware_device_compatibility_tested": false,
+    "host_authority_granted": false,
+    "new_governed_skills_admitted": 0,
+    "package_specific_rights_established": false,
+    "performance_claims_reproduced": false,
+    "publisher_authenticated": false,
+    "third_party_code_executed": false
+  },
+  "checks": {
+    "131072_symmetric_accumulation_would_overflow": false,
+    "arithmetic_safe_symmetric_k_max": 133144,
+    "avoided_int32_intermediate_128_square_bytes_per_direction": 65536,
+    "avoided_int32_intermediate_512_square_bytes_per_direction": 1048576,
+    "block_size_64_group_size_96_start_64_crosses": true,
+    "correct_rounding_step_bound_without_saturation": "scale / 2",
+    "example_claimed_scalar_output_error_bound": 0.003937007874015748,
+    "example_quantized_dot_error": 62.23,
+    "example_reconstructed_dot": 16129,
+    "example_unquantized_dot": 16191.23,
+    "example_valid_no_clipping_analytical_dot_bound": 191.245,
+    "first_symmetric_int32_overflow_k": 133145,
+    "global_half_scale_tolerance_can_hide_other_groups": true
+  },
+  "claim_facts": {
+    "independent_math": "integer arithmetic and CPU-only Python stdlib regression suite",
+    "nvidia_ptx_sm_61_dp4a": "https://docs.nvidia.com/cuda/parallel-thread-execution/",
+    "proof_source": "proof/quantization/int8/int8-quantized-proof.md"
+  },
+  "package_dispositions": {
+    "inference/write-triton-dequant-kernel": "SOURCE-INSPECTED; REFERENCE-ONLY; UNCHANGED-USE-HOLD",
+    "quantization/debug-quantized-kernel-accuracy": "SOURCE-INSPECTED; REFERENCE-ONLY; UNCHANGED-USE-HOLD",
+    "quantization/write-int8-quantized-kernel": "SOURCE-INSPECTED; REFERENCE-ONLY; UNCHANGED-USE-HOLD"
+  },
+  "schema": "skillz/quantized-kernel-static-cpu-adjudication/1",
+  "source": {
+    "additional_proof_git_blob": "8ea720219ade32886435b71ea6613633d4b436c3",
+    "commit": "7b7337a123f8711aa8e3d0452351d8fd30dde4b7",
+    "packages": {
+      "inference/write-triton-dequant-kernel": {
+        "metadata_blob": "0a327c0563f5d478fe6d19a43aa9e7a6358f07c7",
+        "package_files": [
+          "SKILL.md",
+          "skill.json"
+        ],
+        "package_tree": "f6fc2496c7361f66aba0c49a7903b33010271e3f",
+        "skill_blob": "7607a10910bab6efc8ddec64181f8c1c63607a6e"
+      },
+      "quantization/debug-quantized-kernel-accuracy": {
+        "metadata_blob": "d402b28f00634b759c74594edfe9404c087f472c",
+        "package_files": [
+          "SKILL.md",
+          "skill.json"
+        ],
+        "package_tree": "22393b767b89f64ab669ed3507d6ae49bc6a1a43",
+        "skill_blob": "4a09a68f143ae47c78df0bdea5b5db1854ebca93"
+      },
+      "quantization/write-int8-quantized-kernel": {
+        "metadata_blob": "30824f4a8b0c6166ba663201b081780d71af9c43",
+        "package_files": [
+          "SKILL.md",
+          "skill.json"
+        ],
+        "package_tree": "34ba484cf823a3f0d74b3b4aad70db7163fc2112",
+        "skill_blob": "66453dc4e638d285cd30ae98bc7236b96c9b90bd"
+      }
+    },
+    "repository": "https://github.com/tensormux/kernel-skills",
+    "tree": "01ac1803e1046fe2883a1bd089d70aa817ddc8d8"
+  }
+}
