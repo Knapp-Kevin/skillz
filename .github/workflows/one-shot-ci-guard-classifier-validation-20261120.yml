@@ -25,7 +25,7 @@ jobs:
           from pathlib import Path
           import ast, json, re, subprocess, tempfile
           root=Path("skills/authored/ci-guard")
-          all_files=[p for p in root.rglob("*") if p.is_file()]
+          all_files=[p for p in root.rglob("*") if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"]
           assert len(all_files)==10, [str(p) for p in all_files]
           assert (root/"LICENSE").exists()
           for p in all_files:
