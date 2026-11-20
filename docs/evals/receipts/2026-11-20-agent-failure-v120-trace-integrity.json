@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "issue": 738,
+  "skill": "agent-failure-boundary-analysis",
+  "source_version": "1.2.0",
+  "source_blob_sha1": "447d9934db360eb3ff6309a5033f119914c1eced",
+  "package_tree_sha1": "cd86911fe032fc423c8e2008d3683522490d3f04",
+  "method_script_blob_sha1": "4201e6d39f27660c41f02cd857af71427624ec12",
+  "local_executed_script_blob_sha1": "4201e6d39f27660c41f02cd857af71427624ec12",
+  "test_script_blob_sha1": "d4f4aa1ea5a80f26208b1f0b8020aac95400de9e",
+  "local_executed_test_blob_sha1": "d4f4aa1ea5a80f26208b1f0b8020aac95400de9e",
+  "fixture_blob_sha1": "8a55313aeec7cd58ad1f733e5008170058179a86",
+  "environment": "Isolated local Python standard library; no repository/network access in checker",
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v",
+    "PYTHONDONTWRITEBYTECODE=1 python scripts/audit_trace.py --input examples/pr815-public-receipts-negative-control.json"
+  ],
+  "results": {
+    "python_regression_tests_run": 31,
+    "passed": 31,
+    "failed": 0,
+    "cli_public_source_negative_control": true,
+    "claim_results": [
+      {
+        "claim": "MERGED",
+        "recorded_input": "SUPPORTED_BY_RECORDED_INPUT"
+      },
+      {
+        "claim": "CI_PASSED",
+        "recorded_input": "SUPPORTED_BY_RECORDED_INPUT"
+      },
+      {
+        "claim": "DEPLOYED",
+        "recorded_input": "INSUFFICIENT_RECORDED_EVIDENCE"
+      },
+      {
+        "claim": "USER_OUTCOME_VERIFIED",
+        "recorded_input": "INSUFFICIENT_RECORDED_EVIDENCE"
+      }
+    ],
+    "root_cause": "NOT_DETERMINED",
+    "evidence_authenticity_verified": false
+  },
+  "public_receipts": [
+    "https://github.com/Knapp-Kevin/skillz/pull/815",
+    "https://github.com/Knapp-Kevin/skillz/runs/136497431818",
+    "https://github.com/Knapp-Kevin/skillz/runs/136497403519"
+  ],
+  "source_readback": {
+    "pr_number": 815,
+    "merge_commit": "99b3fe70ce889d8c07903d0eab3baad1d60c52e4",
+    "merged_at_utc": "2026-11-20T18:52:12Z",
+    "alerts_check_success_utc": "2026-11-20T18:50:27Z",
+    "project_report_success_utc": "2026-11-20T18:50:25Z"
+  },
+  "scenario_type": "RECORDED_REAL_PUBLIC_GITHUB_EVIDENCE_WITH_TWO_INTENTIONALLY_FALSE_SYNTHETIC_COMPLETION_CLAIMS",
+  "scope": "Methods produce a consistency report from a user-supplied bounded record; no accounts, commits, branches or issue state are mutated by the checker",
+  "evidence_limitations": [
+    "Real PR/check facts were read via GitHub connector separately, not authenticated by bundled script",
+    "Negative deployment and verified-user-outcome claims are fabricated solely for the test; not an observed incident",
+    "No independent original-agent-postmortem versus replacement-model-host A/B",
+    "No real-world incident classification or user outcome evaluated",
+    "No 1.5x overall skill effectiveness result; source-level limited method functionality only",
+    "Caller-supplied event type/after-dependency/approval scope may be incorrect; false external facts are not detected"
+  ],
+  "historical_source_rights": "NOT_ESTABLISHED",
+  "historical_comparator": "skills/agent-postmortem/SKILL.md",
+  "historical_retirement_pin_preserved": true,
+  "assertions": "31/31 local method tests; no model-host skill outcome or external deployment inferred"
+}

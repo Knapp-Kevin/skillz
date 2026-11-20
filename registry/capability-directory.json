@@ -32994,8 +32994,8 @@
       "id": "local-skills/agent-failure-boundary-analysis",
       "source_id": "local-skills",
       "skill_name": "agent-failure-boundary-analysis",
-      "content_blob_sha": "4a114972587060c79ee6df852526a0a047abd3c2",
-      "complete_package_tree_sha": "426391a3bea7e75f364fe86da8845dee2718f8a5",
+      "content_blob_sha": "447d9934db360eb3ff6309a5033f119914c1eced",
+      "complete_package_tree_sha": "cd86911fe032fc423c8e2008d3683522490d3f04",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33012,7 +33012,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "link_basis": "Current six-file v1.2 original source; maintainer static 18/20; 31 local offline Python method checks and public GitHub receipt negative control, no independent model-host original comparison",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },

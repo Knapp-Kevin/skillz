@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "incident_id": "SKILLZ-PR815-UNSUPPORTED-DEPLOYMENT-CONTROL",
+  "inventory_complete": false,
+  "attempt_budget": null,
+  "events": [
+    {
+      "id": "socket-alerts",
+      "kind": "CI_RECEIPT",
+      "state": "OBSERVED",
+      "source_ref": "https://github.com/Knapp-Kevin/skillz/runs/136497431818",
+      "after": []
+    },
+    {
+      "id": "socket-project",
+      "kind": "CI_RECEIPT",
+      "state": "OBSERVED",
+      "source_ref": "https://github.com/Knapp-Kevin/skillz/runs/136497403519",
+      "after": []
+    },
+    {
+      "id": "merge",
+      "kind": "PR_MERGE_RECEIPT",
+      "state": "OBSERVED",
+      "source_ref": "https://github.com/Knapp-Kevin/skillz/pull/815#merged-2026-11-20T18:52:12Z-99b3fe70ce889d8c07903d0eab3baad1d60c52e4",
+      "after": ["socket-alerts", "socket-project"]
+    }
+  ],
+  "claims": [
+    {"id": "pr-was-merged", "kind": "MERGED", "evidence_refs": ["merge"]},
+    {"id": "ci-was-green", "kind": "CI_PASSED", "evidence_refs": ["socket-alerts", "socket-project"]},
+    {"id": "invented-production-deployment", "kind": "DEPLOYED", "evidence_refs": ["merge"]},
+    {"id": "invented-user-outcome", "kind": "USER_OUTCOME_VERIFIED", "evidence_refs": ["merge"]}
+  ]
+}

@@ -57,7 +57,19 @@
       "current_active_reference": "skills/authored/agent-failure-boundary-analysis/SKILL.md",
       "consumer_scan_status": "KNOWN_ACTIVE_REGISTRIES_RECONCILED_EXHAUSTIVE_SEARCH_NOT_PROVEN",
       "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18",
-      "retirement_behavioral_claim": "NO_INDEPENDENT_MODEL_A_B; 1.5x_not_proven"
+      "retirement_behavioral_claim": "NO_INDEPENDENT_MODEL_A_B; 1.5x_not_proven",
+      "current_active_source_method": {
+        "version": "1.2.0",
+        "entrypoint": "skills/authored/agent-failure-boundary-analysis/SKILL.md",
+        "skill_blob_sha": "447d9934db360eb3ff6309a5033f119914c1eced",
+        "package_tree_sha": "cd86911fe032fc423c8e2008d3683522490d3f04",
+        "evidence": "docs/evals/receipts/2026-11-20-agent-failure-v120-trace-integrity.json",
+        "test_result": "31_LOCAL_PYTHON_TESTS_PASS",
+        "scope": "OFFLINE_METHOD_CONSISTENCY_WITH_PUBLIC_SOURCE_NEGATIVE_CONTROL",
+        "historical_retirement_pin_unchanged": true,
+        "agent_host_parity": "NOT_PROVEN",
+        "overall_gain_1_5x": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/automation-receipts/SKILL.md",

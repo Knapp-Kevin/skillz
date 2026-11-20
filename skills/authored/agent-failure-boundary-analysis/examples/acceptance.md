@@ -1,4 +1,4 @@
-# Synthetic acceptance scenarios: Agent Failure Boundary Analysis v1.1
+# Synthetic acceptance scenarios: Agent Failure Boundary Analysis v1.2
 
 These are **original hypothetical test inputs and expected decisions**, not
 records of agent-host execution. Test against a pinned complete package;
@@ -39,3 +39,36 @@ explicitly test these outcomes independently of general static quality:
 
 An actual >=1.5x claim requires equivalent, permitted paired runs and
 scored real outputs. Merely listing these tests means NOT_RUN.
+
+
+## Optional method executable qualification (v1.2)
+
+The standalone \`scripts/audit_trace.py\` has 31 actual Python regression
+tests at \`tests/test_audit_trace.py\`, distinct from the earlier
+agent-written textual emulations. Run with
+\`python3 -m unittest discover -s tests -v\`.
+
+The negative control at
+\`examples/pr815-public-receipts-negative-control.json\` records
+**real, verified public GitHub source references** for Skillz PR #815:
+both successful Socket Security checks and its merge receipt.
+It then deliberately supplies two **fictional** claims: that the PR
+was deployed to production and that the requested user-visible
+outcome was verified. The checker must return supported *recorded
+input* for the merge and check receipts but
+INSUFFICIENT_RECORDED_EVIDENCE for deployment and user outcome.
+This is a negative test of source-to-conclusion promotion, **not**
+a claim of an actual production failure or incident.
+
+Other executable cases exercise explicit precedence versus input order;
+cycle, self-edge and missing-reference refusal; missing/duplicate IDs;
+alleged versus observed evidence; scoped approval and write ordering;
+no budget, exceeded budget, incomplete attempt inventory and supplied
+complete inventory; inert untrusted text; malformed/extra JSON fields;
+large-file refusal; and CLI stdout-only behavior.
+
+The checker cannot establish causal sufficiency, completeness of the
+input, correct event-type classification, validity of source pointers,
+or owner approval. Its own output always marks source authenticity
+NOT_VERIFIED and root cause NOT_DETERMINED. No independently isolated
+old/new agent-host skill comparison or overall 1.5x effect has run.
