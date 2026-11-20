@@ -13,10 +13,10 @@ Track discovery leads, complete-package inspection, static disposition, dependen
 | Phase | Required result | Status |
 |---|---|---|
 | 1. Ingestion | Parseable, paired, unambiguous companions with preservation receipt | [Completed for 2,084 files](reviews/2026-11-17-companion-yaml-ingestion-repair.md) |
-| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; 122/1,043 identities mapped |
-| 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; one bounded melody outcome defined; remaining workflow decomposition pending |
+| 2. Evidence reconciliation | Status vocabulary and identity lookup agree; supplementary exact-pinned routes enter canonical navigation without promoting discovery leads | In progress; November 18 source-review checkpoint 131/1,047 governed identities mapped (104 verified-static + 27 rejected); 916 unmapped, links are not essential-outcome or host-behavior acceptance |
+| 3. Outcome definitions | Essential workflows and acceptance criteria for all 33 domains; reconcile 25 provisional areas and additional taxonomy gaps | In progress: all 247 recognized subdomains indexed; six partially decomposed subdomains with eight bounded outcomes including file-management governance; 241 still require decomposition |
 | 4. Balanced qualification | Equal effort for discovery and complete-package evaluation; decisive evidence-bound dispositions | Pending ongoing tranches |
-| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | One original constrained-melody package delivered; continue comparison-led authorship under `skills/authored/<slug>/` |
+| 5. Targeted authorship | Original packages where comparison establishes unmet outcomes or unusable rights/dependencies | Original melody, four file/information-management methods and 21 newly drafted independent historical-function replacements are now statically registered; twenty-two sources (`todo-harvester`, `agent-postmortem`, `automation-receipts`, `decision-log`, `permissions-review`, `mcp-vetting`, `agent-home-doctor`, `fact-check`, `paper-digest`, `career-radar`, `handoff-writer`, `standup-writer`, `week-in-review`, `deck-outline`, `devlog-draft`, `deep-dive`, `learning-plan`, `smallbiz-ops`, `daily-briefing`, `finance-review`, `inbox-triage`, `task-surface`) retired after separately documented owner-approved controlled checks; 22 others retained. No independent host A/B or exhaustive consumer scan claimed. Maintain source comparison, rights and behavior boundaries before further authorship or deletion under `skills/authored/<slug>/` |
 | 6. Application readiness | Export distinguishes references, eligible packages and unmet outcomes; application demonstrates each promised workflow | Not established |
 
 The audit recovered supplementary structured pointers for **35 of 51** subdomains without explicit directory pointers. Reconcile their pins and route meanings before linking them. The other 16 remain mapping/qualification gaps, not proof of absent methods. Preserve rejected dispositions and separate candidate/study references from governed matches.
@@ -50,3 +50,37 @@ The maintenance-only offline test `python3 -m unittest discover -s scripts/qa -p
 ## November 17 progress
 
 [Exact review and source comparison](reviews/2026-11-17-melody-and-capability-scope.md): original melody package with incomplete text-agent pilot; [all 247 recognized outcome work units](../registry/capability-outcome-register.json); [13 new proposed domains, 65 subdomains and four music extensions](../registry/capability-scope-extensions-20261117.json). The 25 older provisional domains remain separate and unqualified. Continuous maintenance now explicitly tracks discovery/evaluation balance and non-degradation.
+
+## November 18 scoped information-management review
+
+[Exact pinned comparison and first-party static review](reviews/2026-11-18-taxonomy-reference-integrity-static-review.md): new original [Metadata Taxonomy Steward](../skills/authored/metadata-taxonomy-steward/SKILL.md) and [Reference Integrity Auditor](../skills/authored/reference-integrity-auditor/SKILL.md), each 18/20 static only and behavioral validation NOT RUN. Independent bounded comparison included five previously reviewed, pinned external entrypoints; unchanged-use rejection and licensing restrictions remain intact. They map to existing recognized taxonomy/IA and maintenance/provenance routes but add **no newly covered subdomain**. The separate 16-proposed-subdomain file/information-management proposal stays noncanonical.
+
+A separate exact-review mapping tranche linked five prior third-party skill identities (3 static verified, 2 rejected unchanged) without upgrading their use permissions. Existing 78 linked subdomains did not increase; navigation strengthened, essential outcome acceptance not established.
+
+The [November 18 capability-gap audit](reviews/2026-11-18-capability-discovery-evaluation-gap-priorities.md) and [outcome register](../registry/capability-outcome-register.json) distinguish historical broad discovery/evaluation frontiers from currently reviewed identities. Define actual subdomain outcomes, map source evidence, and test independently. Never use a source-name match or a static 18/20 score as production acceptance.
+
+
+## 2026-11-18: independent legacy-origin replacement lane (PR #736)
+
+All 44 root-level `frostwulf.zo.computer` entrypoints are inventoried,
+but account ownership is not authorship evidence. **21 newly written packages
+cover all 44 historical functions in an outcome-design crosswalk**.
+Every new package is a standalone rights-scoped original source with
+static review, exact package tree, governed identity and existing canonical
+capability routing. Host-executed behavior and true functional equivalence
+are explicitly **NOT ESTABLISHED**. Twenty-two narrowly scoped historical source retirements have explicit receipts; no independent paired host parity or 1.5× improvement has been proven.
+
+Work after drafting is **replacement acceptance, not automatic deletion**:
+review behavior of any replacement requiring live services or writes;
+check unresolved features in consolidated modes; trace consumers and exact
+source links; re-point citations and active routes; preserve immutable
+historical review records; and verify no discovery or security coverage
+regression when retiring each source. Use the [independent gap and retirement
+audit](../docs/reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md)
+and [44-entry ledger](../registry/migration/frostwulf-independent-replacement-ledger-20261118.json).
+
+This lane does not displace broad third-party discovery, essential-workflow
+decomposition, or the **916 reviewed but unmapped** third-party identities.
+Do not count 44 replacements as 44 new distinct skill packages: **21
+packages** are added, while historical review records are temporarily retained.
+Proposed taxonomy domains are not promoted by these changes.

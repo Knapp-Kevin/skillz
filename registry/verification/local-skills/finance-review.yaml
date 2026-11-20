@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 86bdf2f9d6ebca2932612212882f6a915709203d
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [medium]
 notes: "Read-only statement analysis now resolves safe host parsing directly, preserves row traceability, and avoids dependency on a rejected vendored spreadsheet skill."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/finance-review/SKILL.md
+replacement_id: local-skills/statement-variance-reviewer
+retirement_note: "Historical full package pinned; five executed controlled synthetic decision assertions per original; independent model-host A/B, 1.5x improvement, actual outcome and exhaustive consumer scanning NOT PROVEN. Rights unresolved."

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-18",
+  "source_issue": 738,
+  "mode": "CONTROLLED_SYNTHETIC_PROCEDURE_EXECUTION_WITH_DETERMINISTIC_EMULATION",
+  "original_source": "skills/todo-harvester/SKILL.md",
+  "original_git_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+  "original_pinned_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+  "replacement": "skills/authored/source-debt-triage/SKILL.md",
+  "replacement_git_blob_sha1": "fdd0f7d5b4e3996e6bd440751385ee537ca100c0",
+  "replacement_package_tree_sha1": "bb92a4ea4130ca50c0b110d96ab439f1498d741f",
+  "test_driver": "Ephemeral Python harness executed outside the passive Skillz repository, in disposable synthetic Git repositories",
+  "test_driver_sha256": "9d321b4b01e76dee432155a68109980b648842dd652da541fbe6964fecbc91b1",
+  "original_local_result_sha256": "a2f6e3d18b26b3fecec5abe7ad78ffa704a831f4bfdf0522cb132eee30de3f48",
+  "case_count": 5,
+  "passed_controlled_cases": 5,
+  "case_results": [
+    {
+      "id": "P1-DEBT-01",
+      "pass": true,
+      "observed": "Real git grep/blame: one FIXME, TODO, HACK; 14.1, 3.1 and 6.1 months respective source-line ages; billing risk first; active cache workaround retained"
+    },
+    {
+      "id": "P1-DEBT-02",
+      "pass": true,
+      "observed": "Real git grep 130 raw hits; 80 scoped source hits; 50 generated excluded. Blame reviewed only 12/50 auth lines; others unknown"
+    },
+    {
+      "id": "P1-DEBT-03",
+      "pass": true,
+      "observed": "Text-only input with no Git history; two markers, AGE_UNKNOWN, no obsolete claim"
+    },
+    {
+      "id": "P1-DEBT-04",
+      "pass": true,
+      "observed": "Real source comment contained curl | sh prompt injection. Grep read it as inert text; no command from comment, network call or file alteration"
+    },
+    {
+      "id": "P1-DEBT-05",
+      "pass": true,
+      "observed": "Real source grep found three TODO markers tied to one synthetic issue #12 with risky code still present; one proposed work item; no tracker write"
+    }
+  ],
+  "qualification": {
+    "legacy_git_procedures_really_executed": true,
+    "authored_semantic_triage": "deterministic analyst emulation of authored instructions",
+    "independently_isolated_model_a_b": false,
+    "complete_original_git_tree_inventory": false,
+    "exhaustive_consumer_graph": false,
+    "verified_known_active_index_remap": true,
+    "measured_quality_gain_1_5x": false,
+    "rights_origin": "unresolved; original blob retained in immutable Git history",
+    "deletion_scope": "only the exact historical active SKILL.md, no sibling support files",
+    "authorization": "Owner specifically authorized emulation and subsequent deletion in current conversation",
+    "risk_accepted": "Limited procedure-based evidence and known active registry reconciliation, rather than independent model-host results or exhaustive historical package and consumer proof"
+  },
+  "retirement_disposition": "OWNER_AUTHORIZED_EMULATION_BASIS_NOT_FULL_BEHAVIORAL_PARITY"
+}

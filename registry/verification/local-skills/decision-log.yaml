@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New exact source statically re-reviewed, NOT pinned SkillSpector scanned or actual agent-host behavior. Unchanged use held.
@@ -19,3 +20,8 @@ tags:
   authority: [mutating]
   portability: [medium]
 notes: "2026-11-04 fresh full-current 18/20 semantic review: Removed credential-prefix logging; required exact log/account authorization for reads and external evidence. Previous 19/20 grade on older blob was insufficient to catch this authority/egress defect. Current exact SKILL.md 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b, complete package Git tree ca790304801fd1717841a8fab98bb4ebeed4c9bf. External pinned scanner and real synthetic host tool-call behavior NOT RUN; security issue #402. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/52a6b0419630091e04a53b04161d200ab5ef3f38/skills/decision-log/SKILL.md
+replacement_id: local-skills/decision-record-steward
+retirement_note: "Exact full single-file historical tree verified. Five synthetic procedure scenarios passed in local deterministic Python; real paired agent-host execution and 1.5x outcome gain not proven. Historical rights remain unresolved."

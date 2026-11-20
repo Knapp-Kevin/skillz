@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: context-continuation-contract
+skill_version: "1.2.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/context-continuation-contract/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/context-continuation-contract/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 6ae4e50ad1baa1e8addc16eeab1c27a4de364982
+complete_package_tree_sha: d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only, mutating]
+  portability: [high]
+notes: >-
+  Three-file v1.1 static review 18/20, including optional, specific-host-authorized
+  continuity record persistence. Default read-only; maximum action mutating.
+  docs/reviews/2026-11-19-context-continuation-parity-v1-1.md.
+  No actual host write, readback or behavioral paired runs; 1.5x NOT PROVEN.
+
+review_20261119: "Exact new v1.2 package pinned and source-level review under issue #738. Five offline emulations and no independent host A/B or measured 1.5x gain."

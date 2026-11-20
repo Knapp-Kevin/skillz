@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-03
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Reused byte-for-byte previously statically reviewed skill source from closed-unmerged PR #496. No executed adversarial behavior or current exact-package security scan; historical scanner passes of old packages cannot transfer.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Exact receipt identity, schedule and last-run evidence are assessed only within an approved account/workspace/time scope. Missing private logs or artifacts yield unverified/unsubstantiated, never inferred success. No monitoring or external writes; no secret fragments, raw logs or sensitive paths disclosed."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/52a6b0419630091e04a53b04161d200ab5ef3f38/skills/automation-receipts/SKILL.md
+replacement_id: local-skills/scheduled-work-proof-auditor
+retirement_note: "Exact full single-file historical tree verified. Five synthetic procedure scenarios passed in local deterministic Python; real paired agent-host execution and 1.5x outcome gain not proven. Historical rights remain unresolved."

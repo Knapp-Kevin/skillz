@@ -1,6 +1,8 @@
 # Skill template
 
-Use this as a **starting point** when an authorized maintainer adds or revises a first-party user-facing skill under `skills/<name>/`. It is an example, not an executable installer, universal runtime contract, or requirement that every skill contain scripts, scheduled jobs, or a host-specific model tier. See [static review and freshness](static-review-and-freshness.md) and [skill verification](skill-verification.md).
+Use this as a **starting point** when an authorized maintainer adds or revises a first-party user-facing skill under `skills/authored/<name>/`. It is an example, not an executable installer, universal runtime contract, or requirement that every skill contain scripts, scheduled jobs, or a host-specific model tier. See [static review and freshness](static-review-and-freshness.md) and [skill verification](skill-verification.md).
+
+**First-party destination:** place complete new packages only under `skills/authored/<slug>/`, record source/license/complete tree and governed review links, and keep legacy or rights-uncertain files outside the authored collection until independently rebuilt. This template is not authority to move-and-relabel another author's text. See [the 2026-11-18 historical-origin migration audit](reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md).
 
 ## Copy and adapt
 
@@ -54,6 +56,29 @@ metadata:
 
 Only include a script invocation **when the particular skill needs and legitimately supports that component**. A skill with scripts must document its pinned dependency/runtime requirements, input/output boundary, safe fallback where possible, and whether running it can read private files, contact a service or mutate state. Scripts, templates, examples, fixtures and references owned by the package belong in the complete-package review; they must not be discarded merely for being non-Markdown.
 
+## Universal capability-adaptive execution
+
+[Capability-Adaptive Skill Execution](capability-adaptive-skill-execution.md)
+is the execution standard for **all** governed skills, existing and new.
+Provide a usable short entrypoint; put difficult decision branches and
+worked examples into optional references; support bounded honest fallback.
+Agents may use a better equivalent method or complete additional authorized
+work without a model-name tier, arbitrary action-count ceiling or mandatory
+walk through every component. Choose scaffolding from the task's actual
+uncertainty, never model identity. Authority, safety and evidence integrity
+do not vary. This is not a requirement for scripts or host execution.
+
+## Self-contained, offline-capable distribution
+
+The canonical capability-adaptive standard is a **maintainer rule**.
+A downloaded skill must **not** need a Skillz checkout, network access,
+its sibling skill directories, or a central policy file to operate.
+Write the complete required behavior into `SKILL.md` and any **bundled**
+support files. Keep mandatory links inside `skills/authored/<slug>/`;
+explicitly mark external links and other skills as optional context or
+handoffs, with an in-package fallback or stated scope boundary.
+Verify a complete standalone copy before labeling the package portable.
+
 ## Adaptive, not presumptive
 
 1. **Bind narrowly.** Use the active user's request and explicitly relevant project governance. Host memory, private profile or connected accounts may be read only where relevant and permitted under the host's own authority rules. A public skill, template or repository link is not permission to crawl unrelated memory or accounts.
@@ -73,6 +98,8 @@ Only include a script invocation **when the particular skill needs and legitimat
 
 ## Before admitting or revising a first-party package
 
+- [ ] [Capability-adaptive behavior](capability-adaptive-skill-execution.md) checked: low-context minimum, targeted optional support, better equivalent methods permitted, honest fallback and no artificial model-tier ceiling.
+- [ ] Standalone offline package closure checked: all mandatory references and behavioral rules ship in the package; no central repo or sibling-skill dependency is required.
 - [ ] The name matches the package directory and the description has a real trigger and non-trigger.
 - [ ] The entire material package (including any scripts or references) has been read, with actual dependencies and host limitations recorded.
 - [ ] Authority for reads, external communications, changes, scheduling and costs is explicit; missing authority does not silently become approval.

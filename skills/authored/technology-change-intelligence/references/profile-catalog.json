@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "id": "anthropic-claude",
+      "legacy_alias": "claude-pulse",
+      "aliases": [
+        "Claude update",
+        "Claude Code release"
+      ],
+      "window_days": 7,
+      "source_lanes": [
+        "vendor model release and API notes",
+        "Claude Code version history",
+        "official product change notices",
+        "dated incident advisories"
+      ],
+      "change_watch": [
+        "model/API compatibility",
+        "coding-agent client breaking changes",
+        "retirement dates",
+        "billing and quota policy"
+      ],
+      "adversarial_check": "Separate model announcement from actual API or Claude Code availability; do not confuse beta and general access.",
+      "section_label": "Compatibility and effective dates"
+    },
+    {
+      "id": "deepseek-models",
+      "legacy_alias": "deepseek-pulse",
+      "aliases": [
+        "DeepSeek update",
+        "DeepSeek model releases"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "model publisher release channels",
+        "weight registry model cards",
+        "hosted API documentation",
+        "primary technical papers"
+      ],
+      "change_watch": [
+        "checkpoint identity and terms",
+        "API behavior and billing",
+        "reasoning-model benchmarks",
+        "deployment constraints"
+      ],
+      "adversarial_check": "An uploaded model card is not proof of independent performance or permissive redistribution.",
+      "section_label": "Weights, terms and reproducibility"
+    },
+    {
+      "id": "google-gemini",
+      "legacy_alias": "gemini-pulse",
+      "aliases": [
+        "Gemini updates",
+        "Gemini CLI changes"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "vendor API version notices",
+        "SDK and agent framework releases",
+        "model availability matrix",
+        "developer product announcements"
+      ],
+      "change_watch": [
+        "model alias rollover",
+        "quotas and regional access",
+        "Gemini CLI or ADK compatibility",
+        "feature deprecation dates"
+      ],
+      "adversarial_check": "Do not mix Gemini consumer app changes with developer API or coding-tool capabilities.",
+      "section_label": "Developer migration risks"
+    },
+    {
+      "id": "github-discovery",
+      "legacy_alias": "github-pulse",
+      "aliases": [
+        "GitHub pulse",
+        "trending repositories"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "repository release and commit history",
+        "source identity and license",
+        "issue and maintainer activity",
+        "public repository discovery data"
+      ],
+      "change_watch": [
+        "new agent and tool projects",
+        "release momentum",
+        "maintenance signal",
+        "supply chain and copied-repository risk"
+      ],
+      "adversarial_check": "Stars and short-lived trends are discovery hints, not independent quality or security evidence.",
+      "section_label": "Promising repositories with verification gaps"
+    },
+    {
+      "id": "glm-zai",
+      "legacy_alias": "glm-pulse",
+      "aliases": [
+        "GLM update",
+        "Z.ai model releases"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "publisher docs under current brand",
+        "original model releases",
+        "published weights and model cards",
+        "API and pricing documentation"
+      ],
+      "change_watch": [
+        "publisher/organization rename continuity",
+        "weight versions and licenses",
+        "coding model behavior",
+        "API economics"
+      ],
+      "adversarial_check": "Prove official continuity when artifacts appear under different organization or product names.",
+      "section_label": "Publisher identity and model terms"
+    },
+    {
+      "id": "ai-governance",
+      "legacy_alias": "governance-pulse",
+      "aliases": [
+        "AI governance news",
+        "regulatory changes"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "official legal enactment and regulator guidance",
+        "standards body publications",
+        "security framework maintainer releases",
+        "vendor compliance disclosures"
+      ],
+      "change_watch": [
+        "enacted vs proposed rules",
+        "effective dates and geographic scope",
+        "standard revisions",
+        "new governance/security mechanisms"
+      ],
+      "adversarial_check": "Separate legal applicability and in-force date from press commentary or a nonbinding draft.",
+      "section_label": "Binding obligations and scope"
+    },
+    {
+      "id": "huggingface-ecosystem",
+      "legacy_alias": "hf-pulse",
+      "aliases": [
+        "Hugging Face pulse",
+        "HF models and papers"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "official model and dataset release artifacts",
+        "repository histories",
+        "research-paper originals",
+        "official library changelogs"
+      ],
+      "change_watch": [
+        "weights and dataset updates",
+        "model license and gated access",
+        "library breaking changes",
+        "Spaces demonstrations"
+      ],
+      "adversarial_check": "A trending count or popular demo is not an inference benchmark or production-readiness claim.",
+      "section_label": "Artifact provenance and practical tests"
+    },
+    {
+      "id": "local-inference",
+      "legacy_alias": "inference-pulse",
+      "aliases": [
+        "local inference update",
+        "runtime GPU trends"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "runtime release notes and exact tags",
+        "hardware vendor technical releases",
+        "quantization papers and implementation",
+        "primary performance measurements"
+      ],
+      "change_watch": [
+        "runtime API or format migration",
+        "token throughput and latency conditions",
+        "accelerator kernel support",
+        "model format compatibility"
+      ],
+      "adversarial_check": "Compare performance only under matched batch, context, hardware, precision and power conditions.",
+      "section_label": "Measured integration impact"
+    },
+    {
+      "id": "moonshot-kimi",
+      "legacy_alias": "kimi-pulse",
+      "aliases": [
+        "Kimi release",
+        "Moonshot AI update"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "publisher model notes",
+        "weight artifacts and licensing",
+        "hosted API documentation",
+        "technical benchmark reports"
+      ],
+      "change_watch": [
+        "agentic tool use",
+        "model weights and restrictions",
+        "context and throughput claims",
+        "endpoint price and availability"
+      ],
+      "adversarial_check": "A curated agent demonstration is not verified autonomous-task reliability.",
+      "section_label": "Agent capability versus demonstration"
+    },
+    {
+      "id": "meta-llama",
+      "legacy_alias": "llama-pulse",
+      "aliases": [
+        "Llama release",
+        "Meta open weights"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "Meta model announcements",
+        "published weight license and access conditions",
+        "release code artifacts",
+        "community reproductions"
+      ],
+      "change_watch": [
+        "license changes",
+        "weights and architecture variants",
+        "deployment constraints",
+        "ecosystem compatibility"
+      ],
+      "adversarial_check": "Open-weight access is not equivalent to open-source permissions or downstream commercial rights.",
+      "section_label": "Model use-rights and deployment fit"
+    },
+    {
+      "id": "mcp-protocol",
+      "legacy_alias": "mcp-pulse",
+      "aliases": [
+        "MCP ecosystem changes",
+        "MCP security updates"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "normative protocol specifications",
+        "official SDK version histories",
+        "published vulnerability advisories",
+        "registry and verified project documentation"
+      ],
+      "change_watch": [
+        "wire contract revisions",
+        "SDK migration notes",
+        "auth and tool boundary vulnerabilities",
+        "new server capability classes"
+      ],
+      "adversarial_check": "Do not interpret a newly listed MCP server as reviewed, trusted or permitted to connect.",
+      "section_label": "Protocol compatibility and threat posture"
+    },
+    {
+      "id": "agent-memory",
+      "legacy_alias": "memory-pulse",
+      "aliases": [
+        "agent memory research",
+        "memory framework trends"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "original memory-system papers",
+        "framework release and API histories",
+        "primary evaluation suites",
+        "independent benchmark reproductions"
+      ],
+      "change_watch": [
+        "long-term retention methods",
+        "retrieval and forgetting design",
+        "privacy/cross-scope isolation",
+        "measurement reproducibility"
+      ],
+      "adversarial_check": "Do not infer durable recall, privacy or memory deletion from marketing diagrams or demo anecdotes.",
+      "section_label": "Memory mechanisms and qualification evidence"
+    },
+    {
+      "id": "mistral-models",
+      "legacy_alias": "mistral-pulse",
+      "aliases": [
+        "Mistral updates",
+        "Mistral coding models"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "vendor API changelog",
+        "model announcement and artifact registry",
+        "SDK release history",
+        "commercial licensing documents"
+      ],
+      "change_watch": [
+        "API-only versus weight-release distinctions",
+        "model support lifecycle",
+        "developer models",
+        "token economics"
+      ],
+      "adversarial_check": "Differentiate named proprietary endpoint releases from downloadable checkpoints and their rights.",
+      "section_label": "Availability and deployment rights"
+    },
+    {
+      "id": "openai-developer",
+      "legacy_alias": "openai-pulse",
+      "aliases": [
+        "OpenAI release pulse",
+        "Codex and API news"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "OpenAI API change notices",
+        "developer and SDK releases",
+        "product availability and pricing documents",
+        "official incident advisories"
+      ],
+      "change_watch": [
+        "API deprecations and alias changes",
+        "Codex and SDK behavior",
+        "model functionality and price",
+        "client migration dates"
+      ],
+      "adversarial_check": "Model names, release dates and plan availability can differ by API, product and region.",
+      "section_label": "Developer compatibility changes"
+    },
+    {
+      "id": "perplexity-search",
+      "legacy_alias": "perplexity-pulse",
+      "aliases": [
+        "Perplexity updates",
+        "Sonar changes"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "search API release and model docs",
+        "consumer browser/product announcements",
+        "enterprise product notes",
+        "official pricing terms"
+      ],
+      "change_watch": [
+        "grounding API features",
+        "citation retrieval changes",
+        "Sonar versioning",
+        "consumer-versus-API scope"
+      ],
+      "adversarial_check": "Consumer browser improvements do not establish accuracy or change behavior of developer search APIs.",
+      "section_label": "Retrieval API versus consumer product"
+    },
+    {
+      "id": "alibaba-qwen",
+      "legacy_alias": "qwen-pulse",
+      "aliases": [
+        "Qwen updates",
+        "Qwen model weights"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "publisher model cards and research",
+        "model release artifacts and licensing",
+        "official agent/coding tools",
+        "reproducible runtime reports"
+      ],
+      "change_watch": [
+        "open weights and variants",
+        "inference and quantization practicality",
+        "coding-agent tooling",
+        "license per checkpoint"
+      ],
+      "adversarial_check": "Different Qwen checkpoints may have materially different rights or hardware demands.",
+      "section_label": "Checkpoint fit and licensing"
+    },
+    {
+      "id": "xai-grok",
+      "legacy_alias": "xai-pulse",
+      "aliases": [
+        "xAI updates",
+        "Grok developer API"
+      ],
+      "window_days": 30,
+      "source_lanes": [
+        "official API documentation and changelog",
+        "versioned SDK repository releases",
+        "publisher model announcements",
+        "dated technical assessments"
+      ],
+      "change_watch": [
+        "API/SDK compatibility",
+        "pricing and availability",
+        "model technical changes",
+        "credible incident reports"
+      ],
+      "adversarial_check": "Viral commentary or brand debate is not independent developer evidence.",
+      "section_label": "Verified API impact over social noise"
+    }
+  ],
+  "profile_count": 17,
+  "purpose": "Original static specialization data for one source-grounded technology intelligence skill; not copied historical upstream source URL lists."
+}

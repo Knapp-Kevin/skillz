@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: statement-variance-reviewer
+skill_version: "1.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/statement-variance-reviewer/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/statement-variance-reviewer/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 94f76bdb554fc3f3ee2b51d072ba7de067f518bd
+complete_package_tree_sha: 21118d6dda9fe0f07a9e96e361f3cd38f15cb82f
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Exact current three-file v1.1 static review 18/20,
+  docs/reviews/2026-11-18-statement-learning-parity-v1-1.md.
+  No host executed behavior, observed financial parse or course source review;
+  legacy parity and 1.5x effectiveness NOT PROVEN.

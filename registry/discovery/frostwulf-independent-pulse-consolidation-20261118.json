@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "new_skill_id": "local-skills/technology-change-intelligence",
+  "exact_skill_sha": "0ed4d1ff60f510a33f7d638032c3009e556ae608",
+  "complete_package_tree_sha": "b38b79e11ae1acca2ff753734c3c22c3d00f15af",
+  "profile_count": 17,
+  "legacy_source_rights": "unresolved",
+  "legacy_removed": 0,
+  "review": "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
+  "capability_paths": [
+    "research/source-discovery",
+    "research/synthesis"
+  ],
+  "scope": "17 legacy topic functions mapped to 17 named original profiles under one new skill. Does not prove full behavioral feature parity."
+}

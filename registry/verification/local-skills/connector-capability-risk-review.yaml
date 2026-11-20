@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: connector-capability-risk-review
+skill_version: "1.2.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/connector-capability-risk-review/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/connector-capability-risk-review/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 7c19817cf91804c430b94364550aa50eda731fb1
+complete_package_tree_sha: 26b1fa68302ce1fb088748edd98d9702b85de23d
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "No external agent-host execution, actual connector acceptance, filesystem deletion or security scanner."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [agent-security, evaluation]
+  lifecycle: [maintenance, verification]
+  characteristic: [privacy-bounded, evidence-first, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  V1.2 exact complete source package source-reviewed following independent
+  function-level remediation under docs/reviews/2026-11-19-decision-connector-parity-v1-1.md.
+  Strictly read-only vetting; no connector invocation.
+  No actual host behavior or >=1.5x effectiveness evidence.

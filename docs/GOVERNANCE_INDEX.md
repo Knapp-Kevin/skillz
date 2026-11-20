@@ -83,6 +83,7 @@ These determine what the external host agent may treat as reviewed evidence.
 | First-party review registry | `registry/local-verification.json` | individual structured semantic review of current first-party skills; not a provenance substitute |
 | Taxonomy | `registry/taxonomy.yaml` | controlled tags used consistently across characterization and selection |
 | Verification standard | `docs/skill-verification.md` | current state meanings and structured semantic rubric |
+| Universal capability-adaptive execution | `docs/capability-adaptive-skill-execution.md` | all skills: optional graduated guidance, no arbitrary model-tier ceiling, fixed safety/authority/evidence floor |
 | Companion metadata decision | Wayfinder decision #36 / `docs/companion-metadata.md` | provenance and verification remain distinct mandatory evidence surfaces for governed skill completeness |
 
 A source can be official, reputable, popular, current, and locally present while an individual skill remains unverified. Popularity and reputation are context, not proof.

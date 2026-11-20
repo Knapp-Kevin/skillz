@@ -1132,36 +1132,22 @@
   "first_party_categories": {
     "planning-productivity": [
       "daily-briefing",
-      "decision-log",
       "inbox-triage",
       "learning-plan",
-      "task-surface",
-      "week-in-review"
+      "task-surface"
     ],
     "writing-communication": [
-      "brief-writer",
-      "deck-outline",
-      "devlog-draft",
-      "handoff-writer",
-      "standup-writer"
+      "brief-writer"
     ],
     "research-analysis": [
       "compare",
-      "deep-dive",
-      "fact-check",
-      "paper-digest"
+      "deep-dive"
     ],
     "software-repositories": [
       "repo-doctor",
-      "repo-pulse",
-      "todo-harvester"
+      "repo-pulse"
     ],
     "agent-operations-security": [
-      "agent-home-doctor",
-      "agent-postmortem",
-      "automation-receipts",
-      "mcp-vetting",
-      "permissions-review",
       "session-continuity"
     ],
     "monitoring-intelligence": [
@@ -1184,7 +1170,6 @@
       "xai-pulse"
     ],
     "business-career": [
-      "career-radar",
       "finance-review",
       "smallbiz-ops"
     ],
@@ -5465,5 +5450,42 @@
     "discovery_artifacts": 170,
     "counting_rule": "Overlapping populations; governed subset is not corpus size.",
     "readiness": "inventory ingestion only; composition eligibility separately assessed"
+  },
+  "frostwulf_independent_replacement_20261118": {
+    "date": "2026-11-18",
+    "status": "21 independent authored packages; 22 retired original entrypoints with source-specific controlled checks, 22 active. Model-host A/B parity and 1.5x effectiveness not proven.",
+    "new_package_ids": [
+      "claim-evidence-adjudicator",
+      "research-methods-appraiser",
+      "source-debt-triage",
+      "decision-record-steward",
+      "agent-workspace-footprint-assessor",
+      "connector-capability-risk-review",
+      "privilege-exposure-mapper",
+      "scheduled-work-proof-auditor",
+      "technology-change-intelligence",
+      "agent-failure-boundary-analysis",
+      "decision-tradeoff-workbench",
+      "research-question-dossier",
+      "professional-market-evidence-scout",
+      "statement-variance-reviewer",
+      "context-continuation-contract",
+      "evidence-narrative-composer",
+      "personal-operations-control-board",
+      "learning-evidence-progression",
+      "repository-delivery-assessor",
+      "business-presence-observatory",
+      "work-period-evidence-reporter"
+    ],
+    "migration_ledger": "registry/migration/frostwulf-independent-replacement-ledger-20261118.json",
+    "review_paths": [
+      "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
+      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+    ],
+    "host_behavior": "not-run",
+    "legacy_retired": 22,
+    "retirement_status": "fifteen owner-accepted source-bound controlled cases, with no measured 1.5x effectiveness"
   }
 }

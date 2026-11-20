@@ -47,7 +47,7 @@ A skill cannot be promoted to `verified` while any of these are unresolved:
 1. hidden or unbounded authority escalation;
 2. mutation or external side effects without a clear trigger/consent boundary;
 3. prompt-injection-like instructions that try to override higher-priority policy or unrelated user intent;
-4. missing or broken required references, templates, scripts, package files, or host capabilities;
+4. missing or broken required references, templates, scripts, package files, or host capabilities, **including mandatory files or normative rules located outside a standalone distributed skill package**;
 5. unclear provenance or unresolved license obligations;
 6. instructions that encourage fabricated evidence, hidden gaps, or false completion claims;
 7. materially unsafe failure behavior;
@@ -83,6 +83,34 @@ Promotion to `verified` requires:
 - controlled characterization tags;
 - reviewer notes explaining material limitations.
 
+## Capability-adaptive review for all skills
+
+[Capability-Adaptive Skill Execution](capability-adaptive-skill-execution.md)
+applies to **every governed skill**, including unmodified legacy and
+third-party sources. Apply it within the existing ten-dimension rubric,
+not as another gate or score.
+
+- **Clarity:** can a limited-context agent take a safe useful next step,
+  with optional examples for ambiguous junctions?
+- **Authority/failure:** can an agent execute any authorized work
+  regardless of model name, and recover honestly from missing sources
+  or permissions?
+- **Portability:** can an equivalent trusted tool or method replace
+  an example-specific command?
+- **Effectiveness/resilience:** can capable agents finish work without
+  unnecessary module rituals, steps, output caps or model-tier rules?
+  All paths must still protect real security and evidence requirements.
+
+Review one limited-context ambiguous task, one better-method task and
+one missing-permission case; explicitly look for false-success claims.
+Static scenario reading is not observed cross-model performance or parity.
+
+The standard is applicable now to selection and review, **not** proof
+that every existing exact version complies. Correct material violations
+when discovered; otherwise revisit at the next meaningful revision.
+Don't bulk-churn unchanged package fingerprints or silently modify
+external licensed content merely to echo inherited policy.
+
 ## Static scenarios versus external behavioral validation
 
 Static scenario/adversarial **reading** can strengthen `verified` semantic evidence. It may inspect intended trigger and non-trigger cases, pressure on authority boundaries, ambiguous sequencing, dependencies, and unnecessary workflow burden. Record these as reviewer interpretation, not observed agent behavior.
@@ -100,6 +128,16 @@ Review the skill as the package it actually is.
 If the skill owns scripts, references, templates, fixtures, examples, JSON, assets, or other supporting files, those may be necessary parts of the capability. Do not discard them merely because the engine itself is passive or because they are executable/non-Markdown.
 
 Dependency coherence includes checking that required supporting components exist, are described accurately, and do not silently introduce unacceptable authority, portability, licensing, or host assumptions.
+
+**Offline package-closure review:** Evaluate the entrypoint and each required
+reference as though the **single skill directory** were copied to an isolated
+offline agent. All required operational and governance instructions must be
+present inside it; a link to repository-wide documentation cannot impose a
+runtime rule. Cross-skill links and online material may remain optional
+informational citations or explicit handoffs with a documented in-package
+fallback or boundary. Do not mistake a valid GitHub URL for a locally bundled
+dependency. Record entrypoint-only closure separately from a complete-package
+audit; do not mark uninspected components as passed.
 
 ## Fingerprint invalidation
 

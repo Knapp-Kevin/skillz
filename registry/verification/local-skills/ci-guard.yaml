@@ -1,0 +1,28 @@
+schema_version: 1
+skill_name: ci-guard
+skill_version: "1.2.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/ci-guard/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/ci-guard/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: a98f04ad42fedec08d316605ba7d390c7de3b5f1
+complete_package_tree_sha: 950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "v1.2 offline package-closure M7 static-checked; v1.1 GG-CORE host trial historical. No qualifying v1.2 cross-model behavioral validation."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [ci-assurance, development-effectiveness, evidence-audit]
+  lifecycle: [evaluation]
+  characteristic: [traceable, risk-proportionate, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Six-file v1.2 offline-closure static review in docs/reviews/2026-11-19-ci-guard-offline-package-closure.md.
+  No observed v1.2 host A/B, security scan or measured uplift.

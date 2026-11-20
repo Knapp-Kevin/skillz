@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: privilege-exposure-mapper
+skill_version: "1.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/privilege-exposure-mapper/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/privilege-exposure-mapper/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 2e07c2ff66fd6af2a55866d5b96c3bb877fb138f
+complete_package_tree_sha: 0bcb42382d152636c4b9f7c6c70367eb52633740
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "No external agent-host execution, actual connector acceptance, filesystem deletion or security scanner."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [agent-security, evaluation]
+  lifecycle: [maintenance, verification]
+  characteristic: [privacy-bounded, evidence-first, risk-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Current v1.1 exact three-file source static review 18/20:
+  docs/reviews/2026-11-18-agent-home-privilege-parity-v1-1.md.
+  Report-only, no mutation.
+  Behavioral comparison NOT RUN; 1.5x target NOT PROVEN.

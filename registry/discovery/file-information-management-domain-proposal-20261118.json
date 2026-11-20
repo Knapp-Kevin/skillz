@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-18",
+  "status": "proposed-scope-not-canonical",
+  "id": "file-information-management",
+  "name": "File and Information Management",
+  "owner_artifact": "skills/authored/file-lifecycle-curator/SKILL.md",
+  "review": "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md",
+  "boundary": "General file inventory, document indexing, metadata/keyword organization, duplicate handling, reorganization and archive preparation. Does not replace enterprise records-management compliance, regulated legal retention advice, security incident response, backup engineering, filesystem permissions administration, or host storage execution.",
+  "adjacent_recognized_routes": [
+    "memory-context/retrieval",
+    "memory-context/summarization",
+    "technical-writing/documentation-ia",
+    "ux-ui/information-architecture"
+  ],
+  "qualification": "Four complementary first-party passive skill packages are exact-version static-reviewed: within-collection curator, multi-source catalog, metadata taxonomy governance and reference-integrity audit. Sixteen proposed file-management subdomains remain noncanonical and behaviorally unqualified, without provider runtime or write authority.",
+  "subdomains": [
+    {
+      "id": "inventory",
+      "essential_outcome": "Inventory an explicitly authorized collection with stable record IDs, observed attributes, scope gaps and source receipts",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "content-extraction",
+      "essential_outcome": "Extract authorized document text and coverage diagnostics without executing untrusted content",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "metadata-decks",
+      "essential_outcome": "Produce source-grounded file-level metadata cards and machine-readable records with privacy controls",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "keyword-tagging",
+      "essential_outcome": "Normalize controlled-vocabulary keywords and document confidence, synonyms and exceptions",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "classification-organization",
+      "essential_outcome": "Build and validate meaning-aware categorization and reversible organizational proposals",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "summarization",
+      "essential_outcome": "Produce content-grounded short/detailed summaries with evidence locators and extraction limits",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "indexing-search",
+      "essential_outcome": "Construct provenance-aware searchable indexes and verify actual retrieval capability",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "deduplication-versioning",
+      "essential_outcome": "Distinguish byte-exact duplicates, near duplicates and version relationships without unsafe consolidation",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "archival-retention",
+      "essential_outcome": "Recommend, prepare and independently verify recoverable archives without assuming deletion authority",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "lifecycle-operations",
+      "essential_outcome": "Stage authority-scoped change plans with drift/collision/ACL checks, receipts and rollback boundaries",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/file-lifecycle-curator"
+      ],
+      "acceptance": "Evidence-bound deliverable plus explicit limitations, safe authority controls and failure/exception outcomes; production outcome requires observed host acceptance."
+    },
+    {
+      "id": "source-federation",
+      "essential_outcome": "Enumerate explicitly authorized connector scopes with capability and completeness receipts",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "cross-source-identity",
+      "essential_outcome": "Reconcile provider-native identities, revisions, shortcuts, exports and version relationships without unsafe merging",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "permission-aware-federated-retrieval",
+      "essential_outcome": "Retrieve and cite cross-source results without leaking private metadata, result counts or relationships between viewers",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "connector-freshness-revocation",
+      "essential_outcome": "Track per-source observation windows, invalidation, revocation, delta gaps and source-recheck requirements",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/federated-source-catalog"
+      ],
+      "acceptance": "Explicit source/identity/permission evidence, per-source completeness and failure behavior; host behavior, shared-index safety and persistence must be independently tested."
+    },
+    {
+      "id": "metadata-taxonomy-stewardship",
+      "essential_outcome": "Maintain stable, versioned cross-source metadata terms, aliases, semantic conflicts, source-native labels and authorized migration proposals",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/metadata-taxonomy-steward"
+      ],
+      "acceptance": "Preserve source terms and permissions; detect conflicting aliases and cycles; version changes; independently evaluate provider mapping and no silent retagging."
+    },
+    {
+      "id": "reference-integrity-impact",
+      "essential_outcome": "Audit typed document and connector reference edges, revision-bound target resolution, broken/unknown links, bounded orphan candidates and non-destructive repair proposals",
+      "qualification": "static-method-available-not-outcome-validated",
+      "candidate_method_ids": [
+        "local-skills/reference-integrity-auditor"
+      ],
+      "acceptance": "Differentiate broken vs inaccessible/unknown; bound graph scope, preserve revision/source ACL and prevent exfiltration or unapproved edits."
+    }
+  ],
+  "canonical_promotion_required": true,
+  "behavioral_evidence": "not-run: no agent-host or actual connector acceptance recorded",
+  "discovery_evaluation_gap": "Four pinned third-party entrypoints were independently re-read for bounded overlap; broader exact-source comparison, licensing/admission, behavior and effective source denominator remain incomplete. No global uniqueness claim.",
+  "companion_artifacts": [
+    "skills/authored/file-lifecycle-curator/SKILL.md",
+    "skills/authored/federated-source-catalog/SKILL.md",
+    "skills/authored/metadata-taxonomy-steward/SKILL.md",
+    "skills/authored/reference-integrity-auditor/SKILL.md"
+  ],
+  "reviews": [
+    "docs/reviews/2026-11-18-file-lifecycle-curator-static-review.md",
+    "docs/reviews/2026-11-18-federated-source-catalog-static-review.md",
+    "docs/reviews/2026-11-18-file-information-management-gap-audit.md",
+    "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md"
+  ],
+  "current_packages": [
+    {
+      "id": "local-skills/file-lifecycle-curator",
+      "version": "1.1.0",
+      "entry_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
+      "tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
+      "validation_status": "not-run"
+    },
+    {
+      "id": "local-skills/federated-source-catalog",
+      "version": "1.1.0",
+      "entry_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
+      "tree_sha": "b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1",
+      "validation_status": "not-run"
+    },
+    {
+      "id": "local-skills/metadata-taxonomy-steward",
+      "version": "1.0.0",
+      "entry_blob_sha": "9d52d909a8e1dbc2c63748085b62bfa56c268989",
+      "tree_sha": "341bf5f8751333db8896f01c51f614b4acc6ad0d",
+      "validation_status": "not-run"
+    },
+    {
+      "id": "local-skills/reference-integrity-auditor",
+      "version": "1.0.0",
+      "entry_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
+      "tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+      "validation_status": "not-run"
+    }
+  ],
+  "current_static_review": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
+}

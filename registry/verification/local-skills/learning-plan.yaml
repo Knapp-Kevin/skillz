@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 7941b70fc971bf7c16c1201b7c8876f35db4ab29
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-03
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Exact SKILL.md bytes match a previously static-reviewed source, but no current-package security scan or actual agent behavior has been observed; validation remains not-run.
@@ -19,3 +20,8 @@ tags:
   authority: [generate-only, external-side-effect]
   portability: [high]
 notes: "Source-verified curriculum and checkpoint/slip protocol; one-shot planning separated from explicitly approved recurring check-ins, private-source access and delivery. Behavioral and external package-security qualification are not-run."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/learning-plan/SKILL.md
+replacement_id: local-skills/learning-evidence-progression
+retirement_note: "Full historical single-file tree pinned; five analyst synthetic decisions passed, no independent model-host A/B or 1.5x gain; historical rights and exhaustive consumer scan remain unresolved."

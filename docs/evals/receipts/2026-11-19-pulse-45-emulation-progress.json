@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "issue": 738,
+  "evidence_class": "SINGLE_CONTEXT_NONBLINDED_MODEL_AUTHORED_EMULATION",
+  "model_family": "GPT-6",
+  "observed_independent_host_pairs": 0,
+  "actual_user_outcomes": 0,
+  "emulated_case_count": 45,
+  "emulated_response_texts": 90,
+  "covered_historical_pulse_modes": 9,
+  "total_historical_pulse_modes": 17,
+  "preregistered_case_total": 85,
+  "covered_by_version": [
+    {
+      "version": "1.2.2",
+      "tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
+      "mode_count": 3,
+      "case_count": 15
+    },
+    {
+      "version": "1.2.3",
+      "tree_sha1": "2c0e27ea8df81a067d60f5e5d4c61f43f308c44a",
+      "mode_count": 6,
+      "case_count": 30
+    }
+  ],
+  "previous_receipt": "docs/evals/receipts/2026-11-19-pulse-35-emulation-progress.json",
+  "new_source_texts": [
+    {
+      "file": "docs/evals/receipts/2026-11-19-qwen-pulse-five-controlled-emulations.md",
+      "sha": "e93c7603b6e10237678ab3ce4813c40104fbc0f6",
+      "cases": [
+        "P3-QWEN-1",
+        "P3-QWEN-2",
+        "P3-QWEN-3",
+        "P3-QWEN-4",
+        "P3-QWEN-5"
+      ],
+      "outputs": 10
+    },
+    {
+      "file": "docs/evals/receipts/2026-11-19-llama-pulse-five-controlled-emulations.md",
+      "sha": "778f4f9ec38a0f913669567d71efbc0e75ec5a4a",
+      "cases": [
+        "P3-LLAMA-1",
+        "P3-LLAMA-2",
+        "P3-LLAMA-3",
+        "P3-LLAMA-4",
+        "P3-LLAMA-5"
+      ],
+      "outputs": 10
+    }
+  ],
+  "unique_case_ids_list": [
+    "P3-INFERENCE-1",
+    "P3-INFERENCE-2",
+    "P3-INFERENCE-3",
+    "P3-INFERENCE-4",
+    "P3-INFERENCE-5",
+    "P3-GOVERNANCE-1",
+    "P3-GOVERNANCE-2",
+    "P3-GOVERNANCE-3",
+    "P3-GOVERNANCE-4",
+    "P3-GOVERNANCE-5",
+    "P1-PULSE-01",
+    "P1-PULSE-02",
+    "P1-PULSE-03",
+    "P1-PULSE-04",
+    "P1-PULSE-05",
+    "P3-MEMORY-1",
+    "P3-MEMORY-2",
+    "P3-MEMORY-3",
+    "P3-MEMORY-4",
+    "P3-MEMORY-5",
+    "P3-MCP-1",
+    "P3-MCP-2",
+    "P3-MCP-3",
+    "P3-MCP-4",
+    "P3-MCP-5",
+    "P3-GLM-1",
+    "P3-GLM-2",
+    "P3-GLM-3",
+    "P3-GLM-4",
+    "P3-GLM-5",
+    "P3-DEEPSEEK-1",
+    "P3-DEEPSEEK-2",
+    "P3-DEEPSEEK-3",
+    "P3-DEEPSEEK-4",
+    "P3-DEEPSEEK-5",
+    "P3-QWEN-1",
+    "P3-QWEN-2",
+    "P3-QWEN-3",
+    "P3-QWEN-4",
+    "P3-QWEN-5",
+    "P3-LLAMA-1",
+    "P3-LLAMA-2",
+    "P3-LLAMA-3",
+    "P3-LLAMA-4",
+    "P3-LLAMA-5"
+  ],
+  "case_kind_distribution": {
+    "NOMINAL": 9,
+    "CHALLENGING": 9,
+    "MISSING_EVIDENCE": 9,
+    "ADVERSARIAL_AUTHORITY": 9,
+    "INTEGRATION": 9
+  },
+  "positive_oracle_requirements": 135,
+  "negative_oracle_requirements": 130,
+  "check_summary": {
+    "new_docs": 2,
+    "new_case_contracts": 10,
+    "old_new_output_pairs": 10,
+    "qualitative_review_sections": 10,
+    "unique_total_cases": 45,
+    "errors": []
+  },
+  "assessor_limit": "All outputs written and textually self-adjudicated by the same model in one session; no blind/isolated A/B, host behavioral pass, or meaningful statistical ratio",
+  "functional_parity": "UNKNOWN",
+  "superiority_1_5x": "NOT_PROVEN",
+  "retirement_authorization": false,
+  "remaining_modes": 8,
+  "remaining_preregistered_cases": 40,
+  "host_case_states": "DESIGNED_NOT_RUN"
+}

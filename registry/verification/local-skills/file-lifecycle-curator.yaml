@@ -1,0 +1,50 @@
+schema_version: 1
+skill_name: file-lifecycle-curator
+skill_version: 1.1.0
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/file-lifecycle-curator/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4d9387a3698252c7f92c0a4cbed415f789155c79
+complete_package_tree_sha: 31f63a762ead720db8c390017c235e6602f3ffd8
+characterized_at: '2026-11-18'
+reviewed_at: '2026-11-18'
+verification_status: verified
+verification_basis: individual-structured-static-review
+validation_status: not-run
+validation_note: >-
+  The H01-H12 synthetic policy oracle passed 12/12 *oracle rule checks* in first-party
+  offline evaluation; this does not execute the skill in an agent host or test
+  connector permissions. Behavior still NOT RUN.
+  Synthetic scenarios were statically inspected only; no host/model tool behavior,
+  file move, archive creation, restoration, ingestion, OCR or search backend tested.
+rubric: docs/skill-verification.md
+rubric_score: 18/20
+tags:
+  use_case:
+  - file-information-management
+  - knowledge-organization
+  - document-summarization
+  - retrieval
+  lifecycle:
+  - intake
+  - organization
+  - maintenance
+  - archiving
+  characteristic:
+  - evidence-first
+  - traceable
+  - reversible-by-design
+  - safety-bounded
+  - human-review
+  authority:
+  - read-only
+  portability:
+  - high
+notes: >-
+  Complete original seven-file text package inspected; v1.1 optional federated intake contract statically reviewed. Permission changes,
+  relocation, indexing persistence, external egress and deletions require fresh
+  action-specific authority. Host behavioral validation, security scanner, restore
+  and production utility NOT RUN. See docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.

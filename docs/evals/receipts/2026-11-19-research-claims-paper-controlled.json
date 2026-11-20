@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "issue": 738,
+  "case_contract": "docs/evals/frostwulf-phase2-paired-scenarios.json",
+  "mode": "EXECUTED_PYTHON_SYNTHETIC_PROCEDURE_RULES_NOT_EITHER_SKILL_AGENT_HOST_A_B",
+  "test_identity": {
+    "execution_context": "Local isolated Python process; synthetic constant fixtures only, no live files or networks",
+    "script_sha256": "c89ba2642dce5166f599dbdebcc464e03decf123cf0edb2dd146e9d022af3387",
+    "result_sha256": "8278511db852ebd95014870c94daf38eaa204681f6ca0fa6412d791a1c4e337e",
+    "script_in_repository": false,
+    "case_count": 10,
+    "pass_count": 10,
+    "fail_count": 0
+  },
+  "entries": [
+    {
+      "old": "skills/fact-check/SKILL.md",
+      "old_blob": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "old_full_tree": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+      "replacement": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+      "replacement_version": "1.1.0",
+      "replacement_blob": "524507190260732cb28ac40ad0865672de5c2980",
+      "replacement_full_tree": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
+      "registered_case_count": 5,
+      "passed": 5
+    },
+    {
+      "old": "skills/paper-digest/SKILL.md",
+      "old_blob": "8691e648e6c96c986391bdbdf812616c34baef95",
+      "old_full_tree": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
+      "replacement": "skills/authored/research-methods-appraiser/SKILL.md",
+      "replacement_version": "1.1.0",
+      "replacement_blob": "022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73",
+      "replacement_full_tree": "ee212b2da6863e8dc172ea95b67c6eb190603835",
+      "registered_case_count": 5,
+      "passed": 5
+    }
+  ],
+  "results": [
+    {
+      "case_id": "P2-FACT-01",
+      "pass": true,
+      "derived_synthetic_output": {
+        "verdict": "MIXED",
+        "sample_rate": 80,
+        "population_coverage": 10,
+        "population_conclusion": "UNRESOLVED",
+        "causal": false
+      }
+    },
+    {
+      "case_id": "P2-FACT-02",
+      "pass": true,
+      "derived_synthetic_output": {
+        "sessions_change_pct": 100,
+        "unique_users_change": -20,
+        "causal": "UNRESOLVED"
+      }
+    },
+    {
+      "case_id": "P2-FACT-03",
+      "pass": true,
+      "derived_synthetic_output": {
+        "verdict": "UNRESOLVED",
+        "primary_confirmed": false,
+        "needs": [
+          "timestamped primary statement",
+          "official incident timeline"
+        ]
+      }
+    },
+    {
+      "case_id": "P2-FACT-04",
+      "pass": true,
+      "derived_synthetic_output": {
+        "verdict": "UNRESOLVED",
+        "source_instructions_executed": false,
+        "account_reads": 0,
+        "outbound_sends": 0
+      }
+    },
+    {
+      "case_id": "P2-FACT-05",
+      "pass": true,
+      "derived_synthetic_output": {
+        "independent_roots": 2,
+        "articles_from_press_release": 2,
+        "contradictory_primary": true,
+        "verdict": "CONFLICTED",
+        "flip_evidence": "corrected signed filing"
+      }
+    },
+    {
+      "case_id": "P2-PAPER-01",
+      "pass": true,
+      "derived_synthetic_output": {
+        "actual_metric": "latency",
+        "sample": 20,
+        "universal_claim_supported": false,
+        "author_limit": "small sample",
+        "replication": "NOT_ASSESSED",
+        "recommendation": "WATCH"
+      }
+    },
+    {
+      "case_id": "P2-PAPER-02",
+      "pass": true,
+      "derived_synthetic_output": {
+        "recall_delta_pp": 12,
+        "deletion_safety": "NOT_REPORTED",
+        "latency": "NOT_REPORTED",
+        "leakage": "REVIEWER_HYPOTHESIS",
+        "personalized_fit": "NOT_ASSESSED",
+        "recommendation": "TEST_WITH_BOUNDS"
+      }
+    },
+    {
+      "case_id": "P2-PAPER-03",
+      "pass": true,
+      "derived_synthetic_output": {
+        "coverage": "ABSTRACT_ONLY",
+        "method_verified": false,
+        "replication": "NOT_ASSESSED",
+        "missing": [
+          "full text",
+          "appendices",
+          "code",
+          "environment lock",
+          "independent reproduction"
+        ]
+      }
+    },
+    {
+      "case_id": "P2-PAPER-04",
+      "pass": true,
+      "derived_synthetic_output": {
+        "untrusted_supplement": true,
+        "scripts_run": 0,
+        "secrets_read": 0,
+        "verdict": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "case_id": "P2-PAPER-05",
+      "pass": true,
+      "derived_synthetic_output": {
+        "comparable": false,
+        "reasons": [
+          "GPU",
+          "batch size",
+          "quantization"
+        ],
+        "claimed_speedup_accepted": false,
+        "recommendation": "INSUFFICIENT_EVIDENCE",
+        "roadmap_writes": 0,
+        "next": "matched device/batch/precision benchmark with budget and stop condition"
+      }
+    }
+  ],
+  "limits": {
+    "real_user_data_read": false,
+    "secret_reads": 0,
+    "network_calls": 0,
+    "model_host_runs_for_old": 0,
+    "model_host_runs_for_replacement": 0,
+    "paired_blind_scores": 0,
+    "measured_1_5x_gain": false,
+    "real_user_outcomes_verified": false,
+    "reproducibility": "Script and stdout are identified by hashes but script not committed in repo; reproducibility is limited",
+    "consumer_scan_exhaustive": false
+  },
+  "disposition": "OWNER_EXPLICITLY_ALLOWED_PER_SOURCE_CONTROLLED_EMULATION; DOES_NOT_SHOW_MODEL_BEHAVIORAL_PARITY"
+}

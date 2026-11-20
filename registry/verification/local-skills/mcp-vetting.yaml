@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 37a13d7296c7d3d87dc360988bc6aca1f873c4db
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-03
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Static semantic score is carried over only because the skill Git blob matches the previous source review exactly. No executed behavioral validation or new final-package security scan.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "19/20 exact-version static semantic review: complete tool-level authority and data-flow inventory, no installation/connection, current taxonomy and issue-first admission, missing-evidence deferral, separate external security/behavioral gates. Host-specific unknowns prevent a perfect score; no behavioral evidence was executed."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/120b038d230b77930208f2108c34f169f297dcf9/skills/mcp-vetting/SKILL.md
+replacement_id: local-skills/connector-capability-risk-review
+retirement_note: "Real ephemeral offline JSON fixture evaluation five checks; no live MCP server, isolated model A/B or measured 1.5x. Historic authorship and license unresolved."

@@ -1,12 +1,11 @@
 # Local Skill Library
 
-This directory contains the first-party/local user-facing portion of the `skillz` library.
+This directory contains Skillz's first-party user-facing packages and capability navigation. Start from a task, then inspect the relevant complete `SKILL.md` package and its exact-version evidence.
 
 ## Browse by purpose
 
-Humans can start with [`categories/`](categories/):
-
 - [Planning & Productivity](categories/planning-productivity/)
+- [File & Information Management](categories/file-information-management/)
 - [Writing & Communication](categories/writing-communication/)
 - [Research & Analysis](categories/research-analysis/)
 - [Software & Repositories](categories/software-repositories/)
@@ -14,65 +13,40 @@ Humans can start with [`categories/`](categories/):
 - [Monitoring & Intelligence](categories/monitoring-intelligence/)
 - [Business & Career](categories/business-career/)
 
-Category folders are a human navigation layer. Canonical active local skill content is the discovered `SKILL.md` material under `skills/`.
+The category shelves are navigation aids, not approval lists. Search the [full capability directory](../registry/capability-directory.json) and [governed review index](../registry/governed-review-name-index.json) when a task is not represented here.
 
-## Canonical authored skills
+## Active original skills
 
-All new first-party custom packages belong under [authored/](authored/) and are listed with explicit SPDX licensing and exact package identities in [the authored-skill index](../registry/authored-skills-index.json). Existing historical first-party skills remain in place until separately migrated.
+Canonical authored packages live under [`authored/`](authored/) and have an exact-version [authored index](../registry/authored-skills-index.json). Downloaded packages should be independently understandable offline, including the references they actually require.
 
-## New domain-specific first-party example
+Examples include [Technology Change Intelligence](authored/technology-change-intelligence/SKILL.md), [Repository Delivery Assessor](authored/repository-delivery-assessor/SKILL.md), [Context Continuation Contract](authored/context-continuation-contract/SKILL.md), and [Healthcare Contract Forensics](authored/healthcare-contract-forensics/SKILL.md). These links show available methods, **not** verified outcomes on every model or permission to inspect sensitive accounts.
 
-[Healthcare Contract Forensics](authored/healthcare-contract-forensics/SKILL.md) supports bounded employer/PBM agreement review, with a [fictional reconciliation exercise](authored/healthcare-contract-forensics/examples/synthetic-pbm-case.md) and [exact-package static review](../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md). Its semantic static status is **verified 19/20**; external model behavior and financial recovery are **not validated**. The historical dashboard remains a dated snapshot until fully regenerated.
+## What was retired
 
-## Counting boundary
+All **44 historical Frostwulf-attributed root skill entrypoints** were retired from active selection, with complete original Git package-tree identities retained. Their functions were crosswalked to **21 original authored replacement packages**. Retirements used owner-accepted controlled procedures; the [migration ledger](../registry/migration/frostwulf-independent-replacement-ledger-20261118.json) records original and replacement paths. Independently executed host parity, the target 1.5× improvement and historical rights remain unproven. Historical packages are not reinstalled just because their source still exists in immutable Git history.
 
-Every active user-facing local skill counts, but `skills/` is not the whole reference ecosystem.
+## Evidence to check before use
 
-The repository also carries approved pinned/tracked third-party reference material under [`sources/`](sources/). Repository-maintenance instructions under [`../engine/skills/`](../engine/skills/) do not count as user-facing inventory.
+First-party provenance lives in [`../registry/skills/local-skills/`](../registry/skills/local-skills/), review companions in [`../registry/verification/local-skills/`](../registry/verification/local-skills/), and the local selection state in [`../registry/local-verification.json`](../registry/local-verification.json). Third-party reference sources and verified or rejected exact-version companions retain separate rights and reuse conditions.
 
-Broad third-party source presence means **referenceable**, not automatically **trusted unchanged**.
+- A **static review** rates source quality and documented boundaries, not observed host behavior.
+- A **security scan**, if present, applies only to its pinned package and stated procedure.
+- A **behavioral test** must provide actual, scoped host observations before its outcome can be claimed.
+- **Discovery, adoption and execution** have distinct permissions. No repository file grants connector access, private reads or writes.
 
-## First-party quality and provenance records
+For contributors, see the [review rubric](../docs/skill-verification.md), [capability-adaptive standard](../docs/capability-adaptive-skill-execution.md), [provenance policy](../docs/third-party-provenance.md) and [consumer contract](../docs/consumer-discovery-and-installation.md).
 
-Active local skills are not exempt from the same evidence discipline applied to third-party work merely because we wrote them ourselves. Home-field advantage is not a verification method.
+## Maintainer checks
 
-Their structured review manifest is:
+Skillz remains a **passive library** for consumers. It also contains explicitly invoked, offline maintainer QA scripts. Those scripts are not background agents and do not install or execute referenced third-party skills.
 
-[`../registry/local-verification.json`](../registry/local-verification.json)
+From the repository root, maintainers can check canonical capability links and retirement-route integrity:
 
-Their mandatory provenance companions are under:
+```bash
+node scripts/qa/check-authored-capability-links.mjs
+node --test scripts/qa/test-retired-skill-routes.mjs
+```
 
-[`../registry/skills/local-skills/`](../registry/skills/local-skills/)
+The [retirement audit](../scripts/qa/check-retired-skill-routes.mjs) refuses retired source reactivation, stale selectors, missing replacements, mismatched historical ledgers and broken active navigation. These are structural checks, **not** proof of skill effectiveness.
 
-Together, those passive records establish, where applicable:
-
-- canonical repository/path identity;
-- provenance and first-party relationship;
-- exact Git blob fingerprint;
-- individual structured rubric score;
-- current quality state;
-- behavioral-validation status;
-- controlled use-case/lifecycle/characteristic tags;
-- authority and portability;
-- material review notes.
-
-Completeness is checked by the external host agent during repository curation by comparing the live skill corpus with those records. `skillz` owns no verification script, CI gate, test runner, preflight process, or background enforcement mechanism.
-
-Behavioral validation is separate. `validation_status: not-run` is an explicit limitation, not a euphemism for "probably fine."
-
-## Third-party quality states
-
-Individually governed third-party skills use provenance under [`../registry/skills/`](../registry/skills/) and exact-version quality records under [`../registry/verification/`](../registry/verification/).
-
-Current unchanged-reuse semantics are:
-
-- `verified`: exact version passed the structured review and may be considered when operational/user fit matches;
-- `validated`: `verified` plus representative behavioral evidence;
-- `unverified`: design/reference evidence only;
-- `trusted-baseline`: legacy schema compatibility only, not current unchanged-selection eligibility;
-- `stale`: prior exact-version evidence no longer applies;
-- `rejected` / `retired`: excluded from normal unchanged selection.
-
-A reference can still contribute a useful mechanism without becoming the final workflow. Material adaptation remains subject to provenance, licensing, dependency, authority, and rejection/staleness constraints.
-
-See [`../docs/skill-verification.md`](../docs/skill-verification.md), [`../docs/curation-policy.md`](../docs/curation-policy.md), and [`../registry/verification/README.md`](../registry/verification/README.md).
+For system-wide orientation, return to the [project README](../README.md) or [agent start guide](../AGENT_START_HERE.md).

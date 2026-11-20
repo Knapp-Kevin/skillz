@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "source_rights": "historical authorship/rights unresolved, legacy unchanged",
+  "new_original_package_count": 12,
+  "legacy_capabilities_addressed": 19,
+  "review": "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md",
+  "records": [
+    {
+      "id": "local-skills/agent-failure-boundary-analysis",
+      "legacy_source_paths": [
+        "skills/agent-postmortem/SKILL.md"
+      ],
+      "blob": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
+      "package_tree": "529d15ce1636092920e810c75097594a195c7315",
+      "capability_routes": [
+        "agent-mcp-development/evaluation",
+        "security/incident-response"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/decision-tradeoff-workbench",
+      "legacy_source_paths": [
+        "skills/brief-writer/SKILL.md",
+        "skills/compare/SKILL.md"
+      ],
+      "blob": "671d0bdd130414c8a71c86059e21489123f08c4d",
+      "package_tree": "45b00d78352674b6e705704deb96af114ba4c830",
+      "capability_routes": [
+        "planning/decision-frameworks",
+        "business/strategy"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/research-question-dossier",
+      "legacy_source_paths": [
+        "skills/deep-dive/SKILL.md"
+      ],
+      "blob": "be5e60add3642754ac89d9d28c51077f13515ed9",
+      "package_tree": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "capability_routes": [
+        "research/synthesis",
+        "research/source-discovery"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/professional-market-evidence-scout",
+      "legacy_source_paths": [
+        "skills/career-radar/SKILL.md"
+      ],
+      "blob": "266072c0044c023674718c3775b50104b95b3a66",
+      "package_tree": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "capability_routes": [
+        "career/job-search",
+        "career/compensation"
+      ],
+      "static_score": "17/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/statement-variance-reviewer",
+      "legacy_source_paths": [
+        "skills/finance-review/SKILL.md"
+      ],
+      "blob": "5ab4cc773e90213e2d769142ea0b4741f657ca5e",
+      "package_tree": "08ecf062b07b632d5d5eef1cefa61abb658d5f48",
+      "capability_routes": [
+        "finance/reporting",
+        "finance/budgeting"
+      ],
+      "static_score": "17/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/context-continuation-contract",
+      "legacy_source_paths": [
+        "skills/handoff-writer/SKILL.md",
+        "skills/session-continuity/SKILL.md"
+      ],
+      "blob": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "package_tree": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "capability_routes": [
+        "memory-context/context-compression",
+        "agent-mcp-development/multi-agent-collaboration"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/evidence-narrative-composer",
+      "legacy_source_paths": [
+        "skills/deck-outline/SKILL.md",
+        "skills/devlog-draft/SKILL.md"
+      ],
+      "blob": "d67e8824ab340014f5379f32fc8e02df3220d18a",
+      "package_tree": "6e356d294bab2483fd4a938c24fd5e5b0b2ad34a",
+      "capability_routes": [
+        "communication/presentations",
+        "marketing/content"
+      ],
+      "static_score": "17/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/personal-operations-control-board",
+      "legacy_source_paths": [
+        "skills/daily-briefing/SKILL.md",
+        "skills/inbox-triage/SKILL.md",
+        "skills/task-surface/SKILL.md"
+      ],
+      "blob": "04ed03841366f854d642e8ebcafd9d39023608c6",
+      "package_tree": "7dab6d9a2d31e59a84b5979d20398efea223dc17",
+      "capability_routes": [
+        "time-productivity/task-systems",
+        "time-productivity/personal-planning",
+        "communication/organizational-communication"
+      ],
+      "static_score": "17/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/learning-evidence-progression",
+      "legacy_source_paths": [
+        "skills/learning-plan/SKILL.md"
+      ],
+      "blob": "0207ac7d4c8844f4922067cf49495437e1bea10a",
+      "package_tree": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "capability_routes": [
+        "education/curriculum",
+        "education/assessment"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/repository-delivery-assessor",
+      "legacy_source_paths": [
+        "skills/repo-doctor/SKILL.md",
+        "skills/repo-pulse/SKILL.md"
+      ],
+      "blob": "2e4b24f1a3e764a90f9dcdc2804267fccbb15d41",
+      "package_tree": "5a896b31e8019645207dc73316e09534c004dfd2",
+      "capability_routes": [
+        "software-engineering/maintenance",
+        "cloud-devops/ci-cd"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/business-presence-observatory",
+      "legacy_source_paths": [
+        "skills/smallbiz-ops/SKILL.md"
+      ],
+      "blob": "87f586fe378dfabc2055fc7efe0589e99d212cbf",
+      "package_tree": "20a2d534e0b4a29e7dd2423aefbb6980f972968f",
+      "capability_routes": [
+        "business/operations",
+        "marketing/seo"
+      ],
+      "static_score": "17/20",
+      "observed_behavior": "not-run"
+    },
+    {
+      "id": "local-skills/work-period-evidence-reporter",
+      "legacy_source_paths": [
+        "skills/standup-writer/SKILL.md",
+        "skills/week-in-review/SKILL.md"
+      ],
+      "blob": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
+      "package_tree": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "capability_routes": [
+        "communication/organizational-communication",
+        "time-productivity/collaboration"
+      ],
+      "static_score": "18/20",
+      "observed_behavior": "not-run"
+    }
+  ]
+}

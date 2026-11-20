@@ -2,6 +2,7 @@
 // Maintenance-only integrity check. Reads local passive JSON; no network, install, CI or execution of skills.
 import fs from 'node:fs';
 import path from 'node:path';
+import { auditRetiredRoutes } from './check-retired-skill-routes.mjs';
 
 const root = process.cwd();
 const load = (p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
@@ -9,6 +10,12 @@ const fail = (msg) => { throw new Error('Authored capability index: ' + msg); };
 const authored = load('registry/authored-skills-index.json').skills;
 const directory = load('registry/capability-directory.json');
 const names = load('registry/governed-review-name-index.json');
+// Verify the source-bound 30-day GitHub discovery behavior, not a historical 14-day default.
+const topicProfiles = load('skills/authored/technology-change-intelligence/references/profile-catalog.json');
+if (topicProfiles.profile_count !== 17 || topicProfiles.profiles?.length !== 17 ||
+    new Set(topicProfiles.profiles.map(p => p.id)).size !== 17 ||
+    topicProfiles.profiles.find(p => p.id === 'github-discovery')?.window_days !== 30)
+  fail('Technology Change Intelligence route count or GitHub 30-day default drift');
 const records = new Map(directory.skill_records.map(r => [r.id, r]));
 const byPath = new Map(directory.domains.flatMap(d => d.subdomains.map(s => [d.id + '/' + s.id, s])));
 const firstParty = new Set(names.first_party_ids);
@@ -55,4 +62,8 @@ for (const d of directory.domains) {
   if (overview.linked_reviewed_examples !== new Set(d.subdomains.flatMap(s => s.matched_skill_ids)).size) fail('domain overview count drift ' + d.id);
   if (overview.subdomains_with_linked_examples !== d.subdomains.filter(s => s.matched_skill_ids.length).length) fail('subdomain overview count drift ' + d.id);
 }
+// The authored routing check must also refuse resurrection of an archived skill.
+const retirement = auditRetiredRoutes(root);
+if (!retirement.ok) fail('retired source/navigation drift: ' + retirement.problems.join('; '));
+console.log('Historical routing OK:', retirement.historical, 'retired,', retirement.checkedLinks, 'active navigation links');
 console.log('Authored routing OK:', authored.length, 'authored,', records.size, 'mapped identities,', linkedSubs, 'linked subdomains');

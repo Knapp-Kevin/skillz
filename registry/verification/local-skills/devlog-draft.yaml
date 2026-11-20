@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d74ff133f69c8908c4acf296fb93313069082114
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New exact source statically re-reviewed, NOT pinned SkillSpector scanned or actual agent-host behavior. Unchanged use held.
@@ -19,3 +20,8 @@ tags:
   authority: [generate-only]
   portability: [medium]
 notes: "2026-11-04 fresh full-current 17/20 semantic review: Removed implicit host-profile/memory root discovery; bound allowed repos/logs; made public-quote redaction explicit. Previous 19/20 grade on older blob was insufficient to catch this authority/egress defect. Current exact SKILL.md d74ff133f69c8908c4acf296fb93313069082114, complete package Git tree ba81b6da10b317b314d31264d7c5d9362d753702. External pinned scanner and real synthetic host tool-call behavior NOT RUN; security issue #402. See docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/devlog-draft/SKILL.md
+replacement_id: local-skills/evidence-narrative-composer
+retirement_note: "Historical single-file source tree pinned; five self-adjudicated synthetic case outputs passed. No independently observed host parity or 1.5x gain; copyright and full consumer scan unresolved."

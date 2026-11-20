@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: repository-delivery-assessor
+skill_version: "1.3.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/repository-delivery-assessor/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 75c09e83d13a388e591f384f8029090edbe0bc50
+complete_package_tree_sha: 58662de287377f9b479d80cfa92e454413f9dc0e
+characterized_at: "2026-11-19"
+reviewed_at: "2026-11-19"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Current v1.3 exact six-file package static review 18/20:
+  docs/reviews/2026-11-19-ci-guard-delivery-components.md.
+  Historical v1.2 and v1.1 source reviews retained as history.
+  Controlled emulation only, independent host behavior NOT_RUN,
+  1.5x effectiveness NOT_PROVEN.

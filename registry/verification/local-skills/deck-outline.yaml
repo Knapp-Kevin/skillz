@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 63c943992417148d010551238a15259d4968cb55
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
@@ -19,3 +20,8 @@ tags:
   authority: [generate-only]
   portability: [high]
 notes: "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/deck-outline/SKILL.md
+replacement_id: local-skills/evidence-narrative-composer
+retirement_note: "Historical single-file source tree pinned; five self-adjudicated synthetic case outputs passed. No independently observed host parity or 1.5x gain; copyright and full consumer scan unresolved."

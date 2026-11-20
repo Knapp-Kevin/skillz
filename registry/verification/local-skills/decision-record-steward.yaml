@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: decision-record-steward
+skill_version: "1.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/decision-record-steward/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/decision-record-steward/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: d9005c5c1b3fbed122a52d106104dbee02b5a165
+complete_package_tree_sha: 56b32d80412fbae75f05914e992156f081d8ce05
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [decision-governance]
+  lifecycle: [evaluation]
+  characteristic: [evidence-first, privacy-bounded, traceable]
+  authority: [read-only, mutating]
+  portability: [high]
+notes: >-
+  V1.1 exact complete source package static reviewed 18/20, independent
+  function-level remediation under docs/reviews/2026-11-18-decision-connector-parity-v1-1.md.
+  Default read-only, optional approved record append/create is mutating.
+  No actual host behavior or >=1.5x effectiveness evidence.

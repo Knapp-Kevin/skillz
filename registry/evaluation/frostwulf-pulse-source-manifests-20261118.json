@@ -1,0 +1,560 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-19",
+  "historical_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+  "scope": "Seventeen legacy topic pulses mapped into one original authored technology-change-intelligence package with separate profiles",
+  "manifest_type": "COMPLETE_UNTRUNCATED_GIT_PACKAGE_TREE_PINNING",
+  "counts": {
+    "profiles": 17,
+    "pinned_bundled_source_json": 16,
+    "inline_source_lists": 1,
+    "full_package_trees_verified": 17,
+    "host_behavior_observed": 0,
+    "paired_case_slots_declared": 85
+  },
+  "non_exhaustive_warning": "Full source Git package trees ARE now verified for all 17 historical Pulses at the recorded live main revision, including each known bundled or inline source list. This does NOT prove live source access, per-profile functional parity, real subscriber behavior, copyright clearance, or 1.5x gain. Prior synthetic fixture replacement-tree fingerprints refer to an older authored package and need requalification for v1.2.",
+  "rows": [
+    {
+      "historical_entrypoint": "skills/claude-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
+      "source_list_mode": "INLINE_IN_SKILL_MD",
+      "known_source_manifest_path": null,
+      "known_source_manifest_git_blob_sha1": null,
+      "source_manifest_json_parse_verified": false,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/deepseek-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/deepseek-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "0acf86aa545c6c519ee95e364226badca5f32bda",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "8984411410ccae81474a93e53c28a180ff61ec25",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "0acf86aa545c6c519ee95e364226badca5f32bda"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_EXACT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_PAIR_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-deepseek-pulse-v124-source-and-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/gemini-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/gemini-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "02a7017d93b20f13392bdb0343d22ad3d5ebf440",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "02a7017d93b20f13392bdb0343d22ad3d5ebf440"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/github-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/github-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "bfdce4b0e819ceab937b1b92d31313cde11595f4",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "bfdce4b0e819ceab937b1b92d31313cde11595f4"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/github-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-github-v124-live-source-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/glm-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/glm-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "741b61992356dc6a7ee2063fe54765b93fc3c039",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "7974b0f1957fec72a823e43b5c6985abfb9a937c",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "741b61992356dc6a7ee2063fe54765b93fc3c039"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-glm-v124-live-source-five-cases.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/governance-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/governance-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "ea931e8cb3adaebe7a8819bfa27af2902b356b76",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "506e6452333173778aa6e0e4e9a614b10cd12c58",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "ea931e8cb3adaebe7a8819bfa27af2902b356b76"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/governance-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-governance-v124-live-source-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/hf-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "149e577a9f72895b09aea43d607203d731db1bce",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/hf-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "e29fd6def1f6bf38d93ba3a8864b9fd264388e38",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "149e577a9f72895b09aea43d607203d731db1bce"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "e29fd6def1f6bf38d93ba3a8864b9fd264388e38"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_v1.2.4_CASES_CONTROLLED_TEXT_EMULATION; INDEPENDENT_HOST_PAIR_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-19-hf-v124-live-source-and-five-case-acceptance.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/inference-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/inference-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "3eba79599f77970dd91367df55f1325ded8f2149",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/inference-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-inference-v124-source-bound-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/kimi-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/kimi-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "d3916d9e018cdb00a7ce529933c4c95310aedb92",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "049e00a74897ba13f8168e7f8ce2a896d9937e84",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "d3916d9e018cdb00a7ce529933c4c95310aedb92"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-kimi-v124-source-bound-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/llama-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "c0c38b0dd182f1f588d1800b832b331c8572080e",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/llama-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "14b89191a00a7e1ffccb28ab47c32b1a5a84acdb",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "53dbd090ce88c406296ff84fce4faa61534044cd",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "14b89191a00a7e1ffccb28ab47c32b1a5a84acdb"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/llama-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-llama-v124-source-bound-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/mcp-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/mcp-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "586ae9bffc9ff8112d4e460aa878b6ebe4015172",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "586ae9bffc9ff8112d4e460aa878b6ebe4015172"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/mcp-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-mcp-v124-source-bound-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/memory-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/memory-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "d05ad098fcb822b1af81798cae1321d135f3f042",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "d05ad098fcb822b1af81798cae1321d135f3f042"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/memory-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-memory-v124-source-bound-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/mistral-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/mistral-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "760e8d731d00ff99ac8eb7405ab7da9390745c43",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "0460d0ae30d98e8013eb41f5f86668af6acec2d1",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "760e8d731d00ff99ac8eb7405ab7da9390745c43"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-mistral-v124-live-source-five-cases.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/openai-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/openai-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "7453e54b0fd67f2fbf6ca8bad4e6f0e569b59a3b",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "7453e54b0fd67f2fbf6ca8bad4e6f0e569b59a3b"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-openai-v124-current-sources-five-cases.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/perplexity-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "06906792509a41a3a9cbb641e02f47e9fb458a69",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/perplexity-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "a7dc203a87bbb6eab1ccbbe40583c5f90eb74d46",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "2929295240f02db18afc52eeb44a8d3c30ec8346",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "a7dc203a87bbb6eab1ccbbe40583c5f90eb74d46"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/qwen-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/qwen-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "304be9866f211cec086f5479af9d872cac7d84b4",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "e328cb591e98f994d2646bae448cb779c6adee06",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "304be9866f211cec086f5479af9d872cac7d84b4"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_EXACT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_PAIR_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-qwen-pulse-v124-source-and-five-case-retirement.json"
+      ]
+    },
+    {
+      "historical_entrypoint": "skills/xai-pulse/SKILL.md",
+      "entrypoint_git_blob_sha1": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
+      "source_list_mode": "PINNED_BUNDLED_JSON",
+      "known_source_manifest_path": "skills/xai-pulse/sources.json",
+      "known_source_manifest_git_blob_sha1": "f3608fb81efd181a91ecf2c72b73930e073ab67f",
+      "source_manifest_json_parse_verified": true,
+      "complete_package_tree_status": "VERIFIED_UNTRUNCATED_GIT_TREE",
+      "rights": "NOT_ESTABLISHED",
+      "execution": "NOT_RUN",
+      "complete_package_tree_sha1": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+      "complete_package_files": [
+        {
+          "name": "SKILL.md",
+          "blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813"
+        },
+        {
+          "name": "sources.json",
+          "blob_sha": "f3608fb81efd181a91ecf2c72b73930e073ab67f"
+        }
+      ],
+      "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
+      "profile_case_contract_count": 5,
+      "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "5_V1_2_4_CASES_CONTROLLED_TEXTUAL_EMULATION; HOST_PAIR_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-19-pulse-xai-v124-five-controlled-cases.json",
+        "docs/evals/receipts/2026-11-19-pulse-xai-live-primary-sources-smoke.json"
+      ]
+    }
+  ],
+  "source_integrity_evidence": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
+}

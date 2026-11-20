@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: work-period-evidence-reporter
+display_name: "Work Period Evidence Reporter"
+skill_version: "1.2.0"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/authored/work-period-evidence-reporter/SKILL.md
+source_class: first-party-authored
+license: MIT
+relationship: newly-authored-original
+copyright_holder: Kevin Knapp
+license_evidence_path: skills/authored/work-period-evidence-reporter/LICENSE
+curated_at: "2026-11-19"
+last_checked_at: "2026-11-19"
+availability: in-repo
+local_path: skills/authored/work-period-evidence-reporter/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: verified-static
+dependency_status: self-contained-text-package
+dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
+content_blob_sha: 1f009236ab80aba49095a55229a6109504035096
+complete_package_tree_sha: 5183dedbb6283ccd01b27198e9cd33a242e20a0e
+historical_comparators: "skills/standup-writer/SKILL.md; skills/week-in-review/SKILL.md"
+historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
+rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
+import_eligibility: review-required
+rationale: "Current three-file v1.1 complete-package static review 18/20 restores specialized predecessor deliverables; docs/reviews/2026-11-19-narrative-and-work-period-parity-v1-1.md. Host behavior not run."
+
+source_level_reassessment: "2026-11-19 exact v1.2 package and 10 bounded synthetic report cases; no independent host A/B or measured gain."

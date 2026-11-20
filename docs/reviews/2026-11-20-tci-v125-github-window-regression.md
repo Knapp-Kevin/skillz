@@ -1,0 +1,7 @@
+# Technology Change Intelligence v1.2.5: GitHub discovery window correction
+
+**Source change verified November 20, 2026.** The retired GitHub Pulse used a 30-day default. Technology Change Intelligence v1.2.4 had changed it to 14 days, silently narrowing candidate discovery. The authored v1.2.5 profile restores **30 days** by default, retains user-specified interval override and explicitly requires `30_DAY_COVERAGE_NOT_CHECKED` when the full period was not actually searched.
+
+**Exact new package:** eleven-file Git tree `7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7`; entrypoint Git blob `7a2a66d3de1147cb83fa42176d501b81b6338770`. Previous v1.2.4 tree `4514fd326d170a49be9f43fcfdcbcd4e2983f8fb`, blob `da2ed091777ed05e7ac94454439c3404c824408d`. All 17 profile IDs remain unique. The 16 other profile configurations and source-lane definitions are unchanged. A controlled nominal case tests newly created versus merely recently pushed repositories; adversarial/source-gap cases refuse fabricated 30-day completeness, unsanctioned writes and schedules.
+
+**Static checks:** source JSON parse and count, Git tree identity, 16-profile non-regression, source instructions, specialist gate, synthetic acceptance cases and canonical index/selector/provenance/verification identity reconciliation. Historical v1.2.4 acceptance receipts and retirement evidence remain pinned to their original revision. No isolated model-host A/B, actual full-period web search, user outcome or 1.5× effectiveness is claimed. Historical source ownership remains unknown.

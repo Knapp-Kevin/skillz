@@ -5,18 +5,27 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/github-pulse/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: daf4d425d0037a521610c87422a544770f8c9a22
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
-availability: in-repo
+availability: retired-historical
 local_path: skills/github-pulse/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: conditional-on-security-and-user-fit
+import_eligibility: retired-not-selectable
 rationale: "Separates popularity from quality and limits deeper-look recommendations; source/API availability and rate limits are operational constraints."
 exact_version_requalification: "Current 9c345c88cef5f4f97235facb6d3d7414ab820f1a static semantic grade 18/20, documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md. Current whole-package security SkillSpector and external-host behavior NOT RUN; unchanged adoption held."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/github-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: github-discovery
+retirement_receipt: docs/evals/receipts/2026-11-20-github-v124-live-source-five-case-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

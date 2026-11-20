@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9326d7a691e40ff30a07a71738b13a04117206d6
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Exact-version source-only semantic review complete on 2026-11-04. External-host behavioral validation not-run, security qualification and unchanged-use clearance not established.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only, generate-only]
   portability: [medium]
 notes: "Current exact-version 9326d7a691e40ff30a07a71738b13a04117206d6 re-read after addition of sensitive-output guard; Q15 source-semantic grade 18/20 remains supported by unchanged trigger/procedure and strengthened privacy boundaries. This is static review only. External whole-package security and actual host behavior remain not-run."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/inbox-triage/SKILL.md
+replacement_id: local-skills/personal-operations-control-board
+retirement_note: "Historical full package pinned; five executed controlled synthetic decision assertions per original; independent model-host A/B, 1.5x improvement, actual outcome and exhaustive consumer scanning NOT PROVEN. Rights unresolved."

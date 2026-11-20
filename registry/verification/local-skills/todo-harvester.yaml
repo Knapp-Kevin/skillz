@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3
 characterized_at: 2026-08-30
 reviewed_at: 2026-08-30
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Behavioral validation remains not-run absent a current matching executed artifact.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Strong read-only debt-marker triage using blame age plus surrounding-code verification before stale classification; output stays proposal-only."
+
+retired_at: "2026-11-18"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/c95b31e6d0955f00c5ae14bb59ceee821de20b2c/skills/todo-harvester/SKILL.md
+replacement_id: local-skills/source-debt-triage
+retirement_note: "Historical source and prior review retained. Five controlled procedure scenarios passed; independent host behavior not-run and full consumer scan incomplete. Owner accepted explicit bounded emulation-based retirement."

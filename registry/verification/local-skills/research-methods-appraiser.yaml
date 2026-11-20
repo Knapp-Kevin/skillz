@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: research-methods-appraiser
+skill_version: "1.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/research-methods-appraiser/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/research-methods-appraiser/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73
+complete_package_tree_sha: ee212b2da6863e8dc172ea95b67c6eb190603835
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [research-appraisal]
+  lifecycle: [evaluation]
+  characteristic: [evidence-first, privacy-bounded, traceable]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Current original three-file v1.1 source static review 18/20, with
+  independently written functional corrections: docs/reviews/2026-11-18-research-parity-v1-1.md.
+  Host tests and paired legacy behavior not run, 1.5x not proven.

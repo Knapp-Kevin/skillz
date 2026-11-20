@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 18f46840032829963715ec23894f7826dbbfcb77
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-05
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New v1.0.1 source inspected after removal of an unsafe broad Git wildcard permission recommendation. Static source inspection only, with no pinned full-package security scan or independent observed agent-host behavior.
@@ -19,3 +20,8 @@ tags:
   authority: [read-only, external-side-effect]
   portability: [medium]
 notes: "v1.0.1 source reviewed: removes unsafe Bash(git *) wildcard-narrowing example, explains git helper execution risk, and requires host-enforced explicit argument/configuration boundaries or a scoped metadata API. Recurrence/delivery require distinct approval. Semantic static review only; pinned scanner and independent agent-host acceptance not run."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/94a34d59ad5d3a9844b602d353084f5dd08791c8/skills/permissions-review/SKILL.md
+replacement_id: local-skills/privilege-exposure-mapper
+retirement_note: "Historical full package single-file tree pinned; five synthetic Python permission-graph tests pass. Independent agent-host behavioral parity and 1.5x improvement not established, rights unresolved."

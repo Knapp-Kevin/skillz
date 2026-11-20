@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "issue": 738,
+  "classification": "CONTROLLED_SINGLE_CHAT_EMULATION_NOT_OBSERVED_HOST_PAIRS",
+  "source_rights": "HISTORICAL_NOT_ESTABLISHED",
+  "model_family": "GPT-6",
+  "contexts_independent": false,
+  "blinded_evaluation": false,
+  "live_retrieval_performed": false,
+  "external_side_effects_performed": false,
+  "actual_observed_host_pairs": 0,
+  "actual_user_outcomes": 0,
+  "exact_version_groups": [
+    {
+      "replacement_version": "1.2.2",
+      "tree_sha1": "4e92122e2bf68926df743a4393ef166a42fadba9",
+      "modes": [
+        "local-inference",
+        "ai-governance",
+        "github-discovery"
+      ],
+      "case_count": 15,
+      "source_output_refs": [
+        {
+          "path": "docs/evals/receipts/2026-11-19-inference-pulse-five-controlled-emulations.md",
+          "sha": "1bf1d5692faebdf8254cb3078a78271c39f370bf",
+          "ids": [
+            "P3-INFERENCE-1",
+            "P3-INFERENCE-2",
+            "P3-INFERENCE-3",
+            "P3-INFERENCE-4",
+            "P3-INFERENCE-5"
+          ],
+          "paired_texts": 10
+        },
+        {
+          "path": "docs/evals/receipts/2026-11-19-governance-pulse-five-controlled-emulations.md",
+          "sha": "eae1386903e56a15ffc2196adb0a3f928a0821f8",
+          "ids": [
+            "P3-GOVERNANCE-1",
+            "P3-GOVERNANCE-2",
+            "P3-GOVERNANCE-3",
+            "P3-GOVERNANCE-4",
+            "P3-GOVERNANCE-5"
+          ],
+          "paired_texts": 10
+        },
+        {
+          "path": "docs/evals/receipts/2026-11-19-github-pulse-five-controlled-emulations.md",
+          "sha": "a9632ebe37bfa5126fa76e0ab3b4832289410788",
+          "ids": [
+            "P1-PULSE-01",
+            "P1-PULSE-02",
+            "P1-PULSE-03",
+            "P1-PULSE-04",
+            "P1-PULSE-05"
+          ],
+          "paired_texts": 10
+        }
+      ]
+    },
+    {
+      "replacement_version": "1.2.3",
+      "tree_sha1": "2c0e27ea8df81a067d60f5e5d4c61f43f308c44a",
+      "modes": [
+        "agent-memory",
+        "mcp-protocol"
+      ],
+      "case_count": 10,
+      "source_output_refs": [
+        {
+          "path": "docs/evals/receipts/2026-11-19-memory-pulse-five-controlled-emulations.md",
+          "sha": "c6d1a7f75f67a902b6c54417c957a19111536c44",
+          "ids": [
+            "P3-MEMORY-1",
+            "P3-MEMORY-2",
+            "P3-MEMORY-3",
+            "P3-MEMORY-4",
+            "P3-MEMORY-5"
+          ],
+          "paired_texts": 10
+        },
+        {
+          "path": "docs/evals/receipts/2026-11-19-mcp-pulse-five-controlled-emulations.md",
+          "sha": "8a86fb4a1a87aaeb1bef4892acd9a1da2b87a852",
+          "ids": [
+            "P3-MCP-1",
+            "P3-MCP-2",
+            "P3-MCP-3",
+            "P3-MCP-4",
+            "P3-MCP-5"
+          ],
+          "paired_texts": 10
+        }
+      ]
+    }
+  ],
+  "cumulative_historical_modes_with_emulated_text": 5,
+  "cumulative_historical_modes_total": 17,
+  "emulated_scenario_count": 25,
+  "scenario_target_count": 85,
+  "total_response_texts": 50,
+  "positive_oracles_available": 75,
+  "negative_oracles_available": 70,
+  "case_kinds": {
+    "NOMINAL": 5,
+    "CHALLENGING": 5,
+    "MISSING_EVIDENCE": 5,
+    "ADVERSARIAL_AUTHORITY": 5,
+    "INTEGRATION": 5
+  },
+  "structural_checks": {
+    "documented_ids": 25,
+    "unique_ids": 25,
+    "each_document_five_cases": true,
+    "each_case_old_and_new_text": true,
+    "each_case_review_section": true,
+    "errors": []
+  },
+  "assessor": "Same model authored and qualitatively reviewed all outputs; no independent scorer",
+  "semantic_result": "NO_OBVIOUS_CRITICAL_OMISSION_ON_SINGLE_AUTHOR_TEXTUAL_REVIEW_NOT_PARITY_PROVEN",
+  "improvement_claim": "NOT_MEASURED",
+  "parity_claim": "UNKNOWN",
+  "retirement_authorized": false,
+  "remaining_work": "Complete remaining 60 of 85 preregistered cases, qualify at exact current package revision with independent or owner-accepted bounded emulation and meaningful adjudication; preserve historical rights/evidence.",
+  "identified_outcome_gaps": [
+    {
+      "mode": "github-discovery",
+      "status": "CORRECTED_IN_V1.2.3",
+      "summary": "Short one-line-per-repo discovery scan restored in merged PR #783"
+    },
+    {
+      "mode": "mcp-protocol",
+      "status": "REVIEW_PENDING",
+      "summary": "Capability-gap/duplicate assessment should explicitly require a user-provided authorized inventory, otherwise mark NOT_CHECKED"
+    }
+  ],
+  "case_ids": [
+    "P3-INFERENCE-1",
+    "P3-INFERENCE-2",
+    "P3-INFERENCE-3",
+    "P3-INFERENCE-4",
+    "P3-INFERENCE-5",
+    "P3-GOVERNANCE-1",
+    "P3-GOVERNANCE-2",
+    "P3-GOVERNANCE-3",
+    "P3-GOVERNANCE-4",
+    "P3-GOVERNANCE-5",
+    "P1-PULSE-01",
+    "P1-PULSE-02",
+    "P1-PULSE-03",
+    "P1-PULSE-04",
+    "P1-PULSE-05",
+    "P3-MEMORY-1",
+    "P3-MEMORY-2",
+    "P3-MEMORY-3",
+    "P3-MEMORY-4",
+    "P3-MEMORY-5",
+    "P3-MCP-1",
+    "P3-MCP-2",
+    "P3-MCP-3",
+    "P3-MCP-4",
+    "P3-MCP-5"
+  ]
+}

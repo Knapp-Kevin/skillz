@@ -1,62 +1,66 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-17",
-  "purpose": "Governed review-name lookup: 48 first-party plus 995 third-party identities, 1,043 total. Not the open-ended discovery corpus or a universal coverage claim.",
+  "snapshot_date": "2026-11-19",
+  "purpose": "Current 1047 governed exact-version identities (52 first-party, 995 third-party); 22 historical retired entrypoints in archive only.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
-  "source_snapshot": "Source/navigation baseline 48d35fc2aa0a6b3cd8ae09c94be67213e68fbd49 plus exact new package fingerprints in authored index",
+  "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 48,
+    "first_party": 52,
     "third_party": 995,
-    "total": 1043
+    "total": 1047
   },
   "first_party_ids": [
-    "local-skills/agent-home-doctor",
-    "local-skills/agent-postmortem",
-    "local-skills/automation-receipts",
+    "local-skills/agent-failure-boundary-analysis",
+    "local-skills/agent-workspace-footprint-assessor",
     "local-skills/brief-writer",
-    "local-skills/career-radar",
+    "local-skills/business-presence-observatory",
     "local-skills/character-motivation-interview",
+    "local-skills/ci-guard",
+    "local-skills/claim-evidence-adjudicator",
     "local-skills/claude-pulse",
     "local-skills/compare",
-    "local-skills/daily-briefing",
-    "local-skills/decision-log",
-    "local-skills/deck-outline",
-    "local-skills/deep-dive",
+    "local-skills/connector-capability-risk-review",
+    "local-skills/context-continuation-contract",
+    "local-skills/decision-record-steward",
+    "local-skills/decision-tradeoff-workbench",
     "local-skills/deepseek-pulse",
     "local-skills/develop-melodic-motif",
-    "local-skills/devlog-draft",
-    "local-skills/fact-check",
-    "local-skills/finance-review",
+    "local-skills/evidence-narrative-composer",
+    "local-skills/federated-source-catalog",
+    "local-skills/file-lifecycle-curator",
     "local-skills/gemini-pulse",
     "local-skills/github-pulse",
     "local-skills/glm-pulse",
     "local-skills/governance-pulse",
-    "local-skills/handoff-writer",
     "local-skills/healthcare-contract-forensics",
     "local-skills/hf-pulse",
-    "local-skills/inbox-triage",
     "local-skills/inference-pulse",
     "local-skills/kimi-pulse",
-    "local-skills/learning-plan",
+    "local-skills/learning-evidence-progression",
     "local-skills/llama-pulse",
     "local-skills/mcp-pulse",
-    "local-skills/mcp-vetting",
     "local-skills/memory-pulse",
+    "local-skills/metadata-taxonomy-steward",
     "local-skills/mistral-pulse",
     "local-skills/narrative-scene-gap-audit",
     "local-skills/openai-pulse",
-    "local-skills/paper-digest",
-    "local-skills/permissions-review",
     "local-skills/perplexity-pulse",
+    "local-skills/personal-operations-control-board",
+    "local-skills/privilege-exposure-mapper",
+    "local-skills/professional-market-evidence-scout",
     "local-skills/qwen-pulse",
+    "local-skills/reference-integrity-auditor",
     "local-skills/repo-doctor",
     "local-skills/repo-pulse",
+    "local-skills/repository-delivery-assessor",
+    "local-skills/research-methods-appraiser",
+    "local-skills/research-question-dossier",
+    "local-skills/scheduled-work-proof-auditor",
     "local-skills/session-continuity",
-    "local-skills/smallbiz-ops",
-    "local-skills/standup-writer",
-    "local-skills/task-surface",
-    "local-skills/todo-harvester",
-    "local-skills/week-in-review",
+    "local-skills/source-debt-triage",
+    "local-skills/statement-variance-reviewer",
+    "local-skills/technology-change-intelligence",
+    "local-skills/work-period-evidence-reporter",
     "local-skills/xai-pulse"
   ],
   "third_party_ids": [
@@ -1068,5 +1072,260 @@
       "local-skills/character-motivation-interview"
     ],
     "routing": "registry/discovery/authored-capability-routing-20261108.json"
+  },
+  "authored_extension_20261118": {
+    "date": "2026-11-18",
+    "ids": [
+      "local-skills/federated-source-catalog",
+      "local-skills/file-lifecycle-curator",
+      "local-skills/metadata-taxonomy-steward",
+      "local-skills/reference-integrity-auditor"
+    ],
+    "companion_review": "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md",
+    "provenance": "registry/authored-skills-index.json",
+    "qualification": "All four referenced authored packages are independently static-reviewed in exact versions; host behavior NOT RUN. File lifecycle and federated catalog are v1.1; taxonomy and reference integrity are v1.0."
+  },
+  "frostwulf_independent_replacement_20261118": {
+    "status": "21 new original packages mapped to 44 legacy capability functions, 44 originals retained, no host acceptance, no retirement authority",
+    "review_paths": [
+      "docs/reviews/2026-11-18-frostwulf-first-four-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md",
+      "docs/reviews/2026-11-18-technology-change-intelligence-static-review.md",
+      "docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md"
+    ],
+    "new_ids": [
+      "local-skills/claim-evidence-adjudicator",
+      "local-skills/research-methods-appraiser",
+      "local-skills/source-debt-triage",
+      "local-skills/decision-record-steward",
+      "local-skills/agent-workspace-footprint-assessor",
+      "local-skills/connector-capability-risk-review",
+      "local-skills/privilege-exposure-mapper",
+      "local-skills/scheduled-work-proof-auditor",
+      "local-skills/technology-change-intelligence",
+      "local-skills/agent-failure-boundary-analysis",
+      "local-skills/decision-tradeoff-workbench",
+      "local-skills/research-question-dossier",
+      "local-skills/professional-market-evidence-scout",
+      "local-skills/statement-variance-reviewer",
+      "local-skills/context-continuation-contract",
+      "local-skills/evidence-narrative-composer",
+      "local-skills/personal-operations-control-board",
+      "local-skills/learning-evidence-progression",
+      "local-skills/repository-delivery-assessor",
+      "local-skills/business-presence-observatory",
+      "local-skills/work-period-evidence-reporter"
+    ]
+  },
+  "retired_legacy_ids": [
+    {
+      "id": "local-skills/todo-harvester",
+      "source_commit": "c95b31e6d0955f00c5ae14bb59ceee821de20b2c",
+      "source_blob": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+      "replacement_id": "local-skills/source-debt-triage",
+      "host_parity": "not-run"
+    },
+    {
+      "id": "local-skills/agent-postmortem",
+      "source_commit": "44a81f39173098eb754090ea83e3a076940d7a6b",
+      "source_blob": "dde789e87da090b92021b3e55304299244f62ac2",
+      "replacement_id": "local-skills/agent-failure-boundary-analysis",
+      "host_parity": "not-run",
+      "controlled_report_review": "docs/reviews/2026-11-19-agent-postmortem-controlled-retirement.md"
+    },
+    {
+      "id": "local-skills/automation-receipts",
+      "source_commit": "52a6b0419630091e04a53b04161d200ab5ef3f38",
+      "source_blob": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
+      "source_tree": "39a8e08f7037fca28665b33edcc9d93314059c2d",
+      "replacement_id": "local-skills/scheduled-work-proof-auditor",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "id": "local-skills/decision-log",
+      "source_commit": "52a6b0419630091e04a53b04161d200ab5ef3f38",
+      "source_blob": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
+      "source_tree": "ca790304801fd1717841a8fab98bb4ebeed4c9bf",
+      "replacement_id": "local-skills/decision-record-steward",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "id": "local-skills/permissions-review",
+      "source_commit": "94a34d59ad5d3a9844b602d353084f5dd08791c8",
+      "source_blob": "18f46840032829963715ec23894f7826dbbfcb77",
+      "source_tree": "e942297c3e343ad5af388b23604987a9bb49322d",
+      "replacement_id": "local-skills/privilege-exposure-mapper",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
+    },
+    {
+      "id": "local-skills/mcp-vetting",
+      "source_commit": "120b038d230b77930208f2108c34f169f297dcf9",
+      "source_blob": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+      "source_tree": "a8824fff4a3d0ed5b7a82603b48f1aefbccb9666",
+      "replacement_id": "local-skills/connector-capability-risk-review",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
+    },
+    {
+      "id": "local-skills/agent-home-doctor",
+      "source_commit": "369f6fd853b79eaf666c89da893429ba5156bc2e",
+      "source_blob": "3415f1f4bb72afc44266706be649c3950f809337",
+      "source_tree": "7e78ed3047b66c67c492eae1191853d6d7ce095e",
+      "replacement_id": "local-skills/agent-workspace-footprint-assessor",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json"
+    },
+    {
+      "id": "local-skills/fact-check",
+      "source_commit": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+      "source_blob": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "source_tree": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+      "replacement_id": "local-skills/claim-evidence-adjudicator",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "id": "local-skills/paper-digest",
+      "source_commit": "285732d5390c7e309b5613f8afba06ce5a0ce8cd",
+      "source_blob": "8691e648e6c96c986391bdbdf812616c34baef95",
+      "source_tree": "15ce2f528620a2ab99fe2f7029a73baa352ca7e0",
+      "replacement_id": "local-skills/research-methods-appraiser",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "id": "local-skills/career-radar",
+      "source_commit": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
+      "source_blob": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
+      "source_tree": "35055db24f786f8b3b57f78789e146eb0ee49b9c",
+      "replacement_id": "local-skills/professional-market-evidence-scout",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
+    },
+    {
+      "id": "local-skills/handoff-writer",
+      "source_commit": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
+      "source_blob": "733b8029063ff057051a61bc270cce138f324c7d",
+      "source_tree": "d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff",
+      "replacement_id": "local-skills/context-continuation-contract",
+      "host_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
+    },
+    {
+      "id": "local-skills/standup-writer",
+      "source_commit": "e410dd6dc4280d34504a22c6fdbe3a3f18833dd9",
+      "source_blob": "21c216fbc46f516fecc0a562afbe652fbd436b95",
+      "source_tree": "d6429bfea7bebe567aa52f7c5f1f6c44fd10086f",
+      "replacement_id": "local-skills/work-period-evidence-reporter",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json"
+    },
+    {
+      "id": "local-skills/week-in-review",
+      "source_commit": "e410dd6dc4280d34504a22c6fdbe3a3f18833dd9",
+      "source_blob": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
+      "source_tree": "81646a594bf994e24899f7a086d86459cfaa5832",
+      "replacement_id": "local-skills/work-period-evidence-reporter",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json"
+    },
+    {
+      "id": "local-skills/deck-outline",
+      "source_commit": "efd33e05141b81250420eca249364c82fa429558",
+      "source_blob": "63c943992417148d010551238a15259d4968cb55",
+      "source_tree": "8ef15cae96adcf8289c3c844847f026b97f8cfc6",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "id": "local-skills/devlog-draft",
+      "source_commit": "efd33e05141b81250420eca249364c82fa429558",
+      "source_blob": "d74ff133f69c8908c4acf296fb93313069082114",
+      "source_tree": "ba81b6da10b317b314d31264d7c5d9362d753702",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "id": "local-skills/deep-dive",
+      "source_commit": "285c1f922c76ba57b45098de1efaaa9746793dcf",
+      "source_blob": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
+      "source_tree": "6119cf00ef09a1bb4097c28c3ed4aac8909b7037",
+      "replacement_id": "local-skills/research-question-dossier",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
+    },
+    {
+      "id": "local-skills/learning-plan",
+      "source_commit": "285c1f922c76ba57b45098de1efaaa9746793dcf",
+      "source_blob": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
+      "source_tree": "931fb2192a3cb1212643fe1df51d5e4bc3c70af4",
+      "replacement_id": "local-skills/learning-evidence-progression",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
+    },
+    {
+      "id": "local-skills/smallbiz-ops",
+      "source_commit": "df12a9d2f27278d8cf8853905787e9373a1ca185",
+      "source_blob": "b7f20b33c81e647ec8ff95ef765beb75867870e2",
+      "source_tree": "304c1a49988aee8f446b5fa00700ff46a5e2358b",
+      "replacement_id": "local-skills/business-presence-observatory",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-smallbiz-controlled-portfolio.json"
+    },
+    {
+      "id": "local-skills/daily-briefing",
+      "source_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "source_tree": "6c73d9f034feaecad129769a9ec0afebabc397f6",
+      "source_blob": null,
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "id": "local-skills/finance-review",
+      "source_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "source_tree": "65edb7c6acd6b6ac808bd4f55ecd5b0248b774c3",
+      "source_blob": null,
+      "replacement_id": "local-skills/statement-variance-reviewer",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "id": "local-skills/inbox-triage",
+      "source_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "source_tree": "d5796de1dbb5605e3ba8c2932ddf6860f972bef0",
+      "source_blob": null,
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "id": "local-skills/task-surface",
+      "source_commit": "a72e30c8f0ddc35dec1ff2e5e149519f170da01a",
+      "source_tree": "951d5da3b04651e5612e8d1af811b39250672585",
+      "source_blob": null,
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "host_parity": "not-run",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    }
+  ],
+  "delivery_effectiveness_extension_20261119": {
+    "date": "2026-11-19",
+    "ids": [
+      "local-skills/ci-guard"
+    ],
+    "component_paths": [
+      "skills/authored/repository-delivery-assessor/components/issue-resolution.md",
+      "skills/authored/repository-delivery-assessor/components/delivery-momentum.md",
+      "skills/authored/repository-delivery-assessor/components/delivery-evidence.md"
+    ],
+    "review": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
+    "behavioral_validation": "not-run",
+    "note": "CI Guard standalone, three focused components under the existing delivery assessor"
   }
 }

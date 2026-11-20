@@ -9,656 +9,6 @@
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
   "skills": [
     {
-      "skill_name": "agent-home-doctor",
-      "local_path": "skills/agent-home-doctor/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "3415f1f4bb72afc44266706be649c3950f809337",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "repository-maintenance",
-          "security"
-        ],
-        "lifecycle": [
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "safety-bounded",
-          "human-review",
-          "traceable"
-        ],
-        "authority": [
-          "mutating"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
-    },
-    {
-      "skill_name": "agent-postmortem",
-      "local_path": "skills/agent-postmortem/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "evaluation",
-          "agent-development"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "decomposition",
-          "traceable",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA dde789e87da090b92021b3e55304299244f62ac2; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "brief-writer",
-      "local_path": "skills/brief-writer/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "decision-support",
-          "writing",
-          "communication"
-        ],
-        "lifecycle": [
-          "planning"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "context-efficient",
-          "human-review",
-          "risk-aware"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "career-radar",
-      "local_path": "skills/career-radar/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "career",
-          "research",
-          "monitoring"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "retrieval-first",
-          "source-driven",
-          "synthesis",
-          "evidence-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Exact 1.1.4 current source eb7565605a190e9ea3462bad57ac62aba88d3ecf, full Git tree 35055db24f786f8b3b57f78789e146eb0ee49b9c; source-only 18/20 evaluation and 8/8 structural regression checks after repairing prior private-notes lookup and outbound web-query egress. docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md. Scanner/current-tree security not-run, observed host behavior not-run, unchanged use HELD."
-    },
-    {
-      "skill_name": "claude-pulse",
-      "local_path": "skills/claude-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Official-first, read-only Claude monitoring is fully host-driven and passive, with current-source verification, clear authority separation, and community commentary treated as signal rather than truth."
-    },
-    {
-      "skill_name": "compare",
-      "local_path": "skills/compare/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "decision-support",
-          "research",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "planning",
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "metric-driven",
-          "human-review",
-          "source-driven",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "daily-briefing",
-      "local_path": "skills/daily-briefing/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "planning"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "synthesis",
-          "tool-routing",
-          "context-efficient",
-          "evidence-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held."
-    },
-    {
-      "skill_name": "decision-log",
-      "local_path": "skills/decision-log/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "decision-support",
-          "documentation"
-        ],
-        "lifecycle": [
-          "planning",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "human-review",
-          "risk-aware"
-        ],
-        "authority": [
-          "mutating"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Fresh exact-source 18/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b, full package tree ca790304801fd1717841a8fab98bb4ebeed4c9bf; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
-    },
-    {
-      "skill_name": "deck-outline",
-      "local_path": "skills/deck-outline/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "63c943992417148d010551238a15259d4968cb55",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "communication",
-          "writing",
-          "planning"
-        ],
-        "lifecycle": [
-          "planning",
-          "design"
-        ],
-        "characteristic": [
-          "synthesis",
-          "evidence-first",
-          "human-review",
-          "context-efficient"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill."
-    },
-    {
-      "skill_name": "deep-dive",
-      "local_path": "skills/deep-dive/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "research",
-          "web-search"
-        ],
-        "lifecycle": [
-          "discovery",
-          "verification"
-        ],
-        "characteristic": [
-          "retrieval-first",
-          "source-driven",
-          "evidence-first",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "deepseek-pulse",
-      "local_path": "skills/deepseek-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "devlog-draft",
-      "local_path": "skills/devlog-draft/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d74ff133f69c8908c4acf296fb93313069082114",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "writing",
-          "communication",
-          "documentation"
-        ],
-        "lifecycle": [
-          "planning"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "synthesis",
-          "human-review"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
-    },
-    {
-      "skill_name": "fact-check",
-      "local_path": "skills/fact-check/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "20/20",
-      "tags": {
-        "use_case": [
-          "research",
-          "decision-support",
-          "web-search"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "decomposition",
-          "source-driven",
-          "traceable",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA d83c43282d525682f3e13b8296111d7fe7de46f0; prior 20/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "finance-review",
-      "local_path": "skills/finance-review/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "86bdf2f9d6ebca2932612212882f6a915709203d",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "business-operations",
-          "decision-support",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "risk-aware",
-          "tool-routing"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Read-only statement analysis now resolves safe host parsing directly, preserves row traceability, and avoids dependency on a rejected vendored spreadsheet skill."
-    },
-    {
-      "skill_name": "gemini-pulse",
-      "local_path": "skills/gemini-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "github-pulse",
-      "local_path": "skills/github-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 9c345c88cef5f4f97235facb6d3d7414ab820f1a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
-    },
-    {
-      "skill_name": "glm-pulse",
-      "local_path": "skills/glm-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "governance-pulse",
-      "local_path": "skills/governance-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research",
-          "security"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "handoff-writer",
-      "local_path": "skills/handoff-writer/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "733b8029063ff057051a61bc270cce138f324c7d",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "handoff",
-          "documentation",
-          "communication"
-        ],
-        "lifecycle": [
-          "release",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "context-efficient",
-          "risk-aware"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 exact Handoff Writer 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed and whole package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff. Current source-semantic 18/20 and 14/14 bounded source checks only; scanner and actual host behavior NOT RUN, no unchanged-use approval. See docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md."
-    },
-    {
-      "skill_name": "hf-pulse",
-      "local_path": "skills/hf-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis",
-          "tool-routing"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 149e577a9f72895b09aea43d607203d731db1bce static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
       "skill_name": "healthcare-contract-forensics",
       "local_path": "skills/authored/healthcare-contract-forensics/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -692,775 +42,6 @@
         ]
       },
       "notes": "2026-11-06 issue #714: current v1.1.0 10-file MIT-authored package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; SKILL blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static structured 19/20; deterministic 4/4 clause-card completeness and 8/8 original-excerpt matches, plus synthetic currency arithmetic. Human-facing README added for shared folder. External host behavior, baseline comparison and scanner NOT RUN; no production/PHI clearance. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-commenter-acceptance-audit.md."
-    },
-    {
-      "skill_name": "inbox-triage",
-      "local_path": "skills/inbox-triage/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9326d7a691e40ff30a07a71738b13a04117206d6",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "communication"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "decomposition",
-          "tool-routing",
-          "human-review",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only",
-          "generate-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 current exact-source SHA 9326d7a691e40ff30a07a71738b13a04117206d6 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted."
-    },
-    {
-      "skill_name": "inference-pulse",
-      "local_path": "skills/inference-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "synthesis",
-          "compatibility-aware",
-          "retrieval-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "kimi-pulse",
-      "local_path": "skills/kimi-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 6625f147011dfd38ed2b9881eda2d5ea62e2ece4 static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "learning-plan",
-      "local_path": "skills/learning-plan/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "planning",
-          "research",
-          "productivity"
-        ],
-        "lifecycle": [
-          "planning"
-        ],
-        "characteristic": [
-          "source-driven",
-          "evidence-first",
-          "test-gated",
-          "human-review"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run. 2026-11-05 reconciliation: the exact matching individual review is 18/20, not 19/20. No new semantic review occurred; the source and 2026-11-03 individual review date are unchanged."
-    },
-    {
-      "skill_name": "llama-pulse",
-      "local_path": "skills/llama-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "mcp-pulse",
-      "local_path": "skills/mcp-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "security",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "risk-aware",
-          "synthesis",
-          "retrieval-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "mcp-vetting",
-      "local_path": "skills/mcp-vetting/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "security",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "source-driven",
-          "traceable",
-          "human-review"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run."
-    },
-    {
-      "skill_name": "memory-pulse",
-      "local_path": "skills/memory-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "memory",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held."
-    },
-    {
-      "skill_name": "mistral-pulse",
-      "local_path": "skills/mistral-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "openai-pulse",
-      "local_path": "skills/openai-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "paper-digest",
-      "local_path": "skills/paper-digest/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "8691e648e6c96c986391bdbdf812616c34baef95",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "research",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "source-driven",
-          "risk-aware",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md."
-    },
-    {
-      "skill_name": "permissions-review",
-      "local_path": "skills/permissions-review/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "18f46840032829963715ec23894f7826dbbfcb77",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "security",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "traceable",
-          "human-review"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "v1.0.1 exact-blob source static review: unsafe Bash(git *) example removed; Git read commands can launch repository-controlled helpers, so recommend only verified host-enforced exact argv/configuration restrictions or scoped metadata API. No pinned current-tree scanner pass, no independently observed agent-host behavior, no unchanged-use approval. See docs/reviews/2026-11-05-issue483-git-wildcard-permission-repair.md."
-    },
-    {
-      "skill_name": "perplexity-pulse",
-      "local_path": "skills/perplexity-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "qwen-pulse",
-      "local_path": "skills/qwen-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "repo-doctor",
-      "local_path": "skills/repo-doctor/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "16/20",
-      "tags": {
-        "use_case": [
-          "repository-maintenance",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "tool-assisted"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-05 source fed90fa0a664611e560bbc3ded630eb9e72253e1, tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7. Static 16/20, source assertions 9/9; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
-    },
-    {
-      "skill_name": "repo-pulse",
-      "local_path": "skills/repo-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9e6938b29e4c0748e4098bc53a96498f42784423",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "repository-maintenance"
-        ],
-        "lifecycle": [
-          "operations",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "tool-assisted",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
-    },
-    {
-      "skill_name": "smallbiz-ops",
-      "local_path": "skills/smallbiz-ops/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "b7f20b33c81e647ec8ff95ef765beb75867870e2",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "business-operations",
-          "monitoring"
-        ],
-        "lifecycle": [
-          "operations",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "source-driven",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Current exact 1.1.3 source b7f20b33c81e647ec8ff95ef765beb75867870e2, package 304c1a49988aee8f446b5fa00700ff46a5e2358b, 18/20 fresh source-semantic review with explicitly scoped private source binding. See docs/reviews/2026-11-04-issue402-career-smallbiz-private-scope.md. Security and host behavior NOT RUN; unchanged use held."
-    },
-    {
-      "skill_name": "standup-writer",
-      "local_path": "skills/standup-writer/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "21c216fbc46f516fecc0a562afbe652fbd436b95",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "communication"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "synthesis",
-          "traceable",
-          "tool-routing"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-05 source 21c216fbc46f516fecc0a562afbe652fbd436b95, tree d6429bfea7bebe567aa52f7c5f1f6c44fd10086f. Static 18/20, source assertions 7/7; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
-    },
-    {
-      "skill_name": "task-surface",
-      "local_path": "skills/task-surface/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "planning",
-          "orchestration"
-        ],
-        "lifecycle": [
-          "planning",
-          "operations"
-        ],
-        "characteristic": [
-          "contract-first",
-          "orchestration",
-          "human-review",
-          "traceable",
-          "risk-aware"
-        ],
-        "authority": [
-          "mutating",
-          "external-side-effect"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material."
-    },
-    {
-      "skill_name": "todo-harvester",
-      "local_path": "skills/todo-harvester/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "repository-maintenance",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "risk-aware",
-          "decomposition"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Strong read-only debt-marker triage using blame age plus surrounding-code verification before stale classification; output stays proposal-only."
-    },
-    {
-      "skill_name": "week-in-review",
-      "local_path": "skills/week-in-review/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "productivity",
-          "planning"
-        ],
-        "lifecycle": [
-          "operations"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "synthesis",
-          "traceable",
-          "tool-routing"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "Exact repaired 5fa0b34372aa28067f41ab19afacbe4430a31b4e (tree 81646a594bf994e24899f7a086d86459cfaa5832) static semantic 18/20; no implicit private workspace discovery; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security scan/host behavior not-run, unchanged-use held."
-    },
-    {
-      "skill_name": "xai-pulse",
-      "local_path": "skills/xai-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "automation-receipts",
-      "local_path": "skills/automation-receipts/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "security"
-        ],
-        "lifecycle": [
-          "verification",
-          "operations"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "deterministic",
-          "traceable"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Doc-only durable-receipt verification protocol: any status claim about automation is checked against a seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) before being represented; missing receipts downgrade the claim to unsubstantiated."
-    },
-    {
-      "skill_name": "session-continuity",
-      "local_path": "skills/session-continuity/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "memory",
-          "context-management",
-          "handoff"
-        ],
-        "lifecycle": [
-          "operations",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "safety-bounded",
-          "context-efficient"
-        ],
-        "authority": [
-          "mutating"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
     },
     {
       "skill_name": "narrative-scene-gap-audit",
@@ -1562,6 +143,2490 @@
         ]
       },
       "notes": "Complete original three-file MIT package inspected; no required executable or account. Source comparison and dimensional rationales in docs/reviews/2026-11-17-melody-and-capability-scope.md. No security scanner execution or unchanged-use approval."
+    },
+    {
+      "skill_name": "file-lifecycle-curator",
+      "local_path": "skills/authored/file-lifecycle-curator/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
+      "complete_package_tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "knowledge-organization",
+          "document-summarization",
+          "retrieval"
+        ],
+        "lifecycle": [
+          "intake",
+          "organization",
+          "maintenance",
+          "archiving"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "safety-bounded",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-18 v1.1 independently reviewed complete 7-file MIT source package, including optional federated handoff with native ID, principal, revision kind/value, viewer scope, limited extraction and no mutation. H01-H12 first-party deterministic oracle contract checks 12/12 (not a model-agent test). Host behavior, connector and permission isolation NOT RUN. docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
+    },
+    {
+      "skill_name": "federated-source-catalog",
+      "local_path": "skills/authored/federated-source-catalog/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
+      "complete_package_tree_sha": "b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "connector-federation",
+          "knowledge-organization",
+          "retrieval"
+        ],
+        "lifecycle": [
+          "discovery",
+          "intake",
+          "retrieval",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "privacy-bounded",
+          "safety-bounded",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-18 v1.1 independently reviewed complete 8-file MIT source package, including optional federated handoff with native ID, principal, revision kind/value, viewer scope, limited extraction and no mutation. H01-H12 first-party deterministic oracle contract checks 12/12 (not a model-agent test). Host behavior, connector and permission isolation NOT RUN. docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
+    },
+    {
+      "skill_name": "metadata-taxonomy-steward",
+      "local_path": "skills/authored/metadata-taxonomy-steward/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9d52d909a8e1dbc2c63748085b62bfa56c268989",
+      "complete_package_tree_sha": "341bf5f8751333db8896f01c51f614b4acc6ad0d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "metadata-taxonomy-steward"
+        ],
+        "lifecycle": [
+          "maintenance",
+          "evaluation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Versioned controlled vocabulary, source-native tag crosswalk, ambiguity and sensitive labels; read-only taxonomy change plans. Exact original 4-file static review at docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md. Third-party adjacent-source comparison bounded, model/host behavior and connector acceptance NOT RUN."
+    },
+    {
+      "skill_name": "reference-integrity-auditor",
+      "local_path": "skills/authored/reference-integrity-auditor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
+      "complete_package_tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "file-information-management",
+          "reference-integrity-auditor"
+        ],
+        "lifecycle": [
+          "maintenance",
+          "evaluation"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Cross-source citation/link health, stale/hidden target evidence, orphan scope and revision-bound repair proposals. Exact original 4-file static review at docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md. Third-party adjacent-source comparison bounded, model/host behavior and connector acceptance NOT RUN."
+    },
+    {
+      "skill_name": "claim-evidence-adjudicator",
+      "local_path": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "524507190260732cb28ac40ad0865672de5c2980",
+      "complete_package_tree_sha": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "planning",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact v1.1 source and three-element package re-pinned after source-level research-claim parity repairs; five offline synthetic cases for historical Fact Check, no independent agent-host A/B or 1.5x gain.",
+      "previous_content_blob_sha": "63864e5ed30deee2be15c3044ddb87fd641145a0",
+      "previous_package_tree_sha": "f4fbdc7847e5e045b7ba298e84f31013b2d4fef7",
+      "reviewed_at": "2026-11-19"
+    },
+    {
+      "skill_name": "research-methods-appraiser",
+      "local_path": "skills/authored/research-methods-appraiser/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "fa02b51c8a7985d24b1fdf3e01167c668a9aba79",
+      "complete_package_tree_sha": "28ed960cd7849bb0d72d6323b8ed35cf9c3b6e5b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "planning",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-18 direct maintainer complete-package static review: docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No external host behavior or copyright certification."
+    },
+    {
+      "skill_name": "source-debt-triage",
+      "local_path": "skills/authored/source-debt-triage/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "79ab882e03287c47b6c62dea44c5f20001d32f2d",
+      "complete_package_tree_sha": "d6a7246d40172b41e20a93025ccc4efa91aa41e2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "planning",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-18 direct maintainer complete-package static review: docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No external host behavior or copyright certification."
+    },
+    {
+      "skill_name": "decision-record-steward",
+      "local_path": "skills/authored/decision-record-steward/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "ef0ae9791df3cbf69b0f9445807240188a17f130",
+      "complete_package_tree_sha": "992a7db63ea585fc939802dfac1f3cd76abe98a3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "planning",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "privacy-bounded",
+          "traceable"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-18 direct maintainer complete-package static review: docs/reviews/2026-11-18-frostwulf-first-four-static-review.md. No external host behavior or copyright certification."
+    },
+    {
+      "skill_name": "agent-workspace-footprint-assessor",
+      "local_path": "skills/authored/agent-workspace-footprint-assessor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d790e403e59319df5b148b93f4b24e8971c0e692",
+      "complete_package_tree_sha": "0dbad84eadc96648879fdf2f279b07137d28d76c",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "v1.2 full package inspected after context-cost reporting and mutation-boundary repair. 9 controlled real temporary filesystem operations and seven static assertions; these are not host-agent behavior tests or measured 1.5x.",
+      "previous_content_blob_sha": "d350c6e9f9bb396d7f5844109e5ee6c74d5b5a43",
+      "previous_package_tree_sha": "e4846d301e09eb6851cc89325fc0528cccc29406",
+      "reviewed_at": "2026-11-19"
+    },
+    {
+      "skill_name": "connector-capability-risk-review",
+      "local_path": "skills/authored/connector-capability-risk-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "7c19817cf91804c430b94364550aa50eda731fb1",
+      "complete_package_tree_sha": "26b1fa68302ce1fb088748edd98d9702b85de23d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact current v1.2 new MIT package pinned and statically reassessed after review timestamp, source-scope and legacy verdict mapping improvements; docs/reviews/2026-11-19-mcp-vetting-controlled-retirement.md. Five offline Python synthetic procedure cases pass, not a model-host behavior test.",
+      "previous_content_blob_sha": "53dcb0926ba29048e8ef42c5aa1f24ebdf180de6",
+      "previous_package_tree_sha": "12809e8090eac17a1092fc18f687fd8f957d7fc3",
+      "reviewed_at": "2026-11-19"
+    },
+    {
+      "skill_name": "privilege-exposure-mapper",
+      "local_path": "skills/authored/privilege-exposure-mapper/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
+      "complete_package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete three-file original MIT package; direct maintainer static review 18/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+    },
+    {
+      "skill_name": "scheduled-work-proof-auditor",
+      "local_path": "skills/authored/scheduled-work-proof-auditor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
+      "complete_package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "agent-security",
+          "evidence-evaluation"
+        ],
+        "lifecycle": [
+          "evaluation",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete three-file original MIT package; direct maintainer static review 17/20; docs/reviews/2026-11-18-frostwulf-safety-four-static-review.md; no observed host or security scan."
+    },
+    {
+      "skill_name": "technology-change-intelligence",
+      "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+      "complete_package_tree_sha": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "technology-intelligence"
+        ],
+        "lifecycle": [
+          "research",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bound",
+          "evidence-first",
+          "dated",
+          "privacy-bounded"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "v1.2.5 source-pinned eleven-file package. Restored GitHub 30-day default with explicit interval overrides and truthful unavailable-source coverage. Other 16 specialist routes unchanged. Static review, not independent host behavior or 1.5x proof.",
+      "previous_content_blob_sha": "da2ed091777ed05e7ac94454439c3404c824408d",
+      "previous_package_tree_sha": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "reviewed_at": "2026-11-20"
+    },
+    {
+      "skill_name": "agent-failure-boundary-analysis",
+      "local_path": "skills/authored/agent-failure-boundary-analysis/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "e9e59007a37e2c234c4ccf89e13858fd253cfed9",
+      "complete_package_tree_sha": "529d15ce1636092920e810c75097594a195c7315",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "decision-tradeoff-workbench",
+      "local_path": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "671d0bdd130414c8a71c86059e21489123f08c4d",
+      "complete_package_tree_sha": "45b00d78352674b6e705704deb96af114ba4c830",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "research-question-dossier",
+      "local_path": "skills/authored/research-question-dossier/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "be5e60add3642754ac89d9d28c51077f13515ed9",
+      "complete_package_tree_sha": "6b20ef72ae84c263685f471d7967387c3ae98153",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "professional-market-evidence-scout",
+      "local_path": "skills/authored/professional-market-evidence-scout/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5c1003c2bd3d13d972eff6fd52dd47ec03d327d2",
+      "complete_package_tree_sha": "4c7fe969e2c9d181d46924c570e2653a7c067fc1",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact v1.2 source and complete package verified after crosswalk for career-radar. Controlled synthetic case record docs/evals/receipts/2026-11-19-career-handoff-controlled.json; no independent host A/B or 1.5x evidence.",
+      "previous_content_blob_sha": "266072c0044c023674718c3775b50104b95b3a66",
+      "previous_package_tree_sha": "d001d19ebd8231042b0bcb24a7af58b991be7aee",
+      "reviewed_at": "2026-11-19"
+    },
+    {
+      "skill_name": "statement-variance-reviewer",
+      "local_path": "skills/authored/statement-variance-reviewer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5ab4cc773e90213e2d769142ea0b4741f657ca5e",
+      "complete_package_tree_sha": "08ecf062b07b632d5d5eef1cefa61abb658d5f48",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "context-continuation-contract",
+      "local_path": "skills/authored/context-continuation-contract/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "complete_package_tree_sha": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact v1.2 source and complete package verified after crosswalk for handoff-writer. Controlled synthetic case record docs/evals/receipts/2026-11-19-career-handoff-controlled.json; no independent host A/B or 1.5x evidence.",
+      "previous_content_blob_sha": "4a2af8971576581adf3d768cc6878549c5cac511",
+      "previous_package_tree_sha": "3d54204ba4f8d7d4e2490fbbaf71976a6ccb5f64",
+      "reviewed_at": "2026-11-19"
+    },
+    {
+      "skill_name": "evidence-narrative-composer",
+      "local_path": "skills/authored/evidence-narrative-composer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d67e8824ab340014f5379f32fc8e02df3220d18a",
+      "complete_package_tree_sha": "6e356d294bab2483fd4a938c24fd5e5b0b2ad34a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "personal-operations-control-board",
+      "local_path": "skills/authored/personal-operations-control-board/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "04ed03841366f854d642e8ebcafd9d39023608c6",
+      "complete_package_tree_sha": "7dab6d9a2d31e59a84b5979d20398efea223dc17",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "learning-evidence-progression",
+      "local_path": "skills/authored/learning-evidence-progression/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "0207ac7d4c8844f4922067cf49495437e1bea10a",
+      "complete_package_tree_sha": "18052a4b7e0f574ff8530450367adab79ed0d9c6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "repository-delivery-assessor",
+      "local_path": "skills/authored/repository-delivery-assessor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "2e4b24f1a3e764a90f9dcdc2804267fccbb15d41",
+      "complete_package_tree_sha": "5a896b31e8019645207dc73316e09534c004dfd2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "business-presence-observatory",
+      "local_path": "skills/authored/business-presence-observatory/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "87f586fe378dfabc2055fc7efe0589e99d212cbf",
+      "complete_package_tree_sha": "20a2d534e0b4a29e7dd2423aefbb6980f972968f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Complete 3-file package with original synthetic challenge cases, MIT LICENSE, source SHA and package SHA. docs/reviews/2026-11-18-frostwulf-final-twelve-static-review.md. Behavioral testing NOT RUN; no historic rights inferred."
+    },
+    {
+      "skill_name": "work-period-evidence-reporter",
+      "local_path": "skills/authored/work-period-evidence-reporter/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "1f009236ab80aba49095a55229a6109504035096",
+      "complete_package_tree_sha": "5183dedbb6283ccd01b27198e9cd33a242e20a0e",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "evidence-audit",
+          "workflow-review"
+        ],
+        "lifecycle": [
+          "planning",
+          "evaluation"
+        ],
+        "characteristic": [
+          "source-bounded",
+          "traceable",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Current v1.2 exact three-file original package statically reviewed, previously missing weekly handoff and optional scheduling requirements restored. Ten analyst-emulated synthetic report scenarios passed, independently observed agent-host parity and 1.5x not proven.",
+      "previous_content_blob_sha": "bbd1317876ddbcdee2f25d5ffb9530685a9fb3e6",
+      "previous_package_tree_sha": "75a2ef507564aa4c4a827b7f15a6e3b21cbd5697",
+      "reviewed_at": "2026-11-19"
+    },
+    {
+      "skill_name": "ci-guard",
+      "local_path": "skills/authored/ci-guard/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
+      "complete_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "ci-assurance",
+          "development-effectiveness",
+          "evidence-audit"
+        ],
+        "lifecycle": [
+          "evaluation"
+        ],
+        "characteristic": [
+          "traceable",
+          "risk-proportionate",
+          "authority-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Six-file CI Guard v1.2 exact-package static review. Runtime policy is bundled: seven relative Markdown links across the complete six-file package all resolve locally, none escapes the package or needs network. docs/reviews/2026-11-19-ci-guard-offline-package-closure.md. M7 offline scenario is static; v1.1 GG-CORE host trial is historical. Cross-model validation NOT RUN.",
+      "previous_content_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
+      "previous_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1",
+      "reviewed_at": "2026-11-19"
+    }
+  ],
+  "retired_legacy_records": [
+    {
+      "skill_name": "todo-harvester",
+      "local_path": "skills/todo-harvester/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "repository-maintenance",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "risk-aware",
+          "decomposition"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Strong read-only debt-marker triage using blame age plus surrounding-code verification before stale classification; output stays proposal-only.",
+      "retired_at": "2026-11-18",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/source-debt-triage",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/c95b31e6d0955f00c5ae14bb59ceee821de20b2c/skills/todo-harvester/SKILL.md",
+      "historical_rights": "unproven",
+      "behavioral_parity": "not-run"
+    },
+    {
+      "skill_name": "agent-postmortem",
+      "local_path": "skills/agent-postmortem/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "dde789e87da090b92021b3e55304299244f62ac2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "evaluation",
+          "agent-development"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "decomposition",
+          "traceable",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA dde789e87da090b92021b3e55304299244f62ac2; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/agent-failure-boundary-analysis",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/44a81f39173098eb754090ea83e3a076940d7a6b/skills/agent-postmortem/SKILL.md",
+      "historical_rights": "unproven",
+      "behavioral_parity": "not-run",
+      "controlled_acceptance_receipt": "docs/evals/receipts/2026-11-19-agent-postmortem-controlled-report-evaluation.json"
+    },
+    {
+      "skill_name": "automation-receipts",
+      "local_path": "skills/automation-receipts/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "94fb288d7d6a3ea6982f22bd8bb9ef77b9de7add",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "security"
+        ],
+        "lifecycle": [
+          "verification",
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "deterministic",
+          "traceable"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Doc-only durable-receipt verification protocol: any status claim about automation is checked against a seven-field receipt contract (id, persistence surface, next fire time, log path, last-run timestamp, exit status, evidence artifact) before being represented; missing receipts downgrade the claim to unsubstantiated.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/scheduled-work-proof-auditor",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/52a6b0419630091e04a53b04161d200ab5ef3f38/skills/automation-receipts/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "skill_name": "decision-log",
+      "local_path": "skills/decision-log/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "documentation"
+        ],
+        "lifecycle": [
+          "planning",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "human-review",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Fresh exact-source 18/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 53b82e2a4838cdba57ee2e4c9158d6d2b4150c6b, full package tree ca790304801fd1717841a8fab98bb4ebeed4c9bf; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/decision-record-steward",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/52a6b0419630091e04a53b04161d200ab5ef3f38/skills/decision-log/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-automation-decision-controlled-procedures.json"
+    },
+    {
+      "skill_name": "permissions-review",
+      "local_path": "skills/permissions-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "18f46840032829963715ec23894f7826dbbfcb77",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "security",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "v1.0.1 exact-blob source static review: unsafe Bash(git *) example removed; Git read commands can launch repository-controlled helpers, so recommend only verified host-enforced exact argv/configuration restrictions or scoped metadata API. No pinned current-tree scanner pass, no independently observed agent-host behavior, no unchanged-use approval. See docs/reviews/2026-11-05-issue483-git-wildcard-permission-repair.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/privilege-exposure-mapper",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/94a34d59ad5d3a9844b602d353084f5dd08791c8/skills/permissions-review/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-permissions-review-controlled-security.json"
+    },
+    {
+      "skill_name": "mcp-vetting",
+      "local_path": "skills/mcp-vetting/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "37a13d7296c7d3d87dc360988bc6aca1f873c4db",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "security",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "source-driven",
+          "traceable",
+          "human-review"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Exact-source static MCP server review uses current controlled authority tags, full tool/data/credential inventory and issue-first candidate intake. It never connects or installs the candidate, and missing evidence is not treated as permission. Security and behavioral tests not-run.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/connector-capability-risk-review",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/120b038d230b77930208f2108c34f169f297dcf9/skills/mcp-vetting/SKILL.md",
+      "historical_rights": "unproven",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-mcp-vetting-controlled-execution.json"
+    },
+    {
+      "skill_name": "agent-home-doctor",
+      "local_path": "skills/agent-home-doctor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "3415f1f4bb72afc44266706be649c3950f809337",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "repository-maintenance",
+          "security"
+        ],
+        "lifecycle": [
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "safety-bounded",
+          "human-review",
+          "traceable"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 20/20 was overconfident. Source 3415f1f4bb72afc44266706be649c3950f809337, full package tree 7e78ed3047b66c67c492eae1191853d6d7ce095e; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/agent-workspace-footprint-assessor",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/369f6fd853b79eaf666c89da893429ba5156bc2e/skills/agent-home-doctor/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-agent-home-controlled-filesystem.json"
+    },
+    {
+      "skill_name": "fact-check",
+      "local_path": "skills/fact-check/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d83c43282d525682f3e13b8296111d7fe7de46f0",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "20/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "decision-support",
+          "web-search"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "decomposition",
+          "source-driven",
+          "traceable",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA d83c43282d525682f3e13b8296111d7fe7de46f0; prior 20/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/claim-evidence-adjudicator",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/fact-check/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "skill_name": "paper-digest",
+      "local_path": "skills/paper-digest/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "8691e648e6c96c986391bdbdf812616c34baef95",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "source-driven",
+          "risk-aware",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source 8691e648e6c96c986391bdbdf812616c34baef95, full package tree 15ce2f528620a2ab99fe2f7029a73baa352ca7e0; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/research-methods-appraiser",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285732d5390c7e309b5613f8afba06ce5a0ce8cd/skills/paper-digest/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-research-claims-paper-controlled.json"
+    },
+    {
+      "skill_name": "career-radar",
+      "local_path": "skills/career-radar/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "eb7565605a190e9ea3462bad57ac62aba88d3ecf",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "career",
+          "research",
+          "monitoring"
+        ],
+        "lifecycle": [
+          "discovery"
+        ],
+        "characteristic": [
+          "retrieval-first",
+          "source-driven",
+          "synthesis",
+          "evidence-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Exact 1.1.4 current source eb7565605a190e9ea3462bad57ac62aba88d3ecf, full Git tree 35055db24f786f8b3b57f78789e146eb0ee49b9c; source-only 18/20 evaluation and 8/8 structural regression checks after repairing prior private-notes lookup and outbound web-query egress. docs/reviews/2026-11-05-issue402-career-radar-outbound-query-boundary.md. Scanner/current-tree security not-run, observed host behavior not-run, unchanged use HELD.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/professional-market-evidence-scout",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/9a3d7d73330a711c612f27ae4184a44ddf4ac3cc/skills/career-radar/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
+    },
+    {
+      "skill_name": "handoff-writer",
+      "local_path": "skills/handoff-writer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "733b8029063ff057051a61bc270cce138f324c7d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "handoff",
+          "documentation",
+          "communication"
+        ],
+        "lifecycle": [
+          "release",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "context-efficient",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 exact Handoff Writer 1.1.3 SKILL.md 733b8029063ff057051a61bc270cce138f324c7d, bundled example 273489b0756fb8fb31f657894fa7c4a9c25665ed and whole package d8493fe2e4274ba33ce72cf9f74e8fdfb591c0ff. Current source-semantic 18/20 and 14/14 bounded source checks only; scanner and actual host behavior NOT RUN, no unchanged-use approval. See docs/reviews/2026-11-04-issue402-handoff-writer-113-static-package-review.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/context-continuation-contract",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/9a3d7d73330a711c612f27ae4184a44ddf4ac3cc/skills/handoff-writer/SKILL.md",
+      "historical_rights": "not established",
+      "behavioral_parity": "not-run",
+      "controlled_procedure_receipt": "docs/evals/receipts/2026-11-19-career-handoff-controlled.json"
+    },
+    {
+      "skill_name": "standup-writer",
+      "local_path": "skills/standup-writer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "21c216fbc46f516fecc0a562afbe652fbd436b95",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "communication"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "synthesis",
+          "traceable",
+          "tool-routing"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-05 source 21c216fbc46f516fecc0a562afbe652fbd436b95, tree d6429bfea7bebe567aa52f7c5f1f6c44fd10086f. Static 18/20, source assertions 7/7; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/work-period-evidence-reporter",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/e410dd6dc4280d34504a22c6fdbe3a3f18833dd9/skills/standup-writer/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json"
+    },
+    {
+      "skill_name": "week-in-review",
+      "local_path": "skills/week-in-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5fa0b34372aa28067f41ab19afacbe4430a31b4e",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "planning"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "synthesis",
+          "traceable",
+          "tool-routing"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Exact repaired 5fa0b34372aa28067f41ab19afacbe4430a31b4e (tree 81646a594bf994e24899f7a086d86459cfaa5832) static semantic 18/20; no implicit private workspace discovery; see docs/reviews/2026-11-04-issue402-standup-weekly-private-scope-repair.md. Security scan/host behavior not-run, unchanged-use held.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/work-period-evidence-reporter",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/e410dd6dc4280d34504a22c6fdbe3a3f18833dd9/skills/week-in-review/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-work-period-controlled-reports.json"
+    },
+    {
+      "skill_name": "deck-outline",
+      "local_path": "skills/deck-outline/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "63c943992417148d010551238a15259d4968cb55",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "communication",
+          "writing",
+          "planning"
+        ],
+        "lifecycle": [
+          "planning",
+          "design"
+        ],
+        "characteristic": [
+          "synthesis",
+          "evidence-first",
+          "human-review",
+          "context-efficient"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Narrative-first outline is well bounded and now resolves presentation execution through the active host instead of depending on a rejected vendored document skill.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/deck-outline/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "skill_name": "devlog-draft",
+      "local_path": "skills/devlog-draft/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d74ff133f69c8908c4acf296fb93313069082114",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "writing",
+          "communication",
+          "documentation"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "synthesis",
+          "human-review"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Fresh exact-source 17/20 static semantic requalification after P0 privacy/secret safety repair; old 19/20 was overconfident. Source d74ff133f69c8908c4acf296fb93313069082114, full package tree ba81b6da10b317b314d31264d7c5d9362d753702; external pinned SkillSpector and observed agent behavior not-run, unchanged use HELD. docs/reviews/2026-11-04-issue402-four-first-party-privacy-gaps.md.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/evidence-narrative-composer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/efd33e05141b81250420eca249364c82fa429558/skills/devlog-draft/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deck-devlog-controlled-outputs.json"
+    },
+    {
+      "skill_name": "deep-dive",
+      "local_path": "skills/deep-dive/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "44d59d8b890d5b5ca3dc2497aada03f0ff70ad99",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "research",
+          "web-search"
+        ],
+        "lifecycle": [
+          "discovery",
+          "verification"
+        ],
+        "characteristic": [
+          "retrieval-first",
+          "source-driven",
+          "evidence-first",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA 44d59d8b890d5b5ca3dc2497aada03f0ff70ad99; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/research-question-dossier",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/deep-dive/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
+    },
+    {
+      "skill_name": "learning-plan",
+      "local_path": "skills/learning-plan/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "7941b70fc971bf7c16c1201b7c8876f35db4ab29",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "planning",
+          "research",
+          "productivity"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "source-driven",
+          "evidence-first",
+          "test-gated",
+          "human-review"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "One-time source-verified learning plan with checkpoints and honest slip protocol; automated check-ins and future private data access need separate recurrence, access, delivery, retention, cost and revocation approval. External security and behavioral validation not-run. 2026-11-05 reconciliation: the exact matching individual review is 18/20, not 19/20. No new semantic review occurred; the source and 2026-11-03 individual review date are unchanged.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/learning-evidence-progression",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/285c1f922c76ba57b45098de1efaaa9746793dcf/skills/learning-plan/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-deep-learning-controlled-decisions.json"
+    },
+    {
+      "skill_name": "smallbiz-ops",
+      "local_path": "skills/smallbiz-ops/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "b7f20b33c81e647ec8ff95ef765beb75867870e2",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "business-operations",
+          "monitoring"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "source-driven",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Current exact 1.1.3 source b7f20b33c81e647ec8ff95ef765beb75867870e2, package 304c1a49988aee8f446b5fa00700ff46a5e2358b, 18/20 fresh source-semantic review with explicitly scoped private source binding. See docs/reviews/2026-11-04-issue402-career-smallbiz-private-scope.md. Security and host behavior NOT RUN; unchanged use held.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/business-presence-observatory",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/df12a9d2f27278d8cf8853905787e9373a1ca185/skills/smallbiz-ops/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-smallbiz-controlled-portfolio.json"
+    },
+    {
+      "skill_name": "daily-briefing",
+      "local_path": "skills/daily-briefing/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "95e18a42978ef7ef5e6a1a8f4d60012c98c73da9",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "planning"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "synthesis",
+          "tool-routing",
+          "context-efficient",
+          "evidence-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Daily Briefing 1.1.3 exact source 95e18a42978ef7ef5e6a1a8f4d60012c98c73da9, full package Git tree 6c73d9f034feaecad129769a9ec0afebabc397f6; source-semantic 17/20 review fixes unapproved private-root discovery in step 3. See docs/reviews/2026-11-04-issue402-daily-briefing-private-root-boundary.md. No current-tree SkillSpector scan or observed host behavior; unchanged use held.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/daily-briefing/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "finance-review",
+      "local_path": "skills/finance-review/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "86bdf2f9d6ebca2932612212882f6a915709203d",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "business-operations",
+          "decision-support",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "risk-aware",
+          "tool-routing"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Read-only statement analysis now resolves safe host parsing directly, preserves row traceability, and avoids dependency on a rejected vendored spreadsheet skill.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/statement-variance-reviewer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/finance-review/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "inbox-triage",
+      "local_path": "skills/inbox-triage/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9326d7a691e40ff30a07a71738b13a04117206d6",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "communication"
+        ],
+        "lifecycle": [
+          "operations"
+        ],
+        "characteristic": [
+          "decomposition",
+          "tool-routing",
+          "human-review",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only",
+          "generate-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 current exact-source SHA 9326d7a691e40ff30a07a71738b13a04117206d6 Q15 ten-axis semantic static review updated for redaction safeguard. Security SkillSpector not executed on new exact package; actual agent behavioral validation not-run; unchanged-use clearance/merge not granted.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/inbox-triage/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "task-surface",
+      "local_path": "skills/task-surface/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "27f1a5ffe56f7653ec68c6ac998a4a03c0137085",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "productivity",
+          "planning",
+          "orchestration"
+        ],
+        "lifecycle": [
+          "planning",
+          "operations"
+        ],
+        "characteristic": [
+          "contract-first",
+          "orchestration",
+          "human-review",
+          "traceable",
+          "risk-aware"
+        ],
+        "authority": [
+          "mutating",
+          "external-side-effect"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "Adaptive pointer-layer coordination model with approval-gated GitHub writes and bound governance contract; multi-step external mutations make authority and host assumptions material.",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/personal-operations-control-board",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/task-surface/SKILL.md",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "claude-pulse",
+      "local_path": "skills/claude-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Official-first, read-only Claude monitoring is fully host-driven and passive, with current-source verification, clear authority separation, and community commentary treated as signal rather than truth.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "anthropic-claude",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "gemini-pulse",
+      "local_path": "skills/gemini-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "google-gemini",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "kimi-pulse",
+      "local_path": "skills/kimi-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "6625f147011dfd38ed2b9881eda2d5ea62e2ece4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source 6625f147011dfd38ed2b9881eda2d5ea62e2ece4 static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "4d8935ea2d8006ea277ab1371f419c723a867643",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "moonshot-kimi",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-kimi-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "llama-pulse",
+      "local_path": "skills/llama-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "c0c38b0dd182f1f588d1800b832b331c8572080e",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "meta-llama",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/llama-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-llama-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "openai-pulse",
+      "local_path": "skills/openai-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "openai-developer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-openai-v124-current-sources-five-cases.json"
+    },
+    {
+      "skill_name": "perplexity-pulse",
+      "local_path": "skills/perplexity-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "perplexity-search",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json"
+    },
+    {
+      "skill_name": "github-pulse",
+      "local_path": "skills/github-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9c345c88cef5f4f97235facb6d3d7414ab820f1a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source 9c345c88cef5f4f97235facb6d3d7414ab820f1a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "03e135f4e916115040af63271de71b23277e36f7",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "github-discovery",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/github-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-github-v124-live-source-five-case-retirement.json"
+    },
+    {
+      "skill_name": "governance-pulse",
+      "local_path": "skills/governance-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "4eb7b63979fb29d997ef3ad6a10e9248e7c573ce",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research",
+          "security"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source 4eb7b63979fb29d997ef3ad6a10e9248e7c573ce static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "aa2157650140bf0820b6d6b1921c5f0881d8c627",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "ai-governance",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/governance-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-governance-v124-live-source-five-case-retirement.json"
+    },
+    {
+      "skill_name": "inference-pulse",
+      "local_path": "skills/inference-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "synthesis",
+          "compatibility-aware",
+          "retrieval-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "local-inference",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/inference-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-inference-v124-source-bound-five-case-retirement.json"
+    },
+    {
+      "skill_name": "mcp-pulse",
+      "local_path": "skills/mcp-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "security",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "synthesis",
+          "retrieval-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "mcp-protocol",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/mcp-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-mcp-v124-source-bound-five-case-retirement.json"
+    },
+    {
+      "skill_name": "memory-pulse",
+      "local_path": "skills/memory-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "memory",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "agent-memory",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/memory-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-memory-v124-source-bound-five-case-retirement.json"
+    },
+    {
+      "skill_name": "brief-writer",
+      "local_path": "skills/brief-writer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "writing",
+          "communication"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "context-efficient",
+          "human-review",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/decision-tradeoff-workbench",
+      "replacement_mode": "decision-brief",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/brief-writer",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json"
+    },
+    {
+      "skill_name": "compare",
+      "local_path": "skills/compare/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "research",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "planning",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "metric-driven",
+          "human-review",
+          "source-driven",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/decision-tradeoff-workbench",
+      "replacement_mode": "compare",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/compare",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json"
+    },
+    {
+      "skill_name": "repo-doctor",
+      "local_path": "skills/repo-doctor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "16/20",
+      "tags": {
+        "use_case": [
+          "repository-maintenance",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-05 source fed90fa0a664611e560bbc3ded630eb9e72253e1, tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7. Static 16/20, source assertions 9/9; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/repository-delivery-assessor",
+      "replacement_mode": "single_repository_diagnostic",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ccd98e2a281939ac2820407a636c8bb698ec98d2/skills/repo-doctor",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json"
+    },
+    {
+      "skill_name": "repo-pulse",
+      "local_path": "skills/repo-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9e6938b29e4c0748e4098bc53a96498f42784423",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "repository-maintenance"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "tool-assisted",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/repository-delivery-assessor",
+      "replacement_mode": "approved_repository_portfolio_pulse",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ccd98e2a281939ac2820407a636c8bb698ec98d2/skills/repo-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json"
+    },
+    {
+      "skill_name": "session-continuity",
+      "local_path": "skills/session-continuity/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "memory",
+          "context-management",
+          "handoff"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "safety-bounded",
+          "context-efficient"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/context-continuation-contract",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bc0f660d87b2d6a8462d6fb28e077e81af222428/skills/session-continuity",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json"
+    },
+    {
+      "skill_name": "deepseek-pulse",
+      "local_path": "skills/deepseek-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "deepseek-models",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/deepseek-pulse.yaml"
+    },
+    {
+      "skill_name": "glm-pulse",
+      "local_path": "skills/glm-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "glm-zai",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/glm-pulse.yaml"
+    },
+    {
+      "skill_name": "hf-pulse",
+      "local_path": "skills/hf-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "huggingface-ecosystem",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/hf-pulse.yaml"
+    },
+    {
+      "skill_name": "mistral-pulse",
+      "local_path": "skills/mistral-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "mistral-models",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/mistral-pulse.yaml"
+    },
+    {
+      "skill_name": "qwen-pulse",
+      "local_path": "skills/qwen-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "alibaba-qwen",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/qwen-pulse.yaml"
+    },
+    {
+      "skill_name": "xai-pulse",
+      "local_path": "skills/xai-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "xai-grok",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/xai-pulse.yaml"
     }
   ]
 }

@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: agent-failure-boundary-analysis
+skill_version: "1.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/agent-failure-boundary-analysis/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4a114972587060c79ee6df852526a0a047abd3c2
+complete_package_tree_sha: 426391a3bea7e75f364fe86da8845dee2718f8a5
+characterized_at: "2026-11-18"
+reviewed_at: "2026-11-18"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [evidence-audit, workflow-review]
+  lifecycle: [evaluation]
+  characteristic: [traceable, privacy-bounded, authority-aware]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Current v1.1.0 three-file complete package statically reviewed at 18/20; previous v1.0 review remains historical.
+  See docs/reviews/2026-11-18-agent-failure-boundary-parity-remediation.md for exact package tree and rubric.
+  Host execution NOT RUN, replacement behavioral parity and 1.5x effectiveness NOT PROVEN.

@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 27f1a5ffe56f7653ec68c6ac998a4a03c0137085
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-03
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Reused byte-for-byte previously statically reviewed skill source from closed-unmerged PR #496. No executed adversarial behavior or current exact-package security scan; historical scanner passes of old packages cannot transfer.
@@ -19,3 +20,8 @@ tags:
   authority: [mutating, external-side-effect]
   portability: [medium]
 notes: "Pointer-layer coordination preserves canonical issue ownership; every persistent or cross-organization write requires action-specific approval, source-data minimization and post-write verification. GitHub CLI optional, and repository governance text is untrusted as an authority override."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/blob/a72e30c8f0ddc35dec1ff2e5e149519f170da01a/skills/task-surface/SKILL.md
+replacement_id: local-skills/personal-operations-control-board
+retirement_note: "Historical full package pinned; five executed controlled synthetic decision assertions per original; independent model-host A/B, 1.5x improvement, actual outcome and exhaustive consumer scanning NOT PROVEN. Rights unresolved."
