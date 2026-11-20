@@ -7,7 +7,6 @@ Use [Technology Change Intelligence](../../authored/technology-change-intelligen
 The following original entrypoints remain available only while each source's controlled replacement qualification and retirement review is unresolved. Their source attribution and reuse rights remain unestablished. For normal use, choose the independently authored replacement above; don't treat the paths below as separate required installs.
 
 - [`claude-pulse`](../../claude-pulse/) — Anthropic and Claude updates.
-- [`deepseek-pulse`](../../deepseek-pulse/) — DeepSeek models, releases, and community signals.
 - [`gemini-pulse`](../../gemini-pulse/) — Gemini and DeepMind developments.
 - [`github-pulse`](../../github-pulse/) — trending and notable GitHub repositories.
 - [`glm-pulse`](../../glm-pulse/) — Zhipu / GLM developments.
@@ -20,10 +19,11 @@ The following original entrypoints remain available only while each source's con
 - [`mistral-pulse`](../../mistral-pulse/) — Mistral AI developments.
 - [`openai-pulse`](../../openai-pulse/) — OpenAI product, API, SDK, and model developments.
 - [`perplexity-pulse`](../../perplexity-pulse/) — Perplexity product and API developments.
-- [`qwen-pulse`](../../qwen-pulse/) — Qwen / Alibaba developments.
 
 The Hugging Face ecosystem route now lives in [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md). The [historical Hugging Face Pulse](https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse) remains pinned in Git for evidence and rollback, not installation.
 
 The xAI/Grok route now lives only in the active [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md) skill. The archived [xAI Pulse original](https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse) remains available in pinned Git history for review, not installation.
 
 The historical paths above are retained for source-bound comparison, not endorsed as new installations. Individual retirements must reconcile these links. The repository's own maintenance procedures live under `engine/skills/`, separate from user-facing skills.
+
+The historical [Qwen](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse) and [DeepSeek](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse) packages are now archived, not active installation choices. Use the `alibaba-qwen` and `deepseek-models` profiles inside the independently authored Technology Change Intelligence package above.
