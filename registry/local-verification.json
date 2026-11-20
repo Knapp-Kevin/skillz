@@ -9,72 +9,6 @@
   "validation_policy": "Behavioral validation is exact-version evidence and remains not-run unless a current matching artifact has representative executed evidence.",
   "skills": [
     {
-      "skill_name": "brief-writer",
-      "local_path": "skills/brief-writer/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "decision-support",
-          "writing",
-          "communication"
-        ],
-        "lifecycle": [
-          "planning"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "context-efficient",
-          "human-review",
-          "risk-aware"
-        ],
-        "authority": [
-          "generate-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "compare",
-      "local_path": "skills/compare/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "decision-support",
-          "research",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "planning",
-          "verification"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "metric-driven",
-          "human-review",
-          "source-driven",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
       "skill_name": "healthcare-contract-forensics",
       "local_path": "skills/authored/healthcare-contract-forensics/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2486,6 +2420,88 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-20-memory-v124-source-bound-five-case-retirement.json"
+    },
+    {
+      "skill_name": "brief-writer",
+      "local_path": "skills/brief-writer/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "bdc5411eec2eb268955c677f0b0c7c6bdba171e3",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "writing",
+          "communication"
+        ],
+        "lifecycle": [
+          "planning"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "context-efficient",
+          "human-review",
+          "risk-aware"
+        ],
+        "authority": [
+          "generate-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/decision-tradeoff-workbench",
+      "replacement_mode": "decision-brief",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/brief-writer",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json"
+    },
+    {
+      "skill_name": "compare",
+      "local_path": "skills/compare/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "37b5d493dfa87ff1ce20e7b44d7d095e2eeed700",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "decision-support",
+          "research",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "planning",
+          "verification"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "metric-driven",
+          "human-review",
+          "source-driven",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/decision-tradeoff-workbench",
+      "replacement_mode": "compare",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/compare",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json"
     }
   ]
 }

@@ -200,10 +200,10 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 [Personal Operations Control Board](skills/authored/personal-operations-control-board/SKILL.md) (daily brief, inbox and task board), [Decision Record Steward](skills/authored/decision-record-steward/SKILL.md), [Learning Evidence Progression](skills/authored/learning-evidence-progression/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (weekly review)
 
 ### Writing & Communication
-`brief-writer`, [Evidence Narrative Composer](skills/authored/evidence-narrative-composer/SKILL.md) (deck outlines + devlogs), [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
+[Decision Tradeoff Workbench](skills/authored/decision-tradeoff-workbench/SKILL.md) (decision briefs), [Evidence Narrative Composer](skills/authored/evidence-narrative-composer/SKILL.md) (deck outlines + devlogs), [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md), [Work Period Evidence Reporter](skills/authored/work-period-evidence-reporter/SKILL.md) (daily standup)
 
 ### Research & Analysis
-`compare`, [Research Question Dossier](skills/authored/research-question-dossier/SKILL.md), [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
+[Decision Tradeoff Workbench](skills/authored/decision-tradeoff-workbench/SKILL.md) (comparisons), [Research Question Dossier](skills/authored/research-question-dossier/SKILL.md), [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
 
 ### Software & Repositories
 `repo-doctor`, `repo-pulse`; current original replacement: [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)

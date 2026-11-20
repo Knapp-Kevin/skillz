@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 39,
+    "legacy_removed": 41,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 5
+    "legacy_remaining": 3
   },
   "rows": [
     {
@@ -86,9 +86,20 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
-      "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "bounded_multi_mode"
+      "replacement_status": "decision_tradeoff_workbench_v1_1_0_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_mode": "bounded_multi_mode",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/brief-writer",
+      "original_exact_package_tree": "3f45875f509b1a20fca4c1847c8122b549a76126",
+      "replacement_exact_package_tree": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+      "retirement_owner_authorization": "owner accepted controlled emulation and source removal 2026-11-18, repeated proceed",
+      "retirement_behavioral_claim": "FIVE_CURRENT_REPLACEMENT_CONTROLLED_OUTPUTS; COMPARE_ARITHMETIC_EXECUTED; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "INDEX_AND_CATEGORY_SELECTORS_REHOMED; FULL_SCAN_NOT_PROVEN",
+      "accepted_behavior_delta": "Old asks for decision and deadline before creating a brief; successor allows explicitly UNCONFIRMED provisional draft when owner unavailable.",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/career-radar/SKILL.md",
@@ -138,9 +149,20 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
-      "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "bounded_multi_mode"
+      "replacement_status": "decision_tradeoff_workbench_v1_1_0_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_mode": "bounded_multi_mode",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/compare",
+      "original_exact_package_tree": "4ceefd2c39842ebb3e711a2f82d9840131588054",
+      "replacement_exact_package_tree": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+      "retirement_owner_authorization": "owner accepted controlled emulation and source removal 2026-11-18, repeated proceed",
+      "retirement_behavioral_claim": "FIVE_CURRENT_REPLACEMENT_CONTROLLED_OUTPUTS; COMPARE_ARITHMETIC_EXECUTED; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "INDEX_AND_CATEGORY_SELECTORS_REHOMED; FULL_SCAN_NOT_PROVEN",
+      "accepted_behavior_delta": "Old requires confirmed criteria before gathering evidence; successor can provide clearly provisional, unweighted research when confirmation is absent.",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/daily-briefing/SKILL.md",
