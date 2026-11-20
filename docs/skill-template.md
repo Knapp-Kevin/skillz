@@ -68,6 +68,24 @@ walk through every component. Choose scaffolding from the task's actual
 uncertainty, never model identity. Authority, safety and evidence integrity
 do not vary. This is not a requirement for scripts or host execution.
 
+## CI-generating skills: classify before dispatch
+
+A skill that **generates or materially redesigns CI workflows** must
+provide a decision about changed-artifact risk and affected checks **before**
+launching expensive jobs. Use trustworthy base/head comparison, dependency
+impact when available, a minimum always-required security/status floor and a
+correctly emitting required gate. Unknown impact is not `docs-only`; a
+`README.md` change usually does not need unrelated full Python tests. Mixed
+changes inherit the union of checks. Preserve the required pre-merge failure
+boundary, never treat GitHub skipped jobs as assurance, and label projected
+savings as estimates until measured.
+
+Make the procedure self-contained in the generated skill package; the
+maintainer rule here is not a runtime dependency. The CI Guard package is
+an example, **not** an obligatory extra installed skill or mandated script.
+Adapt to other CI providers and equivalent stronger impact graphs without
+weakening the above invariants.
+
 ## Self-contained, offline-capable distribution
 
 The canonical capability-adaptive standard is a **maintainer rule**.
