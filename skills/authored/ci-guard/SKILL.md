@@ -166,40 +166,40 @@ not fewer safeguards.
    dependencies, median/p90 and failure patterns if measurable, and what
    release/deploy boundary it contributes to. Distinguish skipped, neutral,
    canceled, timed out, unavailable, expected and successful.
-3. **Challenge the assurance claim.** For every consequential control, identify
+4. **Challenge the assurance claim.** For every consequential control, identify
    failure/threat, impact, detection mechanism, a representative positive
    and negative test, bypass/permission risks, overlap with other checks, and
    residual risk if removed. A security-sounding name is not proof; duplicate
    names do not prove equivalent detection. Preserve a uniquely effective
    control even when it is expensive.
-4. **Trace delivery friction.** Identify duplicated work, avoidable dependency
+5. **Trace delivery friction.** Identify duplicated work, avoidable dependency
    serialization, low-value full matrices on low-risk changes, flaky tests,
    job-name/status drift, required checks that skip, and gates blocking their
    own repair. Prefer the measured critical path over summed runner minutes.
    Record confidence; never invent a baseline or savings percentage.
-5. **Choose a disposition per finding.** KEEP, REPAIR, SIMPLIFY, RELOCATE,
+6. **Choose a disposition per finding.** KEEP, REPAIR, SIMPLIFY, RELOCATE,
    VERIFY or ESCALATE. REPAIR a flaky test instead of silently excluding it.
    A conditionally skipped required check needs a trustworthy always-reporting
    gate or equivalent proven enforcement, not a fake success.
-6. **Place checks by risk.** Keep fast change-relevant checks and essential
+7. **Place checks by risk.** Keep fast change-relevant checks and essential
    security on PRs; evaluate broader main, release candidate, staging,
    production and periodic gates only where the claimed failure boundary
    supports that placement. Change/path-based optimization must account for
    shared workflows, generated outputs and dependency propagation; docs-only
    is not always low risk.
-7. **Propose the smallest safe change.** Capture current behavior, precise
+8. **Propose the smallest safe change.** Capture current behavior, precise
    configuration change, expected effect and uncertainty, tests proving the
    control still detects a planted failure, exact acceptance and rollback,
    authority owner and blast radius. Do not turn a CI review into an
    unrelated runtime refactor or a new permanent governance framework.
-8. **Execute only when authorized.** Re-read target SHA and required protection
+9. **Execute only when authorized.** Re-read target SHA and required protection
    before changes. Use a bounded PR and an auditable diff, then verify on the
    modified head with a deliberately failing negative control where safely
    possible. Check existing protection and approval constraints. For a
    self-blocking gate, use only an owner-authorized, scoped repair path with
    a known temporary safeguard and restoration criterion; never bypass
    branch protection merely because the change fixes CI.
-9. **Verify delivery, not just checks.** Distinguish config proposed, committed,
+10. **Verify delivery, not just checks.** Distinguish config proposed, committed,
    tested on the exact head, reviewed, merged, deployed and observed benefit.
    A green workflow never substitutes for runtime or customer acceptance.
 
