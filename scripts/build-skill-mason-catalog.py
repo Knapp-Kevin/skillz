@@ -153,7 +153,10 @@ def build(root, commit, tree):
                 mapped[identity].append(route)
             for identity in sub.get("name_only_review_candidate_ids", []):
                 hints[identity].append(route)
-    records = []
+    records, archived_review_companions = [], []
+    index_ids = set(names["first_party_ids"] + names["third_party_ids"])
+    if len(index_ids) != names["record_counts"]["total"]:
+        raise ValueError("governed index contains duplicate review identities")
     provenance_paths = sorted(p for p in blobs if p.startswith("registry/skills/") and p.endswith(".yaml"))
     expected_verification = {p.replace("registry/skills/", "registry/verification/", 1) for p in provenance_paths}
     actual_verification = {p for p in blobs if p.startswith("registry/verification/") and p.endswith(".yaml")}
@@ -166,6 +169,34 @@ def build(root, commit, tree):
             raise ValueError(f"paired identity mismatch: {provenance_path}")
         record_id = provenance_path[len("registry/skills/"):-5]
         source_class = "first-party" if record_id.startswith("local-skills/") else "third-party"
+        if record_id not in index_ids:
+            # Retired first-party companions are preserved in the source ledger
+            # but must not be resurrected into the current governed catalog.
+            if not (
+                source_class == "first-party"
+                and v.get("verification_status") == "retired"
+                and p.get("availability") == "retired-historical"
+                and p.get("import_eligibility") == "retired-not-selectable"
+                and p.get("retired_at") and v.get("retired_at")
+                and p.get("replacement_id")
+                and p.get("replacement_id") == v.get("replacement_id")
+                and p.get("historical_source_url")
+                and p.get("historical_source_url") == v.get("historical_source_url")
+            ):
+                raise ValueError(f"unindexed non-retired or incoherent companion: {record_id}")
+            archived_review_companions.append({
+                "record_id": record_id,
+                "provenance": provenance_path,
+                "verification": verification_path,
+                "retired_at": str(v["retired_at"]),
+                "replacement_id": v["replacement_id"],
+                "historical_source_url": v["historical_source_url"],
+                "governed_catalog_membership": "excluded-retired-historical",
+                "raw_companions_preserved_in_source_inventory": True,
+            })
+            continue
+        if source_class == "first-party" and v.get("verification_status") == "retired":
+            raise ValueError(f"indexed historical retirement may not be active: {record_id}")
         algorithm = v["fingerprint_algorithm"]
         entry_blob, package_tree = _source_git_identity(p, v)
         local_package = None
@@ -197,7 +228,6 @@ def build(root, commit, tree):
             "evidence": {"provenance": provenance_path, "verification": verification_path},
         })
     actual_ids = {r["record_id"] for r in records}
-    index_ids = set(names["first_party_ids"] + names["third_party_ids"])
     if actual_ids != index_ids or len(records) != names["record_counts"]["total"]:
         raise ValueError("governed name index differs from complete companion population")
     if set(mapped) - actual_ids:
@@ -246,6 +276,12 @@ def build(root, commit, tree):
         "counts": {"governed_records": len(records), "first_party": sum(r["source_class"] == "first-party" for r in records), "third_party": sum(r["source_class"] == "third-party" for r in records), "mapped": sum(r["capability_mapping"]["state"] == "evidence-linked" for r in records), "unmapped": sum(r["capability_mapping"]["state"] == "unmapped" for r in records), "semantic_states": dict(sorted(collections.Counter(r["review"]["semantic_status"] for r in records).items())), "g1_g3_observations": sum(x["record_count"] for x in g_shards), "four_source_paths": sum(x["record_count"] for x in four_sources), "discovery_artifacts": len(discovery["all_discovery_artifacts"]), "source_files": len(inventory), "submodule_pins": len(gitlinks)},
         "taxonomy": {"recognized": "registry/capability-directory.json", "outcomes": "registry/capability-outcome-register.json", "prior_proposals": "registry/discovery/capability-domain-expansion-20261102.json", "new_proposals": "registry/capability-scope-extensions-20261117.json"},
         "source_files": inventory,
+        "historical_review_companions": {
+            "count": len(archived_review_companions),
+            "excluded_from_governed_records": True,
+            "entries": archived_review_companions,
+            "interpretation": "Retired original provenance and verification remain accessible through pinned source_files. They are historical evidence, not selectable governed skills.",
+        },
         "source_files_scope": "All tracked regular-file source inputs, excluding registry/exports/ generated handoffs; submodule commits recorded separately. No untracked input is read.",
         "submodule_pins": gitlinks,
         "readiness": {"inventory_and_ingestion": "complete-for-declared-snapshot", "universal_capability_coverage": "not-established", "composition_eligibility": "requires-independent-target-specific-assessment", "prism_integration": "not-implemented-by-this-export"},
