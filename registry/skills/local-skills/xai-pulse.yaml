@@ -4,7 +4,8 @@ display_name: "xAI Pulse"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/xai-pulse/SKILL.md
-source_class: historical-local-origin-unverified
+source_class: first-party
+underlying_authorship: not-proven
 license: unknown
 historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
