@@ -6,8 +6,6 @@ Use [Technology Change Intelligence](../../authored/technology-change-intelligen
 
 The following original entrypoints remain available only while each source's controlled replacement qualification and retirement review is unresolved. Their source attribution and reuse rights remain unestablished. For normal use, choose the independently authored replacement above; don't treat the paths below as separate required installs.
 
-- [`github-pulse`](../../github-pulse/) — trending and notable GitHub repositories.
-- [`governance-pulse`](../../governance-pulse/) — AI governance, standards, and policy developments.
 - [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
 - [`mcp-pulse`](../../mcp-pulse/) — Model Context Protocol ecosystem activity.
 - [`memory-pulse`](../../memory-pulse/) — agent-memory and context-engineering developments.
@@ -27,3 +25,5 @@ The original [Claude Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d8
 Historical [Kimi](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse) and [Llama](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/llama-pulse) source packages are archived, not selectable; the authored Technology Change Intelligence skill supplies `moonshot-kimi` and `meta-llama` specialist modes.
 
 Historical [OpenAI](https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse) and [Perplexity](https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse) source packages are preserved in immutable Git only, not active installs; use `openai-developer` or `perplexity-search` in the independently authored Technology Change Intelligence package.
+
+Historical [GitHub Pulse](https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/github-pulse) and [Governance Pulse](https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/governance-pulse) remain pinned for source review only. Active discovery uses Technology Change Intelligence's `github-discovery` and `ai-governance` routes.

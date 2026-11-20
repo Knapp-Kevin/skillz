@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 34,
+    "legacy_removed": 36,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 10
+    "legacy_remaining": 8
   },
   "rows": [
     {
@@ -338,9 +338,20 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "github-discovery"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "github-discovery",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/github-pulse",
+      "original_exact_package_tree": "f2c634ad4cc9ae2d22aa84462750b5d82ec36b56",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation/deletion 2026-11-18; continued retirement 2026-11-20",
+      "retirement_behavioral_claim": "ACTUAL_PUBLIC_PRIMARY_SOURCE_READS_PLUS_FIVE_V1_2_4_CONTROLLED_CASES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; FULL_CONSUMER_SEARCH_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-github-v124-live-source-five-case-retirement.json"
+      ],
+      "accepted_behavior_delta": "Historical default 30-day horizon, TCI github-discovery 14-day default. Explicit 30-day request still supported; not equivalent default, owner accepts narrower on-demand fallback."
     },
     {
       "legacy_entrypoint": "skills/glm-pulse/SKILL.md",
@@ -368,9 +379,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "ai-governance"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "ai-governance",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/governance-pulse",
+      "original_exact_package_tree": "506e6452333173778aa6e0e4e9a614b10cd12c58",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation/deletion 2026-11-18; continued retirement 2026-11-20",
+      "retirement_behavioral_claim": "ACTUAL_PUBLIC_PRIMARY_SOURCE_READS_PLUS_FIVE_V1_2_4_CONTROLLED_CASES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; FULL_CONSUMER_SEARCH_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-governance-v124-live-source-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/handoff-writer/SKILL.md",
