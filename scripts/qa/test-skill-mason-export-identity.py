@@ -108,8 +108,22 @@ class ExportSourceIdentityTests(unittest.TestCase):
             for path in verification_root.rglob("*.yaml")
         }
         self.assertEqual(set(provenance), set(verification), "orphaned companion")
-        self.assertEqual(set(provenance), expected, "governed source/index divergence")
+        self.assertTrue(expected <= set(provenance), "indexed review companion missing")
         self.assertEqual(len(expected), index["record_counts"]["total"])
+        # Retired historic source reviews remain preserved, but not active.
+        archived = set(provenance) - expected
+        for record_id in sorted(archived):
+            with self.subTest(historical_record=record_id):
+                self.assertTrue(record_id.startswith("local-skills/"))
+                p = yaml.load(provenance[record_id].read_bytes(), Loader=mod.UniqueLoader)
+                v = yaml.load(verification[record_id].read_bytes(), Loader=mod.UniqueLoader)
+                self.assertEqual(v["verification_status"], "retired")
+                self.assertEqual(p["availability"], "retired-historical")
+                self.assertEqual(p["import_eligibility"], "retired-not-selectable")
+                self.assertTrue(p.get("retired_at") and v.get("retired_at"))
+                self.assertTrue(p.get("replacement_id"))
+                self.assertEqual(p["replacement_id"], v["replacement_id"])
+                self.assertEqual(p["historical_source_url"], v["historical_source_url"])
         for record_id in sorted(expected):
             with self.subTest(record_id=record_id):
                 p = yaml.load(provenance[record_id].read_bytes(), Loader=mod.UniqueLoader)
