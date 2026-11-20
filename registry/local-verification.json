@@ -107,37 +107,6 @@
       "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
-      "skill_name": "deepseek-pulse",
-      "local_path": "skills/deepseek-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
       "skill_name": "gemini-pulse",
       "local_path": "skills/gemini-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -563,37 +532,6 @@
         ]
       },
       "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "qwen-pulse",
-      "local_path": "skills/qwen-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "repo-doctor",

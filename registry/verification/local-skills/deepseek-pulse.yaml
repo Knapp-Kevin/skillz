@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 63be9ffb787e29e7c9d53a4111c817f660d0c943
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
@@ -19,3 +20,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Current exact-version 2026-11-04 source/package semantic review 18/20: Public DeepSeek/HF weights, papers, pricing and license radar; missing-source fallback explicit; actual host behavior not tested. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: deepseek-models
+retirement_note: "Historical source archived; public primary sources and 5/5 single-context current v1.2.4 cases. Independent host validation NOT_RUN, 1.5x NOT_PROVEN."
