@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 24,
+    "legacy_removed": 26,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 20
+    "legacy_remaining": 18
   },
   "rows": [
     {
@@ -224,9 +224,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "deepseek-models"
+      "replacement_status": "technology_change_intelligence_v1_2_4_standalone_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "deepseek-models",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse",
+      "original_exact_package_tree": "8984411410ccae81474a93e53c28a180ff61ec25",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted actual controlled procedure/emulation retirement path 2026-11-18; owner instructed keep going 2026-11-20",
+      "retirement_behavioral_claim": "LIVE_PUBLIC_PRIMARY_SOURCES_AND_FIVE_CONTROLLED_V1_2_4_TEXT_CASES; NO_INDEPENDENT_HOST_AB_OR_MEASURED_1_5X",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_CONTENT_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-deepseek-pulse-v124-source-and-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/devlog-draft/SKILL.md",
@@ -566,9 +576,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "alibaba-qwen"
+      "replacement_status": "technology_change_intelligence_v1_2_4_standalone_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "alibaba-qwen",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse",
+      "original_exact_package_tree": "e328cb591e98f994d2646bae448cb779c6adee06",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted actual controlled procedure/emulation retirement path 2026-11-18; owner instructed keep going 2026-11-20",
+      "retirement_behavioral_claim": "LIVE_PUBLIC_PRIMARY_SOURCES_AND_FIVE_CONTROLLED_V1_2_4_TEXT_CASES; NO_INDEPENDENT_HOST_AB_OR_MEASURED_1_5X",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_CONTENT_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-qwen-pulse-v124-source-and-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/repo-doctor/SKILL.md",
