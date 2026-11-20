@@ -10,7 +10,9 @@ import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import re
+import shutil
 import subprocess
+import tempfile
 
 import yaml
 
@@ -107,6 +109,9 @@ def _source_git_identity(provenance, verification):
 def build(root, commit, tree):
     if not all(re.fullmatch(r"[0-9a-f]{40}", v) for v in (commit, tree)):
         raise ValueError("explicit exact Git commit and tree are required")
+    actual_commit = git(root, "rev-parse", "HEAD").decode().strip()
+    if actual_commit != commit:
+        raise ValueError("local HEAD commit differs from independently pinned source commit")
     actual_tree = git(root, "rev-parse", "HEAD^{tree}").decode().strip()
     if actual_tree != tree:
         raise ValueError("local HEAD tree differs from independently pinned source tree")
@@ -249,23 +254,47 @@ def build(root, commit, tree):
     return artifact_bytes, manifest
 
 
+def write_handoff(root, outputs, handoff_id, check=False):
+    """Versioned, write-once offline handoff. Existing releases are never patched."""
+    if not re.fullmatch(r"skill-mason-v(?:[2-9]|[1-9][0-9]+)", handoff_id):
+        raise ValueError("new handoff ID must be skill-mason-v2 or higher")
+    base = safe_path(root, "registry/exports")
+    destination = safe_path(base, handoff_id)
+    if set(outputs) != {"governed.ndjson", "discovery-manifests.json", "manifest.json"}:
+        raise ValueError("handoff artifact set differs from canonical three files")
+    if check:
+        for relative, raw in outputs.items():
+            target = safe_path(destination, relative)
+            if not target.is_file() or target.read_bytes() != raw:
+                raise SystemExit(f"export drift: {relative}")
+        return
+    if destination.exists() or destination.is_symlink():
+        raise FileExistsError(f"immutable handoff already exists: {destination}")
+    base.mkdir(parents=True, exist_ok=True)
+    staging = Path(tempfile.mkdtemp(prefix=".skill-mason-", dir=base))
+    try:
+        for relative, raw in outputs.items():
+            safe_path(staging, relative).write_bytes(raw)
+        if destination.exists() or destination.is_symlink():
+            raise FileExistsError(f"immutable handoff already exists: {destination}")
+        staging.rename(destination)
+    finally:
+        if staging.exists():
+            shutil.rmtree(staging)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, default=Path.cwd())
     parser.add_argument("--source-commit", required=True)
     parser.add_argument("--source-tree", required=True)
-    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--handoff-id", required=True,
+                        help="new immutable output ID, e.g. skill-mason-v2")
+    parser.add_argument("--check", action="store_true",
+                        help="compare an existing handoff without writing")
     args = parser.parse_args()
     outputs, manifest = build(args.source_root.resolve(), args.source_commit, args.source_tree)
-    destination = args.source_root.resolve() / "registry/exports/skill-mason-v1"
-    for relative, raw in outputs.items():
-        target = safe_path(destination, relative)
-        if args.check:
-            if not target.exists() or target.read_bytes() != raw:
-                raise SystemExit(f"export drift: {relative}")
-        else:
-            destination.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(raw)
+    write_handoff(args.source_root.resolve(), outputs, args.handoff_id, args.check)
     print(json.dumps(manifest["counts"], sort_keys=True))
 
 
