@@ -147,8 +147,13 @@
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
       "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
-      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.4_85_CASES_NOT_RUN"
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-glm-v124-live-source-five-cases.json"
+      ]
     },
     {
       "historical_entrypoint": "skills/governance-pulse/SKILL.md",
@@ -368,8 +373,13 @@
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
       "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
-      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.4_85_CASES_NOT_RUN"
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-mistral-v124-live-source-five-cases.json"
+      ]
     },
     {
       "historical_entrypoint": "skills/openai-pulse/SKILL.md",

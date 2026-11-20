@@ -172,37 +172,6 @@
       "requalification_reason": "Host-driven digest, authority/privacy guards and host-conditional candidate-registry lookup changed exact skill. Historical rubric stays pinned to prior_reviewed_blob_sha; current scanner and behavioral validation remain not-run."
     },
     {
-      "skill_name": "glm-pulse",
-      "local_path": "skills/glm-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
       "skill_name": "governance-pulse",
       "local_path": "skills/governance-pulse/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -439,37 +408,6 @@
         ]
       },
       "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held."
-    },
-    {
-      "skill_name": "mistral-pulse",
-      "local_path": "skills/mistral-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "openai-pulse",
