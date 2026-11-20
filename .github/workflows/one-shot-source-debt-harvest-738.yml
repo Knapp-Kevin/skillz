@@ -16,7 +16,7 @@ jobs:
         with:
           persist-credentials: false
           submodules: false
-      - name: Execute 17 regressions with original git grep and correct Git metadata exclusion
+      - name: Execute 18 regressions including malformed Python tokenization and old git grep comparison
         run: |
           cd skills/authored/source-debt-triage
           PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s examples -p test_harvest.py -v
@@ -33,6 +33,21 @@ jobs:
           assert d['revision']=='UNVERIFIED_CALLER_WORKTREE'
           assert d['skipped_count']==0
           print("REAL_CHECKOUT_SCANNER_PASS", d['source_files_scanned'], d['counts'])
+          PY
+      - name: Inspect actual repository scripts and label partial language coverage
+        run: |
+          python3 - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          p = Path("skills/authored/source-debt-triage/scripts/harvest.py")
+          s = importlib.util.spec_from_file_location("harvest",p)
+          h = importlib.util.module_from_spec(s)
+          s.loader.exec_module(h)
+          r=h.inspect(Path("scripts"),max_rows=0)
+          assert r["source_files_scanned"] > 5,r
+          assert r["markers_reported"]==0
+          assert r["markers_not_shown"]==r["markers_detected"]
+          print("REAL_REPO_SCRIPTS_ANALYSIS",r["source_files_scanned"],r["markers_detected"],r["scan_status"],r["tokenization_states"])
           PY
       - name: Verify standalone package closure and Python syntax
         run: |
