@@ -79,6 +79,27 @@ class ExportTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "differs from pinned tree"):
             self.build()
 
+    def test_wrong_commit_refused_even_with_correct_tree(self):
+        with self.assertRaisesRegex(ValueError, "HEAD commit differs"):
+            exporter.build(self.root, "0" * 40, self.tree)
+
+    def test_immutable_versioned_handoff_round_trip(self):
+        outputs, _ = self.build()
+        exporter.write_handoff(self.root, outputs, "skill-mason-v2")
+        exporter.write_handoff(self.root, outputs, "skill-mason-v2", check=True)
+        with self.assertRaises(FileExistsError):
+            exporter.write_handoff(self.root, outputs, "skill-mason-v2")
+        self.assertEqual((self.root / "registry/exports/skill-mason-v2/manifest.json").read_bytes(), outputs["manifest.json"])
+
+    def test_immutable_handoff_rejects_legacy_id_or_partial_artifacts(self):
+        outputs, _ = self.build()
+        for name in ("skill-mason-v1", "../outside", "skill-mason-v02"):
+            with self.assertRaises(ValueError):
+                exporter.write_handoff(self.root, outputs, name)
+        with self.assertRaises(ValueError):
+            exporter.write_handoff(self.root, {"manifest.json": outputs["manifest.json"]}, "skill-mason-v2")
+        self.assertFalse((self.root / "registry/exports/skill-mason-v2").exists())
+
     def test_wrong_tree_refused(self):
         with self.assertRaisesRegex(ValueError, "tree differs"):
             exporter.build(self.root, self.commit_id, "0" * 40)
