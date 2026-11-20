@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## Historical TODO Harvester tree verified after retirement (November 20, 2026)
+
+[Exact one-file original Git package receipt](docs/evals/receipts/2026-11-20-todo-post-retirement-complete-package-tree.json) verifies the previously unenumerated TODO Harvester source tree at immutable commit `c95b31e6d0955f00c5ae14bb59ceee821de20b2c`. All 44 historical package identities now have full-tree verification recorded. This is **post-retirement source integrity**, not retroactive proof of historical pre-deletion review, observed host parity, measured 1.5× quality or resolved copyright.
+
 ## All 44 historical skill packages retired from the active tree (November 20, 2026)
 
 The original [Session Continuity](https://github.com/Knapp-Kevin/skillz/tree/bc0f660d87b2d6a8462d6fb28e077e81af222428/skills/session-continuity) package has been retired and its independently authored [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md) v1.2.0 is now the active route. The [five-case source-bound qualification](docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json) tests scope-limited recall, stale handoffs, missing context, sensitive memory boundaries and permissioned persistence without pretending to save a memory. The local verification archive also now includes six previously omitted historical Pulse entries, reconstructed solely from existing pinned verification receipts. **44/44 retired, 0 historical root skill packages remain active.** This completes source retirement under owner-accepted bounded procedures, not independent host A/B parity, measured 1.5× effectiveness, resolved source copyright or exhaustive consumer coverage. Issue #738 remains open for those goals.
