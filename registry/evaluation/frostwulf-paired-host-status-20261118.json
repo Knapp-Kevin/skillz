@@ -3666,7 +3666,7 @@
         "security_no_regression": "NO_CRITICAL_SAFETY_FAILURE_IN_FIVE_CONTROLLED_CASES_NOT_MODEL_HOST_VALIDATED",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_ORIGINAL_GIT_HISTORY_PRESERVED",
-        "consumer_ref_integrity": "KNOWN_CANONICAL_ACTIVE_REFERENCES_RECONCILED_FULL_REPO_SCAN_NOT_PROVEN",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_RECONCILED; FULL_CHECKOUT_3054_TEXT_FILES_3035_LINKS_ZERO_ACTIVE_RETIRED_LINKS_PR_813; OTHER_BINARY_OR_DYNAMIC_CONSUMERS_UNASSESSED",
         "owner_evidence_acceptance": "OWNER_EXPLICITLY_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE",
         "eligible_for_retirement": true,
         "reason": "Original retirement used a narrow owner-accepted one-file source exception. Complete one-file historical Git package was verified later in 2026-11-20 receipt. Independent host A/B, measured 1.5x, source rights, exhaustive consumer coverage remain unproven.",
@@ -3695,6 +3695,19 @@
         "original_skill_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
         "source_file_count": 1,
         "post_retirement_only": true
+      },
+      "current_successor_source_method": {
+        "version": "1.2.0",
+        "snapshot_commit": "0698965b9901d75fb94a1dcb7cd3f09d702b54a7",
+        "skill_blob": "c434b4080c356a77fd11dd78ea62b84c34c463a1",
+        "package_tree": "63e578f731a895f576ce96f7710182361c31e2ad",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-todo-grep-vs-source-debt-comment-harvest.json",
+        "executable_test_result": "18/18_PASS",
+        "metric": "CONTROLLED_GIT_FIXTURE_MARKER_PRECISION_2X_NOT_OVERALL_SKILL_EFFECTIVENESS",
+        "critical_skill_host_parity": "NOT_PROVEN",
+        "improvement_1_5x_overall": "NOT_PROVEN",
+        "source_rights": "NOT_ESTABLISHED_HISTORICAL",
+        "note": "The earlier v1.1 replacement fields are historical retirement-phase pins, not current authored source. No transfer of model-host evidence to v1.2."
       }
     },
     {

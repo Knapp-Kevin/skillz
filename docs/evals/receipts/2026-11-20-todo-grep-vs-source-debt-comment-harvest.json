@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "issue": 738,
+  "comparison": "PREDECESSOR_COMMAND_VS_ORIGINAL_AUTHORED_SCANNER_CONTROLLED_FIXTURE",
+  "date": "2026-11-20",
+  "predecessor": {
+    "entrypoint": "skills/todo-harvester/SKILL.md",
+    "pinned_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+    "entrypoint_blob": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+    "rights": "NOT_ESTABLISHED",
+    "method": "git grep -nE with the original exclusion set executed against a disposable Git repository"
+  },
+  "successor": {
+    "entrypoint": "skills/authored/source-debt-triage/SKILL.md",
+    "version": "1.2.0",
+    "pinned_commit": "0698965b9901d75fb94a1dcb7cd3f09d702b54a7",
+    "entrypoint_blob": "c434b4080c356a77fd11dd78ea62b84c34c463a1",
+    "complete_package_tree": "63e578f731a895f576ce96f7710182361c31e2ad",
+    "method": "original Python tokenize and C-like conservative lexical parser with no source execution"
+  },
+  "evidence": {
+    "workflow_url": "https://github.com/Knapp-Kevin/skillz/actions/runs/44791828796",
+    "tests_executed": 18,
+    "tests_passed": 18,
+    "package_closure_files": 5,
+    "real_repository_python_files_scanned": 8,
+    "real_repository_diagnostics": "zero source markers under scripts, exact Python tokenization, full textual scope for those supported inputs"
+  },
+  "paired_fixture": {
+    "type": "synthetic_disposable_git_with_actual_command_execution",
+    "languages": [
+      "python",
+      "c"
+    ],
+    "known_true_comment_markers": 4,
+    "predecessor_raw_hit_lines": 8,
+    "predecessor_true_positive_lines": 4,
+    "predecessor_false_positive_lines": 4,
+    "successor_total_marker_rows": 4,
+    "successor_true_positive_rows": 4,
+    "successor_false_positive_rows": 0,
+    "predecessor_precision": 0.5,
+    "successor_precision": 1,
+    "precision_ratio_for_fixture": 2,
+    "recall_for_known_markers": {
+      "predecessor": 1,
+      "successor": 1
+    },
+    "notes": "Baseline includes matched source strings and identifier names. This is one favorable bounded fixture, not a distributional sample or an independent model-host test."
+  },
+  "evidence_boundaries": {
+    "historical_skill_host_execution": false,
+    "successor_skill_host_execution": false,
+    "executable_source_method_test": true,
+    "independent_model_a_b": false,
+    "global_legacy_parity_proven": false,
+    "overall_skill_effectiveness_1_5x_proven": false,
+    "observed_customer_outcomes": false,
+    "source_rights_resolved": false,
+    "metric": "Precision is a scoped test property; it cannot be substituted for weighted user effectiveness across 44 skill predecessors."
+  }
+}

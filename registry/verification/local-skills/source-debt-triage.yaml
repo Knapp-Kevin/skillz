@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: source-debt-triage
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/source-debt-triage/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/source-debt-triage/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: fdd0f7d5b4e3996e6bd440751385ee537ca100c0
-complete_package_tree_sha: bb92a4ea4130ca50c0b110d96ab439f1498d741f
-characterized_at: "2026-11-18"
-reviewed_at: "2026-11-18"
+content_blob_sha: c434b4080c356a77fd11dd78ea62b84c34c463a1
+complete_package_tree_sha: 63e578f731a895f576ce96f7710182361c31e2ad
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-20"
 verification_status: verified
-verification_basis: maintainer-complete-package-static-review
+verification_basis: maintainer-complete-package-static-review-plus-source-method-test
 validation_status: not-run
-validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+validation_note: "18/18 original scanner CPU tests and actual Git grep comparator exercised, but no independently observed consuming-model A/B or real user outcomes. 2x precision pertains only to synthetic fixture."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "19/20"
 tags:
   use_case: [code-debt]
   lifecycle: [evaluation]
@@ -24,6 +24,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Exact three-file v1.1 static review 18/20: docs/reviews/2026-11-18-source-debt-parity-v1-1.md.
-  Original predecessor is retained; #737 retirement HOLD remains in force.
-  Host behavior not run; 1.5x effectiveness not proven.
+  Exact v1.2 five-file static review 19/20: docs/reviews/2026-11-20-source-debt-v1-2-executable-harvest-review.md.
+  Original historical predecessor is already retired and preserved in Git. Scanner tests 18/18 PASS;
+  independent skill-host parity and 1.5x overall effectiveness remain NOT PROVEN.

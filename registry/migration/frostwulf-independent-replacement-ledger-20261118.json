@@ -884,7 +884,7 @@
       "retirement_review": "docs/reviews/2026-11-18-todo-controlled-procedure-retirement.md",
       "retirement_scope": "exact_known_SKILL_md_only",
       "current_active_reference": "skills/authored/source-debt-triage/SKILL.md",
-      "consumer_scan_status": "KNOWN_ACTIVE_REGISTRIES_RECONCILED_EXHAUSTIVE_SEARCH_NOT_PROVEN",
+      "consumer_scan_status": "FULL_CHECKOUT_3054_TEXT_FILES_3035_MARKDOWN_LINKS_ZERO_ACTIVE_RETIRED_LINKS_PR_813; DYNAMIC_AND_BINARY_REFERENCE_COVERAGE_NOT_PROVEN",
       "retirement_owner_authorization": "explicit-owner-directed-controlled-emulation-and-delete-2026-11-18",
       "retirement_behavioral_claim": "NO_INDEPENDENT_MODEL_A_B; quality_ratio_not_proven",
       "post_retirement_full_package_verification": {
@@ -894,6 +894,17 @@
         "exact_skill_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
         "source_file_count": 1,
         "receipt": "docs/evals/receipts/2026-11-20-todo-post-retirement-complete-package-tree.json"
+      },
+      "current_successor_source_method": {
+        "version": "1.2.0",
+        "snapshot_commit": "0698965b9901d75fb94a1dcb7cd3f09d702b54a7",
+        "entrypoint_blob_sha1": "c434b4080c356a77fd11dd78ea62b84c34c463a1",
+        "full_tree_sha1": "63e578f731a895f576ce96f7710182361c31e2ad",
+        "receipt": "docs/evals/receipts/2026-11-20-todo-grep-vs-source-debt-comment-harvest.json",
+        "tests": "18/18 original executable source scanner tests PASS",
+        "controlled_precision_ratio": "2.00 on one synthetic Git fixture, not a 1.5x overall outcome claim",
+        "independent_host_parity": "NOT_RUN",
+        "rights": "original historical source authorship NOT_ESTABLISHED"
       }
     },
     {
