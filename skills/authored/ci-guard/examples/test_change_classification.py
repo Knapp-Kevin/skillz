@@ -60,9 +60,8 @@ class RiskBasedSelection(unittest.TestCase):
     def test_changed_classifier_itself_falls_back_full(self):
         self.assertEqual(
             module.classify(["skills/authored/ci-guard/scripts/classify_change.py"])
-            ["route"], "full" if False else "python")
-        # A consumer is REQUIRED to put the classifier and its policy in a
-        # protected CI directory. In that distribution location it is full:
+            ["route"], "full")
+        # Consumer installations also classify their workflow policy as full.
         self.assertEqual(module.classify(["ci/classify_change.py"])["route"], "full")
 
     def test_unverified_empty_diff_falls_back_full(self):
