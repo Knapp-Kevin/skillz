@@ -108,6 +108,27 @@ class RiskBasedSelection(unittest.TestCase):
             self.assertIn("runtime.py", paths)
             self.assertEqual(module.classify(paths)["route"], "mixed")
 
+    def test_git_symlink_change_cannot_be_docs_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            git(repo, "init", "-q")
+            git(repo, "config", "user.name", "CI Test")
+            git(repo, "config", "user.email", "ci-test@example.invalid")
+            (repo / "README.md").write_text("ordinary documentation\n", encoding="utf-8")
+            (repo / "other.md").write_text("another doc\n", encoding="utf-8")
+            git(repo, "add", ".")
+            git(repo, "commit", "-qm", "baseline")
+            base = git(repo, "rev-parse", "HEAD")
+            (repo / "README.md").unlink()
+            (repo / "README.md").symlink_to("other.md")
+            git(repo, "add", "-A")
+            git(repo, "commit", "-qm", "replace docs with symlink")
+            head = git(repo, "rev-parse", "HEAD")
+            changed = module.changed_paths(repo, base, head)
+            self.assertIn("README.md", changed)
+            self.assertIn("__NONREGULAR_FILE_OR_MODE__", changed)
+            self.assertEqual(module.classify(changed)["route"], "full")
+
     def test_invalid_commit_ref_refused(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(module.ClassificationError):
