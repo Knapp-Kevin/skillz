@@ -10,7 +10,9 @@ import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import re
+import shutil
 import subprocess
+import tempfile
 
 import yaml
 
@@ -54,9 +56,64 @@ def safe_path(root, relative):
     return result
 
 
+def _source_git_identity(provenance, verification):
+    """Normalize explicitly recorded Git blob/tree claims; never invent rights.
+
+    Only the known v1 Git fingerprint algorithms define what content_blob_sha
+    means. An alias disagreement is a refusal, not first-nonempty-wins.
+    """
+    algorithm = verification["fingerprint_algorithm"]
+    recorded = verification["content_blob_sha"]
+
+    def collect(kind, candidates):
+        known = []
+        for label, value in candidates:
+            if value is None or value == "":
+                continue
+            if not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{40}", value):
+                raise ValueError(f"invalid {kind} Git object claim: {label}")
+            known.append((label, value))
+        if len({value for _, value in known}) > 1:
+            raise ValueError(f"contradictory {kind} Git object claims: " +
+                             ", ".join(label for label, _ in known))
+        return known[0][1] if known else None
+
+    blob = [
+        ("verification.skill_md_blob_sha", verification.get("skill_md_blob_sha")),
+        ("verification.skill_blob_sha", verification.get("skill_blob_sha")),
+        ("provenance.skill_md_blob_sha", provenance.get("skill_md_blob_sha")),
+        ("provenance.skill_blob_sha", provenance.get("skill_blob_sha")),
+    ]
+    tree = [
+        ("verification.complete_package_tree_sha",
+         verification.get("complete_package_tree_sha")),
+        ("verification.package_tree_sha", verification.get("package_tree_sha")),
+        ("provenance.complete_package_tree_sha",
+         provenance.get("complete_package_tree_sha")),
+        ("provenance.package_tree_sha", provenance.get("package_tree_sha")),
+    ]
+    if algorithm in ("git-blob-sha1", "git-tree-and-blob-sha1"):
+        blob.append(("verification.content_blob_sha", recorded))
+        blob.append(("provenance.content_blob_sha", provenance.get("content_blob_sha")))
+    elif algorithm == "git-tree-sha1":
+        tree.append(("verification.content_blob_sha", recorded))
+        tree.append(("provenance.content_blob_sha", provenance.get("content_blob_sha")))
+    # Unknown algorithms are preserved as recorded evidence but never
+    # coerced into a Git SHA-1 or asserted as package identity.
+    entry_blob = collect("SKILL.md blob", blob)
+    package_tree = collect("package tree", tree)
+    if algorithm == "git-tree-and-blob-sha1" and (
+            entry_blob is None or package_tree is None):
+        raise ValueError("combined tree/blob review missing exact source identities")
+    return entry_blob, package_tree
+
+
 def build(root, commit, tree):
     if not all(re.fullmatch(r"[0-9a-f]{40}", v) for v in (commit, tree)):
         raise ValueError("explicit exact Git commit and tree are required")
+    actual_commit = git(root, "rev-parse", "HEAD").decode().strip()
+    if actual_commit != commit:
+        raise ValueError("local HEAD commit differs from independently pinned source commit")
     actual_tree = git(root, "rev-parse", "HEAD^{tree}").decode().strip()
     if actual_tree != tree:
         raise ValueError("local HEAD tree differs from independently pinned source tree")
@@ -98,7 +155,10 @@ def build(root, commit, tree):
                 mapped[identity].append(route)
             for identity in sub.get("name_only_review_candidate_ids", []):
                 hints[identity].append(route)
-    records = []
+    records, archived_review_companions = [], []
+    index_ids = set(names["first_party_ids"] + names["third_party_ids"])
+    if len(index_ids) != names["record_counts"]["total"]:
+        raise ValueError("governed index contains duplicate review identities")
     provenance_paths = sorted(p for p in blobs if p.startswith("registry/skills/") and p.endswith(".yaml"))
     expected_verification = {p.replace("registry/skills/", "registry/verification/", 1) for p in provenance_paths}
     actual_verification = {p for p in blobs if p.startswith("registry/verification/") and p.endswith(".yaml")}
@@ -111,13 +171,34 @@ def build(root, commit, tree):
             raise ValueError(f"paired identity mismatch: {provenance_path}")
         record_id = provenance_path[len("registry/skills/"):-5]
         source_class = "first-party" if record_id.startswith("local-skills/") else "third-party"
+        if record_id not in index_ids:
+            # Unindexed historical companions remain in the pinned source ledger.
+            # Indexed retired reviews retain their explicit retired review status.
+            if not (
+                source_class == "first-party"
+                and v.get("verification_status") == "retired"
+                and p.get("availability") == "retired-historical"
+                and p.get("import_eligibility") == "retired-not-selectable"
+                and p.get("retired_at") and v.get("retired_at")
+                and p.get("replacement_id")
+                and p.get("replacement_id") == v.get("replacement_id")
+                and p.get("historical_source_url")
+                and p.get("historical_source_url") == v.get("historical_source_url")
+            ):
+                raise ValueError(f"unindexed non-retired or incoherent companion: {record_id}")
+            archived_review_companions.append({
+                "record_id": record_id,
+                "provenance": provenance_path,
+                "verification": verification_path,
+                "retired_at": str(v["retired_at"]),
+                "replacement_id": v["replacement_id"],
+                "historical_source_url": v["historical_source_url"],
+                "governed_catalog_membership": "excluded-retired-historical",
+                "raw_companions_preserved_in_source_inventory": True,
+            })
+            continue
         algorithm = v["fingerprint_algorithm"]
-        entry_blob = v.get("skill_md_blob_sha") or p.get("skill_md_blob_sha")
-        package_tree = v.get("complete_package_tree_sha") or v.get("package_tree_sha") or p.get("complete_package_tree_sha") or p.get("package_tree_sha")
-        if algorithm == "git-blob-sha1":
-            entry_blob = entry_blob or v["content_blob_sha"]
-        elif algorithm == "git-tree-sha1":
-            package_tree = package_tree or v["content_blob_sha"]
+        entry_blob, package_tree = _source_git_identity(p, v)
         local_package = None
         local_entrypoint_match = "not-assessed"
         local_path = v.get("local_path") or p.get("local_path")
@@ -147,7 +228,6 @@ def build(root, commit, tree):
             "evidence": {"provenance": provenance_path, "verification": verification_path},
         })
     actual_ids = {r["record_id"] for r in records}
-    index_ids = set(names["first_party_ids"] + names["third_party_ids"])
     if actual_ids != index_ids or len(records) != names["record_counts"]["total"]:
         raise ValueError("governed name index differs from complete companion population")
     if set(mapped) - actual_ids:
@@ -196,6 +276,12 @@ def build(root, commit, tree):
         "counts": {"governed_records": len(records), "first_party": sum(r["source_class"] == "first-party" for r in records), "third_party": sum(r["source_class"] == "third-party" for r in records), "mapped": sum(r["capability_mapping"]["state"] == "evidence-linked" for r in records), "unmapped": sum(r["capability_mapping"]["state"] == "unmapped" for r in records), "semantic_states": dict(sorted(collections.Counter(r["review"]["semantic_status"] for r in records).items())), "g1_g3_observations": sum(x["record_count"] for x in g_shards), "four_source_paths": sum(x["record_count"] for x in four_sources), "discovery_artifacts": len(discovery["all_discovery_artifacts"]), "source_files": len(inventory), "submodule_pins": len(gitlinks)},
         "taxonomy": {"recognized": "registry/capability-directory.json", "outcomes": "registry/capability-outcome-register.json", "prior_proposals": "registry/discovery/capability-domain-expansion-20261102.json", "new_proposals": "registry/capability-scope-extensions-20261117.json"},
         "source_files": inventory,
+        "historical_review_companions": {
+            "count": len(archived_review_companions),
+            "excluded_from_governed_records": True,
+            "entries": archived_review_companions,
+            "interpretation": "Retired original provenance and verification remain accessible through pinned source_files. They are historical evidence, not selectable governed skills.",
+        },
         "source_files_scope": "All tracked regular-file source inputs, excluding registry/exports/ generated handoffs; submodule commits recorded separately. No untracked input is read.",
         "submodule_pins": gitlinks,
         "readiness": {"inventory_and_ingestion": "complete-for-declared-snapshot", "universal_capability_coverage": "not-established", "composition_eligibility": "requires-independent-target-specific-assessment", "prism_integration": "not-implemented-by-this-export"},
@@ -204,23 +290,47 @@ def build(root, commit, tree):
     return artifact_bytes, manifest
 
 
+def write_handoff(root, outputs, handoff_id, check=False):
+    """Versioned, write-once offline handoff. Existing releases are never patched."""
+    if not re.fullmatch(r"skill-mason-v(?:[2-9]|[1-9][0-9]+)", handoff_id):
+        raise ValueError("new handoff ID must be skill-mason-v2 or higher")
+    base = safe_path(root, "registry/exports")
+    destination = safe_path(base, handoff_id)
+    if set(outputs) != {"governed.ndjson", "discovery-manifests.json", "manifest.json"}:
+        raise ValueError("handoff artifact set differs from canonical three files")
+    if check:
+        for relative, raw in outputs.items():
+            target = safe_path(destination, relative)
+            if not target.is_file() or target.read_bytes() != raw:
+                raise SystemExit(f"export drift: {relative}")
+        return
+    if destination.exists() or destination.is_symlink():
+        raise FileExistsError(f"immutable handoff already exists: {destination}")
+    base.mkdir(parents=True, exist_ok=True)
+    staging = Path(tempfile.mkdtemp(prefix=".skill-mason-", dir=base))
+    try:
+        for relative, raw in outputs.items():
+            safe_path(staging, relative).write_bytes(raw)
+        if destination.exists() or destination.is_symlink():
+            raise FileExistsError(f"immutable handoff already exists: {destination}")
+        staging.rename(destination)
+    finally:
+        if staging.exists():
+            shutil.rmtree(staging)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, default=Path.cwd())
     parser.add_argument("--source-commit", required=True)
     parser.add_argument("--source-tree", required=True)
-    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--handoff-id", required=True,
+                        help="new immutable output ID, e.g. skill-mason-v2")
+    parser.add_argument("--check", action="store_true",
+                        help="compare an existing handoff without writing")
     args = parser.parse_args()
     outputs, manifest = build(args.source_root.resolve(), args.source_commit, args.source_tree)
-    destination = args.source_root.resolve() / "registry/exports/skill-mason-v1"
-    for relative, raw in outputs.items():
-        target = safe_path(destination, relative)
-        if args.check:
-            if not target.exists() or target.read_bytes() != raw:
-                raise SystemExit(f"export drift: {relative}")
-        else:
-            destination.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(raw)
+    write_handoff(args.source_root.resolve(), outputs, args.handoff_id, args.check)
     print(json.dumps(manifest["counts"], sort_keys=True))
 
 

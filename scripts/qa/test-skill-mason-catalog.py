@@ -79,6 +79,75 @@ class ExportTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "differs from pinned tree"):
             self.build()
 
+    def test_wrong_commit_refused_even_with_correct_tree(self):
+        with self.assertRaisesRegex(ValueError, "HEAD commit differs"):
+            exporter.build(self.root, "0" * 40, self.tree)
+
+    def test_immutable_versioned_handoff_round_trip(self):
+        outputs, _ = self.build()
+        exporter.write_handoff(self.root, outputs, "skill-mason-v2")
+        exporter.write_handoff(self.root, outputs, "skill-mason-v2", check=True)
+        with self.assertRaises(FileExistsError):
+            exporter.write_handoff(self.root, outputs, "skill-mason-v2")
+        self.assertEqual((self.root / "registry/exports/skill-mason-v2/manifest.json").read_bytes(), outputs["manifest.json"])
+
+    def test_immutable_handoff_rejects_legacy_id_or_partial_artifacts(self):
+        outputs, _ = self.build()
+        for name in ("skill-mason-v1", "../outside", "skill-mason-v02"):
+            with self.assertRaises(ValueError):
+                exporter.write_handoff(self.root, outputs, name)
+        with self.assertRaises(ValueError):
+            exporter.write_handoff(self.root, {"manifest.json": outputs["manifest.json"]}, "skill-mason-v2")
+        self.assertFalse((self.root / "registry/exports/skill-mason-v2").exists())
+
+    def test_retired_unindexed_companions_are_preserved_not_reactivated(self):
+        retired = {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "source_repository": "https://example.invalid/source",
+            "source_path": "skills/old-demo/SKILL.md",
+            "license": "unknown", "portability": "high",
+            "dependency_status": "unknown", "availability": "retired-historical",
+            "import_eligibility": "retired-not-selectable",
+            "retired_at": "2026-11-19", "replacement_id": "local-skills/demo",
+            "historical_source_url": "https://example.invalid/immutable-original",
+        }
+        verification = {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "fingerprint_algorithm": "git-blob-sha1",
+            "content_blob_sha": "c" * 40, "verification_status": "retired",
+            "verification_basis": "original-evidence", "rubric_score": "12/20",
+            "characterized_at": "2026-01-01", "validation_status": "not-run",
+            "tags": {}, "retired_at": "2026-11-19",
+            "replacement_id": "local-skills/demo",
+            "historical_source_url": "https://example.invalid/immutable-original",
+        }
+        self.write_yaml("registry/skills/local-skills/old-demo.yaml", retired)
+        self.write_yaml("registry/verification/local-skills/old-demo.yaml", verification)
+        self.commit()
+        outputs, manifest = self.build()
+        ids = [json.loads(line)["record_id"] for line in
+               outputs["governed.ndjson"].splitlines()]
+        self.assertNotIn("local-skills/old-demo", ids)
+        self.assertEqual(len(ids), 2)
+        archived = manifest["historical_review_companions"]
+        self.assertEqual(archived["count"], 1)
+        self.assertEqual(archived["entries"][0]["record_id"], "local-skills/old-demo")
+        self.assertTrue(any(row["path"].endswith("old-demo.yaml")
+                            for row in manifest["source_files"]))
+
+    def test_unindexed_nonretired_companion_is_refused(self):
+        self.write_yaml("registry/skills/local-skills/old-demo.yaml", {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "availability": "in-repo", "import_eligibility": "eligible",
+        })
+        self.write_yaml("registry/verification/local-skills/old-demo.yaml", {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "verification_status": "verified",
+        })
+        self.commit()
+        with self.assertRaisesRegex(ValueError, "unindexed non-retired"):
+            self.build()
+
     def test_wrong_tree_refused(self):
         with self.assertRaisesRegex(ValueError, "tree differs"):
             exporter.build(self.root, self.commit_id, "0" * 40)
@@ -92,7 +161,7 @@ class ExportTests(unittest.TestCase):
     def test_unindexed_record_refused(self):
         self.write_json("registry/governed-review-name-index.json", {"first_party_ids": ["local-skills/demo"], "third_party_ids": [], "record_counts": {"total": 1}})
         self.commit()
-        with self.assertRaisesRegex(ValueError, "name index differs"):
+        with self.assertRaisesRegex(ValueError, "unindexed non-retired"):
             self.build()
 
     def test_duplicate_yaml_keys_refused(self):
