@@ -72,6 +72,8 @@ def changed_paths(repo: Path, base: str, head: str) -> list[str]:
 def is_protected(path: str) -> bool:
     name = Path(path).name
     lower = path.lower()
+    if path.endswith("/scripts/classify_change.py") or name == "classify_change.py":
+        return True
     if path in PROTECTED_NAMES or name in PROTECTED_NAMES:
         return True
     if name.startswith(("requirements", "Dockerfile", "Containerfile")):
