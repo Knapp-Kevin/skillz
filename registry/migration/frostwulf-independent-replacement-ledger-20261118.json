@@ -703,9 +703,14 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "xai-grok"
+      "replacement_status": "v1.2.4_source_bound_controlled_qualification_partial_no_independent_host",
+      "legacy_disposition": "retain_pending_owner_specific_retirement_acceptance",
+      "replacement_profile": "xai-grok",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-19-pulse-xai-live-primary-sources-smoke.json",
+        "docs/evals/receipts/2026-11-19-pulse-xai-v124-five-controlled-cases.json"
+      ],
+      "consumer_routing": "skills/categories/monitoring-intelligence/README.md"
     }
   ],
   "review_evidence": [

@@ -3533,10 +3533,10 @@
         "security_no_regression": "NOT_PROVEN",
         "actual_user_outcome": "NOT_VERIFIED",
         "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
+        "consumer_ref_integrity": "CATEGORY_DISCOVERY_REHOMED_TO_AUTHORED; EXHAUSTIVE_CONSUMER_SCAN_NOT_PROVEN",
         "owner_evidence_acceptance": "NOT_ESTABLISHED",
         "eligible_for_retirement": false,
-        "reason": "Exact source and designed cases pinned; 85 non-isolated self-reviewed emulations span earlier successor versions, so current v1.2.4 independent host parity and 1.5x remain unproven.",
+        "reason": "Current v1.2.4 scoped 5-case controlled emulation and one live public primary-source review support migration readiness, but tests are same-session/self-reviewed; no independent host pair, exhaustive consumer audit, or specific owner retirement acceptance. Remains HOLD.",
         "source_package_tree_sha1": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
         "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
       },
@@ -3544,7 +3544,28 @@
       "legacy_support_source_list_mode": "PINNED_BUNDLED_JSON",
       "legacy_known_source_manifest_path": "skills/xai-pulse/sources.json",
       "legacy_known_source_manifest_git_blob_sha1": "f3608fb81efd181a91ecf2c72b73930e073ab67f",
-      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE"
+      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE",
+      "source_bound_controlled_qualification": {
+        "date": "2026-11-19",
+        "evidence_class": "PRIMARY_SOURCE_BOUNDED_SINGLE_CONTEXT_PROCEDURE_SMOKE_AND_V124_SYNTHETIC_EMULATION",
+        "live_read_only_source_case": "docs/evals/receipts/2026-11-19-pulse-xai-live-primary-sources-smoke.json",
+        "current_version_five_cases": "docs/evals/receipts/2026-11-19-pulse-xai-v124-five-controlled-cases.json",
+        "original_and_new_read_only_outputs": 2,
+        "current_successor_synthetic_cases": 5,
+        "source_assertions_executed": 5,
+        "source_assertions_passed": 5,
+        "live_pair_scaffold_checks": 10,
+        "live_pair_scaffold_passed": 10,
+        "negative_mutations_detected": 6,
+        "host_observed_pairs": 0,
+        "independent_qualitative_review": false,
+        "consumer_route": "skills/categories/monitoring-intelligence/README.md",
+        "consumer_reference_audit": "KNOWN_CATEGORY_ROUTE_CORRECTED_NOT_EXHAUSTIVE",
+        "critical_parity": "UNKNOWN_NO_INDEPENDENT_EVIDENCE",
+        "quality_ratio": "NOT_PROVEN",
+        "owner_specific_retirement_acceptance": "NOT_ESTABLISHED",
+        "retirement_eligible": false
+      }
     }
   ],
   "phase2_fixture": "docs/evals/frostwulf-phase2-paired-scenarios.json",
