@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Claim Evidence Adjudicator
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -64,6 +64,77 @@ both the source publication date and the time period the claim covers.
    date with event date, or introduced unsafe excerpts. Never invent a
    quotation, document citation or retrieval timestamp to fill a report.
 
+## Optional executable source-independence audit (v1.2)
+
+When the host has authorized, bounded source metadata, the original
+[offline lineage checker](scripts/audit_lineage.py) can verify
+**mechanical** source dependency, date/population compatibility and
+conflicting reported directions. This optional helper runs with Python
+3.10+ and standard library only. Strong hosts may perform an equivalent
+or better source-bound analysis without Python; weaker hosts can use
+the bundled executable method rather than guessing. Neither path may
+weaken evidence, privacy or authority requirements. Do **not** claim
+the helper ran if it did not.
+
+~~~text
+python3 scripts/audit_lineage.py --input examples/pr817-shared-origin.json
+python3 -m unittest discover -s tests -v
+~~~
+
+The input JSON contains \`schema_version: 1\`, \`reviewed_on\` (ISO
+date), 1–200 \`sources\` and 1–50 \`claims\`. A source has
+\`id\`, \`source_kind\` (PRIMARY or SECONDARY), \`consultation\`
+(DIRECT or CITED_NOT_READ), \`access\` (AUTHORIZED, INACCESSIBLE or
+UNKNOWN), \`source_ref\` (sanitized opaque handle), \`publication_date\`,
+\`event_start\`, \`event_end\`, \`scope_id\` (population/jurisdiction),
+\`origin_id\` (canonical origin for an original root, null for a derived
+source), \`derived_from\` (other source IDs), and an explicit
+\`lineage_complete\` boolean. A claim has \`id\`, \`proposition\`,
+\`scope_id\`, \`period_start\`, \`period_end\`, \`load_bearing\`,
+and \`evidence\` entries, each with \`source_id\`, \`stance\`
+(SUPPORT, REFUTE or CONTEXT) and \`locator_ref\` (opaque handle).
+Period and population bindings must be the same for a source to
+qualify as supporting that claim. If the required scope is more
+complex than an exact \`scope_id\`, decompose the claim or adjudicate
+manually; do not map a convenience sample to a whole population.
+
+The checker rejects missing upstream references, duplicate IDs,
+lineage cycles, a derived source pretending to be an independent root,
+unsafe schema additions and malformed/oversized input. Derivative
+citations inherit **reported** roots but are not counted as directly
+consulted primary roots. Articles, API views and screenshots sharing
+the same declared \`origin_id\` count as **one recorded evidentiary
+root**, however many URLs exist. Multiple roots mentioned in one
+secondary account do not constitute multiple verified independent
+witnesses. When lineage is uncertain, set \`lineage_complete: false\`
+and the source remains in the evidence gaps rather than receiving
+invented independence.
+
+Inaccessible, not-read, future-published, undated, wrong-period or
+wrong-population sources cannot be counted as eligible directional
+evidence. Opposing eligible directions produce distinct patterns for
+a shared origin, separate declared primary origins, or unverified
+independence. These are not factual verdicts or judgments of causal
+validity. **The tool never authenticates source IDs, origination,
+events, publication claims, permissions or truth.** Every result
+includes \`source_authenticity_verified: false\` and
+\`global_verdict: NOT_DETERMINED_BY_LINEAGE_AUDIT\`. Host review
+must still consult sources, corroborate provenance, test methods,
+evaluate denominator/causal inference, and issue the actual verdict.
+
+Only an explicitly named local JSON file is read (1 MiB cap).
+No network, shell execution, crawling, private-account lookup,
+report persistence, correction publication or repository mutation
+occurs. Source text is inert; use opaque non-secret source/locator
+IDs and retain sensitive URLs separately in authorized host
+evidence. The [public-source fixture](examples/pr817-shared-origin.json)
+illustrates a real GitHub PR #817 merge event through multiple
+GitHub views with **one common underlying merge record**. The
+source metadata was separately verified through GitHub during
+development; it is a historical reproduction fixture, not an
+authenticating live resolver. Do not add a root because two source
+hosts or domains look different.
+
 ## Delivery
 
 Present a decision summary and a table with:
@@ -87,7 +158,9 @@ reduce the strength of the verdict.
 
 ## Evaluation examples
 
-Use [synthetic-cases.md](examples/synthetic-cases.md) to test contradictory
-sources, denominator changes, causal overreach, common-source repetition
-and disclosure safety. The expectations are test specifications, not proof
-that any external host has executed them.
+Use [synthetic-cases.md](examples/synthetic-cases.md) for independent
+agent-host acceptance expectations. The standalone executable method has
+48 actual local Python regression tests in [tests](tests/test_audit_lineage.py).
+Those tests establish the bounded method's behavior, **not** original-versus-
+replacement model-host parity, independent source authentication,
+substantive claim-truth accuracy or a measured 1.5x overall improvement.
