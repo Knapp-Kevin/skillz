@@ -172,8 +172,8 @@ def build(root, commit, tree):
         record_id = provenance_path[len("registry/skills/"):-5]
         source_class = "first-party" if record_id.startswith("local-skills/") else "third-party"
         if record_id not in index_ids:
-            # Retired first-party companions are preserved in the source ledger
-            # but must not be resurrected into the current governed catalog.
+            # Unindexed historical companions remain in the pinned source ledger.
+            # Indexed retired reviews retain their explicit retired review status.
             if not (
                 source_class == "first-party"
                 and v.get("verification_status") == "retired"
@@ -197,8 +197,6 @@ def build(root, commit, tree):
                 "raw_companions_preserved_in_source_inventory": True,
             })
             continue
-        if source_class == "first-party" and v.get("verification_status") == "retired":
-            raise ValueError(f"indexed historical retirement may not be active: {record_id}")
         algorithm = v["fingerprint_algorithm"]
         entry_blob, package_tree = _source_git_identity(p, v)
         local_package = None
