@@ -100,6 +100,54 @@ class ExportTests(unittest.TestCase):
             exporter.write_handoff(self.root, {"manifest.json": outputs["manifest.json"]}, "skill-mason-v2")
         self.assertFalse((self.root / "registry/exports/skill-mason-v2").exists())
 
+    def test_retired_unindexed_companions_are_preserved_not_reactivated(self):
+        retired = {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "source_repository": "https://example.invalid/source",
+            "source_path": "skills/old-demo/SKILL.md",
+            "license": "unknown", "portability": "high",
+            "dependency_status": "unknown", "availability": "retired-historical",
+            "import_eligibility": "retired-not-selectable",
+            "retired_at": "2026-11-19", "replacement_id": "local-skills/demo",
+            "historical_source_url": "https://example.invalid/immutable-original",
+        }
+        verification = {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "fingerprint_algorithm": "git-blob-sha1",
+            "content_blob_sha": "c" * 40, "verification_status": "retired",
+            "verification_basis": "original-evidence", "rubric_score": "12/20",
+            "characterized_at": "2026-01-01", "validation_status": "not-run",
+            "tags": {}, "retired_at": "2026-11-19",
+            "replacement_id": "local-skills/demo",
+            "historical_source_url": "https://example.invalid/immutable-original",
+        }
+        self.write_yaml("registry/skills/local-skills/old-demo.yaml", retired)
+        self.write_yaml("registry/verification/local-skills/old-demo.yaml", verification)
+        self.commit()
+        outputs, manifest = self.build()
+        ids = [json.loads(line)["record_id"] for line in
+               outputs["governed.ndjson"].splitlines()]
+        self.assertNotIn("local-skills/old-demo", ids)
+        self.assertEqual(len(ids), 2)
+        archived = manifest["historical_review_companions"]
+        self.assertEqual(archived["count"], 1)
+        self.assertEqual(archived["entries"][0]["record_id"], "local-skills/old-demo")
+        self.assertTrue(any(row["path"].endswith("old-demo.yaml")
+                            for row in manifest["source_files"]))
+
+    def test_unindexed_nonretired_companion_is_refused(self):
+        self.write_yaml("registry/skills/local-skills/old-demo.yaml", {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "availability": "in-repo", "import_eligibility": "eligible",
+        })
+        self.write_yaml("registry/verification/local-skills/old-demo.yaml", {
+            "source_id": "local-skills", "skill_name": "old-demo",
+            "verification_status": "verified",
+        })
+        self.commit()
+        with self.assertRaisesRegex(ValueError, "unindexed non-retired"):
+            self.build()
+
     def test_wrong_tree_refused(self):
         with self.assertRaisesRegex(ValueError, "tree differs"):
             exporter.build(self.root, self.commit_id, "0" * 40)
