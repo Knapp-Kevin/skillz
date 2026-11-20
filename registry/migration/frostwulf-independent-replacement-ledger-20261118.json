@@ -99,7 +99,16 @@
       "accepted_behavior_delta": "Old asks for decision and deadline before creating a brief; successor allows explicitly UNCONFIRMED provisional draft when owner unavailable.",
       "source_bound_qualification_receipts": [
         "docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json"
-      ]
+      ],
+      "current_active_source_method": {
+        "entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+        "version": "1.2.0",
+        "skill_blob_sha": "24c65454a57689bfbea24ef024591e202118b675",
+        "package_tree_sha": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
+        "evidence": "docs/evals/receipts/2026-11-20-decision-workbench-v120-executable-scoring.json",
+        "status": "25_REAL_LOCAL_PYTHON_METHOD_TESTS_PASSED_HOST_SKILL_AB_NOT_RUN_1_5X_NOT_PROVEN",
+        "retirement_pin_unchanged": true
+      }
     },
     {
       "legacy_entrypoint": "skills/career-radar/SKILL.md",
@@ -162,7 +171,16 @@
       "accepted_behavior_delta": "Old requires confirmed criteria before gathering evidence; successor can provide clearly provisional, unweighted research when confirmation is absent.",
       "source_bound_qualification_receipts": [
         "docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json"
-      ]
+      ],
+      "current_active_source_method": {
+        "entrypoint": "skills/authored/decision-tradeoff-workbench/SKILL.md",
+        "version": "1.2.0",
+        "skill_blob_sha": "24c65454a57689bfbea24ef024591e202118b675",
+        "package_tree_sha": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
+        "evidence": "docs/evals/receipts/2026-11-20-decision-workbench-v120-executable-scoring.json",
+        "status": "25_REAL_LOCAL_PYTHON_METHOD_TESTS_PASSED_HOST_SKILL_AB_NOT_RUN_1_5X_NOT_PROVEN",
+        "retirement_pin_unchanged": true
+      }
     },
     {
       "legacy_entrypoint": "skills/daily-briefing/SKILL.md",

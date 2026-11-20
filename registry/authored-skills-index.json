@@ -626,9 +626,9 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/decision-tradeoff-workbench.yaml",
       "verification_path": "registry/verification/local-skills/decision-tradeoff-workbench.yaml",
-      "skill_blob_sha": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
-      "package_tree_sha": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
-      "package_file_count": 3,
+      "skill_blob_sha": "24c65454a57689bfbea24ef024591e202118b675",
+      "package_tree_sha": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
+      "package_file_count": 6,
       "review_status": "verified-static",
       "review_score": "18/20",
       "behavioral_validation": "not-run",
@@ -636,15 +636,15 @@
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "New independently written package; legacy comparator(s): brief-writer, compare. Normalized seven-token windows show no exact overlaps with these historic SKILL.md files. This is not legal originality or global corpus novelty proof.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/741",
-      "package_version": "1.1.0",
+      "package_version": "1.2.0",
       "capability_paths": [
         "planning/decision-frameworks",
         "business/strategy"
       ],
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
-      "previous_reviewed_skill_blob_sha": "671d0bdd130414c8a71c86059e21489123f08c4d",
-      "previous_reviewed_package_tree_sha": "45b00d78352674b6e705704deb96af114ba4c830",
-      "review_note": "Exact three-file static review docs/reviews/2026-11-18-decision-tradeoff-functional-parity.md; behavioral parity and 1.5x effectiveness NOT_PROVEN."
+      "previous_reviewed_skill_blob_sha": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
+      "previous_reviewed_package_tree_sha": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+      "review_note": "Current v1.2 six-file standalone package: maintainer static review 18/20 and 25/25 real local Python method regression tests (2026-11-20). This is arithmetic method execution, not independent old/new host skill A/B, vendor evidence validation, actual user outcome or proof of >=1.5x effectiveness. See docs/reviews/2026-11-20-decision-workbench-v120-executable-method.md."
     },
     {
       "id": "research-question-dossier",
