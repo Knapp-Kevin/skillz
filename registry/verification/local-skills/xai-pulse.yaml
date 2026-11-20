@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 58dcef43210c4ddb09f4a7ad7273d99516e42813
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
@@ -19,3 +20,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Current exact-version 2026-11-04 source/package semantic review 17/20: Technical-first official vs community-source separation; narrow differentiation and no executed host handling observation. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: xai-grok
+retirement_note: "Historical two-file package pinned in Git. v1.2.4 bounded source-grounded controlled emulation accepted for retirement, independent host parity and measured 1.5x NOT_PROVEN; original authorship unknown."

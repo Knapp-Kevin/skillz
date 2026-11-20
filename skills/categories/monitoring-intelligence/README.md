@@ -22,6 +22,7 @@ The following original entrypoints remain available only while each source's con
 - [`openai-pulse`](../../openai-pulse/) — OpenAI product, API, SDK, and model developments.
 - [`perplexity-pulse`](../../perplexity-pulse/) — Perplexity product and API developments.
 - [`qwen-pulse`](../../qwen-pulse/) — Qwen / Alibaba developments.
-- [`xai-pulse`](../../xai-pulse/) — xAI / Grok developments.
+
+The xAI/Grok route now lives only in the active [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md) skill. The archived [xAI Pulse original](https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse) remains available in pinned Git history for review, not installation.
 
 The historical paths above are retained for source-bound comparison, not endorsed as new installations. Individual retirements must reconcile these links. The repository's own maintenance procedures live under `engine/skills/`, separate from user-facing skills.

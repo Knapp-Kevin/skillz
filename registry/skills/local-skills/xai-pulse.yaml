@@ -5,18 +5,26 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/xai-pulse/SKILL.md
 source_class: first-party
-license: MIT
+underlying_authorship: not-proven
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 4ff16d78e6414fd1637026062e57e18c821440b9
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
-availability: in-repo
+availability: retired-historical
 local_path: skills/xai-pulse/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: conditional-on-security-and-user-fit
+import_eligibility: retired-not-selectable
 rationale: "Current exact two-file package/source semantically reviewed 17/20 on 2026-11-04. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Existing static scanner PASS matches the unchanged package tree; agent-host behavior and unchanged-use approval not established."
 exact_version_requalification: "Current SKILL.md 58dcef43210c4ddb09f4a7ad7273d99516e42813 semantically verified 17/20 by new exact-package review; earlier rubric is historical. Host behavioral validation not-run; import conditional on fit and qualified security."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: xai-grok
+retirement_basis: "Owner-accepted five controlled v1.2.4 textual procedures and one real public source read; no host A/B, 1.5x or exhaustive consumer scan."

@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 22,
+    "legacy_removed": 23,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 22
+    "legacy_remaining": 21
   },
   "rows": [
     {
@@ -703,14 +703,21 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "v1.2.4_source_bound_controlled_qualification_partial_no_independent_host",
-      "legacy_disposition": "retain_pending_owner_specific_retirement_acceptance",
+      "replacement_status": "technology_change_intelligence_v1_2_4_standalone_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
       "replacement_profile": "xai-grok",
       "source_bound_qualification_receipts": [
         "docs/evals/receipts/2026-11-19-pulse-xai-live-primary-sources-smoke.json",
         "docs/evals/receipts/2026-11-19-pulse-xai-v124-five-controlled-cases.json"
       ],
-      "consumer_routing": "skills/categories/monitoring-intelligence/README.md"
+      "consumer_routing": "skills/categories/monitoring-intelligence/README.md",
+      "retired_at": "2026-11-19",
+      "original_exact_package_tree": "b389f8de77dc95b207e650e4a5ca2ff5caf3cc41",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse",
+      "retirement_owner_authorization": "owner-approved-controlled-emulation-and-deletion-2026-11-18; owner requested proceed to next phase with legitimate progress 2026-11-19",
+      "retirement_behavioral_claim": "SINGLE_CONTEXT_SOURCE_BOUNDED_EMULATION_PLUS_ACTUAL_PUBLIC_SOURCE_FETCH; HOST_AB_NOT_RUN; 1.5x_NOT_PROVEN",
+      "consumer_ref_integrity": "INDEX_AND_CATEGORY_RECONCILED; EXHAUSTIVE_SCAN_NOT_PROVEN"
     }
   ],
   "review_evidence": [
