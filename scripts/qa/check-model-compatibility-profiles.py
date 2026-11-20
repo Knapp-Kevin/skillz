@@ -125,7 +125,7 @@ def scalar_yaml(path, field):
 def markdown_slug(header):
     value = header.lower().strip()
     # GitHub headings: punctuation removed, spaces become hyphens.
-    value = re.sub(r"[^\\w -]", "", value, flags=re.UNICODE)
+    value = re.sub(r"[^a-z0-9 -]", "", value, flags=re.UNICODE)
     return value.replace(" ", "-")
 
 
