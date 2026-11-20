@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-20",
+  "issue": 738,
+  "evidence_class": "DIRECT_UNTRUNCATED_HISTORICAL_GIT_COMMIT_TREE_READ_POST_RETIREMENT",
+  "historical_snapshot_commit": "c95b31e6d0955f00c5ae14bb59ceee821de20b2c",
+  "historical_root_tree": "d9d70cb083b7d483e4cad65a7c3ac32c91447146",
+  "historical_package_path": "skills/todo-harvester",
+  "historical_package_tree_sha1": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
+  "historical_package_entries": [
+    {
+      "path": "SKILL.md",
+      "git_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "tree_untruncated": true,
+  "expected_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+  "exact_one_file_package_verified": true,
+  "verification_time": "AFTER_ORIGINAL_SOURCE_REMOVAL",
+  "limits": [
+    "Original retirement at the time only claimed a known one-file SKILL.md; this is a later package enumeration, not evidence of contemporaneous full-tree review",
+    "Does not establish copyright, user outcomes, host parity, 1.5x improvement or exhaustive consumer scan"
+  ]
+}

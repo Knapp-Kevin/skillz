@@ -886,7 +886,15 @@
       "current_active_reference": "skills/authored/source-debt-triage/SKILL.md",
       "consumer_scan_status": "KNOWN_ACTIVE_REGISTRIES_RECONCILED_EXHAUSTIVE_SEARCH_NOT_PROVEN",
       "retirement_owner_authorization": "explicit-owner-directed-controlled-emulation-and-delete-2026-11-18",
-      "retirement_behavioral_claim": "NO_INDEPENDENT_MODEL_A_B; quality_ratio_not_proven"
+      "retirement_behavioral_claim": "NO_INDEPENDENT_MODEL_A_B; quality_ratio_not_proven",
+      "post_retirement_full_package_verification": {
+        "status": "VERIFIED_AFTER_ORIGINAL_RETIREMENT",
+        "historical_snapshot_commit": "c95b31e6d0955f00c5ae14bb59ceee821de20b2c",
+        "exact_tree_sha1": "8e718ecafbf601557cf5ca44fb681affdac1f4a9",
+        "exact_skill_blob_sha1": "dc14a79da8d1c2835ff2c3d2a1b0f0dd27e029b3",
+        "source_file_count": 1,
+        "receipt": "docs/evals/receipts/2026-11-20-todo-post-retirement-complete-package-tree.json"
+      }
     },
     {
       "legacy_entrypoint": "skills/week-in-review/SKILL.md",
