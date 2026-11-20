@@ -1,0 +1,199 @@
+name: One-shot Skill Mason v2 handoff publication
+on:
+  push:
+    branches:
+      - release/skill-mason-v2-handoff-20261120
+permissions:
+  contents: write
+jobs:
+  build-and-commit-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout isolated release branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Checkout exact trusted source snapshot
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 000de43c3a5e245d58aa9aa015c661d3288828a2
+          path: pinned-source
+          submodules: false
+          persist-credentials: false
+      - name: Install isolated passive-export dependency
+        run: |
+          python3 -m venv /tmp/skill-mason-v2-venv
+          /tmp/skill-mason-v2-venv/bin/pip install --disable-pip-version-check --no-input PyYAML==6.0.3
+      - name: Execute exporter and full-population tests at source pin
+        run: |
+          cd pinned-source
+          /tmp/skill-mason-v2-venv/bin/python scripts/qa/test-skill-mason-catalog.py -v
+          /tmp/skill-mason-v2-venv/bin/python scripts/qa/test-skill-mason-export-identity.py -v
+      - name: Generate versioned export, detailed delta and preservation receipt
+        run: |
+          /tmp/skill-mason-v2-venv/bin/python - <<'PY'
+          import hashlib
+          import importlib.util
+          import json
+          from pathlib import Path
+          import re
+          import subprocess
+
+          source = Path("pinned-source").resolve()
+          dest_root = Path.cwd().resolve()
+          commit = "000de43c3a5e245d58aa9aa015c661d3288828a2"
+          tree = "74a57111957f4275e91860125d64080b74bf4c78"
+          assert subprocess.check_output(["git","-C",str(source),"rev-parse","HEAD"],text=True).strip() == commit
+          assert subprocess.check_output(["git","-C",str(source),"rev-parse","HEAD^{tree}"],text=True).strip() == tree
+          spec = importlib.util.spec_from_file_location("producer", source / "scripts/build-skill-mason-catalog.py")
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          outputs, manifest = mod.build(source, commit, tree)
+          assert set(outputs) == {"governed.ndjson","discovery-manifests.json","manifest.json"}
+          assert manifest["source"]["commit"] == commit and manifest["source"]["git_tree_sha1"] == tree
+          assert manifest["counts"]["governed_records"] == 1047
+          assert manifest["historical_review_companions"]["count"] == 22
+          assert len({e["record_id"] for e in manifest["historical_review_companions"]["entries"]}) == 22
+          for item in manifest["artifacts"]:
+              raw = outputs[item["path"]]
+              assert len(raw) == item["bytes"]
+              assert hashlib.sha256(raw).hexdigest() == item["sha256"]
+
+          def sha(raw):
+              return hashlib.sha256(raw).hexdigest()
+          def blob_sha(raw):
+              return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
+          v1 = dest_root / "registry/exports/skill-mason-v1"
+          expected_v1 = {
+              "manifest.json": "55974d44fdfde36bd537a552feac933c341e1895",
+              "governed.ndjson": "b40f7ed18121b5f8cebe8cd97be1e061e3c0b232",
+              "discovery-manifests.json": "769e9538d0fe5c72a1ead7b7e8567e7760abd334",
+          }
+          v1_receipt = {}
+          for filename, git_blob in expected_v1.items():
+              raw = (v1 / filename).read_bytes()
+              assert blob_sha(raw) == git_blob, filename
+              v1_receipt[filename] = {"git_blob_sha1": git_blob, "sha256": sha(raw), "bytes": len(raw)}
+
+          old_rows = [json.loads(line) for line in (v1/"governed.ndjson").read_text().splitlines()]
+          new_rows = [json.loads(line) for line in outputs["governed.ndjson"].splitlines()]
+          old = {r["record_id"]: r for r in old_rows}
+          new = {r["record_id"]: r for r in new_rows}
+          assert len(old) == len(old_rows) and len(new) == len(new_rows)
+          assert len(old) == 1043 and len(new) == 1047
+          index = json.loads((source/"registry/governed-review-name-index.json").read_text())
+          assert set(new) == set(index["first_party_ids"] + index["third_party_ids"])
+          assert index["record_counts"]["total"] == len(new)
+          assert all(r["composition"]["eligibility"] == "not-assessed"
+                     and r["composition"]["composable_method_contract"] is None
+                     and r["composition"]["export_is_not_admission_or_permission"]
+                     for r in new_rows)
+          for key in sorted(set(new) & set(old)):
+              if new[key]["source_class"] == "third-party":
+                  assert old[key]["rights"] == new[key]["rights"], "third-party rights drift: " + key
+                  assert old[key]["operation"] == new[key]["operation"], "third-party authority drift: " + key
+                  assert old[key]["review"] == new[key]["review"], "third-party review drift: " + key
+
+          frontend = new["anthropic-skills/frontend-design"]["identity"]
+          assert frontend["entrypoint_git_blob_sha1"] == "a5333457c414d20d625f307df945842c0952ecc3"
+          assert frontend["package_git_tree_sha1"] == "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6"
+          assert old["anthropic-skills/frontend-design"]["identity"]["entrypoint_git_blob_sha1"] is None
+
+          common = sorted(set(old)&set(new))
+          added = sorted(set(new)-set(old))
+          removed = sorted(set(old)-set(new))
+          changed = []
+          for record_id in common:
+              before, after = old[record_id], new[record_id]
+              if before != after:
+                  changed.append({
+                      "record_id": record_id,
+                      "old_record_sha256": sha(mod.canonical(before).encode()),
+                      "new_record_sha256": sha(mod.canonical(after).encode()),
+                      "changed_top_level_fields": sorted(k for k in set(before)|set(after) if before.get(k)!=after.get(k)),
+                      "old_review_status": before["review"]["semantic_status"],
+                      "new_review_status": after["review"]["semantic_status"],
+                  })
+          unchanged = len(common) - len(changed)
+          assert len(added) == 26 and len(removed) == 22 and len(changed) == 36 and unchanged == 985
+          retired = {r["record_id"] for r in manifest["historical_review_companions"]["entries"]}
+          assert set(removed) == retired, "historical review evidence not preserved"
+          manifest["historical_review_companions"]["entries"]  # no mutation of generated artifacts
+
+          delta = {
+              "schema_version": "skill-mason-handoff-delta-v1",
+              "previous_handoff": "skill-mason-v1",
+              "next_handoff": "skill-mason-v2",
+              "source_commit": commit,
+              "source_tree_sha1": tree,
+              "v1_artifact_receipts": v1_receipt,
+              "v2_artifact_receipts": {k: {"sha256":sha(raw),"bytes":len(raw)} for k,raw in sorted(outputs.items())},
+              "counts": {"added":len(added),"removed_from_governed":len(removed),"changed":len(changed),"unchanged":unchanged},
+              "added_record_ids": added,
+              "removed_from_governed_record_ids_retained_in_archival_source": removed,
+              "changed_records": changed,
+              "unchanged_record_ids": [record_id for record_id in common if old[record_id]==new[record_id]],
+              "export_status": "metadata-only-not-admission",
+              "historical_companions": "22 historical-only reviews remain in manifest.historical_review_companions and source_files",
+              "permissions": "No host, rights, behavioral, security or composition eligibility promoted by export",
+          }
+          mod.write_handoff(dest_root, outputs, "skill-mason-v2")
+          release = dest_root/"registry/exports/skill-mason-v2"
+          mod.write_handoff(dest_root, outputs, "skill-mason-v2",check=True)
+          (release/"delta-v1-v2.json").write_text(mod.canonical(delta))
+          readme = f"""# Skill Mason catalog handoff v2
+
+          **Exact source snapshot:** [`{commit}`](https://github.com/Knapp-Kevin/skillz/tree/{commit})
+          (Git tree `{tree}`).
+
+          **Immutable predecessor:** [v1](../skill-mason-v1/README.md). Neither its manifest, governed records nor discovery artifact changed. This is a **passive metadata snapshot**, not permission to install, use, copy, combine or execute source packages.
+
+          ## Inventory and verification
+
+          - Indexed governed records: **{len(new_rows)}**, including any original retired semantic statuses.
+          - Additional historical-only retired companion pairs: **{len(retired)}**, represented in `manifest.json` and original source-file inventory, not selectable or silently lost.
+          - Tracked source file inventory: **{len(manifest['source_files'])}**. Source Git submodule pins are recorded without materializing or executing contents.
+          - V1 comparison: **{len(added)} added**, **{len(removed)} removed from governed index but historically retained**, **{len(changed)} changed**, **{unchanged} byte-equivalent records**.
+          - Original `anthropic-skills/frontend-design` exact `SKILL.md` blob: `{frontend['entrypoint_git_blob_sha1']}`; complete package Git tree: `{frontend['package_git_tree_sha1']}`.
+          - Producer source: `scripts/build-skill-mason-catalog.py` at the pinned snapshot. A standalone, offline Python/PyYAML producer, not a consumer activation instruction.
+
+          ## Files
+
+          - [`manifest.json`](manifest.json): source commit/tree, per-source-file and generated artifact SHA-256 inventories.
+          - [`governed.ndjson`](governed.ndjson): all **{len(new_rows)}** governed review identities. Preserve rejected, retired, unmapped and unknown evidence.
+          - [`discovery-manifests.json`](discovery-manifests.json): raw-discovery shard references and source-evidence pointers.
+          - [`delta-v1-v2.json`](delta-v1-v2.json): exact added/removed/changed/unchanged record identities, individual changed-record before/after SHA-256, changed top-level fields, and v1/v2 artifact receipts.
+
+          ## Consumer boundary
+
+          Validate the `manifest.json` SHA-256 and byte lengths against its artifact entries, match every source-file hash against the pinned commit/tree, then import every line of `governed.ndjson`. Independently trust the source commit and manifest digest. The manifest does not authenticate itself. No exported record has composition admission, target-host permission, expanded source-license clearance, or observed behavioral acceptance merely because it is present. The upstream pinned original and the consumer's independent source/rights/host gates remain required. A downstream Skill Mason snapshot-pin update requires a **separate, reviewed accession**.
+
+          Full review history, limitations and old consumer procedure remain in [the original v1 guide](../skill-mason-v1/README.md). No third-party source packages are vendored into this handoff.
+          """
+          (release/"README.md").write_text("\n".join(line[10:] if line.startswith("          ") else line for line in readme.splitlines())+"\n")
+          for filename, git_blob in expected_v1.items():
+              assert blob_sha((v1/filename).read_bytes())==git_blob
+          assert len(list(release.iterdir()))==5
+          print("HANDOFF_V2_PREPARED",json.dumps({
+              "source_commit":commit,"source_tree_sha1":tree,"governed":len(new_rows),
+              "historical_only":len(retired),"source_files":len(manifest["source_files"]),
+              "delta":delta["counts"],
+              "artifacts":delta["v2_artifact_receipts"],
+              "delta_sha256":sha((release/"delta-v1-v2.json").read_bytes()),
+              "readme_sha256":sha((release/"README.md").read_bytes()),
+              "v1_untouched": True,
+          },sort_keys=True))
+          PY
+      - name: Commit only versioned v2 handoff to isolated release branch
+        run: |
+          test "$(git branch --show-current)" = "release/skill-mason-v2-handoff-20261120"
+          test -f registry/exports/skill-mason-v2/delta-v1-v2.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry/exports/skill-mason-v2/README.md registry/exports/skill-mason-v2/manifest.json registry/exports/skill-mason-v2/governed.ndjson registry/exports/skill-mason-v2/discovery-manifests.json registry/exports/skill-mason-v2/delta-v1-v2.json
+          git diff --cached --check
+          test "$(git diff --cached --name-only | wc -l)" -eq 5
+          git commit -m "data(export): publish immutable Skill Mason catalog v2 candidate and full delta (#726)"
+          git push origin HEAD:refs/heads/release/skill-mason-v2-handoff-20261120
