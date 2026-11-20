@@ -2,6 +2,7 @@
 // Maintenance-only integrity check. Reads local passive JSON; no network, install, CI or execution of skills.
 import fs from 'node:fs';
 import path from 'node:path';
+import { auditRetiredRoutes } from './check-retired-skill-routes.mjs';
 
 const root = process.cwd();
 const load = (p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
@@ -55,4 +56,8 @@ for (const d of directory.domains) {
   if (overview.linked_reviewed_examples !== new Set(d.subdomains.flatMap(s => s.matched_skill_ids)).size) fail('domain overview count drift ' + d.id);
   if (overview.subdomains_with_linked_examples !== d.subdomains.filter(s => s.matched_skill_ids.length).length) fail('subdomain overview count drift ' + d.id);
 }
+// The authored routing check must also refuse resurrection of an archived skill.
+const retirement = auditRetiredRoutes(root);
+if (!retirement.ok) fail('retired source/navigation drift: ' + retirement.problems.join('; '));
+console.log('Historical routing OK:', retirement.historical, 'retired,', retirement.checkedLinks, 'active navigation links');
 console.log('Authored routing OK:', authored.length, 'authored,', records.size, 'mapped identities,', linkedSubs, 'linked subdomains');
