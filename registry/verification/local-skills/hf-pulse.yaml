@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 149e577a9f72895b09aea43d607203d731db1bce
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: New source changed for security backfill issue #402. Old scanner and semantic review outcomes are historical; final package scan and external adversarial host behavior not-run.
@@ -22,3 +23,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "2026-11-04 current exact-version source semantic 18/20 in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; whole package security and actual host behavioral acceptance NOT RUN; no unchanged-use clearance."
+
+retired_at: "2026-11-19"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: huggingface-ecosystem
+retirement_note: "Source pinned under immutable Git history. Five current-version bounded scenarios plus public model/dataset/library/Space/paper source reads. Independent host parity and 1.5x NOT_PROVEN."

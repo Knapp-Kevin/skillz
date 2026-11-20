@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 23,
+    "legacy_removed": 24,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 21
+    "legacy_remaining": 20
   },
   "rows": [
     {
@@ -360,9 +360,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "huggingface-ecosystem"
+      "replacement_status": "tci_v1.2.4_hf_route_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "huggingface-ecosystem",
+      "retired_at": "2026-11-19",
+      "original_exact_package_tree": "37dc928e758ea8c02bdb4f4f863fd81997925a47",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse",
+      "retirement_owner_authorization": "owner-approved controlled emulation and deletion 2026-11-18; current user requested legitimate progress 2026-11-19",
+      "retirement_behavioral_claim": "PUBLIC_HF_SOURCE_READS_AND_FIVE_SINGLE_CONTEXT_CONTROLLED_EMULATIONS; HOST_AB_NOT_RUN; 1.5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_CONTENT_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-19-hf-v124-live-source-and-five-case-acceptance.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/inbox-triage/SKILL.md",

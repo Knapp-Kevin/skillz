@@ -12,7 +12,6 @@ The following original entrypoints remain available only while each source's con
 - [`github-pulse`](../../github-pulse/) — trending and notable GitHub repositories.
 - [`glm-pulse`](../../glm-pulse/) — Zhipu / GLM developments.
 - [`governance-pulse`](../../governance-pulse/) — AI governance, standards, and policy developments.
-- [`hf-pulse`](../../hf-pulse/) — Hugging Face ecosystem activity.
 - [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
 - [`kimi-pulse`](../../kimi-pulse/) — Moonshot AI / Kimi developments.
 - [`llama-pulse`](../../llama-pulse/) — Meta AI / Llama developments.
@@ -22,6 +21,8 @@ The following original entrypoints remain available only while each source's con
 - [`openai-pulse`](../../openai-pulse/) — OpenAI product, API, SDK, and model developments.
 - [`perplexity-pulse`](../../perplexity-pulse/) — Perplexity product and API developments.
 - [`qwen-pulse`](../../qwen-pulse/) — Qwen / Alibaba developments.
+
+The Hugging Face ecosystem route now lives in [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md). The [historical Hugging Face Pulse](https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse) remains pinned in Git for evidence and rollback, not installation.
 
 The xAI/Grok route now lives only in the active [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md) skill. The archived [xAI Pulse original](https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse) remains available in pinned Git history for review, not installation.
 
