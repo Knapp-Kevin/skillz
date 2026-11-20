@@ -9,8 +9,6 @@ The following original entrypoints remain available only while each source's con
 - [`github-pulse`](../../github-pulse/) — trending and notable GitHub repositories.
 - [`governance-pulse`](../../governance-pulse/) — AI governance, standards, and policy developments.
 - [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
-- [`kimi-pulse`](../../kimi-pulse/) — Moonshot AI / Kimi developments.
-- [`llama-pulse`](../../llama-pulse/) — Meta AI / Llama developments.
 - [`mcp-pulse`](../../mcp-pulse/) — Model Context Protocol ecosystem activity.
 - [`memory-pulse`](../../memory-pulse/) — agent-memory and context-engineering developments.
 - [`openai-pulse`](../../openai-pulse/) — OpenAI product, API, SDK, and model developments.
@@ -27,3 +25,5 @@ The historical [Qwen](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef2
 The historical [GLM/Z.ai](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse) and [Mistral](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse) entrypoints are archived for evidence only. Use the `glm-zai` and `mistral-models` profiles in the authored Technology Change Intelligence skill.
 
 The original [Claude Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse) and [Gemini Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse) source packages are retained at immutable Git revisions for source evidence, not active installation. Use the `anthropic-claude` or `google-gemini` routes in Technology Change Intelligence.
+
+Historical [Kimi](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse) and [Llama](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/llama-pulse) source packages are archived, not selectable; the authored Technology Change Intelligence skill supplies `moonshot-kimi` and `meta-llama` specialist modes.

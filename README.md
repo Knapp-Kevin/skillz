@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## Historical Pulse retirement: Kimi and Llama (November 20, 2026)
+
+The original Kimi and Llama packages have been removed from active installation routes and preserved at immutable Git revisions. [Current v1.2.4 source-bound Kimi evaluation](docs/evals/receipts/2026-11-20-kimi-v124-source-bound-retirement.json) and [Llama evaluation](docs/evals/receipts/2026-11-20-llama-v124-source-bound-retirement.json) each contain five analyst-generated current-version outcome cases and actual author-controlled model metadata reads. They specifically preserve checkpoint-level license, gated access, dated SDK/tooling, benchmark uncertainty and refusal of untrusted commands. **32/44 retired, 12 remain**. Host parity, 1.5× comparative effectiveness, real-world deployment and full consumer audit are NOT PROVEN.
+
 ## Historical Pulse retirement: Claude and Gemini (November 20, 2026)
 
 The historical Claude and Gemini specialist packages are retired from active `skills/` and preserved by immutable Git identities. [Technology Change Intelligence v1.2.4](skills/authored/technology-change-intelligence/SKILL.md) retains `anthropic-claude` and `google-gemini` routes. Read-only **current primary release evidence** plus five current-version controlled qualitative cases per route are recorded in the [Claude receipt](docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json) and [Gemini receipt](docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json). These distinguish CLI versus API, stable versus preview, region/tier uncertainty, and prompt-injection refusals. **30/44 historical skills retired, 14 remain.** Independent host A/B, 1.5× gain, community-source completeness and exhaustive consumer scan are **NOT PROVEN**.
