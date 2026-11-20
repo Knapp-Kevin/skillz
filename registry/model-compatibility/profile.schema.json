@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Knapp-Kevin/skillz/blob/main/registry/model-compatibility/profile.schema.json",
+  "title": "Passive model compatibility annotation (not an instruction or endorsement)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_revision",
+    "skill_identity",
+    "skill_version",
+    "source",
+    "capability_paths",
+    "model_context",
+    "observed_effectiveness",
+    "host_assumptions",
+    "assertions",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "skillz/model-compatibility-profile/1"
+    },
+    "profile_revision": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}\\.[1-9][0-9]*$"
+    },
+    "skill_identity": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
+    },
+    "skill_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "snapshot_commit",
+        "skill_path",
+        "skill_blob_sha1",
+        "package_tree_sha1",
+        "verification_companion",
+        "reviewed_at",
+        "checked_at"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 12
+        },
+        "snapshot_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "skill_path": {
+          "type": "string",
+          "pattern": "^skills/authored/[a-z0-9-]+/SKILL\\.md$"
+        },
+        "skill_blob_sha1": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "package_tree_sha1": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "verification_companion": {
+          "type": "string",
+          "pattern": "^registry/verification/local-skills/[a-z0-9-]+\\.yaml$"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "capability_paths": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
+      }
+    },
+    "model_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "family",
+        "exact_model",
+        "host",
+        "host_version",
+        "context_window_tokens"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exact_model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "host": {
+          "type": "string",
+          "minLength": 1
+        },
+        "host_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context_window_tokens": {
+          "oneOf": [
+            {
+              "const": "UNKNOWN"
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ]
+        }
+      }
+    },
+    "observed_effectiveness": {
+      "enum": [
+        "UNKNOWN",
+        "NOT_QUALIFIED",
+        "QUALIFIED_AT_EXACT_HOST"
+      ]
+    },
+    "host_assumptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tool_requirements",
+        "context_sensitivity",
+        "fallback"
+      ],
+      "properties": {
+        "tool_requirements": {
+          "type": "string",
+          "minLength": 3
+        },
+        "context_sensitivity": {
+          "type": "string",
+          "minLength": 3
+        },
+        "fallback": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "facet",
+          "evidence_level",
+          "guidance",
+          "source_pointer",
+          "limit"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "facet": {
+            "enum": [
+              "effort-cost",
+              "verification-completion",
+              "legacy-instruction",
+              "reasoning-output",
+              "authority-delegation",
+              "progress-style",
+              "context-portability",
+              "tool-fallback"
+            ]
+          },
+          "evidence_level": {
+            "enum": [
+              "AUTHOR_CLAIM",
+              "THIRD_PARTY_CLAIM",
+              "STATIC_ASSESSMENT",
+              "OBSERVED_TEST",
+              "UNKNOWN"
+            ]
+          },
+          "guidance": {
+            "type": "string",
+            "minLength": 5
+          },
+          "source_pointer": {
+            "type": "string",
+            "minLength": 5
+          },
+          "limit": {
+            "type": "string",
+            "minLength": 5
+          },
+          "observed_test": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "model_revision",
+              "host",
+              "execution_receipt",
+              "task_fixture",
+              "outcome",
+              "observed_at"
+            ],
+            "properties": {
+              "model_revision": {
+                "type": "string",
+                "minLength": 1
+              },
+              "host": {
+                "type": "string",
+                "minLength": 1
+              },
+              "execution_receipt": {
+                "type": "string",
+                "minLength": 5
+              },
+              "task_fixture": {
+                "type": "string",
+                "minLength": 5
+              },
+              "outcome": {
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "INCOMPLETE"
+                ]
+              },
+              "observed_at": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      }
+    },
+    "authority": {
+      "const": "PASSIVE_METADATA_ONLY_NOT_EXECUTION_PERMISSION"
+    }
+  }
+}
