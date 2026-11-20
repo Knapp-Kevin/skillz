@@ -28,10 +28,15 @@ MAX_FILES = 4000
 def python_comments(text: str) -> tuple[list[tuple[int, str]], str]:
     found = []
     try:
+        incomplete = False
         for part in tokenize.generate_tokens(io.StringIO(text).readline):
             if part.type == token.COMMENT:
                 found.append((part.start[0], part.string))
-        return found, "EXACT_COMMENT_TOKENIZATION"
+            elif part.type == token.ERRORTOKEN and part.string.strip():
+                # Unclosed single-line strings can surface as ERRORTOKEN,
+                # without tokenize raising TokenError.
+                incomplete = True
+        return found, "PARSE_INCOMPLETE" if incomplete else "EXACT_COMMENT_TOKENIZATION"
     except (tokenize.TokenError, IndentationError, SyntaxError, UnicodeError):
         return found, "PARSE_INCOMPLETE"
 
