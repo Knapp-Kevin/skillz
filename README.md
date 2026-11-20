@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## Historical Pulse retirement: OpenAI and Perplexity (November 20, 2026)
+
+Two historical vendor-specific packages are removed from active `skills/` with source identities preserved at pinned Git revisions. Consolidated [Technology Change Intelligence v1.2.4](skills/authored/technology-change-intelligence/SKILL.md) provides `openai-developer` and `perplexity-search`. Current primary-source reads and five controlled qualitative cases per route are in the [OpenAI acceptance receipt](docs/evals/receipts/2026-11-20-openai-v124-current-sources-five-cases.json) and [Perplexity receipt](docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json). OpenAI cases preserve GPT-6.2 Responses tool requirements and November 30 API deprecation distinctions. Perplexity cases distinguish Agent API effort pins, Sonar, Decisions, Context and Monitor API, plus consent for webhooks. **34/44 retired, 10 remain.** Neither independent host parity nor the 1.5× target is established; consumer scan is incomplete.
+
 ## Historical Pulse retirement: Kimi and Llama (November 20, 2026)
 
 The original Kimi and Llama packages have been removed from active installation routes and preserved at immutable Git revisions. [Current v1.2.4 source-bound Kimi evaluation](docs/evals/receipts/2026-11-20-kimi-v124-source-bound-retirement.json) and [Llama evaluation](docs/evals/receipts/2026-11-20-llama-v124-source-bound-retirement.json) each contain five analyst-generated current-version outcome cases and actual author-controlled model metadata reads. They specifically preserve checkpoint-level license, gated access, dated SDK/tooling, benchmark uncertainty and refusal of untrusted commands. **32/44 retired, 12 remain**. Host parity, 1.5× comparative effectiveness, real-world deployment and full consumer audit are NOT PROVEN.

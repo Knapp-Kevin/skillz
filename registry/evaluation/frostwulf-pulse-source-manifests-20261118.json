@@ -425,8 +425,13 @@
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
       "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
-      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.4_85_CASES_NOT_RUN"
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-openai-v124-current-sources-five-cases.json"
+      ]
     },
     {
       "historical_entrypoint": "skills/perplexity-pulse/SKILL.md",
@@ -452,8 +457,13 @@
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
       "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
-      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.4_85_CASES_NOT_RUN"
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json"
+      ]
     },
     {
       "historical_entrypoint": "skills/qwen-pulse/SKILL.md",

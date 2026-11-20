@@ -282,68 +282,6 @@
       "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held."
     },
     {
-      "skill_name": "openai-pulse",
-      "local_path": "skills/openai-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
-      "skill_name": "perplexity-pulse",
-      "local_path": "skills/perplexity-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
       "skill_name": "repo-doctor",
       "local_path": "skills/repo-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2430,6 +2368,84 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-20-llama-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "openai-pulse",
+      "local_path": "skills/openai-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "1285b1226733e93b0db4b230a6fb0021e5220fd0",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 18/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "openai-developer",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-openai-v124-current-sources-five-cases.json"
+    },
+    {
+      "skill_name": "perplexity-pulse",
+      "local_path": "skills/perplexity-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "06906792509a41a3a9cbb641e02f47e9fb458a69",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "perplexity-search",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json"
     }
   ]
 }
