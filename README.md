@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## All 44 historical skill packages retired from the active tree (November 20, 2026)
+
+The original [Session Continuity](https://github.com/Knapp-Kevin/skillz/tree/bc0f660d87b2d6a8462d6fb28e077e81af222428/skills/session-continuity) package has been retired and its independently authored [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md) v1.2.0 is now the active route. The [five-case source-bound qualification](docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json) tests scope-limited recall, stale handoffs, missing context, sensitive memory boundaries and permissioned persistence without pretending to save a memory. The local verification archive also now includes six previously omitted historical Pulse entries, reconstructed solely from existing pinned verification receipts. **44/44 retired, 0 historical root skill packages remain active.** This completes source retirement under owner-accepted bounded procedures, not independent host A/B parity, measured 1.5× effectiveness, resolved source copyright or exhaustive consumer coverage. Issue #738 remains open for those goals.
+
 ## Historical repository skills retired: Repo Doctor and Repo Pulse (November 20, 2026)
 
 Two complete original packages are removed from active selection; immutable Git source identities remain. The current [Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) v1.3.0 covers scoped repo diagnosis and portfolio attention. [Repo Doctor receipt](docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json) and [Repo Pulse receipt](docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json) include actual read-only Skillz GitHub metadata and five bounded procedure cases each. Local Git hooks were not run; local state and comprehensive CI were not assessed. **43/44 retired, one remains.** Host A/B, actual repair, full consumer scan and 1.5× improvement remain NOT_PROVEN.

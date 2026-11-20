@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 43,
+    "legacy_retirements_approved": 44,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
     "historical_full_package_trees_verified": 38,
-    "retired_under_owner_accepted_procedure": 43,
+    "retired_under_owner_accepted_procedure": 44,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -3283,13 +3283,13 @@
       "legacy_blob_sha1": "93b8f0be84bdb39153386c27b46294233c39bb8b",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
-      "replacement_package_version": "1.1.0",
-      "replacement_skill_blob_sha1": "41bec236390d73bdecae389508156b5a784c1b54",
-      "replacement_package_tree_sha1": "c779e8414ea60ae28d7942b0311e518485e480f0",
+      "replacement_package_version": "1.2.0",
+      "replacement_skill_blob_sha1": "6ae4e50ad1baa1e8addc16eeab1c27a4de364982",
+      "replacement_package_tree_sha1": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_TEXTUAL_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3338,18 +3338,32 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_EXACT_COMPLETE_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_V1_2_0_CONTROLLED_CONTINUATION_CASES",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_CASES; NO_UNAUTHORIZED_MEMORY_WRITE",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_PINNED_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_SEARCH_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE",
+        "eligible_for_retirement": true,
+        "reason": "Owner accepted source-specific controlled continuity output validation, no isolated host A/B or actual memory persistence.",
+        "qualification_basis": "OWNER_ACCEPTED_REAL_SOURCE_REVISION_RECONCILIATION_AND_FIVE_V1_2_0_CASES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json",
+        "case_count": 5,
+        "case_assertions_passed": 34,
+        "negative_mutations_detected": 5,
+        "mode": "REAL_SOURCE_REVISION_READ_AND_CONTROLLED_TEXT_OUTPUTS_NO_MEMORY_WRITE",
+        "original_full_tree_sha1": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
+        "replacement_full_tree_sha1": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/smallbiz-ops/SKILL.md",

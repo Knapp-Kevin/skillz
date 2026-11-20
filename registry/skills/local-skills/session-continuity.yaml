@@ -5,17 +5,25 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/session-continuity/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party-derived
 source_snapshot_revision: 25f22f4d263a721790277da0fcdc0140fd42390b
 curated_at: 2026-09-08
 last_checked_at: 2026-09-08
-availability: in-repo
+availability: retired-historical
 local_path: skills/session-continuity/SKILL.md
 permission_tier: mutating
 portability: high
 review_status: verified-structured
 dependency_status: host-capability-dependent
 dependencies: "Requires only a legitimate host memory/context capability when durable recall or persistence is available; degrades to explicit gap reporting when it is not."
-import_eligibility: eligible-standalone
+import_eligibility: retired-not-selectable
 rationale: "First-party substrate-agnostic derivation for the cross-session continuity gap established in issues #71 and #73. It expresses continuity discipline informed by host-memory lessons without implementing or mirroring Continuum or any other substrate. Recall is read-only; persistent capture is explicitly authorization-gated and sensitive-data-minimized."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/bc0f660d87b2d6a8462d6fb28e077e81af222428/skills/session-continuity
+replacement_id: local-skills/context-continuation-contract
+retirement_receipt: docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

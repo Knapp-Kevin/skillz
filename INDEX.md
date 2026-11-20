@@ -209,7 +209,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 [Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) (diagnostics and portfolio pulse); [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)
 
 ### Agent Operations & Security
-[Agent Workspace Footprint Assessor](skills/authored/agent-workspace-footprint-assessor/SKILL.md), [Agent Failure Boundary Analysis](skills/authored/agent-failure-boundary-analysis/SKILL.md) (postmortems), [Scheduled Work Proof Auditor](skills/authored/scheduled-work-proof-auditor/SKILL.md), [Connector Capability Risk Review](skills/authored/connector-capability-risk-review/SKILL.md), [Privilege Exposure Mapper](skills/authored/privilege-exposure-mapper/SKILL.md) (permissions review), `session-continuity`
+[Agent Workspace Footprint Assessor](skills/authored/agent-workspace-footprint-assessor/SKILL.md), [Agent Failure Boundary Analysis](skills/authored/agent-failure-boundary-analysis/SKILL.md) (postmortems), [Scheduled Work Proof Auditor](skills/authored/scheduled-work-proof-auditor/SKILL.md), [Connector Capability Risk Review](skills/authored/connector-capability-risk-review/SKILL.md), [Privilege Exposure Mapper](skills/authored/privilege-exposure-mapper/SKILL.md) (permissions review), [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md) (session capture and resume)
 
 ### Monitoring & Intelligence
 [Technology Change Intelligence specialist profiles]; [Technology Change Intelligence](skills/authored/technology-change-intelligence/SKILL.md) now supplies the xAI/Grok route (`xai-grok`) and all other specialist discovery routes.
