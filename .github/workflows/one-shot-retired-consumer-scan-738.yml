@@ -22,6 +22,16 @@ jobs:
         run: |
           node --check scripts/qa/check-authored-capability-links.mjs
           node scripts/qa/check-authored-capability-links.mjs
+      - name: Verify CI Guard corrected authored index source pin
+        run: |
+          node - <<'JS'
+          const fs = require('fs');
+          const a = require('./registry/authored-skills-index.json').skills.find(x => x.id === 'ci-guard');
+          const c = require('./registry/capability-directory.json').skill_records.find(x => x.id === 'local-skills/ci-guard');
+          if (a.skill_blob_sha !== c.content_blob_sha || a.package_tree_sha !== c.complete_package_tree_sha || a.package_version !== '1.3.0')
+            throw Error('CI Guard v1.3 source identity mismatch');
+          console.log('CI Guard source identity reconciled');
+          JS
       - name: Scan complete source checkout for stale active consumers
         run: |
           node scripts/qa/check-retired-skill-consumers.mjs
