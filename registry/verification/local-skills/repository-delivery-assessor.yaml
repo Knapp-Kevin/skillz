@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: repository-delivery-assessor
-skill_version: "1.3.0"
+skill_version: "1.4.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-delivery-assessor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 75c09e83d13a388e591f384f8029090edbe0bc50
-complete_package_tree_sha: 58662de287377f9b479d80cfa92e454413f9dc0e
-characterized_at: "2026-11-19"
-reviewed_at: "2026-11-19"
+content_blob_sha: 5e940e687efdfd835528911523c831bcd9ebb1de
+complete_package_tree_sha: f423b0c8765a2da62f949b0b571f9c40f7eaf569
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-20"
 verification_status: verified
-verification_basis: maintainer-complete-package-static-review
+verification_basis: maintainer-complete-package-static-review-and-39-local-offline-method-tests
 validation_status: not-run
-validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+validation_note: "39/39 actual local Python PR metadata method tests pass; separately verified historical public PR #816 source fixture. No independent old/new agent-host skill comparison or production outcome validation."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,8 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Current v1.3 exact six-file package static review 18/20:
-  docs/reviews/2026-11-19-ci-guard-delivery-components.md.
-  Historical v1.2 and v1.1 source reviews retained as history.
-  Controlled emulation only, independent host behavior NOT_RUN,
-  1.5x effectiveness NOT_PROVEN.
+  v1.4 standalone nine-file package statically assessed 18/20 with 39/39
+  local Python offline method regression tests. docs/reviews/2026-11-20-repository-delivery-v140-exacthead-triage.md.
+  Historical v1.3 review stays pinned, 1.5x effectiveness NOT PROVEN,
+  independently isolated host comparison NOT_RUN, real delivery unverified.

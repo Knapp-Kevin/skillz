@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Repository Delivery Assessor
-  version: 1.3.0
+  version: 1.4.0
   license: MIT
 ---
 
@@ -164,6 +164,72 @@ Add a short VERIFIED_HEALTHY section only for categories actually
 inspected. A small patch is not a successful remedy until its relevant
 functional acceptance has been independently checked.
 
+## Optional executable exact-head portfolio triage (v1.4)
+
+For a one-time authorized GitHub portfolio pulse, the original,
+self-contained Python 3.9+ stdlib utility at
+[scripts/triage.py](scripts/triage.py) can independently check the
+most error-prone metadata classifications. It **does not** connect to
+GitHub; the host must collect authorized current metadata first,
+verify the operator identity, and explicitly disclose incomplete
+coverage. This helper is optional. Capable hosts may perform an
+equivalent safer comparison directly and disclose source evidence.
+A missing Python runtime is not permission to invent results or
+truncate the intended assessment.
+
+From the copied standalone skill package:
+
+~~~text
+python3 scripts/triage.py --input examples/pr816-public-source-snapshot.json
+python3 -m unittest discover -s tests -v
+~~~
+
+Input is a bounded JSON object with \`schema_version: 1\`,
+\`operator\`, \`as_of_utc\`, \`quiet_days\`, an explicit
+\`authorized_repositories\` allowlist and a \`repositories\` snapshot.
+Each listed repository supplies an exact \`source_revision\`,
+\`last_push_utc\` (or null), \`prs_complete\`, and its current
+\`prs\` records. Each open PR supplies \`number\`, \`head_sha\`,
+\`author\`, \`draft\`, \`review_requests\`, \`checks_complete\`,
+\`required_checks_verified\`, \`required_checks\`, and \`checks\`
+with name, head SHA and conclusion. Use \`null\` or false for
+unestablished coverage; do not assert a complete required-check set
+from whatever check runs happen to be visible.
+
+The checker returns a structured pulse with **Needs You** populated
+only by explicit, non-draft review requests to the named operator.
+An open PR, an old branch or a successful check cannot independently
+establish that the operator must act. Per-repo records preserve current
+versus stale check SHA, missing/ambiguous names, required-check-set
+uncertainty, pending/failing/canceled/skipped statuses, activity
+threshold and absent PR enumeration. A passing set of recorded checks
+is **not** proof of merge approval, release, deployment, successful
+installation or user acceptance. Without a separately verified
+authoritative required-check inventory, \`REQUIRED_SET_NOT_VERIFIED\`
+is the truthful result. A genuinely verified empty required-check
+set yields NO_REQUIRED_CHECKS_DEFINED, not a green CI claim.
+A quiet project is not a deletion candidate.
+
+The input fixture uses a **real public historical snapshot of Skillz
+PR #816**, during the brief interval after its two successful Socket
+checks and before merge. Both checks genuinely passed on the PR head,
+but there were no requested reviewers. The fixture deliberately
+leaves required branch-protection check enumeration, local worktree
+state, full PR enumeration and user-outcome verification as
+**not assessed**. It is not a current repository snapshot, and
+tests must not treat its success as a release qualification.
+
+The utility reads one explicitly provided JSON file (maximum 1 MiB),
+writes JSON only to stdout, performs no network access or repository
+mutation, does not execute issue/PR text, and rejects repositories
+outside the approved allowlist. Names and metadata should be
+minimized and sanitized by the authorized host before preparing the
+file. The tool does not authenticate the claims in the JSON input:
+capture real source URLs/revisions and approval evidence in the host
+report. Do not turn its output into a scheduler, merge command, PR
+comment or owner authorization. Preserve the full skill's diagnostic
+and delivery-evidence procedures when those tasks are requested.
+
 ## Output
 `scope@revisions; delivery objective; qualified completed work;
 blocked and active items; evidence gaps; actionable ordered plan;
@@ -182,13 +248,18 @@ in output. A green GitHub check is not release qualification.
 ## Adversarial cases
 See [original scenarios](examples/acceptance.md).
 
-## Targeted delivery-effectiveness components (v1.3)
+## Targeted delivery-effectiveness components (v1.4)
 
-For a specific **CI assurance/efficiency** question, delegate the detailed
-control inventory, risk boundary, placement experiment and rollback to
-[CI Guard](../ci-guard/SKILL.md). Keep this assessor focused on the
-repository-wide outcome and cross-check CI Guard conclusions against the
-current acceptance goal. Avoid repeating its pipeline analysis.
+For a specific **CI assurance/efficiency** question, CI Guard is an
+optional separately installed specialist, **not** a runtime prerequisite.
+This package stands alone: inspect exact check revision, trigger, tested
+failure boundary, required-check provenance, skipped/pending status,
+trust scope, cost evidence, rollback and user-outcome acceptance
+using the methods above. If a separately available CI Guard provides
+deeper control inventory and experiment support, use it without
+duplicating work or substituting its conclusions for the delivery goal.
+Never require a sibling package or repository policy file to be online
+for this skill to function.
 
 Choose one internal component when deeper treatment is needed, and do not
 run all three by default:

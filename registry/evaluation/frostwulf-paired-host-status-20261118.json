@@ -3225,6 +3225,18 @@
         "replacement_full_tree_sha1": "58662de287377f9b479d80cfa92e454413f9dc0e",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_successor_source_method": {
+        "version": "1.4.0",
+        "skill_blob": "5e940e687efdfd835528911523c831bcd9ebb1de",
+        "package_tree": "f423b0c8765a2da62f949b0b571f9c40f7eaf569",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-repo-delivery-v140-verified-triage.json",
+        "executable_test_result": "39/39_LOCAL_PYTHON_PASS",
+        "source_check": "PR816_PUBLIC_HEAD_SHA_AND_SECURITY_CHECKS_VERIFIED",
+        "independent_skill_host_comparison": "NOT_RUN",
+        "improvement_1_5x": "NOT_PROVEN",
+        "limitations": "No API authenticity in bundled scorer; historic PR slice not current branch protection or production outcome",
+        "note": "v1.3 retired skill/source pins preserved, new v1.4 method evidence not inherited as complete host parity."
       }
     },
     {
@@ -3312,6 +3324,18 @@
         "replacement_full_tree_sha1": "58662de287377f9b479d80cfa92e454413f9dc0e",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_successor_source_method": {
+        "version": "1.4.0",
+        "skill_blob": "5e940e687efdfd835528911523c831bcd9ebb1de",
+        "package_tree": "f423b0c8765a2da62f949b0b571f9c40f7eaf569",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-repo-delivery-v140-verified-triage.json",
+        "executable_test_result": "39/39_LOCAL_PYTHON_PASS",
+        "source_check": "PR816_PUBLIC_HEAD_SHA_AND_SECURITY_CHECKS_VERIFIED",
+        "independent_skill_host_comparison": "NOT_RUN",
+        "improvement_1_5x": "NOT_PROVEN",
+        "limitations": "No API authenticity in bundled scorer; historic PR slice not current branch protection or production outcome",
+        "note": "v1.3 retired skill/source pins preserved, new v1.4 method evidence not inherited as complete host parity."
       }
     },
     {

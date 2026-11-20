@@ -71,3 +71,35 @@
 - A GitHub run shows green checks on an older head. Reject current acceptance.
 - A CI optimization request with measurable pipeline details routes to
   CI Guard rather than duplicating deep analysis here.
+
+
+## Executable v1.4 regression suite and source-bound negative control
+
+The new offline \`scripts/triage.py\` is covered by 39 locally executed
+Python \`unittest\` cases in \`tests/test_triage.py\`. These cover
+explicit operator review-request detection versus merely open PRs;
+draft exclusion; case-normalized reviewer matching; exact PR head
+binding; old-head green checks; failure, timeout, skipped, neutral,
+pending, and ambiguous duplicate named checks; missing and unverified
+required-check inventories; incomplete PR enumeration and missing
+worktree observations; current, quiet, unknown, and future-dated
+activity; rejection of out-of-scope repositories; malformed schema,
+duplicate records, unsafe directive fields, timestamps and oversized
+input; and no-write command-line JSON output.
+
+The [public GitHub fixture](pr816-public-source-snapshot.json) encodes
+PR #816's observable public state at 2026-11-20 19:20:45 UTC:
+open, non-draft, no review requests, head
+\`9b00d6f9ff76bbea3057cbe852a469e30ff97172\`, and two successful
+Socket checks on that exact head. The PR merged later at
+2026-11-20 19:21:00 UTC. The input is explicitly historical and
+incomplete. The checker must report zero operator review requests,
+preserve both exact-head check successes, and **refuse to infer**
+the full required-check set, local clean state, release or deployment
+readiness, or real user acceptance. These are metadata-source checks,
+not agent-host original-versus-replacement behavioral testing.
+
+One local Python execution of the 39 tests does not establish the
+legacy \`repo-pulse\`/\`repo-doctor\` pairwise skill quality, adoption,
+actual user benefit, or a statistically meaningful >=1.5x effect.
+Preserve prior source and retirement evidence as historical.

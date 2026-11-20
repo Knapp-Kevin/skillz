@@ -34084,8 +34084,8 @@
       "id": "local-skills/repository-delivery-assessor",
       "source_id": "local-skills",
       "skill_name": "repository-delivery-assessor",
-      "content_blob_sha": "75c09e83d13a388e591f384f8029090edbe0bc50",
-      "complete_package_tree_sha": "58662de287377f9b479d80cfa92e454413f9dc0e",
+      "content_blob_sha": "5e940e687efdfd835528911523c831bcd9ebb1de",
+      "complete_package_tree_sha": "f423b0c8765a2da62f949b0b571f9c40f7eaf569",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34102,7 +34102,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Pinned v1.3 six-file authored package with issue/momentum/evidence components; static reviewed; host behavior not run.",
+      "link_basis": "Current nine-file original v1.4 standalone package: source exact-static 18/20, 39 offline Python PR-metadata tests and independently verified public PR #816 source fixture; no independent old/new agent-host A/B",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },
