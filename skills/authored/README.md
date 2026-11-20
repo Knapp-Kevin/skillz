@@ -93,6 +93,10 @@ define the unresolved gate. The exact old `todo-harvester/SKILL.md` is retired u
 
 The existing first-party `skills/<slug>/` entries are not automatically moved or relicensed. Move them only as separate, reviewed maintenance work with compatible index/registry updates.
 
+## Repository README Architect v0.1.0 (2026-11-20)
+
+[Repository README Architect](repository-readme-architect/SKILL.md) supports **CREATE from scratch** (including a missing or empty README), **UPLIFT**, **AUDIT**, and **VERIFY**. It is independently authored, MIT, offline-standalone, and repository-agnostic; source-grounded claims and bounded read/write authority are mandatory. [Six designed acceptance cases](repository-readme-architect/examples/controlled-scenarios.md) cover missing README, empty repository, generated-block integrity, release claims, narrative clarity and host differences. [Static review](../../docs/reviews/2026-11-20-readme-architect-static-review.md) is 18/20; real agent-host behavioral validation has **not** been performed.
+
 ## Current authored packages
 
 [Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) | [Package record](../../registry/authored-skills-index.json) | [Review and licensing evidence](../../docs/reviews/2026-11-06-issue714-healthcare-contract-forensics-static-review.md).

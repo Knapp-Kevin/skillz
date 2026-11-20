@@ -16,8 +16,8 @@
     {
       "domain": "software-engineering",
       "display_name": "Software engineering",
-      "linked_reviewed_examples": 17,
-      "subdomains_with_linked_examples": 3,
+      "linked_reviewed_examples": 18,
+      "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 28,
       "evidence_preview": [
         {
@@ -2457,7 +2457,7 @@
     {
       "domain": "marketing",
       "display_name": "Marketing",
-      "linked_reviewed_examples": 7,
+      "linked_reviewed_examples": 8,
       "subdomains_with_linked_examples": 4,
       "name_only_candidate_count": 25,
       "evidence_preview": [
@@ -3539,10 +3539,22 @@
     {
       "domain": "technical-writing",
       "display_name": "Technical writing",
-      "linked_reviewed_examples": 12,
+      "linked_reviewed_examples": 13,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 15,
       "evidence_preview": [
+        {
+          "id": "local-skills/repository-readme-architect",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "18/20",
+          "review_evidence_path": "registry/verification/local-skills/repository-readme-architect.yaml",
+          "source_class": "local-provenance",
+          "path": "technical-writing/documentation-ia",
+          "capability_example": "Create and uplift accurate, navigable READMEs including missing-README cases.",
+          "unchanged_use_approved": false,
+          "restriction": "Static-only review and bounded owner-authorized writes"
+        },
         {
           "id": "bm629-agent-skills/authoring-api-reference",
           "verification_status": "verified",
@@ -5000,7 +5012,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1047,
+  "governed_identity_denominator": 1048,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -11832,12 +11844,14 @@
           "id": "developer-experience",
           "name": "developer experience",
           "capabilities": [
+            "Build repository onboarding READMEs from scratch with real setup, examples and transparent limitations.",
             "Draft evidence-grounded AGENTS.md guidance without unauthorized root writes",
             "Validate conventional branch names separately from checkout or remote pull",
             "Draft change-intent commit messages without inventing rationale or executing commits"
           ],
-          "matched_skill_ids": [],
-          "coverage_status": "source-vetted-candidates-only",
+          "matched_skill_ids": [
+            "local-skills/repository-readme-architect"],
+          "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "developer experience",
             "Software engineering developer experience"
@@ -20951,10 +20965,12 @@
           "id": "content",
           "name": "content",
           "capabilities": [
+            "Explain repository purpose and outcomes for newcomers without invented product claims or releases.",
             "social media content planning",
             "Develop evidence-linked presentations or development narratives without invented outcomes."
           ],
           "matched_skill_ids": [
+            "local-skills/repository-readme-architect",
             "corey-haines-marketing-skills/social",
             "local-skills/evidence-narrative-composer"
           ],
@@ -24757,6 +24773,7 @@
           "id": "documentation-ia",
           "name": "documentation IA",
           "capabilities": [
+            "Create and uplift README files with source-grounded project claims, links, accessible navigation and governance preservation.",
             "Preserve plaintext meaning while converting formatting to Markdown",
             "Organize a file library into a documented taxonomy with metadata cards, keyword tags and reversible proposals",
             "Create a cross-source logical information catalog preserving original locations, metadata and user-specific access boundaries",
@@ -24764,6 +24781,7 @@
             "Review supplied coherent document sets for cross-document traceability, version skew and dependency integrity without external link crawling."
           ],
           "matched_skill_ids": [
+            "local-skills/repository-readme-architect",
             "local-skills/file-lifecycle-curator",
             "local-skills/federated-source-catalog",
             "local-skills/metadata-taxonomy-steward",
@@ -31413,6 +31431,34 @@
   "identity_level_capability_links_scope": "First-party plus exact-version third-party review records mapped as evidence-backed domain starting points, including some rejected unchanged records; not behavioral validation, external eligibility or complete search coverage.",
   "skill_records": [
     {
+      "id": "local-skills/repository-readme-architect",
+      "source_id": "local-skills",
+      "skill_name": "repository-readme-architect",
+      "content_blob_sha": "221fc33ece71af1941254d4ad9907ef2166f8e44",
+      "complete_package_tree_sha": "a753453e323f4f45dc56d415e661faec78704e3b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "18/20",
+      "capability_paths": [
+        "technical-writing/documentation-ia",
+        "software-engineering/developer-experience",
+        "marketing/content"
+      ],
+      "evidence_path": "registry/verification/local-skills/repository-readme-architect.yaml",
+      "skill_path": "skills/authored/repository-readme-architect/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
+      "source_license": "Original first-party MIT standalone package",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only-default",
+        "user-authorized-focused-repository-write"
+      ],
+      "link_basis": "Static-reviewed original five-file package; no independent host execution",
+      "restriction": "No unrequested write, command execution, secret read, release or external publication",
+      "unchanged_use_approved": false
+    },
+    {
       "id": "addyosmani-agent-skills/browser-testing-with-devtools",
       "source_id": "addyosmani-agent-skills",
       "skill_name": "browser-testing-with-devtools",
@@ -33779,7 +33825,7 @@
       "evidence_path": "registry/verification/local-skills/metadata-taxonomy-steward.yaml",
       "skill_path": "skills/authored/metadata-taxonomy-steward/SKILL.md",
       "provenance_path": "registry/skills/local-skills/metadata-taxonomy-steward.yaml",
-      "source_license": "Original four-file MIT package",
+      "source_license": "Original five-file MIT package",
       "source_role": "first-party",
       "source_class": "first-party-authored",
       "authority_tags": [
@@ -34018,7 +34064,7 @@
       "evidence_path": "registry/verification/local-skills/reference-integrity-auditor.yaml",
       "skill_path": "skills/authored/reference-integrity-auditor/SKILL.md",
       "provenance_path": "registry/skills/local-skills/reference-integrity-auditor.yaml",
-      "source_license": "Original four-file MIT package",
+      "source_license": "Original five-file MIT package",
       "source_role": "first-party",
       "source_class": "first-party-authored",
       "authority_tags": [
@@ -34456,13 +34502,13 @@
       "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 131,
+  "identity_level_capability_links_mapped": 132,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 52,
-    "known_total_governed_review_records": 1047,
+    "known_first_party_skill_records": 53,
+    "known_total_governed_review_records": 1048,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34519,14 +34565,14 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 52,
+  "first_party_identity_links_mapped": 53,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 52,
+    "mapped_first_party_distinct": 53,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 131,
-    "subdomains_with_evidence_linked_examples": 87,
+    "mapped_total_distinct": 132,
+    "subdomains_with_evidence_linked_examples": 88,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
     "no_false_absence": "An empty subdomain means no evidence-linked examples yet; use the governed review name index and discovery manifests.",
