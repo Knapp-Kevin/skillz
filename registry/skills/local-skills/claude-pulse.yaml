@@ -4,7 +4,7 @@ display_name: "Claude Pulse"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/claude-pulse/SKILL.md
-source_class: historical-uncertain
+source_class: first-party
 license: unknown
 historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
