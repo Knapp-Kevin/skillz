@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 32,
+    "legacy_removed": 34,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 12
+    "legacy_remaining": 10
   },
   "rows": [
     {
@@ -574,9 +574,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "openai-developer"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "openai-developer",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse",
+      "original_exact_package_tree": "e7d287f0f6f280b45196205cbd0d71e9c69274ed",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation and removal 2026-11-18, continued 2026-11-20",
+      "retirement_behavioral_claim": "READ_PUBLIC_PRIMARY_API_DOCS_AND_FIVE_CURRENT_V1_2_4_SINGLE_CONTEXT_ANALYST_CASES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; FULL_SEARCH_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-openai-v124-current-sources-five-cases.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/paper-digest/SKILL.md",
@@ -626,9 +636,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "perplexity-search"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "perplexity-search",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse",
+      "original_exact_package_tree": "2929295240f02db18afc52eeb44a8d3c30ec8346",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation and removal 2026-11-18, continued 2026-11-20",
+      "retirement_behavioral_claim": "READ_PUBLIC_PRIMARY_API_DOCS_AND_FIVE_CURRENT_V1_2_4_SINGLE_CONTEXT_ANALYST_CASES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; FULL_SEARCH_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/qwen-pulse/SKILL.md",

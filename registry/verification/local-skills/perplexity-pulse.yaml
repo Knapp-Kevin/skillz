@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 06906792509a41a3a9cbb641e02f47e9fb458a69
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
@@ -19,3 +20,11 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Current exact-version 2026-11-04 source/package semantic review 17/20: Sonar API and Comet product separation is useful, but generic vendor-scan overlap and untested effectiveness constrain grade. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: perplexity-search
+retirement_receipt: docs/evals/receipts/2026-11-20-perplexity-v124-current-sources-five-cases.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

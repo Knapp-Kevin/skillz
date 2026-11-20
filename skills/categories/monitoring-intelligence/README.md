@@ -11,8 +11,6 @@ The following original entrypoints remain available only while each source's con
 - [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
 - [`mcp-pulse`](../../mcp-pulse/) — Model Context Protocol ecosystem activity.
 - [`memory-pulse`](../../memory-pulse/) — agent-memory and context-engineering developments.
-- [`openai-pulse`](../../openai-pulse/) — OpenAI product, API, SDK, and model developments.
-- [`perplexity-pulse`](../../perplexity-pulse/) — Perplexity product and API developments.
 
 The Hugging Face ecosystem route now lives in [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md). The [historical Hugging Face Pulse](https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse) remains pinned in Git for evidence and rollback, not installation.
 
@@ -27,3 +25,5 @@ The historical [GLM/Z.ai](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165ca
 The original [Claude Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse) and [Gemini Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse) source packages are retained at immutable Git revisions for source evidence, not active installation. Use the `anthropic-claude` or `google-gemini` routes in Technology Change Intelligence.
 
 Historical [Kimi](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/kimi-pulse) and [Llama](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af608278e8c1837ea5302c70/skills/llama-pulse) source packages are archived, not selectable; the authored Technology Change Intelligence skill supplies `moonshot-kimi` and `meta-llama` specialist modes.
+
+Historical [OpenAI](https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse) and [Perplexity](https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse) source packages are preserved in immutable Git only, not active installs; use `openai-developer` or `perplexity-search` in the independently authored Technology Change Intelligence package.
