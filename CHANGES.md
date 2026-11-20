@@ -2,6 +2,12 @@
 
 A hand-maintained dated pointer to meaningful **repository changes**, not a machine poller, adoption registry, or substitute for per-skill provenance and exact-version verification. For complete history use [commits](https://github.com/Knapp-Kevin/skillz/commits/main), [current state](docs/SYSTEM_STATE.md), and canonical `registry/` records. Entries identify confirmed work only; repository-side work in open PRs is not listed as shipped.
 
+## 2026-11-20
+
+- The main README is reorganized around discovery, task-oriented navigation, quality evidence and maintained source-of-truth links. The complete superseded README, including the dated retirement chronology, research snapshots and featured method shelf, is preserved at [the archived snapshot](docs/history/readme-snapshot-2026-11-20.md). No historical evidence was promoted to observed effectiveness.
+- [PRs #795–#802](https://github.com/Knapp-Kevin/skillz/issues/738) retired the remaining historical Pulse and non-Pulse packages; 44/44 are out of active selection under the evidence limits on [issue #738](https://github.com/Knapp-Kevin/skillz/issues/738).
+- [PR #803](https://github.com/Knapp-Kevin/skillz/pull/803) completed post-retirement historical package-tree integrity; [PR #804](https://github.com/Knapp-Kevin/skillz/pull/804) added a runnable offline route-regression checker and test suite. Host parity and the 1.5× effectiveness goal are still not measured.
+
 ## 2026-10-07
 - [#403 / `c5bf800`](https://github.com/Knapp-Kevin/skillz/commit/c5bf80049fa0114bcd9ec61ff4b7e78b588caaf1): Introduced the pinned SkillSpector maintainer scan gate and policy separating semantic verification from exact-version package-security evidence. Existing skill scans still require persisted individual security records; see [#402](https://github.com/Knapp-Kevin/skillz/issues/402).
 
