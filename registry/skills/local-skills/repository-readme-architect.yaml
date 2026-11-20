@@ -17,10 +17,10 @@ local_path: skills/authored/repository-readme-architect/SKILL.md
 permission_tier: read-and-generate; focused repository write only with user authorization
 portability: high
 review_status: verified-static
-dependency_status: standalone-four-file-text-package
+dependency_status: standalone-five-file-text-package
 dependencies: "SKILL.md contains all required behavior; README, LICENSE, and optional synthetic examples included"
 content_blob_sha: 221fc33ece71af1941254d4ad9907ef2166f8e44
-complete_package_tree_sha: 2197e6666ec50da20001bca0ee69773cbf0f47fc
+complete_package_tree_sha: a753453e323f4f45dc56d415e661faec78704e3b
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
 rationale: "Original creation-from-zero, uplift, audit and verification method, repository agnostic. Influenced by general public documentation patterns and UORust quality defects. Exact-package static review 18/20, host behavioral validation not-run."
