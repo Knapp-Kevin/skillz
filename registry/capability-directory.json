@@ -34431,12 +34431,12 @@
       "id": "local-skills/ci-guard",
       "source_id": "local-skills",
       "skill_name": "ci-guard",
-      "source_snapshot_revision": "9a3d7d73330a711c612f27ae4184a44ddf4ac3cc",
-      "content_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
-      "complete_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
+      "source_snapshot_revision": "596d7cad757f8b57b99ffdd8e28281d650da8f63",
+      "content_blob_sha": "f314ca9afe746af8f154447987ee59d29e7198fb",
+      "complete_package_tree_sha": "77450795ccb8a1cda65414406232f9a579596947",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "static_score": "18/20",
+      "static_score": "19/20",
       "capability_paths": [
         "cloud-devops/ci-cd",
         "software-engineering/maintenance"
@@ -34450,7 +34450,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Exact v1.1 six-file source with optional targeted decision help; static reviewed under universal adaptive standard; independent cross-model behavior not run",
+      "link_basis": "Exact v1.3 ten-file source with classification-first CI generation and cost controls; 16/16 classifier CPU tests passed, while cross-model and real savings remain unmeasured",
       "restriction": "Read-only reference. External CI changes, token/branch-rule edits, merging and deployment need separate authorization.",
       "unchanged_use_approved": false
     }

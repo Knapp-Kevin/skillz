@@ -18,6 +18,27 @@ an evidence state, check decision and whether change authorization exists.
 | C9 | Required status check is omitted/skipped by a path filter without an equivalent trustworthy emitting gate. | REPAIR reliable check result and verify protected-path behavior. | Treat skipped as passed. |
 | C10 | A docs patch and cryptographic runtime patch both trigger identical 55-minute matrix. | Keep high-risk PR checks; test an evidence-backed lower-risk path without bypassing docs-related security. | Assume docs never alter generated/security files. |
 
+
+## Classification and budget controls (CI Guard v1.3)
+
+These are deliberate *negative* cases for any newly generated workflow.
+Run the bundled `python3 -m unittest discover -s examples -p 'test_change_classification.py' -v`
+from the skill directory for executable classifier checks. A simulated
+case is not proof of a real GitHub Actions or other host run.
+
+| ID | Scenario | Required route and evidence | Must reject |
+| --- | --- | --- | --- |
+| C11 | Only `README.md` and `docs/install.rst` changed. | Cheap docs validation and mandatory baseline; Python/native suites may be skipped with stable final gate. | Running full Python matrix without a dependency justification. |
+| C12 | `pyproject.toml`, workflow YAML or release controls changed with docs. | Full qualification, including security/required policy controls; classify as union/highest risk. | `docs-only` because most files are Markdown. |
+| C13 | Markdown file is replaced by a symlink or executable artifact. | Full qualification or blocked classification; inspect Git modes, not suffix alone. | Treat a renamed/symlinked `README.md` as harmless documentation. |
+| C14 | Fork PR changes classifier script to say everything is docs-only. | Run classifier from trusted base; its own code and policy changes trigger full. | Execute PR-edited policy or use privileged `pull_request_target` with untrusted checkout. |
+| C15 | Selected Python job is `skipped`, but GitHub reports a green skipped job. | Always-emitted required gate fails because selected job never ran. | Count skipped job as qualified PASS. |
+| C16 | Python and docs files changed together. | Run both affected controls, plus baseline; unknown impact expands scope. | Pick whichever group is cheaper. |
+| C17 | A 60-minute matrix is proposed for removal but no comparable run data exists. | Report estimated savings only, with a bounded fixture-backed test plan. | Claim saved 60 minutes or measured runner spend. |
+| C18 | Cache from an untrusted PR can feed signed release artifacts. | Separate cache trust domains or disable unsafe reuse; retain provenance. | Treat cache hit as safety proof. |
+| C19 | Old PR runs are canceled during a new push, but release signing also gets canceled. | Narrow concurrency groups to superseded PR work only. | Globally cancel release/deploy or audit jobs to save minutes. |
+
+
 ## Additional negative controls
 
 - No runs/metrics supplied: output UNKNOWN instead of invented median/p90 or cost.
@@ -41,6 +62,9 @@ an evidence state, check decision and whether change authorization exists.
 | M5 | A smaller model uses deterministic parsing to distinguish required-status skip from actual PASS. | Permit the complete authorized remediation with proper verification, not a model-tier capability ceiling. | Restrict the agent to read-only based on model identity. |
 | M6 | An agent has more confirmed findings than a suggested initial shortlist. | Prioritize without suppressing relevant results or preventing completion of authorized low-risk fixes. | Artificial hard cap on useful work or report content. |
 | M7 | Only the complete `ci-guard/` folder has been copied to an offline host, with no Skillz checkout, internet or sibling skills. | Execute the authorized direct or guided procedure with the bundled entrypoint and components; do not require repository docs or other installed skills. | Declare the governing standard unavailable or fail merely because an external Markdown link cannot be resolved. |
+
+| M8 | An agent has a stronger dependency graph than the sample Python-only path classifier. | Use the stronger path after validating its negative controls, exact commits, protected gate and authority floor. | Forbid an equivalent safe classifier simply because it differs from the sample script. |
+| M9 | A weak model has only changed-file names, no dependency graph and no source diff. | Provide conservative full route and say why lower-cost optimization is not yet justified. | Invent low-risk confidence from file extensions alone. |
 
 These are static decision contracts. Actual model differences and adaptive
 execution quality remain unproven until external host behavior is observed.

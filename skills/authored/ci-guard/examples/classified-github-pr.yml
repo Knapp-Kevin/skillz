@@ -1,0 +1,125 @@
+# Original example: adapt commands, the trusted classifier path, and required
+# security/status controls to the actual target repository before activation.
+# Do not silently replace existing required checks with this example.
+# This WORKFLOW is not auto-installed and is not enabled by Skillz.
+name: Classified PR verification
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true # Only for superseded PR revisions, not releases.
+
+jobs:
+  classify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      route: ${{ steps.impact.outputs.route }}
+      run_python: ${{ steps.impact.outputs.run_python }}
+      run_full: ${{ steps.impact.outputs.run_full }}
+    steps:
+      - name: Checkout PR source as untrusted data
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: work
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Checkout trusted base policy (do not execute PR-edited classifier)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Identify exact base-to-head impact and cheap whitespace faults
+        id: impact
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C work fetch --no-tags --depth=1 origin "$BASE_SHA"
+          # This source path is for Skillz itself. When distributing CI Guard
+          # to another repo, install the bundled script to ci/classify_change.py
+          # and change this trusted checkout path to trusted/ci/classify_change.py.
+          python3 trusted/skills/authored/ci-guard/scripts/classify_change.py \
+            --repo work --base "$BASE_SHA" --head "$HEAD_SHA" \
+            --github-output "$GITHUB_OUTPUT"
+          git -C work diff --check "$BASE_SHA" "$HEAD_SHA"
+
+  python-tests:
+    # Example assumes a Python project with committed tests/. Adapt this command.
+    needs: classify
+    if: ${{ needs.classify.outputs.run_python == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Run actual Python tests
+        run: python3 -m unittest discover -s tests -v
+
+  full-qualification:
+    # Must contain the repo's REAL integration/native/release-sensitive tests.
+    # Missing script FAILS CLOSED, never a fake green placeholder.
+    needs: classify
+    if: ${{ needs.classify.outputs.run_full == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Run required full qualification
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f ci/full-qualification.sh
+          bash ci/full-qualification.sh
+
+  ci-policy-gate:
+    # Configure THIS stable job as required only after checking existing rules.
+    # Keep independent security/trust/release required checks intact.
+    name: CI policy gate
+    needs: [classify, python-tests, full-qualification]
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      CLASSIFY_RESULT: ${{ needs.classify.result }}
+      WANT_PYTHON: ${{ needs.classify.outputs.run_python }}
+      PYTHON_RESULT: ${{ needs.python-tests.result }}
+      WANT_FULL: ${{ needs.classify.outputs.run_full }}
+      FULL_RESULT: ${{ needs.full-qualification.result }}
+    steps:
+      - name: Fail on missing classification, failed or skipped selected work
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          if os.environ["CLASSIFY_RESULT"] != "success":
+              sys.exit("classification failed or did not report")
+          for wanted, result, label in (
+              ("WANT_PYTHON", "PYTHON_RESULT", "Python"),
+              ("WANT_FULL", "FULL_RESULT", "full qualification"),
+          ):
+              select = os.environ[wanted]
+              state = os.environ[result]
+              if select not in ("true", "false"):
+                  sys.exit(f"{label}: missing or forged classification decision")
+              if select == "true" and state != "success":
+                  sys.exit(f"{label}: selected but status={state!r}")
+              if select == "false" and state != "skipped":
+                  sys.exit(f"{label}: unexpected execution/status={state!r}")
+          print("Selected CI jobs completed successfully at this PR revision")
+          PY
