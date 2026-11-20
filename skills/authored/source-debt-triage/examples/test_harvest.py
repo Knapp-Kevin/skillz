@@ -78,6 +78,11 @@ class HarvestAcceptance(unittest.TestCase):
         self.assertEqual(r["scan_status"], "PARTIAL")
         self.assertIn("PARSE_INCOMPLETE", r["tokenization_states"])
 
+    def test_unterminated_single_line_python_string_is_not_qualified(self):
+        r = self.inspect({"broken.py": 's = "unfinished\\n# TODO real\\n'})
+        self.assertEqual(r["scan_status"], "PARTIAL")
+        self.assertIn("PARSE_INCOMPLETE", r["tokenization_states"])
+
     def test_incomplete_c_style_is_not_claimed_complete(self):
         r = self.inspect({"broken.c": '/* FIXME open\n'})
         self.assertEqual(r["scan_status"], "PARTIAL")
