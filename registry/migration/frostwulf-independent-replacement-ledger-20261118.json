@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 41,
+    "legacy_removed": 43,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 3
+    "legacy_remaining": 1
   },
   "rows": [
     {
@@ -749,9 +749,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
-      "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "replacement_status": "repository_delivery_assessor_v1_3_0_source_bound_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ccd98e2a281939ac2820407a636c8bb698ec98d2/skills/repo-doctor",
+      "original_exact_package_tree": "cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7",
+      "replacement_exact_package_tree": "58662de287377f9b479d80cfa92e454413f9dc0e",
+      "retirement_owner_authorization": "owner accepted controlled emulation and deletion 2026-11-18; reiterated proceed 2026-11-20",
+      "retirement_behavioral_claim": "REAL_SCOPED_GITHUB_READS_AND_FIVE_CURRENT_VERSION_CONTROLLED_CASES; NO_LOCAL_GIT; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
@@ -759,9 +769,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
-      "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "multiple_bounded_modes"
+      "replacement_status": "repository_delivery_assessor_v1_3_0_source_bound_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_mode": "multiple_bounded_modes",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ccd98e2a281939ac2820407a636c8bb698ec98d2/skills/repo-pulse",
+      "original_exact_package_tree": "452ecbe5dd3d51825cda94890a82f0ccdbf11d2d",
+      "replacement_exact_package_tree": "58662de287377f9b479d80cfa92e454413f9dc0e",
+      "retirement_owner_authorization": "owner accepted controlled emulation and deletion 2026-11-18; reiterated proceed 2026-11-20",
+      "retirement_behavioral_claim": "REAL_SCOPED_GITHUB_READS_AND_FIVE_CURRENT_VERSION_CONTROLLED_CASES; NO_LOCAL_GIT; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/session-continuity/SKILL.md",
