@@ -26,7 +26,7 @@ jobs:
           import ast, json, re, subprocess, tempfile
           root=Path("skills/authored/ci-guard")
           all_files=[p for p in root.rglob("*") if p.is_file()]
-          assert len(all_files)==9, [str(p) for p in all_files]
+          assert len(all_files)==10, [str(p) for p in all_files]
           assert (root/"LICENSE").exists()
           for p in all_files:
               if p.suffix==".py":
