@@ -1,6 +1,10 @@
 # Monitoring & Intelligence
 
-Skills for recurring scans of fast-moving technical ecosystems, platforms, models, standards, and governance signals.
+Use [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md) for new research, one-off digests, interest-aligned briefings, and optional **unsaved** subscriber-interest drafts. It supports all 17 named specialist topic routes plus unfamiliar topics, with source-grounded decisions and read-only authority. It does not schedule or deliver recurring reports by itself.
+
+## Historical Pulse comparators (not preferred for new adoption)
+
+The following original entrypoints remain available only while each source's controlled replacement qualification and retirement review is unresolved. Their source attribution and reuse rights remain unestablished. For normal use, choose the independently authored replacement above; don't treat the paths below as separate required installs.
 
 - [`claude-pulse`](../../claude-pulse/) — Anthropic and Claude updates.
 - [`deepseek-pulse`](../../deepseek-pulse/) — DeepSeek models, releases, and community signals.
@@ -20,4 +24,4 @@ Skills for recurring scans of fast-moving technical ecosystems, platforms, model
 - [`qwen-pulse`](../../qwen-pulse/) — Qwen / Alibaba developments.
 - [`xai-pulse`](../../xai-pulse/) — xAI / Grok developments.
 
-These are monitoring capabilities for users. The repository's own ecosystem-scanning machinery lives under `engine/skills/` and does not count as library inventory.
+The historical paths above are retained for source-bound comparison, not endorsed as new installations. Individual retirements must reconcile these links. The repository's own maintenance procedures live under `engine/skills/`, separate from user-facing skills.
