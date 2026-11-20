@@ -1,0 +1,53 @@
+name: One-shot Source Debt v1.2 executable qualification
+on:
+  push:
+    branches: [feature/source-debt-executable-harvest-738-20261120]
+    paths:
+      - .github/workflows/one-shot-source-debt-harvest-738.yml
+permissions:
+  contents: read
+jobs:
+  source-method-qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Exact-head checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          submodules: false
+      - name: Execute original 17 regression cases including real old grep comparison
+        run: |
+          cd skills/authored/source-debt-triage
+          PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s examples -p test_harvest.py -v
+      - name: Exercise live package source without writes
+        run: |
+          set -euo pipefail
+          python3 skills/authored/source-debt-triage/scripts/harvest.py \
+            --root skills/authored/source-debt-triage --max-rows 20 > /tmp/harvest-report.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/harvest-report.json'))
+          assert d['scan_status']=='COMPLETE_FOR_SUPPORTED_LEXICAL_PARSERS', d['scan_status']
+          assert d['source_files_scanned'] >= 2, d
+          assert d['revision']=='UNVERIFIED_CALLER_WORKTREE'
+          assert d['skipped_count']==0
+          print("REAL_CHECKOUT_SCANNER_PASS", d['source_files_scanned'], d['counts'])
+          PY
+      - name: Verify standalone package closure and Python syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import ast,re
+          root=Path("skills/authored/source-debt-triage")
+          files=[p for p in root.rglob("*") if p.is_file() and "__pycache__" not in p.parts and p.suffix!=".pyc"]
+          assert len(files)==5, files
+          for p in files:
+              if p.suffix==".py": ast.parse(p.read_text())
+              if p.suffix==".md":
+                  for target in re.findall(r'\[[^]]+\]\(([^)]+)\)',p.read_text()):
+                      if target.startswith("http"): continue
+                      dest=(p.parent/target.split("#")[0]).resolve()
+                      assert dest.is_relative_to(root.resolve()) and dest.is_file(), (p,target)
+          print("OFFLINE_PACKAGE_CLOSURE_PASS",len(files))
+          PY
