@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Technology Change Intelligence
-  version: 1.2.4
+  version: 1.2.5
   license: MIT
 ---
 
@@ -45,7 +45,7 @@ prepare a separate evidence ledger for each before comparisons. Do not
 collapse model release, hosted product updates, code repository changes and
 published research into the same event type.
 
-Default horizon is the selected profile's `window_days`, not an assertion
+Default horizon is the selected profile's `window_days` (the `github-discovery` profile uses the preserved **30-day default**), not an assertion
 that those dates were searched. The user may specify a different explicit
 local-calendar interval. Determine the actual review time from the host; if
 it is unavailable, state the date-bound limitation instead of inventing

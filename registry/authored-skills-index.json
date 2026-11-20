@@ -558,25 +558,25 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/technology-change-intelligence.yaml",
       "verification_path": "registry/verification/local-skills/technology-change-intelligence.yaml",
-      "skill_blob_sha": "da2ed091777ed05e7ac94454439c3404c824408d",
-      "package_tree_sha": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "skill_blob_sha": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+      "package_tree_sha": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
       "package_file_count": 11,
       "review_status": "verified-static",
       "review_score": "19/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
-      "rights_note": "Independently written new six-file package, 17 topic profiles; no old pulse sources, source JSON or text imported. Seventeen corresponding seven-word text comparisons zero matching windows. Neither legal originality nor actual host behavior proven.",
+      "rights_note": "Independently written new eleven-file package, 17 topic profiles; no old pulse sources, source JSON or text imported. Seventeen corresponding seven-word text comparisons zero matching windows. Neither legal originality nor actual host behavior proven.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/742",
-      "package_version": "1.2.4",
+      "package_version": "1.2.5",
       "capability_paths": [
         "research/source-discovery",
         "research/synthesis"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-19-tci-interest-first-v1-2-static-review.md",
-      "previous_reviewed_skill_blob_sha": "ed57df330a5cf88eec055afc8f1d325247c44742",
-      "previous_reviewed_package_tree_sha": "3b6983ed4189ff93cecdccf55f6f086f7743617d",
-      "review_note": "v1.2.4 current exact source static review; MCP capability inventory required before gap/duplicate classification. docs/reviews/2026-11-19-tci-mcp-capability-gate-v1-2-4.md; 85 older-version in-chat emulations do not prove current host parity."
+      "previous_reviewed_skill_blob_sha": "da2ed091777ed05e7ac94454439c3404c824408d",
+      "previous_reviewed_package_tree_sha": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "review_note": "v1.2.5 source-specific eleven-file static review: GitHub discovery 30-day horizon restored from 14; explicit window overrides, no fake full coverage; 16 other routes unchanged. Historical retirement source v1.2.4 stays pinned. Host parity and 1.5x NOT_PROVEN."
     },
     {
       "id": "agent-failure-boundary-analysis",

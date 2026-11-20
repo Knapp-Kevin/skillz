@@ -34268,8 +34268,8 @@
       "id": "local-skills/technology-change-intelligence",
       "source_id": "local-skills",
       "skill_name": "technology-change-intelligence",
-      "content_blob_sha": "f10bc601da39c4e0021d51dd29ff863801f5b6e8",
-      "complete_package_tree_sha": "3d8636c4f9306081b8e1048478b6a3cc39ac04be",
+      "content_blob_sha": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+      "complete_package_tree_sha": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "19/20",
@@ -34286,7 +34286,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Nine-file source-specific standalone offline-closure review, 17 unchanged specialized profile/report contracts, new interest-first and ad-hoc topic modes; 17 structural checks + 12 executed analyst-output contract checks; no actual host behavior.",
+      "link_basis": "Eleven-file source-specific standalone offline-closure review, 17 unchanged specialized profile/report contracts, new interest-first and ad-hoc topic modes; 17 structural checks + 12 executed analyst-output contract checks; no actual host behavior.",
       "restriction": "Reference-only; no service, saved subscriber, persistent memory, recurring monitoring or private data access enabled",
       "unchanged_use_approved": false
     },

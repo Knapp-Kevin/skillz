@@ -1,6 +1,6 @@
 # Monitoring & Intelligence
 
-Use [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md) for new research, one-off digests, interest-aligned briefings, and optional **unsaved** subscriber-interest drafts. It supports all 17 named specialist topic routes plus unfamiliar topics, with source-grounded decisions and read-only authority. It does not schedule or deliver recurring reports by itself.
+Use [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md) for new research, one-off digests, interest-aligned briefings, and optional **unsaved** subscriber-interest drafts. It supports all 17 named specialist topic routes plus unfamiliar topics, with source-grounded decisions and read-only authority. The GitHub route defaults to 30 days, or a user-specified date range, and must mark unchecked coverage. It does not schedule or deliver recurring reports by itself.
 
 ## Historical Pulse comparators (not preferred for new adoption)
 

@@ -554,8 +554,8 @@
       "skill_name": "technology-change-intelligence",
       "local_path": "skills/authored/technology-change-intelligence/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "da2ed091777ed05e7ac94454439c3404c824408d",
-      "complete_package_tree_sha": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "content_blob_sha": "7a2a66d3de1147cb83fa42176d501b81b6338770",
+      "complete_package_tree_sha": "7aa1d44926dc7eeda91ac71f7ddebd3cf34772b7",
       "verification_status": "verified",
       "validation_status": "not-run",
       "rubric_score": "19/20",
@@ -581,10 +581,10 @@
           "high"
         ]
       },
-      "notes": "v1.2.4 eleven-file package, explicit authorized MCP existing-capability inventory requirement and no-inventory NOT_CHECKED fallback. One author-authored synthetic response; prior 85 emulations used earlier trees. No independent host parity or 1.5x. docs/reviews/2026-11-19-tci-mcp-capability-gate-v1-2-4.md",
-      "previous_content_blob_sha": "2df52cd76f95cedbfea7a0dde0576c196371077a",
-      "previous_package_tree_sha": "2c0e27ea8df81a067d60f5e5d4c61f43f308c44a",
-      "reviewed_at": "2026-11-19"
+      "notes": "v1.2.5 source-pinned eleven-file package. Restored GitHub 30-day default with explicit interval overrides and truthful unavailable-source coverage. Other 16 specialist routes unchanged. Static review, not independent host behavior or 1.5x proof.",
+      "previous_content_blob_sha": "da2ed091777ed05e7ac94454439c3404c824408d",
+      "previous_package_tree_sha": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "reviewed_at": "2026-11-20"
     },
     {
       "skill_name": "agent-failure-boundary-analysis",
