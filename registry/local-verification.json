@@ -270,40 +270,6 @@
       "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
     },
     {
-      "skill_name": "hf-pulse",
-      "local_path": "skills/hf-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis",
-          "tool-routing"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 149e577a9f72895b09aea43d607203d731db1bce static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "de2d55b632e88deaa71aa145cf83293f5877381a",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
       "skill_name": "healthcare-contract-forensics",
       "local_path": "skills/authored/healthcare-contract-forensics/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
