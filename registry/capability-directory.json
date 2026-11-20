@@ -31435,7 +31435,7 @@
       "source_id": "local-skills",
       "skill_name": "repository-readme-architect",
       "content_blob_sha": "221fc33ece71af1941254d4ad9907ef2166f8e44",
-      "complete_package_tree_sha": "2197e6666ec50da20001bca0ee69773cbf0f47fc",
+      "complete_package_tree_sha": "a753453e323f4f45dc56d415e661faec78704e3b",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -31454,7 +31454,7 @@
         "read-only-default",
         "user-authorized-focused-repository-write"
       ],
-      "link_basis": "Static-reviewed original four-file package; no independent host execution",
+      "link_basis": "Static-reviewed original five-file package; no independent host execution",
       "restriction": "No unrequested write, command execution, secret read, release or external publication",
       "unchanged_use_approved": false
     },
@@ -33825,7 +33825,7 @@
       "evidence_path": "registry/verification/local-skills/metadata-taxonomy-steward.yaml",
       "skill_path": "skills/authored/metadata-taxonomy-steward/SKILL.md",
       "provenance_path": "registry/skills/local-skills/metadata-taxonomy-steward.yaml",
-      "source_license": "Original four-file MIT package",
+      "source_license": "Original five-file MIT package",
       "source_role": "first-party",
       "source_class": "first-party-authored",
       "authority_tags": [
@@ -34064,7 +34064,7 @@
       "evidence_path": "registry/verification/local-skills/reference-integrity-auditor.yaml",
       "skill_path": "skills/authored/reference-integrity-auditor/SKILL.md",
       "provenance_path": "registry/skills/local-skills/reference-integrity-auditor.yaml",
-      "source_license": "Original four-file MIT package",
+      "source_license": "Original five-file MIT package",
       "source_role": "first-party",
       "source_class": "first-party-authored",
       "authority_tags": [
