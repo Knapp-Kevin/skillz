@@ -39,7 +39,7 @@
           "facet": "verification-completion",
           "evidence_level": "STATIC_ASSESSMENT",
           "guidance": "A capable host may use an equivalent scoped verification path instead of following every illustrative step",
-          "source_pointer": "skills/authored/ci-guard/SKILL.md#execution",
+          "source_pointer": "skills/authored/ci-guard/SKILL.md#capability-adaptive-execution",
           "limit": "Static reading only: no cross-model success or execution observed"
         },
         {
