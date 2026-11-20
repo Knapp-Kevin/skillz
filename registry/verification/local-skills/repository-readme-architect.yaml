@@ -1,0 +1,32 @@
+schema_version: 1
+skill_name: repository-readme-architect
+skill_version: "0.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/repository-readme-architect/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/repository-readme-architect/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 221fc33ece71af1941254d4ad9907ef2166f8e44
+complete_package_tree_sha: 2197e6666ec50da20001bca0ee69773cbf0f47fc
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-20"
+verification_status: verified
+verification_basis: maintainer-complete-package-static-review
+validation_status: not-run
+validation_note: "Six designed synthetic cases are fixtures, not externally observed host outcomes. UORust example demonstrates repo change preparation; its independent quality assessment is pending."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [readme-create, readme-uplift, documentation-quality, evidence-integrity]
+  lifecycle: [creation, implementation, review, verification]
+  characteristic: [standalone, capability-adaptive, reader-centered, traceable]
+  authority: [read-only-default, user-authorized-focused-write]
+  portability: high
+notes: >-
+  Ten-dimension static assessment: [2,2,2,2,2,2,2,2,1,1] = 18/20.
+  The procedure distinguishes CREATE from UPLIFT, factual claims from release
+  status, and original source assertions from independently verified evidence.
+  No auto-running README shell commands or rewriting generated sources.
+  Reduced adversarial and effectiveness credit reflects untested host behavior.
+  Static review does not establish real use quality, model parity, or production results.
