@@ -161,7 +161,7 @@ class ExportTests(unittest.TestCase):
     def test_unindexed_record_refused(self):
         self.write_json("registry/governed-review-name-index.json", {"first_party_ids": ["local-skills/demo"], "third_party_ids": [], "record_counts": {"total": 1}})
         self.commit()
-        with self.assertRaisesRegex(ValueError, "name index differs"):
+        with self.assertRaisesRegex(ValueError, "unindexed non-retired"):
             self.build()
 
     def test_duplicate_yaml_keys_refused(self):
