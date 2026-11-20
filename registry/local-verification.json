@@ -693,37 +693,6 @@
       "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
     },
     {
-      "skill_name": "xai-pulse",
-      "local_path": "skills/xai-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
-    },
-    {
       "skill_name": "session-continuity",
       "local_path": "skills/session-continuity/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
