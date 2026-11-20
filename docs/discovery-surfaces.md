@@ -76,3 +76,7 @@ A discovery lead should become a candidate issue when there is enough evidence t
 4. what source/terms/authority questions need evaluation.
 
 Once an issue exists, `docs/candidate-intake.md` controls the evaluation and admission lifecycle.
+
+## Model-specific prompting guidance is a source lead, not another skill
+
+For #599, capture exact-publisher/version prompting notes and model/host adaptations only when a real source and rights context can be identified. Record which model/version, host, tool permissions, context limitations, evidence origin/date and confidence were *actually* asserted; preserve `THIRD_PARTY_CLAIM` or `UNKNOWN` when vendor attribution, model identity or behavior has not been checked. Deduplicate copied presentations/mirrors, compare changed artifact versions and queue new material for separate review. Route it to a matching existing capability domain under #588 before proposing any new identity. [Passive model compatibility profiles](model-compatibility-profiles.md) provide a small exact-pin example; the unverified presenter notes there are **not** Anthropic documentation or an observed model test. No crawler, model call, installation, network dependency or new recurring discovery process is introduced.
