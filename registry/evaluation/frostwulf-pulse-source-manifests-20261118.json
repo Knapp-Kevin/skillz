@@ -466,8 +466,14 @@
       "current_main_source_revision": "f2ccbd80b5155acc0af9a3b6c8cab56c7e567259",
       "profile_case_contract_count": 5,
       "current_authored_replacement_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
-      "retirement_status": "HOLD_UNTIL_PER_PROFILE_QUALIFICATION",
-      "replacement_case_requalification": "REQUIRED_v1.2.4_85_CASES_NOT_RUN"
+      "retirement_status": "RETIRED_FROM_ACTIVE_TREE_OWNER_ACCEPTED_CONTROLLED_PROCEDURE",
+      "replacement_case_requalification": "5_V1_2_4_CASES_CONTROLLED_TEXTUAL_EMULATION; HOST_PAIR_NOT_RUN",
+      "historical_source_archive": "https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse",
+      "active_tree_existence": "ABSENT_AFTER_PROPOSED_RETIREMENT_MERGE",
+      "retirement_receipts": [
+        "docs/evals/receipts/2026-11-19-pulse-xai-v124-five-controlled-cases.json",
+        "docs/evals/receipts/2026-11-19-pulse-xai-live-primary-sources-smoke.json"
+      ]
     }
   ],
   "source_integrity_evidence": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
