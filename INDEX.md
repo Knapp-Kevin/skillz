@@ -206,7 +206,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 [Decision Tradeoff Workbench](skills/authored/decision-tradeoff-workbench/SKILL.md) (comparisons), [Research Question Dossier](skills/authored/research-question-dossier/SKILL.md), [Claim Evidence Adjudicator](skills/authored/claim-evidence-adjudicator/SKILL.md), [Research Methods Appraiser](skills/authored/research-methods-appraiser/SKILL.md)
 
 ### Software & Repositories
-`repo-doctor`, `repo-pulse`; current original replacement: [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)
+[Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) (diagnostics and portfolio pulse); [Source Debt Triage](skills/authored/source-debt-triage/SKILL.md)
 
 ### Agent Operations & Security
 [Agent Workspace Footprint Assessor](skills/authored/agent-workspace-footprint-assessor/SKILL.md), [Agent Failure Boundary Analysis](skills/authored/agent-failure-boundary-analysis/SKILL.md) (postmortems), [Scheduled Work Proof Auditor](skills/authored/scheduled-work-proof-auditor/SKILL.md), [Connector Capability Risk Review](skills/authored/connector-capability-risk-review/SKILL.md), [Privilege Exposure Mapper](skills/authored/privilege-exposure-mapper/SKILL.md) (permissions review), `session-continuity`

@@ -44,69 +44,6 @@
       "notes": "2026-11-06 issue #714: current v1.1.0 10-file MIT-authored package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; SKILL blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static structured 19/20; deterministic 4/4 clause-card completeness and 8/8 original-excerpt matches, plus synthetic currency arithmetic. Human-facing README added for shared folder. External host behavior, baseline comparison and scanner NOT RUN; no production/PHI clearance. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-commenter-acceptance-audit.md."
     },
     {
-      "skill_name": "repo-doctor",
-      "local_path": "skills/repo-doctor/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "16/20",
-      "tags": {
-        "use_case": [
-          "repository-maintenance",
-          "evaluation"
-        ],
-        "lifecycle": [
-          "verification",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "risk-aware",
-          "tool-assisted"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-05 source fed90fa0a664611e560bbc3ded630eb9e72253e1, tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7. Static 16/20, source assertions 9/9; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
-    },
-    {
-      "skill_name": "repo-pulse",
-      "local_path": "skills/repo-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9e6938b29e4c0748e4098bc53a96498f42784423",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "repository-maintenance"
-        ],
-        "lifecycle": [
-          "operations",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "tool-assisted",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held."
-    },
-    {
       "skill_name": "session-continuity",
       "local_path": "skills/session-continuity/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2502,6 +2439,85 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json"
+    },
+    {
+      "skill_name": "repo-doctor",
+      "local_path": "skills/repo-doctor/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "16/20",
+      "tags": {
+        "use_case": [
+          "repository-maintenance",
+          "evaluation"
+        ],
+        "lifecycle": [
+          "verification",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "risk-aware",
+          "tool-assisted"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-05 source fed90fa0a664611e560bbc3ded630eb9e72253e1, tree cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7. Static 16/20, source assertions 9/9; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/repository-delivery-assessor",
+      "replacement_mode": "single_repository_diagnostic",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ccd98e2a281939ac2820407a636c8bb698ec98d2/skills/repo-doctor",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json"
+    },
+    {
+      "skill_name": "repo-pulse",
+      "local_path": "skills/repo-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9e6938b29e4c0748e4098bc53a96498f42784423",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "repository-maintenance"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "tool-assisted",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-05 source 9e6938b29e4c0748e4098bc53a96498f42784423, tree 452ecbe5dd3d51825cda94890a82f0ccdbf11d2d. Static 18/20, source assertions 8/8; Git fsmonitor execution risk reproduced in isolated local checkout, host behavior and pinned scanner NOT RUN. See docs/reviews/2026-11-05-issue402-git-readonly-execution-boundary.md. Unchanged use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/repository-delivery-assessor",
+      "replacement_mode": "approved_repository_portfolio_pulse",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/ccd98e2a281939ac2820407a636c8bb698ec98d2/skills/repo-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json"
     }
   ]
 }

@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 41,
+    "legacy_retirements_approved": 43,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
     "historical_full_package_trees_verified": 38,
-    "retired_under_owner_accepted_procedure": 41,
+    "retired_under_owner_accepted_procedure": 43,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -3109,13 +3109,13 @@
       "legacy_blob_sha1": "fed90fa0a664611e560bbc3ded630eb9e72253e1",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
-      "replacement_package_version": "1.2.0",
-      "replacement_skill_blob_sha1": "9261eadd5df37e4265f8913c538c0a379cf2f8f4",
-      "replacement_package_tree_sha1": "a0d217f8f48399acb95d3a8f263f26fb87eda4f1",
+      "replacement_package_version": "1.3.0",
+      "replacement_skill_blob_sha1": "75c09e83d13a388e591f384f8029090edbe0bc50",
+      "replacement_package_tree_sha1": "58662de287377f9b479d80cfa92e454413f9dc0e",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SOURCE_BOUND_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3164,32 +3164,45 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_EXACT_COMPLETE_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_V1_3_0_CURRENT_PROCEDURE_OUTPUTS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_SYNTHETIC_CASES; LOCAL_GIT_NOT_RUN",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE",
+        "eligible_for_retirement": true,
+        "reason": "Real public repository metadata and owner-accepted bounded source-specific outputs, no independent host A/B.",
+        "qualification_basis": "OWNER_ACCEPTED_REAL_READ_ONLY_GITHUB_AND_FIVE_V1_3_0_CASES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
-      "prior_replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778"
+      "prior_replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json",
+        "case_count": 5,
+        "case_assertions_passed": 24,
+        "negative_mutations_detected": 5,
+        "original_full_tree_sha1": "cfd45c4b4cbef88fd58d7c97f5abc357cb0b1bf7",
+        "replacement_full_tree_sha1": "58662de287377f9b479d80cfa92e454413f9dc0e",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
       "legacy_blob_sha1": "9e6938b29e4c0748e4098bc53a96498f42784423",
       "legacy_origin_rights": "NOT_ESTABLISHED",
       "replacement_entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
-      "replacement_package_version": "1.2.0",
-      "replacement_skill_blob_sha1": "9261eadd5df37e4265f8913c538c0a379cf2f8f4",
-      "replacement_package_tree_sha1": "a0d217f8f48399acb95d3a8f263f26fb87eda4f1",
+      "replacement_package_version": "1.3.0",
+      "replacement_skill_blob_sha1": "75c09e83d13a388e591f384f8029090edbe0bc50",
+      "replacement_package_tree_sha1": "58662de287377f9b479d80cfa92e454413f9dc0e",
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SOURCE_BOUND_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -3238,19 +3251,32 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_EXACT_COMPLETE_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_V1_3_0_CURRENT_PROCEDURE_OUTPUTS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_SYNTHETIC_CASES; LOCAL_GIT_NOT_RUN",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE",
+        "eligible_for_retirement": true,
+        "reason": "Real public repository metadata and owner-accepted bounded source-specific outputs, no independent host A/B.",
+        "qualification_basis": "OWNER_ACCEPTED_REAL_READ_ONLY_GITHUB_AND_FIVE_V1_3_0_CASES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
-      "prior_replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778"
+      "prior_replacement_package_tree_sha1": "d77f373e2825c2eee23cfe60937afc83a547e778",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json",
+        "case_count": 5,
+        "case_assertions_passed": 24,
+        "negative_mutations_detected": 5,
+        "original_full_tree_sha1": "452ecbe5dd3d51825cda94890a82f0ccdbf11d2d",
+        "replacement_full_tree_sha1": "58662de287377f9b479d80cfa92e454413f9dc0e",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/session-continuity/SKILL.md",

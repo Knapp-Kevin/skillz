@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## Historical repository skills retired: Repo Doctor and Repo Pulse (November 20, 2026)
+
+Two complete original packages are removed from active selection; immutable Git source identities remain. The current [Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) v1.3.0 covers scoped repo diagnosis and portfolio attention. [Repo Doctor receipt](docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json) and [Repo Pulse receipt](docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json) include actual read-only Skillz GitHub metadata and five bounded procedure cases each. Local Git hooks were not run; local state and comprehensive CI were not assessed. **43/44 retired, one remains.** Host A/B, actual repair, full consumer scan and 1.5× improvement remain NOT_PROVEN.
+
 ## Historical decision skills retired: Brief Writer and Compare (November 20, 2026)
 
 Retired the historical Brief Writer and Compare entrypoints after current [Decision Tradeoff Workbench](skills/authored/decision-tradeoff-workbench/SKILL.md) controlled outputs preserved one-page briefing and owner-confirmed evidence-weighted comparisons. [Brief acceptance](docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json) includes a complete short fictional decision memo; [Compare acceptance](docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json) includes executed 22-versus-25 weighted arithmetic with a noncompensatory hard gate, plus four additional scenarios each. Explicit difference: the successor permits provisional drafts/criteria with UNCONFIRMED fields where older skills demanded confirmation before drafting. **41/44 retired, 3 remain.** Controlled same-model analysis does not establish independent host parity, page rendering, actual user outcome or 1.5× gain.
