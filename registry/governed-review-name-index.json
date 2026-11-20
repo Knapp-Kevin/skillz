@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-19",
-  "purpose": "Current 1047 governed exact-version identities (52 first-party, 995 third-party); 22 historical retired entrypoints in archive only.",
+  "snapshot_date": "2026-11-20",
+  "purpose": "Current 1048 governed exact-version identities (53 first-party, 995 third-party). Source snapshots and historic retired entries remain separate.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 52,
+    "first_party": 53,
     "third_party": 995,
-    "total": 1047
+    "total": 1048
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -53,6 +53,7 @@
     "local-skills/repo-doctor",
     "local-skills/repo-pulse",
     "local-skills/repository-delivery-assessor",
+    "local-skills/repository-readme-architect",
     "local-skills/research-methods-appraiser",
     "local-skills/research-question-dossier",
     "local-skills/scheduled-work-proof-auditor",
@@ -1327,5 +1328,19 @@
     "review": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
     "behavioral_validation": "not-run",
     "note": "CI Guard standalone, three focused components under the existing delivery assessor"
+  },
+  "repository_readme_architect_extension_20261120": {
+    "identity": "local-skills/repository-readme-architect",
+    "entrypoint": "skills/authored/repository-readme-architect/SKILL.md",
+    "source_class": "first-party-authored",
+    "license": "MIT",
+    "semantic_review": "verified-static 18/20; exact package fingerprinted",
+    "behavioral_validation": "not-run",
+    "capability_paths": [
+      "technical-writing/documentation-ia",
+      "software-engineering/developer-experience",
+      "marketing/content"
+    ],
+    "decision": "READ/CREATE/UPLIFT/AUDIT/VERIFY; no blanket external permission"
   }
 }
