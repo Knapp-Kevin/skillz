@@ -34216,11 +34216,12 @@
       "id": "local-skills/source-debt-triage",
       "source_id": "local-skills",
       "skill_name": "source-debt-triage",
-      "content_blob_sha": "fdd0f7d5b4e3996e6bd440751385ee537ca100c0",
-      "complete_package_tree_sha": "bb92a4ea4130ca50c0b110d96ab439f1498d741f",
+      "source_snapshot_revision": "0698965b9901d75fb94a1dcb7cd3f09d702b54a7",
+      "content_blob_sha": "c434b4080c356a77fd11dd78ea62b84c34c463a1",
+      "complete_package_tree_sha": "63e578f731a895f576ce96f7710182361c31e2ad",
       "verification_status": "verified",
       "validation_status": "not-run",
-      "static_score": "18/20",
+      "static_score": "19/20",
       "capability_paths": [
         "software-engineering/maintenance"
       ],
@@ -34233,7 +34234,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "2026-11-18 exact complete-package maintainer static review, no host behavioral qualification",
+      "link_basis": "Exact v1.2 standalone five-file original scanner with 18/18 executable cases and real historical Git grep comparison; 2x precision only on constructed fixture; independent host and overall 1.5x effectiveness NOT PROVEN",
       "restriction": "Reference-only, no implicit source/tool permissions",
       "unchanged_use_approved": false
     },
