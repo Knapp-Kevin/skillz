@@ -1,0 +1,51 @@
+name: One-shot CI Guard classification/package qualification
+on:
+  push:
+    branches: [feature/ci-guard-budget-aware-classification-20261120]
+    paths: [.github/workflows/one-shot-ci-guard-classifier-validation-20261120.yml]
+permissions:
+  contents: read
+jobs:
+  original-cpu-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          submodules: false
+      - name: Execute original, real Python classifier fixture and Git tests
+        run: |
+          cd skills/authored/ci-guard
+          python3 -m unittest discover -s examples -p 'test_change_classification.py' -v
+      - name: Check classifier output and offline package closure
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import ast, json, re, subprocess, tempfile
+          root=Path("skills/authored/ci-guard")
+          all_files=[p for p in root.rglob("*") if p.is_file()]
+          assert len(all_files)==9, [str(p) for p in all_files]
+          assert (root/"LICENSE").exists()
+          for p in all_files:
+              if p.suffix==".py":
+                  ast.parse(p.read_text(), filename=str(p))
+              if p.suffix==".md":
+                  for target in re.findall(r"\[[^]]+\]\(([^)]+)\)",p.read_text()):
+                      target=target.split("#")[0]
+                      if not target or target.startswith("https://") or target.startswith("http://"):
+                          continue
+                      target_path=(p.parent/target).resolve()
+                      assert target_path.is_relative_to(root.resolve()), (p,target)
+                      assert target_path.is_file(), (p,target)
+          with tempfile.TemporaryDirectory() as d:
+              fixture=Path(d)/"paths.txt"
+              fixture.write_text("README.md\ndocs/usage.md\n")
+              out=subprocess.check_output([
+                  "python3",str(root/"scripts/classify_change.py"),
+                  "--paths-file",str(fixture)],text=True)
+              state=json.loads(out)
+              assert state["route"]=="docs" and state["run_full"]=="false" and state["run_python"]=="false",state
+          print("OFFLINE_CLOSURE_AND_CLASSIFIER_OUTPUT: PASS",len(all_files))
+          PY
