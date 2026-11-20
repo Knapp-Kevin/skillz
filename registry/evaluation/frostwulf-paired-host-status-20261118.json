@@ -194,6 +194,18 @@
         "replacement_full_tree_sha1": "426391a3bea7e75f364fe86da8845dee2718f8a5",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_successor_source_method": {
+        "version": "1.2.0",
+        "skill_blob": "447d9934db360eb3ff6309a5033f119914c1eced",
+        "package_tree": "cd86911fe032fc423c8e2008d3683522490d3f04",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-agent-failure-v120-trace-integrity.json",
+        "executable_test_result": "31/31_LOCAL_PYTHON_PASS",
+        "real_source_negative_control": "PR_815_MERGE_AND_CI_SUPPORTED;_DEPLOYMENT_AND_USER_OUTCOME_UNSUPPORTED",
+        "agent_host_comparison": "NOT_RUN",
+        "improvement_1_5x": "NOT_PROVEN",
+        "source_authenticity_verified_by_checker": false,
+        "note": "Historical v1.1 retirement pins preserved. This validates source-input consistency, not real incident diagnosis, authentication, or independent skill host behavior."
       }
     },
     {

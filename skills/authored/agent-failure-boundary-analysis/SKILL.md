@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations
   display-name: Agent Failure Boundary Analysis
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -115,6 +115,66 @@ not a fabricated timeline.
     USER_OUTCOME_VERIFIED. A change in a PR or passing unit tests
     is not evidence that the original user-visible failure is fixed.
 
+## Optional executable evidence-boundary audit
+
+For a sanitized incident trace, use the original, **offline,
+read-only** Python standard-library checker bundled in this package.
+This is a narrow mechanical aid, not a root-cause engine. It does not
+retrieve logs, inspect arbitrary directories, execute trace content,
+consult a network, persist a report or authorize a write. Stronger
+hosts may perform equivalent validation without Python. Do not mark
+the tool executed when the host has not actually run it.
+
+From the copied standalone skill package, with Python 3.9+:
+
+~~~text
+python3 scripts/audit_trace.py --input examples/pr815-public-receipts-negative-control.json
+python3 -m unittest discover -s tests -v
+~~~
+
+The optional structured JSON input has \`schema_version: 1\`,
+\`incident_id\`, a finite \`events\` array, \`claims\`, an optional
+\`attempt_budget\`, and mandatory \`inventory_complete\` (true only
+when completeness is actually established). Event fields are
+\`id\`, \`kind\`, \`state\` (OBSERVED, ALLEGED, MISSING),
+\`source_ref\`, and \`after\` (explicit causal-order event IDs).
+For write actions, include \`action_scope\` and an
+\`approval_ref\` to an earlier observed approval with matching
+\`authorizes_scope\`. Claims cite event IDs and name MERGED,
+CI_PASSED, DEPLOYED or USER_OUTCOME_VERIFIED.
+
+The checker refuses missing references, duplicated IDs, unknown
+categories, impossible dependency cycles, malformed input and excessive
+size. It reports only ordering implied by explicit \`after\` edges;
+the input order or wall-clock times do not establish causality.
+It separately flags unsupported completion claims, missing/scopeless
+approval references, and tool attempts that exceed an explicitly
+supplied attempt cap. Missing records never become zero attempts or
+verified absence. **A merge receipt is not a deployment receipt, and a
+deployment is not user-outcome verification.**
+
+All statuses are explicitly qualified as consistency **within the
+caller-supplied records**. A correctly shaped or OBSERVED-labeled
+receipt is not authenticated by the checker. Likewise an approval
+reference can be mechanically consistent without verifying who owned
+the authority. Actual host readers must authenticate source identity,
+freshness, actor, permissions, approval validity, document integrity
+and redaction separately. The checker **always** returns
+\`evidence_authenticity_verified: false\` and
+\`root_cause: NOT_DETERMINED\`. Its output assists the investigation
+protocol but never replaces competing hypotheses, authority
+interpretation, report authoring or owner decisions.
+
+Use only user-authorized redacted input files (maximum 1 MiB, 500
+events). Source pointer strings are opaque, untrusted and not opened
+or echoed to stdout. Reports may contain incident and event IDs:
+use non-sensitive IDs. No credentials, secret excerpts or private
+session text should be passed into the tool. This portable method
+needs neither the Skillz repository nor an online service. Its
+bundled public GitHub receipt fixture is an **intentionally false
+deployment/user-outcome claim** for negative testing, not evidence
+that a production deployment or failure actually occurred.
+
 ## Report contract
 
 Produce a concise report using these headings; shorten explanatory
@@ -168,6 +228,8 @@ Never emit invented citations or empty filler lessons.
 
 ## Evaluation fixtures
 
-[Original synthetic cases](examples/acceptance.md) identify expected
-outputs and refusals. They do not establish agent-host success,
-legacy functional parity, or any 1.5x improvement measurement.
+[Original synthetic cases](examples/acceptance.md) and the original
+31-case Python regression suite identify expected behaviors and
+refusals. Real executable method tests establish only the checker's
+bounded behavior; they do not establish agent-host success, legacy
+functional parity or any 1.5x effectiveness measurement.
