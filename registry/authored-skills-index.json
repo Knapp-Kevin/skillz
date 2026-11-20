@@ -1026,6 +1026,36 @@
       "review_note": "v1.3 ten-file complete-package static review 19/20, 16/16 actual classifier CPU regression tests and offline closure. No independent consuming-model A/B, generated workflow deployment or measured CI budget savings. Prior v1.2 review remains historical.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258"
+    },
+    {
+      "id": "repository-readme-architect",
+      "display_name": "Repository README Architect",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/repository-readme-architect",
+      "entrypoint": "skills/authored/repository-readme-architect/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/repository-readme-architect/LICENSE",
+      "license_inheritance": "Original independently authored material; bundled MIT license in standalone package, no third-party skill text imported.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-20",
+      "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
+      "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
+      "skill_blob_sha": "221fc33ece71af1941254d4ad9907ef2166f8e44",
+      "package_tree_sha": "2197e6666ec50da20001bca0ee69773cbf0f47fc",
+      "package_file_count": 4,
+      "review_status": "verified-static",
+      "review_score": "18/20",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only; focused repository write on explicit user request",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original MIT README creation, uplift, audit and verify method; static review only. No external package text imported. See docs/reviews/2026-11-20-readme-architect-static-review.md.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "technical-writing/documentation-ia",
+        "software-engineering/developer-experience",
+        "marketing/content"
+      ]
     }
   ]
 }
