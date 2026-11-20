@@ -110,108 +110,6 @@
       "notes": "2026-11-06 issue #714: current v1.1.0 10-file MIT-authored package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; SKILL blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static structured 19/20; deterministic 4/4 clause-card completeness and 8/8 original-excerpt matches, plus synthetic currency arithmetic. Human-facing README added for shared folder. External host behavior, baseline comparison and scanner NOT RUN; no production/PHI clearance. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-commenter-acceptance-audit.md."
     },
     {
-      "skill_name": "inference-pulse",
-      "local_path": "skills/inference-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "synthesis",
-          "compatibility-aware",
-          "retrieval-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "mcp-pulse",
-      "local_path": "skills/mcp-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "security",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "risk-aware",
-          "synthesis",
-          "retrieval-first"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 issue #402 current source 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
-      "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
-      "rubric_score_current_fingerprint": false,
-      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established."
-    },
-    {
-      "skill_name": "memory-pulse",
-      "local_path": "skills/memory-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "memory",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "medium"
-        ]
-      },
-      "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held."
-    },
-    {
       "skill_name": "repo-doctor",
       "local_path": "skills/repo-doctor/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2462,6 +2360,132 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-20-governance-v124-live-source-five-case-retirement.json"
+    },
+    {
+      "skill_name": "inference-pulse",
+      "local_path": "skills/inference-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "synthesis",
+          "compatibility-aware",
+          "retrieval-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic score 17/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "bc90e5248c04c408c8c5a44bea62b1d66a7fb143",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "External-host-only collection and full action-specific recurrence/source-trust guard changed this skill's exact fingerprint. Previous rubric grade applies to prior_reviewed_blob_sha only. Fresh semantic/security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "local-inference",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/inference-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-inference-v124-source-bound-five-case-retirement.json"
+    },
+    {
+      "skill_name": "mcp-pulse",
+      "local_path": "skills/mcp-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "security",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "risk-aware",
+          "synthesis",
+          "retrieval-first"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 issue #402 current source 33070cbc43c1bf05feeeb4e9bdd1c1d0ac04247a static semantic score 18/20 documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md; external pinned full-package security and actual host behavior NOT RUN; unchanged use held.",
+      "prior_reviewed_blob_sha": "41451ac34a4a660ec82cae2c4356d3afe4b49334",
+      "rubric_score_current_fingerprint": false,
+      "requalification_reason": "Host-only source collection, scoped future scheduling, untrusted-source control, and separate private-local-file authorization changed the exact skill fingerprint. Earlier rubric score is historical; current package security/behavioral acceptance not established.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "mcp-protocol",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/mcp-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-mcp-v124-source-bound-five-case-retirement.json"
+    },
+    {
+      "skill_name": "memory-pulse",
+      "local_path": "skills/memory-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "84fe948e761f95d4196efaf80a0ef6add7c01a16",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "memory",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "medium"
+        ]
+      },
+      "notes": "2026-11-04 exact 1.1.3 static package review 18/20 at docs/reviews/2026-11-04-issue402-memory-pulse-113-authority-review.md; user-approved project context only. Current package security not-run, behavioral not-run, unchanged use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "agent-memory",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/memory-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-memory-v124-source-bound-five-case-retirement.json"
     }
   ]
 }

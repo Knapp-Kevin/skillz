@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 36,
+    "legacy_removed": 39,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 8
+    "legacy_remaining": 5
   },
   "rows": [
     {
@@ -462,9 +462,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "local-inference"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "local-inference",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/inference-pulse",
+      "original_exact_package_tree": "3eba79599f77970dd91367df55f1325ded8f2149",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation/deletion 2026-11-18, continued retirement 2026-11-20",
+      "retirement_behavioral_claim": "PUBLIC_UPSTREAM_RELEASE_OR_RESEARCH_READS_AND_FIVE_V1_2_4_CONTROLLED_RESPONSES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-inference-v124-source-bound-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/kimi-pulse/SKILL.md",
@@ -534,9 +544,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "mcp-protocol"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "mcp-protocol",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/mcp-pulse",
+      "original_exact_package_tree": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation/deletion 2026-11-18, continued retirement 2026-11-20",
+      "retirement_behavioral_claim": "PUBLIC_UPSTREAM_RELEASE_OR_RESEARCH_READS_AND_FIVE_V1_2_4_CONTROLLED_RESPONSES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-mcp-v124-source-bound-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/mcp-vetting/SKILL.md",
@@ -565,9 +585,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "agent-memory"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "agent-memory",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/memory-pulse",
+      "original_exact_package_tree": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner accepted controlled emulation/deletion 2026-11-18, continued retirement 2026-11-20",
+      "retirement_behavioral_claim": "PUBLIC_UPSTREAM_RELEASE_OR_RESEARCH_READS_AND_FIVE_V1_2_4_CONTROLLED_RESPONSES; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-memory-v124-source-bound-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/mistral-pulse/SKILL.md",

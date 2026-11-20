@@ -5,18 +5,27 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/inference-pulse/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 822c2f13d3cb1d80a100812d1c0baf506c2956e5
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
-availability: in-repo
+availability: retired-historical
 local_path: skills/inference-pulse/SKILL.md
 permission_tier: read-only
 portability: medium
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime; bundled sources.json ship with the skill folder"
-import_eligibility: conditional-on-security-and-user-fit
+import_eligibility: retired-not-selectable
 rationale: "Useful breaking-change-first local-runtime monitoring with explicit generic fallback when no target is bound; runtime relevance is environment-dependent."
 exact_version_requalification: "Current d76c0cc56bc90e7c88c2c63564ae9f24a77cca6c static semantic grade 17/20, documented in docs/reviews/2026-11-04-issue402-six-pulse-current-semantic-review.md. Current whole-package security SkillSpector and external-host behavior NOT RUN; unchanged adoption held."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/inference-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: local-inference
+retirement_receipt: docs/evals/receipts/2026-11-20-inference-v124-source-bound-five-case-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

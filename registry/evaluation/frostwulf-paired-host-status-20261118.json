@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 36,
+    "legacy_retirements_approved": 39,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
     "historical_full_package_trees_verified": 38,
-    "retired_under_owner_accepted_procedure": 36,
+    "retired_under_owner_accepted_procedure": 39,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -1909,7 +1909,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SOURCE_BOUND_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -1959,23 +1959,38 @@
       ],
       "retirement_qualification": {
         "full_original_package_tree_verified": "YES_UNTRUNCATED_GIT_TREE",
-        "paired_host_case_coverage": "NOT_RUN_FOR_CURRENT_REPLACEMENT_v1.2.4",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_V1_2_4_CONTROLLED_CASES_AND_UPSTREAM_READS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_CASES; NO_REAL_HOST_SECURITY_PROOF",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "Exact source and designed cases pinned; 85 non-isolated self-reviewed emulations span earlier successor versions, so current v1.2.4 independent host parity and 1.5x remain unproven.",
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_IMMUTABLE_GIT_HISTORY",
+        "consumer_ref_integrity": "INDEX_AND_CATEGORY_ROUTES_REHOMED; EXHAUSTIVE_TEXT_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE_WITH_REPEATED_PROCEED",
+        "eligible_for_retirement": true,
+        "reason": "Specific owner-controlled public-source plus five scenario acceptance; not independent A/B or measured gain.",
         "source_package_tree_sha1": "3eba79599f77970dd91367df55f1325ded8f2149",
-        "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
+        "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json",
+        "qualification_basis": "OWNER_ACCEPTED_PUBLIC_UPSTREAM_READS_AND_FIVE_V1_2_4_CASES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
       "legacy_support_source_list_mode": "PINNED_BUNDLED_JSON",
       "legacy_known_source_manifest_path": "skills/inference-pulse/sources.json",
       "legacy_known_source_manifest_git_blob_sha1": "c6c100e86bd1a9bf8b5e73a7217911a169e59c7d",
-      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE"
+      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-inference-v124-source-bound-five-case-retirement.json",
+        "case_count": 5,
+        "case_assertions_passed": 29,
+        "negative_mutations_detected": 5,
+        "public_source_items": 4,
+        "mode": "PUBLIC_PRIMARY_UPSTREAM_READS_AND_NONINDEPENDENT_TEXTUAL_CASES",
+        "original_full_tree_sha1": "3eba79599f77970dd91367df55f1325ded8f2149",
+        "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/kimi-pulse/SKILL.md",
@@ -2250,7 +2265,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SOURCE_BOUND_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -2300,23 +2315,38 @@
       ],
       "retirement_qualification": {
         "full_original_package_tree_verified": "YES_UNTRUNCATED_GIT_TREE",
-        "paired_host_case_coverage": "NOT_RUN_FOR_CURRENT_REPLACEMENT_v1.2.4",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_V1_2_4_CONTROLLED_CASES_AND_UPSTREAM_READS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_CASES; NO_REAL_HOST_SECURITY_PROOF",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "Exact source and designed cases pinned; 85 non-isolated self-reviewed emulations span earlier successor versions, so current v1.2.4 independent host parity and 1.5x remain unproven.",
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_IMMUTABLE_GIT_HISTORY",
+        "consumer_ref_integrity": "INDEX_AND_CATEGORY_ROUTES_REHOMED; EXHAUSTIVE_TEXT_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE_WITH_REPEATED_PROCEED",
+        "eligible_for_retirement": true,
+        "reason": "Specific owner-controlled public-source plus five scenario acceptance; not independent A/B or measured gain.",
         "source_package_tree_sha1": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
-        "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
+        "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json",
+        "qualification_basis": "OWNER_ACCEPTED_PUBLIC_UPSTREAM_READS_AND_FIVE_V1_2_4_CASES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
       "legacy_support_source_list_mode": "PINNED_BUNDLED_JSON",
       "legacy_known_source_manifest_path": "skills/mcp-pulse/sources.json",
       "legacy_known_source_manifest_git_blob_sha1": "586ae9bffc9ff8112d4e460aa878b6ebe4015172",
-      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE"
+      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-mcp-v124-source-bound-five-case-retirement.json",
+        "case_count": 5,
+        "case_assertions_passed": 26,
+        "negative_mutations_detected": 5,
+        "public_source_items": 4,
+        "mode": "PUBLIC_PRIMARY_UPSTREAM_READS_AND_NONINDEPENDENT_TEXTUAL_CASES",
+        "original_full_tree_sha1": "99daec2f140151570fd505db1f3c2d41e0ba90d3",
+        "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/mcp-vetting/SKILL.md",
@@ -2415,7 +2445,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_SOURCE_BOUND_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -2465,23 +2495,38 @@
       ],
       "retirement_qualification": {
         "full_original_package_tree_verified": "YES_UNTRUNCATED_GIT_TREE",
-        "paired_host_case_coverage": "NOT_RUN_FOR_CURRENT_REPLACEMENT_v1.2.4",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "paired_host_case_coverage": "NOT_RUN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_V1_2_4_CONTROLLED_CASES_AND_UPSTREAM_READS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_BOUNDED_CASES; NO_REAL_HOST_SECURITY_PROOF",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "Exact source and designed cases pinned; 85 non-isolated self-reviewed emulations span earlier successor versions, so current v1.2.4 independent host parity and 1.5x remain unproven.",
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_IMMUTABLE_GIT_HISTORY",
+        "consumer_ref_integrity": "INDEX_AND_CATEGORY_ROUTES_REHOMED; EXHAUSTIVE_TEXT_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE_WITH_REPEATED_PROCEED",
+        "eligible_for_retirement": true,
+        "reason": "Specific owner-controlled public-source plus five scenario acceptance; not independent A/B or measured gain.",
         "source_package_tree_sha1": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
-        "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json"
+        "source_package_inventory_receipt": "docs/evals/receipts/2026-11-19-pulse-17-full-package-integrity.json",
+        "qualification_basis": "OWNER_ACCEPTED_PUBLIC_UPSTREAM_READS_AND_FIVE_V1_2_4_CASES",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true
       },
       "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
       "legacy_support_source_list_mode": "PINNED_BUNDLED_JSON",
       "legacy_known_source_manifest_path": "skills/memory-pulse/sources.json",
       "legacy_known_source_manifest_git_blob_sha1": "d05ad098fcb822b1af81798cae1321d135f3f042",
-      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE"
+      "legacy_source_inventory_state": "PARTIAL_KNOWN_SOURCE_LIST_NOT_FULL_PACKAGE",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-memory-v124-source-bound-five-case-retirement.json",
+        "case_count": 5,
+        "case_assertions_passed": 29,
+        "negative_mutations_detected": 5,
+        "public_source_items": 5,
+        "mode": "PUBLIC_PRIMARY_UPSTREAM_READS_AND_NONINDEPENDENT_TEXTUAL_CASES",
+        "original_full_tree_sha1": "69d2337cc4d9c0728dfca18d556c7d0b7551057a",
+        "replacement_full_tree_sha1": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/mistral-pulse/SKILL.md",
