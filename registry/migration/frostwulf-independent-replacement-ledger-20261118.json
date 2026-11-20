@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 28,
+    "legacy_removed": 30,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 16
+    "legacy_remaining": 14
   },
   "rows": [
     {
@@ -118,9 +118,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "anthropic-claude"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "anthropic-claude",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse",
+      "original_exact_package_tree": "690a0c7ed7a9666ef71d9a607bccfa28833eae02",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner authorized controlled emulation and deletion 2026-11-18; continuing retirement sequence 2026-11-20",
+      "retirement_behavioral_claim": "ACTUAL_PUBLIC_SOURCE_READS_PLUS_FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_SEARCH_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/compare/SKILL.md",
@@ -308,9 +318,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/technology-change-intelligence/SKILL.md",
-      "replacement_status": "original_consolidated_profile_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_profile": "google-gemini"
+      "replacement_status": "technology_change_intelligence_v1_2_4_source_bound_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_profile": "google-gemini",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse",
+      "original_exact_package_tree": "ff5d73b1208b6faafe7eecdc7d0b67daa3c78a29",
+      "replacement_exact_package_tree": "4514fd326d170a49be9f43fcfdcbcd4e2983f8fb",
+      "retirement_owner_authorization": "owner authorized controlled emulation and deletion 2026-11-18; continuing retirement sequence 2026-11-20",
+      "retirement_behavioral_claim": "ACTUAL_PUBLIC_SOURCE_READS_PLUS_FIVE_CURRENT_V1_2_4_CONTROLLED_CASES; INDEPENDENT_HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "ROOT_INDEX_AND_MONITORING_CATEGORY_REHOMED; EXHAUSTIVE_SEARCH_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/github-pulse/SKILL.md",

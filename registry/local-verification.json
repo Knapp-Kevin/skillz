@@ -41,38 +41,6 @@
       "notes": "2026-11-04 #686 exact source SHA bdc5411eec2eb268955c677f0b0c7c6bdba171e3; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
     },
     {
-      "skill_name": "claude-pulse",
-      "local_path": "skills/claude-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "18/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis",
-          "risk-aware"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Official-first, read-only Claude monitoring is fully host-driven and passive, with current-source verification, clear authority separation, and community commentary treated as signal rather than truth."
-    },
-    {
       "skill_name": "compare",
       "local_path": "skills/compare/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -105,37 +73,6 @@
         ]
       },
       "notes": "2026-11-04 #686 exact source SHA 37b5d493dfa87ff1ce20e7b44d7d095e2eeed700; prior 19/20 semantic grade is static only. External static scanner pass recorded at #693; behavioral testing not-run; unchanged use not approved."
-    },
-    {
-      "skill_name": "gemini-pulse",
-      "local_path": "skills/gemini-pulse/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "17/20",
-      "tags": {
-        "use_case": [
-          "monitoring",
-          "research"
-        ],
-        "lifecycle": [
-          "discovery",
-          "maintenance"
-        ],
-        "characteristic": [
-          "source-driven",
-          "retrieval-first",
-          "synthesis"
-        ],
-        "authority": [
-          "read-only"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held."
     },
     {
       "skill_name": "github-pulse",
@@ -2398,6 +2335,85 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-19-operations-four-controlled-decisions.json"
+    },
+    {
+      "skill_name": "claude-pulse",
+      "local_path": "skills/claude-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "0f1db475d8d5b93513a7fd9f6ca8416ed1c468c4",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis",
+          "risk-aware"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Official-first, read-only Claude monitoring is fully host-driven and passive, with current-source verification, clear authority separation, and community commentary treated as signal rather than truth.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "anthropic-claude",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json"
+    },
+    {
+      "skill_name": "gemini-pulse",
+      "local_path": "skills/gemini-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "9dbae1510d0fb3c65056fc53f0050ce0ed6ede59",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "tags": {
+        "use_case": [
+          "monitoring",
+          "research"
+        ],
+        "lifecycle": [
+          "discovery",
+          "maintenance"
+        ],
+        "characteristic": [
+          "source-driven",
+          "retrieval-first",
+          "synthesis"
+        ],
+        "authority": [
+          "read-only"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "2026-11-04 full current two-file package static source review 17/20; see docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Exact-tree historical static scanner PASS remains matched; external agent behavior not-run and unchanged-use held.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "google-gemini",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json"
     }
   ]
 }

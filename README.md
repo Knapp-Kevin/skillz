@@ -12,6 +12,10 @@ The [template](docs/skill-template.md) and
 and future skills without pretending historic models have already
 passed behavioral tests.
 
+## Historical Pulse retirement: Claude and Gemini (November 20, 2026)
+
+The historical Claude and Gemini specialist packages are retired from active `skills/` and preserved by immutable Git identities. [Technology Change Intelligence v1.2.4](skills/authored/technology-change-intelligence/SKILL.md) retains `anthropic-claude` and `google-gemini` routes. Read-only **current primary release evidence** plus five current-version controlled qualitative cases per route are recorded in the [Claude receipt](docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json) and [Gemini receipt](docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json). These distinguish CLI versus API, stable versus preview, region/tier uncertainty, and prompt-injection refusals. **30/44 historical skills retired, 14 remain.** Independent host A/B, 1.5× gain, community-source completeness and exhaustive consumer scan are **NOT PROVEN**.
+
 ## Historical Pulse retirement: GLM/Z.ai and Mistral (November 20, 2026)
 
 **Two more old source packages retired:** GLM and Mistral historical entrypoints are removed from active `skills/`, with original exact Git identities retained for attribution and rollback. The consolidated [Technology Change Intelligence](skills/authored/technology-change-intelligence/SKILL.md) serves their `glm-zai` and `mistral-models` routes. The [GLM source/case evaluation](docs/evals/receipts/2026-11-20-glm-v124-live-source-five-cases.json) distinguishes different checkpoint rights and uncertain historical publisher identity; the [Mistral source/case evaluation](docs/evals/receipts/2026-11-20-mistral-v124-live-source-five-cases.json) separates a November SDK schema change from older downloadable weights. Both include current v1.2.4 five-case controlled emulations and actual primary-source reads. **These do not demonstrate independent host parity, 1.5× effectiveness or exhaustive consumer coverage.** Across the full migration, **28/44 retired, 16 historical originals remain**.

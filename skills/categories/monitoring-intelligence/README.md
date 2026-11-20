@@ -6,8 +6,6 @@ Use [Technology Change Intelligence](../../authored/technology-change-intelligen
 
 The following original entrypoints remain available only while each source's controlled replacement qualification and retirement review is unresolved. Their source attribution and reuse rights remain unestablished. For normal use, choose the independently authored replacement above; don't treat the paths below as separate required installs.
 
-- [`claude-pulse`](../../claude-pulse/) — Anthropic and Claude updates.
-- [`gemini-pulse`](../../gemini-pulse/) — Gemini and DeepMind developments.
 - [`github-pulse`](../../github-pulse/) — trending and notable GitHub repositories.
 - [`governance-pulse`](../../governance-pulse/) — AI governance, standards, and policy developments.
 - [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
@@ -27,3 +25,5 @@ The historical paths above are retained for source-bound comparison, not endorse
 The historical [Qwen](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse) and [DeepSeek](https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse) packages are now archived, not active installation choices. Use the `alibaba-qwen` and `deepseek-models` profiles inside the independently authored Technology Change Intelligence package above.
 
 The historical [GLM/Z.ai](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse) and [Mistral](https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse) entrypoints are archived for evidence only. Use the `glm-zai` and `mistral-models` profiles in the authored Technology Change Intelligence skill.
+
+The original [Claude Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse) and [Gemini Pulse](https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse) source packages are retained at immutable Git revisions for source evidence, not active installation. Use the `anthropic-claude` or `google-gemini` routes in Technology Change Intelligence.

@@ -4,18 +4,27 @@ display_name: "Claude Pulse"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/claude-pulse/SKILL.md
-source_class: first-party
-license: MIT
+source_class: historical-uncertain
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 906b229172b9e81f0338048c50522df6439bf63c
 curated_at: 2026-08-30
 last_checked_at: 2026-08-30
-availability: in-repo
+availability: retired-historical
 local_path: skills/claude-pulse/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
+import_eligibility: retired-not-selectable
 rationale: "Official-first, read-only Claude monitoring is fully host-driven and passive, with current-source verification, clear authority separation, and community commentary treated as signal rather than truth."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/claude-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: anthropic-claude
+retirement_receipt: docs/evals/receipts/2026-11-20-claude-v124-source-bound-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

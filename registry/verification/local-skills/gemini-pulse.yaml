@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9dbae1510d0fb3c65056fc53f0050ce0ed6ede59
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Current exact-source static review complete. Identical two-file tree retains existing pinned static SkillSpector PASS; external agent behavior not-run. No unchanged-use approval.
@@ -19,3 +20,11 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: "Current exact-version 2026-11-04 source/package semantic review 17/20: Public Google/DeepMind API, deprecation and SDK digest; host-specific Qor relevance remains conditional on authorized supplied context. See docs/reviews/2026-11-04-pr673-nine-pulse-static-requalification.md. Security PASS is exact-tree only; behavioral validation not-run."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/004ee34d81f6ed71f6ac46b6592288bc44e1948b/skills/gemini-pulse
+replacement_id: local-skills/technology-change-intelligence
+replacement_profile: google-gemini
+retirement_receipt: docs/evals/receipts/2026-11-20-gemini-v124-source-bound-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

@@ -212,7 +212,7 @@ Corey Haines Marketing Skills remains **50/50 current-standard complete**. The f
 [Agent Workspace Footprint Assessor](skills/authored/agent-workspace-footprint-assessor/SKILL.md), [Agent Failure Boundary Analysis](skills/authored/agent-failure-boundary-analysis/SKILL.md) (postmortems), [Scheduled Work Proof Auditor](skills/authored/scheduled-work-proof-auditor/SKILL.md), [Connector Capability Risk Review](skills/authored/connector-capability-risk-review/SKILL.md), [Privilege Exposure Mapper](skills/authored/privilege-exposure-mapper/SKILL.md) (permissions review), `session-continuity`
 
 ### Monitoring & Intelligence
-`claude-pulse`, `gemini-pulse`, `github-pulse`, `governance-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `openai-pulse`, `perplexity-pulse`; [Technology Change Intelligence](skills/authored/technology-change-intelligence/SKILL.md) now supplies the xAI/Grok route (`xai-grok`) and all other specialist discovery routes.
+`github-pulse`, `governance-pulse`, `inference-pulse`, `kimi-pulse`, `llama-pulse`, `mcp-pulse`, `memory-pulse`, `openai-pulse`, `perplexity-pulse`; [Technology Change Intelligence](skills/authored/technology-change-intelligence/SKILL.md) now supplies the xAI/Grok route (`xai-grok`) and all other specialist discovery routes.
 
 ### Business & Career
 [Professional Market Evidence Scout](skills/authored/professional-market-evidence-scout/SKILL.md), [Statement Variance Reviewer](skills/authored/statement-variance-reviewer/SKILL.md), [Business Presence Observatory](skills/authored/business-presence-observatory/SKILL.md)
