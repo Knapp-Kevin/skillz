@@ -6,9 +6,6 @@ Use [Technology Change Intelligence](../../authored/technology-change-intelligen
 
 The following original entrypoints remain available only while each source's controlled replacement qualification and retirement review is unresolved. Their source attribution and reuse rights remain unestablished. For normal use, choose the independently authored replacement above; don't treat the paths below as separate required installs.
 
-- [`inference-pulse`](../../inference-pulse/) — local inference runtimes and formats.
-- [`mcp-pulse`](../../mcp-pulse/) — Model Context Protocol ecosystem activity.
-- [`memory-pulse`](../../memory-pulse/) — agent-memory and context-engineering developments.
 
 The Hugging Face ecosystem route now lives in [Technology Change Intelligence](../../authored/technology-change-intelligence/SKILL.md). The [historical Hugging Face Pulse](https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse) remains pinned in Git for evidence and rollback, not installation.
 
@@ -27,3 +24,5 @@ Historical [Kimi](https://github.com/Knapp-Kevin/skillz/tree/ea6892d8e4875c61af6
 Historical [OpenAI](https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/openai-pulse) and [Perplexity](https://github.com/Knapp-Kevin/skillz/tree/bfb6ddb5972685c8c8acb7b6f7a8ca0cc7f8fb93/skills/perplexity-pulse) source packages are preserved in immutable Git only, not active installs; use `openai-developer` or `perplexity-search` in the independently authored Technology Change Intelligence package.
 
 Historical [GitHub Pulse](https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/github-pulse) and [Governance Pulse](https://github.com/Knapp-Kevin/skillz/tree/a485e18ed4e11b41cd3441da02171cb77a9f7251/skills/governance-pulse) remain pinned for source review only. Active discovery uses Technology Change Intelligence's `github-discovery` and `ai-governance` routes.
+
+The original historical [Inference](https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/inference-pulse), [MCP](https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/mcp-pulse), and [Memory](https://github.com/Knapp-Kevin/skillz/tree/c43a5bdd3281752af22659e3711b49e48e1179c8/skills/memory-pulse) Pulse packages are archived for evidence only. Use Technology Change Intelligence's `local-inference`, `mcp-protocol`, and `agent-memory` routes for active discovery.
