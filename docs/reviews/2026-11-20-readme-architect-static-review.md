@@ -3,7 +3,7 @@
 **Date:** 2026-11-20  
 **Source:** `skills/authored/repository-readme-architect/`  
 **Entry SHA:** `221fc33ece71af1941254d4ad9907ef2166f8e44`  
-**Complete tree SHA:** `2197e6666ec50da20001bca0ee69773cbf0f47fc`
+**Complete tree SHA:** `a753453e323f4f45dc56d415e661faec78704e3b`
 
 ## Outcome
 
