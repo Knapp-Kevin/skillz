@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "issue": 738,
+  "current_skill": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+  "source_version": "1.2.0",
+  "old_reviewed_version": "1.1.0",
+  "current_entrypoint_blob_sha1": "112e125b44a3d117c570fc49c17cea6551714560",
+  "current_package_tree_sha1": "2a5cc6d1b2ab81960edcb13d32cc3d2cbe12a4c0",
+  "original_implementation_blob_sha1": "f778a602212e1c593179ffe8209bcaf0a9c28331",
+  "original_test_blob_sha1": "bfb0279e3294b49ba97b4c2dea0591b88506e33e",
+  "original_public_fixture_blob_sha1": "5252e07098118bf2904ce31239d98c1a2380e713",
+  "exact_source_match": {
+    "python_script_git_hash_from_local": "f778a602212e1c593179ffe8209bcaf0a9c28331",
+    "git_upload_script_hash": "f778a602212e1c593179ffe8209bcaf0a9c28331",
+    "python_test_git_hash_from_local": "bfb0279e3294b49ba97b4c2dea0591b88506e33e",
+    "git_upload_test_hash": "bfb0279e3294b49ba97b4c2dea0591b88506e33e"
+  },
+  "executed": {
+    "mode": "ACTUAL_STANDALONE_PYTHON_METHOD_TESTS",
+    "python_version": "3.13.5",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v",
+    "tests_run": 48,
+    "tests_passed": 48,
+    "failures": 0,
+    "errors": 0
+  },
+  "verified_public_source_fixture": {
+    "checked_via": "GitHub connector public REST endpoints prior to fixture authoring",
+    "pr_url": "https://github.com/Knapp-Kevin/skillz/pull/817",
+    "merged_at_utc": "2026-11-20T19:57:51Z",
+    "commit_sha": "777e41bdcb29f14e0026dcee834033ec8e546a7c",
+    "api_surfaces": [
+      "https://api.github.com/repos/Knapp-Kevin/skillz/pulls/817",
+      "https://api.github.com/repos/Knapp-Kevin/skillz/issues/817",
+      "https://github.com/Knapp-Kevin/skillz/pull/817"
+    ],
+    "source_origin": "GitHub PR #817 merge state/event, not multiple independent origins",
+    "executable_result": {
+      "eligible_source_citations": 3,
+      "recorded_primary_origins": 1,
+      "global_verdict": "NOT_DETERMINED_BY_LINEAGE_AUDIT",
+      "source_authenticity_verified": false
+    }
+  },
+  "coverage": [
+    "same-root collapse across multiple API/web views",
+    "primary versus derivative count and lineage completeness",
+    "two declared independent primary roots",
+    "same/different/unknown origin conflict",
+    "unread and inaccessible exclusion",
+    "publication date, period and population exclusion",
+    "duplicate/missing/cyclic evidence reference",
+    "strict JSON/oversize input reject",
+    "no filesystem side effect or subprocess"
+  ],
+  "right_boundaries": {
+    "historical_fact_check_rights": "NOT_ESTABLISHED",
+    "legacy_tree_sha1": "dc28e222ef448bed3d72193477fac2e7206f2ec9",
+    "original_comparator": "skills/fact-check/SKILL.md",
+    "historical_retirement_pins_preserved": true
+  },
+  "limitations": [
+    "All source identity, root origin, independence, scope and consultation flags are user/host-supplied assertions and not authenticated by the Python checker.",
+    "An incorrectly assigned origin_id can manufacture apparent independence, even when all deterministic tests pass.",
+    "Real GitHub source was verified separately by the host, not via script network access.",
+    "The execution does not substantively adjudicate causal, statistical or factual truth.",
+    "No independently isolated original-versus-new skill model-host A/B or real user outcome measurement was performed.",
+    "Overall 1.5x skill effectiveness remains NOT_PROVEN; historical parity remains NOT_PROVEN."
+  ],
+  "changes_to_external_state_from_method": [],
+  "independent_model_host_pair_executed": false,
+  "original_vs_replacement_host_parity": "NOT_PROVEN",
+  "measured_overall_1_5x": "NOT_PROVEN"
+}

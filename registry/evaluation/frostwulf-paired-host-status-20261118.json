@@ -1258,6 +1258,18 @@
         "replacement_full_tree_sha1": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_successor_source_method": {
+        "version": "1.2.0",
+        "skill_blob": "112e125b44a3d117c570fc49c17cea6551714560",
+        "package_tree": "2a5cc6d1b2ab81960edcb13d32cc3d2cbe12a4c0",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-claim-lineage-v120-executable.json",
+        "executable_test_result": "48/48_LOCAL_PYTHON_PASS",
+        "public_source_control": "PR817_THREE_GITHUB_VIEWS_ONE_MERGE_ORIGIN",
+        "source_authenticity_verified_by_checker": false,
+        "independent_skill_host_comparison": "NOT_RUN",
+        "measured_1_5x": "NOT_PROVEN",
+        "note": "Historical v1.1 retirement pins untouched; validates bounded lineage consistency only, not claim-truth outcomes."
       }
     },
     {

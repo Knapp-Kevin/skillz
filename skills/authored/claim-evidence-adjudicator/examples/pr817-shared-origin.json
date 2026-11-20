@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-20",
+  "sources": [
+    {
+      "id": "pr817_rest",
+      "source_kind": "PRIMARY",
+      "consultation": "DIRECT",
+      "access": "AUTHORIZED",
+      "source_ref": "public_pr817_api",
+      "publication_date": "2026-11-20",
+      "event_start": "2026-11-20",
+      "event_end": "2026-11-20",
+      "scope_id": "skillz_pr817",
+      "origin_id": "github_pr817_merge_event",
+      "derived_from": [],
+      "lineage_complete": true
+    },
+    {
+      "id": "pr817_web",
+      "source_kind": "PRIMARY",
+      "consultation": "DIRECT",
+      "access": "AUTHORIZED",
+      "source_ref": "public_pr817_web",
+      "publication_date": "2026-11-20",
+      "event_start": "2026-11-20",
+      "event_end": "2026-11-20",
+      "scope_id": "skillz_pr817",
+      "origin_id": "github_pr817_merge_event",
+      "derived_from": [],
+      "lineage_complete": true
+    },
+    {
+      "id": "pr817_issue_api",
+      "source_kind": "SECONDARY",
+      "consultation": "DIRECT",
+      "access": "AUTHORIZED",
+      "source_ref": "public_issue817_api",
+      "publication_date": "2026-11-20",
+      "event_start": "2026-11-20",
+      "event_end": "2026-11-20",
+      "scope_id": "skillz_pr817",
+      "origin_id": null,
+      "derived_from": ["pr817_rest"],
+      "lineage_complete": true
+    }
+  ],
+  "claims": [
+    {
+      "id": "pr817_merged",
+      "proposition": "Skillz pull request 817 was merged on 2026-11-20",
+      "scope_id": "skillz_pr817",
+      "period_start": "2026-11-20",
+      "period_end": "2026-11-20",
+      "load_bearing": true,
+      "evidence": [
+        {"source_id":"pr817_rest","stance":"SUPPORT","locator_ref":"merged_at"},
+        {"source_id":"pr817_web","stance":"SUPPORT","locator_ref":"pr_merge_marker"},
+        {"source_id":"pr817_issue_api","stance":"SUPPORT","locator_ref":"closed_pr_status"}
+      ]
+    }
+  ]
+}

@@ -341,7 +341,19 @@
       "current_active_reference": "skills/authored/claim-evidence-adjudicator/SKILL.md",
       "consumer_scan_status": "KNOWN_ACTIVE_ROUTES_RECONCILED_EXHAUSTIVE_SCAN_NOT_PROVEN",
       "retirement_owner_authorization": "owner_approved_source_bound_procedure_emulation_2026_11_18",
-      "retirement_behavioral_claim": "PYTHON_SYNTHETIC_PROCEDURE_NOT_SKILL_MODEL_HOST; QUALITY_1_5X_NOT_PROVEN"
+      "retirement_behavioral_claim": "PYTHON_SYNTHETIC_PROCEDURE_NOT_SKILL_MODEL_HOST; QUALITY_1_5X_NOT_PROVEN",
+      "current_active_source_method": {
+        "version": "1.2.0",
+        "entrypoint": "skills/authored/claim-evidence-adjudicator/SKILL.md",
+        "skill_blob_sha": "112e125b44a3d117c570fc49c17cea6551714560",
+        "package_tree_sha": "2a5cc6d1b2ab81960edcb13d32cc3d2cbe12a4c0",
+        "evidence": "docs/evals/receipts/2026-11-20-claim-lineage-v120-executable.json",
+        "test_result": "48_LOCAL_PYTHON_TESTS_PASS",
+        "scope": "OFFLINE_SOURCE_LINEAGE_CONSISTENCY_AND_PUBLIC_GITHUB_SHARED_ORIGIN_NEGATIVE_CONTROL",
+        "historical_retirement_pin_unchanged": true,
+        "independent_model_host_parity": "NOT_PROVEN",
+        "overall_gain_1_5x": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/finance-review/SKILL.md",

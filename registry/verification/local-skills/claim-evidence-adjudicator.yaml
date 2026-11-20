@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: claim-evidence-adjudicator
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/claim-evidence-adjudicator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/claim-evidence-adjudicator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 524507190260732cb28ac40ad0865672de5c2980
-complete_package_tree_sha: 4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4
-characterized_at: "2026-11-19"
-reviewed_at: "2026-11-19"
+content_blob_sha: 112e125b44a3d117c570fc49c17cea6551714560
+complete_package_tree_sha: 2a5cc6d1b2ab81960edcb13d32cc3d2cbe12a4c0
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-20"
 verification_status: verified
-verification_basis: maintainer-complete-package-static-review
+verification_basis: maintainer-complete-package-static-review-and-48-real-method-tests
 validation_status: not-run
-validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+validation_note: "48/48 real local Python method tests pass; real public GitHub PR #817 source metadata separately consulted. Does not authenticate source lineage, determine truth or prove independent host old/new A/B."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,8 +24,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Original instruction text and synthetic cases, complete three-file identity
-  confirmed. Legacy comparator rights and original authorship unproven.
-  docs/reviews/2026-11-19-frostwulf-first-four-static-review.md. No global novelty or external behavior claim.
+  Current six-file v1.2 package maintains historical 18/20 rubric only;
+  48/48 actual local Python evidence-lineage method tests passed. docs/reviews/2026-11-20-claim-lineage-v120-executable-review.md.
+  Source authenticity, original-versus-new host comparison, substantive claim accuracy
+  and 1.5x effectiveness NOT PROVEN.
 
-review_note_20261119: "Exact v1.1 package pin; primary-source and falsifiability source-level parity review in docs/reviews/2026-11-19-fact-check-controlled-retirement.md; independent host/1.5x not proven."
+review_note_20261119: "Historical prior v1.1 static review; current v1.2 method execution separately recorded docs/evals/receipts/2026-11-20-claim-lineage-v120-executable.json."

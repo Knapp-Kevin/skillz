@@ -33129,8 +33129,8 @@
       "id": "local-skills/claim-evidence-adjudicator",
       "source_id": "local-skills",
       "skill_name": "claim-evidence-adjudicator",
-      "content_blob_sha": "524507190260732cb28ac40ad0865672de5c2980",
-      "complete_package_tree_sha": "4f1576d8c8170e1b14f97e761a2dcfd4a8bcd0c4",
+      "content_blob_sha": "112e125b44a3d117c570fc49c17cea6551714560",
+      "complete_package_tree_sha": "2a5cc6d1b2ab81960edcb13d32cc3d2cbe12a4c0",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33146,7 +33146,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "2026-11-18 exact complete-package maintainer static review, no host behavioral qualification",
+      "link_basis": "Exact six-file original v1.2 standalone source, 48 real local Python method tests; independently retrieved public PR #817 shared-origin fixture. No authenticated independent host old/new A/B or overall 1.5x.",
       "restriction": "Reference-only, no implicit source/tool permissions",
       "unchanged_use_approved": false,
       "notes": "v1.1 original MIT source, exact package re-pinned with explicit primary-source and context-verdict semantics; static review only; five controlled synthetic research cases, no measured host parity or 1.5x quality gain."
