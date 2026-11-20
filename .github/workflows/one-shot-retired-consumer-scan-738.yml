@@ -32,6 +32,15 @@ jobs:
             throw Error('CI Guard v1.3 source identity mismatch');
           console.log('CI Guard source identity reconciled');
           JS
+      - name: Reconcile observed capability domain coverage
+        run: |
+          node - <<'JS'
+          const d = require('./registry/capability-directory.json');
+          const actual = d.domains.flatMap(x => x.subdomains).filter(x => x.matched_skill_ids.length).length;
+          if (actual !== 87 || actual !== d.navigation_population.subdomains_with_evidence_linked_examples)
+            throw Error('Derived subdomain count differs from actual links');
+          console.log('Catalog subdomains linked:', actual);
+          JS
       - name: Scan complete source checkout for stale active consumers
         run: |
           node scripts/qa/check-retired-skill-consumers.mjs
