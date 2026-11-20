@@ -49,6 +49,22 @@ class ExportSourceIdentityTests(unittest.TestCase):
                 {}, {"fingerprint_algorithm": "sha256",
                      "content_blob_sha": "a" * 64}), (None, None))
 
+    def test_generic_provenance_blob_alias_is_cross_checked(self):
+        p = {"content_blob_sha": BLOB}
+        v = {"fingerprint_algorithm": "git-blob-sha1", "content_blob_sha": BLOB}
+        self.assertEqual(mod._source_git_identity(p, v), (BLOB, None))
+        p["content_blob_sha"] = TREE
+        with self.assertRaisesRegex(ValueError, "contradictory SKILL.md blob"):
+            mod._source_git_identity(p, v)
+
+    def test_generic_provenance_tree_alias_is_cross_checked(self):
+        p = {"content_blob_sha": TREE}
+        v = {"fingerprint_algorithm": "git-tree-sha1", "content_blob_sha": TREE}
+        self.assertEqual(mod._source_git_identity(p, v), (None, TREE))
+        p["content_blob_sha"] = BLOB
+        with self.assertRaisesRegex(ValueError, "contradictory package tree"):
+            mod._source_git_identity(p, v)
+
     def test_explicit_blob_alias_conflict_is_refused(self):
         with self.assertRaisesRegex(ValueError, "contradictory SKILL.md blob"):
             mod._source_git_identity(
