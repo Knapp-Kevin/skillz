@@ -18,6 +18,8 @@ jobs:
           submodules: false
       - name: Run real offline consumer tests
         run: node --test scripts/qa/test-retired-skill-consumers.mjs scripts/qa/test-retired-skill-routes.mjs
+      - name: Verify integrated authored, capability and retired consumer guards
+        run: node scripts/qa/check-authored-capability-links.mjs
       - name: Scan complete source checkout for stale active consumers
         run: |
           node scripts/qa/check-retired-skill-consumers.mjs
