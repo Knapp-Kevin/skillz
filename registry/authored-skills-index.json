@@ -1008,24 +1008,24 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
-      "skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
-      "package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
-      "package_file_count": 6,
+      "skill_blob_sha": "f314ca9afe746af8f154447987ee59d29e7198fb",
+      "package_tree_sha": "77450795ccb8a1cda65414406232f9a579596947",
+      "package_file_count": 10,
       "review_status": "verified-static",
-      "review_score": "18/20",
+      "review_score": "19/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
-      "rights_note": "Original GitHub Actions CI control-evaluation procedure, two modular references and synthetic cases. No external skill text imported.",
-      "package_version": "1.2.0",
+      "rights_note": "Original CI classification and budget-aware verification procedures, synthetic cases and optional read-only stdlib classifier. No external skill text imported.",
+      "package_version": "1.3.0",
       "capability_paths": [
         "cloud-devops/ci-cd",
         "software-engineering/maintenance"
       ],
-      "capability_mapping_ref": "docs/reviews/2026-11-19-ci-guard-offline-package-closure.md",
-      "review_note": "v1.2 standalone/offline package-closure remediation, six-file exact-package static review 18/20: docs/reviews/2026-11-19-ci-guard-offline-package-closure.md. Prior v1.1 field trial historic; no observed v1.2 cross-model parity or uplift.",
-      "previous_reviewed_skill_blob_sha": "29de6cb583efaca3edac1ea39fa557909b17807b",
-      "previous_reviewed_package_tree_sha": "6c9075636b92c6bddd601bcfdb8f975131a93ec1"
+      "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
+      "review_note": "v1.3 ten-file complete-package static review 19/20, 16/16 actual classifier CPU regression tests and offline closure. No independent consuming-model A/B, generated workflow deployment or measured CI budget savings. Prior v1.2 review remains historical.",
+      "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
+      "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258"
     }
   ]
 }
