@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: decision-tradeoff-workbench
-skill_version: "1.1.0"
+skill_version: "1.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/decision-tradeoff-workbench/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/decision-tradeoff-workbench/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 923d03cc92ab15f953528bd9ce5232bafda8a4e8
-complete_package_tree_sha: 3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650
-characterized_at: "2026-11-18"
-reviewed_at: "2026-11-18"
+content_blob_sha: 24c65454a57689bfbea24ef024591e202118b675
+complete_package_tree_sha: a8cb0eac3a487bdc77064935b2f6c4f10fff215c
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-20"
 verification_status: verified
-verification_basis: maintainer-complete-package-static-review
+verification_basis: maintainer-complete-package-static-review-and-local-executable-method-tests
 validation_status: not-run
-validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+validation_note: "25/25 real local Python arithmetic/security method tests passed. No independent historical-vs-current agent-host comparison or external source verification; host validation not-run."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,6 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Decision Tradeoff Workbench v1.1 complete-package manual static review 18/20.
-  docs/reviews/2026-11-18-decision-tradeoff-functional-parity.md.
-  No host execution, rendered page measurement or paired comparator validation: behavior NOT RUN, 1.5x NOT PROVEN.
+  Decision Tradeoff Workbench v1.2 six-file source static review 18/20; 25/25
+  local Python method tests. docs/reviews/2026-11-20-decision-workbench-v120-executable-method.md.
+  No independent agent-host skill execution, source validation, physical brief rendering
+  or measured 1.5x overall effectiveness. Previous v1.1 static identity retained in index.

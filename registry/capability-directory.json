@@ -33289,8 +33289,8 @@
       "id": "local-skills/decision-tradeoff-workbench",
       "source_id": "local-skills",
       "skill_name": "decision-tradeoff-workbench",
-      "content_blob_sha": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
-      "complete_package_tree_sha": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+      "content_blob_sha": "24c65454a57689bfbea24ef024591e202118b675",
+      "complete_package_tree_sha": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -33307,7 +33307,7 @@
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Pinned original three-file package, reviewed for safety and specialized outcome; no observed host execution",
+      "link_basis": "Current six-file v1.2 original standalone package: maintainer static review 18/20, 25 local Python method tests; no independent comparative host skill A/B",
       "restriction": "Read-only reference material; no implied data access, sending, scheduling or source mutation",
       "unchanged_use_approved": false
     },

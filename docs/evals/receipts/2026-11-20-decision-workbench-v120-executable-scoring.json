@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-20",
+  "issue": 738,
+  "evidence_class": "EXECUTED_ORIGINAL_PYTHON_METHOD_REGRESSIONS_NOT_AGENT_HOST_COMPARISON",
+  "package": "skills/authored/decision-tradeoff-workbench",
+  "source_version": "1.2.0",
+  "source_skill_blob_sha1": "24c65454a57689bfbea24ef024591e202118b675",
+  "source_package_tree_sha1": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
+  "historical_retirement_phase_version": "1.1.0",
+  "historical_comparators": [
+    "skills/compare/SKILL.md",
+    "skills/brief-writer/SKILL.md"
+  ],
+  "environment": "Python 3.13.5 in isolated work container",
+  "execution_command": "python3 -m unittest discover -s tests -v",
+  "source_blob_equivalence": {
+    "scripts/score.py": {
+      "locally_executed_git_blob_sha1": "5a097723cf7e4335ac93364a761a08c5fb462cc6",
+      "uploaded_git_blob_sha1": "5a097723cf7e4335ac93364a761a08c5fb462cc6"
+    },
+    "tests/test_score.py": {
+      "locally_executed_git_blob_sha1": "020463fd7710dce36baf41c0c8de4c985f4d62ad",
+      "uploaded_git_blob_sha1": "020463fd7710dce36baf41c0c8de4c985f4d62ad"
+    }
+  },
+  "tests": {
+    "run": 25,
+    "passed": 25,
+    "failed": 0,
+    "includes": [
+      "literal zero distinct from missing",
+      "hard gate noncompensatory",
+      "owner-unapproved weights block rank",
+      "partial coverage prevents winner",
+      "ties",
+      "sensitivity weight flip",
+      "source reference required for scored cells",
+      "nonfinite, boolean, range, precision and negative weights rejected",
+      "duplicate and missing identities rejected",
+      "malformed/duplicate JSON keys rejected",
+      "one MiB input size limit",
+      "source text is not executed",
+      "CLI outputs JSON and creates no files"
+    ]
+  },
+  "controlled_nominal": {
+    "source": "Previously recorded synthetic compare nominal scenario P4-COMPARE-1; not a live vendor benchmark",
+    "weights": {
+      "security": 5,
+      "cost": 3,
+      "integration": 2
+    },
+    "rating_scale_max": 3,
+    "A": {
+      "security": 3,
+      "cost": 1,
+      "integration": 2,
+      "weighted_total": 22,
+      "hard_gate": "PASS"
+    },
+    "B": {
+      "security": 2,
+      "cost": 3,
+      "integration": 3,
+      "weighted_total": 25,
+      "hard_gate": "FAIL"
+    },
+    "hard_gate_minimum": {
+      "security": 3
+    },
+    "computed_leader": "A",
+    "claim": "Only synthetic score arithmetic, not a validated choice"
+  },
+  "rights": "Historical attribution and underlying rights NOT_ESTABLISHED; new Python code and tests independently authored",
+  "limitations": [
+    "25 tests run directly against new standalone method only; no isolated old/new agent host runs",
+    "Same maintainer designed fixture and tests; not blind adjudication",
+    "No independent ratings, vendor claims, actual procurement or business outcomes verified",
+    "No rendered one-page brief verification",
+    "No statistically grounded overall improvement ratio; >=1.5x NOT_PROVEN"
+  ],
+  "recommendation": "Keep historical comparisons pinned; test external independent host execution and user decision outcomes separately."
+}

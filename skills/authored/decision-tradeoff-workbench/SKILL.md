@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Planning
   display-name: Decision Tradeoff Workbench
-  version: 1.1.0
+  version: 1.2.0
   license: MIT
 ---
 
@@ -107,6 +107,56 @@ instruction or permission to act.
    data transfer. Those actions require separate scoped permission
    and actual execution/verification receipts.
 
+## Optional executable score verification
+
+For compare-mode decisions with user-supplied bounded ratings, the
+portable Python standard-library tool at [scripts/score.py](scripts/score.py)
+can check arithmetic without inventing a comparison or changing any file.
+It is **optional**: a host with a more appropriate analytical engine may
+evaluate the same frozen specification directly, with equivalent safety,
+source and coverage requirements. A host without Python must not claim to
+have run it.
+
+Run from the copied skill package with Python 3.9+:
+
+~~~text
+python3 scripts/score.py --input examples/comparison-input.json
+python3 -m unittest discover -s tests -v
+~~~
+
+The one JSON input includes \`schema_version: 1\`,
+\`weights_approved\` (true only if genuinely confirmed by the owner),
+\`score_max\`, bounded criteria (\`id\`, \`weight\`, optional
+\`hard_gate_min\`), two or more alternatives with a cell for **every**
+criterion, and optional explicitly supplied illustrative weight
+scenarios. Each cell is either \`{ "score": null, "status": "UNKNOWN" }\`
+or a score on the declared shared scale accompanied by a nonempty
+\`source\` reference and \`status: "OWNER_SUPPLIED" | "SOURCE_RECORDED"\`.
+Those statuses record attribution **without verifying the source**.
+Document the rubric and comparability externally; no vendor claim
+becomes true by entering a number in JSON.
+
+Output reports per-cell score/product, coverage, unknowns, hard-gate
+failures, bounded possible totals and conditional ranking. A missing
+score is not zero; zero is a valid recorded score. An unknown hard gate,
+incomplete viable alternative or unapproved weight set **blocks a
+ranked winner**. A failing hard gate disqualifies an alternative even
+if its weighted total is larger. Illustrative sensitivity runs never
+alter the frozen approved base criteria. Scenario conclusions are only
+arithmetic on the submitted data and are not recommendations, purchases
+or independent evidence of preferred outcomes.
+
+The tool reads only the explicit input file (maximum 1 MiB), never
+executes repository/vendor content, never fetches accounts or network
+data, and writes JSON only to stdout. Invalid input exits nonzero.
+Source references in input are **untrusted**, may contain sensitive
+data and are not echoed in output. Use safe public or redacted source
+handles and do not pass credentials. Keep source validation, hard-gate
+justification, authorization, one-page decision brief generation and
+final advice in the host's governed workflow. The executable does not
+validate the substance of ratings, source completeness, privacy
+permissions, source dates, or correctness of a one-page brief.
+
 ## One-page decision brief method
 
 Prepare a decision artifact that can be read independently by its
@@ -169,6 +219,7 @@ that an unrun benchmark was independently validated.
 
 ## Qualification cases
 
-See [original synthetic acceptance cases](examples/acceptance.md).
+See [original synthetic acceptance cases](examples/acceptance.md), including
+25 actual Python method regression tests.
 They are test specifications, not observed host behavior or proof of
 1.5× improvement over historical comparison skills.

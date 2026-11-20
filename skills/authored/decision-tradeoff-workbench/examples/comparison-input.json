@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "weights_approved": true,
+  "score_max": 3,
+  "criteria": [
+    {
+      "id": "security",
+      "weight": 5,
+      "hard_gate_min": 3
+    },
+    {
+      "id": "cost",
+      "weight": 3
+    },
+    {
+      "id": "integration",
+      "weight": 2
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "A",
+      "cells": {
+        "security": {
+          "score": 3,
+          "status": "OWNER_SUPPLIED",
+          "source": "synthetic-owner-exercise"
+        },
+        "cost": {
+          "score": 1,
+          "status": "OWNER_SUPPLIED",
+          "source": "synthetic-owner-exercise"
+        },
+        "integration": {
+          "score": 2,
+          "status": "OWNER_SUPPLIED",
+          "source": "synthetic-owner-exercise"
+        }
+      }
+    },
+    {
+      "id": "B",
+      "cells": {
+        "security": {
+          "score": 2,
+          "status": "OWNER_SUPPLIED",
+          "source": "synthetic-owner-exercise"
+        },
+        "cost": {
+          "score": 3,
+          "status": "OWNER_SUPPLIED",
+          "source": "synthetic-owner-exercise"
+        },
+        "integration": {
+          "score": 3,
+          "status": "OWNER_SUPPLIED",
+          "source": "synthetic-owner-exercise"
+        }
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "illustrative-security-priority",
+      "weights": {
+        "security": 9,
+        "cost": 1,
+        "integration": 1
+      }
+    }
+  ]
+}

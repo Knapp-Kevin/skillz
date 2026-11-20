@@ -368,6 +368,18 @@
         "replacement_full_tree_sha1": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_successor_source_method": {
+        "version": "1.2.0",
+        "skill_blob": "24c65454a57689bfbea24ef024591e202118b675",
+        "package_tree": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-decision-workbench-v120-executable-scoring.json",
+        "executable_test_result": "25/25_LOCAL_PYTHON_PASS",
+        "comparison": "EXACT_SOURCE_INPUTS_REPRODUCE_A_22_B_25_B_FAILS_HARD_SECURITY_GATE",
+        "critical_skill_host_parity": "NOT_PROVEN",
+        "improvement_1_5x_overall": "NOT_PROVEN",
+        "source_rights": "NOT_ESTABLISHED_HISTORICAL",
+        "note": "Earlier v1.1 retirement fields are historical pins; this optional read-only executable is not agent-host skill A/B, independent evidence verification or one-page memo validation."
       }
     },
     {
@@ -636,6 +648,18 @@
         "replacement_full_tree_sha1": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
         "improvement_ratio": "NOT_PROVEN",
         "full_consumer_audit": "NOT_PROVEN"
+      },
+      "current_successor_source_method": {
+        "version": "1.2.0",
+        "skill_blob": "24c65454a57689bfbea24ef024591e202118b675",
+        "package_tree": "a8cb0eac3a487bdc77064935b2f6c4f10fff215c",
+        "execution_receipt": "docs/evals/receipts/2026-11-20-decision-workbench-v120-executable-scoring.json",
+        "executable_test_result": "25/25_LOCAL_PYTHON_PASS",
+        "comparison": "EXACT_SOURCE_INPUTS_REPRODUCE_A_22_B_25_B_FAILS_HARD_SECURITY_GATE",
+        "critical_skill_host_parity": "NOT_PROVEN",
+        "improvement_1_5x_overall": "NOT_PROVEN",
+        "source_rights": "NOT_ESTABLISHED_HISTORICAL",
+        "note": "Earlier v1.1 retirement fields are historical pins; this optional read-only executable is not agent-host skill A/B, independent evidence verification or one-page memo validation."
       }
     },
     {

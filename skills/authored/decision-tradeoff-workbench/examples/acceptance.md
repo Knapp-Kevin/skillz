@@ -47,7 +47,22 @@
 ## Evidence status
 
 The scenarios above are synthetically authored expected outcomes.
-No comparison agent-host run, rendered-page measurement, vendor
-source retrieval or observed old-versus-new quality measurement has
-been performed. Functional parity and >=1.5× effectiveness remain
-NOT_PROVEN until paired evidence exists.
+An original read-only Python arithmetic method was exercised in 25 local
+unittest cases, including a controlled reproduction of the legacy compare
+nominal scores (A=22, B=25, B disqualified by security gate). Tests establish
+method behavior, not independent host comparison. No comparison agent-host
+run, rendered-page measurement, vendor source retrieval or observed
+old-versus-new overall quality measurement has been performed. Functional
+parity and >=1.5× effectiveness remain NOT_PROVEN.
+
+
+## Executable method tests (v1.2.0)
+
+Run \`python3 -m unittest discover -s tests -v\` against the standalone
+package. Actual unit cases exercise arithmetic, owner-unapproved
+weights, true zero versus missing values, unknown/failed hard gates,
+incomplete comparability, ties, explicit weight sensitivity and a
+winner reversal, duplicate IDs, invalid numbers and schema, missing
+source handles, nonfinite values, missing cells, untrusted source text,
+CLI stdout-only operation, duplicate JSON and oversized input.
+This is executable method evidence, not independent agent-host A/B.
