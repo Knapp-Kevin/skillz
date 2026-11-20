@@ -45,7 +45,7 @@ New third-party admission follows issue-first intake. Formatting repair is not c
 
 A separately reviewed exporter change repairs a historical mixed Git-tree/Git-blob fingerprint omission. The previous published handoff stays pinned and immutable. Future export proposals must reconcile every explicit `SKILL.md` blob SHA-1 and complete package Git tree SHA-1 across provenance and verification companions rather than preferring one source when claims conflict. Known `git-tree-and-blob-sha1` records have both identities; the older generator did not always export the dedicated blob because it overlooked `skill_blob_sha`.
 
-The maintenance-only offline test `python3 -m unittest discover -s scripts/qa -p 'test-skill-mason-export-identity.py' -v` covers the real Anthropic frontend-design review, known fingerprint algorithms, forged/conflicting aliases and absent trees. It requires the same Python/PyYAML dependencies as the exporter. Tests are not a rights, host or publication grant. The patch must not replace the historical `registry/exports/skill-mason-v1` bytes or bypass the acceptance and version-delta requirements of a future separately pinned handoff.
+The maintenance-only offline test `python3 scripts/qa/test-skill-mason-export-identity.py -v` covers the real Anthropic frontend-design review, known fingerprint algorithms, forged/conflicting aliases and absent trees. It requires the same Python/PyYAML dependencies as the exporter. Tests are not a rights, host or publication grant. The patch must not replace the historical `registry/exports/skill-mason-v1` bytes or bypass the acceptance and version-delta requirements of a future separately pinned handoff.
 
 ## November 17 progress
 
