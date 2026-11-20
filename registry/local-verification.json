@@ -44,39 +44,6 @@
       "notes": "2026-11-06 issue #714: current v1.1.0 10-file MIT-authored package tree 587d29e9a1275efcb8f20437bbc5479d36d1f5b3; SKILL blob 5a304a552678ad88f4fa239abf28fe52b20bbab6. Static structured 19/20; deterministic 4/4 clause-card completeness and 8/8 original-excerpt matches, plus synthetic currency arithmetic. Human-facing README added for shared folder. External host behavior, baseline comparison and scanner NOT RUN; no production/PHI clearance. See registry/authored-skills-index.json and docs/reviews/2026-11-06-issue714-commenter-acceptance-audit.md."
     },
     {
-      "skill_name": "session-continuity",
-      "local_path": "skills/session-continuity/SKILL.md",
-      "fingerprint_algorithm": "git-blob-sha1",
-      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
-      "verification_status": "verified",
-      "validation_status": "not-run",
-      "rubric_score": "19/20",
-      "tags": {
-        "use_case": [
-          "memory",
-          "context-management",
-          "handoff"
-        ],
-        "lifecycle": [
-          "operations",
-          "maintenance"
-        ],
-        "characteristic": [
-          "evidence-first",
-          "traceable",
-          "safety-bounded",
-          "context-efficient"
-        ],
-        "authority": [
-          "mutating"
-        ],
-        "portability": [
-          "high"
-        ]
-      },
-      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run."
-    },
-    {
       "skill_name": "narrative-scene-gap-audit",
       "local_path": "skills/authored/narrative-scene-gap-audit/SKILL.md",
       "fingerprint_algorithm": "git-blob-sha1",
@@ -2518,6 +2485,148 @@
       "historical_rights": "NOT_ESTABLISHED",
       "behavioral_parity": "NOT_RUN",
       "controlled_report_receipt": "docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json"
+    },
+    {
+      "skill_name": "session-continuity",
+      "local_path": "skills/session-continuity/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "93b8f0be84bdb39153386c27b46294233c39bb8b",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "rubric_score": "19/20",
+      "tags": {
+        "use_case": [
+          "memory",
+          "context-management",
+          "handoff"
+        ],
+        "lifecycle": [
+          "operations",
+          "maintenance"
+        ],
+        "characteristic": [
+          "evidence-first",
+          "traceable",
+          "safety-bounded",
+          "context-efficient"
+        ],
+        "authority": [
+          "mutating"
+        ],
+        "portability": [
+          "high"
+        ]
+      },
+      "notes": "Substrate-agnostic continuity procedure with scoped recall, correction precedence, explicit gap reporting, current-authority separation, and authorization-gated minimal durable capture; behavioral validation remains not-run.",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/context-continuation-contract",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bc0f660d87b2d6a8462d6fb28e077e81af222428/skills/session-continuity",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "controlled_report_receipt": "docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json"
+    },
+    {
+      "skill_name": "deepseek-pulse",
+      "local_path": "skills/deepseek-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "63be9ffb787e29e7c9d53a4111c817f660d0c943",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "deepseek-models",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/deepseek-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/deepseek-pulse.yaml"
+    },
+    {
+      "skill_name": "glm-pulse",
+      "local_path": "skills/glm-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "79e2e3b384ee707871122fa70d5fb3651c0511e6",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "glm-zai",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/glm-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/glm-pulse.yaml"
+    },
+    {
+      "skill_name": "hf-pulse",
+      "local_path": "skills/hf-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "149e577a9f72895b09aea43d607203d731db1bce",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "huggingface-ecosystem",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/97f85d0d6d209c2f872b3627576e8d26557ecaa5/skills/hf-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/hf-pulse.yaml"
+    },
+    {
+      "skill_name": "mistral-pulse",
+      "local_path": "skills/mistral-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "5695a01a8d7927f87be7da76ec353d12ef56ddb9",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "mistral-models",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/cf5a0d165cae426d788f8617b1d812ccda23c5f0/skills/mistral-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/mistral-pulse.yaml"
+    },
+    {
+      "skill_name": "qwen-pulse",
+      "local_path": "skills/qwen-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "03d3015bbfe571ddaf4fa9448de66f74bb62ce69",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "18/20",
+      "retired_at": "2026-11-20",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "alibaba-qwen",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/7d35daefa51aef24b9980457a3a1c6b846b79ecf/skills/qwen-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/qwen-pulse.yaml"
+    },
+    {
+      "skill_name": "xai-pulse",
+      "local_path": "skills/xai-pulse/SKILL.md",
+      "fingerprint_algorithm": "git-blob-sha1",
+      "content_blob_sha": "58dcef43210c4ddb09f4a7ad7273d99516e42813",
+      "verification_status": "retired",
+      "validation_status": "not-run",
+      "rubric_score": "17/20",
+      "retired_at": "2026-11-19",
+      "current_selection": "disabled",
+      "replacement_id": "local-skills/technology-change-intelligence",
+      "replacement_profile": "xai-grok",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/44b097208df98d3839bf27eedef627a5d5a635cc/skills/xai-pulse",
+      "historical_rights": "NOT_ESTABLISHED",
+      "behavioral_parity": "NOT_RUN",
+      "reconstructed_from_verification_companion": "registry/verification/local-skills/xai-pulse.yaml"
     }
   ]
 }

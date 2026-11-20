@@ -9,11 +9,11 @@
     "legacy_candidates": 44,
     "independent_drafts": 21,
     "independent_drafts_reviewed": 21,
-    "legacy_removed": 43,
+    "legacy_removed": 44,
     "legacy_functions_addressed": 44,
     "consolidated_legacy_functions": 17,
     "replacement_packages": 21,
-    "legacy_remaining": 1
+    "legacy_remaining": 0
   },
   "rows": [
     {
@@ -789,9 +789,19 @@
       "underlying_authorship": "not_proven",
       "legacy_rights": "not_established",
       "replacement_entrypoint": "skills/authored/context-continuation-contract/SKILL.md",
-      "replacement_status": "original_package_static_reviewed_behavior_not_run",
-      "legacy_disposition": "retain_pending_replacement_acceptance",
-      "replacement_mode": "bounded_multi_mode"
+      "replacement_status": "context_continuation_contract_v1_2_0_controlled_qualified",
+      "legacy_disposition": "retired_active_tree_owner_accepted_controlled_emulation",
+      "replacement_mode": "bounded_multi_mode",
+      "retired_at": "2026-11-20",
+      "historical_source_url": "https://github.com/Knapp-Kevin/skillz/tree/bc0f660d87b2d6a8462d6fb28e077e81af222428/skills/session-continuity",
+      "original_exact_package_tree": "35aa83bd4823be99babe9015b629071cb3ed5cb5",
+      "replacement_exact_package_tree": "d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a",
+      "retirement_owner_authorization": "owner accepted controlled emulation/removal 2026-11-18 and continued 2026-11-20",
+      "retirement_behavioral_claim": "REAL_CURRENT_SOURCE_RECONCILIATION_AND_FIVE_CONTROLLED_OUTPUTS; NO_HOST_MEMORY_WRITE; HOST_AB_NOT_RUN; 1_5X_NOT_PROVEN",
+      "consumer_ref_integrity": "KNOWN_INDEX_AND_AGENT_CATEGORY_REHOMED; EXHAUSTIVE_SCAN_NOT_PROVEN",
+      "source_bound_qualification_receipts": [
+        "docs/evals/receipts/2026-11-20-session-continuity-v120-five-case-retirement.json"
+      ]
     },
     {
       "legacy_entrypoint": "skills/smallbiz-ops/SKILL.md",
