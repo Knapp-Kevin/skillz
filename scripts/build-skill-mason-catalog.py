@@ -94,8 +94,10 @@ def _source_git_identity(provenance, verification):
     ]
     if algorithm in ("git-blob-sha1", "git-tree-and-blob-sha1"):
         blob.append(("verification.content_blob_sha", recorded))
+        blob.append(("provenance.content_blob_sha", provenance.get("content_blob_sha")))
     elif algorithm == "git-tree-sha1":
         tree.append(("verification.content_blob_sha", recorded))
+        tree.append(("provenance.content_blob_sha", provenance.get("content_blob_sha")))
     # Unknown algorithms are preserved as recorded evidence but never
     # coerced into a Git SHA-1 or asserted as package identity.
     entry_blob = collect("SKILL.md blob", blob)
