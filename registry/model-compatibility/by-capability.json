@@ -1,0 +1,36 @@
+{
+  "schema_version": "skillz/model-compatibility-capability-facets/1",
+  "canonical_capability_source": "registry/capability-directory.json",
+  "profiles_source": "registry/model-compatibility/profiles.json",
+  "purpose": "Secondary lookup only; never changes identity, skill count, authority, verification or recommendation",
+  "facets": {
+    "cloud-devops/ci-cd": [
+      {
+        "skill_identity": "local-skills/ci-guard",
+        "profile_revision": "2026-11-20.1",
+        "observed_effectiveness": "UNKNOWN"
+      }
+    ],
+    "research/fact-checking": [
+      {
+        "skill_identity": "local-skills/claim-evidence-adjudicator",
+        "profile_revision": "2026-11-20.1",
+        "observed_effectiveness": "UNKNOWN"
+      }
+    ],
+    "research/source-discovery": [
+      {
+        "skill_identity": "local-skills/technology-change-intelligence",
+        "profile_revision": "2026-11-20.1",
+        "observed_effectiveness": "UNKNOWN"
+      }
+    ],
+    "research/synthesis": [
+      {
+        "skill_identity": "local-skills/technology-change-intelligence",
+        "profile_revision": "2026-11-20.1",
+        "observed_effectiveness": "UNKNOWN"
+      }
+    ]
+  }
+}
