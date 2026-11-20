@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operator": "Knapp-Kevin",
+  "as_of_utc": "2026-11-20T19:20:45Z",
+  "quiet_days": 30,
+  "authorized_repositories": [
+    "Knapp-Kevin/skillz"
+  ],
+  "repositories": [
+    {
+      "name": "Knapp-Kevin/skillz",
+      "source_revision": "99b3fe70ce889d8c07903d0eab3baad1d60c52e4",
+      "last_push_utc": null,
+      "prs_complete": false,
+      "prs": [
+        {
+          "number": 816,
+          "state": "OPEN",
+          "head_sha": "9b00d6f9ff76bbea3057cbe852a469e30ff97172",
+          "draft": false,
+          "author": "Knapp-Kevin",
+          "review_requests": [],
+          "checks_complete": false,
+          "required_checks_verified": false,
+          "required_checks": [],
+          "checks": [
+            {
+              "name": "Socket Security: Pull Request Alerts",
+              "head_sha": "9b00d6f9ff76bbea3057cbe852a469e30ff97172",
+              "conclusion": "success"
+            },
+            {
+              "name": "Socket Security: Project Report",
+              "head_sha": "9b00d6f9ff76bbea3057cbe852a469e30ff97172",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

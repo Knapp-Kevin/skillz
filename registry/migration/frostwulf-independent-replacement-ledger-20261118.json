@@ -791,7 +791,19 @@
       "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_NOT_PROVEN",
       "source_bound_qualification_receipts": [
         "docs/evals/receipts/2026-11-20-repo-doctor-v130-five-controlled-diagnostics.json"
-      ]
+      ],
+      "current_active_source_method": {
+        "version": "1.4.0",
+        "entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
+        "skill_blob_sha": "5e940e687efdfd835528911523c831bcd9ebb1de",
+        "package_tree_sha": "f423b0c8765a2da62f949b0b571f9c40f7eaf569",
+        "evidence": "docs/evals/receipts/2026-11-20-repo-delivery-v140-verified-triage.json",
+        "test_result": "39_OF_39_LOCAL_PYTHON_METHOD_TESTS_PASSED",
+        "scope": "OFFLINE_PORTFOLIO_METADATA_TRIAGE_PUBLIC_PR816_SOURCE_NEGATIVE_CONTROL",
+        "historical_retirement_pin_unchanged": true,
+        "independent_agent_host_parity": "NOT_PROVEN",
+        "overall_effectiveness_gain_1_5x": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/repo-pulse/SKILL.md",
@@ -811,7 +823,19 @@
       "consumer_ref_integrity": "KNOWN_ACTIVE_ROUTES_REHOMED; EXHAUSTIVE_NOT_PROVEN",
       "source_bound_qualification_receipts": [
         "docs/evals/receipts/2026-11-20-repo-pulse-v130-five-controlled-diagnostics.json"
-      ]
+      ],
+      "current_active_source_method": {
+        "version": "1.4.0",
+        "entrypoint": "skills/authored/repository-delivery-assessor/SKILL.md",
+        "skill_blob_sha": "5e940e687efdfd835528911523c831bcd9ebb1de",
+        "package_tree_sha": "f423b0c8765a2da62f949b0b571f9c40f7eaf569",
+        "evidence": "docs/evals/receipts/2026-11-20-repo-delivery-v140-verified-triage.json",
+        "test_result": "39_OF_39_LOCAL_PYTHON_METHOD_TESTS_PASSED",
+        "scope": "OFFLINE_PORTFOLIO_METADATA_TRIAGE_PUBLIC_PR816_SOURCE_NEGATIVE_CONTROL",
+        "historical_retirement_pin_unchanged": true,
+        "independent_agent_host_parity": "NOT_PROVEN",
+        "overall_effectiveness_gain_1_5x": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/session-continuity/SKILL.md",
