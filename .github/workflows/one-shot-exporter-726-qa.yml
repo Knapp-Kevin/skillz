@@ -54,7 +54,8 @@ jobs:
           records = [json.loads(line) for line in outputs["governed.ndjson"].splitlines()]
           identities = {row["record_id"]: row for row in records}
           assert len(identities) == len(records)
-          assert all(x["review"]["semantic_status"] != "retired" for x in records)
+          assert all(x["composition"]["eligibility"] == "not-assessed" for x in records)
+          assert all(x["composition"]["export_is_not_admission_or_permission"] for x in records)
           frontend = identities["anthropic-skills/frontend-design"]["identity"]
           assert frontend["entrypoint_git_blob_sha1"] == "a5333457c414d20d625f307df945842c0952ecc3"
           assert frontend["package_git_tree_sha1"] == "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6"
