@@ -127,6 +127,9 @@ def inspect(root: Path, max_rows: int = 100) -> dict:
         kept = []
         for d in sorted(dirs):
             p = Path(folder) / d
+            if d == ".git":
+                # Repository object database is metadata, not source coverage.
+                continue
             if d in SKIP_DIRS or p.is_symlink():
                 skipped.append({"path": p.relative_to(root).as_posix(), "reason": "excluded-directory-or-symlink"})
             else:
