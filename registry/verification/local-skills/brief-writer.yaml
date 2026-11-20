@@ -6,7 +6,8 @@ fingerprint_algorithm: git-blob-sha1
 content_blob_sha: bdc5411eec2eb268955c677f0b0c7c6bdba171e3
 characterized_at: 2026-08-30
 reviewed_at: 2026-11-04
-verification_status: verified
+verification_status: retired
+prior_verification_status: verified
 verification_basis: "individual-structured-static-review"
 validation_status: not-run
 validation_note: Exact-blob static source refresh only. Independent adversarial behavior not-run; external exact-tree SkillSpector 5/5 pass evidence recorded separately on draft #693 is not unchanged-use approval.
@@ -19,3 +20,11 @@ tags:
   authority: [generate-only]
   portability: [high]
 notes: "Retains prior 19/20 static semantic rationale; repaired source scopes private reads, forbids secret fragments and rejects untrusted retrieved instructions. No host behavioral acceptance performed."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/brief-writer
+replacement_id: local-skills/decision-tradeoff-workbench
+replacement_mode: decision-brief
+retirement_receipt: docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

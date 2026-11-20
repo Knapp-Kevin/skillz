@@ -5,17 +5,26 @@ source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/compare/SKILL.md
 source_class: first-party
-license: MIT
+license: unknown
+historical_declared_license: MIT (not independently substantiated)
 relationship: first-party
 source_snapshot_revision: 7970edf438afb67cee91d87fe79174623800d0cb
 curated_at: 2026-08-30
 last_checked_at: 2026-11-04
-availability: in-repo
+availability: retired-historical
 local_path: skills/compare/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: verified-structured
 dependency_status: self-contained
 dependencies: "None beyond the host agent conversation runtime"
-import_eligibility: eligible-standalone
+import_eligibility: retired-not-selectable
 rationale: "2026-11-04 authority repair source identity tied to PR #686 commit 7970edf438af. Previous 19/20 static grade retained, external scanner evidence separately recorded at #693, executed adversarial validation not-run; unchanged adoption not approved."
+
+retired_at: "2026-11-20"
+historical_source_url: https://github.com/Knapp-Kevin/skillz/tree/27a1b1ac732b1b5752cc50527e3ec211d7ca311c/skills/compare
+replacement_id: local-skills/decision-tradeoff-workbench
+replacement_mode: compare
+retirement_receipt: docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json
+rights: NOT_ESTABLISHED
+host_behavior: NOT_RUN

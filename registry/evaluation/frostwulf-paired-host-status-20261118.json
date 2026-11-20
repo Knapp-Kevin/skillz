@@ -14,13 +14,13 @@
     "host_executions_observed": 0,
     "parity_proven": 0,
     "improvement_1_5x_proven": 0,
-    "legacy_retirements_approved": 39,
+    "legacy_retirements_approved": 41,
     "historical_entrypoints_pinned": 44,
     "pulse_source_lists_identified": 17,
     "pulse_source_json_blobs_pinned": 16,
     "pulse_inline_source_lists": 1,
     "historical_full_package_trees_verified": 38,
-    "retired_under_owner_accepted_procedure": 39,
+    "retired_under_owner_accepted_procedure": 41,
     "retirements_strict_full_host_evidence": 0
   },
   "entries": [
@@ -293,7 +293,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_TEXTUAL_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -342,18 +342,33 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_EXACT_COMPLETE_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_CURRENT_MODE_CONTROLLED_OUTPUTS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_SYNTHETIC_CASES; NOT_HOST_PROVEN",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_INDEX_AND_CATEGORIES_REHOMED; FULL_CONTENT_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE_WITH_REPEATED_PROCEED",
+        "eligible_for_retirement": true,
+        "reason": "Owner-accepted five current-mode concrete outputs and computed compare weights; host A/B and measured gain not established.",
+        "qualification_basis": "OWNER_ACCEPTED_CONCRETE_SYNTHETIC_DECISION_REPORTS",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true,
+        "known_behavior_delta": "Old asks for decision and deadline before creating a brief; successor allows explicitly UNCONFIRMED provisional draft when owner unavailable."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-brief-writer-structured-decision-five-case-retirement.json",
+        "case_count": 5,
+        "case_assertions_passed": 31,
+        "negative_mutations_detected": 5,
+        "mode": "REAL_COMPARISON_ARITHMETIC_PLUS_SAME_CONTEXT_DECISION_RESPONSES",
+        "original_full_tree_sha1": "3f45875f509b1a20fca4c1847c8122b549a76126",
+        "replacement_full_tree_sha1": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/career-radar/SKILL.md",
@@ -546,7 +561,7 @@
       "static_review_state": "verified-static",
       "host_validation_state": "NOT_RUN",
       "critical_outcome_status": "NOT_PROVEN",
-      "retirement": "HOLD",
+      "retirement": "RETIRED_BY_OWNER_ACCEPTED_CONTROLLED_TEXTUAL_EMULATION",
       "cases": [
         {
           "kind": "NOMINAL",
@@ -595,18 +610,33 @@
         }
       ],
       "retirement_qualification": {
-        "full_original_package_tree_verified": "NOT_ESTABLISHED",
+        "full_original_package_tree_verified": "YES_EXACT_COMPLETE_GIT_TREE",
         "paired_host_case_coverage": "NOT_RUN",
-        "critical_function_parity": "NOT_PROVEN",
-        "security_no_regression": "NOT_PROVEN",
+        "critical_function_parity": "NOT_PROVEN_INDEPENDENTLY; FIVE_CURRENT_MODE_CONTROLLED_OUTPUTS",
+        "security_no_regression": "NO_KNOWN_CRITICAL_FAILURE_IN_SYNTHETIC_CASES; NOT_HOST_PROVEN",
         "actual_user_outcome": "NOT_VERIFIED",
-        "original_rights_and_history": "UNRESOLVED_KEEP_HISTORY",
-        "consumer_ref_integrity": "NOT_CHECKED",
-        "owner_evidence_acceptance": "NOT_ESTABLISHED",
-        "eligible_for_retirement": false,
-        "reason": "No observed paired host acceptance and complete source/consumer evidence."
+        "original_rights_and_history": "RIGHTS_NOT_ESTABLISHED_GIT_HISTORY_PRESERVED",
+        "consumer_ref_integrity": "KNOWN_INDEX_AND_CATEGORIES_REHOMED; FULL_CONTENT_SCAN_NOT_PROVEN",
+        "owner_evidence_acceptance": "OWNER_AUTHORIZED_CONTROLLED_EMULATION_AND_DELETE_WITH_REPEATED_PROCEED",
+        "eligible_for_retirement": true,
+        "reason": "Owner-accepted five current-mode concrete outputs and computed compare weights; host A/B and measured gain not established.",
+        "qualification_basis": "OWNER_ACCEPTED_CONCRETE_SYNTHETIC_DECISION_REPORTS",
+        "strict_host_evidence_qualified": false,
+        "owner_risk_exception": true,
+        "known_behavior_delta": "Old requires confirmed criteria before gathering evidence; successor can provide clearly provisional, unweighted research when confirmation is absent."
       },
-      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0"
+      "legacy_entrypoint_pin_commit": "319b6eae2dedf3e8ca1ceac77aaed5a710d91ff0",
+      "controlled_procedure_acceptance": {
+        "receipt": "docs/evals/receipts/2026-11-20-compare-structured-decision-five-case-retirement.json",
+        "case_count": 5,
+        "case_assertions_passed": 31,
+        "negative_mutations_detected": 5,
+        "mode": "REAL_COMPARISON_ARITHMETIC_PLUS_SAME_CONTEXT_DECISION_RESPONSES",
+        "original_full_tree_sha1": "4ceefd2c39842ebb3e711a2f82d9840131588054",
+        "replacement_full_tree_sha1": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
+        "improvement_ratio": "NOT_PROVEN",
+        "full_consumer_audit": "NOT_PROVEN"
+      }
     },
     {
       "legacy_entrypoint": "skills/daily-briefing/SKILL.md",
