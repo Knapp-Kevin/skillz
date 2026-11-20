@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Maintainer-run pure offline exporter fingerprint tests. No skills activated."""
 import importlib.util
+import json
 from pathlib import Path
 import unittest
 
@@ -91,6 +92,39 @@ class ExportSourceIdentityTests(unittest.TestCase):
             mod._source_git_identity(p, v),
             ("a5333457c414d20d625f307df945842c0952ecc3",
              "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6"))
+
+    def test_entire_governed_companion_population_matches_index(self):
+        """Exercise every real companion, not a hand-picked sample."""
+        index = json.loads((ROOT / "registry/governed-review-name-index.json").read_text())
+        expected = set(index["first_party_ids"] + index["third_party_ids"])
+        provenance_root = ROOT / "registry/skills"
+        verification_root = ROOT / "registry/verification"
+        provenance = {
+            path.relative_to(provenance_root).with_suffix("").as_posix(): path
+            for path in provenance_root.rglob("*.yaml")
+        }
+        verification = {
+            path.relative_to(verification_root).with_suffix("").as_posix(): path
+            for path in verification_root.rglob("*.yaml")
+        }
+        self.assertEqual(set(provenance), set(verification), "orphaned companion")
+        self.assertEqual(set(provenance), expected, "governed source/index divergence")
+        self.assertEqual(len(expected), index["record_counts"]["total"])
+        for record_id in sorted(expected):
+            with self.subTest(record_id=record_id):
+                p = yaml.load(provenance[record_id].read_bytes(), Loader=mod.UniqueLoader)
+                v = yaml.load(verification[record_id].read_bytes(), Loader=mod.UniqueLoader)
+                self.assertEqual((p["source_id"], p["skill_name"]),
+                                 (v["source_id"], v["skill_name"]))
+                entry, tree = mod._source_git_identity(p, v)
+                algorithm = v["fingerprint_algorithm"]
+                if algorithm == "git-blob-sha1":
+                    self.assertEqual(entry, v["content_blob_sha"])
+                elif algorithm == "git-tree-sha1":
+                    self.assertEqual(tree, v["content_blob_sha"])
+                elif algorithm == "git-tree-and-blob-sha1":
+                    self.assertEqual(entry, v["content_blob_sha"])
+                    self.assertIsNotNone(tree)
 
     def test_never_promotes_rights_or_behavior(self):
         p = {"skill_blob_sha": BLOB, "package_tree_sha": TREE,
