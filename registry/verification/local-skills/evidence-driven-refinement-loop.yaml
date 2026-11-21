@@ -14,7 +14,7 @@ reviewed_at: "2026-11-21"
 verification_status: verified
 verification_basis: exact-ten-file-static-semantic-review-plus-executed-three-version-offline-mechanics-regression
 validation_status: not-run
-validation_note: "Exact v0.3.2 ten-file package identity verified, package-local Markdown links resolve, 38/38 optional preference-manager and 22/22 engine-contract Python methods passed on each of 3.9, 3.11 and 3.13 at source commit c2016fe5 in GitHub Actions run 44943518832. Includes independent private-root profiles and nonblocking POSIX advisory lock contention/refusal. These deterministic checks are NOT independent agent-host execution, user outcome verification, hostile same-UID isolation, or Windows portability; consumer validation remains not-run."
+validation_note: "Exact v0.3.2 ten-file package identity verified; 38/38 preference manager and 22/22 engine tests passed on each Python 3.9, 3.11 and 3.13 in Actions run 44943518832. A separate Linux-UID integration job passed in run 44943711677 at commit bf5b1b11: each user wrote/read only its own 0700 private root, cross-user read and write attempts were refused, revocation did not affect the other profile, and canonical SKILL.md stayed unchanged. These are actual filesystem/process tests, NOT agent-host behavior, user outcome, hostile same-UID isolation, distributed storage or Windows portability; consumer validation remains not-run."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -36,5 +36,8 @@ notes: >-
   Same-UID hostile processes, real separate-user host isolation,
   cross-machine concurrency, Windows and independent consuming-agent
   outcomes remain unproven and must not be inferred from green CI.
+  Two separate Linux UIDs additionally passed real host permission tests
+  in Actions run 44943711677 with no canonical source modification.
+  This is an OS-level fixture, not independent AI-host validation.
   Adversarial historical review:
   docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
