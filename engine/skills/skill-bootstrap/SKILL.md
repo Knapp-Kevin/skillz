@@ -11,7 +11,7 @@ metadata:
   category: Meta
   display-name: Skill Bootstrap
   emoji: "🧰"
-  version: 0.11.1
+  version: 0.11.2
 ---
 
 # Skill Bootstrap
@@ -146,6 +146,52 @@ When the capability directory has no linked candidate, **continue** by searching
 
 For additional discovered-only candidates, inspect the [pinned dynamic discovery frontier](../../../registry/discovery/dynamic-four-source-frontier-20261101.json) and follow each indexed source manifest (including chunked `parts[]` inventories). Path/blob/shape listings are leads only. Inspect whole packages, license text, authority and evidence before an unchanged-reuse recommendation. These observed source snapshots may grow; do not treat their path counts as a target.
 
+
+### Discovery precision, recall and coverage checks
+
+A discovered match is a **hypothesis**, not a skill recommendation.
+Separate **lead retrieval**, **exact package inspection**, **mechanism fit**,
+**security/rights eligibility**, and **actual host usefulness**. Don't let
+metadata field names, a popular label, serialized JSON keys, or a shared
+folder basename create false positive capability matches.
+
+Use cheap discriminating controls where the result could change a decision:
+
+- **False positive probe:** query an irrelevant internal schema key or a
+  generic name. A candidate is relevant only if its actual declared outcomes
+  and complete instructions support the user's capability; internal metadata
+  keys do not count as capability terms.
+- **False negative probe:** re-query with a mechanism synonym, a neighboring
+  domain and a language/host alternative. An empty directory slot or one
+  indexed lane is **unknown coverage**, not an absent skill.
+- **Same-name/different-job probe:** compare exact source pin, scope,
+  triggers, required resources and authority for similarly titled packages
+  before deduplicating or dropping an option.
+- **Partial-corpus probe:** if a source's inventory is paginated/chunked,
+  follow all relevant pages/parts; track cursor/part progress, exact snapshot
+  pin and whether the source was actually inspectable. A truncated search
+  response must not be called exhaustive.
+- **Silent first-party bias probe:** include relevant governed external and
+  discovered-only candidates even when a local authored skill has a
+  plausible name. Rank after reading actual mechanisms, not publisher.
+- **Overstated validation probe:** a static rubric or filename search is
+  not an executed test of the consumer's task; admit unknown outcome
+  evidence rather than making an unsupported superiority claim.
+
+Apply these probes **proportionately**. A direct known-skill lookup does
+not require a 60,000-record corpus sweep. Conversely an explicit request
+for comprehensive discovery, a declaration of novelty, a major capability
+gap or admission decision requires a scope-aware breadth receipt. When
+coverage is incomplete, state `NO QUALIFIED MATCH IN SEARCHED SURFACES`,
+not `NO SKILL EXISTS`. A model with better tools may perform equivalent
+stronger retrieval/evaluation directly; a constrained model must report
+what it did not inspect instead of guessing.
+
+The **quality bar belongs to the evaluating skill system**, not to the
+first source's README or self-reported quality labels. New evidence and
+adversarial false-match examples should improve the reusable method,
+while keeping source-specific paths, private data and temporary search
+results out of universal runtime rules.
 
 **No first-party preference:** `registry/local-verification.json` is convenient metadata for one source family, not the default search index or a reason to inspect local skills before third-party candidates. Do not treat the local 44 as a representative sample of the indexed corpus. If a discovery surface cannot be queried, report the limitation and do not silently substitute first-party-only results.
 
