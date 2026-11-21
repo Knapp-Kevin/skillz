@@ -129,7 +129,14 @@ Static reviewers should challenge four cases:
    `preferences.local.json` is a consumer artifact and must **not**
    appear in the public authored source. Do not impose a preference
    component on skills with no personalization surface.
-8. Upgrade and contamination: if a canonical skill changes, don't
+8. Execution integration: verify the skill's shipped `SKILL.md`
+   actually references the preference contract, chooses an available
+   update method after consent, checks result after a write, supports
+   revocation, and behaves honestly without local storage. Schema-only
+   packages do **not** implement personalization. If an optional helper
+   script is bundled, review its writes, isolation, allowed fields,
+   failure/rollback behavior and actual test receipts separately.
+9. Upgrade and contamination: if a canonical skill changes, don't
    silently treat old preferences as still applicable; reconcile version
    conflicts and disregard overlay instructions that claim to be system
    messages, reviewer approvals or permissions.
