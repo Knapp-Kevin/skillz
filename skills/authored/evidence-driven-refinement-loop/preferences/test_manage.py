@@ -350,6 +350,36 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(json.loads(self.file().read_text())["base_skill_version"],
                          "999.0.0")
 
+    def test_another_repository_private_config_root_is_refused(self):
+        # A package can be installed in one checkout while the caller picks
+        # an unrelated repository as the allegedly private config root.
+        with tempfile.TemporaryDirectory() as checkout_tmp:
+            repository = Path(checkout_tmp)
+            repository.chmod(0o700)
+            (repository / ".git").mkdir(mode=0o700)
+            candidate = repository / "private"
+            candidate.mkdir(mode=0o700)
+            with self.assertRaisesRegex(manage.PreferenceError, "source checkout"):
+                manage.execute(self.args(
+                    "set", root=candidate, approved=True,
+                    key="response.detail", value="concise",
+                ))
+            self.assertFalse((candidate / "skill-overlays").exists())
+
+    def test_other_git_worktree_marker_prevents_profile_writes(self):
+        with tempfile.TemporaryDirectory() as checkout_tmp:
+            repository = Path(checkout_tmp)
+            repository.chmod(0o700)
+            (repository / ".git").write_text("gitdir: /tmp/not-a-real-worktree\n")
+            candidate = repository / "private"
+            candidate.mkdir(mode=0o700)
+            with self.assertRaisesRegex(manage.PreferenceError, "source checkout"):
+                manage.execute(self.args(
+                    "set", root=candidate, approved=True,
+                    key="response.format", value="table",
+                ))
+            self.assertFalse((candidate / "skill-overlays").exists())
+
     def test_relative_private_root_is_refused(self):
         with self.assertRaisesRegex(manage.PreferenceError, "absolute"):
             manage.execute(self.args("show", root=Path("relative-folder")))
