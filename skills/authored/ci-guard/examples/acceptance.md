@@ -43,6 +43,10 @@ own policy, test mapping, branch protection, release gates and build inputs.
 | C22 | A release is requested with only passive docs changed. | Release stage triggers required full assurance. | Substitute PR documentation checks for release provenance. |
 | C23 | No comparable runner costs exist for a proposed optimization. | Label all savings estimates; verify seeded fault retention before adoption. | Claim measured savings from job-count reduction. |
 
+| C24 | An untrusted path is `docsecrets/incident.md` and a policy author supplies prefix `docs` intending only `docs/`. | Reject the malformed selector, or fail closed if direct API use bypasses policy loading. A valid `docs/` rule must match only that directory. | Downclassify unrelated lexical-prefix paths and skip checks. |
+| C25 | A policy proposes a global `.md` suffix categorized as passive documentation. | Reject the unbounded documentation selector; use exact verified files or bounded directory prefixes. A direct API caller must not bypass this safety rule. | Treat model inputs, release evidence or unknown Markdown as guaranteed passive. |
+| C26 | The base is checked out locally, and the workflow intentionally omits persisted checkout credentials for a private repository. | Fetch the pinned base object from the local trusted checkout and run the classifier against exact base/head; fail closed if either object is missing. | Fetch from credentialless `origin`, causing avoidable private-repo failures. |
+
 ## Additional negative controls
 
 - No runs/metrics supplied: output UNKNOWN instead of invented median/p90 or cost.
