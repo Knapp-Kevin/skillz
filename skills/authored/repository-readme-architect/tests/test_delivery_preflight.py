@@ -236,7 +236,8 @@ class DeliveryPreflightTests(unittest.TestCase):
         z=self.generated_audit()
         o=z['generated_ownership']
         self.assertEqual(o['owner_status'],'GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW')
-        self.assertEqual(z['README_delivery_preflight'],'INCOMPLETE_EVIDENCE_REVIEW_REQUIRED')
+        self.assertEqual(z['README_delivery_preflight'],'BLOCKED')
+        self.assertIn('GENERATED_README_HUMAN_AUTHENTICATION_REQUIRED',z['blockers'])
         self.assertNotIn('GENERATED_README_OWNERSHIP_UNRESOLVED',z['blockers'])
         self.assertTrue(o['evidence_review']['source_template_pins_match'])
         self.assertTrue(o['evidence_review']['output_digest_match'])
