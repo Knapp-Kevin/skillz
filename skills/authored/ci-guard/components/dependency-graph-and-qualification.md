@@ -66,7 +66,12 @@ without a shell, from a specified workspace with untrusted PR content treated
 as data. As with any CI system, running the checked-out code in an unprivileged
 runner is authorized test execution, **not a license to grant it secrets or
 publishing tokens**. The command manifest and executor must come from trusted
-base. The example's `trusted/ci/verify_*.sh` commands are **consumer-owned
+base. The reference workflow runs command processes with the candidate `work/`
+checkout as the working directory. Its command manifest therefore invokes
+`../trusted/ci/verify_*.sh` from that checkout and passes `.` as the
+candidate path. The consumer-owned verifier must check that path rather than
+accidentally testing the runner's parent directory. The example's
+`../trusted/ci/verify_*.sh` commands are **consumer-owned
 real checks**; missing files FAIL rather than returning success-shaped stubs.
 Check closure by actual installed tools, not by assuming test names.
 
