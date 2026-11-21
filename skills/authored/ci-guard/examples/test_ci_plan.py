@@ -55,6 +55,21 @@ class PlanTests(unittest.TestCase):
         self.assertTrue(doc['groups']['rust'])
         self.assertFalse(doc['groups']['docs'])
 
+    def test_full_policy_rejects_independent_omitted_obligation(self):
+        from copy import deepcopy
+        policy = deepcopy(POLICY)
+        policy['obligations']['native-proof'] = {'group': 'rust', 'needs': []}
+        with self.assertRaisesRegex(p.PlanError, 'full plan omits'):
+            p.validate_policy(policy)
+
+    def test_full_policy_allows_transitive_obligation_not_repeated_in_roots(self):
+        # The graph fixture omits rust-build from full roots but includes
+        # it transitively through rust-tests and model-consumer.
+        validated = p.validate_policy(POLICY)
+        self.assertNotIn('rust-build', validated['full'])
+        self.assertEqual(set(p.closure(validated['obligations'], validated['full'])),
+                         set(validated['obligations']))
+
     def test_trust_policy_change_selects_all(self):
         doc = plan(['.github/workflows/check.yml'])
         self.assertTrue(doc['full'])
