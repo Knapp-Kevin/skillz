@@ -209,6 +209,31 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(json.loads(self.file().read_text())["base_skill_version"],
                          "999.0.0")
 
+    def test_relative_private_root_is_refused(self):
+        with self.assertRaisesRegex(manage.PreferenceError, "absolute"):
+            manage.execute(self.args("show", root=Path("relative-folder")))
+
+    def test_untrusted_writable_ancestor_is_refused(self):
+        untrusted = self.root / "replaceable-parent"
+        untrusted.mkdir(mode=0o700)
+        untrusted.chmod(0o777)  # No sticky bit, another UID can replace children.
+        private = untrusted / "private"
+        private.mkdir(mode=0o700)
+        with self.assertRaisesRegex(manage.PreferenceError, "ancestor"):
+            manage.execute(self.args("set", key="response.detail",
+                                     value="concise", approved=True, root=private))
+        self.assertFalse((private / "skill-overlays").exists())
+
+    def test_symlinked_parent_is_refused(self):
+        real_parent = self.root / "real-parent"
+        real_parent.mkdir(mode=0o700)
+        linked = self.root / "linked-parent"
+        linked.symlink_to(real_parent, target_is_directory=True)
+        private = real_parent / "private"
+        private.mkdir(mode=0o700)
+        with self.assertRaisesRegex(manage.PreferenceError, "ancestor"):
+            manage.execute(self.args("show", root=linked / "private"))
+
     def test_symlink_root_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
             linked = Path(temporary) / "linked"
