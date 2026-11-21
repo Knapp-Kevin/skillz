@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.3.0"
+skill_version: "1.4.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -16,12 +16,12 @@ availability: in-repo
 local_path: skills/authored/ci-guard/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
-dependency_status: self-contained-text-package
-dependencies: "Standalone ten-file package: SKILL.md, four local components, YAML template, acceptance cases, optional Python3 stdlib classifier/test and MIT license. No network or central runtime standard."
-content_blob_sha: f314ca9afe746af8f154447987ee59d29e7198fb
-complete_package_tree_sha: 77450795ccb8a1cda65414406232f9a579596947
+review_status: needs-re-review
+dependency_status: self-contained-optional-python-stdlib-and-policy-fixture
+dependencies: "Standalone eleven-file package: SKILL.md and four local components, portable classification template, synthetic acceptance/tests, optional Python 3.9+ Git-based classifier and anonymous example JSON policy, MIT license. No runtime connection or universal repository assumptions."
+content_blob_sha: 3b1ca78d2cf63cb4e6c280515c503f38e85e0d14
+complete_package_tree_sha: 2a6ba9faa12575753a1023932bb2a2f9b0c4e770
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "Exact v1.3 ten-file static review 19/20 and original 16/16 CPU classification tests passed: docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md. Template is not deployed; budget effect, end-user host and cross-model acceptance remain NOT RUN. v1.2 historical review retained."
+rationale: "v1.4.0 introduces generic impact categories, trusted consumer-specific policy, draft and exact-candidate routing, required decision gate, and verified artifact reuse contract. 19 newly authored synthetic test methods but executable current-version tests NOT_RUN; prior v1.3 16/16 results historical only. Exact-package review and consumer acceptance pending."
