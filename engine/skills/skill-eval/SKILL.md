@@ -82,6 +82,28 @@ Remediation and discriminating regression: <material defect and exact necessary 
 Material uncertainty: <only unresolved facts>
 ```
 
+## Repeatable review of the newly corrected candidate
+
+For authorized refinement, evaluate the **original artifact**, identify
+the material failure and produce a bounded correction. Then evaluate
+the **new exact package**, not the old score or the edit description.
+Challenge the original failure, a near-miss negative case, preservation
+of a previously successful case and an unrelated higher-risk boundary.
+Choose the next iteration because of an evidenced new defect, not to
+satisfy a preordained number of passes.
+
+Do not self-award Gold, `verified`, or `validated` because the loop
+was followed. Record separately the source change, static reviewer
+judgment, actual deterministic test, host-executed behavior, real
+consumer acceptance and independent package security. When evidence
+is missing, the proper decision may be HOLD or STOP_NO_CHANGE. The
+evaluation system itself defines the quality bar independently of a
+source package's own claimed standards.
+
+The standalone `evidence-driven-refinement-loop` authored package
+generalizes this approach to ordinary user artifacts, but these
+engine instructions must remain sufficient without importing it.
+
 ## Regression and iterative quality rule
 
 When an author requests refinement, don't respond with only a new checklist.
