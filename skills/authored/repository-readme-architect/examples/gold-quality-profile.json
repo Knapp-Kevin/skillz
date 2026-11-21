@@ -12,5 +12,15 @@
     "https://code.example.invalid/example-kit/license"
   ],
   "journey_mode": "execute",
-  "exceptions": []
+  "exceptions": [],
+  "asset_inventory": [
+    {
+      "path": "assets/example-kit-banner.png",
+      "status": "verified-existing",
+      "owner": "Example Kit project, verify source and rights independently",
+      "purpose": "Project-specific hero illustration on README",
+      "alt": "Example Kit banner showing the project’s purpose",
+      "replacement": "No replacement planned; retain evidence of source/rights"
+    }
+  ]
 }
