@@ -61,14 +61,14 @@ CONTRACT = {
 }
 
 
-def valid_banner():
+def valid_banner(rgb=b"\xf0\xf4\xff"):
     """Generate a real, valid 960x240 RGB PNG without external dependencies."""
     width, height = 960, 240
     def chunk(name, payload):
         return (len(payload).to_bytes(4, "big") + name + payload +
                 (binascii.crc32(name + payload) & 0xffffffff).to_bytes(4, "big"))
     header = width.to_bytes(4, "big") + height.to_bytes(4, "big") + b"\x08\x02\x00\x00\x00"
-    row = b"\x00" + b"\xf0\xf4\xff" * width
+    row = b"\x00" + rgb * width
     return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", header) +
             chunk(b"IDAT", zlib.compress(row * height)) + chunk(b"IEND", b""))
 
@@ -111,7 +111,7 @@ class QualityProfileTests(unittest.TestCase):
     def test_valid_replacement_banner_pixels_still_fail_prior_digest(self):
         path = self.root / "assets/banner.png"
         before = path.read_bytes()
-        modified = before.replace(b"\xf0\xf4\xff", b"\xe0\xe4\xef", 1)
+        modified = valid_banner(b"\xe0\xe4\xef")
         self.assertNotEqual(before, modified)
         path.write_bytes(modified)
         self.assertEqual(self.gate("asset-digest")[0]["status"], "FAIL")
