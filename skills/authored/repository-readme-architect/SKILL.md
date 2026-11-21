@@ -152,7 +152,8 @@ The optional [delivery preflight](scripts/delivery_preflight.py) supports
 template inputs, README output SHA-256, exact candidate HEAD and the named
 required CI drift/parity check. With matching local bytes and a recorded
 successful exact-head check, it changes `GENERATED_OWNERSHIP_HOLD` to
-`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. **That is not clearance.**
+`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. **That is not clearance and the machine outcome remains BLOCKED** until
+an independent human authenticates the records.
 A manually supplied receipt can be forged; the helper cannot authenticate
 provider CI, generator invocation or correct use of the template. The reviewer
 must independently inspect the generator source and run evidence, confirm CI
