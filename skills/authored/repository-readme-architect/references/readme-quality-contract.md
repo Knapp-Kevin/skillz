@@ -45,6 +45,76 @@ A successful source-checkout demo is not a published installation, and one passi
 
 **VERIFY.** Read current exact source revisions and *the complete candidate README*, not merely a diff. Distinguish source-inspected static checks, executed local commands, external integration checks and reader simulations. Mark each as PASS, FAIL, NOT_RUN or NOT_APPLICABLE. A passed local link audit is never a pass for claims, remote URLs, installability, accessibility of all rendered states, or reader comprehension.
 
+## Binding quality-profile contract and presentation review (v0.4)
+
+The skill's Baseline/Gold/Platinum expectations are the normative bar.
+Organization exemplars, style guides, original READMEs, available banners
+and templates must be inspected **before editing**, but they are evidence
+about legitimate identity, established navigation and legal rights. They
+do not reduce or replace this skill's selected standard. A weak predecessor
+style is not a reason to deliver another weak README.
+
+**Gold** requires project-correct banner, purposeful and legitimate
+badges, a linked TOC with label/target integrity, explicit reader value,
+a practical first-success journey, maintained technical navigation,
+source-qualified consequential claims and a rendered usability review.
+**Platinum** additionally requires independent reader-task and expanded
+accessibility/responsive review. **Baseline** keeps these contextual;
+do not add decoration when it does not improve that reader's task.
+
+For a selected Gold/Platinum profile, create a contract in the **consumer's**
+approved working area. Example:
+[anonymous sample](../examples/gold-quality-profile.json). Fields:
+
+- `profile`: exact `gold` or `platinum`; `project_identity`: verified
+  product name; `banner_path`: *actual project-owned* local asset path.
+- `required_badge_labels`: meaningful evidence-backed badges appropriate
+  to that product; `allowed_badge_targets`: known legitimate HTTPS destinations.
+  A URL string is a proposed identity, **not** a successful live validation.
+- `journey_mode`: `execute` for real commands and expected result, or
+  `read` for specs, research, datasets and other document-first projects
+  where inventing an install command would be dishonest.
+- `exceptions`: `[{"requirement":"banner","reason":"...","evidence_ref":"..."}]`.
+  The helper treats even a structurally valid exception as HOLD: only an
+  independent human can validate applicability and grant a waiver. Do not
+  remove a required check to make the result green.
+
+Optional bounded offline check:
+
+~~~sh
+python3 scripts/profile_acceptance.py --root /approved/project \
+  --readme README.md --profile gold \
+  --contract .review/readme-gold-contract.json
+~~~
+
+This helper reports mandatory *mechanical* FAILs for absent/wrong banner,
+missing alt, missing/wrong badges, wrong TOC targets, no first-success example,
+missing technical navigation and broken local navigation. An existing asset
+does not establish rights or correct branding. Remote badge HTTP/meaning,
+actual rendered desktop/mobile appearance, visual hierarchy, independence of
+editorial review, test of first use, and authentication of source claims remain
+HOLD/NOT_RUN without separate evidence. It does not write, render, fetch
+remote URLs, execute README commands or authenticate CI. The helper
+intentionally cannot self-award the profile; its return code remains nonzero
+for FAIL or unresolved HOLD. When Python or rendering tools are unavailable,
+perform equivalent manual audit and record NOT_RUN distinctly.
+
+When the README is generated, **do not change output directly**. Modify the
+authorized generator/source and candidate output together; the separate
+`delivery_preflight.py --generated-evidence` can attach source/template
+digests and the exact-head drift receipt, but only independent review can
+verify the actual generator execution, provider run and byte parity. A profile
+checker pass is not an ownership or CI bypass. The existing section
+disposition preflight remains required for UPLIFT: preserving presentation
+never authorizes losing a verified compatibility warning or other material
+baseline evidence.
+
+**Completion receipt must show two decisions independently:** technical
+delivery PASS/FAIL/HOLD/NOT_RUN with actual revision and CI/provenance, and
+editorial/readership PASS/FAIL/HOLD/NOT_RUN with recorded visual/usability,
+brand/source checks, exceptions and reader-task outcome. A merged PR
+or green CI is insufficient by itself to claim Gold/Platinum completion.
+
 ## 4. Platinum-grade acceptance without a magic score
 
 Do not label the README excellent, gold, platinum or fully verified merely because a checklist exists. A release-ready claim requires all applicable mandatory gates, each with evidence:
