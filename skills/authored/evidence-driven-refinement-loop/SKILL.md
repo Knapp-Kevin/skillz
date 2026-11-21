@@ -12,7 +12,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Evidence-Driven Refinement Loop
-  version: 0.3.1
+  version: 0.3.2
   license: MIT
 ---
 
@@ -256,8 +256,13 @@ or assume this host supports writable local storage.
    **explicitly approved full revocation** even when the stored JSON,
    canonical version or bundled schema is damaged. Do not misreport a
    failed post-write check as rollback; inspect actual persisted state.
-   The POSIX helper does not protect against hostile same-UID processes
-   or serialize independent simultaneous writers.
+   The POSIX helper uses a **nonblocking advisory lock** to serialize
+   cooperating same-host writers across the entire read/modify/write
+   transaction; a contending update is refused rather than waiting
+   indefinitely. Read-only lookups do not acquire that lock and may
+   see the previous or next complete atomic version. This is **not**
+   a sandbox for hostile same-UID processes, a distributed lock, or
+   a guarantee that a host actually honored user consent.
 
 Scope user/project-specific settings to the correct profile; preserve
 minimal provenance of *consent*, not raw conversation text. Never store
