@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib-and-policy-fixture
 dependencies: "Standalone eleven-file package: SKILL.md and four local components, portable classification template, synthetic acceptance/tests, optional Python 3.9+ Git-based classifier and anonymous example JSON policy, MIT license. No runtime connection or universal repository assumptions."
 content_blob_sha: 3b1ca78d2cf63cb4e6c280515c503f38e85e0d14
-complete_package_tree_sha: 2a6ba9faa12575753a1023932bb2a2f9b0c4e770
+complete_package_tree_sha: d985e3d7fbd4f8e26739558066e991f37fc36911
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
