@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.4.1
+  version: 1.5.0
   license: MIT
 ---
 
@@ -31,10 +31,15 @@ PR/main/release/deploy placement and prove a proposed simplification. Both
 components are part of this package, not independent authorization systems.
 Use [Change classification and budget-aware CI](components/change-classification-and-budget.md)
 when generating workflows or reducing runner/tool/action budget. This
-component includes an optional [repository-neutral classifier](scripts/classify_change.py),
-a [consumer-owned policy example](examples/impact-policy.json), and a
-[GitHub PR template](examples/classified-github-pr.yml); none is
-automatically installed or grants execution authority.
+component includes a category-only classifier in
+[scripts/classify_change.py](scripts/classify_change.py), which is **not sufficient**
+to implement selective CI. The executable [plan/execute/qualify engine](scripts/ci_plan.py),
+[dependency adapter fixture](examples/impact-graph.json),
+[trusted execution-command fixture](examples/exec-policy.json), and
+[GitHub PR reference](examples/classified-github-pr.yml) close the loop.
+Read [dependency qualification](components/dependency-graph-and-qualification.md)
+and [modular bootstrap migration](components/modular-bootstrap-and-migration.md).
+All are standalone package resources, not automatically installed controls.
 
 When a request primarily concerns issue aging, cross-repo delivery or
 objective drift, suggest Repository Delivery Assessor **if separately
@@ -106,6 +111,53 @@ emits a check on every protected path. Do not execute repository-supplied code
 as part of a read-only review. Use only authorized host APIs or a verified safe
 local environment; do not fetch secrets or print credential-bearing logs.
 
+## P0: closed-loop selective execution
+
+**Classification alone is not a CI optimization.** An existing monolithic
+bootstrap that still runs for every change defeats a new classification step.
+
+A completed workflow must deliver **three separate capabilities**:
+
+1. **Classify** changed, renamed and deleted files from the exact trusted
+   base/merge-base/HEAD, including source-to-build/test, model-input,
+   generated output, shared infrastructure and transitive graph consumers.
+2. **Execute** the complete dependency closure as real commands in
+   selected CI groups; use a trusted-base execution manifest that covers
+   **every obligation**. Share expensive bootstrap/setup where it reduces
+   actual cost. Missing verifier commands fail rather than simulate success.
+3. **Qualify** the exact plan: recompute source and manifest digests and
+   changed-file closure at the final gate; require completed GitHub job
+   status **and** per-obligation execution receipts for every selected
+   group on the current HEAD, base, merge base, run ID and attempt.
+   Missing, skipped, failed, canceled, misrouted, tampered or stale work
+   must fail. Unselected work must be genuinely skipped.
+
+**Documentation verification is mandatory when docs are selected.**
+A `run_docs`/docs label without a real docs job, verified execution and
+final-gate accounting is a P0 failure. The new reference explicitly wires
+`docs`, `rust`, `model` and `trust` groups into a stable
+`CI policy gate`, and rejects incomplete/incorrect job evidence.
+A consumer's real command scripts, graph and policy are independently
+required; the generic example does not invent project-specific acceptance.
+
+**Never classify a README as passive merely by extension.** A README
+may be a model input; the reference fixture maps it to model-consumer
+validation plus its Rust-build dependency. Rust edits select build/test
+closure; workflow, trust-policy and unknown changes select full.
+The [complete execution contract](components/dependency-graph-and-qualification.md)
+and [modular bootstrap procedure](components/modular-bootstrap-and-migration.md)
+are bundled and require no external Skillz checkout.
+
+For an expensive bootstrap, inventory constituent verification commands,
+shared setup, native/proof obligations, dependencies and billable startup.
+A logical check split is not automatically a new runner. Move expensive
+work behind actual plan-dependent dispatch, then confirm **all old
+unconditional workflows and reusable entrypoints are no longer running
+unchanged** before claiming savings. Prove detection parity in shadow
+mode, migrate branch-protected checks with owner authority, and
+measure real runner minutes and critical-path time. Preserve independent
+release/signature/production controls and a safe rollback.
+
 ## Classification-first budget contract
 
 **Every generated or materially redesigned CI workflow must classify its
@@ -144,7 +196,7 @@ equivalent method, but may not silently skip the decision or assurance floor.
   read-only scope, retain action/source pinning, and validate a seeded
   risky change routes to the relevant checks before trusting the design.
 
-**Portable implementation contract (v1.4):** The bundled classifier
+**Legacy category-only classification contract (v1.4):** The bundled classifier
 takes exact Git base/head evidence, `--stage draft|candidate|release`,
 and a trusted-base `--policy` JSON mapping consumer paths with
 `exact`, `prefix` or `suffix` rules into `documentation`,
@@ -178,7 +230,7 @@ would be able to publish a failing candidate. Missing or mismatched evidence
 requires trusted rebuild/requalification or blocks delivery. Do not drop
 distinct native, proof or security assurance that the reused artifact lacks.
 
-**Beyond classification**, optimize test impact graph selection, cheap
+**Beyond classification and selective execution**, optimize test impact graph selection, cheap
 early checks, safe cache/artifact reuse, redundant matrix fanout, canceled
 superseded PR runs, bounded infrastructure retries, and build/setup costs.
 Always verify that unique failure detection remains and compute **actual**
