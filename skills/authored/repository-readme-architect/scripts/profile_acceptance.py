@@ -86,7 +86,8 @@ def contract_from(path):
         raise InputError("invalid badge destinations")
     if not all(isinstance(a, dict) and set(a) ==
                {"path", "status", "owner", "purpose", "alt", "replacement"}
-               and all(isinstance(v, str) for v in a.values()) and a["status"] in STATES
+               and all(isinstance(v, str) and v.strip() for v in a.values())
+               and a["status"] in STATES
                for a in cfg["asset_inventory"]):
         raise InputError("invalid asset lifecycle inventory")
     if not all(isinstance(a, dict) and set(a) == {"requirement", "reason", "evidence_ref"}
@@ -186,6 +187,10 @@ def audit(root, readme, cfg):
     check("identity", "PASS" if title.strip().casefold() == cfg["project_identity"].strip().casefold() else "FAIL",
           "H1 must identify the verified target product, not another repository")
 
+    if len({a["path"] for a in cfg["asset_inventory"]}) != len(cfg["asset_inventory"]):
+        raise InputError("duplicate asset inventory paths")
+    for entry in cfg["asset_inventory"]:
+        _path(root, entry["path"])  # Reject traversal and symlink ownership aliases.
     inventory = {a["path"]: a for a in cfg["asset_inventory"]}
     banner = cfg["banner_path"]
     # Badges are metadata with accessible labels, not decorative image assets.
@@ -204,6 +209,8 @@ def audit(root, readme, cfg):
         check("banner", "FAIL", "banner file missing or empty")
     elif len(selected[0]) < 6:
         check("banner", "FAIL", "banner alt text is not descriptive")
+    elif cfg["project_identity"].casefold() not in selected[0].casefold():
+        check("banner", "FAIL", "banner alt identity does not name this project")
     else:
         try:
             dims = _image_geometry(_path(root, banner))
