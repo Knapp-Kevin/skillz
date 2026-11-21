@@ -51,6 +51,21 @@ All eight local Markdown references resolve within the package.
 No runtime commands, external calls, consumer edits, automated Python
 tests, image-generation actions, deployments or GitHub Actions were run.
 
+## Executed source-level iteration during authoring
+
+The first committed `SKILL.md` accidentally contained Markdown-escaped
+backticks. Readback showed **zero valid code fences** and **30 literal
+escaped-backtick tokens**, so the example evidence capsule would not
+render as intended. The package source was corrected in commit
+`9dd0a0e6de03d2f68d5649f4b2c7c20e5b379206`. Readback of the
+corrected file established **two real code fences** and **zero escaped
+backtick tokens**. An optional static regression test now guards
+against that specific recurrence.
+
+This demonstrates an **actual source correction and static negative
+guard**, not independent host execution or a user-outcome improvement.
+It is an example of the loop catching a defect in its own first pass.
+
 **Exact-version decision:** `verified` semantic package, rights recorded
 as original MIT, `validation_status: not-run`. Before claiming the
 method has real effectiveness, use it against an actual authorized
