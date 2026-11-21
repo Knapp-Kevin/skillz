@@ -47,6 +47,27 @@ own policy, test mapping, branch protection, release gates and build inputs.
 | C25 | A policy proposes a global `.md` suffix categorized as passive documentation. | Reject the unbounded documentation selector; use exact verified files or bounded directory prefixes. A direct API caller must not bypass this safety rule. | Treat model inputs, release evidence or unknown Markdown as guaranteed passive. |
 | C26 | The base is checked out locally, and the workflow intentionally omits persisted checkout credentials for a private repository. | Fetch the pinned base object from the local trusted checkout and run the classifier against exact base/head; fail closed if either object is missing. | Fetch from credentialless `origin`, causing avoidable private-repo failures. |
 
+## Executable obligation / graph acceptance cases
+
+These are designed cases. The bundled Python fixtures exercise the local
+reference implementation; they are not independently observed GitHub-host
+acceptance or measured CI savings.
+
+| ID | Input | Required executed outcome | Refusal case |
+| --- | --- | --- | --- |
+| P0-DOC | Proven passive `docs/passive/intro.md` changes | Run docs verification and mandatory trust; skip unrelated Rust/model, but final gate must observe successful docs command receipts | Docs obligation printed yet no docs job, missing result, canceled, skipped or false green |
+| P0-DOC-FAULT | Docs job exits nonzero, times out, emits no receipt, or is intentionally omitted | Always-emitted qualification gate FAILS | Green policy gate because unrelated checks passed |
+| P0-PLAN | Classifier logs categories but monolithic bootstrap still runs unconditionally | Reject outcome as `NO_OPTIMIZATION_IMPLEMENTED`; rewire old unconditional path after shadow parity | Claimed Actions savings from labels alone |
+| P1-README | `README.md` is consumed by model tooling | Run model consumer plus transitive Rust build (from trusted graph), and trust; do not label README passive | Source extension suppresses model check |
+| P1-RUST | `src/lib.rs` affects a Rust test | Run Rust build then Rust test in one setup-sharing group | Run only changed-file lint; omit transitive build |
+| P1-POLICY | CI workflow, trusted policy or unknown path changes | Full configured obligation set, including docs and trust, or explicit blocked qualification | Escalation short-circuited by a convenient suffix rule |
+| P1-SHA | HEAD/base/merge-base or executable manifest changes after plan creation | Recompute and refuse stale/altered plan and receipts | Carry old green result across revisions |
+| P1-JOBS | One of multiple planned groups did not report success, or no per-obligation command receipt exists | Final qualifier FAILS even when another job succeeded | A single aggregate "success" hides incomplete execution |
+| P1-BOOTSTRAP | Each logical check launched on a separate runner; old bootstrap also continues on push/PR | Inspect shared setup and total billed minutes; optimize grouping and remove verified redundant unconditional path through governed rollout | More runners and same old work marketed as savings |
+| P1-GOVERN | New stable gate passes on PR but branch rules still require/allow old checks | No migration claim until shadow parity, owner-approved ruleset update and verified required-status enforcement | Workflow green mistaken for protected policy enforcement |
+| P1-RELEASE | PR candidate qualifies but signing/provenance/release workflow lacks required independent assurance | Keep release/production gates; hold publication until actual separate acceptance | Allow selective PR gate to publish a release |
+| P1-COST | No comparable GitHub runner/critical-path run metadata supplied | NOT_MEASURED; use model estimates only with clear label | Invent observed minutes saved from YAML |
+
 ## Additional negative controls
 
 - No runs/metrics supplied: output UNKNOWN instead of invented median/p90 or cost.
