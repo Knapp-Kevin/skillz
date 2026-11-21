@@ -9,7 +9,7 @@ metadata:
   category: Meta
   display-name: Skill Forge
   emoji: "⚒️"
-  version: 2.0.0
+  version: 2.1.0
   repo-bound: true
 ---
 
@@ -17,24 +17,97 @@ metadata:
 
 **Repository-maintenance procedure only.**
 
-Use this only when the active route is `REPOSITORY_MAINTENANCE` and the user explicitly intends a skill to become part of this repository's `skills/` tree.
+Use this only when the active route is `REPOSITORY_MAINTENANCE` and the user explicitly intends to create or refine a first-party user-facing skill in the **canonical `skills/authored/<slug>/` tree**. User-personal skills remain outside this repository.
 
 For normal FIRST_VISIT or RETURNING_USER synthesis, use `engine/skills/skill-bootstrap/SKILL.md` and create or hand off artifacts for the user's actual environment instead.
 
 ## Procedure
 
-1. Confirm explicit `REPOSITORY_MAINTENANCE` authority for the proposed repository change, including the intended `skills/` destination and affected paths. A general request to create a skill for a user's own agent does not authorize a repository write.
+1. Confirm explicit `REPOSITORY_MAINTENANCE` authority for the proposed repository change, including the canonical `skills/authored/<slug>/` destination and affected paths. A general request to create a skill for a user's own agent does not authorize a repository write.
 2. Define the skill's durable capability, trigger/non-trigger conditions, inputs/outputs, authority, dependencies, portability, and completion criteria.
-3. Compare the proposed capability with existing local skills and governed external records. Do not create a duplicate merely because a new name is available.
+3. Compare the proposed capability against first-party and **all accessible relevant governed and discovery-only source families**, not only an easy local index. Search by outcome, synonyms, mechanism and adjacent domain. Verify the actual package/behavior before declaring a duplicate or a genuine gap. An empty capability-directory slot or shared name establishes neither novelty nor equivalence. Record inaccessible sources rather than claiming exhaustive discovery.
 4. Use `docs/skill-template.md` as the structural starting point when applicable.
-5. Create or revise the full skill package under `skills/<name>/`. A skill package may legitimately include its own scripts, references, templates, fixtures, JSON, examples, or other components when those components are part of the skill itself.
+5. Create or revise the full standalone skill package under **`skills/authored/<slug>/`**, not `skills/<name>/`, `engine/skills/` or a tracked upstream-source tree. Use a stable unique slug. A package may legitimately contain scripts, references, templates, fixtures, JSON, examples and other in-skill components where these change execution quality. Mandatory instructions and their supporting files must ship **inside the downloadable package**, work offline when the task permits, and not rely on the wider Skillz repository or a sibling skill to function.
 6. Preserve those skill-owned components unless there is a specific quality, safety, licensing, or redundancy reason to change them.
-7. Review the finished package semantically against `docs/skill-verification.md`, including provenance, licensing, dependencies, authority, portability, ambiguity, failure handling, and likely misuse.
-8. Bind first-party provenance and the individual verification record to the exact finished package identity/fingerprint; record the controlled taxonomy, rubric score, disposition, dependencies, authority, and behavioral-validation state honestly. Static scenarios do not establish behavioral `validated`.
+7. Review the **actual finished complete package** semantically against `docs/skill-verification.md`, including provenance, licensing, dependencies, authority, portability, ambiguity, failure handling, likely misuse, and real user outcome. Use at least a positive trigger, non-trigger, high-risk adversarial boundary and a low-capability/offline execution scenario when applicable. Assess whether an instruction-only checklist would falsely pass without producing the intended artifact, and whether stronger hosts can perform safe equivalent methods without unnecessary restrictions. These are static interpretations unless genuinely executed.
+8. Bind first-party provenance under `registry/skills/local-skills/<slug>.yaml` and the paired exact-version verification under `registry/verification/local-skills/<slug>.yaml` to **both** the actual SKILL.md blob and complete package tree. Record the controlled taxonomy, rubric score, disposition, dependency closure, rights, authority, package-security state and behavioral-validation state honestly. Recheck all local references and bundled files. A changed file invalidates the previous package-specific verdict until re-reviewed; never import an old version's passing tests or grade into a new version. Static scenarios do not establish behavioral `validated`.
 9. For new or materially revised user-facing packages, record the **separate** exact-package security evidence state under `docs/security-scanning.md`. Static source review is the primary qualification method; an external scanner is optional supplementary evidence, not a universal admission or merge prerequisite. Missing, incomplete, failed, or stale scanner evidence must retain its truthful status, and credible unresolved security findings must be remediated or held before recommending unchanged use. Any scanner execution requires separate host authorization.
 10. Do not publish/count a new governed user-facing skill as admitted until the required provenance, semantic, security, licensing, and authorization decisions are satisfied. If blocked, keep the candidate explicitly unadmitted; preserve useful draft/reference material without inflating inventory.
-11. After a material admitted tranche, reconcile `README.md`, `docs/SYSTEM_STATE.md`, `CURATION_QUEUE.md`, `INDEX.md`, and `index.json` together from live evidence. For an unmerged draft, do not falsely increment published counts.
+11. After a material admitted tranche, update only the **affected** human-navigation and canonical index surfaces that actually derive from the live repository state. Keep the root `README.md` a durable public-facing introduction, **not a running maintenance log**. Use appropriate workboard, issue, review or historical records for provenance and progress. Do not mechanically update every index file, invent counts, or count an unmerged draft as published.
 12. Update human navigation only where the new or revised skill materially affects it, and report actual files, evidence, limitations, and unresolved gates.
+
+## Iterative improvement as an execution discipline
+
+For a material refinement, run a **bounded, evidence-driven cycle on the
+actual package** instead of collecting an unlimited series of suggestions:
+
+1. **Observe:** reproduce a consequential failure against the current
+   package, recording the intended user result and any existing success
+   invariants. A source/README-only cosmetic gap is not automatically a
+   functional defect.
+2. **Explain:** state a falsifiable mechanism, a competing cause when
+   consequential, and the smallest correction likely to change behavior.
+3. **Change:** update the true owning source and all necessary portable
+   supports under explicitly authorized scope. Do not change only a
+   generated artifact or review checklist.
+4. **Challenge:** test the original failing case, an adjacent negative
+   case, previously working behavior, authority/rights, and the real
+   consumer outcome when supported. Differentiate executed tests from
+   static reasoning and independently observed user results.
+5. **Decide:** ACCEPT, ITERATE, HOLD, REVERT or STOP_NO_CHANGE using frozen
+   acceptance criteria and evidence. After a revision, review the *new
+   complete package* again for a different consequential failure. Another
+   iteration requires a new decision-relevant finding, not momentum for
+   its own sake.
+
+Repeat only while material defects remain, expected improvement exceeds
+cost and authorized checks remain available. Stop on a supported good
+result, no real improvement, regression, a hard unknown or exhausted
+authority/budget. Never water down the rubric, ignore older tests or
+promote a source merely because it has been edited many times.
+
+This complete algorithm must remain in this engine source; no consumer
+needs another skill installed. The authored reusable
+`evidence-driven-refinement-loop` expresses the same method for work
+outside Skillz but is not a runtime dependency.
+
+## Evidence-driven refinement loop
+
+When strengthening an existing skill, start with a **specific user-visible
+failure** or consequential untested assumption: what input produced what bad
+result, what was expected, and which part of the package caused it. Make a
+small targeted behavioral correction, then test the original failure and
+a neighboring counterexample. Check preservation of previously verified
+capabilities, offline package closure and weaker/stronger-host applicability.
+
+Treat **source change**, **local deterministic test**, **static semantic review**,
+**observed independent agent-host behavior**, **consumer acceptance**, and
+**merged/deployed outcome** as separate evidence layers. A passing check or
+merged PR does not itself prove the requested user outcome. Keep unknowns
+explicit; don't publish attractive metrics without observed receipts.
+Optional tests/simulated fixtures are useful when they detect genuine
+failures, but the passive repository does not mandate CI, hosted execution
+or arbitrary model benchmarks for static skill admission.
+
+## Acceptance probes (static review, unless actually executed)
+
+- **Wrong destination:** request a first-party skill, with no further path
+  preference. The only valid default repository destination is
+  `skills/authored/<slug>/`; an inferred `skills/<name>/` or engine path FAILS.
+- **User-artifact boundary:** a normal user asks for a private agent skill.
+  Never silently write it into Skillz; hand off to the user's host.
+- **False novelty:** an unmapped capability or same-name skill is found.
+  Check additional accessible families and actual mechanisms; do not
+  claim originality or duplicate behavior from titles.
+- **Standalone closure:** export one authored package alone while offline.
+  Every mandatory reference must still resolve locally; missing parent
+  repository policy is a package defect.
+- **Green without outcome:** tests pass but a user cannot complete the
+  documented first action. Technical checks are observed evidence, not
+  final reader acceptance.
+- **Changed package:** one supporting fixture or script changes after a
+  prior exact-tree review. Mark current-version review/evidence pending;
+  retain previous receipts as historical evidence only.
 
 ## Negative rules
 

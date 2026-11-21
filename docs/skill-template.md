@@ -1,6 +1,6 @@
 # Skill template
 
-Use this as a **starting point** when an authorized maintainer adds or revises a first-party user-facing skill under `skills/authored/<name>/`. It is an example, not an executable installer, universal runtime contract, or requirement that every skill contain scripts, scheduled jobs, or a host-specific model tier. See [static review and freshness](static-review-and-freshness.md) and [skill verification](skill-verification.md).
+Use this as a **starting point** when an authorized maintainer adds or revises a first-party user-facing skill under `skills/authored/<slug>/`. It is an example, not an executable installer, universal runtime contract, or requirement that every skill contain scripts, scheduled jobs, or a host-specific model tier. See [static review and freshness](static-review-and-freshness.md) and [skill verification](skill-verification.md).
 
 **First-party destination:** place complete new packages only under `skills/authored/<slug>/`, record source/license/complete tree and governed review links, and keep legacy or rights-uncertain files outside the authored collection until independently rebuilt. This template is not authority to move-and-relabel another author's text. See [the 2026-11-18 historical-origin migration audit](reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md).
 
@@ -104,6 +104,33 @@ Verify a complete standalone copy before labeling the package portable.
 3. **Keep defaults portable.** Avoid baking one operator's paths, company or credentials into a general-purpose skill. Provide a clearly scoped configuration slot or an honest no-configuration fallback when the behavior depends on user context.
 4. **Do not assume a scheduler or installer.** Background work, persistence and installation are host-specific capabilities requiring separate action-appropriate authorization. A reusable skill can remain fully useful without them.
 5. **Use deterministic tools when justified, not by reflex.** A script may improve reliability on repeatable calculations or parsing; it is not a universal requirement. Never equate a script's output, a checklist or a static desk review with observed agent behavior.
+
+## Built-in iterative refinement (for authored skills)
+
+A portable authored skill should enable **Observe → Explain → Change →
+Challenge → Decide** when asked to improve its own output or procedures.
+This is a behavior principle, not a mandatory extra file, iteration
+count, special model requirement or dependence on Skillz.
+
+- Observe the **actual consumer failure** and establish baseline/outcome
+  evidence; if there is no failure, use a discriminating negative case
+  before manufacturing tasks.
+- Explain a falsifiable mechanism and select the smallest sufficient,
+  owner-authorized correction.
+- Challenge the **revised artifact** with the original reproducer, a
+  nearby counterexample, preservation of known successes, hard
+  safety/rights constraints, and user outcome when observable.
+- Decide ACCEPT, ITERATE, HOLD, REVERT or STOP_NO_CHANGE against the
+  original acceptance criteria. Repeating requires a *new material
+  finding*; a process that cannot stop creates churn, not quality.
+- Report exact current-version evidence honestly. Green CI, static
+  review, executable parser tests and observed user effectiveness are
+  different claims. Repeatable failures may justify regression fixtures.
+
+Do not force this process as ceremony on trivial lookups, read-only
+reviews, or users who did not authorize writes. A downloaded skill must
+carry its own necessary rules offline, rather than linking to this
+template as a runtime prerequisite.
 
 ## Evidence and failure-resistant design
 
