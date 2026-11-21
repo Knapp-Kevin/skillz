@@ -46,7 +46,9 @@ requirement for hosts that lack Python. It supports `show`, `validate`,
 trusted host. The helper creates only its user-scoped child directories
 and `preferences.local.json`, never writes into the package or public
 source checkout, rejects invalid/malicious preference fields, and
-refuses unsupported OS privacy checks rather than guessing.
+refuses unsupported OS privacy checks rather than guessing. A fixed,
+code-level safe-value allowlist must match `schema.json` exactly; changing
+the schema alone cannot silently grant new preference capabilities.
 
 ```sh
 python preferences/manage.py --root "$USER_PRIVATE_CONFIG" show
