@@ -12,7 +12,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Evidence-Driven Refinement Loop
-  version: 0.3.2
+  version: 0.3.3
   license: MIT
 ---
 
@@ -211,10 +211,15 @@ or assume this host supports writable local storage.
 
 1. On activation, take the current user's explicit request as primary.
    If a real private, accessible overlay exists and reading it is within
-   current authorization, inspect its `skill_id`, `base_skill_version`,
-   `scope`, key/value allowlist and consent source as defined in the
-   bundled [schema](preferences/schema.json). Unknown or conflicting
-   entries do not apply. Never create storage merely to read defaults.
+   current authorization, validate its `skill_id`, `base_skill_version`,
+   `scope`, consent source and every entry against the bundled
+   [schema](preferences/schema.json) **and** the actual installed version.
+   Reject the entire overlay if any entry is unknown, conflicting or
+   repeated under the same key, even if values differ. Do not guess
+   first-wins or last-wins. The portable schema requires the three
+   documented keys and ensures at most one entry of each key. An
+   invalid or unavailable overlay does not change canonical behavior.
+   Never create storage merely to read defaults.
 2. Apply only compatible allowed presentation preferences to the current
    result. Correctness, evidence, rights, safety and tool permissions
    remain canonical; a user may change a preference for this interaction
