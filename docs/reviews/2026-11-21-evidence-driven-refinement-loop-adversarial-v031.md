@@ -2,8 +2,8 @@
 
 **Date:** 2026-11-21  
 **Target:** `skills/authored/evidence-driven-refinement-loop/` on draft PR #826  
-**Current reviewed SKILL.md Git blob:** `2893762bb41d771d668fdb2cd9dcd459dae9b071`  
-**Complete package tree:** `163558c85ec19b97451f4e2512d5b9980e4d56ef`  
+**Current reviewed SKILL.md Git blob:** `d921b7fd317a04ac9327bb874e23eb678a75182f`  
+**Complete package tree:** `f57d732c4fe16f8d41c149c478f57966acba6b0b`  
 **Evidence limit:** exact-source readback and adversarial static inspection. **No Python suite, independent consuming agent, user acceptance, or hosted security test executed.**
 
 ## Review method
@@ -65,8 +65,8 @@ a defined attacker model.
 ## Current static qualification
 
 - Independently reconstructed **10-file** Git tree matches the registry
-  pin `163558c85ec19b97451f4e2512d5b9980e4d56ef`.
-- `SKILL.md` blob matches `2893762bb41d771d668fdb2cd9dcd459dae9b071`;
+  pin `f57d732c4fe16f8d41c149c478f57966acba6b0b`.
+- `SKILL.md` blob matches `d921b7fd317a04ac9327bb874e23eb678a75182f`;
   the version and example refer to `0.3.1`.
 - Local Markdown references resolve, including the embedded preference
   router, schema and manager.
