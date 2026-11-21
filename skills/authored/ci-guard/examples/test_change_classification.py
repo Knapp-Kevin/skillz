@@ -72,6 +72,24 @@ class PortableClassification(unittest.TestCase):
         self.assertTrue(d["requires_exact_final_acceptance"])
         self.assertFalse(d["merge_qualified"])
 
+    def test_same_source_head_requires_new_full_gate_after_ready_transition(self):
+        paths = ["src/library.rs"]
+        draft = self.route(paths, stage="draft")
+        candidate = self.route(paths, stage="candidate")
+        self.assertEqual(draft["route"], "targeted")
+        self.assertEqual(candidate["route"], "full")
+        self.assertEqual(candidate["run_full"], "true")
+        self.assertFalse(draft["merge_qualified"])
+        self.assertFalse(candidate["merge_qualified"])
+
+    def test_required_gate_example_rechecks_ready_for_review(self):
+        text = (ROOT / "examples/classified-github-pr.yml").read_text(encoding="utf-8")
+        self.assertIn("ready_for_review", text)
+        self.assertIn("if: ${{ always() }}", text)
+        self.assertIn("CLASSIFY_RESULT", text)
+        self.assertIn("selected != 1", text)
+        self.assertNotIn("pull_request_target", text)
+
     def test_draft_unknown_is_full(self):
         self.assertEqual(self.route(["unknown.binary"], stage="draft")["route"], "full")
 
