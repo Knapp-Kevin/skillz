@@ -8,6 +8,8 @@ on:
       - 'docs/skill-template.md'
       - 'docs/skill-verification.md'
       - 'scripts/qa/test-engine-contracts.py'
+      - 'registry/skills/local-skills/evidence-driven-refinement-loop.yaml'
+      - 'registry/verification/local-skills/evidence-driven-refinement-loop.yaml'
       - '.github/workflows/skill-preference-qa.yml'
   push:
     branches:
@@ -15,6 +17,8 @@ on:
     paths:
       - 'skills/authored/evidence-driven-refinement-loop/**'
       - 'scripts/qa/test-engine-contracts.py'
+      - 'registry/skills/local-skills/evidence-driven-refinement-loop.yaml'
+      - 'registry/verification/local-skills/evidence-driven-refinement-loop.yaml'
       - '.github/workflows/skill-preference-qa.yml'
 
 permissions:
