@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.3.0
+  version: 0.3.1
   license: MIT
 ---
 
@@ -106,6 +106,10 @@ every substantive section, including code examples, compatibility and
 platform limits, diagrams, tables, badges with provenance, security or
 release caveats, historical signer identities and operational guidance.
 Record a before/after correspondence, not just matching headings.
+Include heading level and title in preservation fingerprints. A heading-only
+section such as `Experimental` or `Not production-ready` can be a critical
+qualification even without body text. Unchanged paragraph content under a
+changed safety heading does not prove retention; require a disposition.
 Every removed or substantively revised original section requires a
 **recorded disposition**: \`RETAINED\`, \`RELOCATED\`, \`SUPERSEDED\`,
 \`OUTDATED\`, or \`UNVERIFIED\`. Bind it to the baseline section ID and
