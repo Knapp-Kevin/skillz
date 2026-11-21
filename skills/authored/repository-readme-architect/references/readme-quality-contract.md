@@ -112,6 +112,15 @@ approved working area. Example:
 - `required_badge_labels`: meaningful evidence-backed badges appropriate
   to that product; `allowed_badge_targets`: known legitimate HTTPS destinations.
   A URL string is a proposed identity, **not** a successful live validation.
+- `asset_inventory`: required item per displayed identity asset, each with
+  `path`, `status` (`verified-existing`, `newly-committed`,
+  `approved-final`, `proposed-placeholder`, `temporary-placeholder`,
+  or `draft`), `owner`, `purpose`, `alt`, and `replacement`.
+  Fields must be nonempty, paths must remain in the approved repository,
+  and repeated/unsafe paths are rejected. Proposed or temporary art cannot
+  satisfy a finished banner requirement even if its bytes exist.
+  An inventory declaration alone does not authenticate copyright, commits,
+  approvals or pixel-level image integrity.
 - `journey_mode`: `execute` for real commands and expected result, or
   `read` for specs, research, datasets and other document-first projects
   where inventing an install command would be dishonest.
@@ -135,7 +144,11 @@ does not establish rights or correct branding. Remote badge HTTP/meaning,
 actual rendered desktop/mobile appearance, visual hierarchy, independence of
 editorial review, test of first use, and authentication of source claims remain
 HOLD/NOT_RUN without separate evidence. It does not write, render, fetch
-remote URLs, execute README commands or authenticate CI. The helper
+remote URLs, execute README commands or authenticate CI. The helper also rejects obvious raster header/geometry failures, some
+unsafe SVG constructs and HTML-image alt omissions, without claiming to
+fully decode or render every image format. It never validates that a
+preview is the committed artifact; obtain the exact asset digest and
+rendered screenshot separately. The helper
 intentionally cannot self-award the profile; its return code remains nonzero
 for FAIL or unresolved HOLD. When Python or rendering tools are unavailable,
 perform equivalent manual audit and record NOT_RUN distinctly.
