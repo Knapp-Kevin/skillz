@@ -113,17 +113,17 @@ model, network access, a test runner or persisted tracking records.
      ownership, referenced assets, and review/verification receipts
      still honest after the change?
 5. **DECIDE against the frozen criteria.** Record facts separately:
-   \`OBSERVED_PASS\`, \`OBSERVED_FAIL\`, \`NOT_RUN\`, \`UNKNOWN\`,
-   \`BLOCKED\` or \`STATIC_INFERENCE\`; never turn a design scenario
+   `OBSERVED_PASS`, `OBSERVED_FAIL`, `NOT_RUN`, `UNKNOWN`,
+   `BLOCKED` or `STATIC_INFERENCE`; never turn a design scenario
    into an observed test. Choose one:
-   - \`ACCEPT\` if the targeted outcome and invariants are demonstrated
+   - `ACCEPT` if the targeted outcome and invariants are demonstrated
      at the required evidence level, and no material regression remains;
-   - \`ITERATE\` if a clearly identified new failure justifies another
+   - `ITERATE` if a clearly identified new failure justifies another
      bounded correction and the available budget permits;
-   - \`HOLD\` if a material unknown, adverse result, missing approval,
+   - `HOLD` if a material unknown, adverse result, missing approval,
      stale evidence or unreviewed generator prevents safe acceptance;
-   - \`REVERT\` if the change worsens the target or violates an invariant;
-   - \`STOP_NO_CHANGE\` if no meaningful improvement was evidenced or
+   - `REVERT` if the change worsens the target or violates an invariant;
+   - `STOP_NO_CHANGE` if no meaningful improvement was evidenced or
      the expected marginal value does not justify more work.
 
 Never lower the acceptance bar mid-cycle to declare success. New
@@ -170,7 +170,7 @@ For each material iteration, retain the minimum **evidence capsule**
 in the reply or an owner-approved artifact, rather than creating
 a mandatory file, log or issue:
 
-\`\`\`text
+```text
 Target / exact before → after identity:
 Intended consumer outcome and frozen acceptance:
 Observed deficiency / evidence:
@@ -180,7 +180,7 @@ Real consumer acceptance (or NOT_RUN):
 Security, rights, generator and authority constraints:
 Decision: ACCEPT | ITERATE | HOLD | REVERT | STOP_NO_CHANGE
 Unresolved gap and next highest-value action (or NONE):
-\`\`\`
+```
 
 Record source-local regression tests for **recurring, reproducible**
 failures when it materially improves future assurance and is authorized.
@@ -200,7 +200,7 @@ honest partial improvement over indefinite analysis.
 When independent user validation or a deployment is unavailable,
 report precisely what **was changed and locally checked**, and
 what still needs actual runtime/consumer evidence. A complete
-iteration may legitimately end \`HOLD\`; a green check is not
+iteration may legitimately end `HOLD`; a green check is not
 permission to declare a user-level result.
 
 ## Adversarial self-review
