@@ -91,7 +91,7 @@ def run_feedback_contract_error(template, forge, verification):
             "independent verification",
             "CANONICAL_IMPROVEMENT",
             "LOCAL_PREFERENCE",
-            "user-private",
+            "user-scoped private",
         )),
         "verification": (verification, (
             "## Per-execution feedback and anti-drift review for authored skills",
@@ -136,13 +136,22 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertIn("preferences/manage.py", skill)
 
     def test_preference_overlay_is_isolated_from_canonical_rewrites(self):
-        skill = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
-        for required in ("CANONICAL_IMPROVEMENT", "LOCAL_PREFERENCE",
-                         "MIXED", "user-local", "preferences.json",
-                         "outside", "untrusted data", "reconcile",
-                         "explicit-user-confirmation"):
+        root = "skills/authored/evidence-driven-refinement-loop/"
+        skill = read(root + "SKILL.md")
+        routing = read(root + "preferences/routing.md")
+        schema = read(root + "preferences/schema.json")
+        manager = read(root + "preferences/manage.py")
+        for required in ("CANONICAL_IMPROVEMENT", "LOCAL_PREFERENCE", "MIXED",
+                         "preferences.local.json", "untrusted data",
+                         "source package", "explicitly approved full revocation"):
             with self.subTest(phrase=required):
                 self.assertIn(required, skill)
+        self.assertIn("explicit-user-confirmation", schema)
+        self.assertIn("not a bug", skill)
+        self.assertIn("separate", routing)
+        self.assertIn("reject_checkout_root(", manager)
+        self.assertIn("Refusing", manager)
+        self.assertNotIn('"preferences.local.json"', read(root + "preferences/example.json"))
 
     def test_overlay_preference_must_not_launder_into_policy(self):
         skill = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
@@ -157,7 +166,11 @@ class EngineStaticContracts(unittest.TestCase):
         schema = json.loads(read(package_root + "schema.json"))
         self.assertEqual(config["skill_id"], schema["properties"]["skill_id"]["const"])
         self.assertEqual(config["schema_version"], schema["properties"]["schema_version"]["const"])
-        self.assertEqual(config["base_skill_version"], "0.2.0")
+        canonical = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
+        declared_version = re.search(r"(?m)^  version: ([0-9]+\\.[0-9]+\\.[0-9]+)$",
+                                     canonical)
+        self.assertIsNotNone(declared_version)
+        self.assertEqual(config["base_skill_version"], declared_version.group(1))
         self.assertEqual(config["scope"], "user-local")
         self.assertEqual(config["preferences"][0]["source"], "explicit-user-confirmation")
         self.assertIn("preferences.local.json", read(package_root + "README.md"))
@@ -180,14 +193,19 @@ class EngineStaticContracts(unittest.TestCase):
             forged, read(SKILLS["forge"]),
             read("docs/skill-verification.md")))
 
-    def test_all_seven_repo_bound_skills_have_metadata(self):
+    def test_engine_metadata_distinguishes_maintenance_from_user_bootstrap(self):
         for name, path in SKILLS.items():
             with self.subTest(name=name):
                 data = read(path)
-                self.assertTrue(data.startswith("---\nname: "))
-                self.assertIn("\n  repo-bound: true\n", data)
-                self.assertRegex(data, r"(?m)^  version: [0-9]+\.[0-9]+\.[0-9]+$")
-                self.assertIn("\n# ", data)
+                self.assertTrue(data.startswith("---\\nname: "))
+                self.assertRegex(data, r"(?m)^  version: [0-9]+\\.[0-9]+\\.[0-9]+$")
+                self.assertIn("\\n# ", data)
+                if name == "bootstrap":
+                    # User bootstrap must never inherit repository-write authority.
+                    self.assertNotIn("\\n  repo-bound: true\\n", data)
+                    self.assertIn("Only `REPOSITORY_MAINTENANCE`", data)
+                else:
+                    self.assertIn("\\n  repo-bound: true\\n", data)
 
     def test_maintainer_destination_agrees_with_template(self):
         forge = read(SKILLS["forge"])
@@ -278,7 +296,10 @@ class EngineStaticContracts(unittest.TestCase):
             self.assertIn(fragment, skill)
         self.assertEqual(markdown_local_links(root + "SKILL.md", skill), [])
         self.assertNotIn(chr(92) + chr(96), skill)  # Reject Markdown-escaped backticks.
-        self.assertEqual(skill.count(chr(96) * 3), 2)  # One real evidence capsule.
+        self.assertEqual(skill.count("~~~"), 0)  # Keep Markdown fences consistent.
+        self.assertEqual(skill.count(chr(96) * 3), 4)  # One SH and one text fence.
+        self.assertEqual(skill.count(chr(96) * 3 + "sh"), 1)
+        self.assertEqual(skill.count(chr(96) * 3 + "text"), 1)
 
     def test_iteration_method_can_refuse_false_improvement(self):
         root = "skills/authored/evidence-driven-refinement-loop/"
@@ -301,7 +322,7 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertIn("Iterative improvement as an execution discipline", forge)
         self.assertIn("Repeatable review of the newly corrected candidate", evaluator)
         self.assertIn("Iterate on a real artifact", bootstrap)
-        self.assertIn("Built-in iterative refinement", template)
+        self.assertIn("Per-execution self-review and governed evolution", template)
         for body in (forge, evaluator, bootstrap, template):
             self.assertIn("evidence", body.lower())
         self.assertIn("not a runtime dependency", forge)
