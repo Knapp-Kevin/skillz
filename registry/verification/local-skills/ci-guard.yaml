@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.4.1"
+skill_version: "1.5.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 9d270cc45bdb4fc31c07ff165a85df0cc86c0db8
-complete_package_tree_sha: 790a54da6624e344e59f5b8cc089aa55b94880a6
+content_blob_sha: 026ac1d217aaba3002cb15eac58d9699db06fe6f
+complete_package_tree_sha: aee282c0cc0cd3163a55159f9f3deaf6cc79bbe4
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
-verification_basis: v1.4.1-source-changed-exact-package-review-and-execution-pending
+verification_basis: v1.5.0-source-upgrade-local-plan-execution-suite-passed-independent-host-hold
 validation_status: not-run
-validation_note: "v1.3 original classifier 16/16 passed historically. v1.4.1 28 authored Python test methods NOT_RUN on exact current source. Five focused rule-level controlled emulations and one disposable local Git base-fetch fixture PASS; neither proves actual package test suite or consuming workflow. No host acceptance or measured minutes saved."
+validation_note: "36/36 new local Python tests passed against exact source snapshots, including disposable Git plan-execute-qualify. Existing 28 legacy classifier methods NOT_RUN on v1.5. No independent Actions run, consumer adoption, branch protection, actual billed-minute savings, or agent-host behavior validation; do not claim validated."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_4_1"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,8 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Exact v1.4.1 source modified from reviewed v1.3. New generic classifier,
-  policy and draft/candidate example are NOT_RUN, not yet static verified or
-  independently host validated. Historic v1.3 19/20 and tests remain linked
-  in docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md.
-  No actual CI optimization or merge-decision permission established.
+  Exact v1.5.0 complete source is recorded; new dependency-aware
+  qualification and documentation job have local executed fixture proof.
+  All prior v1.3-v1.4 receipts remain historical for their exact packages.
+  New package has not undergone independent consuming-repository CI
+  acceptance, protected-status cutover, or measured cost verification.
