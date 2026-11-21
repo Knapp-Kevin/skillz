@@ -183,6 +183,15 @@ my-skill/
     example.json    # anonymous illustration, not a user profile
 ```
 
+Where a skill supports **persisted** user preferences, its
+`SKILL.md` must explicitly identify when to read, classify, apply,
+update, revalidate, revoke and reconcile the overlay. The component
+should contain a decision contract distinguishing shared improvements
+from taste, and a concrete host-compatible update method, optionally an
+offline, tested helper; a JSON Schema/example alone is **not** a working
+runtime. The helper is not required for every authored skill, and a
+no-storage fallback must keep the main skill functional.
+
 The **package defines the preference contract**, and the **user owns a
 separate `preferences.local.json`**. A strictly private, single-user
 installation can keep that local file in its own `preferences/`
