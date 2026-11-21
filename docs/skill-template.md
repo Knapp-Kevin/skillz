@@ -105,6 +105,33 @@ Verify a complete standalone copy before labeling the package portable.
 4. **Do not assume a scheduler or installer.** Background work, persistence and installation are host-specific capabilities requiring separate action-appropriate authorization. A reusable skill can remain fully useful without them.
 5. **Use deterministic tools when justified, not by reflex.** A script may improve reliability on repeatable calculations or parsing; it is not a universal requirement. Never equate a script's output, a checklist or a static desk review with observed agent behavior.
 
+## Built-in iterative refinement (for authored skills)
+
+A portable authored skill should enable **Observe → Explain → Change →
+Challenge → Decide** when asked to improve its own output or procedures.
+This is a behavior principle, not a mandatory extra file, iteration
+count, special model requirement or dependence on Skillz.
+
+- Observe the **actual consumer failure** and establish baseline/outcome
+  evidence; if there is no failure, use a discriminating negative case
+  before manufacturing tasks.
+- Explain a falsifiable mechanism and select the smallest sufficient,
+  owner-authorized correction.
+- Challenge the **revised artifact** with the original reproducer, a
+  nearby counterexample, preservation of known successes, hard
+  safety/rights constraints, and user outcome when observable.
+- Decide ACCEPT, ITERATE, HOLD, REVERT or STOP_NO_CHANGE against the
+  original acceptance criteria. Repeating requires a *new material
+  finding*; a process that cannot stop creates churn, not quality.
+- Report exact current-version evidence honestly. Green CI, static
+  review, executable parser tests and observed user effectiveness are
+  different claims. Repeatable failures may justify regression fixtures.
+
+Do not force this process as ceremony on trivial lookups, read-only
+reviews, or users who did not authorize writes. A downloaded skill must
+carry its own necessary rules offline, rather than linking to this
+template as a runtime prerequisite.
+
 ## Evidence and failure-resistant design
 
 - Write precise triggers and non-triggers and a concise ordered procedure.
