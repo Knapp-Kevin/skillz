@@ -104,7 +104,10 @@ selected by the dependency closure and **all four** are checked by an
 always-emitted qualification gate. Missing, skipped, failed, stale or
 misrouted docs verification fails the gate. The executable commands in the
 sample manifest reference **consumer-owned real verifier scripts** under
-`trusted/ci/verify_*.sh`. Those scripts must be authored/checked by each
+`../trusted/ci/verify_*.sh` relative to the candidate `work/` directory.
+The command runs **from the candidate checkout**, with `.` as the candidate
+argument, rather than accidentally checking the runner's parent directory.
+Those scripts must be authored/checked by each
 consumer and fetched from the trusted base; missing commands fail closed.
 All release/provenance and independently branch-required checks continue
 until migration is separately authorized and proved. Pin third-party
