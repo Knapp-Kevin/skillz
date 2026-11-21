@@ -58,6 +58,15 @@ an opt-in `preferences.local.json` in a private user configuration area
 or a strictly private single-user installation. The [skill](SKILL.md)
 retains a read-only/no-storage fallback.
 
+The canonical `SKILL.md` includes a concrete execution hook for the
+bundled [routing rules](preferences/routing.md) and optional
+[offline preference manager](preferences/manage.py). This supports
+allowlisted, user-consented updates, removal, version checks and
+private-state validation. See the [component instructions](preferences/README.md)
+for supported hosts and a no-storage fallback. The optional
+[regression tests](preferences/test_manage.py) are not mandatory for
+normal skill execution.
+
 ## Evidence levels
 
 Distinguish what was written, what was actually checked, what an agent
