@@ -19,6 +19,13 @@ import stat
 import sys
 
 SKILL_ID = "evidence-driven-refinement-loop"
+# Fixed code-level allowlist; declarative schema must agree exactly.
+# A modified schema alone must never expand the manager's permissions.
+SAFE_VALUES = {
+    "response.detail": {"concise", "standard", "detailed"},
+    "response.format": {"paragraphs", "checklist", "table"},
+    "examples.focus": {"general", "documentation", "code", "ci"},
+}
 MAX_BYTES = 8192
 PACKAGE = Path(__file__).resolve().parent.parent
 SCHEMA_FILE = Path(__file__).with_name("schema.json")
@@ -51,6 +58,8 @@ def allowed_keys() -> dict[str, set[str]]:
         if props["source"].get("const") != "explicit-user-confirmation":
             raise PreferenceError("Schema would accept unapproved preference")
         result[key] = set(vals)
+    if result != SAFE_VALUES:
+        raise PreferenceError("Bundled schema differs from fixed safe preference allowlist")
     return result
 
 
