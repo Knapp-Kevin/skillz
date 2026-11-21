@@ -17,10 +17,10 @@ local_path: skills/authored/repository-readme-architect/SKILL.md
 permission_tier: read-and-generate; focused repository write only with user authorization
 portability: high
 review_status: needs-re-review
-dependency_status: standalone-twelve-file-optional-python-stdlib
-dependencies: "Complete standalone twelve-file package: normative safeguards in SKILL.md; optional Python 3.9+ stdlib read-only link and delivery-preflight checkers, tests, examples and quality reference. No runtime internet, sibling or central Skillz policy required."
-content_blob_sha: 514f0512dcf221d72a1b66bd62ab2381ad94673f
-complete_package_tree_sha: eb3451aa957a3cf0a01821a55e2d593772433685
+dependency_status: self-contained-fifteen-file-optional-python-stdlib
+dependencies: "Standalone fifteen-file package: portable Gold/Platinum guidance in SKILL.md, three read-only Python 3.9+ stdlib checkers (local links, preservation/generator/CI, presentation quality), 48 newly authored anonymous profile tests, inherited checker tests, offline sample contract and references. No external runtime standards."
+content_blob_sha: 156f0c812be124098b6c84b22ae895e7993c59be
+complete_package_tree_sha: 972fbc6227f4fd3b5b7dc60e4a3bb0355f0499b6
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
-rationale: "v0.4.0 establishes Gold by default for substantive repositories and specifies independent editorial acceptance; executable profile checker not yet included in package, so current exact-version review is pending. Earlier 101 local tests apply to v0.3.0 only."
+rationale: "v0.4.0 establishes Gold as default for substantive repos, Why-What-How openings, Grade-10 accessible introductions, source-first generator ownership, verified image lifecycle/digests, enforced structural presentation gates and mandatory independent editorial/reader/visual review. New 48-case profile suite is committed but NOT_RUN on exact branch HEAD. Prior 101 tests from v0.3.0 are historical only. Exact-package verification pending."
