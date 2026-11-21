@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: d921b7fd317a04ac9327bb874e23eb678a75182f
-complete_package_tree_sha: f57d732c4fe16f8d41c149c478f57966acba6b0b
+complete_package_tree_sha: a98510befd694a2509cfb469cf3829646bef0405
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
 verification_status: verified
-verification_basis: exact-ten-file-static-source-and-contract-review-with-fourteen-synthetic-adversarial-scenarios
+verification_basis: exact-ten-file-static-semantic-review-plus-executed-two-version-offline-mechanics-regression
 validation_status: not-run
-validation_note: "Exact v0.3.1 ten-file tree rebuilt and checked against companion pins; Markdown local links resolve; source-order probes confirm consent-gated mutation, schema-independent revocation, descriptor metadata recheck, atomic post-write readback and ancestry check. 30 Python helper regression methods and 22 engine QA methods NOT_RUN; no independent host execution or measured consumer effect. Same-UID attacker and concurrent writes remain outside proven safety boundary."
+validation_note: "Exact v0.3.1 package identity verified; 38/38 optional preference manager tests and 22/22 engine source contract tests passed on each of Python 3.11 and 3.13 in GitHub Actions run 44943402910 at commit 15e1217d. Regression checks include two independent private-root profiles and advisory lock refusal. These are deterministic mechanics tests, NOT independent agent-host execution, user outcome or full adversarial same-UID isolation; consumer validation remains not-run."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,15 +24,16 @@ tags:
   authority: [read-only-default, owner-authorized-scoped-change]
   portability: high
 notes: >-
-  Static v0.3.1 review score 18/20: trigger 2, procedure 2, authority 2,
-  failure 2, evidence 2, dependency 1 (helper tests not executed),
-  portability 2, differentiation 2, adversarial resilience 2,
-  effectiveness 1 (agent/user behavior not observed). An initial false
-  finding about JSON Schema required-fields was withdrawn after readback.
-  Actual defects corrected: unknown direct method action, stale/malformed
-  preference revocation, unsafe opened-file verification, unverified save
-  acknowledgement, and replaceable parent roots. Real POSIX execution
-  and same-UID/concurrency isolation remain unproven. Thirty optional
-  helper tests and 22 engine tests exist but NOT_RUN. This exact-source
-  static assessment does not certify runtime privacy, security or efficacy.
-  Review: docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
+  Exact v0.3.1 source review retains rubric score 18/20; source quality
+  is separate from observed host behavior. CI run 44943402910 at
+  commit 15e1217d executed 38 preference manager cases and 22 engine
+  contract cases on Python 3.11 and 3.13, all PASS. It verifies
+  cooperative advisory lock behavior, version/revocation handling,
+  persisted data allowlists, and two disjoint private configuration
+  roots under a single OS identity. It does not demonstrate isolation
+  across adversarial same-UID processes, genuine separate OS users,
+  Windows portability, or independent consuming-agent acceptance.
+  Canonical source and user-preference learning remain separate;
+  installed user values are never part of the public skill package.
+  Adversarial source review:
+  docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
