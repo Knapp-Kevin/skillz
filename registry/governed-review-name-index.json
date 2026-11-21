@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-11-20",
-  "purpose": "Current 1048 governed exact-version identities (53 first-party, 995 third-party). Source snapshots and historic retired entries remain separate.",
+  "purpose": "Current 1049 governed exact-version identities (54 first-party, 995 third-party). Source snapshots and historic retired entries remain separate.",
   "lookup": "For id source/skill, read registry/verification/source/skill.yaml and registry/skills/source/skill.yaml. Read full SKILL.md and license/notice material before suitability, reuse, adaptation, or installation claims.",
   "source_snapshot": "2026-11-18 current canonical capability-directory and authored-index exact-version source identities; prior historical source snapshots remain in their review ledgers.",
   "record_counts": {
-    "first_party": 53,
+    "first_party": 54,
     "third_party": 995,
-    "total": 1048
+    "total": 1049
   },
   "first_party_ids": [
     "local-skills/agent-failure-boundary-analysis",
@@ -58,6 +58,7 @@
     "local-skills/research-question-dossier",
     "local-skills/scheduled-work-proof-auditor",
     "local-skills/session-continuity",
+    "local-skills/skill-trial-evidence-auditor",
     "local-skills/source-debt-triage",
     "local-skills/statement-variance-reviewer",
     "local-skills/technology-change-intelligence",
@@ -1351,5 +1352,22 @@
       "generated-document ownership",
       "exact-HEAD required CI gates"
     ]
+  },
+  "skill_trial_evidence_auditor_extension_20261120": {
+    "date": "2026-11-20",
+    "id": "local-skills/skill-trial-evidence-auditor",
+    "entrypoint": "skills/authored/skill-trial-evidence-auditor/SKILL.md",
+    "source_blob_sha1": "4ab57ef3003285b7e6807776d7bfbc5a51118f97",
+    "tree_sha1": "22dc96c351ffcf9c77b81c613415d9010b16984f",
+    "capability_paths": [
+      "agent-mcp-development/evaluation",
+      "research/reproducibility"
+    ],
+    "review": "docs/reviews/2026-11-20-trial-evidence-gap-comparison.md",
+    "receipt": "docs/evals/receipts/2026-11-20-skill-trial-v010-controlled-method.json",
+    "static_grade": "19/20",
+    "executable_method_tests": "44/44 PASS",
+    "external_host_validation": "NOT_RUN",
+    "corpus_wide_novelty_claim": false
   }
 }

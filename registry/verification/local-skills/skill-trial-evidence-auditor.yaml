@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: skill-trial-evidence-auditor
+skill_version: "0.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/skill-trial-evidence-auditor/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/skill-trial-evidence-auditor/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 4ab57ef3003285b7e6807776d7bfbc5a51118f97
+complete_package_tree_sha: 22dc96c351ffcf9c77b81c613415d9010b16984f
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-20"
+verification_status: verified
+verification_basis: maintainer-complete-eight-file-static-review-and-44-executed-local-method-tests
+validation_status: not-run
+validation_note: "44/44 local Python 3.13 checker-method tests pass; synthetic 13-pair fixture correctly withholds host-effect claim. No independent actual agent host behavioral validation, cross-model A/B, user outcome, external security scanner or overall 1.5x effectiveness proven."
+rubric: docs/skill-verification.md
+rubric_score: "19/20"
+tags:
+  use_case: [agent-skill-evaluation, experiment-integrity, trial-evidence-review]
+  lifecycle: [evaluation, verification]
+  characteristic: [standalone, evidence-first, permission-bounded, capability-adaptive]
+  authority: [read-only]
+  portability: [high]
+notes: >-
+  Offline self-contained original skill, Python optional. Exact eight-file tree.
+  Separate tool input consistency from actual runner artifact authentication and
+  any observed host agent behavioral effectiveness.
+  docs/reviews/2026-11-20-trial-evidence-gap-comparison.md
+  docs/evals/receipts/2026-11-20-skill-trial-v010-controlled-method.json

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-19",
+  "snapshot_date": "2026-11-20",
   "navigation_root": "capability-domains",
   "description": "Open-ended evidence-linked capability crosswalk plus name-only reviewed-record search hints. Name-only leads are not examined/qualified mappings; blank entries are unknown, not proof of absence.",
   "reading_route": [
@@ -1142,7 +1142,7 @@
     {
       "domain": "agent-mcp-development",
       "display_name": "Agent / MCP development",
-      "linked_reviewed_examples": 9,
+      "linked_reviewed_examples": 10,
       "subdomains_with_linked_examples": 6,
       "name_only_candidate_count": 17,
       "evidence_preview": [
@@ -1227,6 +1227,18 @@
           "capability_example": "Package or resume verified context without transferring hidden authority or stale assertions.",
           "unchanged_use_approved": false,
           "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/skill-trial-evidence-auditor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "19/20",
+          "review_evidence_path": "registry/verification/local-skills/skill-trial-evidence-auditor.yaml",
+          "source_class": "local-provenance",
+          "path": "agent-mcp-development/evaluation",
+          "capability_example": "Audit actual paired agent-skill trial receipts for comparability, leakage, trigger behavior, safety and honest uncertainty.",
+          "unchanged_use_approved": false,
+          "restriction": "No real host trial or independently authenticated runner evidence. Read-only metadata audit only."
         }
       ],
       "name_only_preview": [
@@ -2128,7 +2140,7 @@
     {
       "domain": "research",
       "display_name": "Research",
-      "linked_reviewed_examples": 27,
+      "linked_reviewed_examples": 28,
       "subdomains_with_linked_examples": 5,
       "name_only_candidate_count": 10,
       "evidence_preview": [
@@ -2243,6 +2255,18 @@
           "capability_example": "Build a question-specific and source-root-aware research explanation with rival hypotheses.",
           "unchanged_use_approved": false,
           "restriction": "Reference-only until user/host authority and outcome checks; historical source rights unresolved"
+        },
+        {
+          "id": "local-skills/skill-trial-evidence-auditor",
+          "verification_status": "verified",
+          "validation_status": "not-run",
+          "static_score": "19/20",
+          "review_evidence_path": "registry/verification/local-skills/skill-trial-evidence-auditor.yaml",
+          "source_class": "local-provenance",
+          "path": "research/reproducibility",
+          "capability_example": "Qualify experimental improvement claims against matched controls, source identity and reproducibility gaps.",
+          "unchanged_use_approved": false,
+          "restriction": "No real host trial or independently authenticated runner evidence. Read-only metadata audit only."
         }
       ],
       "name_only_preview": [
@@ -5012,7 +5036,7 @@
     "registry/verification/"
   ],
   "first_party_evidence": "registry/local-verification.json",
-  "governed_identity_denominator": 1048,
+  "governed_identity_denominator": 1049,
   "third_party_identity_denominator": 995,
   "domains": [
     {
@@ -15053,11 +15077,13 @@
             "Reference evaluation methods; default external LLM judge/trace egress not approved",
             "Analyze failed agent sessions and propose falsifiable improvements",
             "Compare prompt-injection, bias and privacy risks in a supplied prompt",
-            "Reconstruct causally discriminating agent incidents and explicit boundary violations."
+            "Reconstruct causally discriminating agent incidents and explicit boundary violations.",
+            "Audit actual paired agent-skill trial receipts for comparability, leakage, trigger behavior, safety and honest uncertainty."
           ],
           "matched_skill_ids": [
             "google-agents-cli/google-agents-cli-eval",
-            "local-skills/agent-failure-boundary-analysis"
+            "local-skills/agent-failure-boundary-analysis",
+            "local-skills/skill-trial-evidence-auditor"
           ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
@@ -20365,10 +20391,12 @@
           "id": "reproducibility",
           "name": "reproducibility",
           "capabilities": [
-            "Experimental-design and reproducibility ladder review of research claims."
+            "Experimental-design and reproducibility ladder review of research claims.",
+            "Qualify experimental improvement claims against matched controls, source identity and reproducibility gaps."
           ],
           "matched_skill_ids": [
-            "local-skills/research-methods-appraiser"
+            "local-skills/research-methods-appraiser",
+            "local-skills/skill-trial-evidence-auditor"
           ],
           "coverage_status": "unassessed",
           "search_hints": [
@@ -34501,15 +34529,41 @@
       "link_basis": "Exact v1.3 ten-file source with classification-first CI generation and cost controls; 16/16 classifier CPU tests passed, while cross-model and real savings remain unmeasured",
       "restriction": "Read-only reference. External CI changes, token/branch-rule edits, merging and deployment need separate authorization.",
       "unchanged_use_approved": false
+    },
+    {
+      "id": "local-skills/skill-trial-evidence-auditor",
+      "source_id": "local-skills",
+      "skill_name": "skill-trial-evidence-auditor",
+      "content_blob_sha": "4ab57ef3003285b7e6807776d7bfbc5a51118f97",
+      "complete_package_tree_sha": "22dc96c351ffcf9c77b81c613415d9010b16984f",
+      "verification_status": "verified",
+      "validation_status": "not-run",
+      "static_score": "19/20",
+      "capability_paths": [
+        "agent-mcp-development/evaluation",
+        "research/reproducibility"
+      ],
+      "evidence_path": "registry/verification/local-skills/skill-trial-evidence-auditor.yaml",
+      "skill_path": "skills/authored/skill-trial-evidence-auditor/SKILL.md",
+      "provenance_path": "registry/skills/local-skills/skill-trial-evidence-auditor.yaml",
+      "source_license": "New original eight-file MIT standalone package",
+      "source_role": "first-party",
+      "source_class": "first-party-authored",
+      "authority_tags": [
+        "read-only"
+      ],
+      "link_basis": "Original eight-file standalone exact source; 44/44 actual local Python integrity-method checks; 3 external pinned README prior-art comparisons, not complete code reviews. Independent agent-host A/B NOT_RUN.",
+      "restriction": "No automatic agent evaluations, permission expansion, receipt authentication, user-impact claims, 1.5x proof, scheduled runs or repo mutations.",
+      "unchanged_use_approved": false
     }
   ],
-  "identity_level_capability_links_mapped": 132,
+  "identity_level_capability_links_mapped": 133,
   "third_party_identity_links_remaining": 921,
   "population_accounting": {
     "owner_target": "Continuous expansion: discover, index and individually review every distinct eligible skill in each declared snapshot, while adding new sources, skills and revisions",
     "known_persisted_third_party_exact_version_review_records": 995,
-    "known_first_party_skill_records": 53,
-    "known_total_governed_review_records": 1048,
+    "known_first_party_skill_records": 54,
+    "known_total_governed_review_records": 1049,
     "discovered_distinct_skill_denominator": null,
     "eligible_distinct_skill_denominator": null,
     "source_overlap_deduplication_status": "not-reconciled",
@@ -34566,13 +34620,13 @@
     "openai_plugins_capability_index_20261102": "registry/discovery/openai-plugins-capability-index-20261102.json",
     "j4flmao_agent_skills_capability_index_20261102": "registry/discovery/j4flmao-agent-skills-capability-index-20261102.json"
   },
-  "first_party_identity_links_mapped": 53,
+  "first_party_identity_links_mapped": 54,
   "third_party_identity_links_mapped": 79,
   "unmapped_review_identity_count": 916,
   "navigation_population": {
-    "mapped_first_party_distinct": 53,
+    "mapped_first_party_distinct": 54,
     "mapped_third_party_distinct": 79,
-    "mapped_total_distinct": 132,
+    "mapped_total_distinct": 133,
     "subdomains_with_evidence_linked_examples": 88,
     "total_subdomains": 247,
     "status": "partial and open-ended; external corpus discovery remains broader than links",
@@ -34869,5 +34923,19 @@
     "applies_to": "all reviewed identities (existing, first-party and external)",
     "evidence_limit": "not a retrospective certification; assess relevant exact version on selection and material revision",
     "model_restrictions": "none on otherwise authorized capability; safety and evidence remain invariant"
+  },
+  "skill_trial_evidence_extension_20261120": {
+    "date": "2026-11-20",
+    "new_id": "local-skills/skill-trial-evidence-auditor",
+    "source_review": "docs/reviews/2026-11-20-trial-evidence-gap-comparison.md",
+    "execution_receipt": "docs/evals/receipts/2026-11-20-skill-trial-v010-controlled-method.json",
+    "source_scope": "three pinned public README GitHub metadata surfaces, seven internal engine SKILL.md sources, prior authored overlaps; not full ecosystem",
+    "methods_tests": "44_PASS_LOCAL_PYTHON",
+    "external_host_behavior": "NOT_RUN",
+    "canonical_paths": [
+      "agent-mcp-development/evaluation",
+      "research/reproducibility"
+    ],
+    "novelty": "NOT_PROVEN_GLOBALLY"
   }
 }

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "scope": "Original standalone trial evidence adjudication skill and bounded external prior-art source reading",
+  "package_path": "skills/authored/skill-trial-evidence-auditor",
+  "skill_version": "0.1.0",
+  "entrypoint_git_blob_sha1": "4ab57ef3003285b7e6807776d7bfbc5a51118f97",
+  "complete_git_tree_sha1": "22dc96c351ffcf9c77b81c613415d9010b16984f",
+  "file_count": 8,
+  "implementation_git_blob_sha1": "cac8a94b40ce1aa6b24b99e85428050b42c426d9",
+  "tested_tests_git_blob_sha1": "3b78bd31d3babf7c5df52097a86d93dc2a715b34",
+  "executed": {
+    "kind": "REAL_OFFLINE_PYTHON_METHOD_TESTS",
+    "python_version": "3.13",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -q",
+    "tests": 44,
+    "passed": 44,
+    "failures": 0,
+    "errors": 0,
+    "source_blob_match_locally_executed_bytes": true
+  },
+  "synthetic_control": {
+    "filename": "examples/synthetic-trial-receipt.json",
+    "pairs": 13,
+    "positive_pairs": 12,
+    "nontrigger_pairs": 1,
+    "recorded_delta_percentage_points": 100,
+    "exact_discordant_pair_p": 0.0004882812500000003,
+    "determination": "WITHHELD_INSUFFICIENT_OR_UNQUALIFIED_EVIDENCE",
+    "reason": "CONTROLLED_EMULATION; NOT_PREREGISTERED; NO_ISOLATED_HOLDOUT",
+    "actual_independent_agent_host_validation": false,
+    "source_authenticity_verified": false
+  },
+  "independently_consulted_public_readme_snapshots": [
+    {
+      "repo": "TiesPetersen/SkillBenchmark",
+      "head": "6ba8132fd5a7def75e2c57545c9c158e01cfdda8",
+      "readme_blob": "08ebd703e70630daea13c3e9460ec711483494e6",
+      "actual_code_review": false
+    },
+    {
+      "repo": "tardigrde/agent-skill-eval",
+      "head": "536101b7bf3f6395c8d4ece03d1b412862b660e4",
+      "readme_blob": "db89de19443369cf97e9caec8f069e4d6238abe6",
+      "actual_code_review": false
+    },
+    {
+      "repo": "KalarisLabs/research-agent-skills",
+      "head": "a74b0dbe5fa865d73b9f250ba5b0c9f107bd1baa",
+      "readme_blob": "f2277a58665a59472992e6f840f371deb9a7140d",
+      "actual_code_review": false
+    }
+  ],
+  "discovery_limitations": [
+    "Only three external README surfaces and repo metadata, seven internal engine source files, current authored index and selected overlap candidates inspected",
+    "G1-G3, dynamic four-source source trees and governed third-party 995 not exhaustively reviewed",
+    "No novelty or global absence claim",
+    "External README benchmark and licensing assertions not independently verified as code or nested rights"
+  ],
+  "security_external_scan": "NOT_RUN",
+  "actual_agent_host_trial": "NOT_RUN",
+  "independent_model_comparison": "NOT_RUN",
+  "measured_quality_effect": "NOT_PROVEN",
+  "source_rights": "New first-party original MIT code and wording; no third-party source copied",
+  "registry_authority": "read-only by default; no automatic model runs, installs, scheduling or persistent review publication",
+  "risk": "Checker consumes user/host supplied assertions, cannot validate actual execution or judge independence; synthetic p-value does not validate host effectiveness"
+}
