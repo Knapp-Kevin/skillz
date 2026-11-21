@@ -114,7 +114,11 @@ selected banner, relevant badge identities/destinations, reader-journey mode
 and explicit exceptions in a profile contract. The optional bundled
 [profile acceptance checker](scripts/profile_acceptance.py) and
 [example profile contract](examples/gold-quality-profile.json) provide
-read-only mechanical checks. This contract **cannot disable required
+read-only mechanical checks. Its asset inventory must bind each displayed
+project image to its exact repository path, status, owner, purpose,
+accessible alt and replacement condition. Check actual binary identity
+and rendered screenshots separately; no self-asserted asset status is
+proof of approved branding. This contract **cannot disable required
 elements**. A missing required element is FAIL, or HOLD with an explained
 evidence-bound exception requiring independent owner/editorial judgment.
 An exception field or passing local script does not certify its own approval.
