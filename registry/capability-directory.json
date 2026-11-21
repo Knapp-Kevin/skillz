@@ -31435,8 +31435,8 @@
       "id": "local-skills/repository-readme-architect",
       "source_id": "local-skills",
       "skill_name": "repository-readme-architect",
-      "content_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
-      "complete_package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
+      "content_blob_sha": "a0e2e2afb9d013ebbc7330c87120a0e97381518e",
+      "complete_package_tree_sha": "a0c876e64a4e69ab4e2ea121a25b21d80e2c4d6c",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "19/20",
@@ -31448,15 +31448,15 @@
       "evidence_path": "registry/verification/local-skills/repository-readme-architect.yaml",
       "skill_path": "skills/authored/repository-readme-architect/SKILL.md",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
-      "source_license": "Original first-party MIT ten-file self-contained package",
+      "source_license": "Original first-party MIT twelve-file self-contained package",
       "source_role": "first-party",
       "source_class": "first-party-authored",
       "authority_tags": [
         "read-only-default",
         "user-authorized-focused-repository-write"
       ],
-      "link_basis": "Exact v0.2 ten-file complete standalone package, 57/57 executed local Python source-checker tests, controlled CREATE/Uplift source exercises; 19/20 maintainer static review, independent model-host effects NOT_RUN.",
-      "restriction": "No unrequested repository write, remote URL fetch, shell execution from README, credential read, CI modification, release claim or external publication; script's local success is not product claim verification.",
+      "link_basis": "Exact v0.3 twelve-file original offline standalone package, 101/101 real local Python method tests; mandatory formatter discovery, baseline section preservation, generated owner and exact-head CI decisions. UOR repos read-only as external illustration. Maintainer static 19/20, host outcomes NOT_RUN.",
+      "restriction": "No arbitrary command execution, unrequested formatting or generated README writes, nonauthorized generator edits, required CI bypass, external URL fetch or undocumented source data deletion. Offline checker never authenticates branch rules or claims merge ready.",
       "unchanged_use_approved": false
     },
     {

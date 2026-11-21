@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-20",
+  "repository": "Knapp-Kevin/skillz",
+  "skill": "repository-readme-architect",
+  "version": "0.3.0",
+  "entrypoint_sha1": "a0e2e2afb9d013ebbc7330c87120a0e97381518e",
+  "complete_package_tree_sha1": "a0c876e64a4e69ab4e2ea121a25b21d80e2c4d6c",
+  "file_count": 12,
+  "prior_version": "0.2.0",
+  "prior_tree_sha1": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
+  "tested_implementation_sha1": "d11b678c1420eb83ef068654f7a1f337b8a1a78a",
+  "tested_regression_sha1": "872c1d77daf3a74c167e8c4f19694d6521860a1d",
+  "previous_checker_sha1": "97e824b5c30b3159b5a15af01ec9e1feca088a32",
+  "previous_checker_test_sha1": "52c7d13987ee0694c8ad71505a1efe27e42e5703",
+  "local_execution": {
+    "python_version": "3.13.5",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -q",
+    "tests_run": 101,
+    "passed": 101,
+    "failed": 0,
+    "errors": 0,
+    "legacy_tests_kept": 57,
+    "new_delivery_tests": 44,
+    "testing_scenario_summary": [
+      "Detect installed documentation-formatter configuration metadata without executing package scripts",
+      "Prevent README UPLIFT with missing or same-file baseline",
+      "Require baseline SHA256-bound dispositions for changed/removed meaningful sections",
+      "Reject stale/unknown/duplicate disposition records and unsupported RETAINED claims",
+      "Reject unauthorized/missing relocation destinations, preserve UNKNOWN and semantic limitations",
+      "Recognize plain-language machine-generated-by footer like public UOR Framework and ignore markers only inside code fences",
+      "Hold generated owner rather than manually changing output",
+      "Withhold merge-readiness for stale HEAD, unknown required checks, failed/pending/skipped mandatory gates",
+      "Report non-required general CI failures separately, never suppress or reclassify required gate",
+      "Reject duplicate JSON keys, NaN, malformed data, symlinks, path traversal and over-1MiB inputs",
+      "Preserve prior 57 local link/anchor/generated-region/controlled CREATE tests"
+    ]
+  },
+  "public_reference_readonly_observations": [
+    {
+      "repository": "UOR-Foundation/uor-comms",
+      "main_sha": "82dae7aa7e15d4609f5cc5d43efb79ed60c14634",
+      "readme_sha": "bba3ad4cb1f715583f12cfb7a77a6888dc0a2ee1",
+      "finding": "Main README retained template-origin/front-door links, real open PR #35 docs correction observed; no actual README content mutation executed",
+      "qualification": "Real source inspected; cannot infer full scope or eventual UOR PR acceptance from this sample"
+    },
+    {
+      "repository": "UOR-Foundation/uor-framework",
+      "main_sha": "51c01382200b0179d6640b07e9c8119364ab69a1",
+      "readme_sha": "753b3266d80690ac8aa6a3ad225aab116931450d",
+      "finding": "README has explicit generated-by uor-docs footer; do not directly edit generated README",
+      "qualification": "Read-only source inspection; actual generator source and regeneration were not executed"
+    }
+  ],
+  "mandatory_narrative_gates": [
+    "formatter applicability before write, locally execute safe checker if authorized/available",
+    "baseline section-by-section preservation and disposition record",
+    "generated README ownership detect then generator-first editing",
+    "exact head required CI gates, separate nonrequired full-suite failures"
+  ],
+  "helper_limitations": [
+    "Helper only finds common known local formatter configurations; it never runs or asserts formatter success.",
+    "Section digest compares normalized ATX baseline sections; semantic preservation, Setext complexity and authoritative disposition evidence require host review.",
+    "Generator markers are clues; source code and generator ownership must be independently verified before any write.",
+    "CI receipt is caller-supplied and not authenticated; exact-head equality is not proof of valid ruleset enumeration or mergeability.",
+    "Real UOR repos were inspected read-only through GitHub; neither an actual UOR README rewrite nor an authorized generator regeneration was performed.",
+    "Independent external agent-host acceptance and real consumer usability still NOT_RUN."
+  ],
+  "package_source_transfer": "New Python script/test Git SHA verified byte-for-byte against locally executed files; previous checker unchanged.",
+  "github_actions_workflows_created": 0,
+  "github_actions_executed_by_local_testing": 0,
+  "host_behavior_validation": "NOT_RUN",
+  "source_evidence_authenticated_by_checker": false,
+  "complete_reader_outcome_proven": false
+}

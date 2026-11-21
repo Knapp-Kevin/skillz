@@ -93,9 +93,9 @@ define the unresolved gate. The exact old `todo-harvester/SKILL.md` is retired u
 
 The existing first-party `skills/<slug>/` entries are not automatically moved or relicensed. Move them only as separate, reviewed maintenance work with compatible index/registry updates.
 
-## Repository README Architect v0.1.0 (2026-11-20)
+## Repository README Architect (current v0.3.0)
 
-[Repository README Architect](repository-readme-architect/SKILL.md) is a self-contained first-party MIT skill for **CREATE from zero**, **UPLIFT**, **AUDIT**, and **VERIFY**. It includes [an evidence and quality contract](repository-readme-architect/references/readme-quality-contract.md), complete [CREATE](repository-readme-architect/examples/create-python-library-output.md) and [AUDIT](repository-readme-architect/examples/audit-output.md) examples, and an **optional offline local-link verifier** with 57/57 actually executed Python tests. [Current v0.2 exact-package review](../../docs/reviews/2026-11-20-readme-architect-v020-complete-package-review.md): maintainer static 19/20; independent agent-host/user acceptance **not run**. No sibling or repository-wide runtime dependency.
+[Repository README Architect](repository-readme-architect/SKILL.md) is a self-contained first-party MIT skill for **CREATE from zero**, **UPLIFT**, **AUDIT**, and **VERIFY**, with mandatory formatter preflight, section-preservation dispositions, generated-source ownership and exact-head CI qualification. It includes [an evidence and quality contract](repository-readme-architect/references/readme-quality-contract.md), complete [CREATE](repository-readme-architect/examples/create-python-library-output.md) and [AUDIT](repository-readme-architect/examples/audit-output.md) examples, and an **optional offline local-link verifier** with 101/101 actually executed Python tests. [Current v0.3 exact-package review](../../docs/reviews/2026-11-20-readme-architect-v030-preservation-review.md): maintainer static 19/20; independent agent-host/user acceptance **not run**. No sibling or repository-wide runtime dependency.
 
 ## Current authored packages
 

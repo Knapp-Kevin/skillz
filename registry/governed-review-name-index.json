@@ -1334,16 +1334,22 @@
     "entrypoint": "skills/authored/repository-readme-architect/SKILL.md",
     "source_class": "first-party-authored",
     "license": "MIT",
-    "semantic_review": "v0.2 exact ten-file package, maintainer static 19/20, 57/57 local Python method tests; source fingerprints in authored index",
-    "behavioral_validation": "not-run: no independent external agent-host or end-user trials",
+    "semantic_review": "v0.3 exact twelve-file package, maintainer static 19/20, 101/101 real local Python method tests; no claim of independent host effectiveness",
+    "behavioral_validation": "not-run: independent external agent-host/user outcome still absent",
     "capability_paths": [
       "technical-writing/documentation-ia",
       "software-engineering/developer-experience",
       "marketing/content"
     ],
     "decision": "READ/CREATE/UPLIFT/AUDIT/VERIFY; no blanket external permission",
-    "current_package_version": "0.2.0",
-    "current_package_tree_sha1": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
-    "current_entrypoint_blob_sha1": "e4ba8915e5141b87ab45111d0ddc5d526b551d60"
+    "current_package_version": "0.3.0",
+    "current_package_tree_sha1": "a0c876e64a4e69ab4e2ea121a25b21d80e2c4d6c",
+    "current_entrypoint_blob_sha1": "a0e2e2afb9d013ebbc7330c87120a0e97381518e",
+    "delivery_safeguards": [
+      "formatter applicability preflight",
+      "baseline section dispositions",
+      "generated-document ownership",
+      "exact-HEAD required CI gates"
+    ]
   }
 }
