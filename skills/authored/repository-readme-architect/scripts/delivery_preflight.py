@@ -309,6 +309,7 @@ def audit(root,readme,mode,baseline=None,dispositions=None,ci_receipt=None,head_
         owners['evidence_review']=evidence
         if evidence['state']=='EVIDENCE_ATTACHED_PENDING_HUMAN_AUTHENTICATION':
             owners['owner_status']='GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW'
+            blockers.append('GENERATED_README_HUMAN_AUTHENTICATION_REQUIRED')
         else:
             blockers.append('GENERATED_README_OWNERSHIP_UNRESOLVED')
     elif generated_evidence is not None:
