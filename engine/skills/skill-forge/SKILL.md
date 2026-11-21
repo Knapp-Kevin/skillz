@@ -36,6 +36,41 @@ For normal FIRST_VISIT or RETURNING_USER synthesis, use `engine/skills/skill-boo
 11. After a material admitted tranche, update only the **affected** human-navigation and canonical index surfaces that actually derive from the live repository state. Keep the root `README.md` a durable public-facing introduction, **not a running maintenance log**. Use appropriate workboard, issue, review or historical records for provenance and progress. Do not mechanically update every index file, invent counts, or count an unmerged draft as published.
 12. Update human navigation only where the new or revised skill materially affects it, and report actual files, evidence, limitations, and unresolved gates.
 
+## Iterative improvement as an execution discipline
+
+For a material refinement, run a **bounded, evidence-driven cycle on the
+actual package** instead of collecting an unlimited series of suggestions:
+
+1. **Observe:** reproduce a consequential failure against the current
+   package, recording the intended user result and any existing success
+   invariants. A source/README-only cosmetic gap is not automatically a
+   functional defect.
+2. **Explain:** state a falsifiable mechanism, a competing cause when
+   consequential, and the smallest correction likely to change behavior.
+3. **Change:** update the true owning source and all necessary portable
+   supports under explicitly authorized scope. Do not change only a
+   generated artifact or review checklist.
+4. **Challenge:** test the original failing case, an adjacent negative
+   case, previously working behavior, authority/rights, and the real
+   consumer outcome when supported. Differentiate executed tests from
+   static reasoning and independently observed user results.
+5. **Decide:** ACCEPT, ITERATE, HOLD, REVERT or STOP_NO_CHANGE using frozen
+   acceptance criteria and evidence. After a revision, review the *new
+   complete package* again for a different consequential failure. Another
+   iteration requires a new decision-relevant finding, not momentum for
+   its own sake.
+
+Repeat only while material defects remain, expected improvement exceeds
+cost and authorized checks remain available. Stop on a supported good
+result, no real improvement, regression, a hard unknown or exhausted
+authority/budget. Never water down the rubric, ignore older tests or
+promote a source merely because it has been edited many times.
+
+This complete algorithm must remain in this engine source; no consumer
+needs another skill installed. The authored reusable
+`evidence-driven-refinement-loop` expresses the same method for work
+outside Skillz but is **not** a runtime dependency.
+
 ## Evidence-driven refinement loop
 
 When strengthening an existing skill, start with a **specific user-visible
