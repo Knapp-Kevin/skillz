@@ -205,9 +205,11 @@ def execute(args: argparse.Namespace) -> dict:
     target = overlay_file(args.root, create_dirs=args.action == "set")
     doc = load(target, version=version, allowlist=allow)
     if args.action == "show":
-        return {"status": "READ_ONLY", "preferences": doc["preferences"], "base_skill_version": version}
+        return {"status": "LOADED" if target.exists() else "ABSENT",
+                "preferences": doc["preferences"], "base_skill_version": version}
     if args.action == "validate":
-        return {"status": "VALID", "count": len(doc["preferences"]), "base_skill_version": version}
+        return {"status": "VALID" if target.exists() else "ABSENT",
+                "count": len(doc["preferences"]), "base_skill_version": version}
     if args.action == "set":
         if args.key not in allow or args.value not in allow[args.key]:
             raise PreferenceError("Unknown preference or disallowed value")
