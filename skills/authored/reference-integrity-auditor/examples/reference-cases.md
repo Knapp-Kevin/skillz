@@ -40,3 +40,35 @@ GAPS: incomplete external graph and unsupported target resolvers
 
 The user must not mistake a complete list of examined references
 for a complete enumeration of every possible document dependency.
+
+
+## Executed offline method qualification: v1.1
+
+The optional \`scripts/audit_graph.py\` method was executed with
+\`PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -q\`
+under Python 3.13.5: **60 tests, 60 pass, zero failures**. This
+is **not** an independent host-agent acceptance outcome.
+
+Coverage includes supported/unsupported resolution receipts,
+404 and 403 handling, stale revisions, verified versus untrusted
+redirects, anchor-renderer uncertainty, cross-scope hidden nodes,
+input outside the graph, duplicate fields, bad status/type,
+revision and ID checks, absent target consistency,
+local-only orphan candidates, proposed renames, cycle-safe
+transitive impact, unresolved potential dependents, no mutation
+or source commands, 1 MiB limit, and symlinked-path refusal.
+
+A host separately read GitHub's real public tree for the prior
+Reference Integrity Auditor at commit
+\`4ec0ac51cf1d53b012123a2c9314868a70b5bf2f\`
+and observed three legitimate relative links from SKILL.md
+to the LICENSE, the in-package reference-edge contract, and
+these synthetic cases. The bundled
+\`skillz-public-links-pinned.json\` is the positive-control
+snapshot. It is **not** evidence of a real missing link and
+is not a comprehensive scan of all external references.
+All negative defect cases in the tests are synthetic.
+
+An actual independent agent-host skill evaluation, provider
+ACL isolation, end-to-end user acceptance and measured 1.5x
+effectiveness remain NOT_RUN / NOT_PROVEN.

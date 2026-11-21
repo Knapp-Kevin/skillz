@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "scope_id": "skillz-public-package",
+  "snapshot_revision": "4ec0ac51cf1d53b012123a2c9314868a70b5bf2f",
+  "enumeration": {
+    "sources_complete": false,
+    "visibility_complete": true
+  },
+  "nodes": [
+    {
+      "id": "entrypoint",
+      "visible": true,
+      "revision": "1dd69184869a203e63d7afbefc0a50452d3f586b"
+    },
+    {
+      "id": "contract",
+      "visible": true,
+      "revision": "cceca09ab272b8e681805bca6728c33a92a9958f"
+    },
+    {
+      "id": "cases",
+      "visible": true,
+      "revision": "7a8240f4905d8f97d5d29413d7e9aede513e13e9"
+    },
+    {
+      "id": "license",
+      "visible": true,
+      "revision": "3ef83cc9480c9ac96b0e17d79ba6cf5f5beda1f0"
+    }
+  ],
+  "edges": [
+    {
+      "id": "link-contract",
+      "source": "entrypoint",
+      "target": "contract",
+      "kind": "RELATIVE_MARKDOWN",
+      "evidence_ref": "SKILL-line-contract",
+      "lookup": {
+        "state": "FOUND",
+        "authorized": true,
+        "complete": true,
+        "absence_proven": false,
+        "source_current": true,
+        "target_current": true,
+        "anchor": "NOT_APPLICABLE",
+        "redirect_verified": false,
+        "anchor_renderer_verified": false
+      }
+    },
+    {
+      "id": "link-cases",
+      "source": "entrypoint",
+      "target": "cases",
+      "kind": "RELATIVE_MARKDOWN",
+      "evidence_ref": "SKILL-line-acceptance",
+      "lookup": {
+        "state": "FOUND",
+        "authorized": true,
+        "complete": true,
+        "absence_proven": false,
+        "source_current": true,
+        "target_current": true,
+        "anchor": "NOT_APPLICABLE",
+        "redirect_verified": false,
+        "anchor_renderer_verified": false
+      }
+    },
+    {
+      "id": "link-license",
+      "source": "entrypoint",
+      "target": "license",
+      "kind": "RELATIVE_MARKDOWN",
+      "evidence_ref": "SKILL-line-license",
+      "lookup": {
+        "state": "FOUND",
+        "authorized": true,
+        "complete": true,
+        "absence_proven": false,
+        "source_current": true,
+        "target_current": true,
+        "anchor": "NOT_APPLICABLE",
+        "redirect_verified": false,
+        "anchor_renderer_verified": false
+      }
+    }
+  ],
+  "changes": [
+    {
+      "id": "rename-contract",
+      "node": "contract",
+      "operation": "RENAME"
+    }
+  ]
+}
