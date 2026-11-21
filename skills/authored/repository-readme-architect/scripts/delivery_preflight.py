@@ -89,17 +89,25 @@ def _sections(markdown):
         if h:
             if current is not None: out.append(current)
             elif ''.join(pre).strip():out.append({'id':'preamble','heading':'Preamble','body':''.join(pre)})
-            current={'id':f's{1+sum(x["id"].startswith("s") for x in out)}','heading':h.group(2).strip(),'body':''}
+            current={'id':f's{1+sum(x["id"].startswith("s") for x in out)}','heading':h.group(2).strip(),'level':len(h.group(1)),'body':''}
         elif current is None:pre.append(line)
         else:current['body']+=line
         if len(out)>MAX_SECTIONS:raise Invalid('too many sections')
     if current is not None:out.append(current)
     elif ''.join(pre).strip():out.append({'id':'preamble','heading':'Preamble','body':''.join(pre)})
-    return [x for x in out if _norm(x['body'])]
+    # An empty-body heading can itself be a critical qualification.
+    return out
 
 
 def _norm(text):
     return ' '.join(text.split())
+
+
+def _section_text(section):
+    """Normalized heading depth and title plus body, or authored preamble."""
+    if section['id'] == 'preamble':
+        return _norm(section['body'])
+    return _norm('#' * section['level'] + ' ' + section['heading'] + '\n' + section['body'])
 
 
 def _hash(text):
@@ -147,8 +155,7 @@ def _owner(root,raw):
 
 def _preservation(root, before, after, disposition_path=None):
     old=_sections(before); new=_sections(after)
-    normalized={_norm(x['body']) for x in new}
-    all_after=' '+_norm(after)+' '
+    normalized={_section_text(x) for x in new}
     records={}
     if disposition_path:
         j=_json(root,disposition_path)
@@ -165,10 +172,10 @@ def _preservation(root, before, after, disposition_path=None):
     if set(records)-ids:raise Invalid('stale unknown section IDs in manifest')
     findings=[]; missing=0; holds=0; review=0
     for s in old:
-        text=_norm(s['body']); digest=_hash(text)
-        unchanged=(text in normalized or (' '+text+' ') in all_after)
+        text=_section_text(s); digest=_hash(text)
+        unchanged=text in normalized
         if unchanged:
-            findings.append({'section_id':s['id'],'heading':s['heading'],'source_sha256':digest,'state':'RETAINED_EXACT_BODY'})
+            findings.append({'section_id':s['id'],'heading':s['heading'],'source_sha256':digest,'state':'RETAINED_EXACT_SECTION'})
             continue
         rec=records.get(s['id'])
         if rec is None:
@@ -183,15 +190,16 @@ def _preservation(root, before, after, disposition_path=None):
                     if 'destination' not in rec:raise Invalid('relocation destination required')
                     target=_path(root,rec['destination'])
                     if not target.is_file():raise Invalid('relocation destination missing')
-                    if _norm(s['body']) in _norm(_read(target)):
-                        state='RELOCATION_TEXT_PRESENT_REVIEW_REQUIRED'
+                    if text in {_section_text(x) for x in _sections(_read(target))}:
+                        state='RELOCATION_SECTION_PRESENT_REVIEW_REQUIRED'
                     else:state='RELOCATION_NOT_PROVEN';holds+=1
                 elif decision=='RETAINED':
                     state='RETENTION_NOT_PROVEN';holds+=1
                 else:state='EVIDENCE_REVIEW_REQUIRED'
                 review+=1
         findings.append({'section_id':s['id'],'heading':s['heading'],'source_sha256':digest,'state':state,'disposition':decision})
-    return {'baseline_sections':len(old),'section_findings':findings,'missing_dispositions':missing,
+    return {'baseline_sections':len(old),'fingerprint_scope':'normalized-heading-level-title-and-body',
+            'section_findings':findings,'missing_dispositions':missing,
             'unresolved_removals':holds,'manual_evidence_reviews':review,
             'semantic_preservation_authenticated':False}
 
