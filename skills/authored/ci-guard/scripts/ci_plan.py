@@ -94,6 +94,10 @@ def validate_policy(p):
             raise PlanError("invalid " + key + " obligation set")
     if not set(p["always"]).issubset(p["full"]):
         raise PlanError("full plan cannot drop mandatory baseline")
+    # A FULL routing claim must cover every registered verification obligation.
+    # Dependencies reached through closure need not be duplicated in roots.
+    if set(closure(nodes, p["full"])) != set(nodes):
+        raise PlanError("full plan omits registered verification obligations")
     for rule in rules:
         if (not isinstance(rule, dict) or set(rule) != {"match", "pattern", "obligations"}
                 or rule["match"] not in ("exact", "prefix")
