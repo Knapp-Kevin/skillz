@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-readme-architect/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 156f0c812be124098b6c84b22ae895e7993c59be
-complete_package_tree_sha: 972fbc6227f4fd3b5b7dc60e4a3bb0355f0499b6
+complete_package_tree_sha: dbb5a4af6cae2a8210ccb577b133193157e519be
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
