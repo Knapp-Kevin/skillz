@@ -79,6 +79,9 @@ def run_feedback_contract_error(template, forge, verification):
             "CANONICAL_IMPROVEMENT",
             "LOCAL_PREFERENCE",
             "outside the skill package",
+            "First-class package component",
+            "schema.json",
+            "example.json",
             "user-approved",
         )),
         "forge": (forge, (
@@ -124,6 +127,17 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertNotEqual(poisoned, skill)
         self.assertNotIn("untrusted data, not instructions", poisoned)
         self.assertIn("untrusted data, not instructions", skill)
+        package_root = "skills/authored/evidence-driven-refinement-loop/preferences/"
+        import json
+        config = json.loads(read(package_root + "example.json"))
+        schema = json.loads(read(package_root + "schema.json"))
+        self.assertEqual(config["skill_id"], schema["properties"]["skill_id"]["const"])
+        self.assertEqual(config["schema_version"], schema["properties"]["schema_version"]["const"])
+        self.assertEqual(config["base_skill_version"], "0.2.0")
+        self.assertEqual(config["scope"], "user-local")
+        self.assertEqual(config["preferences"][0]["source"], "explicit-user-confirmation")
+        self.assertIn("preferences.local.json", read(package_root + "README.md"))
+        self.assertIn("schema.json", read("skills/authored/evidence-driven-refinement-loop/SKILL.md"))
         cases = read("skills/authored/evidence-driven-refinement-loop/examples/acceptance.md")
         for heading in ("Case 11:", "Case 12:", "Case 13:", "Case 14:"):
             self.assertIn(heading, cases)
