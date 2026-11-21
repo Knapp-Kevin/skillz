@@ -12,7 +12,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Evidence-Driven Refinement Loop
-  version: 0.2.0
+  version: 0.3.0
   license: MIT
 ---
 
@@ -151,6 +151,17 @@ However, impact must be supported, not invented as a numerical estimate.
 
 ## Route canonical improvement separately from local preferences
 
+At each meaningful execution, finish the user task, check the actual
+output against its acceptance criteria and protected invariants, then
+**route any supported learning signal** using the bundled
+[preference-versus-improvement decision contract](preferences/routing.md).
+Do not substitute iterative self-evaluation for genuine outcome evidence;
+`NO_ACTION` is a legitimate result. A canonical improvement requires a
+reproducible, broadly relevant failure and separately authorized source
+maintenance. A local preference is not a bug; it may be applied to the
+current user task, and only retained with explicit consent and a real
+private host store.
+
 A skill's output can teach two very different lessons. Decide the
 **destination** before suggesting an edit:
 
@@ -173,7 +184,7 @@ A skill's output can teach two very different lessons. Decide the
 has authorized user-specific storage, keep personal preference data in
 an isolated file under that user's private configuration area (for
 example, a *host-chosen*, user-private
-`<config>/skill-overlays/<skill-id>/preferences.json`), **never inside
+`<config>/skill-overlays/<skill-id>/preferences.local.json`), **never inside
 this downloaded skill, a shared workspace or the public Skillz repo**.
 Do not assume the example path exists or that a cloud-hosted agent has
 a private filesystem. If no trustworthy store is available, honor the
@@ -182,8 +193,11 @@ file for a user-controlled save; do not claim it was persisted.
 
 The **`preferences/` component bundled with this package** contains
 [`preferences/schema.json`](preferences/schema.json),
-[`preferences/example.json`](preferences/example.json), and
-[`preferences/README.md`](preferences/README.md). Those are shareable
+[`preferences/example.json`](preferences/example.json),
+[`preferences/README.md`](preferences/README.md),
+[`preferences/routing.md`](preferences/routing.md), and an optional
+[`preferences/manage.py`](preferences/manage.py) local update tool with
+[`preferences/test_manage.py`](preferences/test_manage.py) regression cases. Those are shareable
 rules and anonymous examples, **not** a user's saved preferences. The
 active user's non-executable values belong in a separately authorized
 `preferences.local.json` file. If this is a genuinely private,
@@ -192,6 +206,51 @@ single-user installed copy, that file may live under its
 multi-user host, keep it in an isolated private user configuration area
 instead. Never write real user data into the distributed source package,
 or assume this host supports writable local storage.
+
+**Embedded preference application and update workflow:**
+
+1. On activation, take the current user's explicit request as primary.
+   If a real private, accessible overlay exists and reading it is within
+   current authorization, inspect its `skill_id`, `base_skill_version`,
+   `scope`, key/value allowlist and consent source as defined in the
+   bundled [schema](preferences/schema.json). Unknown or conflicting
+   entries do not apply. Never create storage merely to read defaults.
+2. Apply only compatible allowed presentation preferences to the current
+   result. Correctness, evidence, rights, safety and tool permissions
+   remain canonical; a user may change a preference for this interaction
+   without making it persistent.
+3. Classify an execution finding as `CANONICAL_IMPROVEMENT`,
+   `LOCAL_PREFERENCE`, `MIXED`, `NO_ACTION`, or `HOLD` using the
+   bundled [routing rules](preferences/routing.md). Never automatically
+   write a canonical source improvement or derive one solely from style.
+4. For an explicitly **user-approved retained** `LOCAL_PREFERENCE`,
+   choose a real authorized private user configuration directory. On
+   trusted POSIX hosts with Python 3, the optional executable component
+   can validate/update the file with:
+
+   ```sh
+   python preferences/manage.py --root "$USER_PRIVATE_CONFIG" set response.detail concise --approved
+   python preferences/manage.py --root "$USER_PRIVATE_CONFIG" show
+   python preferences/manage.py --root "$USER_PRIVATE_CONFIG" remove response.detail --approved
+   ```
+
+   The variable stands for a host-confirmed **existing** user-private
+   directory, not an installation path to invent. The manager checks
+   real directory ownership/modes, refuses symlinks and unauthorized
+   fields, writes atomically, rejects stale skill versions and supports
+   `clear --approved` to revoke all retained settings. Its `--approved`
+   switch is not proof of consent: the acting agent must establish that
+   authorization independently before invoking it. The manager never
+   updates `SKILL.md`, repository files, users' memory, or remote services.
+5. Where Python, POSIX private-file verification, authorized persistent
+   storage or user approval is unavailable, **do not run a partial write
+   or claim persistence**. Honor the preference for the current task or
+   provide an optional portable overlay for the user to save. Hosts with
+   trusted native secure storage may implement equivalent
+   [component rules](preferences/README.md) without the helper script.
+   After an actual write, re-read and validate the result; disclose
+   failure rather than announcing success. On version upgrades, hold
+   incompatible entries pending deliberate user review.
 
 Scope user/project-specific settings to the correct profile; preserve
 minimal provenance of *consent*, not raw conversation text. Never store
