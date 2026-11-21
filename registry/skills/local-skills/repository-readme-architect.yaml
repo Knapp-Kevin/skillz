@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: repository-readme-architect
 display_name: "Repository README Architect"
-skill_version: "0.3.1"
+skill_version: "0.3.2"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/repository-readme-architect/SKILL.md
@@ -19,8 +19,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: standalone-twelve-file-optional-python-stdlib
 dependencies: "Complete standalone twelve-file package: normative safeguards in SKILL.md; optional Python 3.9+ stdlib read-only link and delivery-preflight checkers, tests, examples and quality reference. No runtime internet, sibling or central Skillz policy required."
-content_blob_sha: 71b9608650f5be3d8aa80016c223bdc1f9d18bef
-complete_package_tree_sha: 13ece5f4eb16b157f0b8e38ab013b7bc55440da9
+content_blob_sha: 29c562bd6abd8d00bfceb2363d6afeba756ad294
+complete_package_tree_sha: 80f16ea3df0cf064e6323fc5a1b9673e00ca4e12
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
-rationale: "v0.3.1: heading title and depth plus heading-only sections are now preservation inputs. Prior v0.3.0 passed 101 local tests; v0.3.1 full suite remains NOT_RUN. Historical static assessment in docs/reviews/2026-11-20-readme-architect-v030-preservation-review.md; exact-current-version verification pending."
+rationale: "v0.3.2 heading-aware preservation and source/template plus exact-head CI drift evidence attachment. Unverified claims cannot clear generated-file human authenticity hold. Earlier v0.3.0 101 tests passed; current v0.3.2 code and 21 new tests NOT_RUN. Static re-review and independent consumer acceptance pending."
