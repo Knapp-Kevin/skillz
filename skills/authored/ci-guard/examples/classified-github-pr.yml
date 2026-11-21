@@ -4,6 +4,8 @@ name: Classified PR verification
 
 on:
   pull_request:
+    # Required when draft→ready happens without changing the HEAD SHA.
+    types: [opened, reopened, synchronize, ready_for_review, converted_to_draft]
 
 permissions:
   contents: read
