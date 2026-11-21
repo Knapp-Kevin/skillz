@@ -45,6 +45,39 @@ A successful source-checkout demo is not a published installation, and one passi
 
 **VERIFY.** Read current exact source revisions and *the complete candidate README*, not merely a diff. Distinguish source-inspected static checks, executed local commands, external integration checks and reader simulations. Mark each as PASS, FAIL, NOT_RUN or NOT_APPLICABLE. A passed local link audit is never a pass for claims, remote URLs, installability, accessibility of all rendered states, or reader comprehension.
 
+## Lead with Why, then What, then How: editorial acceptance
+
+The **root README is a public-facing project introduction**, not a developer
+reference dump. The first 30 seconds must establish (1) the reader's
+problem and why it matters, (2) the project's verifiable practical response,
+and (3) the first use/evaluation/documentation action. Use natural prose,
+not a compulsory three-heading layout; a list of components, mathematical
+foundations or source imports is not an explanation of value.
+
+Use approximately **tenth-grade reading accessibility in the opening**
+as a reader-centered target, not as a simplistic automated grade cutoff.
+Define unfamiliar acronyms, put concrete outcomes before abstract terms,
+avoid unsupported competitive adjectives and retain accurate caveats.
+Technical users can follow linked developer references, diagrams,
+specifications and generated API documentation. High-complexity content
+belongs where progressive navigation makes it approachable.
+
+Before the Gold/Platinum grade can pass, an editorial reviewer must
+perform a first-time reader simulation, record answers to Why/What/How,
+check comprehension and evidence boundaries, and test an observable
+first-success step (or honest documentation-first route). Mechanical
+presence of badges, headings, links and code fences cannot satisfy this
+semantic gate. Record the actual rendered asset identity and source
+status; previewed, proposed and temporary images are not final delivery.
+Preserve exact generator source/output parity for generator-owned READMEs.
+
+**Continuous improvement rule:** after each reviewed delivery, turn each
+distinct reader failure, misleading claim, generator overwrite or asset
+misidentification into a versioned, anonymous regression fixture. Keep
+successful strategies as examples while distinguishing principles from
+one-repository visual preferences. Do not update the universal standard
+based solely on a single repository's convention.
+
 ## Binding quality-profile contract and presentation review (v0.4)
 
 The skill's Baseline/Gold/Platinum expectations are the normative bar.
