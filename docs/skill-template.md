@@ -170,6 +170,31 @@ barrier to a time-sensitive response.
    Retain `HOLD`, `REVERT`, and `STOP_NO_CHANGE` as valid outcomes;
    a self-authored passing test cannot self-certify effectiveness.
 
+**First-class package component.** For a skill with meaningful
+personalization knobs, ship a `preferences/` directory alongside
+`SKILL.md` and optional `examples/` or `references/`:
+
+```text
+my-skill/
+  SKILL.md
+  preferences/
+    README.md       # permitted preferences, precedence, privacy, fallback
+    schema.json     # non-executable allowed data shapes and values
+    example.json    # anonymous illustration, not a user profile
+```
+
+The **package defines the preference contract**, and the **user owns a
+separate `preferences.local.json`**. A strictly private, single-user
+installation can keep that local file in its own `preferences/`
+directory; public source, shared installs and cloud/multi-user hosts
+must place it in appropriate isolated user-private storage instead.
+Never bundle real personal preference files into an authored package,
+assume a host path exists, or require persistence for core operation.
+Do not require this physical directory for skills without meaningful
+personalization: the logical per-run preference classification rule
+still applies. A skill with this component must ship all normative
+instructions inside its own package, not point at this template.
+
 **Local overlay contract.** A permitted private overlay is a
 non-executable, declarative data file scoped to the actual user/profile
 and skill identity, optionally further to a project. It records only
