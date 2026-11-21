@@ -97,7 +97,7 @@ class EngineStaticContracts(unittest.TestCase):
     def test_forge_respects_user_artifact_boundary_and_offline_closure(self):
         forge = read(SKILLS["forge"])
         self.assertIn("normal FIRST_VISIT or RETURNING_USER", forge)
-        self.assertIn("Every mandatory reference", forge) if False else None
+        self.assertIn("mandatory instructions and their supporting files", forge.casefold())
         self.assertIn("must ship", forge)
         self.assertIn("stronger", forge)
         self.assertIn("previous version", forge)
