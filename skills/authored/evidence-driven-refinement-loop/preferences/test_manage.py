@@ -45,6 +45,7 @@ class PreferenceManagerTests(unittest.TestCase):
     def test_valid_set_read_and_file_permissions(self):
         self.assertEqual(self.set_pref()["status"], "SAVED")
         doc = manage.execute(self.args("show"))
+        self.assertEqual(doc["status"], "LOADED")
         self.assertEqual(doc["preferences"][0]["value"], "concise")
         self.assertEqual(doc["base_skill_version"], self.version)
         self.assertEqual(stat.S_IMODE(self.file().stat().st_mode), 0o600)
@@ -139,7 +140,7 @@ class PreferenceManagerTests(unittest.TestCase):
 
     def test_read_only_does_not_create_storage(self):
         result = manage.execute(self.args("show"))
-        self.assertEqual(result["status"], "READ_ONLY")
+        self.assertEqual(result["status"], "ABSENT")
         self.assertEqual(result["preferences"], [])
         self.assertFalse((self.root / "skill-overlays").exists())
 
