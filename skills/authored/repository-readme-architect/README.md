@@ -36,7 +36,7 @@ For a generated README, the optional preflight also accepts
 `--generated-evidence .review/generated-owner.json` with exact local
 generator/template file fingerprints, output SHA-256 and a named required
 CI drift-check receipt for the candidate HEAD. A locally consistent attachment
-is **pending independent human review**, not authenticated generator execution
+stays **blocked pending independent human review**, not authenticated generator execution
 or permission to hand-edit generated files. Missing or mismatched evidence
 stays blocked. The format and verification limits are documented in the
 [bundled quality contract](references/readme-quality-contract.md).
