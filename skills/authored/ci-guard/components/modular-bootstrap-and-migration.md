@@ -91,15 +91,28 @@ billed runner minutes | approval/protected status | fault-detection verdict`.
 - **Billed runner minutes:** sum recorded job-level billed minutes, including
   cache/set-up duplication. Some billing plans round to whole minutes;
   don't infer costs from YAML or a single wall-clock delta.
-- **Critical path:** elapsed time from start of required PR qualification
-  to actual required final-gate success, excluding/including queue time
-  consistently. The sum of runner minutes is *not* critical-path latency.
+- **Critical path:** derive the longest *actual* required-job dependency
+  chain from observed per-job starts/ends and explicitly supplied `needs`
+  edges. Report the separate qualification wall-time envelope from first
+  required start to final required completion. Missing cross-workflow
+  dependency records, incomplete job lists or cycles mean UNKNOWN; the
+  sum of billed runner minutes is not critical-path latency.
 - **Comparable cohorts:** docs-only, README/model input, Rust-only, mixed,
   policy/trust and release separately. Annotate environment and cache
   differences, retries, cancellation and unrelated infrastructure changes.
 - **Independent acceptance:** observe end-to-end selected work and real gate
   conclusions in at least one external consumer repo after owner approval.
   Offline scripts and synthetic fixtures prove only the local mechanism.
+
+The optional [offline run comparator](../scripts/compare_ci_runs.py)
+accepts explicitly supplied *actual* baseline/new GitHub job receipts with
+same exact HEAD, case, runner profile and cache cohort. Each job requires its
+measured billed runner minutes, start/end UTC, observed success and dependency
+`needs`. It outputs billable minute deltas, DAG critical-path deltas and the
+separate observed elapsed-time envelope. It refuses missing source identity,
+failed protected status, incomparable pairs and incomplete multi-workflow
+dependency edges. The tool **does not authenticate API data** or manufacture
+measured savings from synthetic inputs. Synthetic examples test math only.
 
 **Decision:** qualify optimization only when required check detection and
 protected-status behavior are preserved, the old expensive path really
