@@ -68,6 +68,15 @@ Distinguish two independent outputs of the review:
   compatibility check. If the host lacks suitable local storage, do not
   invent a path or claim persistence.
 
+An authored skill with durable preferences must **wire the component
+into its own `SKILL.md`**: read only when permitted, route canonical
+vs local findings, validate and apply allowlisted settings, require
+consent for writes, persist only through a real host-supported method,
+read back actual changes, and support revocation and version mismatch.
+A JSON schema without an actual skill invocation/update path is
+incomplete. Bundled scripts are optional, must have tests or honest
+NOT_RUN evidence, and must not become universal runtime dependencies.
+
 When personalization is meaningful, make it a **first-class
 bundled `preferences/` component** containing an explanatory README,
 non-executable JSON Schema and anonymous example. Keep the runtime
