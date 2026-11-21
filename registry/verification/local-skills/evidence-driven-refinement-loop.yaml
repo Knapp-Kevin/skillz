@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
-skill_version: "0.3.2"
+skill_version: "0.3.3"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/evidence-driven-refinement-loop/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c3b63af6c40aec479d435bd1429ed9af4730c64c
-complete_package_tree_sha: 0ee1a7e0784048504ee9a3ca5c5fbdbd70499241
+content_blob_sha: 9142e29bb1b0f5225284ac28b150ec3eaa375624
+complete_package_tree_sha: e8bbdf3c2e32be9a9483854cbf6413dda10c02ea
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
 verification_status: verified
-verification_basis: exact-ten-file-source-review-plus-three-version-Python-regressions-and-separate-Linux-UID-isolation
+verification_basis: exact-ten-file-source-review-plus-executed-portable-draft-2020-12-schema-three-python-versions-and-distinct-Linux-user-test
 validation_status: not-run
-validation_note: "v0.3.2 package identity pinned. GitHub Actions run 44943793248 at exact PR head 7db19967 passed 38/38 manager tests and 22/22 engine tests on each of Python 3.9, 3.11 and 3.13, plus a separate two-real-Linux-user job. Each account retained a distinct setting; profile A was denied reading/writing B, revoking A preserved B, and canonical SKILL.md hash was unchanged. These are executed filesystem/helper checks, not independent consuming-agent execution, user-level skill outcome, Windows portability, or hostile same-UID isolation; validation_status remains not-run."
+validation_note: "v0.3.3 repaired a verified portable-schema bug: draft-2020-12 validator rejected valid examples; an initial uniqueness fix was wrongly scoped. Failing Actions runs 44946542762 and 44946683677 establish the before-state. Green run 44946733879 executed 47/47 preference-manager/JSON Schema tests and 22/22 engine contract tests on each Python 3.9, 3.11 and 3.13; two real Linux identities isolation job passed. Same-model, fictional two-profile consuming-agent emulation is recorded, not independent host acceptance. Exact package identity pinned, consumer validation still not-run."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,18 +24,24 @@ tags:
   authority: [read-only-default, owner-authorized-scoped-change]
   portability: high
 notes: >-
-  v0.3.2 remains 18/20 on the static semantic rubric. Canonical SKILL.md
-  invokes the bundled preference routing and user-local manager. Exact
-  distributed package Git blob and 10-file tree are pinned above.
-  Actions run 44943793248 checked out exact PR-head commit 7db19967,
-  passing 38 preference manager and 22 engine contract tests on each of
-  Python 3.9, 3.11 and 3.13 (Ubuntu 24.04). Additional Ubuntu job ran
-  with two independent real Linux OS identities: private user A stored
-  concise, B stored detailed, A could neither read nor modify B's private
-  root, A's revocation did not affect B, and canonical SKILL.md remained
-  byte-stable. This demonstrates the specified POSIX helper and OS
-  permission behavior, not an agent's ability to interpret instructions.
-  Host model compliance, safety against malicious same-UID processes,
-  multi-host transactions and Windows remain unproven. Keep consumer
-  validation_status not-run. Earlier adversarial review remains at
-  docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
+  Exact-version v0.3.3 static semantic quality 18/20; consumer
+  validation_status remains not-run. The bundled strict JSON Schema had
+  a significant interoperability defect despite positive Python manager
+  tests: it rejected valid examples because item-level additionalProperties
+  was disconnected from oneOf branch properties. The first attempt also
+  misplaced contains/maxContains under objects instead of their array.
+  Both failures reproduced through the actual draft-2020-12 validator in
+  CI (runs 44946542762 and 44946683677), then fixed on exact ten-file
+  package blob and tree above. CI run 44946733879 passed 47/47 manager
+  plus JSON Schema interoperability cases and 22/22 engine checks on
+  Python 3.9, 3.11 and 3.13, along with Linux UID isolation checks.
+  The assistant also applied the standalone instruction bundle to
+  eight fictional consuming scenarios with two preference profiles:
+  consistent canonical finding, different table/paragraph presentation,
+  transient override, injection refusal, stale-version hold, no-store
+  fallback, mixed finding and recursive self-praise refusal. This
+  same-model emulation is evidence of a controlled response exercise,
+  NOT an independent host/user outcome or proof of tenant isolation.
+  Receipt: docs/evals/receipts/2026-11-21-preference-consumer-self-emulation.md.
+  Same-UID malicious processes, distributed synchronization and Windows
+  private-store adapters are outside the tested boundary.
