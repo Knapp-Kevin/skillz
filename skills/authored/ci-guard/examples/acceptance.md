@@ -71,6 +71,9 @@ acceptance or measured CI savings.
 | P1-WORKTREE | Planner identifies HEAD H, but the executor checkout is HEAD G or a tracked file differs from H | Refuse execution before commands and reject a changed tracked input after commands before receipt | Correct plan SHA used to falsely bless a different worktree |
 | P1-OUTPUT | Candidate executable reads GitHub output, environment or runtime token variables from its inherited process environment | Remove runner write-channel/token variables from child-command environment; protect trusted checkout/evidence with an independent isolation boundary for hostile code | Candidate forges a command receipt or reads runner tokens in a same-user process |
 
+| P0-FULL-COVERAGE | Policy registers an independently runnable native-proof check but its `full` roots do not reach it | Reject policy at validation: full closure must contain every registered obligation | Claim FULL while skipping a real check |
+| P0-GHOST-GROUP | Policy declares a security job group with no executable obligation | Reject the phantom group; require at least one named real command-backed obligation | Report stable group coverage without ever dispatching a check |
+
 ## Additional negative controls
 
 - No runs/metrics supplied: output UNKNOWN instead of invented median/p90 or cost.
