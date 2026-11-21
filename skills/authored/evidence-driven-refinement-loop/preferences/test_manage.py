@@ -52,6 +52,35 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(stat.S_IMODE(self.file().stat().st_mode), 0o600)
         self.assertFalse(self.file().is_symlink())
 
+    def test_two_private_profiles_remain_independent_after_revocation(self):
+        # Same canonical skill, disjoint private configuration roots.
+        # This tests logical isolation, not separate-UID OS containment.
+        with tempfile.TemporaryDirectory() as other_directory:
+            other_root = Path(other_directory)
+            other_root.chmod(0o700)
+            a = self.args("set", key="response.detail", value="concise",
+                          approved=True)
+            b = self.args("set", key="response.detail", value="detailed",
+                          approved=True, root=other_root)
+            self.assertEqual(manage.execute(a)["status"], "SAVED")
+            self.assertEqual(manage.execute(b)["status"], "SAVED")
+            a_stored = manage.execute(self.args("show"))["preferences"]
+            b_stored = manage.execute(self.args("show", root=other_root))["preferences"]
+            self.assertEqual(a_stored[0]["value"], "concise")
+            self.assertEqual(b_stored[0]["value"], "detailed")
+
+            manage.execute(self.args("clear", approved=True))
+            self.assertEqual(manage.execute(self.args("show"))["preferences"], [])
+            # Profile B must remain intact after profile A has withdrawn consent.
+            self.assertEqual(
+                manage.execute(self.args("show", root=other_root))["preferences"],
+                b_stored,
+            )
+            self.assertTrue(
+                (other_root / "skill-overlays" / manage.SKILL_ID
+                 / "preferences.local.json").exists()
+            )
+
     def test_update_replaces_preference_without_duplicate(self):
         self.set_pref()
         self.set_pref(value="detailed")
