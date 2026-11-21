@@ -127,6 +127,23 @@ class PortableClassification(unittest.TestCase):
                     with self.assertRaises(impact.ClassificationError):
                         impact.load_policy(path)
 
+    def test_ambiguous_duplicate_json_keys_are_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "policy.json"
+            p.write_text('{"schema_version":1,"schema_version":1,"rules":[]}',
+                         encoding="utf-8")
+            with self.assertRaises(impact.ClassificationError):
+                impact.load_policy(p)
+
+    def test_non_string_policy_categories_fail_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "policy.json"
+            p.write_text(json.dumps({"schema_version":1,"rules":[
+                {"match":"exact","pattern":"README.md","category":["documentation"]}
+            ]}), encoding="utf-8")
+            with self.assertRaises(impact.ClassificationError):
+                impact.load_policy(p)
+
     def test_trusted_policy_file_is_parsed_without_executing_commands(self):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / "policy.json"
