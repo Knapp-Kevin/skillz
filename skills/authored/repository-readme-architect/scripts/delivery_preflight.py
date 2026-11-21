@@ -297,12 +297,22 @@ def _ci(receipt, head):
             'required_check_state_authenticated':False}
 
 
-def audit(root,readme,mode,baseline=None,dispositions=None,ci_receipt=None,head_sha=None):
+def audit(root,readme,mode,baseline=None,dispositions=None,ci_receipt=None,head_sha=None,generated_evidence=None):
     if mode not in ('CREATE','UPLIFT','AUDIT','VERIFY'):raise Invalid('unknown mode')
     raw=_read(_path(root,readme)); blockers=[]
     formatters=_scan_formatter(root)
     owners=_owner(root,raw)
-    if owners['owner_status']=='GENERATED_OWNERSHIP_HOLD':blockers.append('GENERATED_README_OWNERSHIP_UNRESOLVED')
+    ci_data=_json(root,ci_receipt) if ci_receipt else None
+    ci=_ci(ci_data,head_sha)
+    if owners['owner_status']=='GENERATED_OWNERSHIP_HOLD':
+        evidence=_generated_evidence(root,readme,generated_evidence,ci_data,ci,head_sha)
+        owners['evidence_review']=evidence
+        if evidence['state']=='EVIDENCE_ATTACHED_PENDING_HUMAN_AUTHENTICATION':
+            owners['owner_status']='GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW'
+        else:
+            blockers.append('GENERATED_README_OWNERSHIP_UNRESOLVED')
+    elif generated_evidence is not None:
+        blockers.append('GENERATED_EVIDENCE_WITHOUT_EXPLICIT_OWNERSHIP_MARKER')
     p=None
     if mode=='UPLIFT':
         if not baseline:blockers.append('BASELINE_REQUIRED_FOR_UPLIFT')
@@ -312,7 +322,6 @@ def audit(root,readme,mode,baseline=None,dispositions=None,ci_receipt=None,head_
             p=_preservation(root,_read(_path(root,baseline)),raw,dispositions)
             if p['missing_dispositions']:blockers.append('MISSING_OR_STALE_SECTION_DISPOSITIONS')
             if p['unresolved_removals']:blockers.append('UNVERIFIED_SECTION_REMOVAL')
-    ci=_ci(_json(root,ci_receipt) if ci_receipt else None,head_sha)
     return {'schema_version':1,'mode':mode,'formatter_preflight':{'discovered':formatters,'local_validation':'NOT_RUN','configs_executed':False},
             'generated_ownership':owners,'preservation_audit':p,'ci_delivery':ci,
             'README_delivery_preflight':'BLOCKED' if blockers else 'INCOMPLETE_EVIDENCE_REVIEW_REQUIRED',
@@ -325,10 +334,11 @@ def main(argv=None):
     p.add_argument('--root',required=True);p.add_argument('--readme',default='README.md')
     p.add_argument('--mode',choices=['CREATE','UPLIFT','AUDIT','VERIFY'],required=True)
     p.add_argument('--baseline');p.add_argument('--dispositions');p.add_argument('--ci-receipt');p.add_argument('--head-sha')
+    p.add_argument('--generated-evidence',help='source/template fingerprints and drift-check receipt for human review')
     a=p.parse_args(argv)
     try:
         if a.head_sha and not SLUG.fullmatch(a.head_sha):raise Invalid('invalid HEAD SHA')
-        result=audit(_root(a.root),a.readme,a.mode,a.baseline,a.dispositions,a.ci_receipt,a.head_sha)
+        result=audit(_root(a.root),a.readme,a.mode,a.baseline,a.dispositions,a.ci_receipt,a.head_sha,a.generated_evidence)
     except (Invalid,OSError) as exc:
         print('INVALID_INPUT: '+str(exc),file=sys.stderr);return 2
     print(json.dumps(result,sort_keys=True,indent=2))
