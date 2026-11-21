@@ -1,5 +1,5 @@
 # Governed recursive skill improvement
-## Umbrella architecture strategy, revision 0.2 (2026-11-21)
+## Umbrella architecture strategy, revision 0.3 (2026-11-21)
 
 **Status:** Proposed, architecture validation and staged implementation authorized for issue planning. **Not implemented.**  
 **Scope:** Skillz authored skill improvement and its repository-level quality engine. The standalone Evidence-Driven Refinement Loop package remains independently usable.  
@@ -91,6 +91,8 @@ One record per **actual observed** branch action and outcome, with a content-add
   "task_family": "schema-compatibility",
   "task_fixture_id": "fixture-red-001",
   "source_artifact_git_blob": "40-character-hex-git-blob",
+  "workspace_state_digest": "sha256:<64-hex>",
+  "evaluation_context_id": "fixed-context-001",
   "evaluator_id": "schema-validator-v1",
   "policy_id": "incumbent-v1",
   "outcome": "OBSERVED_FAIL",
@@ -100,7 +102,7 @@ One record per **actual observed** branch action and outcome, with a content-add
 }
 ```
 
-This JSON is illustrative, not schema-valid: the placeholder digests must be replaced with real fingerprints. Validation must reject missing parents, cycles, duplicate IDs, illegal transitions, invalid/missing receipts, evaluator/source mismatch, implausible timestamps, unsupported task families and unknown outcomes. Events never contain raw user requests, preference file paths, personal IDs, credentials, full tool logs or secret-bearing diffs.
+This JSON is illustrative, not schema-valid: the placeholder digests must be replaced with real fingerprints. Validation must reject missing parents, cycles, duplicate IDs, illegal transitions, invalid/missing receipts, evaluator/source mismatch, implausible timestamps, unsupported task families and unknown outcomes. Events never contain raw user requests, preference file paths, personal IDs, credentials, full tool logs or secret-bearing diffs. The workspace-state digest is a **privacy-safe content fingerprint of authorized synthetic/public test state**, not a raw dump of file contents; unavailable or unshareable state yields `UNKNOWN_STATE` and is not eligible for exact replay. A digest proves correspondence to a claimed snapshot only when its evidence source is actually verified, not authorship or consent.
 
 **Discovered hypotheses** and **executed outcomes** are different entities. A candidate may exist without an outcome; it cannot be silently counted as a successful attempt. A `SKIPPED`/unobserved branch has no replay reward.
 
@@ -113,13 +115,15 @@ Input: task-family tags, established evidence, allowed branch frontier, remainin
 Given a frozen replay-world collection and fixed evaluator:
 
 1. Evaluate the incumbent first; retain its measured result and exact identity.
-2. For each proposed policy, step only across **previously observed** choices and outcomes; if a policy requests an unobserved transition, report `UNKNOWN_BRANCH` or a coverage penalty, not a guessed reward.
+2. For each proposed policy, step only across **previously observed** choices and outcomes whose **preconditions and state provenance match** the target replay step; an unseen transition is `UNKNOWN_BRANCH`, and a different underlying workspace/environment state is `UNKNOWN_STATE`. Never infer a result solely because a similar command ran elsewhere. Mark state-changing/order-sensitive operations **non-replayable** absent matching isolated branch snapshots. Neither unknown status receives a guessed reward or an `OBSERVED_PASS` label.
 3. Maintain separate development and **held-out** fixtures by task family and time cohort. No leaked holdout scores during candidate tuning. No duplicate evidence masquerading as independent worlds.
 4. Compare on non-negotiable correctness and safety gates **before** utility/cost. A single material authority/security failure vetoes promotion. Measure test calls, elapsed time, stalled branches, false skips, and preservation regressions, using identical accounting rules.
 5. Prefer incumbent on ties, too-small samples, missing provenance, disagreement, excessive overhead, unsupported transfers, or changed evaluator. Improvement is a **hypothesis**, not a shipped fact, until a bounded **live** adversarial pilot confirms it.
 6. Proposals never self-merge, rewrite `SKILL.md` or the evaluator, or change user memory/persistent preferences.
 
-**Invalid shortcut:** Offline replay can answer only “how would this policy have navigated the observed subset?” It cannot answer “what result would an unexplored branch have produced?” A winning score on replay is not a guarantee of generalization.
+**Invalid shortcut:** Offline replay can answer only “how would this policy have navigated the observed, **state-compatible** subset?” It cannot answer “what result would an unexplored branch have produced?” or “what would this mutation do if earlier edits were different?” A winning score on replay is not a guarantee of generalization.
+
+**State-equivalence gate:** In code/skill refinement, earlier branch edits may change tests, dependencies, file state, available authority or downstream prompts. Replay must bind each outcome to a verified isolated source/workspace snapshot and evaluator/tool context (or a demonstrably invariant read-only operation). Ordering and parallelism can only be varied if they cannot change that outcome. If equivalence cannot be proved, replay reports `UNKNOWN_STATE`; the policy comparison cannot count it as a successful hypothetical execution.
 
 ## 6. Baseline, research questions and scorecard
 
@@ -141,6 +145,7 @@ Primary measures, all **observed** and reported with denominators: verified acti
 | --- | --- | --- |
 | Same-model praise becomes quality evidence | Keep author-generated output labeled, require external mechanics where possible | Feed repeat self-endorsement with no changed artifact: no policy promotion |
 | Partial tree creates hindsight bias | Record unknown branches, restrict replay to observed outcomes | Candidate chooses missing child: return UNKNOWN, never fabricated score |
+| Mutations make recorded outcomes order-dependent | Bind outcomes to isolated workspace snapshots and evaluator context; never reorder non-commuting effects | Candidate changes prior edit or environment: return UNKNOWN_STATE, not reused reward |
 | Policy changes evaluator or safety checks | Separate roles and frozen immutable evaluator ID | Mutated evaluator identity blocks comparison/promote |
 | Prompt injection in history/issue text | Input treated as untrusted data, allowlisted parser | Event contains “skip security”: no tool/authority change |
 | Personal preference reused as generic improvement | Separate private overlay from canonical improvement ledger | A wants table, B wants paragraphs: no global policy alteration |
@@ -156,7 +161,7 @@ Architecture acceptance requires **actual planted negative tests** for each high
 
 ### Adversarial revision from v0.1 to v0.2
 
-The first conceptual design pass (not separately committed or executed) contemplated storing every attempt and selecting the highest replay score. That fails for sparse histories, polluted history, false claims of permission, and evaluator drift. Revision 0.2 therefore makes recording **optional and privacy-filtered**, distinguishes hypotheses from executed nodes, constrains replay to supported transitions, holds evaluator identity fixed, retains the incumbent on ties, adds unseen cases and live pilots, and makes the policy **declarative** by default. This is a design critique, **not an executed proof**.
+The first conceptual design pass (not separately committed or executed) contemplated storing every attempt and selecting the highest replay score. That fails for sparse histories, polluted history, false claims of permission and evaluator drift. Revision 0.2 made recording optional, added provenance, fixed the evaluator, held the incumbent on ties and restricted replay to observed nodes. A **second adversarial challenge** found a further defect: even an *observed* node's outcome may depend on prior mutable workspace state, so changing branch order can invalidate reuse. Revision 0.3 adds state/context fingerprints, non-replayable classifications and an explicit `UNKNOWN_STATE` gate. Both are **design-level improvements**, not executed implementation proof.
 
 ## 8. Phased delivery and stop gates
 
@@ -164,9 +169,9 @@ Each phase is a **useful completed behavior**, not a completed planning note. A 
 
 | Phase | Executable deliverable | Exit evidence | Dependency |
 | --- | --- | --- | --- |
-| [0. Architecture proof (#829)](https://github.com/Knapp-Kevin/skillz/issues/829) | Frozen contract & attack matrix tested against a minimal demonstration fixture | Written decision plus red/green planted failures for replay unknowns, evaluator tamper and private data | None |
+| [0. Architecture proof (#829)](https://github.com/Knapp-Kevin/skillz/issues/829) | Frozen contract & attack matrix tested against a minimal demonstration fixture | Red/green planted failures for unknown branches, **state mismatch**, evaluator tamper and private data | None |
 | [1. Evidence intake (#830)](https://github.com/Knapp-Kevin/skillz/issues/830) | Minimal standalone-optional event recorder/importer; reject unauthorized/invalid records | CLI/API fixture tests, no raw personal overlay/secret capture, exact digest/readback, package closure | 0 |
-| [2. Offline replay (#831)](https://github.com/Knapp-Kevin/skillz/issues/831) | Deterministic traversal of observed tree with explicit UNKNOWN_BRANCH and budget accounting | Reproducible paired replay, mutation negatives, seeded fixtures, exact evaluator pins | 1 |
+| [2. Offline replay (#831)](https://github.com/Knapp-Kevin/skillz/issues/831) | Deterministic state-compatible traversal with explicit UNKNOWN_BRANCH / UNKNOWN_STATE and budget accounting | Reproducible paired replay, state-swap negatives, seeded isolated snapshots, exact evaluator pins | 1 |
 | [3. Policy laboratory (#832)](https://github.com/Knapp-Kevin/skillz/issues/832) | Declarative baseline plus candidate comparison, fixed evaluator, hard-veto safety checks and heldouts | Candidate that cheats is rejected; on tied/small samples incumbent retained | 2 |
 | [4. Adversarial live pilot (#833)](https://github.com/Knapp-Kevin/skillz/issues/833) | Bounded real tasks across two skill families; baseline and candidate use equal budgets | Real red/green outcomes, preserved acceptance gates, measured cost, decision to ship or stop | 3 |
 | [5. Consumer integration (#834)](https://github.com/Knapp-Kevin/skillz/issues/834) | Optional explorer embedded through portable in-package instructions and/or repository engine; versioned opt-in | Standalone/no-network/no-store export tests, no regression in v0.3.4 local preference behavior | 4 |
