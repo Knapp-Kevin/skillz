@@ -284,13 +284,23 @@ def audit(root, readme, cfg):
     if step is None:
         check("first-success", "FAIL", "no usable first-reader journey section")
     elif cfg["journey_mode"] == "execute":
-        has_command = bool(re.search(r"(?m)^ {0,3}(?:\x60{3,}|~{3,})", raw))
-        only_tests = bool(re.search(r"(?im)^\s*(?:cargo test|npm test|pytest|go test|make test)\s*$", step))
-        observable = bool(re.search(r"\b(?:expected|you should see|output|result|prints|creates|opens|displays|shows)\b", step, re.I))
-        if not has_command or (only_tests and not observable) or not observable:
-            check("first-success", "FAIL", "example must enable an observable user outcome, not only developer checks")
+        # Read raw QUICK START alone. An unrelated architecture example is not
+        # first-use onboarding, and Git clone/cargo test alone is not product use.
+        actual = _section(raw.splitlines(), START_HEAD) or ""
+        blocks = re.findall(r"(?ms)^ {0,3}(?:\x60{3,}|~{3,})[^\n]*\n(.*?)\n {0,3}(?:\x60{3,}|~{3,})", actual)
+        generic = re.compile(
+            r"(?i)^(?:cargo test|npm test|pytest(?: .*)?|go test(?: .*)?|"
+            r"make test|git clone(?: .*)?|pip install(?: .*)?|npm install(?: .*)?)$")
+        actual_calls = [line.strip() for b in blocks for line in b.splitlines()
+                        if line.strip() and not line.lstrip().startswith("#")]
+        meaningful = any(not generic.fullmatch(line) for line in actual_calls)
+        observable = bool(re.search(
+            r"\b(?:expected|you should see|output|result|prints|creates|opens|displays|shows)\b",
+            step, re.I))
+        if not meaningful or not observable:
+            check("first-success", "FAIL", "example must show product use and observable outcome, not only developer checks")
         else:
-            check("first-success", "HOLD", "command and expected result present; safety, correctness and actual execution unverified")
+            check("first-success", "HOLD", "actual first-use command/result present; correctness and execution unverified")
     elif not re.search(r"\[[^\]]+\]\([^)]+\)", step) or not re.search(
             r"\b(?:read|open|follow|explore|start|see)\b", step, re.I):
         check("first-success", "FAIL", "documentation-first path needs a concrete next reading action")
