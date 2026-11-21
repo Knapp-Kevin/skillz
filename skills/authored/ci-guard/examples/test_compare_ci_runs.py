@@ -13,7 +13,7 @@ def run(run_id, job_minutes, seconds):
     return {'run_id':str(run_id),'attempt':1,'head':'1'*40,
             'scenario':'passive-docs','runner_profile':'ubuntu-large','cache_class':'cold',
             'protected_status':'success','jobs':[{
-            'name':'required-gate','started_at':'2026-11-20T00:00:00Z',
+            'name':'required-gate','needs':[],'started_at':'2026-11-20T00:00:00Z',
             'completed_at':'2026-11-20T00:00:%02dZ'%seconds,
             'billed_runner_minutes':job_minutes,'result':'success'}]}
 
@@ -44,3 +44,28 @@ class MeasuredBudgetTests(unittest.TestCase):
     def test_same_run_duplicated_refused(self):
         with self.assertRaises(m.EvidenceError):
             m.compare({'schema_version':1,'pairs':[{'baseline':run(1,9,50),'optimized':run(1,3,20)}]})
+
+
+class CriticalPathIntegrityTests(unittest.TestCase):
+    def test_parallel_jobs_are_not_summed_as_critical_path(self):
+        baseline = run(1, 9, 50)
+        extra = dict(baseline['jobs'][0])
+        extra['name'] = 'parallel-docs'
+        extra['billed_runner_minutes'] = 4
+        baseline['jobs'].append(extra)
+        result=m.summarize_run(baseline)
+        self.assertEqual(result['critical_path_seconds'],50)
+        self.assertEqual(result['qualification_elapsed_seconds'],50)
+        self.assertEqual(result['billed_runner_minutes'],13)
+
+    def test_missing_cross_workflow_dependency_is_not_an_accepted_critical_path(self):
+        baseline=run(1,9,50)
+        baseline['jobs'][0]['needs']=['other-workflow-required-check']
+        with self.assertRaises(m.EvidenceError):
+            m.summarize_run(baseline)
+
+    def test_job_graph_cycle_is_refused(self):
+        baseline=run(1,9,50)
+        baseline['jobs'][0]['needs']=['required-gate']
+        with self.assertRaises(m.EvidenceError):
+            m.summarize_run(baseline)
