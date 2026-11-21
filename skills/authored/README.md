@@ -95,7 +95,7 @@ The existing first-party `skills/<slug>/` entries are not automatically moved or
 
 ## Repository README Architect v0.1.0 (2026-11-20)
 
-[Repository README Architect](repository-readme-architect/SKILL.md) supports **CREATE from scratch** (including a missing or empty README), **UPLIFT**, **AUDIT**, and **VERIFY**. It is independently authored, MIT, offline-standalone, and repository-agnostic; source-grounded claims and bounded read/write authority are mandatory. [Six designed acceptance cases](repository-readme-architect/examples/controlled-scenarios.md) cover missing README, empty repository, generated-block integrity, release claims, narrative clarity and host differences. [Static review](../../docs/reviews/2026-11-20-readme-architect-static-review.md) is 18/20; real agent-host behavioral validation has **not** been performed.
+[Repository README Architect](repository-readme-architect/SKILL.md) is a self-contained first-party MIT skill for **CREATE from zero**, **UPLIFT**, **AUDIT**, and **VERIFY**. It includes [an evidence and quality contract](repository-readme-architect/references/readme-quality-contract.md), complete [CREATE](repository-readme-architect/examples/create-python-library-output.md) and [AUDIT](repository-readme-architect/examples/audit-output.md) examples, and an **optional offline local-link verifier** with 57/57 actually executed Python tests. [Current v0.2 exact-package review](../../docs/reviews/2026-11-20-readme-architect-v020-complete-package-review.md): maintainer static 19/20; independent agent-host/user acceptance **not run**. No sibling or repository-wide runtime dependency.
 
 ## Current authored packages
 
