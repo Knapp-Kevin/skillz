@@ -42,6 +42,18 @@ The full workflow, authority rules, portable evidence capsule and stop
 conditions are in [SKILL.md](SKILL.md). No scripting, network access,
 scheduled automation, parent Skillz repository or specific model is required.
 
+## Canonical skill versus local preferences
+
+A demonstrated general bug belongs in the **canonical improvement**
+proposal lane. A user's preferred level of detail or output format
+belongs in a **user-local preference** lane. Mixed feedback is separated.
+A consuming host may, only with user consent and suitable private
+storage, retain simple non-executable settings in an isolated file
+outside the downloaded skill or Skillz repository. Preferences never
+weaken verification, safety or authority requirements and do not
+become public skill changes merely by repetition. The [skill](SKILL.md)
+contains a portable example and a read-only/no-storage fallback.
+
 ## Evidence levels
 
 Distinguish what was written, what was actually checked, what an agent
