@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
 display_name: "Evidence-Driven Refinement Loop"
-skill_version: "0.3.1"
+skill_version: "0.3.2"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
@@ -19,8 +19,8 @@ portability: high
 review_status: verified-static
 dependency_status: standalone-with-optional-offline-local-preference-manager
 dependencies: "Ten-file standalone package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional POSIX Python 3 manage.py and 38-test test_manage.py; user preferences remain private and opt-in. Core skill requires no helper, host persistence or network."
-content_blob_sha: d921b7fd317a04ac9327bb874e23eb678a75182f
-complete_package_tree_sha: a98510befd694a2509cfb469cf3829646bef0405
+content_blob_sha: c3b63af6c40aec479d435bd1429ed9af4730c64c
+complete_package_tree_sha: 0ee1a7e0784048504ee9a3ca5c5fbdbd70499241
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
-rationale: "v0.3.1 separates evidenced canonical improvements from local, consent-gated preferences. Optional POSIX manager provides allowlisted, version-aware storage, post-write checks, revocation and advisory locking of cooperative writers; it is not a same-UID sandbox. Exact package tree statically verified and 38 manager tests plus 22 engine contract tests passed on Python 3.11 and 3.13 in GitHub Actions run 44943402910 (commit 15e1217d); source checkout was unchanged for these package files at this review. No independent agent-host/user outcome validation yet. Static score remains 18/20."
+rationale: "v0.3.2 embeds governed per-run learning classification and consent-gated user-local preferences; optional manager serializes cooperating writers with nonblocking POSIX advisory locking. Exact 10-file package statically read back and fingerprinted. Executed 38/38 manager and 22/22 engine tests on each of Python 3.9, 3.11 and 3.13 at exact source commit c2016fe5 (GitHub Actions run 44943518832). No independent consuming-agent/user outcome or hostile same-UID process isolation demonstrated; static rubric 18/20."
