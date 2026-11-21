@@ -17,6 +17,8 @@ REQUIRED = {"schema_version", "profile", "project_identity", "banner_path",
             "required_badge_labels", "allowed_badge_targets", "journey_mode",
             "asset_inventory", "exceptions"}
 IMAGE = re.compile(r'!\[([^\]\n]*)\]\(([^)\n]+)\)')
+HTML_IMAGE = re.compile(r'<img\b[^>]*>', re.I)
+ATTRIBUTE = re.compile(r'\b(src|alt)\s*=\s*["\x27]([^"\x27]+)["\x27]', re.I)
 BADGE = re.compile(r'\[!\[([^\]\n]+)\]\(([^)\n]+)\)\]\(([^)\n]+)\)')
 TOC_HEAD = re.compile(r'^\s{0,3}#{1,4}\s+(?:table of contents|contents|on this page|navigation)\s*#*\s*$', re.I)
 TOC_LINK = re.compile(r'^\s*[-*+]\s+\[([^\]]+)\]\(#([^)]+)\)\s*$')
@@ -189,6 +191,10 @@ def audit(root, readme, cfg):
     # Badges are metadata with accessible labels, not decorative image assets.
     presentation = BADGE.sub("", text)
     images = [(m.group(1).strip(), m.group(2).strip()) for m in IMAGE.finditer(presentation)]
+    html_items = [{k.lower(): v for k, v in ATTRIBUTE.findall(m.group(0))}
+                  for m in HTML_IMAGE.finditer(text)]
+    for item in html_items:
+        images.append((item.get("alt", ""), item.get("src", "")))
     selected = next(((alt, src) for alt, src in images if src == banner), None)
     if selected is None or banner not in inventory:
         check("banner", "FAIL", "required project-specific banner missing or not in asset inventory")
