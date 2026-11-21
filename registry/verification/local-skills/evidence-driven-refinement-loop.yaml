@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
-skill_version: "0.3.1"
+skill_version: "0.3.2"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/evidence-driven-refinement-loop/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d921b7fd317a04ac9327bb874e23eb678a75182f
-complete_package_tree_sha: a98510befd694a2509cfb469cf3829646bef0405
+content_blob_sha: c3b63af6c40aec479d435bd1429ed9af4730c64c
+complete_package_tree_sha: 0ee1a7e0784048504ee9a3ca5c5fbdbd70499241
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
 verification_status: verified
-verification_basis: exact-ten-file-static-semantic-review-plus-executed-two-version-offline-mechanics-regression
+verification_basis: exact-ten-file-static-semantic-review-plus-executed-three-version-offline-mechanics-regression
 validation_status: not-run
-validation_note: "Exact v0.3.1 package identity verified; 38/38 optional preference manager tests and 22/22 engine source contract tests passed on each of Python 3.11 and 3.13 in GitHub Actions run 44943402910 at commit 15e1217d. Regression checks include two independent private-root profiles and advisory lock refusal. These are deterministic mechanics tests, NOT independent agent-host execution, user outcome or full adversarial same-UID isolation; consumer validation remains not-run."
+validation_note: "Exact v0.3.2 ten-file package identity verified, package-local Markdown links resolve, 38/38 optional preference-manager and 22/22 engine-contract Python methods passed on each of 3.9, 3.11 and 3.13 at source commit c2016fe5 in GitHub Actions run 44943518832. Includes independent private-root profiles and nonblocking POSIX advisory lock contention/refusal. These deterministic checks are NOT independent agent-host execution, user outcome verification, hostile same-UID isolation, or Windows portability; consumer validation remains not-run."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,16 +24,17 @@ tags:
   authority: [read-only-default, owner-authorized-scoped-change]
   portability: high
 notes: >-
-  Exact v0.3.1 source review retains rubric score 18/20; source quality
-  is separate from observed host behavior. CI run 44943402910 at
-  commit 15e1217d executed 38 preference manager cases and 22 engine
-  contract cases on Python 3.11 and 3.13, all PASS. It verifies
-  cooperative advisory lock behavior, version/revocation handling,
-  persisted data allowlists, and two disjoint private configuration
-  roots under a single OS identity. It does not demonstrate isolation
-  across adversarial same-UID processes, genuine separate OS users,
-  Windows portability, or independent consuming-agent acceptance.
-  Canonical source and user-preference learning remain separate;
-  installed user values are never part of the public skill package.
-  Adversarial source review:
+  v0.3.2 static semantic assessment 18/20. The distributed skill's
+  canonical instructions explicitly invoke the bounded learning and local
+  preference component. The exact 10-file source tree and git blob are
+  pinned above. GitHub Actions run 44943518832 checked out exact source
+  commit c2016fe5 and passed all 38 manager and 22 engine contract tests
+  on Python 3.9, 3.11 and 3.13 on Ubuntu 24.04. Tests cover private
+  configuration roots, two isolated test profiles, opt-in writes, version
+  upgrade holds, revocation, symlink and malicious field rejection,
+  concurrent lock refusal, readback and safe filesystem boundaries.
+  Same-UID hostile processes, real separate-user host isolation,
+  cross-machine concurrency, Windows and independent consuming-agent
+  outcomes remain unproven and must not be inferred from green CI.
+  Adversarial historical review:
   docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
