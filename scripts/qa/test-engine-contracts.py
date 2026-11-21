@@ -153,6 +153,44 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertIn("offline deterministic fixtures", policy)
         self.assertNotIn("No tests, harnesses, CI, runtime, or other execution machinery belong", policy)
 
+    def test_refinement_skill_is_a_complete_portable_package(self):
+        root = "skills/authored/evidence-driven-refinement-loop/"
+        for required in ("SKILL.md", "README.md", "LICENSE", "examples/acceptance.md"):
+            self.assertTrue((ROOT / (root + required)).is_file())
+        skill = read(root + "SKILL.md")
+        for fragment in ("OBSERVE the delivered result", "EXPLAIN a testable mechanism",
+                         "CHANGE the smallest adequate surface",
+                         "CHALLENGE the candidate", "DECIDE against the frozen criteria",
+                         "STOP_NO_CHANGE", "Do not trigger", "fresh, action-specific approval"):
+            self.assertIn(fragment, skill)
+        self.assertEqual(markdown_local_links(root + "SKILL.md", skill), [])
+
+    def test_iteration_method_can_refuse_false_improvement(self):
+        root = "skills/authored/evidence-driven-refinement-loop/"
+        skill = read(root + "SKILL.md")
+        cases = read(root + "examples/acceptance.md")
+        self.assertIn("green", skill.lower())
+        self.assertIn("REVERT", skill)
+        self.assertIn("HOLD", skill)
+        self.assertIn("STOP_NO_CHANGE", skill)
+        self.assertIn("False success", cases)
+        self.assertIn("Misleading tests and stale evidence", cases)
+        self.assertIn("Improvement that sacrifices a hard invariant", cases)
+        self.assertGreaterEqual(len(re.findall(r"(?m)^## Case [0-9]+:", cases)), 8)
+
+    def test_engine_development_adopts_refinement_without_a_runtime_dependency(self):
+        forge = read(SKILLS["forge"])
+        evaluator = read(SKILLS["eval"])
+        bootstrap = read(SKILLS["bootstrap"])
+        template = read("docs/skill-template.md")
+        self.assertIn("Iterative improvement as an execution discipline", forge)
+        self.assertIn("Repeatable review of the newly corrected candidate", evaluator)
+        self.assertIn("Iterate on a real artifact", bootstrap)
+        self.assertIn("Built-in iterative refinement", template)
+        for body in (forge, evaluator, bootstrap, template):
+            self.assertIn("evidence", body.lower())
+        self.assertIn("not a runtime dependency", forge)
+
     def test_modified_engine_markdown_links_are_local_and_present(self):
         for name, path in SKILLS.items():
             with self.subTest(name=name):
