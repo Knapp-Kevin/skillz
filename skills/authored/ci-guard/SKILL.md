@@ -125,8 +125,10 @@ equivalent method, but may not silently skip the decision or assurance floor.
   docs-only.** It may be executable input, model input, release evidence,
   generated output or governance; determine this from the consumer's trusted
   dependency/policy evidence before reducing checks.
-- A docs-looking path can be security/build/release input. Workflow and
-  policy changes, dependency locks, executable docs, generated interface
+- A docs-looking path can be security/build/release input. A directory
+  classification must use a real path boundary (`docs/`, not `docs`);
+  global `.md` suffixes cannot declare arbitrary files passive. Workflow
+  and policy changes, dependency locks, executable docs, generated interface
   contracts, unknown types, and ambiguous or missing diffs demand a broader
   route unless a verified dependency map proves a narrower one is safe.
 - Mixed changes take the union of applicable checks. Keep genuinely
