@@ -69,7 +69,7 @@ promote a source merely because it has been edited many times.
 This complete algorithm must remain in this engine source; no consumer
 needs another skill installed. The authored reusable
 `evidence-driven-refinement-loop` expresses the same method for work
-outside Skillz but is **not** a runtime dependency.
+outside Skillz but is not a runtime dependency.
 
 ## Evidence-driven refinement loop
 
