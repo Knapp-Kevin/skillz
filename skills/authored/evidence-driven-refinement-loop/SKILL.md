@@ -12,7 +12,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Evidence-Driven Refinement Loop
-  version: 0.3.0
+  version: 0.3.1
   license: MIT
 ---
 
