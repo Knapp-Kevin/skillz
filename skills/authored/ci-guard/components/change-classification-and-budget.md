@@ -88,15 +88,33 @@ An unlisted path is `unknown` and FULL. Structural validation refuses
 unsafe/unsupported selectors. The JSON must be copied to and run from the
 **trusted base revision**, not the candidate PR revision.
 
-The [GitHub Actions reference](../examples/classified-github-pr.yml)
-uses the unprivileged PR event, exact trusted-base policy and classifier,
-a draft/candidate impact decision, mutually exclusive target/full jobs, and
-an always-emitted final gate. Consumer `ci/targeted-qualification.sh`
-and `ci/full-qualification.sh` are **required actual scripts**: the
-example fails if missing, not a success-shaped placeholder. Existing
-branch-protection checks and provider-specific release assurance remain
-independent until their replacements are explicitly qualified. Pin third-party
-actions. Never execute or install generated workflows without authorization.
+**Legacy classifier versus executable plan:** `classify_change.py`
+only identifies generic impact categories and draft/candidate routing. It
+cannot itself prove that any expensive work was skipped or any obligation
+was executed. **Do not use it as the final reference** when the objective is
+an operational selective workflow.
+
+The [current GitHub Actions reference](../examples/classified-github-pr.yml)
+uses unprivileged PR events, an exact trusted-base [graph policy](../examples/impact-graph.json)
+and [command manifest](../examples/exec-policy.json), and the
+[plan/execute/qualify tool](../scripts/ci_plan.py). Every classified
+obligation must reach one real executable command in its group.
+The `docs`, `rust`, `model` and `trust` jobs are conditionally
+selected by the dependency closure and **all four** are checked by an
+always-emitted qualification gate. Missing, skipped, failed, stale or
+misrouted docs verification fails the gate. The executable commands in the
+sample manifest reference **consumer-owned real verifier scripts** under
+`trusted/ci/verify_*.sh`. Those scripts must be authored/checked by each
+consumer and fetched from the trusted base; missing commands fail closed.
+All release/provenance and independently branch-required checks continue
+until migration is separately authorized and proved. Pin third-party
+actions; do not install a reference workflow without owner authorization.
+
+The full [dependency-closure and evidence contract](dependency-graph-and-qualification.md)
+and [bootstrap cost / branch-governance migration](modular-bootstrap-and-migration.md)
+are bundled and normative when redesigning a workflow. A classifier whose
+labels do not alter real selected execution, or a monolithic bootstrap that
+keeps running for all paths, is a **failed optimization**.
 
 **Stage and evidence requirements:** A draft with known executable/model/
 dependency impact may run targeted feedback only, with full acceptance still
@@ -180,8 +198,14 @@ executions only when observed; modeled savings are ESTIMATES. Keep **false
 negative risk** explicit: suppressing a check that would have blocked a real
 regression is unacceptable regardless of the runner-minute savings.
 
-**Completion:** The generated workflow shows a verified classification
-decision, truthful selected/skipped results, a reliable required status, and
-an authorized negative control proving a sensitive change is not routed to
-docs-only. Deliver a bounded patch and outcome evidence. Do not mistake a
-successful YAML parse or simulated check plan for a real CI run.
+**Completion:** The generated workflow demonstrates classification
+**controlling real dispatch**, every selected transitive obligation mapping
+to actual executable commands and receipts, and an exact-source final gate
+verifying both selected and intentionally skipped work. Show negative tests
+for omitted/failed docs, model-consumed README, Rust dependencies, policy
+changes, stale/altered plans and canceled jobs. Shadow-run against original
+full acceptance, migrate the protected status under owner authority, confirm
+the old unconditional expensive bootstrap stopped, and measure actual
+runner-minutes and critical-path change before claiming optimization achieved.
+Do not confuse YAML parsing, a simulated plan or local unit tests with an
+independently observed consumer CI execution.
