@@ -104,7 +104,9 @@ scope; prefer check-only modes and record unavoidable changes.
 Before altering a baseline, record every substantive ATX/Setext
 heading section, introductory text, nested content, code examples,
 technical limits and footnotes. Use a stable *baseline-bound*
-section ID and digest. A change in prose, semantics, code or caveat
+section ID and normalized digest of heading level, title and body. Include
+heading-only sections, including warnings like `Experimental` or
+`Not production-ready`. A change in prose, semantics, code or caveat
 is NOT automatically preserved because the heading survived.
 A normalized text match only proves some bytes remain, not that
 they have the same meaning or prominence.
@@ -128,7 +130,7 @@ Optional machine manifest for
   "sections": [
     {
       "section_id": "s1",
-      "original_sha256": "SHA256_OF_NORMALIZED_ORIGINAL_BODY",
+      "original_sha256": "SHA256_OF_NORMALIZED_HEADING_LEVEL_TITLE_AND_BODY",
       "disposition": "SUPERSEDED",
       "evidence_ref": "AUTHORIZED_PINNED_REPLACEMENT_EVIDENCE"
     }
@@ -140,9 +142,12 @@ This is a **schema illustration**, not evidence for a real rewrite.
 Obtain each real \`original_sha256\` from the preflight's
 \`preservation_audit.section_findings[*].source_sha256\`,
 *not* from a different README version. The script enumerates the
-baseline's ATX-heading blocks and preamble, reports changed sections
+baseline's ATX-heading blocks (including heading-only sections) and
+preamble, fingerprints full heading-plus-body sections, reports changes
 and checks manifest identity, file existence for relocation, and
-whether an exact normalized body appears at the destination.
+whether a complete normalized section appears at the destination.
+Existing v0.3.0 body-only manifest hashes become stale under v0.3.1 and
+must be recomputed from the original baseline before any disposition is accepted.
 It does **not** authenticate a disposition's source evidence or
 understand all Markdown structure, tables and semantic changes.
 Setext headings, generated footers and special project-specific
