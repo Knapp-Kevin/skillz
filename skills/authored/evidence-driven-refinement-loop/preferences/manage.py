@@ -213,6 +213,30 @@ def write_atomic(path: Path, doc: dict) -> None:
             pass
 
 
+def revoke_overlay(path: Path) -> dict:
+    """Revoke private preference data even if its JSON/version is invalid.
+
+    Revocation must not depend on successfully interpreting potentially
+    stale, hostile, or corrupted preference content. Do NOT follow links.
+    """
+    try:
+        item = path.lstat()
+    except FileNotFoundError:
+        return {"status": "NOT_FOUND", "remaining": 0}
+    if (not stat.S_ISREG(item.st_mode) or item.st_uid != os.getuid()
+            or stat.S_IMODE(item.st_mode) & 0o077):
+        raise PreferenceError("Refusing to delete unsafe preference file")
+    path.unlink()
+    if path.is_symlink() or path.exists():
+        raise PreferenceError("Post-delete verification failed; no success asserted")
+    parent_fd = os.open(path.parent, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        os.fsync(parent_fd)
+    finally:
+        os.close(parent_fd)
+    return {"status": "REMOVED", "remaining": 0}
+
+
 def execute(args: argparse.Namespace) -> dict:
     if args.action not in ("show", "validate", "set", "remove", "clear"):
         raise PreferenceError("Unknown action; no file operation authorized")
@@ -225,6 +249,10 @@ def execute(args: argparse.Namespace) -> dict:
     ):
         raise PreferenceError("Unknown preference or disallowed value")
     target = overlay_file(args.root, create_dirs=args.action == "set")
+    if args.action == "clear":
+        # An owner may revoke an obsolete or malformed overlay. Do not
+        # block deletion on a schema or canonical version mismatch.
+        return revoke_overlay(target)
     doc = load(target, version=version, allowlist=allow)
     if args.action == "show":
         return {"status": "LOADED" if target.exists() else "ABSENT",
@@ -251,8 +279,6 @@ def execute(args: argparse.Namespace) -> dict:
         if len(kept) == len(doc["preferences"]):
             return {"status": "NOT_FOUND", "key": args.key}
         doc["preferences"] = kept
-    elif args.action == "clear":
-        doc["preferences"] = []
     if doc["preferences"]:
         write_atomic(target, doc)
         if load(target, version=version, allowlist=allow) != doc:
