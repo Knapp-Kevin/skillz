@@ -119,12 +119,30 @@ def reject_checkout_root(root: Path) -> None:
             raise PreferenceError("Local preferences cannot be stored in a source checkout")
 
 
+def check_root_ancestors(root: Path) -> None:
+    """Refuse path ancestors another OS identity could rename or replace.
+
+    Sticky world-writable directories (such as /tmp) protect child
+    ownership under normal POSIX DAC. This cannot isolate a hostile
+    process running under the same effective UID.
+    """
+    if not root.is_absolute():
+        raise PreferenceError("Private configuration root must be absolute")
+    for parent in root.parents:
+        info = parent.lstat()
+        if not stat.S_ISDIR(info.st_mode):
+            raise PreferenceError("Private root ancestor is not a real directory")
+        if info.st_mode & 0o022 and not info.st_mode & stat.S_ISVTX:
+            raise PreferenceError("Private root ancestor is writable by other identities")
+
+
 def overlay_file(root_arg: str, *, create_dirs: bool) -> Path:
     if os.name != "posix" or not hasattr(os, "O_NOFOLLOW"):
         raise PreferenceError("Private filesystem/ACL cannot be verified here; use host-native storage")
     root = Path(root_arg).expanduser()
     if root.is_symlink():
         raise PreferenceError("Private root must not be a symlink")
+    check_root_ancestors(root)
     reject_checkout_root(root)
     check_private_dir(root, allow_create=False)
     intermediate = root / "skill-overlays"
