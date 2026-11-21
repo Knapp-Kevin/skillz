@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 28bd16010b92f4e86ae17684b2ab8d91737f49df
-complete_package_tree_sha: 6321eeda7f94fcc66b536902e76598d87a8ae2e7
+complete_package_tree_sha: 4912303e73e1a9403bae69eeb166f6672a423df9
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
 verification_basis: v1.5.0-source-upgrade-local-plan-execution-suite-passed-independent-host-hold
 validation_status: not-run
-validation_note: "47/47 new local Python tests passed against exact source snapshots, including disposable Git plan-execute-qualify. Existing 28 legacy classifier methods NOT_RUN on v1.5. No independent Actions run, consumer adoption, branch protection, actual billed-minute savings, or agent-host behavior validation; do not claim validated."
+validation_note: "76/76 new local Python tests passed against exact source snapshots, including disposable Git plan-execute-qualify. The 28 retained classifier tests PASS locally on exact Git blob-matching sources; 40 plan and 8 metrics tests PASS. No independent Actions run, consumer adoption, branch protection, actual billed-minute savings, or agent-host behavior validation; do not claim validated."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5"
 tags:
