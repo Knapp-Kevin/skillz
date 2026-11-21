@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Anonymous, offline adversarial Gold/Platinum README quality regression."""
 import json
+import hashlib
 import zlib
 import binascii
 from pathlib import Path
@@ -83,6 +84,8 @@ class QualityProfileTests(unittest.TestCase):
         (self.root / "docs/guide.md").write_text("# Technical Guide\n", encoding="utf-8")
         self.write_readme(BASE)
         self.contract = json.loads(json.dumps(CONTRACT))
+        self.contract["asset_inventory"][0]["sha256"] = hashlib.sha256(
+            (self.root / "assets/banner.png").read_bytes()).hexdigest()
         self.write_contract()
 
     def write_readme(self, text):
@@ -104,6 +107,15 @@ class QualityProfileTests(unittest.TestCase):
         self.assertFalse(r["completion_permitted"])
         self.assertEqual(r["technical_delivery_status"], "NOT_RUN")
         self.assertEqual(r["editorial_acceptance_status"], "HOLD")
+
+    def test_valid_replacement_banner_pixels_still_fail_prior_digest(self):
+        path = self.root / "assets/banner.png"
+        before = path.read_bytes()
+        modified = before.replace(b"\xf0\xf4\xff", b"\xe0\xe4\xef", 1)
+        self.assertNotEqual(before, modified)
+        path.write_bytes(modified)
+        self.assertEqual(self.gate("asset-digest")[0]["status"], "FAIL")
+        self.assertFalse(self.evaluate()["assets_approved"])
 
     def test_corrupt_png_banner_fails_before_human_visual_check(self):
         (self.root / "assets/banner.png").write_bytes(b"\x89PNG\r\n\x1a\ncorrupt")
@@ -155,6 +167,8 @@ class QualityProfileTests(unittest.TestCase):
             '<script>alert(1)</script></svg>', encoding="utf-8")
         self.contract["banner_path"] = "assets/banner.svg"
         self.contract["asset_inventory"][0]["path"] = "assets/banner.svg"
+        self.contract["asset_inventory"][0]["sha256"] = hashlib.sha256(
+            (self.root / "assets/banner.svg").read_bytes()).hexdigest()
         self.write_readme(BASE.replace("assets/banner.png", "assets/banner.svg"))
         self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
 
@@ -164,6 +178,8 @@ class QualityProfileTests(unittest.TestCase):
             '<rect width="960" height="240" fill="navy"/></svg>', encoding="utf-8")
         self.contract["banner_path"] = "assets/banner.svg"
         self.contract["asset_inventory"][0]["path"] = "assets/banner.svg"
+        self.contract["asset_inventory"][0]["sha256"] = hashlib.sha256(
+            (self.root / "assets/banner.svg").read_bytes()).hexdigest()
         self.write_readme(BASE.replace("assets/banner.png", "assets/banner.svg"))
         self.assertEqual(self.gate("banner")[0]["status"], "HOLD")
 
