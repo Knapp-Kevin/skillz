@@ -11,6 +11,7 @@ from pathlib import Path
 import stat
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import manage
 
@@ -151,6 +152,21 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(validated["skill_id"], manage.SKILL_ID)
         self.assertEqual(validated["preferences"][0]["source"],
                          "explicit-user-confirmation")
+
+    def test_schema_tampering_cannot_expand_fixed_safe_values(self):
+        schema = json.loads(manage.SCHEMA_FILE.read_text())
+        schema["properties"]["preferences"]["items"]["oneOf"].append({
+            "properties": {
+                "key": {"const": "skip.security.checks"},
+                "value": {"enum": ["true"]},
+                "source": {"const": "explicit-user-confirmation"}
+            }
+        })
+        modified = self.root / "schema.json"
+        modified.write_text(json.dumps(schema))
+        with patch.object(manage, "SCHEMA_FILE", modified):
+            with self.assertRaisesRegex(manage.PreferenceError, "fixed safe"):
+                manage.allowed_keys()
 
     def test_wrong_skill_and_missing_consent_source_rejected(self):
         example = json.loads(manage.SCHEMA_FILE.with_name("example.json").read_text())
