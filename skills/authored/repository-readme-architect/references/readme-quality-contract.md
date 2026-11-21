@@ -115,7 +115,12 @@ approved working area. Example:
 - `asset_inventory`: required item per displayed identity asset, each with
   `path`, `status` (`verified-existing`, `newly-committed`,
   `approved-final`, `proposed-placeholder`, `temporary-placeholder`,
-  or `draft`), `owner`, `purpose`, `alt`, and `replacement`.
+  or `draft`), `owner`, `purpose`, `alt`, `replacement`, and
+  `sha256` (64 lowercase hex characters for the exact reviewed bytes).
+  The local checker computes the digest and fails changed or missing art;
+  the digest is **not** independent evidence of brand approval or of the
+  Git commit that contains the file. The sample uses a deliberately
+  invalid-for-delivery zero digest that must be replaced.
   Fields must be nonempty, paths must remain in the approved repository,
   and repeated/unsafe paths are rejected. Proposed or temporary art cannot
   satisfy a finished banner requirement even if its bytes exist.
