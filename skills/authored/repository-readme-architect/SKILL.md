@@ -116,7 +116,10 @@ and explicit exceptions in a profile contract. The optional bundled
 [example profile contract](examples/gold-quality-profile.json) provide
 read-only mechanical checks. Its asset inventory must bind each displayed
 project image to its exact repository path, status, owner, purpose,
-accessible alt and replacement condition. Check actual binary identity
+accessible alt, replacement condition and SHA-256 of the exact image.
+A missing or modified committed asset must fail local presentation integrity;
+the inventory's owner/status declarations still need independent evidence.
+Check actual binary identity
 and rendered screenshots separately; no self-asserted asset status is
 proof of approved branding. This contract **cannot disable required
 elements**. A missing required element is FAIL, or HOLD with an explained
