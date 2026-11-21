@@ -208,8 +208,8 @@ The required exact-head drift check is identified by name among recorded
 required checks; a successful unrelated check does not qualify.
 
 If local pins and *recorded* CI signals agree, the owner state becomes
-`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. The outcome remains
-`INCOMPLETE_EVIDENCE_REVIEW_REQUIRED` with
+`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. The machine outcome remains `BLOCKED` with
+`GENERATED_README_HUMAN_AUTHENTICATION_REQUIRED` and
 `ownership_clearance_granted: false`,
 `generator_execution_authenticated: false`, and
 `repository_merge_ready: false`. A malicious actor can submit matching
