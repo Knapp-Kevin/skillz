@@ -86,6 +86,10 @@ def validate_policy(p):
                 or len(set(cfg["needs"])) != len(cfg["needs"])
                 or any(not isinstance(v, str) or v not in nodes for v in cfg["needs"])):
             raise PlanError("invalid obligation or dependency: " + str(name))
+    # Every advertised group must own at least one runnable obligation.
+    # A phantom security/native group cannot silently disappear from FULL.
+    if {cfg["group"] for cfg in nodes.values()} != set(groups):
+        raise PlanError("declared CI group has no executable obligations")
     for key in ("always", "full"):
         values = p[key]
         if (not isinstance(values, list) or not values
