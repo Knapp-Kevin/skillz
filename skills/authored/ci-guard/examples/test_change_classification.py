@@ -90,6 +90,17 @@ class PortableClassification(unittest.TestCase):
         self.assertIn("selected != 1", text)
         self.assertNotIn("pull_request_target", text)
 
+    def test_private_repo_template_uses_existing_local_base_checkout(self):
+        text = (ROOT / "examples/classified-github-pr.yml").read_text(
+            encoding="utf-8")
+        # Both checkouts use persist-credentials:false. A later network
+        # fetch from "origin" can fail on a private repository.
+        self.assertIn('git -C work fetch --no-tags ../trusted "$BASE_SHA"', text)
+        self.assertNotIn('git -C work fetch --no-tags --depth=1 origin "$BASE_SHA"', text)
+        self.assertIn('path: trusted', text)
+        self.assertIn('path: work', text)
+        self.assertIn('persist-credentials: false', text)
+
     def test_draft_unknown_is_full(self):
         self.assertEqual(self.route(["unknown.binary"], stage="draft")["route"], "full")
 
