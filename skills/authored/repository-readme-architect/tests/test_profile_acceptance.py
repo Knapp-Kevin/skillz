@@ -184,6 +184,16 @@ class QualityProfileTests(unittest.TestCase):
         with self.assertRaises(profile.InputError):
             self.evaluate()
 
+    def test_uninventoried_logo_asset_fails(self):
+        (self.root / "assets/other.png").write_bytes(valid_banner())
+        self.write_readme(BASE + "\n![Another branding image](assets/other.png)\n")
+        self.assertTrue(any(x["status"] == "FAIL" for x in self.gate("asset-status")))
+
+    def test_remote_brand_image_is_unverified_not_implicitly_approved(self):
+        self.write_readme(BASE + "\n![A remote visual representing Example Kit](https://cdn.example.invalid/kit.png)\n")
+        self.assertTrue(any(x["status"] == "HOLD" for x in self.gate("asset-status")))
+        self.assertFalse(self.evaluate()["assets_approved"])
+
     def test_missing_banner_is_failed(self):
         self.write_readme(BASE.replace("![An original Example Kit visual that introduces the project](assets/banner.png)", ""))
         self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
