@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.3.1
+  version: 0.3.2
   license: MIT
 ---
 
@@ -146,6 +146,20 @@ generator or missing regeneration environment is NOT_VERIFIED, not a
 license to edit the published output manually. A README with only
 owned generated *sections* may permit edits outside those spans while
 preserving their bytes.
+
+The optional [delivery preflight](scripts/delivery_preflight.py) supports
+`--generated-evidence` for an evidence attachment binding generator source,
+template inputs, README output SHA-256, exact candidate HEAD and the named
+required CI drift/parity check. With matching local bytes and a recorded
+successful exact-head check, it changes `GENERATED_OWNERSHIP_HOLD` to
+`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. **That is not clearance.**
+A manually supplied receipt can be forged; the helper cannot authenticate
+provider CI, generator invocation or correct use of the template. The reviewer
+must independently inspect the generator source and run evidence, confirm CI
+identity and required status at the actual HEAD, ensure generated output
+matches the authorized template, and preserve the generated-file boundary.
+Missing, mismatched or skipped evidence remains a blocker. No self-asserted
+`verified` or `approved` field may override this requirement.
 
 ### D. CI-aware exact-head delivery: before claiming merge readiness
 
