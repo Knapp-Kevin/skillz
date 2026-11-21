@@ -19,9 +19,9 @@ portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "Nineteen-file standalone package with executable DAG planner/executor/qualifier, exact Git and trusted policy/command manifests, CI reference and optional Python stdlib/Git tests. Consumer-owned real verification commands and explicit branch-policy authority required for deployment."
-content_blob_sha: 026ac1d217aaba3002cb15eac58d9699db06fe6f
-complete_package_tree_sha: f41df6568413cdecdd902ff9f2b3f285c643621e
+content_blob_sha: 28bd16010b92f4e86ae17684b2ab8d91737f49df
+complete_package_tree_sha: 4d3aa3d20653e933d879171d769989eb6d8c4169
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5 end-to-end upgrade: docs, Rust, model and trust obligations map through trusted graph and real command manifest to conditional jobs and exact qualification. 39/39 new local Python tests ran in a disposable fixture against source matching committed blobs; 28 preexisting classifier methods remain NOT_RUN on v1.5. Independent Actions-host integration, protected-policy migration and measured savings are pending."
+rationale: "v1.5 end-to-end upgrade: docs, Rust, model and trust obligations map through trusted graph and real command manifest to conditional jobs and exact qualification. 43/43 new local Python tests ran in a disposable fixture against source matching committed blobs; 28 preexisting classifier methods remain NOT_RUN on v1.5. Independent Actions-host integration, protected-policy migration and measured savings are pending."
