@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.4.0
+  version: 1.4.1
   license: MIT
 ---
 
