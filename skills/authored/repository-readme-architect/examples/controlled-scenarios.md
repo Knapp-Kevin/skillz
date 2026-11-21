@@ -30,7 +30,7 @@ Expected: flag Windows binary claim as unsupported, distinguish CI from actual r
 
 Input evidence: a complex project README begins with two screens of aspirational mission statements, followed by a verified install example.
 
-Expected: identify why the opening hides what the software is; recommend an opening with a concrete problem, precise product and first useful action. Do not mandate the Golden Circle or eliminate essential technical evidence.
+Expected: **FAIL** a jargon-first opening. Require a readable Why → What → How sequence: an actual problem and stakes, verified practical project response, then a meaningful first action. Do not demand literal section headings, a marketing slogan or deletion of necessary technical evidence; link deeper implementation details.
 
 ## F. Stronger-method decision
 
