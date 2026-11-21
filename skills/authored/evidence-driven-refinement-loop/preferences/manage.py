@@ -184,6 +184,10 @@ def execute(args: argparse.Namespace) -> dict:
         raise PreferenceError("Mutation requires explicit user approval; --approved is not proof of consent")
     version = current_version()
     allow = allowed_keys()
+    if args.action == "set" and (
+        args.key not in allow or args.value not in allow.get(args.key, set())
+    ):
+        raise PreferenceError("Unknown preference or disallowed value")
     target = overlay_file(args.root, create_dirs=args.action == "set")
     doc = load(target, version=version, allowlist=allow)
     if args.action == "show":
