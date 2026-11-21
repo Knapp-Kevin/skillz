@@ -167,7 +167,7 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertEqual(config["skill_id"], schema["properties"]["skill_id"]["const"])
         self.assertEqual(config["schema_version"], schema["properties"]["schema_version"]["const"])
         canonical = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
-        declared_version = re.search(r"(?m)^  version: ([0-9]+\\.[0-9]+\\.[0-9]+)$",
+        declared_version = re.search(r"(?m)^  version: ([0-9]+\.[0-9]+\.[0-9]+)$",
                                      canonical)
         self.assertIsNotNone(declared_version)
         self.assertEqual(config["base_skill_version"], declared_version.group(1))
@@ -197,15 +197,15 @@ class EngineStaticContracts(unittest.TestCase):
         for name, path in SKILLS.items():
             with self.subTest(name=name):
                 data = read(path)
-                self.assertTrue(data.startswith("---\\nname: "))
-                self.assertRegex(data, r"(?m)^  version: [0-9]+\\.[0-9]+\\.[0-9]+$")
-                self.assertIn("\\n# ", data)
+                self.assertTrue(data.startswith("---\nname: "))
+                self.assertRegex(data, r"(?m)^  version: [0-9]+\.[0-9]+\.[0-9]+$")
+                self.assertIn("\n# ", data)
                 if name == "bootstrap":
                     # User bootstrap must never inherit repository-write authority.
-                    self.assertNotIn("\\n  repo-bound: true\\n", data)
+                    self.assertNotIn("\n  repo-bound: true\n", data)
                     self.assertIn("Only `REPOSITORY_MAINTENANCE`", data)
                 else:
-                    self.assertIn("\\n  repo-bound: true\\n", data)
+                    self.assertIn("\n  repo-bound: true\n", data)
 
     def test_maintainer_destination_agrees_with_template(self):
         forge = read(SKILLS["forge"])
