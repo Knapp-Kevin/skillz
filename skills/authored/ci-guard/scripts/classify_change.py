@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+from typing import Optional
 
 SHA_RE = re.compile(r"[a-fA-F0-9]{40}(?:[a-fA-F0-9]{24})?\Z")
 MAX_FILES = 2000
@@ -203,7 +204,7 @@ def _matches(path: str, rule: dict) -> bool:
     return path.endswith(pattern)
 
 
-def classify(paths: list[str], policy: list[dict] | None = None,
+def classify(paths: list[str], policy: Optional[list[dict]] = None,
              stage: str = "candidate") -> dict:
     """Select generic targeted/full work, never authorize a merge.
 
@@ -253,7 +254,7 @@ def classify(paths: list[str], policy: list[dict] | None = None,
     }
 
 
-def emit(result: dict, output: Path | None) -> None:
+def emit(result: dict, output: Optional[Path]) -> None:
     print(json.dumps(result, sort_keys=True))
     if output:
         with output.open("a", encoding="utf-8") as stream:
