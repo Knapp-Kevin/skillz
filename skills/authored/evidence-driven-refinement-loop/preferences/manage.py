@@ -165,11 +165,16 @@ def load(path: Path, *, version: str, allowlist: dict[str, set[str]]) -> dict:
         raise PreferenceError("Preference file permissions/size unsafe")
     flags = os.O_RDONLY | os.O_NOFOLLOW
     fd = os.open(path, flags)
-    try:
-        with os.fdopen(fd, "rb") as stream:
-            raw = stream.read(MAX_BYTES + 1)
-    except Exception:
-        raise
+    with os.fdopen(fd, "rb") as stream:
+        # Re-check the OPEN descriptor: lstat followed by open is a
+        # separate operation and cannot defend against file swaps.
+        opened = os.fstat(stream.fileno())
+        if (not stat.S_ISREG(opened.st_mode)
+                or opened.st_uid != os.getuid()
+                or stat.S_IMODE(opened.st_mode) & 0o077
+                or opened.st_size > MAX_BYTES):
+            raise PreferenceError("Opened preference file is unsafe")
+        raw = stream.read(MAX_BYTES + 1)
     if len(raw) > MAX_BYTES:
         raise PreferenceError("Preference file too large")
     try:
@@ -195,6 +200,12 @@ def write_atomic(path: Path, doc: dict) -> None:
             stream.flush()
             os.fsync(stream.fileno())
         os.replace(tmp, path)
+        # Persist the directory entry as well as the file contents.
+        parent_fd = os.open(path.parent, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        try:
+            os.fsync(parent_fd)
+        finally:
+            os.close(parent_fd)
     finally:
         try:
             tmp.unlink()
@@ -203,6 +214,8 @@ def write_atomic(path: Path, doc: dict) -> None:
 
 
 def execute(args: argparse.Namespace) -> dict:
+    if args.action not in ("show", "validate", "set", "remove", "clear"):
+        raise PreferenceError("Unknown action; no file operation authorized")
     if args.action in ("set", "remove", "clear") and not args.approved:
         raise PreferenceError("Mutation requires explicit user approval; --approved is not proof of consent")
     version = current_version()
@@ -230,6 +243,8 @@ def execute(args: argparse.Namespace) -> dict:
         doc["preferences"] = [entries[k] for k in sorted(entries)]
         validate_document(doc, version=version, allowlist=allow)
         write_atomic(target, doc)
+        if load(target, version=version, allowlist=allow) != doc:
+            raise PreferenceError("Post-write verification failed; no success asserted")
         return {"status": "SAVED", "key": args.key, "base_skill_version": version}
     if args.action == "remove":
         kept = [p for p in doc["preferences"] if p["key"] != args.key]
@@ -240,10 +255,14 @@ def execute(args: argparse.Namespace) -> dict:
         doc["preferences"] = []
     if doc["preferences"]:
         write_atomic(target, doc)
+        if load(target, version=version, allowlist=allow) != doc:
+            raise PreferenceError("Post-write verification failed; no success asserted")
     else:
         if target.is_symlink():
             raise PreferenceError("Refusing to delete a preference symlink")
         target.unlink(missing_ok=True)
+        if target.is_symlink() or target.exists():
+            raise PreferenceError("Post-delete verification failed; no success asserted")
     return {"status": "REMOVED", "remaining": len(doc["preferences"])}
 
 
