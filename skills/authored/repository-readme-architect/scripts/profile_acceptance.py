@@ -187,6 +187,33 @@ def _opening(cleaned):
     return " ".join(result)
 
 
+def _generator_candidates(root):
+    """Find common root-README writers without executing toolchains.
+
+    This is evidence to investigate, never proof that no other writer exists.
+    """
+    names = ["Makefile", "Justfile", "justfile", "package.json", "pyproject.toml"]
+    workflow = root / ".github" / "workflows"
+    if workflow.is_dir() and not workflow.is_symlink():
+        names += [".github/workflows/" + p.name
+                  for p in sorted(workflow.iterdir())
+                  if p.is_file() and not p.is_symlink()
+                  and p.suffix.lower() in (".yml", ".yaml")][:40]
+    suspects = []
+    for rel in names:
+        try:
+            path = _path(root, rel)
+            if not path.is_file() or path.stat().st_size > 32768:
+                continue
+            content = path.read_text("utf-8")
+            if (re.search(r"(?i)\bREADME\.md\b", content) and
+                re.search(r"(?i)\b(generate|generator|render|publish|output|write|pandoc|docs|cat)\b|>", content)):
+                suspects.append(rel)
+        except (OSError, UnicodeError, ValueError):
+            suspects.append(rel + " (cannot inspect safely)")
+    return suspects
+
+
 def audit(root, readme, cfg):
     raw = _read(_path(root, readme))
     cleaned = local.clean_lines(raw)
@@ -323,8 +350,11 @@ def audit(root, readme, cfg):
         check("local-links", "FAIL", "%d broken local links/anchors" % local_report["local_blockers"])
     else:
         check("local-links", "HOLD", "supported local links checked; remote and complex links remain unverified")
-    if re.search(r"(?i)(do not edit|auto.generated|<!--\s*generated:begin)", raw):
-        check("generated-owner", "HOLD", "update generator/templates and verify parity through separate delivery preflight")
+    writers = _generator_candidates(root)
+    if re.search(r"(?i)(do not edit|auto.generated|<!--\s*generated:begin)", raw) or writers:
+        check("generated-owner", "HOLD",
+              "possible generator ownership; audit source/templates and exact regeneration parity: " +
+              ", ".join(writers[:12]))
     if cfg["exceptions"]:
         check("exceptions", "HOLD", "exceptions need independent review; profile cannot self-approve")
     check("visual", "HOLD", "final committed README rendering, responsive layout and branded asset must be inspected")
