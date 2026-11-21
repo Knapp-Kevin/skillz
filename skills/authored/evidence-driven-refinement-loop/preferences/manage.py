@@ -129,6 +129,15 @@ def overlay_file(root_arg: str, *, create_dirs: bool) -> Path:
     return skilldir / "preferences.local.json"
 
 
+def reject_duplicate_fields(pairs: list[tuple[str, object]]) -> dict:
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise PreferenceError("Duplicate JSON field rejected")
+        result[key] = value
+    return result
+
+
 def load(path: Path, *, version: str, allowlist: dict[str, set[str]]) -> dict:
     fresh = {
         "schema_version": 1,
@@ -155,7 +164,8 @@ def load(path: Path, *, version: str, allowlist: dict[str, set[str]]) -> dict:
     if len(raw) > MAX_BYTES:
         raise PreferenceError("Preference file too large")
     try:
-        doc = json.loads(raw.decode("utf-8"))
+        doc = json.loads(raw.decode("utf-8"),
+                         object_pairs_hook=reject_duplicate_fields)
     except (UnicodeError, ValueError) as exc:
         raise PreferenceError("Invalid preference JSON") from exc
     return validate_document(doc, version=version, allowlist=allowlist)
