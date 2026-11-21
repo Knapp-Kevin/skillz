@@ -24,12 +24,20 @@ python3 scripts/check_readme.py --root /approved/project --readme README.md
 python3 -m unittest discover -s tests -v
 ```
 
-The checker is read-only and standard-library only. It checks common local links, file/heading anchors, reference definitions and explicitly delimited generated content. It never executes a README command, follows symlinks, calls a provider or validates a release claim. Complex Markdown, external URLs, factual accuracy, installability and actual reader success require separately reported evidence. The script is **optional**, not a requirement for users on weaker hosts or systems without Python.
+Before UPLIFT, follow the [four mandatory delivery safeguards](SKILL.md#four-mandatory-readme-delivery-safeguards) and, when a safe local Python interpreter is available, inspect the candidate with:
+
+```text
+python3 scripts/delivery_preflight.py --root /approved/project --mode UPLIFT --readme README.md --baseline .review/README-before.md
+```
+
+A UPLIFT that removes or substantively changes original content requires an evidence-bound section disposition manifest; generated READMEs must be modified through their authorized generator, not by hand. Local documentation formatters should be identified before editing, then executed safely when available and authorized. Required CI gates must never be bypassed, and CI receipts must match the candidate commit.
+
+The link checker is read-only and standard-library only. It checks common local links, file/heading anchors, reference definitions and explicitly delimited generated content. It never executes a README command, follows symlinks, calls a provider or validates a release claim. Complex Markdown, external URLs, factual accuracy, installability and actual reader success require separately reported evidence. The script is **optional**, not a requirement for users on weaker hosts or systems without Python.
 
 ## Qualification and boundaries
 
-**Current version: 0.2.0.** A local Python 3.13.5 run passed **57/57 actual tests**, including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
+**Current version: 0.3.0.** Local Python 3.13.5 suites passed **101/101 actual tests** (57 existing link/README exercises plus 44 new delivery-preflight tests), including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
 
-Generated sections, canonical ownership, release evidence, licenses and historical signer identity must be preserved or corrected only from appropriate source evidence. The helper does not mutate files, and reading this skill never authorizes new permissions, CI runs, deployments, releases or unrelated repository changes.
+Generated sections, canonical ownership, release evidence, licenses and historical signer identity must be preserved or corrected only from appropriate source evidence. Neither helper mutates files, authenticates provider evidence or runs formatters/CI. A locally green report is not a merge-ready verdict. The helpers do not mutate files, and reading this skill never authorizes new permissions, CI runs, deployments, releases or unrelated repository changes.
 
 A README succeeds when the actual reader can understand the project, take the correct first action (or understand why none is available), and verify consequential claims. Its job is not to become an ongoing PR diary.

@@ -65,3 +65,55 @@ The bundled `tests/test_check_readme.py` was **executed locally** under Python 3
 The local execution also created a controlled Python library source tree **without a README**, installed the [complete CREATE example](create-python-library-output.md) as its README, ran the documented source-checkout import/print command, observed its expected output, and executed its controlled Python unittest. A second controlled uplift exercised byte-for-byte generated-block preservation. A VERIFY negative case left an external installer link unverified rather than treating its presence as release proof. The [empty-repository output](empty-repository-output.md) and [AUDIT output](audit-output.md) illustrate safe artifact forms.
 
 This is direct deterministic method execution and a self-controlled source example, **not an independently observed external host, user test or cross-model comparison**. The scripted checker is intentionally only a bounded Markdown-local mechanical validator; it does not prove the model generated a useful README for a real third-party repository. Source-revision-bound claims and actual end-user acceptance still need independent evaluation.
+
+
+## G. UPLIFT: silent loss of technical details
+
+Input: README rewrite removes a formerly important compatibility section
+while retaining its heading, and a different section is moved into
+a deeper doc. Expected: compare full baseline/candidate section content;
+flag missing original technical statements; require an exact-baseline
+section disposition and actual source evidence for every removal.
+\`RETAINED\` alone does not prove technical information remains,
+and \`OUTDATED\` without authoritative evidence requires review.
+
+## H. Generated README owner, plain-text footer
+
+Source-grounded form: a Rust framework README ends with an explicit
+plain-language machine-generation instruction that identifies its docs
+generator. Expected: identify and verify generator ownership, hold
+hand edits, modify the actual source/templating code *only when separately
+authorized*, regenerate, test and review differences. A marker appearing
+only inside a fenced Markdown code example is not proof the README is
+owned by that generator. Never delete metadata or real source details
+to make a generated output more concise.
+
+## I. Formatter preflight, not GitHub Actions experimentation
+
+Input: an existing Prettier config, markdownlint, Vale and custom package
+scripts, with no available CI minutes. Expected: inspect source-based
+config applicability; do not run untrusted scripts automatically; use
+installed safe local check-only formatting commands only when authorized;
+record their exact exit code or NOT_RUN. A custom package script name
+is not proof its contents were executed or that it applies to README.md.
+
+## J. Exact-head CI qualification, no required-gate bypass
+
+Input: a README-only change with a passed documentation lint, a failing
+repository-wide non-required test, and a mandatory check that is queued.
+Expected: the mandatory check is a blocker; the non-required failure is
+a visible advisory attributed to its own scope, not silently deleted.
+Skipped, neutral, missing and stale-head required checks are not green.
+An unverified required-check inventory means merge readiness UNKNOWN.
+
+**Bounded real-world source check, not consumer execution:** On
+2026-11-20, UOR-Foundation/uor-comms at main
+\`82dae7aa7e15d4609f5cc5d43efb79ed60c14634\`
+still carried template-derived front matter and open PR #35 sought README
+correction. Separately, UOR-Foundation/uor-framework at main
+\`51c01382200b0179d6640b07e9c8119364ab69a1\`
+explicitly identified its README's generator as \`uor-docs\`.
+These are two *different* workflows, not findings that either
+repository was written to or tested for full acceptance. The
+positive and negative controls in the new Python suite are
+controlled inputs, not independent hosted-agent acceptance.

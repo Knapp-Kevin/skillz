@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: repository-readme-architect
-skill_version: "0.2.0"
+skill_version: "0.3.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/repository-readme-architect/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-readme-architect/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e4ba8915e5141b87ab45111d0ddc5d526b551d60
-complete_package_tree_sha: aeb51bc194874ad18df1af7fb8d9b137d768da1b
+content_blob_sha: a0e2e2afb9d013ebbc7330c87120a0e97381518e
+complete_package_tree_sha: a0c876e64a4e69ab4e2ea121a25b21d80e2c4d6c
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: verified
-verification_basis: maintainer-complete-package-static-review-plus-57-local-method-tests
+verification_basis: maintainer-complete-package-static-review-plus-101-local-method-tests
 validation_status: not-run
-validation_note: "57/57 actual Python 3.13.5 standard-library method tests, including controlled CREATE source execution, UPLIFT generated preservation and VERIFY negative release control. Independent external agent-host and user acceptance NOT_RUN. docs/evals/receipts/2026-11-20-readme-architect-v020-executed-qa.json."
+validation_note: "101/101 real local Python 3.13.5 tests: 57 prior link/source-checkout controls plus 44 formatter/section-preservation/generator-owner/exact-head CI evidence tests. Public UOR README files inspected read-only. No independent agent-host or user acceptance. docs/evals/receipts/2026-11-20-readme-architect-v030-preservation-gates.json."
 rubric: docs/skill-verification.md
 rubric_score: "19/20"
 tags:
@@ -24,10 +24,9 @@ tags:
   authority: [read-only-default, user-authorized-focused-write]
   portability: high
 notes: >-
-  Ten-dimension current static maintainer rubric [2,2,2,2,2,2,2,2,2,1] = 19/20.
-  Exact ten-file source was reviewed; 57/57 local Python 3.13.5 tests
-  executed on the identical script/test Git blobs. Controlled authored
-  source-checkout CREATE first-success and UPLIFT generated-block
-  preservation were actually exercised. No independent model-host
-  original/replacement comparison, remote links, real release/installer
-  or external consumer journey observed. docs/reviews/2026-11-20-readme-architect-v020-complete-package-review.md.
+  Maintainer exact v0.3 static rubric [2,2,2,2,2,2,2,2,2,1] = 19/20.
+  12-file package with two offline checkers. 101/101 real local Python tests,
+  exact new code/test blob identities; read-only UOR public references.
+  No actual UOR rewrite, generator regeneration or formatter CI execution.
+  Independent agent-host behavior, verified customer outcomes and measured
+  effectiveness remain NOT_RUN. docs/reviews/2026-11-20-readme-architect-v030-preservation-review.md.

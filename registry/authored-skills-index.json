@@ -1044,24 +1044,24 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
-      "skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
-      "package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
-      "package_file_count": 10,
+      "skill_blob_sha": "a0e2e2afb9d013ebbc7330c87120a0e97381518e",
+      "package_tree_sha": "a0c876e64a4e69ab4e2ea121a25b21d80e2c4d6c",
+      "package_file_count": 12,
       "review_status": "verified-static",
       "review_score": "19/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only; focused repository write on explicit user request",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "First-party MIT complete README skill with optional local-only checker and in-package evidence contract; external source and source rights never imported. Focused repo writes only on explicit owner action, no automatic CI or publication.",
-      "package_version": "0.2.0",
+      "package_version": "0.3.0",
       "capability_paths": [
         "technical-writing/documentation-ia",
         "software-engineering/developer-experience",
         "marketing/content"
       ],
-      "previous_reviewed_skill_blob_sha": "221fc33ece71af1941254d4ad9907ef2166f8e44",
-      "previous_reviewed_package_tree_sha": "a753453e323f4f45dc56d415e661faec78704e3b",
-      "review_note": "v0.2 exact ten-file original package: 57/57 actual local Python standard-library tests, executed controlled CREATE first-success and UPLIFT preservation. Maintainer static 19/20; independent external model-host behavioral validation and full reader outcomes NOT_RUN. docs/reviews/2026-11-20-readme-architect-v020-complete-package-review.md"
+      "previous_reviewed_skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
+      "previous_reviewed_package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
+      "review_note": "v0.3 original twelve-file package; 101/101 actual local Python checks (57 preserved + 44 delivery preflight). Mandatory formatter preflight, section preservation, generated source ownership and exact-head CI reporting; UOR real source observations read-only. Maintainer static 19/20, independent agent-host and user outcome NOT_RUN. docs/reviews/2026-11-20-readme-architect-v030-preservation-review.md."
     }
   ]
 }
