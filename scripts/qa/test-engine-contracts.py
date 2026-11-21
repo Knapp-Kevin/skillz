@@ -164,6 +164,8 @@ class EngineStaticContracts(unittest.TestCase):
                          "STOP_NO_CHANGE", "Do not trigger", "fresh, action-specific approval"):
             self.assertIn(fragment, skill)
         self.assertEqual(markdown_local_links(root + "SKILL.md", skill), [])
+        self.assertNotIn(chr(92) + chr(96), skill)  # Reject Markdown-escaped backticks.
+        self.assertEqual(skill.count(chr(96) * 3), 2)  # One real evidence capsule.
 
     def test_iteration_method_can_refuse_false_improvement(self):
         root = "skills/authored/evidence-driven-refinement-loop/"
