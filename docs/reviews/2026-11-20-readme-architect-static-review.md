@@ -9,7 +9,7 @@
 
 The independently authored procedure has four distinct modes: **CREATE from no README**, **UPLIFT an existing README**, **AUDIT** (read-only) and **VERIFY**. Its outcome is a complete Markdown artifact or approved focused PR, not merely a checklist. It is repository-agnostic and has no assumed language/runtime, installer, network, scheduler or sibling-skill dependency.
 
-The example case is UORust, where a README update to address the problem/why-first gap and stale migrated repository links was committed as PR #36. That example is not copied into the canonical skill and is **not** evidence of successful independent use on a second repository.
+A separate consumer example was not incorporated into the canonical skill. An external example alone is **not** evidence of successful independent skill use on a second repository; the package assessment remains source-based and repository-neutral.
 
 ## Prior-art boundaries
 
@@ -36,4 +36,4 @@ Compared directly to the already indexed external **OpenClaw README Standard** a
 
 See `skills/authored/repository-readme-architect/examples/controlled-scenarios.md`. They cover empty repo, missing README with real code, generated block preservation, stale release claims, why/how/what pitfalls, and limited-versus-strong host methods.
 
-Next meaningful qualification is to execute **CREATE** against an actual repository lacking a README and compare the resulting artifact for factual accuracy, readability and newcomer usability, then independently evaluate UORust's uplift for equivalence between intended and observed outcomes. Do not upgrade to `validated` based on these fixtures alone.
+Next meaningful qualification is to execute **CREATE** against an actual repository lacking a README and compare the resulting artifact for factual accuracy, readability and newcomer usability, then independently evaluate an authorized README uplift on a separate repository for equivalence between intended and observed outcomes. Do not upgrade to `validated` based on these fixtures alone.
