@@ -186,6 +186,15 @@ class PortableClassification(unittest.TestCase):
             self.route(["docs/guide.md"], rules=bad_rule)["route"],
             "full")
 
+    def test_direct_global_doc_suffix_cannot_skip_checks(self):
+        # Programmatic consumers cannot bypass the trusted policy boundary.
+        bypass = [{"match": "suffix", "pattern": ".md",
+                   "category": "documentation"}]
+        for path in ("README.md", "docs/passive.md", "docs-private/plan.md"):
+            with self.subTest(path=path):
+                self.assertEqual(
+                    self.route([path], rules=bypass)["route"], "full")
+
     def test_global_markdown_suffix_cannot_claim_passive_docs(self):
         """Markdown can be a model/build input, release or governance asset."""
         with tempfile.TemporaryDirectory() as tmp:
