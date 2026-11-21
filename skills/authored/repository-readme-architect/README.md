@@ -45,6 +45,12 @@ The link checker is read-only and standard-library only. It checks common local 
 
 ## Gold/Platinum quality acceptance
 
+**Gold is the default quality benchmark for substantive repositories.**
+Baseline is only appropriate when a compact artifact serves the reader
+better, with an explicit justification. Different repository types will
+need different onboarding and presentation designs, not different truth or
+usability standards.
+
 The skill sets the standard. Existing organization READMEs, brand assets
 and style rules are **identity and provenance evidence**, not permission
 to downgrade an explicitly requested Gold or Platinum outcome. The
