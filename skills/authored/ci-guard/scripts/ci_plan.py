@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -346,6 +347,21 @@ def verify_checkout(repo, expected_head):
         raise PlanError("execution checkout has modified tracked inputs")
 
 
+def isolated_command_env():
+    """Withhold GitHub runner write channels/tokens from consumer commands.
+
+    This reduces accidental and direct evidence forgery, but same-user host
+    processes still require independent sandboxing for adversarial PR code.
+    """
+    env = os.environ.copy()
+    for key in ("GITHUB_OUTPUT", "GITHUB_ENV", "GITHUB_PATH", "GITHUB_STATE",
+                "GITHUB_STEP_SUMMARY", "ACTIONS_RUNTIME_TOKEN", "GITHUB_TOKEN",
+                "GH_TOKEN", "ACTIONS_ID_TOKEN_REQUEST_URL",
+                "ACTIONS_ID_TOKEN_REQUEST_TOKEN"):
+        env.pop(key, None)
+    return env
+
+
 def execute(policy, executor, plan, group, workdir, run_id, attempt,
             source_repo=None):
     if plan.get("executor_sha256") != digest(validate_executor(executor, policy)):
@@ -367,6 +383,7 @@ def execute(policy, executor, plan, group, workdir, run_id, attempt,
         try:
             completed = subprocess.run(cfg["argv"], cwd=root, shell=False,
                                       timeout=cfg["timeout_sec"], check=False,
+                                      env=isolated_command_env(),
                                       stdout=sys.stderr, stderr=sys.stderr)
         except (OSError, subprocess.TimeoutExpired) as exc:
             raise PlanError("obligation execution unavailable: " + name) from exc
@@ -375,6 +392,8 @@ def execute(policy, executor, plan, group, workdir, run_id, attempt,
             raise PlanError("obligation failed (no success receipt): " + name)
         observations.append({"obligation":name, "exit_code":0,
                              "argv_sha256":digest(cfg["argv"]), "elapsed_ms":elapsed})
+    if source_repo is not None:
+        verify_checkout(source_repo, plan["head"])
     return receipt(plan, group, run_id, attempt, observations)
 
 
