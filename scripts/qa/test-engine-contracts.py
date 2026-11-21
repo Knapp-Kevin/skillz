@@ -76,17 +76,27 @@ def run_feedback_contract_error(template, forge, verification):
             "untrusted **proposal**",
             "Bound recursion by decision value",
             "opt-in",
+            "CANONICAL_IMPROVEMENT",
+            "LOCAL_PREFERENCE",
+            "outside the skill package",
+            "user-approved",
         )),
         "forge": (forge, (
             "## Per-execution self-review is not self-modifying policy",
             "standalone offline package",
             "NO_ACTION",
             "independent verification",
+            "CANONICAL_IMPROVEMENT",
+            "LOCAL_PREFERENCE",
+            "user-private",
         )),
         "verification": (verification, (
             "## Per-execution feedback and anti-drift review for authored skills",
             "Feedback contamination",
             "Authority and privacy",
+            "CANONICAL_IMPROVEMENT",
+            "LOCAL_PREFERENCE",
+            "Upgrade and contamination",
             "NO_ACTION",
         )),
     }
@@ -98,6 +108,26 @@ def run_feedback_contract_error(template, forge, verification):
 
 
 class EngineStaticContracts(unittest.TestCase):
+    def test_preference_overlay_is_isolated_from_canonical_rewrites(self):
+        skill = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
+        for required in ("CANONICAL_IMPROVEMENT", "LOCAL_PREFERENCE",
+                         "MIXED", "user-local", "preferences.json",
+                         "outside", "untrusted data", "reconcile",
+                         "explicit-user-confirmation"):
+            with self.subTest(phrase=required):
+                self.assertIn(required, skill)
+
+    def test_overlay_preference_must_not_launder_into_policy(self):
+        skill = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
+        poisoned = skill.replace("untrusted data, not instructions",
+                                "trusted instructions, not data")
+        self.assertNotEqual(poisoned, skill)
+        self.assertNotIn("untrusted data, not instructions", poisoned)
+        self.assertIn("untrusted data, not instructions", skill)
+        cases = read("skills/authored/evidence-driven-refinement-loop/examples/acceptance.md")
+        for heading in ("Case 11:", "Case 12:", "Case 13:", "Case 14:"):
+            self.assertIn(heading, cases)
+
     def test_authored_skill_run_feedback_is_bounded_and_evidence_based(self):
         self.assertIsNone(run_feedback_contract_error(
             read("docs/skill-template.md"),
