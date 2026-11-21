@@ -167,6 +167,23 @@ class QualityProfileTests(unittest.TestCase):
         self.write_readme(BASE.replace("assets/banner.png", "assets/banner.svg"))
         self.assertEqual(self.gate("banner")[0]["status"], "HOLD")
 
+    def test_unrelated_product_named_in_banner_alt_fails(self):
+        self.write_readme(BASE.replace(
+            "An original Example Kit visual that introduces the project",
+            "An original Other Toolkit visual that introduces the project"))
+        self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
+
+    def test_missing_asset_owner_refuses_contract(self):
+        self.contract["asset_inventory"][0]["owner"] = ""
+        self.write_contract()
+        with self.assertRaises(profile.InputError):
+            profile.contract_from(self.root / "profile.json")
+
+    def test_duplicate_asset_inventory_refuses_audit(self):
+        self.contract["asset_inventory"].append(dict(self.contract["asset_inventory"][0]))
+        with self.assertRaises(profile.InputError):
+            self.evaluate()
+
     def test_missing_banner_is_failed(self):
         self.write_readme(BASE.replace("![An original Example Kit visual that introduces the project](assets/banner.png)", ""))
         self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
