@@ -358,6 +358,24 @@ This is semantic, probabilistic review of instructions. It is not a benchmark of
 
 **Output:** `PASS`, `REVISE`, `MERGE`, `SPLIT`, or `DELETE` for each artifact, with material findings and remaining uncertainty.
 
+**Iterate on a real artifact, not a checklist.** When a material
+failure is found and the user has authorized changing the host-side
+skill, preserve the baseline and successful behavior, state a
+falsifiable cause, make the smallest adequate correction, and challenge
+the new artifact using the original reproducer, a nearby negative case,
+protected constraints and a user-outcome exercise where feasible.
+After a revision, read the **new complete package** again for a
+different meaningful failure. Iterate only while a new actionable
+finding changes the decision; otherwise stop. The proper outcome may
+be `NO CHANGE`, `HOLD` or a truthful partial handoff.
+
+Keep the method **self-contained here**. The separately authored
+`evidence-driven-refinement-loop` is available as a reusable
+specialized option for broader artifact tasks but is not installed
+automatically and is not needed for basic bootstrap. Do not make
+a source package's own README, hidden requirements or claimed score
+define the universal quality bar.
+
 Revise material failures and review again. A serious safety/authority ambiguity is not averaged away by strong wording elsewhere.
 
 ## S11 — Install or hand off
@@ -398,6 +416,13 @@ A returning user starts from the fitted system already in use.
 7. Search only where material improvement is plausible.
 8. Prefer the smallest justified change.
 9. `NO CHANGE NEEDED` is correct when no material improvement is established.
+10. For an authorized refinement of an existing user-installed skill,
+    compare its actual before/after task outcome, trigger and non-trigger
+    behavior, unchanged successful cases, and relevant privacy/safety
+    boundaries. Treat another attractive draft or static checklist as
+    insufficient evidence of the user's improved experience; record
+    executable/consumer checks separately and mark unavailable ones
+    NOT_TESTED.
 
 ## Completion record
 
