@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "issue": 738,
+  "skill": "reference-integrity-auditor",
+  "package_version": "1.1.0",
+  "entrypoint_blob_sha1": "7ee18deb36d517b3c43b43cfdfbf47ae54efa327",
+  "complete_package_tree_sha1": "5a2008481596cc9b89d441a50c8db2dc00234571",
+  "previous_package_tree_sha1": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+  "implementation_blob_sha1": "693e3fff1c8f6da8963b0dcb9dd0e76cce8d53e2",
+  "executed_test_blob_sha1": "78faf463668625639219ed6a9383e69c76112a74",
+  "fixture_blob_sha1": "a689852d1dde1d26b1e75cb159c2fe675653df57",
+  "source_transfer_integrity": "Locally executed Python sources and JSON fixture matched immutable GitHub-created blobs byte-for-byte, verified by git hash-object and GitHub create_blob SHA",
+  "execution": {
+    "environment": "Local isolated Python 3.13.5 standard library, no network",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -q",
+    "tests": 60,
+    "passed": 60,
+    "failures": 0,
+    "errors": 0,
+    "script_cli_example": "python scripts/audit_graph.py --input examples/skillz-public-links-pinned.json"
+  },
+  "positive_control": {
+    "source_repository": "Knapp-Kevin/skillz",
+    "pinned_commit": "4ec0ac51cf1d53b012123a2c9314868a70b5bf2f",
+    "historical_package_tree": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+    "actual_source_blob": "1dd69184869a203e63d7afbefc0a50452d3f586b",
+    "verified_target_blobs": {
+      "references/reference-edge-contract.md": "cceca09ab272b8e681805bca6728c33a92a9958f",
+      "examples/reference-cases.md": "7a8240f4905d8f97d5d29413d7e9aede513e13e9",
+      "LICENSE": "3ef83cc9480c9ac96b0e17d79ba6cf5f5beda1f0"
+    },
+    "actual_cli_observation": {
+      "lookup_recorded_states": [
+        "VERIFIED_CURRENT",
+        "VERIFIED_CURRENT",
+        "VERIFIED_CURRENT"
+      ],
+      "proposed_rename_of_contract_direct_dependents": [
+        "entrypoint"
+      ],
+      "proposed_rename_of_contract_transitive_dependents": [],
+      "orphan_coverage": "UNDETERMINED_INCOMPLETE_ENUMERATION",
+      "target_evidence_authenticated_by_script": false,
+      "writes_performed": false
+    }
+  },
+  "negative_control_cases": "Synthetic 403/404, absent target with and without authoritative absence, stale branch and target, unauthorized redirect, heading renderer unverified, private edges withheld, out-of-scope nodes, cycles, unknown dependents, partial enumeration, symlinked input refusal; no real broken link alleged.",
+  "scope_limitations": [
+    "Offline checker consumes host-authored metadata; it does not independently authenticate viewer permissions, provider status, Git object integrity, branch rules, source completeness, slug conventions or real target existence.",
+    "Real public GitHub tree was inspected via connector separately from the Python checker, not fetched by the Python script.",
+    "No independent host agent using the original v1.0 vs current v1.1 skill was executed.",
+    "No actual unlink/rename, user-visible repair, provider ACL isolation or cross-tenant integration was performed.",
+    "Overall skill-effectiveness ratio >=1.5x NOT_PROVEN; previous static review 18/20 retained as historical, no inflated quality score."
+  ],
+  "git_actions_workflow_runs_triggered_by_tests": 0,
+  "result_kind": "EXECUTED_BOUNDED_PYTHON_METHOD_AND_VERIFIED_PUBLIC_GIT_TREE_POSITIVE_CONTROL_NOT_AGENT_HOST_AB",
+  "requires_repository_or_internet_at_runtime": false
+}

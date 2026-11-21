@@ -11850,7 +11850,8 @@
             "Draft change-intent commit messages without inventing rationale or executing commits"
           ],
           "matched_skill_ids": [
-            "local-skills/repository-readme-architect"],
+            "local-skills/repository-readme-architect"
+          ],
           "coverage_status": "partial-linked-evidence",
           "search_hints": [
             "developer experience",
@@ -34052,8 +34053,8 @@
       "id": "local-skills/reference-integrity-auditor",
       "source_id": "local-skills",
       "skill_name": "reference-integrity-auditor",
-      "content_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
-      "complete_package_tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
+      "content_blob_sha": "7ee18deb36d517b3c43b43cfdfbf47ae54efa327",
+      "complete_package_tree_sha": "5a2008481596cc9b89d441a50c8db2dc00234571",
       "verification_status": "verified",
       "validation_status": "not-run",
       "static_score": "18/20",
@@ -34064,14 +34065,14 @@
       "evidence_path": "registry/verification/local-skills/reference-integrity-auditor.yaml",
       "skill_path": "skills/authored/reference-integrity-auditor/SKILL.md",
       "provenance_path": "registry/skills/local-skills/reference-integrity-auditor.yaml",
-      "source_license": "Original five-file MIT package",
+      "source_license": "Original seven-file MIT standalone package",
       "source_role": "first-party",
       "source_class": "first-party-authored",
       "authority_tags": [
         "read-only"
       ],
-      "link_basis": "Read-only bounded reference edge audit; link/anchor/ACL status and orphan candidates require actual authorized provider resolution. Exact static review: docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md.",
-      "restriction": "Host behavior, active provider link/label resolution and per-viewer isolation are not run. No implicit source writes, cross-tenant share or egress.",
+      "link_basis": "v1.1 original optional offline graph-checker: real local Python 60/60 method tests and verified pinned GitHub positive-control source tree; no standalone provider/network resolution or independent model-host A/B.",
+      "restriction": "Local provided evidence only. Source authorization, actual provider resolution, private edge isolation and real customer repairs NOT verified. No writes, automatic link updates or orphan deletion.",
       "unchanged_use_approved": false
     },
     {

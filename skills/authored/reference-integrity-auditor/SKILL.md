@@ -11,6 +11,7 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
   display-name: Reference Integrity Auditor
+  version: 1.1.0
   version: 1.0.0
 ---
 
@@ -27,11 +28,12 @@ Drive links in repository docs", "find orphaned index cards", "review
 references after a rename", "trace citations across versions", "check
 source-to-target integrity" or "give me a non-destructive link repair plan."
 
-Do not activate for general content search ([Federated Source Catalog](../federated-source-catalog/SKILL.md)),
-tagging or archiving ([File Lifecycle Curator](../file-lifecycle-curator/SKILL.md)),
-taxonomy governance ([Metadata Taxonomy Steward](../metadata-taxonomy-steward/SKILL.md)),
-arbitrary web crawling, security scanning, production deployment,
-link rewriting or bulk file mutation.
+Do not use for general content search, tagging or archiving, taxonomy
+governance, arbitrary web crawling, security scanning, production
+deployment, link rewriting or bulk file mutation. Other specialized
+skills may support those activities **if separately installed**, but
+this package has no runtime dependency on the Skillz repository, a
+sibling skill or a connected network.
 
 A visible reference is not proof its target exists, that the user
 can access the target, or that its bytes/version are current.
@@ -63,6 +65,86 @@ can access the target, or that its bytes/version are current.
    viewer without proper entitlement, truncated enumeration, expired
    cursor, moved target, redirect, source revision drift or rate limit
    can be UNKNOWN/INACCESSIBLE, not a confirmed broken link.
+
+## Optional executable bounded graph audit (v1.1)
+
+For an authorized, redacted *snapshot* of already collected source,
+target and relationship evidence, use the original, standalone
+Python 3.9+ standard-library checker at
+[scripts/audit_graph.py](scripts/audit_graph.py). It is **optional**:
+a capable host can perform stronger equivalent analysis directly,
+and a host without Python should still complete the supported
+manual protocol with explicit NOT_ASSESSED limitations. The rules
+for source authority, scope, non-disclosure and mutation do not vary
+between models or execution paths.
+
+From the copied, offline skill directory:
+
+~~~text
+python3 scripts/audit_graph.py --input examples/skillz-public-links-pinned.json
+python3 -m unittest discover -s tests -v
+~~~
+
+Input schema version 1 has an approved \`scope_id\`, immutable
+\`snapshot_revision\`, \`enumeration\` completeness flags, bounded
+\`nodes\`, \`edges\` and optional proposed \`changes\`. Each node
+has an opaque \`id\`, independently authorized \`visible\` flag and
+revision identity. Each edge includes \`source\`, \`target\`
+(known node ID or null), typed \`kind\`, an opaque
+\`evidence_ref\` and a \`lookup\` receipt. That receipt specifies
+the provider-reported \`state\`, independent authorization,
+lookup completeness, *explicit* absence proof, source/target
+revision-current flags, anchor result and
+\`anchor_renderer_verified\` attestation, and separately verified
+redirect status. An absent target has \`target_current: null\`.
+The [in-package reference contract](references/reference-edge-contract.md)
+defines these fields and evidence boundaries. No URL or raw target
+file content is needed as input.
+
+The script does **not** resolve any paths, anchors, URLs, shortcuts
+or citations. It performs only source-record consistency checks;
+\`VERIFIED_CURRENT\` means a compatible resolution is **recorded
+in the supplied host evidence**, not that the script authenticated
+a real provider. A bare HTTP 404, unknown permission, unsupported
+renderer, unverified absence or incomplete revision binding is not
+a confirmed broken link. A reported 403 remains INACCESSIBLE,
+not absent. Verified provider moves are distinguished from unsafe
+redirects. Hidden source or target edges are omitted completely,
+including their IDs and aggregate counts. Unresolved but visible
+edges become **possible** dependents, separate from established
+graph links.
+
+For a proposed MOVE, RENAME or DELETE_PROPOSAL, the checker
+traverses the reverse graph to identify direct and transitive
+dependents, coping with cycles. This is **impact planning only**:
+no paths are rewritten or deleted. Local orphan candidates are
+produced only when the bounded approved source inventory and
+visibility are both explicitly complete; they never prove global
+disuse or authorize deletion. Unknown external dependents remain
+unknown even after a bounded enumeration.
+
+The shipped [public positive-control fixture](examples/skillz-public-links-pinned.json)
+uses an independently inspected GitHub source tree at
+\`4ec0ac51cf1d53b012123a2c9314868a70b5bf2f\` to verify the
+then-existing skill's three relative links to its in-package
+reference contract, synthetic cases and LICENSE. The case does
+**not** represent a newly detected broken repository link or
+a complete enumeration of global relationships. Synthetic
+negative cases remain explicitly distinguished in the bundled
+[test suite](tests/test_audit_graph.py).
+
+The tool reads one explicitly supplied JSON file only (maximum
+1 MiB), refuses symlinked input paths and parents, rejects
+malformed, duplicated or unexpectedly extended schemas, performs
+no network calls, subprocesses, hidden directory crawling or
+source mutations, and prints JSON to stdout. Source, target
+and evidence identifiers must be safe non-secret handles,
+prepared by an independently authorized host. The tool always
+reports \`target_evidence_authenticated: false\` and
+\`writes_performed: false\`. The host must verify actual access,
+provider identity, snapshot freshness, provenance, visibility,
+scope completeness and user outcome independently before
+presenting a final conclusion or any separately approved edit.
 
 ## Procedure
 
@@ -139,10 +221,14 @@ and `PROPOSED / APPROVED / EXECUTED / VERIFIED / BLOCKED / NOT RUN`
 action ledger. Withhold protected details from the wrong viewer.
 
 Use [synthetic reference cases](examples/reference-cases.md) for
-static reasoning expectations only. Real link behavior, file
-mutation, connector freshness and permissions remain untested unless
-actually executed with appropriate host tools and evidence.
+independent host acceptance expectations. The 60-test optional
+Python regression suite has been executed locally against the
+complete source method. It does not establish independent old/new
+model-host parity, provider authorization, large-graph performance
+or real product/user acceptance.
 
-**Portability:** Original passive MIT [LICENSE](LICENSE) skill. No
-crawler, resolver engine, credentials, database, scheduler, web
-requests or patch tool bundled. This is a read-only review contract.
+**Portability:** Original MIT [LICENSE](LICENSE) package, with an
+optional bundled offline Python script. No crawler, network resolver,
+credentials, persistent database, scheduler, web requests or patch
+tool is needed. All governing instructions and executable guidance
+are in this downloaded package, not in an external repository policy.
