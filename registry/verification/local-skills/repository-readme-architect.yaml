@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: repository-readme-architect
-skill_version: "0.3.2"
+skill_version: "0.4.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/repository-readme-architect/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-readme-architect/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 29c562bd6abd8d00bfceb2363d6afeba756ad294
-complete_package_tree_sha: 80f16ea3df0cf064e6323fc5a1b9673e00ca4e12
+content_blob_sha: 514f0512dcf221d72a1b66bd62ab2381ad94673f
+complete_package_tree_sha: eb3451aa957a3cf0a01821a55e2d593772433685
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
 verification_basis: v0.3.2-heading-and-generated-evidence-regressions-pending-execution-and-review
 validation_status: not-run
-validation_note: "101/101 tests executed only on historical v0.3.0; v0.3.1 added eight heading tests and v0.3.2 added 13 generated evidence tests, all NOT_RUN on current package. Generated owner evidence remains blocked pending independent human authentication. No observed host acceptance."
+validation_note: "v0.4.0 canonical Gold/default contract committed. Exact package remains unverified: local 25-test profile-checker fixture exists but has NOT been integrated into the branch, current complete package tests NOT_RUN, and independent rendered/reader acceptance NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "19/20"
 tags:
