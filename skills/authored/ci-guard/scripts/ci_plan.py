@@ -3,7 +3,8 @@
 
 Standard-library Python 3.9+ and Git only. The policy/this program must be run
 from a trusted base checkout, not from an untrusted PR's modified files.
-Does not execute test programs, authorize merges, or establish cost savings.
+Executes consumer commands only in explicit execute mode; does not authorize
+merges, establish runner isolation, or prove cost savings.
 """
 from __future__ import annotations
 
@@ -329,7 +330,24 @@ def qualify(policy, plan, observed, expected, run_id, attempt, executor=None):
                 name for name, enabled in plan["groups"].items() if enabled)}
 
 
-def execute(policy, executor, plan, group, workdir, run_id, attempt):
+def verify_checkout(repo, expected_head):
+    """Bind executed commands to the actual checked-out candidate revision.
+
+    Git objects existing in a checkout do NOT prove that its worktree has the
+    requested HEAD. A modified tracked source must also not be silently tested
+    under a pristine commit's identity. Untracked output remains permissible.
+    """
+    root = Path(repo).resolve(strict=True)
+    actual = git(root, "rev-parse", "--verify", "HEAD^{commit}").decode()
+    if actual != expected_head:
+        raise PlanError("execution checkout HEAD does not match plan")
+    dirty = git(root, "status", "--porcelain", "--untracked-files=no")
+    if dirty:
+        raise PlanError("execution checkout has modified tracked inputs")
+
+
+def execute(policy, executor, plan, group, workdir, run_id, attempt,
+            source_repo=None):
     if plan.get("executor_sha256") != digest(validate_executor(executor, policy)):
         raise PlanError("executor manifest does not match selected plan")
     if group not in plan["groups"] or not plan["groups"][group]:
@@ -337,6 +355,8 @@ def execute(policy, executor, plan, group, workdir, run_id, attempt):
     if plan.get("plan_sha256") != digest({k:v for k,v in plan.items()
                                              if k != "plan_sha256"}):
         raise PlanError("plan digest mismatch")
+    if source_repo is not None:
+        verify_checkout(source_repo, plan["head"])
     root = Path(workdir).resolve(strict=True)
     if not root.is_dir():
         raise PlanError("workspace unavailable")
@@ -383,6 +403,8 @@ def main(argv=None):
     run.add_argument("--executor", required=True)
     run.add_argument("--group", required=True)
     run.add_argument("--workdir", required=True)
+    run.add_argument("--repo", required=True,
+                     help="exact candidate checkout; HEAD and tracked files verified")
     run.add_argument("--run-id", required=True)
     run.add_argument("--attempt", required=True)
     run.add_argument("--github-output")
@@ -398,7 +420,7 @@ def main(argv=None):
         policy = validate_policy(json_file(args.policy))
         executor = validate_executor(json_file(args.executor), policy)
         obj = execute(policy, executor, json_file(args.plan), args.group,
-                      args.workdir, args.run_id, args.attempt)
+                      args.workdir, args.run_id, args.attempt, args.repo)
     else:
         policy = validate_policy(json_file(args.policy))
         executor = validate_executor(json_file(args.executor), policy)
