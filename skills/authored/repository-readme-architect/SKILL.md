@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.3.0
+  version: 0.4.0
   license: MIT
 ---
 
@@ -66,6 +66,101 @@ truth, reader-first-success, navigation, source-integrity, safety and
 maintainability conditions have evidence. It is not a self-awarded number,
 a universal section template, or an excuse to add decorative content.
 
+## Binding quality profiles: this skill sets the standard
+
+**The standard comes from this skill and the explicitly chosen quality
+profile**, not from whatever the target README, organization or exemplar
+already does. Before writing, inspect that repository's identity, existing
+documentation, organization style rules, exemplars, brand assets, accessibility
+conventions and generator ownership. Treat findings as *context and evidence*
+for accurate branding and compatible integration, **not as authority to
+downgrade quality**. Challenge weak or irrelevant precedents. Never reuse
+another product's banner, logo, badges, language or colors merely because
+an asset or template exists. Inspect available assets and their ownership first. When a substantive
+repository lacks suitable identity graphics, plan and, **when authorized**,
+create a repository-specific asset rather than default to text-only or borrow
+an unrelated banner. Unknown image rights/provenance remain HOLD; do not
+invent brand approval or silently generate images without authorization.
+
+**Gold is the default delivery benchmark for substantive repositories,**
+including libraries, CLIs, applications, research projects and maintained
+documentation collections. It does not require identical layouts or arbitrary
+decoration. Adapt *how* each outcome is achieved to the real audience and
+product type, while keeping the underlying reader value, correctness,
+accessibility, navigation, visual coherence and maintainability standards.
+Use Baseline only when a compact artifact genuinely serves the reader better
+(for example a minimal placeholder, profile fragment or tiny repository),
+with a recorded user-value justification. Never silently select Baseline
+because the current README is weak or the repository lacks imagery.
+Platinum adds explicit independent acceptance beyond Gold.
+
+Select and record the applicable profile before editing, and judge the
+finished candidate against it:
+
+- **Baseline**: truthful, accessible, reader-task-fit. No universal banner,
+  badge or TOC requirement for tiny or specialized repositories.
+- **Gold**: a **binding** project-appropriate banner, meaningful verified
+  badge set, linked and correctly targeted contents, clear product value,
+  executable or document-first observable first success, usable technical
+  navigation, supported claims and a visual/usability review. The project
+  can specialize evidence and asset choices, **not silently waive** a gate.
+- **Platinum**: all gold obligations plus independent reader-task evidence
+  and expanded accessibility/responsive visual review. Do not self-award
+  either profile from a checklist or a successful CI run.
+
+A direct request for “gold-standard” or “platinum-grade” **selects that
+profile**, rather than simply encouraging nicer prose. Encode project identity,
+selected banner, relevant badge identities/destinations, reader-journey mode
+and explicit exceptions in a profile contract. The optional bundled
+[profile acceptance checker](scripts/profile_acceptance.py) and
+[example profile contract](examples/gold-quality-profile.json) provide
+read-only mechanical checks. Its asset inventory must bind each displayed
+project image to its exact repository path, status, owner, purpose,
+accessible alt, replacement condition and SHA-256 of the exact image.
+A missing or modified committed asset must fail local presentation integrity;
+the inventory's owner/status declarations still need independent evidence.
+Check actual binary identity
+and rendered screenshots separately; no self-asserted asset status is
+proof of approved branding. This contract **cannot disable required
+elements**. A missing required element is FAIL, or HOLD with an explained
+evidence-bound exception requiring independent owner/editorial judgment.
+An exception field or passing local script does not certify its own approval.
+
+**Normative qualitative gates are not fulfilled by section presence.**
+Independently review (1) Why→What→How in the opening and the 30-second
+purpose test, (2) tenth-grade comprehension of introductory copy,
+(3) credible observable newcomer first success, (4) visual cohesion and
+accessible hierarchy, (5) verified claims/links/assets, (6) technical
+navigation without overwhelming the front page, and (7) generator ownership
+and maintainability. The mechanical checker may FAIL obvious omissions,
+but a structural PASS never certifies semantic clarity.
+
+**Presentation and usability audit is mandatory for Gold/Platinum.**
+Check actual image provenance and display, useful alt text, correct product
+branding, legitimate relevant badge sources and links, heading/TOC targets,
+responsive rendered hierarchy, first-success usability, and accessible
+navigation. Render and inspect real Markdown where tooling permits;
+otherwise record NOT_RUN/HOLD, never PASS. Run the existing
+[local link checker](scripts/check_readme.py) and
+[delivery preflight](scripts/delivery_preflight.py) as applicable. The
+profile checker is **additional**, not a substitute for preservation,
+generator-owner parity, claim verification or CI gates. For generator-owned
+READMEs, update the authorized generator/template and output together,
+authenticate exact parity and ownership, and preserve the existing hold
+until independent review.
+
+**Two separate acceptance decisions must be explicit:**
+(1) technical delivery (changes, provenance, tests, generated parity and
+required CI at exact HEAD), and (2) editorial/reader acceptance against
+the selected profile (presentation, semantics, accessibility, identity,
+first-use result and evidence accuracy). A merged PR with green CI proves
+delivery of that revision, **not completion of the intended README quality
+grade**. Only both evidenced decisions can support a completed Gold/Platinum
+claim. If either is unknown, delivery may be shipped but grade remains HOLD.
+Use every qualified outcome and failed reader exercise to refine this
+skill's portable contract and controlled regression corpus, not to copy
+the conventions of one repository into a universal style template.
+
 ## Four mandatory README delivery safeguards
 
 These are **required decisions**, regardless of model or available tools,
@@ -106,6 +201,10 @@ every substantive section, including code examples, compatibility and
 platform limits, diagrams, tables, badges with provenance, security or
 release caveats, historical signer identities and operational guidance.
 Record a before/after correspondence, not just matching headings.
+Include heading level and title in preservation fingerprints. A heading-only
+section such as `Experimental` or `Not production-ready` can be a critical
+qualification even without body text. Unchanged paragraph content under a
+changed safety heading does not prove retention; require a disposition.
 Every removed or substantively revised original section requires a
 **recorded disposition**: \`RETAINED\`, \`RELOCATED\`, \`SUPERSEDED\`,
 \`OUTDATED\`, or \`UNVERIFIED\`. Bind it to the baseline section ID and
@@ -143,6 +242,21 @@ license to edit the published output manually. A README with only
 owned generated *sections* may permit edits outside those spans while
 preserving their bytes.
 
+The optional [delivery preflight](scripts/delivery_preflight.py) supports
+`--generated-evidence` for an evidence attachment binding generator source,
+template inputs, README output SHA-256, exact candidate HEAD and the named
+required CI drift/parity check. With matching local bytes and a recorded
+successful exact-head check, it changes `GENERATED_OWNERSHIP_HOLD` to
+`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. **That is not clearance and the machine outcome remains BLOCKED** until
+an independent human authenticates the records.
+A manually supplied receipt can be forged; the helper cannot authenticate
+provider CI, generator invocation or correct use of the template. The reviewer
+must independently inspect the generator source and run evidence, confirm CI
+identity and required status at the actual HEAD, ensure generated output
+matches the authorized template, and preserve the generated-file boundary.
+Missing, mismatched or skipped evidence remains a blocker. No self-asserted
+`verified` or `approved` field may override this requirement.
+
 ### D. CI-aware exact-head delivery: before claiming merge readiness
 
 Determine and record the exact candidate commit, target branch,
@@ -177,9 +291,53 @@ behavior. A monorepo or hybrid project may need a component map before
 a single quick start; a documentation corpus may need a reading order
 rather than an installation command. A claimed feature lacking corroboration must be qualified or omitted, not upgraded through eloquent writing.
 
-### 2. Open with reader value, not rigid rhetoric
+### 2. Lead with Why → What → How, then build technical depth
 
-The opening screen should reveal the problem or outcome, name the thing and audience, describe the differentiating mechanism, establish a relevant trust limit and offer a next action. **Problem → product → method → proof → action** is a useful default, **not** an enforced Why → How → What ordering. A user who arrives to install a library may need a command before philosophy. Avoid vague mission statements and unexplained jargon.
+**Why, then What, then How is the binding communication sequence** for the
+opening of a substantive public-facing repository README. First answer
+what real problem exists, who experiences it, and why its solution matters.
+Then explain *what* verified project capability addresses that problem,
+with one concrete example or outcome. Next give a credible *how* to use,
+evaluate, read or contribute. A banner, title, or badge must not displace
+this explanation. Put practical value ahead of architecture, mathematics,
+component inventories, and implementation mechanisms. The headings need
+not literally say Why/What/How; a coherent introduction may use natural
+prose. A rushed reader should understand the relevance within 30 seconds.
+
+**Default introductions to approximately tenth-grade accessibility.**
+Use short, concrete language, define technical terms at first use,
+expand unfamiliar acronyms, defer equations and unexplained notation
+to linked technical references, and introduce complexity progressively.
+A readability score is a diagnostic only: both the accessible prose and
+technical accuracy require deliberate editorial judgment. A novice should
+be able to explain the project purpose without domain expertise.
+
+The root README is the public front door, not an automatically generated
+developer reference or a changelog. Keep technical depth accessible by
+linked developer references, architecture pages, specification or tutorial
+material in repository-appropriate paths. If root README generation
+overwrites human writing, inspect generator code, templates, build and
+CI contracts; update the *true source* and output with parity evidence,
+or restructure generator-owned references separately when authorized.
+Never claim that a hand-edited generated output will survive regeneration.
+
+**First-user success is a hard outcome gate.** A new reader should know
+the first useful action *and* recognize an observable success result.
+A generic dependency install, import list, lint command or cargo test
+is not automatically evidence that a first-time user achieved the product
+goal. Adapt the journey for a library, CLI, UI, service, dataset,
+framework, research/specification repository or organization profile.
+If no runnable first step exists, present an honest evaluation/reading
+path and release limitation instead of fabricating one.
+
+**Assets follow an explicit lifecycle.** Inventory project-specific
+image source, purpose, owner/rights, accessible alt text, exact reference,
+and status (verified existing, newly generated and committed, proposed
+placeholder, approved final). Do not equate a preview or local temporary
+image with the committed rendered README. Create missing assets when
+authorized and add them to an appropriate permanent repository path.
+Check the exact committed asset, including light/dark presentation where
+relevant, and retain replacement requirements for placeholders.
 
 Make the reader's first action **safe and actually applicable**: state
 prerequisites, which repository/source checkout or published channel it
@@ -207,7 +365,7 @@ legitimately superseded and authorized. If generated spans or historic
 issuer identities cannot be safely updated, preserve them and surface
 the limitation, rather than silently changing them.
 
-- Title, optional existing logo/hero with accurate alt text, optional restrained badges.
+- Title with appropriate project identity; logo/banner and badge requirements follow the **selected quality profile**, not general preference.
 - One-screen explanation of reader problem, product, main differentiator and first useful action.
 - Small **real** quick start with prerequisites, source-compatible commands and expected observable output; if an install cannot be verified, mark the exact unverified step.
 - Contents for longer READMEs; correct GitHub anchor generation and meaningful navigation.
@@ -218,7 +376,7 @@ the limitation, rather than silently changing them.
 - License (only if evidenced), support/contribution/security reporting and release provenance when relevant.
 - For empty/minimal repositories, honestly prefer a small functional README over a fake “complete” enterprise site.
 
-Never invent working links, badges, release versions, platform support, build scripts, API endpoints, test results, maintainer contact addresses, sponsor programs or licenses. Dynamic badges are appropriate for changing facts only if their target and labels are verified; decorative badges are not achievement evidence. Never force a generated image or extensive table of contents onto a tiny project.
+Never invent working links, badges, release versions, platform support, build scripts, API endpoints, test results, maintainer contact addresses, sponsor programs or licenses. Dynamic badges are appropriate for changing facts only if their target and labels are verified; decorative badges are not achievement evidence. Never force a generated image or extensive table of contents onto a tiny **baseline-profile** project. Gold/Platinum presentation requirements are binding unless a justified exception is independently accepted.
 
 ### 4. Protect existing sources of truth
 

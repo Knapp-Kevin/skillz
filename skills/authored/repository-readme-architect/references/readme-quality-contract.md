@@ -45,6 +45,142 @@ A successful source-checkout demo is not a published installation, and one passi
 
 **VERIFY.** Read current exact source revisions and *the complete candidate README*, not merely a diff. Distinguish source-inspected static checks, executed local commands, external integration checks and reader simulations. Mark each as PASS, FAIL, NOT_RUN or NOT_APPLICABLE. A passed local link audit is never a pass for claims, remote URLs, installability, accessibility of all rendered states, or reader comprehension.
 
+## Lead with Why, then What, then How: editorial acceptance
+
+The **root README is a public-facing project introduction**, not a developer
+reference dump. The first 30 seconds must establish (1) the reader's
+problem and why it matters, (2) the project's verifiable practical response,
+and (3) the first use/evaluation/documentation action. Use natural prose,
+not a compulsory three-heading layout; a list of components, mathematical
+foundations or source imports is not an explanation of value.
+
+Use approximately **tenth-grade reading accessibility in the opening**
+as a reader-centered target, not as a simplistic automated grade cutoff.
+Define unfamiliar acronyms, put concrete outcomes before abstract terms,
+avoid unsupported competitive adjectives and retain accurate caveats.
+Technical users can follow linked developer references, diagrams,
+specifications and generated API documentation. High-complexity content
+belongs where progressive navigation makes it approachable.
+
+Before the Gold/Platinum grade can pass, an editorial reviewer must
+perform a first-time reader simulation, record answers to Why/What/How,
+check comprehension and evidence boundaries, and test an observable
+first-success step (or honest documentation-first route). Mechanical
+presence of badges, headings, links and code fences cannot satisfy this
+semantic gate. Record the actual rendered asset identity and source
+status; previewed, proposed and temporary images are not final delivery.
+Preserve exact generator source/output parity for generator-owned READMEs.
+
+**Continuous improvement rule:** after each reviewed delivery, turn each
+distinct reader failure, misleading claim, generator overwrite or asset
+misidentification into a versioned, anonymous regression fixture. Keep
+successful strategies as examples while distinguishing principles from
+one-repository visual preferences. Do not update the universal standard
+based solely on a single repository's convention.
+
+## Binding quality-profile contract and presentation review (v0.4)
+
+The skill's Baseline/Gold/Platinum expectations are the normative bar.
+**Gold applies by default to substantive repositories.** Baseline is a
+documented, reader-value exception for intrinsically small/limited artifacts,
+not a fallback merely because good branding, links or onboarding are missing.
+Platinum requires independently verified reader and visual/accessibility
+evidence in addition to Gold. The *quality characteristics* are universal;
+their implementations depend on repository type and demonstrable audience need.
+Organization exemplars, style guides, original READMEs, available banners
+and templates must be inspected **before editing**, but they are evidence
+about legitimate identity, established navigation and legal rights. They
+do not reduce or replace this skill's selected standard. A weak predecessor
+style is not a reason to deliver another weak README.
+
+**Gold** requires project-correct banner, purposeful and legitimate
+badges, a linked TOC with label/target integrity, explicit reader value,
+a practical first-success journey, maintained technical navigation,
+source-qualified consequential claims and a rendered usability review.
+**Platinum** additionally requires independent reader-task and expanded
+accessibility/responsive review. **Baseline** is the justified small-artifact exception; do not force
+irrelevant decoration where it degrades user experience. For Gold, a
+missing suitable asset is an action to produce or authorize one, not an
+automatic downgrade or an excuse to borrow another product's branding.
+
+For a selected Gold/Platinum profile, create a contract in the **consumer's**
+approved working area. Example:
+[anonymous sample](../examples/gold-quality-profile.json). Fields:
+
+- `profile`: exact `gold` or `platinum`; `project_identity`: verified
+  product name; `banner_path`: *actual project-owned* local asset path.
+- `required_badge_labels`: meaningful evidence-backed badges appropriate
+  to that product; `allowed_badge_targets`: known legitimate HTTPS destinations.
+  A URL string is a proposed identity, **not** a successful live validation.
+- `asset_inventory`: required item per displayed identity asset, each with
+  `path`, `status` (`verified-existing`, `newly-committed`,
+  `approved-final`, `proposed-placeholder`, `temporary-placeholder`,
+  or `draft`), `owner`, `purpose`, `alt`, `replacement`, and
+  `sha256` (64 lowercase hex characters for the exact reviewed bytes).
+  The local checker computes the digest and fails changed or missing art;
+  the digest is **not** independent evidence of brand approval or of the
+  Git commit that contains the file. The sample uses a deliberately
+  invalid-for-delivery zero digest that must be replaced.
+  Fields must be nonempty, paths must remain in the approved repository,
+  and repeated/unsafe paths are rejected. Proposed or temporary art cannot
+  satisfy a finished banner requirement even if its bytes exist.
+  An inventory declaration alone does not authenticate copyright, commits,
+  approvals or pixel-level image integrity.
+- `journey_mode`: `execute` for real commands and expected result, or
+  `read` for specs, research, datasets and other document-first projects
+  where inventing an install command would be dishonest.
+- `exceptions`: `[{"requirement":"banner","reason":"...","evidence_ref":"..."}]`.
+  The helper treats even a structurally valid exception as HOLD: only an
+  independent human can validate applicability and grant a waiver. Do not
+  remove a required check to make the result green.
+
+Optional bounded offline check:
+
+~~~sh
+python3 scripts/profile_acceptance.py --root /approved/project \
+  --readme README.md --profile gold \
+  --contract .review/readme-gold-contract.json
+~~~
+
+This helper reports mandatory *mechanical* FAILs for absent/wrong banner,
+missing alt, missing/wrong badges, wrong TOC targets, no first-success example,
+missing technical navigation and broken local navigation. An existing asset
+does not establish rights or correct branding. Remote badge HTTP/meaning,
+actual rendered desktop/mobile appearance, visual hierarchy, independence of
+editorial review, test of first use, and authentication of source claims remain
+HOLD/NOT_RUN without separate evidence. It does not write, render, fetch
+remote URLs, execute README commands or authenticate CI. The helper also rejects obvious raster header/geometry failures, some
+unsafe SVG constructs and HTML-image alt omissions, without claiming to
+fully decode or render every image format. It never validates that a
+preview is the committed artifact; obtain the exact asset digest and
+rendered screenshot separately. The helper
+intentionally cannot self-award the profile; its return code remains nonzero
+for FAIL or unresolved HOLD. When Python or rendering tools are unavailable,
+perform equivalent manual audit and record NOT_RUN distinctly.
+
+When the README is generated, **do not change output directly**. Modify the
+authorized generator/source and candidate output together; the separate
+`delivery_preflight.py --generated-evidence` can attach source/template
+digests and the exact-head drift receipt, but only independent review can
+verify the actual generator execution, provider run and byte parity. A profile
+checker pass is not an ownership or CI bypass. The existing section
+disposition preflight remains required for UPLIFT: preserving presentation
+never authorizes losing a verified compatibility warning or other material
+baseline evidence.
+
+**First-user success is an acceptance test**, not a generic command
+presence test. A library example must demonstrate a representative output;
+a CLI or application must have an observable result; a research/specification
+repository needs a credible reading or reproducibility journey. A command
+such as `cargo test` alone is developer verification, not proof of the
+newcomer's intended first outcome.
+
+**Completion receipt must show two decisions independently:** technical
+delivery PASS/FAIL/HOLD/NOT_RUN with actual revision and CI/provenance, and
+editorial/readership PASS/FAIL/HOLD/NOT_RUN with recorded visual/usability,
+brand/source checks, exceptions and reader-task outcome. A merged PR
+or green CI is insufficient by itself to claim Gold/Platinum completion.
+
 ## 4. Platinum-grade acceptance without a magic score
 
 Do not label the README excellent, gold, platinum or fully verified merely because a checklist exists. A release-ready claim requires all applicable mandatory gates, each with evidence:
@@ -104,7 +240,9 @@ scope; prefer check-only modes and record unavoidable changes.
 Before altering a baseline, record every substantive ATX/Setext
 heading section, introductory text, nested content, code examples,
 technical limits and footnotes. Use a stable *baseline-bound*
-section ID and digest. A change in prose, semantics, code or caveat
+section ID and normalized digest of heading level, title and body. Include
+heading-only sections, including warnings like `Experimental` or
+`Not production-ready`. A change in prose, semantics, code or caveat
 is NOT automatically preserved because the heading survived.
 A normalized text match only proves some bytes remain, not that
 they have the same meaning or prominence.
@@ -128,7 +266,7 @@ Optional machine manifest for
   "sections": [
     {
       "section_id": "s1",
-      "original_sha256": "SHA256_OF_NORMALIZED_ORIGINAL_BODY",
+      "original_sha256": "SHA256_OF_NORMALIZED_HEADING_LEVEL_TITLE_AND_BODY",
       "disposition": "SUPERSEDED",
       "evidence_ref": "AUTHORIZED_PINNED_REPLACEMENT_EVIDENCE"
     }
@@ -140,9 +278,12 @@ This is a **schema illustration**, not evidence for a real rewrite.
 Obtain each real \`original_sha256\` from the preflight's
 \`preservation_audit.section_findings[*].source_sha256\`,
 *not* from a different README version. The script enumerates the
-baseline's ATX-heading blocks and preamble, reports changed sections
+baseline's ATX-heading blocks (including heading-only sections) and
+preamble, fingerprints full heading-plus-body sections, reports changes
 and checks manifest identity, file existence for relocation, and
-whether an exact normalized body appears at the destination.
+whether a complete normalized section appears at the destination.
+Existing v0.3.0 body-only manifest hashes become stale under v0.3.1 and
+must be recomputed from the original baseline before any disposition is accepted.
 It does **not** authenticate a disposition's source evidence or
 understand all Markdown structure, tables and semantic changes.
 Setext headings, generated footers and special project-specific
@@ -164,6 +305,58 @@ unless authorized regeneration of that exact source is performed.
 When the generator or permission is unavailable, label
 \`GENERATED_OWNER_HOLD\` and report the missing dependency.
 Do not substitute the generated file for source truth.
+
+### Generated README owner evidence attachment (v0.3.2)
+
+An explicit generated-document marker normally requires a hard ownership hold.
+If the **generator/template was changed in authorized scope**, attach evidence
+for human review rather than repeatedly describing the hold without a way to
+resolve it. The optional `--generated-evidence .review/generated-owner.json`
+accepts this bounded schema (hash placeholders are illustrative only):
+
+~~~json
+{
+  "schema_version": 1,
+  "generator_source": {
+    "path": "tools/build_readme.py",
+    "sha256": "SHA256_OF_EXACT_GENERATOR_SOURCE_BYTES"
+  },
+  "templates": [
+    {
+      "path": "docs/templates/README.md.j2",
+      "sha256": "SHA256_OF_EXACT_TEMPLATE_BYTES"
+    }
+  ],
+  "output_sha256": "SHA256_OF_EXACT_CANDIDATE_README_BYTES",
+  "candidate_head_sha": "40_OR_64_CHARACTER_COMMIT_SHA",
+  "drift_check_name": "README output parity",
+  "ci_evidence_ref": "exact-run-URL-or-maintainer-evidence-ID"
+}
+~~~
+
+Use alongside `--head-sha` and `--ci-receipt` (schema below).
+The script rejects unknown/self-approval fields, absent templates,
+duplicate paths, unapproved path traversal, symlink references, stale or
+mismatched local file bytes, wrong HEAD, and missing/failed/skipped/nonrequired
+drift checks. It does **not** execute the generator, inspect templates for
+semantic correctness, fetch the run URL or authenticate the CI report.
+The required exact-head drift check is identified by name among recorded
+required checks; a successful unrelated check does not qualify.
+
+If local pins and *recorded* CI signals agree, the owner state becomes
+`GENERATED_EVIDENCE_PENDING_HUMAN_REVIEW`. The machine outcome remains `BLOCKED` with
+`GENERATED_README_HUMAN_AUTHENTICATION_REQUIRED` and
+`ownership_clearance_granted: false`,
+`generator_execution_authenticated: false`, and
+`repository_merge_ready: false`. A malicious actor can submit matching
+local files and invent a successful receipt, so the maintainer must check the
+actual committed generator/template diff, trusted workflow and provider run,
+the checked candidate SHA, and regenerated byte-for-byte README parity
+**before** approving publication. The script cannot grant that approval.
+
+When evidence is absent or fails local reconciliation, keep
+`GENERATED_README_OWNERSHIP_UNRESOLVED` as a mechanical blocker. Never
+interpret an exit code of 0 as permission to edit generated output.
 
 ### CI receipt and exact-head audit
 
