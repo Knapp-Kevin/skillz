@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
-skill_version: "0.3.0"
+skill_version: "0.3.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/evidence-driven-refinement-loop/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: f0f72c58e76092975473ebb20f62514a2ecfd21d
-complete_package_tree_sha: dce7503dc50e94ea4acb63b5622634cfa8d9cb7d
+content_blob_sha: 2893762bb41d771d668fdb2cd9dcd459dae9b071
+complete_package_tree_sha: 163558c85ec19b97451f4e2512d5b9980e4d56ef
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
 verification_status: verified
 verification_basis: exact-ten-file-static-source-and-contract-review-with-fourteen-synthetic-adversarial-scenarios
 validation_status: not-run
-validation_note: "Current v0.3.0 complete ten-file tree hash independently recreated and matched; package-relative Markdown links resolved, anonymous example matches schema allowlist, hostile preference keys rejected by static inspection, manager wiring and optional test methods present. Python 18-method helper test suite and 22-method engine QA suite NOT_RUN, agent-host execution NOT_RUN, consumer outcomes NOT_OBSERVED, external security scan NOT_RUN. Static verification is not demonstrated runtime safety."
+validation_note: "Exact v0.3.1 ten-file tree rebuilt and checked against companion pins; Markdown local links resolve; source-order probes confirm consent-gated mutation, schema-independent revocation, descriptor metadata recheck, atomic post-write readback and ancestry check. 30 Python helper regression methods and 22 engine QA methods NOT_RUN; no independent host execution or measured consumer effect. Same-UID attacker and concurrent writes remain outside proven safety boundary."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,6 +24,19 @@ tags:
   authority: [read-only-default, owner-authorized-scoped-change]
   portability: high
 notes: >-
+  Static v0.3.1 review score 18/20: trigger 2, procedure 2, authority 2,
+  failure 2, evidence 2, dependency 1 (helper tests not executed),
+  portability 2, differentiation 2, adversarial resilience 2,
+  effectiveness 1 (agent/user behavior not observed). An initial false
+  finding about JSON Schema required-fields was withdrawn after readback.
+  Actual defects corrected: unknown direct method action, stale/malformed
+  preference revocation, unsafe opened-file verification, unverified save
+  acknowledgement, and replaceable parent roots. Real POSIX execution
+  and same-UID/concurrency isolation remain unproven. Thirty optional
+  helper tests and 22 engine tests exist but NOT_RUN. This exact-source
+  static assessment does not certify runtime privacy, security or efficacy.
+  Review: docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
+
   Static v0.3.0 score: trigger 2, procedure 2, authority 2,
   failure 2, evidence 2, dependency 1 (optional helper unexecuted),
   portability 2 (declarative fallback, POSIX helper only),
