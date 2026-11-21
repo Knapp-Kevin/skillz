@@ -85,6 +85,21 @@ are never proven by a local string match. Both technical delivery
 acceptance **and separate editorial quality acceptance** must pass.
 Existing generated ownership and preservation safeguards remain intact.
 
+## Offline Gold/Platinum regression
+
+From this standalone skill package, exercise the 48 synthetic negative
+and boundary cases with no network, provider or GitHub Actions budget:
+
+~~~sh
+python3 -m unittest discover -s tests -p 'test_profile_acceptance.py' -v
+~~~
+
+This is the **test command**, not a claim that the current v0.4.0 suite
+has executed. The checker deliberately returns a HOLD even with all
+mechanical conditions present because actual source authority,
+generated-file parity, approved branding, rendered Markdown,
+first-user comprehension and CI delivery require independent evidence.
+
 ## Qualification and boundaries
 
 **Current version: 0.4.0 (binding quality profiles, generated-owner evidence, heading preservation).** Previous v0.3.0 Python 3.13.5 suites passed **101/101 actual tests** (57 existing link/README exercises plus 44 new delivery-preflight tests), including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
