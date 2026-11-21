@@ -119,9 +119,13 @@ def overlay_file(root_arg: str, *, create_dirs: bool) -> Path:
     reject_checkout_root(root)
     check_private_dir(root, allow_create=False)
     intermediate = root / "skill-overlays"
-    check_private_dir(intermediate, allow_create=create_dirs)
     skilldir = intermediate / SKILL_ID
-    check_private_dir(skilldir, allow_create=create_dirs)
+    for directory in (intermediate, skilldir):
+        if not create_dirs and not directory.exists() and not directory.is_symlink():
+            # An unseen overlay is a normal first-run state, never an
+            # instruction to create storage during a read-only operation.
+            return skilldir / "preferences.local.json"
+        check_private_dir(directory, allow_create=create_dirs)
     return skilldir / "preferences.local.json"
 
 
