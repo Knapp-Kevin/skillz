@@ -1,37 +1,39 @@
 # safestrip
 
-A small Python library for cleaning leading and trailing whitespace from text. The supplied example demonstrates `clean(" a ") == "a"`.
+Clean leading and trailing whitespace from a Python string with a small source-available function. The intended reader is a Python developer inspecting this example repository.
 
-**Audience:** Python developers who need this simple text-cleaning operation. The available project snapshot does not establish broader normalization, Unicode handling, performance, published releases, or licensing terms.
+The demonstrated operation is `clean(" a ") == "a"`. The evidence does **not** establish other normalization behavior, distribution to PyPI, supported operating systems, a license or production use.
 
-## Quick start
+## Run from a source checkout
 
-**Requirements:** Python 3.11 or newer, as declared in `pyproject.toml`. From the project root:
+**Prerequisite:** Python 3.11 or newer, as declared in `pyproject.toml`. From the repository root, without installing a distribution:
 
 ```sh
-python -m pip install -e .
+PYTHONPATH=src python -c "from safestrip.format import clean; print(clean(' a '))"
 ```
 
-Use the function in Python:
+Expected output:
 
-```python
-from safestrip.format import clean
-
-assert clean(" a ") == "a"
+```text
+a
 ```
 
-The import and expected output are consistent with the supplied project example. **Commands were not executed in this controlled evaluation**, and package installation was not tested.
+The command was executed in a controlled local fixture using Python 3.13.5. It was **not** tested as a published package installation, a Windows shell command or across the full supported version range. On Windows, set the module search path using the current shell's appropriate mechanism rather than assuming POSIX `PYTHONPATH=...` syntax works unchanged.
 
-## Project layout
+## Verify the example
 
-- `pyproject.toml`: package metadata and supported Python floor.
-- `safestrip.format.clean`: public callable shown in the supplied example.
-- Tests: available in the supplied repository snapshot; run them with the project's actual declared runner rather than assuming pytest is configured.
+```sh
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
 
-## Status and scope
+The controlled fixture contains a passing source test of this one operation; the example does not establish the rest of a future library's quality.
 
-This README documents the observed `clean` example. The supplied snapshot provides no evidence of a PyPI release, license, public API beyond this function, or other guarantees. Consult the repository source and tests before making stronger claims.
+## Source map
 
-## Contributing
+- `pyproject.toml`: package identity and declared Python version floor.
+- `src/safestrip/format.py`: the implementation of `clean`.
+- `tests/test_format.py`: the demonstrated operation's regression test.
 
-If you plan to change behavior, provide a focused test for the behavior being changed. The available project snapshot does not specify an established pull-request or maintainer contact policy.
+## Project status and contributing
+
+This is a controlled source-checkout example, not a verified published package. The source snapshot provides no evidenced public release, license, contact address, support policy, contribution workflow or security guarantee. Review actual source and repository governance before depending on it or submitting changes.

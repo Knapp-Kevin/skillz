@@ -1044,21 +1044,24 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
-      "skill_blob_sha": "221fc33ece71af1941254d4ad9907ef2166f8e44",
-      "package_tree_sha": "a753453e323f4f45dc56d415e661faec78704e3b",
-      "package_file_count": 5,
+      "skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
+      "package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
+      "package_file_count": 10,
       "review_status": "verified-static",
-      "review_score": "18/20",
+      "review_score": "19/20",
       "behavioral_validation": "not-run",
       "host_authority": "read-only; focused repository write on explicit user request",
       "publication_status": "reference-only-not-production-qualified",
-      "rights_note": "Original MIT README creation, uplift, audit and verify method; static review only. No external package text imported. See docs/reviews/2026-11-20-readme-architect-static-review.md.",
-      "package_version": "0.1.0",
+      "rights_note": "First-party MIT complete README skill with optional local-only checker and in-package evidence contract; external source and source rights never imported. Focused repo writes only on explicit owner action, no automatic CI or publication.",
+      "package_version": "0.2.0",
       "capability_paths": [
         "technical-writing/documentation-ia",
         "software-engineering/developer-experience",
         "marketing/content"
-      ]
+      ],
+      "previous_reviewed_skill_blob_sha": "221fc33ece71af1941254d4ad9907ef2166f8e44",
+      "previous_reviewed_package_tree_sha": "a753453e323f4f45dc56d415e661faec78704e3b",
+      "review_note": "v0.2 exact ten-file original package: 57/57 actual local Python standard-library tests, executed controlled CREATE first-success and UPLIFT preservation. Maintainer static 19/20; independent external model-host behavioral validation and full reader outcomes NOT_RUN. docs/reviews/2026-11-20-readme-architect-v020-complete-package-review.md"
     }
   ]
 }
