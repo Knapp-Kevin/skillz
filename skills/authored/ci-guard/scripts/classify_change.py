@@ -117,12 +117,22 @@ def _safe_path(path: str) -> bool:
             and "\\" not in path and not any(ord(ch) < 32 for ch in path))
 
 
+def _no_duplicate_keys(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ClassificationError("duplicate impact policy key")
+        result[key] = value
+    return result
+
+
 def load_policy(path: Path) -> list[dict]:
     """Parse only trusted-base JSON; pattern matching never runs code."""
     try:
-        if path.stat().st_size > 131072 or path.is_symlink():
+        if path.is_symlink() or path.stat().st_size > 131072:
             raise ClassificationError("unsafe impact policy input")
-        raw = json.loads(path.read_text(encoding="utf-8"))
+        raw = json.loads(path.read_text(encoding="utf-8"),
+                         object_pairs_hook=_no_duplicate_keys)
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         raise ClassificationError("impact policy unavailable or invalid") from exc
     if not isinstance(raw, dict) or set(raw) != {"schema_version", "rules"}:
@@ -137,7 +147,9 @@ def load_policy(path: Path) -> list[dict]:
         if not isinstance(rule, dict) or set(rule) != {"match", "pattern", "category"}:
             raise ClassificationError("unknown impact rule property")
         match, pattern, category = rule["match"], rule["pattern"], rule["category"]
-        if match not in MATCHES or category not in CATEGORIES - {"unknown"}:
+        if (not isinstance(match, str) or match not in MATCHES or
+                not isinstance(category, str) or
+                category not in CATEGORIES - {"unknown"}):
             raise ClassificationError("unsupported impact selector/category")
         if not isinstance(pattern, str) or len(pattern) > 255 or not pattern:
             raise ClassificationError("invalid impact pattern")
