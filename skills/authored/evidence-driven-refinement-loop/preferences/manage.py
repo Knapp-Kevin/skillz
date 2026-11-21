@@ -10,6 +10,7 @@ and use an authorized host-native private store instead.
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
 import json
 import os
 from pathlib import Path
@@ -17,6 +18,11 @@ import re
 import secrets
 import stat
 import sys
+
+if os.name == "posix":
+    import fcntl
+else:
+    fcntl = None
 
 SKILL_ID = "evidence-driven-refinement-loop"
 # Fixed code-level allowlist; declarative schema must agree exactly.
@@ -255,32 +261,40 @@ def revoke_overlay(path: Path) -> dict:
     return {"status": "REMOVED", "remaining": 0}
 
 
-def execute(args: argparse.Namespace) -> dict:
-    if args.action not in ("show", "validate", "set", "remove", "clear"):
-        raise PreferenceError("Unknown action; no file operation authorized")
-    if args.action in ("set", "remove", "clear") and not args.approved:
-        raise PreferenceError("Mutation requires explicit user approval; --approved is not proof of consent")
-    if args.action == "clear":
-        # Revocation must not depend on any skill-version or bundled-schema
-        # parser. Explicit approval and private-file checks still apply.
-        return revoke_overlay(overlay_file(args.root, create_dirs=False))
-    version = current_version()
-    allow = allowed_keys()
-    if args.action == "set" and (
-        args.key not in allow or args.value not in allow.get(args.key, set())
-    ):
-        raise PreferenceError("Unknown preference or disallowed value")
-    target = overlay_file(args.root, create_dirs=args.action == "set")
+@contextmanager
+def mutation_lock(path: Path):
+    """Serialize cooperating POSIX writers for this user/skill directory.
+
+    Refuse lock contention immediately. This is advisory and does not
+    sandbox processes sharing an OS identity or span multiple machines.
+    """
+    if fcntl is None:
+        raise PreferenceError("POSIX advisory locking unavailable")
+    lock_path = path.parent / ".preferences.lock"
+    flags = os.O_RDWR | os.O_CREAT | os.O_NOFOLLOW | os.O_CLOEXEC
+    fd = os.open(lock_path, flags, 0o600)
+    try:
+        info = os.fstat(fd)
+        if (not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid()
+                or stat.S_IMODE(info.st_mode) & 0o077 or info.st_nlink != 1):
+            raise PreferenceError("Preference lock is not a private regular file")
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as exc:
+            raise PreferenceError("Concurrent preference write in progress; retry") from exc
+        try:
+            yield
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+    finally:
+        os.close(fd)
+
+
+def update_overlay(args: argparse.Namespace, target: Path, version: str,
+                   allow: dict[str, set[str]]) -> dict:
+    """Called only while holding the per-skill mutation lock."""
     doc = load(target, version=version, allowlist=allow)
-    if args.action == "show":
-        return {"status": "LOADED" if target.exists() else "ABSENT",
-                "preferences": doc["preferences"], "base_skill_version": version}
-    if args.action == "validate":
-        return {"status": "VALID" if target.exists() else "ABSENT",
-                "count": len(doc["preferences"]), "base_skill_version": version}
     if args.action == "set":
-        if args.key not in allow or args.value not in allow[args.key]:
-            raise PreferenceError("Unknown preference or disallowed value")
         entries = {p["key"]: p for p in doc["preferences"]}
         entries[args.key] = {
             "key": args.key, "value": args.value,
@@ -292,11 +306,12 @@ def execute(args: argparse.Namespace) -> dict:
         if load(target, version=version, allowlist=allow) != doc:
             raise PreferenceError("Post-write verification failed; no success asserted")
         return {"status": "SAVED", "key": args.key, "base_skill_version": version}
-    if args.action == "remove":
-        kept = [p for p in doc["preferences"] if p["key"] != args.key]
-        if len(kept) == len(doc["preferences"]):
-            return {"status": "NOT_FOUND", "key": args.key}
-        doc["preferences"] = kept
+    if args.action != "remove":
+        raise PreferenceError("Unexpected mutation action")
+    kept = [p for p in doc["preferences"] if p["key"] != args.key]
+    if len(kept) == len(doc["preferences"]):
+        return {"status": "NOT_FOUND", "key": args.key}
+    doc["preferences"] = kept
     if doc["preferences"]:
         write_atomic(target, doc)
         if load(target, version=version, allowlist=allow) != doc:
@@ -308,6 +323,39 @@ def execute(args: argparse.Namespace) -> dict:
         if target.is_symlink() or target.exists():
             raise PreferenceError("Post-delete verification failed; no success asserted")
     return {"status": "REMOVED", "remaining": len(doc["preferences"])}
+
+
+def execute(args: argparse.Namespace) -> dict:
+    if args.action not in ("show", "validate", "set", "remove", "clear"):
+        raise PreferenceError("Unknown action; no file operation authorized")
+    if args.action in ("set", "remove", "clear") and not args.approved:
+        raise PreferenceError("Mutation requires explicit user approval; --approved is not proof of consent")
+    if args.action == "clear":
+        # Revocation stays available on stale, hostile or malformed JSON
+        # and even when the bundled skill schema cannot be parsed.
+        target = overlay_file(args.root, create_dirs=False)
+        if not target.parent.is_dir():
+            return {"status": "NOT_FOUND", "remaining": 0}
+        with mutation_lock(target):
+            return revoke_overlay(target)
+    version = current_version()
+    allow = allowed_keys()
+    if args.action == "set" and (
+        args.key not in allow or args.value not in allow.get(args.key, set())
+    ):
+        raise PreferenceError("Unknown preference or disallowed value")
+    target = overlay_file(args.root, create_dirs=args.action == "set")
+    if args.action in ("show", "validate"):
+        doc = load(target, version=version, allowlist=allow)
+        if args.action == "show":
+            return {"status": "LOADED" if target.exists() else "ABSENT",
+                    "preferences": doc["preferences"], "base_skill_version": version}
+        return {"status": "VALID" if target.exists() else "ABSENT",
+                "count": len(doc["preferences"]), "base_skill_version": version}
+    if not target.parent.is_dir():
+        return {"status": "NOT_FOUND", "key": args.key}
+    with mutation_lock(target):
+        return update_overlay(args, target, version, allow)
 
 
 def main(argv: list[str] | None = None) -> int:
