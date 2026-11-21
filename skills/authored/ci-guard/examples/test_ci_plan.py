@@ -5,10 +5,12 @@ model behavior. All fixtures created in disposable local repositories.
 """
 import importlib.util
 import json
+import os
 from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('ci_plan', ROOT/'scripts/ci_plan.py')
@@ -286,6 +288,58 @@ class ExecutionTests(unittest.TestCase):
             with self.assertRaisesRegex(p.PlanError, 'modified tracked'):
                 p.execute(POLICY, executor, planned, 'docs', root, '14', '1',
                           source_repo=project)
+
+    def test_execution_fails_if_verifier_mutates_tracked_input(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            gitroot = root / 'candidate'
+            gitroot.mkdir()
+            def git(*args):
+                return subprocess.check_output(['git', '-C', str(gitroot), *args],
+                                               stderr=subprocess.DEVNULL, text=True).strip()
+            git('init', '-q')
+            git('config', 'user.name', 'Fixture')
+            git('config', 'user.email', 'fixture@example.invalid')
+            (gitroot/'docs/passive').mkdir(parents=True)
+            source = gitroot/'docs/passive/check.md'
+            source.write_text('clean', encoding='utf-8')
+            git('add', '.')
+            git('commit', '-qm', 'base')
+            baseline = git('rev-parse', 'HEAD')
+            source.write_text('head', encoding='utf-8')
+            git('add', '.')
+            git('commit', '-qm', 'head')
+            head = git('rev-parse', 'HEAD')
+            commands = {name: {'argv':['python3','-c','print(0)'], 'timeout_sec':5}
+                        for name in POLICY['obligations']}
+            commands['docs-links']['argv'] = [
+                'python3', '-c',
+                'from pathlib import Path;Path(' + repr(str(source)) + ').write_text("dirty")']
+            executor = {'schema_version':1, 'commands':commands}
+            plan = p.git_plan(POLICY,gitroot,baseline,head,'candidate',executor)
+            with self.assertRaisesRegex(p.PlanError, 'modified tracked'):
+                p.execute(POLICY,executor,plan,'docs',root,'44','1',source_repo=gitroot)
+
+    def test_untrusted_command_does_not_inherit_github_output_channels(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            trace = root/'seen.json'
+            commands = {name: {'argv':['python3','-c', 'print("ok")'],
+                               'timeout_sec':5} for name in POLICY['obligations']}
+            commands['docs-links']['argv'] = ['python3', '-c',
+                'import os,json;from pathlib import Path;Path(' + repr(str(trace)) +
+                ').write_text(json.dumps({k:os.getenv(k) for k in '
+                '["GITHUB_OUTPUT","GITHUB_ENV","ACTIONS_RUNTIME_TOKEN"]}))']
+            executor={'schema_version':1,'commands':commands}
+            plan=p.make_plan(POLICY,['docs/passive/guide.md'],BASE,HEAD,MB,
+                             'candidate',executor)
+            with mock.patch.dict(os.environ, {'GITHUB_OUTPUT':'/tmp/test-output',
+                                             'GITHUB_ENV':'/tmp/test-env',
+                                             'ACTIONS_RUNTIME_TOKEN':'not-a-real-token'}):
+                p.execute(POLICY,executor,plan,'docs',root,'14','1')
+            self.assertEqual(json.loads(trace.read_text()),{
+                'GITHUB_OUTPUT':None,'GITHUB_ENV':None,
+                'ACTIONS_RUNTIME_TOKEN':None})
 
     def test_workflow_requires_checkout_preflight_in_every_group(self):
         workflow = (ROOT / 'examples/classified-github-pr.yml').read_text(encoding='utf-8')
