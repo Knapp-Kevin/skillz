@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Anonymous, offline adversarial Gold/Platinum README quality regression."""
 import json
+import zlib
+import binascii
 from pathlib import Path
 import sys
 import tempfile
@@ -58,13 +60,25 @@ CONTRACT = {
 }
 
 
+def valid_banner():
+    """Generate a real, valid 960x240 RGB PNG without external dependencies."""
+    width, height = 960, 240
+    def chunk(name, payload):
+        return (len(payload).to_bytes(4, "big") + name + payload +
+                (binascii.crc32(name + payload) & 0xffffffff).to_bytes(4, "big"))
+    header = width.to_bytes(4, "big") + height.to_bytes(4, "big") + b"\x08\x02\x00\x00\x00"
+    row = b"\x00" + b"\xf0\xf4\xff" * width
+    return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", header) +
+            chunk(b"IDAT", zlib.compress(row * height)) + chunk(b"IEND", b""))
+
+
 class QualityProfileTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
         (self.root / "assets").mkdir()
-        (self.root / "assets/banner.png").write_bytes(b"\x89PNG\r\n\x1a\nfixture")
+        (self.root / "assets/banner.png").write_bytes(valid_banner())
         (self.root / "docs").mkdir()
         (self.root / "docs/guide.md").write_text("# Technical Guide\n", encoding="utf-8")
         self.write_readme(BASE)
@@ -90,6 +104,35 @@ class QualityProfileTests(unittest.TestCase):
         self.assertFalse(r["completion_permitted"])
         self.assertEqual(r["technical_delivery_status"], "NOT_RUN")
         self.assertEqual(r["editorial_acceptance_status"], "HOLD")
+
+    def test_corrupt_png_banner_fails_before_human_visual_check(self):
+        (self.root / "assets/banner.png").write_bytes(b"\x89PNG\r\n\x1a\ncorrupt")
+        self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
+
+    def test_narrow_banner_cannot_silently_pass_hero_profile(self):
+        path = self.root / "assets/banner.png"
+        data = bytearray(path.read_bytes())
+        data[16:20] = (200).to_bytes(4, "big")
+        self.assertEqual(profile._image_geometry(path)[0], 200)
+        self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
+
+    def test_missing_public_purpose_introduction_fails(self):
+        self.write_readme(BASE.replace(
+            "Many projects make new users sift through technical details before finding\n"
+            "out what they can actually do. Example Kit helps them see the value of their\n"
+            "work quickly. It offers a small verified demonstration with a visible result.\n"
+            "Follow the first steps to see a useful result without guessing how it works.",
+            ""))
+        self.assertEqual(self.gate("opening-meaning")[0]["status"], "FAIL")
+
+    def test_equation_first_opening_fails(self):
+        self.write_readme(BASE.replace(
+            "Many projects make new users sift through technical details before finding",
+            "∑ x_i = y. Many projects make new users sift through technical details before finding"))
+        self.assertEqual(self.gate("opening-meaning")[0]["status"], "FAIL")
+
+    def test_present_readable_intro_is_held_until_editorial_review(self):
+        self.assertEqual(self.gate("opening-meaning")[0]["status"], "HOLD")
 
     def test_missing_banner_is_failed(self):
         self.write_readme(BASE.replace("![An original Example Kit visual that introduces the project](assets/banner.png)", ""))
