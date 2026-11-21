@@ -186,7 +186,9 @@ def audit(root, readme, cfg):
 
     inventory = {a["path"]: a for a in cfg["asset_inventory"]}
     banner = cfg["banner_path"]
-    images = [(m.group(1).strip(), m.group(2).strip()) for m in IMAGE.finditer(text)]
+    # Badges are metadata with accessible labels, not decorative image assets.
+    presentation = BADGE.sub("", text)
+    images = [(m.group(1).strip(), m.group(2).strip()) for m in IMAGE.finditer(presentation)]
     selected = next(((alt, src) for alt, src in images if src == banner), None)
     if selected is None or banner not in inventory:
         check("banner", "FAIL", "required project-specific banner missing or not in asset inventory")
