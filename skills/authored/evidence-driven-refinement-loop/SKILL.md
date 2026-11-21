@@ -12,7 +12,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Evidence-Driven Refinement Loop
-  version: 0.3.3
+  version: 0.3.4
   license: MIT
 ---
 
@@ -242,7 +242,11 @@ or assume this host supports writable local storage.
    Run these commands from the installed skill's directory, or use
    the actual absolute path to its bundled manager. The variable
    stands for a host-confirmed **existing** user-private directory,
-   not an installation path to invent. The manager checks
+   not an installation path to invent. Never select a configuration
+   root from **any source checkout**, including another project or
+   linked Git worktree, even if its subdirectory is mode 0700: a
+   private-looking source path is not an appropriate place for user data.
+   The manager checks
    real directory ownership/modes, refuses symlinks and unauthorized
    fields, writes atomically, rejects stale skill versions and supports
    `clear --approved` to revoke all retained settings. Its `--approved`
