@@ -91,6 +91,64 @@
               }
             }
           }
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "allOf": [
+          {
+            "contains": {
+              "type": "object",
+              "required": [
+                "key"
+              ],
+              "properties": {
+                "key": {
+                  "const": "response.detail"
+                }
+              }
+            },
+            "minContains": 0,
+            "maxContains": 1
+          },
+          {
+            "contains": {
+              "type": "object",
+              "required": [
+                "key"
+              ],
+              "properties": {
+                "key": {
+                  "const": "response.format"
+                }
+              }
+            },
+            "minContains": 0,
+            "maxContains": 1
+          },
+          {
+            "contains": {
+              "type": "object",
+              "required": [
+                "key"
+              ],
+              "properties": {
+                "key": {
+                  "const": "examples.focus"
+                }
+              }
+            },
+            "minContains": 0,
+            "maxContains": 1
+          }
         ]
       }
     }
