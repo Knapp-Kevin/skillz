@@ -74,6 +74,16 @@ array. Each rule has exactly `match` (`exact`, `prefix` or `suffix`),
 `workflows`, `release-assets`). Multiple matching rules union their
 categories, and built-in critical classes cannot be overridden.
 Only explicitly verified passive paths should use `documentation`.
+A **prefix selector must end in `/` and designate a directory**;
+`{"match":"prefix","pattern":"docs"}` is invalid, because it also
+matches `docsecrets/` and `docs-private/`. Use `docs/` only after
+inspecting all relevant descendant inputs. **Documentation cannot be
+assigned by a global suffix rule** such as `{"match":"suffix",
+"pattern":".md","category":"documentation"}`: a Markdown file may
+be model input, generated build material, executable documentation,
+governance or release evidence. Use bounded exact file or directory
+prefix rules for established passive content. Other suffix categories
+remain permitted when they select conservatively.
 An unlisted path is `unknown` and FULL. Structural validation refuses
 unsafe/unsupported selectors. The JSON must be copied to and run from the
 **trusted base revision**, not the candidate PR revision.
