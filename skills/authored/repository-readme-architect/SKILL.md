@@ -119,6 +119,15 @@ elements**. A missing required element is FAIL, or HOLD with an explained
 evidence-bound exception requiring independent owner/editorial judgment.
 An exception field or passing local script does not certify its own approval.
 
+**Normative qualitative gates are not fulfilled by section presence.**
+Independently review (1) Why→What→How in the opening and the 30-second
+purpose test, (2) tenth-grade comprehension of introductory copy,
+(3) credible observable newcomer first success, (4) visual cohesion and
+accessible hierarchy, (5) verified claims/links/assets, (6) technical
+navigation without overwhelming the front page, and (7) generator ownership
+and maintainability. The mechanical checker may FAIL obvious omissions,
+but a structural PASS never certifies semantic clarity.
+
 **Presentation and usability audit is mandatory for Gold/Platinum.**
 Check actual image provenance and display, useful alt text, correct product
 branding, legitimate relevant badge sources and links, heading/TOC targets,
@@ -275,9 +284,53 @@ behavior. A monorepo or hybrid project may need a component map before
 a single quick start; a documentation corpus may need a reading order
 rather than an installation command. A claimed feature lacking corroboration must be qualified or omitted, not upgraded through eloquent writing.
 
-### 2. Open with reader value, not rigid rhetoric
+### 2. Lead with Why → What → How, then build technical depth
 
-The opening screen should reveal the problem or outcome, name the thing and audience, describe the differentiating mechanism, establish a relevant trust limit and offer a next action. **Problem → product → method → proof → action** is a useful default, **not** an enforced Why → How → What ordering. A user who arrives to install a library may need a command before philosophy. Avoid vague mission statements and unexplained jargon.
+**Why, then What, then How is the binding communication sequence** for the
+opening of a substantive public-facing repository README. First answer
+what real problem exists, who experiences it, and why its solution matters.
+Then explain *what* verified project capability addresses that problem,
+with one concrete example or outcome. Next give a credible *how* to use,
+evaluate, read or contribute. A banner, title, or badge must not displace
+this explanation. Put practical value ahead of architecture, mathematics,
+component inventories, and implementation mechanisms. The headings need
+not literally say Why/What/How; a coherent introduction may use natural
+prose. A rushed reader should understand the relevance within 30 seconds.
+
+**Default introductions to approximately tenth-grade accessibility.**
+Use short, concrete language, define technical terms at first use,
+expand unfamiliar acronyms, defer equations and unexplained notation
+to linked technical references, and introduce complexity progressively.
+A readability score is a diagnostic only: both the accessible prose and
+technical accuracy require deliberate editorial judgment. A novice should
+be able to explain the project purpose without domain expertise.
+
+The root README is the public front door, not an automatically generated
+developer reference or a changelog. Keep technical depth accessible by
+linked developer references, architecture pages, specification or tutorial
+material in repository-appropriate paths. If root README generation
+overwrites human writing, inspect generator code, templates, build and
+CI contracts; update the *true source* and output with parity evidence,
+or restructure generator-owned references separately when authorized.
+Never claim that a hand-edited generated output will survive regeneration.
+
+**First-user success is a hard outcome gate.** A new reader should know
+the first useful action *and* recognize an observable success result.
+A generic dependency install, import list, lint command or cargo test
+is not automatically evidence that a first-time user achieved the product
+goal. Adapt the journey for a library, CLI, UI, service, dataset,
+framework, research/specification repository or organization profile.
+If no runnable first step exists, present an honest evaluation/reading
+path and release limitation instead of fabricating one.
+
+**Assets follow an explicit lifecycle.** Inventory project-specific
+image source, purpose, owner/rights, accessible alt text, exact reference,
+and status (verified existing, newly generated and committed, proposed
+placeholder, approved final). Do not equate a preview or local temporary
+image with the committed rendered README. Create missing assets when
+authorized and add them to an appropriate permanent repository path.
+Check the exact committed asset, including light/dark presentation where
+relevant, and retain replacement requirements for placeholders.
 
 Make the reader's first action **safe and actually applicable**: state
 prerequisites, which repository/source checkout or published channel it
