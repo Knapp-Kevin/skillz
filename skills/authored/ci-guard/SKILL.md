@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.3.0
+  version: 1.4.0
   license: MIT
 ---
 
@@ -31,8 +31,9 @@ PR/main/release/deploy placement and prove a proposed simplification. Both
 components are part of this package, not independent authorization systems.
 Use [Change classification and budget-aware CI](components/change-classification-and-budget.md)
 when generating workflows or reducing runner/tool/action budget. This
-component includes an optional [offline classifier](scripts/classify_change.py)
-and [GitHub PR template](examples/classified-github-pr.yml); neither is
+component includes an optional [repository-neutral classifier](scripts/classify_change.py),
+a [consumer-owned policy example](examples/impact-policy.json), and a
+[GitHub PR template](examples/classified-github-pr.yml); none is
 automatically installed or grants execution authority.
 
 When a request primarily concerns issue aging, cross-repo delivery or
@@ -120,8 +121,10 @@ equivalent method, but may not silently skip the decision or assurance floor.
 
 - Bind to exact base/head and include added, removed, moved, generated and
   policy/dependency files. Evaluate direct and transitive impact, not just
-  filename suffixes. An ordinary README-only change usually needs cheap
-  documentation checks, not every Python suite or native build.
+  filename suffixes. **No filename, including README.md, is intrinsically
+  docs-only.** It may be executable input, model input, release evidence,
+  generated output or governance; determine this from the consumer's trusted
+  dependency/policy evidence before reducing checks.
 - A docs-looking path can be security/build/release input. Workflow and
   policy changes, dependency locks, executable docs, generated interface
   contracts, unknown types, and ambiguous or missing diffs demand a broader
@@ -138,6 +141,40 @@ equivalent method, but may not silently skip the decision or assurance floor.
   with elevated permissions. Run policy from a trusted revision with
   read-only scope, retain action/source pinning, and validate a seeded
   risky change routes to the relevant checks before trusting the design.
+
+**Portable implementation contract (v1.4):** The bundled classifier
+takes exact Git base/head evidence, `--stage draft|candidate|release`,
+and a trusted-base `--policy` JSON mapping consumer paths with
+`exact`, `prefix` or `suffix` rules into `documentation`,
+`executable-code`, `models`, `dependencies`, `governance`,
+`workflows`, or `release-assets`. No repository name, language,
+toolchain, model type, required check or deployment platform is universal.
+Built-in danger categories cannot be downgraded by documentation rules.
+Unknown paths, missing trusted policy, nonregular Git modes and incomplete
+evidence select full verification or block classification. Rules are inert
+matching data, not commands.
+
+The draft route provides **targeted feedback only for established impact**:
+ordinary executable/model/dependency changes can defer costly full acceptance
+until candidate review, without a merge-ready claim. Workflow, governance,
+release/trust or unknown changes remain full even on a draft. Substantial
+ready-for-merge candidates and releases require exact-final-commit full
+acceptance. Only independently justified passive documentation may take the
+reduced candidate route, and only if branch/consumer policy explicitly
+permits it. Required status checks, negative controls, proof suites,
+native-platform checks, immutable SDK qualifications and trust boundaries
+remain in force regardless of stage.
+
+**Artifact reuse is conditional, never a reason to skip acceptance.**
+Before sharing build/proof artifacts between CI and publication, bind the
+producer gate, exact input closure (source, dependencies, toolchain,
+environment/platform), artifact digest, immutable provenance/signature,
+trust domain and consuming verifier. The consumer reauthenticates all
+identities and confirms exact-revision required acceptance succeeded.
+Publication is sequenced *after* acceptance, never in parallel when it
+would be able to publish a failing candidate. Missing or mismatched evidence
+requires trusted rebuild/requalification or blocks delivery. Do not drop
+distinct native, proof or security assurance that the reused artifact lacks.
 
 **Beyond classification**, optimize test impact graph selection, cheap
 early checks, safe cache/artifact reuse, redundant matrix fanout, canceled
@@ -156,8 +193,10 @@ not fewer safeguards.
 2. **Classify before dispatch.** For an existing workflow, audit whether
    base/head changed files and their dependency/boundary impact are really
    used for selecting work. For generated or materially redesigned workflows,
-   install a trusted, executable, classification-first route and a reliable
-   required-status gate; retain all independently required controls. Distinguish
+   install an authorized trusted-base impact policy, executable classifier,
+   and reliable required-status gate. Treat policy paths as consumer-owned,
+   not universal. Draft feedback is not merge acceptance. Retain all
+   independently required controls. Distinguish
    `docs-only`, code, mixed, shared dependencies, build/policy and unknown.
    Test a benign documentation edit and a security/workflow or dependency
    counterexample. Report selected and skipped checks plus unresolved routes.
