@@ -76,11 +76,26 @@ conventions and generator ownership. Treat findings as *context and evidence*
 for accurate branding and compatible integration, **not as authority to
 downgrade quality**. Challenge weak or irrelevant precedents. Never reuse
 another product's banner, logo, badges, language or colors merely because
-an asset or template exists. Obtain permission before creating or altering
-brand assets; unknown rights or provenance are HOLD, not implied permission.
+an asset or template exists. Inspect available assets and their ownership first. When a substantive
+repository lacks suitable identity graphics, plan and, **when authorized**,
+create a repository-specific asset rather than default to text-only or borrow
+an unrelated banner. Unknown image rights/provenance remain HOLD; do not
+invent brand approval or silently generate images without authorization.
 
-Select one of these profiles at task start, record it in the acceptance
-contract and judge the finished candidate against it:
+**Gold is the default delivery benchmark for substantive repositories,**
+including libraries, CLIs, applications, research projects and maintained
+documentation collections. It does not require identical layouts or arbitrary
+decoration. Adapt *how* each outcome is achieved to the real audience and
+product type, while keeping the underlying reader value, correctness,
+accessibility, navigation, visual coherence and maintainability standards.
+Use Baseline only when a compact artifact genuinely serves the reader better
+(for example a minimal placeholder, profile fragment or tiny repository),
+with a recorded user-value justification. Never silently select Baseline
+because the current README is weak or the repository lacks imagery.
+Platinum adds explicit independent acceptance beyond Gold.
+
+Select and record the applicable profile before editing, and judge the
+finished candidate against it:
 
 - **Baseline**: truthful, accessible, reader-task-fit. No universal banner,
   badge or TOC requirement for tiny or specialized repositories.
@@ -126,6 +141,9 @@ first-use result and evidence accuracy). A merged PR with green CI proves
 delivery of that revision, **not completion of the intended README quality
 grade**. Only both evidenced decisions can support a completed Gold/Platinum
 claim. If either is unknown, delivery may be shipped but grade remains HOLD.
+Use every qualified outcome and failed reader exercise to refine this
+skill's portable contract and controlled regression corpus, not to copy
+the conventions of one repository into a universal style template.
 
 ## Four mandatory README delivery safeguards
 
