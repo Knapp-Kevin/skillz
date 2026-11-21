@@ -19,8 +19,8 @@ portability: high
 review_status: verified-static
 dependency_status: standalone-with-optional-offline-local-preference-manager
 dependencies: "Ten-file package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional Python 3 manage.py and 30-method test_manage.py. Core works without Python, network, scheduler, persistence or sibling skill; POSIX local helper needs an approved private config root."
-content_blob_sha: 2893762bb41d771d668fdb2cd9dcd459dae9b071
-complete_package_tree_sha: 163558c85ec19b97451f4e2512d5b9980e4d56ef
+content_blob_sha: d921b7fd317a04ac9327bb874e23eb678a75182f
+complete_package_tree_sha: f57d732c4fe16f8d41c149c478f57966acba6b0b
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
 rationale: "v0.3.1 adversarial refinement corrects unknown direct actions, revoked stale/malformed preferences, post-write readback, open-descriptor checks and replaceable POSIX directory ancestors. User-specific consent and canonical skill change remain independently governed; same-UID adversaries and concurrent writers are outside the proven isolation boundary. Exact 10-file tree and links statically verified; 30 optional Python helper tests and 22 engine QA methods NOT_RUN; no host/user effectiveness observed. See docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md. Static semantic assessment 18/20."
