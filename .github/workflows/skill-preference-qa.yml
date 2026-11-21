@@ -61,8 +61,14 @@ jobs:
         run: |
           set -euo pipefail
           PACKAGE="$GITHUB_WORKSPACE/skills/authored/evidence-driven-refinement-loop"
-          MANAGER="$PACKAGE/preferences/manage.py"
           SOURCE_BEFORE="$(sha256sum "$PACKAGE/SKILL.md" | cut -d' ' -f1)"
+          # Runner checkouts are inaccessible to non-runner UIDs. Stage only
+          # the canonical read-only files needed by the manager under /opt.
+          sudo install -d -m 0755 /opt/skillz-qa/preferences
+          sudo install -m 0644 "$PACKAGE/SKILL.md" /opt/skillz-qa/SKILL.md
+          sudo install -m 0644 "$PACKAGE/preferences/manage.py" /opt/skillz-qa/preferences/manage.py
+          sudo install -m 0644 "$PACKAGE/preferences/schema.json" /opt/skillz-qa/preferences/schema.json
+          MANAGER="/opt/skillz-qa/preferences/manage.py"
 
           sudo useradd --create-home --shell /bin/bash skillzqa_a
           sudo useradd --create-home --shell /bin/bash skillzqa_b
