@@ -100,6 +100,26 @@ host-native isolation and transaction boundary. If mutation partially succeeds
 but subsequent syncing/verification fails, the helper reports a
 blocked result; inspect the actual file instead of assuming rollback.
 
+## Portable JSON Schema interoperability (v0.3.3)
+
+The bundled JSON Schema is intended for **standards-compliant draft
+2020-12 validators**, not only the Python manager. Every preference
+entry defines the three recognized fields at the same level as its
+closed-object rule, so a legitimate example must validate. Three
+`contains` / `maxContains: 1` constraints also prevent conflicting
+values for the *same* preference key (ordinary `uniqueItems` alone
+does not). The agent must reject the **entire** conflicting overlay,
+not guess first-wins or last-wins.
+
+The optional `test_manage.py` interoperability cases validate the
+real JSON Schema against a draft-2020-12 validator, including accepted
+examples, every allowlisted value, duplicate-key conflicts, unknown
+keys and extra fields. These tests use the **optional QA-only**
+`jsonschema` Python library in GitHub Actions; running or distributing
+the skill itself does **not** require installing that package. If the
+validator is not installed, those tests report SKIPPED; never claim
+schema interoperability was checked based only on the Python manager.
+
 ## Allowed and disallowed behavior
 
 - The overlay changes **optional presentation**, such as response detail,
