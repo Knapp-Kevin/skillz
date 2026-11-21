@@ -55,6 +55,25 @@ class PlanTests(unittest.TestCase):
         self.assertTrue(doc['groups']['rust'])
         self.assertFalse(doc['groups']['docs'])
 
+    def test_declared_group_without_any_obligation_is_refused(self):
+        from copy import deepcopy
+        policy = deepcopy(POLICY)
+        policy['groups'].append('security-phantom')
+        with self.assertRaisesRegex(p.PlanError, 'group has no executable'):
+            p.validate_policy(policy)
+
+    def test_declared_group_with_real_obligation_is_not_ghost(self):
+        from copy import deepcopy
+        policy = deepcopy(POLICY)
+        policy['groups'].append('security-extra')
+        policy['obligations']['security-proof'] = {
+            'group': 'security-extra', 'needs': []}
+        policy['full'].append('security-proof')
+        validated = p.validate_policy(policy)
+        result = p.make_plan(validated,
+                             ['.github/workflows/test.yml'], BASE, HEAD, MB)
+        self.assertTrue(result['groups']['security-extra'])
+
     def test_full_policy_rejects_independent_omitted_obligation(self):
         from copy import deepcopy
         policy = deepcopy(POLICY)
