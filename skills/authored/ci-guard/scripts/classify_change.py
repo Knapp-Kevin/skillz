@@ -157,7 +157,19 @@ def load_policy(path: Path) -> list[dict]:
         if match == "suffix":
             if not pattern.startswith(".") or "/" in pattern or "\\" in pattern:
                 raise ClassificationError("invalid suffix selector")
-        elif not _safe_path(pattern.rstrip("/") if match == "prefix" else pattern):
+            # A global filename extension cannot establish that *every*
+            # matching artifact is passive documentation. Some Markdown is
+            # executable, generated input, governance or release evidence.
+            if category == "documentation":
+                raise ClassificationError(
+                    "documentation rules require an exact path or directory prefix")
+        elif match == "prefix":
+            # Require a real directory boundary: "docs" also matches
+            # "docsecrets/", "docs-private/" and similar unrelated paths.
+            if not pattern.endswith("/") or not _safe_path(pattern[:-1]):
+                raise ClassificationError(
+                    "prefix selectors must name a directory ending in /")
+        elif not _safe_path(pattern):
             raise ClassificationError("unsafe impact selector")
         normalized.append(rule)
     return normalized
@@ -200,7 +212,9 @@ def _matches(path: str, rule: dict) -> bool:
     if rule["match"] == "exact":
         return path == pattern
     if rule["match"] == "prefix":
-        return path.startswith(pattern)
+        # An already-validated rule has a trailing separator. Keep the
+        # boundary check here as defense if a caller supplies direct rules.
+        return pattern.endswith("/") and path.startswith(pattern)
     return path.endswith(pattern)
 
 
