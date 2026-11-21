@@ -18,9 +18,9 @@ permission_tier: read-only analysis; specific owner-authorized bounded artifact 
 portability: high
 review_status: verified-static
 dependency_status: standalone-with-optional-offline-local-preference-manager
-dependencies: "Ten-file package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional Python 3 manage.py and 17-method test_manage.py. Core works without Python, network, scheduler, persistence or sibling skill; POSIX local helper needs an approved private config root."
+dependencies: "Ten-file package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional Python 3 manage.py and 18-method test_manage.py. Core works without Python, network, scheduler, persistence or sibling skill; POSIX local helper needs an approved private config root."
 content_blob_sha: f0f72c58e76092975473ebb20f62514a2ecfd21d
-complete_package_tree_sha: 3265448e048faaf00186460a03a1b3ac7ba79d20
+complete_package_tree_sha: dce7503dc50e94ea4acb63b5622634cfa8d9cb7d
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
-rationale: "v0.3.0 integrates a first-class preference routing/update component into SKILL.md. The optional offline manager limits stored settings to three presentation keys and user-specific, consent-gated private POSIX storage; supports read, set, update, remove, clear and version hold. Canonical defects remain separately qualified proposals. Ten-file exact package, local links and schema example statically checked; 17 bundled optional regression test methods and 22 engine QA methods NOT_RUN, no independent consumer outcomes. Static semantic assessment 18/20."
+rationale: "v0.3.0 integrates a first-class preference routing/update component into SKILL.md. The optional offline manager limits stored settings to three presentation keys and user-specific, consent-gated private POSIX storage; supports read, set, update, remove, clear and version hold. Canonical defects remain separately qualified proposals. Ten-file exact package, local links and schema example statically checked; 18 bundled optional regression test methods and 22 engine QA methods NOT_RUN, no independent consumer outcomes. Static semantic assessment 18/20."
