@@ -300,6 +300,20 @@ class QualityProfileTests(unittest.TestCase):
         self.write_readme(BASE.replace("docs/guide.md", "docs/missing.md"))
         self.assertEqual(self.gate("local-links")[0]["status"], "FAIL")
 
+    def test_unmarked_makefile_generator_gets_an_ownership_hold(self):
+        (self.root / "Makefile").write_text(
+            "README.md:\n\tpython docs/generate.py > README.md\n",
+            encoding="utf-8")
+        self.assertEqual(self.gate("generated-owner")[0]["status"], "HOLD")
+
+    def test_unmarked_workflow_rebuild_of_root_readme_is_detected(self):
+        folder = self.root / ".github/workflows"
+        folder.mkdir(parents=True)
+        (folder / "docs.yml").write_text(
+            "name: docs\nsteps:\n  - run: python docs/render.py --output README.md\n",
+            encoding="utf-8")
+        self.assertEqual(self.gate("generated-owner")[0]["status"], "HOLD")
+
     def test_generated_owner_never_self_clears(self):
         self.write_readme(BASE + "\n<!-- generated:begin -->\ngenerated text\n<!-- generated:end -->\n")
         self.assertEqual(self.gate("generated-owner")[0]["status"], "HOLD")
