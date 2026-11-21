@@ -51,6 +51,15 @@ The consumer-owned graph policy contains:
   exact Git/NUL diff, deleted paths and conservative nonregular mode handling.
   No silently omitted transitive dependency.
 
+**Coverage invariants are enforced at policy load:** every advertised
+execution group must own at least one registered obligation; the transitive
+closure of `full` roots must contain **all** registered obligations,
+including independent native, security or model checks. A declared but empty
+security job, or a newly added check omitted from `full`, is an invalid
+policy. Duplicate root entries are unnecessary when a dependency already
+reaches the obligation. This prevents a plan from saying `full: true`
+while silently omitting a required executable check.
+
 The **separate** command manifest is a complete mapping from each obligation to
 an argv-array plus bounded timeout. An interpreter invokes these commands
 without a shell, from a specified workspace with untrusted PR content treated
