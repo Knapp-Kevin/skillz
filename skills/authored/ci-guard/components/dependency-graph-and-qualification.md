@@ -70,6 +70,22 @@ must run the planner before expensive work and expose the selected group flags.
 
 The `execute` command runs every required obligation in dependency order
 **within one group** and emits a receipt *after* all its real commands exit 0.
+**Exact execution checkout is now mandatory for the CLI**: pass `--repo`
+pointing to the checked-out candidate. Before executing, the runner confirms
+Git HEAD matches the pinned plan and no tracked source was modified. It
+rechecks tracked files before issuing the successful receipt. A correct Git
+object in the local repository is not sufficient proof that the working
+tree being tested matches that object. Generated untracked output is allowed.
+
+The executor also strips GitHub output/environment modification paths and
+GitHub runtime/token variables from child verifier processes. This blocks
+direct inheritance of common evidence-forgery channels; however, **it is not
+OS-level isolation**. An adversarial same-user process may still access the
+trusted checkout, runner filesystem or parent process state. For genuinely
+hostile PR executable content, run it under a separate restricted OS
+principal/container with no writable access to trusted source, evidence
+channels, host process state, tokens or signing credentials. An untrusted
+child's self-reported success is never independent attestation.
 Receipt binds the group, selected obligation list, plan digest, policy and
 executor digests, base, merge base, head, stage, GitHub run ID/attempt, and
 per-obligation command hash + exit-code + elapsed milliseconds. Cross-group
@@ -103,7 +119,7 @@ python3 ci/ci_plan.py plan --repo . --base "$BASE_SHA" --head "$HEAD_SHA" \
   --stage candidate --file /tmp/ci-plan.json
 python3 ci/ci_plan.py execute --plan /tmp/ci-plan.json \
   --policy ci/impact-graph.json --executor ci/exec-policy.json \
-  --group docs --workdir . --run-id "local-trial" --attempt 1
+  --group docs --workdir . --repo . --run-id "local-trial" --attempt 1
 ```
 
 The second command is appropriate **only** when the plan actually selects docs,
