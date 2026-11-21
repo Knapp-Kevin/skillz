@@ -95,6 +95,16 @@ class PreferenceManagerTests(unittest.TestCase):
         with self.assertRaises(manage.PreferenceError):
             manage.execute(self.args("show"))
 
+    def test_duplicate_json_fields_cannot_launder_an_override(self):
+        self.set_pref()
+        raw = self.file().read_text()
+        raw = raw.replace('"scope": "user-local",',
+                          '"scope": "system", "scope": "user-local",')
+        self.assertIn('"scope": "system"', raw)
+        self.file().write_text(raw)
+        with self.assertRaisesRegex(manage.PreferenceError, "Duplicate"):
+            manage.execute(self.args("show"))
+
     def test_version_mismatch_is_held_not_upgraded(self):
         self.set_pref()
         doc = json.loads(self.file().read_text())
