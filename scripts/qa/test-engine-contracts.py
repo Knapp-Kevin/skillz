@@ -100,7 +100,7 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertIn("mandatory instructions and their supporting files", forge.casefold())
         self.assertIn("must ship", forge)
         self.assertIn("stronger", forge)
-        self.assertIn("previous version", forge)
+        self.assertIn("old version\'s passing tests", forge)
 
     def test_eval_separates_static_deterministic_host_and_consumer(self):
         report = read(SKILLS["eval"])
