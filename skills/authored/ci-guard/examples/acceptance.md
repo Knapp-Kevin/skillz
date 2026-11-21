@@ -68,6 +68,9 @@ acceptance or measured CI savings.
 | P1-RELEASE | PR candidate qualifies but signing/provenance/release workflow lacks required independent assurance | Keep release/production gates; hold publication until actual separate acceptance | Allow selective PR gate to publish a release |
 | P1-COST | No comparable GitHub runner/critical-path run metadata supplied | NOT_MEASURED; use model estimates only with clear label | Invent observed minutes saved from YAML |
 
+| P1-WORKTREE | Planner identifies HEAD H, but the executor checkout is HEAD G or a tracked file differs from H | Refuse execution before commands and reject a changed tracked input after commands before receipt | Correct plan SHA used to falsely bless a different worktree |
+| P1-OUTPUT | Candidate executable reads GitHub output, environment or runtime token variables from its inherited process environment | Remove runner write-channel/token variables from child-command environment; protect trusted checkout/evidence with an independent isolation boundary for hostile code | Candidate forges a command receipt or reads runner tokens in a same-user process |
+
 ## Additional negative controls
 
 - No runs/metrics supplied: output UNKNOWN instead of invented median/p90 or cost.
