@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "skill_id": "evidence-driven-refinement-loop",
+  "base_skill_version": "0.2.0",
+  "scope": "user-local",
+  "preferences": [
+    {
+      "key": "response.detail",
+      "value": "concise",
+      "source": "explicit-user-confirmation"
+    }
+  ]
+}
