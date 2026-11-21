@@ -264,6 +264,18 @@ class QualityProfileTests(unittest.TestCase):
         self.write_readme(text)
         self.assertEqual(self.gate("first-success")[0]["status"], "FAIL")
 
+    def test_generic_developer_test_still_fails_even_with_expected_result(self):
+        self.write_readme(BASE.replace("python -m example_kit demo", "cargo test"))
+        self.assertEqual(self.gate("first-success")[0]["status"], "FAIL")
+
+    def test_unrelated_code_example_does_not_rescue_empty_quick_start(self):
+        text = BASE.replace(
+            "~~~sh\npython -m example_kit demo\n~~~",
+            "See the technical reference later in this README.")
+        text += "\n## Developer Test\n\n~~~sh\npython -m example_kit demo\n~~~\n"
+        self.write_readme(text)
+        self.assertEqual(self.gate("first-success")[0]["status"], "FAIL")
+
     def test_missing_expected_result_fails(self):
         self.write_readme(BASE.replace("Expected result: the program prints a small example report.", ""))
         self.assertEqual(self.gate("first-success")[0]["status"], "FAIL")
