@@ -59,6 +59,57 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(len(prefs), 1)
         self.assertEqual(prefs[0]["value"], "detailed")
 
+    def test_unknown_direct_action_cannot_mutate_without_approval(self):
+        # The public function must not depend solely on CLI argparse.
+        self.set_pref()
+        initial = self.file().read_bytes()
+        with self.assertRaisesRegex(manage.PreferenceError, "Unknown action"):
+            manage.execute(self.args("surprise-delete"))
+        self.assertEqual(self.file().read_bytes(), initial)
+
+    def test_postwrite_reopens_and_validates_saved_bytes(self):
+        original = manage.load
+        reads = []
+
+        def dishonest_readback(path, *, version, allowlist):
+            reads.append(True)
+            if len(reads) > 1:
+                return {"preferences": []}
+            return original(path, version=version, allowlist=allowlist)
+
+        with patch.object(manage, "load", side_effect=dishonest_readback):
+            with self.assertRaisesRegex(manage.PreferenceError,
+                                        "Post-write verification failed"):
+                self.set_pref()
+        self.assertGreaterEqual(len(reads), 2)
+
+    def test_opened_descriptor_security_is_rechecked(self):
+        self.set_pref()
+        original_fstat = manage.os.fstat
+
+        def swapped_fd_fstat(fd):
+            observed = original_fstat(fd)
+            from types import SimpleNamespace
+            return SimpleNamespace(st_mode=0o100644, st_uid=observed.st_uid,
+                                   st_size=observed.st_size)
+
+        with patch.object(manage.os, "fstat", side_effect=swapped_fd_fstat):
+            with self.assertRaisesRegex(manage.PreferenceError,
+                                        "Opened preference file is unsafe"):
+                manage.execute(self.args("show"))
+
+    def test_file_and_parent_directory_are_synced_on_save(self):
+        original_fsync = manage.os.fsync
+        calls = []
+
+        def counted_fsync(fd):
+            calls.append(fd)
+            return original_fsync(fd)
+
+        with patch.object(manage.os, "fsync", side_effect=counted_fsync):
+            self.set_pref()
+        self.assertGreaterEqual(len(calls), 2)
+
     def test_unknown_policy_bypass_is_refused_without_fs_change(self):
         with self.assertRaises(manage.PreferenceError):
             self.set_pref(key="skip.security.checks", value="true")
