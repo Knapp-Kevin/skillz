@@ -156,20 +156,20 @@ Architecture acceptance requires **actual planted negative tests** for each high
 
 ### Adversarial revision from v0.1 to v0.2
 
-The first architectural draft contemplated storing every attempt and selecting the highest replay score. That fails for sparse histories, polluted history, false claims of permission, and evaluator drift. Revision 0.2 therefore makes recording **optional and privacy-filtered**, distinguishes hypotheses from executed nodes, constrains replay to supported transitions, holds evaluator identity fixed, retains the incumbent on ties, adds unseen cases and live pilots, and makes the policy **declarative** by default. This is a design critique, **not an executed proof**.
+The first conceptual design pass (not separately committed or executed) contemplated storing every attempt and selecting the highest replay score. That fails for sparse histories, polluted history, false claims of permission, and evaluator drift. Revision 0.2 therefore makes recording **optional and privacy-filtered**, distinguishes hypotheses from executed nodes, constrains replay to supported transitions, holds evaluator identity fixed, retains the incumbent on ties, adds unseen cases and live pilots, and makes the policy **declarative** by default. This is a design critique, **not an executed proof**.
 
 ## 8. Phased delivery and stop gates
 
-Each phase is a **useful completed behavior**, not a completed planning note. A phase may end `NO_GO` when evidence contradicts its value. Issue links are tracked by the umbrella issue; no bulk rollout until the pilot works.
+Each phase is a **useful completed behavior**, not a completed planning note. A phase may end `NO_GO` when evidence contradicts its value. This strategy is tracked by [umbrella #828](https://github.com/Knapp-Kevin/skillz/issues/828). No bulk rollout until the pilot works.
 
 | Phase | Executable deliverable | Exit evidence | Dependency |
 | --- | --- | --- | --- |
-| 0. Architecture proof | Frozen contract & attack matrix tested against a minimal demonstration fixture | Written decision plus red/green planted failures for replay unknowns, evaluator tamper and private data | None |
-| 1. Evidence intake | Minimal standalone-optional event recorder/importer; reject unauthorized/invalid records | CLI/API fixture tests, no raw personal overlay/secret capture, exact digest/readback, package closure | 0 |
-| 2. Offline replay | Deterministic traversal of observed tree with explicit UNKNOWN_BRANCH and budget accounting | Reproducible paired replay, mutation negatives, seeded fixtures, exact evaluator pins | 1 |
-| 3. Policy laboratory | Declarative baseline plus candidate comparison, fixed evaluator, hard-veto safety checks and heldouts | Candidate that cheats is rejected; on tied/small samples incumbent retained | 2 |
-| 4. Adversarial live pilot | Bounded real tasks across two skill families; baseline and candidate use equal budgets | Real red/green outcomes, preserved acceptance gates, measured cost, decision to ship or stop | 3 |
-| 5. Consumer integration | Optional explorer embedded through portable in-package instructions and/or repository engine; versioned opt-in | Standalone/no-network/no-store export tests, no regression in v0.3.4 local preference behavior | 4 |
+| [0. Architecture proof (#829)](https://github.com/Knapp-Kevin/skillz/issues/829) | Frozen contract & attack matrix tested against a minimal demonstration fixture | Written decision plus red/green planted failures for replay unknowns, evaluator tamper and private data | None |
+| [1. Evidence intake (#830)](https://github.com/Knapp-Kevin/skillz/issues/830) | Minimal standalone-optional event recorder/importer; reject unauthorized/invalid records | CLI/API fixture tests, no raw personal overlay/secret capture, exact digest/readback, package closure | 0 |
+| [2. Offline replay (#831)](https://github.com/Knapp-Kevin/skillz/issues/831) | Deterministic traversal of observed tree with explicit UNKNOWN_BRANCH and budget accounting | Reproducible paired replay, mutation negatives, seeded fixtures, exact evaluator pins | 1 |
+| [3. Policy laboratory (#832)](https://github.com/Knapp-Kevin/skillz/issues/832) | Declarative baseline plus candidate comparison, fixed evaluator, hard-veto safety checks and heldouts | Candidate that cheats is rejected; on tied/small samples incumbent retained | 2 |
+| [4. Adversarial live pilot (#833)](https://github.com/Knapp-Kevin/skillz/issues/833) | Bounded real tasks across two skill families; baseline and candidate use equal budgets | Real red/green outcomes, preserved acceptance gates, measured cost, decision to ship or stop | 3 |
+| [5. Consumer integration (#834)](https://github.com/Knapp-Kevin/skillz/issues/834) | Optional explorer embedded through portable in-package instructions and/or repository engine; versioned opt-in | Standalone/no-network/no-store export tests, no regression in v0.3.4 local preference behavior | 4 |
 
 No hidden background task or recurring automation. GitHub Actions minutes may be used for bounded deterministic QA. Later corpus-wide rollout, third-party replication, or agent-host trials are **optional follow-on work**, not prerequisites to finish the first vertical slice.
 
