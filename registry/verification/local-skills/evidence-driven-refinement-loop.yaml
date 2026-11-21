@@ -12,9 +12,9 @@ complete_package_tree_sha: 0ee1a7e0784048504ee9a3ca5c5fbdbd70499241
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
 verification_status: verified
-verification_basis: exact-ten-file-static-semantic-review-plus-executed-three-version-offline-mechanics-regression
+verification_basis: exact-ten-file-source-review-plus-three-version-Python-regressions-and-separate-Linux-UID-isolation
 validation_status: not-run
-validation_note: "Exact v0.3.2 ten-file package identity verified; 38/38 preference manager and 22/22 engine tests passed on each Python 3.9, 3.11 and 3.13 in Actions run 44943518832. A separate Linux-UID integration job passed in run 44943711677 at commit bf5b1b11: each user wrote/read only its own 0700 private root, cross-user read and write attempts were refused, revocation did not affect the other profile, and canonical SKILL.md stayed unchanged. These are actual filesystem/process tests, NOT agent-host behavior, user outcome, hostile same-UID isolation, distributed storage or Windows portability; consumer validation remains not-run."
+validation_note: "v0.3.2 package identity pinned. GitHub Actions run 44943793248 at exact PR head 7db19967 passed 38/38 manager tests and 22/22 engine tests on each of Python 3.9, 3.11 and 3.13, plus a separate two-real-Linux-user job. Each account retained a distinct setting; profile A was denied reading/writing B, revoking A preserved B, and canonical SKILL.md hash was unchanged. These are executed filesystem/helper checks, not independent consuming-agent execution, user-level skill outcome, Windows portability, or hostile same-UID isolation; validation_status remains not-run."
 rubric: docs/skill-verification.md
 rubric_score: "18/20"
 tags:
@@ -24,20 +24,18 @@ tags:
   authority: [read-only-default, owner-authorized-scoped-change]
   portability: high
 notes: >-
-  v0.3.2 static semantic assessment 18/20. The distributed skill's
-  canonical instructions explicitly invoke the bounded learning and local
-  preference component. The exact 10-file source tree and git blob are
-  pinned above. GitHub Actions run 44943518832 checked out exact source
-  commit c2016fe5 and passed all 38 manager and 22 engine contract tests
-  on Python 3.9, 3.11 and 3.13 on Ubuntu 24.04. Tests cover private
-  configuration roots, two isolated test profiles, opt-in writes, version
-  upgrade holds, revocation, symlink and malicious field rejection,
-  concurrent lock refusal, readback and safe filesystem boundaries.
-  Same-UID hostile processes, real separate-user host isolation,
-  cross-machine concurrency, Windows and independent consuming-agent
-  outcomes remain unproven and must not be inferred from green CI.
-  Two separate Linux UIDs additionally passed real host permission tests
-  in Actions run 44943711677 with no canonical source modification.
-  This is an OS-level fixture, not independent AI-host validation.
-  Adversarial historical review:
+  v0.3.2 remains 18/20 on the static semantic rubric. Canonical SKILL.md
+  invokes the bundled preference routing and user-local manager. Exact
+  distributed package Git blob and 10-file tree are pinned above.
+  Actions run 44943793248 checked out exact PR-head commit 7db19967,
+  passing 38 preference manager and 22 engine contract tests on each of
+  Python 3.9, 3.11 and 3.13 (Ubuntu 24.04). Additional Ubuntu job ran
+  with two independent real Linux OS identities: private user A stored
+  concise, B stored detailed, A could neither read nor modify B's private
+  root, A's revocation did not affect B, and canonical SKILL.md remained
+  byte-stable. This demonstrates the specified POSIX helper and OS
+  permission behavior, not an agent's ability to interpret instructions.
+  Host model compliance, safety against malicious same-UID processes,
+  multi-host transactions and Windows remain unproven. Keep consumer
+  validation_status not-run. Earlier adversarial review remains at
   docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
