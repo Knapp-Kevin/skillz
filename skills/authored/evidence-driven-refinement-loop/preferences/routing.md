@@ -60,7 +60,9 @@ provide a portable handoff; never pretend a file was saved.
 
 One-time user preferences still affect the current response without
 persistence. A canonical version change triggers a compatibility review,
-not automatic migration. An explicit user correction revokes an older
+not automatic migration. An approved full revocation must remain
+possible even for an outdated, malformed or unreadable overlay; never
+make deletion contingent on adopting a newer preference schema. An explicit user correction revokes an older
 contradictory preference even if the local file has not yet been updated.
 
 Order: higher-priority instructions and safety rules, current user's
