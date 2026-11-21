@@ -123,3 +123,27 @@ actual agents classify preferences reliably, user-specific storage is
 correctly provisioned by every host, or users achieve improved outcomes.
 `validation_status` therefore remains `not-run` for consuming-agent
 behavior.
+
+## Distinct Linux identity verification (2026-11-21)
+
+[GitHub Actions run 44943711677](https://github.com/Knapp-Kevin/skillz/actions/runs/44943711677)
+completed successfully at commit `bf5b1b11b6cf10b9209f945b45898e36d0289f2c`.
+The isolated-identity job staged **only canonical, read-only skill files**
+under `/opt/skillz-qa` and executed the preference manager under two
+separate Linux user accounts, each with a different 0700 private root.
+
+Observed executable assertions included two different saved values,
+refusal of cross-UID preference reads and writes, independent revocation,
+and unchanged canonical `SKILL.md` before and after the test. All three
+Python regression jobs (3.9, 3.11 and 3.13) also passed. The GitHub
+runner checkout was not accessible to new UIDs, so the initial attempt
+failed during fixture setup; staging a read-only package corrected the
+fixture without weakening private-root permissions. The follow-up
+successful run is the one relied upon here.
+
+This confirms **Linux operating-system identity separation for the
+tested fixture**, not universal agent-host compliance, protection from
+root or hostile same-UID processes, cross-machine consistency, or
+production tenant isolation. The original skill continues to require a
+real consuming host and user-approved storage before applying or saving
+personal preferences.
