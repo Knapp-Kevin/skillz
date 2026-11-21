@@ -9,7 +9,7 @@ metadata:
   category: Meta
   display-name: Skills Pulse
   emoji: "🧭"
-  version: 2.0.0
+  version: 2.1.0
   repo-bound: true
 ---
 
@@ -21,9 +21,9 @@ metadata:
 
 ## Procedure
 
-1. Read `registry/sources.yaml` and current governed records so already-known material is not rediscovered as new.
-2. Inspect a small, relevant set of public sources for meaningful changes or differentiated skills.
-3. Treat popularity, stars, installs, or official branding as discovery signals only.
+1. Read `registry/sources.yaml`, the capability directory, and current governed/discovery records so already-known material is not rediscovered as new. Treat all dated snapshot counts as provenance observations, never as the corpus size.
+2. Derive the requested **capability coverage and time window** before selecting public source lanes. Inspect all relevant accessible governed and indexed discovery families, plus current public sources when material. Use a bounded shortlist for an ordinary question, but **do not impose a fixed tiny source cap** on an explicitly broad sweep. Follow all relevant pages/chunks/cursors of a selected source; record inaccessible/partial families. A source pin and its observed latest change are separate facts.
+3. Search by intended task and mechanism, plus alternate language and neighboring domains. Check possible retrieval false positives from schema field names or shared folder names, and false negatives from unmapped taxonomy slots. Treat popularity, stars, installs or official branding as discovery leads only.
 4. For promising material, check:
    - source identity and maintainer provenance;
    - license/terms;
@@ -32,18 +32,40 @@ metadata:
    - authority/side effects;
    - portability and host assumptions;
    - overlap with existing local or governed capabilities.
-5. Prefer differentiated capability over generic best-practice duplication.
-6. Propose only candidates worth individual semantic review.
+5. Prefer evidence-backed differentiated capability over generic best-practice duplication. Compare complete package scope, exact source identity, existing mechanisms and observed limitations before collapsing same-name records or claiming novelty. A source-level change does not establish an individual skill's behavior or eligibility.
+6. Propose only candidates worth individual semantic review, recording `FOUND`, `PACKAGE_READ`, `REVIEWED`, or `NOT_INSPECTED` separately and stating what must be verified next. Where a known authored skill is stronger, identify a concrete refinement mechanism rather than producing another duplicate. A promising unreviewed file is not installed or endorsed.
 7. Do not admit, install, copy, or modify anything merely because it was discovered.
+
+## Discovery quality controls
+
+Before asserting "nothing relevant" or "new capability", make a brief
+coverage record: query/capability synonyms, source families and revision
+pins, paginated parts attempted, candidate matches, full packages
+actually read, and unresolved rights, access or review status. A missing
+map entry, empty first page, stale snapshot, search result matching a
+serialized metadata key, or a same-name package from another publisher
+does not prove absence, relevance, or equivalence.
+
+For material decisions, test one intentionally irrelevant term
+(**precision probe**) and one credible alternative synonym/mechanism
+(**recall probe**). These are observations about available search,
+not synthetic claims about end-user usage. Record skipped probes with
+a reason when the request is a narrow exact-identity lookup.
+
+Do not scan every source by reflex. Stop when additional coverage is
+unlikely to change a bounded decision; continue more broadly when the
+user explicitly requests comprehensive discovery or a gap decision
+would otherwise be premature. Never convert a partial search into an
+exhaustive claim.
 
 ## Output
 
 For each candidate provide:
 
-- source and exact revision/identity when available;
+- source and exact revision/identity when available, including checked-at date;
 - what differentiated capability it adds;
 - likely overlap/redundancy;
-- license/dependency/authority concerns;
+- license/dependency/authority concerns, package-read versus lead-only status, and unsearched source limits;
 - recommendation: `SOURCE-VET`, `INDIVIDUAL-REVIEW`, `REFERENCE-ONLY`, or `IGNORE`.
 
 If nothing materially useful is found, report that plainly. Curation does not need to manufacture work.
