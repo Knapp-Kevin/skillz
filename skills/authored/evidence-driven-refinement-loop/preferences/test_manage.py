@@ -128,8 +128,9 @@ class PreferenceManagerTests(unittest.TestCase):
             self.set_pref()
 
     def test_read_only_does_not_create_storage(self):
-        with self.assertRaises(manage.PreferenceError):
-            manage.execute(self.args("show"))
+        result = manage.execute(self.args("show"))
+        self.assertEqual(result["status"], "READ_ONLY")
+        self.assertEqual(result["preferences"], [])
         self.assertFalse((self.root / "skill-overlays").exists())
 
     def test_schema_allowlist_matches_anonymous_example(self):
