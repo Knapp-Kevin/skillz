@@ -88,6 +88,36 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(len(prefs), 1)
         self.assertEqual(prefs[0]["value"], "detailed")
 
+    def test_two_private_profiles_remain_isolated_through_update_and_revocation(self):
+        with tempfile.TemporaryDirectory() as sibling_tmp:
+            other = Path(sibling_tmp)
+            other.chmod(0o700)
+            self.assertEqual(self.set_pref(value="concise")["status"], "SAVED")
+            saved_other = manage.execute(self.args(
+                "set", key="response.detail", value="detailed",
+                approved=True, root=other))
+            self.assertEqual(saved_other["status"], "SAVED")
+            first = manage.execute(self.args("show"))["preferences"]
+            second = manage.execute(self.args("show", root=other))["preferences"]
+            self.assertEqual(first[0]["value"], "concise")
+            self.assertEqual(second[0]["value"], "detailed")
+            self.assertNotEqual(
+                self.file().resolve(),
+                (other / "skill-overlays" / manage.SKILL_ID
+                 / "preferences.local.json").resolve(),
+            )
+            self.assertEqual(
+                manage.execute(self.args("clear", approved=True))["status"],
+                "REMOVED",
+            )
+            remaining = manage.execute(self.args("show", root=other))
+            self.assertEqual(remaining["preferences"][0]["value"], "detailed")
+            self.assertFalse(self.file().exists())
+            self.assertEqual(
+                manage.execute(self.args("clear", approved=True, root=other))["status"],
+                "REMOVED",
+            )
+
     def test_busy_writer_is_refused_without_clobbering_overlay(self):
         import fcntl
         self.set_pref()
