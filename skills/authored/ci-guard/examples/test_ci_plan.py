@@ -247,6 +247,51 @@ class ExecutionTests(unittest.TestCase):
                 for group, active in doc['groups'].items()}}
             self.assertTrue(p.qualify(POLICY,doc,result,doc,'100','1',executor)['qualified'])
 
+    def test_execution_refuses_wrong_checkout_or_modified_tracked_source(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            project = root / 'work'
+            project.mkdir()
+            def git(*args):
+                return subprocess.check_output(
+                    ['git', '-C', str(project), *args],
+                    stderr=subprocess.DEVNULL, text=True).strip()
+            git('init', '-q')
+            git('config', 'user.name', 'Fixture')
+            git('config', 'user.email', 'fixture@example.invalid')
+            (project/'docs/passive').mkdir(parents=True)
+            doc = project/'docs/passive/guide.md'
+            doc.write_text('baseline\n', encoding='utf-8')
+            git('add', '.')
+            git('commit', '-qm', 'baseline')
+            base = git('rev-parse', 'HEAD')
+            doc.write_text('revision 2\n', encoding='utf-8')
+            git('add', '.')
+            git('commit', '-qm', 'head')
+            head = git('rev-parse', 'HEAD')
+            executor = {'schema_version': 1, 'commands': {
+                name: {'argv': ['python3', '-c', 'print(123)'], 'timeout_sec': 5}
+                for name in POLICY['obligations']
+            }}
+            planned = p.git_plan(POLICY, project, base, head, 'candidate', executor)
+            proof = p.execute(POLICY, executor, planned, 'docs', root, '14', '1',
+                              source_repo=project)
+            self.assertEqual([x['exit_code'] for x in proof['execution']], [0])
+            git('checkout', '--detach', '-q', base)
+            with self.assertRaisesRegex(p.PlanError, 'HEAD does not match'):
+                p.execute(POLICY, executor, planned, 'docs', root, '14', '1',
+                          source_repo=project)
+            git('checkout', '--detach', '-q', head)
+            doc.write_text('tampered after checkout\n', encoding='utf-8')
+            with self.assertRaisesRegex(p.PlanError, 'modified tracked'):
+                p.execute(POLICY, executor, planned, 'docs', root, '14', '1',
+                          source_repo=project)
+
+    def test_workflow_requires_checkout_preflight_in_every_group(self):
+        workflow = (ROOT / 'examples/classified-github-pr.yml').read_text(encoding='utf-8')
+        self.assertEqual(workflow.count('--workdir . --repo work --group'), 4)
+        self.assertNotIn('--workdir . --group ', workflow)
+
     def test_missing_command_fails_closed(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);executor={'schema_version':1,'commands':{}}
@@ -352,7 +397,7 @@ class ExecutionTests(unittest.TestCase):
                 if enabled:
                     proc=subprocess.run(['python3',str(script),'execute','--plan',str(plan_file),
                                          '--policy',str(policy_path),'--executor',str(executor_path),
-                                         '--workdir',str(root),'--group',group,
+                                         '--workdir',str(root),'--repo',str(root),'--group',group,
                                          '--run-id','123','--attempt','1'],
                                         check=True,capture_output=True,text=True)
                     receipts[group]={'result':'success','receipt':json.loads(proc.stdout)}
