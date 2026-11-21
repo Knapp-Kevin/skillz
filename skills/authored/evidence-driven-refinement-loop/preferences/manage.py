@@ -242,6 +242,10 @@ def execute(args: argparse.Namespace) -> dict:
         raise PreferenceError("Unknown action; no file operation authorized")
     if args.action in ("set", "remove", "clear") and not args.approved:
         raise PreferenceError("Mutation requires explicit user approval; --approved is not proof of consent")
+    if args.action == "clear":
+        # Revocation must not depend on any skill-version or bundled-schema
+        # parser. Explicit approval and private-file checks still apply.
+        return revoke_overlay(overlay_file(args.root, create_dirs=False))
     version = current_version()
     allow = allowed_keys()
     if args.action == "set" and (
@@ -249,10 +253,6 @@ def execute(args: argparse.Namespace) -> dict:
     ):
         raise PreferenceError("Unknown preference or disallowed value")
     target = overlay_file(args.root, create_dirs=args.action == "set")
-    if args.action == "clear":
-        # An owner may revoke an obsolete or malformed overlay. Do not
-        # block deletion on a schema or canonical version mismatch.
-        return revoke_overlay(target)
     doc = load(target, version=version, allowlist=allow)
     if args.action == "show":
         return {"status": "LOADED" if target.exists() else "ABSENT",
