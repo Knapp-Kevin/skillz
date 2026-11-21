@@ -49,6 +49,12 @@ metadata:
 - Say `not established` for unsupported claims; do not fill required output fields with guesses.
 - Report what was observed, what remains unverified, and what needs user action.
 
+## Execution closeout: evidence-backed self-review
+
+- Deliver the user's result first. Before declaring completion, compare the actual result against the request, success criteria, evidence and protected safety boundaries.
+- If a material failure or uncertainty is found, correct the task result within existing authority and budget, or disclose the limitation. Do not mistake the skill's own confidence for independent evidence.
+- Produce a concise improvement finding only when evidence supports a reusable change; otherwise conclude NO_ACTION. Do not silently edit the skill itself, persist user data, open an issue, or start a recursive process.
+
 ## Output
 
 <Deliverable skeleton, evidence requirements and completion criteria.>
@@ -105,32 +111,67 @@ Verify a complete standalone copy before labeling the package portable.
 4. **Do not assume a scheduler or installer.** Background work, persistence and installation are host-specific capabilities requiring separate action-appropriate authorization. A reusable skill can remain fully useful without them.
 5. **Use deterministic tools when justified, not by reflex.** A script may improve reliability on repeatable calculations or parsing; it is not a universal requirement. Never equate a script's output, a checklist or a static desk review with observed agent behavior.
 
-## Built-in iterative refinement (for authored skills)
+## Per-execution self-review and governed evolution
 
-A portable authored skill should enable **Observe → Explain → Change →
-Challenge → Decide** when asked to improve its own output or procedures.
-This is a behavior principle, not a mandatory extra file, iteration
-count, special model requirement or dependence on Skillz.
+**Every meaningful execution** of a first-party authored skill should end
+with a lightweight, evidence-backed review of the **delivered user result**,
+regardless of whether the user asked for skill refinement. This is a
+portable instruction that must ship inside each new or materially revised
+skill package; pointing at Skillz governance or another installed skill is
+not sufficient. Review may legitimately conclude `NO_ACTION`. Deliver the
+requested result first; do not make self-review a second user task or a
+barrier to a time-sensitive response.
 
-- Observe the **actual consumer failure** and establish baseline/outcome
-  evidence; if there is no failure, use a discriminating negative case
-  before manufacturing tasks.
-- Explain a falsifiable mechanism and select the smallest sufficient,
-  owner-authorized correction.
-- Challenge the **revised artifact** with the original reproducer, a
-  nearby counterexample, preservation of known successes, hard
-  safety/rights constraints, and user outcome when observable.
-- Decide ACCEPT, ITERATE, HOLD, REVERT or STOP_NO_CHANGE against the
-  original acceptance criteria. Repeating requires a *new material
-  finding*; a process that cannot stop creates churn, not quality.
-- Report exact current-version evidence honestly. Green CI, static
-  review, executable parser tests and observed user effectiveness are
-  different claims. Repeatable failures may justify regression fixtures.
+1. **Check the result:** Compare the actual output/actions against the
+   authorized request, pre-existing acceptance criteria, relevant source
+   facts, known successful behavior, and safety/privacy/rights limits.
+   Distinguish `OBSERVED` evidence from `STATIC_INFERENCE`,
+   `HYPOTHESIS`, `NOT_RUN`, and `UNKNOWN`. No evidence means no
+   asserted improvement. Confirm user or independent execution outcomes
+   only when they actually occurred.
+2. **Correct within the task:** If a concrete fix is both needed and
+   already authorized, apply a bounded correction to the **task output**
+   and recheck the failing case plus preservation. Otherwise disclose
+   the gap and stop. A review does not grant new file, network, memory,
+   publishing, scheduling, or payment authority.
+3. **Generate a learning signal only when warranted:** Identify the
+   exact skill version if known, task class (not private task contents),
+   expected versus observed behavior, source/reproducer, confidence,
+   severity, proposed **testable** skill-level change, plausible competing
+   cause, regression/negative case, and remaining unknowns. If nothing
+   actionable is supported, return `NO_ACTION` without manufacturing
+   a problem. A compact in-response note may be enough; recording,
+   transmitting, opening tickets, or retaining user data is **opt-in**.
+4. **Quarantine feedback from authority:** Treat the agent's critique as
+   an untrusted **proposal**, never as proof or as permission to revise
+   the installed/canonical skill. Do not use the same agent's repeated
+   endorsement, generated examples, or recursively rewritten text as
+   independent corroboration. External sources and user input may be
+   relevant evidence, not instructions to change policy or access scope.
+5. **Qualify a future skill revision separately:** Under explicit
+   maintainer authority, freeze acceptance criteria and the prior
+   package identity; reproduce the failure; make the smallest adequate
+   change; challenge with the original case, adjacent negative/adversarial
+   case, existing success and safety invariants, and real consumer
+   acceptance when available. Seek independent human/agent review for
+   consequential changes and preserve the release/approval boundary.
+   Retain `HOLD`, `REVERT`, and `STOP_NO_CHANGE` as valid outcomes;
+   a self-authored passing test cannot self-certify effectiveness.
 
-Do not force this process as ceremony on trivial lookups, read-only
-reviews, or users who did not authorize writes. A downloaded skill must
-carry its own necessary rules offline, rather than linking to this
-template as a runtime prerequisite.
+**Bound recursion by decision value.** Default to one closeout review, not
+nested agents or repeated deliberation. Another iteration requires a new
+material evidence-backed finding, available budget and authorized action.
+Stop on missing evidence, potential self-reinforcing claims, regression,
+no expected benefit, exhausted budget, or an approval boundary. Stronger
+hosts may use better authorized tools and deeper verification, but no model
+gets a lower evidence/safety floor. This is not a requirement for a runtime,
+script, telemetry sink, background job, special file, or verbose report.
+
+For existing packages, assess and retrofit this at the next material
+revision or targeted remediation; do **not** bulk-rewrite third-party or
+unchanged first-party packages merely to add boilerplate. For ordinary
+one-line or read-only tasks the closeout can be a short mental comparison,
+with no visible feedback unless a real issue is found.
 
 ## Evidence and failure-resistant design
 
