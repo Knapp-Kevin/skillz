@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.3.2
+  version: 0.4.0
   license: MIT
 ---
 
@@ -65,6 +65,67 @@ A bounded **platinum-grade acceptance** means all applicable material
 truth, reader-first-success, navigation, source-integrity, safety and
 maintainability conditions have evidence. It is not a self-awarded number,
 a universal section template, or an excuse to add decorative content.
+
+## Binding quality profiles: this skill sets the standard
+
+**The standard comes from this skill and the explicitly chosen quality
+profile**, not from whatever the target README, organization or exemplar
+already does. Before writing, inspect that repository's identity, existing
+documentation, organization style rules, exemplars, brand assets, accessibility
+conventions and generator ownership. Treat findings as *context and evidence*
+for accurate branding and compatible integration, **not as authority to
+downgrade quality**. Challenge weak or irrelevant precedents. Never reuse
+another product's banner, logo, badges, language or colors merely because
+an asset or template exists. Obtain permission before creating or altering
+brand assets; unknown rights or provenance are HOLD, not implied permission.
+
+Select one of these profiles at task start, record it in the acceptance
+contract and judge the finished candidate against it:
+
+- **Baseline**: truthful, accessible, reader-task-fit. No universal banner,
+  badge or TOC requirement for tiny or specialized repositories.
+- **Gold**: a **binding** project-appropriate banner, meaningful verified
+  badge set, linked and correctly targeted contents, clear product value,
+  executable or document-first observable first success, usable technical
+  navigation, supported claims and a visual/usability review. The project
+  can specialize evidence and asset choices, **not silently waive** a gate.
+- **Platinum**: all gold obligations plus independent reader-task evidence
+  and expanded accessibility/responsive visual review. Do not self-award
+  either profile from a checklist or a successful CI run.
+
+A direct request for “gold-standard” or “platinum-grade” **selects that
+profile**, rather than simply encouraging nicer prose. Encode project identity,
+selected banner, relevant badge identities/destinations, reader-journey mode
+and explicit exceptions in a profile contract. The optional bundled
+[profile acceptance checker](scripts/profile_acceptance.py) and
+[example profile contract](examples/gold-quality-profile.json) provide
+read-only mechanical checks. This contract **cannot disable required
+elements**. A missing required element is FAIL, or HOLD with an explained
+evidence-bound exception requiring independent owner/editorial judgment.
+An exception field or passing local script does not certify its own approval.
+
+**Presentation and usability audit is mandatory for Gold/Platinum.**
+Check actual image provenance and display, useful alt text, correct product
+branding, legitimate relevant badge sources and links, heading/TOC targets,
+responsive rendered hierarchy, first-success usability, and accessible
+navigation. Render and inspect real Markdown where tooling permits;
+otherwise record NOT_RUN/HOLD, never PASS. Run the existing
+[local link checker](scripts/check_readme.py) and
+[delivery preflight](scripts/delivery_preflight.py) as applicable. The
+profile checker is **additional**, not a substitute for preservation,
+generator-owner parity, claim verification or CI gates. For generator-owned
+READMEs, update the authorized generator/template and output together,
+authenticate exact parity and ownership, and preserve the existing hold
+until independent review.
+
+**Two separate acceptance decisions must be explicit:**
+(1) technical delivery (changes, provenance, tests, generated parity and
+required CI at exact HEAD), and (2) editorial/reader acceptance against
+the selected profile (presentation, semantics, accessibility, identity,
+first-use result and evidence accuracy). A merged PR with green CI proves
+delivery of that revision, **not completion of the intended README quality
+grade**. Only both evidenced decisions can support a completed Gold/Platinum
+claim. If either is unknown, delivery may be shipped but grade remains HOLD.
 
 ## Four mandatory README delivery safeguards
 
@@ -226,7 +287,7 @@ legitimately superseded and authorized. If generated spans or historic
 issuer identities cannot be safely updated, preserve them and surface
 the limitation, rather than silently changing them.
 
-- Title, optional existing logo/hero with accurate alt text, optional restrained badges.
+- Title with appropriate project identity; logo/banner and badge requirements follow the **selected quality profile**, not general preference.
 - One-screen explanation of reader problem, product, main differentiator and first useful action.
 - Small **real** quick start with prerequisites, source-compatible commands and expected observable output; if an install cannot be verified, mark the exact unverified step.
 - Contents for longer READMEs; correct GitHub anchor generation and meaningful navigation.
@@ -237,7 +298,7 @@ the limitation, rather than silently changing them.
 - License (only if evidenced), support/contribution/security reporting and release provenance when relevant.
 - For empty/minimal repositories, honestly prefer a small functional README over a fake “complete” enterprise site.
 
-Never invent working links, badges, release versions, platform support, build scripts, API endpoints, test results, maintainer contact addresses, sponsor programs or licenses. Dynamic badges are appropriate for changing facts only if their target and labels are verified; decorative badges are not achievement evidence. Never force a generated image or extensive table of contents onto a tiny project.
+Never invent working links, badges, release versions, platform support, build scripts, API endpoints, test results, maintainer contact addresses, sponsor programs or licenses. Dynamic badges are appropriate for changing facts only if their target and labels are verified; decorative badges are not achievement evidence. Never force a generated image or extensive table of contents onto a tiny **baseline-profile** project. Gold/Platinum presentation requirements are binding unless a justified exception is independently accepted.
 
 ### 4. Protect existing sources of truth
 
