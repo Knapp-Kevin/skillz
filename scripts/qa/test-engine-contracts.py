@@ -111,6 +111,30 @@ def run_feedback_contract_error(template, forge, verification):
 
 
 class EngineStaticContracts(unittest.TestCase):
+    def test_preference_manager_is_actually_wired_to_skill(self):
+        root = "skills/authored/evidence-driven-refinement-loop/"
+        skill = read(root + "SKILL.md")
+        for name in ("preferences/routing.md", "preferences/schema.json",
+                     "preferences/README.md", "preferences/manage.py",
+                     "preferences/test_manage.py", "preferences.local.json",
+                     "CANONICAL_IMPROVEMENT", "LOCAL_PREFERENCE",
+                     "MIXED", "NO_ACTION", "--approved"):
+            with self.subTest(reference=name):
+                self.assertIn(name, skill)
+        manager = read(root + "preferences/manage.py")
+        self.assertIn("Duplicate JSON field rejected", manager)
+        self.assertIn("def write_atomic(", manager)
+        self.assertIn("refusing", manager.lower() + " refusing")
+        self.assertIn("manual preference reconciliation", manager)
+        self.assertFalse((ROOT / root / "preferences" / "preferences.local.json").exists())
+
+    def test_preference_component_removed_reference_is_detected(self):
+        skill = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
+        poisoned = skill.replace("preferences/manage.py", "preferences/not-a-manager.py")
+        self.assertNotEqual(skill, poisoned)
+        self.assertNotIn("preferences/manage.py", poisoned)
+        self.assertIn("preferences/manage.py", skill)
+
     def test_preference_overlay_is_isolated_from_canonical_rewrites(self):
         skill = read("skills/authored/evidence-driven-refinement-loop/SKILL.md")
         for required in ("CANONICAL_IMPROVEMENT", "LOCAL_PREFERENCE",
