@@ -48,6 +48,12 @@ A successful source-checkout demo is not a published installation, and one passi
 ## Binding quality-profile contract and presentation review (v0.4)
 
 The skill's Baseline/Gold/Platinum expectations are the normative bar.
+**Gold applies by default to substantive repositories.** Baseline is a
+documented, reader-value exception for intrinsically small/limited artifacts,
+not a fallback merely because good branding, links or onboarding are missing.
+Platinum requires independently verified reader and visual/accessibility
+evidence in addition to Gold. The *quality characteristics* are universal;
+their implementations depend on repository type and demonstrable audience need.
 Organization exemplars, style guides, original READMEs, available banners
 and templates must be inspected **before editing**, but they are evidence
 about legitimate identity, established navigation and legal rights. They
@@ -59,8 +65,10 @@ badges, a linked TOC with label/target integrity, explicit reader value,
 a practical first-success journey, maintained technical navigation,
 source-qualified consequential claims and a rendered usability review.
 **Platinum** additionally requires independent reader-task and expanded
-accessibility/responsive review. **Baseline** keeps these contextual;
-do not add decoration when it does not improve that reader's task.
+accessibility/responsive review. **Baseline** is the justified small-artifact exception; do not force
+irrelevant decoration where it degrades user experience. For Gold, a
+missing suitable asset is an action to produce or authorize one, not an
+automatic downgrade or an excuse to borrow another product's branding.
 
 For a selected Gold/Platinum profile, create a contract in the **consumer's**
 approved working area. Example:
@@ -108,6 +116,13 @@ checker pass is not an ownership or CI bypass. The existing section
 disposition preflight remains required for UPLIFT: preserving presentation
 never authorizes losing a verified compatibility warning or other material
 baseline evidence.
+
+**First-user success is an acceptance test**, not a generic command
+presence test. A library example must demonstrate a representative output;
+a CLI or application must have an observable result; a research/specification
+repository needs a credible reading or reproducibility journey. A command
+such as `cargo test` alone is developer verification, not proof of the
+newcomer's intended first outcome.
 
 **Completion receipt must show two decisions independently:** technical
 delivery PASS/FAIL/HOLD/NOT_RUN with actual revision and CI/provenance, and
