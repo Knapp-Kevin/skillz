@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
 display_name: "Evidence-Driven Refinement Loop"
-skill_version: "0.2.0"
+skill_version: "0.3.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
@@ -17,10 +17,10 @@ local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 permission_tier: read-only analysis; specific owner-authorized bounded artifact writes
 portability: high
 review_status: verified-static
-dependency_status: standalone-with-optional-declarative-preference-component
-dependencies: "Seven-file standalone package: normative SKILL.md, README.md, MIT LICENSE, adversarial acceptance examples, and bundled preferences/README.md, schema.json and example.json. No consumer user data, external service, runtime, scheduler, network or sibling package required"
-content_blob_sha: 41a19aeed2f7613a89b68bb7f0f83843b2973701
-complete_package_tree_sha: 11ebfcf7869c72bb3064c1e877e3f5ba714de108
+dependency_status: standalone-with-optional-offline-local-preference-manager
+dependencies: "Ten-file package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional Python 3 manage.py and 17-method test_manage.py. Core works without Python, network, scheduler, persistence or sibling skill; POSIX local helper needs an approved private config root."
+content_blob_sha: f0f72c58e76092975473ebb20f62514a2ecfd21d
+complete_package_tree_sha: 3265448e048faaf00186460a03a1b3ac7ba79d20
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
-rationale: "Exact v0.2.0 complete seven-file static review, score 19/20 (effectiveness design 1 pending independent outcomes). Canonical skill learning and user-specific preference refinement are routed separately; bundled preferences component declares schema and anonymous sample, while user-specific values remain opt-in private outside public sources. Verified local Markdown links, example allowlist, deliberately unauthorized preference/key rejection and independently matching tree SHA. Four additional synthetic preference cases, but no consumer-host execution or effectiveness lift established."
+rationale: "v0.3.0 integrates a first-class preference routing/update component into SKILL.md. The optional offline manager limits stored settings to three presentation keys and user-specific, consent-gated private POSIX storage; supports read, set, update, remove, clear and version hold. Canonical defects remain separately qualified proposals. Ten-file exact package, local links and schema example statically checked; 17 bundled optional regression test methods and 22 engine QA methods NOT_RUN, no independent consumer outcomes. Static semantic assessment 18/20."
