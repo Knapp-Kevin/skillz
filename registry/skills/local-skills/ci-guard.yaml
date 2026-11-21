@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "Nineteen-file standalone package with executable DAG planner/executor/qualifier, exact Git and trusted policy/command manifests, CI reference and optional Python stdlib/Git tests. Consumer-owned real verification commands and explicit branch-policy authority required for deployment."
 content_blob_sha: 28bd16010b92f4e86ae17684b2ab8d91737f49df
-complete_package_tree_sha: 4d3aa3d20653e933d879171d769989eb6d8c4169
+complete_package_tree_sha: fdf9278bef98eae5c72bda2766d1fe1c4a9959f6
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
