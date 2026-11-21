@@ -74,7 +74,7 @@ configuration mechanism. If it cannot establish isolation/consent,
 operate without persistence. Neither the skill nor a schema grants
 permission to write files, change memory, transmit telemetry or sync.
 
-## Adversarial review boundary (v0.3.1)
+## Adversarial review and locking boundary (v0.3.2)
 
 The helper rejects unsupported action names even if imported and called
 without its CLI parser, rechecks permissions against the **opened file
@@ -89,10 +89,14 @@ nonreplaceable directories under the supported POSIX permission model;
 world/group-writable parents without a sticky bit are refused. This
 limits cross-UID path replacement, **not** adversarial processes with
 the same effective UID, unsafe container sharing, compromised machines,
-or simultaneous unrelated updates. The helper does not provide a
-cross-process transaction lock, OS sandbox, or proof of consent. A
-host that permits concurrent preference writes must serialize them
-or use a stronger host-native store. If mutation partially succeeds
+or simultaneous unrelated updates. The helper uses a POSIX **nonblocking advisory lock** to serialize
+cooperating writers on the same machine; if another writer owns the
+lock, mutation fails with an explicit retryable contention result.
+Read-only lookups remain lock-free and only observe complete atomic
+files. The lock does **not** protect against hostile same-UID programs,
+noncooperating writers, or distributed hosts, and is not proof of
+consent. A shared host or multi-machine deployment needs a stronger
+host-native isolation and transaction boundary. If mutation partially succeeds
 but subsequent syncing/verification fails, the helper reports a
 blocked result; inspect the actual file instead of assuming rollback.
 
