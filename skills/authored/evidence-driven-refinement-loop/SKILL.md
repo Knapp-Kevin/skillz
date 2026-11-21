@@ -180,26 +180,19 @@ a private filesystem. If no trustworthy store is available, honor the
 preference for the current interaction and optionally return a portable
 file for a user-controlled save; do not claim it was persisted.
 
-Only non-executable, narrowly applicable preference *data* belongs in
-that file. An illustrative user-approved record is:
+The **`preferences/` component bundled with this package** contains
+[`preferences/schema.json`](preferences/schema.json),
+[`preferences/example.json`](preferences/example.json), and
+[`preferences/README.md`](preferences/README.md). Those are shareable
+rules and anonymous examples, **not** a user's saved preferences. The
+active user's non-executable values belong in a separately authorized
+`preferences.local.json` file. If this is a genuinely private,
+single-user installed copy, that file may live under its
+`preferences/` directory; in a public checkout, shared installation or
+multi-user host, keep it in an isolated private user configuration area
+instead. Never write real user data into the distributed source package,
+or assume this host supports writable local storage.
 
-```json
-{
-  "schema_version": 1,
-  "skill_id": "example-skill",
-  "base_skill_version": "1.0.0",
-  "scope": "user-local",
-  "preferences": [
-    {
-      "key": "response.detail",
-      "value": "concise",
-      "source": "explicit-user-confirmation"
-    }
-  ]
-}
-```
-
-Use the actual installed skill identity/version, not the placeholders.
 Scope user/project-specific settings to the correct profile; preserve
 minimal provenance of *consent*, not raw conversation text. Never store
 secrets, identifiers beyond what the storage mechanism truly needs,
