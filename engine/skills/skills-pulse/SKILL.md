@@ -60,7 +60,7 @@ exhaustive claim.
 
 ## Output
 
-For each candidate provide:
+Before candidate recommendations, report which capability families, source lanes, source pins, manifest pages/chunks and alternative queries were actually checked, along with important omissions. Then, for each candidate provide:
 
 - source and exact revision/identity when available, including checked-at date;
 - what differentiated capability it adds;
