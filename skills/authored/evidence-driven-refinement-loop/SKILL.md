@@ -234,8 +234,10 @@ or assume this host supports writable local storage.
    python preferences/manage.py --root "$USER_PRIVATE_CONFIG" remove response.detail --approved
    ```
 
-   The variable stands for a host-confirmed **existing** user-private
-   directory, not an installation path to invent. The manager checks
+   Run these commands from the installed skill's directory, or use
+   the actual absolute path to its bundled manager. The variable
+   stands for a host-confirmed **existing** user-private directory,
+   not an installation path to invent. The manager checks
    real directory ownership/modes, refuses symlinks and unauthorized
    fields, writes atomically, rejects stale skill versions and supports
    `clear --approved` to revoke all retained settings. Its `--approved`
@@ -250,7 +252,12 @@ or assume this host supports writable local storage.
    [component rules](preferences/README.md) without the helper script.
    After an actual write, re-read and validate the result; disclose
    failure rather than announcing success. On version upgrades, hold
-   incompatible entries pending deliberate user review.
+   incompatible entries pending deliberate user review, but retain
+   **explicitly approved full revocation** even when the stored JSON,
+   canonical version or bundled schema is damaged. Do not misreport a
+   failed post-write check as rollback; inspect actual persisted state.
+   The POSIX helper does not protect against hostile same-UID processes
+   or serialize independent simultaneous writers.
 
 Scope user/project-specific settings to the correct profile; preserve
 minimal provenance of *consent*, not raw conversation text. Never store
