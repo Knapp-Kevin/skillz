@@ -145,6 +145,73 @@ class PortableClassification(unittest.TestCase):
                     with self.assertRaises(impact.ClassificationError):
                         impact.load_policy(path)
 
+    def test_documentation_prefix_must_respect_directory_boundary(self):
+        """A policy for docs must never classify docsecrets as passive."""
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "policy.json"
+            for prefix in ("docs", "docs-private", "src", "docs//",
+                           "docs/../", "docs/./"):
+                with self.subTest(prefix=prefix):
+                    p.write_text(json.dumps({
+                        "schema_version": 1, "rules": [
+                            {"match": "prefix", "pattern": prefix,
+                             "category": "documentation"}]
+                    }), encoding="utf-8")
+                    with self.assertRaises(impact.ClassificationError):
+                        impact.load_policy(p)
+            p.write_text(json.dumps({
+                "schema_version": 1, "rules": [
+                    {"match": "prefix", "pattern": "docs/",
+                     "category": "documentation"}]
+            }), encoding="utf-8")
+            checked = impact.load_policy(p)
+            self.assertEqual(
+                impact.classify(["docs/guides/usage.md"], checked)["route"],
+                "targeted")
+            for adjacent in ("docsecrets/incident.md",
+                             "docs-private/keys.md",
+                             "docs-shared/contract.md"):
+                with self.subTest(adjacent=adjacent):
+                    self.assertEqual(
+                        impact.classify([adjacent], checked)["route"], "full")
+
+    def test_direct_prefix_rule_cannot_bypass_directory_boundary(self):
+        # Programmatic users of classify() may skip load_policy().
+        bad_rule = [{"match": "prefix", "pattern": "docs",
+                     "category": "documentation"}]
+        self.assertEqual(
+            self.route(["docsecrets/incident.md"], rules=bad_rule)["route"],
+            "full")
+        self.assertEqual(
+            self.route(["docs/guide.md"], rules=bad_rule)["route"],
+            "full")
+
+    def test_global_markdown_suffix_cannot_claim_passive_docs(self):
+        """Markdown can be a model/build input, release or governance asset."""
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "policy.json"
+            p.write_text(json.dumps({
+                "schema_version": 1, "rules": [
+                    {"match": "suffix", "pattern": ".md",
+                     "category": "documentation"}]
+            }), encoding="utf-8")
+            with self.assertRaises(impact.ClassificationError):
+                impact.load_policy(p)
+            # Explicit trusted approved directories still work.
+            p.write_text(json.dumps({
+                "schema_version": 1, "rules": [
+                    {"match": "prefix", "pattern": "docs/passive/",
+                     "category": "documentation"},
+                    {"match": "suffix", "pattern": ".md",
+                     "category": "governance"}]
+            }), encoding="utf-8")
+            checked = impact.load_policy(p)
+            self.assertEqual(
+                impact.classify(["docs/passive/guide.md"], checked)["route"],
+                "full")  # Conservative category wins.
+            self.assertEqual(
+                impact.classify(["notes/manual.md"], checked)["route"], "full")
+
     def test_ambiguous_duplicate_json_keys_are_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / "policy.json"
