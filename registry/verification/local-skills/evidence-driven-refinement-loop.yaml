@@ -36,17 +36,3 @@ notes: >-
   helper tests and 22 engine tests exist but NOT_RUN. This exact-source
   static assessment does not certify runtime privacy, security or efficacy.
   Review: docs/reviews/2026-11-21-evidence-driven-refinement-loop-adversarial-v031.md.
-
-  Static v0.3.0 score: trigger 2, procedure 2, authority 2,
-  failure 2, evidence 2, dependency 1 (optional helper unexecuted),
-  portability 2 (declarative fallback, POSIX helper only),
-  differentiation 2, adversarial resilience 2, effectiveness 1.
-  Verified is source-level semantic review of exactly pinned ten-file
-  package, not proof of helper execution, host privacy, or effectiveness.
-  New preference routing component distinguishes canonical improvement
-  hypotheses from scoped user tastes. Helper code reviewed for allowlists,
-  ownership/mode checks, symlink refusal, no source checkout writes, atomic
-  updates, JSON duplicate key refusal, approval flag and version holds.
-  The approval flag does not itself prove user consent. Eighteen regression
-  methods are committed but NOT_RUN; reviewer-designed 14 scenarios are
-  not observed agent behavior. Previous v0.2.0 review is historical.
