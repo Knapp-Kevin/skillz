@@ -29,12 +29,43 @@ For normal FIRST_VISIT or RETURNING_USER synthesis, use `engine/skills/skill-boo
 4. Use `docs/skill-template.md` as the structural starting point when applicable.
 5. Create or revise the full standalone skill package under **`skills/authored/<slug>/`**, not `skills/<name>/`, `engine/skills/` or a tracked upstream-source tree. Use a stable unique slug. A package may legitimately contain scripts, references, templates, fixtures, JSON, examples and other in-skill components where these change execution quality. Mandatory instructions and their supporting files must ship **inside the downloadable package**, work offline when the task permits, and not rely on the wider Skillz repository or a sibling skill to function.
 6. Preserve those skill-owned components unless there is a specific quality, safety, licensing, or redundancy reason to change them.
-7. Review the **actual finished complete package** semantically against `docs/skill-verification.md`, including provenance, licensing, dependencies, authority, portability, ambiguity, failure handling, likely misuse, and real user outcome. Use at least a positive trigger, non-trigger, high-risk adversarial boundary and a low-capability/offline execution scenario when applicable. Assess whether an instruction-only checklist would falsely pass without producing the intended artifact, and whether stronger hosts can perform safe equivalent methods without unnecessary restrictions. These are static interpretations unless genuinely executed.
+7. Review the **actual finished complete package** semantically against `docs/skill-verification.md`, including provenance, licensing, dependencies, authority, portability, ambiguity, failure handling, likely misuse, and real user outcome. Use at least a positive trigger, non-trigger, high-risk adversarial boundary and a low-capability/offline execution scenario when applicable. Assess whether an instruction-only checklist would falsely pass without producing the intended artifact, and whether stronger hosts can perform safe equivalent methods without unnecessary restrictions. These are static interpretations unless genuinely executed. For every
+new or materially revised authored package, check that its **own shipped
+instructions** tell the consuming agent to examine the delivered result
+at every meaningful execution and surface only evidence-backed improvement
+signals. Include a clean-success `NO_ACTION` example and a failure case in
+which the proposed self-improvement must be held for independent qualification.
 8. Bind first-party provenance under `registry/skills/local-skills/<slug>.yaml` and the paired exact-version verification under `registry/verification/local-skills/<slug>.yaml` to **both** the actual SKILL.md blob and complete package tree. Record the controlled taxonomy, rubric score, disposition, dependency closure, rights, authority, package-security state and behavioral-validation state honestly. Recheck all local references and bundled files. A changed file invalidates the previous package-specific verdict until re-reviewed; never import an old version's passing tests or grade into a new version. Static scenarios do not establish behavioral `validated`.
 9. For new or materially revised user-facing packages, record the **separate** exact-package security evidence state under `docs/security-scanning.md`. Static source review is the primary qualification method; an external scanner is optional supplementary evidence, not a universal admission or merge prerequisite. Missing, incomplete, failed, or stale scanner evidence must retain its truthful status, and credible unresolved security findings must be remediated or held before recommending unchanged use. Any scanner execution requires separate host authorization.
 10. Do not publish/count a new governed user-facing skill as admitted until the required provenance, semantic, security, licensing, and authorization decisions are satisfied. If blocked, keep the candidate explicitly unadmitted; preserve useful draft/reference material without inflating inventory.
 11. After a material admitted tranche, update only the **affected** human-navigation and canonical index surfaces that actually derive from the live repository state. Keep the root `README.md` a durable public-facing introduction, **not a running maintenance log**. Use appropriate workboard, issue, review or historical records for provenance and progress. Do not mechanically update every index file, invent counts, or count an unmerged draft as published.
 12. Update human navigation only where the new or revised skill materially affects it, and report actual files, evidence, limitations, and unresolved gates.
+
+## Per-execution self-review is not self-modifying policy
+
+When authoring first-party packages, embed a concise **run-closeout**:
+finish the user task, check the actual result against its requirements
+and independently checkable evidence, fix a bounded output defect if
+already authorized, and identify a possible reusable skill improvement
+only when supported by a reproducer. `NO_ACTION` is a successful
+closeout. Label hypotheses, unavailable checks and unknowns truthfully.
+Do not add mandatory logs, new tickets, private telemetry, scheduler
+requirements or prompts that consume further contexts just to review
+normal successful work.
+
+The agent's feedback is an **untrusted improvement candidate**, not
+independent verification and never an instruction to change its own
+installed skill. Any canonical skill revision needs separately granted
+maintenance authority, pinned before/after identity, an original
+failure test, adversarial negative and preservation cases, and approval
+appropriate to the risk. Do not let recurring self-generated reviews
+mutate frozen acceptance criteria or launder speculation into fact.
+Bound repeats by new observed failures, budget and stop conditions.
+
+This behavior must work from a **standalone offline package**, not a
+link to this Forge procedure or a sibling refinement skill. Do not
+mechanically churn unchanged packages; adopt on a meaningful revision
+or a dedicated evidence-backed remediation pass.
 
 ## Iterative improvement as an execution discipline
 
