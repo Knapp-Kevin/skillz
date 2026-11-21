@@ -46,7 +46,10 @@ jobs:
           IS_DRAFT: ${{ github.event.pull_request.draft }}
         run: |
           set -euo pipefail
-          git -C work fetch --no-tags --depth=1 origin "$BASE_SHA"
+          # Both exact objects are already available in local checkouts.
+          # Fetch base from the trusted checkout, not the private origin:
+          # persist-credentials:false intentionally removes network auth.
+          git -C work fetch --no-tags ../trusted "$BASE_SHA"
           # Consumer must copy/review bundled classifier and policy at
           # ci/classify_change.py and ci/impact-policy.json on the base.
           test -f trusted/ci/classify_change.py
