@@ -215,6 +215,10 @@ def _matches(path: str, rule: dict) -> bool:
         # An already-validated rule has a trailing separator. Keep the
         # boundary check here as defense if a caller supplies direct rules.
         return pattern.endswith("/") and path.startswith(pattern)
+    # Conservative for direct API callers that bypass load_policy.
+    # No universal file-extension pattern proves passive documentation.
+    if rule["category"] == "documentation":
+        return False
     return path.endswith(pattern)
 
 
