@@ -68,6 +68,16 @@ Distinguish two independent outputs of the review:
   compatibility check. If the host lacks suitable local storage, do not
   invent a path or claim persistence.
 
+When personalization is meaningful, make it a **first-class
+bundled `preferences/` component** containing an explanatory README,
+non-executable JSON Schema and anonymous example. Keep the runtime
+`preferences.local.json` out of the publicly distributed package.
+It may reside beside the template in a verified private single-user
+installation, otherwise under a real user-scoped private configuration
+location. Do not require this folder for skills without meaningful
+personalization knobs, and never mistake a template/example for data
+actually retained on a consumer host.
+
 Split mixed findings rather than hiding a defect as preference or
 exporting user preferences into universal skill policy. A local overlay
 is subordinate to host/safety rules, active user intent, canonical
