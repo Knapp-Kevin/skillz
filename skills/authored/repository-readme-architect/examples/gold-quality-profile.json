@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "profile": "gold",
+  "project_identity": "Example Kit",
+  "banner_path": "assets/example-kit-banner.png",
+  "required_badge_labels": [
+    "Build",
+    "License"
+  ],
+  "allowed_badge_targets": [
+    "https://code.example.invalid/example-kit/actions",
+    "https://code.example.invalid/example-kit/license"
+  ],
+  "journey_mode": "execute",
+  "exceptions": []
+}
