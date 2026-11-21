@@ -94,6 +94,30 @@ def contract_from(path):
     return cfg
 
 
+def _image_geometry(path):
+    """Reject impossible raster dimensions and active/external SVG.
+
+    This is NOT a decode or visual review. Actual render remains HOLD.
+    """
+    suffix = path.suffix.lower()
+    if suffix == ".png":
+        with path.open("rb") as stream:
+            hdr = stream.read(24)
+        if len(hdr) < 24 or hdr[:8] != b"\x89PNG\r\n\x1a\n" or hdr[12:16] != b"IHDR":
+            raise InputError("invalid PNG identity/header")
+        return (int.from_bytes(hdr[16:20], "big"), int.from_bytes(hdr[20:24], "big"))
+    if suffix == ".svg":
+        markup = path.read_text(encoding="utf-8")
+        if re.search(r"(?i)<\s*(?:script|foreignObject)\b|\bon\w+\s*=|(?:href|xlink:href)\s*=\s*['\"]\s*(?:https?:|//|javascript:|data:)", markup):
+            raise InputError("SVG active or remote dependencies are not trusted assets")
+        m = re.search(r"\bviewBox\s*=\s*['\"]\s*[\d.]+\s+[\d.]+\s+([\d.]+)\s+([\d.]+)\s*['\"]", markup)
+        if not m:
+            raise InputError("SVG banner viewBox absent or unrecognized")
+        return (float(m.group(1)), float(m.group(2)))
+    # JPEG/WebP/other formats require an authenticated decoder at visual review.
+    return None
+
+
 def _slug(text):
     text = re.sub(r"[*_\x60~]", "", text.strip().rstrip("#").strip()).lower()
     return re.sub(r"\s+", "-", re.sub(r"[^\w\- ]", "", text))
@@ -173,7 +197,14 @@ def audit(root, readme, cfg):
     elif len(selected[0]) < 6:
         check("banner", "FAIL", "banner alt text is not descriptive")
     else:
-        check("banner", "HOLD", "referenced asset exists; brand identity, rights and rendered quality unverified")
+        try:
+            dims = _image_geometry(_path(root, banner))
+            if dims and (dims[0] < 480 or dims[1] < 100 or not 1.5 <= dims[0] / dims[1] <= 9.0):
+                check("banner", "FAIL", "banner intrinsic size/aspect ratio is unsuitable for a README hero")
+            else:
+                check("banner", "HOLD", "plausible local asset; brand rights, actual rendering and responsive quality unverified")
+        except (OSError, UnicodeError, ValueError, ZeroDivisionError) as e:
+            check("banner", "FAIL", "banner image integrity: " + str(e))
     for alt, src in images:
         if len(alt) < 6 or alt.casefold() in ("banner", "logo", "image", "screenshot"):
             check("image-alt", "FAIL", "non-descriptive image alt: " + src[:120])
