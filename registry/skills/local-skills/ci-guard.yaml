@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.4.0"
+skill_version: "1.4.1"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -19,9 +19,9 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib-and-policy-fixture
 dependencies: "Standalone eleven-file package: SKILL.md and four local components, portable classification template, synthetic acceptance/tests, optional Python 3.9+ Git-based classifier and anonymous example JSON policy, MIT license. No runtime connection or universal repository assumptions."
-content_blob_sha: 3b1ca78d2cf63cb4e6c280515c503f38e85e0d14
-complete_package_tree_sha: d985e3d7fbd4f8e26739558066e991f37fc36911
+content_blob_sha: 9d270cc45bdb4fc31c07ff165a85df0cc86c0db8
+complete_package_tree_sha: 790a54da6624e344e59f5b8cc089aa55b94880a6
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.4.0 introduces generic impact categories, trusted consumer-specific policy, draft and exact-candidate routing, required decision gate, and verified artifact reuse contract. 19 newly authored synthetic test methods but executable current-version tests NOT_RUN; prior v1.3 16/16 results historical only. Exact-package review and consumer acceptance pending."
+rationale: "v1.4.1 corrects a proven lexical-prefix docs classification vulnerability, blocks unbounded Markdown docs-only selectors, and removes an authenticated-remote fetch dependency from the example workflow. Local controlled rule-level emulation 5/5 and anonymous two-checkout Git fixture passed; 28 authored Python test methods are present but NOT_RUN against exact current package. Real consumer workflow and independent host acceptance pending."
