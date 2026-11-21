@@ -66,9 +66,9 @@ Skillz separates *what is documented* from *what has actually been demonstrated*
 | Measure | Recorded state | Source |
 | --- | ---: | --- |
 | Canonical capability domains / subdomains | **33 / 247** | [Capability directory](registry/capability-directory.json) |
-| Governed review identities | **1,047** | [Name index](registry/governed-review-name-index.json) |
-| Identities linked to capability examples | **131** | [Capability directory](registry/capability-directory.json) |
-| Authored skill packages indexed | **30** | [Authored-skill index](registry/authored-skills-index.json) |
+| Governed review identities | **1,049** | [Name index](registry/governed-review-name-index.json) |
+| Identities linked to capability examples | **133** | [Capability directory](registry/capability-directory.json) |
+| Authored skill packages indexed | **32** | [Authored-skill index](registry/authored-skills-index.json) |
 | Historical source packages retired | **44 / 44** | [Retirement ledger](registry/migration/frostwulf-independent-replacement-ledger-20261118.json) |
 
 The 44 historical entrypoints were consolidated into 21 independently authored replacement packages under owner-accepted bounded evaluation procedures. Their original source identities remain in Git history. **Independent original-vs-replacement host parity, 1.5× measured quality improvement and historical copyright ownership remain unproven**; retirement does not erase those qualifications. See [issue #738](https://github.com/Knapp-Kevin/skillz/issues/738).
