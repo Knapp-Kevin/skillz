@@ -1,0 +1,44 @@
+name: Skill package regression
+
+on:
+  pull_request:
+    paths:
+      - 'skills/authored/evidence-driven-refinement-loop/**'
+      - 'engine/skills/**'
+      - 'docs/skill-template.md'
+      - 'docs/skill-verification.md'
+      - 'scripts/qa/test-engine-contracts.py'
+      - '.github/workflows/skill-package-regression.yml'
+  push:
+    branches:
+      - refine/engine-reliability-review-20261120
+    paths:
+      - 'skills/authored/evidence-driven-refinement-loop/**'
+      - 'engine/skills/**'
+      - 'docs/skill-template.md'
+      - 'docs/skill-verification.md'
+      - 'scripts/qa/test-engine-contracts.py'
+      - '.github/workflows/skill-package-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: skill-package-regression-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  classified-skill-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@v4
+      - name: Run preference manager regression suite
+        run: |
+          python3 --version
+          python3 -m unittest discover -s skills/authored/evidence-driven-refinement-loop/preferences -p 'test_manage.py' -v
+      - name: Run engine source contract suite
+        run: |
+          python3 scripts/qa/test-engine-contracts.py -v
