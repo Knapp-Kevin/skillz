@@ -158,6 +158,40 @@ class PreferenceManagerTests(unittest.TestCase):
         with self.assertRaisesRegex(manage.PreferenceError, "Duplicate"):
             manage.execute(self.args("show"))
 
+    def test_stale_overlay_can_be_revoked_without_schema_migration(self):
+        self.set_pref()
+        doc = json.loads(self.file().read_text())
+        doc["base_skill_version"] = "999.0.0"
+        self.file().write_text(json.dumps(doc))
+        result = manage.execute(self.args("clear", approved=True))
+        self.assertEqual(result["status"], "REMOVED")
+        self.assertFalse(self.file().exists())
+
+    def test_malformed_overlay_can_be_revoked_without_reading_json(self):
+        self.set_pref()
+        self.file().write_text("{broken json")
+        result = manage.execute(self.args("clear", approved=True))
+        self.assertEqual(result["remaining"], 0)
+        self.assertFalse(self.file().exists())
+
+    def test_cannot_revoke_symlink_overlay(self):
+        target = manage.overlay_file(str(self.root), create_dirs=True)
+        other = self.root / "unrelated.json"
+        other.write_text("keep me")
+        target.symlink_to(other)
+        with self.assertRaisesRegex(manage.PreferenceError, "unsafe"):
+            manage.execute(self.args("clear", approved=True))
+        self.assertEqual(other.read_text(), "keep me")
+
+    def test_revocation_without_approval_is_rejected_even_if_stale(self):
+        self.set_pref()
+        doc = json.loads(self.file().read_text())
+        doc["base_skill_version"] = "999.0.0"
+        self.file().write_text(json.dumps(doc))
+        with self.assertRaisesRegex(manage.PreferenceError, "approval"):
+            manage.execute(self.args("clear"))
+        self.assertTrue(self.file().exists())
+
     def test_version_mismatch_is_held_not_upgraded(self):
         self.set_pref()
         doc = json.loads(self.file().read_text())
