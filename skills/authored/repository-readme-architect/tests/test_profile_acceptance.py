@@ -134,6 +134,39 @@ class QualityProfileTests(unittest.TestCase):
     def test_present_readable_intro_is_held_until_editorial_review(self):
         self.assertEqual(self.gate("opening-meaning")[0]["status"], "HOLD")
 
+    def test_html_picture_banner_supported_but_not_auto_visual_pass(self):
+        original = "![An original Example Kit visual that introduces the project](assets/banner.png)"
+        html = ('<picture><source media="(prefers-color-scheme: dark)" '
+                'srcset="assets/banner.png">'
+                '<img src="assets/banner.png" '
+                'alt="An original Example Kit visual that introduces the project"></picture>')
+        self.write_readme(BASE.replace(original, html))
+        self.assertEqual(self.gate("banner")[0]["status"], "HOLD")
+        self.assertEqual(self.gate("html-images")[0]["status"], "HOLD")
+
+    def test_html_banner_without_alt_is_not_accessible(self):
+        original = "![An original Example Kit visual that introduces the project](assets/banner.png)"
+        self.write_readme(BASE.replace(original, '<img src="assets/banner.png">'))
+        self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
+
+    def test_active_svg_banner_fails_integrity(self):
+        (self.root / "assets/banner.svg").write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240">'
+            '<script>alert(1)</script></svg>', encoding="utf-8")
+        self.contract["banner_path"] = "assets/banner.svg"
+        self.contract["asset_inventory"][0]["path"] = "assets/banner.svg"
+        self.write_readme(BASE.replace("assets/banner.png", "assets/banner.svg"))
+        self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
+
+    def test_valid_svg_still_requires_rendered_brand_review(self):
+        (self.root / "assets/banner.svg").write_text(
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240">'
+            '<rect width="960" height="240" fill="navy"/></svg>', encoding="utf-8")
+        self.contract["banner_path"] = "assets/banner.svg"
+        self.contract["asset_inventory"][0]["path"] = "assets/banner.svg"
+        self.write_readme(BASE.replace("assets/banner.png", "assets/banner.svg"))
+        self.assertEqual(self.gate("banner")[0]["status"], "HOLD")
+
     def test_missing_banner_is_failed(self):
         self.write_readme(BASE.replace("![An original Example Kit visual that introduces the project](assets/banner.png)", ""))
         self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
