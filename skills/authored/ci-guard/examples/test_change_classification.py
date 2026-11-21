@@ -87,7 +87,10 @@ class PortableClassification(unittest.TestCase):
         self.assertIn("ready_for_review", text)
         self.assertIn("if: ${{ always() }}", text)
         self.assertIn("CLASSIFY_RESULT", text)
-        self.assertIn("selected != 1", text)
+        self.assertIn("needs: [classify, docs, rust, model, trust]", text)
+        self.assertIn("ci_plan.py qualify", text)
+        self.assertIn("ci-evidence.json", text)
+        self.assertIn("--group docs", text)
         self.assertNotIn("pull_request_target", text)
 
     def test_private_repo_template_uses_existing_local_base_checkout(self):
