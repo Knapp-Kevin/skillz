@@ -124,6 +124,30 @@ def _section(cleaned, pattern):
     return None
 
 
+def _opening(cleaned):
+    """Collect the first public-facing paragraph, not title/banner/badges."""
+    seen_title = False
+    result = []
+    for line in cleaned:
+        heading = local.HEAD.match(line)
+        if heading and len(heading.group(1)) == 1 and not seen_title:
+            seen_title = True
+            continue
+        if not seen_title:
+            continue
+        if heading:
+            break
+        item = line.strip()
+        if not item or item.startswith(("![", "[![", "<picture", "<img", "|", "---")):
+            continue
+        if item.startswith(("-", "*", "+")) and not result:
+            continue
+        result.append(item)
+        if len(" ".join(result).split()) >= 130:
+            break
+    return " ".join(result)
+
+
 def audit(root, readme, cfg):
     raw = _read(_path(root, readme))
     cleaned = local.clean_lines(raw)
@@ -203,9 +227,15 @@ def audit(root, readme, cfg):
 
     check("technical-navigation", "HOLD" if any(TECH_HEAD.match(l) for l in cleaned) else "FAIL",
           "technical references require source-bound verification, not just headings")
-    # The semantic Why→What→How and tenth-grade comprehension tests are never
-    # marked PASS by simple phrases, text length, readability scores or regex.
-    check("opening-meaning", "HOLD", "review Why→What→How, 30-second purpose and Grade-10 comprehension independently")
+    # Obvious defects may FAIL mechanically. A good heuristic result is never
+    # a semantic PASS: Why/What/How and comprehension require editorial review.
+    opening = _opening(cleaned)
+    if len(opening.split()) < 22:
+        check("opening-meaning", "FAIL", "first-screen narrative is missing or too short to explain a reader problem")
+    elif re.search(r"[∑∫∂∀∃⊗∈⊂]|\\\\begin\\{|\\$\\$", opening):
+        check("opening-meaning", "FAIL", "unexplained equations or dense notation lead the public introduction")
+    else:
+        check("opening-meaning", "HOLD", "independently verify Why→What→How, 30-second purpose and Grade-10 comprehension")
     local_report = local.audit(root, _path(root, readme))
     if local_report["local_blockers"]:
         check("local-links", "FAIL", "%d broken local links/anchors" % local_report["local_blockers"])
