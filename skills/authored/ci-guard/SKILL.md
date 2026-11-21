@@ -293,9 +293,16 @@ not fewer safeguards.
    self-blocking gate, use only an owner-authorized, scoped repair path with
    a known temporary safeguard and restoration criterion; never bypass
    branch protection merely because the change fixes CI.
-10. **Verify delivery, not just checks.** Distinguish config proposed, committed,
-   tested on the exact head, reviewed, merged, deployed and observed benefit.
-   A green workflow never substitutes for runtime or customer acceptance.
+10. **Verify delivery, not just checks.** Shadow-compare selected
+   execution against original full acceptance, including planted failures,
+   before migrating branch-required statuses. Verify the old unconditional
+   expensive bootstrap really stopped running; do not assume a new
+   classifier reduced costs. Measure actual billed runner minutes and
+   qualification critical path from comparable observed source-bound runs,
+   or mark savings NOT_MEASURED. Separate PROPOSED, IMPLEMENTED,
+   LOCALLY_TESTED, INDEPENDENTLY_INTEGRATED, BRANCH_PROTECTED,
+   MERGED, DEPLOYED and BENEFIT_MEASURED. A green workflow alone never
+   substitutes for actual product/user acceptance.
 
 ## Report contract
 
