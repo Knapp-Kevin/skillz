@@ -174,6 +174,13 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(result["remaining"], 0)
         self.assertFalse(self.file().exists())
 
+    def test_revocation_still_works_with_missing_bundle_schema(self):
+        self.set_pref()
+        with patch.object(manage, "SCHEMA_FILE", self.root / "missing-schema.json"):
+            result = manage.execute(self.args("clear", approved=True))
+        self.assertEqual(result["status"], "REMOVED")
+        self.assertFalse(self.file().exists())
+
     def test_cannot_revoke_symlink_overlay(self):
         target = manage.overlay_file(str(self.root), create_dirs=True)
         other = self.root / "unrelated.json"
