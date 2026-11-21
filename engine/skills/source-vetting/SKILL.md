@@ -57,7 +57,10 @@ Source: <canonical source>
 Maintainer/publisher: <identity>
 Source class: <official / official-ecosystem / community-vetted / aggregated / normative / other>
 License model: <root + per-skill caveats>
-Revision: <exact revision if established>
+Revision: <exact revision if established; latest upstream state separately>
+Canonical origin and mirror/fork lineage: <observed source identities or unknown>
+Scope inspected: <packages/files/source manifest parts actually read>
+Uninspected scope: <pages, subtrees, missing license evidence, or none>
 Differentiated value: <what this source adds>
 Material risks/ambiguities: <only meaningful findings>
 Recommended source role: tracked-corpus | normative-spec | dynamic-discovery | reference-only | do-not-track
