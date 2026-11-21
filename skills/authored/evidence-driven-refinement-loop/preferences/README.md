@@ -74,6 +74,28 @@ configuration mechanism. If it cannot establish isolation/consent,
 operate without persistence. Neither the skill nor a schema grants
 permission to write files, change memory, transmit telemetry or sync.
 
+## Adversarial review boundary (v0.3.1)
+
+The helper rejects unsupported action names even if imported and called
+without its CLI parser, rechecks permissions against the **opened file
+descriptor**, verifies a save by reopening the stored overlay, and syncs
+file and directory changes before reporting success. An explicitly
+approved `clear` revokes the file even if its JSON, skill version, or
+bundled schema cannot be read. It still requires an owner-private root
+and refuses a nonregular or symlinked preference file.
+
+The root path must be absolute. Ancestor directories must be real,
+nonreplaceable directories under the supported POSIX permission model;
+world/group-writable parents without a sticky bit are refused. This
+limits cross-UID path replacement, **not** adversarial processes with
+the same effective UID, unsafe container sharing, compromised machines,
+or simultaneous unrelated updates. The helper does not provide a
+cross-process transaction lock, OS sandbox, or proof of consent. A
+host that permits concurrent preference writes must serialize them
+or use a stronger host-native store. If mutation partially succeeds
+but subsequent syncing/verification fails, the helper reports a
+blocked result; inspect the actual file instead of assuming rollback.
+
 ## Allowed and disallowed behavior
 
 - The overlay changes **optional presentation**, such as response detail,
