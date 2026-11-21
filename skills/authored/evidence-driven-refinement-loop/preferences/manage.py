@@ -115,13 +115,19 @@ def check_private_dir(path: Path, *, allow_create: bool) -> None:
 
 
 def reject_checkout_root(root: Path) -> None:
-    # Do not silently create user data in this package or the containing
-    # source checkout. A standalone installed copy has no .git boundary.
+    """Reject all source checkouts, not just the skill's own repository.
+
+    An apparently private 0700 directory may still be inside a different
+    Git working tree (including a linked worktree with a .git FILE). Keep
+    per-user preferences out of every source checkout, even when the
+    caller supplied that path deliberately.
+    """
     actual = root.resolve()
     if actual == PACKAGE or PACKAGE in actual.parents:
         raise PreferenceError("Local preferences cannot be written inside the skill package")
-    for ancestor in (PACKAGE, *PACKAGE.parents):
-        if (ancestor / ".git").exists() and (actual == ancestor or ancestor in actual.parents):
+    for ancestor in (actual, *actual.parents):
+        marker = ancestor / ".git"
+        if (ancestor.name == ".git" or marker.exists() or marker.is_symlink()):
             raise PreferenceError("Local preferences cannot be stored in a source checkout")
 
 
