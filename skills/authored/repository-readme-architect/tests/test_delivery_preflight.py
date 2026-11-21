@@ -51,10 +51,10 @@ class DeliveryPreflightTests(unittest.TestCase):
         self.assertNotIn('BASELINE_REQUIRED_FOR_UPLIFT',self.run_audit('CREATE')['blockers'])
     def test_unchanged_sections_retained(self):
         self.put('before.md','# Guide\n\nImportant constraints remain exactly here.\n')
-        self.put('README.md','# New name\n\nImportant constraints remain exactly here.\n')
+        self.put('README.md','# Guide\n\nImportant constraints remain exactly here.\n')
         p=self.run_audit(baseline='before.md')['preservation_audit']
         self.assertEqual(p['missing_dispositions'],0)
-        self.assertEqual(p['section_findings'][0]['state'],'RETAINED_EXACT_BODY')
+        self.assertEqual(p['section_findings'][0]['state'],'RETAINED_EXACT_SECTION')
     def test_removed_section_without_disposition_blocks(self):
         self.put('before.md','# Intro\n\nCritical compatibility information.\n## Limits\n\nWindows build is not released.\n')
         z=self.run_audit(baseline='before.md')
@@ -62,9 +62,79 @@ class DeliveryPreflightTests(unittest.TestCase):
         self.assertEqual(z['README_delivery_preflight'],'BLOCKED')
     def test_unchanged_code_content_detected(self):
         self.put('before.md','# Setup\n\n```sh\npython -m app --safe\n```\n')
-        self.put('README.md','# New setup\n\n```sh\npython -m app --safe\n```\n')
+        self.put('README.md','# Setup\n\n```sh\npython -m app --safe\n```\n')
         z=self.run_audit(baseline='before.md')['preservation_audit']
         self.assertEqual(z['missing_dispositions'],0)
+    def test_changed_warning_heading_with_same_body_blocks(self):
+        self.put('before.md','# Product\n\nOverview.\n## Experimental\n\nWorks only on development builds.\n')
+        self.put('README.md','# Product\n\nOverview.\n## Production-ready\n\nWorks only on development builds.\n')
+        result=self.run_audit(baseline='before.md')
+        p=result['preservation_audit']
+        self.assertEqual(p['baseline_sections'],2)
+        self.assertEqual(p['missing_dispositions'],1)
+        self.assertEqual(p['section_findings'][1]['state'],'MISSING_DISPOSITION')
+        self.assertEqual(result['README_delivery_preflight'],'BLOCKED')
+
+    def test_heading_only_warning_is_preserved_and_deletion_detected(self):
+        old='# Product\n\n## Not production-ready\n'
+        self.put('before.md',old);self.put('README.md',old)
+        p=self.run_audit(baseline='before.md')['preservation_audit']
+        self.assertEqual(p['baseline_sections'],2)
+        self.assertEqual(p['missing_dispositions'],0)
+        self.assertEqual(p['section_findings'][1]['state'],'RETAINED_EXACT_SECTION')
+        self.put('README.md','# Product\n')
+        p=self.run_audit(baseline='before.md')['preservation_audit']
+        self.assertEqual(p['baseline_sections'],2)
+        self.assertEqual(p['missing_dispositions'],1)
+
+    def test_heading_level_change_requires_disposition(self):
+        self.put('before.md','# Example\n\n## Experimental\n\nLimited preview.\n')
+        self.put('README.md','# Example\n\n### Experimental\n\nLimited preview.\n')
+        self.assertEqual(self.run_audit(baseline='before.md')['preservation_audit']['missing_dispositions'],1)
+
+    def test_heading_replaced_by_prose_does_not_count_as_section(self):
+        self.put('before.md','## Experimental\n\nDo not deploy.\n')
+        self.put('README.md','# Summary\n\nExperimental Do not deploy.\n')
+        self.assertEqual(self.run_audit(baseline='before.md')['preservation_audit']['missing_dispositions'],1)
+
+    def test_heading_only_parent_with_unchanged_child_is_flagged(self):
+        self.put('before.md','# Product\n\n## Experimental\n### Linux\n\nAvailable.\n')
+        self.put('README.md','# Product\n\n## Stable\n### Linux\n\nAvailable.\n')
+        p=self.run_audit(baseline='before.md')['preservation_audit']
+        self.assertEqual(p['baseline_sections'],3)
+        self.assertEqual(p['missing_dispositions'],1)
+        self.assertEqual(p['section_findings'][2]['state'],'RETAINED_EXACT_SECTION')
+
+    def test_body_only_legacy_manifest_hash_is_stale(self):
+        old='# Experimental\n\nNot production-ready.\n'
+        self.put('before.md',old)
+        self.put('README.md','# Available\n\nNot production-ready.\n')
+        legacy_hash=mod._hash(mod._norm(mod._sections(old)[0]['body']))
+        self.obj('plan.json',{'schema_version':1,'sections':[{
+            'section_id':'s1','original_sha256':legacy_hash,
+            'disposition':'OUTDATED','evidence_ref':'release-evidence'}]})
+        p=self.run_audit(baseline='before.md',dispositions='plan.json')['preservation_audit']
+        self.assertEqual(p['section_findings'][0]['state'],'STALE_DISPOSITION_SOURCE_HASH')
+
+    def test_relocated_body_with_changed_warning_heading_is_not_proven(self):
+        old='# Experimental\n\nOnly development builds are supported.\n'
+        self.put('before.md',old)
+        self.put('README.md','# Public release\n\nAvailable for installation.\n')
+        self.put('docs/release.md','# Stable\n\nOnly development builds are supported.\n')
+        digest=mod._hash(mod._section_text(mod._sections(old)[0]))
+        self.obj('plan.json',{'schema_version':1,'sections':[{
+            'section_id':'s1','original_sha256':digest,'disposition':'RELOCATED',
+            'evidence_ref':'manual-qualification','destination':'docs/release.md'}]})
+        p=self.run_audit(baseline='before.md',dispositions='plan.json')['preservation_audit']
+        self.assertEqual(p['section_findings'][0]['state'],'RELOCATION_NOT_PROVEN')
+        self.assertEqual(p['unresolved_removals'],1)
+
+    def test_section_digest_changes_when_only_heading_changes(self):
+        old=mod._sections('# Experimental\n\nSame body.\n')[0]
+        new=mod._sections('# Production-ready\n\nSame body.\n')[0]
+        self.assertNotEqual(mod._hash(mod._section_text(old)),mod._hash(mod._section_text(new)))
+        self.assertEqual(mod._norm(old['body']),mod._norm(new['body']))
+
     def test_heading_inside_fenced_content_does_not_split(self):
         a=mod._sections('# Heading\n\n```md\n# Not a heading\n```\nUse responsibly.\n')
         self.assertEqual(len(a),1)
@@ -83,7 +153,7 @@ class DeliveryPreflightTests(unittest.TestCase):
     def test_proper_outdated_disposition_still_manual_review(self):
         old='# Intro\n\nUnreleased Windows installer is available.\n'
         self.put('before.md',old)
-        sha=mod._hash(mod._norm(mod._sections(old)[0]['body']))
+        sha=mod._hash(mod._section_text(mod._sections(old)[0]))
         self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':sha,'disposition':'OUTDATED','evidence_ref':'release-assets-2026-11'}]})
         p=self.run_audit(baseline='before.md',dispositions='plan.json')['preservation_audit']
         self.assertEqual(p['missing_dispositions'],0)
@@ -92,36 +162,36 @@ class DeliveryPreflightTests(unittest.TestCase):
     def test_unverified_disposition_blocks(self):
         old='# Title\n\nHistorical signing keys are documented here.\n'
         self.put('before.md',old)
-        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._norm(mod._sections(old)[0]['body'])),'disposition':'UNVERIFIED','evidence_ref':'missing-source'}]})
+        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._section_text(mod._sections(old)[0])),'disposition':'UNVERIFIED','evidence_ref':'missing-source'}]})
         self.assertIn('UNVERIFIED_SECTION_REMOVAL',self.run_audit(baseline='before.md',dispositions='plan.json')['blockers'])
     def test_retained_label_does_not_pass_deleted_text(self):
         old='# Title\n\nA unique compatibility limitation.\n'
         self.put('before.md',old)
-        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._norm(mod._sections(old)[0]['body'])),'disposition':'RETAINED','evidence_ref':'reviewer'}]})
+        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._section_text(mod._sections(old)[0])),'disposition':'RETAINED','evidence_ref':'reviewer'}]})
         p=self.run_audit(baseline='before.md',dispositions='plan.json')['preservation_audit']
         self.assertEqual(p['section_findings'][0]['state'],'RETENTION_NOT_PROVEN')
         self.assertEqual(p['unresolved_removals'],1)
     def test_relocation_requires_destination(self):
         old='# Title\n\nUnique technical instruction from documentation.\n'
         self.put('before.md',old)
-        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._norm(mod._sections(old)[0]['body'])),'disposition':'RELOCATED','evidence_ref':'docs/guide.md'}]})
+        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._section_text(mod._sections(old)[0])),'disposition':'RELOCATED','evidence_ref':'docs/guide.md'}]})
         with self.assertRaises(mod.Invalid):self.run_audit(baseline='before.md',dispositions='plan.json')
     def test_relocation_exact_text_recognized_not_fully_proven(self):
         old='# Title\n\nUnique technical instruction from documentation.\n'
-        self.put('before.md',old);self.put('docs/guide.md','# Details\n\nUnique technical instruction from documentation.\n')
-        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._norm(mod._sections(old)[0]['body'])),'disposition':'RELOCATED','evidence_ref':'docs/guide.md','destination':'docs/guide.md'}]})
+        self.put('before.md',old);self.put('docs/guide.md','# Title\n\nUnique technical instruction from documentation.\n')
+        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._section_text(mod._sections(old)[0])),'disposition':'RELOCATED','evidence_ref':'docs/guide.md','destination':'docs/guide.md'}]})
         p=self.run_audit(baseline='before.md',dispositions='plan.json')['preservation_audit']
-        self.assertEqual(p['section_findings'][0]['state'],'RELOCATION_TEXT_PRESENT_REVIEW_REQUIRED')
+        self.assertEqual(p['section_findings'][0]['state'],'RELOCATION_SECTION_PRESENT_REVIEW_REQUIRED')
         self.assertFalse(p['semantic_preservation_authenticated'])
     def test_relocation_missing_text_not_proven(self):
         old='# Title\n\nUnique technical instruction from documentation.\n'
         self.put('before.md',old);self.put('docs/guide.md','# Details\n\nNothing related.\n')
-        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._norm(mod._sections(old)[0]['body'])),'disposition':'RELOCATED','evidence_ref':'docs/guide.md','destination':'docs/guide.md'}]})
+        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._section_text(mod._sections(old)[0])),'disposition':'RELOCATED','evidence_ref':'docs/guide.md','destination':'docs/guide.md'}]})
         self.assertEqual(self.run_audit(baseline='before.md',dispositions='plan.json')['preservation_audit']['unresolved_removals'],1)
     def test_malicious_relocation_outside_root_rejected(self):
         old='# Title\n\nUnique technical instruction from documentation.\n'
         self.put('before.md',old)
-        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._norm(mod._sections(old)[0]['body'])),'disposition':'RELOCATED','evidence_ref':'external','destination':'../outside.md'}]})
+        self.obj('plan.json',{'schema_version':1,'sections':[{'section_id':'s1','original_sha256':mod._hash(mod._section_text(mod._sections(old)[0])),'disposition':'RELOCATED','evidence_ref':'external','destination':'../outside.md'}]})
         with self.assertRaises(mod.Invalid):self.run_audit(baseline='before.md',dispositions='plan.json')
     def test_generated_root_owner_holds(self):
         self.put('README.md','<!-- AUTO-GENERATED by make readme -->\n# Product\nContent\n')
