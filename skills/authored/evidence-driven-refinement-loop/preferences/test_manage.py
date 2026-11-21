@@ -59,6 +59,83 @@ class PreferenceManagerTests(unittest.TestCase):
         self.assertEqual(len(prefs), 1)
         self.assertEqual(prefs[0]["value"], "detailed")
 
+    def test_busy_writer_is_refused_without_clobbering_overlay(self):
+        import fcntl
+        self.set_pref()
+        prior = self.file().read_bytes()
+        lockfile = self.file().parent / ".preferences.lock"
+        fd = os.open(lockfile, os.O_RDWR | os.O_NOFOLLOW)
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            with self.assertRaisesRegex(manage.PreferenceError,
+                                        "Concurrent preference write"):
+                self.set_pref(value="detailed")
+            self.assertEqual(self.file().read_bytes(), prior)
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            os.close(fd)
+        self.assertEqual(self.set_pref(value="detailed")["status"], "SAVED")
+
+    def test_clear_cannot_race_with_busy_writer(self):
+        import fcntl
+        self.set_pref()
+        lockfile = self.file().parent / ".preferences.lock"
+        fd = os.open(lockfile, os.O_RDWR | os.O_NOFOLLOW)
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            with self.assertRaisesRegex(manage.PreferenceError,
+                                        "Concurrent preference write"):
+                manage.execute(self.args("clear", approved=True))
+            self.assertTrue(self.file().exists())
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            os.close(fd)
+        self.assertEqual(manage.execute(self.args("clear", approved=True))["status"],
+                         "REMOVED")
+
+    def test_read_only_lookup_does_not_wait_for_writer_lock(self):
+        import fcntl
+        self.set_pref()
+        lockfile = self.file().parent / ".preferences.lock"
+        fd = os.open(lockfile, os.O_RDWR | os.O_NOFOLLOW)
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            result = manage.execute(self.args("show"))
+            self.assertEqual(result["status"], "LOADED")
+            self.assertEqual(result["preferences"][0]["value"], "concise")
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            os.close(fd)
+
+    def test_unsafe_writable_lock_is_refused(self):
+        self.set_pref()
+        lockfile = self.file().parent / ".preferences.lock"
+        lockfile.chmod(0o666)
+        with self.assertRaisesRegex(manage.PreferenceError,
+                                    "lock is not a private regular file"):
+            self.set_pref(value="detailed")
+        self.assertEqual(manage.execute(self.args("show"))["preferences"][0]["value"],
+                         "concise")
+
+    def test_untrusted_lock_symlink_is_refused(self):
+        self.set_pref()
+        lockfile = self.file().parent / ".preferences.lock"
+        lockfile.unlink()
+        unrelated = self.root / "unrelated.txt"
+        unrelated.write_text("preserve this")
+        lockfile.symlink_to(unrelated)
+        with self.assertRaises(OSError):
+            self.set_pref(value="detailed")
+        self.assertEqual(unrelated.read_text(), "preserve this")
+        self.assertEqual(manage.execute(self.args("show"))["preferences"][0]["value"],
+                         "concise")
+
+    def test_unknown_remove_does_not_create_storage_or_lock(self):
+        result = manage.execute(self.args("remove", key="response.detail",
+                                          approved=True))
+        self.assertEqual(result["status"], "NOT_FOUND")
+        self.assertFalse((self.root / "skill-overlays").exists())
+
     def test_unknown_direct_action_cannot_mutate_without_approval(self):
         # The public function must not depend solely on CLI argparse.
         self.set_pref()
