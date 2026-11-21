@@ -81,6 +81,35 @@ Do **not** remove old checks merely because a new workflow has green CI.
 Do not rename a protected status without migrating rulesets/branch protection.
 Do not deploy or modify repository governance without authorization.
 
+## Early-failure ordering before expensive setup
+
+Review the **actual event trace** for cheap correctness failures that occur
+only after downloading a large container/toolchain or performing heavy
+bootstrap. A deterministic format, metadata, whitespace or policy check
+may be suitable as a preflight *if* its tool/version/environment semantics
+are proven equivalent to the canonical gate. Its success is only an early
+screen; the trusted final acceptance still checks the authoritative form.
+
+- Prefer a lightweight preflight before expensive runner/container setup
+  **when the expected saved cost outweighs another runner startup**. A
+  separate GitHub job is not automatically the cheapest architecture.
+- Where exact toolchain reproducibility is required, run the cheap check in
+  the existing trusted environment before the expensive operation, or prove
+  an equivalent pinned tool; never create a second loose formatter whose
+  inconsistent results weaken acceptance.
+- Fail fast on an actual negative result; retain full downstream checks on
+  a preflight pass. A proposed reordering is not measured savings.
+- Distinguish queue, checkout, image transfer, build and test latency using
+  timestamps and billed job minutes from actual runs. One run that failed
+  early does not establish a counterfactual median, p90 or net cost benefit.
+
+**Observed failure pattern informing the design:** A repository bootstrap
+downloaded its large locked SDK, then immediately failed a deterministic
+Rust formatting check for one extraneous blank line. That confirms a
+costly *ordering opportunity* worth evaluating, not that an alternate
+preflight would have passed governance, been cheaper on average or
+preserved unique acceptance. Validate those properties in shadow mode.
+
 ## Measurements: separate budget from critical path
 
 For each comparable actual baseline and new-run pair, record:
