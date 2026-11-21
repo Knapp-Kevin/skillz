@@ -377,8 +377,18 @@ class ExecutionTests(unittest.TestCase):
 
     def test_workflow_requires_checkout_preflight_in_every_group(self):
         workflow = (ROOT / 'examples/classified-github-pr.yml').read_text(encoding='utf-8')
-        self.assertEqual(workflow.count('--workdir . --repo work --group'), 4)
+        self.assertEqual(workflow.count('--workdir work --repo work --group'), 4)
+        self.assertNotIn('--workdir . --repo work --group', workflow)
         self.assertNotIn('--workdir . --group ', workflow)
+
+    def test_consumer_command_manifest_is_bound_to_candidate_cwd(self):
+        manifest = json.loads((ROOT / 'examples/exec-policy.json').read_text(
+            encoding='utf-8'))
+        for name, command in manifest['commands'].items():
+            with self.subTest(obligation=name):
+                self.assertEqual(command['argv'][0], 'bash')
+                self.assertTrue(command['argv'][1].startswith('../trusted/ci/'))
+                self.assertEqual(command['argv'][2], '.')
 
     def test_missing_command_fails_closed(self):
         with tempfile.TemporaryDirectory() as d:
