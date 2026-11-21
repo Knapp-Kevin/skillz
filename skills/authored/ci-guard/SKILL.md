@@ -130,7 +130,12 @@ A completed workflow must deliver **three separate capabilities**:
    status **and** per-obligation execution receipts for every selected
    group on the current HEAD, base, merge base, run ID and attempt.
    Missing, skipped, failed, canceled, misrouted, tampered or stale work
-   must fail. Unselected work must be genuinely skipped.
+   must fail. Unselected work must be genuinely skipped. Before executing,
+   independently verify the actual candidate checkout HEAD and tracked files
+   match the plan, and recheck before reporting success. Do not pass
+   `GITHUB_OUTPUT`, runner tokens or similar evidence-control channels
+   into child checks. A shared same-user runner is **not** a hostile-code
+   sandbox; high-risk PR execution requires stronger process isolation.
 
 **Documentation verification is mandatory when docs are selected.**
 A `run_docs`/docs label without a real docs job, verified execution and
