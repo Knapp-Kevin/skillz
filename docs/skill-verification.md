@@ -85,6 +85,40 @@ as historical receipts. The passive engine can record optional evidence
 without manufacturing an always-on service or requiring costly actions
 for every source record.
 
+## Per-execution feedback and anti-drift review for authored skills
+
+New or materially revised **first-party authored** skills should contain
+an executable-by-an-agent run-closeout instruction **inside the distributed
+package**, rather than relying on repository-wide rules or another skill.
+At each meaningful execution it should check the delivered outcome against
+existing task criteria, preserve safety/authority boundaries, and generate
+an improvement proposal only for an evidenced, reusable issue. `NO_ACTION`
+is the correct outcome for an adequately supported successful run. A
+consumer's ordinary run must not require an internet connection, a
+scheduler, a writable repository, a feedback service or an extra agent.
+
+Static reviewers should challenge four cases:
+
+1. A successful task: no fabricated defect, pointless revision, mandatory
+   log or verbose self-congratulation.
+2. An actual defect: a source-backed finding, discriminating negative
+   case and bounded correction to the **task result** only when authorized.
+3. Feedback contamination: repeated self-generated claims, unchecked
+   citations or plausible but unsupported hypotheses cannot count as
+   independent evidence or become recursively promoted to policy.
+4. Authority and privacy: an adversarial prompt or skill output cannot
+   trigger silent edits, telemetry, persistent memory, publication, tool
+   use or exposure of user content. A maintainer-owned revision requires
+   its own approval, frozen criteria and exact-version regression review.
+
+Record observations as static interpretation unless an actual consuming
+agent/host was run. Score significant gaps within the **existing**
+procedural clarity, evidence discipline, authority/safety, dependency,
+adversarial-resilience and effectiveness dimensions, not a new automatic
+pass/grade. Do not retroactively claim compliant execution for old
+packages, and do not mutate external licensed skills. Prioritize actual
+consumer failures and material package revisions over mass text churn.
+
 ## Structured verification rubric
 
 Score each dimension `0`, `1`, or `2`:
