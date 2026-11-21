@@ -42,10 +42,16 @@ def summarize_run(data):
         raise EvidenceError('unqualified or incomplete run')
     total = 0.0
     earliest, latest = None, None
+    durations, graph = {}, {}
     for job in data['jobs']:
         if not isinstance(job, dict) or set(job) != {
-                'name', 'started_at', 'completed_at', 'billed_runner_minutes', 'result'}:
+                'name', 'needs', 'started_at', 'completed_at', 'billed_runner_minutes', 'result'}:
             raise EvidenceError('incomplete job observation')
+        if (not isinstance(job['name'], str) or not job['name']
+                or job['name'] in durations or not isinstance(job['needs'], list)
+                or len(set(job['needs'])) != len(job['needs'])
+                or any(not isinstance(x, str) for x in job['needs'])):
+            raise EvidenceError('missing or repeated job/dependency identity')
         if job['result'] != 'success':
             raise EvidenceError('failed or skipped required job in success record')
         minutes = job['billed_runner_minutes']
@@ -57,8 +63,28 @@ def summarize_run(data):
         earliest = min(earliest, start) if earliest else start
         latest = max(latest, end) if latest else end
         total += minutes
+        durations[job['name']] = (end-start).total_seconds()
+        graph[job['name']] = job['needs']
+    # The provided dependency graph must cover every required job.
+    # This computes the longest executed job-duration chain, not the wall
+    # envelope, which separately contains runner queue/scheduling gaps.
+    visiting, longest = set(), {}
+    def path_length(name):
+        if name in visiting:
+            raise EvidenceError('cyclic required job dependency graph')
+        if name in longest:
+            return longest[name]
+        if name not in graph:
+            raise EvidenceError('incomplete multi-workflow dependency evidence')
+        visiting.add(name)
+        length = durations[name] + max([path_length(dep) for dep in graph[name]] or [0.0])
+        visiting.remove(name)
+        longest[name] = length
+        return length
+    critical = max(path_length(name) for name in graph)
     return {'billed_runner_minutes': round(total, 4),
-            'critical_path_seconds': round((latest-earliest).total_seconds(), 3)}
+            'critical_path_seconds': round(critical, 3),
+            'qualification_elapsed_seconds': round((latest-earliest).total_seconds(), 3)}
 
 
 def compare(data):
@@ -80,10 +106,12 @@ def compare(data):
         pairs.append({'scenario': b['scenario'], 'head': b['head'],
                       'baseline':old, 'optimized':new,
                       'saved_runner_minutes': round(old['billed_runner_minutes']-new['billed_runner_minutes'],4),
-                      'saved_critical_seconds': round(old['critical_path_seconds']-new['critical_path_seconds'],3)})
+                      'saved_critical_seconds': round(old['critical_path_seconds']-new['critical_path_seconds'],3),
+                      'saved_elapsed_seconds': round(old['qualification_elapsed_seconds']-new['qualification_elapsed_seconds'],3)})
     return {'pairs': pairs, 'count': len(pairs),
             'sum_runner_minutes_saved': round(sum(x['saved_runner_minutes'] for x in pairs),4),
             'median_critical_seconds_saved': statistics.median(x['saved_critical_seconds'] for x in pairs),
+            'median_elapsed_seconds_saved': statistics.median(x['saved_elapsed_seconds'] for x in pairs),
             'provenance': 'OBSERVED_AS_SUPPLIED_NOT_EXTERNALLY_AUTHENTICATED'}
 
 
