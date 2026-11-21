@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence-Driven Refinement Loop user-local preference overlay",
+  "description": "Optional non-executable, user-approved presentation preferences. Not policy or authorization.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "skill_id",
+    "base_skill_version",
+    "scope",
+    "preferences"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "skill_id": {
+      "const": "evidence-driven-refinement-loop"
+    },
+    "base_skill_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "maxLength": 30
+    },
+    "scope": {
+      "const": "user-local"
+    },
+    "preferences": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "value",
+          "source"
+        ],
+        "oneOf": [
+          {
+            "properties": {
+              "key": {
+                "const": "response.detail"
+              },
+              "value": {
+                "enum": [
+                  "concise",
+                  "standard",
+                  "detailed"
+                ]
+              },
+              "source": {
+                "const": "explicit-user-confirmation"
+              }
+            }
+          },
+          {
+            "properties": {
+              "key": {
+                "const": "response.format"
+              },
+              "value": {
+                "enum": [
+                  "paragraphs",
+                  "checklist",
+                  "table"
+                ]
+              },
+              "source": {
+                "const": "explicit-user-confirmation"
+              }
+            }
+          },
+          {
+            "properties": {
+              "key": {
+                "const": "examples.focus"
+              },
+              "value": {
+                "enum": [
+                  "general",
+                  "documentation",
+                  "code",
+                  "ci"
+                ]
+              },
+              "source": {
+                "const": "explicit-user-confirmation"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
