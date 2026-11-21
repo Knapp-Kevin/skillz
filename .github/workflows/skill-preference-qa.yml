@@ -1,0 +1,43 @@
+name: Authored skill preference regression
+
+on:
+  pull_request:
+    paths:
+      - 'skills/authored/evidence-driven-refinement-loop/**'
+      - 'engine/skills/**'
+      - 'docs/skill-template.md'
+      - 'docs/skill-verification.md'
+      - 'scripts/qa/test-engine-contracts.py'
+      - '.github/workflows/skill-preference-qa.yml'
+  push:
+    branches:
+      - 'refine/engine-reliability-review-20261120'
+    paths:
+      - 'skills/authored/evidence-driven-refinement-loop/**'
+      - 'scripts/qa/test-engine-contracts.py'
+      - '.github/workflows/skill-preference-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-contracts:
+    name: Offline Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Preference manager functional and adversarial cases
+        working-directory: skills/authored/evidence-driven-refinement-loop
+        run: python -m unittest discover -s preferences -p 'test_manage.py' -v
+      - name: Engine static contract regressions
+        run: python scripts/qa/test-engine-contracts.py -v
