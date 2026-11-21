@@ -482,6 +482,37 @@ class PortableSchemaInteroperabilityTests(unittest.TestCase):
                 allowlist=manage.allowed_keys()
             )
 
+    def test_each_allowlisted_value_agrees_with_python_manager(self):
+        for key, values in manage.SAFE_VALUES.items():
+            for value in sorted(values):
+                with self.subTest(key=key, value=value):
+                    doc = json.loads(json.dumps(self.example))
+                    doc["preferences"] = [
+                        {"key": key, "value": value,
+                         "source": "explicit-user-confirmation"}
+                    ]
+                    self.assertTrue(self.validator.is_valid(doc))
+                    manage.validate_document(
+                        doc, version=manage.current_version(),
+                        allowlist=manage.allowed_keys()
+                    )
+
+    def test_conflicting_keys_remain_invalid_in_different_orders(self):
+        for values in [("concise", "detailed"), ("detailed", "concise")]:
+            with self.subTest(values=values):
+                doc = json.loads(json.dumps(self.example))
+                doc["preferences"] = [
+                    {"key": "response.detail", "value": value,
+                     "source": "explicit-user-confirmation"}
+                    for value in values
+                ]
+                self.assertFalse(self.validator.is_valid(doc))
+                with self.assertRaises(manage.PreferenceError):
+                    manage.validate_document(
+                        doc, version=manage.current_version(),
+                        allowlist=manage.allowed_keys()
+                    )
+
     def test_duplicate_identical_entries_are_invalid(self):
         doc = json.loads(json.dumps(self.example))
         doc["preferences"].append(dict(doc["preferences"][0]))
