@@ -43,9 +43,28 @@ stays blocked. The format and verification limits are documented in the
 
 The link checker is read-only and standard-library only. It checks common local links, file/heading anchors, reference definitions and explicitly delimited generated content. It never executes a README command, follows symlinks, calls a provider or validates a release claim. Complex Markdown, external URLs, factual accuracy, installability and actual reader success require separately reported evidence. The script is **optional**, not a requirement for users on weaker hosts or systems without Python.
 
+## Gold/Platinum quality acceptance
+
+The skill sets the standard. Existing organization READMEs, brand assets
+and style rules are **identity and provenance evidence**, not permission
+to downgrade an explicitly requested Gold or Platinum outcome. The
+selected profile makes appropriate banner, legitimate badges, working
+table of contents, usable first-success example, technical navigation
+and evidence-qualified claims binding requirements. Platinum also
+requires independent reader and accessibility/responsive review.
+
+Use the [read-only profile checker](scripts/profile_acceptance.py)
+with a [project-specific contract](examples/gold-quality-profile.json)
+to detect missing presentation requirements. Missing items are FAIL;
+evidence-bound exceptions remain HOLD until independently adjudicated.
+External badge legitimacy, rendered quality and actual reader outcomes
+are never proven by a local string match. Both technical delivery
+acceptance **and separate editorial quality acceptance** must pass.
+Existing generated ownership and preservation safeguards remain intact.
+
 ## Qualification and boundaries
 
-**Current version: 0.3.2 (generated-owner evidence attachment and heading-preservation fix).** Previous v0.3.0 Python 3.13.5 suites passed **101/101 actual tests** (57 existing link/README exercises plus 44 new delivery-preflight tests), including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
+**Current version: 0.4.0 (binding quality profiles, generated-owner evidence, heading preservation).** Previous v0.3.0 Python 3.13.5 suites passed **101/101 actual tests** (57 existing link/README exercises plus 44 new delivery-preflight tests), including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
 
 Generated sections, canonical ownership, release evidence, licenses and historical signer identity must be preserved or corrected only from appropriate source evidence. Neither helper mutates files, authenticates provider evidence or runs formatters/CI. A locally green report is not a merge-ready verdict. The helpers do not mutate files, and reading this skill never authorizes new permissions, CI runs, deployments, releases or unrelated repository changes.
 
