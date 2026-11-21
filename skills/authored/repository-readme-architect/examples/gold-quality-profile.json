@@ -20,7 +20,8 @@
       "owner": "Example Kit project, verify source and rights independently",
       "purpose": "Project-specific hero illustration on README",
       "alt": "Example Kit banner showing the project’s purpose",
-      "replacement": "No replacement planned; retain evidence of source/rights"
+      "replacement": "No replacement planned; retain evidence of source/rights",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   ]
 }
