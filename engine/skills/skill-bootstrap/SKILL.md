@@ -193,7 +193,7 @@ adversarial false-match examples should improve the reusable method,
 while keeping source-specific paths, private data and temporary search
 results out of universal runtime rules.
 
-**No first-party preference:** `registry/local-verification.json` is convenient metadata for one source family, not the default search index or a reason to inspect local skills before third-party candidates. Do not treat the local 44 as a representative sample of the indexed corpus. If a discovery surface cannot be queried, report the limitation and do not silently substitute first-party-only results.
+**No first-party preference:** `registry/local-verification.json` is convenient metadata for one source family, not the default search index or a reason to inspect local skills before third-party candidates. Do not treat any dated first-party count as a representative sample or live denominator of the indexed corpus. Check the actual current inventory units before quoting counts. If a discovery surface cannot be queried, report the limitation and do not silently substitute first-party-only results.
 
 The broad tracked upstream corpus is **reference/discovery material**, not blanket trusted inventory and not a destination for generated user artifacts.
 
