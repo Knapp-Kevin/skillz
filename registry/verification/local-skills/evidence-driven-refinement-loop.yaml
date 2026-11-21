@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
-skill_version: "0.2.0"
+skill_version: "0.3.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/evidence-driven-refinement-loop/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 41a19aeed2f7613a89b68bb7f0f83843b2973701
-complete_package_tree_sha: 11ebfcf7869c72bb3064c1e877e3f5ba714de108
+content_blob_sha: f0f72c58e76092975473ebb20f62514a2ecfd21d
+complete_package_tree_sha: 3265448e048faaf00186460a03a1b3ac7ba79d20
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
 verification_status: verified
-verification_basis: exact-seven-file-static-semantic-review-and-fourteen-synthetic-adversarial-scenarios
+verification_basis: exact-ten-file-static-source-and-contract-review-with-fourteen-synthetic-adversarial-scenarios
 validation_status: not-run
-validation_note: "Exact v0.2.0 complete package source readback; independently recreated matching seven-file tree, checked Markdown local links and JSON sample against allowed schema values; deliberate malicious key and unauthorized source rejected in static contract probes. No consuming-agent behavior, real user outcome, comprehensive Python suite, or external security scanner was run. These checks do not establish effectiveness."
+validation_note: "Current v0.3.0 complete ten-file tree hash independently recreated and matched; package-relative Markdown links resolved, anonymous example matches schema allowlist, hostile preference keys rejected by static inspection, manager wiring and optional test methods present. Python 17-method helper test suite and 22-method engine QA suite NOT_RUN, agent-host execution NOT_RUN, consumer outcomes NOT_OBSERVED, external security scan NOT_RUN. Static verification is not demonstrated runtime safety."
 rubric: docs/skill-verification.md
-rubric_score: "19/20"
+rubric_score: "18/20"
 tags:
   use_case: [iterative-quality-improvement, artifact-refinement, regression-prevention, user-local-preferences]
   lifecycle: [evaluation, implementation, review, verification]
@@ -24,14 +24,16 @@ tags:
   authority: [read-only-default, owner-authorized-scoped-change]
   portability: high
 notes: >-
-  New exact-version review for v0.2.0, independently assessed on the new
-  seven-file package rather than transferring the v0.1.0 grade. Ten rubric
-  dimensions: 2 for trigger, procedure, authority, failure handling,
-  evidence, dependencies, portability, differentiation and adversarial
-  resilience; 1 for effectiveness until independent user outcome tests exist.
-  Preference overlays are non-executable, user-scoped opt-in data and are
-  excluded from canonical/public package contents. All referenced local
-  Markdown files found; JSON sample conforms to declared allowed keys,
-  values, consent source, and version; invalid keys and consent were rejected
-  by a source-level probe. Static cases do not prove consuming-agent
-  enforcement, safe host persistence, or measurable improvement.
+  Static v0.3.0 score: trigger 2, procedure 2, authority 2,
+  failure 2, evidence 2, dependency 1 (optional helper unexecuted),
+  portability 2 (declarative fallback, POSIX helper only),
+  differentiation 2, adversarial resilience 2, effectiveness 1.
+  Verified is source-level semantic review of exactly pinned ten-file
+  package, not proof of helper execution, host privacy, or effectiveness.
+  New preference routing component distinguishes canonical improvement
+  hypotheses from scoped user tastes. Helper code reviewed for allowlists,
+  ownership/mode checks, symlink refusal, no source checkout writes, atomic
+  updates, JSON duplicate key refusal, approval flag and version holds.
+  The approval flag does not itself prove user consent. Seventeen regression
+  methods are committed but NOT_RUN; reviewer-designed 14 scenarios are
+  not observed agent behavior. Previous v0.2.0 review is historical.
