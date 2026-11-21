@@ -32,6 +32,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
+          # Avoid implicit pull_request merge refs when qualifying source identity.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
       - uses: actions/setup-python@v6
         with:
