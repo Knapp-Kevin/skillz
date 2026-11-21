@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "commands": {
+    "docs-links": {"argv": ["bash", "trusted/ci/verify_docs.sh", "work"], "timeout_sec": 600},
+    "rust-build": {"argv": ["bash", "trusted/ci/verify_rust_build.sh", "work"], "timeout_sec": 1800},
+    "rust-tests": {"argv": ["bash", "trusted/ci/verify_rust_tests.sh", "work"], "timeout_sec": 1800},
+    "model-consumer": {"argv": ["bash", "trusted/ci/verify_model.sh", "work"], "timeout_sec": 1500},
+    "trust-policy": {"argv": ["bash", "trusted/ci/verify_trust.sh", "work"], "timeout_sec": 900}
+  }
+}

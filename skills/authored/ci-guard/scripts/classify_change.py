@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Deterministic, conservative change-impact classifier for CI Guard.
+"""Standalone, repository-neutral, fail-closed PR impact classifier.
 
-Optional standalone executable shipped inside the CI Guard skill package.
-No network, dependencies, secrets, or arbitrary repository code execution.
-GitHub Actions template executes it from a TRUSTED BASE checkout, never from
-untrusted PR changes. The workflow must retain independently required checks.
+Requires a trusted-base policy for any reduced route. Does not run repository
+code, authenticate event data or authorize a merge. Python 3.9+ and Git only.
 """
 from __future__ import annotations
 
@@ -14,26 +12,46 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+from typing import Optional
 
 SHA_RE = re.compile(r"[a-fA-F0-9]{40}(?:[a-fA-F0-9]{24})?\Z")
-DOC_SUFFIXES = {".md", ".markdown", ".rst", ".adoc"}
-PYTHON_SUFFIXES = {".py", ".pyi"}
-SPECIAL_DOCS = {"README", "README.md", "CHANGELOG.md", "CONTRIBUTING.md"}
-PROTECTED_NAMES = {
-    "CODEOWNERS", "LICENSE", "LICENSE.md", "SECURITY.md",
-    "pyproject.toml", "setup.py", "setup.cfg", "tox.ini", "pytest.ini",
-    "Pipfile", "Pipfile.lock", "uv.lock", "poetry.lock",
-    "Dockerfile", "Makefile", "Justfile", ".gitmodules",
-    "package.json", "package-lock.json", "pnpm-lock.yaml",
-    "Cargo.toml", "Cargo.lock", "go.mod", "go.sum",
-}
-PROTECTED_PREFIXES = (
-    ".github/workflows/", ".github/actions/", ".github/CODEOWNERS",
-    ".github/dependabot", "ci/", "scripts/ci/", "packaging/", "release/",
-    "infra/", "infrastructure/", "terraform/", "deploy/", "deployment/",
-    "migrations/", "docs/api-contracts/", "docs/generated-contracts/",
-)
 MAX_FILES = 2000
+MAX_RULES = 256
+CATEGORIES = frozenset({
+    "documentation", "executable-code", "models", "dependencies",
+    "governance", "workflows", "release-assets", "unknown"
+})
+MATCHES = frozenset({"exact", "prefix", "suffix"})
+DEPENDENCY_NAMES = frozenset({
+    "Cargo.toml", "Cargo.lock", "go.mod", "go.sum",
+    "package.json", "package-lock.json", "pnpm-lock.yaml", "yarn.lock",
+    "pyproject.toml", "poetry.lock", "uv.lock", "Pipfile", "Pipfile.lock",
+    "requirements.txt", "Gemfile", "Gemfile.lock", "composer.json",
+    "composer.lock", "pom.xml", "gradle.lockfile", "build.gradle",
+    "build.gradle.kts", "settings.gradle", "settings.gradle.kts"
+})
+GOVERNANCE_NAMES = frozenset({
+    "AGENTS.md", "CLAUDE.md", "CODEOWNERS", "SECURITY.md",
+    "GOVERNANCE.md", "POLICY.md", "POLICIES.md"
+})
+MODEL_EXT = frozenset({
+    ".onnx", ".gguf", ".safetensors", ".tflite", ".pte", ".pt",
+    ".pth", ".h5", ".hdf5", ".pb", ".ckpt", ".mlmodel"
+})
+CODE_EXT = frozenset({
+    ".py", ".pyi", ".rs", ".go", ".js", ".jsx", ".mjs", ".cjs",
+    ".ts", ".tsx", ".java", ".kt", ".swift", ".c", ".h", ".cc",
+    ".cpp", ".hpp", ".cs", ".rb", ".php", ".scala", ".sh",
+    ".ps1", ".bat", ".cmd", ".lua", ".sql", ".wasm"
+})
+RELEASE_EXT = frozenset({
+    ".whl", ".exe", ".msi", ".msix", ".dmg", ".apk", ".aab",
+    ".ipa", ".vsix", ".deb", ".rpm", ".jar", ".nupkg"
+})
+RELEASE_NAMES = frozenset({"CHANGELOG.md", "RELEASE_NOTES.md", "RELEASE.md"})
+POLICY_NAMES = frozenset({"impact-policy.json", "classify_change.py"})
+ALWAYS_FULL = frozenset({"unknown", "governance", "workflows", "release-assets"})
+CANDIDATE_FULL = frozenset({"executable-code", "models", "dependencies"})
 
 
 class ClassificationError(ValueError):
@@ -44,7 +62,8 @@ def git(repo: Path, *args: str) -> bytes:
     try:
         return subprocess.check_output(
             ["git", "-C", str(repo), "-c", "core.hooksPath=/dev/null", *args],
-            stderr=subprocess.PIPE, timeout=15)
+            stderr=subprocess.PIPE, timeout=15
+        )
     except (OSError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
         raise ClassificationError("Git comparison unavailable; refuse to skip checks") from exc
 
@@ -91,106 +110,197 @@ def changed_paths(repo: Path, base: str, head: str) -> list[str]:
     return files
 
 
-def is_protected(path: str) -> bool:
-    name = Path(path).name
-    lower = path.lower()
-    if path.endswith("/scripts/classify_change.py") or name == "classify_change.py":
-        return True
-    if path in PROTECTED_NAMES or name in PROTECTED_NAMES:
-        return True
-    if name.startswith(("requirements", "Dockerfile", "Containerfile")):
-        return True
-    if lower.endswith((".lock", ".toml", ".ini", ".cfg", ".yml", ".yaml",
-                       ".json", ".sh", ".ps1", ".bat", ".cmd")):
-        return True
-    return path.startswith(PROTECTED_PREFIXES)
+
+def _safe_path(path: str) -> bool:
+    return (isinstance(path, str) and bool(path) and not path.startswith("/")
+            and not path.startswith("./") and not path.startswith("../")
+            and not any(part in (".", "..", "") for part in path.split("/"))
+            and "\\" not in path and not any(ord(ch) < 32 for ch in path))
 
 
-def classify(paths: list[str]) -> dict:
-    """Return selected check categories, conservative reason and normalized paths.
+def _no_duplicate_keys(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ClassificationError("duplicate impact policy key")
+        result[key] = value
+    return result
 
-    The example supports focused Python and documentation checks. Other code,
-    unknown paths and protected config must fall back to FULL. This is NOT a
-    source dependency graph and cannot independently exempt required gates.
+
+def load_policy(path: Path) -> list[dict]:
+    """Parse only trusted-base JSON; pattern matching never runs code."""
+    try:
+        if path.is_symlink() or path.stat().st_size > 131072:
+            raise ClassificationError("unsafe impact policy input")
+        raw = json.loads(path.read_text(encoding="utf-8"),
+                         object_pairs_hook=_no_duplicate_keys)
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        raise ClassificationError("impact policy unavailable or invalid") from exc
+    if not isinstance(raw, dict) or set(raw) != {"schema_version", "rules"}:
+        raise ClassificationError("unexpected impact policy schema")
+    if type(raw["schema_version"]) is not int or raw["schema_version"] != 1:
+        raise ClassificationError("unsupported impact policy version")
+    rules = raw["rules"]
+    if not isinstance(rules, list) or len(rules) > MAX_RULES:
+        raise ClassificationError("impact rules absent or excessive")
+    normalized = []
+    for rule in rules:
+        if not isinstance(rule, dict) or set(rule) != {"match", "pattern", "category"}:
+            raise ClassificationError("unknown impact rule property")
+        match, pattern, category = rule["match"], rule["pattern"], rule["category"]
+        if (not isinstance(match, str) or match not in MATCHES or
+                not isinstance(category, str) or
+                category not in CATEGORIES - {"unknown"}):
+            raise ClassificationError("unsupported impact selector/category")
+        if not isinstance(pattern, str) or len(pattern) > 255 or not pattern:
+            raise ClassificationError("invalid impact pattern")
+        if match == "suffix":
+            if not pattern.startswith(".") or "/" in pattern or "\\" in pattern:
+                raise ClassificationError("invalid suffix selector")
+            # A global filename extension cannot establish that *every*
+            # matching artifact is passive documentation. Some Markdown is
+            # executable, generated input, governance or release evidence.
+            if category == "documentation":
+                raise ClassificationError(
+                    "documentation rules require an exact path or directory prefix")
+        elif match == "prefix":
+            # Require a real directory boundary: "docs" also matches
+            # "docsecrets/", "docs-private/" and similar unrelated paths.
+            if not pattern.endswith("/") or not _safe_path(pattern[:-1]):
+                raise ClassificationError(
+                    "prefix selectors must name a directory ending in /")
+        elif not _safe_path(pattern):
+            raise ClassificationError("unsafe impact selector")
+        normalized.append(rule)
+    return normalized
+
+
+def _built_in(path: str) -> set[str]:
+    """Recognize universal danger boundaries without granting docs-only."""
+    name = path.rsplit("/", 1)[-1]
+    parts = path.lower().split("/")
+    lowered = name.lower()
+    cats = set()
+    if name in GOVERNANCE_NAMES or lowered in ("agents.md", "claude.md"):
+        cats.add("governance")
+    if path.startswith((".github/workflows/", ".github/actions/")):
+        cats.add("workflows")
+    if name in POLICY_NAMES or path.startswith(("ci/", "scripts/ci/")):
+        cats.add("workflows")
+    if name in DEPENDENCY_NAMES or lowered.startswith(("requirements-", "dockerfile", "containerfile")):
+        cats.add("dependencies")
+    if lowered.endswith((".lock", ".lockb")):
+        cats.add("dependencies")
+    if parts[0] in ("release", "releases", "packaging", "dist"):
+        cats.add("release-assets")
+    if name in RELEASE_NAMES or Path(name).suffix.lower() in RELEASE_EXT:
+        cats.add("release-assets")
+    if Path(name).suffix.lower() in MODEL_EXT:
+        cats.add("models")
+    if Path(name).suffix.lower() in CODE_EXT:
+        cats.add("executable-code")
+    # Governance and generated interfaces are not merely their file extensions.
+    if path.startswith(("docs/api-contracts/", "docs/generated-contracts/", "docs/governance/")):
+        cats.add("governance")
+    if path.startswith((".github/", "infra/", "infrastructure/", "deploy/", "deployment/")):
+        cats.add("workflows")
+    return cats
+
+
+def _matches(path: str, rule: dict) -> bool:
+    pattern = rule["pattern"]
+    if rule["match"] == "exact":
+        return path == pattern
+    if rule["match"] == "prefix":
+        # An already-validated rule has a trailing separator. Keep the
+        # boundary check here as defense if a caller supplies direct rules.
+        return pattern.endswith("/") and path.startswith(pattern)
+    # Conservative for direct API callers that bypass load_policy.
+    # No universal file-extension pattern proves passive documentation.
+    if rule["category"] == "documentation":
+        return False
+    return path.endswith(pattern)
+
+
+def classify(paths: list[str], policy: Optional[list[dict]] = None,
+             stage: str = "candidate") -> dict:
+    """Select generic targeted/full work, never authorize a merge.
+
+    Absent trusted policy always means FULL. A draft may defer full work for
+    *known* executable/model/dependency changes, but readiness, unknown or
+    mandatory safety categories require full acceptance.
     """
-    if not paths:
-        paths = ["__EMPTY_OR_UNVERIFIED_DIFF__"]
-    unique = sorted(set(paths))
-    if len(unique) > MAX_FILES:
-        unique = ["__TOO_MANY_CHANGED_FILES__"]
-    invalid = any(
-        not path or path.startswith("/") or path.startswith("../")
-        or "/../" in path or "\\" in path or any(ord(ch) < 32 for ch in path)
-        for path in unique
-    )
+    if stage not in ("draft", "candidate", "release"):
+        raise ClassificationError("unknown development stage; no reduced route")
+    unique = sorted(set(paths)) if paths else []
+    invalid = (not unique or len(unique) > MAX_FILES
+               or any(not _safe_path(x) for x in unique))
     categories = set()
-    reason = []
+    reasons = []
     if invalid:
-        categories.add("full")
-        reason.append("unsafe-filename")
-    for path in unique:
-        if is_protected(path):
-            categories.add("full")
-            reason.append("protected-config-or-boundary")
-        elif Path(path).suffix.lower() in DOC_SUFFIXES or path in SPECIAL_DOCS:
-            categories.add("docs")
-        elif Path(path).suffix.lower() in PYTHON_SUFFIXES:
-            categories.add("python")
-        else:
-            categories.add("full")
-            reason.append("unknown-or-cross-language-impact")
-    if "full" in categories:
-        # Include targeted jobs alongside full integration checks: the full
-        # suite in real consumers is policy-defined and must not be a no-op.
-        selected = ["docs", "python", "full"]
-        route = "full"
-    elif categories == {"docs"}:
-        selected, route = ["docs"], "docs"
-    elif categories == {"python"}:
-        selected, route = ["python"], "python"
-    else:
-        selected, route = ["docs", "python"], "mixed"
+        categories.add("unknown")
+        reasons.append("missing-overlarge-or-unsafe-diff")
+    for path in unique if not invalid else []:
+        path_cats = _built_in(path)
+        if policy is not None:
+            path_cats.update(rule["category"] for rule in policy if _matches(path, rule))
+        if not path_cats:
+            path_cats.add("unknown")
+            reasons.append("unmapped-impact")
+        categories.update(path_cats)
+    if policy is None:
+        categories.add("unknown")
+        reasons.append("trusted-policy-unavailable")
+    full = bool(categories & ALWAYS_FULL) or stage == "release"
+    if stage == "candidate" and categories & CANDIDATE_FULL:
+        full = True
+    target = not full
     return {
-        "route": route, "selected": selected,
-        "run_docs": "true" if "docs" in selected else "false",
-        "run_python": "true" if "python" in selected else "false",
-        "run_full": "true" if "full" in selected else "false",
-        "reason": ",".join(sorted(set(reason))) or "recognized-paths",
+        "route": "full" if full else "targeted",
+        "stage": stage,
+        "categories": sorted(categories),
         "changed_count": len(unique),
-        "changed_paths": unique,
+        "changed_paths": unique[:MAX_FILES],
+        "run_targeted": "true" if target else "false",
+        "run_full": "true" if full else "false",
+        "requires_exact_final_acceptance": bool(categories - {"documentation"}),
+        "deferred_full_acceptance": bool(
+            stage == "draft" and target and categories & CANDIDATE_FULL),
+        "merge_qualified": False,
+        "reason": ",".join(sorted(set(reasons))) or "trusted-identified-impact",
         "mandatory_floor": "independent required security, policy and trust checks always remain",
     }
 
 
-def emit(result: dict, output: Path | None) -> None:
+def emit(result: dict, output: Optional[Path]) -> None:
     print(json.dumps(result, sort_keys=True))
-    if output is not None:
-        # Only fixed validated literals reach the GitHub output file.
-        rows = {k: result[k] for k in
-                ("route", "run_docs", "run_python", "run_full", "reason")}
-        with output.open("a", encoding="utf-8") as out:
-            for key, value in rows.items():
-                out.write(f"{key}={value}\n")
+    if output:
+        with output.open("a", encoding="utf-8") as stream:
+            # No PR-derived paths, rule text or arbitrary values go into GITHUB_OUTPUT.
+            for key in ("route", "run_targeted", "run_full"):
+                stream.write(f"{key}={result[key]}\n")
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo", type=Path, default=Path("."))
-    parser.add_argument("--base", help="trusted PR base commit full SHA")
-    parser.add_argument("--head", help="PR head commit full SHA")
-    parser.add_argument("--paths-file", type=Path,
-                        help="local line-separated path fixture only")
-    parser.add_argument("--github-output", type=Path)
-    args = parser.parse_args()
-    if args.paths_file and (args.base or args.head):
-        parser.error("choose exact git refs OR a local fixture, not both")
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--repo", type=Path, default=Path("."))
+    ap.add_argument("--base", help="exact base commit SHA")
+    ap.add_argument("--head", help="exact head commit SHA")
+    ap.add_argument("--stage", choices=("draft", "candidate", "release"), default="candidate")
+    ap.add_argument("--policy", type=Path, help="trusted-base policy file; absent means full")
+    ap.add_argument("--paths-file", type=Path, help="local fixture only, not a PR input")
+    ap.add_argument("--github-output", type=Path)
+    args = ap.parse_args()
     if args.paths_file:
+        if args.base or args.head:
+            ap.error("fixture and Git refs are mutually exclusive")
         paths = args.paths_file.read_text(encoding="utf-8").splitlines()
     else:
         if not args.base or not args.head:
-            parser.error("--base and --head are required with git mode")
+            ap.error("both exact base and head commits are required")
         paths = changed_paths(args.repo.resolve(), args.base, args.head)
-    emit(classify(paths), args.github_output)
+    policy = load_policy(args.policy) if args.policy else None
+    emit(classify(paths, policy, args.stage), args.github_output)
     return 0
 
 
@@ -198,6 +308,5 @@ if __name__ == "__main__":
     try:
         sys.exit(main())
     except (ClassificationError, UnicodeError, OSError) as exc:
-        # An unavailable comparison is not permission to infer docs-only.
         print(f"CLASSIFICATION_UNVERIFIED: {exc}", file=sys.stderr)
         sys.exit(2)
