@@ -11,7 +11,7 @@ relationship: newly-authored-original
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/ci-guard/LICENSE
 curated_at: "2026-11-19"
-last_checked_at: "2026-11-20"
+last_checked_at: "2026-11-21"
 availability: in-repo
 local_path: skills/authored/ci-guard/SKILL.md
 permission_tier: read-only
@@ -20,8 +20,8 @@ review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "Nineteen-file standalone package with executable DAG planner/executor/qualifier, exact Git and trusted policy/command manifests, CI reference and optional Python stdlib/Git tests. Consumer-owned real verification commands and explicit branch-policy authority required for deployment."
 content_blob_sha: 28bd16010b92f4e86ae17684b2ab8d91737f49df
-complete_package_tree_sha: fdf9278bef98eae5c72bda2766d1fe1c4a9959f6
+complete_package_tree_sha: 6321eeda7f94fcc66b536902e76598d87a8ae2e7
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5 end-to-end upgrade: docs, Rust, model and trust obligations map through trusted graph and real command manifest to conditional jobs and exact qualification. 43/43 new local Python tests ran in a disposable fixture against source matching committed blobs; 28 preexisting classifier methods remain NOT_RUN on v1.5. Independent Actions-host integration, protected-policy migration and measured savings are pending."
+rationale: "v1.5 end-to-end upgrade including complete FULL-closure and non-phantom-group validation: docs, Rust, model and trust obligations map through trusted graph and real command manifest to conditional jobs and exact qualification. 47/47 new local Python tests ran in a disposable fixture against source matching committed blobs; 28 preexisting classifier methods remain NOT_RUN on v1.5. Independent Actions-host integration, protected-policy migration and measured savings are pending."
