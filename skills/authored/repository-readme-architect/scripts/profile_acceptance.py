@@ -223,8 +223,18 @@ def audit(root, readme, cfg):
     for alt, src in images:
         if len(alt) < 6 or alt.casefold() in ("banner", "logo", "image", "screenshot"):
             check("image-alt", "FAIL", "non-descriptive image alt: " + src[:120])
-        if src in inventory and inventory[src]["status"] in NONFINAL:
+        if src.startswith(("https://", "http://")):
+            check("asset-status", "HOLD", "remote image needs identity, accessibility and provenance review: " + src[:120])
+        elif src not in inventory:
+            check("asset-status", "FAIL", "displayed asset is missing from the ownership inventory: " + src[:120])
+        elif inventory[src]["status"] in NONFINAL:
             check("asset-status", "FAIL", "nonfinal asset presented in README: " + src[:120])
+        else:
+            try:
+                if not _path(root, src).is_file():
+                    check("asset-status", "FAIL", "displayed asset is missing: " + src[:120])
+            except InputError:
+                check("asset-status", "FAIL", "unsafe/symlinked displayed asset: " + src[:120])
     if re.search(r"<(?:picture|img)\b", text, re.I):
         check("html-images", "HOLD", "HTML/picture image handling requires rendered visual review")
 
