@@ -6,6 +6,7 @@ brand, external badge, semantic quality, rendered view, generated source,
 actual first-user outcome, or provider CI. No network, command execution, writes.
 """
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -85,9 +86,10 @@ def contract_from(path):
                for x in cfg["allowed_badge_targets"]):
         raise InputError("invalid badge destinations")
     if not all(isinstance(a, dict) and set(a) ==
-               {"path", "status", "owner", "purpose", "alt", "replacement"}
+               {"path", "status", "owner", "purpose", "alt", "replacement", "sha256"}
                and all(isinstance(v, str) and v.strip() for v in a.values())
                and a["status"] in STATES
+               and bool(re.fullmatch(r"[a-f0-9]{64}", a["sha256"]))
                for a in cfg["asset_inventory"]):
         raise InputError("invalid asset lifecycle inventory")
     if not all(isinstance(a, dict) and set(a) == {"requirement", "reason", "evidence_ref"}
@@ -95,6 +97,16 @@ def contract_from(path):
                for a in cfg["exceptions"]):
         raise InputError("unjustified or malformed exception")
     return cfg
+
+
+def _image_digest(path):
+    if not path.is_file() or path.stat().st_size > 16_777_216:
+        raise InputError("asset missing or exceeds 16 MiB review limit")
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1_048_576), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _image_geometry(path):
@@ -190,7 +202,11 @@ def audit(root, readme, cfg):
     if len({a["path"] for a in cfg["asset_inventory"]}) != len(cfg["asset_inventory"]):
         raise InputError("duplicate asset inventory paths")
     for entry in cfg["asset_inventory"]:
-        _path(root, entry["path"])  # Reject traversal and symlink ownership aliases.
+        item = _path(root, entry["path"])  # Reject traversal and symlink ownership aliases.
+        if item.is_file() and _image_digest(item) != entry["sha256"]:
+            check("asset-digest", "FAIL", "asset bytes differ from declared SHA-256: " + entry["path"][:120])
+        elif not item.is_file():
+            check("asset-digest", "FAIL", "declared asset does not exist: " + entry["path"][:120])
     inventory = {a["path"]: a for a in cfg["asset_inventory"]}
     banner = cfg["banner_path"]
     # Badges are metadata with accessible labels, not decorative image assets.
