@@ -3,8 +3,8 @@
 **Date:** 2026-11-21  
 **Target:** `skills/authored/evidence-driven-refinement-loop/` on draft PR #826  
 **Current reviewed SKILL.md Git blob:** `d921b7fd317a04ac9327bb874e23eb678a75182f`  
-**Complete package tree:** `f57d732c4fe16f8d41c149c478f57966acba6b0b`  
-**Evidence limit:** exact-source readback and adversarial static inspection. **No Python suite, independent consuming agent, user acceptance, or hosted security test executed.**
+**Complete package tree:** `a98510befd694a2509cfb469cf3829646bef0405`  
+**Evidence:** exact-source review plus later successful GitHub Actions regression tests (see executed-evidence addendum). No independent consuming-agent acceptance or hosted security scan has been performed.
 
 ## Review method
 
@@ -75,9 +75,8 @@ a defined attacker model.
   readback checks, descriptor checks, and directory-owner checks.
 - The schema already requires `key`, `value`, `source` and rejects
   additional preference fields. Do not record that as a repaired defect.
-- **30** optional Python preference-manager test methods are committed,
-  including planted adverse cases; **NOT_RUN**.
-- **22** optional engine source-contract methods are committed; **NOT_RUN**.
+- **38** optional Python preference-manager tests passed on both Python 3.11 and 3.13 in Actions run 44943402910.
+- **22** engine source-contract tests passed on both Python 3.11 and 3.13 in Actions run 44943402910.
 - No independent host observation, privacy penetration test, consumer
   acceptance, or quantitative effectiveness improvement is claimed.
 
@@ -90,3 +89,37 @@ demonstrating preference isolation, override refusal, revocation and
 same-canonical-skill stability. Test concurrent writers or require a
 host-provided serialized store before promising concurrency safety.
 Retain PR #826 as draft until the maintainer can substantiate acceptance.
+
+## Executed-evidence addendum (2026-11-21)
+
+The previously NOT_RUN mechanics suites were subsequently executed on the
+public GitHub Actions runners, without using an external scanner or a
+consuming-agent host:
+
+- [Workflow run 44943402910](https://github.com/Knapp-Kevin/skillz/actions/runs/44943402910)
+  at commit `15e1217d5fc8337afc24ba051b63853bd76ff0c1`.
+- Python 3.11: preference-manager tests **38/38 PASS**; engine contract
+  tests **22/22 PASS**.
+- Python 3.13: preference-manager tests **38/38 PASS**; engine contract
+  tests **22/22 PASS**.
+- A bounded POSIX `flock` mutation lock now serializes **cooperating**
+  managers at the same private root. Contention is refused without
+  clobbering state. This does not protect against hostile same-UID
+  processes or distributed/multi-host races.
+- Two isolated private configuration roots now have an executable test:
+  different preferences persist without cross-over; clearing one root
+  does not erase the other. Both roots run under the **same POSIX user**
+  in CI, so this is a logical isolation test, not a true multi-user
+  host tenancy or authorization test.
+- The duplicate regression workflow created during development was
+  removed. The retained `.github/workflows/skill-preference-qa.yml`
+  tests two Python versions on relevant changes.
+
+The full package tree now contains ten files at
+`a98510befd694a2509cfb469cf3829646bef0405`; its `SKILL.md`
+identity remains `d921b7fd317a04ac9327bb874e23eb678a75182f`.
+The pass is deterministic local-mechanics evidence, **not** proof that
+actual agents classify preferences reliably, user-specific storage is
+correctly provisioned by every host, or users achieve improved outcomes.
+`validation_status` therefore remains `not-run` for consuming-agent
+behavior.
