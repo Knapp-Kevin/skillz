@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
 display_name: "Evidence-Driven Refinement Loop"
-skill_version: "0.3.2"
+skill_version: "0.3.3"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
@@ -18,9 +18,9 @@ permission_tier: read-only analysis; specific owner-authorized bounded artifact 
 portability: high
 review_status: verified-static
 dependency_status: standalone-with-optional-offline-local-preference-manager
-dependencies: "Ten-file standalone package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional POSIX Python 3 manage.py and 38-test test_manage.py; user preferences remain private and opt-in. Core skill requires no helper, host persistence or network."
-content_blob_sha: c3b63af6c40aec479d435bd1429ed9af4730c64c
-complete_package_tree_sha: 0ee1a7e0784048504ee9a3ca5c5fbdbd70499241
+dependencies: "Ten-file standalone package: SKILL.md, README.md, LICENSE, examples/acceptance.md, preferences/README.md, schema.json, example.json, routing.md, optional POSIX Python 3 manage.py and 47-method test_manage.py. Optional CI-only jsonschema==4.23.0 validates draft-2020-12 portability; core consumer skill and manager require neither network nor third-party package, persistence or sibling files."
+content_blob_sha: 9142e29bb1b0f5225284ac28b150ec3eaa375624
+complete_package_tree_sha: e8bbdf3c2e32be9a9483854cbf6413dda10c02ea
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
-rationale: "v0.3.2 ships governed per-run canonical-improvement vs local-preference routing with consent-gated, version-aware overlay management and nonblocking POSIX advisory locking. Exact 10-file package pinned. GitHub Actions run 44943793248 at exact PR head 7db19967 passed 38 manager and 22 engine tests on each of Python 3.9/3.11/3.13, plus real two-Linux-UID isolation/read-denial/write-denial/revocation without source mutation. No independent consuming-agent success or hostile same-UID isolation shown; static rubric 18/20."
+rationale: "v0.3.3 fixes a demonstrated cross-host contract defect: the schema rejected its own valid example and, after first repair, failed to enforce duplicate-key exclusion. GitHub Actions runs 44946542762/44946683677 establish failing baselines; run 44946733879 passes 47 manager/schema tests and 22 engine tests on each Python 3.9/3.11/3.13 plus separate Linux UIDs. Same-model consuming-agent emulation E01-E08 followed distinct preference styles and authority boundaries; not independent host or end-user acceptance. Exact 10-file source pinned; static rubric remains 18/20."
