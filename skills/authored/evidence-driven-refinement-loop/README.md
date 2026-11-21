@@ -51,8 +51,12 @@ A consuming host may, only with user consent and suitable private
 storage, retain simple non-executable settings in an isolated file
 outside the downloaded skill or Skillz repository. Preferences never
 weaken verification, safety or authority requirements and do not
-become public skill changes merely by repetition. The [skill](SKILL.md)
-contains a portable example and a read-only/no-storage fallback.
+become public skill changes merely by repetition. The skill's bundled [`preferences/`](preferences/README.md)
+component contains a [JSON Schema](preferences/schema.json) and
+[anonymous example](preferences/example.json); actual user values go in
+an opt-in `preferences.local.json` in a private user configuration area
+or a strictly private single-user installation. The [skill](SKILL.md)
+retains a read-only/no-storage fallback.
 
 ## Evidence levels
 
