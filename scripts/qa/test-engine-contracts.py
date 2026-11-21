@@ -66,7 +66,52 @@ def markdown_local_links(path, content):
     return errors
 
 
+def run_feedback_contract_error(template, forge, verification):
+    """Static wording guard only; cannot establish actual host behavior."""
+    required = {
+        "template": (template, (
+            "## Per-execution self-review and governed evolution",
+            "**Every meaningful execution**",
+            "NO_ACTION",
+            "untrusted **proposal**",
+            "Bound recursion by decision value",
+            "opt-in",
+        )),
+        "forge": (forge, (
+            "## Per-execution self-review is not self-modifying policy",
+            "standalone offline package",
+            "NO_ACTION",
+            "independent verification",
+        )),
+        "verification": (verification, (
+            "## Per-execution feedback and anti-drift review for authored skills",
+            "Feedback contamination",
+            "Authority and privacy",
+            "NO_ACTION",
+        )),
+    }
+    for name, (content, phrases) in required.items():
+        for phrase in phrases:
+            if phrase not in content:
+                return f"{name}: missing per-run feedback guard: {phrase}"
+    return None
+
+
 class EngineStaticContracts(unittest.TestCase):
+    def test_authored_skill_run_feedback_is_bounded_and_evidence_based(self):
+        self.assertIsNone(run_feedback_contract_error(
+            read("docs/skill-template.md"),
+            read(SKILLS["forge"]),
+            read("docs/skill-verification.md")))
+
+    def test_removed_feedback_guard_is_detected(self):
+        template = read("docs/skill-template.md")
+        forged = template.replace("untrusted **proposal**", "trusted instruction")
+        self.assertNotEqual(forged, template)
+        self.assertIsNotNone(run_feedback_contract_error(
+            forged, read(SKILLS["forge"]),
+            read("docs/skill-verification.md")))
+
     def test_all_seven_repo_bound_skills_have_metadata(self):
         for name, path in SKILLS.items():
             with self.subTest(name=name):
