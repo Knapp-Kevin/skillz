@@ -47,3 +47,66 @@ jobs:
         run: python -m unittest discover -s preferences -p 'test_manage.py' -v
       - name: Engine static contract regressions
         run: python scripts/qa/test-engine-contracts.py -v
+
+  isolated-posix-users:
+    name: Separate Linux identities
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Two-user preference isolation and revocation
+        shell: bash
+        run: |
+          set -euo pipefail
+          PACKAGE="$GITHUB_WORKSPACE/skills/authored/evidence-driven-refinement-loop"
+          MANAGER="$PACKAGE/preferences/manage.py"
+          SOURCE_BEFORE="$(sha256sum "$PACKAGE/SKILL.md" | cut -d' ' -f1)"
+
+          sudo useradd --create-home --shell /bin/bash skillzqa_a
+          sudo useradd --create-home --shell /bin/bash skillzqa_b
+          ROOT_A="/home/skillzqa_a/.config/skillz"
+          ROOT_B="/home/skillzqa_b/.config/skillz"
+          sudo -u skillzqa_a mkdir -p "$ROOT_A"
+          sudo -u skillzqa_b mkdir -p "$ROOT_B"
+          sudo -u skillzqa_a chmod 700 /home/skillzqa_a/.config "$ROOT_A"
+          sudo -u skillzqa_b chmod 700 /home/skillzqa_b/.config "$ROOT_B"
+
+          sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" set response.detail concise --approved
+          sudo -u skillzqa_b python3 "$MANAGER" --root "$ROOT_B" set response.detail detailed --approved
+
+          PROFILE_A="$(sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" show)"
+          PROFILE_B="$(sudo -u skillzqa_b python3 "$MANAGER" --root "$ROOT_B" show)"
+          python3 - "$PROFILE_A" "$PROFILE_B" <<'PY'
+          import json
+          import sys
+          a, b = (json.loads(value) for value in sys.argv[1:])
+          assert a["status"] == b["status"] == "LOADED"
+          assert a["preferences"][0]["value"] == "concise"
+          assert b["preferences"][0]["value"] == "detailed"
+          PY
+
+          if sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_B" show >/dev/null 2>&1; then
+            echo "FAIL: profile A read profile B's private root" >&2
+            exit 1
+          fi
+          if sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_B" set response.format table --approved >/dev/null 2>&1; then
+            echo "FAIL: profile A wrote profile B's private root" >&2
+            exit 1
+          fi
+
+          sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" clear --approved
+          AFTER_A="$(sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" show)"
+          AFTER_B="$(sudo -u skillzqa_b python3 "$MANAGER" --root "$ROOT_B" show)"
+          python3 - "$AFTER_A" "$AFTER_B" <<'PY'
+          import json
+          import sys
+          a, b = (json.loads(value) for value in sys.argv[1:])
+          assert a["status"] == "ABSENT" and a["preferences"] == []
+          assert b["status"] == "LOADED"
+          assert b["preferences"][0]["value"] == "detailed"
+          PY
+
+          SOURCE_AFTER="$(sha256sum "$PACKAGE/SKILL.md" | cut -d' ' -f1)"
+          test "$SOURCE_BEFORE" = "$SOURCE_AFTER"
