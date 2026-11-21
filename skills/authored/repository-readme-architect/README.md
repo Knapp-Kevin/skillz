@@ -43,6 +43,23 @@ stays blocked. The format and verification limits are documented in the
 
 The link checker is read-only and standard-library only. It checks common local links, file/heading anchors, reference definitions and explicitly delimited generated content. It never executes a README command, follows symlinks, calls a provider or validates a release claim. Complex Markdown, external URLs, factual accuracy, installability and actual reader success require separately reported evidence. The script is **optional**, not a requirement for users on weaker hosts or systems without Python.
 
+## Reader-first Gold Standard
+
+The first screen answers **Why → What → How**, in that order: reader
+problem and significance, verified project value, and a practical way
+to begin. A first-time visitor should understand purpose within
+30 seconds. Introductory language targets approximately tenth-grade
+accessibility, while deep technical content moves into linked references
+without losing accuracy. The root README is a public-facing introduction,
+not an automatically generated API manual.
+
+Gold also requires a first-success path with a meaningful, observable
+result; a generic test command alone does not qualify. Visual asset
+inventory distinguishes verified existing artwork, newly committed
+artwork, proposed placeholders and approved final branding. Structural
+checks cannot replace independent editorial, rendered or newcomer
+acceptance.
+
 ## Gold/Platinum quality acceptance
 
 **Gold is the default quality benchmark for substantive repositories.**
