@@ -84,7 +84,7 @@ class PolicyLaboratoryTests(unittest.TestCase):
         data["candidate"]["max_attempts"] = 1
         result = lab.evaluate(data)
         self.assertEqual(result["decision"], "REJECT_CANDIDATE")
-        self.assertIn("PROTECTED_VERIFIER_SKIPPED", result["veto_reasons"])
+        self.assertIn("PROTECTED_VERIFIER_SKIPPED_OR_FAILED", result["veto_reasons"])
 
     def test_training_gain_with_negative_heldout_is_not_promotion(self):
         data = manifest()
@@ -92,6 +92,20 @@ class PolicyLaboratoryTests(unittest.TestCase):
         decision = lab.evaluate(data)
         self.assertEqual(decision["decision"], "HOLD_INCUMBENT")
         self.assertEqual(decision["cases"][2]["recorded_failure_detection_delta"], 0)
+
+    def test_failed_protected_preservation_is_vetoed(self):
+        data = manifest()
+        target = data["cases"][0]["trace"]
+        protected = next(n for n in target["nodes"] if n["node_id"] == "n-check")
+        protected["outcome"] = "OBSERVED_FAIL"
+        receipts = [r for r in target["receipts"]
+                    if r["payload"]["node_id"] != "n-check"]
+        receipts.append(with_receipt(protected))
+        target["receipts"] = receipts
+        outcome = lab.evaluate(data)
+        self.assertEqual(outcome["decision"], "REJECT_CANDIDATE")
+        self.assertIn("PROTECTED_VERIFIER_SKIPPED_OR_FAILED",
+                      outcome["veto_reasons"])
 
     def test_unknown_branch_does_not_gain(self):
         data = manifest()
@@ -147,7 +161,7 @@ class PolicyLaboratoryTests(unittest.TestCase):
     def test_wrong_context_rejected_before_comparing(self):
         data = manifest()
         data["cases"][2]["trace"]["evaluation_context_id"] = "wrong-context"
-        with self.assertRaisesRegex(lab.LabError, "drift"):
+        with self.assertRaisesRegex(replay.ReplayError, "drift"):
             lab.evaluate(data)
 
     def test_tampered_orphan_receipt_is_not_reward(self):
