@@ -1020,7 +1020,7 @@
       "skill_blob_sha": "09f2a1771a03d082c87a17f40e5bbb38cfe6657b",
       "package_tree_sha": "2ec235742a01a50d341bc7d22b66077ccee5fde1",
       "package_file_count": 34,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V1_5_7",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
@@ -1032,7 +1032,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "CI Guard v1.5.7 (#861): normalized v2 explicit side-effect obligation closure with eight planted tests. Exact-head QA PENDING; provider release effects, live consumer adoption and measured savings NOT_RUN/NOT_MEASURED.",
+      "review_note": "CI Guard v1.5.7 #861 normalized v2 side-effect obligation closure; PR #868 head 19818416702e3bcccf0627ad0d37c617bd1bdd20 workflow #45077634202 PASS 150/150 Python methods (12+16+23+45+28+26), plus Socket checks success. Registry-only evidence reconciliation still requires fresh head QA. Provider side effects, consumer adoption and cost/latency NOT_RUN/NOT_MEASURED.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"
