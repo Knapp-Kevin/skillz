@@ -1,12 +1,16 @@
 """Adversarial Phase-0 contract tests. Synthetic fixture only: no agent run or writes."""
 import copy
+from contextlib import redirect_stderr, redirect_stdout
+import io
 import json
+import tempfile
 from pathlib import Path
 import sys
 import unittest
 
 BASE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BASE / "scripts" / "qa" / "recursive-improvement"))
+import contract  # noqa: E402
 from contract import ContractError, decide, receipt_digest, validate_trace  # noqa: E402
 
 FIXTURE = Path(__file__).with_name("fixtures") / "two-branch.json"
@@ -233,6 +237,56 @@ class ContractTests(unittest.TestCase):
                    evaluator_id=self.data["evaluator_id"],
                    evaluation_context_id=self.data["evaluation_context_id"],
                    budget_remaining=1)
+
+    def test_offline_cli_validates_synthetic_fixture_with_trusted_pins(self):
+        result = contract.validate_file(
+            FIXTURE, expected_evaluator="schema-v1",
+            expected_context="isolated-v1")
+        self.assertEqual(result["status"], "VALID_STRUCTURE_ONLY")
+        self.assertEqual(result["observed_nodes"], 2)
+        capture = io.StringIO()
+        with redirect_stdout(capture):
+            exit_code = contract.main([
+                str(FIXTURE), "--expected-evaluator", "schema-v1",
+                "--expected-context", "isolated-v1"])
+        self.assertEqual(exit_code, 0)
+        self.assertIn("VALID_STRUCTURE_ONLY", capture.getvalue())
+
+    def test_cli_does_not_trust_evaluator_identity_from_the_file(self):
+        with self.assertRaisesRegex(ContractError, "trusted evaluator/context mismatch"):
+            contract.validate_file(
+                FIXTURE, expected_evaluator="attacker-v1",
+                expected_context="isolated-v1")
+
+    def test_cli_rejects_duplicate_json_fields_even_when_values_agree(self):
+        text = FIXTURE.read_text(encoding="utf-8")
+        text = text.replace('"schema_version": 1,',
+                            '"schema_version": 1, "schema_version": 1,', 1)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "duplicate.json"
+            path.write_text(text, encoding="utf-8")
+            with self.assertRaisesRegex(ContractError, "duplicate object key"):
+                contract.validate_file(
+                    path, expected_evaluator="schema-v1",
+                    expected_context="isolated-v1")
+
+    def test_cli_invalid_fixture_exits_blocked_not_traced_success(self):
+        stderr = io.StringIO()
+        with redirect_stderr(stderr):
+            result = contract.main([
+                str(FIXTURE), "--expected-evaluator", "wrong-v1",
+                "--expected-context", "isolated-v1"])
+        self.assertEqual(result, 2)
+        self.assertIn('"status": "BLOCKED"', stderr.getvalue())
+
+    def test_cli_refuses_oversized_trace_before_parsing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "oversized.json"
+            path.write_bytes(b" " * 1_048_577)
+            with self.assertRaisesRegex(ContractError, "size limit"):
+                contract.validate_file(
+                    path, expected_evaluator="schema-v1",
+                    expected_context="isolated-v1")
 
     def test_receipt_digest_is_not_assumed_to_prove_real_execution(self):
         # A self-authored payload can be internally consistent. We explicitly
