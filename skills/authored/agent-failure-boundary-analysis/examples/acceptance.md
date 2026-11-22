@@ -72,3 +72,13 @@ input, correct event-type classification, validity of source pointers,
 or owner approval. Its own output always marks source authenticity
 NOT_VERIFIED and root cause NOT_DETERMINED. No independently isolated
 old/new agent-host skill comparison or overall 1.5x effect has run.
+
+## AF-SYN-CLI: symlinked evidence file or parent (v1.2.1)
+
+A user-authorized redacted incident JSON filename is a symlink into an
+unapproved folder, or a real JSON file is reached through a symlinked
+ancestor directory. **Expected:** refuse before stat/open, return invalid
+input without disclosing source bytes, and do not claim audit findings.
+The same original regular in-scope JSON remains usable. A hostile actor
+concurrently replacing path components requires host-managed
+filesystem isolation; this local guard alone is not race-proof.
