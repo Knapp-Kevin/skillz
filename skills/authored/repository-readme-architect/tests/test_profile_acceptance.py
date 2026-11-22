@@ -278,6 +278,13 @@ class QualityProfileTests(unittest.TestCase):
         self.assertIn("Run the demo", section)
         self.assertNotIn("Documentation", section)
 
+    def test_fake_heading_in_quick_start_code_fence_does_not_truncate_use(self):
+        self.write_readme(BASE.replace(
+            "python -m example_kit demo",
+            "## command comment that is not a Markdown heading\n"
+            "python -m example_kit demo"))
+        self.assertEqual(self.gate("first-success")[0]["status"], "HOLD")
+
     def test_nested_quick_start_without_use_still_fails(self):
         before = BASE.split("## Quick Start",1)[0]
         after = BASE.split("## Documentation",1)[1]
