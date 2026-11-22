@@ -100,7 +100,7 @@ def receipt_digest(payload):
 def _read_regular_file(path):
     path = Path(path)
     try:
-        fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_CLOEXEC)
+        fd = os.open(path, os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW | os.O_CLOEXEC)
         with os.fdopen(fd, "rb") as stream:
             info = os.fstat(stream.fileno())
             require(stat.S_ISREG(info.st_mode) and info.st_size <= LIMIT, "Input must be a bounded regular file")
@@ -141,7 +141,7 @@ def checked_root(root_arg):
 @contextmanager
 def writer_lock(root):
     lock = root / ".trace.lock"
-    fd = os.open(lock, os.O_RDWR | os.O_CREAT | os.O_NOFOLLOW | os.O_CLOEXEC, 0o600)
+    fd = os.open(lock, os.O_RDWR | os.O_CREAT | os.O_NONBLOCK | os.O_NOFOLLOW | os.O_CLOEXEC, 0o600)
     try:
         st = os.fstat(fd)
         require(stat.S_ISREG(st.st_mode) and st.st_uid == os.getuid() and not stat.S_IMODE(st.st_mode) & 0o077 and st.st_nlink == 1, "Unsafe lock inode")
@@ -240,7 +240,7 @@ def _check_log(raw):
 
 def _read_log(path):
     try:
-        fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_CLOEXEC)
+        fd = os.open(path, os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW | os.O_CLOEXEC)
         with os.fdopen(fd, "rb") as stream:
             st = os.fstat(stream.fileno())
             require(stat.S_ISREG(st.st_mode) and st.st_uid == os.getuid() and not stat.S_IMODE(st.st_mode) & 0o077 and st.st_nlink == 1, "Unsafe trace inode")
@@ -354,7 +354,7 @@ def observe(root_arg, experiment_id, parent_node_id, evaluator_id, context_id,
                    "evidence_basis": "host-supplied-file-unattested"}
         raw, event_hash = _event(len(trace["events"]), trace["last_digest"], "observation", wrapper)
         require(path.stat().st_size + len(raw) <= LIMIT, "Trace size limit exhausted")
-        fd = os.open(path, os.O_WRONLY | os.O_APPEND | os.O_NOFOLLOW | os.O_CLOEXEC)
+        fd = os.open(path, os.O_WRONLY | os.O_APPEND | os.O_NONBLOCK | os.O_NOFOLLOW | os.O_CLOEXEC)
         try:
             st, current = os.fstat(fd), path.lstat()
             require(stat.S_ISREG(st.st_mode) and st.st_uid == os.getuid() and
