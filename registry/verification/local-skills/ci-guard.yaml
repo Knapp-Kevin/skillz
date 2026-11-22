@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.3"
+skill_version: "1.5.4"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 6b619a623814e1f5410a43bb21724c31980e2e40
-complete_package_tree_sha: d4b5ef1a67240b035bb63a2984c1cc378a142264
+content_blob_sha: d4ad020828d1175625d3478646165b813bb48d69
+complete_package_tree_sha: 66cd22ccd873d26e7ac419fc029c51438837ccbb
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: unverified
-verification_basis: v1.5.3-hosted-source-bound-27-overlap-cutover-plus-54-classification-plan-qa
-validation_status: passed-offline-contract-tests
-validation_note: "Current v1.5.3 source-bound GitHub Actions QA first succeeded on commit 89e708891117e46e2a6525347dce46ed7ea9e00a, run 45006875321 (12/12 original overlap +15/15 new cutover +28/28 classifier +26/26 plan, comparator script invoked). A 16th co-trigger test and review/index edits followed, requiring a new exact-head QA run. This historical green is NOT the current exact-head PASS until verified; no consumer host CI cost or branch protection acceptance measured."
+verification_basis: v1.5.4-one-pass-self-repair-anonymous-fixtures-exact-head-qa-pending
+validation_status: not-run
+validation_note: "New v1.5.4 source adds 14 runnable Python self-repair adversarial tests and anonymous fixture. Python/GitHub Actions execution on the changed version NOT_RUN at this source snapshot. Historical v1.5.3 QA run 45007034982 passed but cannot verify new source. Real consumer acceptance, provider cost, p50/p90 traces and observed critical path NOT_MEASURED."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_3"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5_4"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,8 +24,11 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Current v1.5.3 keeps original v1.5.2 nested source-graph checker as the single
-  implementation and adds strict source-cutover tests and protected receipt
-  preservation. Original v1.5.2 source-bound test results are historical.
-  Current version requires fresh GitHub-hosted offline contract test receipts.
-  Real CI event inventory, consumer assurance parity and actual savings unproven.
+  v1.5.4 mandates complete preflight before running expensive remediation
+  for an unhealthy CI system. An optional read-only preflight analyzes
+  caller-declared workflows/events, predicted fanout and repeated test
+  phases; its structural verdict is not provider authentication.
+  Fourteen new Python tests are authored, not yet executed on changed
+  bytes. CI self-repair and real cost improvement require exact-head
+  negative-control parity, authorized consumer cutover and observed
+  billed minutes plus critical path.
