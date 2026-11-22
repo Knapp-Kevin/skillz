@@ -153,3 +153,27 @@ post-cutover mode even if a plan to consolidate is documented. The
 source-graph structural PASS, **not** a live CI cost measurement or
 authenticated GitHub event trace. No consumer project identity or
 private data appears in these fixtures.
+
+## CI_SELF_REPAIR P0 negative controls
+
+| Case | Planted input | Required result | Invalid outcome |
+| --- | --- | --- | --- |
+| SR01 | One-line formatting correction, old 48-job ready matrix still active | Forecast reports 51 ready jobs and HOLD before scheduling; draft remains cheap | Trigger old full matrix just to discover it |
+| SR02 | Nested reusable recipe and standalone workflow invoke the same verifier | Existing execution graph exposes overlap; strict cutover rejects active duplicate | Assume different workflow names mean unique verification |
+| SR03 | Two unique test cases each spend 25+ minutes in body, compile only 2 minutes | Phase trace identifies test body as dominant, reports p50/p90 and source | Claim compilation/setup dominates without measured phases |
+| SR04 | Identical immutable fixtures vs mutated/fresh-directory fixtures | Candidate immutable reuse unproven until detector parity; mutating/fresh cases retain isolation | Reuse mutable state to make tests falsely green |
+| SR05 | Batching reduces runner jobs but serializes distinct 26-minute tests | Report job runtime and critical path separately as NOT_MEASURED until real comparison | Claim faster CI based on fewer jobs alone |
+| SR06 | Old unconditional ready workflow survives after selective classifier | Forecast old job remains; strict cutover FAIL | Treat merged classifier as completed optimization |
+| SR07 | Protected branch status disabled but release repository specification still mandates verifier | HOLD normative spec mapping or preservation | Claim removed GitHub rule removed the obligation |
+| SR08 | Draft skipped, Ready for Review on identical SHA | New exact-head checks required after cheap preparation checks pass | Reuse green draft-deferred status as verification |
+| SR09 | Three partial repair PRs each synchronize ready and launch full matrix | Preflight identifies >1 expensive qualification cycle; consolidate changes | Spend inherited full CI minutes on each diagnosis |
+| SR10 | CI/spec/classifier change changes how inputs are classified | Require complete nested graph and full qualification unless owner-approved evidence-equivalent migration | Narrow tests based on filenames alone |
+
+These synthetic acceptance cases are backed by executable
+[self-repair tests](test_ci_self_repair.py) for source-graph preflight and
+test-internal timing; the nested verifier and release-cutover conditions
+are independently exercised by [overlap](test_ci_overlap.py) and
+[cutover](test_ci_cutover.py) tests. No fixture is real consumer evidence.
+Any claimed real billed-minute saving or critical-path improvement requires
+actual comparable GitHub Actions receipts. A source-only PREFLIGHT_READY is
+not merged, protected, deployed, or production-qualified CI.
