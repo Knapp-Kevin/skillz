@@ -1,0 +1,126 @@
+{
+  "revision": "source-H",
+  "inventory_complete": true,
+  "workflows": [
+    {
+      "id": "legacy-full",
+      "events": [
+        "ready",
+        "push"
+      ],
+      "paths": [
+        "*"
+      ],
+      "matrix_jobs": 48,
+      "matrix_expanded": true,
+      "invocations_expanded": true,
+      "active": false,
+      "expensive": true
+    },
+    {
+      "id": "cheap-draft",
+      "events": [
+        "draft"
+      ],
+      "paths": [
+        "*"
+      ],
+      "matrix_jobs": 0,
+      "matrix_expanded": true,
+      "invocations_expanded": true,
+      "active": true,
+      "expensive": false
+    },
+    {
+      "id": "ready-targeted",
+      "events": [
+        "ready"
+      ],
+      "paths": [
+        "src/*",
+        "tests/*"
+      ],
+      "matrix_jobs": 2,
+      "matrix_expanded": true,
+      "invocations_expanded": true,
+      "active": true,
+      "expensive": true
+    },
+    {
+      "id": "ready-style",
+      "events": [
+        "ready"
+      ],
+      "paths": [
+        "*"
+      ],
+      "matrix_jobs": 1,
+      "matrix_expanded": true,
+      "invocations_expanded": true,
+      "active": true,
+      "expensive": false
+    }
+  ],
+  "repair_events": [
+    {
+      "id": "draft-correction",
+      "stage": "draft",
+      "changed_paths": [
+        "tests/example.py"
+      ]
+    },
+    {
+      "id": "complete-ready-candidate",
+      "stage": "ready",
+      "changed_paths": [
+        "tests/example.py"
+      ]
+    }
+  ],
+  "budget": {
+    "max_preparation_jobs": 1,
+    "max_expensive_cycles": 1,
+    "planned_expensive_cycles": 1
+  },
+  "controls": {
+    "nested_execution_inventory_complete": true,
+    "required_status_and_spec_mapped": true,
+    "release_unique_detection_preserved": true,
+    "source_tests_and_policy_ready": true,
+    "rollback_defined": true,
+    "cheap_checks_passed": true,
+    "exact_head_freshness_plan": true,
+    "owner_authorized_full_gate": false
+  },
+  "phases": [
+    {
+      "test_id": "case-A",
+      "phase": "compile",
+      "environment": "linux",
+      "revision": "source-H",
+      "p50_minutes": 2,
+      "p90_minutes": 3,
+      "evidence": "observed"
+    },
+    {
+      "test_id": "case-A",
+      "phase": "test",
+      "environment": "linux",
+      "revision": "source-H",
+      "p50_minutes": 25,
+      "p90_minutes": 35,
+      "evidence": "observed",
+      "unique_detection": true
+    },
+    {
+      "test_id": "case-B",
+      "phase": "test",
+      "environment": "linux",
+      "revision": "source-H",
+      "p50_minutes": 26,
+      "p90_minutes": 37,
+      "evidence": "observed",
+      "unique_detection": true
+    }
+  ]
+}
