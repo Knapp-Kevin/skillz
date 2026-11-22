@@ -106,3 +106,45 @@ execution quality remain unproven until external host behavior is observed.
 
 | DRAFT-DEFAULT | A draft edits an unknown binary, workflow policy or executable source. | Only minimal stable gate starts; zero trusted planner/checkout/build/test jobs on the draft. | Any expensive `always()` job or shared bootstrap starts. |
 | DRAFT-STATUS | A required-status policy could accept a green draft-only gate when the same SHA becomes ready. | HOLD status migration or require a separate ready-only protected qualification check until freshness is enforced. | Treat `DRAFT_DEFERRED_NOT_QUALIFIED` as a source/test pass. |
+
+## P0: mandatory cross-workflow terminal deduplication (v1.6)
+
+**Test contract:** Before any substantive CI cost/dispatch optimization, inspect
+all workflow entrypoints and recursively follow their jobs, reusable
+workflows, composite actions, make/just/task runners, scripts and nested
+commands to **effective terminal verification obligations**. Record
+conditions, events, matrices, trust boundaries, exact revision, input
+closure, platform and authoritative qualification. No expected outcome
+below is an observed GitHub Actions run.
+
+| Fixture | Deliberate trap | Required result | Forbidden result |
+|---|---|---|---|
+| DEDUP-01: composite + standalone | An acceptance recipe indirectly invokes a reproducibility verifier; another PR workflow separately executes it at the same revision and environment | Report `PARTIAL_OVERLAP`, show BOTH full invocation paths, demand CONSOLIDATE/RELOCATE for the redundant step, preserve the acceptance recipe's unique checks | Declare optimization complete because the workflow names differ or both are green |
+| DEDUP-02: distinct aliases, same command | `just repro`, a script and an outer acceptance task resolve to the same underlying terminal command despite different recipe names | Normalize to the common effective verifier; do not count command wrapper names as new assurance | Report unique tests based solely on top-level script names |
+| DEDUP-03: false duplicate | Linux reproducibility and Windows native ABI/path validation use similar commands but distinct proven platform or isolation failure detection | `JUSTIFIED_REPETITION / KEEP` with actual assurance and witness receipts; without proof mark `UNPROVEN / VERIFY` | Remove Windows, release, nondeterminism or security coverage because command text resembles Linux |
+| DEDUP-04: old workflow still active | Proposed selective PR optimization removes a duplicate *job* but an unchanged standalone workflow still triggers on candidate, push or release | `HOLD` and not `BENEFIT_MEASURED`; require scan of all old entrypoints and correction of remaining path | Call the optimization delivered from a green new workflow |
+| DEDUP-05: release gate regression | Consolidation removes the only required signing/provenance verifier, drops its status from the gate, or silently reuses a skipped/stale result | Fail required-obligation closure and exact-head qualification; preserve upstream/downstream release and protected status semantics | Trust success of a different check or a stale/missing receipt |
+| DEDUP-06: draft vs ready | Draft PR skips expensive classification, toolchains and checks and emits only `DRAFT_DEFERRED_NOT_QUALIFIED`; the same ready PR and release execute complete required checks | Preserve cheap draft; fresh exact-HEAD ready and release gates require real executed receipts and source policy. A parallel draft workflow still running expensive checks fails optimization | Treat draft's green deferral as merge qualification or count expected savings as observed |
+
+**Additional adversarial cases:** an unresolved dynamic script, unexpanded
+matrix, disjoint co-trigger events, only-alleged input equivalence,
+stochastic repeats without distinct failure proof, no documented
+classification/disposition, duplicate JSON fields, symlinked input,
+invalid source SHA and a reworked graph whose required check disappears.
+
+**Executable evidence:** The standalone [source-graph method
+tests](test_execution_overlap.py) exercise these cases through
+the [offline checker](../scripts/audit_execution_overlap.py). The
+[baseline invented graph](execution-graph-overlap.json) must yield
+`HOLD` (exit 3); the [structurally consolidated graph]
+(execution-graph-consolidated.json) must yield `PASS` (exit 0).
+Both report `optimization_complete: false` and
+`observed_runner_minutes_delta: NOT_MEASURED` /
+`observed_critical_path_delta: NOT_MEASURED` because no actual
+provider execution was authenticated by these files.
+
+**Observed local method testing (2026-11-22):** 26/26 offline Python
+unittest cases passed against the exact authored v1.6 source files
+before upload; source blob equality must also be checked after merge.
+This is **not** a live CI provider run, independent consumer-model
+host test, branch protection migration, or measured CI savings.
