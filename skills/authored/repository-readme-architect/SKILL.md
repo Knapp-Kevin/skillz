@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.5.0
+  version: 0.5.1
   license: MIT
 ---
 
