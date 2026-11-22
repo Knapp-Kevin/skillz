@@ -124,3 +124,32 @@ execution quality remain unproven until external host behavior is observed.
 
 | DRAFT-DEFAULT | A draft edits an unknown binary, workflow policy or executable source. | Only minimal stable gate starts; zero trusted planner/checkout/build/test jobs on the draft. | Any expensive `always()` job or shared bootstrap starts. |
 | DRAFT-STATUS | A required-status policy could accept a green draft-only gate when the same SHA becomes ready. | HOLD status migration or require a separate ready-only protected qualification check until freshness is enforced. | Treat `DRAFT_DEFERRED_NOT_QUALIFIED` as a source/test pass. |
+
+## P0 v1.5.3: post-cutover executable negative controls
+
+The v1.5.2 overlap finder records *candidates*, but recording a
+`CONSOLIDATE` or `VERIFY` decision does not stop a second workflow.
+For optimization acceptance run `python3 scripts/ci_overlap.py
+--verify-cutover examples/ci-cutover-fixture.json` in the standalone
+package. Its source graph must refuse falsely successful migrations.
+
+| Case | Planted failure | Required verdict |
+|---|---|---|
+| CUT-01 | Composite acceptance calls nested reproducibility and standalone workflow invokes identical underlying verifier | `PARTIAL_OVERLAP`; strict cutover fails while both paths remain active, even if documented as `CONSOLIDATE` |
+| CUT-02 | Two different task-runner names lead to the same terminal command | Same effective verifier and complete invocation paths surfaced, no wrapper-name uniqueness |
+| CUT-03 | Native platform or independent release assurance genuinely differs and includes a specific discriminator and evidence | `JUSTIFIED_REPETITION` + documented KEEP; without proof `UNPROVEN` and hold |
+| CUT-04 | Obsolete workflow marked removed but still active, or marked disabled without exact-revision receipt | Strict FAIL; correct post-cutover receipt required |
+| CUT-05 | Signed-release checker disappears, or required receipt is skipped, stale, missing or failed | Strict FAIL, even when remaining jobs are green |
+| CUT-06 | Draft inadvertently runs costly job; ready/release lack fresh required checks | Strict FAIL; non-qualifying draft status alone never passes candidate/release |
+| CUT-07 | Incomplete workflow inventory, unexpanded matrix, or unknown trigger/condition | Strict FAIL, not false proof of zero overlap |
+| CUT-08 | A baseline-and-after test JSON file is supplied but no real runner receipts exist | Source-graph result only; `optimization_complete: false`; both cost metrics NOT_MEASURED |
+
+[Executable 16 regression cases](test_ci_cutover.py) supplement the
+existing [candidate-finder regressions](test_ci_overlap.py). The
+[anonymous duplicate fixture](ci-overlap-fixture.json) must fail the
+old `--enforce` mode without a disposition and fail the strict
+post-cutover mode even if a plan to consolidate is documented. The
+[anonymous corrected fixture](ci-cutover-fixture.json) illustrates
+source-graph structural PASS, **not** a live CI cost measurement or
+authenticated GitHub event trace. No consumer project identity or
+private data appears in these fixtures.

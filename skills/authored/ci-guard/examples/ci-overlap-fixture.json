@@ -1,0 +1,109 @@
+{
+  "nodes": {
+    "acceptance-recipe": {
+      "calls": [
+        "model-check",
+        "nested-repro-recipe"
+      ]
+    },
+    "nested-repro-recipe": {
+      "calls": [
+        "repro-terminal"
+      ]
+    },
+    "standalone-recipe": {
+      "calls": [
+        "repro-terminal"
+      ]
+    },
+    "release-recipe": {
+      "calls": [
+        "repro-terminal",
+        "signature-terminal"
+      ]
+    },
+    "model-check": {
+      "command": "python -m qa.check_model",
+      "obligation": "model-validation",
+      "inputs": "revision-H"
+    },
+    "repro-terminal": {
+      "command": "python -m qa.check_reproducibility",
+      "obligation": "reproducibility",
+      "inputs": "revision-H"
+    },
+    "signature-terminal": {
+      "command": "python -m qa.check_signatures",
+      "obligation": "release-signing",
+      "inputs": "revision-H"
+    },
+    "draft-terminal": {
+      "command": "python -m qa.defer",
+      "obligation": "draft-deferral",
+      "inputs": "revision-H"
+    }
+  },
+  "entrypoints": [
+    {
+      "id": "acceptance",
+      "cohort": "ready-H",
+      "stage": "candidate",
+      "event": "pull_request",
+      "revision": "revision-H",
+      "environment": "linux-pinned",
+      "trust_boundary": "candidate-readonly",
+      "condition": "ready && changed",
+      "matrix_expanded": true,
+      "expensive": true,
+      "invokes": [
+        "acceptance-recipe"
+      ]
+    },
+    {
+      "id": "standalone",
+      "cohort": "ready-H",
+      "stage": "candidate",
+      "event": "pull_request",
+      "revision": "revision-H",
+      "environment": "linux-pinned",
+      "trust_boundary": "candidate-readonly",
+      "condition": "ready && changed",
+      "matrix_expanded": true,
+      "expensive": true,
+      "invokes": [
+        "standalone-recipe"
+      ]
+    },
+    {
+      "id": "release",
+      "cohort": "release-H",
+      "stage": "release",
+      "event": "release",
+      "revision": "revision-H",
+      "environment": "linux-pinned",
+      "trust_boundary": "release-attested",
+      "condition": "release_ready",
+      "matrix_expanded": true,
+      "expensive": true,
+      "invokes": [
+        "release-recipe"
+      ]
+    },
+    {
+      "id": "draft",
+      "cohort": "draft-H",
+      "stage": "draft",
+      "event": "pull_request",
+      "revision": "revision-H",
+      "environment": "lightweight",
+      "trust_boundary": "candidate-readonly",
+      "condition": "draft",
+      "matrix_expanded": true,
+      "expensive": false,
+      "invokes": [
+        "draft-terminal"
+      ]
+    }
+  ],
+  "decisions": {}
+}
