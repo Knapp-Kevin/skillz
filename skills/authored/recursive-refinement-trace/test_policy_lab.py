@@ -42,6 +42,7 @@ def case(suffix, split, family, *, gain=True, proposal_attack=False):
 def manifest():
     return {
         "schema_version": 1, "evaluator_id": EVALUATOR,
+        "evaluator_sha256": "sha256:" + "e" * 64,
         "evaluation_context_id": CONTEXT, "budget": 3,
         "candidate": {
             "schema_version": 1, "policy_id": "adversarial-v1",
@@ -114,6 +115,18 @@ class PolicyLaboratoryTests(unittest.TestCase):
         result = lab.evaluate(data)
         self.assertNotEqual(result["decision"], "PROPOSE_BOUNDED_LIVE_PILOT")
         self.assertTrue(result["veto_reasons"])
+
+    def test_evaluator_artifact_digest_is_required_and_pinned(self):
+        data = manifest()
+        self.assertEqual(lab.evaluate(data)["evaluator_sha256"],
+                         data["evaluator_sha256"])
+        del data["evaluator_sha256"]
+        with self.assertRaises(lab.LabError):
+            lab.evaluate(data)
+        data = manifest()
+        data["evaluator_sha256"] = "unverifiable"
+        with self.assertRaises(replay.ReplayError):
+            lab.evaluate(data)
 
     def test_candidate_does_not_control_evaluator(self):
         data = manifest()
