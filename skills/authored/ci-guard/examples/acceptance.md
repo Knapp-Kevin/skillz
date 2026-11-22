@@ -278,3 +278,20 @@ A structurally reconciled job ledger never permits release, merging,
 cutover, cost-saving certification or authentication of GitHub dispatch
 lineage. Simulated samples may never be used for adoption evidence.
 
+
+## Static source/oracle reconciliation falsifiers (CI Guard v1.6.1)
+
+The [source-reconciliation method](../components/source-reconciliation.md)
+is exercised by [25 synthetic executable negative controls]
+(test_ci_source_reconcile.py). Complete checked-out workflow files and
+their literal events, job IDs, `if`, `needs`, runner values and supplied
+SHA-256 values must match a normalized v3 design. Python conformance
+`test_*` AST anchors must explicitly reference each job and its
+literal guard/needs; edited or stale local allowlists are rejected.
+Unexpected workflow files, symlink/path traversal, omitted jobs,
+unsupported filtered trigger, YAML multiline guards, reuse, dynamic
+matrix and oracle source drift all HOLD. This source-binding static
+phase never runs arbitrary repository code or certifies that actual
+conformance tests, provider job execution, release/branch protection
+or end-user CI savings passed. The consuming host executes the
+real local tests and checks Git/provider revision provenance separately.
