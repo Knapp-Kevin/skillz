@@ -20,16 +20,16 @@ review_status: source-reviewed
 dependency_status: standalone-optional-posix-python-stdlib
 dependencies: >-
   Original eight-file complete skill package, optional host-invoked POSIX
-  Python 3.9+ standard-library trace recorder and 38-method offline test suite.
+  Python 3.9+ standard-library trace recorder and 40-method offline test suite.
   No network, repository runtime, scheduled jobs, model service or third-party
   dependencies. A caller-provided existing mode-0700 host-owned root and
   explicit clearance are required for mutation.
 content_blob_sha: 0f03b4bffb5abd6c2e09dea1f0a38a67056f66cb
-complete_package_tree_sha: a9af2c6686996b19ebc341698f049111f2811f49
+complete_package_tree_sha: 79258fe8c7a53691d19cca5610dbfdbb95f1e31e
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Phase-1 #830 standalone host-local capture implementation, 38/38 locally
+  Phase-1 #830 standalone host-local capture implementation, 40/40 locally
   executed Python 3.13.5 adversarial tests including synthetic red/green
   subprocess observations. Append-only SHA-256 chain, P0-compatible export,
   private path boundaries, no auto activation, no hosted claim of consent.
