@@ -196,6 +196,18 @@ authorizes publication: release and token-trigger effects still need real host
 receipts, safe permission checks, independent policy qualification and owner
 authority. Do not infer actual side effects from synthetic simulation.
 
+## Source validation before any host qualification
+
+Use the [bounded source and conformance-oracle reconciliation]
+(source-reconciliation.md) with the same exact normalized v3 revision.
+Its read-only, text-only supported subset compares every source job,
+literal `if` guard, `needs`, runner, complete workflow inventory,
+SHA-256 file digests and Python AST test assertion anchors. A stale
+guard/oracle, forgotten workflow or unsupported YAML must HOLD,
+not be silently resolved by trusting the hand-authored scenario.
+Run compiled/source local conformance tests independently; this
+static subset does **not** prove GitHub effective condition semantics.
+
 ## Transition from synthetic scenario to observed host receipts
 
 The normalized simulator **never** proves GitHub provider behavior.
