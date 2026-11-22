@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: federated-source-catalog
 display_name: Federated Source Catalog
-skill_version: 1.1.0
+skill_version: 1.1.1
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/federated-source-catalog/SKILL.md
@@ -11,7 +11,7 @@ relationship: first-party
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/federated-source-catalog/LICENSE
 curated_at: '2026-11-18'
-last_checked_at: '2026-11-18'
+last_checked_at: '2026-11-22'
 availability: in-repo
 local_path: skills/authored/federated-source-catalog/SKILL.md
 permission_tier: read-only
@@ -22,8 +22,8 @@ dependencies: >-
   Text-only catalog planning requires supplied source details. Live federation
   requires independently connected, authorized host source tools. No bundled
   OAuth/client, storage, index, sync, watcher, or deletion runtime.
-content_blob_sha: 5f4859515de5d073a939d439f1d75e1084d4404e
-complete_package_tree_sha: b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1
+content_blob_sha: 8d218771193ccefa162479e1a57fd08e9b4ba60a
+complete_package_tree_sha: 68978717ac4bdb9766ebeab1616feec2196c8573
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
@@ -33,3 +33,7 @@ rationale: >-
   stable revision provenance and prompt-injection boundaries. Host/connector
   behavior and operational security scanning not run. See
   docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
+
+# 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
+# Optional composition still requires independent host availability/authorization.
+# An offline-only negative scenario is bundled; no new host validation claimed.
