@@ -6,11 +6,17 @@
 
 Version 0.2 required truthful statements and preserving generated spans, but failed to make *source-document preservation*, *formatter discovery*, *generator ownership* and *exact-HEAD CI status* explicit pre-delivery obligations. The dangerous failure is a cleaner-looking README that deletes legitimate technical limits, examples or provenance while removing template copy.
 
-Two real public repository sources were separately read via GitHub:
-- [UOR-Foundation/uor-comms](https://github.com/UOR-Foundation/uor-comms), main `82dae7aa7e15d4609f5cc5d43efb79ed60c14634`: README still contains template-derived paths/front door; PR #35 addresses the README. A preservation-first UPLIFT is appropriate but the actual original-vs-PR side-by-side acceptance was **not performed**.
-- [UOR-Foundation/uor-framework](https://github.com/UOR-Foundation/uor-framework), main `51c01382200b0179d6640b07e9c8119364ab69a1`: the README explicitly identifies its generation by `uor-docs` and tells maintainers not to hand-edit the output. Correct action is inspect and change the controlling generator source **when explicitly in scope**, then regenerate and verify, not a direct README write. The generator implementation and output were **not executed**.
-
-These are real source observations, not independent skill-host trials or evidence of completed UOR repairs.
+Two earlier third-party source observations motivated distinct controls.
+Their source identity, repository and revision references were deliberately
+redacted from this public reusable skill library. One case concerned a
+README retaining template-derived navigation; the other concerned a
+README explicitly owned by an external documentation generator.
+Neither observation established completed consumer repairs, executed
+generator parity, external model-host trials or real reader acceptance.
+Because the original source identifiers have been redacted, these
+historical observations are no longer independently reproducible
+from this public review; the fixture and local test evidence below
+remain separately attributable to the authored skill package.
 
 ## Actual implementation
 
@@ -32,6 +38,6 @@ Optional original offline Python helper `scripts/delivery_preflight.py` reads on
 
 Structured ten-dimension current **maintainer** assessment remains **19/20**, unchanged from v0.2: procedural, authority, failure and preservation hardening improves robustness but **effectiveness** remains 1/2 until independent reader/agent-host evaluations. This is a judgment of exact source text and actual bounded helper tests, **not** a claim of production acceptance or measured improvement.
 
-Not yet verified: every exotic Markdown section, formatter execution on UOR repos, authenticated public branch policy, generator regeneration, independent multi-model or third-party consumer outcomes, production release/install, or external link results. No root README changelog change, unrelated code modification, new GitHub Actions job, CI budget consumption or automatic merge authority is in the helper.
+Not yet verified: every exotic Markdown section, formatter execution on external consumer repositories, authenticated public branch policy, generator regeneration, independent multi-model or third-party consumer outcomes, production release/install, or external link results. No root README changelog change, unrelated code modification, new GitHub Actions job, CI budget consumption or automatic merge authority is in the helper.
 
 [Machine receipt](../evals/receipts/2026-11-20-readme-architect-v030-preservation-gates.json).

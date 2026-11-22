@@ -35,6 +35,57 @@ Choose one primary reader task before deciding section order. Use the actual pro
 
 A successful source-checkout demo is not a published installation, and one passing Python example is not proof of all declared Python versions. Show Windows, Linux or macOS commands only where known and appropriate; do not silently assume POSIX shell for every audience. If a command is dangerous or mutating, prefer a safe representative demo or explain effects and permission requirements; never execute code from an untrusted README as an audit step.
 
+## 2a. Choosing an information architecture for project portfolios
+
+For an organization profile, repository collection or ecosystem README,
+**the inventory is not the explanation**. Compare at least the following
+reader navigation strategies against the evidence and reader task:
+
+| Arrangement | Prefer when | Failure mode to avoid |
+| --- | --- | --- |
+| **By abstraction** (experiences → coordination → services → foundations) | Projects have credible conceptual roles at different levels; newcomers need to see how the stack fits together | Fictional build/runtime dependency arrows; forcing unrelated efforts into one linear chain |
+| By outcome/capability | Several independent products address distinct reader problems | Hiding foundational components or inventing product integration |
+| By domain or audience | Distinct teams, fields or user roles have different entry points | Overlapping labels with untraceable duplicated project counts |
+| By maturity/status | The reader's actual question is what is usable today | Conflating stable products with more fundamental concepts |
+| Flat/compact directory | Few projects or no defensible higher-order relationships | Alphabetical order becoming the only explanation of purpose |
+
+**Abstraction is conceptual altitude.** An outer experience may use or
+demonstrate lower-level capabilities, but placement does not prove a
+dependency. Distinguish four relationship statuses when presenting an
+architecture: `conceptual only`, `implemented integration`,
+`verified build/runtime dependency`, and `planned`. Attribute the
+last three to actual sources and revisions when material. Never convert
+a speculative arrow into an observed interface. For unverifiable roles,
+label `placement provisional`, keep the link visible in an
+`Other or unclassified` group, or use outcome-first grouping instead.
+
+**Construction procedure:** inventory the complete approved set and
+original README; record exact canonical repository URLs, current
+purpose, ownership/disclosure scope, and any source-proven relationships.
+Select the primary reader question. Label a small number of meaningful
+layers using familiar words, put project links in the most useful layer
+once, give a short outcome-oriented description, and provide a secondary
+entry point for another reader class (e.g. `Find a product` versus
+`Explore the underlying libraries`). Keep historical technical context,
+important existing links and source-generated spans. Explain arrows
+in prose if actual dependencies are verified; otherwise use separated
+headings rather than arrow notation. For unrelated project lines,
+use multiple groups instead of inventing a single root.
+
+**Readability and fidelity checks:** a reader can identify the
+top-level experience and an underlying implementation path within a
+quick scan; every in-scope item is present exactly once in the canonical
+directory; cross-cutting items are linked rather than counted twice;
+headings and local anchors resolve; links point to the right owners;
+descriptions and statuses are grounded; unclassified work is not hidden;
+a text alternative exists for any diagram. Test both novice discovery
+and maintainer mechanism discovery. The supplied
+[fictional worked portfolio](../examples/abstraction-portfolio-example.md)
+is a layout illustration, not evidence that any real relationships,
+URLs or releases exist. Any remote link remains NOT_CHECKED without
+authorized access. A source-only heuristic cannot self-certify
+reader comprehension or semantic abstraction correctness.
+
 ## 3. CREATE, UPLIFT, AUDIT, VERIFY evidence boundaries
 
 **CREATE.** Inventory actual files first. When the repository has no README, finish a complete factual Markdown artifact with a short purpose, concrete status and useful next action. Blank repos get a truthful minimal document, not a fictitious install/roadmap. Do not ask a long questionnaire if an evidence-bounded artifact can already be produced.
@@ -294,8 +345,8 @@ unless separately authorized.
 ### Source-generator ownership decision
 
 Search both README content and actual source build configuration.
-HTML generated markers, a footer identifying \`uor-docs\`-like
-generators, templating inputs, generated blocks, Makefile/Justfile
+HTML generated markers, a footer naming a documentation generator,
+templating inputs, generated blocks, Makefile/Justfile
 targets, cargo/docs/Node scripts, and documentation build workflows
 are **clues** until verified against the controlling source.
 If the full README is generated, do not hand-edit it; update the

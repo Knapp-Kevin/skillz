@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.4.1
+  version: 0.5.0
   license: MIT
 ---
 
@@ -356,6 +356,78 @@ When a command cannot be executed with current permissions, check that
 its referenced entrypoint exists and mark runtime verification NOT_RUN.
 Use the **five-second skim test**: the name, concrete function and next action can be found quickly. Use the **skeptical-engineer test**: the most important claim can be traced to actual code, release or measured evidence. Write concisely and naturally; no hype, fake adoption metrics or unsupported guarantees.
 
+## Portfolio and multi-project information architecture: abstraction-first when useful
+
+A README that introduces **a collection of repositories or components**
+must help readers form a mental model, not merely provide an inventory.
+When trustworthy evidence shows that projects occupy different conceptual
+layers, **evaluate an abstraction-first presentation as the primary
+navigation**. Start with the most recognizable outcomes and products,
+then show the orchestration/interfaces that make them possible, then
+shared services/frameworks, and finally the reusable primitives, core
+libraries, protocols or specifications beneath them. The examples of
+layers are *roles*, not mandatory headings or an architectural claim.
+
+**This is a decision rule, not a universal forced hierarchy.**
+A small collection of unrelated projects may be clearer as a flat
+shortlist. Multiple independent product lines may need use-case groupings
+or a two-dimensional index. A research catalog might be more useful by
+topic or learning sequence. Choose the ordering that answers the
+reader's actual question fastest; explain the chosen axis in plain
+language. Do not treat chronology, release maturity, alphabetical order,
+repository size, stars, or ownership as a substitute for abstraction.
+Never assign a layer simply because the repository name sounds foundational.
+Unknown roles belong in an explicit **Other or unclassified** group until
+evidence supports placement, not in a fabricated dependency chain.
+
+When building or improving a repository portfolio, organization profile,
+multi-package monorepo or documented ecosystem:
+
+1. **Inventory before composing.** From authorized canonical metadata,
+   record every in-scope project, accurate link and intended audience;
+   record its evidenced function, implementation status and relevant
+   relationships. Scope/exclusions must be explicit. Do not silently drop
+   small or less impressive projects.
+2. **Identify conceptual altitude, not hypothetical dependencies.**
+   Describe each project's role in one useful sentence. Distinguish
+   `conceptual layer` (how to understand the collection),
+   `integration` (verified interface), `dependency` (proven
+   build/runtime prerequisite), and `roadmap` (planned relationship).
+   A visual arrow or nesting must not turn an inferred relationship
+   into a factual dependency claim.
+3. **Choose and label a primary reader path.** When supported, orient
+   from `experiences → coordination/interfaces → shared capabilities
+   → primitives/foundations`. Offer a reverse entry for implementers
+   when their most likely first action begins at the foundational
+   layer. Use audience and conceptual labels instead of repeating
+   jargon in every row. Place each project once in the main inventory;
+   cross-link legitimately cross-cutting work rather than duplicate it.
+4. **Preserve choice and scale.** Give each item a short description,
+   a verified repo link, and status only if grounded. A few links
+   can appear horizontally as a compact navigation strip; with many
+   options, prefer grouped vertical bullets, a small table, or an
+   accessible text outline. Avoid huge dense multi-column grids,
+   ornate unsupported diagrams, and walls of nested headings.
+   An optional diagram must have an equally useful text counterpart,
+   accessible alt text, and source/rights evidence.
+5. **Verify the result, not only the formatting.** Reconcile the
+   revised entries against the canonical inventory and the previous
+   README; flag omissions, duplicates, unsupported category labels,
+   broken local anchors, inaccessible or stale destinations, and
+   apparent arrows implying unverified dependence. Run a novice
+   `where do I start?` task and an implementer `where is the
+   underlying mechanism?` task. If independent readers are unavailable,
+   mark both as controlled emulations, not observed outcomes.
+
+A practical self-contained example and decision comparison are bundled
+in [abstraction-first portfolio navigation](examples/abstraction-portfolio-example.md),
+with adversarial cases in
+[controlled scenarios](examples/controlled-scenarios.md).
+**Do not copy a single organization's product taxonomy or identifiers
+into other repositories.** This method is provider-agnostic and works
+offline; outside repositories, diagram generators, or installed sibling
+skills are not prerequisites.
+
 ### 3. Construct the right README, including from zero
 
 For CREATE, build **the entire** `README.md` from scratch. First
@@ -380,7 +452,7 @@ the limitation, rather than silently changing them.
 - Contents for longer READMEs; correct GitHub anchor generation and meaningful navigation.
 - Functional capabilities grouped by user outcome, explicitly separating supported from roadmap/proposed items.
 - Appropriate diagram, example or screenshot *only if evidence and asset rights support it*. Assets may be generated or changed only under the current user-authorized image/edit scope.
-- Architecture orientation and maps to deeper maintained documentation rather than copy-pasting entire reference manuals.
+- Architecture orientation and maps to deeper maintained documentation rather than copy-pasting entire reference manuals. For a multi-project portfolio, evaluate an **abstraction-first map** with one-line roles and verified links before defaulting to alphabetic, chronological or release-order inventories; preserve the independent project's identities and unverified relationship boundaries.
 - Verification methodology and realistic limitations (particularly for security, cryptography, AI, formal proofs, performance and medical/financial claims).
 - License (only if evidenced), support/contribution/security reporting and release provenance when relevant.
 - For empty/minimal repositories, honestly prefer a small functional README over a fake “complete” enterprise site.
