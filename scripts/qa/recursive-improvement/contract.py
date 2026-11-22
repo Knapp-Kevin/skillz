@@ -31,7 +31,7 @@ NODE_FIELDS = {"node_id", "parent_node_id", "record_type", "candidate_id",
                "evaluation_context_id"}
 OBS_FIELDS = NODE_FIELDS | {"outcome", "receipt_digest", "post_workspace_state_digest",
                             "post_source_artifact_git_blob"}
-RECEIPT_FIELDS = {"node_id", "outcome", "source_artifact_git_blob",
+RECEIPT_FIELDS = {"node_id", "outcome", "action", "source_artifact_git_blob",
                   "workspace_state_digest", "evaluator_id", "evaluation_context_id",
                   "test_invocations", "wall_ms"}
 
@@ -137,21 +137,21 @@ def validate_trace(trace):
                  node["source_artifact_git_blob"] == base_source,
                  "trace: UNKNOWN_STATE parent/child mismatch")
 
-    visiting, visited = set(), set()
-
-    def visit(node_id):
-        _require(node_id not in visiting, "trace: cycle")
-        if node_id in visited:
-            return
-        visiting.add(node_id)
-        for child in nodes:
-            if child["parent_node_id"] == node_id:
-                visit(child["node_id"])
-        visiting.remove(node_id)
+    # Every non-root node has precisely one parent. Iterative traversal
+    # rejects unreachable cycles and supports the full 1000-node bound
+    # without exhausting Python's recursion limit.
+    children = {node_id: [] for node_id in indexed}
+    for node in nodes:
+        if node["parent_node_id"] is not None:
+            children[node["parent_node_id"]].append(node["node_id"])
+    visited = set()
+    stack = [roots[0]["node_id"]]
+    while stack:
+        node_id = stack.pop()
+        _require(node_id not in visited, "trace: cyclic or repeated traversal")
         visited.add(node_id)
-
-    visit(roots[0]["node_id"])
-    _require(len(visited) == len(nodes), "trace: unreachable nodes")
+        stack.extend(children[node_id])
+    _require(len(visited) == len(nodes), "trace: cycle or unreachable nodes")
 
     validated_receipts = {}
     for item in receipts:
@@ -165,6 +165,8 @@ def validate_trace(trace):
         _sha(payload["workspace_state_digest"], DIGEST, "receipt state")
         _require(type(payload["outcome"]) is str and payload["outcome"] in OUTCOMES,
                  "receipt: unsupported outcome")
+        _require(type(payload["action"]) is str and payload["action"] in BRANCH_ACTIONS,
+                 "receipt: unsupported action")
         _require(type(payload["test_invocations"]) is int and
                  1 <= payload["test_invocations"] <= 1000, "receipt: invalid test count")
         _require(type(payload["wall_ms"]) is int and
@@ -181,7 +183,7 @@ def validate_trace(trace):
         digest = node["receipt_digest"]
         _require(digest in validated_receipts, "observation: missing receipt")
         rec = validated_receipts[digest]
-        for key in ("node_id", "outcome", "source_artifact_git_blob",
+        for key in ("node_id", "outcome", "action", "source_artifact_git_blob",
                     "workspace_state_digest", "evaluator_id",
                     "evaluation_context_id"):
             _require(node[key] == rec[key], "observation: receipt binding mismatch")
