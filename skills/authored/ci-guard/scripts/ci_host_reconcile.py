@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import argparse
 import datetime
-import hashlib
 import json
 import os
 from pathlib import Path
@@ -258,6 +257,14 @@ def reconcile(sim,mapping,observed,live=False):
                 "HOST_WORKFLOW_PATH_MISMATCH")
         require(run.get("id")==w["run_id"],"HOST_RUN_ID_MISMATCH")
         hostjobs=rec["jobs"]
+        expected_states=[source["statuses"][name] for name in w["jobs"]]
+        run_conclusion=run.get("conclusion")
+        if run_conclusion not in CONCLUSIONS:
+            issues.append("HOST_WORKFLOW_INCOMPLETE_OR_UNSUPPORTED:"+w["workflow"])
+        elif all(x=="success" for x in expected_states) and run_conclusion!="success":
+            issues.append("HOST_WORKFLOW_OUTCOME_DRIFT:"+w["workflow"])
+        elif any(x in {"failure","cancelled"} for x in expected_states) and run_conclusion=="success":
+            issues.append("HOST_WORKFLOW_FALSE_GREEN:"+w["workflow"])
         require(len(hostjobs) <= MAX_JOBS_PER_RUN,"unbounded host jobs")
         names={}
         for job in hostjobs:
