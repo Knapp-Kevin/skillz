@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.9"
+skill_version: "1.6.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "38-file standalone MIT package, stdlib normalized v3 scenario simulator with explicit caller-declared cross-workflow dispatch, strict comparator/results proof, canonical overlap and self-repair."
-content_blob_sha: 67b84ef20fca3a99fdf14e7aa8bd6608dfd493fb
-complete_package_tree_sha: 765ff8de31efefd63a5f6a590b4205cce257d80f
+dependencies: "43-file standalone MIT CI Guard package, Python stdlib normalized v3 simulator, optional owner-authorized read-only GitHub run/job observation with actions:read, offline synthetic conformance tests; no network needed for default operation."
+content_blob_sha: 015765b16fa56e2ef8ba0050077e1592b889a654
+complete_package_tree_sha: e78308f1d02d42b2ad634aaf72f95585de794af5
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.9 adds modeled dispatch chain scheduling and fail-closed token/source checks with 10 new planted scenario tests. Source hosted 184/184 PASS at PR #870 source head 541bd1f20c808949cd93bb242bd7da20ea48c851. Real host dispatch and external measured ROI NOT_RUN."
+rationale: "v1.6.0 adds read-only exact-run GitHub REST adapter and offline result reconciliation without provider/policy certification; 26 planted host tests included. Hosted source QA PENDING; real consumer adoption and cost savings NOT_RUN."
