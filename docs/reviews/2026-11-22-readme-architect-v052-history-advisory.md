@@ -35,3 +35,7 @@ narrow PNG**, updates the already-approved test digest so the outcome
 isolates geometry, and asserts that the valid source digest passes while
 the narrow hero banner fails. This corrected source and full package
 regression suite require fresh exact-head hosted qualification.
+
+## Hosted source qualification and bounded evidence
+
+The corrected [GitHub Actions run #45085404005](https://github.com/Knapp-Kevin/skillz/actions/runs/45085404005) on exact **source HEAD** `fde064a23a0cad1364433fd315783a2f9ceaeb33` passed **190/190 Python tests** across the standalone package, including the eight new chronology tests and corrected narrow-image geometry negative control. The companion source/package tree fingerprint is `939f5b8d1f8a92c6fc0aa33cd09d5a7a2d7b6cbe`, while the unchanged since v0.5.2 source edit SKILL Git blob is `48630765c039db0c854190367ff66374bdd52590`. Both are pinned in the exact-version registry. An evidence-only final head still requires fresh GitHub Actions qualification before merge. No independent reader comprehension or external consumer effect is claimed.

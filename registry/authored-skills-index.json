@@ -1052,7 +1052,7 @@
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
       "skill_blob_sha": "48630765c039db0c854190367ff66374bdd52590",
-      "package_tree_sha": "7954b38cb64a053f13213d80bdcb0e723d0c686a",
+      "package_tree_sha": "939f5b8d1f8a92c6fc0aa33cd09d5a7a2d7b6cbe",
       "package_file_count": 17,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_5_2",
@@ -1068,8 +1068,8 @@
       ],
       "previous_reviewed_skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
       "previous_reviewed_package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
-      "review_note": "README Architect 0.5.2 patch adds conservative nonblocking CHRONOLOGICAL_LOG_ADVISORY for dense date/PR history under log headings, 8 planted controls and one path-selected offline QA workflow. Source QA and independent reader outcomes PENDING; no version jump to 0.6 or reader comprehension claims.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/824"
+      "review_note": "Repository README Architect v0.5.2 #873 compatible nonblocking README history advisory. Full package test suite PASS 190/190 Python methods on source head fde064a23a0cad1364433fd315783a2f9ceaeb33 Actions #45085404005, including eight new history negative controls and repaired existing narrow-banner fixture. Final evidence-only head requires fresh QA. Independent reader/host behavior NOT_RUN.",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/873"
     },
     {
       "id": "skill-trial-evidence-auditor",
