@@ -31,15 +31,15 @@ own policy, test mapping, branch protection, release gates and build inputs.
 | --- | --- | --- | --- |
 | C11 | Only `docs/guides/intro.md` changes and a trusted consumer policy proves it passive. | `targeted` with stable final gate and independent mandatory controls. | Hard-code a universal docs filename exemption. |
 | C12 | A `README.md` is a declared model input rather than passive prose. | Classify `models` and require full exact-HEAD acceptance when candidate. | Assume Markdown is safe by extension. |
-| C13 | A `src/engine.rs` edit occurs on an authenticated draft. | Targeted feedback, explicit deferred full acceptance; no merge eligibility. | Count draft targeted green as release acceptance. |
-| C14 | Workflow/policy/governance files change on a draft, including `AGENTS.md`, `CLAUDE.md` or `ci/impact-policy.json`. | Full qualification even though draft; decision gate always reports. | Treat draft as unconditional exemption. |
+| C13 | A `src/engine.rs` edit occurs on a draft. | The default workflow skips classification and all expensive runners; one lightweight gate reports `DRAFT_DEFERRED_NOT_QUALIFIED`. | Run Rust bootstrap just because the draft changed code, or claim draft gate success qualifies a merge. |
+| C14 | A workflow, governance or unknown file changes on a draft. | Default workflow still skips expensive work; Ready for Review must run the full required trusted candidate closure on exact HEAD. Independently mandatory security exceptions need owner approval. | Burn runner minutes for every draft or reuse the green deferral to merge. |
 | C15 | Candidate has a model, dependency, code or mixed substantive change. | Full exact-HEAD acceptance and retained native/proof/security controls. | Pick cheaper affected suite with missing dependency evidence. |
 | C16 | Unknown path, unavailable policy, renamed executable, symlink, malformed diff or missing base. | Full or blocked with an explicit reason; no unsupported reduced route. | Trust a filename, missing fact or success-shaped skipped job. |
 | C17 | Candidate changes a governance Markdown file and broad policy says `*.md` is documentation. | Built-in high-risk category wins, full qualification. | Let consumer allowlist override critical classification. |
 | C18 | A selected targeted/full job gets a GitHub `skipped` conclusion. | Always-running required gate fails. | Treat skipped as completed successful work. |
 | C19 | A Pages/artifact build is green while required native acceptance is not yet complete. | Publication stays blocked until exact-subject acceptance succeeds; preserve signed provenance. | Publish early because the artifact built once. |
 | C20 | A previously built artifact has matching filename but no authenticated signature, input-closure or digest. | Rebuild/requalify or block reuse; record evidence and costs. | Share untrusted cache or artifact just to reduce minutes. |
-| C21 | A draft becomes ready or head SHA changes after a green targeted run. | Reclassify the current candidate and run required complete suites on that exact SHA. | Transfer an older stage or SHA's verdict. |
+| C21 | A draft becomes ready or head SHA changes after a deferred draft run. | Run fresh required classification, all selected checks, and fail-closed exact-head gate; verify branch-protected freshness. | Reuse draft-defer status or stale SHA evidence as candidate qualification. |
 | C22 | A release is requested with only passive docs changed. | Release stage triggers required full assurance. | Substitute PR documentation checks for release provenance. |
 | C23 | No comparable runner costs exist for a proposed optimization. | Label all savings estimates; verify seeded fault retention before adoption. | Claim measured savings from job-count reduction. |
 
@@ -103,3 +103,6 @@ acceptance or measured CI savings.
 
 These are static decision contracts. Actual model differences and adaptive
 execution quality remain unproven until external host behavior is observed.
+
+| DRAFT-DEFAULT | A draft edits an unknown binary, workflow policy or executable source. | Only minimal stable gate starts; zero trusted planner/checkout/build/test jobs on the draft. | Any expensive `always()` job or shared bootstrap starts. |
+| DRAFT-STATUS | A required-status policy could accept a green draft-only gate when the same SHA becomes ready. | HOLD status migration or require a separate ready-only protected qualification check until freshness is enforced. | Treat `DRAFT_DEFERRED_NOT_QUALIFIED` as a source/test pass. |
