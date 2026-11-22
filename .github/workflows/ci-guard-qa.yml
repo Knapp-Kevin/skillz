@@ -1,0 +1,37 @@
+name: CI Guard offline contract tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/ci-guard/**'
+      - 'registry/skills/local-skills/ci-guard.yaml'
+      - 'registry/verification/local-skills/ci-guard.yaml'
+      - '.github/workflows/ci-guard-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-guard-qa-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-contracts:
+    # Draft PRs do not allocate runners for these optional tests.
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Executable CI Guard negative controls (Python standard library only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_overlap.py' -v
+          python3 skills/authored/ci-guard/examples/test_change_classification.py
+          python3 skills/authored/ci-guard/examples/test_ci_plan.py
+          python3 skills/authored/ci-guard/examples/test_compare_ci_runs.py
