@@ -1020,7 +1020,7 @@
       "skill_blob_sha": "2065f60fb2e3f8052c6695cd473ae1813e3561fb",
       "package_tree_sha": "c0b3dae61ace2ff104a647a24d49858de114e97e",
       "package_file_count": 34,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V1_5_6",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
@@ -1032,7 +1032,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "2026-11-22 v1.5.6 bounded normalized whole-workflow SIMULATE extension (issue #861), 34-file standalone MIT package. New ci_scenario.py and 37 locally PASS adversarial cases, eight fictional workflows, two designs, ten event/status scenarios, implicit branch authority denied; full exact-head hosted suite pending. Simulator cannot interpret arbitrary GitHub Actions semantics, authenticate actual conformance tests, enforce real independent-lane export guards, measure provider costs, or validate a consumer's outcome. Current agent-host behavioral validation NOT_RUN.",
+      "review_note": "CI Guard v1.5.6 normalized scenario source merged PR #865, run #45073979352 PASS 142/142 exact-head Python tests: 37 scenario, 12 overlap, 16 cutover, 23 self-repair, 28 classifier, 26 plan. Complete 34-file source/entrypoint pins reverified on main. This is deterministic internal behavior under caller-authored inputs; real GitHub provider semantics, external conformance or runtime export guards, measured runner cost/critical path, and real consumer/model-host user outcomes NOT_RUN/NOT_MEASURED. Issue #861 remains open.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"

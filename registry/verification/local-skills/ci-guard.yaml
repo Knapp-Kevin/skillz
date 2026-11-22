@@ -11,10 +11,10 @@ content_blob_sha: 2065f60fb2e3f8052c6695cd473ae1813e3561fb
 complete_package_tree_sha: c0b3dae61ace2ff104a647a24d49858de114e97e
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: unverified
-verification_basis: v1.5.6-local-37-normalized-scenario-tests-and-current-version-host-QA-pending
-validation_status: not-run
-validation_note: "v1.5.6 new scripts/ci_scenario.py offline normalized graph and 37 executable Python negative controls PASS locally. Existing 105 previous-version suites remain historical and must rerun against this exact source. Intended semantics subset does NOT interpret full GitHub YAML or prove compiled repo conformance, trigger tokens, actual runtime export guard enforcement, protected branch status or real cost receipts. Complete exact package current-version hosted QA pending; host agent behavior NOT_RUN."
+verification_status: verified
+verification_basis: v1.5.6-exact-head-hosted-142-of-142-offline-method-tests
+validation_status: passed-offline-contract-tests
+validation_note: "Exact CI Guard v1.5.6 source, GitHub Actions #45073979352 on PR #865 HEAD 428f4052f2f857be7a11e96f7042f67a2c7c89a8 PASS: 142/142 Python tests (12 overlap, 16 cutover, 23 self-repair, 37 normalized scenario, 28 classifier, 26 plan). Complete 34-file package tree c0b3dae61ace2ff104a647a24d49858de114e97e and SKILL blob 2065f60fb2e3f8052c6695cd473ae1813e3561fb verified on merged main. Deterministic source and caller-declared simulation only: actual GitHub event semantics, consumer conformance/runtime guard, branch protection, model-host behavior, real runner cost and product outcomes NOT_RUN/NOT_MEASURED."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5_6"
 tags:
@@ -30,5 +30,5 @@ notes: >-
   interpreter and does not authenticate external pipeline results.
   Unknown provider semantics, validator drift and hidden indirect export
   calls require source/runtime host tests and may HOLD. Thirty-seven local
-  Python scenario methods passed on new source; full exact-head GitHub QA
-  and consumer cost/outcome verification remain pending.
+  Python scenario methods passed on new source; full exact-head GitHub QA PASSED (142/142) on PR #865; consumer
+  cost/outcome verification and real provider semantics remain NOT_RUN.
