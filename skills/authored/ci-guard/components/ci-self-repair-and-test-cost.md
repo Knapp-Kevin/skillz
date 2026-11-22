@@ -34,8 +34,32 @@ Report observed phase durations *by test ID* with exact run/head, OS,
 toolchain, environment, input closure, p50/p90 where supported, and
 runner-minute and actual qualification critical-path contribution.
 Do **not** declare repeated compilation the bottleneck simply because
-build logs contain repeated compiler invocations. A 1-minute build plus
-30-minute test case means **case execution** dominates.
+build logs contain compiler invocations. Nor conclude that a process
+spending 30 minutes inside a test harness was computing for 30 minutes.
+Inspect blocking/polling intervals, requested-artifact timestamps, artifact
+arrival timestamps, producer run/job identity and post-arrival completion.
+If several consumers finish seconds after the **same upstream artifact**
+arrives, classify the evidenced waiting interval as `DEPENDENCY_WAIT`,
+not test algorithm execution, redundant compilation or shareable setup.
+
+**Job scheduling remedy:** If the producer supplies required same-run
+artifacts, consider explicit producer→consumer job `needs` and
+same-run artifact custody, delaying consumer runner allocation until
+producer success. Reject a proposed graph where consumers still occupy
+runners waiting, where a producer fails but consumers claim success, or
+where an artifact from another run/revision is silently accepted.
+**Do not make the producer an unconditional dependency on all paths.**
+When the producer is intentionally skipped in a legitimate lightweight
+or non-full path, keep that path's required consumer verification running
+via a separately demonstrated conditional route and valid fallback.
+A skipped producer must not make all downstream tests disappear.
+
+For cost, distinguish *potential runner-occupied wait seconds* inferred
+from source-bound timestamps from **actual billed runner-minute savings**
+and **observed qualification critical-path changes** after deployment.
+Dependency scheduling may save runner time without reducing the wall-clock
+critical path, and can make some paths slower. These outcomes require
+provider receipts; synthetic evidence never establishes a dollar saving.
 
 For repeated operations, distinguish:
 - `REPEATED_IMMUTABLE_SETUP`: same proven immutable input closure,
