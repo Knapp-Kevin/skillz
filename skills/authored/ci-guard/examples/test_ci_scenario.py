@@ -452,7 +452,10 @@ class ScenarioTests(unittest.TestCase):
     def test_orphaned_dispatch_target_refused(self):
         def edit(doc):
             add_dispatch_chain(doc)
-            doc['designs'][0]['workflows'].pop()
+            # Preserve the receiver and its job; orphan only the event edge.
+            receiver=doc['designs'][0]['workflows'][-1]
+            receiver.pop('trigger_from')
+            receiver.pop('token_semantics')
         with self.assertRaisesRegex(sim.Invalid,'unmapped or contradictory dispatch target'):
             self.run_doc(edit)
 
