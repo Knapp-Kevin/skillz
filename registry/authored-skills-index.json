@@ -1017,9 +1017,9 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
-      "skill_blob_sha": "be9aa4b11ccbb14a6994b2e666e3a80abd6ae635",
-      "package_tree_sha": "0c9556782649571f21bb0099249b12afcce8007f",
-      "package_file_count": 29,
+      "skill_blob_sha": "2242b2d4cc3b38e13904322a9cd7732d417e1f67",
+      "package_tree_sha": "2736194c948d0e1123a729aad458c278bccc9f0e",
+      "package_file_count": 31,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V1_5_4",
       "behavioral_validation": "not-run",
@@ -1032,7 +1032,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "v1.5.4 mandatory P0 CI_SELF_REPAIR one-pass source/phase-cost/fanout preflight for pathological inherited CI. 17/17 new local Python tests executed; exact-head hosted QA still pending, no external consumer/real runner cost validation. New phase helper distinct from canonical nested-overlap auditor; read-only optional stdlib. 29-file full package SHA pinned.",
+      "review_note": "v1.5.4 P0 one-pass CI_SELF_REPAIR and artifact dependency-wait root cause: 28/28 local Python negative tests pass (17 phase/fanout +11 30-minute shared-producer artifact-wait/fallback). Records source-bound request/arrival timestamps, same-run custody, needs gating, failure propagation, and preserves lightweight path if producer skipped. Exact 31-file Git tree and SKILL blob pinned; full exact-head GitHub-hosted QA pending; real provider runner/critical path savings NOT_MEASURED.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"
