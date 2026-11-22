@@ -196,9 +196,14 @@ def main(argv=None):
     p.add_argument('--input', required=True, type=Path, help='Explicitly supplied local JSON file')
     args = p.parse_args(argv)
     try:
-        if args.input.stat().st_size > MAX_BYTES:
+        # Lexical refusal happens before stat/open; hostile concurrent path
+        # replacement requires a separate host-enforced stable snapshot.
+        source_path = args.input.absolute()
+        if any(part.is_symlink() for part in (source_path, *source_path.parents)):
+            raise InputError('symlinked input path or ancestor')
+        if source_path.stat().st_size > MAX_BYTES:
             raise InputError('input too large')
-        with args.input.open('r', encoding='utf-8') as source:
+        with source_path.open('r', encoding='utf-8') as source:
             doc = json.load(source, object_pairs_hook=distinct_pairs, parse_float=Decimal, parse_constant=invalid_constant)
         result = score(doc)
     except (InputError, OSError, UnicodeError, json.JSONDecodeError) as exc:
