@@ -160,6 +160,8 @@ def assess(document):
         issues.append('READINESS_HEAD_STALE')
     count = number(plan.get('planned_expensive_cycles'), 'planned_expensive_cycles')
     limit = number(plan.get('max_expensive_cycles'), 'max_expensive_cycles')
+    if not isinstance(count, int) or not isinstance(limit, int):
+        raise InvalidManifest('planned and maximum expensive cycles must be integers')
     if limit > 2 or count > limit or count < 1:
         issues.append('UNBOUNDED_EXPENSIVE_REVALIDATION')
     forecast = plan.get('forecast')
@@ -177,6 +179,10 @@ def assess(document):
             raise InvalidManifest('forecast.expensive must be boolean')
         if event == 'draft' and jobs and row['expensive']:
             issues.append('DRAFT_EXPENSIVE_FANOUT')
+        if not isinstance(jobs, int):
+            raise InvalidManifest('forecast.selected_jobs must be an integer')
+        if event in ('ready', 'release') and jobs == 0:
+            issues.append('REQUIRED_FANOUT_ABSENT:' + event)
         if jobs > 1 and row.get('approval') != 'owner-authorized':
             issues.append('FANOUT_NOT_ACKNOWLEDGED:' + event)
         if row.get('inputs_revision') != source:
@@ -191,13 +197,16 @@ def assess(document):
     candidate = unique_strings(plan.get('candidate_selected'), 'candidate_selected')
     release = unique_strings(plan.get('release_selected'), 'release_selected')
     policy = unique_strings(plan.get('protected_statuses'), 'protected_statuses')
+    if not normative or not candidate or not release:
+        issues.append('QUALIFICATION_OBLIGATIONS_EMPTY')
     if normative - candidate:
         issues.append('NORMATIVE_CANDIDATE_CHECK_REMOVED')
     if normative - release:
         issues.append('NORMATIVE_RELEASE_CHECK_REMOVED')
     if policy - candidate:
         issues.append('PROTECTED_STATUS_NOT_SELECTED')
-    risky = set(plan.get('change_classes', [])) & {'workflow', 'policy', 'governance', 'release', 'unknown'}
+    classes = unique_strings(plan.get('change_classes'), 'change_classes')
+    risky = classes & {'workflow', 'policy', 'governance', 'release', 'unknown'}
     if risky and (plan.get('authorized_policy_migration') is not True or
                   not plan.get('full_qualification') is True):
         issues.append('RISKY_POLICY_CHANGE_REQUIRES_FULL_OR_AUTHORIZED_MIGRATION')
