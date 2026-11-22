@@ -11,17 +11,16 @@ content_blob_sha: e4f8a1668b48646c99ae2aaf60dac076aae3ebe6
 complete_package_tree_sha: d46950b4d62d3eae06080b980b3ed7c8d8767014
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
-verification_status: unverified
-verification_basis: v0.3.0-twelve-file-source-structural-review-new-python-suite-not-run
-validation_status: not-run
+verification_status: verified
+verification_basis: v0.3.1-exact-head-hosted-106-Python-suite-pass
+validation_status: passed-offline-contract-tests
 validation_note: >-
-  New v0.3.0 optional policy lab and 20 Python adversarial methods
-  published with exact source identity. The new Python suite and
-  independent user/host acceptance are NOT_RUN. Older v0.2.0 84/84
-  local tests are historical and do not transfer to changed package bytes.
-  Valid trace exports and policy lab output remain structural, not
-  independently authenticated execution or policy efficacy.
-
+  Exact-source v0.3.1 hosted PR #862 run #45072270335 completed
+  successfully against 9a9efb66397dd8f8cc9d5bee5af691d636497675:
+  106/106 replay, trace and Phase-3 policy lab Python methods PASS.
+  This is deterministic source/method evidence only; independent agent-host
+  skill effectiveness, policy promotion and live pilot remain NOT_RUN.
+  Historical v0.2 and v0.3.0 test receipts remain version-bound.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_3_1"
 tags:
@@ -41,3 +40,7 @@ notes: >-
 # NOT_RUN as of source edit; historical receipts do not apply to these bytes.
 # Host/agent outcomes, consumer data rights and concurrent path-swap TOCTOU
 # containment are NOT_VERIFIED.
+
+# 2026-11-22: merged source PR #862 at 8485dd10bdd72fe2f6d027fcc8a30e32dbb788a7.
+# CI run 45072270335 PASS on exact PR HEAD, 106/106 deterministic tests;
+# does not authenticate a model-host evaluation or an external consumer outcome.
