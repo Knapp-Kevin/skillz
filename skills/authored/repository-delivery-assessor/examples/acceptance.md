@@ -103,3 +103,13 @@ One local Python execution of the 39 tests does not establish the
 legacy \`repo-pulse\`/\`repo-doctor\` pairwise skill quality, adoption,
 actual user benefit, or a statistically meaningful >=1.5x effect.
 Preserve prior source and retirement evidence as historical.
+
+## RDA-SYN-CLI: linked repository snapshot refusal (v1.4.1)
+
+The analyst supplies an apparent authorized offline JSON snapshot but
+the input file or one parent directory is a symlink to an unauthorized
+snapshot. Expected: no read, no portfolio status, no disclosure and
+a failed CLI result. A plain approved JSON continues to preserve exact
+PR HEAD, required checks, missing accounts and no false release.
+Host-enforced immutable source custody is necessary against malicious
+concurrent path replacement.
