@@ -127,7 +127,7 @@ This source checker never upgrades an apparent pass into
 
 ## Planted falsifiers
 
-The bundled [25 tests](../examples/test_ci_source_reconcile.py) create
+The bundled [27 tests](../examples/test_ci_source_reconcile.py) create
 ephemeral, entirely fictional workflow files and Python conformance
 checkers. They plant stale literals, old allowlists, missing guards
 and dependencies, duplicate/missing jobs, unlisted workflows,
