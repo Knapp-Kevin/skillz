@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: repository-readme-architect
 display_name: "Repository README Architect"
-skill_version: "0.5.0"
+skill_version: "0.5.1"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/repository-readme-architect/SKILL.md
@@ -19,8 +19,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-seventeen-file-optional-python-stdlib
 dependencies: "Standalone 17-file offline package: portable Gold/Platinum README guidance, abstraction-first navigation with fully fictional example, three read-only Python standard-library checkers, existing tests and seven new local portfolio tests. No consumer library, brand, network, service or sibling skill required."
-content_blob_sha: 47e813f6e37242568e11cb5c400a680bbf461995
-complete_package_tree_sha: 94a118964320ab27776eee5004d2e722fc6c4aa1
+content_blob_sha: 09eb0cf23b64f28f53df823d7d054ea835dd0d28
+complete_package_tree_sha: 248726a1107021fbf3cdb7c2d5468d0848302418
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
-rationale: "v0.5.0 adds reader-adaptive abstraction-first organization for multi-project and organization README presentation, distinguishing conceptual roles from verified runtime dependencies, including complete-inventory preservation, two audience journeys, a fictional worked example, adversarial cases and seven authored local regression methods. Consumer identity evidence redacted. Local structural checks passed; new exact-version Python and reader tests NOT_RUN. Old receipts are historical."
+rationale: "v0.5.1 contains v0.5.0 abstraction-first guidance plus final anonymization of two generator-fixture references. v0.5.0 adds reader-adaptive abstraction-first organization for multi-project and organization README presentation, distinguishing conceptual roles from verified runtime dependencies, including complete-inventory preservation, two audience journeys, a fictional worked example, adversarial cases and seven authored local regression methods. Consumer identity evidence redacted. Local structural checks passed; new exact-version Python and reader tests NOT_RUN. Old receipts are historical."
