@@ -106,6 +106,16 @@ class CutoverTests(unittest.TestCase):
                          "PARTIAL_OVERLAP")
         self.assertEqual(self.assess(data)["status"], "FAIL")
 
+    def test_push_and_pr_events_on_same_revision_are_compared(self):
+        data = fixture()
+        data["entrypoints"][1]["event"] = "push"
+        # The scoped cohort intentionally represents two real triggers
+        # that can run for the same candidate revision.
+        self.assertEqual(overlap.audit(data)["findings"][0]["normalized_class"],
+                         "PARTIAL_OVERLAP")
+        self.assertIn("REDUNDANT_ACTIVE_INVOCATION:acceptance-job|standalone-job",
+                      self.assess(data)["issues"])
+
     def test_declared_consolidation_not_equal_executed_consolidation(self):
         data = fixture()
         data["decisions"]["acceptance-job|standalone-job"] = {
