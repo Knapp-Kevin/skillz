@@ -17,10 +17,10 @@ owned by the target repository and provider, including:
   scheduled, release, deployment and publication triggers and path filters.
   Record events whose conjunction can execute the same revision, including a
   push plus PR event and two individually passing workflows.
-- Every job's \`needs\`, \`if\`, cancellation and concurrency, matrix and
+- Every job's `needs`, `if`, cancellation and concurrency, matrix and
   fail-fast expansions, runner OS/architecture/toolchain, secrets/permissions,
   fork trust, artifacts, cache keys, source and binary revision bindings.
-- Every \`run\`, \`uses\` and called reusable workflow, composite action, Make,
+- Every `run`, `uses` and called reusable workflow, composite action, Make,
   Just, NPM, Cargo xtask, shell/Python helper, shared script or nested recipe.
   Recursively follow actual static or observed call edges to their **terminal
   verification commands**. A new script name does not establish a new check.
@@ -32,7 +32,7 @@ owned by the target repository and provider, including:
 
 Use approved read-only source APIs when possible. Inspect task files and
 scripts as **untrusted text**, not by running commands. Never assume a
-dynamic invocation or \`workflow_call\` resolves to nothing. If calls,
+dynamic invocation or `workflow_call` resolves to nothing. If calls,
 conditions, event overlap, matrix values or terminal behavior cannot be
 established, label **UNPROVEN** and block a reduced/complete optimization
 claim until resolved. An inventory of only the workflow under edit is
@@ -41,8 +41,8 @@ an explicit coverage limit, not proof of uniqueness.
 
 ## 2. Normalize and classify overlapping work
 
-Build a graph \`workflow[event] -> job[condition,matrix,needs] ->
-reusable/composite/task/script -> terminal verification\`. Record each
+Build a graph `workflow[event] -> job[condition,matrix,needs] ->
+reusable/composite/task/script -> terminal verification`. Record each
 terminal's source/inputs/toolchain/OS/environment/trust, failure-detection
 boundary, verification obligation, observed status and affected release
 qualification. **Unroll** all applicable invocations; a shared script
@@ -53,15 +53,15 @@ not wrapper spelling, and classify:
 
 | Class | Evidence rule | Disposition |
 |---|---|---|
-| \`EXACT_DUPLICATE\` | Same effective terminal verification, exact revision, inputs, environment, toolchain, platform, trust and failure boundary | \`CONSOLIDATE\` or \`RELOCATE\` the avoidable copy |
-| \`PARTIAL_OVERLAP\` | Jobs or recipes share proven effective verification but each may also perform unique checks | \`CONSOLIDATE\` only overlapping work, or \`RELOCATE\` it; keep every distinct detector |
-| \`JUSTIFIED_REPETITION\` | Independent platform, security isolation, nondeterminism, release or artifact provenance detection is proven by discriminating evidence and genuinely different execution boundary | \`KEEP\` with source and test receipts |
-| \`UNPROVEN\` | Missing terminal source, dynamic dispatch, changed inputs, unknown equivalence or alleged independent assurance with no proof | \`VERIFY\`; no consolidation decision or optimization success |
+| `EXACT_DUPLICATE` | Same effective terminal verification, exact revision, inputs, environment, toolchain, platform, trust and failure boundary | `CONSOLIDATE` or `RELOCATE` the avoidable copy |
+| `PARTIAL_OVERLAP` | Jobs or recipes share proven effective verification but each may also perform unique checks | `CONSOLIDATE` only overlapping work, or `RELOCATE` it; keep every distinct detector |
+| `JUSTIFIED_REPETITION` | Independent platform, security isolation, nondeterminism, release or artifact provenance detection is proven by discriminating evidence and genuinely different execution boundary | `KEEP` with source and test receipts |
+| `UNPROVEN` | Missing terminal source, dynamic dispatch, changed inputs, unknown equivalence or alleged independent assurance with no proof | `VERIFY`; no consolidation decision or optimization success |
 
 For each candidate, record
-\`obligation | exact event/revision | complete invocation paths |
+`obligation | exact event/revision | complete invocation paths |
 terminal command | inputs/environment/trust | unique failure detection |
-classification | CONSOLIDATE/KEEP/RELOCATE/VERIFY | owner/evidence\`.
+classification | CONSOLIDATE/KEEP/RELOCATE/VERIFY | owner/evidence`.
 
 Same job names or same last command string alone prove neither equivalence
 nor safe consolidation. Different task-runner names may still converge on
@@ -75,10 +75,10 @@ checks, release provenance and actual test coverage.
 
 Before removing any invocation, pin the **authoritative execution path** per
 required obligation. Maintain the exact candidate and release required-check
-sets; the new trust/qualification gate must reject \`missing\`, \`skipped\`,
-\`failed\`, \`canceled\`, \`stale\`, different SHA, missing manifest or absent
+sets; the new trust/qualification gate must reject `missing`, `skipped`,
+`failed`, `canceled`, `stale`, different SHA, missing manifest or absent
 per-obligation proof. A success from another job is not a substitute for
-the removed obligation's receipt. Migrate protected status names, job \`needs\`,
+the removed obligation's receipt. Migrate protected status names, job `needs`,
 artifacts, downstream release specifications and source-to-check routing
 under separately approved policy authority.
 
@@ -103,13 +103,13 @@ accepts a caller-inspected, explicitly enumerated JSON graph. It is
 recipe runner, authenticated CI receipt source, or a proof of repository-wide
 inventory completeness. This is deliberately safe for an offline host.
 
-\`\`\`sh
+```sh
 python3 scripts/audit_execution_overlap.py --input examples/execution-graph-overlap.json
 # exit 3 = HOLD (duplicate or other coverage defect)
 python3 scripts/audit_execution_overlap.py --input examples/execution-graph-consolidated.json
 # exit 0 = source-graph structural PASS, NOT production optimization complete
 python3 -B -m unittest discover -s examples -p 'test_execution_overlap.py' -v
-\`\`\`
+```
 
 The [two synthetic fixtures](../examples/execution-graph-overlap.json)
 ([after cutover](../examples/execution-graph-consolidated.json)) represent
@@ -121,18 +121,18 @@ obsolete paths after cutover, release check removal, skipped/stale receipts,
 cheap drafts and required ready/release work. They do not prove real
 provider behavior.
 
-The bounded input is version 1 and records \`revision\`,
-\`inventory_complete\`, unresolved invocation paths, full workflow/job/
-recipe/script/terminal nodes with \`invokes\` edges, stage dispatch,
-job \`needs\` and expanded matrices, effective terminal obligation,
+The bounded input is version 1 and records `revision`,
+`inventory_complete`, unresolved invocation paths, full workflow/job/
+recipe/script/terminal nodes with `invokes` edges, stage dispatch,
+job `needs` and expanded matrices, effective terminal obligation,
 source SHA, input set, environment, platform, toolchain, trust,
 failure boundary, reported receipt and documented dispositions. The
-\`qualification\` section must cover every required candidate/release
+`qualification` section must cover every required candidate/release
 obligation, fail on non-success and bind the revision.
 
-**Do not treat a reported \`PASS\` as verified host assurance.** The
-checker explicitly reports \`optimization_complete: false\`, unauthenticated
-source/receipt assertions, and \`NOT_MEASURED\` cost deltas even for a passing
+**Do not treat a reported `PASS` as verified host assurance.** The
+checker explicitly reports `optimization_complete: false`, unauthenticated
+source/receipt assertions, and `NOT_MEASURED` cost deltas even for a passing
 fixture. Its only guarantee is that *the supplied bounded graph* satisfies
 the mechanical rules. Evidence that the submitted graph matches ALL
 real workflows/scripts/runs and protected gates must be independently
@@ -154,7 +154,7 @@ comparable run receipts bound to revision and event:
 Use the bundled [run comparison](../scripts/compare_ci_runs.py) where
 suitable and disclose comparability limits. Never claim measured
 savings from fewer jobs, a local graph PASS, removed YAML, a predicted
-duration or a synthetic fixture. Report \`NOT_MEASURED\` until actual
+duration or a synthetic fixture. Report `NOT_MEASURED` until actual
 before/after execution and equal failure-detection evidence exist.
 
 **Acceptance is blocked** if an unnecessary second execution remains
