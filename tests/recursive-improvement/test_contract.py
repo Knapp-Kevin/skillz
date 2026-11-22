@@ -206,6 +206,34 @@ class ContractTests(unittest.TestCase):
         bad["receipts"].append(extra)
         self.assertReject(bad, "unreferenced receipt")
 
+    def test_unhashable_values_fail_as_contract_errors_not_crash(self):
+        # JSON can legally contain arrays and objects at these positions.
+        # They must fail through the public contract exception, not TypeError.
+        cases = [
+            ("task_family", ["schema-compatibility"]),
+            ("action", ["adversarial-probe"]),
+            ("outcome", {"claimed": "OBSERVED_PASS"}),
+        ]
+        for field, value in cases:
+            with self.subTest(node_field=field):
+                bad = copy.deepcopy(self.data)
+                bad["nodes"][1][field] = value
+                self.assertReject(bad)
+        bad = copy.deepcopy(self.data)
+        bad["receipts"][0]["payload"]["outcome"] = ["OBSERVED_PASS"]
+        self.assertReject(bad)
+
+    def test_unhashable_policy_action_fails_as_contract_error(self):
+        bad = {"action": {"tool": "run-shell"}, "selected_node_id": "n-attack",
+               "max_attempts": 1}
+        with self.assertRaises(ContractError):
+            decide(self.data, "n-root", bad,
+                   workspace_state_digest=self.data["nodes"][0]["workspace_state_digest"],
+                   source_artifact_git_blob=self.data["nodes"][0]["source_artifact_git_blob"],
+                   evaluator_id=self.data["evaluator_id"],
+                   evaluation_context_id=self.data["evaluation_context_id"],
+                   budget_remaining=1)
+
     def test_receipt_digest_is_not_assumed_to_prove_real_execution(self):
         # A self-authored payload can be internally consistent. We explicitly
         # do not claim to verify who performed the test or granted consent.
