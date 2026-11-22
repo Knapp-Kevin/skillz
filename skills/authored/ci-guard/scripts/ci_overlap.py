@@ -236,7 +236,8 @@ def qualify_cutover(graph, report):
         else:
             issues.append("STAGE_NOT_DECLARED:" + str(eid))
 
-    if policy.get("draft_status") != "DRAFT_DEFERRED_NOT_QUALIFIED":
+    if (policy.get("draft_status") != "DRAFT_DEFERRED_NOT_QUALIFIED"
+        or policy.get("draft_qualified", False) is not False):
         issues.append("DRAFT_FALSE_QUALIFICATION")
     required = policy.get("required")
     receipt_set = policy.get("receipts")
@@ -247,8 +248,8 @@ def qualify_cutover(graph, report):
             stage_required = required.get(stage)
             receipts = receipt_set.get(stage)
             if (not isinstance(stage_required, list) or not stage_required or
-                len(set(stage_required)) != len(stage_required) or
-                not all(isinstance(x, str) and x for x in stage_required)):
+                not all(isinstance(x, str) and x for x in stage_required) or
+                len(set(stage_required)) != len(stage_required)):
                 issues.append("REQUIRED_POLICY_MISSING:" + stage)
                 continue
             if not isinstance(receipts, list):
