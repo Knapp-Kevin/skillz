@@ -373,6 +373,8 @@ def observe(root_arg, experiment_id, parent_node_id, evaluator_id, context_id,
 def inspect(root_arg, experiment_id, export=False):
     root = checked_root(root_arg)
     trace = _read_log(_log_path(root, experiment_id))
+    require(trace["header"]["experiment_id"] == experiment_id,
+            "Trace experiment identity mismatch")
     if export:
         # Export exactly the Phase-0 closed-world trace contract, without a
         # runtime envelope or leaking any original file/path content.
