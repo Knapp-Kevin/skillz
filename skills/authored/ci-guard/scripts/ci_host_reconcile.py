@@ -62,8 +62,10 @@ def parse_mapping(d):
               "design_id", "expected_event", "workflow_runs"), label="mapping")
     require(d["schema_version"] == 1 and type(d["schema_version"]) is int,
             "unsupported mapping schema")
-    require(isinstance(d["repository"], str) and REPO.fullmatch(d["repository"]),
-            "repository must be owner/name")
+    require(isinstance(d["repository"], str) and REPO.fullmatch(d["repository"])
+            and all(part not in {".", ".."} and not part.startswith("-")
+                    for part in d["repository"].split("/")),
+            "repository must be safe owner/name path components")
     require(isinstance(d["source_revision"], str) and SHA.fullmatch(d["source_revision"]),
             "source must be exact full lowercase commit SHA")
     identity(d["scenario_id"], "scenario");identity(d["design_id"], "design")
