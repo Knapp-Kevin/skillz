@@ -15,7 +15,11 @@
         "candidate",
         "release"
       ],
-      "entrypoint": true
+      "entrypoint": true,
+      "events": [
+        "pull_request",
+        "release"
+      ]
     },
     {
       "id": "accept-job",
@@ -28,7 +32,8 @@
         "release"
       ],
       "needs": [],
-      "matrix_expanded": true
+      "matrix_expanded": true,
+      "condition": "ready-or-release"
     },
     {
       "id": "accept-recipe",
@@ -122,7 +127,11 @@
         "candidate",
         "release"
       ],
-      "entrypoint": true
+      "entrypoint": true,
+      "events": [
+        "pull_request",
+        "release"
+      ]
     },
     {
       "id": "repro-job",
@@ -135,7 +144,8 @@
         "release"
       ],
       "needs": [],
-      "matrix_expanded": true
+      "matrix_expanded": true,
+      "condition": "ready-or-release"
     },
     {
       "id": "just-repro",
@@ -182,7 +192,10 @@
       "stages": [
         "release"
       ],
-      "entrypoint": true
+      "entrypoint": true,
+      "events": [
+        "release"
+      ]
     },
     {
       "id": "sign-job",
@@ -194,7 +207,8 @@
         "release"
       ],
       "needs": [],
-      "matrix_expanded": true
+      "matrix_expanded": true,
+      "condition": "ready-or-release"
     },
     {
       "id": "sign",
@@ -227,7 +241,10 @@
       "stages": [
         "draft"
       ],
-      "entrypoint": true
+      "entrypoint": true,
+      "events": [
+        "pull_request"
+      ]
     },
     {
       "id": "draft-job",
@@ -239,7 +256,8 @@
         "draft"
       ],
       "needs": [],
-      "matrix_expanded": true
+      "matrix_expanded": true,
+      "condition": "ready-or-release"
     },
     {
       "id": "draft-deferred",
