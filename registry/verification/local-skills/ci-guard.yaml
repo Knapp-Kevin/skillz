@@ -11,10 +11,10 @@ content_blob_sha: 09f2a1771a03d082c87a17f40e5bbb38cfe6657b
 complete_package_tree_sha: 2ec235742a01a50d341bc7d22b66077ccee5fde1
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: needs-re-review
-verification_basis: v1.5.7-source-awaiting-exact-head-QA
-validation_status: pending
-validation_note: "New v2 side-effect negative controls staged. Exact-head PR hosted QA PENDING, prior 142/142 PASS applied only to v1.5.6. Consumer/provider behavior NOT_RUN."
+verification_status: verified
+verification_basis: v1.5.7-head-1981841-hosted-150-of-150-offline-methods
+validation_status: passed-offline-contract-tests
+validation_note: "PR #868 initial source head 19818416702e3bcccf0627ad0d37c617bd1bdd20 GitHub Actions #45077634202 PASS 150/150 Python methods: 12 overlap +16 cutover +23 self-repair +45 scenario +28 classification +26 plan. All three initial checks success. Final registry-only reconciliation head requires fresh QA. Consumer semantics/cost still NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5_7"
 tags:
@@ -24,6 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  The v1.5.7 normalized simulator now independently closes forward/tag/dispatch
-  side-effect obligations. Source exact-head QA PENDING; real provider effects,
-  host adoption, and cost savings NOT_RUN/NOT_MEASURED.
+  v1.5.7 source passed 150/150 hosted Python QA on PR #868 first exact
+  source head, including 45 normalized scenario cases. The later registry
+  reconciliation head must separately PASS before merging. These local tests
+  do not authenticate provider dispatch or consumer publication outcomes.
