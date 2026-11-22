@@ -159,12 +159,13 @@ may weaken evaluator, privacy or authority checks.
 [policy_lab.py](policy_lab.py) to compare a *frozen* recorded-order
 incumbent to one versioned declarative exploration-policy candidate,
 using only public/synthetic, host-cleared v1 trace exports. The
-[19 adversarial local test cases](test_policy_lab.py) ship with this
+[20 adversarial local test cases](test_policy_lab.py) ship with this
 package. This is an **opt-in standalone Python 3.9+ read-only
 method**, not a Skillz service, a mandatory skill runtime, or an
 automatic self-improvement process.
 
 Build an input manifest with a fixed `evaluator_id`,
+`evaluator_sha256` for the exact evaluator artifact,
 `evaluation_context_id`, common `budget`, a single `candidate`
 and separately identified `development`/`heldout` `cases`.
 Each case includes a unique experiment ID, its original closed-world
