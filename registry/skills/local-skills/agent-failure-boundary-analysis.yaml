@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: agent-failure-boundary-analysis
 display_name: "Agent Failure Boundary Analysis"
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
@@ -11,7 +11,7 @@ relationship: newly-authored-original
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/agent-failure-boundary-analysis/LICENSE
 curated_at: "2026-11-18"
-last_checked_at: "2026-11-20"
+last_checked_at: "2026-11-22"
 availability: in-repo
 local_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
 permission_tier: read-only
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Six-file portable package; optional Python 3.9+ stdlib trace-checker, governed host fallback"
-content_blob_sha: 447d9934db360eb3ff6309a5033f119914c1eced
-complete_package_tree_sha: cd86911fe032fc423c8e2008d3683522490d3f04
+content_blob_sha: f93214f32cf6810a3665b7ff28180974c4111031
+complete_package_tree_sha: cd6d35d48621a54cd5737d3a533162b7e398dbfb
 historical_comparators: "skills/agent-postmortem/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Current v1.2 six-file original package static review 18/20 and 31/31 executed offline Python method tests; host comparison and 1.5x NOT_PROVEN. docs/reviews/2026-11-20-agent-failure-v120-executable-evidence-review.md."
+rationale: "v1.2.1 fixes symlinked input file/ancestor preflight before reading optional offline JSON; two planted negative CLI cases added, valid original input paths preserved. 33 changed-version Python test methods authored but full current suite NOT_RUN. Previous-version source method pass receipts remain historical, not transferable. Lexical symlink defense does not protect hostile concurrent path replacement; host snapshot isolation and actual agent-host behavior unverified. Exact complete package Git SHA pinned."
