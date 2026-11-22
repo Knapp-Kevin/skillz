@@ -27,6 +27,8 @@ Choose a capability below, open its **SKILL.md**, and copy the **entire skill di
 | [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) | Map effective permissions and least-privilege change risk |
 | [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) | Distinguish scheduled jobs from observed delivery |
 | [Context Continuation Contract](context-continuation-contract/SKILL.md) | Carry verified context across agents and sessions |
+| [Evidence-Driven Refinement Loop](evidence-driven-refinement-loop/SKILL.md) | Challenge real task outcomes, route supported improvements and keep personal preferences separate |
+| [Recursive Refinement Trace](recursive-refinement-trace/SKILL.md) | Opt-in host-local trace capture and observed-only replay of recorded refinement attempts |
 
 ## Research, evidence, and information management
 
