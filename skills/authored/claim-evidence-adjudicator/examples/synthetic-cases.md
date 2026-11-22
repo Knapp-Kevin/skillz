@@ -50,3 +50,15 @@ a deterministic script without an authenticated host resolver.
 This method execution does not count as independent end-to-end
 model-host skill execution, old/new behavioral parity or a
 quantitative 1.5x user-effectiveness improvement.
+
+## Input-scope symlink adversarial cases (v1.2.1)
+
+- An authorized JSON filename is actually a symlink to a private
+  outside-scope file. Expected: refuse before `stat` or `open`,
+  without disclosing text or producing a lineage result.
+- An apparent authorized input lies inside a symlinked parent directory.
+  Expected: same refusal; absent host-enforced immutability, do not
+  claim immunity to concurrent replacement of source paths.
+- A regular complete, in-scope JSON input remains parseable, and
+  prior source-lineage/citation independence controls remain unchanged.
+  These are authored negative cases, not executed host trials.

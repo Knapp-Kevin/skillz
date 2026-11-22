@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Research
   display-name: Claim Evidence Adjudicator
-  version: 1.2.0
+  version: 1.2.1
   license: MIT
 ---
 
@@ -98,9 +98,9 @@ qualify as supporting that claim. If the required scope is more
 complex than an exact \`scope_id\`, decompose the claim or adjudicate
 manually; do not map a convenience sample to a whole population.
 
-The checker rejects missing upstream references, duplicate IDs,
+The checker rejects symlinked JSON input or any symlinked ancestor **before opening the file**, missing upstream references, duplicate IDs,
 lineage cycles, a derived source pretending to be an independent root,
-unsafe schema additions and malformed/oversized input. Derivative
+unsafe schema additions and malformed/oversized input. This lexical path preflight is not a race-proof filesystem sandbox: concurrently mutable, untrusted input trees require a host-enforced stable snapshot. Derivative
 citations inherit **reported** roots but are not counted as directly
 consulted primary roots. Articles, API views and screenshots sharing
 the same declared \`origin_id\` count as **one recorded evidentiary

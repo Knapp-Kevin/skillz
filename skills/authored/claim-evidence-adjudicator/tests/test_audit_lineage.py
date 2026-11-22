@@ -242,6 +242,35 @@ class MethodTests(unittest.TestCase):
             self.assertEqual(p.returncode,2)
             self.assertIn("1MiB",p.stderr)
 
+    def test_cli_rejects_symlinked_input(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source = root / "private.json"
+            source.write_text(json.dumps(example()), encoding="utf-8")
+            alias = root / "approved.json"
+            alias.symlink_to(source)
+            p = subprocess.run(
+                [sys.executable, str(HERE/"scripts/audit_lineage.py"),
+                 "--input", str(alias)], capture_output=True, text=True)
+            self.assertEqual(p.returncode, 2)
+            self.assertIn("symlinked input", p.stderr)
+            self.assertFalse(p.stdout)
+
+    def test_cli_rejects_symlinked_parent(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root/"real").mkdir()
+            source = root/"real"/"approved.json"
+            source.write_text(json.dumps(example()), encoding="utf-8")
+            (root/"alias").symlink_to(root/"real", target_is_directory=True)
+            p = subprocess.run(
+                [sys.executable, str(HERE/"scripts/audit_lineage.py"),
+                 "--input", str(root/"alias"/"approved.json")],
+                capture_output=True, text=True)
+            self.assertEqual(p.returncode, 2)
+            self.assertIn("symlinked input", p.stderr)
+            self.assertFalse(p.stdout)
+
     def test_cli_stdout_only_and_no_untrusted_pointer_leak(self):
         with tempfile.TemporaryDirectory() as tmp:
             d=example()

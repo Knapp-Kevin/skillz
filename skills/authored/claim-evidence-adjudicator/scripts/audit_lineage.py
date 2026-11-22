@@ -251,9 +251,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--input", type=Path, required=True)
     args = parser.parse_args(argv)
     try:
-        if args.input.stat().st_size > MAX_SIZE:
+        # Reject symlinked input paths and ancestors before any stat/open.
+        # Lexical preflight is not proof against concurrent path replacement;
+        # hostile workspaces require a host-enforced immutable snapshot.
+        source = args.input.absolute()
+        if any(part.is_symlink() for part in (source, *source.parents)):
+            raise InvalidInput("symlinked input path or ancestor")
+        if source.stat().st_size > MAX_SIZE:
             raise InvalidInput("input exceeds 1MiB")
-        with args.input.open("r", encoding="utf-8") as file:
+        with source.open("r", encoding="utf-8") as file:
             doc = json.load(file, object_pairs_hook=pairs, parse_constant=nonfinite)
         result = audit(doc)
     except InvalidInput as err:
