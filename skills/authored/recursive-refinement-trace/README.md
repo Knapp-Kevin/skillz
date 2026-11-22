@@ -150,15 +150,15 @@ Run from this standalone package, explicitly and locally:
 python -m unittest test_trace test_replay -v
 ```
 
-The combined regression suite includes **82 actual locally executed tests**
-(40 recorder tests plus 42 replay tests), including a **real local synthetic
+The combined regression suite includes **84 actual locally executed tests**
+(40 recorder tests plus 44 replay tests), including a **real local synthetic
 source check** that
 produces actual failing and passing subprocess exit statuses on two
 synthetic preference files. It then records separate red/green experiments,
 without falsely claiming one observation mutated the workspace of another.
 An additional integration test records two sibling outcomes using the real
 bundled recorder and confirms that the two policies select distinct known
-paths without writing to the log. All 82 tests passed locally on Python
+paths without writing to the log. All 84 tests passed locally on Python
 3.13.5. No second model, external execution attestation, or replay policy
 effectiveness gain was demonstrated. Tests run without installing
 dependencies or accessing network services.
