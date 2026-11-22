@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "43-file standalone MIT CI Guard package, Python stdlib normalized v3 simulator, optional owner-authorized read-only GitHub run/job observation with actions:read, offline synthetic conformance tests; no network needed for default operation."
 content_blob_sha: 015765b16fa56e2ef8ba0050077e1592b889a654
-complete_package_tree_sha: e78308f1d02d42b2ad634aaf72f95585de794af5
+complete_package_tree_sha: ebf67f6633f013de744961fffb9976070780871f
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required

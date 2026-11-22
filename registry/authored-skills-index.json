@@ -1018,7 +1018,7 @@
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
       "skill_blob_sha": "015765b16fa56e2ef8ba0050077e1592b889a654",
-      "package_tree_sha": "e78308f1d02d42b2ad634aaf72f95585de794af5",
+      "package_tree_sha": "ebf67f6633f013de744961fffb9976070780871f",
       "package_file_count": 43,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V1_6_0",
