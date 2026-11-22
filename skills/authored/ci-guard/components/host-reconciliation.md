@@ -44,16 +44,18 @@ run attempt, workflow path, full source SHA, expected provider event,
 normalized job IDs and their **exact displayed job names**:
 
 ```sh
-GH_TOKEN="<redacted actions-read token>" python3 scripts/ci_host_reconcile.py \
+python3 scripts/ci_host_reconcile.py \
   --simulator-results /path/to/ci-scenario-output.json \
   --mapping /path/to/approved-real-run-mapping.json \
   --live --require-pass
 ```
 
-The token is read from the environment; it is never printed. Prefer your
+Export an appropriately scoped `GH_TOKEN` through your shell's secret-manager
+integration before invoking the command. The token is read from the environment;
+it is never printed. Prefer your
 host's secure secret environment injection, **not literal shell history**.
 The tool makes only GET requests to bounded fixed
-`https://api.github.com/repos/{owner}/{repo}/actions/runs/{id}` and
+`https://api.github.com/repos/{owner}/{repo}/actions/runs/{id}/attempts/{attempt}` and
 `/attempts/{attempt}/jobs?per_page=100&page=N`; it enforces TLS using
 the standard trust store and disallows redirects, arbitrary remote hosts,
 path traversal, oversized responses, duplicates and unbounded pagination.
@@ -78,6 +80,11 @@ full source HEAD, workflow source path, run attempt, completed host workflow,
 overall workflow conclusion, mapped job statuses, and durations are checked.
 Any unknown or failed comparison is `HOLD` or a nonzero CLI failure with
 `--require-pass`.
+
+Workflow run metadata and jobs must be fetched for **the exact same attempt**.
+A prior failed run cannot borrow the later successful rerun's overall conclusion.
+Use GitHub's explicit `/attempts/{attempt}` run endpoint, never
+a latest-attempt overview for historical job evidence.
 
 The normalized `ready` event does **not** automatically turn into a
 provider `pull_request` event. The mapping explicitly declares the actual
@@ -110,7 +117,7 @@ passing the manifest to the adapter.
 
 ## Negative controls
 
-The [26 executable planted tests](../examples/test_ci_host_reconcile.py)
+The [27 executable planted tests](../examples/test_ci_host_reconcile.py)
 reject stale/wrong source, job rerun attempt mix-ups, event/path mismatch,
 invalid selected source graph, missing/duplicated/unmapped verifier jobs,
 failed or skipped checks, false-green workflow-level conclusion, invalid
