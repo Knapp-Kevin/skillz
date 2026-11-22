@@ -1109,7 +1109,7 @@
       "provenance_path": "registry/skills/local-skills/recursive-refinement-trace.yaml",
       "verification_path": "registry/verification/local-skills/recursive-refinement-trace.yaml",
       "skill_blob_sha": "0f03b4bffb5abd6c2e09dea1f0a38a67056f66cb",
-      "package_tree_sha": "7d2bed23953010eeaa71869ec0ef705d703181b8",
+      "package_tree_sha": "a9af2c6686996b19ebc341698f049111f2811f49",
       "package_file_count": 8,
       "review_status": "source-reviewed",
       "review_score": "not-scored",
@@ -1122,7 +1122,7 @@
         "software-engineering/maintenance",
         "agent-mcp-development/evaluation"
       ],
-      "review_note": "Phase-1 #830: exact eight-file package; 37/37 local Python 3.13.5 adversarial tests, including actual synthetic red/green subprocesses and P0-compatible exports. Separate external-agent, user-effectiveness, Windows-native secure storage and same-UID attack validation remain NOT_RUN."
+      "review_note": "Phase-1 #830: exact eight-file package; 38/38 local Python 3.13.5 adversarial tests, including actual synthetic red/green subprocesses and P0-compatible exports. Separate external-agent, user-effectiveness, Windows-native secure storage and same-UID attack validation remain NOT_RUN. An additional adversarial experiment-file rename test reproduced an identity-substitution defect, corrected before merge. Updated tree fingerprint attached."
     }
   ]
 }
