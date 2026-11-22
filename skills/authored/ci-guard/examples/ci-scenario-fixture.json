@@ -23,7 +23,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -32,7 +32,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -41,7 +41,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -51,7 +51,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -60,7 +60,7 @@
             "push"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -69,7 +69,7 @@
             "release"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -78,7 +78,7 @@
             "dispatch"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -87,7 +87,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         }
       ],
@@ -241,27 +241,6 @@
           "trust": "high"
         },
         {
-          "id": "gate",
-          "workflow": "acceptance",
-          "needs": [],
-          "condition": "success",
-          "conformance_condition": "success",
-          "conformance_needs": [],
-          "routes": [
-            "full",
-            "light"
-          ],
-          "eligible_events": [
-            "ready"
-          ],
-          "role": "qualify",
-          "lane": "other",
-          "seconds": 0,
-          "matrix": [
-            "default"
-          ]
-        },
-        {
           "id": "forward",
           "workflow": "forward",
           "needs": [],
@@ -317,6 +296,58 @@
           "role": "other",
           "lane": "other",
           "seconds": 6,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-full",
+          "workflow": "acceptance",
+          "needs": [
+            "producer",
+            "dependent",
+            "independent-full"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer",
+            "dependent",
+            "independent-full"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-light",
+          "workflow": "acceptance",
+          "needs": [
+            "independent-light"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "independent-light"
+          ],
+          "routes": [
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
           "matrix": [
             "default"
           ]
@@ -401,7 +432,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -410,7 +441,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -419,7 +450,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -429,7 +460,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -438,7 +469,7 @@
             "push"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -447,7 +478,7 @@
             "release"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -456,7 +487,7 @@
             "dispatch"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         },
         {
@@ -465,7 +496,7 @@
             "ready"
           ],
           "paths": [
-            "*"
+            "**"
           ]
         }
       ],
@@ -619,27 +650,6 @@
           "trust": "high"
         },
         {
-          "id": "gate",
-          "workflow": "acceptance",
-          "needs": [],
-          "condition": "success",
-          "conformance_condition": "success",
-          "conformance_needs": [],
-          "routes": [
-            "full",
-            "light"
-          ],
-          "eligible_events": [
-            "ready"
-          ],
-          "role": "qualify",
-          "lane": "other",
-          "seconds": 0,
-          "matrix": [
-            "default"
-          ]
-        },
-        {
           "id": "forward",
           "workflow": "forward",
           "needs": [],
@@ -695,6 +705,58 @@
           "role": "other",
           "lane": "other",
           "seconds": 6,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-full",
+          "workflow": "acceptance",
+          "needs": [
+            "producer",
+            "dependent",
+            "independent"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer",
+            "dependent",
+            "independent"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-light",
+          "workflow": "acceptance",
+          "needs": [
+            "independent"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "independent"
+          ],
+          "routes": [
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
           "matrix": [
             "default"
           ]
