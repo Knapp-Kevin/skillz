@@ -5,6 +5,24 @@ classification is introduced, or an optimized path would change protected
 CI obligations. A classifier added next to an unchanged expensive workflow
 saves **zero** minutes by itself. Avoid celebrating labels as optimization.
 
+## P0 one-pass self-repair when inherited CI is pathological
+
+When even a formatting/test correction launches an enormous legacy
+matrix, run [CI_SELF_REPAIR](ci-self-repair-and-test-cost.md)
+**before the first expensive workflow change**. Inventory every
+workflow/recipe and source-to-obligation path, trace actual phases
+*inside* long test cases, and forecast draft/ready/release fanout.
+A repeated compiler command is not automatically the main cost.
+
+Stage a coherent source, test, workflow, policy/spec, status-migration
+and rollback change in one cheap draft preparation. Do not repeatedly
+re-run inherited full CI on half-complete ready PRs. Only after cheap
+format/integrity checks and exact-head readiness pass should the
+owner-authorized minimum full assurance run begin. Preserve native,
+security, independent release and source-contract checks. Distinguish
+actual run costs from estimates, and keep zero automatic consumer
+workflow writes.
+
 ## Inventory before decomposition
 
 Inspect the actual workflow YAML, referenced reusable workflows, scripts,
