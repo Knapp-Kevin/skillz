@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "experiment_id": "fixture-two-branches",
+  "evaluator_id": "schema-v1",
+  "evaluation_context_id": "isolated-v1",
+  "nodes": [
+    {
+      "node_id": "n-root",
+      "parent_node_id": null,
+      "record_type": "proposal",
+      "candidate_id": "hyp-root",
+      "task_family": "schema-compatibility",
+      "action": "inspect",
+      "source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "evaluator_id": "schema-v1",
+      "evaluation_context_id": "isolated-v1"
+    },
+    {
+      "node_id": "n-attack",
+      "parent_node_id": "n-root",
+      "record_type": "observation",
+      "candidate_id": "hyp-duplicate",
+      "task_family": "schema-compatibility",
+      "action": "adversarial-probe",
+      "source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "evaluator_id": "schema-v1",
+      "evaluation_context_id": "isolated-v1",
+      "outcome": "OBSERVED_FAIL",
+      "post_source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "post_workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "receipt_digest": "sha256:f0dd21e64291357d7bbe85b8a05d8c68e5b5a8ca02a22751f6bd7f3a7b2f9edf"
+    },
+    {
+      "node_id": "n-preserve",
+      "parent_node_id": "n-root",
+      "record_type": "observation",
+      "candidate_id": "hyp-control",
+      "task_family": "schema-compatibility",
+      "action": "preservation-check",
+      "source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "evaluator_id": "schema-v1",
+      "evaluation_context_id": "isolated-v1",
+      "outcome": "OBSERVED_PASS",
+      "post_source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "post_workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "receipt_digest": "sha256:2acef23db91caeb3953cb90eb1ac0ea9caa8dd0f3842cc5abbfbd668e949ec03"
+    }
+  ],
+  "receipts": [
+    {
+      "digest": "sha256:f0dd21e64291357d7bbe85b8a05d8c68e5b5a8ca02a22751f6bd7f3a7b2f9edf",
+      "payload": {
+        "node_id": "n-attack",
+        "outcome": "OBSERVED_FAIL",
+        "source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "evaluator_id": "schema-v1",
+        "evaluation_context_id": "isolated-v1",
+        "test_invocations": 1,
+        "wall_ms": 12,
+        "action": "adversarial-probe"
+      }
+    },
+    {
+      "digest": "sha256:2acef23db91caeb3953cb90eb1ac0ea9caa8dd0f3842cc5abbfbd668e949ec03",
+      "payload": {
+        "node_id": "n-preserve",
+        "outcome": "OBSERVED_PASS",
+        "source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "evaluator_id": "schema-v1",
+        "evaluation_context_id": "isolated-v1",
+        "test_invocations": 1,
+        "wall_ms": 9,
+        "action": "preservation-check"
+      }
+    }
+  ]
+}
