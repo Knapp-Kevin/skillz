@@ -167,7 +167,7 @@ class HostEvidenceTests(unittest.TestCase):
             with self.subTest(change=change):
                 s=story()
                 if change=="pending":s["status"]="HOLD"
-                elif change=="unqualified":s["results"][0]["matches_expected"]=False
+                elif change=="unqualified":next(x for x in s["results"] if x["design"]=="split-independent" and x["scenario"]=="postmerge-push")["matches_expected"]=False
                 else:s["host_execution_proven"]=True
                 with self.assertRaises(audit.Hold):
                     audit.reconcile(s,mapping(),observed())
