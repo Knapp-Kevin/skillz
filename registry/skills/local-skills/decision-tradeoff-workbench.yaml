@@ -25,8 +25,16 @@ historical_comparators: "skills/brief-writer/SKILL.md; skills/compare/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "Current v1.2 six-file source static review 18/20, 25/25 actual Python method tests; host-level parity NOT RUN, 1.5x NOT PROVEN. docs/reviews/2026-11-20-decision-workbench-v120-executable-method.md."
+rationale: >-
+  Current v1.2.1 exact-source standalone input-boundary and original
+  functional method suite qualified against GitHub Actions PR #862,
+  run #45072270335, head 9a9efb66397dd8f8cc9d5bee5af691d636497675:
+  27/27 Python methods PASS, including the new file and ancestor
+  symlink negative controls. Original positive workflow preserved.
+  Historic earlier-version ratings and runs are not current receipts.
+  The source checker does not independently authenticate input rights,
+  consent, external host behavior, benefit or concurrent path-swap safety.
 
-# 2026-11-22: v1.2.1 refuses symlinked JSON input and ancestors before stat/read.
-# Two planted negative Python tests; full current-version suite is pending.
-# Lexical source preflight does NOT address hostile concurrent file replacement.
+# 2026-11-22: exact current source and 207/207 combined suite receipt
+# https://github.com/Knapp-Kevin/skillz/actions/runs/45072270335
+# Behavior in a consuming model host and real-user outcomes NOT_RUN.
