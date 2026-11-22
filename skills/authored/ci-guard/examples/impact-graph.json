@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "groups": ["docs", "rust", "model", "trust"],
+  "obligations": {
+    "docs-links": {"group": "docs", "needs": []},
+    "rust-build": {"group": "rust", "needs": []},
+    "rust-tests": {"group": "rust", "needs": ["rust-build"]},
+    "model-consumer": {"group": "model", "needs": ["rust-build"]},
+    "trust-policy": {"group": "trust", "needs": []}
+  },
+  "always": ["trust-policy"],
+  "full": ["docs-links", "rust-tests", "model-consumer", "trust-policy"],
+  "rules": [
+    {"match": "prefix", "pattern": "docs/passive/", "obligations": ["docs-links"]},
+    {"match": "exact", "pattern": "README.md", "obligations": ["model-consumer"]},
+    {"match": "prefix", "pattern": "src/", "obligations": ["rust-tests"]},
+    {"match": "prefix", "pattern": "models/", "obligations": ["model-consumer"]},
+    {"match": "prefix", "pattern": "tests/", "obligations": ["rust-tests"]}
+  ]
+}

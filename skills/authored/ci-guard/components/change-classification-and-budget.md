@@ -26,9 +26,10 @@ would add cost without reducing work. Do not silently omit it.
 2. **Classify impact, not suffix alone:** identify documentation-only,
    isolated code or tests, shared-library/lockfile, workflow/policy, release,
    security, build infrastructure, generated output and cross-component risk.
-   `README.md` is usually low risk; `SECURITY.md`, release notes used as
-   signed release inputs, executable docs, generated API schemas, a Markdown
-   workflow policy, or an `*.md` symlink may not be. A mixed change inherits
+   A README can be a language/model build input; a security heading,
+   release note, executable document, generated interface contract,
+   workflow policy or Markdown symlink can be consequential. **Neither
+   filename nor extension alone proves documentation-only impact.** A mixed change inherits
    **the union of required checks**. Disclose uncertain impact.
 3. **Bind to the required assurance floor:** classify which **additional**
    checks are safely conditional. Keep the actual branch-protected required
@@ -56,16 +57,89 @@ would add cost without reducing work. Do not silently omit it.
    cannot be treated as commands. The final gate is independent of PR-edited
    policy. A changed classifier/policy itself triggers the full suite.
 
-The bundled original [offline classifier](../scripts/classify_change.py)
-implements a **conservative example** for Python/docs/unknown paths. It is
-not a complete dependency graph or a universally safe file whitelist;
-repositories must adapt high-risk paths to their own build/deployment
-contracts. [GitHub Actions reference](../examples/classified-github-pr.yml)
-shows an unprivileged PR event, trusted-base classifier, conditional jobs and
-an always-present final gate. Copy/adapt both into the consumer repository
-and pin any third-party actions. The example fails closed when its full
-qualification implementation is absent, rather than emitting a fake pass.
-Do not execute or install generated workflows without user authorization.
+The bundled [offline classifier](../scripts/classify_change.py) is
+**repository-neutral**: it recognizes universal danger categories without
+assuming a project's primary language, repository name, model format or
+documentation semantics. The [anonymous policy fixture](../examples/impact-policy.json)
+illustrates inert JSON rules. A real consumer MUST author its own trusted
+impact policy by auditing exact build, model, governance, dependency and
+release inputs. An absent policy means FULL, including for Markdown.
+The generic classifier is not a dependency graph. It cannot independently
+prove that `README.md` is passive or that a suite may be skipped.
+
+Policy schema: a JSON object with `"schema_version": 1` and `"rules"`
+array. Each rule has exactly `match` (`exact`, `prefix` or `suffix`),
+`pattern` (a path or extension) and `category` (`documentation`,
+`executable-code`, `models`, `dependencies`, `governance`,
+`workflows`, `release-assets`). Multiple matching rules union their
+categories, and built-in critical classes cannot be overridden.
+Only explicitly verified passive paths should use `documentation`.
+A **prefix selector must end in `/` and designate a directory**;
+`{"match":"prefix","pattern":"docs"}` is invalid, because it also
+matches `docsecrets/` and `docs-private/`. Use `docs/` only after
+inspecting all relevant descendant inputs. **Documentation cannot be
+assigned by a global suffix rule** such as `{"match":"suffix",
+"pattern":".md","category":"documentation"}`: a Markdown file may
+be model input, generated build material, executable documentation,
+governance or release evidence. Use bounded exact file or directory
+prefix rules for established passive content. Other suffix categories
+remain permitted when they select conservatively.
+An unlisted path is `unknown` and FULL. Structural validation refuses
+unsafe/unsupported selectors. The JSON must be copied to and run from the
+**trusted base revision**, not the candidate PR revision.
+
+**Legacy classifier versus executable plan:** `classify_change.py`
+only identifies generic impact categories and draft/candidate routing. It
+cannot itself prove that any expensive work was skipped or any obligation
+was executed. **Do not use it as the final reference** when the objective is
+an operational selective workflow.
+
+The [current GitHub Actions reference](../examples/classified-github-pr.yml)
+uses unprivileged PR events, an exact trusted-base [graph policy](../examples/impact-graph.json)
+and [command manifest](../examples/exec-policy.json), and the
+[plan/execute/qualify tool](../scripts/ci_plan.py). Every classified
+obligation must reach one real executable command in its group.
+The `docs`, `rust`, `model` and `trust` jobs are conditionally
+selected by the dependency closure and **all four** are checked by an
+always-emitted qualification gate. Missing, skipped, failed, stale or
+misrouted docs verification fails the gate. The executable commands in the
+sample manifest reference **consumer-owned real verifier scripts** under
+`../trusted/ci/verify_*.sh` relative to the candidate `work/` directory.
+The command runs **from the candidate checkout**, with `.` as the candidate
+argument, rather than accidentally checking the runner's parent directory.
+Those scripts must be authored/checked by each
+consumer and fetched from the trusted base; missing commands fail closed.
+All release/provenance and independently branch-required checks continue
+until migration is separately authorized and proved. Pin third-party
+actions; do not install a reference workflow without owner authorization.
+
+The full [dependency-closure and evidence contract](dependency-graph-and-qualification.md)
+and [bootstrap cost / branch-governance migration](modular-bootstrap-and-migration.md)
+are bundled and normative when redesigning a workflow. A classifier whose
+labels do not alter real selected execution, or a monolithic bootstrap that
+keeps running for all paths, is a **failed optimization**.
+
+**Stage and evidence requirements:** A draft with known executable/model/
+dependency impact may run targeted feedback only, with full acceptance still
+due when ready. Workflows, trust/governance, release inputs and unknown impact
+always require full verification. Final consequential candidates and releases
+must pass the complete applicable suites on their exact commit, including
+negative controls, platform-specific tests, proof/model verification, signed
+input identity and immutable SDK boundaries where relevant. Ordinary
+hand-authored documentation receives reduced work only after the consumer
+explicitly proves it is not an input to those contracts.
+
+**Pages, deployment and build reuse:** Before removing any repeated build,
+verify that producing/consuming jobs use identical content-addressed input
+closure, exact source SHA, toolchain/SDK pins, platform assumptions, artifact
+digest and provenance. The consumer must authenticate signatures and release
+eligibility, not trust a cache key, filename, self-reported fingerprint or an
+untrusted artifact from a fork. Sequence publication after all required
+acceptance has succeeded on the exact subject revision. Reuse the qualified
+artifact only where it preserves both content and assurance. Otherwise,
+retain a separate build and investigate future safe composition. Measure
+wall time and billed minutes from comparable real runs, never from YAML
+job counts alone.
 
 ## Other high-value, independent budget levers
 
@@ -83,10 +157,13 @@ downstream jobs unnecessarily. Never serialize unrelated checks merely to
 create a more elaborate plan.
 
 **C. Reuse computation safely.** Prefer reproducible caches (lockfile,
-toolchain, OS and trust boundary in key) and content-addressed build
-artifacts. Do not allow untrusted fork caches or artifacts to poison release,
-signing or privileged workflows. Verify artifact origin/digest where it
-matters. A cache hit alone is not a security or correctness pass.
+toolchain, OS and trust boundary in key), content-addressed build outputs and
+signed provenance. Track both the **bytes** and the **acceptance verdict**
+that qualified those bytes. A consumer of a CI/Pages/release artifact must
+validate its producer, immutable input closure, digest, trust domain and
+exact-revision required-gate success. Never accept untrusted fork caches or
+artifacts into signing/release without explicit isolation and verification.
+A cache hit alone is not a security or correctness pass.
 
 **D. Matrix and environment coverage.** Drop redundant combinations only
 with evidence they exercise the same behavior. Keep platform-specific/native
@@ -124,8 +201,14 @@ executions only when observed; modeled savings are ESTIMATES. Keep **false
 negative risk** explicit: suppressing a check that would have blocked a real
 regression is unacceptable regardless of the runner-minute savings.
 
-**Completion:** The generated workflow shows a verified classification
-decision, truthful selected/skipped results, a reliable required status, and
-an authorized negative control proving a sensitive change is not routed to
-docs-only. Deliver a bounded patch and outcome evidence. Do not mistake a
-successful YAML parse or simulated check plan for a real CI run.
+**Completion:** The generated workflow demonstrates classification
+**controlling real dispatch**, every selected transitive obligation mapping
+to actual executable commands and receipts, and an exact-source final gate
+verifying both selected and intentionally skipped work. Show negative tests
+for omitted/failed docs, model-consumed README, Rust dependencies, policy
+changes, stale/altered plans and canceled jobs. Shadow-run against original
+full acceptance, migrate the protected status under owner authority, confirm
+the old unconditional expensive bootstrap stopped, and measure actual
+runner-minutes and critical-path change before claiming optimization achieved.
+Do not confuse YAML parsing, a simulated plan or local unit tests with an
+independently observed consumer CI execution.

@@ -1,125 +1,270 @@
-# Original example: adapt commands, the trusted classifier path, and required
-# security/status controls to the actual target repository before activation.
-# Do not silently replace existing required checks with this example.
-# This WORKFLOW is not auto-installed and is not enabled by Skillz.
-name: Classified PR verification
-
+# PORTABLE REFERENCE, NOT AN INSTALLED WORKFLOW.
+# Consumer must copy the trusted planner, graph and execution policies, and real verify_*.sh
+# runners to ci/ on base. Missing scripts FAIL; no success placeholders.
+# Keep separate required release/production, secrets and signed artifact checks.
+name: Dependency-aware PR qualification
 on:
   pull_request:
-
+    types: [opened, reopened, synchronize, ready_for_review, converted_to_draft]
 permissions:
   contents: read
-
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: true # Only for superseded PR revisions, not releases.
-
+  group: ci-impact-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 jobs:
   classify:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
-      route: ${{ steps.impact.outputs.route }}
-      run_python: ${{ steps.impact.outputs.run_python }}
-      run_full: ${{ steps.impact.outputs.run_full }}
+      plan_json: ${{ steps.plan.outputs.plan_json }}
     steps:
-      - name: Checkout PR source as untrusted data
+      - name: Checkout untrusted candidate data
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: work
           persist-credentials: false
-          fetch-depth: 1
-      - name: Checkout trusted base policy (do not execute PR-edited classifier)
+      - name: Checkout trusted base policy and planner
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: trusted
           persist-credentials: false
-          fetch-depth: 1
-      - name: Identify exact base-to-head impact and cheap whitespace faults
-        id: impact
+      - id: plan
+        name: Plan full dependency closure from exact merge-base/head
+        shell: bash
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        shell: bash
+          IS_DRAFT: ${{ github.event.pull_request.draft }}
         run: |
           set -euo pipefail
-          git -C work fetch --no-tags --depth=1 origin "$BASE_SHA"
-          # This source path is for Skillz itself. When distributing CI Guard
-          # to another repo, install the bundled script to ci/classify_change.py
-          # and change this trusted checkout path to trusted/ci/classify_change.py.
-          python3 trusted/skills/authored/ci-guard/scripts/classify_change.py \
-            --repo work --base "$BASE_SHA" --head "$HEAD_SHA" \
+          git -C work fetch --no-tags ../trusted "$BASE_SHA"
+          test -f trusted/ci/ci_plan.py
+          test -f trusted/ci/impact-graph.json
+          test -f trusted/ci/exec-policy.json
+          case "$IS_DRAFT" in
+            true) STAGE=draft ;;
+            false) STAGE=candidate ;;
+            *) exit 2 ;;
+          esac
+          python3 trusted/ci/ci_plan.py plan \
+            --repo work --policy trusted/ci/impact-graph.json \
+            --executor trusted/ci/exec-policy.json \
+            --base "$BASE_SHA" --head "$HEAD_SHA" --stage "$STAGE" \
             --github-output "$GITHUB_OUTPUT"
-          git -C work diff --check "$BASE_SHA" "$HEAD_SHA"
 
-  python-tests:
-    # Example assumes a Python project with committed tests/. Adapt this command.
+  docs:
     needs: classify
-    if: ${{ needs.classify.outputs.run_python == 'true' }}
+    if: ${{ needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.docs == true }}
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 12
+    outputs:
+      receipt: ${{ steps.proof.outputs.receipt_json }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          path: work
           persist-credentials: false
-      - name: Run actual Python tests
-        run: python3 -m unittest discover -s tests -v
-
-  full-qualification:
-    # Must contain the repo's REAL integration/native/release-sensitive tests.
-    # Missing script FAILS CLOSED, never a fake green placeholder.
-    needs: classify
-    if: ${{ needs.classify.outputs.run_full == 'true' }}
-    runs-on: ubuntu-24.04
-    timeout-minutes: 45
-    steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
           persist-credentials: false
-      - name: Run required full qualification
+      - id: proof
+        name: Execute and record every docs obligation from trusted command map
         shell: bash
+        env:
+          PLAN_JSON: ${{ needs.classify.outputs.plan_json }}
         run: |
           set -euo pipefail
-          test -f ci/full-qualification.sh
-          bash ci/full-qualification.sh
+          printf '%s\n' "$PLAN_JSON" > "$RUNNER_TEMP/ci-plan.json"
+          # The trusted executor runs ALL group obligations in dependency order;
+          # missing/failed/timeout commands produce no successful group receipt.
+          python3 trusted/ci/ci_plan.py execute \
+            --plan "$RUNNER_TEMP/ci-plan.json" \
+            --policy trusted/ci/impact-graph.json \
+            --executor trusted/ci/exec-policy.json \
+            --workdir work --repo work --group docs \
+            --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" \
+            --github-output "$GITHUB_OUTPUT"
+
+  rust:
+    needs: classify
+    if: ${{ needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.rust == true }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    outputs:
+      receipt: ${{ steps.proof.outputs.receipt_json }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: work
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+      - id: proof
+        name: Execute and record every rust obligation from trusted command map
+        shell: bash
+        env:
+          PLAN_JSON: ${{ needs.classify.outputs.plan_json }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$PLAN_JSON" > "$RUNNER_TEMP/ci-plan.json"
+          # The trusted executor runs ALL group obligations in dependency order;
+          # missing/failed/timeout commands produce no successful group receipt.
+          python3 trusted/ci/ci_plan.py execute \
+            --plan "$RUNNER_TEMP/ci-plan.json" \
+            --policy trusted/ci/impact-graph.json \
+            --executor trusted/ci/exec-policy.json \
+            --workdir work --repo work --group rust \
+            --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" \
+            --github-output "$GITHUB_OUTPUT"
+
+  model:
+    needs: [classify, rust]
+    if: ${{ always() && needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.model == true && needs.rust.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      receipt: ${{ steps.proof.outputs.receipt_json }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: work
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+      - id: proof
+        name: Execute and record every model obligation from trusted command map
+        shell: bash
+        env:
+          PLAN_JSON: ${{ needs.classify.outputs.plan_json }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$PLAN_JSON" > "$RUNNER_TEMP/ci-plan.json"
+          # The trusted executor runs ALL group obligations in dependency order;
+          # missing/failed/timeout commands produce no successful group receipt.
+          python3 trusted/ci/ci_plan.py execute \
+            --plan "$RUNNER_TEMP/ci-plan.json" \
+            --policy trusted/ci/impact-graph.json \
+            --executor trusted/ci/exec-policy.json \
+            --workdir work --repo work --group model \
+            --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" \
+            --github-output "$GITHUB_OUTPUT"
+
+  trust:
+    needs: classify
+    if: ${{ needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.trust == true }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      receipt: ${{ steps.proof.outputs.receipt_json }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: work
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+      - id: proof
+        name: Execute and record every trust obligation from trusted command map
+        shell: bash
+        env:
+          PLAN_JSON: ${{ needs.classify.outputs.plan_json }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$PLAN_JSON" > "$RUNNER_TEMP/ci-plan.json"
+          # The trusted executor runs ALL group obligations in dependency order;
+          # missing/failed/timeout commands produce no successful group receipt.
+          python3 trusted/ci/ci_plan.py execute \
+            --plan "$RUNNER_TEMP/ci-plan.json" \
+            --policy trusted/ci/impact-graph.json \
+            --executor trusted/ci/exec-policy.json \
+            --workdir work --repo work --group trust \
+            --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" \
+            --github-output "$GITHUB_OUTPUT"
 
   ci-policy-gate:
-    # Configure THIS stable job as required only after checking existing rules.
-    # Keep independent security/trust/release required checks intact.
-    name: CI policy gate
-    needs: [classify, python-tests, full-qualification]
+    name: CI policy gate # Stable branch-protection status. Never path-skip.
+    needs: [classify, docs, rust, model, trust]
     if: ${{ always() }}
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
-    env:
-      CLASSIFY_RESULT: ${{ needs.classify.result }}
-      WANT_PYTHON: ${{ needs.classify.outputs.run_python }}
-      PYTHON_RESULT: ${{ needs.python-tests.result }}
-      WANT_FULL: ${{ needs.classify.outputs.run_full }}
-      FULL_RESULT: ${{ needs.full-qualification.result }}
+    timeout-minutes: 7
     steps:
-      - name: Fail on missing classification, failed or skipped selected work
+      - name: Fail if classification itself did not finish
+        env:
+          CLASSIFY_RESULT: ${{ needs.classify.result }}
+        run: test "$CLASSIFY_RESULT" = success
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: work
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+      - name: Qualify every selected obligation against recomputed plan
         shell: bash
+        env:
+          PLAN_JSON: ${{ needs.classify.outputs.plan_json }}
+          DOCS_RESULT: ${{ needs.docs.result }}
+          DOCS_RECEIPT: ${{ needs.docs.outputs.receipt }}
+          RUST_RESULT: ${{ needs.rust.result }}
+          RUST_RECEIPT: ${{ needs.rust.outputs.receipt }}
+          MODEL_RESULT: ${{ needs.model.result }}
+          MODEL_RECEIPT: ${{ needs.model.outputs.receipt }}
+          TRUST_RESULT: ${{ needs.trust.result }}
+          TRUST_RECEIPT: ${{ needs.trust.outputs.receipt }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          IS_DRAFT: ${{ github.event.pull_request.draft }}
         run: |
+          set -euo pipefail
+          git -C work fetch --no-tags ../trusted "$BASE_SHA"
+          printf '%s\n' "$PLAN_JSON" > "$RUNNER_TEMP/ci-plan.json"
           python3 - <<'PY'
-          import os, sys
-          if os.environ["CLASSIFY_RESULT"] != "success":
-              sys.exit("classification failed or did not report")
-          for wanted, result, label in (
-              ("WANT_PYTHON", "PYTHON_RESULT", "Python"),
-              ("WANT_FULL", "FULL_RESULT", "full qualification"),
-          ):
-              select = os.environ[wanted]
-              state = os.environ[result]
-              if select not in ("true", "false"):
-                  sys.exit(f"{label}: missing or forged classification decision")
-              if select == "true" and state != "success":
-                  sys.exit(f"{label}: selected but status={state!r}")
-              if select == "false" and state != "skipped":
-                  sys.exit(f"{label}: unexpected execution/status={state!r}")
-          print("Selected CI jobs completed successfully at this PR revision")
+          import json, os
+          from pathlib import Path
+          jobs = {}
+          for group in ('docs','rust','model','trust'):
+              result = os.environ[group.upper() + '_RESULT']
+              raw = os.environ[group.upper() + '_RECEIPT']
+              try:
+                  proof = json.loads(raw) if raw else None
+              except json.JSONDecodeError:
+                  proof = {'invalid': raw}
+              jobs[group] = {'result': result, 'receipt': proof}
+          Path(os.environ['RUNNER_TEMP'], 'ci-evidence.json').write_text(
+              json.dumps({'schema_version':1, 'jobs':jobs}), encoding='utf-8')
           PY
+          case "$IS_DRAFT" in
+            true) STAGE=draft ;;
+            false) STAGE=candidate ;;
+            *) exit 2 ;;
+          esac
+          python3 trusted/ci/ci_plan.py qualify \
+            --repo work --policy trusted/ci/impact-graph.json \
+            --executor trusted/ci/exec-policy.json \
+            --base "$BASE_SHA" --head "$HEAD_SHA" --stage "$STAGE" \
+            --plan "$RUNNER_TEMP/ci-plan.json" \
+            --evidence "$RUNNER_TEMP/ci-evidence.json" \
+            --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"
+# No release/production job in this PR workflow. Those protected, signed,
+# provenance-bound gates remain independent until a separately authorized
+# shadow-mode migration proves their coverage and installs required statuses.

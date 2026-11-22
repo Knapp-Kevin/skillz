@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "match": "prefix",
+      "pattern": "docs/guides/",
+      "category": "documentation"
+    },
+    {
+      "match": "prefix",
+      "pattern": "src/",
+      "category": "executable-code"
+    },
+    {
+      "match": "prefix",
+      "pattern": "models/",
+      "category": "models"
+    },
+    {
+      "match": "prefix",
+      "pattern": "specs/",
+      "category": "governance"
+    }
+  ]
+}
