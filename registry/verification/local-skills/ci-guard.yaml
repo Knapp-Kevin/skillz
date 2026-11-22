@@ -12,9 +12,9 @@ complete_package_tree_sha: 4171a31de3c15658defef54c9c8144af8eed371c
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: unverified
-verification_basis: v1.5.2-nested-invocation-candidate-inventory-and-offline-regression-tests-pending
-validation_status: not-run
-validation_note: "v1.5.2 adds an analyst-expanded, conservative cross-workflow command overlap inspector, documentation and 12 regression cases. Python tests/CI are pending at this revision; no real consumer-host deduplication or cost savings are claimed. Prior version tests do not transfer to changed bytes."
+verification_basis: v1.5.2-source-bound-GitHub-host-offline-contract-tests-pass-consumer-not-qualified
+validation_status: passed-offline-contract-tests
+validation_note: "CI Guard v1.5.2 GitHub-hosted source-bound offline QA run 45005537015 PASS: 12 overlap regressions, 28 classification tests and 26 plan tests; comparison script invoked successfully. Exact prior PR head 069d0438; registry-only evidence update requires recheck at changed head. No real consumer-host deduplication or billed savings proven."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5_2"
 tags:
@@ -28,5 +28,6 @@ notes: >-
   pre-cutover cross-workflow execution overlap analysis. The inspector acts
   on manually verified graph inputs; it is not GitHub-host authentication,
   actual fault-injection parity, deployment acceptance or measured savings.
-  Current source remains unverified until observed tests and independent
-  consumer acceptance are documented.
+  Offline tests have been observed on the previous source-bound head;
+  independent consumer migration, host fault parity and savings are still
+  unverified.
