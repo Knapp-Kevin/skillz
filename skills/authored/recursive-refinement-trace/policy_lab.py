@@ -143,10 +143,18 @@ def evaluate(data):
         must = set(c["required_actions"]) | {candidate["verify_lane"]}
         base_missing = sorted(must - seen_actions(baseline))
         candidate_missing = sorted(must - seen_actions(proposed))
+        # A protected preservation/verification action must have recorded
+        # PASS, not merely appear as a selected node. A failing protected
+        # action is a veto even if a separate adversarial probe found a bug.
+        def protected_failed(path):
+            return any(nodes[n]["action"] in must and
+                       nodes[n]["outcome"] != "OBSERVED_PASS"
+                       for n in path["visited_node_ids"])
         reasons = []
-        if candidate_missing:
-            reasons.append("PROTECTED_VERIFIER_SKIPPED")
-        if baseline["terminal_status"] in INDETERMINATE or base_missing:
+        if candidate_missing or protected_failed(proposed):
+            reasons.append("PROTECTED_VERIFIER_SKIPPED_OR_FAILED")
+        if (baseline["terminal_status"] in INDETERMINATE or base_missing
+                or protected_failed(baseline)):
             reasons.append("BASELINE_INSUFFICIENT")
         if proposed["terminal_status"] in INDETERMINATE:
             reasons.append("CANDIDATE_INDETERMINATE")
@@ -177,7 +185,7 @@ def evaluate(data):
     holdout = [c for c in results if c["split"] == "heldout"]
     improvement = (all(c["recorded_failure_detection_delta"] > 0 for c in dev)
                    and all(c["recorded_failure_detection_delta"] > 0 for c in holdout))
-    if veto and any(v in veto for v in ("PROTECTED_VERIFIER_SKIPPED",
+    if veto and any(v in veto for v in ("PROTECTED_VERIFIER_SKIPPED_OR_FAILED",
                                        "PRESERVATION_REGRESSION")):
         decision = "REJECT_CANDIDATE"
     elif veto or not improvement:
