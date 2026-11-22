@@ -2,6 +2,11 @@
 # Consumer must copy the trusted planner, graph and execution policies, and real verify_*.sh
 # runners to ci/ on base. Missing scripts FAIL; no success placeholders.
 # Keep separate required release/production, secrets and signed artifact checks.
+# Drafts skip every expensive job before runner setup; one minimal status gate
+# emits DRAFT_DEFERRED_NOT_QUALIFIED without a checkout, planner or test.
+# On ready_for_review, fresh exact-HEAD qualification is mandatory.
+# Before branch-protection migration, prove stale draft-gate success cannot
+# satisfy required ready-state checks for the same commit SHA.
 name: Dependency-aware PR qualification
 on:
   pull_request:
@@ -13,6 +18,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   classify:
+    if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
@@ -56,7 +62,7 @@ jobs:
 
   docs:
     needs: classify
-    if: ${{ needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.docs == true }}
+    if: ${{ !github.event.pull_request.draft && needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.docs == true }}
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     outputs:
@@ -92,7 +98,7 @@ jobs:
 
   rust:
     needs: classify
-    if: ${{ needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.rust == true }}
+    if: ${{ !github.event.pull_request.draft && needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.rust == true }}
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     outputs:
@@ -128,7 +134,7 @@ jobs:
 
   model:
     needs: [classify, rust]
-    if: ${{ always() && needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.model == true && needs.rust.result == 'success' }}
+    if: ${{ always() && !github.event.pull_request.draft && needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.model == true && needs.rust.result == 'success' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     outputs:
@@ -164,7 +170,7 @@ jobs:
 
   trust:
     needs: classify
-    if: ${{ needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.trust == true }}
+    if: ${{ !github.event.pull_request.draft && needs.classify.result == 'success' && fromJSON(needs.classify.outputs.plan_json).groups.trust == true }}
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     outputs:
@@ -205,21 +211,32 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 7
     steps:
+      - name: Draft deferred (not merge qualified)
+        if: ${{ github.event.pull_request.draft }}
+        env:
+          IS_DRAFT: ${{ github.event.pull_request.draft }}
+        run: |
+          test "$IS_DRAFT" = true
+          echo "DRAFT_DEFERRED_NOT_QUALIFIED: ready-for-review needs fresh checks"
       - name: Fail if classification itself did not finish
+        if: ${{ !github.event.pull_request.draft }}
         env:
           CLASSIFY_RESULT: ${{ needs.classify.result }}
         run: test "$CLASSIFY_RESULT" = success
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - if: ${{ !github.event.pull_request.draft }}
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: work
           persist-credentials: false
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - if: ${{ !github.event.pull_request.draft }}
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: trusted
           persist-credentials: false
       - name: Qualify every selected obligation against recomputed plan
+        if: ${{ !github.event.pull_request.draft }}
         shell: bash
         env:
           PLAN_JSON: ${{ needs.classify.outputs.plan_json }}

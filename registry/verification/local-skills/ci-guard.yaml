@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.0"
+skill_version: "1.5.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 28bd16010b92f4e86ae17684b2ab8d91737f49df
-complete_package_tree_sha: 4912303e73e1a9403bae69eeb166f6672a423df9
+content_blob_sha: e6b47200f62ba2c81a3bdcfe5489043952b3a4a0
+complete_package_tree_sha: 1ce9e29eeea3bce4b440e039a69fac27a4742142
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
-verification_basis: v1.5.0-source-upgrade-local-plan-execution-suite-passed-independent-host-hold
+verification_basis: v1.5.1-targeted-adversarial-static-draft-contract-checks-python-not-run
 validation_status: not-run
-validation_note: "76/76 new local Python tests passed against exact source snapshots, including disposable Git plan-execute-qualify. The 28 retained classifier tests PASS locally on exact Git blob-matching sources; 40 plan and 8 metrics tests PASS. No independent Actions run, consumer adoption, branch protection, actual billed-minute savings, or agent-host behavior validation; do not claim validated."
+validation_note: "v1.5.1 target static draft guards checked on branch, 10 structural invariants passed and 2 new executable regression functions added. v1.5.1 Python tests NOT_RUN; original v1.5.0 76/76 local tests historical only. No actual Actions adoption, branch protection or measured runner savings; external host validation NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5_1"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,8 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Exact v1.5.0 complete source is recorded; new dependency-aware
-  qualification and documentation job have local executed fixture proof.
-  All prior v1.3-v1.4 receipts remain historical for their exact packages.
-  New package has not undergone independent consuming-repository CI
-  acceptance, protected-status cutover, or measured cost verification.
+  v1.5.1 changes the default draft workflow execution path and preserves
+  full ready-state qualification. Structural tests inspect dispatch and
+  trust-gate source but are not GitHub Actions job execution. Current
+  source has not completed whole-package behavioral or independent
+  host acceptance; retain unverified/validation not-run.

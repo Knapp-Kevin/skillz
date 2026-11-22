@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.5.0
+  version: 1.5.1
   license: MIT
 ---
 
@@ -110,6 +110,39 @@ rerun behavior; required status-check names and whether each one reliably
 emits a check on every protected path. Do not execute repository-supplied code
 as part of a read-only review. Use only authorized host APIs or a verified safe
 local environment; do not fetch secrets or print credential-bearing logs.
+
+## Binding draft PR dispatch default
+
+Draft PRs **skip the expensive CI path by default**, regardless of change
+category. A generated or materially redesigned GitHub Actions PR workflow
+must gate classification, bootstrap, build, test, model verification and
+every other costly job **before** checkout or runner setup. An unknown
+file, security-policy edit or dependency change does not automatically
+justify spending full CI minutes on an unmergeable draft. A separately
+approved, mandatory draft security/compliance check is an explicit
+exception, not an implicit opt-out from this default.
+
+If a branch-protected PR needs a stable required check, retain one cheap
+always-present `CI policy gate`. On drafts it returns the explicit
+`DRAFT_DEFERRED_NOT_QUALIFIED` marker without checkout, planner,
+verifier commands, or receipts. The status describes deferred work, NOT
+passed assurance. On `ready_for_review`, `reopened`, or ready-head
+`synchronize`, run fresh classification, executable obligations, and
+fail-closed qualification bound to the actual candidate HEAD.
+`converted_to_draft` cancels superseded expensive work. If branch
+protection could reuse a green draft-defer status for that same SHA
+after readiness, HOLD migration or require a separate ready-only
+protected qualification check. Do not weaken required statuses.
+
+The bundled [reference workflow](examples/classified-github-pr.yml)
+implements this default for its own six jobs. Existing unmodified
+workflows and reusable bootstraps in a consumer repository must be
+independently inventoried and brought behind equivalent dispatch
+guards to realize savings. The optional `--stage draft` in the
+bundled generic classifier/planner remains **explicit opt-in**
+diagnostics, never the default workflow route nor a merge verdict.
+Only comparable observed GitHub Actions receipts establish actual
+runner-minute or latency savings.
 
 ## P0: closed-loop selective execution
 
@@ -213,7 +246,10 @@ Unknown paths, missing trusted policy, nonregular Git modes and incomplete
 evidence select full verification or block classification. Rules are inert
 matching data, not commands.
 
-The draft route provides **targeted feedback only for established impact**:
+The **optional manually invoked** draft analysis route can offer
+targeted feedback after explicit host authorization; default draft
+workflow dispatch skips it. Within that opt-in classifier, the draft
+route provides targeted feedback only for established impact:
 ordinary executable/model/dependency changes can defer costly full acceptance
 until candidate review, without a merge-ready claim. Workflow, governance,
 release/trust or unknown changes remain full even on a draft. Substantial ready-for-merge candidates require complete **exact-HEAD

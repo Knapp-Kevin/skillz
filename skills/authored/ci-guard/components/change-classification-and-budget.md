@@ -5,6 +5,31 @@ relevant suites, addressing runner cost, or reducing waste from unrelated
 checks. The main [CI Guard entrypoint](../SKILL.md) carries the mandatory
 contract; this file is bundled technical guidance, not a central dependency.
 
+## Draft PR dispatch: default is no expensive jobs
+
+The reference and any newly generated PR workflow **skip classifier,
+bootstrap, verifier and matrix jobs on drafts before checkout**. This
+includes unknown files, workflow policy edits and all `always()` jobs.
+A lightweight stable `CI policy gate` may run solely to preserve a
+branch-required status; its draft path emits
+`DRAFT_DEFERRED_NOT_QUALIFIED`, does not checkout source or inspect the
+plan, and establishes **no** passed obligations. Never path-filter an
+entire required workflow, rely on a skipped job as successful work,
+or claim a draft defer qualifies the eventual merge.
+
+On `ready_for_review`, restart complete exact-HEAD classification
+and execute every selected obligation with fresh receipts. Preserve
+`synchronize`, `reopened` and `converted_to_draft` event handling,
+and cancellation of superseded expensive jobs. **Consumer enforcement
+must be checked:** a green draft-only gate on the same SHA is not a
+valid ready-state receipt. HOLD required-check migration when branch
+rules cannot enforce fresh ready-state checks, or use an independently
+protected ready-only gate. Draft-mandatory legal/security checks require
+a separate explicit owner exception and actual enforced dispatch.
+Other consuming workflows with unconditional bootstrap can erase these
+savings; audit them independently. CLI `--stage draft` is optional
+manual diagnostic feedback and not this workflow's default.
+
 ## Non-negotiable design gate for GENERATED workflows
 
 **Classify the actual changed artifacts before selecting expensive CI work.**
@@ -119,10 +144,11 @@ are bundled and normative when redesigning a workflow. A classifier whose
 labels do not alter real selected execution, or a monolithic bootstrap that
 keeps running for all paths, is a **failed optimization**.
 
-**Stage and evidence requirements:** A draft with known executable/model/
-dependency impact may run targeted feedback only, with full acceptance still
-due when ready. Workflows, trust/governance, release inputs and unknown impact
-always require full verification. Final consequential candidates and releases
+**Stage and evidence requirements:** Default workflow dispatch skips all
+expensive draft checks, irrespective of impact. A separately invoked
+manual draft diagnostic may conservatively choose targeted or full tests,
+but cannot qualify merging. Ready candidates must run the required
+full/transitive closure, including trust/governance and unknown-impact work. Final consequential candidates and releases
 must pass the complete applicable suites on their exact commit, including
 negative controls, platform-specific tests, proof/model verification, signed
 input identity and immutable SDK boundaries where relevant. Ordinary
