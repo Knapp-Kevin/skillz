@@ -11,7 +11,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Recursive Refinement Trace
-  version: 0.3.0
+  version: 0.3.1
   license: MIT
 ---
 
@@ -232,3 +232,17 @@ source under separately authorized maintenance, demonstrate red/green and
 preservation outcomes, and stop when the evidence meets the frozen criterion.
 When privacy, host storage or execution proof is unavailable, return an
 explicit HOLD/NOT_RUN rather than create an untrusted persistent profile.
+
+### Standalone optional-file input boundary (v0.3.1)
+
+When using the bundled Python command on a caller-selected local JSON
+input, reject the supplied **file and any symlinked path ancestor before
+stat/open/read**, rather than assuming a user-specified filename resolves
+within its apparent directory. This lexical preflight is not a TOCTOU-proof
+sandbox on an attacker-controlled, concurrently changing filesystem; for
+that threat model the authorized host must supply a stable isolated
+snapshot or stronger descriptor-enforced containment. Never silently
+follow a linked source, read another tenant's material, or imply that
+the optional checker authenticates the input's provenance. Its positive
+ordinary-file path remains available with the original source and
+verification limitations.

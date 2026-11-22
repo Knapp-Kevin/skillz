@@ -152,6 +152,33 @@ class OfflinePulseTests(unittest.TestCase):
             p=Path(td)/'input.json';p.write_text('{"schema_version":1,"schema_version":1}',encoding='utf8')
             out=subprocess.run([sys.executable,str(ROOT/'scripts'/'triage.py'),'--input',str(p)],capture_output=True,text=True)
             self.assertEqual(out.returncode,2)
+    def test_cli_refuses_symlinked_repository_snapshot(self):
+        with tempfile.TemporaryDirectory() as td:
+            folder = Path(td)
+            outside = folder / 'outside.json'
+            outside.write_text(json.dumps(base()), encoding='utf-8')
+            alias = folder / 'approved.json'
+            alias.symlink_to(outside)
+            out = subprocess.run([sys.executable, str(ROOT/'scripts'/'triage.py'),
+                                  '--input', str(alias)], capture_output=True, text=True)
+            self.assertEqual(out.returncode, 2)
+            self.assertIn('symlinked input', out.stderr)
+            self.assertFalse(out.stdout)
+
+    def test_cli_refuses_symlinked_snapshot_parent(self):
+        with tempfile.TemporaryDirectory() as td:
+            folder = Path(td)
+            real = folder / 'private'
+            real.mkdir()
+            (real / 'snapshot.json').write_text(json.dumps(base()), encoding='utf-8')
+            (folder / 'alias').symlink_to(real, target_is_directory=True)
+            out = subprocess.run([sys.executable, str(ROOT/'scripts'/'triage.py'),
+                                  '--input', str(folder/'alias'/'snapshot.json')],
+                                 capture_output=True, text=True)
+            self.assertEqual(out.returncode, 2)
+            self.assertIn('symlinked input', out.stderr)
+            self.assertFalse(out.stdout)
+
     def test_cli_rejects_oversized_input(self):
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/'input.json';p.write_bytes(b' '* (engine.MAX_SIZE+1))

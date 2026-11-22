@@ -72,3 +72,16 @@ input, correct event-type classification, validity of source pointers,
 or owner approval. Its own output always marks source authenticity
 NOT_VERIFIED and root cause NOT_DETERMINED. No independently isolated
 old/new agent-host skill comparison or overall 1.5x effect has run.
+
+## AGENT-TRACE-PATH: portable offline source-boundary negative controls (v1.2.1)
+
+Only this skill folder is installed, and a user supplies a synthetic
+JSON input path. First, a regular in-scope JSON input preserves existing
+checker behavior and its evidence limits. Next, the apparent source
+file is a symlink to a different folder; finally, an ancestor directory
+is symlinked while the basename appears unchanged. In both negative
+variants the optional checker must return **invalid input before any
+content read** and must produce no purported result. The bundled
+Python source tests include both variants, but a source-file receipt
+must not be passed off as independently authenticated authorization,
+model-host behavior or adversarial concurrent filesystem protection.

@@ -136,6 +136,33 @@ class TraceAuditTests(unittest.TestCase):
             r=subprocess.run([sys.executable,str(ROOT/'scripts/audit_trace.py'),'--input',str(inp)],capture_output=True,text=True)
             self.assertEqual(r.returncode,2)
             self.assertIn('duplicate JSON key',r.stderr)
+    def test_cli_rejects_symlinked_input_before_read(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            private = root / 'outside.json'
+            private.write_text(json.dumps(fixture()), encoding='utf-8')
+            alias = root / 'approved.json'
+            alias.symlink_to(private)
+            run = subprocess.run([sys.executable, str(ROOT/'scripts/audit_trace.py'),
+                                  '--input', str(alias)], capture_output=True, text=True)
+            self.assertEqual(run.returncode, 2)
+            self.assertIn('symlinked input', run.stderr)
+            self.assertFalse(run.stdout)
+
+    def test_cli_rejects_symlinked_parent_before_read(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            real = root / 'actual'
+            real.mkdir()
+            (real / 'evidence.json').write_text(json.dumps(fixture()), encoding='utf-8')
+            (root / 'alias').symlink_to(real, target_is_directory=True)
+            run = subprocess.run([sys.executable, str(ROOT/'scripts/audit_trace.py'),
+                                  '--input', str(root/'alias'/'evidence.json')],
+                                 capture_output=True, text=True)
+            self.assertEqual(run.returncode, 2)
+            self.assertIn('symlinked input', run.stderr)
+            self.assertFalse(run.stdout)
+
     def test_cli_rejects_oversized_file(self):
         with tempfile.TemporaryDirectory() as td:
             inp=Path(td)/'huge.json';inp.write_bytes(b' '* (audit.MAX_BYTES+1))

@@ -1,0 +1,38 @@
+name: Authored input-boundary safety contracts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/agent-failure-boundary-analysis/**'
+      - 'skills/authored/decision-tradeoff-workbench/**'
+      - 'skills/authored/repository-delivery-assessor/**'
+      - 'skills/authored/recursive-refinement-trace/**'
+      - '.github/workflows/authored-input-safety-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: authored-input-safety-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package-contracts:
+    # Draft changes defer runner allocation. One cheap job, no matrix/bootstrap.
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # pinned upstream v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Run focused offline package contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/agent-failure-boundary-analysis/tests -p 'test_*.py' -v
+          python3 -B -m unittest discover -s skills/authored/decision-tradeoff-workbench/tests -p 'test_*.py' -v
+          python3 -B -m unittest discover -s skills/authored/repository-delivery-assessor/tests -p 'test_*.py' -v
+          (cd skills/authored/recursive-refinement-trace && python3 -B -m unittest discover -s . -p 'test_*.py' -v)

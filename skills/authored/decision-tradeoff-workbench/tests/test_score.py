@@ -127,6 +127,33 @@ class ScoreTests(unittest.TestCase):
             run=subprocess.run([sys.executable,str(ROOT/'scripts'/'score.py'),'--input',str(inp)],capture_output=True,text=True,check=False)
             self.assertEqual(run.returncode,2)
             self.assertIn('duplicate JSON field',run.stderr)
+    def test_cli_refuses_symlinked_scoring_input(self):
+        with tempfile.TemporaryDirectory() as td:
+            folder = Path(td)
+            original = folder / 'private.json'
+            original.write_text(json.dumps(fixture()), encoding='utf-8')
+            alias = folder / 'scoring.json'
+            alias.symlink_to(original)
+            run = subprocess.run([sys.executable, str(ROOT/'scripts'/'score.py'),
+                                  '--input', str(alias)], capture_output=True, text=True)
+            self.assertEqual(run.returncode, 2)
+            self.assertIn('symlinked input', run.stderr)
+            self.assertFalse(run.stdout)
+
+    def test_cli_refuses_symlinked_parent_directory(self):
+        with tempfile.TemporaryDirectory() as td:
+            folder = Path(td)
+            actual = folder / 'outside'
+            actual.mkdir()
+            (actual / 'scoring.json').write_text(json.dumps(fixture()), encoding='utf-8')
+            (folder / 'linked').symlink_to(actual, target_is_directory=True)
+            run = subprocess.run([sys.executable, str(ROOT/'scripts'/'score.py'),
+                                  '--input', str(folder/'linked'/'scoring.json')],
+                                 capture_output=True, text=True)
+            self.assertEqual(run.returncode, 2)
+            self.assertIn('symlinked input', run.stderr)
+            self.assertFalse(run.stdout)
+
     def test_cli_oversize_rejected(self):
         with tempfile.TemporaryDirectory() as td:
             inp=Path(td)/'huge.json'; inp.write_bytes(b' '* (score.MAX_BYTES+1))
