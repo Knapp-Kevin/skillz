@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: repository-readme-architect
 display_name: "Repository README Architect"
-skill_version: "0.5.1"
+skill_version: "0.5.2"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/repository-readme-architect/SKILL.md
@@ -18,9 +18,9 @@ permission_tier: read-and-generate; focused repository write only with user auth
 portability: high
 review_status: needs-re-review
 dependency_status: self-contained-seventeen-file-optional-python-stdlib
-dependencies: "Standalone 17-file offline package: portable Gold/Platinum README guidance, abstraction-first navigation with fully fictional example, three read-only Python standard-library checkers, existing tests and seven new local portfolio tests. No consumer library, brand, network, service or sibling skill required."
-content_blob_sha: 09eb0cf23b64f28f53df823d7d054ea835dd0d28
-complete_package_tree_sha: 248726a1107021fbf3cdb7c2d5468d0848302418
+dependencies: "Standalone 17-file MIT README Architect package with three optional offline stdlib checkers and tests; compatible history-log advisory, no new runtime dependencies. Repo-local QA workflow is not packaged."
+content_blob_sha: 48630765c039db0c854190367ff66374bdd52590
+complete_package_tree_sha: 939f5b8d1f8a92c6fc0aa33cd09d5a7a2d7b6cbe
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
-rationale: "v0.5.1 contains v0.5.0 abstraction-first guidance plus final anonymization of two generator-fixture references. v0.5.0 adds reader-adaptive abstraction-first organization for multi-project and organization README presentation, distinguishing conceptual roles from verified runtime dependencies, including complete-inventory preservation, two audience journeys, a fictional worked example, adversarial cases and seven authored local regression methods. Consumer identity evidence redacted. Local structural checks passed; new exact-version Python and reader tests NOT_RUN. Old receipts are historical."
+rationale: "v0.5.2 compatible patch reinforces prior front-door vs changelog guidance with high-threshold, nonblocking repeated-PR/date-history detection and eight planted tests. Complete exact package pinned. Hosted complete package source QA PASS 190/190 at source head fde064a23a0cad1364433fd315783a2f9ceaeb33; final metadata head pending; independent host/reader behavior NOT_RUN."

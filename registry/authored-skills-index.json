@@ -1051,16 +1051,16 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
-      "skill_blob_sha": "09eb0cf23b64f28f53df823d7d054ea835dd0d28",
-      "package_tree_sha": "248726a1107021fbf3cdb7c2d5468d0848302418",
+      "skill_blob_sha": "48630765c039db0c854190367ff66374bdd52590",
+      "package_tree_sha": "939f5b8d1f8a92c6fc0aa33cd09d5a7a2d7b6cbe",
       "package_file_count": 17,
       "review_status": "needs-re-review",
-      "review_score": "NOT_ASSESSED_EXACT_V0_5_1",
+      "review_score": "NOT_ASSESSED_EXACT_V0_5_2",
       "behavioral_validation": "not-run",
       "host_authority": "read-only; focused repository write on explicit user request",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "First-party MIT complete README skill with optional local-only checker and in-package evidence contract; external source and source rights never imported. Focused repo writes only on explicit owner action, no automatic CI or publication.",
-      "package_version": "0.5.1",
+      "package_version": "0.5.2",
       "capability_paths": [
         "technical-writing/documentation-ia",
         "software-engineering/developer-experience",
@@ -1068,8 +1068,8 @@
       ],
       "previous_reviewed_skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
       "previous_reviewed_package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
-      "review_note": "v0.5.1 retains abstraction-first information architecture v0.5.0 and removes the final known consumer-identifying generator test strings. 17-file package exactly pinned; source anonymous marker scan completed. Seven new Python portfolio regression tests and full suite NOT_RUN, consumer render, independent reader/host outcomes NOT_RUN.",
-      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/824"
+      "review_note": "Repository README Architect v0.5.2 #873 compatible nonblocking README history advisory. Full package test suite PASS 190/190 Python methods on source head fde064a23a0cad1364433fd315783a2f9ceaeb33 Actions #45085404005, including eight new history negative controls and repaired existing narrow-banner fixture. Final evidence-only head requires fresh QA. Independent reader/host behavior NOT_RUN.",
+      "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/873"
     },
     {
       "id": "skill-trial-evidence-auditor",

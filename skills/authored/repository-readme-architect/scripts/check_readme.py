@@ -20,6 +20,18 @@ DEFINITION = re.compile(r'^ {0,3}\[([^\]\n]+)\]:\s*(?:<([^>\n]+)>|(\S+))',re.M)
 GENERATED = re.compile(r'<!--\s*generated:(begin|end)\s*-->',re.I)
 FENCE = re.compile(r'^ {0,3}(`{3,}|~{3,})')
 SENSITIVE = re.compile(r'(?i)(?:token|key|secret|signature|password|auth|credential)=')
+# Optional editorial signal, not a completeness or quality certification.
+# Avoid mistaking a single PR reference or an ordinary release overview for a log.
+HISTORY_HEADING = re.compile(
+    r'(?i)\b(?:changelog|release history|'
+    r'(?:recent|merged|closed|completed|weekly|daily|development|work|progress|latest)'
+    r'[ -]*(?:pull requests?|prs?|updates?|logs?|history))\b')
+HISTORY_ENTRY = re.compile(
+    r'(?i)(?:\b(?:pull request|pr)\s*#\d+\b|'
+    r'\b20\d\d[-/]\d\d[-/]\d\d\b|'
+    r'\b(?:merged|closed)\s+#\d+\b)')
+BULLET = re.compile(r'^\s{0,6}(?:[-*+]\s+|\d+[.)]\s+)')
+
 
 
 def clean_lines(text):
@@ -121,6 +133,31 @@ def generated_regions(text):
     return regions,None
 
 
+def chronological_log_advisories(lines):
+    """Signal dense historical PR/date lists within log-like sections.
+
+    This is a high-threshold heuristic for HUMAN editorial review only.
+    It never blocks the local link checker, analyzes fenced examples,
+    or decides whether a README is actually good or bad.
+    """
+    output=[]
+    headings=[]
+    for line_no,line in enumerate(lines,1):
+        match=HEAD.match(line)
+        if match:
+            headings.append((line_no,len(match.group(1)),match.group(2)))
+    for idx,(start,level,title) in enumerate(headings):
+        if not HISTORY_HEADING.search(title):
+            continue
+        end=next((line_no for line_no,next_level,_ in headings[idx+1:]
+                  if next_level<=level),len(lines)+1)
+        entries=sum(bool(BULLET.match(lines[n-1]) and HISTORY_ENTRY.search(lines[n-1]))
+                    for n in range(start+1,end))
+        if entries>=3:
+            output.append(start)
+    return output
+
+
 def audit(root, readme, baseline=None):
     findings=[];counts={}
     def emit(line,status,kind):
@@ -153,6 +190,8 @@ def audit(root, readme, baseline=None):
                     status='LOCAL_ANCHOR_FOUND' if fragment in seen else ('ANCHOR_UNVERIFIED_COMPLEX_MARKDOWN' if uncertain else 'BROKEN_LOCAL_ANCHOR')
             elif status=='LOCAL_FILE_EXISTS':status='LOCAL_FILE_EXISTS'
             emit(line_no,status,kind)
+    for heading_line in chronological_log_advisories(lines):
+        emit(heading_line,'CHRONOLOGICAL_LOG_ADVISORY','editorial')
     regions,malformed=generated_regions(raw)
     if malformed:emit(0,malformed,'generated')
     if baseline is not None:
@@ -170,6 +209,7 @@ def audit(root, readme, baseline=None):
             'source_authenticity_verified':False,'external_links_tested':False,'commands_executed':False,
             'readme_claims_verified':False,'reader_success_verified':False,
             'markdown_coverage_complete':False,
+            'editorial_advisories_are_blockers':False,
             'counts':counts,'findings':findings,'local_blockers':sum(counts.get(x,0) for x in errors)}
 
 

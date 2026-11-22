@@ -8,6 +8,12 @@ The skill produces a finished Markdown artifact or an explicitly authorized focu
 
 **[Read the full standalone skill](SKILL.md)**. The normative CREATE, UPLIFT, AUDIT and VERIFY methods, authority boundaries, safe fallback and delivery criteria all live in its entrypoint. No Skillz repository, account connection, runtime, or sibling skill is required.
 
+The read-only `scripts/check_readme.py` also flags a dense chronological
+PR/date history under a log-like README heading as
+`CHRONOLOGICAL_LOG_ADVISORY`. It does not fail the link/generator
+preflight, rewrite the README, or claim editorial quality is machine-proved.
+An editor must decide whether to move history into maintained release notes.
+
 For deeper or repeatable work, this *optional in-package* material is available:
 
 - [Quality and evidence contract](references/readme-quality-contract.md): source-to-claim traceability, project archetypes, preservation inventory, first-success checks and release-ready acceptance gates.

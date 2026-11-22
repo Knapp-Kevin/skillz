@@ -61,9 +61,8 @@ CONTRACT = {
 }
 
 
-def valid_banner(rgb=b"\xf0\xf4\xff"):
-    """Generate a real, valid 960x240 RGB PNG without external dependencies."""
-    width, height = 960, 240
+def valid_banner(rgb=b"\xf0\xf4\xff", width=960, height=240):
+    """Generate a real, valid RGB PNG without external dependencies."""
     def chunk(name, payload):
         return (len(payload).to_bytes(4, "big") + name + payload +
                 (binascii.crc32(name + payload) & 0xffffffff).to_bytes(4, "big"))
@@ -123,9 +122,17 @@ class QualityProfileTests(unittest.TestCase):
 
     def test_narrow_banner_cannot_silently_pass_hero_profile(self):
         path = self.root / "assets/banner.png"
-        data = bytearray(path.read_bytes())
-        data[16:20] = (200).to_bytes(4, "big")
+        # A valid, actually written narrow image proves the geometry rule,
+        # rather than silently testing the original wide banner.
+        path.write_bytes(valid_banner(width=200))
+        self.contract["asset_inventory"][0]["sha256"] = hashlib.sha256(
+            path.read_bytes()).hexdigest()
+        self.write_contract()
         self.assertEqual(profile._image_geometry(path)[0], 200)
+        self.assertEqual(
+            self.contract["asset_inventory"][0]["sha256"],
+            hashlib.sha256(path.read_bytes()).hexdigest()
+        )
         self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
 
     def test_missing_public_purpose_introduction_fails(self):
