@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.2"
+skill_version: "1.5.3"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "Twenty-two-file standalone package with executable DAG planner/executor/qualifier, exact Git and trusted policy/command manifests, CI reference and optional Python stdlib/Git tests. Consumer-owned real verification commands and explicit branch-policy authority required for deployment."
-content_blob_sha: 196884ab82ee892e9854e1afdea80b276bc50d48
-complete_package_tree_sha: 4171a31de3c15658defef54c9c8144af8eed371c
+dependencies: "25-file standalone MIT package; optional Python 3 stdlib source-graph candidate and cutover checker, separate consumer-run Actions evidence required. No always-on service or mandatory independent model."
+content_blob_sha: 6b619a623814e1f5410a43bb21724c31980e2e40
+complete_package_tree_sha: 3bced0e5b73a7d7f37d93032d561b0639f15ab8c
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.2 adds mandatory cross-workflow nested-command inventory, a conservative standalone Python overlap inspector, 12 adversarial cases and a PR-targeted offline QA workflow. It preserves v1.5.1 draft and exact-HEAD ready qualification guidance. This revision has not yet passed its newly added hosted tests; consuming repository parity, release migration and actual saved runner minutes remain unverified. Historical tests do not qualify changed bytes."
+rationale: "v1.5.3 integrates after concurrent merged v1.5.2 #854: extends ONE original script ci_overlap.py with full nested invocation paths, normalized user-required classes and strict --verify-cutover source-graph qualification. 15 new planted regressions and anonymous runnable source-graph before/after fixtures, plus the retained 12 original overlap and classifier/plan tests. Current branch CI execution pending, no source-blob test receipt yet. Local authored prototype of a separate checker passed 26 tests but was intentionally NOT imported to avoid two independent duplicate checkers. Complete 25-file standalone MIT package. Consumer CI cost and real branch/release host acceptance NOT_MEASURED/NOT_RUN."
