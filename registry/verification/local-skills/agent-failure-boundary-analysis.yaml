@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: agent-failure-boundary-analysis
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/agent-failure-boundary-analysis/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 447d9934db360eb3ff6309a5033f119914c1eced
-complete_package_tree_sha: cd86911fe032fc423c8e2008d3683522490d3f04
+content_blob_sha: a7323faf06a660109004e2f73bba17293d9d4186
+complete_package_tree_sha: 0b23fbf43fb69b67523fc151a6460d8d60ba15f7
 characterized_at: "2026-11-20"
-reviewed_at: "2026-11-20"
-verification_status: verified
+reviewed_at: "2026-11-22"
+verification_status: unverified
 verification_basis: maintainer-static-review-and-31-local-offline-method-tests
 validation_status: not-run
 validation_note: "31/31 real local Python incident trace-checking method tests pass, with separately retrieved public GitHub receipt negative control. No isolated old/new host skill evaluation; source authenticity and user outcome unverified."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_EXACT_V1_2_1"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]
@@ -28,3 +28,9 @@ notes: >-
   Python evidence-method tests. docs/reviews/2026-11-20-agent-failure-v120-executable-evidence-review.md.
   Host agent skill A/B NOT RUN; source authenticity unverified; historical parity,
   user outcomes and 1.5x overall effectiveness NOT PROVEN.
+
+# v1.2.1: two planted file/parent symlink negative cases and original test
+# methods kept (now 33 relevant tests). Full changed-version Python suite
+# NOT_RUN as of source edit; historical receipts do not apply to these bytes.
+# Host/agent outcomes, consumer data rights and concurrent path-swap TOCTOU
+# containment are NOT_VERIFIED.
