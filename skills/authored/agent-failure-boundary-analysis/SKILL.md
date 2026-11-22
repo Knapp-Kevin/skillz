@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations
   display-name: Agent Failure Boundary Analysis
-  version: 1.2.0
+  version: 1.2.1
   license: MIT
 ---
 
@@ -116,6 +116,17 @@ not a fabricated timeline.
     is not evidence that the original user-visible failure is fixed.
 
 ## Optional executable evidence-boundary audit
+
+**Input-path authority:** The optional Python reader refuses a caller-selected
+symlinked source file **or any symlinked parent directory** before inspecting
+its size or opening it. An apparent permitted filename cannot silently
+resolve into another folder. This is a lexical preflight, not a
+race-proof sandbox: hostile concurrently mutable filesystems require
+a trusted, immutable host snapshot. It neither authenticates source
+receipts nor grants permission to inspect other files; the original
+in-scope regular JSON workflow remains supported. Two adversarial
+CLI tests plant linked files and linked parents in the standalone package.
+
 
 For a sanitized incident trace, use the original, **offline,
 read-only** Python standard-library checker bundled in this package.
