@@ -182,9 +182,14 @@ def main(argv=None):
     parser.add_argument("--input", type=Path, required=True)
     args = parser.parse_args(argv)
     try:
-        if args.input.stat().st_size > MAX_SIZE:
+        # Reject linked input path/ancestor before stat/open. An isolated,
+        # immutable host snapshot is required against concurrent races.
+        source = args.input.absolute()
+        if any(part.is_symlink() for part in (source, *source.parents)):
+            raise InvalidInput("symlinked input or ancestor")
+        if source.stat().st_size > MAX_SIZE:
             raise InvalidInput("input exceeds 1MiB")
-        with args.input.open("r",encoding="utf-8") as f:
+        with source.open("r",encoding="utf-8") as f:
             doc = json.load(f,object_pairs_hook=pairs,parse_constant=lambda _: (_ for _ in ()).throw(InvalidInput("invalid numeric constant")))
         result = triage(doc)
     except (InvalidInput, OSError, ValueError, UnicodeError) as exc:
