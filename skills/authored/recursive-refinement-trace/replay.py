@@ -116,6 +116,9 @@ def validate_export(data):
     root_id = roots[0]
     require(indexed[root_id]["record_type"] == "proposal" and
             indexed[root_id]["action"] == "inspect", "Invalid root")
+    task_family = indexed[root_id]["task_family"]
+    require(all(node["task_family"] == task_family for node in nodes),
+            "Task family drift within a frozen experiment")
 
     # No recursive traversal: a 1,000-node chain must remain supported.
     for node_index, node in enumerate(nodes):
@@ -213,7 +216,11 @@ def replay(data, *, policy, budget, source, state, evaluator, context,
         for _ in range(max_steps):
             options = children[current]
             if not options:
-                terminal = "PATH_COMPLETE" if visited else "NO_OBSERVED_BRANCH"
+                if requested_node is not None:
+                    decisions_attempted += 1
+                    terminal = "UNKNOWN_BRANCH"
+                else:
+                    terminal = "PATH_COMPLETE" if visited else "NO_OBSERVED_BRANCH"
                 break
             decisions_attempted += 1
             if requested_node is not None:
