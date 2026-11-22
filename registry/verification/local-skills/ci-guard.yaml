@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.6"
+skill_version: "1.5.7"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 2065f60fb2e3f8052c6695cd473ae1813e3561fb
-complete_package_tree_sha: c0b3dae61ace2ff104a647a24d49858de114e97e
+content_blob_sha: 09f2a1771a03d082c87a17f40e5bbb38cfe6657b
+complete_package_tree_sha: 2ec235742a01a50d341bc7d22b66077ccee5fde1
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: verified
-verification_basis: v1.5.6-exact-head-hosted-142-of-142-offline-method-tests
+verification_basis: v1.5.7-head-1981841-hosted-150-of-150-offline-methods
 validation_status: passed-offline-contract-tests
-validation_note: "Exact CI Guard v1.5.6 source, GitHub Actions #45073979352 on PR #865 HEAD 428f4052f2f857be7a11e96f7042f67a2c7c89a8 PASS: 142/142 Python tests (12 overlap, 16 cutover, 23 self-repair, 37 normalized scenario, 28 classifier, 26 plan). Complete 34-file package tree c0b3dae61ace2ff104a647a24d49858de114e97e and SKILL blob 2065f60fb2e3f8052c6695cd473ae1813e3561fb verified on merged main. Deterministic source and caller-declared simulation only: actual GitHub event semantics, consumer conformance/runtime guard, branch protection, model-host behavior, real runner cost and product outcomes NOT_RUN/NOT_MEASURED."
+validation_note: "PR #868 initial source head 19818416702e3bcccf0627ad0d37c617bd1bdd20 GitHub Actions #45077634202 PASS 150/150 Python methods: 12 overlap +16 cutover +23 self-repair +45 scenario +28 classification +26 plan. All three initial checks success. Final registry-only reconciliation head requires fresh QA. Consumer semantics/cost still NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_6"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5_7"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,11 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  A single reusable CI Guard entry point now includes a bounded normalized
-  whole-workflow SIMULATE phase and strict event/job/needs/matrix/status
-  negative cases. The checker is deliberately NOT a full GitHub Actions
-  interpreter and does not authenticate external pipeline results.
-  Unknown provider semantics, validator drift and hidden indirect export
-  calls require source/runtime host tests and may HOLD. Thirty-seven local
-  Python scenario methods passed on new source; full exact-head GitHub QA PASSED (142/142) on PR #865; consumer
-  cost/outcome verification and real provider semantics remain NOT_RUN.
+  v1.5.7 source passed 150/150 hosted Python QA on PR #868 first exact
+  source head, including 45 normalized scenario cases. The later registry
+  reconciliation head must separately PASS before merging. These local tests
+  do not authenticate provider dispatch or consumer publication outcomes.

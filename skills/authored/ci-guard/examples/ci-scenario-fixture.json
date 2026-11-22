@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  "known_semantics": "NORMALIZED_SUBSET_V1",
+  "known_semantics": "NORMALIZED_SUBSET_V2",
   "inventory": {
     "complete": true,
     "workflow_files_checked": true,
@@ -258,7 +258,9 @@
           "seconds": 4,
           "matrix": [
             "default"
-          ]
+          ],
+          "side_effect": "forward-port",
+          "effect_kind": "forward"
         },
         {
           "id": "tag",
@@ -278,7 +280,9 @@
           "seconds": 6,
           "matrix": [
             "default"
-          ]
+          ],
+          "side_effect": "tag-validation",
+          "effect_kind": "tag"
         },
         {
           "id": "regenerate",
@@ -298,7 +302,9 @@
           "seconds": 6,
           "matrix": [
             "default"
-          ]
+          ],
+          "side_effect": "regenerate-assets",
+          "effect_kind": "regenerate"
         },
         {
           "id": "gate-full",
@@ -419,6 +425,20 @@
           "lint/generic/default",
           "independent/generic/default"
         ]
+      },
+      "normative_side_effects": {
+        "draft": [],
+        "ready": [],
+        "push": [
+          "forward-port"
+        ],
+        "release": [
+          "tag-validation"
+        ],
+        "dispatch": [
+          "regenerate-assets"
+        ],
+        "cancelled": []
       }
     },
     {
@@ -667,7 +687,9 @@
           "seconds": 4,
           "matrix": [
             "default"
-          ]
+          ],
+          "side_effect": "forward-port",
+          "effect_kind": "forward"
         },
         {
           "id": "tag",
@@ -687,7 +709,9 @@
           "seconds": 6,
           "matrix": [
             "default"
-          ]
+          ],
+          "side_effect": "tag-validation",
+          "effect_kind": "tag"
         },
         {
           "id": "regenerate",
@@ -707,7 +731,9 @@
           "seconds": 6,
           "matrix": [
             "default"
-          ]
+          ],
+          "side_effect": "regenerate-assets",
+          "effect_kind": "regenerate"
         },
         {
           "id": "gate-full",
@@ -801,6 +827,20 @@
           "lint/generic/default",
           "independent/generic/default"
         ]
+      },
+      "normative_side_effects": {
+        "draft": [],
+        "ready": [],
+        "push": [
+          "forward-port"
+        ],
+        "release": [
+          "tag-validation"
+        ],
+        "dispatch": [
+          "regenerate-assets"
+        ],
+        "cancelled": []
       }
     }
   ],
@@ -863,7 +903,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "ready-light",
@@ -893,7 +934,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "draft-full",
@@ -953,7 +995,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "producer-failed",
@@ -1015,7 +1058,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "proof-shard-failed",
@@ -1077,7 +1121,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "independent-api-violation",
@@ -1144,7 +1189,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "stale-ready-receipt",
@@ -1204,7 +1250,8 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
     },
     {
       "id": "postmerge-push",
@@ -1264,7 +1311,10 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": [
+        "forward-port"
+      ]
     },
     {
       "id": "release-without-gate",
@@ -1324,7 +1374,10 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": [
+        "tag-validation"
+      ]
     },
     {
       "id": "cancelled",
@@ -1384,7 +1437,71 @@
           "conclusion": "success",
           "kind": "EXECUTED_VERIFIER"
         }
-      }
+      },
+      "required_side_effects": []
+    },
+    {
+      "id": "dispatch-regeneration",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "dispatch",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      },
+      "required_side_effects": [
+        "regenerate-assets"
+      ]
     }
   ]
 }

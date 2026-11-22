@@ -32,7 +32,8 @@ to make the simulation look green.
 
 The bundled standard-library
 [ci_scenario.py](../scripts/ci_scenario.py)
-takes a caller-authored JSON manifest. It neither parses arbitrary
+takes a caller-authored JSON manifest. Schema v2 additionally requires
+separate side-effect inventories for forward/tag/regeneration/publication. It neither parses arbitrary
 GitHub expressions nor executes workflow code, uses a shell, installs
 dependencies, reads private projects, mutates branch protection or
 publishes artifacts. It processes at most 1 MiB and requires two to
@@ -53,7 +54,7 @@ The simulator returns
 `observed_critical_path_delta:NOT_MEASURED` even on
 `STRUCTURAL_PASS`.
 
-Supported *normalized subset v1*:
+Supported *normalized subset v2* (v1 inputs require explicit migration):
 - Trusted-normalized path patterns only: exact path, `**` (all), or\n  `prefix/**` (descendants). Other GitHub minimatch forms are unsupported\n  and must be normalized by the host or HOLD.\n- Declared event and changed-path matching, including separate
   draft, ready, push, release, dispatch and cancellation scenarios;
   explicit route-specific job eligibility;
@@ -68,6 +69,9 @@ Supported *normalized subset v1*:
 - Exact source revision, required status conclusion and provenance
   kind; source-oracle `if`/needs agreement, unique terminal verifier
   obligation per platform/trust/shard and a separate policy gate that waits on its own same-workflow\n  prerequisites; cross-workflow required contexts are only\n  caller-declared policy input, not direct `needs`;
+- Separately required named forward/tag/regeneration/publication side
+  effects, where loss, failure, duplication or unapproved work is a HOLD
+  regardless of whether a PR qualification gate is expected;
 - Scheduled/failed/skipped/cancelled job states, estimated runner-job
   seconds, longest declared DAG path and earliest declared failure.
   These are **counterfactual estimates**, not provider billing.
@@ -112,10 +116,11 @@ The simulator deliberately fails:
 - an intentionally skipped producer blocking valid lightweight tests;
 - a green publication claim without separately run native/release
   obligations;
+- a missing, failing, duplicated or unexpected forward/tag/dispatch side effect;
 - an uninspected workflow, stale or cross-revision source input, or
   unmodeled provider trigger chain.
 
-The in-package [37 executable regression cases]
+The in-package [45 executable regression cases]
 (../examples/test_ci_scenario.py) exercise these failures. Written
 cases are not an independent consumer host trial.
 
@@ -166,3 +171,22 @@ pins and independent source evidence. **Completion of a consumer CI
 optimization** separately requires provider-verified full paths,
 required statuses, actual runner allocations, trustworthy timestamps,
 non-full-path preservation and measured cost/critical-path receipts.
+
+## Normalized v2 side-effect obligations
+
+A design declares `normative_side_effects` by event; a scenario independently
+lists `required_side_effects` from reviewed repository policy. Every
+`role:other` job declares `effect_kind` (`forward`, `tag`, `regenerate`,
+`publish`, or `internal`). Externally consequential jobs give their action
+an explicit `side_effect` identity; purely internal jobs declare no external
+effect. Each required effect must have **exactly one successful** eligible
+execution. The source simulator fails closed if it is absent, failed, duplicated,
+unexpected or conflicts with normative policy, even where the PR qualification
+gate intentionally does not run on a release/push/dispatch event.
+
+This avoids accidentally deleting forwarding or tag validation merely because
+those jobs do not contribute unique terminal verifier obligations. Neither the
+JSON input nor its success output authenticates GitHub's dispatch semantics or
+authorizes publication: release and token-trigger effects still need real host
+receipts, safe permission checks, independent policy qualification and owner
+authority. Do not infer actual side effects from synthetic simulation.

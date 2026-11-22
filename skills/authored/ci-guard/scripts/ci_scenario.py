@@ -50,7 +50,7 @@ def unique(rows, where):
 def parse(document):
     fields(document,{"schema_version","source_revision","inventory","designs","scenarios","known_semantics"},
            {"schema_version","source_revision","inventory","designs","scenarios","known_semantics"}, "manifest")
-    need(document["schema_version"] == 1 and type(document["schema_version"]) is int, "unsupported schema")
+    need(document["schema_version"] == 2 and type(document["schema_version"]) is int, "unsupported schema")
     source=ident(document["source_revision"],"source revision")
     need(len(source) in (40, 64) and all(c in "0123456789abcdef" for c in source), "source revision must be lowercase SHA fingerprint")
     inventory=document["inventory"]
@@ -61,17 +61,18 @@ def parse(document):
         if inventory[flag] is not True: reasons.append("INVENTORY_INCOMPLETE:"+flag)
     if inventory["source_revision"] != source: reasons.append("INVENTORY_STALE")
     if not isinstance(inventory["unresolved"],list) or inventory["unresolved"]: reasons.append("UNRESOLVED_PATH_OR_ORACLE")
-    if document["known_semantics"] != "NORMALIZED_SUBSET_V1": reasons.append("UNSUPPORTED_SEMANTICS")
+    if document["known_semantics"] != "NORMALIZED_SUBSET_V2": reasons.append("UNSUPPORTED_SEMANTICS")
     designs=document["designs"]
     need(isinstance(designs,list) and 2 <= len(designs) <= 4, "compare two to four graph designs")
     design_ids=[]
     for d in designs:
-        fields(d,{"id","source_revision","workflows","jobs","normative_obligations"},
-               {"id","source_revision","workflows","jobs","normative_obligations"},"design")
+        fields(d,{"id","source_revision","workflows","jobs","normative_obligations","normative_side_effects"},
+               {"id","source_revision","workflows","jobs","normative_obligations","normative_side_effects"},"design")
         design_ids.append(ident(d["id"],"design id"))
         if d["source_revision"]!=source: reasons.append("DESIGN_STALE:"+d["id"])
         need(isinstance(d["workflows"],list) and 1 <= len(d["workflows"]) <= 24,"bounded workflows")
         need(isinstance(d["jobs"],list) and 1 <= len(d["jobs"]) <= 128,"bounded jobs")
+        need(isinstance(d["normative_side_effects"],dict), "normative side-effect mapping must be an object")
     unique(design_ids,"design IDs")
     scenarios=document["scenarios"]
     need(isinstance(scenarios,list) and 1 <= len(scenarios) <= 64,"bounded scenarios required")
@@ -102,7 +103,7 @@ def eval_design(d, scenario, source):
         wmap[wid]=w
     jmap={}
     for j in d["jobs"]:
-        fields(j,{"id","workflow","needs","condition","routes","role","lane","obligation","platform","trust","seconds","matrix","artifact_from","artifact_id","runtime_guard","conformance_condition","conformance_needs","independent_detection","eligible_events","matrix_source","matrix_revision"},
+        fields(j,{"id","workflow","needs","condition","routes","role","lane","obligation","platform","trust","seconds","matrix","artifact_from","artifact_id","runtime_guard","conformance_condition","conformance_needs","independent_detection","eligible_events","matrix_source","matrix_revision","side_effect","effect_kind"},
                {"id","workflow","needs","condition","routes","role","lane","seconds","matrix","conformance_condition","conformance_needs","eligible_events"},"job")
         jid=ident(j["id"],"job id")
         need(jid not in jmap,"duplicate job")
@@ -125,6 +126,16 @@ def eval_design(d, scenario, source):
             if j.get("matrix_revision") != source:
                 raise Invalid("dynamic matrix expansion revision stale")
         if j["role"]=="produce": ident(j.get("artifact_id"),"produced artifact")
+        if j["role"]=="other":
+            need(j.get("effect_kind") in {"forward","tag","regenerate","publish","internal"},
+                 "other job requires explicit effect_kind")
+            if j["effect_kind"]=="internal":
+                need(j.get("side_effect") is None, "internal job cannot claim external effect")
+            else:
+                ident(j.get("side_effect"),"side effect identity")
+        else:
+            need(j.get("side_effect") is None and j.get("effect_kind") is None,
+                 "side effects require role other")
         jmap[jid]=j
     for j in jmap.values():
         need(all(dep in jmap and dep!=j["id"] for dep in j["needs"]),"missing/self job dependency")
@@ -240,6 +251,24 @@ def eval_design(d, scenario, source):
             problems.append("REQUIRED_STATUS_UNQUALIFIED:"+key)
         if receipt["conclusion"]=="success" and (key in missing):
             problems.append("REQUIRED_STATUS_SPOOFED:"+key)
+    # Side effects are independent of terminal-verifier qualification.
+    required_effects=unique(scenario["required_side_effects"],"scenario side effects")
+    for effect in required_effects: ident(effect,"side effect identity")
+    observed_effects={}
+    for jid in sorted(run_scheduled):
+        job=jmap[jid]
+        if job["role"]=="other" and job["effect_kind"]!="internal":
+            observed_effects.setdefault(job["side_effect"],[]).append(statuses[jid])
+    for effect in required_effects:
+        outcomes=observed_effects.get(effect,[])
+        if len(outcomes)!=1 or outcomes[0]!="success":
+            problems.append("MISSING_OR_FAILED_SIDE_EFFECT:"+effect)
+    for effect,outcomes in observed_effects.items():
+        if effect not in required_effects: problems.append("UNEXPECTED_SIDE_EFFECT:"+effect)
+        if len(outcomes)>1: problems.append("DUPLICATE_SIDE_EFFECT:"+effect)
+    normative_effects=d["normative_side_effects"].get(event)
+    if normative_effects is None or set(normative_effects)!=set(required_effects):
+        problems.append("NORMATIVE_SIDE_EFFECTS_DRIFT")
     norm=d["normative_obligations"].get(scenario["route"])
     if norm is None: problems.append("NORMATIVE_ROUTE_NOT_MAPPED")
     elif set(norm)!=set(req):problems.append("NORMATIVE_OBLIGATIONS_DRIFT")
@@ -258,7 +287,8 @@ def eval_design(d, scenario, source):
         "matches_expected":qualifies==scenario["expected_qualifies"],
         "statuses":statuses,"shard_states":shard_states,"scheduled_jobs":sorted(run_scheduled),
         "scheduled_start_seconds":starts,"scheduled_end_seconds":ends,"missing":missing,
-        "duplicate":duplicates,"issues":sorted(set(problems)),
+        "duplicate":duplicates,"required_side_effects":required_effects,
+         "executed_side_effects":observed_effects,"issues":sorted(set(problems)),
         "estimated_runner_seconds":round(costs,3),"estimated_critical_path_seconds":round(critical,3),
         "earliest_failure_seconds":None if earliest_failure==float("inf") else round(earliest_failure,3),
         "provider_authenticated":False}
@@ -268,8 +298,8 @@ def run(doc):
     allowable={j["id"] for d in doc["designs"] for j in d["jobs"]}
     allowable_shards=allowable | {j["id"]+"#"+shard for d in doc["designs"] for j in d["jobs"] for shard in j["matrix"]}
     for scenario in doc["scenarios"]:
-        fields(scenario,{"id","source_revision","event","route","changed_paths","expected_qualifies","required_obligations","forced_outcomes","runtime_api_calls","provider_semantics","receipt_revision","status_checks"},
-            {"id","source_revision","event","route","changed_paths","expected_qualifies","required_obligations","forced_outcomes","runtime_api_calls","provider_semantics","receipt_revision","status_checks"},"scenario")
+        fields(scenario,{"id","source_revision","event","route","changed_paths","expected_qualifies","required_obligations","forced_outcomes","runtime_api_calls","provider_semantics","receipt_revision","status_checks","required_side_effects"},
+            {"id","source_revision","event","route","changed_paths","expected_qualifies","required_obligations","forced_outcomes","runtime_api_calls","provider_semantics","receipt_revision","status_checks","required_side_effects"},"scenario")
         need(scenario["event"] in EVENTS and scenario["route"] in {"full","light"},"invalid scenario event/route")
         need(type(scenario["expected_qualifies"]) is bool,"expected_qualifies boolean")
         need(isinstance(scenario["changed_paths"],list) and scenario["changed_paths"],"changed paths absent")
@@ -283,7 +313,9 @@ def run(doc):
         for y in x["issues"]:
             if y.startswith(("UNSUPPORTED", "VALIDATOR_DRIFT", "INDEPENDENT_LANE_GUARD_ABSENT",
                              "ARTIFACT_PRODUCER_NOT_IN_NEEDS", "MATRIX_PLAN_NOT_IN_NEEDS",
-                             "QUALIFICATION_GATE_MISSING_PREREQUISITES")):
+                             "QUALIFICATION_GATE_MISSING_PREREQUISITES",
+                             "MISSING_OR_FAILED_SIDE_EFFECT","UNEXPECTED_SIDE_EFFECT",
+                             "DUPLICATE_SIDE_EFFECT","NORMATIVE_SIDE_EFFECTS_DRIFT")):
                 problems.append("STRUCTURAL_GRAPH_HOLD:"+x["design"]+":"+x["scenario"]+":"+y)
     return {"status":"STRUCTURAL_PASS" if not problems else "HOLD","issues":sorted(set(problems)),
       "results":results,"schema_version":1,"exact_source_revision":rev,
