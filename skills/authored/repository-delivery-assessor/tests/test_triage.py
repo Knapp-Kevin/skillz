@@ -158,4 +158,34 @@ class OfflinePulseTests(unittest.TestCase):
             out=subprocess.run([sys.executable,str(ROOT/'scripts'/'triage.py'),'--input',str(p)],capture_output=True,text=True)
             self.assertEqual(out.returncode,2)
 
+
+    def test_cli_refuses_linked_input_file(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            private = root / "outside.json"
+            private.write_text("out-of-scope sentinel", encoding="utf-8")
+            alias = root / "approved.json"
+            alias.symlink_to(private)
+            proc = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "triage.py"), "--input", str(alias)],
+                capture_output=True, text=True)
+            self.assertEqual(proc.returncode, 2)
+            self.assertIn("symlinked input", proc.stderr)
+            self.assertNotIn("out-of-scope sentinel", proc.stdout + proc.stderr)
+
+    def test_cli_refuses_linked_parent_directory(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "private").mkdir()
+            target = root / "private" / "outside.json"
+            target.write_text("out-of-scope sentinel", encoding="utf-8")
+            alias = root / "approved"
+            alias.symlink_to(root / "private", target_is_directory=True)
+            proc = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "triage.py"), "--input",
+                 str(alias / "outside.json")], capture_output=True, text=True)
+            self.assertEqual(proc.returncode, 2)
+            self.assertIn("symlinked input", proc.stderr)
+            self.assertNotIn("out-of-scope sentinel", proc.stdout + proc.stderr)
+
 if __name__ == '__main__':unittest.main()
