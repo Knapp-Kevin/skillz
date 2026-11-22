@@ -6,6 +6,19 @@ A classifier that only emits labels while the previous monolithic acceptance
 workflow continues unconditionally is a **FAILED optimization**, even if its
 classification is correct.
 
+## Draft PRs use a separate cheap dispatch path
+
+For a GitHub Actions draft PR, **do not enter the costly three-stage
+pipeline by default**. Skip classification, checkout, setup, real commands
+and any other expensive job at the GitHub job-level `if` guard. Only
+the stable lightweight required gate may run, reporting
+`DRAFT_DEFERRED_NOT_QUALIFIED` without calling this planner or qualifier.
+No assurance receipts exist on a draft. After `ready_for_review`,
+run the complete candidate closure at the exact current HEAD; validate
+branch protection cannot reuse a draft-only green status on the same SHA.
+The explicit manual `--stage draft` option remains available for
+authorized diagnostics but is *not* the workflow default.
+
 ## Three distinct capabilities, one closed loop
 
 1. **Classification:** compare the exact trusted base, merge-base and candidate
