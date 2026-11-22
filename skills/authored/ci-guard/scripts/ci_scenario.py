@@ -50,7 +50,7 @@ def unique(rows, where):
 def parse(document):
     fields(document,{"schema_version","source_revision","inventory","designs","scenarios","known_semantics"},
            {"schema_version","source_revision","inventory","designs","scenarios","known_semantics"}, "manifest")
-    need(document["schema_version"] == 2 and type(document["schema_version"]) is int, "unsupported schema")
+    need(document["schema_version"] == 3 and type(document["schema_version"]) is int, "unsupported schema")
     source=ident(document["source_revision"],"source revision")
     need(len(source) in (40, 64) and all(c in "0123456789abcdef" for c in source), "source revision must be lowercase SHA fingerprint")
     inventory=document["inventory"]
@@ -61,7 +61,7 @@ def parse(document):
         if inventory[flag] is not True: reasons.append("INVENTORY_INCOMPLETE:"+flag)
     if inventory["source_revision"] != source: reasons.append("INVENTORY_STALE")
     if not isinstance(inventory["unresolved"],list) or inventory["unresolved"]: reasons.append("UNRESOLVED_PATH_OR_ORACLE")
-    if document["known_semantics"] != "NORMALIZED_SUBSET_V2": reasons.append("UNSUPPORTED_SEMANTICS")
+    if document["known_semantics"] != "NORMALIZED_SUBSET_V3": reasons.append("UNSUPPORTED_SEMANTICS")
     designs=document["designs"]
     need(isinstance(designs,list) and 2 <= len(designs) <= 4, "compare two to four graph designs")
     design_ids=[]
@@ -103,7 +103,7 @@ def eval_design(d, scenario, source):
         wmap[wid]=w
     jmap={}
     for j in d["jobs"]:
-        fields(j,{"id","workflow","needs","condition","routes","role","lane","obligation","platform","trust","seconds","matrix","artifact_from","artifact_id","runtime_guard","conformance_condition","conformance_needs","independent_detection","eligible_events","matrix_source","matrix_revision","side_effect","effect_kind"},
+        fields(j,{"id","workflow","needs","condition","routes","role","lane","obligation","platform","trust","seconds","matrix","artifact_from","artifact_id","runtime_guard","conformance_condition","conformance_needs","independent_detection","eligible_events","matrix_source","matrix_revision","side_effect","effect_kind","dispatch_target","emitted_event"},
                {"id","workflow","needs","condition","routes","role","lane","seconds","matrix","conformance_condition","conformance_needs","eligible_events"},"job")
         jid=ident(j["id"],"job id")
         need(jid not in jmap,"duplicate job")
@@ -136,15 +136,49 @@ def eval_design(d, scenario, source):
         else:
             need(j.get("side_effect") is None and j.get("effect_kind") is None,
                  "side effects require role other")
+        if j.get("dispatch_target") is not None or j.get("emitted_event") is not None:
+            need(j["role"]=="other" and j.get("dispatch_target") is not None
+                 and j.get("emitted_event")=="dispatch",
+                 "explicit dispatch must originate from a non-verifier other job")
+            ident(j["dispatch_target"],"dispatch target")
         jmap[jid]=j
+    # A cross-workflow event is NOT a GitHub job needs edge. The virtual
+    # predecessor models only an explicitly declared dispatch boundary.
+    # Any unmodeled token/trigger semantics remain HOLD, never implied PASS.
+    event_deps={}
+    source_targets={}
+    for wid,w in wmap.items():
+        emitter=w.get("trigger_from")
+        if emitter is None:
+            need(w.get("token_semantics") is None,
+                 "token semantics without declared trigger")
+            continue
+        need(isinstance(emitter,str) and emitter in jmap,
+             "unmapped event emitter")
+        job=jmap[emitter]
+        need(job["workflow"] != wid and job.get("dispatch_target")==wid
+             and job.get("emitted_event")=="dispatch" and job["role"]=="other",
+             "dispatch source/target contract mismatch")
+        need("dispatch" in w["events"] and set(w["events"])=={"dispatch"},
+             "event-chain receiver only supports dispatch")
+        need(wid not in source_targets, "duplicated event receiver")
+        source_targets[wid]=emitter
+    for j in jmap.values():
+        target=j.get("dispatch_target")
+        if target is not None:
+            need(target in source_targets and source_targets[target]==j["id"],
+                 "unmapped or contradictory dispatch target")
     for j in jmap.values():
         need(all(dep in jmap and dep!=j["id"] for dep in j["needs"]),"missing/self job dependency")
         need(all(jmap[dep]["workflow"] == j["workflow"] for dep in j["needs"]),
              "cross-workflow needs is not a GitHub job dependency")
+    for j in jmap.values():
+        emitter=source_targets.get(j["workflow"])
+        event_deps[j["id"]]=j["needs"]+([emitter] if emitter is not None else [])
     waiting=list(jmap)
     order=[]
     while waiting:
-        available=[k for k in waiting if all(n in order for n in jmap[k]["needs"])]
+        available=[k for k in waiting if all(n in order for n in event_deps[k])]
         need(available,"dependency cycle or missing source")
         for k in available: order.append(k);waiting.remove(k)
     problems=[]
@@ -164,14 +198,17 @@ def eval_design(d, scenario, source):
         if j["role"]=="qualify" and not j["needs"]:
             problems.append("QUALIFICATION_GATE_MISSING_PREREQUISITES:"+j["id"])
     selected=set()
+    emitted_edges=[]
     event=scenario["event"]
     for wid,w in wmap.items():
-        if event in w["events"] and any(normalized_path_match(path,pat) for path in scenario["changed_paths"] for pat in w["paths"]):
+        if w.get("trigger_from") is None and event in w["events"] and any(
+                normalized_path_match(path,pat)
+                for path in scenario["changed_paths"] for pat in w["paths"]):
             selected.add(wid)
         if w.get("trigger_from") is not None:
-            # Never invent GitHub token-trigger behavior; this subset supports
-            # only independently evidenced externally-dispatched chains.
-            if w.get("token_semantics") != "EXTERNAL_DISPATCH_VERIFIED":
+            # This is a documented analyst normal form. Even a structural PASS
+            # cannot authenticate provider token, permissions or dispatch run.
+            if w.get("token_semantics") != "EXTERNAL_DISPATCH_DECLARED":
                 problems.append("UNSUPPORTED_TRIGGER_CHAIN:"+wid)
     statuses={};ends={};starts={};run_scheduled=set();shard_states={}
     calls=scenario.get("runtime_api_calls",{})
@@ -186,8 +223,21 @@ def eval_design(d, scenario, source):
         need(isinstance(job_calls,list) and all(v==API for v in job_calls),"unsupported runtime API call")
     for jid in order:
         j=jmap[jid];deps=[statuses[x] for x in j["needs"]]
+        workflow=wmap[j["workflow"]]
+        emitter=source_targets.get(j["workflow"])
+        chain_eligible=(emitter is not None and
+                        workflow.get("token_semantics")=="EXTERNAL_DISPATCH_DECLARED"
+                        and statuses.get(emitter)=="success"
+                        and any(normalized_path_match(path,pat)
+                                for path in scenario["changed_paths"]
+                                for pat in workflow["paths"]))
+        if chain_eligible and j["workflow"] not in selected:
+            selected.add(j["workflow"])
+            emitted_edges.append({"from_job":emitter,"to_workflow":j["workflow"],
+                                  "event":"dispatch","provider_authenticated":False})
+        effective_event="dispatch" if emitter is not None else event
         allowed=(j["workflow"] in selected and scenario["route"] in j["routes"]
-                 and event in j["eligible_events"])
+                 and effective_event in j["eligible_events"])
         if j["condition"]=="success": allowed=allowed and all(x=="success" for x in deps)
         elif j["condition"]=="needs_skipped": allowed=allowed and "skipped" in deps and "failure" not in deps and "cancelled" not in deps
         elif j["condition"]=="needs_failed": allowed=allowed and "failure" in deps
@@ -197,7 +247,7 @@ def eval_design(d, scenario, source):
         need(set(states.values()) <= STATES,"unrecognized forced result")
         if any(v!="skipped" for v in states.values()):
             run_scheduled.add(jid)
-            starts[jid]=max([ends.get(n,0) for n in j["needs"]] or [0.0])
+            starts[jid]=max([ends.get(n,0) for n in event_deps[jid]] or [0.0])
             ends[jid]=starts[jid]+number(j["seconds"],"time")
             if j["lane"]=="independent" and API in calls.get(jid,[]):
                 states={k:"failure" if v!="skipped" else v for k,v in states.items()}
@@ -286,7 +336,8 @@ def eval_design(d, scenario, source):
         "expected_qualifies":scenario["expected_qualifies"],
         "matches_expected":qualifies==scenario["expected_qualifies"],
         "statuses":statuses,"shard_states":shard_states,"scheduled_jobs":sorted(run_scheduled),
-        "scheduled_start_seconds":starts,"scheduled_end_seconds":ends,"missing":missing,
+        "scheduled_start_seconds":starts,"scheduled_end_seconds":ends,
+        "activated_workflows":sorted(selected),"modeled_dispatch_edges":emitted_edges,"missing":missing,
         "duplicate":duplicates,"required_side_effects":required_effects,
          "executed_side_effects":observed_effects,"issues":sorted(set(problems)),
         "estimated_runner_seconds":round(costs,3),"estimated_critical_path_seconds":round(critical,3),
@@ -318,9 +369,10 @@ def run(doc):
                              "DUPLICATE_SIDE_EFFECT","NORMATIVE_SIDE_EFFECTS_DRIFT")):
                 problems.append("STRUCTURAL_GRAPH_HOLD:"+x["design"]+":"+x["scenario"]+":"+y)
     return {"status":"STRUCTURAL_PASS" if not problems else "HOLD","issues":sorted(set(problems)),
-      "results":results,"schema_version":1,"exact_source_revision":rev,
+      "results":results,"schema_version":3,"exact_source_revision":rev,
       "observed_runner_savings":"NOT_MEASURED","observed_critical_path_delta":"NOT_MEASURED",
-      "real_provider_semantics_authenticated":False,"host_execution_proven":False,
+      "real_provider_semantics_authenticated":False,"event_chains_provider_authenticated":False,
+      "host_execution_proven":False,
       "automatic_best_design_selected":False}
 
 def object_pairs(pairs):
