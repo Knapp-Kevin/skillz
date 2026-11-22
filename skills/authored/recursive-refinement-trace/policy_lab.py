@@ -13,6 +13,9 @@ import json
 from pathlib import Path
 import sys
 
+# Imports must not leave unapproved bytecode files in a standalone copy.
+sys.dont_write_bytecode = True
+
 import replay
 
 CASE_KEYS = frozenset({"case_id", "split", "task_family", "source", "state",
