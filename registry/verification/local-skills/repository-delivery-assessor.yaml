@@ -11,10 +11,10 @@ content_blob_sha: ea5994f8567dc06996641aea27608a6bc578c1dc
 complete_package_tree_sha: e210b1646f679e01017283ece402395e402798fe
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: unverified
+verification_status: verified
 verification_basis: maintainer-complete-package-static-review-and-39-local-offline-method-tests
-validation_status: not-run
-validation_note: "39/39 actual local Python PR metadata method tests pass; separately verified historical public PR #816 source fixture. No independent old/new agent-host skill comparison or production outcome validation."
+validation_status: passed-offline-contract-tests
+validation_note: "Exact-source v1.4.1 GitHub Actions PR #862 run #45072270335 PASS on head 9a9efb66397dd8f8cc9d5bee5af691d636497675; 41/41 local-package Python method tests passed including two new symlink refusal negatives. Source/method checks authenticated to the CI run; external data rights, independent agent-host behavior, malicious concurrent filesystem path-swap and product/user effectiveness NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_4_1"
 tags:
@@ -29,8 +29,6 @@ notes: >-
   Historical v1.3 review stays pinned, 1.5x effectiveness NOT PROVEN,
   independently isolated host comparison NOT_RUN, real delivery unverified.
 
-# v1.4.1: two planted file/parent symlink negative cases and original test
-# methods kept (now 41 relevant tests). Full changed-version Python suite
-# NOT_RUN as of source edit; historical receipts do not apply to these bytes.
-# Host/agent outcomes, consumer data rights and concurrent path-swap TOCTOU
-# containment are NOT_VERIFIED.
+# 2026-11-22: merged source PR #862 at 8485dd10bdd72fe2f6d027fcc8a30e32dbb788a7.
+# CI run 45072270335 PASS on exact PR HEAD, 41/41 deterministic tests;
+# does not authenticate a model-host evaluation or an external consumer outcome.

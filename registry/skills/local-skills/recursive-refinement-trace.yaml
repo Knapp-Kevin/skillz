@@ -29,14 +29,15 @@ complete_package_tree_sha: d46950b4d62d3eae06080b980b3ed7c8d8767014
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Phase-3 v0.3.0 adds optional host-invoked, standalone, read-only
-  declarative policy_lab.py with frozen evaluator and incumbent,
-  two-family development/holdout separation, actual observed-path
-  replay, protected verifier vetoes and no automatic promotion.
-  20 new adversarial tests ship with the package, but current exact
-  source Python execution is NOT_RUN. v0.2.0 84/84 results are historical
-  only. No independent host trial, policy improvement or user gain verified.
+  Current v0.3.1 exact-source standalone input-boundary and original
+  functional method suite qualified against GitHub Actions PR #862,
+  run #45072270335, head 9a9efb66397dd8f8cc9d5bee5af691d636497675:
+  106/106 Python methods PASS, including the new file and ancestor
+  symlink negative controls. Original positive workflow preserved.
+  Historic earlier-version ratings and runs are not current receipts.
+  The source checker does not independently authenticate input rights,
+  consent, external host behavior, benefit or concurrent path-swap safety.
 
-# 2026-11-22: v0.3.1 refuses symlinked JSON input and ancestors before stat/read.
-# Two planted negative Python tests; full current-version suite is pending.
-# Lexical source preflight does NOT address hostile concurrent file replacement.
+# 2026-11-22: exact current source and 207/207 combined suite receipt
+# https://github.com/Knapp-Kevin/skillz/actions/runs/45072270335
+# Behavior in a consuming model host and real-user outcomes NOT_RUN.
