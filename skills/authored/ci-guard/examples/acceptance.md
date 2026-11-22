@@ -282,7 +282,7 @@ lineage. Simulated samples may never be used for adoption evidence.
 ## Static source/oracle reconciliation falsifiers (CI Guard v1.6.1)
 
 The [source-reconciliation method](../components/source-reconciliation.md)
-is exercised by [25 synthetic executable negative controls]
+is exercised by [27 synthetic executable negative controls]
 (test_ci_source_reconcile.py). Complete checked-out workflow files and
 their literal events, job IDs, `if`, `needs`, runner values and supplied
 SHA-256 values must match a normalized v3 design. Python conformance
