@@ -20,6 +20,25 @@ def case():
 def result_for(result,design,scenario):
     return next(x for x in result['results'] if x['design']==design and x['scenario']==scenario)
 
+def add_dispatch_chain(doc):
+    """Expand each fictional graph with an explicit, source-bound dispatch hop."""
+    for design in doc['designs']:
+        source=next(j for j in design['jobs'] if j['id']=='forward')
+        source['dispatch_target']='forward-relay'
+        source['emitted_event']='dispatch'
+        design['workflows'].append({
+            'id':'forward-relay','events':['dispatch'],'paths':['**'],
+            'trigger_from':'forward','token_semantics':'EXTERNAL_DISPATCH_DECLARED'})
+        design['jobs'].insert(0,{
+            'id':'forward-relay-job','workflow':'forward-relay','needs':[],
+            'condition':'success','conformance_condition':'success',
+            'conformance_needs':[],'routes':['full'],'eligible_events':['dispatch'],
+            'role':'other','lane':'other','seconds':2,'matrix':['default'],
+            'side_effect':'forward-relay-reconciled','effect_kind':'forward'})
+        design['normative_side_effects']['push'].append('forward-relay-reconciled')
+    next(s for s in doc['scenarios'] if s['id']=='postmerge-push'
+         )['required_side_effects'].append('forward-relay-reconciled')
+
 class ScenarioTests(unittest.TestCase):
     def run_doc(self,edit=None):
         d=case()
@@ -219,10 +238,13 @@ class ScenarioTests(unittest.TestCase):
             self.run_doc(edit)
 
     def test_unknown_github_trigger_token_rule_holds(self):
-        def edit(doc):doc['designs'][0]['workflows'][6]['trigger_from']='forward';doc['designs'][0]['workflows'][6]['token_semantics']='UNKNOWN'
+        def edit(doc):
+            add_dispatch_chain(doc)
+            doc['designs'][0]['workflows'][-1]['token_semantics']='GITHUB_TOKEN_PUSH'
         r=self.run_doc(edit)
         self.assertEqual(r['status'],'HOLD')
         self.assertTrue(any('UNSUPPORTED_TRIGGER_CHAIN' in i for i in r['issues']))
+        self.assertNotIn('forward-relay-job',result_for(r,'blanket-barrier','postmerge-push')['scheduled_jobs'])
 
     def test_release_tag_and_forward_side_effect_cannot_qualify_proof(self):
         r=self.run_doc()
@@ -381,6 +403,99 @@ class ScenarioTests(unittest.TestCase):
             for design in doc['designs']:
                 next(j for j in design['jobs'] if j['id']=='forward').pop('effect_kind')
         with self.assertRaisesRegex(sim.Invalid,'explicit effect_kind'):
+            self.run_doc(edit)
+
+
+    def test_declared_event_chain_runs_only_after_successful_emitter(self):
+        result=self.run_doc(add_dispatch_chain)
+        self.assertEqual(result['status'],'STRUCTURAL_PASS',result['issues'])
+        for design in ('blanket-barrier','split-independent'):
+            x=result_for(result,design,'postmerge-push')
+            self.assertEqual(x['statuses']['forward'],'success')
+            self.assertEqual(x['statuses']['forward-relay-job'],'success')
+            self.assertIn('forward-relay',x['activated_workflows'])
+            self.assertEqual(x['scheduled_start_seconds']['forward-relay-job'],4)
+            self.assertEqual(x['modeled_dispatch_edges'],[
+                {'from_job':'forward','to_workflow':'forward-relay',
+                 'event':'dispatch','provider_authenticated':False}])
+            self.assertEqual(x['executed_side_effects']['forward-relay-reconciled'],['success'])
+        self.assertFalse(result['event_chains_provider_authenticated'])
+
+    def test_failed_emitter_does_not_allocate_downstream_runner(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            next(s for s in doc['scenarios'] if s['id']=='postmerge-push')['forced_outcomes']['forward']='failure'
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        x=result_for(result,'split-independent','postmerge-push')
+        self.assertEqual(x['statuses']['forward-relay-job'],'skipped')
+        self.assertNotIn('forward-relay-job',x['scheduled_jobs'])
+        self.assertNotIn('forward-relay',x['activated_workflows'])
+        self.assertIn('MISSING_OR_FAILED_SIDE_EFFECT:forward-relay-reconciled',x['issues'])
+
+    def test_direct_dispatch_does_not_forge_an_emitted_workflow(self):
+        result=self.run_doc(add_dispatch_chain)
+        for design in ('blanket-barrier','split-independent'):
+            x=result_for(result,design,'dispatch-regeneration')
+            self.assertEqual(x['statuses']['forward'],'skipped')
+            self.assertEqual(x['statuses']['forward-relay-job'],'skipped')
+            self.assertNotIn('forward-relay',x['activated_workflows'])
+            self.assertEqual(x['statuses']['regenerate'],'success')
+
+    def test_missing_dispatch_target_refused(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            next(j for j in doc['designs'][0]['jobs'] if j['id']=='forward').pop('dispatch_target')
+        with self.assertRaisesRegex(sim.Invalid,'explicit dispatch'):
+            self.run_doc(edit)
+
+    def test_orphaned_dispatch_target_refused(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            # Preserve the receiver and its job; orphan only the event edge.
+            receiver=doc['designs'][0]['workflows'][-1]
+            receiver.pop('trigger_from')
+            receiver.pop('token_semantics')
+        with self.assertRaisesRegex(sim.Invalid,'unmapped or contradictory dispatch target'):
+            self.run_doc(edit)
+
+    def test_bad_emitter_identity_refused(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            doc['designs'][0]['workflows'][-1]['trigger_from']='not-a-job'
+        with self.assertRaisesRegex(sim.Invalid,'unmapped event emitter'):
+            self.run_doc(edit)
+
+    def test_cross_workflow_needs_remains_forbidden_with_dispatch_edge(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            j=next(j for j in doc['designs'][0]['jobs'] if j['id']=='forward-relay-job')
+            j['needs']=['forward'];j['conformance_needs']=['forward']
+        with self.assertRaisesRegex(sim.Invalid,'cross-workflow needs'):
+            self.run_doc(edit)
+
+    def test_emitter_must_be_non_verifier_job(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            next(j for j in doc['designs'][0]['jobs'] if j['id']=='forward')['role']='verify'
+        with self.assertRaises(sim.Invalid):
+            self.run_doc(edit)
+
+    def test_predecessor_cancellation_does_not_trigger_dispatch(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            next(s for s in doc['scenarios'] if s['id']=='postmerge-push')['forced_outcomes']['forward']='cancelled'
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        x=result_for(result,'split-independent','postmerge-push')
+        self.assertEqual(x['statuses']['forward-relay-job'],'skipped')
+        self.assertNotIn('forward-relay-job',x['scheduled_jobs'])
+
+    def test_normalized_dispatch_requires_explicit_supported_event(self):
+        def edit(doc):
+            add_dispatch_chain(doc)
+            doc['designs'][0]['workflows'][-1]['events']=['push','dispatch']
+        with self.assertRaisesRegex(sim.Invalid,'only supports dispatch'):
             self.run_doc(edit)
 
 if __name__=='__main__':unittest.main()

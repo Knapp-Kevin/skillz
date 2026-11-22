@@ -32,7 +32,7 @@ to make the simulation look green.
 
 The bundled standard-library
 [ci_scenario.py](../scripts/ci_scenario.py)
-takes a caller-authored JSON manifest. Schema v2 additionally requires
+takes a caller-authored JSON manifest. Schema v3 retains
 separate side-effect inventories for forward/tag/regeneration/publication. It neither parses arbitrary
 GitHub expressions nor executes workflow code, uses a shell, installs
 dependencies, reads private projects, mutates branch protection or
@@ -54,8 +54,13 @@ The simulator returns
 `observed_critical_path_delta:NOT_MEASURED` even on
 `STRUCTURAL_PASS`.
 
-Supported *normalized subset v2* (v1 inputs require explicit migration):
-- Trusted-normalized path patterns only: exact path, `**` (all), or\n  `prefix/**` (descendants). Other GitHub minimatch forms are unsupported\n  and must be normalized by the host or HOLD.\n- Declared event and changed-path matching, including separate
+Supported *normalized subset v3* (v1/v2 inputs require explicit migration):
+- Trusted-normalized path patterns only: exact path, `**` (all), or\n  `prefix/**` (descendants). Other GitHub minimatch forms are unsupported\n  and must be normalized by the host or HOLD.\n- Explicit bounded dispatch propagation from a source `role:other` job
+  declaring `dispatch_target` and `emitted_event:dispatch` to a receiver
+  workflow with `events:[dispatch]`, `trigger_from` and
+  `token_semantics:EXTERNAL_DISPATCH_DECLARED`. A virtual event predecessor
+  defers scheduling until emitter success; no cross-workflow GitHub `needs`.
+- Declared event and changed-path matching, including separate
   draft, ready, push, release, dispatch and cancellation scenarios;
   explicit route-specific job eligibility;
 - Same-workflow, acyclic `needs` and four simple explicit
@@ -120,7 +125,7 @@ The simulator deliberately fails:
 - an uninspected workflow, stale or cross-revision source input, or
   unmodeled provider trigger chain.
 
-The in-package [45 executable regression cases]
+The in-package [55 executable regression cases]
 (../examples/test_ci_scenario.py) exercise these failures. Written
 cases are not an independent consumer host trial.
 
@@ -190,3 +195,25 @@ JSON input nor its success output authenticates GitHub's dispatch semantics or
 authorizes publication: release and token-trigger effects still need real host
 receipts, safe permission checks, independent policy qualification and owner
 authority. Do not infer actual side effects from synthetic simulation.
+
+## Normalized v3 cross-workflow event modeling
+
+The source job must be `role:other`, declare a matching receiver workflow
+ID in `dispatch_target` and `emitted_event: dispatch`. The recipient
+workflow declares `events: [dispatch]`, `trigger_from: source-job-id`,
+and `token_semantics: EXTERNAL_DISPATCH_DECLARED`. Its jobs list
+`eligible_events: [dispatch]`. This is a **virtual scheduling edge**,
+not the GitHub `needs` API. Source fail/cancel/skip never allocates
+downstream jobs. Receiver cycles, an unknown sender, missing or
+contradictory dispatch target and unsupported token semantics HOLD.
+
+A normal-form declaration cannot establish real GitHub `GITHUB_TOKEN`
+event propagation, dispatch endpoint permissions, branch registration,
+provider receipt custody or release/publication authority. Simulated
+edges always report `provider_authenticated:false`, and the run
+returns `event_chains_provider_authenticated:false`. Zero modeled
+dispatch-transport delay is an estimate, never a hosted latency claim.
+The consuming owner must independently authenticate source and destination
+run IDs, dispatcher token, provenance, permissions, branch/ruleset,
+release controls and actual host behavior before cutover.
+
