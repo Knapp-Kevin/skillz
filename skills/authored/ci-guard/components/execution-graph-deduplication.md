@@ -63,6 +63,15 @@ For each candidate, record
 terminal command | inputs/environment/trust | unique failure detection |
 classification | CONSOLIDATE/KEEP/RELOCATE/VERIFY | owner/evidence`.
 
+For deliberate nondeterminism repetition with identical execution context,
+retain only independently documented stochastic-failure detection, two
+distinct execution receipts and a recorded `nondeterminism` purpose.
+The checker can recognize those **caller-supplied** fields but does not
+authenticate the receipts. Disjoint workflow events without verified
+co-triggering are `UNPROVEN`, even if the terminal commands happen to
+match. A push and PR event may overlap on one revision, so inspect
+observed run/event receipts rather than guessing either way.
+
 Same job names or same last command string alone prove neither equivalence
 nor safe consolidation. Different task-runner names may still converge on
 one identical terminal command. Conversely Linux and native Windows
@@ -124,7 +133,7 @@ provider behavior.
 The bounded input is version 1 and records `revision`,
 `inventory_complete`, unresolved invocation paths, full workflow/job/
 recipe/script/terminal nodes with `invokes` edges, stage dispatch,
-job `needs` and expanded matrices, effective terminal obligation,
+job `needs`, original job `condition`, explicit workflow trigger `events` and expanded matrices, effective terminal obligation,
 source SHA, input set, environment, platform, toolchain, trust,
 failure boundary, reported receipt and documented dispositions. The
 `qualification` section must cover every required candidate/release
