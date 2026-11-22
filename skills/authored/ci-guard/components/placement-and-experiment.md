@@ -6,8 +6,13 @@ effective delivery, or a team proposes moving verification to another gate.
 Use a risk matrix instead of universal gate rules:
 
 - Local/developer: actionable fastest feedback, focused tests.
-- Pull request: change-relevant tests, critical trust/security and correctness
-  controls that must block merging.
+- Draft pull request: default to no expensive CI; one cheap required
+  status may report `DRAFT_DEFERRED_NOT_QUALIFIED` with no checkout
+  or verification. Separately authorized mandatory draft security checks
+  are explicit exceptions, not assumptions.
+- Ready pull request: run change-relevant tests and critical trust,
+  security and correctness controls against the current exact HEAD;
+  reject stale or draft-only evidence and preserve merge protection.
 - Protected main: meaningful broader integration where the PR gate need not
   repeat it, with an explicit recovery plan for post-merge failure.
 - Release candidate: cross-platform, full matrix, signed packaging,
