@@ -24,4 +24,4 @@ complete_package_tree_sha: 765ff8de31efefd63a5f6a590b4205cce257d80f
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.9 adds modeled dispatch chain scheduling and fail-closed token/source checks with 10 new planted scenario tests. Exact-head hosted QA PENDING. Real host dispatch and external measured ROI NOT_RUN."
+rationale: "v1.5.9 adds modeled dispatch chain scheduling and fail-closed token/source checks with 10 new planted scenario tests. Source hosted 184/184 PASS at PR #870 source head 541bd1f20c808949cd93bb242bd7da20ea48c851. Real host dispatch and external measured ROI NOT_RUN."
