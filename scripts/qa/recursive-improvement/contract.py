@@ -6,9 +6,12 @@ A caller must independently establish trusted provenance and owner authority.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
+from pathlib import Path
 import re
+import sys
 
 ACTIONS = frozenset({
     "inspect", "adversarial-probe", "run-targeted-verification",
@@ -226,3 +229,60 @@ def decide(trace, parent_id, policy, *, workspace_state_digest,
         return {"status": "UNKNOWN_STATE"}
     return {"status": node["outcome"], "node_id": node["node_id"],
             "receipt_digest": node["receipt_digest"]}
+
+
+def _reject_duplicate_json_fields(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ContractError("JSON: duplicate object key")
+        result[key] = value
+    return result
+
+
+def _reject_nonfinite(value):
+    raise ContractError("JSON: unsupported non-finite value " + value)
+
+
+def validate_file(path, *, expected_evaluator, expected_context):
+    """Read-only, bounded CLI entrypoint. Caller owns trusted evaluator pins."""
+    _id(expected_evaluator, "expected evaluator")
+    _id(expected_context, "expected context")
+    with Path(path).open("rb") as stream:
+        raw = stream.read(1_048_577)
+    _require(len(raw) <= 1_048_576, "fixture: size limit exceeded")
+    trace = json.loads(raw.decode("utf-8"),
+                       object_pairs_hook=_reject_duplicate_json_fields,
+                       parse_constant=_reject_nonfinite)
+    _require(type(trace) is dict, "fixture: expected trace object")
+    _require(trace.get("evaluator_id") == expected_evaluator and
+             trace.get("evaluation_context_id") == expected_context,
+             "fixture: trusted evaluator/context mismatch")
+    indexed = validate_trace(trace)
+    observed = sum(node["record_type"] == "observation" for node in indexed.values())
+    return {"status": "VALID_STRUCTURE_ONLY", "nodes": len(indexed),
+            "observed_nodes": observed, "evaluator_id": expected_evaluator}
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("trace_file", help="Explicit synthetic/public JSON trace")
+    parser.add_argument("--expected-evaluator", required=True,
+                        help="Evaluator identity supplied by trusted caller, not trace")
+    parser.add_argument("--expected-context", required=True,
+                        help="Evaluation context supplied by trusted caller, not trace")
+    args = parser.parse_args(argv)
+    try:
+        result = validate_file(
+            args.trace_file, expected_evaluator=args.expected_evaluator,
+            expected_context=args.expected_context)
+    except (ContractError, OSError, UnicodeError, ValueError, TypeError) as exc:
+        print(json.dumps({"status": "BLOCKED", "reason": str(exc)},
+                         sort_keys=True), file=sys.stderr)
+        return 2
+    print(json.dumps(result, sort_keys=True))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
