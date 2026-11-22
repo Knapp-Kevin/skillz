@@ -377,6 +377,8 @@ reader's actual question fastest; explain the chosen axis in plain
 language. Do not treat chronology, release maturity, alphabetical order,
 repository size, stars, or ownership as a substitute for abstraction.
 Never assign a layer simply because the repository name sounds foundational.
+Unknown roles belong in an explicit **Other or unclassified** group until
+evidence supports placement, not in a fabricated dependency chain.
 
 When building or improving a repository portfolio, organization profile,
 multi-package monorepo or documented ecosystem:
