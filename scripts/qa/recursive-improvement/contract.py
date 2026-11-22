@@ -71,8 +71,10 @@ def _node(node, evaluator, context):
     _exact(node, OBS_FIELDS if kind == "observation" else NODE_FIELDS, "node")
     for key in ("node_id", "candidate_id", "evaluator_id", "evaluation_context_id"):
         _id(node[key], key)
-    _require(node["task_family"] in FAMILIES, "node: unsupported task family")
-    _require(node["action"] in BRANCH_ACTIONS, "node: disallowed branch action")
+    _require(type(node["task_family"]) is str and node["task_family"] in FAMILIES,
+             "node: unsupported task family")
+    _require(type(node["action"]) is str and node["action"] in BRANCH_ACTIONS,
+             "node: disallowed branch action")
     _require(node["evaluator_id"] == evaluator and
              node["evaluation_context_id"] == context, "node: evaluator/context drift")
     _sha(node["source_artifact_git_blob"], GIT_BLOB, "source blob")
@@ -81,7 +83,8 @@ def _node(node, evaluator, context):
     _require(parent is None or (type(parent) is str and ID.fullmatch(parent)),
              "node: invalid parent identity")
     if kind == "observation":
-        _require(node["outcome"] in OUTCOMES, "node: unobserved or fabricated outcome")
+        _require(type(node["outcome"]) is str and node["outcome"] in OUTCOMES,
+                 "node: unobserved or fabricated outcome")
         _sha(node["receipt_digest"], DIGEST, "receipt digest")
         _sha(node["post_workspace_state_digest"], DIGEST, "post workspace state")
         _sha(node["post_source_artifact_git_blob"], GIT_BLOB, "post source blob")
@@ -157,7 +160,8 @@ def validate_trace(trace):
         _id(payload["evaluation_context_id"], "receipt context")
         _sha(payload["source_artifact_git_blob"], GIT_BLOB, "receipt source")
         _sha(payload["workspace_state_digest"], DIGEST, "receipt state")
-        _require(payload["outcome"] in OUTCOMES, "receipt: unsupported outcome")
+        _require(type(payload["outcome"]) is str and payload["outcome"] in OUTCOMES,
+                 "receipt: unsupported outcome")
         _require(type(payload["test_invocations"]) is int and
                  1 <= payload["test_invocations"] <= 1000, "receipt: invalid test count")
         _require(type(payload["wall_ms"]) is int and
@@ -194,7 +198,7 @@ def decide(trace, parent_id, policy, *, workspace_state_digest,
     _require(type(policy["max_attempts"]) is int and
              0 <= policy["max_attempts"] <= 3, "policy: invalid attempt bound")
     action = policy["action"]
-    _require(action in ACTIONS, "policy: unapproved action")
+    _require(type(action) is str and action in ACTIONS, "policy: unapproved action")
     _require(parent_id in indexed, "policy: missing parent")
     _sha(workspace_state_digest, DIGEST, "current workspace")
     _sha(source_artifact_git_blob, GIT_BLOB, "current source")
