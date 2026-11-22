@@ -11,10 +11,10 @@ content_blob_sha: 2dd814681292e44d9acf97b3a51b9df5b20bc03c
 complete_package_tree_sha: d4183718fee3db5b9eef1fa7ef553f1afa0e9c6b
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: needs-re-review
-verification_basis: v1.6.1-source-oracle-branch-awaiting-exact-head-tests
-validation_status: pending
-validation_note: "v1.6.1 adds source-derived workflow and Python AST oracle partial validation, 27 adversarial tests. Hosted exact PR HEAD qualification PENDING (target 238 methods). Active source Git SHA authentication, compiled test oracle, provider delivery and consumer savings NOT_RUN."
+verification_status: verified
+verification_basis: v1.6.1-PR872-source-head-238-of-238-hosted-tests
+validation_status: passed-offline-contract-tests
+validation_note: "PR #872 source head 7be957a52399daa6b9ca1ed35c7e4bdb7f8253cb GitHub Actions #45084658182 PASS 238/238 Python tests (12 overlap+16 cutover+23 self repair+55 scenarios+28 classifier+26 plan+8 compare+16 results proof+27 host+27 source). Three checks SUCCESS. Final metadata-only head requires exact-head QA; external compiled conformance, Git host semantics and consumer savings NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_6_1"
 tags:
@@ -24,7 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Static file digest and Python AST assertion presence are not Git provider
-  source attestation, YAML effective policy, compiled conformance execution,
-  branch-rule verification or real consumer improvement. Unsupported YAML
-  or source/oracle drift must HOLD. Exact-head hosted QA pending.
+  Static file digests, source job/guard/needs parity and Python AST anchor
+  presence passed 27 planted tests within hosted 238-method suite. Final
+  metadata-only head still requires qualification before merge. This cannot
+  authenticate Git provider SHA, actual compiled conformance test behavior,
+  branch status, token dispatch or real user savings.

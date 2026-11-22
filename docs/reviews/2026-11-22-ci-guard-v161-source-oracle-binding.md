@@ -52,8 +52,7 @@ outcome is asserted.
 
 Source qualification requires a passing exact-head PR and successful
 repository checks, merged source and independently reconciled full
-package tree + SKILL Git blob pins. As of writing, this PR is staged
-and **not yet verified or merged**.
+package tree + SKILL Git blob pins. First source integration [GitHub Actions #45084658182](https://github.com/Knapp-Kevin/skillz/actions/runs/45084658182) at PR #872 source HEAD `7be957a52399daa6b9ca1ed35c7e4bdb7f8253cb` passed **238/238 Python methods**: 12 overlap +16 cutover +23 self-repair +55 scenario +28 classifier +26 plan +8 comparator +16 results proof +27 host +27 source. Socket Security Project Report and PR Alerts both SUCCESS; offline-contracts SUCCESS. The 46-file package tree `d4183718fee3db5b9eef1fa7ef553f1afa0e9c6b` and SKILL blob `2dd814681292e44d9acf97b3a51b9df5b20bc03c` are pinned. The final evidence-only reconciliation HEAD must still pass exact-head checks before merge.
 
 Even after source QA and merge, #861 must remain OPEN until an authorized
 consumer can validate actual Git-hosted event/dispatch, active branch

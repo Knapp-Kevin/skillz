@@ -24,4 +24,4 @@ complete_package_tree_sha: d4183718fee3db5b9eef1fa7ef553f1afa0e9c6b
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.6.1 source/oracle binder compares all workflow source files, digest, job identities, literal guards/needs/runners and checker AST anchors; 27 planted tests. Exact-head CI PENDING. Provider semantics and consumer ROI NOT_RUN."
+rationale: "v1.6.1 source/oracle binder compares all workflow source files, digest, job identities, literal guards/needs/runners and checker AST anchors; 27 planted tests. 238/238 Python QA PASS on PR #872 source head 7be957a52399daa6b9ca1ed35c7e4bdb7f8253cb. Provider semantics and consumer ROI NOT_RUN."
