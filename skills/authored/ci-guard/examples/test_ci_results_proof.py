@@ -164,6 +164,15 @@ class ResultsProofTests(unittest.TestCase):
         self.assertEqual(res["decision"]["verdict"],"REGRESSION")
         self.assertEqual(res["decision"]["indicated_effect"],"REGRESSION_OR_TRADEOFF")
 
+
+    def test_runner_savings_with_slower_earliest_failure_is_regression(self):
+        d=case()
+        d["pairs"][0]["optimized"]=receipt(2,6,20)
+        d["failure_feedback"]={"baseline_seconds":3,"optimized_seconds":12}
+        res=proof.report(d)
+        self.assertEqual(res["metrics"]["first_failure_feedback"]["saved"],-9)
+        self.assertEqual(res["decision"]["verdict"],"REGRESSION")
+
     def test_no_cutover_even_if_scope_matched_and_cheap(self):
         d=case();d["assurance"]["cutover_verified"]=False
         self.assertEqual(proof.report(d)["decision"]["verdict"],"NOT_CUT_OVER")
