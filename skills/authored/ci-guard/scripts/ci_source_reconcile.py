@@ -123,6 +123,7 @@ def read_workflow(source):
     events=[]
     jobs={}
     pending_events=False
+    root_keys=set()
     for lineno,line in enumerate(source.splitlines(),1):
         if not line.strip() or line.lstrip().startswith("#"):
             continue
@@ -134,6 +135,8 @@ def read_workflow(source):
             m=re.fullmatch(r"([A-Za-z][A-Za-z0-9_-]*):(?:[ ]*(.*))?",line)
             need(m is not None,"UNSUPPORTED_SEMANTICS: top-level YAML syntax")
             top=m.group(1)
+            need(top not in root_keys,"UNSUPPORTED_SEMANTICS: duplicate root YAML key")
+            root_keys.add(top)
             if top=="on":
                 need(not events and not pending_events,
                      "duplicate on trigger")
@@ -162,7 +165,8 @@ def read_workflow(source):
             current=m.group(1)
             need(current not in jobs,"duplicate workflow job")
             jobs[current]={"if":None,"needs":[],"needs_literal":None,
-                           "runs_on":None,"uses":False,"matrix":False}
+                           "runs_on":None,"uses":False,"matrix":False,
+                           "seen_fields":set()}
             continue
         need(current is not None,"job member without job")
         if indent==4:
@@ -170,6 +174,9 @@ def read_workflow(source):
             need(m is not None,"UNSUPPORTED_SEMANTICS: complex job field")
             key=m.group(1); val=(m.group(2) or "").strip()
             job=jobs[current]
+            need(key not in job["seen_fields"],
+                 "UNSUPPORTED_SEMANTICS: duplicated YAML job field")
+            job["seen_fields"].add(key)
             if key=="if":
                 need(job["if"] is None,"duplicate job if")
                 job["if"]=literal_guard(val)
@@ -296,6 +303,8 @@ def reconcile(root, scenario, source_map):
          "scenario/design source revision drift")
     validate_manifest(source_map,design)
     expected_w={x["id"]:x for x in design["workflows"]}
+    need(len(expected_w)==len(design["workflows"]),
+         "DUPLICATE_NORMALIZED_WORKFLOW")
     declared_w={x["workflow"]:x for x in source_map["workflow_files"]}
     need(set(declared_w)==set(expected_w),"UNINVENTORIED_OR_MISSING_WORKFLOW")
     workflow_dir=root/".github"/"workflows"
