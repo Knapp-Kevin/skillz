@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "comparison_mode": "strict",
+  "evidence": "SIMULATED",
+  "pairs": [
+    {
+      "baseline": {
+        "run_id": "fictional-before",
+        "attempt": 1,
+        "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "scenario": "ready-ci",
+        "runner_profile": "fictional-linux-x64",
+        "cache_class": "cold",
+        "protected_status": "success",
+        "jobs": [
+          {
+            "name": "required-check",
+            "needs": [],
+            "started_at": "2026-11-22T10:00:00Z",
+            "completed_at": "2026-11-22T10:00:45Z",
+            "billed_runner_minutes": 5,
+            "result": "success"
+          }
+        ]
+      },
+      "optimized": {
+        "run_id": "fictional-after",
+        "attempt": 1,
+        "head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "scenario": "ready-ci",
+        "runner_profile": "fictional-linux-x64",
+        "cache_class": "cold",
+        "protected_status": "success",
+        "jobs": [
+          {
+            "name": "required-check",
+            "needs": [],
+            "started_at": "2026-11-22T10:01:00Z",
+            "completed_at": "2026-11-22T10:01:35Z",
+            "billed_runner_minutes": 3,
+            "result": "success"
+          }
+        ]
+      }
+    }
+  ],
+  "assurance": {
+    "expected_before": [
+      "unique-detector/linux"
+    ],
+    "executed_before": [
+      "unique-detector/linux"
+    ],
+    "expected_after": [
+      "unique-detector/linux"
+    ],
+    "executed_after": [
+      "unique-detector/linux"
+    ],
+    "contexts_before": [
+      "CI policy gate"
+    ],
+    "contexts_after": [
+      "CI policy gate"
+    ],
+    "seeded_fault_caught_before": true,
+    "seeded_fault_caught_after": true,
+    "release_guards_retained": true,
+    "old_workflows_retired": true,
+    "cutover_verified": true
+  },
+  "scope": {
+    "event_before": "pull_request",
+    "event_after": "pull_request",
+    "stage_before": "ready",
+    "stage_after": "ready",
+    "os_before": "linux",
+    "os_after": "linux",
+    "architecture_before": "x64",
+    "architecture_after": "x64",
+    "matrix_before": 1,
+    "matrix_after": 1,
+    "toolchain_before": "test-toolchain",
+    "toolchain_after": "test-toolchain",
+    "workload_equivalence": "same",
+    "confounders": []
+  },
+  "source_refs": {
+    "baseline_workflow": "fictional-before.yml",
+    "optimized_workflow": "fictional-after.yml",
+    "baseline_tree": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "optimized_tree": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "receipt_refs": [
+      "fictional-receipt-before",
+      "fictional-receipt-after"
+    ]
+  },
+  "change": {
+    "summary": "Fictional test: shared setup eliminated from one stage",
+    "waste_before": [
+      "fixture-only overlap"
+    ],
+    "retired_workflows": [
+      "fictional-legacy"
+    ]
+  }
+}
