@@ -1,0 +1,121 @@
+name: Authored skill preference regression
+
+on:
+  pull_request:
+    paths:
+      - 'skills/authored/evidence-driven-refinement-loop/**'
+      - 'engine/skills/**'
+      - 'docs/skill-template.md'
+      - 'docs/skill-verification.md'
+      - 'scripts/qa/test-engine-contracts.py'
+      - 'registry/skills/local-skills/evidence-driven-refinement-loop.yaml'
+      - 'registry/verification/local-skills/evidence-driven-refinement-loop.yaml'
+      - '.github/workflows/skill-preference-qa.yml'
+  push:
+    branches:
+      - 'refine/engine-reliability-review-20261120'
+    paths:
+      - 'skills/authored/evidence-driven-refinement-loop/**'
+      - 'scripts/qa/test-engine-contracts.py'
+      - 'registry/skills/local-skills/evidence-driven-refinement-loop.yaml'
+      - 'registry/verification/local-skills/evidence-driven-refinement-loop.yaml'
+      - '.github/workflows/skill-preference-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-contracts:
+    name: Offline Python ${{ matrix.python-version }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # Avoid implicit pull_request merge refs when qualifying source identity.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install optional JSON Schema interoperability validator (QA only)
+        run: python -m pip install --disable-pip-version-check 'jsonschema==4.23.0'
+      - name: Preference manager functional and adversarial cases
+        working-directory: skills/authored/evidence-driven-refinement-loop
+        run: python -m unittest discover -s preferences -p 'test_manage.py' -v
+      - name: Engine static contract regressions
+        run: python scripts/qa/test-engine-contracts.py -v
+
+  isolated-posix-users:
+    name: Separate Linux identities
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Two-user preference isolation and revocation
+        shell: bash
+        run: |
+          set -euo pipefail
+          PACKAGE="$GITHUB_WORKSPACE/skills/authored/evidence-driven-refinement-loop"
+          SOURCE_BEFORE="$(sha256sum "$PACKAGE/SKILL.md" | cut -d' ' -f1)"
+          # Runner checkouts are inaccessible to non-runner UIDs. Stage only
+          # the canonical read-only files needed by the manager under /opt.
+          sudo install -d -m 0755 /opt/skillz-qa/preferences
+          sudo install -m 0644 "$PACKAGE/SKILL.md" /opt/skillz-qa/SKILL.md
+          sudo install -m 0644 "$PACKAGE/preferences/manage.py" /opt/skillz-qa/preferences/manage.py
+          sudo install -m 0644 "$PACKAGE/preferences/schema.json" /opt/skillz-qa/preferences/schema.json
+          MANAGER="/opt/skillz-qa/preferences/manage.py"
+
+          sudo useradd --create-home --shell /bin/bash skillzqa_a
+          sudo useradd --create-home --shell /bin/bash skillzqa_b
+          ROOT_A="/home/skillzqa_a/.config/skillz"
+          ROOT_B="/home/skillzqa_b/.config/skillz"
+          sudo -u skillzqa_a mkdir -p "$ROOT_A"
+          sudo -u skillzqa_b mkdir -p "$ROOT_B"
+          sudo -u skillzqa_a chmod 700 /home/skillzqa_a/.config "$ROOT_A"
+          sudo -u skillzqa_b chmod 700 /home/skillzqa_b/.config "$ROOT_B"
+
+          sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" set response.detail concise --approved
+          sudo -u skillzqa_b python3 "$MANAGER" --root "$ROOT_B" set response.detail detailed --approved
+
+          PROFILE_A="$(sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" show)"
+          PROFILE_B="$(sudo -u skillzqa_b python3 "$MANAGER" --root "$ROOT_B" show)"
+          python3 - "$PROFILE_A" "$PROFILE_B" <<'PY'
+          import json
+          import sys
+          a, b = (json.loads(value) for value in sys.argv[1:])
+          assert a["status"] == b["status"] == "LOADED"
+          assert a["preferences"][0]["value"] == "concise"
+          assert b["preferences"][0]["value"] == "detailed"
+          PY
+
+          if sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_B" show >/dev/null 2>&1; then
+            echo "FAIL: profile A read profile B's private root" >&2
+            exit 1
+          fi
+          if sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_B" set response.format table --approved >/dev/null 2>&1; then
+            echo "FAIL: profile A wrote profile B's private root" >&2
+            exit 1
+          fi
+
+          sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" clear --approved
+          AFTER_A="$(sudo -u skillzqa_a python3 "$MANAGER" --root "$ROOT_A" show)"
+          AFTER_B="$(sudo -u skillzqa_b python3 "$MANAGER" --root "$ROOT_B" show)"
+          python3 - "$AFTER_A" "$AFTER_B" <<'PY'
+          import json
+          import sys
+          a, b = (json.loads(value) for value in sys.argv[1:])
+          assert a["status"] == "ABSENT" and a["preferences"] == []
+          assert b["status"] == "LOADED"
+          assert b["preferences"][0]["value"] == "detailed"
+          PY
+
+          SOURCE_AFTER="$(sha256sum "$PACKAGE/SKILL.md" | cut -d' ' -f1)"
+          test "$SOURCE_BEFORE" = "$SOURCE_AFTER"

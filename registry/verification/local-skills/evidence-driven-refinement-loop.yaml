@@ -1,0 +1,43 @@
+schema_version: 1
+skill_name: evidence-driven-refinement-loop
+skill_version: "0.3.4"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/evidence-driven-refinement-loop/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 85f7e864733a18293a85b1dded50a93c79d75d73
+complete_package_tree_sha: 463c5c51e3a1c2469420cfa2fde87c39967655a1
+characterized_at: "2026-11-20"
+reviewed_at: "2026-11-21"
+verification_status: verified
+verification_basis: exact-ten-file-source-review-plus-red-green-cross-checkout-adversarial-regressions-and-executed-schema-OS-user-tests
+validation_status: not-run
+validation_note: "v0.3.4 patched the proven alternate-Git-checkout/worktree leakage risk in POSIX preference root validation. Red Actions 44949812573 reproduced two failures on each of Python 3.9/3.11/3.13; green Actions 44949878469 passed the full suite at corrected manager blob 9bbce37f. Exact v0.3.4 package tree pinned; final version-head qualification should be read separately. No independent consuming-agent/user outcomes, cryptographic consent validation, universal Git environment detection or hostile same-UID isolation proved."
+rubric: docs/skill-verification.md
+rubric_score: "18/20"
+tags:
+  use_case: [iterative-quality-improvement, artifact-refinement, regression-prevention, user-local-preferences]
+  lifecycle: [evaluation, implementation, review, verification]
+  characteristic: [standalone, evidence-first, capability-adaptive, outcome-focused, consent-gated-local-preferences]
+  authority: [read-only-default, owner-authorized-scoped-change]
+  portability: high
+notes: >-
+  Static semantic score remains 18/20. v0.3.4 adversarial red/green
+  inspection disproved the claim that local preference data could never
+  enter an unrelated repository: previous reject_checkout_root checked
+  only the SKILL.md package checkout, ignoring an alternate user-selected
+  Git worktree. Two negative cases (normal .git directory and linked
+  .git file) failed on Python 3.9, 3.11, 3.13 at Actions 44949812573.
+  Correction rejects storage in any detected Git checkout ancestor.
+  Actions 44949878469 passed corrected manager with 49 preference/schema
+  methods, 22 engine methods on each of three Python versions and
+  separate Linux UID filesystem isolation. The exact 10-file package
+  fingerprint is above; v0.3.4 version-head CI must still be confirmed.
+  Same-model user-response emulation was not blinded or independent.
+  Consent declarations and --approved are NOT authenticated user grants;
+  host must verify permission independently. Undetected external Git
+  worktree environments, hostile same-UID programs, cross-machine
+  isolation, Windows, and real consumer outcomes remain unverified.
+  Evidence: docs/evals/receipts/2026-11-21-preference-adversarial-checkout-boundary.md.

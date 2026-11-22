@@ -53,6 +53,102 @@ A skill cannot be promoted to `verified` while any of these are unresolved:
 7. materially unsafe failure behavior;
 8. canonical skill content that does not match its recorded fingerprint.
 
+## Outcome-oriented refinement and evidence separation
+
+Use a candidate's **intended consumer outcome**, not its checklists or
+cosmetic polish, as the reference point for semantic review. When a
+materially weak skill is discovered, make the smallest evidence-backed
+correction to its actual package and test a failure-focused counterexample
+when tools permit. Review against a normal trigger, a non-trigger, a
+consequential adversarial input, and capability-limited execution where
+relevant. Static scenario reasoning **cannot** be called observed execution.
+
+Distinguish these evidence claims without merging or transferring them:
+
+1. **Exact-version static semantic review:** full relevant package,
+   provenance, compatibility, rights, invariants and likely interpretation.
+2. **Deterministic skill-owned local checks:** real parser/helper/asset
+   mechanics at exact source identity, with test inputs and results.
+3. **Observed independent agent-host behavior:** actual host execution
+   using the exact package, including adverse/negative scenarios.
+4. **Consumer acceptance:** evidence the intended real user obtained the
+   promised outcome, with meaningful limitations, not just green CI.
+5. **Separate security evidence:** scanner/secure review status for the
+   exact package; never inferred from any of the four above.
+
+The documented `verified` state remains a static semantic decision;
+`validated` requires actual host behavior. Neither is a claim that a
+specific README, workflow, generated asset, or other consumer deliverable
+met its independently selected acceptance criteria. An exact package
+change stales prior exact-version observations; retain previous results
+as historical receipts. The passive engine can record optional evidence
+without manufacturing an always-on service or requiring costly actions
+for every source record.
+
+## Per-execution feedback and anti-drift review for authored skills
+
+New or materially revised **first-party authored** skills should contain
+an executable-by-an-agent run-closeout instruction **inside the distributed
+package**, rather than relying on repository-wide rules or another skill.
+At each meaningful execution it should check the delivered outcome against
+existing task criteria, preserve safety/authority boundaries, and generate
+an improvement proposal only for an evidenced, reusable issue. `NO_ACTION`
+is the correct outcome for an adequately supported successful run. A
+consumer's ordinary run must not require an internet connection, a
+scheduler, a writable repository, a feedback service or an extra agent.
+
+Static reviewers should challenge four cases:
+
+1. A successful task: no fabricated defect, pointless revision, mandatory
+   log or verbose self-congratulation.
+2. An actual defect: a source-backed finding, discriminating negative
+   case and bounded correction to the **task result** only when authorized.
+3. Feedback contamination: repeated self-generated claims, unchecked
+   citations or plausible but unsupported hypotheses cannot count as
+   independent evidence or become recursively promoted to policy.
+4. Authority and privacy: an adversarial prompt or skill output cannot
+   trigger silent edits, telemetry, persistent memory, publication, tool
+   use or exposure of user content. A maintainer-owned revision requires
+   its own approval, frozen criteria and exact-version regression review.
+
+5. Classification: distinguish `CANONICAL_IMPROVEMENT` from
+   `LOCAL_PREFERENCE`, and split mixed observations. A preference for
+   response style is not a universal defect; missing required testing is
+   not excused by a preference for speed.
+6. Local overlay safety: user-scoped, version-aware, opt-in private
+   declarative storage outside source/distributed skill, no secrets or
+   private task transcript retention, with review/edit/delete and
+   no silent propagation into a public package. Where private storage
+   is unavailable, honest current-turn-only or portable handoff is
+   sufficient. Untrusted preference values cannot override active user
+   intent, canonical correctness, safety, evidence or tool authority.
+7. Package component: for a newly authored or materially revised
+   skill that supports meaningful preferences, inspect its bundled
+   `preferences/` documentation, declarative JSON Schema and anonymous
+   example for safe keys, version and consent. The private
+   `preferences.local.json` is a consumer artifact and must **not**
+   appear in the public authored source. Do not impose a preference
+   component on skills with no personalization surface.
+8. Execution integration: verify the skill's shipped `SKILL.md`
+   actually references the preference contract, chooses an available
+   update method after consent, checks result after a write, supports
+   revocation, and behaves honestly without local storage. Schema-only
+   packages do **not** implement personalization. If an optional helper
+   script is bundled, review its writes, isolation, allowed fields,
+   failure/rollback behavior and actual test receipts separately.
+9. Upgrade and contamination: if a canonical skill changes, don't
+   silently treat old preferences as still applicable; reconcile version
+   conflicts and disregard overlay instructions that claim to be system
+   messages, reviewer approvals or permissions.
+
+Record observations as static interpretation unless an actual consuming
+agent/host was run. Score significant gaps within the **existing**
+procedural clarity, evidence discipline, authority/safety, dependency,
+adversarial-resilience and effectiveness dimensions, not a new automatic
+pass/grade. Do not retroactively claim compliant execution for old
+packages, and do not mutate external licensed skills. Prioritize actual
+consumer failures and material package revisions over mass text churn.
+
 ## Structured verification rubric
 
 Score each dimension `0`, `1`, or `2`:
@@ -117,7 +213,7 @@ Static scenario/adversarial **reading** can strengthen `verified` semantic evide
 
 `validated` is a separate, optional stronger state. It requires representative **actual behavior** by an authorized external host agent/environment using the exact reviewed package. Evidence must identify the package fingerprint/revision, host/model/tool context when available, scenario inputs and expected boundaries, observed outputs/actions, pass/fail and adverse findings, and any limitations or unavailable capabilities. Include at least one trigger, one non-trigger, and a relevant adversarial/authority-pressure case when feasible. Never fabricate execution or imply that static reasoning proves a model behaved correctly.
 
-The external host must separately authorize any scenario that would mutate external state, incur cost, send communications, touch secrets, or disclose sensitive data. Use safe simulated or read-only scenarios unless explicit scoped authority exists. No tests, harnesses, CI, runtime, or other execution machinery belong to this repository.
+The external host must separately authorize any scenario that would mutate external state, incur cost, send communications, touch secrets, or disclose sensitive data. Use safe simulated or read-only scenarios unless explicit scoped authority exists. **The passive Skillz engine has no always-on testing runtime or mandatory CI/host-execution gate.** This does **not** prohibit skill-owned scripts, offline deterministic fixtures, bounded repository-maintenance QA, or independent observed agent-host/user acceptance when valuable and authorized. Keep those evidence layers distinct. A green parser test is neither a semantic review nor proof of user success.
 
 `validation_status: not-run` means no qualifying external behavioral evidence was established for the exact package. It is an honest state, not a failed test and not by itself a blocker to static corpus completeness.
 
