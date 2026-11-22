@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "revision": "0123456789abcdef0123456789abcdef01234567",
+  "phase": "candidate",
+  "inventory_complete": true,
+  "unresolved_invocations": [],
+  "nodes": [
+    {
+      "id": "acceptance",
+      "kind": "workflow",
+      "invokes": [
+        "accept-job"
+      ],
+      "stages": [
+        "candidate",
+        "release"
+      ],
+      "entrypoint": true
+    },
+    {
+      "id": "accept-job",
+      "kind": "job",
+      "invokes": [
+        "accept-recipe"
+      ],
+      "stages": [
+        "candidate",
+        "release"
+      ],
+      "needs": [],
+      "matrix_expanded": true
+    },
+    {
+      "id": "accept-recipe",
+      "kind": "recipe",
+      "invokes": [
+        "accept-script"
+      ]
+    },
+    {
+      "id": "accept-script",
+      "kind": "script",
+      "invokes": [
+        "accept-repro",
+        "model",
+        "freshness"
+      ]
+    },
+    {
+      "id": "accept-repro",
+      "kind": "terminal",
+      "invokes": [],
+      "obligation": "repro",
+      "command": "cargo xtask check-reproducibility",
+      "sha": "0123456789abcdef0123456789abcdef01234567",
+      "inputs": [
+        "lockfile:v1",
+        "source:HEAD"
+      ],
+      "platform": "ubuntu-24.04",
+      "environment": "CI=true; stable-locale",
+      "toolchain": "rust:1.84.1",
+      "trust": "pr-unprivileged",
+      "failure_boundary": "detect:repro",
+      "equivalence_proven": true,
+      "independent_assurance": "",
+      "assurance_receipt": "",
+      "cost_class": "expensive",
+      "receipt": "success"
+    },
+    {
+      "id": "model",
+      "kind": "terminal",
+      "invokes": [],
+      "obligation": "model",
+      "command": "model-validator",
+      "sha": "0123456789abcdef0123456789abcdef01234567",
+      "inputs": [
+        "lockfile:v1",
+        "source:HEAD"
+      ],
+      "platform": "ubuntu-24.04",
+      "environment": "CI=true; stable-locale",
+      "toolchain": "rust:1.84.1",
+      "trust": "pr-unprivileged",
+      "failure_boundary": "detect:model",
+      "equivalence_proven": true,
+      "independent_assurance": "",
+      "assurance_receipt": "",
+      "cost_class": "expensive",
+      "receipt": "success"
+    },
+    {
+      "id": "freshness",
+      "kind": "terminal",
+      "invokes": [],
+      "obligation": "freshness",
+      "command": "generator-freshness",
+      "sha": "0123456789abcdef0123456789abcdef01234567",
+      "inputs": [
+        "lockfile:v1",
+        "source:HEAD"
+      ],
+      "platform": "ubuntu-24.04",
+      "environment": "CI=true; stable-locale",
+      "toolchain": "rust:1.84.1",
+      "trust": "pr-unprivileged",
+      "failure_boundary": "detect:freshness",
+      "equivalence_proven": true,
+      "independent_assurance": "",
+      "assurance_receipt": "",
+      "cost_class": "cheap",
+      "receipt": "success"
+    },
+    {
+      "id": "release",
+      "kind": "workflow",
+      "invokes": [
+        "sign-job"
+      ],
+      "stages": [
+        "release"
+      ],
+      "entrypoint": true
+    },
+    {
+      "id": "sign-job",
+      "kind": "job",
+      "invokes": [
+        "sign"
+      ],
+      "stages": [
+        "release"
+      ],
+      "needs": [],
+      "matrix_expanded": true
+    },
+    {
+      "id": "sign",
+      "kind": "terminal",
+      "invokes": [],
+      "obligation": "sign",
+      "command": "signature-verifier",
+      "sha": "0123456789abcdef0123456789abcdef01234567",
+      "inputs": [
+        "lockfile:v1",
+        "source:HEAD"
+      ],
+      "platform": "ubuntu-24.04",
+      "environment": "CI=true; stable-locale",
+      "toolchain": "rust:1.84.1",
+      "trust": "pr-unprivileged",
+      "failure_boundary": "detect:sign",
+      "equivalence_proven": true,
+      "independent_assurance": "",
+      "assurance_receipt": "",
+      "cost_class": "expensive",
+      "receipt": "success"
+    },
+    {
+      "id": "draft",
+      "kind": "workflow",
+      "invokes": [
+        "draft-job"
+      ],
+      "stages": [
+        "draft"
+      ],
+      "entrypoint": true
+    },
+    {
+      "id": "draft-job",
+      "kind": "job",
+      "invokes": [
+        "draft-deferred"
+      ],
+      "stages": [
+        "draft"
+      ],
+      "needs": [],
+      "matrix_expanded": true
+    },
+    {
+      "id": "draft-deferred",
+      "kind": "terminal",
+      "invokes": [],
+      "obligation": "draft-deferred",
+      "command": "status-only",
+      "sha": "0123456789abcdef0123456789abcdef01234567",
+      "inputs": [
+        "lockfile:v1",
+        "source:HEAD"
+      ],
+      "platform": "ubuntu-24.04",
+      "environment": "CI=true; stable-locale",
+      "toolchain": "rust:1.84.1",
+      "trust": "pr-unprivileged",
+      "failure_boundary": "detect:draft-deferred",
+      "equivalence_proven": true,
+      "independent_assurance": "",
+      "assurance_receipt": "",
+      "cost_class": "cheap",
+      "receipt": "success"
+    }
+  ],
+  "required": {
+    "draft": [],
+    "candidate": [
+      "repro",
+      "model",
+      "freshness"
+    ],
+    "release": [
+      "repro",
+      "model",
+      "freshness",
+      "sign"
+    ]
+  },
+  "qualification": {
+    "draft": {
+      "required": [],
+      "exact_revision": true,
+      "reject_non_success": true,
+      "trusted": true,
+      "draft_marker": "DRAFT_DEFERRED_NOT_QUALIFIED"
+    },
+    "candidate": {
+      "required": [
+        "repro",
+        "model",
+        "freshness"
+      ],
+      "exact_revision": true,
+      "reject_non_success": true,
+      "trusted": true
+    },
+    "release": {
+      "required": [
+        "repro",
+        "model",
+        "freshness",
+        "sign"
+      ],
+      "exact_revision": true,
+      "reject_non_success": true,
+      "trusted": true
+    }
+  },
+  "dispositions": []
+}
