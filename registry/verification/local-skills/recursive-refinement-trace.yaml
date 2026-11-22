@@ -35,12 +35,6 @@ notes: >-
   verification. It can only propose a bounded pilot. No evaluator changes,
   independent host testing, live user benefits or policy activation proven.
 
-# v0.3.1: two planted file/parent symlink negative cases and original test
-# methods kept (now 22 relevant tests). Full changed-version Python suite
-# NOT_RUN as of source edit; historical receipts do not apply to these bytes.
-# Host/agent outcomes, consumer data rights and concurrent path-swap TOCTOU
-# containment are NOT_VERIFIED.
-
 # 2026-11-22: merged source PR #862 at 8485dd10bdd72fe2f6d027fcc8a30e32dbb788a7.
 # CI run 45072270335 PASS on exact PR HEAD, 106/106 deterministic tests;
 # does not authenticate a model-host evaluation or an external consumer outcome.
