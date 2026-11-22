@@ -68,7 +68,7 @@ def parse(doc: object):
         common = {"id", "kind", "invokes", "stages", "needs", "matrix_expanded",
                   "obligation", "command", "sha", "inputs", "platform", "environment", "toolchain",
                   "trust", "failure_boundary", "equivalence_proven", "independent_assurance", "assurance_receipt",
-                  "cost_class", "receipt", "assurance_receipt", "entrypoint", "events", "condition"}
+                  "cost_class", "receipt", "assurance_receipt", "entrypoint", "events", "condition", "repetition_purpose"}
         node = shape(raw, common, {"id", "kind", "invokes"}, "node")
         nid = word(node["id"], "node.id")
         require(nid not in nodes, "duplicate node id")
@@ -106,6 +106,8 @@ def parse(doc: object):
                     f"{nid}: assurance_receipt invalid")
             require(type(node["independent_assurance"]) is str and len(node["independent_assurance"]) <= 240,
                     f"{nid}: independent_assurance invalid")
+            require(node.get("repetition_purpose", "") in {"", "nondeterminism"},
+                    f"{nid}: unsupported repetition purpose")
             require(node["cost_class"] in {"cheap", "expensive"}, f"{nid}: cost_class invalid")
             require(node["receipt"] in STATUSES, f"{nid}: receipt invalid")
         else:
@@ -187,6 +189,7 @@ def audit(doc: dict) -> dict:
                                  "equivalence_proven": node["equivalence_proven"],
                                  "independent_assurance": node["independent_assurance"],
                                  "assurance_receipt": node["assurance_receipt"],
+                                 "repetition_purpose": node.get("repetition_purpose", ""),
                                  "cost_class": node["cost_class"], "receipt": node["receipt"]})
                     require(len(runs) <= MAX_PATHS, "expanded invocation paths exceed 5000")
                 else:
@@ -205,11 +208,17 @@ def audit(doc: dict) -> dict:
         all_equivalent = all(row["equivalence_proven"] for row in records)
         job_sets = {(row["workflow"], row["job"]) for row in records}
         event_sets = [set(row["events"]) for row in records]
-        simultaneous = bool(set.intersection(*event_sets))
+        simultaneous = any(event_sets[i] & event_sets[j] for i in range(len(records)) for j in range(i + 1, len(records)))
         if not simultaneous:
             # Distinct events can coincide (push + PR), but only actual source
             # trigger/run evidence can establish they did on the same revision.
             classification = "UNPROVEN"
+        elif (len(signatures) == 1 and all_equivalent
+              and all(r["repetition_purpose"] == "nondeterminism"
+                      and r["independent_assurance"].strip()
+                      and r["assurance_receipt"].strip() for r in records)
+              and len({r["assurance_receipt"] for r in records}) == len(records)):
+            classification = "JUSTIFIED_REPETITION"
         elif len(signatures) == 1 and all_equivalent:
             # Partial overlap if any overlapping job executes other obligations too.
             job_checks = {
@@ -267,7 +276,7 @@ def audit(doc: dict) -> dict:
     return {"schema_version": 1, "revision": doc["revision"], "phase": doc["phase"],
             "observed_source_graph_authenticated": False, "real_runner_receipts_authenticated": False,
             "unique_verification_execution_paths": len(runs),
-            "execution_inventory": [{k: v for k, v in x.items() if k not in {"signature", "equivalence_proven", "independent_assurance", "assurance_receipt"}} for x in runs],
+            "execution_inventory": [{k: v for k, v in x.items() if k not in {"signature", "equivalence_proven", "independent_assurance", "assurance_receipt", "repetition_purpose"}} for x in runs],
             "overlaps": overlaps, "violations": sorted(set(violations)),
             "structural_assessment": "PASS" if not violations else "HOLD",
             "optimization_complete": False, "observed_runner_minutes_delta": "NOT_MEASURED",
