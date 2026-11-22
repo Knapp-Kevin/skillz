@@ -30,6 +30,27 @@ Other consuming workflows with unconditional bootstrap can erase these
 savings; audit them independently. CLI `--stage draft` is optional
 manual diagnostic feedback and not this workflow's default.
 
+## P0 prerequisite: resolve cross-workflow terminal execution BEFORE optimizing
+
+A correct changed-file classifier is not enough. Before introducing a
+selective workflow, draft suppression, split job or cheaper bootstrap,
+inspect **all** CI entrypoints (including separate release/standalone
+workflows and nested task-runner commands) using the bundled
+[cross-workflow execution graph contract](execution-graph-deduplication.md).
+Identify *every effective verification* under all conditions/matrices
+and all relevant events. If an existing workflow's composite recipe
+and a separate triggered workflow already execute the same terminal
+check, the optimization must disclose both paths and decide whether
+they have **identical** or **independent** failure coverage.
+
+A documented avoidable second invocation remaining active after
+cutover means `NO_OPTIMIZATION_IMPLEMENTED` for that obligation,
+regardless of proper draft skipping or a green classifier. Missing
+terminal command resolution, distinct platform proof or release
+gate coverage means `VERIFY` / HOLD, not a guessed skip.
+Preserve authoritative exact-HEAD and release verification, all
+unique failure detectors and required protected statuses.
+
 ## Non-negotiable design gate for GENERATED workflows
 
 **Classify the actual changed artifacts before selecting expensive CI work.**
