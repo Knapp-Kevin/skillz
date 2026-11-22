@@ -61,6 +61,24 @@ change branch protections, edit or deploy a consumer repository,
 schedule an action or spend money. Owner-approved gate migration
 cannot quietly abandon a repo-spec assurance obligation.
 
+## P0 SIMULATE before PREPARE for complex inherited CI
+
+The first pass through DISCOVER must also inventory every repository
+conformance test or validator that asserts hard-coded workflow guards,
+`needs`, check names and matrix conditions. JUSTIFY maps those
+assumptions to actual policy and semantics; a stale allowlist is
+**VALIDATOR_DRIFT**, not authority to remove a good draft/dispatch guard.
+
+Before beginning expensive PREPARE/PROVE on a multi-workflow repair,
+run the [normalized scenario simulator](scenario-simulation.md)
+against a complete trusted source-derived graph, at least two
+candidate schedules, current and planned status contexts, fail/skip
+and producer-skipped negative controls. Any unmodeled provider
+expression or token-trigger chain returns HOLD; this script cannot
+substitute for live GitHub acceptance. Source-specific static
+artifact partitioning must be paired with a runtime CI-only
+fail-fast export negative control.
+
 ## Test-internal cost and unique detection ledger
 
 For each expensive test, record: exact source SHA, test ID, **unique
