@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.5.6
+  version: 1.5.7
   license: MIT
 ---
 
@@ -309,7 +309,11 @@ manifest `runtime_guard` flag is not proof it actually blocks code.
 Report **each candidate's** declared scheduled jobs, per-shard
 verification, explicit required statuses, estimated billed runner-job
 time, predicted critical path and earliest failure signal. Do not
-automatically select the candidate with fewer jobs. The simulator
+automatically select the candidate with fewer jobs. The v1.5.7 normalized v2 contract additionally requires independent
+event-level forward/tag/regeneration side-effect obligations. A missing,
+failed, duplicated, unexpected or policy-drifted effect HOLDs the candidate
+even if the push/release event intentionally has no PR qualification gate.
+This declared structural evidence is not release authority. The simulator
 never authenticates external workflow semantics or real provider
 receipts and reports runner-minute and critical-path savings
 `NOT_MEASURED`; user/host execution and a final exact-head
