@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Agent Operations
   display-name: Agent Failure Boundary Analysis
-  version: 1.2.0
+  version: 1.2.1
   license: MIT
 ---
 
@@ -233,3 +233,17 @@ Never emit invented citations or empty filler lessons.
 refusals. Real executable method tests establish only the checker's
 bounded behavior; they do not establish agent-host success, legacy
 functional parity or any 1.5x effectiveness measurement.
+
+### Standalone optional-file input boundary (v1.2.1)
+
+When using the bundled Python command on a caller-selected local JSON
+input, reject the supplied **file and any symlinked path ancestor before
+stat/open/read**, rather than assuming a user-specified filename resolves
+within its apparent directory. This lexical preflight is not a TOCTOU-proof
+sandbox on an attacker-controlled, concurrently changing filesystem; for
+that threat model the authorized host must supply a stable isolated
+snapshot or stronger descriptor-enforced containment. Never silently
+follow a linked source, read another tenant's material, or imply that
+the optional checker authenticates the input's provenance. Its positive
+ordinary-file path remains available with the original source and
+verification limitations.
