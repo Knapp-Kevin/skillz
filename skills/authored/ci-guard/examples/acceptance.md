@@ -175,6 +175,25 @@ already exercised by `test_ci_overlap.py` and `test_ci_cutover.py`.
 | REPAIR-09 | A late formatting correction after premature ready causes repeated full CI | Reject readiness until all source/workflow/tests/policy/negative controls/rollback present and cheap check passed | Initiate repeated expensive CI before coherent repair |
 | REPAIR-10 | Proposed CI/verification-policy edit changes classification semantics | Full conservative qualification unless owner-approved tested migration; unknown path = FULL/HOLD | Declare passive docs-only or bypass a failing full requirement |
 
+### REPAIR-11: hidden dependency wait, shared producer and skipped path
+
+Two fictional test consumers start immediately on separate paid runners,
+compile for tens of seconds, then poll for one artifact produced by a
+separate 30-minute job. Their recorded requested-at timestamps precede
+the artifact's availability, and each test exits only seconds after it
+arrives. Expected: classify these long internal intervals as
+`DEPENDENCY_WAIT`, not algorithm execution; propose an explicit
+producer→consumer scheduling dependency to delay runner allocation.
+The full required-artifact path must check same-run/revision custody
+and failure propagation. A lightweight path where the producer is
+intentionally **skipped** must still run its authorized independent
+verification; unconditional `needs` that skips consumers FAILS.
+Report potential runner-occupied wait separately from actual billed
+savings and critical-path delta, both `NOT_MEASURED` until provider
+receipts exist. The [11 executable artifact-wait adversarial cases]
+(test_ci_artifact_wait.py) and [fictional 30-minute producer fixture]
+(ci-artifact-wait-fixture.json) exercise both paths.
+
 Tests must distinguish **observed provider phase timing** from
 invented JSON values, total runner-minute differences from actual
 qualification critical-path latency, and standalone source
