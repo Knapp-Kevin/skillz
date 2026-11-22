@@ -68,7 +68,7 @@ def parse(doc: object):
         common = {"id", "kind", "invokes", "stages", "needs", "matrix_expanded",
                   "obligation", "command", "sha", "inputs", "platform", "environment", "toolchain",
                   "trust", "failure_boundary", "equivalence_proven", "independent_assurance", "assurance_receipt",
-                  "cost_class", "receipt", "assurance_receipt", "entrypoint"}
+                  "cost_class", "receipt", "assurance_receipt", "entrypoint", "events", "condition"}
         node = shape(raw, common, {"id", "kind", "invokes"}, "node")
         nid = word(node["id"], "node.id")
         require(nid not in nodes, "duplicate node id")
@@ -76,6 +76,12 @@ def parse(doc: object):
         string_list(node["invokes"], f"{nid}.invokes")
         if node["kind"] == "workflow":
             require(type(node.get("entrypoint")) is bool, f"{nid}: explicit entrypoint required")
+            string_list(node.get("events"), f"{nid}.events", allow_empty=False)
+            if node["entrypoint"]:
+                require("workflow_call" not in node["events"] or len(node["events"]) > 1,
+                        f"{nid}: reusable-only workflow cannot be direct entrypoint")
+        if node["kind"] == "job":
+            word(node.get("condition"), f"{nid}.condition")
         if node["kind"] in {"workflow", "job"}:
             string_list(node.get("stages"), f"{nid}.stages", allow_empty=False)
             require(set(node["stages"]) <= set(STAGES), f"{nid}: unknown stage")
@@ -174,7 +180,7 @@ def audit(doc: dict) -> dict:
                 if node["kind"] == "terminal":
                     require(current_job is not None, f"{nid}: terminal missing job")
                     runs.append({"stage": stage, "workflow": root["id"], "job": current_job,
-                                 "path": path, "obligation": node["obligation"],
+                                 "path": path, "events": root["events"], "condition": nodes[current_job]["condition"], "obligation": node["obligation"],
                                  "command": node["command"],
                                  "signature": [node[k] for k in ("obligation", "sha", "platform",
                                    "toolchain", "trust", "failure_boundary", "environment")] + [node["inputs"]],
@@ -198,7 +204,13 @@ def audit(doc: dict) -> dict:
         signatures = {json.dumps(row["signature"], sort_keys=True) for row in records}
         all_equivalent = all(row["equivalence_proven"] for row in records)
         job_sets = {(row["workflow"], row["job"]) for row in records}
-        if len(signatures) == 1 and all_equivalent:
+        event_sets = [set(row["events"]) for row in records]
+        simultaneous = bool(set.intersection(*event_sets))
+        if not simultaneous:
+            # Distinct events can coincide (push + PR), but only actual source
+            # trigger/run evidence can establish they did on the same revision.
+            classification = "UNPROVEN"
+        elif len(signatures) == 1 and all_equivalent:
             # Partial overlap if any overlapping job executes other obligations too.
             job_checks = {
                 (x["workflow"], x["job"]): {y["obligation"] for y in runs if
