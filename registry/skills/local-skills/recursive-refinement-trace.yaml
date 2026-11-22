@@ -25,13 +25,13 @@ dependencies: >-
   required. POSIX secure host-owned mode-0700 storage is required for capture
   and replay input; read-only reasoning remains available without running code.
 content_blob_sha: cd00d434317c8e6f5298067cbc6654be8436621c
-complete_package_tree_sha: 6262c36a2806bc76f79c80e45ce69552197b2d9b
+complete_package_tree_sha: 50bee109cecb3a00a34a0a2c5b753e0c176714eb
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
   Phase-2 issue #831 extends the merged Phase-1 #830 opt-in recorder with
   deterministic recorded-order and adversarial-first observed-only replay.
-  Exactly 82/82 local Python 3.13.5 methods passed (40 recorder and 42 replay),
+  Exactly 84/84 local Python 3.13.5 methods passed (40 recorder and 44 replay),
   including real synthetic capture to two sibling observations and read-only
   replay. Fixed evaluator and state constraints, unknown branches, test-call
   budgets, policy comparison without winner. Attached executed synthetic
