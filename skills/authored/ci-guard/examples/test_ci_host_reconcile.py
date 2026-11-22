@@ -147,6 +147,21 @@ class HostEvidenceTests(unittest.TestCase):
                 x=audit.reconcile(story(),mapping(),o)
                 self.assertEqual(x["status"],"HOLD")
 
+
+    def test_all_jobs_green_but_workflow_failed_is_not_success(self):
+        o=observed()
+        o["workflow_runs"][0]["run"]["conclusion"]="failure"
+        x=audit.reconcile(story(),mapping(),o)
+        self.assertEqual(x["status"],"HOLD")
+        self.assertIn("HOST_WORKFLOW_OUTCOME_DRIFT:forward",x["issues"])
+
+    def test_incomplete_workflow_conclusion_holds(self):
+        o=observed()
+        o["workflow_runs"][0]["run"]["conclusion"]=None
+        x=audit.reconcile(story(),mapping(),o)
+        self.assertEqual(x["status"],"HOLD")
+        self.assertIn("HOST_WORKFLOW_INCOMPLETE_OR_UNSUPPORTED:forward",x["issues"])
+
     def test_workflow_file_identity_is_source_bound(self):
         o=observed();o["workflow_runs"][0]["run"]["path"]=".github/workflows/not-the-same.yml"
         with self.assertRaisesRegex(audit.Hold,"HOST_WORKFLOW_PATH_MISMATCH"):
