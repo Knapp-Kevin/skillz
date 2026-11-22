@@ -54,7 +54,7 @@ The simulator returns
 `STRUCTURAL_PASS`.
 
 Supported *normalized subset v1*:
-- Declared event and changed-path matching, including separate
+- Trusted-normalized path patterns only: exact path, `**` (all), or\n  `prefix/**` (descendants). Other GitHub minimatch forms are unsupported\n  and must be normalized by the host or HOLD.\n- Declared event and changed-path matching, including separate
   draft, ready, push, release, dispatch and cancellation scenarios;
   explicit route-specific job eligibility;
 - Same-workflow, acyclic `needs` and four simple explicit
@@ -67,7 +67,7 @@ Supported *normalized subset v1*:
   unexpected direct/cached artifact-export attempts;
 - Exact source revision, required status conclusion and provenance
   kind; source-oracle `if`/needs agreement, unique terminal verifier
-  obligation per platform/trust/shard and a separate policy gate;
+  obligation per platform/trust/shard and a separate policy gate that waits on its own same-workflow\n  prerequisites; cross-workflow required contexts are only\n  caller-declared policy input, not direct `needs`;
 - Scheduled/failed/skipped/cancelled job states, estimated runner-job
   seconds, longest declared DAG path and earliest declared failure.
   These are **counterfactual estimates**, not provider billing.
@@ -115,7 +115,7 @@ The simulator deliberately fails:
 - an uninspected workflow, stale or cross-revision source input, or
   unmodeled provider trigger chain.
 
-The in-package [35 executable regression cases]
+The in-package [37 executable regression cases]
 (../examples/test_ci_scenario.py) exercise these failures. Written
 cases are not an independent consumer host trial.
 
