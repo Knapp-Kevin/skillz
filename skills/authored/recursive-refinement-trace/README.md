@@ -228,3 +228,16 @@ dependencies or accessing network services.
 The helper never authenticates user intent, external evaluator execution,
 independent agent behavior or real downstream skill effectiveness. Those
 claims require separate observable evidence, not self-generated receipts.
+
+## RSI-P3-PATH: portable offline source-boundary negative controls (v0.3.1)
+
+Only this skill folder is installed, and a user supplies a synthetic
+JSON input path. First, a regular in-scope JSON input preserves existing
+checker behavior and its evidence limits. Next, the apparent source
+file is a symlink to a different folder; finally, an ancestor directory
+is symlinked while the basename appears unchanged. In both negative
+variants the optional checker must return **invalid input before any
+content read** and must produce no purported result. The bundled
+Python source tests include both variants, but a source-file receipt
+must not be passed off as independently authenticated authorization,
+model-host behavior or adversarial concurrent filesystem protection.
