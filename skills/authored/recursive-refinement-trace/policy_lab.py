@@ -226,9 +226,13 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         require(args.approved_public, "Public/synthetic clearance must be established by host")
-        path = Path(args.manifest)
-        require(not path.is_symlink() and path.is_file() and
-                path.stat().st_size <= MAX_BYTES, "Invalid manifest path or size")
+        path = Path(args.manifest).absolute()
+        # A direct-file symlink is not the only escape: parent directories
+        # may be links. A hostile racing filesystem needs host isolation.
+        require(not any(part.is_symlink() for part in (path, *path.parents)),
+                "Symlinked manifest path or ancestor")
+        require(path.is_file() and path.stat().st_size <= MAX_BYTES,
+                "Invalid manifest path or size")
         manifest = json.loads(path.read_text(encoding="utf-8"),
                               object_pairs_hook=strict_pairs,
                               parse_constant=reject_constant)
