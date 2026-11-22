@@ -249,3 +249,15 @@ do not replace, the existing strict [receipt comparator](../scripts/compare_ci_r
 
 Full provider rulesets, invoices and host-executed seeded faults are beyond
 this offline package and remain independently required in a consumer review.
+
+## P0 explicit event-chain falsifiers (v1.5.9)
+
+The existing [bounded scenario simulator](../components/scenario-simulation.md)
+now carries ten additional executable negative controls in
+[test_ci_scenario.py](test_ci_scenario.py), including success with an
+intentionally reverse-ordered input, source failure/cancellation, direct
+dispatch without an emitter, unsupported token source, orphan sender
+and receiver, cross-workflow `needs`, non-verifier source requirement and
+invalid receiver event. All are synthetic; no GitHub run is
+authenticated by passing them.
+
