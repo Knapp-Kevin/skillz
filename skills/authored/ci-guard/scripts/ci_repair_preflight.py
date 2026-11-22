@@ -17,7 +17,7 @@ MAX_BYTES = 1024 * 1024
 MAX_RECORDS = 3000
 STAGES = ('DISCOVER', 'PREPARE', 'PROVE', 'CUTOVER', 'OBSERVE', 'ROLLBACK')
 CLASSES = {'REPEATED_IMMUTABLE_SETUP', 'JUSTIFIED_ISOLATION',
-           'UNIQUE_DETECTION', 'REDUNDANT_SAME_REVISION', 'UNPROVEN'}
+           'UNIQUE_DETECTION', 'REDUNDANT_SAME_REVISION', 'UNPROVEN', 'DEPENDENCY_WAIT'}
 
 
 class InvalidManifest(ValueError):
@@ -99,7 +99,9 @@ def inspect_phases(phases, source):
         if len(operations) < 2:
             continue
         ids = [row['id'] for row in operations]
-        if any(row['mutates'] or row['isolation'] != 'none' for row in operations):
+        if key[0] == 'dependency_wait':
+            classification = 'DEPENDENCY_WAIT'
+        elif any(row['mutates'] or row['isolation'] != 'none' for row in operations):
             classification = 'JUSTIFIED_ISOLATION'
         elif any(row['unique_detection'] for row in operations) or len({r['assertion'] for r in operations}) != 1:
             classification = 'UNIQUE_DETECTION'
@@ -129,6 +131,123 @@ def inspect_phases(phases, source):
             'phase_timings': stats,
             'overlap_findings': findings,
             'observed_by_provider': False}
+
+
+
+def inspect_artifact_waits(document, phases, source):
+    """Validate claimed artifact-poll evidence and a proposed safe job DAG.
+
+    All records are caller-supplied. PASS only means the *declared* DAG
+    satisfies the safety constraints, NOT that a provider deployed it.
+    """
+    waits = [x for x in phases if x.get('kind') == 'dependency_wait']
+    schedules = document.get('artifact_schedules', [])
+    if not isinstance(schedules, list) or len(schedules) > 100:
+        raise InvalidManifest('artifact_schedules must be a bounded list')
+    issues = []
+    if waits and not schedules:
+        issues.append('ARTIFACT_SCHEDULE_MISSING')
+    matched = set()
+    diagnostics = []
+    schedule_keys = set()
+    total_wait = 0
+    for wait in waits:
+        for field in ('artifact_id', 'producer_job', 'consumer_job'):
+            text(wait.get(field), 'wait.' + field)
+        requested = number(wait.get('requested_at_s'), 'wait.requested_at_s')
+        available = number(wait.get('available_at_s'), 'wait.available_at_s')
+        completed = number(wait.get('consumer_finished_at_s'), 'wait.consumer_finished_at_s')
+        if not (requested < available <= completed):
+            issues.append('ARTIFACT_TIMELINE_INVALID:' + wait['id'])
+        if abs((available - requested) - wait['seconds']) > 0.001:
+            issues.append('WAIT_DURATION_INCONSISTENT:' + wait['id'])
+        total_wait += wait['seconds']
+        diagnostics.append({'phase_id': wait['id'], 'consumer_job': wait['consumer_job'],
+                            'producer_job': wait['producer_job'], 'artifact_id': wait['artifact_id'],
+                            'claimed_paid_wait_seconds': wait['seconds'],
+                            'interpretation': 'DEPENDENCY_WAIT_NOT_TEST_COMPUTE',
+                            'provider_receipt_authenticated': False})
+    for item in schedules:
+        require(item, 'artifact schedule')
+        key = (text(item.get('artifact_id'), 'artifact_id'),
+               text(item.get('producer_job'), 'producer_job'),
+               text(item.get('producer_run_id'), 'producer_run_id'))
+        if key in schedule_keys:
+            raise InvalidManifest('duplicate artifact schedule')
+        schedule_keys.add(key)
+        if item.get('producer_revision') != source:
+            issues.append('ARTIFACT_SOURCE_STALE:' + key[0])
+        available = number(item.get('producer_available_at_s'), 'producer_available_at_s')
+        if item.get('producer_status') != 'success':
+            issues.append('ARTIFACT_PRODUCER_NOT_SUCCESSFUL:' + key[0])
+        routes = item.get('routes')
+        if not isinstance(routes, list) or not routes or len(routes) > 30:
+            raise InvalidManifest('artifact.routes must be bounded nonempty list')
+        names = set()
+        full_path = False
+        alternative_path = False
+        for route in routes:
+            require(route, 'artifact route')
+            name = text(route.get('name'), 'route.name')
+            if name in names:
+                raise InvalidManifest('duplicate artifact route')
+            names.add(name)
+            if not isinstance(route.get('producer_runs'), bool) or not isinstance(route.get('artifact_required'), bool):
+                raise InvalidManifest('route must declare producer_runs and artifact_required')
+            expected = unique_strings(route.get('consumers_expected'), 'route.consumers_expected')
+            selected = unique_strings(route.get('consumers_scheduled'), 'route.consumers_scheduled')
+            needs = unique_strings(route.get('needs_producer_for'), 'route.needs_producer_for')
+            early = unique_strings(route.get('runner_allocated_while_waiting_for'), 'route.runner_allocated_while_waiting_for')
+            if not expected:
+                issues.append('NO_CONSUMER_SCOPE:' + name)
+            if expected - selected:
+                issues.append('LEGITIMATE_CONSUMER_SKIPPED:' + name)
+            if selected - expected or needs - expected or early - expected:
+                issues.append('UNDECLARED_CONSUMER:' + name)
+            if route['producer_runs']:
+                full_path = True
+                if not route['artifact_required']:
+                    issues.append('PRODUCER_ARTIFACT_NOT_REQUIRED:' + name)
+                if expected - needs:
+                    issues.append('CONSUMER_MISSING_PRODUCER_NEEDS:' + name)
+                if early:
+                    issues.append('PAID_RUNNER_WAITS_FOR_ARTIFACT:' + name)
+                if route.get('producer_failure_blocks') is not True:
+                    issues.append('PRODUCER_FAILURE_NOT_PROPAGATED:' + name)
+                if route.get('artifact_custody') != 'same-run':
+                    issues.append('CROSS_RUN_ARTIFACT_CUSTODY:' + name)
+            else:
+                alternative_path = True
+                if route['artifact_required']:
+                    issues.append('ARTIFACT_REQUIRED_WHEN_PRODUCER_SKIPPED:' + name)
+                if needs:
+                    issues.append('SKIPPED_PRODUCER_UNCONDITIONAL_NEEDS:' + name)
+                if early:
+                    issues.append('ALTERNATE_PATH_ALLOCATES_WAITING_RUNNER:' + name)
+                if not route.get('fallback_verification'):
+                    issues.append('ALTERNATE_VERIFICATION_MISSING:' + name)
+        if not full_path or not alternative_path:
+            issues.append('ARTIFACT_PATH_COVERAGE_INCOMPLETE:' + key[0])
+        for wait in waits:
+            if (wait['artifact_id'], wait['producer_job'], wait['run_id']) != key:
+                continue
+            matched.add(wait['id'])
+            if abs(available - wait['available_at_s']) > 0.001:
+                issues.append('ARTIFACT_AVAILABILITY_MISMATCH:' + wait['id'])
+            if wait['revision'] != item['producer_revision']:
+                issues.append('ARTIFACT_PRODUCER_REVISION_MISMATCH:' + wait['id'])
+            if not any(route['producer_runs'] and wait['consumer_job'] in
+                       route['consumers_expected'] for route in routes):
+                issues.append('WAIT_CONSUMER_NOT_ROUTED:' + wait['id'])
+    for wait in waits:
+        if wait['id'] not in matched:
+            issues.append('WAIT_ARTIFACT_UNMATCHED:' + wait['id'])
+    return {'diagnostics': diagnostics, 'issues': sorted(set(issues)),
+            'claimed_runner_occupied_wait_seconds': round(total_wait, 3),
+            'measured_runner_minutes_saved': 'NOT_MEASURED',
+            'measured_critical_path_delta': 'NOT_MEASURED',
+            'requires_provider_timing_and_job_graph': True,
+            'provider_authenticated': False}
 
 
 def assess(document):
@@ -213,11 +332,13 @@ def assess(document):
     if plan.get('merge_qualified_from_draft') is not False:
         issues.append('DRAFT_NOT_QUALIFIED')
     phase = inspect_phases(document.get('phase_observations'), source)
+    artifact = inspect_artifact_waits(document, document.get('phase_observations'), source)
+    issues.extend(artifact['issues'])
     # Local cost arithmetic is source-fixture interpretation; do not confuse
     # claimed 'observed' fields with independent provider authentication.
     return {'schema_version': 1, 'status': 'STRUCTURAL_PASS' if not issues else 'HOLD',
             'issues': sorted(set(issues)), 'predicted_fanout': forecast,
-            'phase_analysis': phase,
+            'phase_analysis': phase, 'artifact_dependency_analysis': artifact,
             'optimization_complete': False, 'host_authenticated': False,
             'observed_runner_minutes_delta': 'NOT_MEASURED',
             'observed_critical_path_delta': 'NOT_MEASURED'}
