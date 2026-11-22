@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.7"
+skill_version: "1.5.8"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 09f2a1771a03d082c87a17f40e5bbb38cfe6657b
-complete_package_tree_sha: 2ec235742a01a50d341bc7d22b66077ccee5fde1
+content_blob_sha: c064dd2224958d6ebdf29f147305ced7f855ea91
+complete_package_tree_sha: c24d4276141e92690ff24afc7004942da1377163
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: verified
-verification_basis: v1.5.7-head-1981841-hosted-150-of-150-offline-methods
-validation_status: passed-offline-contract-tests
-validation_note: "PR #868 initial source head 19818416702e3bcccf0627ad0d37c617bd1bdd20 GitHub Actions #45077634202 PASS 150/150 Python methods: 12 overlap +16 cutover +23 self-repair +45 scenario +28 classification +26 plan. All three initial checks success. Final registry-only reconciliation head requires fresh QA. Consumer semantics/cost still NOT_RUN."
+verification_status: needs-re-review
+verification_basis: v1.5.8-source-awaiting-exact-head-results-proof-QA
+validation_status: pending
+validation_note: "The new ci_results_proof.py, sixteen executable planted tests, comparator raw-timing extension and mandatory invocation of previous comparator tests are staged. Exact-head hosted QA PENDING; provider savings, branch rules and consumer outcomes NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_7"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5_8"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,7 +24,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  v1.5.7 source passed 150/150 hosted Python QA on PR #868 first exact
-  source head, including 45 normalized scenario cases. The later registry
-  reconciliation head must separately PASS before merging. These local tests
-  do not authenticate provider dispatch or consumer publication outcomes.
+  The before-after results proof is synthetic/offline and cannot authenticate
+  GitHub job, status, branch, billing or production evidence. All strict
+  same-source comparator guarantees are retained. New QA results PENDING.
