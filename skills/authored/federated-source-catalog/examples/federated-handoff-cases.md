@@ -67,3 +67,16 @@ locators. In-session summary only, no persistent side effects.
 | H12 | Curator or reader unavailable | Return NOT RUN and bounded source plan |
 
 These are text-level expected outcomes, not a model/host acceptance run.
+
+## H13: isolated federated catalog package, curator absent
+
+Only the `federated-source-catalog/` folder, its H01 synthetic
+handoff input and approved locally supplied metadata exist. The
+per-file enrichment sibling is not installed; no connector or live
+source service is available. Expected: the in-package outbound
+handoff contract remains sufficient to generate a limited read-only
+source map and `NOT RUN` handoff plan. Do not invent a current
+permission receipt, content extraction, card, persistent index,
+an installed File Lifecycle Curator, a verified URL or an external
+fetch. A missing sibling Markdown file must not block the supported
+offline mode.
