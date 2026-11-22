@@ -320,4 +320,135 @@ def observe(root_arg, experiment_id, parent_node_id, evaluator_id, context_id,
     require(type(outcome) is str and outcome in OUTCOMES, "Disallowed outcome")
     require(type(test_invocations) is int and 1 <= test_invocations <= 1000, "Invalid test invocation count")
     require(type(wall_ms) is int and 0 <= wall_ms <= 86_400_000, "Invalid elapsed time")
-    source, state = public_source(sour
+    source, state = public_source(source_file), public_snapshot(state_file)
+    post_source, post_state = public_source(post_source_file), public_snapshot(post_state_file)
+    evidence = public_snapshot(evidence_file)
+    root = checked_root(root_arg)
+    path = _log_path(root, experiment_id)
+    with writer_lock(root):
+        trace = _read_log(path)
+        header = trace["header"]
+        require(header["experiment_id"] == experiment_id, "Trace identity changed")
+        require(evaluator_id == header["evaluator_id"] and context_id == header["evaluation_context_id"], "Evaluator/context mismatch")
+        parent = trace["nodes"].get(parent_node_id)
+        require(parent is not None, "Unknown parent")
+        require(len(trace["nodes"]) < MAX_NODES, "Node budget exhausted")
+        expected_source = parent["post_source_artifact_git_blob"] if parent["record_type"] == "observation" else parent["source_artifact_git_blob"]
+        expected_state = parent["post_workspace_state_digest"] if parent["record_type"] == "observation" else parent["workspace_state_digest"]
+        require(source == expected_source and state == expected_state, "UNKNOWN_STATE: cannot reuse different parent snapshot")
+        node_id = "n-" + secrets.token_hex(12)
+        require(node_id not in trace["nodes"], "Generated node identity collided; retry without altering trace")
+        payload = {"node_id": node_id, "outcome": outcome, "action": action,
+                   "source_artifact_git_blob": source, "workspace_state_digest": state,
+                   "evaluator_id": evaluator_id, "evaluation_context_id": context_id,
+                   "test_invocations": test_invocations, "wall_ms": wall_ms}
+        proof = {"digest": receipt_digest(payload), "payload": payload}
+        node = {"node_id": node_id, "parent_node_id": parent_node_id, "record_type": "observation",
+                "candidate_id": node_id, "task_family": task_family, "action": action,
+                "source_artifact_git_blob": source, "workspace_state_digest": state,
+                "evaluator_id": evaluator_id, "evaluation_context_id": context_id,
+                "outcome": outcome, "receipt_digest": proof["digest"],
+                "post_source_artifact_git_blob": post_source,
+                "post_workspace_state_digest": post_state}
+        wrapper = {"node": node, "receipt": proof, "evidence_file_digest": evidence,
+                   "evidence_basis": "host-supplied-file-unattested"}
+        raw, event_hash = _event(len(trace["events"]), trace["last_digest"], "observation", wrapper)
+        require(path.stat().st_size + len(raw) <= LIMIT, "Trace size limit exhausted")
+        fd = os.open(path, os.O_WRONLY | os.O_APPEND | os.O_NOFOLLOW | os.O_CLOEXEC)
+        try:
+            st, current = os.fstat(fd), path.lstat()
+            require(stat.S_ISREG(st.st_mode) and st.st_uid == os.getuid() and
+                    not stat.S_IMODE(st.st_mode) & 0o077 and st.st_nlink == 1 and
+                    (st.st_dev, st.st_ino) == (current.st_dev, current.st_ino), "Trace changed during append")
+            _write_whole(fd, raw)
+        finally:
+            os.close(fd)
+        checked = _read_log(path)
+        require(checked["last_digest"] == event_hash and node_id in checked["nodes"], "Post-append integrity check failed")
+    return {"status": "RECORDED_STRUCTURE_ONLY", "node_id": node_id,
+            "outcome": outcome, "evidence_file_digest": evidence,
+            "external_execution_authenticated": False}
+
+
+def inspect(root_arg, experiment_id, export=False):
+    root = checked_root(root_arg)
+    trace = _read_log(_log_path(root, experiment_id))
+    if export:
+        # Export exactly the Phase-0 closed-world trace contract, without a
+        # runtime envelope or leaking any original file/path content.
+        return {"schema_version": FORMAT,
+                "experiment_id": experiment_id, "evaluator_id": trace["header"]["evaluator_id"],
+                "evaluation_context_id": trace["header"]["evaluation_context_id"],
+                "nodes": list(trace["nodes"].values()), "receipts": trace["receipts"]}
+    return {"status": "STRUCTURE_ONLY", "experiment_id": experiment_id,
+            "observations": len(trace["receipts"]), "nodes": len(trace["nodes"]),
+            "last_digest": trace["last_digest"],
+            "external_execution_authenticated": False}
+
+
+def clear(root_arg, experiment_id, approved):
+    require(approved, "Explicit approved revocation required")
+    root = checked_root(root_arg)
+    path = _log_path(root, experiment_id)
+    with writer_lock(root):
+        try:
+            info = path.lstat()
+        except FileNotFoundError:
+            return {"status": "NOT_FOUND"}
+        require(stat.S_ISREG(info.st_mode) and info.st_uid == os.getuid() and
+                not stat.S_IMODE(info.st_mode) & 0o077 and info.st_nlink == 1, "Unsafe trace cannot be removed by helper")
+        path.unlink()
+        _sync_dir(root)
+        require(not path.exists() and not path.is_symlink(), "Revocation verification failed")
+    return {"status": "REMOVED"}
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--root", required=True, help="Existing mode-0700 host-owned private directory")
+    p.add_argument("--experiment-id", required=True)
+    subs = p.add_subparsers(dest="command", required=True)
+    ini = subs.add_parser("init")
+    ini.add_argument("--evaluator-id", required=True)
+    ini.add_argument("--context-id", required=True)
+    ini.add_argument("--task-family", required=True, choices=sorted(TASKS))
+    ini.add_argument("--source", required=True)
+    ini.add_argument("--state", required=True)
+    ini.add_argument("--approved-public", action="store_true")
+    obs = subs.add_parser("observe")
+    for flag in ("parent-node-id", "evaluator-id", "context-id", "source", "state",
+                 "post-source", "post-state", "evidence"):
+        obs.add_argument("--" + flag, required=True)
+    obs.add_argument("--task-family", required=True, choices=sorted(TASKS))
+    obs.add_argument("--action", required=True, choices=sorted(ACTIONS))
+    obs.add_argument("--outcome", required=True, choices=sorted(OUTCOMES))
+    obs.add_argument("--test-invocations", required=True, type=int)
+    obs.add_argument("--wall-ms", required=True, type=int)
+    obs.add_argument("--approved-public", action="store_true")
+    subs.add_parser("verify")
+    subs.add_parser("export")
+    rem = subs.add_parser("clear")
+    rem.add_argument("--approved", action="store_true")
+    args = p.parse_args(argv)
+    try:
+        if args.command == "init":
+            result = create(args.root, args.experiment_id, args.evaluator_id, args.context_id,
+                            args.source, args.state, args.task_family, args.approved_public)
+        elif args.command == "observe":
+            result = observe(args.root, args.experiment_id, args.parent_node_id, args.evaluator_id,
+                             args.context_id, args.action, args.outcome, args.task_family,
+                             args.source, args.state, args.post_source, args.post_state,
+                             args.evidence, args.test_invocations, args.wall_ms, args.approved_public)
+        elif args.command == "clear":
+            result = clear(args.root, args.experiment_id, args.approved)
+        else:
+            result = inspect(args.root, args.experiment_id, export=args.command == "export")
+        print(json.dumps(result, sort_keys=True))
+        return 0
+    except (TraceError, OSError, UnicodeError, TypeError, ValueError) as exc:
+        print(json.dumps({"status": "BLOCKED", "reason": str(exc)}, sort_keys=True), file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
