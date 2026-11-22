@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software & Repositories
   display-name: Source Debt Triage
-  version: 1.2.0
+  version: 1.2.1
   license: MIT
 ---
 
@@ -59,7 +59,13 @@ a conservative lexical parser for C/C++/Go/Rust/Java/JS/TS; JavaScript
 regex and template interpolation are explicitly flagged for review,
 rather than being misrepresented as complete parsing. Unsupported source
 types, excluded directories, symlinks, oversized/unreadable files and
-parse errors must remain visible in the coverage report.
+parse errors must remain visible in the coverage report. **Reject a
+symlinked approved root or ancestor before canonicalizing its path;**
+otherwise a path that looks in scope can resolve outside the intended
+tree. Lexical symlink checks are not a secure sandbox against a
+hostile concurrently mutating filesystem. For that threat model,
+require an isolated, host-enforced immutable snapshot and authority
+controls before invoking the optional scanner.
 
 Example in a copy of this **complete skill directory**:
 

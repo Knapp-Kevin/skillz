@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: source-debt-triage
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/source-debt-triage/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/source-debt-triage/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c434b4080c356a77fd11dd78ea62b84c34c463a1
-complete_package_tree_sha: 63e578f731a895f576ce96f7710182361c31e2ad
+content_blob_sha: c7cceef7235e7b52c5ea333956930ad95f5093e6
+complete_package_tree_sha: f9ecb5f40b43922270ab995b953d4b686795c9f1
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: verified
-verification_basis: maintainer-complete-package-static-review-plus-source-method-test
+verification_basis: v1.2.1-targeted-root-symlink-source-adversarial-review
 validation_status: not-run
-validation_note: "18/18 original scanner CPU tests and actual Git grep comparator exercised, but no independently observed consuming-model A/B or real user outcomes. 2x precision pertains only to synthetic fixture."
+validation_note: "v1.2.1 targeted preflight root-symlink reproduction observed with local Python standard library and 2 new regression methods authored, but full current-version 20-test Python suite NOT_RUN. Historical v1.2.0 18/18 fixture pass and 2x precision result remain historical, not current; independent host-model tests NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "19/20"
+rubric_score: "NOT_ASSESSED_EXACT_V1_2_1"
 tags:
   use_case: [code-debt]
   lifecycle: [evaluation]

@@ -101,6 +101,24 @@ class HarvestAcceptance(unittest.TestCase):
         self.assertEqual(r["markers_detected"], 1)
         self.assertEqual(r["skipped_count"], 1)
 
+    def test_symlinked_root_is_rejected_before_resolve(self):
+        tmp, base = fixture({"approved/a.py": "# TODO approved\\n",
+                             "outside/private.py": "# FIXME private\\n"})
+        self.addCleanup(tmp.cleanup)
+        link = base / "root-alias"
+        link.symlink_to(base / "outside", target_is_directory=True)
+        with self.assertRaisesRegex(ValueError, "Symlinked root"):
+            harvest.inspect(link)
+
+    def test_symlinked_ancestor_is_rejected_before_resolve(self):
+        tmp, base = fixture({"approved/a.py": "# TODO approved\\n",
+                             "outside/private.py": "# FIXME private\\n"})
+        self.addCleanup(tmp.cleanup)
+        link = base / "root-alias"
+        link.symlink_to(base / "outside", target_is_directory=True)
+        with self.assertRaisesRegex(ValueError, "Symlinked root"):
+            harvest.inspect(link / "private.py")
+
     def test_bounded_output_not_false_count(self):
         r = self.inspect({"big.py": "# TODO\n# FIXME\n# HACK\n"}, max_rows=1)
         self.assertEqual(r["markers_detected"], 3)

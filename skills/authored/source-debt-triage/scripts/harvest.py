@@ -120,6 +120,13 @@ def c_comments(text: str, ext: str) -> tuple[list[tuple[int, str]], str]:
 
 
 def inspect(root: Path, max_rows: int = 100) -> dict:
+    # Do not let Path.resolve() silently follow a caller-selected
+    # symlinked root or parent before the authorized boundary is checked.
+    # This is a lexical preflight, not a TOCTOU-proof filesystem sandbox:
+    # a hostile concurrently mutating filesystem needs a stronger host.
+    root = root.absolute()
+    if any(part.is_symlink() for part in (root, *root.parents)):
+        raise ValueError("Symlinked root or ancestor not allowed")
     root = root.resolve(strict=True)
     if not root.is_dir():
         raise ValueError("Root must be a directory")
