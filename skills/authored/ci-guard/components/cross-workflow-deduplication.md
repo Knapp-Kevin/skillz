@@ -190,6 +190,19 @@ duplicate**, including removed release signing, missing/stale
 authoritative receipts, draft/ready stage integrity, retired-path
 evidence and independently justified platform repetition.
 
+## Downstream whole-pipeline scenario proof, not another overlap detector
+
+Once this component has expanded terminal command paths and classified
+unique/overlapping execution, use the [portable normalized
+scenario-simulation phase](scenario-simulation.md) to compare
+candidate workflow/job/status layouts with required checks and
+producer failure/skip lanes preserved. The scenario checker does
+**not** reimplement `ci_overlap.py` or infer verifier identity
+from different names; source-derived unique detection remains
+canonical here. If source conformance tests still assert the
+old workflow conditions, the optimization is HOLD until the
+actual test oracle and provider semantics are reconciled.
+
 ## Adversarial migration acceptance
 
 1. Plant a composite command that invokes the same verifier as a separate
