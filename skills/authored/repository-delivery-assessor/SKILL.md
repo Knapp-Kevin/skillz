@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Repository Delivery Assessor
-  version: 1.4.0
+  version: 1.4.1
   license: MIT
 ---
 
@@ -165,6 +165,17 @@ inspected. A small patch is not a successful remedy until its relevant
 functional acceptance has been independently checked.
 
 ## Optional executable exact-head portfolio triage (v1.4)
+
+**Input-path authority:** The optional Python reader refuses a caller-selected
+symlinked source file **or any symlinked parent directory** before inspecting
+its size or opening it. An apparent permitted filename cannot silently
+resolve into another folder. This is a lexical preflight, not a
+race-proof sandbox: hostile concurrently mutable filesystems require
+a trusted, immutable host snapshot. It neither authenticates source
+receipts nor grants permission to inspect other files; the original
+in-scope regular JSON workflow remains supported. Two adversarial
+CLI tests plant linked files and linked parents in the standalone package.
+
 
 For a one-time authorized GitHub portfolio pulse, the original,
 self-contained Python 3.9+ stdlib utility at
