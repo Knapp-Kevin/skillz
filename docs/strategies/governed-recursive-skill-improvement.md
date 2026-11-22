@@ -1,16 +1,24 @@
 # Governed recursive skill improvement
-## Umbrella architecture strategy, revision 0.3 (2026-11-21)
+## Umbrella architecture strategy, revision 0.4 (2026-11-22)
 
 **Status:** Proposed, architecture validation and staged implementation authorized for issue planning. **Not implemented.**  
-**Scope:** Skillz authored skill improvement and its repository-level quality engine. The standalone Evidence-Driven Refinement Loop package remains independently usable.  
+**Scope:** Skillz's **passive authored skill instructions, in-package optional components and maintainer-only QA**. Actual capture, replay and policy selection are invoked by an **authorized external consuming host**, never as repository-owned consumer infrastructure. The standalone Evidence-Driven Refinement Loop package remains independently usable.  
 **Source:** [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://arxiv.org/abs/2609.14858) and the [published Google Research reference](https://github.com/google-research/dream-rsi). Mechanisms are adapted, not copied or claimed to be experimentally reproduced.  
-**Existing baseline:** Evidence-Driven Refinement Loop v0.3.4 in [draft PR #826](https://github.com/Knapp-Kevin/skillz/pull/826), subject to normal merge governance. Do not make the strategy depend on that draft being merged or claim it is live on `main`.
+**Existing baseline:** Evidence-Driven Refinement Loop v0.3.4 in [draft PR #826](https://github.com/Knapp-Kevin/skillz/pull/826), not yet the merged canonical runtime. [Phase-0 contract PR #836](https://github.com/Knapp-Kevin/skillz/pull/836) is now merged on `main` at `96024878db5961121ec5988432a9842033ab101c`. This is **maintainer QA code**, not a repository-owned consumer runner.
 
 ## 1. Decision in one paragraph
 
 Adopt a **bounded, evidence-driven meta-refinement program**. The existing loop fixes a real artifact: OBSERVE → EXPLAIN → CHANGE → CHALLENGE → DECIDE. Add an **optional, separately governed exploration policy** that chooses which falsifiable hypothesis or adversarial test to pursue next, under a fixed evaluator, budget, and authority contract. Collect **minimal, verified discovery traces** from real authorized attempts; replay only observed outcomes to compare exploration strategies cheaply; challenge proposed policy improvements against unseen adverse cases and actual execution before promotion. Never promote local user preferences into canonical policy, treat same-model agreement as external proof, or let an exploration policy change its evaluator or grant itself mutation authority.
 
 **This is recursive improvement of the search strategy and skill implementation, not automatic LLM weight training, general self-modification, or permission to run unsupervised jobs.**
+
+## 1.1. Hard architecture boundary: passive library and external execution
+
+The current [AGENTS.md](../../AGENTS.md) and [Governance Index](../GOVERNANCE_INDEX.md) make Skillz a **passive skill library**, not a consumer runtime, evaluator, replay service, CI platform or policy-runner host. An external consuming agent/environment owns execution, local state, privacy controls, authorized evaluation and user-specific preferences. Skills may bundle **self-contained optional scripts and fixtures**, which the consuming host may execute under its own authority. Maintainer-only checks in `scripts/qa/` may validate repository sources on explicitly authorized maintenance requests; they must not grow into a consumer execution service.
+
+Accordingly, this strategy **does not create a repository-owned learner, daemon, test harness service, policy lab, auto-refiner, scheduled task or automatic CI trigger**. P0's merged `contract.py` is an offline **maintenance-only structural checker**, with synthetic fixtures; it is not the future P1/P2/P3 runtime. The optional replay/capture functionality, if justified by the pilot, is packaged **inside a portable authored skill** for explicit use by the external host, or provided as a host-owned adapter. No consumer installation depends on `scripts/qa/` or on the Skillz monorepo.
+
+Changing this boundary would require an **explicitly authorized Tier-1 architecture revision**, not an incidental issue or PR that happens to introduce executable code.
 
 ## 2. What DREAM-RSI contributes, and what it does not
 
@@ -69,9 +77,9 @@ Transfer the architectural principle, **not** the repository, weights, execution
 **Trust boundaries:**
 
 - **Evaluator and protected invariants:** fixed before the experiment; a candidate policy may not rewrite tests, evidence interpretation, ratings, privacy policy, authority limits, or task acceptance criteria. Version changes create a **new** evaluation cohort and invalidate cross-version score comparisons until reconciled.
-- **Policy:** initially a versioned, non-executable declarative decision table with bounded choices, not free-form Python supplied by a model. Evolve the policy only inside a trusted runner using a allowlisted parser and deterministic tie-breaking. Arbitrary executable policies are **out of scope** until sandbox/threat review justifies them.
+- **Policy:** initially a versioned, non-executable declarative decision table with bounded choices, not free-form Python supplied by a model. A **consuming host**, explicitly authorized by its user, may evaluate it with a self-contained bundled helper and allowlisted parser. The Skillz repository must never launch, host or schedule policy execution. Arbitrary executable policies are **out of scope** until host sandbox/threat review justifies them.
 - **Executor:** current skill/source editing only under current owner authority; permitted outputs include `HOLD`, `NO_ACTION`, and unchanged artifacts. Replay never writes source files.
-- **Replay store:** repository-maintenance experiment data only, written in a governed opt-in workspace. No portable user skill should require the store or write anything on activation. Upload of recordings with confidential, personal or license-restricted contents is prohibited.
+- **Replay store:** an optional, **host-owned** private or ephemeral workspace controlled by the consuming user/host; no automatic repository capture, telemetry, upload or persistent store. A portable skill must work with no store and must never write anything on activation. Only sanitized, permission-cleared synthetic/public fixtures may be deliberately contributed to repository maintenance. Raw personal/confidential/license-restricted recordings stay outside this repository.
 - **Preference overlay:** application controls output presentation, never task scoring, branch priority, search budgets, source maintenance, or global learned policy.
 
 ## 5. Minimal first-party contracts (design targets, not deployed schemas)
@@ -163,6 +171,10 @@ Architecture acceptance requires **actual planted negative tests** for each high
 
 The first conceptual design pass (not separately committed or executed) contemplated storing every attempt and selecting the highest replay score. That fails for sparse histories, polluted history, false claims of permission and evaluator drift. Revision 0.2 made recording optional, added provenance, fixed the evaluator, held the incumbent on ties and restricted replay to observed nodes. A **second adversarial challenge** found a further defect: even an *observed* node's outcome may depend on prior mutable workspace state, so changing branch order can invalidate reuse. Revision 0.3 adds state/context fingerprints, non-replayable classifications and an explicit `UNKNOWN_STATE` gate. Both are **design-level improvements**, not executed implementation proof.
 
+### Adversarial revision v0.4: ownership and governance
+
+Codex review of [strategy PR #835](https://github.com/Knapp-Kevin/skillz/pull/835) revealed a **P1 architecture conflict**: the previous version assigned trace capture, replay and policy-lab execution to a repository-owned engine under `scripts/qa/`, contradicting current Tier-1 passive-library governance. Revision 0.4 moves these execution responsibilities to **authorized external consuming hosts**, using optional self-contained skill components, and limits repository scripts to explicit maintenance-only QA. The earlier design's automatic consumer-infrastructure plan is **rejected**, not silently grandfathered in by an issue or by P0's passing tests. This is an adversarial design correction; executing host behavior remains to be tested in later phases.
+
 ## 8. Phased delivery and stop gates
 
 Each phase is a **useful completed behavior**, not a completed planning note. A phase may end `NO_GO` when evidence contradicts its value. This strategy is tracked by [umbrella #828](https://github.com/Knapp-Kevin/skillz/issues/828). No bulk rollout until the pilot works.
@@ -170,21 +182,22 @@ Each phase is a **useful completed behavior**, not a completed planning note. A 
 | Phase | Executable deliverable | Exit evidence | Dependency |
 | --- | --- | --- | --- |
 | [0. Architecture proof (#829)](https://github.com/Knapp-Kevin/skillz/issues/829) | Frozen contract & attack matrix tested against a minimal demonstration fixture | Red/green planted failures for unknown branches, **state mismatch**, evaluator tamper and private data | None |
-| [1. Evidence intake (#830)](https://github.com/Knapp-Kevin/skillz/issues/830) | Minimal standalone-optional event recorder/importer; reject unauthorized/invalid records | CLI/API fixture tests, no raw personal overlay/secret capture, exact digest/readback, package closure | 0 |
-| [2. Offline replay (#831)](https://github.com/Knapp-Kevin/skillz/issues/831) | Deterministic state-compatible traversal with explicit UNKNOWN_BRANCH / UNKNOWN_STATE and budget accounting | Reproducible paired replay, state-swap negatives, seeded isolated snapshots, exact evaluator pins | 1 |
-| [3. Policy laboratory (#832)](https://github.com/Knapp-Kevin/skillz/issues/832) | Declarative baseline plus candidate comparison, fixed evaluator, hard-veto safety checks and heldouts | Candidate that cheats is rejected; on tied/small samples incumbent retained | 2 |
-| [4. Adversarial live pilot (#833)](https://github.com/Knapp-Kevin/skillz/issues/833) | Bounded real tasks across two skill families; baseline and candidate use equal budgets | Real red/green outcomes, preserved acceptance gates, measured cost, decision to ship or stop | 3 |
-| [5. Consumer integration (#834)](https://github.com/Knapp-Kevin/skillz/issues/834) | Optional explorer embedded through portable in-package instructions and/or repository engine; versioned opt-in | Standalone/no-network/no-store export tests, no regression in v0.3.4 local preference behavior | 4 |
+| [1. Evidence intake (#830)](https://github.com/Knapp-Kevin/skillz/issues/830) | Self-contained optional **skill-bundled / external-host** event recorder/importer; no repo-owned collector | CLI/API fixture tests, no raw personal overlay/secret capture, exact digest/readback, package closure | 0 |
+| [2. Offline replay (#831)](https://github.com/Knapp-Kevin/skillz/issues/831) | Portable host-invoked deterministic traversal with UNKNOWN_BRANCH / UNKNOWN_STATE and budget accounting | Reproducible paired replay, state-swap negatives, seeded isolated snapshots, exact evaluator pins | 1 |
+| [3. Policy laboratory (#832)](https://github.com/Knapp-Kevin/skillz/issues/832) | Host-executed **optional skill component** for declarative policy comparison with fixed evaluator, hard vetoes and heldouts | Candidate that cheats is rejected; on tied/small samples incumbent retained | 2 |
+| [4. Adversarial live pilot (#833)](https://github.com/Knapp-Kevin/skillz/issues/833) | Bounded, user-approved **external-host** real tasks across two skill families; matched budgets | Real red/green outcomes, preserved acceptance gates, measured cost, decision to ship or stop | 3 |
+| [5. Consumer integration (#834)](https://github.com/Knapp-Kevin/skillz/issues/834) | Optional explorer embedded inside a portable authored skill and/or consuming-host adapter; **no repository engine runtime** | Standalone/no-network/no-store export tests, no regression in v0.3.4 local preference behavior | 4 |
 
 No hidden background task or recurring automation. GitHub Actions minutes may be used for bounded deterministic QA. Later corpus-wide rollout, third-party replication, or agent-host trials are **optional follow-on work**, not prerequisites to finish the first vertical slice.
 
 ## 9. Ownership and interfaces
 
-- **Canonical owners:** Skillz maintainers control skill versions, registry pins, evaluator and release decisions. No auto-merge or implied owner approval.
-- **Repository engine:** owns optional experiment capture, replay and policy-lab code. Initial likely location `scripts/qa/recursive-improvement/`, with versioned fixtures under `tests/recursive-improvement/`. Exact paths require Phase-0 validation against current repo layout.
-- **Authored portable skill:** retains all mandatory references **inside its package** and an accessible static adversarial path. Optional replay component only if it materially improves consumer outcomes and ships self-contained. Do not make repo tools a hard runtime dependency.
-- **Data stores:** no public user preference data, memory files, raw user prompts, full private code, or tenant IDs. Synthetic/public sanitized fixtures only in source; ephemeral workspace for real governed experiments.
-- **Existing PR #826:** baseline reference; avoid mixing experimental replay code into its unrelated versioning/review gate. Strategy PR and issues may land independently.
+- **Skillz maintainers:** own passive authored skill packages, source/provenance records, architecture documents, optional synthetic fixtures, and explicitly invoked **maintenance-only QA**. No owned consumer runtime, benchmark harness service, scheduler or evaluator. Source approval remains normal maintainer governance.
+- **External consuming host:** owns execution of optional portable skill components, test/evaluator setup, private/ephemeral trace storage, real user consent, experiment budgets and any side effects. It must establish actual authorization; skill text or receipt flags are not grants.
+- **Self-contained authored skill:** retains all mandatory usage rules, schemas, dependencies and fallback behavior **inside the downloaded package**. Optional trace/replay helpers must be package-local and host-invoked, never call back to repository-owned scripts or infer permanent user storage.
+- **Repository QA:** [merged P0 #836](https://github.com/Knapp-Kevin/skillz/pull/836) supplies an offline structural checker under `scripts/qa/recursive-improvement/` and synthetic negative fixtures. That checker is for **explicit repository maintenance**, not the owner of future experiment replay/policy engines. Do not expand it into the consuming user's runner.
+- **Data boundaries:** no public preference profiles, raw user prompts, full private code, tenant IDs or portable auto-telemetry. Only explicitly sanitized synthetic/public evidence can be committed to source. Real user traces remain host-local unless the user separately authorizes a governed contribution.
+- **Existing PR #826:** baseline reference; avoid mixing policy laboratory work into its unrelated skill-version review. Strategy PR and implementation issues may land independently.
 
 ## 10. Architecture decisions to validate before implementation
 
@@ -195,7 +208,7 @@ No hidden background task or recurring automation. GitHub Actions minutes may be
 5. **Evaluator versions:** stable IDs pinned for fair comparison; schema upgrades require version migration tests and no cross-version claims by default.
 6. **Rollout:** start with one small vertical slice and planted failures, not automatic conversion of every authored skill.
 
-**Next concrete action:** Phase-0 issue produces a minimal validated event/decision fixture and failing tests; Phase-1 turns it into real trace capture. If these do not reveal usable branch structure or trustworthy evidence, halt before building a “dreaming” simulator that mostly simulates paperwork.
+**Next concrete action:** Phase 0 [#829](https://github.com/Knapp-Kevin/skillz/issues/829) is merged and complete (39 tests on Python 3.9/3.11/3.13, [CI run 44988171113](https://github.com/Knapp-Kevin/skillz/actions/runs/44988171113)). Phase 1 [#830](https://github.com/Knapp-Kevin/skillz/issues/830) must deliver a **standalone, host-invoked component** with no repository-owned runtime and real privacy/consent negative tests. If real authorized traces are unavailable, halt rather than invent a “dreaming” simulator.
 
 ## Research links
 
