@@ -12,7 +12,8 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: Business
   display-name: Healthcare Contract Forensics
-  version: 1.1.0
+  version: 1.1.1
+  license: MIT
 ---
 
 # Healthcare Contract Forensics
@@ -24,6 +25,11 @@ metadata:
 Trigger on explicit review of a specified employer/plan-sponsor/PBM/administrator agreement, rebate or pharmacy-payment arrangement, or contract-linked billing data. The operator must identify or approve the material in scope. Also trigger for a hypothetical/synthetic educational PBM contract audit when the user supplies or selects the example.
 
 Do **not** trigger merely for: a patient asking which insurance plan to buy; a benefits enrollment calculator; medical advice; a generic legal question without a contract; unbounded access to a company's file stores; requests to publicly accuse a counterparty; or a request for a live account/vendor integration. Refer personal plan comparison to a separately assessed workflow. If the user provides only a quote or headline, explain the required documents and offer a clearly hypothetical demonstration rather than hallucinating actual findings.
+
+**Distribution:** Original first-party instructions, references,
+and fictional fixtures under the [local MIT license](LICENSE).
+Standalone copies include their own license; no parent repository
+or third-party document is needed to establish reuse terms.
 
 ## Authority, privacy, and prerequisites
 
