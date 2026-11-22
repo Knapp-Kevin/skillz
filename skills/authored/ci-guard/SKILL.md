@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.6.0
+  version: 1.6.1
   license: MIT
 ---
 
@@ -327,6 +327,29 @@ never authenticates external workflow semantics or real provider
 receipts and reports runner-minute and critical-path savings
 `NOT_MEASURED`; user/host execution and a final exact-head
 qualification are separate.
+
+## P0: reconcile workflow source and local acceptance oracles
+
+Do not claim a declared simulator graph matches the repository merely
+because it qualifies in a synthetic scenario. The optional
+[exact-source workflow/oracle binder](components/source-reconciliation.md)
+uses `scripts/ci_source_reconcile.py` to compare the current v3 job/needs
+manifest against the complete `.github/workflows/` file inventory,
+literal job-level `if`, `needs` and `runs-on`, exact source SHA-256
+digests, and bounded Python AST static acceptance-test anchors.
+Unexpected workflow files, missing or renamed verifiers, obsolete checker
+conditions, stale digests, unsupported YAML, matrix or reusable-workflow
+semantics, and symlinks/path traversal **HOLD** rather than allowing a
+false source-qualified graph.
+
+This intentionally supports **only a narrow literal YAML subset**.
+`STATIC_SOURCE_RECONCILED` establishes textual evidence, not a full
+GitHub YAML parse, an executed conformance test, authentication of
+the claimed Git commit or proof that `if` expressions behave as
+their normalized labels imply. Execute the repository's own
+source checks and negative controls on the exact checkout before
+costly CI qualification. Reconcile actual provider run/job evidence
+separately, and never silence a stale validator by deleting its tests.
 
 ## P0: reconcile actual host run/job receipts with the normalized graph
 
@@ -693,7 +716,8 @@ Use [cross-workflow overlap regressions](examples/test_ci_overlap.py),
 [legacy classification regressions](examples/test_change_classification.py)
 and the [executable plan/qualification tests](examples/test_ci_plan.py),
 [observed-run comparison tests](examples/test_compare_ci_runs.py),
-[host reconciliation negative controls](examples/test_ci_host_reconcile.py), plus
+[host reconciliation negative controls](examples/test_ci_host_reconcile.py),
+[source and oracle drift falsifiers](examples/test_ci_source_reconcile.py), plus
 [adversarial acceptance cases](examples/acceptance.md), including deliberate
 negative controls, and distinguish controlled analyst emulation from
 independently observed host behavior. A shorter pipeline that loses unique
