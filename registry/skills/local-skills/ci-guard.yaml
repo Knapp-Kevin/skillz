@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.5"
+skill_version: "1.5.6"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "30-file standalone MIT package; optional Python 3 stdlib source-graph candidate and cutover checker, separate consumer-run Actions evidence required. No always-on service or mandatory independent model."
-content_blob_sha: d1fefd68405080070db557f97d9d511176aefc66
-complete_package_tree_sha: 7c06e7057310e9fc4819e2d892d4bf4390cf40f8
+dependencies: "34-file standalone MIT package. Optional read-only stdlib ci_scenario.py normalized whole-workflow comparator extends canonical ci_overlap.py and ci_self_repair.py, not their duplication. No external provider, consumer scripts or always-on service; independent host acceptance remains required."
+content_blob_sha: 2065f60fb2e3f8052c6695cd473ae1813e3561fb
+complete_package_tree_sha: c0b3dae61ace2ff104a647a24d49858de114e97e
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.5 responds to issue #857 added evidence: two independent tests occupied paid runners waiting for a single shared artifact; apparent slow test runtime must be classified as dependency wait. The P0 self-repair scanner now requires artifact-wait inventory and UTC request/arrival/completion evidence, detects paid idle minutes, demands safe producer scheduling with same-run custody and both producer-failure and intentionally-skipped alternate-route propagation. Original cross-workflow duplicate auditor unchanged. 23 authored self-repair regressions, including nine new artifact-wait tests and bundled negative fixture, exact-head GitHub QA pending; no consumer cost savings or branch-protection acceptance measured. Complete 30-file offline MIT package."
+rationale: "v1.5.6 implements source-scope issue #861 SIMULATE as an optional fail-closed normalized event/job/needs/matrix/status checker. Two 8-workflow candidate graphs, ten scenario fixtures, 37 new executable Python adversarial cases locally PASS. Rejects unsupported GitHub expressions, ambiguous globs and cross-workflow needs; refuses early policy gates, spoofed/stale/draft statuses, duplicate/drop obligations, validator drift and independent-lane artifact exports. Integrates with existing canonical overlap/self-repair components. GitHub-hosted current-version complete QA pending. Real consumer YAML interpretation, static conformance compilation, runtime export guard enforcement and cost savings NOT_MEASURED."
