@@ -167,10 +167,20 @@ cost reduction. A local fixture is bundled:
 ```sh
 python3 scripts/ci_repair_preflight.py --input examples/ci-self-repair-fixture.json
 python3 -B -m unittest discover -s examples -p 'test_ci_repair_preflight.py' -v
+python3 scripts/ci_repair_preflight.py --input examples/ci-artifact-wait-fixture.json
+python3 -B -m unittest discover -s examples -p 'test_ci_artifact_wait.py' -v
 ```
 
 The fictional fixture models 110 seconds total compile but 4,500
-seconds case execution. It flags repeated immutable setup separately
+seconds case execution. A separate fictional
+[shared-artifact wait fixture](../examples/ci-artifact-wait-fixture.json)
+models a 30-minute producer and two consumers claiming a combined
+3,490 runner-occupied seconds waiting on that artifact while performing
+only 13 seconds of case execution. These are synthetic timings and
+do not demonstrate real runner billing or critical-path savings.
+The wait classifier requires claimed artifact request, availability,
+producer identity and same-run revision data; without that evidence,
+long-lived processes remain unproven compute-versus-blocking causes. It flags repeated immutable setup separately
 from mutated fresh-directory work and individual unique assertions.
 The fields `phase_observations[].run_id`, environment, revision,
 `on_critical_path`, p50/p90 and cost are **analyst supplied**;
