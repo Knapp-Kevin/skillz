@@ -182,7 +182,8 @@ def report(data):
         distinct = (before.get("run_id"), before.get("attempt")) != (
             after.get("run_id"), after.get("attempt"))
         check(distinct, "baseline and optimized are the same run attempt")
-        if not same_inputs:
+        if not all(before.get(k) == after.get(k)
+                   for k in ("scenario", "runner_profile", "cache_class")):
             invalid_pair = True
         billed = old["billed_runner_minutes"] is not None and new["billed_runner_minutes"] is not None
         if mode == "strict" and same_inputs and billed:
@@ -249,6 +250,8 @@ def report(data):
         indicated = "NO_MEASURED_COMPARISON"
     if not data["assurance"]["cutover_verified"] or not data["assurance"]["old_workflows_retired"]:
         verdict = "NOT_CUT_OVER"
+    elif not comparable and has_receipts and (bool(scopes) or mode == "longitudinal"):
+        verdict = "NOT_COMPARABLE"
     elif assurances["verdict"] != "QUALIFIED":
         verdict = "REGRESSION"
     elif not comparable and mode != "strict":
@@ -268,7 +271,7 @@ def report(data):
             "optimized": [p["optimized"] for p in aggregate],
             "comparison_eligibility": {"mode": mode,
                                        "status": ("STRICT_AS_SUPPLIED" if comparable else
-                                                  "DIRECTIONAL_ONLY" if mode == "longitudinal" and has_receipts and not scopes else
+                                                  "DIRECTIONAL_ONLY" if mode == "longitudinal" and has_receipts and not scope_differences and not invalid_pair else
                                                   "NOT_COMPARABLE" if has_receipts else "NOT_MEASURED"),
                                        "strict_comparator_executed": strict_checked,
                                        "scope_differences": scopes,
