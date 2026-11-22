@@ -167,6 +167,29 @@ class TraceTests(unittest.TestCase):
             trace.create(link, self.experiment, self.evaluator, self.context,
                          self.source, self.state, "schema-compatibility", True)
 
+    def test_fifo_source_is_blocked_without_hanging(self):
+        fifo = self.root.parent / "untrusted-source.fifo"
+        os.mkfifo(fifo, 0o600)
+        cmd = [sys.executable, str(HERE / "trace.py"),
+               "--root", str(self.root), "--experiment-id", self.experiment,
+               "init", "--evaluator-id", self.evaluator,
+               "--context-id", self.context,
+               "--task-family", "schema-compatibility",
+               "--source", str(fifo), "--state", str(self.state),
+               "--approved-public"]
+        run = subprocess.run(cmd, capture_output=True, timeout=1.5, check=False)
+        self.assertEqual(run.returncode, 2)
+        self.assertIn(b"BLOCKED", run.stderr)
+
+    def test_fifo_trace_log_is_blocked_without_hanging(self):
+        os.mkfifo(self.path(), 0o600)
+        cmd = [sys.executable, str(HERE / "trace.py"),
+               "--root", str(self.root), "--experiment-id", self.experiment,
+               "verify"]
+        run = subprocess.run(cmd, capture_output=True, timeout=1.5, check=False)
+        self.assertEqual(run.returncode, 2)
+        self.assertIn(b"BLOCKED", run.stderr)
+
     def test_input_symlink_rejected(self):
         link = self.root.parent / "evidence-link"
         link.symlink_to(self.source)
