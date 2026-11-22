@@ -1,41 +1,43 @@
 schema_version: 1
 skill_name: recursive-refinement-trace
-skill_version: "0.1.0"
+skill_version: "0.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/recursive-refinement-trace/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/recursive-refinement-trace/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 0f03b4bffb5abd6c2e09dea1f0a38a67056f66cb
-complete_package_tree_sha: 79258fe8c7a53691d19cca5610dbfdbb95f1e31e
+content_blob_sha: cd00d434317c8e6f5298067cbc6654be8436621c
+complete_package_tree_sha: 6262c36a2806bc76f79c80e45ce69552197b2d9b
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
 verification_status: verified
-verification_basis: exact-eight-file-source-identity-and-offline-adversarial-tests
+verification_basis: exact-ten-file-package-source-and-82-local-executed-adversarial-tests
 validation_status: not-run
 validation_note: >-
-  Local Python 3.13.5 ran 40/40 adversarial unittest methods against exact
-  trace.py blob 78a134e182bd0206d7c81fdc1c51b8b4bce2d865 and
-  test_trace.py blob b4ae40a341bfededc457cf7006edc32796f4a9f6.
-  FIFO input and trace paths caused hanging opens, reproduced by timeout-\n  guarded negative cases and fixed by nonblocking file opens; 40/40 tests pass.\n  A renamed trace was shown to misattribute experiment identity; the repaired\n  exact-source recorder rejects it. The suite now includes 40 tests.\n  Synthetic duplicate-preference fixture exits nonzero and corrected
-  fixture exits zero; host-supplied receipts do not authenticate execution
-  or actual user clearance. P0-compatible closed-world export is locally
-  checked; independent consuming agent, real user outcome, Windows ACL,
-  hostile same-UID and distributed-writer correctness remain NOT_RUN.
+  Exact recorder trace.py blob 78a134e182bd0206d7c81fdc1c51b8b4bce2d865,
+  original 40 method test_trace.py blob b4ae40a341bfededc457cf7006edc32796f4a9f6,
+  replay.py blob 5f9c5da1f4a7f346b32533026a7b54de151aaf86, and new
+  42 method test_replay.py blob c6b91207ac1087a36fadcc58a15995d422a717c2
+  were all executed locally with Python 3.13.5, 82/82 PASS. Real synthetic
+  recorder integration confirmed policy divergence and read-only operation.
+  Separate executed receipt under docs/evals/receipts/2026-11-22-rsi-phase2-observed-replay.json.
+  No Python 3.9/3.11 execution, independent consuming agent, Windows ACL,
+  same-UID hostile process, real user outcome or policy win was demonstrated.
 rubric: docs/skill-verification.md
 rubric_score: "not-scored"
 tags:
-  use_case: [recursive-improvement, adversarial-refinement, discovery-traces]
+  use_case: [recursive-improvement, adversarial-refinement, discovery-traces, observed-replay]
   lifecycle: [evaluation, preservation, experimentation]
-  characteristic: [standalone, host-invoked, offline, privacy-bounded]
-  authority: [explicit-user-scoped-write, read-only-inspection]
+  characteristic: [standalone, host-invoked, offline, privacy-bounded, deterministic]
+  authority: [explicit-user-scoped-write, read-only-replay]
   portability: high
 notes: >-
-  A structural first-party source verification and actual local offline tests
-  are distinct from external host behavioral validation. No repo-owned
-  runtime or automatic CI. Private source/evidence bytes and local paths
-  are never included in trace event fields, though even a digest can
-  disclose equality when combined with outside knowledge; use only
-  authorized cleared public/synthetic inputs. State/source snapshots are
-  supplied bytes, not a verified complete workspace snapshot.
+  Captured source/state fingerprints cover exactly supplied cleared files,
+  not a complete environment. Local SHA chains prove internal integrity,
+  not execution authenticity, user permission or policy effectiveness.
+  No future counterfactual reward is imputed from unseen branches; each
+  policy follows a single causally compatible recorded lineage and
+  compares measured costs without ranking/promoting a winner. Original
+  v0.1.0 recorder privacy, identity, FIFO, revocation and locking regressions
+  remain intact. Package runs without repository-owned CI/runtime.
