@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.4"
+skill_version: "1.5.5"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "29-file standalone MIT package; optional Python 3 stdlib source-graph candidate and cutover checker, separate consumer-run Actions evidence required. No always-on service or mandatory independent model."
-content_blob_sha: d4ad020828d1175625d3478646165b813bb48d69
-complete_package_tree_sha: 66cd22ccd873d26e7ac419fc029c51438837ccbb
+dependencies: "30-file standalone MIT package; optional Python 3 stdlib source-graph candidate and cutover checker, separate consumer-run Actions evidence required. No always-on service or mandatory independent model."
+content_blob_sha: d1fefd68405080070db557f97d9d511176aefc66
+complete_package_tree_sha: 7c06e7057310e9fc4819e2d892d4bf4390cf40f8
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.4 implements issue #857 one-pass CI_SELF_REPAIR: mandatory read-only inventory and inherited-event fanout forecast BEFORE first expensive repair; phase-level test p50/p90 with preserved unique detection, isolation/immutable reuse limits, cheap draft, exact-head readiness and rollback. Adds optional stdlib ci_self_repair.py, 14 planted regression methods and anonymous source-only fixture; existing ci_overlap.py remains canonical for nested dedup. 29-file standalone MIT package. Full changed-version GitHub QA pending at PR creation; no consumer workflow changed, no actual billed runner/critical-path gains verified."
+rationale: "v1.5.5 responds to issue #857 added evidence: two independent tests occupied paid runners waiting for a single shared artifact; apparent slow test runtime must be classified as dependency wait. The P0 self-repair scanner now requires artifact-wait inventory and UTC request/arrival/completion evidence, detects paid idle minutes, demands safe producer scheduling with same-run custody and both producer-failure and intentionally-skipped alternate-route propagation. Original cross-workflow duplicate auditor unchanged. 23 authored self-repair regressions, including nine new artifact-wait tests and bundled negative fixture, exact-head GitHub QA pending; no consumer cost savings or branch-protection acceptance measured. Complete 30-file offline MIT package."
