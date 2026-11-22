@@ -1,22 +1,29 @@
 schema_version: 1
 skill_name: agent-failure-boundary-analysis
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/agent-failure-boundary-analysis/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 447d9934db360eb3ff6309a5033f119914c1eced
-complete_package_tree_sha: cd86911fe032fc423c8e2008d3683522490d3f04
+content_blob_sha: f93214f32cf6810a3665b7ff28180974c4111031
+complete_package_tree_sha: cd6d35d48621a54cd5737d3a533162b7e398dbfb
 characterized_at: "2026-11-20"
-reviewed_at: "2026-11-20"
-verification_status: verified
-verification_basis: maintainer-static-review-and-31-local-offline-method-tests
+reviewed_at: "2026-11-22"
+verification_status: unverified
+verification_basis: v1.2.1-source-path-symlink-fix-planted-negative-tests-not-run
 validation_status: not-run
-validation_note: "31/31 real local Python incident trace-checking method tests pass, with separately retrieved public GitHub receipt negative control. No isolated old/new host skill evaluation; source authenticity and user outcome unverified."
+validation_note: >-
+  v1.2.1 source correction refuses symlinked JSON input or any
+  symlinked ancestor before stat/open. Two new negative methods authored;
+  33 test methods now present; full changed-version Python suite
+  NOT_RUN. Historical earlier-version tests cannot qualify these bytes.
+  Concurrent malicious path-replacement protection and agent-host
+  behavioral validation NOT_RUN.
+
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_EXACT_V1_2_1"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]
@@ -24,7 +31,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Current v1.2 six-file package statically reviewed 18/20, 31/31 real local
-  Python evidence-method tests. docs/reviews/2026-11-20-agent-failure-v120-executable-evidence-review.md.
-  Host agent skill A/B NOT RUN; source authenticity unverified; historical parity,
-  user outcomes and 1.5x overall effectiveness NOT PROVEN.
+  Exact v1.2.1 source review: safe lexical input preflight,
+  negative file/parent symlink fixtures, unchanged permitted first task.
+  Current Python behavior and external host outcome remain NOT_RUN.
