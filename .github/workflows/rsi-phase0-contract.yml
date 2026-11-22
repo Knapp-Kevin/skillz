@@ -36,5 +36,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Execute adversarial Phase-0 contract fixtures
         run: python -m unittest discover -s tests/recursive-improvement -p 'test_*.py' -v
+      - name: Read-only CLI smoke with trusted synthetic evaluator pins
+        run: python scripts/qa/recursive-improvement/contract.py tests/recursive-improvement/fixtures/two-branch.json --expected-evaluator schema-v1 --expected-context isolated-v1
       - name: Compile validator without third-party imports
         run: python -m py_compile scripts/qa/recursive-improvement/contract.py
