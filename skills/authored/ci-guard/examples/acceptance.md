@@ -228,3 +228,24 @@ Actions ran the design or that a project passed its Rust/shell/YAML
 conformance suite. Runtime independent-lane export blocking must
 be separately planted and observed by the authorized consuming host.
 The source comparison is a planning safeguard, not production evidence.
+
+## Results-proof after-cutover falsifiers (issue #867)
+
+The [portable results proof](../components/results-proof.md) is exercised by
+[16 executable adverse scenarios](test_ci_results_proof.py). Synthetic data
+never proves delivered consumer savings. These requirements complement, and
+do not replace, the existing strict [receipt comparator](../scripts/compare_ci_runs.py).
+
+| ID | Adversarial fixture | Required behavior |
+| --- | --- | --- |
+| RP-01 | Matched same-source/provider-profile runs, two distinct attempts, equal unique obligations and seeded faults | Compute signed raw/percent deltas and both JSON/Markdown artifacts, explicitly unauthenticated until provider verification |
+| RP-02 | Full release with native matrix vs ready PR missing native | NOT_COMPARABLE and NOT_QUALIFIED; no fabricated giant savings |
+| RP-03 | Billed runner total falls 40%, longest path unchanged | Report only runner benefit, latency saving zero |
+| RP-04 | Static 20% improvement forecast, no observed pair | NOT_MEASURED, never PROVED_IMPROVEMENT |
+| RP-05 | Required failure detector removed or legacy workflow still triggered | NOT_QUALIFIED / NOT_CUT_OVER regardless of billable minutes |
+| RP-06 | Baseline/optimized source revision differs | Strict comparison rejected; explicit weaker longitudinal mode is DIRECTIONAL_ONLY |
+| RP-07 | Executed job timestamps exist but billed runner values missing | Raw minutes available, billed minutes/dollars NOT_MEASURED, original strict comparator still refuses incomplete billing |
+| RP-08 | Billable minutes fall while critical path or earliest-failure feedback increases | REGRESSION or visibly identified tradeoff, no automatic winner |
+
+Full provider rulesets, invoices and host-executed seeded faults are beyond
+this offline package and remain independently required in a consumer review.
