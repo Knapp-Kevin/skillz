@@ -26,10 +26,10 @@ class ScenarioTests(unittest.TestCase):
         if edit:edit(d)
         return sim.run(d)
 
-    def test_two_designs_ten_scenarios_twenty_expected_outcomes(self):
+    def test_two_designs_eleven_scenarios_twenty_two_expected_outcomes(self):
         r=self.run_doc()
         self.assertEqual(r['status'],'STRUCTURAL_PASS',r['issues'])
-        self.assertEqual(len(r['results']),20)
+        self.assertEqual(len(r['results']),22)
         self.assertTrue(all(x['matches_expected'] for x in r['results']))
         self.assertEqual(len(case()['designs'][0]['workflows']),8)
         self.assertFalse(r['real_provider_semantics_authenticated'])
@@ -309,5 +309,78 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(r['status'],'HOLD')
         self.assertTrue(any('QUALIFICATION_GATE_MISSING_PREREQUISITES' in i
                             for x in r['results'] for i in x['issues']))
+
+
+    def test_push_release_dispatch_effects_independent_of_pr_gate(self):
+        result=self.run_doc()
+        for design in ('blanket-barrier','split-independent'):
+            for scenario,effect in (('postmerge-push','forward-port'),
+                                    ('release-without-gate','tag-validation'),
+                                    ('dispatch-regeneration','regenerate-assets')):
+                with self.subTest(design=design,scenario=scenario):
+                    row=result_for(result,design,scenario)
+                    self.assertFalse(row['actual_qualifies'])
+                    self.assertEqual(row['required_side_effects'],[effect])
+                    self.assertEqual(row['executed_side_effects'][effect],['success'])
+                    self.assertFalse(any('SIDE_EFFECT' in issue for issue in row['issues']))
+
+    def test_missing_forward_effect_holds_even_when_gate_intentionally_false(self):
+        def edit(doc):
+            for design in doc['designs']:
+                next(j for j in design['jobs'] if j['id']=='forward')['routes']=['light']
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        for design in ('blanket-barrier','split-independent'):
+            self.assertIn('MISSING_OR_FAILED_SIDE_EFFECT:forward-port',
+                          result_for(result,design,'postmerge-push')['issues'])
+
+    def test_duplicate_tag_effect_is_not_extra_assurance(self):
+        def edit(doc):
+            for design in doc['designs']:
+                duplicate=copy.deepcopy(next(j for j in design['jobs'] if j['id']=='tag'))
+                duplicate['id']='tag-copy'
+                design['jobs'].append(duplicate)
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        self.assertIn('DUPLICATE_SIDE_EFFECT:tag-validation',
+                      result_for(result,'split-independent','release-without-gate')['issues'])
+
+    def test_unexpected_effect_requires_policy_approval(self):
+        def edit(doc):
+            for design in doc['designs']:
+                next(j for j in design['jobs'] if j['id']=='forward')['side_effect']='unexpected-forward'
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        row=result_for(result,'split-independent','postmerge-push')
+        self.assertIn('UNEXPECTED_SIDE_EFFECT:unexpected-forward',row['issues'])
+        self.assertIn('MISSING_OR_FAILED_SIDE_EFFECT:forward-port',row['issues'])
+
+    def test_failed_effect_does_not_count_as_done(self):
+        def edit(doc):
+            next(s for s in doc['scenarios'] if s['id']=='release-without-gate')['forced_outcomes']['tag']='failure'
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        self.assertIn('MISSING_OR_FAILED_SIDE_EFFECT:tag-validation',
+                      result_for(result,'split-independent','release-without-gate')['issues'])
+
+    def test_normative_effects_cannot_be_edited_away_with_candidate(self):
+        def edit(doc):
+            for design in doc['designs']:design['normative_side_effects']['push']=[]
+        result=self.run_doc(edit)
+        self.assertEqual(result['status'],'HOLD')
+        self.assertIn('NORMATIVE_SIDE_EFFECTS_DRIFT',
+                      result_for(result,'split-independent','postmerge-push')['issues'])
+
+    def test_missing_scenario_side_effect_inventory_is_invalid(self):
+        def edit(doc):doc['scenarios'][0].pop('required_side_effects')
+        with self.assertRaisesRegex(sim.Invalid,'missing required fields'):
+            self.run_doc(edit)
+
+    def test_other_job_requires_explicit_effect_kind(self):
+        def edit(doc):
+            for design in doc['designs']:
+                next(j for j in design['jobs'] if j['id']=='forward').pop('effect_kind')
+        with self.assertRaisesRegex(sim.Invalid,'explicit effect_kind'):
+            self.run_doc(edit)
 
 if __name__=='__main__':unittest.main()
