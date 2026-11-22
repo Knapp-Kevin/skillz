@@ -132,6 +132,29 @@ class ExecutionOverlapTest(unittest.TestCase):
         self.assertTrue(all(x["classification"] == "UNPROVEN" for x in r["overlaps"]))
         self.assertEqual(r["structural_assessment"], "HOLD")
 
+    def test_repetition_with_distinct_stochastic_fault_receipts_is_preserved(self):
+        d = fixture()
+        for label, evidence in (("accept-repro", "synthetic:stochastic-fault-A"),
+                                ("other-repro", "synthetic:stochastic-fault-B")):
+            t = byid(d, label)
+            t["repetition_purpose"] = "nondeterminism"
+            t["independent_assurance"] = "Repeated identical run detects stochastic failure"
+            t["assurance_receipt"] = evidence
+        for x in d["dispositions"]:
+            x["decision"] = "KEEP"
+        out = overlap.audit(d)
+        self.assertEqual(out["structural_assessment"], "PASS")
+        self.assertTrue(all(x["classification"] == "JUSTIFIED_REPETITION" for x in out["overlaps"]))
+
+    def test_three_paths_two_shared_pr_events_still_detect_duplicate(self):
+        d = fixture()
+        d["nodes"].append(node("manual-check", "workflow", ["repro-job"],
+                               stages=["candidate"], entrypoint=True,
+                               events=["workflow_dispatch"]))
+        out = overlap.audit(d)
+        self.assertEqual(out["structural_assessment"], "HOLD")
+        self.assertEqual(out["overlaps"][0]["classification"], "PARTIAL_OVERLAP")
+
     def test_changed_toolchain_alone_does_not_prove_independent_detection(self):
         d = fixture()
         byid(d, "other-repro")["toolchain"] = "rust:1.86"
