@@ -66,3 +66,16 @@ winner reversal, duplicate IDs, invalid numbers and schema, missing
 source handles, nonfinite values, missing cells, untrusted source text,
 CLI stdout-only operation, duplicate JSON and oversized input.
 This is executable method evidence, not independent agent-host A/B.
+
+## DECISION-PATH: portable offline source-boundary negative controls (v1.2.1)
+
+Only this skill folder is installed, and a user supplies a synthetic
+JSON input path. First, a regular in-scope JSON input preserves existing
+checker behavior and its evidence limits. Next, the apparent source
+file is a symlink to a different folder; finally, an ancestor directory
+is symlinked while the basename appears unchanged. In both negative
+variants the optional checker must return **invalid input before any
+content read** and must produce no purported result. The bundled
+Python source tests include both variants, but a source-file receipt
+must not be passed off as independently authenticated authorization,
+model-host behavior or adversarial concurrent filesystem protection.
