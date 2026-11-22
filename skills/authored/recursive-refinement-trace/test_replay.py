@@ -1,31 +1,18 @@
 """Executable adversarial contract tests for optional observed-only replay."""
 import copy
 import hashlib
-import importlib
-import importlib.util
 import io
 import json
 from pathlib import Path
 import os
 import sys
 import tempfile
-import types
 import unittest
 from contextlib import redirect_stdout, redirect_stderr
 from unittest import mock
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-if not (HERE / "trace.py").exists():
-    fake = types.ModuleType("trace")
-    fake.TASKS = frozenset({"schema-compatibility", "path-isolation", "ci-classification"})
-    fake.ACTIONS = frozenset({"inspect", "adversarial-probe", "run-targeted-verification", "preservation-check"})
-    fake.OUTCOMES = frozenset({"OBSERVED_PASS", "OBSERVED_FAIL", "BLOCKED"})
-    fake.TraceError = type("TraceError", (ValueError,), {})
-    fake.inspect = lambda *a, **k: None
-    fake.public_source = lambda path: hashlib.sha1(b"blob " + str(len(Path(path).read_bytes())).encode() + b"\0" + Path(path).read_bytes()).hexdigest()
-    fake.public_snapshot = lambda path: "sha256:" + hashlib.sha256(Path(path).read_bytes()).hexdigest()
-    sys.modules["trace"] = fake
 import replay
 
 BLOB = "a" * 40
@@ -317,7 +304,6 @@ class ReplayContract(unittest.TestCase):
         self.assertEqual(replay.compare(fixture(), budget=3, source=BLOB, state=STATE,
                                         evaluator=EVALUATOR, context=CONTEXT)["winner"], None)
 
-    @unittest.skipUnless((HERE / "trace.py").exists(), "Requires actual bundled Phase-1 trace implementation")
     def test_real_capture_then_replay_and_read_only_cli(self):
         import trace as actual
         with tempfile.TemporaryDirectory() as base:
@@ -348,6 +334,63 @@ class ReplayContract(unittest.TestCase):
                 self.assertEqual(replay.main(args), 0)
             self.assertIn("COMPARISON_NOT_A_PROMOTION_DECISION", out.getvalue())
             self.assertEqual((root / "synthetic-replay.trace.jsonl").read_bytes(), before)
+
+    def test_actual_host_recorded_sibling_policies_diverge_without_mutation(self):
+        import trace as actual
+        with tempfile.TemporaryDirectory() as base:
+            root = Path(base) / "private"
+            root.mkdir(mode=0o700)
+            source, state, evidence = [Path(base) / name for name in
+                                      ("source.txt", "state.txt", "evidence.json")]
+            source.write_text("public synthetic source", encoding="utf-8")
+            state.write_text('{"version":1}', encoding="utf-8")
+            evidence.write_text('{"test":"public-synthetic"}', encoding="utf-8")
+            created = actual.create(root, "two-sibling-replay", EVALUATOR,
+                                    CONTEXT, source, state, FAMILY, True)
+            parent = created["root_node_id"]
+            actual.observe(root, "two-sibling-replay", parent, EVALUATOR, CONTEXT,
+                           "preservation-check", "OBSERVED_PASS", FAMILY,
+                           source, state, source, state, evidence, 1, 8, True)
+            actual.observe(root, "two-sibling-replay", parent, EVALUATOR, CONTEXT,
+                           "adversarial-probe", "OBSERVED_FAIL", FAMILY,
+                           source, state, source, state, evidence, 2, 15, True)
+            log = root / "two-sibling-replay.trace.jsonl"
+            original = log.read_bytes()
+            exported = actual.inspect(root, "two-sibling-replay", export=True)
+            settings = dict(budget=2, source=actual.public_source(source),
+                            state=actual.public_snapshot(state),
+                            evaluator=EVALUATOR, context=CONTEXT)
+            report = replay.compare(exported, **settings)
+            self.assertTrue(report["distinct_recorded_paths"])
+            self.assertEqual([x["test_invocations"] for x in report["policies"]], [1, 2])
+            self.assertEqual([x["wall_ms"] for x in report["policies"]], [8, 15])
+            self.assertIsNone(report["winner"])
+            self.assertEqual(log.read_bytes(), original)
+            with redirect_stdout(io.StringIO()) as output:
+                self.assertEqual(replay.main([
+                    "--root", str(root), "--experiment-id", "two-sibling-replay",
+                    "--source", str(source), "--state", str(state),
+                    "--expected-evaluator", EVALUATOR,
+                    "--expected-context", CONTEXT, "--budget", "2",
+                    "--compare", "--approved-public"]), 0)
+            self.assertIn('"distinct_recorded_paths": true', output.getvalue())
+            self.assertEqual(log.read_bytes(), original)
+
+    def test_unknown_branch_rate_denominator_is_recorded_decisions(self):
+        r = execute(requested_node="n-phantom")
+        self.assertEqual(r["unknown_branch_rate"], {"numerator": 1, "denominator": 1})
+        self.assertEqual(execute(state=STATE2)["unknown_branch_rate"],
+                         {"numerator": 0, "denominator": 0})
+
+    def test_compare_respects_max_steps(self):
+        d = fixture()
+        child = node("n-followup", "n-attack", source=BLOB2, state=STATE2)
+        d["nodes"].append(child)
+        d["receipts"].append(with_receipt(child))
+        r = replay.compare(d, budget=4, source=BLOB, state=STATE,
+                           evaluator=EVALUATOR, context=CONTEXT, max_steps=1)
+        self.assertEqual(r["policies"][1]["terminal_status"], "STEP_LIMIT")
+        self.assertEqual(r["policies"][1]["observed_nodes_visited"], 1)
 
     def test_cli_no_approval_fails_without_reading_trace(self):
         with mock.patch.object(replay.capture, "inspect", side_effect=AssertionError("read trace")):
