@@ -5,6 +5,27 @@ classification is introduced, or an optimized path would change protected
 CI obligations. A classifier added next to an unchanged expensive workflow
 saves **zero** minutes by itself. Avoid celebrating labels as optimization.
 
+## Mandatory upstream execution deduplication inventory
+
+**First apply [cross-workflow execution-graph deduplication](execution-graph-deduplication.md).**
+Resolve all workflow triggers and transitive composite/task-runner/script
+invocations to effective terminal checks before selecting pieces to
+separate or share. A monolithic bootstrap may call a verifier that is also
+invoked by a separately triggered workflow. Detect that cost **before**
+adjusting draft dispatch or path classification. Different workflow/job/
+task names are not evidence of unique verification.
+
+Inventory baseline and proposed execution graphs for candidate,
+draft, push/PR and release events, expand matrices and compare exact
+revision, toolchain, inputs, OS/environment, trust and failure boundary.
+For every overlap, assign `EXACT_DUPLICATE`, `PARTIAL_OVERLAP`,
+`JUSTIFIED_REPETITION` or `UNPROVEN` with a documented
+`CONSOLIDATE`, `KEEP`, `RELOCATE` or `VERIFY` outcome.
+Do not remove unique release, signing, native-platform or stochastic
+detection. An old unconditional standalone runner still invoking a
+consolidated check is a **failed optimization** even when the
+new classifier and grouped jobs are correct.
+
 ## Inventory before decomposition
 
 Inspect the actual workflow YAML, referenced reusable workflows, scripts,
