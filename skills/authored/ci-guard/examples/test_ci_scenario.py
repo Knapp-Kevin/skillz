@@ -292,4 +292,22 @@ class ScenarioTests(unittest.TestCase):
             self.assertEqual(p.returncode,2)
             self.assertIn('too large',p.stderr)
 
+    def test_ambiguous_github_style_path_glob_requires_normalization(self):
+        def edit(doc):
+            for d in doc['designs']:
+                d['workflows'][0]['paths']=['src/*']
+        with self.assertRaisesRegex(sim.Invalid,'UNSUPPORTED_SEMANTICS'):
+            self.run_doc(edit)
+
+    def test_qualifying_job_cannot_run_before_prerequisite_verifiers(self):
+        def edit(doc):
+            for d in doc['designs']:
+                gate=next(j for j in d['jobs'] if j['id']=='gate-full')
+                gate['needs']=[]
+                gate['conformance_needs']=[]
+        r=self.run_doc(edit)
+        self.assertEqual(r['status'],'HOLD')
+        self.assertTrue(any('QUALIFICATION_GATE_MISSING_PREREQUISITES' in i
+                            for x in r['results'] for i in x['issues']))
+
 if __name__=='__main__':unittest.main()
