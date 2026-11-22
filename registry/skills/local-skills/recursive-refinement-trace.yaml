@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: recursive-refinement-trace
 display_name: Recursive Refinement Trace
-skill_version: "0.3.0"
+skill_version: "0.3.1"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/recursive-refinement-trace/SKILL.md
@@ -19,13 +19,13 @@ portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-posix-python-stdlib
 dependencies: >-
-  Original ten-file first-party standalone skill with explicit host-invoked
+  Original twelve-file first-party standalone skill with explicit host-invoked
   Python 3.9+ standard-library capture and read-only observed replay helpers.
   No Skillz monorepo, sibling skill, network, automatic CI or second agent
   required. POSIX secure host-owned mode-0700 storage is required for capture
   and replay input; read-only reasoning remains available without running code.
-content_blob_sha: bc95b24eb9a477576aa7071e96f5badbbf04a413
-complete_package_tree_sha: 4276df0fbfdf2c76cde5878ff6204a6c50bb8c51
+content_blob_sha: e4f8a1668b48646c99ae2aaf60dac076aae3ebe6
+complete_package_tree_sha: d46950b4d62d3eae06080b980b3ed7c8d8767014
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
@@ -36,3 +36,7 @@ rationale: >-
   20 new adversarial tests ship with the package, but current exact
   source Python execution is NOT_RUN. v0.2.0 84/84 results are historical
   only. No independent host trial, policy improvement or user gain verified.
+
+# 2026-11-22: v0.3.1 refuses symlinked JSON input and ancestors before stat/read.
+# Two planted negative Python tests; full current-version suite is pending.
+# Lexical source preflight does NOT address hostile concurrent file replacement.
