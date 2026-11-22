@@ -190,6 +190,20 @@ duplicate**, including removed release signing, missing/stale
 authoritative receipts, draft/ready stage integrity, retired-path
 evidence and independently justified platform repetition.
 
+## Below-terminal test-internal cost and one-pass self-repair
+
+For expensive inherited CI, continue beyond the terminal command:
+inspect actual setup, fixture creation, compilation, individual
+test bodies, differential/oracle, mutation and export timings.
+A terminal verifier may contain dozens of unique assertions yet
+repeat immutable setup. Do not infer those assertions are redundant.
+Use the bundled [CI_SELF_REPAIR component]
+(ci-self-repair-and-test-cost.md) to forecast all event/matrix
+fanout **before** releasing any expensive repair candidate and
+stage one coordinated cheap draft correction. Keep this script
+(`ci_overlap.py`) as the canonical cross-workflow execution auditor;
+the separate optional phase-cost preflight does not duplicate it.
+
 ## Adversarial migration acceptance
 
 1. Plant a composite command that invokes the same verifier as a separate
