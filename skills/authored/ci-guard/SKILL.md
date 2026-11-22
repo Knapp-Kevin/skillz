@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.5.8
+  version: 1.5.9
   license: MIT
 ---
 
@@ -309,7 +309,16 @@ manifest `runtime_guard` flag is not proof it actually blocks code.
 Report **each candidate's** declared scheduled jobs, per-shard
 verification, explicit required statuses, estimated billed runner-job
 time, predicted critical path and earliest failure signal. Do not
-automatically select the candidate with fewer jobs. The v1.5.7 normalized v2 contract additionally requires independent
+automatically select the candidate with fewer jobs. The v1.5.9 normalized v3 event-chain model also executes explicitly
+declared dispatch edges between workflows. A successful source job can
+activate its dispatch-only receiver after the emitter completes, while
+failed, canceled or skipped sources do not allocate downstream runners.
+The source must be a non-verifier job with a matching dispatch target;
+unknown token behavior, missing source identities and circular chains
+fail closed. This is a caller-authored simulation with no provider
+authentication, publication authority or measured scheduling claims.
+
+The v1.5.7 normalized v2 contract additionally requires independent
 event-level forward/tag/regeneration side-effect obligations. A missing,
 failed, duplicated, unexpected or policy-drifted effect HOLDs the candidate
 even if the push/release event intentionally has no PR qualification gate.
