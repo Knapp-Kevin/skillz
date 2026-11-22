@@ -126,6 +126,21 @@ class ReplayContract(unittest.TestCase):
         self.assertEqual(result["terminal_status"], "UNKNOWN_BRANCH")
         self.assertEqual(result["observed_nodes_visited"], 0)
 
+    def test_requested_unobserved_child_in_empty_world_is_unknown(self):
+        data = fixture()
+        data["nodes"] = data["nodes"][:1]
+        data["receipts"] = []
+        result = execute(data, requested_node="n-unseen")
+        self.assertEqual(result["terminal_status"], "UNKNOWN_BRANCH")
+        self.assertEqual(result["unknown_branch_rate"],
+                         {"numerator": 1, "denominator": 1})
+        self.assertFalse(result["promotion_eligible"])
+
+    def test_mixed_task_families_in_one_experiment_are_refused(self):
+        data = fixture()
+        data["nodes"][2]["task_family"] = "path-isolation"
+        self.assertBad(data, "Task family drift")
+
     def test_state_mismatch_is_unknown(self):
         result = execute(state=STATE2)
         self.assertEqual(result["terminal_status"], "UNKNOWN_STATE")
