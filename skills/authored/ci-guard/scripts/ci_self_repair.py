@@ -10,11 +10,12 @@ import fnmatch
 import json
 import math
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 MAX_BYTES = 1024 * 1024
 KINDS = {"compile", "setup", "fixture", "project-check", "generation",
-         "test", "oracle", "mutation", "cleanup", "other"}
+         "test", "oracle", "mutation", "cleanup", "dependency-wait", "other"}
 MUTATING = {"mutation", "cleanup"}
 EVIDENCE = {"observed", "estimated"}
 STAGES = {"draft", "ready", "push", "release", "dispatch"}
@@ -66,11 +67,13 @@ def preflight(data):
     workflows = data.get("workflows")
     events = data.get("repair_events")
     phases = data.get("phases")
+    artifact_waits = data.get("artifact_waits")
     controls = data.get("controls")
     budget = data.get("budget")
     require(isinstance(workflows, list) and workflows, "workflow inventory missing")
     require(isinstance(events, list) and events, "repair event forecast missing")
     require(isinstance(phases, list) and phases, "phase observations missing")
+    require(isinstance(artifact_waits, list), "artifact wait inventory missing")
     require(isinstance(controls, dict) and isinstance(budget, dict),
             "controls or budget missing")
     issues = []
@@ -78,6 +81,8 @@ def preflight(data):
         issues.append("INVENTORY_INCOMPLETE")
     if controls.get("nested_execution_inventory_complete") is not True:
         issues.append("NESTED_EXECUTION_NOT_INVENTORIED")
+    if controls.get("artifact_wait_inventory_complete") is not True:
+        issues.append("ARTIFACT_WAIT_INVENTORY_INCOMPLETE")
     if controls.get("required_status_and_spec_mapped") is not True:
         issues.append("REQUIRED_STATUS_OR_SPEC_UNMAPPED")
     if controls.get("release_unique_detection_preserved") is not True:
@@ -208,6 +213,83 @@ def preflight(data):
         # Detection alone does not prove reuse is safe or executed.
         issues.append("IMMUTABLE_REUSE_NOT_YET_PROVEN")
 
+    wait_analysis = []
+    for row in artifact_waits:
+        require(isinstance(row, dict), "artifact wait record required")
+        consumer = nonempty(row.get("consumer_job"), "consumer_job")
+        producer = nonempty(row.get("producer_job"), "producer_job")
+        artifact = nonempty(row.get("artifact_id"), "artifact_id")
+        require(consumer != producer, "producer and consumer must differ")
+        require(row.get("producer_outcome") in {"success", "failure", "skipped", "unknown"},
+                "unknown artifact producer outcome")
+        require(row.get("evidence") in EVIDENCE,
+                "artifact timing provenance missing")
+        requested = row.get("requested_at_utc")
+        arrived = row.get("arrived_at_utc")
+        completed = row.get("completed_at_utc")
+        require(all(isinstance(x, str) for x in (requested, arrived, completed)),
+                "requested/arrived/completed timestamps required")
+        try:
+            dates = [datetime.fromisoformat(x.replace("Z", "+00:00"))
+                     for x in (requested, arrived, completed)]
+        except ValueError as exc:
+            raise ValueError("invalid artifact timing timestamp") from exc
+        require(all(x.tzinfo is not None for x in dates),
+                "timestamps must include time zone")
+        dates = [x.astimezone(timezone.utc) for x in dates]
+        wait_minutes = (dates[1] - dates[0]).total_seconds() / 60
+        tail_seconds = (dates[2] - dates[1]).total_seconds()
+        require(wait_minutes >= 0 and tail_seconds >= 0,
+                "impossible artifact timestamp order")
+        same_run = row.get("same_run_custody") is True
+        paid_wait = row.get("consumer_runner_allocated_during_wait") is True
+        classification = ("DEPENDENCY_WAIT_ON_PAID_RUNNER"
+                          if paid_wait and wait_minutes > 0
+                          else "NO_PAID_RUNNER_WAIT_OBSERVED")
+        # A source-only scheduling proposal cannot prove that needs/if
+        # preserves an intentionally skipped producer's alternate path.
+        controls_ready = (
+            row.get("scheduling_remedy") == "producer-job-dependency"
+            and row.get("runner_deferral_verified") is True
+            and row.get("producer_failure_propagates") is True
+            and row.get("producer_skipped_alternate_preserved") is True
+            and same_run
+            and row.get("producer_outcome") != "unknown"
+        )
+        if paid_wait and wait_minutes > 0 and not controls_ready:
+            issues.append("PAID_ARTIFACT_WAIT_REQUIRES_SAFE_JOB_DEPENDENCY:" + consumer)
+        if not same_run:
+            issues.append("ARTIFACT_CUSTODY_NOT_PROVEN:" + consumer)
+        if row.get("producer_outcome") == "skipped" and (
+                row.get("producer_skipped_alternate_preserved") is not True):
+            issues.append("PRODUCER_SKIPPED_PATH_BROKEN:" + consumer)
+        if row.get("producer_outcome") == "failure" and (
+                row.get("producer_failure_propagates") is not True):
+            issues.append("PRODUCER_FAILURE_NOT_PROPAGATED:" + consumer)
+        if row.get("evidence") != "observed":
+            issues.append("ARTIFACT_WAIT_TIMING_NOT_OBSERVED:" + consumer)
+        wait_analysis.append({
+            "consumer_job": consumer, "producer_job": producer,
+            "artifact_id": artifact, "classification": classification,
+            "observed_or_reported_paid_wait_minutes": (
+                wait_minutes if paid_wait else 0.0),
+            "completion_seconds_after_artifact": tail_seconds,
+            "consumer_runner_allocated_during_wait": paid_wait,
+            "same_run_custody_claimed": same_run,
+            "producer_outcome": row["producer_outcome"],
+            "scheduling_remedy": "DEFER_CONSUMER_RUNNER_UNTIL_PRODUCER_COMPLETION",
+            "skip_path_and_failure_parity_proven_by_host": False,
+            "provider_receipts_authenticated": False,
+            "predicted_savings_not_measured": True,
+        })
+    # Spans inside a long test can overlap with its reported test duration.
+    # Do not add these to test p50/p90 as though they were disjoint cohorts.
+    paid_wait_total = sum(x["observed_or_reported_paid_wait_minutes"]
+                          for x in wait_analysis)
+    largest_other = max(timing.values(), default=0)
+    dominant_cause = ("ARTIFACT_DEPENDENCY_WAIT"
+                      if paid_wait_total > largest_other
+                      else dominant)
     return {
         "status": "PREFLIGHT_READY" if not issues else "HOLD",
         "issues": sorted(set(issues)),
@@ -216,6 +298,10 @@ def preflight(data):
         "sum_individual_p50_minutes": dict(sorted(timing.items())),
         "sum_individual_p90_minutes": dict(sorted(timing_p90.items())),
         "dominant_observed_or_reported_phase": dominant,
+        "dominant_explained_cause": dominant_cause,
+        "artifact_wait_analysis": wait_analysis,
+        "sum_reported_paid_dependency_wait_minutes": paid_wait_total,
+        "artifact_wait_can_overlap_test_duration": True,
         "phase_details": details,
         "repeated_operations": repeated,
         "reported_p50_is_additive_not_critical_path": True,

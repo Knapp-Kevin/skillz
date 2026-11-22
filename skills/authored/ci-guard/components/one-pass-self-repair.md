@@ -97,6 +97,45 @@ a p90 from one sample, infer billed
 runner minutes from elapsed seconds, or sum test durations as the
 critical path.
 
+## Artifact waits hidden inside long-running test processes
+
+When the test reports many minutes but the actual assertion finishes
+immediately after a shared artifact arrives, record **dependency wait**,
+not test algorithm runtime. Require per-consumer request/arrival/finish
+timestamps from actual job logs, whether a billed runner was allocated
+during that wait, the producing job/run/artifact identity, and distinct
+test assertions. Do not assume that longer tests are redundant when
+they merely wait for one shared producer.
+
+Use an explicit producer-job dependency **only after** verifying:
+the consumers do not start paid runners before the producer completes,
+the artifact is authenticated from the same intended run/revision,
+failed/absent producers fail closed, and a producer intentionally
+skipped on the non-full path **does not skip the legitimate alternate
+consumer verification**. In GitHub Actions, `needs` can propagate
+skipped results, so design and test the alternate conditional route
+separately. Avoid a blanket `always()` workaround that makes missing
+artifact or failed producer look qualified.
+
+Input `artifact_waits` is a required list (possibly empty), with
+`controls.artifact_wait_inventory_complete=true` asserting inventory.
+Each record identifies `producer_job`, `consumer_job`,
+`artifact_id`, UTC `requested_at_utc`, `arrived_at_utc`,
+`completed_at_utc`, `producer_outcome`, `evidence`,
+`consumer_runner_allocated_during_wait`, `same_run_custody`,
+`scheduling_remedy`, `runner_deferral_verified`,
+`producer_failure_propagates`, and
+`producer_skipped_alternate_preserved`.
+
+The optional scanner emits `DEPENDENCY_WAIT_ON_PAID_RUNNER` and
+`PAID_ARTIFACT_WAIT_REQUIRES_SAFE_JOB_DEPENDENCY`, and holds on
+missing same-run custody, failure propagation, producer-skipped
+alternate safety or unobserved timing. It **never** authenticates
+caller assertions, verifies actual post-cutover runner allocation,
+or claims verified savings. Test durations and dependency-wait spans
+may overlap, so the sum is a diagnosis aid, not a measured critical
+path or an additive billing result.
+
 ## Offline executable preflight
 
 The optional standard-library-only, read-only
@@ -134,7 +173,12 @@ on main before counted as published.
 
 ## Adversarial requirements
 
-Run the in-package `test_ci_self_repair.py` cases:
+Run the in-package `test_ci_self_repair.py` cases,
+including the planted 30-minute producer, two early-started paid
+consumers, post-arrival seconds-long completion, intact unique
+assertions, success/failure/skipped producer outcomes, and a
+regression in which `needs` incorrectly suppresses a valid
+non-full verification path:
 format-only change inheriting 48 jobs; old unconditional draft/ready
 workflows; short compile vs long test bodies; immutable setup versus
 mutating/fresh-directory isolation; unique oracle detection; extra

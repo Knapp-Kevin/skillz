@@ -154,6 +154,23 @@ source-graph structural PASS, **not** a live CI cost measurement or
 authenticated GitHub event trace. No consumer project identity or
 private data appears in these fixtures.
 
+## Shared artifact producer: explicit runner-wait negative controls
+
+| Case | Planted condition | Required outcome | Unsafe behavior |
+| --- | --- | --- | --- |
+| AW01 | Two consumer jobs start billed runners at 08:00, wait for one artifact until 08:30, then complete in seven and nine seconds | Classify 60 aggregate consumer runner-minutes as declared dependency wait; require provider receipts for actual cost; preserve two distinct tests | Attribute 30 minutes to each algorithm or claim duplicate test assertion |
+| AW02 | Producer moved into a real job dependency | Prevent runner allocation until artifact is available; preserve same-run custody and exact revision; separately check failed and absent artifact | Trust a source-only `needs` declaration or stale artifact |
+| AW03 | Producer intentionally skipped for a legitimate narrow route | Allow the separately required narrow verifier to execute and report; no default `needs` skip of the whole path | Replace one full gate with unintended skipped checks |
+| AW04 | Producer fails or an artifact from another run is offered | Required qualification fails closed, no successful consumer proof | Let `always()` turn unavailable source evidence into green |
+| AW05 | Job runtime minutes decrease after deferring consumers but critical path stays the same | Report observed job runtime, billed minutes and critical path separately | Claim elapsed-time improvement without evidence |
+
+These are synthetic adversarial execution contracts, not observed
+consumer-run evidence. The [self-repair regression suite](
+test_ci_self_repair.py) contains planted artifact-wait tests; migration
+requires independent real GitHub Actions receipts and protected gate
+negative controls. Artifact wait spans may be included in test duration
+and must not be double-counted.
+
 ## CI_SELF_REPAIR P0 negative controls
 
 | Case | Planted input | Required result | Invalid outcome |

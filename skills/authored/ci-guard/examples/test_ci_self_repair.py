@@ -41,6 +41,7 @@ def sample():
                    "planned_expensive_cycles": 1},
         "controls": {
             "nested_execution_inventory_complete": True,
+            "artifact_wait_inventory_complete": True,
             "required_status_and_spec_mapped": True,
             "release_unique_detection_preserved": True,
             "source_tests_and_policy_ready": True,
@@ -49,6 +50,7 @@ def sample():
             "exact_head_freshness_plan": True,
             "owner_authorized_full_gate": False,
         },
+        "artifact_waits": [],
         "phases": [
             {"test_id": "case-A", "phase": "compile", "environment": "linux",
              "revision": "source-H", "p50_minutes": 2, "p90_minutes": 3,
@@ -61,6 +63,27 @@ def sample():
              "evidence": "observed", "unique_detection": True},
         ],
     }
+
+
+def blocked_artifact_consumer(producer_outcome="success", **kwargs):
+    record = {
+        "consumer_job": "platform-test-A",
+        "producer_job": "shared-data-build",
+        "artifact_id": "same-run-artifact/source-H",
+        "requested_at_utc": "2026-11-22T08:00:00Z",
+        "arrived_at_utc": "2026-11-22T08:30:00Z",
+        "completed_at_utc": "2026-11-22T08:30:07Z",
+        "consumer_runner_allocated_during_wait": True,
+        "same_run_custody": True,
+        "producer_outcome": producer_outcome,
+        "scheduling_remedy": "none",
+        "runner_deferral_verified": False,
+        "producer_failure_propagates": True,
+        "producer_skipped_alternate_preserved": True,
+        "evidence": "observed",
+    }
+    record.update(kwargs)
+    return record
 
 
 class SelfRepairAcceptance(unittest.TestCase):
@@ -177,6 +200,99 @@ class SelfRepairAcceptance(unittest.TestCase):
         self.assertFalse(result["provider_receipts_authenticated"])
         self.assertTrue(result["reported_p50_is_additive_not_critical_path"])
         self.assertTrue(result["p50_p90_sums_are_not_cohort_percentiles"])
+
+
+    def test_bundled_artifact_wait_fixture_is_a_negative_control(self):
+        path = ROOT / "examples" / "ci-artifact-wait-fixture.json"
+        case = json.loads(path.read_text(encoding="utf-8"))
+        result = self.assess(case)
+        self.assertEqual(result["status"], "HOLD")
+        self.assertEqual(result["dominant_explained_cause"],
+                         "ARTIFACT_DEPENDENCY_WAIT")
+        self.assertEqual(len(result["artifact_wait_analysis"]), 2)
+        self.assertEqual(result["sum_reported_paid_dependency_wait_minutes"],
+                         60.0)
+
+    def test_shared_artifact_wait_is_not_algorithms_or_compilation(self):
+        case = sample()
+        case["artifact_waits"] = [
+            blocked_artifact_consumer(),
+            blocked_artifact_consumer(consumer_job="platform-test-B",
+                                     completed_at_utc="2026-11-22T08:30:09Z")]
+        result = self.assess(case)
+        self.assertEqual(result["dominant_explained_cause"], "ARTIFACT_DEPENDENCY_WAIT")
+        self.assertEqual(result["sum_reported_paid_dependency_wait_minutes"], 60)
+        self.assertEqual([x["classification"] for x in result["artifact_wait_analysis"]],
+                         ["DEPENDENCY_WAIT_ON_PAID_RUNNER"] * 2)
+        self.assertIn("PAID_ARTIFACT_WAIT_REQUIRES_SAFE_JOB_DEPENDENCY:platform-test-A",
+                      result["issues"])
+        self.assertTrue(result["artifact_wait_can_overlap_test_duration"])
+        self.assertEqual(result["observed_runner_minutes_delta"], "NOT_MEASURED")
+
+    def test_declared_job_dependency_preserves_existing_proof_boundaries(self):
+        case = sample()
+        case["artifact_waits"] = [
+            blocked_artifact_consumer(scheduling_remedy="producer-job-dependency",
+                runner_deferral_verified=True,
+                producer_failure_propagates=True,
+                producer_skipped_alternate_preserved=True)]
+        result = self.assess(case)
+        self.assertEqual(result["status"], "PREFLIGHT_READY", result["issues"])
+        self.assertFalse(result["artifact_wait_analysis"][0]
+                         ["skip_path_and_failure_parity_proven_by_host"])
+        self.assertFalse(result["provider_receipts_authenticated"])
+
+    def test_producer_skipped_path_must_not_be_skipped_by_needs(self):
+        case = sample()
+        case["artifact_waits"] = [
+            blocked_artifact_consumer(producer_outcome="skipped",
+                scheduling_remedy="producer-job-dependency",
+                runner_deferral_verified=True,
+                producer_skipped_alternate_preserved=False)]
+        result = self.assess(case)
+        self.assertIn("PRODUCER_SKIPPED_PATH_BROKEN:platform-test-A",
+                      result["issues"])
+        self.assertEqual(result["status"], "HOLD")
+
+    def test_producer_failure_propagates_cannot_be_bypassed(self):
+        case = sample()
+        case["artifact_waits"] = [
+            blocked_artifact_consumer(producer_outcome="failure",
+                scheduling_remedy="producer-job-dependency",
+                runner_deferral_verified=True,
+                producer_failure_propagates=False)]
+        result = self.assess(case)
+        self.assertIn("PRODUCER_FAILURE_NOT_PROPAGATED:platform-test-A",
+                      result["issues"])
+
+    def test_cross_run_artifact_not_treated_as_safe_dependency(self):
+        case = sample()
+        case["artifact_waits"] = [
+            blocked_artifact_consumer(scheduling_remedy="producer-job-dependency",
+                runner_deferral_verified=True, same_run_custody=False)]
+        result = self.assess(case)
+        self.assertIn("ARTIFACT_CUSTODY_NOT_PROVEN:platform-test-A",
+                      result["issues"])
+
+    def test_unverified_artifact_inventory_is_fail_closed(self):
+        case = sample()
+        case["controls"]["artifact_wait_inventory_complete"] = False
+        self.assertIn("ARTIFACT_WAIT_INVENTORY_INCOMPLETE", self.assess(case)["issues"])
+
+    def test_timing_out_of_order_is_rejected_not_negative_wait(self):
+        case = sample()
+        case["artifact_waits"] = [
+            blocked_artifact_consumer(arrived_at_utc="2026-11-22T07:59:00Z")]
+        with self.assertRaisesRegex(ValueError, "impossible artifact timestamp"):
+            self.assess(case)
+
+    def test_unobserved_wait_does_not_claim_verified_runtime(self):
+        case = sample()
+        case["artifact_waits"] = [blocked_artifact_consumer(evidence="estimated")]
+        result = self.assess(case)
+        self.assertIn("ARTIFACT_WAIT_TIMING_NOT_OBSERVED:platform-test-A",
+                      result["issues"])
+        self.assertEqual(result["observed_critical_path_delta"], "NOT_MEASURED")
 
     def test_cli_exit_code_and_read_only_filesystem(self):
         with tempfile.TemporaryDirectory() as folder:

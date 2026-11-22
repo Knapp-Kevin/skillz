@@ -90,7 +90,8 @@
     "rollback_defined": true,
     "cheap_checks_passed": true,
     "exact_head_freshness_plan": true,
-    "owner_authorized_full_gate": false
+    "owner_authorized_full_gate": false,
+    "artifact_wait_inventory_complete": true
   },
   "phases": [
     {
@@ -122,5 +123,6 @@
       "evidence": "observed",
       "unique_detection": true
     }
-  ]
+  ],
+  "artifact_waits": []
 }
