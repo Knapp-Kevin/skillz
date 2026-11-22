@@ -144,7 +144,7 @@ package. Its source graph must refuse falsely successful migrations.
 | CUT-07 | Incomplete workflow inventory, unexpanded matrix, or unknown trigger/condition | Strict FAIL, not false proof of zero overlap |
 | CUT-08 | A baseline-and-after test JSON file is supplied but no real runner receipts exist | Source-graph result only; `optimization_complete: false`; both cost metrics NOT_MEASURED |
 
-[Executable 15 regression cases](test_ci_cutover.py) supplement the
+[Executable 16 regression cases](test_ci_cutover.py) supplement the
 existing [candidate-finder regressions](test_ci_overlap.py). The
 [anonymous duplicate fixture](ci-overlap-fixture.json) must fail the
 old `--enforce` mode without a disposition and fail the strict
