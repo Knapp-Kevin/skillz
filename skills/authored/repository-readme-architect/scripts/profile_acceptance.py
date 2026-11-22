@@ -156,9 +156,21 @@ def _headings(cleaned):
 
 
 def _section(cleaned, pattern):
+    """Collect a full heading section, including nested subheadings.
+
+    A subsection at greater heading depth belongs to the selected section.
+    Only a sibling or ancestor heading terminates it. This prevents normal
+    Quick Start substeps from being misread as an empty user journey.
+    """
     for i, line in enumerate(cleaned):
         if pattern.match(line):
-            end = next((j for j in range(i + 1, len(cleaned)) if local.HEAD.match(cleaned[j])), len(cleaned))
+            selected = local.HEAD.match(line)
+            if selected is None:
+                raise InputError("section matcher did not select a heading")
+            depth = len(selected.group(1))
+            end = next((j for j in range(i + 1, len(cleaned))
+                        if (heading := local.HEAD.match(cleaned[j]))
+                        and len(heading.group(1)) <= depth), len(cleaned))
             return "\n".join(cleaned[i + 1:end])
     return None
 
