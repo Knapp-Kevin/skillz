@@ -440,6 +440,33 @@ class ExecutionTests(unittest.TestCase):
         with self.assertRaises(p.PlanError):
             p.validate_executor(ex,POLICY)
 
+    def test_default_draft_dispatch_guards_all_expensive_jobs(self):
+        wf = (ROOT/'examples/classified-github-pr.yml').read_text(encoding='utf-8')
+        self.assertIn('ready_for_review', wf)
+        self.assertIn('converted_to_draft', wf)
+        self.assertIn("  classify:\n    if: ${{ !github.event.pull_request.draft }}", wf)
+        for group in ('docs','rust','model','trust'):
+            with self.subTest(group=group):
+                job = wf.split('  '+group+':\n',1)[1].split('    runs-on:',1)[0]
+                self.assertIn('!github.event.pull_request.draft',job)
+        gate = wf.split('  ci-policy-gate:\n',1)[1]
+        self.assertIn('if: ${{ always() }}',gate)
+        self.assertIn('DRAFT_DEFERRED_NOT_QUALIFIED',gate)
+        self.assertEqual(gate.count('if: ${{ github.event.pull_request.draft }}'),1)
+        self.assertEqual(gate.count('if: ${{ !github.event.pull_request.draft }}'),4)
+        self.assertEqual(gate.count('uses: actions/checkout@'),2)
+        self.assertIn('ci_plan.py qualify',gate)
+        self.assertIn('CLASSIFY_RESULT',gate)
+
+    def test_ready_path_still_qualifies_full_current_head(self):
+        wf = (ROOT/'examples/classified-github-pr.yml').read_text(encoding='utf-8')
+        for group in ('docs','rust','model','trust'):
+            self.assertIn('--group '+group,wf)
+        self.assertIn('test "$CLASSIFY_RESULT" = success',wf)
+        self.assertIn('--run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"',wf)
+        self.assertIn('ci-evidence.json',wf)
+        self.assertNotIn('pull_request_target',wf)
+
     def test_workflow_actual_docs_job_and_final_gate_cover_all_groups(self):
         try:
             import yaml
