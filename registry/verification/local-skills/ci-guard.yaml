@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: be9aa4b11ccbb14a6994b2e666e3a80abd6ae635
-complete_package_tree_sha: 0c9556782649571f21bb0099249b12afcce8007f
+content_blob_sha: 2242b2d4cc3b38e13904322a9cd7732d417e1f67
+complete_package_tree_sha: 2736194c948d0e1123a729aad458c278bccc9f0e
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: unverified
-verification_basis: v1.5.4-local-17-new-method-tests-and-existing-suite-host-QA-pending
+verification_basis: v1.5.4-local-28-new-method-tests-and-existing-suite-host-QA-pending
 validation_status: not-run
-validation_note: "Current v1.5.4 new ci_repair_preflight.py and 17-case Python regression source were executed locally: 17/17 PASS, exact files uploaded to branch. Existing 12 overlap, 16 cutover, 28 classification and 26 plan checks inherited unchanged but NOT rerun against v1.5.4 until hosted PR QA. Native consumer branch policy, workflow/test timing source completeness, release qualification and measured runner-minute/critical path are NOT_RUN/NOT_MEASURED."
+validation_note: "v1.5.4 current new script method suites 28/28 PASS in local Python: 17 first-pass tests and 11 artifact producer/wait/fallback negatives. GitHub-hosted full current-head QA pending. Preserves 12 overlap, 16 cutover, 28 classifier, 26 plan source checks. Actual producer occupancy, live artifact custody, partial path behavior and billed runner-minute/critical path savings NOT_RUN/NOT_MEASURED; synthetic timing is not a provider receipt."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5_4"
 tags:
@@ -24,7 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  v1.5.4 adds mandatory self-repair discovery/prepare/prove/cutover/observe/
+  v1.5.4 adds mandatory self-repair and documented dependency-wait artifact scheduling, plus discover/prepare/prove/cutover/observe/
   rollback, test-internal phase classification, readiness and fanout checks.
   The single existing cross-workflow auditor remains canonical. New
   source-manifest preflight cannot authenticate actual provider logs,
