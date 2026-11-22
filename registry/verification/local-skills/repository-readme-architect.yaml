@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: repository-readme-architect
-skill_version: "0.5.0"
+skill_version: "0.5.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/repository-readme-architect/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-readme-architect/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 47e813f6e37242568e11cb5c400a680bbf461995
-complete_package_tree_sha: 94a118964320ab27776eee5004d2e722fc6c4aa1
+content_blob_sha: 09eb0cf23b64f28f53df823d7d054ea835dd0d28
+complete_package_tree_sha: 248726a1107021fbf3cdb7c2d5468d0848302418
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
-verification_basis: exact-v0.5.0-portfolio-navigation-structural-checks-python-suite-not-run
+verification_basis: exact-v0.5.1-portfolio-navigation-anonymous-fixture-source-checks-python-suite-not-run
 validation_status: not-run
-validation_note: "v0.5.0 source structural checks include nine unique fictional projects, anchored conceptual layers, two reader routes, anonymous external illustrative links, and exact source fingerprints. Seven new Python test methods committed, exact-version Python suite NOT_RUN. Independent reader task, rendered portfolio review, external destinations and agent-host outcomes NOT_RUN. Older version test receipts do not transfer."
+validation_note: "v0.5.1 retains v0.5.0 package behavior and anonymizes remaining generator tests. v0.5.0 source structural checks include nine unique fictional projects, anchored conceptual layers, two reader routes, anonymous external illustrative links, and exact source fingerprints. Seven new Python test methods committed, exact-version Python suite NOT_RUN. Independent reader task, rendered portfolio review, external destinations and agent-host outcomes NOT_RUN. Older version test receipts do not transfer."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V0_5_0"
+rubric_score: "NOT_ASSESSED_EXACT_V0_5_1"
 tags:
   use_case: [readme-create, readme-uplift, documentation-quality, evidence-integrity]
   lifecycle: [creation, implementation, review, verification]
@@ -24,7 +24,7 @@ tags:
   authority: [read-only-default, user-authorized-focused-write]
   portability: high
 notes: >-
-  v0.5.0 makes abstraction-based portfolio organization conditional on
+  v0.5.1 retains v0.5.0 abstraction-based portfolio organization conditional on
   evidenced reader needs, not a mandatory linear dependency hierarchy.
   Completeness, link ownership, proven integration, source preservation,
   first-use and real reader comprehension need independent review.
