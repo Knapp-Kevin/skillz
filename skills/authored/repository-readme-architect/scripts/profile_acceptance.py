@@ -156,9 +156,25 @@ def _headings(cleaned):
 
 
 def _section(cleaned, pattern):
-    for i, line in enumerate(cleaned):
+    """Collect a full heading section, including nested subheadings.
+
+    A subsection at greater heading depth belongs to the selected section.
+    Only a sibling or ancestor heading terminates it. This prevents normal
+    Quick Start substeps from being misread as an empty user journey.
+    """
+    # Match section boundaries against fence-masked lines. The returned
+    # body retains raw command blocks, but a "## comment" *inside* a code
+    # fence must never truncate an actual Quick Start section.
+    visible = local.clean_lines("\n".join(cleaned))
+    for i, line in enumerate(visible):
         if pattern.match(line):
-            end = next((j for j in range(i + 1, len(cleaned)) if local.HEAD.match(cleaned[j])), len(cleaned))
+            selected = local.HEAD.match(line)
+            if selected is None:
+                raise InputError("section matcher did not select a heading")
+            depth = len(selected.group(1))
+            end = next((j for j in range(i + 1, len(visible))
+                        if (heading := local.HEAD.match(visible[j]))
+                        and len(heading.group(1)) <= depth), len(visible))
             return "\n".join(cleaned[i + 1:end])
     return None
 

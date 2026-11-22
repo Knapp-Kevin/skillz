@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.4.0
+  version: 0.4.1
   license: MIT
 ---
 
@@ -125,6 +125,15 @@ proof of approved branding. This contract **cannot disable required
 elements**. A missing required element is FAIL, or HOLD with an explained
 evidence-bound exception requiring independent owner/editorial judgment.
 An exception field or passing local script does not certify its own approval.
+
+**A first-use journey may contain nested steps.** Treat `### Install`
+and `### Try it` as part of their enclosing `## Quick Start`, and
+ignore fake headings inside fenced commands when finding the section
+boundary. Do not incorrectly FAIL a correct newcomer example because
+the README uses hierarchical headings; equally, do not borrow a command
+from the unrelated next `##` section to fake first-use success. This is
+enforced by the bundled profile checker and synthetic regressions,
+not an excuse to self-certify editorial quality.
 
 **Normative qualitative gates are not fulfilled by section presence.**
 Independently review (1) Why→What→How in the opening and the 30-second

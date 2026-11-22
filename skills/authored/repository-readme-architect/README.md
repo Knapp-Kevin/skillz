@@ -94,7 +94,7 @@ and boundary cases with no network, provider or GitHub Actions budget:
 python3 -m unittest discover -s tests -p 'test_profile_acceptance.py' -v
 ~~~
 
-This is the **test command**, not a claim that the current v0.4.0 suite
+This is the **test command**, not a claim that the current v0.4.1 suite
 has executed. The checker deliberately returns a HOLD even with all
 mechanical conditions present because actual source authority,
 generated-file parity, approved branding, rendered Markdown,
@@ -102,8 +102,16 @@ first-user comprehension and CI delivery require independent evidence.
 
 ## Qualification and boundaries
 
-**Current version: 0.4.0 (binding quality profiles, generated-owner evidence, heading preservation).** Previous v0.3.0 Python 3.13.5 suites passed **101/101 actual tests** (57 existing link/README exercises plus 44 new delivery-preflight tests), including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
+**Current version: 0.4.1 (binding quality profiles, generated-owner evidence, nested heading preservation).** Previous v0.3.0 Python 3.13.5 suites passed **101/101 actual tests** (57 existing link/README exercises plus 44 new delivery-preflight tests), including controlled CREATE, UPLIFT and VERIFY exercises. The source-checkout CREATE example's documented command and unit test were executed against a controlled first-party fixture. This is bounded *method execution*, **not** independent model-host skill validation, verified third-party deployment or evidence that every generated README is production-ready.
 
 Generated sections, canonical ownership, release evidence, licenses and historical signer identity must be preserved or corrected only from appropriate source evidence. All bundled checkers are read-only. They do not authenticate provider evidence, execute README commands, render pages or run formatters/CI. A local check is not a merge-ready verdict and cannot certify the selected quality grade. Reading this skill never authorizes new permissions, CI runs, deployments, releases or unrelated repository changes.
 
 A README succeeds when the actual reader can understand the project, take the correct first action (or understand why none is available), and verify consequential claims. Its job is not to become an ongoing PR diary.
+
+**v0.4.1 source correction:** The profile checker's section reader now
+retains nested `###` first-use/contents subheadings and ignores fake
+headings inside fenced code. Five adversarial/preservation regression
+methods are included in `tests/test_profile_acceptance.py`. A bounded
+local method reproduction covered four cases, but the complete updated
+package Python suite and any independent README reader acceptance are
+**NOT_RUN**; historical v0.3 results cannot qualify new bytes.
