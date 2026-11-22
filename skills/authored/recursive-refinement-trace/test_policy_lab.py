@@ -236,5 +236,33 @@ class PolicyLaboratoryTests(unittest.TestCase):
             self.assertEqual(json.loads(out.getvalue())["automatic_activation"], False)
 
 
+
+    def test_cli_rejects_linked_manifest_file(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            private = root / "private.json"
+            private.write_text(json.dumps(manifest()), encoding="utf-8")
+            alias = root / "approved.json"
+            alias.symlink_to(private)
+            with redirect_stderr(StringIO()) as error:
+                code = lab.main(["--manifest", str(alias), "--approved-public"])
+            self.assertEqual(code, 2)
+            self.assertIn("Symlinked manifest path", error.getvalue())
+            self.assertNotIn(private.read_text(), error.getvalue())
+
+    def test_cli_rejects_linked_manifest_ancestor(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "private").mkdir()
+            real = root / "private" / "manifest.json"
+            real.write_text(json.dumps(manifest()), encoding="utf-8")
+            alias = root / "external"
+            alias.symlink_to(root / "private", target_is_directory=True)
+            with redirect_stderr(StringIO()) as error:
+                code = lab.main(["--manifest", str(alias / "manifest.json"),
+                                 "--approved-public"])
+            self.assertEqual(code, 2)
+            self.assertIn("Symlinked manifest path", error.getvalue())
+
 if __name__ == "__main__":
     unittest.main()
