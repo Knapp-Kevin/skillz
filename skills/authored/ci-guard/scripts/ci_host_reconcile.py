@@ -141,7 +141,7 @@ def observe_live(mapping, token=None, getter=None):
     for w in mapping["workflow_runs"]:
         rid=w["run_id"]; attempt=w["attempt"]
         prefix="https://api.github.com/repos/"+mapping["repository"]+"/actions/runs/"+str(rid)
-        run=getter(prefix,token)
+        run=getter(prefix+"/attempts/"+str(attempt),token)
         # Per-attempt job endpoint. Do NOT silently blend jobs from reruns.
         jobs=[]
         for page in (1,2,3):
@@ -252,7 +252,7 @@ def reconcile(sim,mapping,observed,live=False):
         require(run.get("event")==mapping["expected_event"],
                 "HOST_EVENT_MISMATCH")
         require(run.get("status")=="completed" and
-                run.get("run_attempt",0)>=w["attempt"],
+                run.get("run_attempt") == w["attempt"],
                 "HOST_RUN_NOT_COMPLETED_OR_ATTEMPT_STALE")
         runpath=run.get("path")
         require(isinstance(runpath,str) and runpath.split("@",1)[0]==w["workflow_file"],
