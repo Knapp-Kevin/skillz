@@ -1,22 +1,29 @@
 schema_version: 1
 skill_name: repository-delivery-assessor
-skill_version: "1.4.0"
+skill_version: "1.4.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-delivery-assessor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5e940e687efdfd835528911523c831bcd9ebb1de
-complete_package_tree_sha: f423b0c8765a2da62f949b0b571f9c40f7eaf569
+content_blob_sha: d3b95ff7da5a09a5515268b7726291040c57e709
+complete_package_tree_sha: 262991c78bb9d86477dd3db7e18a96651c2e42e5
 characterized_at: "2026-11-20"
-reviewed_at: "2026-11-20"
-verification_status: verified
-verification_basis: maintainer-complete-package-static-review-and-39-local-offline-method-tests
+reviewed_at: "2026-11-22"
+verification_status: unverified
+verification_basis: v1.4.1-source-path-symlink-fix-planted-negative-tests-not-run
 validation_status: not-run
-validation_note: "39/39 actual local Python PR metadata method tests pass; separately verified historical public PR #816 source fixture. No independent old/new agent-host skill comparison or production outcome validation."
+validation_note: >-
+  v1.4.1 source correction refuses symlinked JSON input or any
+  symlinked ancestor before stat/open. Two new negative methods authored;
+  41 test methods now present; full changed-version Python suite
+  NOT_RUN. Historical earlier-version tests cannot qualify these bytes.
+  Concurrent malicious path-replacement protection and agent-host
+  behavioral validation NOT_RUN.
+
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_EXACT_V1_4_1"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]
@@ -24,7 +31,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  v1.4 standalone nine-file package statically assessed 18/20 with 39/39
-  local Python offline method regression tests. docs/reviews/2026-11-20-repository-delivery-v140-exacthead-triage.md.
-  Historical v1.3 review stays pinned, 1.5x effectiveness NOT PROVEN,
-  independently isolated host comparison NOT_RUN, real delivery unverified.
+  Exact v1.4.1 source review: safe lexical input preflight,
+  negative file/parent symlink fixtures, unchanged permitted first task.
+  Current Python behavior and external host outcome remain NOT_RUN.
