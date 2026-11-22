@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.5"
+skill_version: "1.5.6"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d1fefd68405080070db557f97d9d511176aefc66
-complete_package_tree_sha: 7c06e7057310e9fc4819e2d892d4bf4390cf40f8
+content_blob_sha: 2065f60fb2e3f8052c6695cd473ae1813e3561fb
+complete_package_tree_sha: c0b3dae61ace2ff104a647a24d49858de114e97e
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: unverified
-verification_basis: v1.5.5-shared-artifact-wait-failure-skipped-alternate-negative-fixtures-exact-head-qa-pending
+verification_basis: v1.5.6-local-37-normalized-scenario-tests-and-current-version-host-QA-pending
 validation_status: not-run
-validation_note: "v1.5.5 extends v1.5.4 with nine artifact-wait regression methods and the two-consumer 30-minute synthetic wait fixture, enforcing failure and intentionally-skipped producer branch preservation. Changed exact-version Python/GitHub Actions tests NOT_RUN at source snapshot; historical v1.5.4 run 45007544990 PASS is not a changed-version receipt. Source-only analyzer does not authenticate provider timing, billable minutes or conditional branch behavior; consumer adoption still NOT_MEASURED."
+validation_note: "v1.5.6 new scripts/ci_scenario.py offline normalized graph and 37 executable Python negative controls PASS locally. Existing 105 previous-version suites remain historical and must rerun against this exact source. Intended semantics subset does NOT interpret full GitHub YAML or prove compiled repo conformance, trigger tokens, actual runtime export guard enforcement, protected branch status or real cost receipts. Complete exact package current-version hosted QA pending; host agent behavior NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_5"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5_6"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,9 +24,11 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  v1.5.5 requires an artifact-wait inventory and distinguishes paid
-  dependency idle from algorithm/computation, including same-run artifact
-  provenance, failure propagation, and the deliberately producer-skipped
-  path. Source-only evidence cannot establish real runner deferral or
-  GitHub Actions conditional correctness. Twenty-three Python regression
-  methods authored; exact-head QA pending, consumer cost NOT_MEASURED.
+  A single reusable CI Guard entry point now includes a bounded normalized
+  whole-workflow SIMULATE phase and strict event/job/needs/matrix/status
+  negative cases. The checker is deliberately NOT a full GitHub Actions
+  interpreter and does not authenticate external pipeline results.
+  Unknown provider semantics, validator drift and hidden indirect export
+  calls require source/runtime host tests and may HOLD. Thirty-seven local
+  Python scenario methods passed on new source; full exact-head GitHub QA
+  and consumer cost/outcome verification remain pending.
