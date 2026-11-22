@@ -604,7 +604,7 @@
       "skill_blob_sha": "a7323faf06a660109004e2f73bba17293d9d4186",
       "package_tree_sha": "0b23fbf43fb69b67523fc151a6460d8d60ba15f7",
       "package_file_count": 6,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V1_2_1",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
@@ -619,7 +619,7 @@
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "4a114972587060c79ee6df852526a0a047abd3c2",
       "previous_reviewed_package_tree_sha": "426391a3bea7e75f364fe86da8845dee2718f8a5",
-      "review_note": "2026-11-22 current 1.2.1 source fix: optional read-only Python checker refuses symlinked input file and any symlinked ancestor before stat/open. Two planted regression methods and original positive tests retained (33 relevant methods); full current-version hosted QA pending. Earlier version runs are historical. Lexical preflight does not guarantee safety against concurrent hostile path replacement; no actual consuming host/model evaluation or external input authentication."
+      "review_note": "2026-11-22 merged v1.2.1 source PR #862 verified at exact source and full package identity; GitHub Actions #45072270335 PASS 33/33 bundled Python method tests (combined 207/207). Includes file and parent symlink negatives, preserves positive source tests and evidence boundaries. Independent agent-host effectiveness, real consumer outcome, owner source authorization and hostile concurrent filesystem path-races remain NOT_RUN/NOT_VERIFIED. Historical version receipts do not transfer."
     },
     {
       "id": "decision-tradeoff-workbench",
@@ -638,7 +638,7 @@
       "skill_blob_sha": "df9cd3a533be9bbddf262d09811046ca8cec7f4c",
       "package_tree_sha": "e73108630e053dacd700693dd24cc48110d70a72",
       "package_file_count": 6,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V1_2_1",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
@@ -653,7 +653,7 @@
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "923d03cc92ab15f953528bd9ce5232bafda8a4e8",
       "previous_reviewed_package_tree_sha": "3f2e3af52d6a10faccb6a25dc1f2fa97e18e8650",
-      "review_note": "2026-11-22 current 1.2.1 source fix: optional read-only Python checker refuses symlinked input file and any symlinked ancestor before stat/open. Two planted regression methods and original positive tests retained (27 relevant methods); full current-version hosted QA pending. Earlier version runs are historical. Lexical preflight does not guarantee safety against concurrent hostile path replacement; no actual consuming host/model evaluation or external input authentication."
+      "review_note": "2026-11-22 merged v1.2.1 source PR #862 verified at exact source and full package identity; GitHub Actions #45072270335 PASS 27/27 bundled Python method tests (combined 207/207). Includes file and parent symlink negatives, preserves positive source tests and evidence boundaries. Independent agent-host effectiveness, real consumer outcome, owner source authorization and hostile concurrent filesystem path-races remain NOT_RUN/NOT_VERIFIED. Historical version receipts do not transfer."
     },
     {
       "id": "research-question-dossier",
@@ -918,7 +918,7 @@
       "skill_blob_sha": "ea5994f8567dc06996641aea27608a6bc578c1dc",
       "package_tree_sha": "e210b1646f679e01017283ece402395e402798fe",
       "package_file_count": 9,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V1_4_1",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
@@ -933,7 +933,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
       "previous_reviewed_skill_blob_sha": "75c09e83d13a388e591f384f8029090edbe0bc50",
       "previous_reviewed_package_tree_sha": "58662de287377f9b479d80cfa92e454413f9dc0e",
-      "review_note": "2026-11-22 current 1.4.1 source fix: optional read-only Python checker refuses symlinked input file and any symlinked ancestor before stat/open. Two planted regression methods and original positive tests retained (41 relevant methods); full current-version hosted QA pending. Earlier version runs are historical. Lexical preflight does not guarantee safety against concurrent hostile path replacement; no actual consuming host/model evaluation or external input authentication."
+      "review_note": "2026-11-22 merged v1.4.1 source PR #862 verified at exact source and full package identity; GitHub Actions #45072270335 PASS 41/41 bundled Python method tests (combined 207/207). Includes file and parent symlink negatives, preserves positive source tests and evidence boundaries. Independent agent-host effectiveness, real consumer outcome, owner source authorization and hostile concurrent filesystem path-races remain NOT_RUN/NOT_VERIFIED. Historical version receipts do not transfer."
     },
     {
       "id": "business-presence-observatory",
@@ -1119,7 +1119,7 @@
       "skill_blob_sha": "e4f8a1668b48646c99ae2aaf60dac076aae3ebe6",
       "package_tree_sha": "d46950b4d62d3eae06080b980b3ed7c8d8767014",
       "package_file_count": 12,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V0_3_1",
       "behavioral_validation": "not-run",
       "host_authority": "user-approved public/synthetic host-local write; read-only inspect/export",
@@ -1130,7 +1130,7 @@
         "software-engineering/maintenance",
         "agent-mcp-development/evaluation"
       ],
-      "review_note": "2026-11-22 current 0.3.1 source fix: optional read-only Python checker refuses symlinked input file and any symlinked ancestor before stat/open. Two planted regression methods and original positive tests retained (22 relevant methods); full current-version hosted QA pending. Earlier version runs are historical. Lexical preflight does not guarantee safety against concurrent hostile path replacement; no actual consuming host/model evaluation or external input authentication."
+      "review_note": "2026-11-22 merged v0.3.1 source PR #862 verified at exact source and full package identity; GitHub Actions #45072270335 PASS 106/106 bundled Python method tests (combined 207/207). Includes file and parent symlink negatives, preserves positive source tests and evidence boundaries. Independent agent-host effectiveness, real consumer outcome, owner source authorization and hostile concurrent filesystem path-races remain NOT_RUN/NOT_VERIFIED. Historical version receipts do not transfer."
     },
     {
       "id": "evidence-driven-refinement-loop",
