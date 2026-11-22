@@ -24,19 +24,15 @@ freshness, rights, dependency, authority and target-host fields or explicit
 unknowns, plus pointers to both original complete companions. No package is
 automatically approved for copying, composition, installation or execution.
 
-## Fit with the requested consumer and Prism
+## Fit with a separately authorized consumer
 
-This handoff serves the owner's requested separate active Skill Mason consumer.
-It exports passive source evidence and does not implement the downstream
-generator, dictate its internal architecture, or disclose its private project
-contents. The separate consumer must assess eligibility before composition.
-
-The current upstream Prism README describes `uor-prism` as the Rust standard
-library facade and `uor-prism-verify` as the replay facade. That is sufficient to
-preserve the intended boundary, not to establish Skill Mason integration. No
-Prism model, verifier receipt, generated skill or zero-inference generator was
-executed by this catalog export. The separate development repository must
-establish those claims with its own implementation and evidence.
+This export is a passive source catalog. It does not implement a downstream
+generator, define another system's internal architecture, or disclose an
+external consumer's project contents. A consumer must independently assess
+reuse eligibility, dependency evidence, source rights, integration and
+execution before promoting any catalog entry. No downstream model,
+verifier receipt, generated skill or zero-inference generator was
+executed by this catalog export.
 
 ## Executed checks
 
@@ -67,5 +63,5 @@ applicable. No generated skill is written into the source library.
 
 **Unfinished:** 921 grounded domain mappings, complete essential-outcome coverage,
 target-specific reuse rights and dependency checks, composable method contracts,
-the active Prism generator and observed host behavior. These are explicit work
+the separately managed downstream generator and observed host behavior. These are explicit work
 items, not reasons to omit the corresponding records from Skill Mason's index.
