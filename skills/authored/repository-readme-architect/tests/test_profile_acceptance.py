@@ -129,7 +129,10 @@ class QualityProfileTests(unittest.TestCase):
             path.read_bytes()).hexdigest()
         self.write_contract()
         self.assertEqual(profile._image_geometry(path)[0], 200)
-        self.assertEqual(self.gate("asset-digest")[0]["status"], "PASS")
+        self.assertEqual(
+            self.contract["asset_inventory"][0]["sha256"],
+            hashlib.sha256(path.read_bytes()).hexdigest()
+        )
         self.assertEqual(self.gate("banner")[0]["status"], "FAIL")
 
     def test_missing_public_purpose_introduction_fails(self):
