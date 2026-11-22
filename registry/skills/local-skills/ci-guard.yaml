@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.6"
+skill_version: "1.5.7"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "34-file standalone MIT package. Optional read-only stdlib ci_scenario.py normalized whole-workflow comparator extends canonical ci_overlap.py and ci_self_repair.py, not their duplication. No external provider, consumer scripts or always-on service; independent host acceptance remains required."
-content_blob_sha: 2065f60fb2e3f8052c6695cd473ae1813e3561fb
-complete_package_tree_sha: c0b3dae61ace2ff104a647a24d49858de114e97e
+dependencies: "34-file MIT standalone package with normalized v2 side-effect simulation and canonical overlap/self-repair. Host execution remains separate."
+content_blob_sha: 09f2a1771a03d082c87a17f40e5bbb38cfe6657b
+complete_package_tree_sha: 2ec235742a01a50d341bc7d22b66077ccee5fde1
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "Current v1.5.6 standalone 34-file CI Guard source includes optional normalized whole-pipeline scenario simulation under #861, with strict unsupported-semantics HOLD. Exact-head GitHub Actions run #45073979352 PASS 142/142 current-version Python source and negative tests, at PR #865 head 428f4052f2f857be7a11e96f7042f67a2c7c89a8; merged and exact blob/tree verified. Source check includes 37 new simulator methods and prior 105 preserved CI Guard methods. No real consumer workflow interpreter, conformance compiled suite, runtime independent-lane artifact guard, protected migration, independent model-host outcome or provider cost/latency comparison was run; all remain NOT_RUN/NOT_MEASURED."
+rationale: "v1.5.7 independently tracks required forward/tag/dispatch side effects. Source exact-head QA PENDING. Provider semantics and consumer cost benefit NOT_RUN/NOT_MEASURED."
