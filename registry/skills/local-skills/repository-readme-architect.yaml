@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: repository-readme-architect
 display_name: "Repository README Architect"
-skill_version: "0.4.1"
+skill_version: "0.5.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/repository-readme-architect/SKILL.md
@@ -17,10 +17,10 @@ local_path: skills/authored/repository-readme-architect/SKILL.md
 permission_tier: read-and-generate; focused repository write only with user authorization
 portability: high
 review_status: needs-re-review
-dependency_status: self-contained-fifteen-file-optional-python-stdlib
-dependencies: "Standalone fifteen-file package: portable Gold/Platinum guidance in SKILL.md, three read-only Python 3.9+ stdlib checkers (local links, preservation/generator/CI, presentation quality), 48 newly authored anonymous profile tests, inherited checker tests, offline sample contract and references. No external runtime standards."
-content_blob_sha: 46f66f6862c8ba8351c9215ecd32a6a02dc05e59
-complete_package_tree_sha: 39649dd010034d47b2836ae8339d3b6fe0a81aa4
+dependency_status: self-contained-seventeen-file-optional-python-stdlib
+dependencies: "Standalone 17-file offline package: portable Gold/Platinum README guidance, abstraction-first navigation with fully fictional example, three read-only Python standard-library checkers, existing tests and seven new local portfolio tests. No consumer library, brand, network, service or sibling skill required."
+content_blob_sha: 47e813f6e37242568e11cb5c400a680bbf461995
+complete_package_tree_sha: 94a118964320ab27776eee5004d2e722fc6c4aa1
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
-rationale: "v0.4.1 fixes a real false FAIL: nested Quick Start and Contents subsections were truncated by the next deeper heading; false Markdown headings inside fenced shell code also hid executable first use. Five new adversarial/negative/preservation test methods committed. A focused local reproduction exercised four cases, but the current complete Python suite is NOT_RUN; no independent README render/editorial/reader qualification. Previous v0.3.0 101/101 and v0.4.0 48 synthetic method counts remain historical."
+rationale: "v0.5.0 adds reader-adaptive abstraction-first organization for multi-project and organization README presentation, distinguishing conceptual roles from verified runtime dependencies, including complete-inventory preservation, two audience journeys, a fictional worked example, adversarial cases and seven authored local regression methods. Consumer identity evidence redacted. Local structural checks passed; new exact-version Python and reader tests NOT_RUN. Old receipts are historical."
