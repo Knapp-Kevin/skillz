@@ -224,6 +224,33 @@ class PolicyLaboratoryTests(unittest.TestCase):
             self.assertEqual(code, 2)
             self.assertIn("duplicate", err.getvalue().lower())
 
+    def test_cli_refuses_symlinked_policy_lab_manifest(self):
+        with tempfile.TemporaryDirectory() as td:
+            folder = Path(td)
+            target = folder / 'outside.json'
+            target.write_text(json.dumps(manifest()), encoding='utf-8')
+            alias = folder / 'selected.json'
+            alias.symlink_to(target)
+            with redirect_stderr(StringIO()) as err, redirect_stdout(StringIO()) as out:
+                code = lab.main(['--manifest', str(alias), '--approved-public'])
+            self.assertEqual(code, 2)
+            self.assertIn('Symlinked manifest', err.getvalue())
+            self.assertFalse(out.getvalue())
+
+    def test_cli_refuses_symlinked_policy_lab_parent(self):
+        with tempfile.TemporaryDirectory() as td:
+            folder = Path(td)
+            private = folder / 'private'
+            private.mkdir()
+            (private / 'manifest.json').write_text(json.dumps(manifest()), encoding='utf-8')
+            (folder / 'alias').symlink_to(private, target_is_directory=True)
+            with redirect_stderr(StringIO()) as err, redirect_stdout(StringIO()) as out:
+                code = lab.main(['--manifest', str(folder/'alias'/'manifest.json'),
+                                 '--approved-public'])
+            self.assertEqual(code, 2)
+            self.assertIn('Symlinked manifest', err.getvalue())
+            self.assertFalse(out.getvalue())
+
     def test_cli_is_read_only_and_produces_no_trace_file(self):
         with tempfile.TemporaryDirectory() as folder:
             target = Path(folder) / "manifest.json"
