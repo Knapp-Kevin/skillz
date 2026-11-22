@@ -14,10 +14,24 @@ Two explicit modes:
 
 A matching observed job list yields only `HOST_JOB_RECONCILED`, not proof of old-workflow absence, effective branch rules, positive/negative conformance tests, actual release/tag/forward side effects, artifact custody, latency causality, billable savings or suitability for production cutover.
 
-**Planted synthetic acceptance:** `examples/test_ci_host_reconcile.py` adds **26** methods with isolated fake API calls, missing and duplicated jobs, source/event/path drift, stale run attempts, false-green workflow-level outcome, skipped/canceled behavior, invalid timestamps, finite bounded API receipts, and CLI negative controls. Bundled fictional `ci-host-reconcile-map.json` and `ci-host-reconcile-observations.json` demonstrate offline invocation without any consumer access. Existing 184 tests retained; target is **210** hosted tests. Source exact-head CI and security checks PENDING as of this record.
+**Planted synthetic acceptance:** `examples/test_ci_host_reconcile.py` adds **27** methods with isolated fake API calls, missing and duplicated jobs, source/event/path drift, stale run attempts, false-green workflow-level outcome, skipped/canceled behavior, invalid timestamps, finite bounded API receipts, and CLI negative controls. Bundled fictional `ci-host-reconcile-map.json` and `ci-host-reconcile-observations.json` demonstrate offline invocation without any consumer access. Existing 184 tests retained; target is **211** hosted tests. Source exact-head CI and security checks PENDING as of this record.
 
 ## Remaining open #861 acceptance
 
 The adapter cannot derive the normalized source graph from actual GitHub workflow YAML or compiled repo conformance tests. GitHub provider dispatch cause/effect, token exceptions, permissions, run lineage, accurate protected branch policy, negative-control host qualification, end-to-end artifact custody and actual consumer provider billing/performance are still independently required. Do not close issue #861 based only on this feature. Issue #840 remains the external adoption/ROI ledger.
 
 **Integration standard:** only an exact-head passing reviewed PR merged into `main` counts as source completion. No source-only report may claim authenticated consumer savings.
+
+## Adversarial review follow-up before merge
+
+The first hosted 210-method run exposed that a repository owner of `..` was
+not rejected by the initial name regex. Validation now rejects dot segments
+before any live API read. The subsequent source hosted suite passed
+210/210. Additional current GitHub API contract verification identified
+a cross-attempt conclusion risk: the original code fetched a latest-run
+resource with attempt-specific job data. The adapter now fetches the exact
+`runs/{id}/attempts/{attempt}` run resource **and** its paired
+`attempts/{attempt}/jobs` response, rejecting any receipt with a different
+`run_attempt`. One more planted regression raises the target suite to
+**211**. This source revision still requires exact-head hosted QA before
+merging. Provider dispatch causality and customer adoption are unproven.
