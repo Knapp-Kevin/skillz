@@ -335,24 +335,6 @@ not fewer safeguards.
    effective branch requirements if readable, observed check/runs window,
    code change types and any unavailable sources. A PR run on an older SHA
    is not evidence that the new head passed.
-3. **Classify, execute and qualify together.** Inspect exact changed-file
-   consumers and the original bootstrap's real unconditional invocations.
-   For materially redesigned workflows install a trusted-base obligation
-   graph, executable complete command manifest, conditional jobs and an
-   independently recomputed exact-revision gate. A classifier label alone
-   is not an implementation. Test benign docs (real docs check), model
-   README, Rust closure and policy/unknown changes, and ensure omitted,
-   skipped, canceled or stale obligations fail. Retain all independent
-   required controls and record actual selected/skipped work.
-3. **Classify, execute and qualify together.** Inspect exact changed-file
-   consumers and the original bootstrap's real unconditional invocations.
-   For materially redesigned workflows install a trusted-base obligation
-   graph, executable complete command manifest, conditional jobs and an
-   independently recomputed exact-revision gate. A classifier label alone
-   is not an implementation. Test benign docs (real docs check), model
-   README, Rust closure and policy/unknown changes, and ensure omitted,
-   skipped, canceled or stale obligations fail. Retain all independent
-   required controls and record actual selected/skipped work.
 2. **Build the execution inventory before optimizing.** Expand **every** workflow,
    trigger, job, nested recipe and reusable call to its real terminal commands;
    compare same-revision invocation paths, environment and assurance boundary.
@@ -365,6 +347,15 @@ not fewer safeguards.
    **before** introducing a classifier or draft-skip optimization.
    Distinguish skipped, neutral,
    canceled, timed out, unavailable, expected and successful.
+3. **Classify, execute and qualify together.** Inspect exact changed-file
+   consumers and the original bootstrap's real unconditional invocations.
+   For materially redesigned workflows install a trusted-base obligation
+   graph, executable complete command manifest, conditional jobs and an
+   independently recomputed exact-revision gate. A classifier label alone
+   is not an implementation. Test benign docs (real docs check), model
+   README, Rust closure and policy/unknown changes, and ensure omitted,
+   skipped, canceled or stale obligations fail. Retain all independent
+   required controls and record actual selected/skipped work.
 4. **Challenge the assurance claim.** For every consequential control, identify
    failure/threat, impact, detection mechanism, a representative positive
    and negative test, bypass/permission risks, overlap with other checks, and
