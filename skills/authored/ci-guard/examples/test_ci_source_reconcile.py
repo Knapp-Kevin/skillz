@@ -230,6 +230,22 @@ class Sources(unittest.TestCase):
         self.assertEqual(r["status"],"STATIC_SOURCE_RECONCILED")
         self.assertFalse(r["compiled_oracle_execution_verified"])
 
+
+    def test_duplicate_root_event_key_is_not_silently_overwritten(self):
+        self.write(".github/workflows/verify.yml",
+                   VERIFY.replace("jobs:\n","on: [push]\njobs:\n"))
+        self.repin()
+        with self.assertRaisesRegex(source.Hold,"duplicate root YAML key"):
+            self.check()
+
+    def test_duplicate_job_condition_is_not_silently_overwritten(self):
+        self.write(".github/workflows/verify.yml",
+                   VERIFY.replace("    if: "+GUARD+"\n",
+                                  "    if: "+GUARD+"\n    if: false\n"))
+        self.repin()
+        with self.assertRaisesRegex(source.Hold,"duplicated YAML job field"):
+            self.check()
+
     def test_yaml_complex_event_filters_are_unsupported(self):
         self.write(".github/workflows/verify.yml",VERIFY.replace(
             "on: [pull_request]","on:\n  pull_request:\n    paths: [src/**]"))
