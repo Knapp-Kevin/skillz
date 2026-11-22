@@ -92,6 +92,104 @@ The CLI reports candidate pairs and refuses `--enforce` when an overlap lacks
 a documented disposition. Documenting a decision does **not** execute the
 remediation or validate its correctness. It is not a production CI policy gate.
 
+## Mandatory, separate post-cutover verification
+
+The pre-optimization command inventory is necessary but **not enough**
+to claim that redundant work stopped. The existing offline inspector
+now has one **stricter cutover mode**, using the SAME nested-command
+expansion as its original candidate finder:
+
+```sh
+# Candidate finder: documented VERIFY alone can satisfy --enforce;
+# that does NOT demonstrate a completed optimization.
+python3 scripts/ci_overlap.py --enforce graph-before.json
+
+# After modifying workflows and updating downstream gates, re-inventory
+# every workflow, including old and newly disabled paths:
+python3 scripts/ci_overlap.py --verify-cutover graph-after.json
+# exit 0: structurally qualified source graph ONLY
+# exit 3: remaining overlap, unknown scope or failed qualification
+# exit 2: malformed, unsafe or unreadable graph input
+```
+
+The graph remains a manually inspected, inert JSON document, not a
+workflow parser, real check-run observer or branch-protection evaluator.
+Add `post_cutover`:
+
+```json
+{
+  "inventory_complete": true,
+  "source_revision": "exact-source-H",
+  "draft_status": "DRAFT_DEFERRED_NOT_QUALIFIED",
+  "draft_qualified": false,
+  "required": {
+    "candidate": ["models", "reproducibility"],
+    "release": ["reproducibility", "signatures"]
+  },
+  "receipts": {
+    "candidate": [
+      {"obligation": "models", "revision": "exact-source-H", "result": "success"},
+      {"obligation": "reproducibility", "revision": "exact-source-H", "result": "success"}
+    ],
+    "release": [
+      {"obligation": "reproducibility", "revision": "exact-source-H", "result": "success"},
+      {"obligation": "signatures", "revision": "exact-source-H", "result": "success"}
+    ]
+  }
+}
+```
+
+That object is a value of the original graph's `post_cutover` field,
+not an entire replacement graph. Include every `entrypoint` with
+`stage` (draft, candidate or release), `event`, `condition`,
+`revision`, `matrix_expanded: true` and `expensive: true|false`.
+A disabled previous path remains explicitly inventoried with
+`active: false` and
+`retirement_proof: {"revision":"exact-source-H","evidence":"..."}`.
+Never erase old workflow files from the inventory just to make
+overlap findings disappear. A pre-cutover `CONSOLIDATE` decision is
+NOT a completed consolidation while both paths still execute.
+
+**Post-cutover fails** when:
+- The inventory is incomplete, an invocation/condition/event/matrix
+  remains unverified, an entrypoint has a stale revision, or an old
+  path is called disabled without a revision-bound observation.
+- Any still-active EXACT_DUPLICATE or PARTIAL_OVERLAP remains,
+  *regardless* of its documented CONSOLIDATE/RELOCATE/VERIFY intent.
+  UNPROVEN is a hold; documented native/security/release independent
+  detection may justify KEEP, but must retain explicit evidence.
+- Required candidate or release obligations disappear from the
+  actual terminal command graph, lack a unique success receipt,
+  are skipped/cancelled/failed/missing, or bind a different revision.
+  Do not let unrelated green jobs qualify a missing release signature.
+- Draft-only required status is presented as qualified or any
+  expensive draft job still executes.
+
+The output includes the **complete nested invocation paths**,
+a normalized `EXACT_DUPLICATE` / `PARTIAL_OVERLAP` /
+`JUSTIFIED_REPETITION` / `UNPROVEN` class alongside the earlier
+candidate-status name, structural cutover PASS/FAIL, and still
+always reports `optimization_complete: false`,
+`observed_runner_minutes_delta: NOT_MEASURED` and
+`observed_critical_path_delta: NOT_MEASURED`.
+
+**Trust limitation:** reported `inventory_complete`, revision
+and receipts are supplied by the caller; the local checker cannot
+authenticate provider runs or verify that every real workflow was
+discovered. Obtain actual Actions/workflow run IDs, exact-head job
+receipts, branch rules, seeded failure-detection parity and
+comparative runner/critical-path observations independently.
+Without those, the *consumer optimization* remains NOT_VERIFIED
+even after a structurally passing graph. The artifact is optional,
+portable Python standard-library code; an authorized host may
+use an independently validated stronger method.
+
+The new [cutover regressions](../examples/test_ci_cutover.py) test
+the difference between **a recorded intention** and **a stopped
+duplicate**, including removed release signing, missing/stale
+authoritative receipts, draft/ready stage integrity, retired-path
+evidence and independently justified platform repetition.
+
 ## Adversarial migration acceptance
 
 1. Plant a composite command that invokes the same verifier as a separate
