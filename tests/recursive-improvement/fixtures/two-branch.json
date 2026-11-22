@@ -30,7 +30,7 @@
       "outcome": "OBSERVED_FAIL",
       "post_source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "post_workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-      "receipt_digest": "sha256:81c612bfba67db2d14a8d5a5d77618a81fed8313ebfaa8b707cfcf368c2c0e91"
+      "receipt_digest": "sha256:f0dd21e64291357d7bbe85b8a05d8c68e5b5a8ca02a22751f6bd7f3a7b2f9edf"
     },
     {
       "node_id": "n-preserve",
@@ -46,12 +46,12 @@
       "outcome": "OBSERVED_PASS",
       "post_source_artifact_git_blob": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "post_workspace_state_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-      "receipt_digest": "sha256:69069edef3c0c961f0e5c1e7c3aba362dba1102be7a9f226ab0d02c5a73967da"
+      "receipt_digest": "sha256:2acef23db91caeb3953cb90eb1ac0ea9caa8dd0f3842cc5abbfbd668e949ec03"
     }
   ],
   "receipts": [
     {
-      "digest": "sha256:81c612bfba67db2d14a8d5a5d77618a81fed8313ebfaa8b707cfcf368c2c0e91",
+      "digest": "sha256:f0dd21e64291357d7bbe85b8a05d8c68e5b5a8ca02a22751f6bd7f3a7b2f9edf",
       "payload": {
         "node_id": "n-attack",
         "outcome": "OBSERVED_FAIL",
@@ -60,11 +60,12 @@
         "evaluator_id": "schema-v1",
         "evaluation_context_id": "isolated-v1",
         "test_invocations": 1,
-        "wall_ms": 12
+        "wall_ms": 12,
+        "action": "adversarial-probe"
       }
     },
     {
-      "digest": "sha256:69069edef3c0c961f0e5c1e7c3aba362dba1102be7a9f226ab0d02c5a73967da",
+      "digest": "sha256:2acef23db91caeb3953cb90eb1ac0ea9caa8dd0f3842cc5abbfbd668e949ec03",
       "payload": {
         "node_id": "n-preserve",
         "outcome": "OBSERVED_PASS",
@@ -73,7 +74,8 @@
         "evaluator_id": "schema-v1",
         "evaluation_context_id": "isolated-v1",
         "test_invocations": 1,
-        "wall_ms": 9
+        "wall_ms": 9,
+        "action": "preservation-check"
       }
     }
   ]
