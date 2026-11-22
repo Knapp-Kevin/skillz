@@ -19,6 +19,26 @@ branch protection cannot reuse a draft-only green status on the same SHA.
 The explicit manual `--stage draft` option remains available for
 authorized diagnostics but is *not* the workflow default.
 
+## Preflight: source-to-obligation AND execution-to-command graphs
+
+These are **two distinct required graphs**. The source-impact dependency
+graph says which obligations a change needs. The
+[recursive verification execution graph](execution-graph-deduplication.md)
+proves where, how many times and under which events each obligation
+actually runs, including nested scripts, independent workflows and
+reusable call chains. Neither graph substitutes for the other.
+
+Before claiming an optimization, inspect every triggered workflow/
+job/script to its effective terminal command. Classify proven
+cross-workflow duplicates, partial overlaps and justified repetition.
+After consolidation, recheck that each required obligation has one
+authoritative execution per applicable assurance context and that
+its real group/individual receipts bind to the protected exact-HEAD
+qualification. A classifier plus a passing final gate does **not**
+demonstrate lower cost while a separate unconditional workflow
+still repeats the work. A missing or stale authoritative receipt,
+or a removed unique release detector, fails qualification.
+
 ## Three distinct capabilities, one closed loop
 
 1. **Classification:** compare the exact trusted base, merge-base and candidate
