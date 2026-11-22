@@ -154,6 +154,7 @@ def preflight(data):
         issues.append("FORECAST_QUALIFICATION_CYCLES_OVER_BUDGET")
 
     timing = {}
+    timing_p90 = {}
     details = []
     by_shared = {}
     for row in phases:
@@ -171,6 +172,7 @@ def preflight(data):
         if row.get("evidence") not in EVIDENCE:
             issues.append("TIMING_UNVERIFIED:" + ident)
         timing[phase] = timing.get(phase, 0) + p50
+        timing_p90[phase] = timing_p90.get(phase, 0) + p90
         shared = row.get("shared_key")
         if shared is not None:
             nonempty(shared, "shared_key")
@@ -212,6 +214,7 @@ def preflight(data):
         "revision": revision,
         "fanout_forecast": forecasts,
         "phase_p50_minutes": dict(sorted(timing.items())),
+        "phase_p90_minutes": dict(sorted(timing_p90.items())),
         "dominant_observed_or_reported_phase": dominant,
         "phase_details": details,
         "repeated_operations": repeated,
