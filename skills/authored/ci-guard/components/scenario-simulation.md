@@ -196,6 +196,19 @@ authorizes publication: release and token-trigger effects still need real host
 receipts, safe permission checks, independent policy qualification and owner
 authority. Do not infer actual side effects from synthetic simulation.
 
+## Transition from synthetic scenario to observed host receipts
+
+The normalized simulator **never** proves GitHub provider behavior.
+After structural source qualification, the optional
+[host run/job reconciliation method](host-reconciliation.md) compares a
+selected scenario's exact source and scheduled jobs to supplied offline
+or explicitly authorized, direct GitHub run/attempt-job receipts. It
+requires exact workflow path/event/run identity, per-job outcome parity
+and run-level conclusion consistency, and distinguishes supplied
+observations from direct API reads. No `STRUCTURAL_PASS` or
+`HOST_JOB_RECONCILED` can prove dispatch causality, old-path retirement,
+branch protection, release actions or billing without separate receipts.
+
 ## Normalized v3 cross-workflow event modeling
 
 The source job must be `role:other`, declare a matching receiver workflow

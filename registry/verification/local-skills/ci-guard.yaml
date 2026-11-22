@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.9"
+skill_version: "1.6.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 67b84ef20fca3a99fdf14e7aa8bd6608dfd493fb
-complete_package_tree_sha: 765ff8de31efefd63a5f6a590b4205cce257d80f
+content_blob_sha: 015765b16fa56e2ef8ba0050077e1592b889a654
+complete_package_tree_sha: 66ba89587f324e7c73156cd70a1d8af7891f4d53
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: verified
-verification_basis: v1.5.9-PR870-source-head-184-of-184-hosted-methods
+verification_basis: v1.6.0-PR871-source-head-211-of-211-hosted-methods
 validation_status: passed-offline-contract-tests
-validation_note: "PR #870 Actions #45081054088 PASS on source head 541bd1f20c808949cd93bb242bd7da20ea48c851, 184/184 Python methods: 12 overlap +16 cutover +23 self-repair +55 scenario +28 classifier +26 plan +8 comparator +16 results proof. All three checks SUCCESS; final metadata-only head requires fresh QA. Provider token dispatch semantics/custody and consumer results NOT_RUN."
+validation_note: "PR #871 Actions #45082983604 PASS on source head 3e8fdfe404504a76b80dda12aaf4a540b4153ec8, 211/211 Python methods (12 overlap+16 cutover+23 repair+55 scenario+28 classifier+26 plan+8 compare+16 proof+27 host). All three PR checks SUCCESS. Final metadata-only head requires fresh Actions qualification. Real provider dispatch/policy and customer savings NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_9"
+rubric_score: "NOT_ASSESSED_EXACT_V1_6_0"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,7 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  The normalized dispatch-chain source was hosted on exact PR source head
-  541bd1f20c808949cd93bb242bd7da20ea48c851 and passed all 184 Python
-  methods. Final evidence-only SHA needs checks before merge. Caller-declared
-  normalized events do not authenticate real GitHub provider behavior.
+  The original 210-method hosted check found an unsafe owner .. path segment,
+  which was corrected. Exact attempt run data cannot borrow newer rerun
+  conclusions. The complete 211-method revised source passed in hosted CI.
+  Final metadata head must pass before merging. Real consumer protected CI,
+  dispatch causality, receipt custody, side effects and savings NOT_RUN.

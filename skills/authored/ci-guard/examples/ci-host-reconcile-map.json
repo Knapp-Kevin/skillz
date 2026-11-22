@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "repository": "fictional-org/fictional-repo",
+  "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "scenario_id": "postmerge-push",
+  "design_id": "split-independent",
+  "expected_event": "push",
+  "workflow_runs": [
+    {
+      "workflow": "forward",
+      "workflow_file": ".github/workflows/forward.yml",
+      "run_id": 73,
+      "attempt": 1,
+      "jobs": {
+        "forward": "forward-port simulation"
+      }
+    }
+  ]
+}

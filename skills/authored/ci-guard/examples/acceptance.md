@@ -261,3 +261,20 @@ and receiver, cross-workflow `needs`, non-verifier source requirement and
 invalid receiver event. All are synthetic; no GitHub run is
 authenticated by passing them.
 
+
+## Host evidence versus declared CI scenarios (CI Guard v1.6.0)
+
+The [read-only host reconciliation adapter](../components/host-reconciliation.md)
+provides **27 planted unit/CLI tests** in
+[test_ci_host_reconcile.py](test_ci_host_reconcile.py), a fictional mapping
+and provider-job receipt sample. It refuses wrong source/event/path/run
+attempts (including cross-attempt conclusion laundering), missing or duplicated job receipts, ambiguous job maps, green
+job/failed workflow contradictions, wrong host job conclusions, absent
+timing, unsupported/provider-incomplete states and forged local proof.
+It separately tests bounded GET-only GitHub API endpoints via injected
+offline requests, with no network during package QA. The only accepted
+live route requires explicit caller authorization for read-only `--live`.
+A structurally reconciled job ledger never permits release, merging,
+cutover, cost-saving certification or authentication of GitHub dispatch
+lineage. Simulated samples may never be used for adoption evidence.
+
