@@ -138,7 +138,7 @@ def raw_delta(before, after):
 
 def report(data):
     fields(data, ("schema_version", "comparison_mode", "evidence", "pairs", "assurance",
-                  "scope", "source_refs", "change"), where="results proof input")
+                  "scope", "source_refs", "change"), ("failure_feedback",), where="results proof input")
     check(type(data["schema_version"]) is int and data["schema_version"] == 1, "unsupported schema")
     mode = data["comparison_mode"]
     check(mode in MODES, "unknown comparison mode")
@@ -164,6 +164,19 @@ def report(data):
               "invalid forecast percent")
     assurances = validate_assurance(data["assurance"])
     scope_differences = validate_scope(data["scope"])
+    feedback = None
+    if "failure_feedback" in data:
+        f = data["failure_feedback"]
+        fields(f, ("baseline_seconds", "optimized_seconds"), where="failure feedback")
+        for name in ("baseline_seconds", "optimized_seconds"):
+            value = f[name]
+            check(type(value) in (int, float) and math.isfinite(value) and 0 <= value <= 86400,
+                  "failure feedback needs observed finite seconds")
+        feedback = {"baseline_seconds": f["baseline_seconds"],
+                    "optimized_seconds": f["optimized_seconds"],
+                    "saved": round(f["baseline_seconds"] - f["optimized_seconds"], 4),
+                    "saved_percent": percent(f["baseline_seconds"], f["optimized_seconds"]),
+                    "provenance": evidence}
 
     aggregate = []
     strict_checked = False
@@ -240,7 +253,8 @@ def report(data):
     critical_delta = metrics["critical_path_seconds"]["saved"]
     elapsed_delta = metrics["qualification_elapsed_seconds"]["saved"]
     runner_delta = metrics["executed_job_minutes"]["saved"]
-    if any(v is not None and v < 0 for v in (billed_delta, critical_delta, elapsed_delta, runner_delta)):
+    if any(v is not None and v < 0 for v in (billed_delta, critical_delta, elapsed_delta, runner_delta,
+                                              feedback["saved"] if feedback else None)):
         indicated = "REGRESSION_OR_TRADEOFF"
     elif any(v is not None and v > 0 for v in (billed_delta, critical_delta, elapsed_delta, runner_delta)):
         indicated = "IMPROVEMENT_AS_SUPPLIED"
@@ -279,7 +293,7 @@ def report(data):
             "metrics": {"summaries": metrics, "pairs": aggregate,
                         "provider_cost": cost,
                         "estimated_runner_savings_percent": change.get("forecast_runner_savings_percent"),
-                        "first_failure_feedback": "NOT_MEASURED"},
+                        "first_failure_feedback": feedback if feedback else "NOT_MEASURED"},
             "assurance_parity": assurances,
             "source_refs": refs, "change": change, "scope": data["scope"],
             "evidence_provenance": evidence, "limitations": limitations,
@@ -321,7 +335,9 @@ def render_markdown(result):
         f'- Provider billed runner time: {fmt("billed_runner_minutes", "billed-min")}',
         f'- Dependency critical path: {fmt("critical_path_seconds", "s")}',
         f'- Qualification wall-clock envelope: {fmt("qualification_elapsed_seconds", "s")}',
-        "- First failing feedback: NOT_MEASURED unless independently measured",
+        "- First failing feedback: " + (str(result["metrics"]["first_failure_feedback"])
+                                       if isinstance(result["metrics"]["first_failure_feedback"],dict)
+                                       else "NOT_MEASURED"),
         "- Monetary cost and payback: NOT_MEASURED without authenticated pricing and engineering cost",
         f'- Forecast (never an observed saving): {c.get("forecast_runner_savings_percent", "NOT_PROVIDED")}', "",
         "## Integrity and limitations", "",
