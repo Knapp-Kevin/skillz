@@ -68,11 +68,12 @@ class HostEvidenceTests(unittest.TestCase):
         o=observed()
         def fake(url,token):
             calls.append((url,token))
-            if "/attempts/" in url:return {"jobs":o["workflow_runs"][0]["jobs"]}
+            if "/jobs?" in url:return {"jobs":o["workflow_runs"][0]["jobs"]}
             return o["workflow_runs"][0]["run"]
         result=audit.observe_live(mapping(),token="never-print-secret",getter=fake)
         self.assertEqual(result["workflow_runs"][0]["jobs"][0]["id"],991)
         self.assertEqual(len(calls),2)
+        self.assertIn("/attempts/1",calls[0][0])
         self.assertTrue(all(url.startswith("https://api.github.com/repos/fictional-org/fictional-repo/actions/runs/73")
                             for url,_ in calls))
         self.assertIn("/attempts/1/jobs?per_page=100&page=1",calls[-1][0])
@@ -93,6 +94,13 @@ class HostEvidenceTests(unittest.TestCase):
     def test_provider_event_mismatch_is_refusal(self):
         with self.assertRaisesRegex(audit.Hold,"HOST_EVENT_MISMATCH"):
             audit.reconcile(story(),mapping(),observed(event="release"))
+
+
+    def test_old_attempt_cannot_inherit_later_successful_rerun_conclusion(self):
+        o=observed()
+        o["workflow_runs"][0]["run"]["run_attempt"]=2
+        with self.assertRaisesRegex(audit.Hold,"HOST_RUN_NOT_COMPLETED_OR_ATTEMPT_STALE"):
+            audit.reconcile(story(),mapping(),o)
 
     def test_stale_or_incomplete_run_attempt_refused(self):
         for key,value in [("run_attempt",0),("status","in_progress")]:
@@ -220,7 +228,7 @@ class HostEvidenceTests(unittest.TestCase):
         calls=[]
         def fake(url,token):
             calls.append(url)
-            if "/attempts/" not in url:return observed()["workflow_runs"][0]["run"]
+            if "/jobs?" not in url:return observed()["workflow_runs"][0]["run"]
             return {"jobs":[{"id":i} for i in range(100)]}
         with self.assertRaisesRegex(audit.Hold,"too many jobs"):
             audit.observe_live(mapping(),getter=fake)
