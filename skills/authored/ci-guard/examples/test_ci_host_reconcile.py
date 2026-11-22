@@ -227,7 +227,7 @@ class HostEvidenceTests(unittest.TestCase):
         self.assertTrue(all("/attempts/1/jobs?" in x for x in calls[1:]))
 
     def test_invalid_repo_or_workflow_path_cannot_request_arbitrary_hosts(self):
-        for badrepo in ("../evil", "example.com/a/b", "a:b/c", "evil/../../escape"):
+        for badrepo in ("../evil", "org/..", "org/.", "./repo", "example.com/a/b", "a:b/c", "evil/../../escape"):
             with self.subTest(repo=badrepo):
                 m=mapping();m["repository"]=badrepo
                 with self.assertRaises(audit.Hold):
