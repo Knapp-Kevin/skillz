@@ -39,3 +39,4 @@ jobs:
           python3 skills/authored/ci-guard/examples/test_ci_plan.py
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_compare_ci_runs.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_results_proof.py' -v
+          python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_host_reconcile.py' -v
