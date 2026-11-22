@@ -37,7 +37,7 @@ def sample():
             {"id": "draft-format-edit", "stage": "draft", "changed_paths": ["tests/check.py"]},
             {"id": "final-ready", "stage": "ready", "changed_paths": ["tests/check.py"]},
         ],
-        "budget": {"max_preparation_jobs": 1, "max_expensive_cycles": 1,
+        "budget": {"max_preparation_jobs": 4, "max_expensive_cycles": 1,
                    "planned_expensive_cycles": 1},
         "controls": {
             "nested_execution_inventory_complete": True,
