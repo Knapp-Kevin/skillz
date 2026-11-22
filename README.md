@@ -31,6 +31,7 @@ A few examples of original, self-contained approaches:
 | Assess repository health or prioritize delivery work | [Repository Delivery Assessor](skills/authored/repository-delivery-assessor/SKILL.md) |
 | Compare alternatives without overriding mandatory constraints | [Decision Tradeoff Workbench](skills/authored/decision-tradeoff-workbench/SKILL.md) |
 | Recover the working state of an interrupted effort | [Context Continuation Contract](skills/authored/context-continuation-contract/SKILL.md) |
+| Create, repair or verify an evidence-backed repository README | [Repository README Architect](skills/authored/repository-readme-architect/SKILL.md) |
 | Inspect a CI delivery problem before weakening safeguards | [CI Guard](skills/authored/ci-guard/SKILL.md) |
 
 These are **examples, not ranked endorsements or evidence of execution in your host**. For additional study-only examples across technical and creative domains, see the [dated featured-method snapshot](docs/history/readme-snapshot-2026-11-20.md#our-featured-methods-a-small-evidence-based-shelf).
