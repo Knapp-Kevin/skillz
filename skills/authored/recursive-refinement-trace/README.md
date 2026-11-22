@@ -1,4 +1,4 @@
-# Recursive Refinement Trace v0.2.0
+# Recursive Refinement Trace v0.3.0
 
 A portable **optional** capture and observed-only replay component for
 governed recursive skill improvement. The downloaded package contains everything required to run
@@ -116,6 +116,65 @@ Skillz-maintainer QA scripts, GitHub, autonomous jobs, memory, or a second
 agent. A missing private root, unsupported host, absent consent, corrupted
 log, or evaluator mismatch results in `BLOCKED`, not invented evidence.
 
+## Optional Phase-3 policy comparison, heldout and safety veto
+
+This package includes a **read-only host-invoked**
+[policy_lab.py](policy_lab.py) and a
+[19-case synthetic adversarial suite](test_policy_lab.py).
+Unlike Phase-2 replay, it proposes a comparison decision against
+a deliberately frozen `recorded-order` incumbent. It never
+executes an agent, evaluates code under test, changes a skill,
+uploads traces, writes output files or activates a proposed
+policy. Only previously observed, causally compatible branches
+can contribute evidence.
+
+After **separate explicit host authorization**, supply a public
+or synthetic JSON manifest containing these exact fields:
+
+- `schema_version: 1`, `evaluator_id`,
+  `evaluation_context_id`, and shared integer `budget`.
+- `candidate` with exactly `schema_version:1`,
+  `policy_id`, `branch_priority`
+  (`recorded-order` or `adversarial-first`),
+  `verify_lane` (`preservation-check` or
+  `run-targeted-verification`), integer `max_attempts`,
+  and `stop_on:recorded-blocked`.
+- `cases`: at least four unique experiments with `case_id`,
+  `split` (`development` or `heldout`),
+  `task_family`, the known-good `source` Git blob and
+  `state` snapshot digest, nonempty
+  `required_actions`, and the exact `trace` exported
+  by the bundled recorder. Each v1 export has one frozen
+  evaluator/context and bound evidence receipts. Include at
+  least two heldout task families represented in development.
+
+The host is responsible for constructing *real* development
+and withheld splits from authorized traces. A JSON statement
+that an experiment was held out is not independent proof of
+blindness. Policy data cannot introduce executable commands,
+arbitrary branch-creation, evaluator overrides, approval
+decisions or private preferences. Protected checks must have
+observed PASS. Candidate proposals that skip/fail them are
+rejected even when cheaper; overfit, indistinguishable or
+unreliable replay retains the incumbent.
+
+```sh
+python policy_lab.py --manifest "$HOST_CLEARED_PUBLIC_MANIFEST" --approved-public
+python -m unittest test_policy_lab -v
+```
+
+Output is JSON with exact manifest/policy hashes, frozen
+evaluator/context, per-case visited nodes, test-call counts,
+recorded elapsed time, differences in recorded failure detection
+and a `PROPOSE_BOUNDED_LIVE_PILOT`,
+`HOLD_INCUMBENT` or `REJECT_CANDIDATE` decision.
+**No result is automatic promotion** or proof of live model
+improvement. File inputs must be cleared for permitted
+public/synthetic disclosure, even if retained privately by the
+host. A successful structural replay cannot authenticate
+a claimed execution, original user authorization or unseen
+branches. The Phase-4 live adversarial pilot remains separate.
+
 ## Storage guarantees and limits
 
 Private root: existing user-owned mode 0700. Trace file: mode 0600;
@@ -150,7 +209,7 @@ Run from this standalone package, explicitly and locally:
 python -m unittest test_trace test_replay -v
 ```
 
-The combined regression suite includes **84 actual locally executed tests**
+The **previous v0.2.0 exact package** recorded **84 actual locally executed tests**
 (40 recorder tests plus 44 replay tests), including a **real local synthetic
 source check** that
 produces actual failing and passing subprocess exit statuses on two
@@ -159,7 +218,9 @@ without falsely claiming one observation mutated the workspace of another.
 An additional integration test records two sibling outcomes using the real
 bundled recorder and confirms that the two policies select distinct known
 paths without writing to the log. All 84 tests passed locally on Python
-3.13.5. No second model, external execution attestation, or replay policy
+3.13.5 **for v0.2.0**. v0.3.0 includes a new policy laboratory and
+19 new adversarial tests; the updated full package Python suite is
+**NOT_RUN** until actually executed on this exact revision. No second model, external execution attestation, or replay policy
 effectiveness gain was demonstrated. Tests run without installing
 dependencies or accessing network services.
 
