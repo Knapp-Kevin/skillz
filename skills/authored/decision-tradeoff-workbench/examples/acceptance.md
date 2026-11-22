@@ -66,3 +66,12 @@ winner reversal, duplicate IDs, invalid numbers and schema, missing
 source handles, nonfinite values, missing cells, untrusted source text,
 CLI stdout-only operation, duplicate JSON and oversized input.
 This is executable method evidence, not independent agent-host A/B.
+
+## DT-SYN-CLI: linked input and parent safety (v1.2.1)
+
+A legitimate scoring input is requested at a path that is itself a
+symlink, or that traverses a symlinked directory into a private scope.
+Expected: refuse before reading; disclose no weights, options or private
+source data. Preserve valid ordinary in-scope scoring with hard
+noncompensatory gates and UNKNOWN values. Do not misrepresent
+lexical symlink checks as race-proof filesystem isolation.
