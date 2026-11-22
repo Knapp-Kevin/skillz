@@ -279,6 +279,14 @@ def reconcile(root, scenario, source_map):
     root=root_dir(root)
     need(isinstance(scenario,dict) and type(scenario.get("schema_version")) is int
          and scenario["schema_version"]==3,"expected normalized v3 scenario input")
+    # Use the existing source-schema authority rather than inventing a
+    # competing manifest validator. This does NOT execute scenarios.
+    import ci_scenario as simulator
+    try:
+        _, parse_issues = simulator.parse(scenario)
+    except simulator.Invalid as exc:
+        raise Hold("INVALID_NORMALIZED_SCENARIO: "+str(exc)) from exc
+    need(not parse_issues,"INCOMPLETE_NORMALIZED_INVENTORY:"+",".join(parse_issues))
     need(isinstance(scenario.get("designs"),list),"designs absent")
     matched=[d for d in scenario["designs"]
              if isinstance(d,dict) and d.get("id")==source_map.get("design_id")]
@@ -297,9 +305,11 @@ def reconcile(root, scenario, source_map):
     for child in workflow_dir.iterdir():
         if child.suffix in {".yml",".yaml"}:
             need(not child.is_symlink() and child.is_file(),"symlinked workflow")
-            actual_workflows.add if False else None
             actual_workflows[child.relative_to(root).as_posix()]=True
-    need(set(actual_workflows)=={entry["path"] for entry in source_map["workflow_files"]},
+    declared_files=[entry["path"] for entry in source_map["workflow_files"]]
+    need(len(set(declared_files))==len(declared_files),
+         "DUPLICATE_WORKFLOW_SOURCE_FILE")
+    need(set(actual_workflows)==set(declared_files),
          "UNINVENTORIED_WORKFLOW_FILES")
     jobmap={j["id"]:j for j in design["jobs"]}
     need(len(jobmap)==len(design["jobs"]),"duplicated normalized job identity")
