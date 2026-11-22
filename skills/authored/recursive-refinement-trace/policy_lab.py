@@ -20,7 +20,7 @@ import replay
 
 CASE_KEYS = frozenset({"case_id", "split", "task_family", "source", "state",
                        "required_actions", "trace"})
-MANIFEST_KEYS = frozenset({"schema_version", "evaluator_id",
+MANIFEST_KEYS = frozenset({"schema_version", "evaluator_sha256", "evaluator_id",
                            "evaluation_context_id", "budget", "candidate", "cases"})
 POLICY_KEYS = frozenset({"schema_version", "policy_id", "branch_priority",
                          "verify_lane", "max_attempts", "stop_on"})
@@ -94,6 +94,7 @@ def evaluate(data):
     require(type(data["schema_version"]) is int and data["schema_version"] == 1,
             "Unsupported manifest version")
     replay.ident(data["evaluator_id"], "evaluator")
+    replay.fingerprint(data["evaluator_sha256"], replay.SHA256, "evaluator source")
     replay.ident(data["evaluation_context_id"], "evaluation context")
     budget = data["budget"]
     require(type(budget) is int and 1 <= budget <= replay.MAX, "Invalid shared budget")
@@ -202,6 +203,7 @@ def evaluate(data):
         "candidate_policy_sha256": digest(candidate),
         "manifest_sha256": digest(data),
         "evaluator_id": data["evaluator_id"],
+        "evaluator_sha256": data["evaluator_sha256"],
         "evaluation_context_id": data["evaluation_context_id"],
         "common_test_call_budget": budget, "veto_reasons": veto,
         "development_case_count": len(dev),
