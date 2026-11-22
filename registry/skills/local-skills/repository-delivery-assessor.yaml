@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: repository-delivery-assessor
 display_name: "Repository Delivery Assessor"
-skill_version: "1.4.0"
+skill_version: "1.4.1"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/repository-delivery-assessor/SKILL.md
@@ -11,7 +11,7 @@ relationship: newly-authored-original
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
 curated_at: "2026-11-18"
-last_checked_at: "2026-11-20"
+last_checked_at: "2026-11-22"
 availability: in-repo
 local_path: skills/authored/repository-delivery-assessor/SKILL.md
 permission_tier: read-only
@@ -19,10 +19,10 @@ portability: high
 review_status: verified-static
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Nine-file standalone original package, three focused components, optional Python 3.9+ offline triage script; no network or sibling package required"
-content_blob_sha: 5e940e687efdfd835528911523c831bcd9ebb1de
-complete_package_tree_sha: f423b0c8765a2da62f949b0b571f9c40f7eaf569
+content_blob_sha: d3b95ff7da5a09a5515268b7726291040c57e709
+complete_package_tree_sha: 262991c78bb9d86477dd3db7e18a96651c2e42e5
 historical_comparators: "skills/repo-doctor/SKILL.md; skills/repo-pulse/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
 import_eligibility: review-required
-rationale: "v1.4 original standalone nine-file static review 18/20, 39/39 local Python regression tests and source-verified public PR #816 negative control. See docs/reviews/2026-11-20-repository-delivery-v140-exacthead-triage.md. Host A/B and 1.5x NOT PROVEN."
+rationale: "v1.4.1 fixes symlinked input file/ancestor preflight before reading optional offline JSON; two planted negative CLI cases added, valid original input paths preserved. 41 changed-version Python test methods authored but full current suite NOT_RUN. Previous-version source method pass receipts remain historical, not transferable. Lexical symlink defense does not protect hostile concurrent path replacement; host snapshot isolation and actual agent-host behavior unverified. Exact complete package Git SHA pinned."
