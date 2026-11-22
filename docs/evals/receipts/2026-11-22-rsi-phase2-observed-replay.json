@@ -1,0 +1,116 @@
+{
+  "comparison": {
+    "distinct_recorded_paths": true,
+    "external_execution_authenticated": false,
+    "limited_to_observed_branches": true,
+    "policies": [
+      {
+        "counterfactual_outcomes_inferred": false,
+        "evaluation_context_id": "isolated-v1",
+        "evaluator_id": "synthetic-json-v1",
+        "experiment_id": "synthetic-eval",
+        "external_execution_authenticated": false,
+        "max_test_invocations": 2,
+        "observed_nodes_in_tree": 2,
+        "observed_nodes_visited": 1,
+        "observed_outcomes": {
+          "BLOCKED": 0,
+          "OBSERVED_FAIL": 0,
+          "OBSERVED_PASS": 1
+        },
+        "policy": "recorded-order",
+        "promotion_eligible": false,
+        "recorded_branch_coverage": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "root_node_id": "n-8e0c41df5699c27ab3025a49",
+        "state_scope": "supplied-snapshot-file-not-complete-environment",
+        "status": "REPLAYED_RECORDED_PATH_ONLY",
+        "terminal_status": "PATH_COMPLETE",
+        "test_invocations": 1,
+        "unknown_branch_count": 0,
+        "unknown_branch_rate": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "unknown_state_count": 0,
+        "unvisited_observed_nodes": 1,
+        "visited_node_ids": [
+          "n-a263ef6099cf6dc05ec5abd3"
+        ],
+        "wall_ms": 969
+      },
+      {
+        "counterfactual_outcomes_inferred": false,
+        "evaluation_context_id": "isolated-v1",
+        "evaluator_id": "synthetic-json-v1",
+        "experiment_id": "synthetic-eval",
+        "external_execution_authenticated": false,
+        "max_test_invocations": 2,
+        "observed_nodes_in_tree": 2,
+        "observed_nodes_visited": 1,
+        "observed_outcomes": {
+          "BLOCKED": 0,
+          "OBSERVED_FAIL": 1,
+          "OBSERVED_PASS": 0
+        },
+        "policy": "adversarial-first",
+        "promotion_eligible": false,
+        "recorded_branch_coverage": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "root_node_id": "n-8e0c41df5699c27ab3025a49",
+        "state_scope": "supplied-snapshot-file-not-complete-environment",
+        "status": "REPLAYED_RECORDED_PATH_ONLY",
+        "terminal_status": "PATH_COMPLETE",
+        "test_invocations": 1,
+        "unknown_branch_count": 0,
+        "unknown_branch_rate": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "unknown_state_count": 0,
+        "unvisited_observed_nodes": 1,
+        "visited_node_ids": [
+          "n-6bc6845e99388134e3d21aaa"
+        ],
+        "wall_ms": 720
+      }
+    ],
+    "status": "COMPARISON_NOT_A_PROMOTION_DECISION",
+    "winner": null
+  },
+  "evaluator": "synthetic-json-v1",
+  "evaluator_context": "isolated-v1",
+  "external_execution_authenticated": false,
+  "notes": "Python subprocess observations executed by local test host; sealed local trace exists only within temporary synthetic directory, which is destroyed. Digest alone is not authentication. Policy costs are recorded, not future projections; no policy winner or deployment implied.",
+  "observations": [
+    {
+      "action": "preservation-check",
+      "exit_code": 0,
+      "outcome": "OBSERVED_PASS",
+      "recorded_node": "n-a263ef6099cf6dc05ec5abd3",
+      "reported_wall_ms": 969
+    },
+    {
+      "action": "adversarial-probe",
+      "exit_code": 1,
+      "outcome": "OBSERVED_FAIL",
+      "recorded_node": "n-6bc6845e99388134e3d21aaa",
+      "reported_wall_ms": 720
+    }
+  ],
+  "phase1_trace_blob": "78a134e182bd0206d7c81fdc1c51b8b4bce2d865",
+  "phase2_replay_blob": "5f9c5da1f4a7f346b32533026a7b54de151aaf86",
+  "phase2_tests_blob": "c6b91207ac1087a36fadcc58a15995d422a717c2",
+  "python_version": "3.13.5",
+  "schema_version": 1,
+  "scope": "synthetic-public-local-POSIX",
+  "source": "single public synthetic JSON artifact with duplicate list entries",
+  "source_git_blob": "5374fcfb808540765684f4b41317976aa41c2904",
+  "state_snapshot_sha256": "sha256:323f38446fa0817709f16c426a8588d946e0629420befd67d21c80500a6bbe17",
+  "title": "P2 executed synthetic two-sibling observed-only replay",
+  "trace_sha256": "sha256:47af5a2dc2c38a6e8c887e3f7e615e4617d714795d9037e0ec63c0d5a212a0fd"
+}

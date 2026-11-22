@@ -1108,21 +1108,21 @@
       "license_verified_at": "2026-11-22",
       "provenance_path": "registry/skills/local-skills/recursive-refinement-trace.yaml",
       "verification_path": "registry/verification/local-skills/recursive-refinement-trace.yaml",
-      "skill_blob_sha": "0f03b4bffb5abd6c2e09dea1f0a38a67056f66cb",
-      "package_tree_sha": "79258fe8c7a53691d19cca5610dbfdbb95f1e31e",
-      "package_file_count": 8,
+      "skill_blob_sha": "cd00d434317c8e6f5298067cbc6654be8436621c",
+      "package_tree_sha": "50bee109cecb3a00a34a0a2c5b753e0c176714eb",
+      "package_file_count": 10,
       "review_status": "source-reviewed",
       "review_score": "not-scored",
       "behavioral_validation": "not-run",
       "host_authority": "user-approved public/synthetic host-local write; read-only inspect/export",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Original MIT first-party package; no user transcripts or preferences in source; optional recorder requires explicit host clearance. Exact content hashes are structural, not proof of consent.",
-      "package_version": "0.1.0",
+      "package_version": "0.2.0",
       "capability_paths": [
         "software-engineering/maintenance",
         "agent-mcp-development/evaluation"
       ],
-      "review_note": "Phase-1 #830: exact eight-file package; 40/40 local Python 3.13.5 adversarial tests, including actual synthetic red/green subprocesses and P0-compatible exports. Separate external-agent, user-effectiveness, Windows-native secure storage and same-UID attack validation remain NOT_RUN. An additional adversarial experiment-file rename test reproduced an identity-substitution defect, corrected before merge. Updated tree fingerprint attached. Codex review FIFO denial-of-service was reproduced with timeout-protected tests and corrected using nonblocking opens. Package pins refreshed."
+      "review_note": "Phase-2 #831 delivers standalone optional observed-only replay in original v0.2 ten-file package. Local Python 3.13.5: 84/84 methods passed (40 Phase-1 recorder, 44 new replay); actual synthetic two-sibling capture and read-only policy divergence reproduced with public fixtures. No evaluator calls during replay, winner selection, independent agent-host validation, full workspace state attestation or deployment improvement. Evidence docs/evals/receipts/2026-11-22-rsi-phase2-observed-replay.json.. Final source-level P2 review corrected missing explicit requested-node accounting and task-family drift, reproduced by tests; exact 84/84 suite executed locally Python 3.13.5."
     }
   ]
 }

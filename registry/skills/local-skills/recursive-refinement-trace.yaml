@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: recursive-refinement-trace
 display_name: Recursive Refinement Trace
-skill_version: "0.1.0"
+skill_version: "0.2.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/recursive-refinement-trace/SKILL.md
@@ -19,20 +19,23 @@ portability: high
 review_status: source-reviewed
 dependency_status: standalone-optional-posix-python-stdlib
 dependencies: >-
-  Original eight-file complete skill package, optional host-invoked POSIX
-  Python 3.9+ standard-library trace recorder and 40-method offline test suite.
-  No network, repository runtime, scheduled jobs, model service or third-party
-  dependencies. A caller-provided existing mode-0700 host-owned root and
-  explicit clearance are required for mutation.
-content_blob_sha: 0f03b4bffb5abd6c2e09dea1f0a38a67056f66cb
-complete_package_tree_sha: 79258fe8c7a53691d19cca5610dbfdbb95f1e31e
+  Original ten-file first-party standalone skill with explicit host-invoked
+  Python 3.9+ standard-library capture and read-only observed replay helpers.
+  No Skillz monorepo, sibling skill, network, automatic CI or second agent
+  required. POSIX secure host-owned mode-0700 storage is required for capture
+  and replay input; read-only reasoning remains available without running code.
+content_blob_sha: cd00d434317c8e6f5298067cbc6654be8436621c
+complete_package_tree_sha: 50bee109cecb3a00a34a0a2c5b753e0c176714eb
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Phase-1 #830 standalone host-local capture implementation, 40/40 locally
-  executed Python 3.13.5 adversarial tests including synthetic red/green
-  subprocess observations. Append-only SHA-256 chain, P0-compatible export,
-  private path boundaries, no auto activation, no hosted claim of consent.
-  Source exact fingerprint pinned; independent external consuming-host and
-  user-outcome validation are NOT_RUN. Real synthetic execution occurs in
-  local tests, not in a separate agent. Reference issue #828.
+  Phase-2 issue #831 extends the merged Phase-1 #830 opt-in recorder with
+  deterministic recorded-order and adversarial-first observed-only replay.
+  Exactly 84/84 local Python 3.13.5 methods passed (40 recorder and 44 replay),
+  including real synthetic capture to two sibling observations and read-only
+  replay. Fixed evaluator and state constraints, unknown branches, test-call
+  budgets, policy comparison without winner. Attached executed synthetic
+  receipt: docs/evals/receipts/2026-11-22-rsi-phase2-observed-replay.json.
+  Git fingerprints pin exact ten-file package. No independent agent-host
+  acceptance, complete environment equivalence, policy generalization or
+  observed production cost savings established; no auto-execution.

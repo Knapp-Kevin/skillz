@@ -4,13 +4,14 @@ description: >-
   Record, verify and export explicitly authorized public or synthetic skill
   refinement attempts as a bounded, tamper-evident, host-local discovery tree.
   Use when a user wants to preserve actual test outcomes, inspect causal
-  branches or prepare observed-only replay evidence. Does not autonomously
-  learn, verify an external agent, or gather private histories.
+  branches or compare observed-only exploration strategies without rerunning
+  tests. Does not autonomously learn, verify an external agent, or gather
+  private histories.
 metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Recursive Refinement Trace
-  version: 0.1.0
+  version: 0.2.0
   license: MIT
 ---
 
@@ -30,7 +31,8 @@ host has established permission to read the specific input files and store
 public/synthetic fingerprints. Merely viewing this skill or reading a source
 repository does not authorize running its helper or creating storage.
 
-For a read-only review of a supplied trace, use `verify` or `export` only
+For a read-only review of a supplied trace, use `verify`, `export` or
+host-authorized `replay.py` only
 when the user and host authorize access to that trace. If the host is
 read-only, non-POSIX, or lacks a private filesystem, describe the evidence
 contract without claiming anything was recorded. Do not demand installation,
@@ -93,8 +95,63 @@ network access, a GitHub checkout, background services or a second AI agent.
    append/readback/sync yields `BLOCKED`, not success or a claimed rollback.
 
 See the [portable offline instructions and command examples](README.md).
-The optional [Python 3.9+ stdlib-only helper](trace.py) and
-[adversarial regression suite](test_trace.py) ship within this package.
+The optional [Python 3.9+ stdlib-only capture helper](trace.py), its
+[trace regression suite](test_trace.py), the [observed-only replay helper](replay.py),
+and [replay regression suite](test_replay.py) ship within this package.
+
+## Optional Phase-2 replay: constrained exploration strategies
+
+**Trigger:** the user explicitly requests replay or comparison of an authorized
+host-local, public/synthetic experiment previously recorded by `trace.py`.
+Neither importing this package nor receiving a trace grants permission to
+inspect it. An external host validates that the source and state snapshot
+files are cleared for this analysis. The CLI requires `--approved-public`;
+this switch is a guard, **not authentic consent**.
+
+```sh
+python replay.py --root "$HOST_PRIVATE_ROOT" --experiment-id "$EXPERIMENT_ID" \
+  --source "$PUBLIC_SOURCE_FILE" --state "$PUBLIC_STATE_SNAPSHOT" \
+  --expected-evaluator "$PINNED_EVALUATOR" --expected-context "$PINNED_CONTEXT" \
+  --budget 3 --compare --approved-public
+```
+
+The replay helper invokes the **bundled** capture reader for validation of
+the whole append-only chain and experiment identity. It independently checks
+the closed-world export, receipt/action binding, parent state, exact source
+Git blobs, evaluator/context identities and resource budget. It does **not**
+execute a discovery agent, evaluator, test command, shell, network request,
+file write or new evidence collection. It does not require any other skill,
+the Skillz repository or a background job.
+
+Two deterministic, declarative navigation strategies are allowed:
+
+- `recorded-order`: follow the first recorded child at each selected parent.
+- `adversarial-first`: prefer an **already recorded** adversarial probe, then
+  preservation check, targeted verification and inspection, breaking ties
+  by original recorded order. It never sorts using outcome or hindsight cost.
+
+The engine follows **one isolated recorded lineage per strategy**. It cannot
+move from one changed sibling workspace into another, infer missing outcomes,
+pretend a different environment is equivalent, or reward a proposal node.
+`UNKNOWN_BRANCH` marks unavailable choices, `UNKNOWN_STATE` marks trusted
+source/snapshot mismatches, and `BUDGET_EXHAUSTED` stops before an unaffordable
+recorded action. The only state scope attested is the **supplied snapshot
+file**, not the entire workspace, dependencies or executable environment.
+
+Outputs report observed visits, test calls, elapsed time, coverage denominator
+(**recorded** observed nodes only), unvisited branches, unknown rates and the
+explicit terminal state. `--compare` shows both strategies with matched
+budgets and frozen evaluator/context, but **never ranks, promotes or
+automatically activates** a new policy. Lower historical cost or better
+replay coverage does not establish live skill quality, correctness, unseen
+branch outcomes or independent host efficacy. Phase-3 holdout and live pilot
+gates remain separately required.
+
+If tools or secure host storage are unavailable, explain the contract or
+review already supplied authorized data without claiming live execution.
+A weaker consuming model may stick to the fixed recorded-order strategy,
+while a stronger one may analyze differences and propose hypotheses. Neither
+may weaken evaluator, privacy or authority checks.
 
 ## Evidence levels and stopping
 
