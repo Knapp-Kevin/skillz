@@ -41,3 +41,16 @@ Expected: explain no actual scene consistency check is possible; offer questions
 ## Future behavioral test requirements
 
 Record host/model version, date, exact case input, actual response, canon/source trace, private-data boundaries, option promotion errors, and verdict. No host was run during this static package authoring.
+
+## Case G: offline rights and rejected option preservation
+
+An author copies only the `character-motivation-interview/`
+folder, supplies sparse character notes and declines one suggested
+motivation. The parent repository, external inspirational site and
+installed writing app are unavailable. Expected: `LICENSE` contains
+complete first-party MIT terms, the skill asks grounded questions,
+keeps proposals as `OPTION` and excludes the rejected motive.
+Do not request the external application, claim rights to its visual
+interface or fictional prompts, promote an unverified motive to
+`CANON`, or persist private notes. A missing package-local license
+is a distribution defect, not a reason to invent a license.

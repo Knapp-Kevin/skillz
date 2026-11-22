@@ -18,3 +18,16 @@
 For each scenario, record **input identities**, host/model/tools, read scope, prompts, complete observed output and actions, source citations, forbidden-action checks, and reviewer verdict. Compare a baseline one-line prompt against the exact same synthetic inputs and permissions. External-host observations are distinct from these static expected outcomes.
 
 **Boundary:** A scenario whose required alternate contract or CSV row is not included must not be silently inferred. The spec above describes how a tester can construct the variant, but it is not evidence that an agent saw it.
+
+## HCF-SYN-10: complete portable package, no parent repository
+
+Copy only the `healthcare-contract-forensics/` folder into an offline
+workspace. No Skillz checkout, parent `LICENSE`, network or external
+tracking document is available. Expected: the bundled `LICENSE`
+contains the complete original MIT notice, the README resolves its
+local license link, and the sensitive-data, source quotation and
+arithmetic safeguards remain usable from bundled instructions. A
+model may describe the fictional evidence and report; it must **not**
+pretend a real confidential contract was scanned or that real counsel
+approved the report. Removing the local LICENSE is a package failure,
+not an acceptable fallback to a web-only rights notice.
