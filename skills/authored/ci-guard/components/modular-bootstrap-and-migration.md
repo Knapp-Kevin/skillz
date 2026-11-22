@@ -22,6 +22,25 @@ separate GitHub job. Group checks when they share large setup, keep output
 subject identity and trust boundaries clear, and parallelize only where the
 critical path improves without increasing billed runner time materially.
 
+## P0 precondition: cross-workflow execution ledger
+
+Before proposing a split, optimization or removal, expand each entrypoint
+through nested task runners, scripts and reusable workflows to the actual
+terminal verifier commands. Compare the same candidate event/source cohort,
+effective inputs, platform/toolchain and security boundary. Explicitly
+classify exact candidates, partial overlap, proven independently useful
+repetition and unknown equivalence. A second invocation of the same check
+inside another workflow must not be missed merely because the workflow names
+differ. This mandatory inventory is specified in
+[cross-workflow deduplication](cross-workflow-deduplication.md) and has bounded
+[offline overlap tests](../examples/test_ci_overlap.py).
+
+No claimed runner savings or workflow removal may proceed without an evidenced
+disposition for each detected overlap and a check of all old unconditional
+triggers. Compare observed before/after executions, not labels. A workflow
+mandated by a spec, release gate or required status may require a governed
+contract migration even when its verification command is redundant.
+
 ## Group based on measurements and dependencies
 
 Design one trusted plan and a small number of execution groups. The example
