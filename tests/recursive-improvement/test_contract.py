@@ -288,6 +288,30 @@ class ContractTests(unittest.TestCase):
                     path, expected_evaluator="schema-v1",
                     expected_context="isolated-v1")
 
+    def test_relabelled_action_cannot_reuse_a_different_observed_receipt(self):
+        bad = copy.deepcopy(self.data)
+        bad["nodes"][2]["action"] = "adversarial-probe"
+        self.assertReject(bad, "receipt binding mismatch")
+
+    def test_deep_supported_1000_node_chain_validates_without_recursion(self):
+        deep = copy.deepcopy(self.data)
+        root = copy.deepcopy(deep["nodes"][0])
+        deep["nodes"] = [root]
+        deep["receipts"] = []
+        previous = "n-root"
+        for index in range(1, 1000):
+            record = copy.deepcopy(root)
+            record.update({
+                "node_id": "n-depth-" + str(index),
+                "parent_node_id": previous,
+                "candidate_id": "hyp-depth-" + str(index),
+                "action": "inspect",
+            })
+            deep["nodes"].append(record)
+            previous = record["node_id"]
+        result = validate_trace(deep)
+        self.assertEqual(len(result), 1000)
+
     def test_receipt_digest_is_not_assumed_to_prove_real_execution(self):
         # A self-authored payload can be internally consistent. We explicitly
         # do not claim to verify who performed the test or granted consent.
