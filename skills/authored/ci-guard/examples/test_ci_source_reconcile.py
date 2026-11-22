@@ -17,7 +17,7 @@ sys.path.insert(0,str(ROOT/"scripts"))
 import ci_source_reconcile as source
 
 HEAD="a"*40
-GUARD="\${{ always() && needs.producer.result == 'success' }}"
+GUARD=chr(36)+"{{ always() && needs.producer.result == 'success' }}"
 VERIFY="""name: Synthetic verify
 on: [pull_request]
 permissions: read-all
