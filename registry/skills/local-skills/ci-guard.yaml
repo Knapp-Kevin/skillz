@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "29-file standalone MIT package; optional standard-library Python canonical overlap and strict cutover checker plus isolated CI_SELF_REPAIR phase-cost and fanout preflight. External consumer source inventory, branch status and cost measurements separately authorized; no always-on service."
-content_blob_sha: be9aa4b11ccbb14a6994b2e666e3a80abd6ae635
-complete_package_tree_sha: 0c9556782649571f21bb0099249b12afcce8007f
+dependencies: "31-file standalone MIT package; optional standard-library Python canonical overlap and strict cutover checker plus isolated CI_SELF_REPAIR phase-cost and fanout preflight. External consumer source inventory, branch status and cost measurements separately authorized; no always-on service."
+content_blob_sha: 2242b2d4cc3b38e13904322a9cd7732d417e1f67
+complete_package_tree_sha: 2736194c948d0e1123a729aad458c278bccc9f0e
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.4 responds to anonymous external trial #857 with mandatory one-pass CI_SELF_REPAIR preflight BEFORE costly workflow corrections. Diagnoses individual test/fixture/compile phases, preserves unique assertions and mutation isolation, forecasts all event/matrix fanout, requires one coherent draft repair and cheap exact-head readiness, protects normative checks independent of GitHub required status, and bounds expensive final proof cycles. 17/17 local Python methods passed on current new script/test files; exact-current-version GitHub-hosted QA pending. New script only performs phase/fanout analysis and reuses canonical ci_overlap.py for nested graph (no duplicate auditor). Source-only structural checks do NOT authenticate consumer logs or measure savings. 29-file standalone source pinned."
+rationale: "v1.5.4 first-party CI_SELF_REPAIR P0 preflight for pathological CI: one coordinated cheap draft repair, event/matrix fanout, normative gate and below-test phase diagnosis. Issue #857 refinement: explicit DEPENDENCY_WAIT for artifact polling; guard same-run producer→consumer dependencies, no paid runner waiting on full path, producer failure propagation, and preserve lightweight producer-skipped consumer verification. 28/28 new local Python tests pass (17+11); exact-head hosted full CI Guard suite pending. Claimed fixture wait 3490 seconds is not real measured savings. New phase helper does not duplicate existing ci_overlap.py. Standalone 31 files, Git SHA pinned, host real savings NOT_MEASURED."
