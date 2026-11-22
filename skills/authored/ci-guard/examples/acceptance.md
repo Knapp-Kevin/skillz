@@ -202,7 +202,7 @@ source-pinned graph designs after a complete workflow, nested command,
 conformance-oracle and normative status inventory. The bundled
 [offline scenario fixture](ci-scenario-fixture.json) uses **eight wholly
 fictional workflows, two candidates, ten source-matched scenarios** and
-the [35 executable tests](test_ci_scenario.py). All actual GitHub
+the [37 executable tests](test_ci_scenario.py). All actual GitHub
 provider behavior, caller-supplied statuses and dollar savings remain
 unverified by this synthetic runner.
 
