@@ -5,6 +5,8 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'skills/authored/repository-readme-architect/**'
+      - 'registry/skills/local-skills/repository-readme-architect.yaml'
+      - 'registry/verification/local-skills/repository-readme-architect.yaml'
       - '.github/workflows/readme-architect-qa.yml'
 
 permissions:
