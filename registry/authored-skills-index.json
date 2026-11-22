@@ -1020,7 +1020,7 @@
       "skill_blob_sha": "c064dd2224958d6ebdf29f147305ced7f855ea91",
       "package_tree_sha": "c24d4276141e92690ff24afc7004942da1377163",
       "package_file_count": 38,
-      "review_status": "needs-re-review",
+      "review_status": "verified-static",
       "review_score": "NOT_ASSESSED_EXACT_V1_5_8",
       "behavioral_validation": "not-run",
       "host_authority": "read-only",
@@ -1032,7 +1032,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "CI Guard v1.5.8 #867 adds executable before-after results proof JSON/Markdown, preserves strict comparator and adds optional raw time with unknown billing. New QA suite includes existing previously uninvoked comparison tests. PR exact-head qualification pending; no authenticated provider savings or external consumer outcomes claimed.",
+      "review_note": "CI Guard v1.5.8 source PR #869 head f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b Actions run #45079498442 PASS 174/174 Python methods: 12 overlap, 16 cutover, 23 self-repair, 45 scenario, 28 classifier, 26 plan, 8 newly activated comparator, 16 new results-proof. Security checks success. Final metadata-only head requires fresh QA. Actual consumer provider ROI and host verification NOT_RUN/NOT_MEASURED.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"

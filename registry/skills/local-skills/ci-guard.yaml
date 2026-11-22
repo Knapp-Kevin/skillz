@@ -24,4 +24,4 @@ complete_package_tree_sha: c24d4276141e92690ff24afc7004942da1377163
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.8 produces strict/longitudinal/offline before-after result artifacts without fabricating provider authentication, billing, assurance or cutover. New source QA PENDING; real consumer ROI NOT_MEASURED."
+rationale: "v1.5.8 produces strict/longitudinal/offline before-after result artifacts without fabricating provider authentication, billing, assurance or cutover. 174/174 Python methods PASS on PR #869 source head f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b; real consumer ROI NOT_MEASURED."

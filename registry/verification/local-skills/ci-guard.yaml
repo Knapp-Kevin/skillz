@@ -11,10 +11,10 @@ content_blob_sha: c064dd2224958d6ebdf29f147305ced7f855ea91
 complete_package_tree_sha: c24d4276141e92690ff24afc7004942da1377163
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: needs-re-review
-verification_basis: v1.5.8-source-awaiting-exact-head-results-proof-QA
-validation_status: pending
-validation_note: "The new ci_results_proof.py, sixteen executable planted tests, comparator raw-timing extension and mandatory invocation of previous comparator tests are staged. Exact-head hosted QA PENDING; provider savings, branch rules and consumer outcomes NOT_RUN."
+verification_status: verified
+verification_basis: v1.5.8-PR869-source-head-174-of-174-hosted-methods
+validation_status: passed-offline-contract-tests
+validation_note: "PR #869 Actions #45079498442 PASS on first complete source head f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b, 174/174 Python tests including all 8 previously dormant comparator tests and 16 new results-proof tests; three checks successful. Final verification metadata-only revision requires fresh exact-head QA. Consumer ROI and provider authentication NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5_8"
 tags:
@@ -24,6 +24,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  The before-after results proof is synthetic/offline and cannot authenticate
-  GitHub job, status, branch, billing or production evidence. All strict
-  same-source comparator guarantees are retained. New QA results PENDING.
+  Source tests on the v1.5.8 PR completed 174/174; post-reconciliation
+  exact-head GitHub QA remains required for merge. No external provider
+  receipts, real branch protection, native negative controls, consumer
+  results or cost savings have been independently authenticated.

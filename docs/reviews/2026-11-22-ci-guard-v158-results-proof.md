@@ -12,6 +12,6 @@
 
 ## Evidence boundary
 
-Source-code compilation/testing and exact-head GitHub Actions must PASS before merge. At creation this PR is **NOT YET QUALIFIED**. Real consumer billing receipts, exact branch protection, host-side seeded faults, release publication, job allocation, engineering cost, commercial ROI and actual production savings are **NOT_RUN/NOT_MEASURED**. #840 stays the real-consumer acceptance record, while #867 is only complete when source and planted contract checks are merged and verified.
+**Hosted source evidence:** PR #869 source head `f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b` passed [Actions #45079498442](https://github.com/Knapp-Kevin/skillz/actions/runs/45079498442): **174/174 tests** (12 overlap + 16 cutover + 23 self-repair + 45 scenario + 28 classifier + 26 plan + 8 comparator + 16 proof). All three PR checks succeeded. Final metadata reconciliation HEAD still requires an exact-head rerun before merge. Real consumer billing receipts, exact branch protection, host-side seeded faults, release publication, job allocation, engineering cost, commercial ROI and actual production savings are **NOT_RUN/NOT_MEASURED**. #840 stays the real-consumer acceptance record, while #867 is only complete when source and planted contract checks are merged and verified.
 
 The two generated documents report `NOT_MEASURED` or `NOT_COMPARABLE` rather than asserting proved savings from unauthenticated supplied data. The standalone tool is not a GitHub Actions interpreter or host-attestation mechanism.
