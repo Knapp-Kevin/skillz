@@ -254,6 +254,39 @@ class QualityProfileTests(unittest.TestCase):
         self.write_readme(BASE.replace("#quick-start", "#not-a-heading"))
         self.assertEqual(self.gate("toc")[0]["status"], "FAIL")
 
+    def test_nested_quick_start_subheadings_keep_real_first_use(self):
+        self.write_readme(BASE.replace(
+            "## Quick Start\n\nRun this example",
+            "## Quick Start\n\n### Installation\n\n"
+            "Inspect the requirements and use the supported demo.\n\n"
+            "### Try it\n\nRun this example"))
+        self.assertEqual(self.gate("first-success")[0]["status"], "HOLD")
+        self.assertEqual(self.evaluate()["quality_status"], "HOLD")
+
+    def test_nested_contents_headings_do_not_hide_real_links(self):
+        self.write_readme(BASE.replace(
+            "## Contents\n- [Quick Start]",
+            "## Contents\n### Reader paths\n- [Quick Start]"))
+        self.assertEqual(self.gate("toc")[0]["status"], "PASS")
+
+    def test_nested_section_stops_at_sibling_not_next_subheading(self):
+        lines = ["## Quick Start", "### Install", "Install package",
+                 "### Try it", "Run the demo", "## Documentation",
+                 "The quick start must not include this section"]
+        section = profile._section(lines, profile.START_HEAD)
+        self.assertIn("### Try it", section)
+        self.assertIn("Run the demo", section)
+        self.assertNotIn("Documentation", section)
+
+    def test_nested_quick_start_without_use_still_fails(self):
+        before = BASE.split("## Quick Start",1)[0]
+        after = BASE.split("## Documentation",1)[1]
+        self.write_readme(before + "## Quick Start\n\n"
+                          "### Installation\n\n"
+                          "Only generic installation advice.\n\n"
+                          "## Documentation" + after)
+        self.assertEqual(self.gate("first-success")[0]["status"], "FAIL")
+
     def test_missing_first_use_fails(self):
         self.write_readme(BASE.replace("## Quick Start", "## Unrelated Section"))
         self.assertEqual(self.gate("first-success")[0]["status"], "FAIL")
