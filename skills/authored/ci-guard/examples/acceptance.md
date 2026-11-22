@@ -265,10 +265,10 @@ authenticated by passing them.
 ## Host evidence versus declared CI scenarios (CI Guard v1.6.0)
 
 The [read-only host reconciliation adapter](../components/host-reconciliation.md)
-provides **26 planted unit/CLI tests** in
+provides **27 planted unit/CLI tests** in
 [test_ci_host_reconcile.py](test_ci_host_reconcile.py), a fictional mapping
 and provider-job receipt sample. It refuses wrong source/event/path/run
-attempts, missing or duplicated job receipts, ambiguous job maps, green
+attempts (including cross-attempt conclusion laundering), missing or duplicated job receipts, ambiguous job maps, green
 job/failed workflow contradictions, wrong host job conclusions, absent
 timing, unsupported/provider-incomplete states and forged local proof.
 It separately tests bounded GET-only GitHub API endpoints via injected
