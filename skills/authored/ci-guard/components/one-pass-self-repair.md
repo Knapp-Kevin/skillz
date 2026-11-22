@@ -91,7 +91,9 @@ Use these classifications:
 Test-label similarity is not a duplication claim. Reuse must not convert
 different unique tests into one lost detector. Reject a proposed
 improvement if it reduces command invocations but leaves the dominant
-test body untouched. Do not infer a p90 from one sample, infer billed
+test body untouched. Summed per-test p50 or p90 phase values are rough workload summaries,
+**not valid portfolio percentiles** or critical-path timings. Do not infer
+a p90 from one sample, infer billed
 runner minutes from elapsed seconds, or sum test durations as the
 critical path.
 
