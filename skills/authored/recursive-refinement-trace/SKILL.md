@@ -11,7 +11,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Recursive Refinement Trace
-  version: 0.3.0
+  version: 0.3.1
   license: MIT
 ---
 
@@ -154,6 +154,17 @@ while a stronger one may analyze differences and propose hypotheses. Neither
 may weaken evaluator, privacy or authority checks.
 
 ## Optional Phase-3: declarative heldout exploration laboratory
+
+**Input-path authority:** The optional Python reader refuses a caller-selected
+symlinked source file **or any symlinked parent directory** before inspecting
+its size or opening it. An apparent permitted filename cannot silently
+resolve into another folder. This is a lexical preflight, not a
+race-proof sandbox: hostile concurrently mutable filesystems require
+a trusted, immutable host snapshot. It neither authenticates source
+receipts nor grants permission to inspect other files; the original
+in-scope regular JSON workflow remains supported. Two adversarial
+CLI tests plant linked files and linked parents in the standalone package.
+
 
 **Activation:** an explicitly authorized host may use
 [policy_lab.py](policy_lab.py) to compare a *frozen* recorded-order
