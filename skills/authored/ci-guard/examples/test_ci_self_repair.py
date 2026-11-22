@@ -91,8 +91,8 @@ class SelfRepairAcceptance(unittest.TestCase):
     def test_real_test_execution_dominates_short_compile(self):
         result = self.assess()
         self.assertEqual(result["dominant_observed_or_reported_phase"], "test")
-        self.assertEqual(result["phase_p50_minutes"]["test"], 51.0)
-        self.assertEqual(result["phase_p50_minutes"]["compile"], 2.0)
+        self.assertEqual(result["sum_individual_p50_minutes"]["test"], 51.0)
+        self.assertEqual(result["sum_individual_p50_minutes"]["compile"], 2.0)
 
     def test_repeated_immutable_setup_is_candidate_not_claimed_saved(self):
         case = sample()
@@ -176,6 +176,7 @@ class SelfRepairAcceptance(unittest.TestCase):
         self.assertEqual(result["observed_critical_path_delta"], "NOT_MEASURED")
         self.assertFalse(result["provider_receipts_authenticated"])
         self.assertTrue(result["reported_p50_is_additive_not_critical_path"])
+        self.assertTrue(result["p50_p90_sums_are_not_cohort_percentiles"])
 
     def test_cli_exit_code_and_read_only_filesystem(self):
         with tempfile.TemporaryDirectory() as folder:
