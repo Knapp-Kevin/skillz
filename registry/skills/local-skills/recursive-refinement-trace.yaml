@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: recursive-refinement-trace
 display_name: Recursive Refinement Trace
-skill_version: "0.2.0"
+skill_version: "0.3.0"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/recursive-refinement-trace/SKILL.md
@@ -16,7 +16,7 @@ availability: in-repo
 local_path: skills/authored/recursive-refinement-trace/SKILL.md
 permission_tier: mutating
 portability: high
-review_status: source-reviewed
+review_status: needs-re-review
 dependency_status: standalone-optional-posix-python-stdlib
 dependencies: >-
   Original ten-file first-party standalone skill with explicit host-invoked
@@ -24,18 +24,15 @@ dependencies: >-
   No Skillz monorepo, sibling skill, network, automatic CI or second agent
   required. POSIX secure host-owned mode-0700 storage is required for capture
   and replay input; read-only reasoning remains available without running code.
-content_blob_sha: cd00d434317c8e6f5298067cbc6654be8436621c
-complete_package_tree_sha: 50bee109cecb3a00a34a0a2c5b753e0c176714eb
+content_blob_sha: bc95b24eb9a477576aa7071e96f5badbbf04a413
+complete_package_tree_sha: 4276df0fbfdf2c76cde5878ff6204a6c50bb8c51
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Phase-2 issue #831 extends the merged Phase-1 #830 opt-in recorder with
-  deterministic recorded-order and adversarial-first observed-only replay.
-  Exactly 84/84 local Python 3.13.5 methods passed (40 recorder and 44 replay),
-  including real synthetic capture to two sibling observations and read-only
-  replay. Fixed evaluator and state constraints, unknown branches, test-call
-  budgets, policy comparison without winner. Attached executed synthetic
-  receipt: docs/evals/receipts/2026-11-22-rsi-phase2-observed-replay.json.
-  Git fingerprints pin exact ten-file package. No independent agent-host
-  acceptance, complete environment equivalence, policy generalization or
-  observed production cost savings established; no auto-execution.
+  Phase-3 v0.3.0 adds optional host-invoked, standalone, read-only
+  declarative policy_lab.py with frozen evaluator and incumbent,
+  two-family development/holdout separation, actual observed-path
+  replay, protected verifier vetoes and no automatic promotion.
+  20 new adversarial tests ship with the package, but current exact
+  source Python execution is NOT_RUN. v0.2.0 84/84 results are historical
+  only. No independent host trial, policy improvement or user gain verified.
