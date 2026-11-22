@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 015765b16fa56e2ef8ba0050077e1592b889a654
-complete_package_tree_sha: ebf67f6633f013de744961fffb9976070780871f
+complete_package_tree_sha: 66ba89587f324e7c73156cd70a1d8af7891f4d53
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: needs-re-review
-verification_basis: v1.6.0-host-observation-source-awaiting-exact-head-QA
-validation_status: pending
-validation_note: "v1.6.0 source adds optional GitHub REST read-only run-job reconciliation, 26 simulated planted tests plus 184 prior. Exact-head Actions and security checks PENDING. Direct host dispatch causality, release policies, consumer savings NOT_RUN."
+verification_status: verified
+verification_basis: v1.6.0-PR871-source-head-211-of-211-hosted-methods
+validation_status: passed-offline-contract-tests
+validation_note: "PR #871 Actions #45082983604 PASS on source head 3e8fdfe404504a76b80dda12aaf4a540b4153ec8, 211/211 Python methods (12 overlap+16 cutover+23 repair+55 scenario+28 classifier+26 plan+8 compare+16 proof+27 host). All three PR checks SUCCESS. Final metadata-only head requires fresh Actions qualification. Real provider dispatch/policy and customer savings NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_6_0"
 tags:
@@ -24,7 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Live GitHub API read can observe run/job statuses but cannot authenticate
-  the source normalized model or host branch rules, actual dispatch lineage,
-  negative-control conformance, release authority, or actual money savings.
-  Offline fixture is wholly fictional. Exact-head source tests pending.
+  The original 210-method hosted check found an unsafe owner .. path segment,
+  which was corrected. Exact attempt run data cannot borrow newer rerun
+  conclusions. The complete 211-method revised source passed in hosted CI.
+  Final metadata head must pass before merging. Real consumer protected CI,
+  dispatch causality, receipt custody, side effects and savings NOT_RUN.

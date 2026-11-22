@@ -35,3 +35,7 @@ resource with attempt-specific job data. The adapter now fetches the exact
 `run_attempt`. One more planted regression raises the target suite to
 **211**. This source revision still requires exact-head hosted QA before
 merging. Provider dispatch causality and customer adoption are unproven.
+
+## Exact source qualification for final integration
+
+PR #871 [Actions run #45082983604](https://github.com/Knapp-Kevin/skillz/actions/runs/45082983604) passed all **211/211** Python methods on source head `3e8fdfe404504a76b80dda12aaf4a540b4153ec8`, including all 27 host receipt controls. Socket Project Report and PR alerts both SUCCESS, CI offline-contracts SUCCESS. The full **43-file** package tree is `66ba89587f324e7c73156cd70a1d8af7891f4d53`, with SKILL blob `015765b16fa56e2ef8ba0050077e1592b889a654`. Both are pinned to first-party registry records. This final verification-only commit still requires its own exact HEAD green run before merge.
