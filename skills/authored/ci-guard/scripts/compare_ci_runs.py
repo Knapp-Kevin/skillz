@@ -9,6 +9,7 @@ Python 3.9+ standard library, no network, no writes, no execution.
 import argparse
 from datetime import datetime
 import json
+import math
 from pathlib import Path
 import statistics
 import sys
@@ -30,7 +31,7 @@ def parse_time(value):
     return dt
 
 
-def summarize_run(data):
+def summarize_run(data, allow_missing_billing=False):
     if not isinstance(data, dict) or set(data) != {
             'run_id', 'attempt', 'head', 'scenario', 'runner_profile',
             'cache_class', 'protected_status', 'jobs'}:
@@ -41,6 +42,8 @@ def summarize_run(data):
             or data['protected_status'] != 'success'):
         raise EvidenceError('unqualified or incomplete run')
     total = 0.0
+    billing_known = True
+    executed_seconds = 0.0
     earliest, latest = None, None
     durations, graph = {}, {}
     for job in data['jobs']:
@@ -55,15 +58,20 @@ def summarize_run(data):
         if job['result'] != 'success':
             raise EvidenceError('failed or skipped required job in success record')
         minutes = job['billed_runner_minutes']
-        if type(minutes) not in (int, float) or minutes < 0:
+        if minutes is None and allow_missing_billing:
+            billing_known = False
+        elif (type(minutes) not in (int, float) or
+              not math.isfinite(minutes) or minutes < 0):
             raise EvidenceError('unobserved billed minutes')
         start, end = parse_time(job['started_at']), parse_time(job['completed_at'])
         if end < start:
             raise EvidenceError('negative job duration')
         earliest = min(earliest, start) if earliest else start
         latest = max(latest, end) if latest else end
-        total += minutes
+        if minutes is not None:
+            total += minutes
         durations[job['name']] = (end-start).total_seconds()
+        executed_seconds += durations[job['name']]
         graph[job['name']] = job['needs']
     # The provided dependency graph must cover every required job.
     # This computes the longest executed job-duration chain, not the wall
@@ -82,7 +90,8 @@ def summarize_run(data):
         longest[name] = length
         return length
     critical = max(path_length(name) for name in graph)
-    return {'billed_runner_minutes': round(total, 4),
+    return {'billed_runner_minutes': round(total, 4) if billing_known else None,
+            'executed_job_minutes': round(executed_seconds / 60, 4),
             'critical_path_seconds': round(critical, 3),
             'qualification_elapsed_seconds': round((latest-earliest).total_seconds(), 3)}
 
