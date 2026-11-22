@@ -21,3 +21,17 @@ Version changes **only from 0.5.1 to 0.5.2**. This fulfills an already documente
 ## Acceptance/evidence limits
 
 Source PR exact-head tests and complete package hash reconciliation are mandatory before calling this delivered. Until then, **PENDING**. Automated syntactic inspection does not prove user comprehension, accessible rendered navigation, or real external consumer adoption. Those remain NOT_RUN.
+
+## First hosted suite exposed an unrelated dormant test defect
+
+PR #873 initial exact-head Actions run #45085263166 executed the **complete**
+README Architect package suite for the first time in this development
+continuation. It found one false negative in the existing
+`test_narrow_banner_cannot_silently_pass_hero_profile`: the test changed
+only an in-memory `bytearray` and then checked the unchanged 960-pixel
+on-disk PNG expecting a 200-pixel width. No banner validation logic was
+weakened. The test fixture now generates and writes a **valid 200-pixel
+narrow PNG**, updates the already-approved test digest so the outcome
+isolates geometry, and asserts that the valid source digest passes while
+the narrow hero banner fails. This corrected source and full package
+regression suite require fresh exact-head hosted qualification.
