@@ -202,6 +202,17 @@ class SelfRepairAcceptance(unittest.TestCase):
         self.assertTrue(result["p50_p90_sums_are_not_cohort_percentiles"])
 
 
+    def test_bundled_artifact_wait_fixture_is_a_negative_control(self):
+        path = ROOT / "examples" / "ci-artifact-wait-fixture.json"
+        case = json.loads(path.read_text(encoding="utf-8"))
+        result = self.assess(case)
+        self.assertEqual(result["status"], "HOLD")
+        self.assertEqual(result["dominant_explained_cause"],
+                         "ARTIFACT_DEPENDENCY_WAIT")
+        self.assertEqual(len(result["artifact_wait_analysis"]), 2)
+        self.assertEqual(result["sum_reported_paid_dependency_wait_minutes"],
+                         60.0)
+
     def test_shared_artifact_wait_is_not_algorithms_or_compilation(self):
         case = sample()
         case["artifact_waits"] = [
