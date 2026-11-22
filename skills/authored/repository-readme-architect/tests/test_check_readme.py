@@ -26,6 +26,91 @@ class ReadmeAuditTests(unittest.TestCase):
     def cli(self,*args):
         return subprocess.run([sys.executable,str(SOURCE),'--root',str(self.root),*args],capture_output=True,text=True)
 
+
+    def test_dense_pr_history_is_editorial_advisory_not_link_failure(self):
+        text=('''# Project
+A short project summary.
+
+## Recent PRs
+- Merged PR #101: updated the formatter
+- Merged PR #102: added a helper
+- Merged PR #103: refined the docs
+
+## Getting started
+Run the included example.
+''')
+        result=self.run_audit(text)
+        self.assertEqual(result['counts']['CHRONOLOGICAL_LOG_ADVISORY'],1)
+        self.assertEqual(result['local_blockers'],0)
+        self.assertIs(result['editorial_advisories_are_blockers'],False)
+        self.assertEqual(result['findings'][0]['line'],4)
+        self.assertEqual(result['findings'][0]['kind'],'editorial')
+
+    def test_sparse_single_pr_reference_is_not_history_log(self):
+        counts=self.stat('# Project\n\n## Progress\n- See PR #101 for rationale\n')
+        self.assertNotIn('CHRONOLOGICAL_LOG_ADVISORY',counts)
+
+    def test_regular_quick_start_list_is_not_history_log(self):
+        counts=self.stat('# Start here\n\n- Install\n- Run tests\n- Read the API reference\n')
+        self.assertNotIn('CHRONOLOGICAL_LOG_ADVISORY',counts)
+
+    def test_fenced_changelog_example_is_ignored(self):
+        text='''# Project
+## Recent PRs
+```md
+- Merged PR #101
+- Merged PR #102
+- Merged PR #103
+```
+'''
+        self.assertNotIn('CHRONOLOGICAL_LOG_ADVISORY',self.stat(text))
+
+    def test_changelog_heading_with_three_dated_entries_is_advisory(self):
+        text='''# Tool
+## Changelog
+- 2026-11-01: Added CLI
+- 2026-11-07: Refined CLI
+- 2026-11-14: Changed CLI
+'''
+        self.assertEqual(self.stat(text)['CHRONOLOGICAL_LOG_ADVISORY'],1)
+
+    def test_other_sections_do_not_inflate_log_threshold(self):
+        text='''# Tool
+## Recent PRs
+- Merged PR #101
+- Merged PR #102
+
+## Architecture
+- Merged PR #103
+'''
+        self.assertNotIn('CHRONOLOGICAL_LOG_ADVISORY',self.stat(text))
+
+    def test_warning_does_not_fail_cli(self):
+        self.put('README.md','''# Tool
+## Recent PRs
+- PR #101
+- PR #102
+- PR #103
+''')
+        outcome=self.cli()
+        self.assertEqual(outcome.returncode,0,outcome.stderr)
+        self.assertIn('CHRONOLOGICAL_LOG_ADVISORY',outcome.stdout)
+
+    def test_multiple_log_sections_report_separately(self):
+        text='''# Tool
+## Progress log
+- PR #101
+- PR #102
+- PR #103
+## Latest updates
+- PR #104
+- PR #105
+- PR #106
+'''
+        result=self.run_audit(text)
+        self.assertEqual(result['counts']['CHRONOLOGICAL_LOG_ADVISORY'],2)
+        self.assertEqual([x['line'] for x in result['findings']],[2,6])
+
     def test_existing_file(self):
         self.put('docs/guide.md','# Guide\n');self.assertEqual(self.stat('[Guide](docs/guide.md)')['LOCAL_FILE_EXISTS'],1)
     def test_existing_heading(self):
