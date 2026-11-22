@@ -156,8 +156,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
       "verification_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
-      "skill_blob_sha": "4d9387a3698252c7f92c0a4cbed415f789155c79",
-      "package_tree_sha": "31f63a762ead720db8c390017c235e6602f3ffd8",
+      "skill_blob_sha": "3e35bdf625b617fea62d9758501d5fc61c444dca",
+      "package_tree_sha": "33a8e598e64478a763e335a2dea9f6eef34a7528",
       "package_file_count": 7,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -165,7 +165,7 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "No third-party skill text, source code or copyrighted example files copied; proposed metadata decks and organization plans are generated without implicit storage, upload, move or deletion authority. v1.1 adds optional read-only federated handoff preserving source native identity, revision and viewer scope; behavioral acceptance not run.",
-      "package_version": "1.1.0",
+      "package_version": "1.1.1",
       "capability_paths": [
         "memory-context/retrieval",
         "memory-context/summarization",
@@ -173,7 +173,8 @@
       ],
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
-      "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md"
+      "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md",
+      "review_note": "2026-11-22 adversarial package review v1.1.1: source claimed independent offline use but linked into a sibling skill folder; fixed hyperlinks to self-contained explanation and in-package contract, preserving optional composition and source/permission invariants. Offline missing-sibling negative case added; current exact source/links checked structurally, host-agent behavior NOT_RUN. Complete source pinned."
     },
     {
       "id": "federated-source-catalog",
@@ -189,8 +190,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/federated-source-catalog.yaml",
       "verification_path": "registry/verification/local-skills/federated-source-catalog.yaml",
-      "skill_blob_sha": "5f4859515de5d073a939d439f1d75e1084d4404e",
-      "package_tree_sha": "b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1",
+      "skill_blob_sha": "8d218771193ccefa162479e1a57fd08e9b4ba60a",
+      "package_tree_sha": "68978717ac4bdb9766ebeab1616feec2196c8573",
       "package_file_count": 8,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -198,7 +199,7 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Original MIT source. No provider API code, copied external skill text, private data, or credential. Real connector access and shared index permissions require separate host authority and operational evidence. v1.1 adds optional read-only federated handoff preserving source native identity, revision and viewer scope; behavioral acceptance not run.",
-      "package_version": "1.1.0",
+      "package_version": "1.1.1",
       "capability_paths": [
         "memory-context/retrieval",
         "memory-context/provenance",
@@ -207,7 +208,8 @@
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
       "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md",
-      "related_authored_skill": "file-lifecycle-curator"
+      "related_authored_skill": "file-lifecycle-curator",
+      "review_note": "2026-11-22 adversarial package review v1.1.1: source claimed independent offline use but linked into a sibling skill folder; fixed hyperlinks to self-contained explanation and in-package contract, preserving optional composition and source/permission invariants. Offline missing-sibling negative case added; current exact source/links checked structurally, host-agent behavior NOT_RUN. Complete source pinned."
     },
     {
       "id": "metadata-taxonomy-steward",
@@ -223,8 +225,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/metadata-taxonomy-steward.yaml",
       "verification_path": "registry/verification/local-skills/metadata-taxonomy-steward.yaml",
-      "skill_blob_sha": "9d52d909a8e1dbc2c63748085b62bfa56c268989",
-      "package_tree_sha": "341bf5f8751333db8896f01c51f614b4acc6ad0d",
+      "skill_blob_sha": "4e4f7c0c4595e95c9628d933146cd253afa41fbd",
+      "package_tree_sha": "dee7107d9886e44e9afca4d985db9a5fb92d5b56",
       "package_file_count": 4,
       "review_status": "verified-static",
       "review_score": "18/20",
@@ -232,14 +234,15 @@
       "host_authority": "read-only",
       "publication_status": "reference-only-not-production-qualified",
       "rights_note": "Versioned controlled vocabulary, source-native tag crosswalk, ambiguity and sensitive labels; read-only taxonomy change plans. No bundled runtime or approved connected source write. No global uniqueness assertion.",
-      "package_version": "1.0.0",
+      "package_version": "1.0.1",
       "capability_paths": [
         "technical-writing/documentation-ia",
         "ux-ui/information-architecture"
       ],
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
-      "capability_mapping_ref": "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md"
+      "capability_mapping_ref": "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md",
+      "review_note": "2026-11-22 adversarial package review v1.0.1: source claimed independent offline use but linked into a sibling skill folder; fixed hyperlinks to self-contained explanation and in-package contract, preserving optional composition and source/permission invariants. Offline missing-sibling negative case added; current exact source/links checked structurally, host-agent behavior NOT_RUN. Complete source pinned."
     },
     {
       "id": "reference-integrity-auditor",
