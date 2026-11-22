@@ -2,7 +2,7 @@
 
 Create a **complete, honest README from scratch**, materially improve one that already exists, audit its reader journey, or verify evidence and navigation without rewriting the repository.
 
-The skill produces a finished Markdown artifact or an explicitly authorized focused change, not an empty template or a marketing checklist. It adapts to libraries, CLIs, applications, services, monorepos, research, datasets, documentation projects and repositories that have no implementation yet.
+The skill produces a finished Markdown artifact or an explicitly authorized focused change, not an empty template or a marketing checklist. For repository collections and organization profile READMEs, it also evaluates **abstraction-first navigation** when that serves the reader better than a flat inventory, while separating conceptual roles from proven dependencies. It adapts to libraries, CLIs, applications, services, monorepos, research, datasets, documentation projects and repositories that have no implementation yet.
 
 ## Start here
 
@@ -12,6 +12,7 @@ For deeper or repeatable work, this *optional in-package* material is available:
 
 - [Quality and evidence contract](references/readme-quality-contract.md): source-to-claim traceability, project archetypes, preservation inventory, first-success checks and release-ready acceptance gates.
 - [Controlled scenarios](examples/controlled-scenarios.md): realistic creation, revision, fact-checking, missing-permission and adversarial test cases.
+- [Abstraction-first portfolio example](examples/abstraction-portfolio-example.md): a wholly fictional, accessible multi-project navigation showing product-to-foundation conceptual layers, unrelated items, and an alternative first step for each audience. Semantic dependencies and external destinations are deliberately NOT_VERIFIED.
 - [Source-checkout CREATE example](examples/create-python-library-output.md), [empty-repository CREATE example](examples/empty-repository-output.md) and [AUDIT example](examples/audit-output.md).
 - [Offline local-link and generated-region checker](scripts/check_readme.py), with [its regression suite](tests/test_check_readme.py).
 
