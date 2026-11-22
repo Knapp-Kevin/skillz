@@ -30,6 +30,18 @@ Other consuming workflows with unconditional bootstrap can erase these
 savings; audit them independently. CLI `--stage draft` is optional
 manual diagnostic feedback and not this workflow's default.
 
+## P0 self-repair fanout gate before using classification as a cost fix
+
+For expensive or self-blocking inherited CI, first
+[profile real test-internal phases and forecast all triggering workflows]
+(ci-self-repair-and-test-cost.md). A draft-skip label in one workflow
+cannot save money when another PR/push trigger still runs its original
+matrix. Prepare all corrections in one cheap draft change with
+formatter/source checks, planned negative controls and a rollback.
+Verify that full-ready qualification only starts on the coherent
+exact head, and that owner-governed normative release/verification
+requirements survive any branch-required status migration.
+
 ## Non-negotiable design gate for GENERATED workflows
 
 **Classify the actual changed artifacts before selecting expensive CI work.**
