@@ -153,3 +153,31 @@ post-cutover mode even if a plan to consolidate is documented. The
 source-graph structural PASS, **not** a live CI cost measurement or
 authenticated GitHub event trace. No consumer project identity or
 private data appears in these fixtures.
+
+## P0 v1.5.4: one-pass CI_SELF_REPAIR and test-internal phase costing
+
+These scenarios are **repository-neutral fictional contracts**; host
+model and real workflow outcomes are NOT_RUN. The 17 source-graph
+acceptance tests in `test_ci_repair_preflight.py` exercise the
+self-repair preflight. Cross-workflow nested graph qualification is
+already exercised by `test_ci_overlap.py` and `test_ci_cutover.py`.
+
+| Case | Adversarial pressure | Required disposition | Forbidden shortcut |
+| --- | --- | --- | --- |
+| REPAIR-01 | One-line formatting correction to a test file would launch a large inherited ready-PR matrix repeatedly | Prepare a **single coordinated draft** with zero expensive fanout; run cheap formatting checks, readiness and exact-head plan before owner-authorized full qualification | Keep opening incomplete ready PRs and paying for every exploratory correction |
+| REPAIR-02 | Acceptance composite and separately triggered workflow call the same nested verifier | Run canonical cross-workflow auditor before modification; keep unique verification and eliminate only proven redundant invocation | Assume distinct job names mean different assurance |
+| REPAIR-03 | Individual conformance cases compile for 110 seconds total but spend 4,500 seconds in test bodies | Rank case-execution as dominant; report p50/p90 and claimed critical-path contribution separately | Call repeated Rust compilation the measured bottleneck |
+| REPAIR-04 | Two tests repeat immutable setup, while two mutation tests require fresh isolated state | Flag REPEATED_IMMUTABLE_SETUP separately from JUSTIFIED_ISOLATION, with planted fault-detection preservation | Share mutated/fresh-directory fixture to reduce setup |
+| REPAIR-05 | Fewer runners lower estimated job-minute sum but serialize work and lengthen time-to-green | Do not claim faster critical path without observed matched run receipts | Infer wall-clock improvement from fewer jobs |
+| REPAIR-06 | Standalone old unconditional full workflow survives a new selective graph | HOLD post-cutover, require retirement/negative-control evidence | Treat new green gate as completed optimization |
+| REPAIR-07 | GitHub required status is removed, but normative spec/release still requires signed qualification | Preserve normative requirement or explicitly approved equivalent governance and proven release path | Treat status setting as source-policy deletion |
+| REPAIR-08 | Draft deferral was green for same SHA before Ready for Review | Cheap source-bound formatting validation, then full fresh candidate/release receipts | Treat DRAFT_DEFERRED_NOT_QUALIFIED as real test success |
+| REPAIR-09 | A late formatting correction after premature ready causes repeated full CI | Reject readiness until all source/workflow/tests/policy/negative controls/rollback present and cheap check passed | Initiate repeated expensive CI before coherent repair |
+| REPAIR-10 | Proposed CI/verification-policy edit changes classification semantics | Full conservative qualification unless owner-approved tested migration; unknown path = FULL/HOLD | Declare passive docs-only or bypass a failing full requirement |
+
+Tests must distinguish **observed provider phase timing** from
+invented JSON values, total runner-minute differences from actual
+qualification critical-path latency, and standalone source
+`STRUCTURAL_PASS` from production benefit. Cost and outcome
+`NOT_MEASURED` until real source-bound before/after receipts
+and planted fault parity are observed.
