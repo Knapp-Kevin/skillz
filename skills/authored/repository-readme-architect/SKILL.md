@@ -6,7 +6,7 @@ metadata:
   author: Skillz Maintainers
   category: Technical Writing
   display-name: Repository README Architect
-  version: 0.5.1
+  version: 0.5.2
   license: MIT
 ---
 
@@ -322,7 +322,14 @@ technical accuracy require deliberate editorial judgment. A novice should
 be able to explain the project purpose without domain expertise.
 
 The root README is the public front door, not an automatically generated
-developer reference or a changelog. Keep technical depth accessible by
+developer reference or a changelog. If `scripts/check_readme.py` emits
+`CHRONOLOGICAL_LOG_ADVISORY`, inspect the section for a repeated dated
+commit/PR running log. Move durable history to release notes or a maintained
+history/evidence file when authorized, while retaining current user-facing
+status and essential project context. This heuristic is **advisory only**:
+it neither establishes a defective README nor fails the local checker.
+Sparse milestone references, release summaries and fenced examples do not
+justify automatic content deletion. Keep technical depth accessible by
 linked developer references, architecture pages, specification or tutorial
 material in repository-appropriate paths. If root README generation
 overwrites human writing, inspect generator code, templates, build and
