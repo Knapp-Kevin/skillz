@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "source_revision": "revision-H",
+  "inventory": {
+    "complete": true,
+    "nested_graph_traced": true,
+    "normative_specs_inspected": true,
+    "branch_rules_inspected": true,
+    "workflows": [
+      "acceptance",
+      "standalone",
+      "release"
+    ],
+    "unresolved_paths": []
+  },
+  "repair": {
+    "mode": "CI_SELF_REPAIR",
+    "stages": [
+      "DISCOVER",
+      "PREPARE",
+      "PROVE",
+      "CUTOVER",
+      "OBSERVE",
+      "ROLLBACK"
+    ],
+    "one_coordinated_change": true,
+    "draft_preparation": true,
+    "readiness": {
+      "source": true,
+      "workflow": true,
+      "tests": true,
+      "policy": true,
+      "negative_controls": true,
+      "rollback": true
+    },
+    "readiness_head": "revision-H",
+    "planned_expensive_cycles": 1,
+    "max_expensive_cycles": 1,
+    "forecast": [
+      {
+        "event": "draft",
+        "selected_jobs": 0,
+        "expensive": false,
+        "inputs_revision": "revision-H"
+      },
+      {
+        "event": "ready",
+        "selected_jobs": 4,
+        "expensive": true,
+        "approval": "owner-authorized",
+        "inputs_revision": "revision-H"
+      },
+      {
+        "event": "release",
+        "selected_jobs": 3,
+        "expensive": true,
+        "approval": "owner-authorized",
+        "inputs_revision": "revision-H"
+      }
+    ],
+    "old_unconditional_paths": 0,
+    "cheap_preflight_result": "success",
+    "cheap_preflight_head": "revision-H",
+    "normative_required": [
+      "format",
+      "model",
+      "native-security",
+      "release-signing"
+    ],
+    "candidate_selected": [
+      "format",
+      "model",
+      "native-security",
+      "release-signing"
+    ],
+    "release_selected": [
+      "format",
+      "model",
+      "native-security",
+      "release-signing"
+    ],
+    "protected_statuses": [
+      "format",
+      "model",
+      "native-security"
+    ],
+    "change_classes": [
+      "docs"
+    ],
+    "authorized_policy_migration": false,
+    "full_qualification": true,
+    "merge_qualified_from_draft": false
+  },
+  "phase_observations": [
+    {
+      "id": "case1-compile",
+      "kind": "compile",
+      "operation": "compile-tests",
+      "fingerprint": "bin-H",
+      "seconds": 50,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": false,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "not-applicable",
+      "immutable": true,
+      "mutates": false,
+      "isolation": "none",
+      "equivalence_proven": false,
+      "unique_detection": false
+    },
+    {
+      "id": "case2-compile",
+      "kind": "compile",
+      "operation": "compile-tests",
+      "fingerprint": "bin-H",
+      "seconds": 60,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": false,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "not-applicable",
+      "immutable": true,
+      "mutates": false,
+      "isolation": "none",
+      "equivalence_proven": false,
+      "unique_detection": false
+    },
+    {
+      "id": "case1-fixture",
+      "kind": "setup",
+      "operation": "construct-project",
+      "fingerprint": "immutable-fixture-H",
+      "seconds": 300,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": false,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "not-applicable",
+      "immutable": true,
+      "mutates": false,
+      "isolation": "none",
+      "equivalence_proven": false,
+      "unique_detection": false
+    },
+    {
+      "id": "case2-fixture",
+      "kind": "setup",
+      "operation": "construct-project",
+      "fingerprint": "immutable-fixture-H",
+      "seconds": 320,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": false,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "not-applicable",
+      "immutable": true,
+      "mutates": false,
+      "isolation": "none",
+      "equivalence_proven": false,
+      "unique_detection": false
+    },
+    {
+      "id": "case1-test",
+      "kind": "test_execution",
+      "operation": "native-conformance",
+      "fingerprint": "baseline-H",
+      "seconds": 2200,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": true,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "assert-proof-one",
+      "immutable": false,
+      "mutates": false,
+      "isolation": "none",
+      "equivalence_proven": false,
+      "unique_detection": true
+    },
+    {
+      "id": "case2-test",
+      "kind": "test_execution",
+      "operation": "native-conformance",
+      "fingerprint": "baseline-H",
+      "seconds": 2300,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": true,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "assert-proof-two",
+      "immutable": false,
+      "mutates": false,
+      "isolation": "none",
+      "equivalence_proven": false,
+      "unique_detection": true
+    },
+    {
+      "id": "case1-mutate",
+      "kind": "setup",
+      "operation": "copy-mutable-project",
+      "fingerprint": "mutating-fixture-H",
+      "seconds": 100,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": false,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "not-applicable",
+      "immutable": false,
+      "mutates": true,
+      "isolation": "fresh-directory",
+      "equivalence_proven": false,
+      "unique_detection": false
+    },
+    {
+      "id": "case2-mutate",
+      "kind": "setup",
+      "operation": "copy-mutable-project",
+      "fingerprint": "mutating-fixture-H",
+      "seconds": 110,
+      "revision": "revision-H",
+      "platform": "linux-pinned",
+      "environment": "ubuntu-24.04",
+      "run_id": "synthetic-run-1",
+      "on_critical_path": false,
+      "trust_boundary": "candidate-readonly",
+      "assertion": "not-applicable",
+      "immutable": false,
+      "mutates": true,
+      "isolation": "fresh-directory",
+      "equivalence_proven": false,
+      "unique_detection": false
+    }
+  ]
+}
