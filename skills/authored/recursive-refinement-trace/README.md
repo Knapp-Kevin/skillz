@@ -120,7 +120,7 @@ log, or evaluator mismatch results in `BLOCKED`, not invented evidence.
 
 This package includes a **read-only host-invoked**
 [policy_lab.py](policy_lab.py) and a
-[19-case synthetic adversarial suite](test_policy_lab.py).
+[20-case synthetic adversarial suite](test_policy_lab.py).
 Unlike Phase-2 replay, it proposes a comparison decision against
 a deliberately frozen `recorded-order` incumbent. It never
 executes an agent, evaluates code under test, changes a skill,
@@ -132,6 +132,7 @@ After **separate explicit host authorization**, supply a public
 or synthetic JSON manifest containing these exact fields:
 
 - `schema_version: 1`, `evaluator_id`,
+  `evaluator_sha256` (source artifact digest, host must authenticate),
   `evaluation_context_id`, and shared integer `budget`.
 - `candidate` with exactly `schema_version:1`,
   `policy_id`, `branch_priority`
@@ -219,7 +220,7 @@ An additional integration test records two sibling outcomes using the real
 bundled recorder and confirms that the two policies select distinct known
 paths without writing to the log. All 84 tests passed locally on Python
 3.13.5 **for v0.2.0**. v0.3.0 includes a new policy laboratory and
-19 new adversarial tests; the updated full package Python suite is
+20 new adversarial tests; the updated full package Python suite is
 **NOT_RUN** until actually executed on this exact revision. No second model, external execution attestation, or replay policy
 effectiveness gain was demonstrated. Tests run without installing
 dependencies or accessing network services.
