@@ -8,7 +8,6 @@ No workflow commands, scripts, actions, or remote operations are executed.
 """
 from __future__ import annotations
 import argparse
-import fnmatch
 import json
 import math
 from pathlib import Path
@@ -79,6 +78,18 @@ def parse(document):
     unique([ident(s.get("id"),"scenario") for s in scenarios],"scenario IDs")
     return source,reasons
 
+def normalized_path_match(path, pattern):
+    """Deliberately tiny normal form, NOT GitHub's minimatch interpreter."""
+    need(isinstance(path,str) and path and isinstance(pattern,str) and pattern,
+         "missing path or pattern")
+    if pattern=="**": return True
+    if pattern.endswith("/**") and pattern.count("*")==2:
+        return path.startswith(pattern[:-3]+"/")
+    need(not any(x in pattern for x in "*?[]{}!"),
+         "UNSUPPORTED_SEMANTICS: path glob requires trusted normalization")
+    return path==pattern
+
+
 def eval_design(d, scenario, source):
     wmap={}
     for w in d["workflows"]:
@@ -139,10 +150,12 @@ def eval_design(d, scenario, source):
             problems.append("MATRIX_PLAN_NOT_IN_NEEDS:"+j["id"])
         if j["role"]=="qualify" and j.get("obligation"):
             problems.append("GATE_CANNOT_IMPERSONATE_VERIFIER:"+j["id"])
+        if j["role"]=="qualify" and not j["needs"]:
+            problems.append("QUALIFICATION_GATE_MISSING_PREREQUISITES:"+j["id"])
     selected=set()
     event=scenario["event"]
     for wid,w in wmap.items():
-        if event in w["events"] and any(fnmatch.fnmatchcase(path,pat) for path in scenario["changed_paths"] for pat in w["paths"]):
+        if event in w["events"] and any(normalized_path_match(path,pat) for path in scenario["changed_paths"] for pat in w["paths"]):
             selected.add(wid)
         if w.get("trigger_from") is not None:
             # Never invent GitHub token-trigger behavior; this subset supports
@@ -269,7 +282,8 @@ def run(doc):
         if not x["matches_expected"]:problems.append("EXPECTED_SCENARIO_MISMATCH:"+x["design"]+":"+x["scenario"])
         for y in x["issues"]:
             if y.startswith(("UNSUPPORTED", "VALIDATOR_DRIFT", "INDEPENDENT_LANE_GUARD_ABSENT",
-                             "ARTIFACT_PRODUCER_NOT_IN_NEEDS", "MATRIX_PLAN_NOT_IN_NEEDS")):
+                             "ARTIFACT_PRODUCER_NOT_IN_NEEDS", "MATRIX_PLAN_NOT_IN_NEEDS",
+                             "QUALIFICATION_GATE_MISSING_PREREQUISITES")):
                 problems.append("STRUCTURAL_GRAPH_HOLD:"+x["design"]+":"+x["scenario"]+":"+y)
     return {"status":"STRUCTURAL_PASS" if not problems else "HOLD","issues":sorted(set(problems)),
       "results":results,"schema_version":1,"exact_source_revision":rev,
