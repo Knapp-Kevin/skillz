@@ -28,7 +28,7 @@
       "Require baseline SHA256-bound dispositions for changed/removed meaningful sections",
       "Reject stale/unknown/duplicate disposition records and unsupported RETAINED claims",
       "Reject unauthorized/missing relocation destinations, preserve UNKNOWN and semantic limitations",
-      "Recognize plain-language machine-generated-by footer like public UOR Framework and ignore markers only inside code fences",
+      "Recognize plain-language machine-generated-by footer from a generic fixture and ignore markers only inside code fences",
       "Hold generated owner rather than manually changing output",
       "Withhold merge-readiness for stale HEAD, unknown required checks, failed/pending/skipped mandatory gates",
       "Report non-required general CI failures separately, never suppress or reclassify required gate",
@@ -38,18 +38,14 @@
   },
   "public_reference_readonly_observations": [
     {
-      "repository": "UOR-Foundation/uor-comms",
-      "main_sha": "82dae7aa7e15d4609f5cc5d43efb79ed60c14634",
-      "readme_sha": "bba3ad4cb1f715583f12cfb7a77a6888dc0a2ee1",
-      "finding": "Main README retained template-origin/front-door links, real open PR #35 docs correction observed; no actual README content mutation executed",
-      "qualification": "Real source inspected; cannot infer full scope or eventual UOR PR acceptance from this sample"
+      "observation_id": "anonymized-external-example-a",
+      "finding": "Historical read-only source inspection observed a template-derived README navigation risk; source identity and exact SHA deliberately excluded",
+      "qualification": "NOT_REPRODUCIBLE_FROM_PUBLIC_RECORD after intentional identity redaction; no actual consumer README change or reader acceptance proven"
     },
     {
-      "repository": "UOR-Foundation/uor-framework",
-      "main_sha": "51c01382200b0179d6640b07e9c8119364ab69a1",
-      "readme_sha": "753b3266d80690ac8aa6a3ad225aab116931450d",
-      "finding": "README has explicit generated-by uor-docs footer; do not directly edit generated README",
-      "qualification": "Read-only source inspection; actual generator source and regeneration were not executed"
+      "observation_id": "anonymized-external-example-b",
+      "finding": "Historical read-only source inspection observed a generated README ownership marker; source identity and exact SHA deliberately excluded",
+      "qualification": "NOT_REPRODUCIBLE_FROM_PUBLIC_RECORD after intentional identity redaction; no actual generator execution or acceptance proven"
     }
   ],
   "mandatory_narrative_gates": [
@@ -63,7 +59,7 @@
     "Section digest compares normalized ATX baseline sections; semantic preservation, Setext complexity and authoritative disposition evidence require host review.",
     "Generator markers are clues; source code and generator ownership must be independently verified before any write.",
     "CI receipt is caller-supplied and not authenticated; exact-head equality is not proof of valid ruleset enumeration or mergeability.",
-    "Real UOR repos were inspected read-only through GitHub; neither an actual UOR README rewrite nor an authorized generator regeneration was performed.",
+    "Historical external observations have identifying records deliberately redacted; neither consumer rewrite nor generator regeneration was performed.",
     "Independent external agent-host acceptance and real consumer usability still NOT_RUN."
   ],
   "package_source_transfer": "New Python script/test Git SHA verified byte-for-byte against locally executed files; previous checker unchanged.",
