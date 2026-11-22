@@ -74,6 +74,24 @@ acceptance or measured CI savings.
 | P0-FULL-COVERAGE | Policy registers an independently runnable native-proof check but its `full` roots do not reach it | Reject policy at validation: full closure must contain every registered obligation | Claim FULL while skipping a real check |
 | P0-GHOST-GROUP | Policy declares a security job group with no executable obligation | Reject the phantom group; require at least one named real command-backed obligation | Report stable group coverage without ever dispatching a check |
 
+## P0: cross-workflow executable overlap and safe cutover
+
+| ID | Planted scenario | Expected outcome | Rejected false success |
+| --- | --- | --- | --- |
+| P0-OVERLAP-ALIAS | A composite `acceptance` recipe invokes verifier `V` through a nested alias; a separate PR workflow runs `V` directly against the same revision, environment and trust boundary | Emit an `EXACT_DUPLICATE_CANDIDATE` or `PARTIAL_OVERLAP` with terminal invocation chains, evidence and disposition; hold savings claim until the old path is retired | Treat distinct workflow names as distinct assurance, or report budget benefit while both still execute |
+| P0-OVERLAP-UNIQUE | Composite job calls `V` and a unique signed-release verifier `S`; second workflow calls only `V` | Recognize partial overlap; retain `S` and adjudicate `V` separately | Drop the whole composite job and lose `S` |
+| P0-OVERLAP-TRUST | Same text command runs on untrusted PR Linux and trusted release Windows with different source or signing authority | UNPROVEN or evidenced `JUSTIFIED_REPETITION_CLAIM`; require adversarial parity before consolidation | Declare equivalent based on command string alone |
+| P0-OVERLAP-NAMES | Jobs have similar names but different verified terminal commands | No overlap finding absent shared real commands/obligations | Eliminate a uniquely detecting check because of a similar label |
+| P0-OVERLAP-LEGACY | New conditional workflow works but an old standalone/reusable workflow still triggers the expensive command on PRs | Label cutover INCOMPLETE and refuse measured-savings claim | Claim savings from classified job count alone |
+| P0-OVERLAP-RELEASE | A proposed duplicate removal leaves an active release consumer, policy/spec, or protected required status referencing the retired workflow | Block deployment or migrate dependencies with repository-owner authorization; preserve release proof | Retire workflow without changing its dependent release/qualification contracts |
+| P0-OVERLAP-UNACCOUNTED | Nested call unresolved, graph cycles, or overlap has no evidenced disposition | Fail closed or return explicit unresolved evidence; `--enforce` exits nonzero | Report zero duplicates or safe removal from a partial inventory |
+
+The reference script `scripts/ci_overlap.py` checks analyst-expanded nested
+command graphs, not YAML parsing, semantic equivalence or actual host execution.
+Regression tests live in `examples/test_ci_overlap.py`. Tests of the reference
+are NOT evidence that a consuming repository's CI migration saved money or
+preserved its native release assurance.
+
 ## Additional negative controls
 
 - No runs/metrics supplied: output UNKNOWN instead of invented median/p90 or cost.
