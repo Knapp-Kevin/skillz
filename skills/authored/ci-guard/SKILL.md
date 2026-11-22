@@ -262,8 +262,18 @@ Use representative provider timing for slow jobs: separate runner
 setup, compile, source fixture/check, actual individual test bodies,
 differential/oracle, mutation and artifact export. Rank actual total
 runner-minute and critical-path cost separately. A short compile
-followed by long conformance tests is **test-execution cost**, not
-evidence that caching or reducing compilation will fix runtime.
+followed by long conformance processes is **not automatically actual
+test computation**: those processes may be holding billed runners while
+polling for an upstream artifact. Require source-bound request/arrival/
+completion timestamps and job dependency evidence; classify proven
+polling as **DEPENDENCY_WAIT** separately from algorithm runtime,
+compilation and shared immutable fixture setup. Where a producer supplies
+one artifact to many consumers, consider moving waiting onto the job DAG
+with `needs` so consumers allocate runners *after* producer success.
+Preserve same-run artifact custody, producer failure propagation and
+conditional producer-skipped paths where legitimate lightweight consumer
+verification must still execute. An unconditional `needs` edge that
+skips a required lightweight path is a P0 regression.
 
 **One bounded coordinated repair:** Prepare source, workflow, policy,
 verifier, negative tests and rollback as **one complete draft change**.
