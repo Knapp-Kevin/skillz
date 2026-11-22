@@ -181,9 +181,14 @@ def main(argv=None):
     parser.add_argument("--input", required=True, type=Path)
     args = parser.parse_args(argv)
     try:
-        if args.input.stat().st_size > MAX_BYTES:
+        # Refuse caller-selected linked roots/parents before stat/open.
+        # Lexical checks are not a TOCTOU-proof sandbox for hostile roots.
+        source = args.input.absolute()
+        if any(part.is_symlink() for part in (source, *source.parents)):
+            raise TraceError("symlinked input or ancestor")
+        if source.stat().st_size > MAX_BYTES:
             raise TraceError("input exceeds 1 MiB")
-        with args.input.open("r", encoding="utf-8") as stream:
+        with source.open("r", encoding="utf-8") as stream:
             payload = json.load(stream, object_pairs_hook=strict_pairs, parse_constant=nonfinite)
         output = audit(payload)
     except (OSError, ValueError, UnicodeError) as error:
