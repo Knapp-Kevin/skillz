@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 6b619a623814e1f5410a43bb21724c31980e2e40
-complete_package_tree_sha: 3bced0e5b73a7d7f37d93032d561b0639f15ab8c
+complete_package_tree_sha: d4b5ef1a67240b035bb63a2984c1cc378a142264
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: unverified
-verification_basis: v1.5.3-targeted-fixture-source-review-host-QA-pending
-validation_status: not-run
-validation_note: "v1.5.3 adds 15 source-graph cutover Python tests plus 12 old overlap and existing classification/plan/test comparison. New exact-head GitHub hosted suite NOT_YET_VERIFIED; v1.5.2 prior 45005537015 success does NOT transfer. A separate unmerged v1.6 prototype had 26 local tests, not published here. Stage/receipt graph asserted by caller, not authenticated. Real consumer optimization, cost savings and protected branch/release acceptance NOT_RUN/NOT_MEASURED."
+verification_basis: v1.5.3-hosted-source-bound-27-overlap-cutover-plus-54-classification-plan-qa
+validation_status: passed-offline-contract-tests
+validation_note: "Current v1.5.3 source-bound GitHub Actions QA first succeeded on commit 89e708891117e46e2a6525347dce46ed7ea9e00a, run 45006875321 (12/12 original overlap +15/15 new cutover +28/28 classifier +26/26 plan, comparator script invoked). A 16th co-trigger test and review/index edits followed, requiring a new exact-head QA run. This historical green is NOT the current exact-head PASS until verified; no consumer host CI cost or branch protection acceptance measured."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V1_5_3"
 tags:
