@@ -12,6 +12,14 @@
 - Remote search returns the first 100 of 1,000 matches.
   Expected: explicitly partial coverage and no invented total.
 
+- A host approves root `/approved/repo` but the selected root path or
+  one of its parent components is a symlink into an out-of-scope
+  workspace. Expected: refuse the scan **before** resolving and
+  enumerating files. A symlinked individual source file remains
+  excluded. A concurrent attacker changing paths during scanning is
+  outside what a simple lexical check can secure; require a
+  host-enforced stable snapshot for that case.
+
 Mark tests observed only when actually exercised by a host.
 
 ## Harvest-output and age-provenance regressions
