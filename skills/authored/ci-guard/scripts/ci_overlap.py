@@ -91,6 +91,10 @@ def audit(graph):
 
     findings = []
     for (a, aa, a_ind, a_paths), (b, bb, b_ind, b_paths) in itertools.combinations(expanded, 2):
+        # A retired path remains in the inventory but no longer executes.
+        # Strict cutover independently demands exact-revision retirement proof.
+        if a.get("active") is False or b.get("active") is False:
+            continue
         if a["cohort"] != b["cohort"]:
             continue
         ac = {(cmd, obligation) for cmd, obligation, _ in aa}
