@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.5.9
+  version: 1.6.0
   license: MIT
 ---
 
@@ -327,6 +327,32 @@ never authenticates external workflow semantics or real provider
 receipts and reports runner-minute and critical-path savings
 `NOT_MEASURED`; user/host execution and a final exact-head
 qualification are separate.
+
+## P0: reconcile actual host run/job receipts with the normalized graph
+
+Do not equate `STRUCTURAL_PASS` with a real GitHub run. After simulation,
+use the [read-only host reconciliation adapter](components/host-reconciliation.md)
+to match the exact source revision, workflow path/event, run ID and
+attempt, complete host workflow conclusion and every scheduled job to
+explicit GitHub Actions receipts. The portable
+[ci_host_reconcile.py](scripts/ci_host_reconcile.py) defaults to offline,
+unauthenticated JSON; an **opt-in owner-authorized** `--live` mode reads
+only bounded direct GitHub REST run and per-attempt job endpoints using
+`actions:read`. No dispatches, permissions changes, publication, or
+untrusted repository execution occur. All observed jobs must be mapped.
+Stale SHA, unknown/missing/extra jobs, unsupported conditions, skipped
+required checks, contradictory workflow conclusions and mixed retry
+attempts HOLD.
+
+A `HOST_JOB_RECONCILED` outcome establishes narrow run/job parity for
+the *supplied mapping* only. It **does not** establish external workflow
+absence, actual forward/tag/publication effects, dispatch API causality,
+token authority, verified artifact custody, protected branch rules,
+independent conformance-test acceptance or provider-billed savings.
+Live API reads are distinguished from caller-supplied offline receipts
+but are not cryptographically signed reports and may not upgrade
+simulator assertions to trusted host policy. Preserve separate host
+seeded-fault testing and end-to-end owner acceptance before cutover.
 
 ## P0: publish measured before/after results proof after cutover
 
@@ -666,7 +692,8 @@ Use [cross-workflow overlap regressions](examples/test_ci_overlap.py),
 [post-cutover executable negative controls](examples/test_ci_cutover.py),
 [legacy classification regressions](examples/test_change_classification.py)
 and the [executable plan/qualification tests](examples/test_ci_plan.py),
-[observed-run comparison tests](examples/test_compare_ci_runs.py), plus
+[observed-run comparison tests](examples/test_compare_ci_runs.py),
+[host reconciliation negative controls](examples/test_ci_host_reconcile.py), plus
 [adversarial acceptance cases](examples/acceptance.md), including deliberate
 negative controls, and distinguish controlled analyst emulation from
 independently observed host behavior. A shorter pipeline that loses unique
