@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.8"
+skill_version: "1.5.9"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c064dd2224958d6ebdf29f147305ced7f855ea91
-complete_package_tree_sha: c24d4276141e92690ff24afc7004942da1377163
+content_blob_sha: 67b84ef20fca3a99fdf14e7aa8bd6608dfd493fb
+complete_package_tree_sha: 595455ad427b12025d51fab6f57963c69dbf04c8
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: verified
-verification_basis: v1.5.8-PR869-source-head-174-of-174-hosted-methods
-validation_status: passed-offline-contract-tests
-validation_note: "PR #869 Actions #45079498442 PASS on first complete source head f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b, 174/174 Python tests including all 8 previously dormant comparator tests and 16 new results-proof tests; three checks successful. Final verification metadata-only revision requires fresh exact-head QA. Consumer ROI and provider authentication NOT_RUN."
+verification_status: needs-re-review
+verification_basis: v1.5.9-source-branch-awaiting-exact-head-QA
+validation_status: pending
+validation_note: "CI Guard v1.5.9 normalized v3 dispatch chain model and 55 synthetic scenario tests staged. Exact-head hosted suite PENDING. Provider tokens/actual dispatch receipt/custody and consumer impact NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_8"
+rubric_score: "NOT_ASSESSED_EXACT_V1_5_9"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,7 +24,6 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Source tests on the v1.5.8 PR completed 174/174; post-reconciliation
-  exact-head GitHub QA remains required for merge. No external provider
-  receipts, real branch protection, native negative controls, consumer
-  results or cost savings have been independently authenticated.
+  The normalized event chain is a bounded caller-authored source model, not
+  GitHub Actions token or dispatch provider authentication. Hosted QA on
+  exact v1.5.9 source and consumer-host behavioral checks remain required.

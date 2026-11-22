@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.8"
+skill_version: "1.5.9"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "38-file standalone MIT skill package; stdlib optional results-proof reporting reuses strict compare_ci_runs.py, canonical scenario, overlap and self-repair modules. No network or provider authorization."
-content_blob_sha: c064dd2224958d6ebdf29f147305ced7f855ea91
-complete_package_tree_sha: c24d4276141e92690ff24afc7004942da1377163
+dependencies: "38-file standalone MIT package, stdlib normalized v3 scenario simulator with explicit caller-declared cross-workflow dispatch, strict comparator/results proof, canonical overlap and self-repair."
+content_blob_sha: 67b84ef20fca3a99fdf14e7aa8bd6608dfd493fb
+complete_package_tree_sha: 595455ad427b12025d51fab6f57963c69dbf04c8
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.8 produces strict/longitudinal/offline before-after result artifacts without fabricating provider authentication, billing, assurance or cutover. 174/174 Python methods PASS on PR #869 source head f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b; real consumer ROI NOT_MEASURED."
+rationale: "v1.5.9 adds modeled dispatch chain scheduling and fail-closed token/source checks with 10 new planted scenario tests. Exact-head hosted QA PENDING. Real host dispatch and external measured ROI NOT_RUN."
