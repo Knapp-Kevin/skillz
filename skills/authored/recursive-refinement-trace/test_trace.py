@@ -75,6 +75,15 @@ class TraceTests(unittest.TestCase):
                             for r in exported["receipts"]))
         self.assertEqual(os.stat(self.path()).st_mode & 0o777, 0o600)
 
+    def test_renamed_trace_cannot_impersonate_a_second_experiment(self):
+        self.init()
+        alias = "renamed-experiment"
+        os.rename(self.path(), self.root / (alias + ".trace.jsonl"))
+        with self.assertRaisesRegex(trace.TraceError, "identity mismatch"):
+            trace.inspect(self.root, alias)
+        with self.assertRaisesRegex(trace.TraceError, "identity mismatch"):
+            trace.inspect(self.root, alias, export=True)
+
     def test_actual_fixture_red_green_checks_create_accurate_two_experiments(self):
         checker = HERE / "examples" / "check_synthetic_preferences.py"
         original = HERE / "examples" / "duplicate-preferences.json"
