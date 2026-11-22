@@ -1,7 +1,7 @@
-# Recursive Refinement Trace v0.1.0
+# Recursive Refinement Trace v0.2.0
 
-A portable **optional** capture component for governed recursive skill
-improvement. The downloaded package contains everything required to run
+A portable **optional** capture and observed-only replay component for
+governed recursive skill improvement. The downloaded package contains everything required to run
 on a trusted POSIX host with Python 3.9+ and user-owned private storage.
 It does not require the Skillz repository, internet, third-party packages,
 other skills, scheduled tasks, an independent agent, or GitHub Actions.
@@ -61,6 +61,61 @@ an entire workspace, so replay beyond those proven conditions remains
 `UNKNOWN_STATE`. `--wall-ms` and `--test-invocations` are supplied by the
 host and not independently measured. Output is JSON, never a hidden upload.
 
+## Replay actual recorded branches, without executing them
+
+After an authorized host has used `trace.py` to record one or more real
+public/synthetic actions, the host can **revisit the recorded decisions**
+without invoking another agent, evaluator, test runner or network service.
+The replay helper reads the original host-owned log, checks its append-only
+hash chain and experiment identity, and confirms that independently supplied
+source and state snapshots match its root.
+
+```sh
+# The environment and consent must be established by the host independently.
+python replay.py --root "$HOST_PRIVATE_ROOT" \
+  --experiment-id "$EXPERIMENT_ID" \
+  --source "$PUBLIC_SOURCE_FILE" --state "$PUBLIC_STATE_SNAPSHOT" \
+  --expected-evaluator "$PINNED_EVALUATOR_ID" \
+  --expected-context "$PINNED_CONTEXT_ID" \
+  --budget 3 --compare --approved-public
+```
+
+The two available navigation policies are `recorded-order` and
+`adversarial-first`. They choose among **already captured** actions using,
+respectively, original append order or fixed adversarial-action priority.
+Outcomes and costs are never used to rank branches before selecting them.
+Both strategies start from the same trusted root snapshot and evaluator,
+receive an identical test-call budget, and follow only a **single isolated
+parent-child path** each. A child with a different source, parent state or
+evaluator is never reused as a causal counterfactual. Reordering an earlier
+edit does not magically recreate a valid later test.
+
+The JSON output includes each visited node, actually recorded outcomes,
+test invocations, recorded wall time, unvisited observation count, known-
+branch coverage denominator, `UNKNOWN_BRANCH` and `UNKNOWN_STATE`
+indicators, and the stopping reason. On a missing requested node it reports
+`UNKNOWN_BRANCH`, not a guessed successful outcome. When a branch exceeds
+the call budget, it stops without executing or counting that branch.
+
+To examine one policy, omit `--compare` and optionally select
+`--policy adversarial-first`. `--requested-node n-example` can deliberately
+test whether a proposed branch was actually captured; it cannot invent an
+outcome for an absent child.
+
+**No winner is selected.** The output explicitly sets
+`promotion_eligible: false` and
+`external_execution_authenticated: false`. Replay is limited to the
+recorded subset and the supplied snapshot file, not a complete execution
+environment. Different observed paths do not establish that either policy
+improves future results, safety, or end-user outcomes. The next phase must
+use separately held-out and live adversarial validation before promotion.
+
+The replay code is read-only and requires no extra dependencies. It imports
+only its **bundled** `trace.py` reader; a downloaded skill does not require
+Skillz-maintainer QA scripts, GitHub, autonomous jobs, memory, or a second
+agent. A missing private root, unsupported host, absent consent, corrupted
+log, or evaluator mismatch results in `BLOCKED`, not invented evidence.
+
 ## Storage guarantees and limits
 
 Private root: existing user-owned mode 0700. Trace file: mode 0600;
@@ -92,14 +147,21 @@ not supply private files**; no checksum can substitute for permission.
 Run from this standalone package, explicitly and locally:
 
 ```sh
-python -m unittest discover -s . -p test_trace.py -v
+python -m unittest test_trace test_replay -v
 ```
 
-The test suite includes a **real local synthetic source check** that
+The combined regression suite includes **82 actual locally executed tests**
+(40 recorder tests plus 42 replay tests), including a **real local synthetic
+source check** that
 produces actual failing and passing subprocess exit statuses on two
 synthetic preference files. It then records separate red/green experiments,
 without falsely claiming one observation mutated the workspace of another.
-Tests run without installing dependencies or accessing network services.
+An additional integration test records two sibling outcomes using the real
+bundled recorder and confirms that the two policies select distinct known
+paths without writing to the log. All 82 tests passed locally on Python
+3.13.5. No second model, external execution attestation, or replay policy
+effectiveness gain was demonstrated. Tests run without installing
+dependencies or accessing network services.
 
 The helper never authenticates user intent, external evaluator execution,
 independent agent behavior or real downstream skill effectiveness. Those
