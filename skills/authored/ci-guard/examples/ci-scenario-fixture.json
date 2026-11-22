@@ -1,0 +1,1390 @@
+{
+  "schema_version": 1,
+  "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "known_semantics": "NORMALIZED_SUBSET_V1",
+  "inventory": {
+    "complete": true,
+    "workflow_files_checked": true,
+    "nested_invocations_expanded": true,
+    "conformance_tests_checked": true,
+    "normative_rules_checked": true,
+    "unresolved": [],
+    "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "designs": [
+    {
+      "id": "blanket-barrier",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "workflows": [
+        {
+          "id": "acceptance",
+          "events": [
+            "draft",
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "repro",
+          "events": [
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "native",
+          "events": [
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "fast",
+          "events": [
+            "draft",
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "forward",
+          "events": [
+            "push"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "tag",
+          "events": [
+            "release"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "regeneration",
+          "events": [
+            "dispatch"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "security",
+          "events": [
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        }
+      ],
+      "jobs": [
+        {
+          "id": "lint",
+          "workflow": "fast",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full",
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 5,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "lint",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "producer",
+          "workflow": "acceptance",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "produce",
+          "lane": "other",
+          "seconds": 1800,
+          "matrix": [
+            "default"
+          ],
+          "artifact_id": "same-run-data"
+        },
+        {
+          "id": "dependent",
+          "workflow": "acceptance",
+          "needs": [
+            "producer"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "dependent",
+          "seconds": 8,
+          "matrix": [
+            "a",
+            "b"
+          ],
+          "obligation": "proof-{shard}",
+          "artifact_from": "producer",
+          "artifact_id": "same-run-data",
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "native",
+          "workflow": "native",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 40,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "native",
+          "runtime_guard": true,
+          "platform": "native",
+          "trust": "security"
+        },
+        {
+          "id": "repro",
+          "workflow": "repro",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 35,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "repro",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "security",
+          "workflow": "security",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 10,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "security",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "high"
+        },
+        {
+          "id": "forward",
+          "workflow": "forward",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "push"
+          ],
+          "role": "other",
+          "lane": "other",
+          "seconds": 4,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "tag",
+          "workflow": "tag",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "release"
+          ],
+          "role": "other",
+          "lane": "other",
+          "seconds": 6,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "regenerate",
+          "workflow": "regeneration",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "dispatch"
+          ],
+          "role": "other",
+          "lane": "other",
+          "seconds": 6,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-full",
+          "workflow": "acceptance",
+          "needs": [
+            "producer",
+            "dependent",
+            "independent-full"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer",
+            "dependent",
+            "independent-full"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-light",
+          "workflow": "acceptance",
+          "needs": [
+            "independent-light"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "independent-light"
+          ],
+          "routes": [
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "independent-full",
+          "workflow": "acceptance",
+          "needs": [
+            "producer"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 20,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "independent",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "independent-light",
+          "workflow": "acceptance",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 20,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "independent",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        }
+      ],
+      "normative_obligations": {
+        "full": [
+          "lint/generic/default",
+          "independent/generic/default",
+          "proof-a/generic/default",
+          "proof-b/generic/default",
+          "native/native/security",
+          "repro/generic/default",
+          "security/generic/high"
+        ],
+        "light": [
+          "lint/generic/default",
+          "independent/generic/default"
+        ]
+      }
+    },
+    {
+      "id": "split-independent",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "workflows": [
+        {
+          "id": "acceptance",
+          "events": [
+            "draft",
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "repro",
+          "events": [
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "native",
+          "events": [
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "fast",
+          "events": [
+            "draft",
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "forward",
+          "events": [
+            "push"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "tag",
+          "events": [
+            "release"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "regeneration",
+          "events": [
+            "dispatch"
+          ],
+          "paths": [
+            "**"
+          ]
+        },
+        {
+          "id": "security",
+          "events": [
+            "ready"
+          ],
+          "paths": [
+            "**"
+          ]
+        }
+      ],
+      "jobs": [
+        {
+          "id": "lint",
+          "workflow": "fast",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full",
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 5,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "lint",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "producer",
+          "workflow": "acceptance",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "produce",
+          "lane": "other",
+          "seconds": 1800,
+          "matrix": [
+            "default"
+          ],
+          "artifact_id": "same-run-data"
+        },
+        {
+          "id": "dependent",
+          "workflow": "acceptance",
+          "needs": [
+            "producer"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "dependent",
+          "seconds": 8,
+          "matrix": [
+            "a",
+            "b"
+          ],
+          "obligation": "proof-{shard}",
+          "artifact_from": "producer",
+          "artifact_id": "same-run-data",
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "native",
+          "workflow": "native",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 40,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "native",
+          "runtime_guard": true,
+          "platform": "native",
+          "trust": "security"
+        },
+        {
+          "id": "repro",
+          "workflow": "repro",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 35,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "repro",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        },
+        {
+          "id": "security",
+          "workflow": "security",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 10,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "security",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "high"
+        },
+        {
+          "id": "forward",
+          "workflow": "forward",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "push"
+          ],
+          "role": "other",
+          "lane": "other",
+          "seconds": 4,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "tag",
+          "workflow": "tag",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "release"
+          ],
+          "role": "other",
+          "lane": "other",
+          "seconds": 6,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "regenerate",
+          "workflow": "regeneration",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "dispatch"
+          ],
+          "role": "other",
+          "lane": "other",
+          "seconds": 6,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-full",
+          "workflow": "acceptance",
+          "needs": [
+            "producer",
+            "dependent",
+            "independent"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "producer",
+            "dependent",
+            "independent"
+          ],
+          "routes": [
+            "full"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "gate-light",
+          "workflow": "acceptance",
+          "needs": [
+            "independent"
+          ],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [
+            "independent"
+          ],
+          "routes": [
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "qualify",
+          "lane": "other",
+          "seconds": 0,
+          "matrix": [
+            "default"
+          ]
+        },
+        {
+          "id": "independent",
+          "workflow": "acceptance",
+          "needs": [],
+          "condition": "success",
+          "conformance_condition": "success",
+          "conformance_needs": [],
+          "routes": [
+            "full",
+            "light"
+          ],
+          "eligible_events": [
+            "ready"
+          ],
+          "role": "verify",
+          "lane": "independent",
+          "seconds": 20,
+          "matrix": [
+            "default"
+          ],
+          "obligation": "independent",
+          "runtime_guard": true,
+          "platform": "generic",
+          "trust": "default"
+        }
+      ],
+      "normative_obligations": {
+        "full": [
+          "lint/generic/default",
+          "independent/generic/default",
+          "proof-a/generic/default",
+          "proof-b/generic/default",
+          "native/native/security",
+          "repro/generic/default",
+          "security/generic/high"
+        ],
+        "light": [
+          "lint/generic/default",
+          "independent/generic/default"
+        ]
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "ready-full",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "ready",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": true,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "ready-light",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "ready",
+      "route": "light",
+      "changed_paths": [
+        "docs/guide.md"
+      ],
+      "expected_qualifies": true,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "draft-full",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "draft",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "producer-failed",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "ready",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {
+        "producer": "failure"
+      },
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "proof-shard-failed",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "ready",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {
+        "dependent#b": "failure"
+      },
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "independent-api-violation",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "ready",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {
+        "independent": [
+          "shared-artifact-export"
+        ],
+        "independent-full": [
+          "shared-artifact-export"
+        ]
+      },
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "stale-ready-receipt",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "ready",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "postmerge-push",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "push",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "release-without-gate",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "release",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    },
+    {
+      "id": "cancelled",
+      "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event": "cancelled",
+      "route": "full",
+      "changed_paths": [
+        "src/example.py"
+      ],
+      "expected_qualifies": false,
+      "required_obligations": [
+        "lint/generic/default",
+        "independent/generic/default",
+        "proof-a/generic/default",
+        "proof-b/generic/default",
+        "native/native/security",
+        "repro/generic/default",
+        "security/generic/high"
+      ],
+      "forced_outcomes": {},
+      "runtime_api_calls": {},
+      "provider_semantics": "NORMALIZED_DECLARED",
+      "receipt_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "status_checks": {
+        "lint/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "independent/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-a/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "proof-b/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "native/native/security": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "repro/generic/default": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        },
+        "security/generic/high": {
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "conclusion": "success",
+          "kind": "EXECUTED_VERIFIER"
+        }
+      }
+    }
+  ]
+}

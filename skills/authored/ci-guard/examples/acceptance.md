@@ -194,3 +194,37 @@ are independently exercised by [overlap](test_ci_overlap.py) and
 Any claimed real billed-minute saving or critical-path improvement requires
 actual comparable GitHub Actions receipts. A source-only PREFLIGHT_READY is
 not merged, protected, deployed, or production-qualified CI.
+
+## P0 v1.5.6: normalized whole-workflow execution scenario cases
+
+An expensive inherited CI optimization must compare **two or more**
+source-pinned graph designs after a complete workflow, nested command,
+conformance-oracle and normative status inventory. The bundled
+[offline scenario fixture](ci-scenario-fixture.json) uses **eight wholly
+fictional workflows, two candidates, ten source-matched scenarios** and
+the [37 executable tests](test_ci_scenario.py). All actual GitHub
+provider behavior, caller-supplied statuses and dollar savings remain
+unverified by this synthetic runner.
+
+| Negative scenario | Expected result |
+| --- | --- |
+| Blanket producer barrier vs independently scheduled check | Preserve identical unique verifier coverage; show runner-seconds and estimated critical-path separately |
+| Draft created/synchronized vs Ready on same SHA | Draft has zero paid verification runners; Ready recomputes actual obligations rather than reuses draft defer |
+| Producer fails or one matrix proof shard fails | No full qualification even if a supplied required status falsely says success |
+| Producer skipped on legitimate docs/light route | Independent lint and required checks still run; a blanket dependent skip is a regression |
+| Native/security verifier shares a name with another check | Platform/trust boundary remains unique; duplicate only when effective obligation actually matches |
+| Required status missing, skipped, stale, cancelled or spoofed | HOLD; cannot impersonate protected source-bound verification |
+| Workflow `if`/needs and local conformance checker disagree | `VALIDATOR_DRIFT`, preserve both validation paths and HOLD |
+| New independent test calls shared export API indirectly | CI-only fail-fast negative control must detect and fail rather than silently regenerate |
+| Runtime guard marker is removed | HOLD until a source and actual runtime test prove its enforcement |
+| Unmodeled `workflow_run`, token dispatch, dynamic output or arbitrary GitHub expression | `UNSUPPORTED_SEMANTICS` / HOLD, not guessed provider execution |
+| Cross-workflow `needs` pretends to be a direct GitHub job dependency | Reject unsupported source graph |
+| Tag/forward/release side effect occurs without release proofs | Never count publication or deployment qualified by unrelated green checks |
+
+The Python simulator accepts only its bounded **normalized subset v1**,
+not arbitrary CI YAML. `STRUCTURAL_PASS` means the caller-declared
+scenario outcomes agree with the modeled rules, **not** that GitHub
+Actions ran the design or that a project passed its Rust/shell/YAML
+conformance suite. Runtime independent-lane export blocking must
+be separately planted and observed by the authorized consuming host.
+The source comparison is a planning safeguard, not production evidence.
