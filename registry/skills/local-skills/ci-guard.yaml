@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.5.7"
+skill_version: "1.5.8"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -18,10 +18,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "34-file MIT standalone package with normalized v2 side-effect simulation and canonical overlap/self-repair. Host execution remains separate."
-content_blob_sha: 09f2a1771a03d082c87a17f40e5bbb38cfe6657b
-complete_package_tree_sha: 2ec235742a01a50d341bc7d22b66077ccee5fde1
+dependencies: "38-file standalone MIT skill package; stdlib optional results-proof reporting reuses strict compare_ci_runs.py, canonical scenario, overlap and self-repair modules. No network or provider authorization."
+content_blob_sha: c064dd2224958d6ebdf29f147305ced7f855ea91
+complete_package_tree_sha: c24d4276141e92690ff24afc7004942da1377163
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "v1.5.7 independently tracks required forward/tag/dispatch side effects. Source 150/150 hosted Python QA PASS on PR #868 head 19818416702e3bcccf0627ad0d37c617bd1bdd20. Provider semantics and consumer cost benefit NOT_RUN/NOT_MEASURED."
+rationale: "v1.5.8 produces strict/longitudinal/offline before-after result artifacts without fabricating provider authentication, billing, assurance or cutover. 174/174 Python methods PASS on PR #869 source head f2c28fe8f7d5d0a1eaf9b0eff284ac2321a9fb6b; real consumer ROI NOT_MEASURED."

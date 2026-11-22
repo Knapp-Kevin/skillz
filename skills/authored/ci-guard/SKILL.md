@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.5.7
+  version: 1.5.8
   license: MIT
 ---
 
@@ -318,6 +318,37 @@ never authenticates external workflow semantics or real provider
 receipts and reports runner-minute and critical-path savings
 `NOT_MEASURED`; user/host execution and a final exact-head
 qualification are separate.
+
+## P0: publish measured before/after results proof after cutover
+
+**A merged CI repair is implementation evidence, not economic proof.** For
+substantive CI optimizations, extend OBSERVE/IMPROVE with the
+[standalone results-proof method](components/results-proof.md), driven by the
+existing [strict run comparator](scripts/compare_ci_runs.py) and optional
+[report generator](scripts/ci_results_proof.py). Produce both a versioned
+`ci-results-proof.json` and `CI-BEFORE-AFTER.md` with source refs,
+event/stage/host/matrix/cache equivalence, before/after metrics, test-obligation
+and seeded-failure parity, old workflow retirement, risks and final verdict.
+
+**Never claim savings from jobs removed or PRs merged.** Compare executed
+job-minutes, provider-billed runner minutes, longest required dependency path,
+observed wall-clock envelope and independently timed earliest failed feedback
+as distinct outcomes. Dollars/payback are NOT_MEASURED unless provider pricing
+and engineering investment are evidenced; do not infer billing from duration.
+For same-source experiments preserve `compare_ci_runs.py` strict matching.
+For changed-source production before/after, report only explicitly normalized
+directional evidence with confounders, never a hidden relaxation of strict
+source equivalence. Release/native/security unique detection must remain
+independently satisfied. Missing actual receipts, failed seeded-fault
+controls or still-running legacy workflows prevent a completion claim.
+
+The standard-library generator is deliberately offline and does not
+authenticate caller-supplied receipts, provider authorization or real
+publication. Its `NOT_MEASURED` / `NOT_COMPARABLE` / `NOT_CUT_OVER` /
+`REGRESSION` result is distinct from `QUALIFIED` / `NOT_QUALIFIED`
+declared assurance parity. Never relabel fixture or caller-declared metrics
+as certified `PROVED_IMPROVEMENT`. The consuming host owns actual
+provider-verified conclusions and case-study claims.
 
 ## P0: cross-workflow execution deduplication
 
