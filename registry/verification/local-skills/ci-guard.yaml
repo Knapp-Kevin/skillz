@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.5.1"
+skill_version: "1.6.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e6b47200f62ba2c81a3bdcfe5489043952b3a4a0
-complete_package_tree_sha: 1ce9e29eeea3bce4b440e039a69fac27a4742142
+content_blob_sha: 69cfa50baec76b327ac3f496f56694720210f3c5
+complete_package_tree_sha: 578bba0b2bab8932ea2ee9122ca886697f711cf3
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: unverified
-verification_basis: v1.5.1-targeted-adversarial-static-draft-contract-checks-python-not-run
+verification_basis: v1.6-new-execution-overlap-method-26-executed-local-tests-full-suite-not-run
 validation_status: not-run
-validation_note: "v1.5.1 target static draft guards checked on branch, 10 structural invariants passed and 2 new executable regression functions added. v1.5.1 Python tests NOT_RUN; original v1.5.0 76/76 local tests historical only. No actual Actions adoption, branch protection or measured runner savings; external host validation NOT_RUN."
+validation_note: "CI Guard v1.6.0 new exact-code stdlib execution-graph auditor tested 26/26 locally; fictional baseline nested composite plus standalone returned exit 3/HOLD with PARTIAL_OVERLAP, fictional deduplicated graph returned exit 0/structural PASS. Historical classifier/planner suites NOT_RUN for v1.6.0 (v1.5.1 itself unverified). No actual consumer command tracing, host-model behavior, protected branch or release gate, runner/critical-path receipts or measured savings. Source graph and synthetic receipts are untrusted caller assertions; they do not prove complete real inventory."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_5_1"
+rubric_score: "NOT_ASSESSED_EXACT_V1_6_0"
 tags:
   use_case: [ci-assurance, development-effectiveness, evidence-audit]
   lifecycle: [evaluation]
@@ -24,8 +24,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  v1.5.1 changes the default draft workflow execution path and preserves
-  full ready-state qualification. Structural tests inspect dispatch and
-  trust-gate source but are not GitHub Actions job execution. Current
-  source has not completed whole-package behavioral or independent
-  host acceptance; retain unverified/validation not-run.
+  CI Guard v1.6.0 adds mandatory pre-optimization recursive cross-workflow
+  execution mapping, explicit redundancy classes/dispositions, runtime
+  source-graph checker and 26 new actually executed local adversarial
+  method tests. No broader v1.6 test suite, independent host
+  validation, real workflow inventory or cost receipts. Source review:
+  docs/reviews/2026-11-22-ci-guard-v160-execution-dedup-review.md.
