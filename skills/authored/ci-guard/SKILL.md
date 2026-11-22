@@ -8,7 +8,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.5.4
+  version: 1.5.5
   license: MIT
 ---
 
@@ -195,6 +195,36 @@ unchanged** before claiming savings. Prove detection parity in shadow
 mode, migrate branch-protected checks with owner authority, and
 measure real runner minutes and critical-path time. Preserve independent
 release/signature/production controls and a safe rollback.
+
+## P0: diagnose artifact-blocked paid runners before treating tests as slow
+
+An apparent 30-minute **test** can be a seven-second computation after
+a 30-minute wait for a shared generated artifact. Demand source-bound
+artifact request, arrival, consumer finish timestamps and runner-allocation
+evidence before attributing slow CI to compilation, test algorithms or
+duplicated assertions. Multiple independent consumer tests may detect
+different failures while **all pay to wait for one producer**.
+
+Classify such spans as `DEPENDENCY_WAIT_ON_PAID_RUNNER`, not
+redundant compilation or algorithm time. Investigate an explicit producer
+job plus scheduling edges so consumers acquire runners only when
+same-run verified artifacts are ready. A GitHub Actions `needs` relation
+alone is insufficient: preserve producer failure propagation and a
+deliberately producer-skipped **legitimate non-full verification route**.
+A skipped `needs` prerequisite can skip its dependent job; consider an
+explicit safe alternate branch or separate jobs with trustworthy
+conditions, not a false `always()` green. Gate any migration on
+source-bound negative tests for success, fail and intentional skip;
+protect artifact custody, current revision and exact-head status.
+
+The [self-repair procedure](components/one-pass-self-repair.md)
+requires a complete artifact-wait inventory and example negative cases.
+Its offline `ci_self_repair.py` now reports wait/cause separately from
+test-phase minutes, and HOLDs when scheduling, custody, failure
+propagation or alternate-path safeguards are unproven. Both observed
+job-minute reduction and critical-path effect remain NOT_MEASURED
+until comparable provider receipts are collected; waiting phases may
+overlap reported test durations, so do not add them twice.
 
 ## P0: whole-system one-pass CI self-repair, including test-internal cost
 
