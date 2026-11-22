@@ -199,6 +199,15 @@ class CutoverTests(unittest.TestCase):
             self.assertEqual(okay.returncode, 0, okay.stderr)
             self.assertEqual(json.loads(okay.stdout)["cutover"]["status"], "PASS")
 
+    def test_shipped_anonymous_cli_fixtures(self):
+        examples = HERE / "examples"
+        before = json.loads((examples / "ci-overlap-fixture.json").read_text())
+        after = json.loads((examples / "ci-cutover-fixture.json").read_text())
+        self.assertEqual(overlap.audit(before)["findings"][0]["normalized_class"],
+                         "PARTIAL_OVERLAP")
+        self.assertEqual(self.assess(before)["status"], "FAIL")
+        self.assertEqual(self.assess(after)["status"], "PASS")
+
     def test_duplicate_json_fields_and_symlink_input_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
