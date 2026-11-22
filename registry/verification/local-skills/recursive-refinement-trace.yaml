@@ -1,14 +1,14 @@
 schema_version: 1
 skill_name: recursive-refinement-trace
-skill_version: "0.3.0"
+skill_version: "0.3.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/recursive-refinement-trace/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/recursive-refinement-trace/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: bc95b24eb9a477576aa7071e96f5badbbf04a413
-complete_package_tree_sha: 4276df0fbfdf2c76cde5878ff6204a6c50bb8c51
+content_blob_sha: e4f8a1668b48646c99ae2aaf60dac076aae3ebe6
+complete_package_tree_sha: d46950b4d62d3eae06080b980b3ed7c8d8767014
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
 verification_status: unverified
@@ -23,7 +23,7 @@ validation_note: >-
   independently authenticated execution or policy efficacy.
 
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V0_3_0"
+rubric_score: "NOT_ASSESSED_EXACT_V0_3_1"
 tags:
   use_case: [recursive-improvement, adversarial-refinement, discovery-traces, observed-replay]
   lifecycle: [evaluation, preservation, experimentation]
@@ -35,3 +35,9 @@ notes: >-
   context, disallows unknown branch promotion and protects recorded PASS
   verification. It can only propose a bounded pilot. No evaluator changes,
   independent host testing, live user benefits or policy activation proven.
+
+# v0.3.1: two planted file/parent symlink negative cases and original test
+# methods kept (now 22 relevant tests). Full changed-version Python suite
+# NOT_RUN as of source edit; historical receipts do not apply to these bytes.
+# Host/agent outcomes, consumer data rights and concurrent path-swap TOCTOU
+# containment are NOT_VERIFIED.
