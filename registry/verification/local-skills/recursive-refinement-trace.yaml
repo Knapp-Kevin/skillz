@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/recursive-refinement-trace/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: cd00d434317c8e6f5298067cbc6654be8436621c
-complete_package_tree_sha: 6262c36a2806bc76f79c80e45ce69552197b2d9b
+complete_package_tree_sha: 50bee109cecb3a00a34a0a2c5b753e0c176714eb
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
 verification_status: verified
@@ -17,9 +17,9 @@ validation_status: not-run
 validation_note: >-
   Exact recorder trace.py blob 78a134e182bd0206d7c81fdc1c51b8b4bce2d865,
   original 40 method test_trace.py blob b4ae40a341bfededc457cf7006edc32796f4a9f6,
-  replay.py blob 5f9c5da1f4a7f346b32533026a7b54de151aaf86, and new
-  42 method test_replay.py blob c6b91207ac1087a36fadcc58a15995d422a717c2
-  were all executed locally with Python 3.13.5, 82/82 PASS. Real synthetic
+  replay.py blob aecab9e6a7a852b9c640f3d9347be9274819fd9c, and new
+  44 method test_replay.py blob 1a068a1e5f240d68a0f5bb4a690566d65ed2a0eb
+  were all executed locally with Python 3.13.5, 84/84 PASS. Real synthetic
   recorder integration confirmed policy divergence and read-only operation.
   Separate executed receipt under docs/evals/receipts/2026-11-22-rsi-phase2-observed-replay.json.
   No Python 3.9/3.11 execution, independent consuming agent, Windows ACL,
