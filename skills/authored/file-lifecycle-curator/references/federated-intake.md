@@ -72,7 +72,6 @@ It is not permission to save a sidecar to disk or cloud storage.
 
 This is a text-to-text handoff contract, not an executable connector,
 complete schema validator, ACL enforcement server or behavioral pass.
-Its sibling [Federated Source Catalog](../../federated-source-catalog/SKILL.md)
-is optional. Static verification must be tied to this reference file's
+A separately packaged **Federated Source Catalog** capability is optional and not part of this folder. All required handoff fields and refusal behavior for this package are defined above, so an offline copy requires no sibling path. Static verification must be tied to this reference file's
 exact tree identity. Any later change to required fields or authority
 logic invalidates the previous complete-package review.
