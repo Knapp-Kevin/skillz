@@ -78,7 +78,7 @@
     }
   ],
   "budget": {
-    "max_preparation_jobs": 1,
+    "max_preparation_jobs": 4,
     "max_expensive_cycles": 1,
     "planned_expensive_cycles": 1
   },
