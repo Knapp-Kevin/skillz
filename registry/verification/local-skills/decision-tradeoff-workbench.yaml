@@ -1,22 +1,22 @@
 schema_version: 1
 skill_name: decision-tradeoff-workbench
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/decision-tradeoff-workbench/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/decision-tradeoff-workbench/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 24c65454a57689bfbea24ef024591e202118b675
-complete_package_tree_sha: a8cb0eac3a487bdc77064935b2f6c4f10fff215c
+content_blob_sha: df9cd3a533be9bbddf262d09811046ca8cec7f4c
+complete_package_tree_sha: e73108630e053dacd700693dd24cc48110d70a72
 characterized_at: "2026-11-20"
-reviewed_at: "2026-11-20"
-verification_status: verified
+reviewed_at: "2026-11-22"
+verification_status: unverified
 verification_basis: maintainer-complete-package-static-review-and-local-executable-method-tests
 validation_status: not-run
 validation_note: "25/25 real local Python arithmetic/security method tests passed. No independent historical-vs-current agent-host comparison or external source verification; host validation not-run."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_EXACT_V1_2_1"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]
@@ -28,3 +28,9 @@ notes: >-
   local Python method tests. docs/reviews/2026-11-20-decision-workbench-v120-executable-method.md.
   No independent agent-host skill execution, source validation, physical brief rendering
   or measured 1.5x overall effectiveness. Previous v1.1 static identity retained in index.
+
+# v1.2.1: two planted file/parent symlink negative cases and original test
+# methods kept (now 27 relevant tests). Full changed-version Python suite
+# NOT_RUN as of source edit; historical receipts do not apply to these bytes.
+# Host/agent outcomes, consumer data rights and concurrent path-swap TOCTOU
+# containment are NOT_VERIFIED.
