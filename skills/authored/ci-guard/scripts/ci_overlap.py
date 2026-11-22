@@ -180,7 +180,9 @@ def qualify_cutover(graph, report):
     policy = graph.get("post_cutover")
     if not isinstance(policy, dict):
         return {"status": "FAIL", "issues": ["CUTOVER_POLICY_MISSING"],
-                "host_authenticated": False, "optimization_complete": False}
+                "host_authenticated": False, "optimization_complete": False,
+                "observed_runner_minutes_delta": "NOT_MEASURED",
+                "observed_critical_path_delta": "NOT_MEASURED"}
     source = policy.get("source_revision")
     if not isinstance(source, str) or not source.strip() or source == "UNKNOWN":
         issues.append("SOURCE_REVISION_UNBOUND")
