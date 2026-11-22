@@ -1110,8 +1110,8 @@
       "license_verified_at": "2026-11-22",
       "provenance_path": "registry/skills/local-skills/recursive-refinement-trace.yaml",
       "verification_path": "registry/verification/local-skills/recursive-refinement-trace.yaml",
-      "skill_blob_sha": "0695fa93a90ac64cee48b896d220626f1a60dc22",
-      "package_tree_sha": "0bd18b883f738629179b834c379ddc5512a206de",
+      "skill_blob_sha": "bc95b24eb9a477576aa7071e96f5badbbf04a413",
+      "package_tree_sha": "4276df0fbfdf2c76cde5878ff6204a6c50bb8c51",
       "package_file_count": 12,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_3_0",
@@ -1124,7 +1124,7 @@
         "software-engineering/maintenance",
         "agent-mcp-development/evaluation"
       ],
-      "review_note": "Phase-3 opt-in self-contained policy laboratory with structural frozen evaluator/incumbent, development/heldout two-family candidate replay, protected action fail/skip veto, no auto activation. 19 committed Python adversarial methods; new Python suite NOT_RUN, v0.2.0 84/84 historical. No independent host/live pilot or effectiveness measurement, see #832."
+      "review_note": "Phase-3 opt-in self-contained policy laboratory with structural frozen evaluator/incumbent, development/heldout two-family candidate replay, protected action fail/skip veto, no auto activation. 20 committed Python adversarial methods; new Python suite NOT_RUN, v0.2.0 84/84 historical. No independent host/live pilot or effectiveness measurement, see #832."
     },
     {
       "id": "evidence-driven-refinement-loop",
