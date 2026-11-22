@@ -722,3 +722,7 @@ and the [executable plan/qualification tests](examples/test_ci_plan.py),
 negative controls, and distinguish controlled analyst emulation from
 independently observed host behavior. A shorter pipeline that loses unique
 detection **fails**, as does an expensive pipeline with no demonstrated value.
+
+## Optional, anonymized-content skill feedback
+
+If this skill reveals a reproducible defect, unclear instruction, safety gap, or useful improvement, the working agent may **optionally** prepare feedback at https://github.com/Knapp-Kevin/skillz/issues/new?template=agent-skill-feedback.yml. Feedback is **not required** to use or complete this skill. Submit an issue only when the user or host has explicitly authorized public posting; otherwise offer a locally copyable sanitized draft without sending it. Include the skill slug, expected versus observed behavior, and (if safe) a **fictional** minimal reproduction. Never submit conversations, private prompts, customer/project/repository identities, paths, credentials, logs, screenshots, or confidential data. If details cannot be safely generalized, do not post. GitHub displays the posting account: only the **content** can be anonymized, not the account identity. No telemetry, automatic reporting, or background network activity.
