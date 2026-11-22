@@ -12,14 +12,19 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
   display-name: File Lifecycle Curator
-  version: 1.1.0
+  version: 1.1.1
+  license: MIT
 ---
 
 # File Lifecycle Curator
 
 Make an authorized collection of files easier to **find, understand, maintain and recover** without sacrificing source identity, privacy, evidence or user control. A file inventory, index, summary, keyword/tag taxonomy, metadata deck and archive plan are distinct deliverables. Do not treat any of them as proof that file operations ran.
 
-**Optional federated intake (v1.1):** When selected records arrive from [Federated Source Catalog](../federated-source-catalog/SKILL.md), enforce the [identity and authorization handoff](references/federated-intake.md) *before* processing private content. Retain original catalog ID, native resource ID, principal/root, source revision kind/value, current viewer authority and extraction coverage. The [synthetic intake cases](examples/federated-intake-cases.md) are acceptance definitions, not observed host tests. Standalone authorized-file work remains supported without a connector or persistent index.
+**Optional federated intake (v1.1):** When selected records arrive from a separately packaged **Federated Source Catalog** capability (only when independently installed, available and authorized), enforce the [identity and authorization handoff](references/federated-intake.md) *before* processing private content. Retain original catalog ID, native resource ID, principal/root, source revision kind/value, current viewer authority and extraction coverage. The [synthetic intake cases](examples/federated-intake-cases.md) are acceptance definitions, not observed host tests. Standalone authorized-file work remains supported without a connector,
+persistent index or sibling directory. This folder's
+[identity and authorization handoff](references/federated-intake.md)
+describes the optional text contract completely; references to a separately
+installed catalog are explanatory, not a required file or network resource.
 
 ## Activation and boundaries
 

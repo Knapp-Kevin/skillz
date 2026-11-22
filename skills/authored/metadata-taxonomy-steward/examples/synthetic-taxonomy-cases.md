@@ -43,3 +43,15 @@ Unvisited collections: listed separately with unknown coverage
 
 These are static acceptance definitions. They do not prove a live model or
 connector behaves correctly.
+
+## T13: standalone taxonomy planning with absent siblings
+
+Download only the `metadata-taxonomy-steward/` folder and provide
+the original synthetic `Roadmap`/`roadmap` and conflicting `draft`
+labels offline. Neither a federated catalog nor curator is installed.
+Expected: classify the two draft senses `HOMONYM_CONFLICT`, propose
+a bounded versioned crosswalk, preserve original source terms,
+withhold the private HR label and mark provider changes `NOT RUN`.
+No sibling skill file, connector, network or permission escalation
+is required. Do not fabricate a working integration, external
+link, committed taxonomy migration or accepted alias.

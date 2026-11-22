@@ -1,7 +1,7 @@
 schema_version: 1
 skill_name: file-lifecycle-curator
 display_name: File Lifecycle Curator
-skill_version: 1.1.0
+skill_version: 1.1.1
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/file-lifecycle-curator/SKILL.md
@@ -11,7 +11,7 @@ relationship: first-party
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
 curated_at: '2026-11-18'
-last_checked_at: '2026-11-18'
+last_checked_at: '2026-11-22'
 availability: in-repo
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 permission_tier: read-only
@@ -22,8 +22,8 @@ dependencies: >-
   Authorized inputs for source inspection. Inventory, tagging, metadata decks, planning
   and excerpt-limited indexing are text-only; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
-content_blob_sha: 4d9387a3698252c7f92c0a4cbed415f789155c79
-complete_package_tree_sha: 31f63a762ead720db8c390017c235e6602f3ffd8
+content_blob_sha: 3e35bdf625b617fea62d9758501d5fc61c444dca
+complete_package_tree_sha: 33a8e598e64478a763e335a2dea9f6eef34a7528
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
@@ -32,3 +32,7 @@ rationale: >-
   inferred metadata, plans from authorized changes, and archive from deletion.
   Representative host behavioral validation and operational security scanning not run.
   See docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
+
+# 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
+# Optional composition still requires independent host availability/authorization.
+# An offline-only negative scenario is bundled; no new host validation claimed.

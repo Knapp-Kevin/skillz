@@ -13,7 +13,8 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
   display-name: Federated Source Catalog
-  version: 1.1.0
+  version: 1.1.1
+  license: MIT
 ---
 
 # Federated Source Catalog
@@ -24,11 +25,15 @@ create a central copy or broaden source access.
 
 **Scope split:** This skill owns multi-source discovery, connector capability
 negotiation, identities, permission boundaries, provenance, freshness and
-cross-source retrieval. [File Lifecycle Curator](../file-lifecycle-curator/SKILL.md)
+cross-source retrieval. a separate **File Lifecycle Curator** capability (not bundled here)
 owns per-collection organization, source-grounded summaries, metadata decks,
 keyword tags, duplicate/version analysis and archive proposals. Compose them
 only when that skill, source data and authority are actually available.
-Neither skill adds filesystem or connector tooling to the host.
+Neither capability adds filesystem or connector tooling to the host.
+This skill's source map, read-only discovery and in-package
+[outbound handoff specification](references/curator-handoff.md)
+remain fully usable offline with supplied data even when the other
+package is absent; the other capability is optional, not a dependency.
 
 **v1.1 composition gate:** Before enriching any federated record, use the [outbound handoff contract](references/curator-handoff.md) and the [original synthetic H01-H12 cases](examples/federated-handoff-cases.md). Preserve each source's native object, revision type/value, principal/root, intended viewer, actual read check and evidence locators across the handoff; a file path or index title is not sufficient identity. The optional curator remains independently usable and cannot inherit a blanket connector authorization.
 

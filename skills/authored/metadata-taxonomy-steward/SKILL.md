@@ -11,7 +11,8 @@ metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
   display-name: Metadata Taxonomy Steward
-  version: 1.0.0
+  version: 1.0.1
+  license: MIT
 ---
 
 # Metadata Taxonomy Steward
@@ -29,11 +30,13 @@ controlled vocabulary", "merge redundant categories", "version our taxonomy",
 systems to a common tagging standard."
 
 Do **not** activate for simple single-file classification or ordinary keyword
-generation: [File Lifecycle Curator](../file-lifecycle-curator/SKILL.md)
-already handles these. [Federated Source Catalog](../federated-source-catalog/SKILL.md)
+generation: a separately available **File Lifecycle Curator** capability (not bundled)
+already handles these. a separate **Federated Source Catalog** capability (optional, not bundled)
 discovers provider identities and per-source permissions. This skill
-governs vocabulary across those records; it does not assume either sibling
-skill, connector, file access, or any write runtime is present.
+governs vocabulary across those records; it does not assume either optional
+sibling capability, connector, file access, or write runtime is present.
+Everything needed for standalone taxonomy review and migration proposals
+is specified in this package; no sibling Markdown path must resolve.
 
 Do not substitute this for regulated records schedules, legal retention,
 security classification authority, medical or protected-trait inference,

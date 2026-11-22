@@ -31,3 +31,14 @@ Expected curated record: record ID `session-A:drive-A:doc-7`, revision value `re
 For user-supplied approved single-collection files, continue using ordinary `record_id`, `source_locator`, `extraction` and `access` fields. Federation-specific `source_context` is optional in standalone mode. A missing federation connector does not invalidate local-only work.
 
 These cases may be exercised by an independently authorized host and reported with actual inputs, tool actions, observations and PASS/FAIL/NOT RUN. Reading this table is static review only.
+
+## H13: isolated curator package with no federation skill installed
+
+Only the `file-lifecycle-curator/` folder, synthetic H01 envelope and
+a user-approved local file collection are available offline.
+Expected: resolve only this folder's SKILL and `references/federated-intake.md`,
+preserve the local-only first-use path, and process H01's scoped
+metadata without requiring a sibling Skillz checkout or a live connector.
+Refuse to infer live federation/authenticated account access. A
+nonexistent sibling Markdown link is a **package portability failure**,
+not grounds to execute another package, fetch code or request secrets.

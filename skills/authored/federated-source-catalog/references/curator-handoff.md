@@ -72,8 +72,6 @@ On loss or mismatch of these fields, report BLOCKED/INCOMPLETE,
 do not treat returned enriched text as a replacement source identity,
 and do not publish a false "complete multi-source index."
 
-The opposite side is described by the curator's
-[optional federated intake](../../file-lifecycle-curator/references/federated-intake.md).
-Both packages remain separately usable for standalone cases. No
+A separately installed **File Lifecycle Curator** may implement the corresponding intake. This file contains the complete outbound contract and the relevant local [synthetic handoff](../examples/federated-handoff-cases.md), so a standalone copy needs no external or sibling file. Both capabilities remain independently usable for approved offline cases. No
 behavioral pass, permission isolation or successful export can be
 established through static instructions alone.
