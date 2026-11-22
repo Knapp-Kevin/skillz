@@ -1,16 +1,16 @@
 schema_version: 1
 skill_name: federated-source-catalog
-skill_version: 1.1.0
+skill_version: 1.1.1
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/federated-source-catalog/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/federated-source-catalog/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5f4859515de5d073a939d439f1d75e1084d4404e
-complete_package_tree_sha: b9add6ba4162fb1ad190dca20aa3fdee67d3e1c1
+content_blob_sha: 8d218771193ccefa162479e1a57fd08e9b4ba60a
+complete_package_tree_sha: 68978717ac4bdb9766ebeab1616feec2196c8573
 characterized_at: '2026-11-18'
-reviewed_at: '2026-11-18'
+reviewed_at: '2026-11-22'
 verification_status: verified
 verification_basis: individual-structured-static-review
 validation_status: not-run
@@ -50,3 +50,6 @@ notes: >-
   shared indexes, export data, sync systems or execute file modifications.
   Static 18/20; behavioral validation not run. See
   docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
+
+# 2026-11-22 exact package static finding: external sibling-path links removed.
+# Current v1.1.1 executable agent-host tests NOT_RUN; preserved safety/identity controls.
