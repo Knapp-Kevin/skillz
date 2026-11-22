@@ -11,7 +11,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: Recursive Refinement Trace
-  version: 0.2.0
+  version: 0.3.0
   license: MIT
 ---
 
@@ -152,6 +152,67 @@ review already supplied authorized data without claiming live execution.
 A weaker consuming model may stick to the fixed recorded-order strategy,
 while a stronger one may analyze differences and propose hypotheses. Neither
 may weaken evaluator, privacy or authority checks.
+
+## Optional Phase-3: declarative heldout exploration laboratory
+
+**Activation:** an explicitly authorized host may use
+[policy_lab.py](policy_lab.py) to compare a *frozen* recorded-order
+incumbent to one versioned declarative exploration-policy candidate,
+using only public/synthetic, host-cleared v1 trace exports. The
+[19 adversarial local test cases](test_policy_lab.py) ship with this
+package. This is an **opt-in standalone Python 3.9+ read-only
+method**, not a Skillz service, a mandatory skill runtime, or an
+automatic self-improvement process.
+
+Build an input manifest with a fixed `evaluator_id`,
+`evaluation_context_id`, common `budget`, a single `candidate`
+and separately identified `development`/`heldout` `cases`.
+Each case includes a unique experiment ID, its original closed-world
+trace export, cleared source/state fingerprints, exact task-family,
+and mandatory protected verification actions. Heldouts must cover
+at least **two distinct task families also represented in
+development**; no experiment may appear in both partitions.
+The host must verify that the supplied exports correspond to
+genuinely cleared, correctly captured prior traces. This helper
+validates internal structure but cannot authenticate the external
+execution, receipt author or user permission.
+
+Candidate policies are *strictly declarative*: fixed fields
+`schema_version`, `policy_id`, `branch_priority`
+(`recorded-order` or `adversarial-first`),
+`verify_lane` (`preservation-check` or
+`run-targeted-verification`), bounded `max_attempts`,
+and `stop_on: recorded-blocked`. There is **no** command,
+file, network, evaluator override, score override, private preference,
+approval or source-write field. Extra fields reject the input.
+The candidate cannot change the shared evaluator/context or the
+baseline's acceptance budget; protected verification actions must
+be **observed PASS**, not merely visited.
+
+The deterministic lab executes the bundled read-only
+[replay.py](replay.py), never tested code. It rejects candidates
+that skip/fail mandatory protection, lose recorded preservation
+passes, exceed/avoid required checks, or rely on unknown branches.
+An impressive development replay with weak heldouts results in
+`HOLD_INCUMBENT`; a clean positive result can return only
+`PROPOSE_BOUNDED_LIVE_PILOT`, **not** activation or verified
+improvement. All records are self-reported historic structure
+and cannot prove unseen counterfactual outcomes or future behavior.
+The incumbent remains effective until separate owner authorization
+and real bounded Phase-4 testing.
+
+A host that has already cleared the manifest data may run:
+
+```sh
+python policy_lab.py --manifest "$CLEARED_SYNTHETIC_MANIFEST" --approved-public
+python -m unittest test_policy_lab -v
+```
+
+The flag is a command guard, not consent. Missing private storage,
+the full evaluator, an independent agent, cloud resources or the Skillz
+repository never becomes a reason to silently capture data or create
+an executor. Without authorized existing input, return `NOT_RUN/HOLD`.
+No model may promote policy changes or waive protected checks.
 
 ## Evidence levels and stopping
 
