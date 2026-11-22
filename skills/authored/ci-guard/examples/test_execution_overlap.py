@@ -38,24 +38,24 @@ def terminal(id, obligation, *, command="check", platform="ubuntu-24.04",
 
 def fixture():
     nodes = [
-        node("acceptance", "workflow", ["accept-job"], stages=["candidate", "release"], entrypoint=True),
+        node("acceptance", "workflow", ["accept-job"], stages=["candidate", "release"], entrypoint=True, events=["pull_request", "release"] ),
         node("accept-job", "job", ["accept-recipe"], stages=["candidate", "release"],
-             needs=[], matrix_expanded=True),
+             needs=[], matrix_expanded=True, condition="ready-or-release"),
         node("accept-recipe", "recipe", ["accept-script"]),
         node("accept-script", "script", ["accept-repro", "model", "freshness"]),
         terminal("accept-repro", "repro", command="cargo xtask check-reproducibility"),
         terminal("model", "model", command="model-validator"),
         terminal("freshness", "freshness", command="generator-freshness"),
-        node("standalone-repro", "workflow", ["repro-job"], stages=["candidate", "release"], entrypoint=True),
-        node("repro-job", "job", ["just-repro"], stages=["candidate", "release"], needs=[], matrix_expanded=True),
+        node("standalone-repro", "workflow", ["repro-job"], stages=["candidate", "release"], entrypoint=True, events=["pull_request", "release"] ),
+        node("repro-job", "job", ["just-repro"], stages=["candidate", "release"], needs=[], matrix_expanded=True, condition="ready-or-release"),
         node("just-repro", "recipe", ["call-repro-script"]),
         node("call-repro-script", "script", ["other-repro"]),
         terminal("other-repro", "repro", command="cargo xtask check-reproducibility"),
-        node("release", "workflow", ["sign-job"], stages=["release"], entrypoint=True),
-        node("sign-job", "job", ["sign"], stages=["release"], needs=[], matrix_expanded=True),
+        node("release", "workflow", ["sign-job"], stages=["release"], entrypoint=True, events=["release"] ),
+        node("sign-job", "job", ["sign"], stages=["release"], needs=[], matrix_expanded=True, condition="ready-or-release"),
         terminal("sign", "sign", command="signature-verifier"),
-        node("draft", "workflow", ["draft-job"], stages=["draft"], entrypoint=True),
-        node("draft-job", "job", ["draft-deferred"], stages=["draft"], needs=[], matrix_expanded=True),
+        node("draft", "workflow", ["draft-job"], stages=["draft"], entrypoint=True, events=["pull_request"] ),
+        node("draft-job", "job", ["draft-deferred"], stages=["draft"], needs=[], matrix_expanded=True, condition="ready-or-release"),
         terminal("draft-deferred", "draft-deferred", command="status-only"),
     ]
     required = {"draft": [], "candidate": ["repro", "model", "freshness"],
@@ -124,6 +124,13 @@ class ExecutionOverlapTest(unittest.TestCase):
         r = overlap.audit(d)
         self.assertTrue(all(x["classification"] == "JUSTIFIED_REPETITION" for x in r["overlaps"]))
         self.assertEqual(r["structural_assessment"], "PASS")
+
+    def test_disjoint_trigger_events_are_unproven_not_falsely_exact(self):
+        d = fixture()
+        byid(d, "standalone-repro")["events"] = ["workflow_dispatch"]
+        r = overlap.audit(d)
+        self.assertTrue(all(x["classification"] == "UNPROVEN" for x in r["overlaps"]))
+        self.assertEqual(r["structural_assessment"], "HOLD")
 
     def test_changed_toolchain_alone_does_not_prove_independent_detection(self):
         d = fixture()
@@ -236,7 +243,7 @@ class ExecutionOverlapTest(unittest.TestCase):
         d = consolidated(fixture())
         byid(d, "accept-job")["invokes"] = ["reusable-workflow"]
         d["nodes"].append(node("reusable-workflow", "workflow", ["accept-recipe"],
-                                stages=["candidate", "release"], entrypoint=False))
+                                stages=["candidate", "release"], entrypoint=False, events=["workflow_call"]))
         r = overlap.audit(d)
         self.assertEqual(r["structural_assessment"], "PASS")
         self.assertTrue(any("reusable-workflow" in x["path"]
