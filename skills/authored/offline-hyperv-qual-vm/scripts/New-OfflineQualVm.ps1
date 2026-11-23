@@ -45,20 +45,20 @@ function Assert-LocalPath([string]$Path) {
         if ($cursor.Attributes -band [IO.FileAttributes]::ReparsePoint) {
             throw 'HOLD: redirected file or ancestor is not permitted.'
         }
-        $cursor = if ($cursor.PSIsContainer) { $cursor.Parent } else { $cursor.Directory }
+        $cursor = if ($cursor -is [IO.DirectoryInfo]) { $cursor.Parent } else { $cursor.Directory }
     }
     return $entry
 }
 function Assert-RealDirectory([string]$Path, [string]$Label) {
     $entry = Assert-LocalPath $Path
-    if (-not $entry.PSIsContainer) {
+    if ($entry -isnot [IO.DirectoryInfo]) {
         throw "HOLD: $Label must be an existing directory."
     }
     return $entry.FullName
 }
 function Assert-RealIso([string]$Path) {
     $entry = Assert-LocalPath $Path
-    if ($entry.PSIsContainer -or
+    if ($entry -is [IO.DirectoryInfo] -or
         -not $entry.Extension.Equals('.iso', [StringComparison]::OrdinalIgnoreCase)) {
         throw 'HOLD: OS media must be an ordinary, authorized .iso file.'
     }

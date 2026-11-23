@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/offline-hyperv-qual-vm/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: cbf4179a3b7d5adbce84ac26161c6b153d6e2814
-complete_package_tree_sha: d5df8a732da7ccb2cf2cf59c5081b5b9b2a090fd
+complete_package_tree_sha: 79d71a81774a977153ebd3232fcb38baf0cfc8b3
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
-verification_basis: static-source-contracts-only
-validation_status: not-run
-validation_note: "Source-only synthetic Python tests and exact-head CI qualification pending. No Windows PowerShell/Hyper-V execution, actual VM, credential, OS, licensing, GPU recovery, checkpoint, copy-out or native test observed."
+verification_basis: static-and-mocked-runtime-contracts
+validation_status: passed-offline-contract-tests
+validation_note: "Source-only 32/32 Python tests passed at earlier merged source; new synthetic PowerShell fake-host refusal job requires exact-head CI qualification. No real Hyper-V guest, owner credential DPAPI read, OS installation, checkpoint or native outcome observed."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
 tags:
