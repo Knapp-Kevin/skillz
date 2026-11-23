@@ -212,7 +212,17 @@ service or an assumed persistent index.
    verify physical moves, or perform any schedule. The host selects
    the private storage, approved retention, backups, encryption and
    cross-run access authority.
-6. **Optional scheduled delivery.** Use the
+6. **Host-invoked cadence engine (no daemon).** The optional
+   [maintenance.py](scripts/maintenance.py) helper checks the saved SQLite
+   state and accepted-run journal for continuity before proposing bounded
+   hourly/daily/weekly maintenance. It preserves state.py's authorization,
+   generation-CAS and checkpoint semantics. Hourly targets changed records;
+   daily and weekly can recommend quality/recovery audits even on no-change
+   snapshots, without duplicate extraction or automatic writes. It does
+   not perform the proposed index review or file operations; the host agent
+   remains responsible for separately approved work and evidence. Read the
+   [durable-state contract](references/durable-state.md) before use.
+7. **Optional scheduled delivery.** Use the
    [scheduled-maintenance-template.md](examples/scheduled-maintenance-template.md)
    only as a user-reviewable handoff to a *real* scheduler the host
    supports. Require separately confirmed recurrence, timezone,

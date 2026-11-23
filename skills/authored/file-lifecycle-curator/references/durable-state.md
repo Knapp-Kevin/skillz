@@ -207,3 +207,67 @@ It runs alongside existing delta and visual tests with:
 
 No data or checkpoint from the test cases leaves the synthetic
 temporary folder; no GitHub or scheduled task is invoked.
+
+## Host-invoked continuity preflight and maintenance helper
+
+The optional `scripts/maintenance.py` wraps the established state helper.
+It is a **skill-package script**, not a process, daemon, scheduler, agent,
+file crawler, index writer or provider connector. It accepts precisely
+one host-supplied authorized JSON snapshot and an approved private checkpoint.
+
+Each invocation first validates source-viewer assertions, opens the checkpoint
+read-only, revalidates its digest and enforces internal accepted-run journal
+continuity: exactly one receipt per generation, a continuous generation range,
+and the latest receipt's run/snapshot pointer matching current state. A missing,
+truncated or inconsistent journal raises `HISTORY_INTEGRITY_HOLD` and does
+not update the store. These checks detect ordinary accidental corruption and
+some malformed/tampered history, **not** malicious replacement of both state
+and receipt evidence. They are not a replacement for trusted host ACLs,
+authenticated backup storage or source-side authorization.
+
+Example **preview**, from the skill package root (nothing persisted):
+
+    python3 scripts/maintenance.py --store /approved-private/state.sqlite \
+      --current examples/maintenance-current.json \
+      --run-id host-unique-observation-003 --cadence daily
+
+To checkpoint a previously accepted initialized store, the host must explicitly
+authorize the private storage write, supply the generation it just inspected
+and a genuinely new snapshot/run ID:
+
+    python3 scripts/maintenance.py --store /approved-private/state.sqlite \
+      --current examples/maintenance-current.json \
+      --run-id host-unique-observation-003 --cadence daily \
+      --commit --expected-generation 2 --ack-private-store
+
+For a **first** approved checkpoint, additionally supply `--initialize` and
+`--expected-generation 0`. These are examples, not preapproved paths,
+snapshots or write permissions. A current viewer assertion in the JSON remains
+a host assertion, never a permission established by this script.
+
+The cadence chooses a **bounded proposed maintenance plan**, not automatic work:
+- hourly: changed-source reconciliation and retry triage;
+- daily: changed-source reconciliation, stale-index review, open holds;
+- weekly: unchanged-evidence sampling, recovery readiness and retention/ACL review.
+
+`maintenance_executed=false` and `source_operations_executed=false` are
+deliberate. A successful checkpoint is only a successfully stored observation
+and recommendations. Any actual index repair or file relocation requires
+separate host capabilities, authority and read-back evidence.
+
+The helper fails closed on generation conflict, wrong collection/principal/
+audience, corruption, missing journal, unknown access or private-store
+violation. Runs from different schedules share a single generation stream.
+A restarted agent first re-reads this stream, rather than trusting a prior
+chat turn or scheduler status. Offline regression coverage:
+`python3 -B -m unittest discover -s tests -p 'test_*.py' -v`.
+
+### Operational limits and deliberately unimplemented capabilities
+
+This phase does not implement backup/restore, long-history compaction,
+multi-shard aggregation, source-authenticated revisions, permanent index
+maintenance, lease ownership or migrations. Owners must retain tested private
+backups externally, and must resolve journal corruption instead of resetting
+the store. Scale remains at the documented 500-record catalog cap and
+100,000-generation history cap. Do not advertise months of unattended
+production operation or recovery qualification from these offline tests alone.
