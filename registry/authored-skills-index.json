@@ -787,9 +787,9 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/context-continuation-contract.yaml",
       "verification_path": "registry/verification/local-skills/context-continuation-contract.yaml",
-      "skill_blob_sha": "c39c93c0b616cc89d17a43e7272acfac64cbca11",
-      "package_tree_sha": "22d2b2f9e37fb7d409664a1e53c17124060c64b6",
-      "package_file_count": 4,
+      "skill_blob_sha": "5aadd65bf5dc73d0f53edb7ad0803771cd4d8be9",
+      "package_tree_sha": "8a998c6c9f845c086d32d65c31ef14021f5b53d3",
+      "package_file_count": 10,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
       "behavioral_validation": "not-run",
@@ -807,7 +807,7 @@
       "previous_reviewed_package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
       "default_authority": "read-only",
       "authority_note": "An optional durable-continuity record write is allowed only after verifying current or applicable standing destination-specific user authorization; no automatic writes.",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 6ae4e50ad1baa1e8addc16eeab1c27a4de364982 and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA 5aadd65bf5dc73d0f53edb7ad0803771cd4d8be9 and full package 8a998c6c9f845c086d32d65c31ef14021f5b53d3 pinned. Previous evidence applies to earlier source c39c93c0b616cc89d17a43e7272acfac64cbca11, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump."
     },
     {
       "id": "evidence-narrative-composer",
@@ -930,8 +930,8 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/repository-delivery-assessor.yaml",
       "verification_path": "registry/verification/local-skills/repository-delivery-assessor.yaml",
-      "skill_blob_sha": "73c1d64eaa9721f76e9c821ab091d7f9d3dbbc8a",
-      "package_tree_sha": "a63cabbf61a03ac423ec5de510c614903278e5fe",
+      "skill_blob_sha": "e5aafd69cf65d8fef5933725ad836cb49763de9c",
+      "package_tree_sha": "c3a6698e17f505e28aecb32ed94a40347b33758c",
       "package_file_count": 9,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -948,7 +948,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
       "previous_reviewed_skill_blob_sha": "75c09e83d13a388e591f384f8029090edbe0bc50",
       "previous_reviewed_package_tree_sha": "58662de287377f9b479d80cfa92e454413f9dc0e",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob ea5994f8567dc06996641aea27608a6bc578c1dc and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA e5aafd69cf65d8fef5933725ad836cb49763de9c and full package c3a6698e17f505e28aecb32ed94a40347b33758c pinned. Previous evidence applies to earlier source 73c1d64eaa9721f76e9c821ab091d7f9d3dbbc8a, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump."
     },
     {
       "id": "business-presence-observatory",
@@ -1032,8 +1032,8 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
-      "skill_blob_sha": "3b6d88fe1ab4b671fe5979aff6d7c7154fbcadf8",
-      "package_tree_sha": "6cc323b74635a797c12aa6ccea0f3081b584533d",
+      "skill_blob_sha": "698cf2a21d675ce2cc154c0d810a493f0d08eea0",
+      "package_tree_sha": "4910a37785d1b69871bfa2e2fb28f28fc00cd0e0",
       "package_file_count": 50,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1047,7 +1047,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "v1.6.2 adds opt-in strategy-fit evaluation before any dependency-graph adoption; source, real provider and economic outcomes remain independently unqualified. Original first-party code, test fixture and adversarial tests are staged in a draft PR. Existing source-review evidence remains historical; current source requires fresh qualification.",
+      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA 698cf2a21d675ce2cc154c0d810a493f0d08eea0 and full package 4910a37785d1b69871bfa2e2fb28f28fc00cd0e0 pinned. Previous evidence applies to earlier source 3b6d88fe1ab4b671fe5979aff6d7c7154fbcadf8, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"
@@ -1066,8 +1066,8 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
-      "skill_blob_sha": "678f4688d04a7a82da4f1f1b83da48ca64c6f201",
-      "package_tree_sha": "eefe919349cfd550685ca374dc39bed685cf363d",
+      "skill_blob_sha": "f9824eda1efb5df463ec46c77256edcd96d10b57",
+      "package_tree_sha": "84bac1b6e2dd01ab568669f2ab7508c268fce983",
       "package_file_count": 17,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1083,7 +1083,7 @@
       ],
       "previous_reviewed_skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
       "previous_reviewed_package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 48630765c039db0c854190367ff66374bdd52590 and remain historical, not current-content validation. GitHub posting account is not anonymous.",
+      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA f9824eda1efb5df463ec46c77256edcd96d10b57 and full package 84bac1b6e2dd01ab568669f2ab7508c268fce983 pinned. Previous evidence applies to earlier source 678f4688d04a7a82da4f1f1b83da48ca64c6f201, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/873"
     },
     {
@@ -1166,8 +1166,8 @@
       "license_verified_at": "2026-11-22",
       "provenance_path": "registry/skills/local-skills/evidence-driven-refinement-loop.yaml",
       "verification_path": "registry/verification/local-skills/evidence-driven-refinement-loop.yaml",
-      "skill_blob_sha": "4473795a0fbd41b0d7765ec61fd51c0e65da7948",
-      "package_tree_sha": "8054f1b050a95543dd135f0389f2b80adb55214e",
+      "skill_blob_sha": "b2978c95e255b132d11720b32f6d22b246b6d17b",
+      "package_tree_sha": "a7d3759fe1b8beb859702f40a3e43ccaa30eca52",
       "package_file_count": 10,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1181,7 +1181,7 @@
         "software-engineering/maintenance",
         "agent-mcp-development/evaluation"
       ],
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 85f7e864733a18293a85b1dded50a93c79d75d73 and remain historical, not current-content validation. GitHub posting account is not anonymous.",
+      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA b2978c95e255b132d11720b32f6d22b246b6d17b and full package a7d3759fe1b8beb859702f40a3e43ccaa30eca52 pinned. Previous evidence applies to earlier source 4473795a0fbd41b0d7765ec61fd51c0e65da7948, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump.",
       "previous_reviewed_skill_blob_sha": "85f7e864733a18293a85b1dded50a93c79d75d73",
       "previous_reviewed_package_tree_sha": "463c5c51e3a1c2469420cfa2fde87c39967655a1"
     }
