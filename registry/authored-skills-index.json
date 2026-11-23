@@ -1356,9 +1356,9 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/effort-allocation-navigator.yaml",
       "verification_path": "registry/verification/local-skills/effort-allocation-navigator.yaml",
-      "skill_blob_sha": "400de1a567a8e7465b7b35bbb5fd514152294887",
-      "package_tree_sha": "ae3ac77556f1374fa6f4a1d378ad2b01eb8e9ddf",
-      "package_file_count": 9,
+      "skill_blob_sha": "93b29536b328a8c6f8f6a9f9bc46e36eb68f2b9a",
+      "package_tree_sha": "a8b06927d927b59010dc3e075856c165732dbacd",
+      "package_file_count": 10,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
       "behavioral_validation": "not-run",
@@ -1371,7 +1371,7 @@
         "time-productivity/personal-planning",
         "planning/decision-frameworks"
       ],
-      "review_note": "First-party 9-file standalone method; synthetic task/dependency graph with 42 proposed Python adversarial tests, source CI pending at PR. No measured ADHD outcomes, personal preference learning, autonomous allocation authority or independent consuming-agent acceptance."
+      "review_note": "A bounded one-phase source refinement followed by 36 adversarial cases plus 42 protected baseline cases. Real exact-HEAD CI execution pending; do not claim live agent/user efficacy. Core protections include inherited safety/deadlines, reconciled DONE, scoped mandatory exceptions and diversified alternatives. No version bump. Independent consumer behavior and saved preference learning NOT_RUN."
     }
   ]
 }
