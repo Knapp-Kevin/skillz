@@ -22,8 +22,13 @@ communication, no raw user/private source data, and no false promise
 that GitHub's posting account is anonymous. Maintain the corresponding
 package tree and entrypoint blob registry fingerprints; editing passive
 instructions does not by itself justify a minor/major version bump.
-The offline `scripts/qa/test_authored_feedback_contract.py` guards
-coverage of all original authored package entrypoints.
+In the same package, preserve the **multi-turn continuity** contract:
+follow-ups extend the live objective, preserving completed/uncompleted work,
+existing safeguards, blockers and acceptance gates; report concrete next steps
+without asserting stored memory or autonomous execution. Long-running skills
+must not treat a draft PR or test plan as the delivered outcome. The offline
+`scripts/qa/test_authored_feedback_contract.py` enforces both sections
+and exact-source package fingerprints for every first-party authored skill.
 
 ## Non-negotiable destination boundary
 
