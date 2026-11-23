@@ -268,17 +268,17 @@ class TestRefinementAdversarial(unittest.TestCase):
         self.assertEqual(first, second)
 
     def test_critical_path_goes_with_focus_goal_not_external_override(self):
-        output = planner.plan(data(action("a", duration_days=2),
-                                   milestone("focus", ["a"]),
+        output = planner.plan(data(action("aa", duration_days=2),
+                                   milestone("focus", ["aa"]),
                                    action("safety", obligation="safety",
                                           duration_days=30),
                                    goal_id="focus"))
         self.assertEqual(output["critical_path"]["duration_days"], 2)
-        self.assertEqual(output["critical_path"]["path"], ["a", "focus"])
+        self.assertEqual(output["critical_path"]["path"], ["aa", "focus"])
         self.assertIn("safety", output["scope_extension_ids"])
 
     def test_unknown_downstream_deadline_is_not_invented(self):
-        output = planner.plan(data(action("a"), milestone("goal", ["a"],
+        output = planner.plan(data(action("aa"), milestone("goal", ["aa"],
                                                        due_date="2026-11-23",
                                                        deadline_evidence="claimed"),
                                    goal_id="goal"))
