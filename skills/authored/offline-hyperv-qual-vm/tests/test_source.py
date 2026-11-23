@@ -29,6 +29,8 @@ def required_features(creation, connection):
         "if (-not $Commit)",
         "if (-not $PSCmdlet.ShouldProcess(",
         "Get-VM -Name $Name",
+        "Get-PSDrive -Name $Path.Substring(0, 1)",
+        "if ($backingDrive.Provider.Name -ne 'FileSystem' -or $backingDrive.DisplayRoot)",
         "if (Test-Path -LiteralPath $vmDir)",
         "New-VM -Name $Name -Generation 2 -NoVHD",
         "Get-VMNetworkAdapter -VMName $Name",
@@ -49,6 +51,8 @@ def required_features(creation, connection):
         "#Requires -Modules Hyper-V",
         "Get-VMNetworkAdapter -VMName $Name",
         "Get-VMGpuPartitionAdapter -VMName $Name",
+        "Get-PSDrive -Name $CredentialPath.Substring(0, 1)",
+        "if ($backingDrive.Provider.Name -ne 'FileSystem' -or $backingDrive.DisplayRoot)",
         "if ($hostAdapters.Count -gt 0)",
         "if ($gpuAdapters.Count -gt 0)",
         "Import-Clixml -LiteralPath",
@@ -104,6 +108,23 @@ class OfflineContract(unittest.TestCase):
         self.assertIn("New-VM -Name $Name -Generation 2 -NoVHD", s)
         self.assertNotIn("Add-VMNetworkAdapter", s)
         self.assertNotIn("Start-VM ", s)
+
+
+    def test_mapped_storage_drive_detected_by_source_contract(self):
+        modified = source(NEW).replace(
+            "Get-PSDrive -Name $Path.Substring(0, 1)", "# omitted drive lookup")
+        self.assertTrue(required_features(modified, source(CONNECT)))
+
+    def test_mapped_credential_drive_detected_by_source_contract(self):
+        modified = source(CONNECT).replace(
+            "Get-PSDrive -Name $CredentialPath.Substring(0, 1)", "# omitted lookup")
+        self.assertTrue(required_features(source(NEW), modified))
+
+    def test_drive_validation_runs_before_any_get_item(self):
+        self.assertLess(source(NEW).index("Get-PSDrive -Name $Path.Substring(0, 1)"),
+                        source(NEW).index("Get-Item -LiteralPath $Path"))
+        self.assertLess(source(CONNECT).index("Get-PSDrive -Name $CredentialPath.Substring(0, 1)"),
+                        source(CONNECT).index("Get-Item -LiteralPath $CredentialPath"))
 
     def test_no_password_prompt_or_private_path_written_by_creator(self):
         s = source(NEW)

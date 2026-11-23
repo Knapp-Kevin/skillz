@@ -56,8 +56,14 @@ if ($vm.State -ne 'Running') {
 # VM card or output artifact. Refuse filesystem redirection on input.
 $cred = $null
 try {
-    if ($CredentialPath.StartsWith('\\')) {
-        throw 'HOLD: credential path cannot be network storage.'
+    if (-not [IO.Path]::IsPathRooted($CredentialPath) -or
+        $CredentialPath -notmatch '^[a-zA-Z]:\\' -or
+        $CredentialPath.StartsWith('\\')) {
+        throw 'HOLD: credential path must be an absolute local drive path.'
+    }
+    $backingDrive = Get-PSDrive -Name $CredentialPath.Substring(0, 1) -ErrorAction Stop
+    if ($backingDrive.Provider.Name -ne 'FileSystem' -or $backingDrive.DisplayRoot) {
+        throw 'HOLD: mapped or network-backed credential path is prohibited.'
     }
     $item = Get-Item -LiteralPath $CredentialPath -Force -ErrorAction Stop
     if ($item.PSIsContainer -or

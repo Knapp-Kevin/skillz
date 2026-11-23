@@ -30,8 +30,14 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 function Assert-LocalPath([string]$Path) {
-    if ($Path.StartsWith('\\')) {
-        throw 'HOLD: UNC/network storage paths are not allowed for the offline VM.'
+    # Refuse UNC, relative and redirected PSDrives BEFORE touching media bytes.
+    if (-not [IO.Path]::IsPathRooted($Path) -or $Path -notmatch '^[a-zA-Z]:\\' -or
+        $Path.StartsWith('\\')) {
+        throw 'HOLD: only an absolute local drive path is permitted.'
+    }
+    $backingDrive = Get-PSDrive -Name $Path.Substring(0, 1) -ErrorAction Stop
+    if ($backingDrive.Provider.Name -ne 'FileSystem' -or $backingDrive.DisplayRoot) {
+        throw 'HOLD: mapped or network-backed storage is prohibited.'
     }
     $entry = Get-Item -LiteralPath $Path -Force -ErrorAction Stop
     $cursor = $entry

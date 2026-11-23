@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/offline-hyperv-qual-vm/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: cbf4179a3b7d5adbce84ac26161c6b153d6e2814
-complete_package_tree_sha: 36c302170d5dfcf2e76618422aa78372f4354ba0
+complete_package_tree_sha: d5df8a732da7ccb2cf2cf59c5081b5b9b2a090fd
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
