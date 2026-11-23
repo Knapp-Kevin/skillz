@@ -14,7 +14,7 @@ availability: in-repo
 local_path: skills/authored/healthcare-contract-forensics/SKILL.md
 permission_tier: read-only
 portability: medium
-review_status: verified-structured
+review_status: needs-re-review
 copyright_holder: Kevin Knapp
 license_evidence_path: skills/authored/healthcare-contract-forensics/LICENSE
 authored_index_path: registry/authored-skills-index.json
@@ -26,3 +26,5 @@ rationale: "First-party independent creation for issue #714, following cross-dom
 # 2026-11-22 exact current package: MIT LICENSE bundled in standalone skill directory.
 # Offline redistribution no longer depends on a parent repository license file.
 # Negative-case scenarios included; model-host behavior remains NOT_RUN.
+content_blob_sha: 9e49eeba8fd9a0f0f1ad4e2daf2290f7e3199203
+complete_package_tree_sha: 8d16573d212cd66c8c41bd9d7b00bc9f973ebd89
