@@ -27,13 +27,13 @@ complete_package_tree_sha: accde9df1e953b60cc9a5e756109e5b2eea22060
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Current thirteen-file package adds original incrementality and safe
-  scheduled-agent handoff to v1.1.1 without changing authority or
-  version. New offline reconciler and 33 planted source-level tests
-  awaiting exact-head CI. Actual private checkpoint storage, source
-  account permissions, scheduler creation and consuming-agent behavior
-  NOT_RUN. Historical package-only static review not a current receipt.
-
+  Current thirteen-file version 1.1.1 package adds optional source-scoped
+  incremental maintenance, recall and scheduled-agent handoff with no
+  new task authority. Exact PR #902 head b8bad75bf253359bb903c3bbfb58e6bb58529e66
+  passed 33/33 synthetic offline reconciliation tests (run 45279737987)
+  and 11/11 authored integrity checks (run 45279737985).
+  No actual private file read, checkpoint write, scheduler creation or
+  user outcome was observed. Historic static review is not current.
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
 # Optional composition still requires independent host availability/authorization.
 # An offline-only negative scenario is bundled; no new host validation claimed.

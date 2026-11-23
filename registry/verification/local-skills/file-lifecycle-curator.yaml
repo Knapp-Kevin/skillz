@@ -12,15 +12,16 @@ complete_package_tree_sha: accde9df1e953b60cc9a5e756109e5b2eea22060
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: source-maintenance-and-reconcile-contract-pending-exact-ci
-validation_status: not-run
+verification_basis: exact-pr-head-offline-reconcile-and-authored-contracts-pass
+validation_status: passed-offline-contract-tests
 validation_note: >-
-  Original seven-file package and old source-only reviews remain historical.
-  Current thirteen-file package includes optional offline read-only Python
-  reconciler and 33 authored adversarial tests, exact-head CI pending.
-  Historical H01-H12 oracle checks applied to an earlier source package.
-  No actual agent host, connector access, private file read, checkpoint
-  persistence, scheduled task, extraction or archive/restoration executed.
+  Exact PR #902 source HEAD b8bad75bf253359bb903c3bbfb58e6bb58529e66
+  passed 33/33 original fictional Python test cases in run 45279737987
+  and 11/11 authored-index/feedback checks in run 45279737985.
+  Both Socket Security results SUCCESS. No connected file host,
+  authenticated source permissions, independent consuming agent,
+  stored private checkpoint, scheduled job or real outcomes observed.
+  Earlier seven-file static review and H01-H12 oracle tests are historical.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
