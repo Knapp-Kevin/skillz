@@ -46,6 +46,7 @@ packages or historical repo-bound procedures that we do not own.
 
 | Skill | What it helps you accomplish |
 | --- | --- |
+| [Offline Hyper-V Qualification VM](offline-hyperv-qual-vm/SKILL.md) | Safely provision and qualify isolated Windows evidence VMs with owner-held credentials and checkpoint discipline |
 | [CI Guard](ci-guard/SKILL.md) | Classify CI changes and protect required delivery checks |
 | [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) | Diagnose repository delivery readiness from actual evidence |
 | [PR Integration Surgeon](pr-integration-surgeon/SKILL.md) | Resolve stacked PR dependency, conflict, stale-head CI and review blockers without treating a plan as a merge |

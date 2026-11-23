@@ -1,0 +1,31 @@
+schema_version: 1
+skill_name: offline-hyperv-qual-vm
+skill_version: "0.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/offline-hyperv-qual-vm/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/offline-hyperv-qual-vm/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: cbf4179a3b7d5adbce84ac26161c6b153d6e2814
+complete_package_tree_sha: 198101bd6412793463a0010e2eb4d5ca5fe2f8e9
+characterized_at: "2026-11-23"
+reviewed_at: "2026-11-23"
+verification_status: needs-re-review
+verification_basis: static-source-contracts-only
+validation_status: not-run
+validation_note: "Source-only synthetic Python tests and exact-head CI qualification pending. No Windows PowerShell/Hyper-V execution, actual VM, credential, OS, licensing, GPU recovery, checkpoint, copy-out or native test observed."
+rubric: docs/skill-verification.md
+rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
+tags:
+  use_case: [windows-vm-qualification, offline-testing, evidence-infrastructure]
+  lifecycle: [provisioning, verification, retirement]
+  characteristic: [standalone, air-gapped, owner-held-credentials, fail-closed]
+  authority: [approval-gated]
+  portability: windows-hyper-v-host-only
+notes: >-
+  The VM creation script is mutating only with -Commit/ShouldProcess and owner
+  permission; the connection script makes a read-only guest adapter probe and
+  optional explicit interactive owner session. Never import a real password
+  or owner environment data into GitHub. Static source checks do not establish
+  operational correctness or an immutable air gap.

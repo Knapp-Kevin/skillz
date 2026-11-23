@@ -1309,6 +1309,37 @@
         "cloud-devops/ci-cd"
       ],
       "review_note": "Initial v0.1.0 source candidate with exact canonical feedback and continuation contracts. 20 synthetic written adverse cases; exact-source host check pending. Independent semantic rubric and first-run installation/novice/user behavior NOT_RUN."
+    },
+    {
+      "id": "offline-hyperv-qual-vm",
+      "display_name": "Offline Hyper-V Qualification VM",
+      "source_class": "first-party-authored",
+      "origin_issue": "https://github.com/Knapp-Kevin/skillz/issues/890",
+      "package_path": "skills/authored/offline-hyperv-qual-vm",
+      "entrypoint": "skills/authored/offline-hyperv-qual-vm/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/offline-hyperv-qual-vm/LICENSE",
+      "license_inheritance": "Original first-party procedure, PowerShell safety scripts, static adversarial tests and fictional blank VM-card template; official Microsoft APIs used as factual reference, no third-party skill text reused.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-23",
+      "provenance_path": "registry/skills/local-skills/offline-hyperv-qual-vm.yaml",
+      "verification_path": "registry/verification/local-skills/offline-hyperv-qual-vm.yaml",
+      "skill_blob_sha": "cbf4179a3b7d5adbce84ac26161c6b153d6e2814",
+      "package_tree_sha": "198101bd6412793463a0010e2eb4d5ca5fe2f8e9",
+      "package_file_count": 8,
+      "review_status": "needs-re-review",
+      "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
+      "behavioral_validation": "not-run",
+      "host_authority": "Read-only provision plan default; -Commit and PowerShell ShouldProcess plus explicit owner authorization needed for VM creation; credentials owner-only; no network; no guest test or deletion without separate authority",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original MIT. Never store guest password, owner private credential path or real customer/VM identity in public package. Python static safety checks do not execute PowerShell.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "software-engineering/maintenance",
+        "cloud-devops/ci-cd"
+      ],
+      "review_note": "Initial standalone eight-file skill source candidate from #890. Script source and contract tests have NOT been executed on a Windows Hyper-V host. Private owner credential/OS installation, fresh-os checkpoint, actual guest isolation and native qualification remain NOT_RUN."
     }
   ]
 }
