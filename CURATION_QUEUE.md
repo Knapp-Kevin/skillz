@@ -1,5 +1,7 @@
 # Skill Curation Queue
 
+**November 23, 2026 #402 direct source risk work:** [Melody, Rhythm Groove and Rhythm Section](docs/reviews/2026-11-23-issue402-music-three-source-dispositions.md) fully reviewed at pinned material source trees with [structured ten-axis findings](registry/security/q8-three-incomplete-music-boundaries-static-dispositions-20261123.json). The historical Q8 flagged review frontier is now **30/40 = 7/7 FAILED + 23/33 INCOMPLETE**, **10** incomplete source packages still awaiting initial complete direct review. Historical scanner states, license/asset restrictions, missing live behavior, and zero unchanged-use permissions are unchanged. No new source/package installation or library-size estimate. #402 remains OPEN for broader completion.
+
 **Skill Mason catalog handoff (November 17, 2026):** [The complete pinned inventory/export](registry/exports/skill-mason-v1/README.md) exposes **61,326 G1–G3 path observations across 942 repositories**, the separately overlapping **4,813-path frontier**, all **170 discovery artifacts**, and **all 1,043 paired-companion review records**. The 1,043 figure is a governed review subset, **not the library size**. All 921 unmapped review records remain present. Exact source hashes, original evidence and review/rights/authority limits are preserved; import readiness does not establish generation eligibility. [Readiness evidence](docs/reviews/2026-11-17-skill-mason-catalog-readiness.md).
 
 
