@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "revision": "fictional-release@d81c940",
+  "objective": {
+    "name": "reduce full candidate cost with genuine assurance parity",
+    "comparison_horizon_runs": 200,
+    "graph_min_saved_runner_hours_per_maintenance_hour": 2,
+    "maximum_critical_path_regression_minutes": 5
+  },
+  "baseline": {
+    "job_minutes": 600,
+    "critical_path_minutes": 60,
+    "evidence": "observed"
+  },
+  "alternatives": [
+    {
+      "id": "existing-full",
+      "kind": "full",
+      "job_minutes": 600,
+      "critical_path_minutes": 60,
+      "evidence": "observed",
+      "detector_parity": true,
+      "required_status_and_spec_compatible": true,
+      "source_impact_complete": null,
+      "transitive_dependencies_complete": null,
+      "stale_and_missing_receipts_refused": true,
+      "rollback_defined": true,
+      "maintenance_hours": 0,
+      "proof_reference": "fictional baseline source ledger"
+    },
+    {
+      "id": "stage-separation",
+      "kind": "stage",
+      "job_minutes": 500,
+      "critical_path_minutes": 40,
+      "evidence": "estimated",
+      "detector_parity": true,
+      "required_status_and_spec_compatible": true,
+      "source_impact_complete": null,
+      "transitive_dependencies_complete": null,
+      "stale_and_missing_receipts_refused": true,
+      "rollback_defined": true,
+      "maintenance_hours": 6,
+      "proof_reference": "fictional scoped stage model"
+    },
+    {
+      "id": "trusted-impact-graph",
+      "kind": "dependency",
+      "job_minutes": 240,
+      "critical_path_minutes": 33,
+      "evidence": "estimated",
+      "detector_parity": true,
+      "required_status_and_spec_compatible": true,
+      "source_impact_complete": true,
+      "transitive_dependencies_complete": true,
+      "stale_and_missing_receipts_refused": true,
+      "rollback_defined": true,
+      "maintenance_hours": 24,
+      "proof_reference": "fictional impact/oracle source closure"
+    },
+    {
+      "id": "test-internal-reuse",
+      "kind": "execution",
+      "job_minutes": 440,
+      "critical_path_minutes": 34,
+      "evidence": "estimated",
+      "detector_parity": true,
+      "required_status_and_spec_compatible": true,
+      "source_impact_complete": null,
+      "transitive_dependencies_complete": null,
+      "stale_and_missing_receipts_refused": true,
+      "rollback_defined": true,
+      "maintenance_hours": 15,
+      "proof_reference": "fictional test phase timing ledger"
+    }
+  ]
+}
