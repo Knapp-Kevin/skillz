@@ -12,7 +12,7 @@ CASES = {
                  "open PR", "incomplete host attempt"),
     "repository-delivery-assessor": ("Delivery-assessment continuation checkpoints",
                                     "verified\nrevision/as-of", "blocked merges",
-                                    "current evidence", "a merge"),
+                                    "as current", "a merge"),
     "repository-readme-architect": ("README-work continuation checkpoints",
                                    "generator-owned regions", "preservation baselines",
                                    "merged PR", "user comprehension"),
