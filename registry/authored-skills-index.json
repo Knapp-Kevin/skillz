@@ -1033,7 +1033,7 @@
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
       "skill_blob_sha": "9ebd0db855f12e0656eeabbc1dd8532646289695",
-      "package_tree_sha": "f9d0f42bc7a8b53696f9fa8c4f045cbddff5626f",
+      "package_tree_sha": "51494e556c7376e5551c8f95358cf51d959c00c2",
       "package_file_count": 50,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
