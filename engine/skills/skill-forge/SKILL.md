@@ -109,6 +109,30 @@ link to this Forge procedure or a sibling refinement skill. Do not
 mechanically churn unchanged packages; adopt on a meaningful revision
 or a dedicated evidence-backed remediation pass.
 
+## Composable first-party Skill Packs
+
+When the outcome genuinely needs independently meaningful phases,
+subskills or shared components, use the optional
+[Skill Pack architecture](../../packs/README.md) and
+[manifest contract](../../packs/manifest-contract.md). Package the
+entrypoint and all owned support files under the same authorized
+`skills/authored/<slug>/` directory; do not create an additional
+first-party identity for each purely internal phase. If a subskill is
+actually independently published, it requires its own complete-package,
+rights and review evidence. Map components to their owning source and
+downstream dependencies. A locally valid pack graph never proves that
+the complete user outcome was reached, rights are resolved or the host
+authorized an action.
+
+Route every post-execution finding through the shared
+[canonical/preference/MIXED decision tree]
+(../../packs/feedback-decision-tree.md). Repair the narrowest owning
+component/phase/subskill or orchestration layer; validate dependent
+interfaces and unchanged successes. A consumer's private preference
+must not be committed to the pack or silently promoted to common policy.
+Do not auto-run a recursive source rewriting loop or bump SemVer for
+every internal component edit.
+
 ## Iterative improvement as an execution discipline
 
 The common [engine refinement handoff](../../refinement/README.md)

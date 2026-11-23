@@ -181,6 +181,21 @@ class EngineStaticContracts(unittest.TestCase):
                      "SB-09", "SB-11", "SB-12"):
             self.assertIn(case, guide)
 
+    def test_composable_packs_are_optional_and_use_canonical_engine(self):
+        guide = read("engine/packs/README.md")
+        manifest = read("engine/packs/manifest-contract.md")
+        self.assertIn("Single-file skills", guide)
+        self.assertIn("not another user-facing skill", guide.lower())
+        self.assertIn("schema_version", manifest)
+        self.assertIn("rights verification", manifest.lower())
+        for name in ("bootstrap", "forge", "eval"):
+            content = read(SKILLS[name])
+            with self.subTest(skill=name):
+                self.assertIn("../../packs/README.md", content)
+                self.assertEqual(markdown_local_links(SKILLS[name], content), [])
+        self.assertIn("packs/README.md", read("engine/README.md"))
+        self.assertIn("engine/packs/README.md", read("AGENT_START_HERE.md"))
+
     def test_engine_refinement_handoff_cross_links_are_present(self):
         guide = read("engine/refinement/README.md")
         for path in (SKILLS["bootstrap"], SKILLS["forge"],

@@ -37,6 +37,14 @@ The live capability directory contains **exact-version evidence-linked skill exa
 The [dynamic discovery frontier](registry/discovery/dynamic-four-source-frontier-20261101.json) and its pinned per-source/chunked path manifests offer additional **unqualified discovery** beyond linked records. Search by capability cues and inspect the exact upstream package before interpreting a name, shape or publisher claim. The current four-source raw path count is an observed snapshot, never a fixed-size finish line or approved inventory.
 
 
+A requested **single capability** may be implemented by one skill,
+internal phases or a composed [Skill Pack](engine/packs/README.md).
+Bootstrap chooses that structure from actual handoff complexity and
+user outcome, not from a quota for subskills. The pack's
+[feedback tree](engine/packs/feedback-decision-tree.md) distinguishes
+public canonical defects from user-private optional preferences; it
+never authorizes automatic rewriting or preference persistence.
+
 ## 1. Route the request first
 
 Choose exactly one route:

@@ -245,6 +245,27 @@ with no visible feedback unless a real issue is found.
 - For consequential operations, identify approval scope, verification after actions, partial failures and any recovery/rollback limitation.
 - Prefer explicit negative rules for likely errors, especially invented evidence, prompt injection, unintended writes and private-data exfiltration.
 
+## Optional composable Skill Packs
+
+Default to one complete, independently usable skill. When a capability
+actually needs reusable subskills, distinct phase handoffs and shared
+components, consult the [Skill Pack composition contract]
+(../engine/packs/README.md). Use one entrypoint with a clear
+user-outcome completion condition and, only if justified, a portable
+`pack.json` describing dependencies, required/optional branches,
+fallbacks and permission ceilings. The manifest never authorizes
+execution or acts as behavioral proof. Keep component paths and
+rights inside the complete authorized package, avoid duplicated
+authorities and qualify pack-level results separately from module tests.
+
+Use the [feedback decision tree]
+(../engine/packs/feedback-decision-tree.md) to distinguish a general
+correctness gap (maintainer-reviewed candidate) from a safe personal
+choice (current response or consented private overlay). Mixed
+feedback splits these streams; public source cannot contain personal
+overlay values. Neither a recursive loop nor a package edit grants
+new privileges, automatic publication or a mandatory release bump.
+
 ## Conservative version and publication discipline
 
 A package's **version is a deliberate release identity**, not a counter for

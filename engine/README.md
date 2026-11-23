@@ -24,6 +24,16 @@ bounded refinement. It carries an optional fictional portable case
 receipt, not background work or mandatory telemetry. **No additional
 user-facing skill or runtime service is introduced.**
 
+## Optional Skill Pack composition
+
+The [Skill Pack architecture and manifest](packs/README.md) lets one
+capability be a self-contained skill, an internally phased skill, or
+a pack containing independently meaningful subskills, phases and
+components. Its [feedback decision tree](packs/feedback-decision-tree.md)
+separates canonical corrections from private, opt-in consumer preferences.
+It reuses Bootstrap, Forge, Eval and the refinement handoff, **not** a
+second engine, automatic updater, hosted runtime or new release cadence.
+
 ## Repository-maintenance procedures
 
 Other procedures support occasional curation or maintenance, such as:

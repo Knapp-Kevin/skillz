@@ -82,6 +82,26 @@ Remediation and discriminating regression: <material defect and exact necessary 
 Material uncertainty: <only unresolved facts>
 ```
 
+## Skill Pack evaluation boundary
+
+For an optional [Skill Pack](../../packs/README.md), evaluate the
+**complete capability-level outcome** separately from each subskill,
+phase and reusable component. Confirm local dependency closure,
+acyclic handoffs, unique ownership, required/optional semantics,
+authority boundaries, user-private preference isolation and
+cross-component regression coverage. A passed structural manifest
+check is only a static graph observation. Individual module success
+does not prove orchestration success; a pack-level verdict does not
+automatically certify every separately reusable subskill.
+
+Inspect post-execution feedback with the
+[improvement-versus-preference decision tree]
+(../../packs/feedback-decision-tree.md). Qualify an objective defect
+before proposing a canonical change, retain current user preferences
+outside published source, and split MIXED feedback into independent
+authority/evidence receipts. Do not promote repeated AI self-review
+into independent consumer evidence.
+
 ## Repeatable review of the newly corrected candidate
 
 Apply the shared [engine refinement handoff](../../refinement/README.md)
