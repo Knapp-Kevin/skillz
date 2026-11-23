@@ -55,6 +55,14 @@ class MaintenanceTests(unittest.TestCase):
             self.assertEqual(conn.execute(
                 "SELECT COUNT(*) FROM accepted_runs").fetchone()[0], 2)
 
+    def test_no_change_weekly_still_proposes_audit_without_commit(self):
+        self.initialize()
+        result = self.invoke(cadence="weekly")
+        self.assertEqual(result["status"], "SAME_SNAPSHOT_NO_WORK")
+        self.assertIn("CHECK_RECOVERY_READINESS", result["maintenance"])
+        self.assertFalse(result["checkpoint_written"])
+        self.assertFalse(result["maintenance_executed"])
+
     def test_overlap_generation_conflict_leaves_state_intact(self):
         self.initialize()
         changed = next_scan(self.first)
