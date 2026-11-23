@@ -24,6 +24,7 @@ DIFFERENT = hashlib.sha256(b"tampered").hexdigest()
 def fixture():
     return {
         "schema_version": 1,
+        "expected_channels": ["linux_x64"],
         "source": {"repository": "fictional/release", "commit": SRC,
                    "tag": "v0.1.0", "tag_target": SRC},
         "build": {"source_commit": SRC, "run_id": "synthetic_run_101",
@@ -226,6 +227,7 @@ class ReleaseEvidenceTests(unittest.TestCase):
     def test_simulated_two_channel_release(self):
         data = fixture()
         data["channels"].append(copy.deepcopy(data["channels"][0]))
+        data["expected_channels"].append("windows_x64")
         second = data["channels"][-1]
         second["id"] = "windows_x64"
         second["platform"] = "windows"
@@ -240,19 +242,58 @@ class ReleaseEvidenceTests(unittest.TestCase):
     def test_missing_second_channel_files_prevent_full_match(self):
         data = fixture()
         data["channels"].append(copy.deepcopy(data["channels"][0]))
+        data["expected_channels"].append("windows_x64")
         data["channels"][-1]["id"] = "windows_x64"
         data["channels"][-1]["filename"] = "missing-windows.zip"
         self.assertEqual(self.inspect(data)["status"], "HOLD_INCOMPLETE_EVIDENCE")
+
+    def test_promised_windows_channel_missing_does_not_silently_pass(self):
+        data = fixture()
+        data["expected_channels"].append("windows_x64")
+        result = self.inspect(data)
+        self.assertEqual(result["status"], "HOLD_INCOMPLETE_EVIDENCE")
+        self.assertIn("EXPECTED_RELEASE_CHANNEL_NOT_OBSERVED:windows_x64",
+                      result["holds"])
+
+    def test_undeclared_extra_channel_is_not_implicitly_accepted(self):
+        data = fixture()
+        data["channels"].append(copy.deepcopy(data["channels"][0]))
+        data["channels"][-1]["id"] = "experimental"
+        result = self.inspect(data)
+        self.assertIn("UNDECLARED_RELEASE_CHANNEL:experimental", result["holds"])
+
+    def test_duplicate_expected_channel_rejected(self):
+        data = fixture()
+        data["expected_channels"].append("linux_x64")
+        self.hold("DUPLICATE_EXPECTED_CHANNEL_ID", data)
+
+    def test_empty_expected_channel_contract_rejected(self):
+        data = fixture()
+        data["expected_channels"] = []
+        self.hold("INVALID_EXPECTED_CHANNELS", data)
+
+    def test_expected_channels_cannot_be_claimed_from_nonlist(self):
+        data = fixture()
+        data["expected_channels"] = "linux_x64"
+        self.hold("INVALID_EXPECTED_CHANNELS", data)
+
+    def test_missing_expected_channels_schema_holds(self):
+        data = fixture()
+        del data["expected_channels"]
+        self.hold("missing required fields", data)
 
     def test_duplicate_channel_id_refused(self):
         data = fixture()
         data["channels"].append(copy.deepcopy(data["channels"][0]))
         self.hold("DUPLICATE_CHANNEL_ID", data)
 
-    def test_reject_empty_channel_inventory(self):
+    def test_empty_channel_inventory_is_explicit_evidence_hold(self):
         data = fixture()
         data["channels"] = []
-        self.hold("INVALID_CHANNEL_COUNT", data)
+        result = self.inspect(data)
+        self.assertEqual(result["status"], "HOLD_INCOMPLETE_EVIDENCE")
+        self.assertIn("EXPECTED_RELEASE_CHANNEL_NOT_OBSERVED:linux_x64",
+                      result["holds"])
 
     def test_reject_more_than_32_channels(self):
         data = fixture()
