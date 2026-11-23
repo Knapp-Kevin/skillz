@@ -295,3 +295,31 @@ phase never runs arbitrary repository code or certifies that actual
 conformance tests, provider job execution, release/branch protection
 or end-user CI savings passed. The consuming host executes the
 real local tests and checks Git/provider revision provenance separately.
+
+## Host retry receipt identity and compute attribution (CI Guard v1.6.3)
+
+Use the entirely fictional three-job attempt pair in
+[test_ci_host_reconcile.py](test_ci_host_reconcile.py). The original run
+contains two already-successful jobs and a failed third job; a later
+targeted attempt returns all three rows with changed provider IDs, but only
+the failed job has a new execution interval.
+
+| Case | Fault injected | Required behavior |
+| --- | --- | --- |
+| HR-01 | Previous success rows appear again under new IDs | Do not double-count them as newly executed |
+| HR-02 | Previous failed job has a distinct later success interval | Identify only the new execution interval |
+| HR-03 | Previous attempt is in progress or falsely marked green | Refuse |
+| HR-04 | New attempt is failed, pending or same attempt number | Refuse |
+| HR-05 | Omitted, duplicated or extra required job | Refuse |
+| HR-06 | Changed timestamps of purported carried-forward success | Refuse |
+| HR-07 | Failed job shows old timestamps or reused ID | Refuse |
+| HR-08 | Wrong run, SHA, event, workflow file or job attempt | Refuse |
+| HR-09 | Prior/next envelopes incomplete or multiple workflows mapped | Refuse |
+| HR-10 | Local simulator falsely asserts provider execution | Refuse |
+| HR-11 | Two offline JSON inputs provided, even if based on real traces | Keep observations unauthenticated |
+| HR-12 | Previous retry changed final CI run conclusion | Never assert downstream tag/publication was relaunched |
+
+All numbers, hashes and labels in this sample are fictional. Passing the
+fixture is **not** GitHub-provider qualification, billable Actions cost
+verification, or release authorization. Preserve independent native,
+status/branch protection and deployment receipts.

@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.6.2
+  version: 1.6.3
   license: MIT
 ---
 
@@ -378,6 +378,20 @@ untrusted repository execution occur. All observed jobs must be mapped.
 Stale SHA, unknown/missing/extra jobs, unsupported conditions, skipped
 required checks, contradictory workflow conclusions and mixed retry
 attempts HOLD.
+
+For a **targeted retry**, do not count every provider job row from the
+later run attempt as newly executed compute. The optional
+`--retry-previous-observations` path compares *two complete, adjacent,
+caller-supplied attempt receipts* with identical source/workflow/run
+identity. It refuses missing obligations, stale source, changed carried-success
+execution timestamps, incomplete attempts and a purported retry with
+no distinct new failed-job execution. A successful
+`RETRY_ACCOUNTING_RECONCILED` is an *offline, timestamp-based inference*,
+not a billing measurement, branch-qualified gate or proof that a completed
+downstream release/tag process automatically restarted. Do not substitute
+a later attempt's API row ID or run_attempt for actual runner occupancy.
+See [host reconciliation](components/host-reconciliation.md) and its
+fully fictional adversarial tests.
 
 A `HOST_JOB_RECONCILED` outcome establishes narrow run/job parity for
 the *supplied mapping* only. It **does not** establish external workflow
