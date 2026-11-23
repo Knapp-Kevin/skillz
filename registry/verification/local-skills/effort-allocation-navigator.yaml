@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/effort-allocation-navigator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/effort-allocation-navigator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 400de1a567a8e7465b7b35bbb5fd514152294887
-complete_package_tree_sha: ae3ac77556f1374fa6f4a1d378ad2b01eb8e9ddf
+content_blob_sha: 93b29536b328a8c6f8f6a9f9bc46e36eb68f2b9a
+complete_package_tree_sha: c8ed767e7113347335ded92badd848db41667bc0
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
-verification_basis: original-first-party-synthetic-contracts-pending-exact-ci
+verification_basis: refined-source-plus-adversarial-contracts-pending-exact-ci
 validation_status: not-run
-validation_note: "Initial source package with 42 authored Python unit tests pending exact-HEAD CI. No real user task-source ingestion, independent consuming agent validation, observed task completion, local preference persistence or measured improvements in decision quality/ADHD-related overwhelm."
+validation_note: "Refinement plus 42 baseline and 36 new adversarial Python tests pending exact-HEAD CI. Actual agent-host behavior, human task outcomes and private preference persistence NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
 tags:

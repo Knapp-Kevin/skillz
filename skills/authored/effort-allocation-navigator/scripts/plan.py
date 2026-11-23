@@ -66,7 +66,7 @@ def validate(document):
     refuse(type(prefs) is dict and set(prefs) <= PREF_KEYS)
     count = integer(prefs.get("choice_count", 2), 1, 3)
     pace = prefs.get("pace", "balanced")
-    refuse(pace in PACES and type(pace) is str)
+    refuse(type(pace) is str and pace in PACES)
     entries = document.get("tasks")
     refuse(type(entries) is list and 1 <= len(entries) <= MAX_TASKS)
     tasks = {}
@@ -81,8 +81,10 @@ def validate(document):
         kind = item.get("kind", "action")
         obligation = item.get("obligation", "discretionary")
         external = item.get("external_blocker", False)
-        refuse(state in STATES and kind in {"action", "milestone"} and
-               obligation in OBLIGATIONS and type(external) is bool)
+        refuse(type(state) is str and type(kind) is str
+               and type(obligation) is str and state in STATES
+               and kind in {"action", "milestone"}
+               and obligation in OBLIGATIONS and type(external) is bool)
         deps = item.get("depends_on", [])
         refuse(type(deps) is list and len(deps) <= MAX_TASKS and
                len(set(str(x) for x in deps)) == len(deps))
@@ -130,6 +132,12 @@ def validate(document):
         colors[key] = 2
     for key in sorted(tasks):
         visit(key)
+    # A completed dependent with unfinished mandatory prerequisites is
+    # contradictory input, not completion evidence. Refuse false progress.
+    for task in tasks.values():
+        if task["state"] == "done":
+            refuse(all(tasks[dep]["state"] == "done"
+                       for dep in task["depends_on"]))
     return tasks, today, goal, capacity, count, pace
 
 
@@ -177,13 +185,28 @@ def critical_path(tasks, goal, scope):
 
 def plan(document):
     tasks, today, goal, capacity, choice_count, pace = validate(document)
-    scope = ancestors(tasks, goal) if goal else set(tasks)
+    goal_scope = ancestors(tasks, goal) if goal else set(tasks)
+    scope = set(goal_scope)
+    # A chosen project goal is a focus lens, not an authority to suppress
+    # independently mandatory safety or owner-confirmed imminent work.
+    for key, task in tasks.items():
+        if task["state"] == "done":
+            continue
+        confirmed_due = (
+            task["deadline_evidence"] == "owner-confirmed"
+            and (iso_date(task["due_date"]) - today).days <= 2
+        )
+        if task["obligation"] == "safety" or confirmed_due:
+            scope.update(ancestors(tasks, key))
+    scope_extensions = sorted(scope - goal_scope)
     incomplete = {key for key in scope if tasks[key]["state"] != "done"}
     if not incomplete:
         return {"status": "PROVISIONAL_CALLER_ASSERTIONS", "mode": "COMPLETE",
-                "choices": [], "critical_path": critical_path(tasks, goal, scope),
+                "choices": [], "critical_path": critical_path(tasks, goal, goal_scope),
+                "scope_extension_ids": scope_extensions,
+                "completion_status": "CALLER_ASSERTED_NOT_INDEPENDENTLY_VERIFIED",
                 "coverage": {"considered": len(scope), "ready": 0, "blocked": 0, "unscored": 0}}
-    path = critical_path(tasks, goal, scope)
+    path = critical_path(tasks, goal, goal_scope)
     ready, blocked = [], []
     for key in sorted(incomplete):
         task = tasks[key]
@@ -195,20 +218,32 @@ def plan(document):
         elif task["kind"] == "action":
             ready.append(key)
     scored, unscored = [], []
+
+    def exposure(key):
+        """Protected obligations propagate through real dependency edges."""
+        desc = [later for later in incomplete if later != key
+                and key in ancestors(tasks, later)]
+        related = [key] + desc
+        safety = any(tasks[item]["obligation"] == "safety"
+                     for item in related)
+        deadlines = [
+            ((iso_date(tasks[item]["due_date"]) - today).days, item)
+            for item in related
+            if tasks[item]["deadline_evidence"] == "owner-confirmed"
+        ]
+        due, source = min(deadlines) if deadlines else (None, None)
+        return desc, safety, due, source
+
     for key in ready:
         task = tasks[key]
         if task["effort_minutes"] is None or task["value"] is None:
             unscored.append(key)
             continue
-        downstream = [later for later in incomplete if later != key and
-                      key in ancestors(tasks, later)]
+        downstream, safety, deadline, deadline_source = exposure(key)
         immediate = sum(1 for later in downstream if all(
             tasks[dep]["state"] == "done" or dep == key
             for dep in tasks[later]["depends_on"]))
-        deadline = None
-        if task["deadline_evidence"] == "owner-confirmed":
-            deadline = (iso_date(task["due_date"]) - today).days
-        lane = 0 if task["obligation"] == "safety" else (
+        lane = 0 if safety else (
             1 if deadline is not None and deadline <= 2 else 2)
         base = (4 * task["value"] + 2 * task["urgency"] +
                 3 * min(3, immediate) + min(3, len(downstream)) +
@@ -220,9 +255,13 @@ def plan(document):
             score += 2
         reasons = []
         if lane == 0:
-            reasons.append("DECLARED_SAFETY_OBLIGATION")
+            reasons.append("DECLARED_SAFETY_OBLIGATION" if
+                           task["obligation"] == "safety" else
+                           "UNLOCKS_DECLARED_SAFETY_OBLIGATION")
         elif lane == 1:
-            reasons.append("OWNER_CONFIRMED_NEAR_DEADLINE")
+            reasons.append("OWNER_CONFIRMED_NEAR_DEADLINE" if
+                           deadline_source == key else
+                           "UNLOCKS_OWNER_CONFIRMED_DEADLINE")
         if immediate:
             reasons.append("UNLOCKS_IMMEDIATE_DEPENDENTS")
         if key in path["path"] and path["status"] == "MODELED_UNLIMITED_PARALLELISM":
@@ -233,14 +272,22 @@ def plan(document):
             reasons.append("CONTINUE_IN_PROGRESS")
         if not reasons:
             reasons.append("HEURISTIC_VALUE_EFFORT")
-        scored.append({"task_id": key, "lane": lane, "score": round(score, 3),
+        strategy = ("CONTINUE" if task["state"] == "doing" else
+                    "UNBLOCK" if immediate else
+                    "SHORT_WIN" if task["effort_minutes"] <= 30 else
+                    "FOCUS_WORK")
+        scored.append({"task_id": key, "lane": lane, "score": round(score, 1),
+                       "_sort_score": score, "strategy": strategy,
                        "effort_minutes": task["effort_minutes"], "reasons": reasons,
-                       "immediate_unlocks": immediate})
+                       "immediate_unlocks": immediate,
+                       "confirmed_deadline_source_id": deadline_source})
     # Never silently rank a safety/near-deadline candidate below unrelated
     # optional work merely because its estimate is missing.
-    urgent_unknown = [key for key in unscored if tasks[key]["obligation"] == "safety" or
-                      (tasks[key]["deadline_evidence"] == "owner-confirmed" and
-                       (iso_date(tasks[key]["due_date"]) - today).days <= 2)]
+    urgent_unknown = []
+    for key in unscored:
+        _, safety, deadline, _ = exposure(key)
+        if safety or (deadline is not None and deadline <= 2):
+            urgent_unknown.append(key)
     if urgent_unknown:
         chosen = urgent_unknown[:choice_count]
         return {
@@ -248,19 +295,45 @@ def plan(document):
             "choices": [{"task_id": key, "role": "primary" if i == 0 else "alternative",
                          "action": "ESTIMATE_OR_CONFIRM"} for i, key in enumerate(chosen)],
             "critical_path": path, "unscored_task_ids": unscored,
-            "blocked": blocked,
+            "scope_extension_ids": scope_extensions, "blocked": blocked,
             "coverage": {"considered": len(scope), "ready": len(ready),
                          "blocked": len(blocked), "unscored": len(unscored)},
         }
-    scored.sort(key=lambda x: (x["lane"], -x["score"], x["task_id"]))
-    selected = scored[:choice_count]
+    scored.sort(key=lambda x: (x["lane"], -x["_sort_score"], x["task_id"]))
+    selected = scored[:1]
+    rest = scored[1:]
+    # An alternative should offer a meaningful different way to progress
+    # when one exists at similar value within the SAME protected lane.
+    # Never diversify by replacing an urgent obligation with a lesser one.
+    while rest and len(selected) < choice_count:
+        anchor = selected[0]
+        first = rest[0]
+        different = next((
+            item for item in rest
+            if item["lane"] == anchor["lane"]
+            and item["strategy"] not in {row["strategy"] for row in selected}
+            and item["_sort_score"] >= 0.7 * first["_sort_score"]
+        ), None)
+        chosen = different if different is not None else first
+        selected.append(chosen)
+        rest.remove(chosen)
     for index, row in enumerate(selected):
-        row.pop("lane")
+        row["priority_lane"] = (
+            "MANDATORY_SAFETY" if row.pop("lane") == 0 else
+            "CONFIRMED_IMMINENT_DEADLINE" if (
+                row["confirmed_deadline_source_id"] is not None and
+                (iso_date(tasks[row["confirmed_deadline_source_id"]]["due_date"]) - today).days <= 2
+            ) else "DISCRETIONARY"
+        )
+        row.pop("_sort_score")
         row["role"] = "primary" if index == 0 else "alternative"
         row["action"] = "BEGIN_USER_CONFIRMED_STEP"
         row["first_slice_minutes"] = min(25, capacity or 25, row["effort_minutes"])
         row["fits_available_capacity"] = (
             None if capacity is None else row["effort_minutes"] <= capacity
+        )
+        row["requires_deferral_of_primary"] = (
+            index > 0 and selected[0]["priority_lane"] != row["priority_lane"]
         )
         # A first slice is NOT proof the full task fits or was finished.
         # The user may choose an alternative; these are suggestions, not mandates.
@@ -272,6 +345,7 @@ def plan(document):
     return {
         "status": "PROVISIONAL_CALLER_ASSERTIONS", "mode": mode,
         "choices": selected, "critical_path": path,
+        "scope_extension_ids": scope_extensions,
         "unscored_task_ids": unscored,
         "blocked": blocked,
         "coverage": {"considered": len(scope), "ready": len(ready),
