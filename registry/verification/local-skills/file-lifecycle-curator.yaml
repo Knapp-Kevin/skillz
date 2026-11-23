@@ -12,14 +12,16 @@ complete_package_tree_sha: e324df81c41a540fe1f6cc208fcfe55eb18c2405
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: reviewer-remediated-38-case-exact-source-ci-pending
-validation_status: not-run
+verification_basis: exact-current-package-offline-source-tests-pass-external-host-not-run
+validation_status: passed-offline-contract-tests
 validation_note: >-
-  Prior source head b8bad75 passed 33/33 synthetic tests and 11/11
-  authored QA, but review found two untested material edge cases.
-  Both are fixed in this new exact source with five extra scenarios.
-  Current 38-case exact-head CI PENDING. Real connected-file behavior,
-  current source permissions, private checkpoint and scheduler NOT_RUN.
+  PR #902 current source head 07253a2d16fc6277c37b4d89249e5b61043d5cdc
+  PASS 38/38 fictional Python tests run 45280511489, 11/11 authored
+  index/feedback contract tests run 45280511700; Socket PR Alerts
+  SUCCESS and Project Report NEUTRAL. All 3 reviewer threads resolved,
+  including P2 old-ID permission hold and extraction regression/relocation.
+  External connected file account rights, actual schedule, persisted
+  checkpoint, real file operations and independent agent host NOT_RUN.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
