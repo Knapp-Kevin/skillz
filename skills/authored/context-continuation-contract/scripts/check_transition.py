@@ -205,6 +205,57 @@ def reconcile(previous, updated, transition):
             "scope": "CALLER_SUPPLIED_SNAPSHOT_STRUCTURAL_RECONCILIATION_ONLY"}
 
 
+
+def reconcile_chain(payload):
+    """Evaluate *every* supplied adjacent transition; never skip a bad middle.
+
+    The caller controls every snapshot and receipt. A chain pass is NOT an
+    authenticated transcript, a model-behavior test or provider verification.
+    """
+    keys(payload, ("schema_version", "checkpoints", "transitions"), label="chain")
+    need(type(payload["schema_version"]) is int and payload["schema_version"] == 1,
+         "unsupported chain schema")
+    states = payload["checkpoints"]
+    routes = payload["transitions"]
+    need(isinstance(states, list) and 2 <= len(states) <= 32,
+         "CHAIN_LENGTH_OUT_OF_BOUNDS: 2..32 checkpoints required")
+    need(isinstance(routes, list) and len(routes) == len(states) - 1,
+         "CHAIN_ROUTE_COUNT_MISMATCH")
+    for i, route in enumerate(routes):
+        try:
+            outcome = reconcile(states[i], states[i + 1], route)
+        except (Hold, TypeError, KeyError, ValueError) as exc:
+            raise Hold("CHAIN_STEP_%d: %s" % (i + 1, exc)) from exc
+        if outcome["status"] != "STATIC_TRANSITION_RECONCILED":
+            # A declared scope change halts replay. Later caller-provided
+            # snapshots are NOT inspected, authorized or marked passing.
+            return {"schema_version": 1, "status": "HOLD",
+                    "issues": outcome.get("issues", ["UNQUALIFIED_TRANSITION"]),
+                    "held_step": i + 1, "qualified_steps": i,
+                    "unexamined_steps": len(routes) - i - 1,
+                    "source_and_proofs_authenticated": False,
+                    "user_authorization_authenticated": False,
+                    "model_agent_behavior_observed": False,
+                    "host_test_execution_verified": False,
+                    "automatic_side_effect_authorized": False}
+    last = states[-1]
+    return {"schema_version": 1,
+            "status": "STATIC_CHAIN_RECONCILED",
+            "claimed_workstream": last["workstream_id"],
+            "first_revision": states[0]["revision"],
+            "last_revision": last["revision"],
+            "qualified_steps": len(routes),
+            "claimed_complete": last["claimed_complete"],
+            "last_next_action": last["next_action"],
+            "source_and_proofs_authenticated": False,
+            "user_authorization_authenticated": False,
+            "model_agent_behavior_observed": False,
+            "host_test_execution_verified": False,
+            "provider_or_merge_outcome_verified": False,
+            "automatic_side_effect_authorized": False,
+            "scope": "CALLER_SUPPLIED_CHAIN_STRUCTURAL_RECONCILIATION_ONLY"}
+
+
 def read_json(path):
     src = Path(path).absolute()
     need(src.is_file() and not any(p.is_symlink() for p in (src, *src.parents)),
@@ -225,18 +276,28 @@ def no_dupes(pairs):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--previous", required=True)
-    parser.add_argument("--updated", required=True)
-    parser.add_argument("--transition", required=True)
+    parser.add_argument("--previous")
+    parser.add_argument("--updated")
+    parser.add_argument("--transition")
+    parser.add_argument("--chain",
+                        help="JSON chain with 2..32 checkpoints and all transitions")
     parser.add_argument("--require-pass", action="store_true")
     args = parser.parse_args()
+    triplet = (args.previous, args.updated, args.transition)
+    if (args.chain is None and any(x is None for x in triplet)) or (
+            args.chain is not None and any(x is not None for x in triplet)):
+        parser.error("provide either --chain or all --previous/--updated/--transition")
     try:
-        outcome = reconcile(read_json(args.previous),
-                            read_json(args.updated),
-                            read_json(args.transition))
+        if args.chain is not None:
+            outcome = reconcile_chain(read_json(args.chain))
+        else:
+            outcome = reconcile(read_json(args.previous),
+                                read_json(args.updated),
+                                read_json(args.transition))
         print(json.dumps(outcome, sort_keys=True))
-        return (3 if args.require_pass and outcome["status"] !=
-                "STATIC_TRANSITION_RECONCILED" else 0)
+        passed = outcome["status"] in (
+            "STATIC_TRANSITION_RECONCILED", "STATIC_CHAIN_RECONCILED")
+        return 3 if args.require_pass and not passed else 0
     except (Hold, TypeError, KeyError, ValueError, OSError, UnicodeError) as exc:
         print("CONTINUATION_HOLD: " + str(exc), file=sys.stderr)
         return 2
