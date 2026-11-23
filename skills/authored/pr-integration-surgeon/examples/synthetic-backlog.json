@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "repository": "fictional/example",
+  "observed_at": "2026-11-22T21:00:00Z",
+  "base_branch": "main",
+  "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "policy": {
+    "observed_complete": true,
+    "merge_queue": "none",
+    "review_required": true,
+    "required_checks": [
+      {
+        "name": "unit",
+        "app": "actions"
+      },
+      {
+        "name": "security",
+        "app": "security"
+      }
+    ]
+  },
+  "prs": [
+    {
+      "number": 101,
+      "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "draft": false,
+      "mergeability": "clean",
+      "review": {
+        "state": "approved",
+        "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "checks": [
+        {
+          "name": "unit",
+          "app": "actions",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "name": "security",
+          "app": "security",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "depends_on": [],
+      "touched_paths": [
+        "src/core.py"
+      ],
+      "paths_complete": true,
+      "issue_refs": [
+        401
+      ]
+    },
+    {
+      "number": 102,
+      "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "draft": false,
+      "mergeability": "clean",
+      "review": {
+        "state": "approved",
+        "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "checks": [
+        {
+          "name": "unit",
+          "app": "actions",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "name": "security",
+          "app": "security",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "depends_on": [
+        101
+      ],
+      "touched_paths": [
+        "src/core.py"
+      ],
+      "paths_complete": true,
+      "issue_refs": [
+        402
+      ]
+    },
+    {
+      "number": 103,
+      "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "draft": true,
+      "mergeability": "clean",
+      "review": {
+        "state": "approved",
+        "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "checks": [
+        {
+          "name": "unit",
+          "app": "actions",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "name": "security",
+          "app": "security",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "depends_on": [],
+      "touched_paths": [
+        "src/component_103.py"
+      ],
+      "paths_complete": true,
+      "issue_refs": [
+        403
+      ]
+    },
+    {
+      "number": 104,
+      "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "draft": false,
+      "mergeability": "conflicting",
+      "review": {
+        "state": "approved",
+        "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "checks": [
+        {
+          "name": "unit",
+          "app": "actions",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "name": "security",
+          "app": "security",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "depends_on": [],
+      "touched_paths": [
+        "src/component_104.py"
+      ],
+      "paths_complete": true,
+      "issue_refs": [
+        404
+      ]
+    },
+    {
+      "number": 105,
+      "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "draft": false,
+      "mergeability": "clean",
+      "review": {
+        "state": "unknown",
+        "head_sha": null
+      },
+      "checks": [
+        {
+          "name": "unit",
+          "app": "actions",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "name": "security",
+          "app": "security",
+          "state": "success",
+          "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "depends_on": [],
+      "touched_paths": [
+        "src/component_105.py"
+      ],
+      "paths_complete": true,
+      "issue_refs": [
+        405
+      ]
+    },
+    {
+      "number": 106,
+      "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "draft": false,
+      "mergeability": "clean",
+      "review": {
+        "state": "approved",
+        "head_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "checks": [],
+      "depends_on": [],
+      "touched_paths": [
+        "src/component_106.py"
+      ],
+      "paths_complete": true,
+      "issue_refs": [
+        406
+      ]
+    }
+  ]
+}

@@ -1215,6 +1215,37 @@
         "agent-mcp-development/evaluation"
       ],
       "review_note": "Original 7-file MCP audit package v0.1.0. Exact-source hosted QA on PR #879 head ba959d8813871a83c31b5629a19a389c735881ce passed 33/33 Python falsifier methods (Actions #45110247036), authored exact-source/feedback QA passed 10/10 (Actions #45110246947), both Socket Security checks SUCCESS. Exact package SHA pinned; independent agent-host tool discovery, provider authenticated captures, production/security acceptance and user outcomes NOT_RUN."
+    },
+    {
+      "id": "pr-integration-surgeon",
+      "display_name": "PR Integration Surgeon",
+      "source_class": "first-party-authored",
+      "origin_issue": "https://github.com/Knapp-Kevin/skillz/issues/880",
+      "package_path": "skills/authored/pr-integration-surgeon",
+      "entrypoint": "skills/authored/pr-integration-surgeon/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/pr-integration-surgeon/LICENSE",
+      "license_inheritance": "Original first-party text, offline Python stdlib integration planner, 49 adversarial tests, and wholly fictional six-PR dataset. No imported external skill text.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-22",
+      "provenance_path": "registry/skills/local-skills/pr-integration-surgeon.yaml",
+      "verification_path": "registry/verification/local-skills/pr-integration-surgeon.yaml",
+      "skill_blob_sha": "03beac120f5fc3cdde5ddffd6bfff78c6827342a",
+      "package_tree_sha": "f993750a3e489d3f7ebaed86f9887caa4a338d6e",
+      "package_file_count": 7,
+      "review_status": "needs-re-review",
+      "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only by default; caller-supplied sanitized local snapshot, no network or merge; mutations only through independent current GitHub authorization and actual checks",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original MIT package; external GitHub API docs used as factual provider context, not copied instructions. No private GitHub data, credentials or real customer source.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "software-engineering/maintenance",
+        "cloud-devops/ci-cd"
+      ],
+      "review_note": "First-party seven-file package source candidate, 49 synthetic offline tests at PR #881 source head 5769bedab30b6fb92a8eed09b187156642148e9d PASS on Actions #45112426407. Authored full-provenance/feedback contract 11/11 PASS on Actions #45112426311; both Socket Security checks SUCCESS. Exact package pins set. Actual host merge/queue review/production acceptance, independent consuming-agent behavior and user outcomes NOT_RUN."
     }
   ]
 }
