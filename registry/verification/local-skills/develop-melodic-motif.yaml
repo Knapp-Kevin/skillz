@@ -7,18 +7,18 @@ license_evidence_path: skills/authored/develop-melodic-motif/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/develop-melodic-motif/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: daa9645531208e3f1df730792b984ac2afac5a03
-complete_package_tree_sha: 3342392bab431158deae93792dc87efe23e45397
+content_blob_sha: 78a870045b8f8e1a18ad4f4fd64cd461a35397bb
+complete_package_tree_sha: 660b3cfdf86ae8221e0d28ee982a3135036a24ed
 characterized_at: '2026-11-17'
 reviewed_at: '2026-11-17'
-verification_status: verified
-verification_basis: individual-structured-static-review
-validation_status: incomplete
-validation_note: One independent text-only holdout pilot observed; no representative multi-case/model, singer or audio acceptance.
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+validation_status: not-run
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
   Incomplete is not validated.
 behavioral_evidence_path: docs/evals/2026-11-17-melody-motif-bounded-pilot.md
 rubric: docs/skill-verification.md
-rubric_score: 18/20
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case:
   - music-composition
