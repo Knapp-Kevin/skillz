@@ -106,11 +106,11 @@ class IntakeTests(unittest.TestCase):
         d["expected"] = d["observed"]
         self.reject(d, "NO_DEMONSTRATED_BEHAVIOR_DIFFERENCE")
 
-    def test_preference_cannot_claim_canonical_bug(self):
+    def test_preference_route_does_not_enter_shared_maintenance(self):
         d = signal()
         d["routing"] = "local-preference"
         d["preference_class"] = "presentation"
-        self.reject(d, "PREFERENCE_MUST_STAY_LOCAL")
+        self.reject(d, "PREFERENCE_REMAINS_PRIVATE")
 
     def test_local_preference_is_not_admitted_to_public_signal(self):
         d = signal()
