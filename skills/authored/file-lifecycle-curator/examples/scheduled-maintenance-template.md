@@ -33,7 +33,13 @@ Your recurring trigger does not add permissions or waive safety rules.
    On revoked or unverifiable access, emit a private ACCESS_HOLD notice
    WITHOUT cached record IDs, names, summaries, relations or counts.
 2. Recover only the last **actually saved and read-back-verified** private
-   checkpoint matching the same scope, principal and audience. If it is
+   checkpoint matching the same scope, principal and audience. When the
+   host uses the optional [SQLite durable-state contract](../references/durable-state.md),
+   operate on ONE approved store for hourly/daily/weekly cycles. Preview
+   the current source snapshot without writing, then on authorized
+   commit supply its actual expected generation. A stale generation,
+   reused run ID or missing permissions is a HOLD, not a reason to
+   overwrite or silently reset the state. If it is
    unavailable, report COLD_START and ask/execute only a bounded read.
    Do not use chat memory or old schedule logs as verified inventory.
 3. Inspect changed/unknown source revisions first, with provider-specific
@@ -59,21 +65,21 @@ Your recurring trigger does not add permissions or waive safety rules.
    counts, what was actually rechecked, holds, **one next action and one
    reasonable alternative**, no-change result, and unresolved evidence.
    Do not claim unexecuted work is complete.
-6. Only when separately approved and supported, write the minimum new
+7. Only when separately approved and supported, write the minimum new
    checkpoint/index updates into the named private store and verify
    read-back. Otherwise mark NOT_SAVED. Do not move, rename, export,
    delete, share, archive or change permissions by default.
-7. Prevent duplicate work after a retry or repeated schedule trigger:
+8. Prevent duplicate work after a retry or repeated schedule trigger:
    compare accepted snapshot/run identity before starting; if unchanged,
    report SAME_SNAPSHOT_NO_WORK without creating additional derived
    artifacts. Any source drift changes the plan and requires rebind.
-8. Report actual observed results to the approved destination. A trigger
+9. Report actual observed results to the approved destination. A trigger
    without a report is NOT a successful delivery. If the run could not
    observe the source, do not claim that the collection has no changes.
-9. Never self-create another schedule, expand scope, change cadence, save
+10. Never self-create another schedule, expand scope, change cadence, save
    preferences, patch canonical skill code or post a public issue without
    separate express authorization and a verified host capability.
-10. Leave a compact continuation receipt with next safe action, pending
+11. Leave a compact continuation receipt with next safe action, pending
     authorization, checkpoint identity/coverage and verification state.
     Respect owner pause, expiry and revocation. Stop when budget exhausted.
 
