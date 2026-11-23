@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: requires-owner-windows-hyper-v-host-and-guest-iso
 dependencies: "Complete standalone eight-file MIT package. PowerShell 5.1+ with Hyper-V module for operational scripts; Windows host and owner authorization for actual provisioning. Python 3.9+ stdlib for portable static tests only. No network needed for hosted checks."
 content_blob_sha: cbf4179a3b7d5adbce84ac26161c6b153d6e2814
-complete_package_tree_sha: 198101bd6412793463a0010e2eb4d5ca5fe2f8e9
+complete_package_tree_sha: 36c302170d5dfcf2e76618422aa78372f4354ba0
 import_eligibility: review-required
 source_rights: "Original first-party source and synthetic contracts. Microsoft Learn used solely for factual cmdlet syntax. Owner-held credentials, actual VM/card and proprietary Windows ISO are never bundled."
 rationale: "Issue #890 initial offline qualification VM implementation. Two scripts implement defensive planning/connecting. No actual Windows host behavior or credential/guest isolation was observed; source-only QA cannot establish operational safety. Reviewer and owner must qualify before use."
