@@ -363,6 +363,22 @@ See the optional in-package [adversarial examples](examples/acceptance.md)
 for expected decisions. They are designed cases, not observed host
 behavior, independent user testing or a requirement to run tools.
 
+## Refinement-loop continuation checkpoints
+
+Each turn must preserve the target artifact's actual starting
+baseline, latest verified revision, chosen failure/falsifier, owner
+constraints, protected regressions, prior candidate's accepted and
+rejected changes, measured results versus inferences, and the next
+decision-relevant experiment. An encouraging critique or new wording
+is not proof of effectiveness. A follow-up to "try again" must not
+rewrite the evaluator, erase a previously failed negative control,
+inflate a model's self-score or expand consent for local preferences.
+If the user explicitly changes the success target, mark the changed
+scope and obtain fresh applicable authorization while preserving the
+old record as evidence, not as an active hidden requirement. Stop
+iterating when no new material failure or hypothesis can be tested.
+No automatic persisted state or other skill dependency is implied.
+
 ## Multi-turn continuity when the work is not one-shot
 
 Treat follow-up messages as continuation of the active task unless the user explicitly changes its objective. Before the next substantive action, recover from available conversation or authorized artifacts: **objective, confirmed decisions, completed and uncompleted work, protected checks, blockers, and next acceptance step**. Do not invent unavailable history or claim persistent storage. Reconcile new instructions with this state; current user direction may change scope, but never silently remove safety, approval, source integrity or verification gates. Execute the next concrete step rather than repeatedly restating a plan. For longer work, provide a compact progress/handoff note showing what is done, what remains, and what evidence supports completion. Do not equate a drafted artifact, open PR, proposed test or green isolated check with the user's actual finished outcome. No autonomous follow-up, session creation or background execution is implied.

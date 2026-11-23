@@ -292,6 +292,21 @@ the optional checker authenticates the input's provenance. Its positive
 ordinary-file path remains available with the original source and
 verification limitations.
 
+## Delivery-assessment continuation checkpoints
+
+On each follow-up, retain the specific repository and verified
+revision/as-of, in-scope issue/PR inventory, acceptance obligations,
+owners, blocked merges, required security/CI conditions and the
+evidence needed to claim actual delivery. Recheck volatile open PRs,
+review state and exact-head CI rather than treating yesterday's count,
+draft, simulated run or previous review as current. A changed
+prioritization can add tasks, but must not erase unresolved safety,
+ownership or release gates. Distinguish a proposed fix, a tested branch,
+a merge, and an observed functioning consumer outcome. If host access
+is unavailable, state the specific unknown instead of turning a
+historical receipt into success. This checkpoint requires no host
+memory service or sibling skill.
+
 ## Multi-turn continuity when the work is not one-shot
 
 Treat follow-up messages as continuation of the active task unless the user explicitly changes its objective. Before the next substantive action, recover from available conversation or authorized artifacts: **objective, confirmed decisions, completed and uncompleted work, protected checks, blockers, and next acceptance step**. Do not invent unavailable history or claim persistent storage. Reconcile new instructions with this state; current user direction may change scope, but never silently remove safety, approval, source integrity or verification gates. Execute the next concrete step rather than repeatedly restating a plan. For longer work, provide a compact progress/handoff note showing what is done, what remains, and what evidence supports completion. Do not equate a drafted artifact, open PR, proposed test or green isolated check with the user's actual finished outcome. No autonomous follow-up, session creation or background execution is implied.

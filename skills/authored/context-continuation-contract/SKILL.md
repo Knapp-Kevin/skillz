@@ -162,6 +162,28 @@ contracts](examples/acceptance.md) identify additional negative cases.
 Neither example file authorizes memory writes, external messages or
 filesystem changes.
 
+## Optional executable transition drift check
+
+A handoff may be copied across turns while quietly losing a required
+verification gate. For a **bounded offline structural check**, this
+standalone package includes `scripts/check_transition.py`, the
+[fictional paired snapshots](examples/multiturn-adversarial.md) and
+[executable adversarial tests](tests/test_check_transition.py). Run the
+script with `--previous`, `--updated`, `--transition` and
+`--require-pass` only when the user has supplied suitable checkpoint
+JSON. It compares the exact workstream objective, sequence, permissions,
+decisions, safeguards, preserved acceptance obligations, proof categories,
+source revisions and executable next action. Missing prior context must
+remain UNKNOWN rather than silently reconstructed.
+
+A `STATIC_TRANSITION_RECONCILED` result **does not** validate real model
+behavior, authenticate a claimed source SHA, verify GitHub checks,
+execute tests, authorize actions or certify completion. Declared user
+scope changes return a **HOLD for independent host authorization**, not
+a synthetic permission grant. The tool is optional; no script, storage,
+network, issue submission or dependency is required for ordinary
+capture/resume or for a downloaded standalone package.
+
 ## Multi-turn continuity when the work is not one-shot
 
 Treat follow-up messages as continuation of the active task unless the user explicitly changes its objective. Before the next substantive action, recover from available conversation or authorized artifacts: **objective, confirmed decisions, completed and uncompleted work, protected checks, blockers, and next acceptance step**. Do not invent unavailable history or claim persistent storage. Reconcile new instructions with this state; current user direction may change scope, but never silently remove safety, approval, source integrity or verification gates. Execute the next concrete step rather than repeatedly restating a plan. For longer work, provide a compact progress/handoff note showing what is done, what remains, and what evidence supports completion. Do not equate a drafted artifact, open PR, proposed test or green isolated check with the user's actual finished outcome. No autonomous follow-up, session creation or background execution is implied.
