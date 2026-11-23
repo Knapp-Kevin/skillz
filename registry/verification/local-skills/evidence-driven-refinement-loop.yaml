@@ -7,16 +7,16 @@ license_evidence_path: skills/authored/evidence-driven-refinement-loop/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 85f7e864733a18293a85b1dded50a93c79d75d73
-complete_package_tree_sha: 463c5c51e3a1c2469420cfa2fde87c39967655a1
+content_blob_sha: 4473795a0fbd41b0d7765ec61fd51c0e65da7948
+complete_package_tree_sha: 8054f1b050a95543dd135f0389f2b80adb55214e
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-21"
-verification_status: verified
-verification_basis: exact-ten-file-source-review-plus-red-green-cross-checkout-adversarial-regressions-and-executed-schema-OS-user-tests
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
 validation_status: not-run
-validation_note: "v0.3.4 patched the proven alternate-Git-checkout/worktree leakage risk in POSIX preference root validation. Red Actions 44949812573 reproduced two failures on each of Python 3.9/3.11/3.13; green Actions 44949878469 passed the full suite at corrected manager blob 9bbce37f. Exact v0.3.4 package tree pinned; final version-head qualification should be read separately. No independent consuming-agent/user outcomes, cryptographic consent validation, universal Git environment detection or hostile same-UID isolation proved."
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [iterative-quality-improvement, artifact-refinement, regression-prevention, user-local-preferences]
   lifecycle: [evaluation, implementation, review, verification]

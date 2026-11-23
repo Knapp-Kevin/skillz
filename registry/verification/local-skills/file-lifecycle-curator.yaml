@@ -7,21 +7,21 @@ license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 3e35bdf625b617fea62d9758501d5fc61c444dca
-complete_package_tree_sha: 33a8e598e64478a763e335a2dea9f6eef34a7528
+content_blob_sha: f099e5d36af3e347a6241814b7b543dcc7ff82c2
+complete_package_tree_sha: d7bd1052e3f056138e57ec7651706e6416ea2458
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
-verification_status: verified
-verification_basis: individual-structured-static-review
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
 validation_status: not-run
-validation_note: >-
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
   The H01-H12 synthetic policy oracle passed 12/12 *oracle rule checks* in first-party
   offline evaluation; this does not execute the skill in an agent host or test
   connector permissions. Behavior still NOT RUN.
   Synthetic scenarios were statically inspected only; no host/model tool behavior,
   file move, archive creation, restoration, ingestion, OCR or search backend tested.
 rubric: docs/skill-verification.md
-rubric_score: 18/20
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case:
   - file-information-management

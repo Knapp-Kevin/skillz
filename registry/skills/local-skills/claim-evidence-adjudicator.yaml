@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/claim-evidence-adjudicator/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Six-file standalone package, optional Python 3.10+ stdlib offline lineage checker; host access to approved sources remains independently required"
-content_blob_sha: 263cd9bbe5d601543a2b197753428fb037fea9f5
-complete_package_tree_sha: 4ec9f1856cbe0379b8e0d014579e1aefd1d6e1e3
+content_blob_sha: 8c347e81615e1bdb711267d692b57f759062a16b
+complete_package_tree_sha: 345a42c06b97c08207bdf46b6e208fc12dd45fc9
 historical_comparator: skills/fact-check/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"

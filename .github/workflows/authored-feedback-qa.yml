@@ -1,0 +1,34 @@
+name: Authored skill optional feedback contracts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/**'
+      - 'scripts/qa/test_authored_feedback_contract.py'
+      - '.github/ISSUE_TEMPLATE/agent-skill-feedback.yml'
+      - '.github/workflows/authored-feedback-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: authored-feedback-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-feedback-contracts:
+    # Passive skill text: no remote issue submission, no runner for draft PRs.
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Check all authored feedback routes and exact package fingerprints
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s scripts/qa -p 'test_authored_feedback_contract.py' -v

@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/evidence-driven-refinement-loop/SKILL.md
 permission_tier: read-only analysis; specific owner-authorized bounded artifact writes
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: standalone-with-optional-offline-local-preference-manager
 dependencies: "Ten-file standalone package. Optional offline POSIX Python 3 manager, 49-method test suite, and QA-only jsonschema==4.23.0 for draft-2020-12 schema tests. Core skill needs no install, network or private storage. Host must independently establish user approval; flags and JSON cannot prove consent."
-content_blob_sha: 85f7e864733a18293a85b1dded50a93c79d75d73
-complete_package_tree_sha: 463c5c51e3a1c2469420cfa2fde87c39967655a1
+content_blob_sha: 4473795a0fbd41b0d7765ec61fd51c0e65da7948
+complete_package_tree_sha: 8054f1b050a95543dd135f0389f2b80adb55214e
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
 rationale: "v0.3.4 adversarially protects against storing user-local preferences inside unrelated detected Git checkouts/worktrees, not only the current skill source. Two planted red tests failed on Python 3.9/3.11/3.13 at source 54ed4b77 (Actions 44949812573), then full tests passed after manager correction at 3d6da9c7 (44949878469). Exact ten-file blob/tree pinned; 49 manager/schema methods, 22 engine methods; separate Linux OS identity test retained. Self-emulation is not independent user/host acceptance; consent provenance remains host-side. Static semantic score 18/20."

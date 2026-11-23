@@ -18,11 +18,11 @@ permission_tier: mutating
 default_permission_tier: read-only
 optional_action_boundary: "Host continuity-record persistence only after specific user authorization and verified destination"
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Four-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 6ae4e50ad1baa1e8addc16eeab1c27a4de364982
-complete_package_tree_sha: d2d51a18cdf366b1fbb6b663c1dbd3a38f66ba5a
+content_blob_sha: c39c93c0b616cc89d17a43e7272acfac64cbca11
+complete_package_tree_sha: 22d2b2f9e37fb7d409664a1e53c17124060c64b6
 historical_comparators: "skills/handoff-writer/SKILL.md; skills/session-continuity/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

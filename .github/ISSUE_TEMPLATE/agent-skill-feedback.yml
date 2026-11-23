@@ -1,0 +1,63 @@
+name: Optional agent-observed skill feedback
+description: Report a reproducible skill defect or improvement with sanitized content. GitHub shows the posting account.
+title: "[Skill feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is OPTIONAL. Use only fictional or cleared public examples.
+        Do not paste conversations, private code, client/repository names, paths,
+        credentials, identifiers, screenshots, logs, or raw user data.
+        A skill-using agent may submit through an explicitly authorized host,
+        but GitHub shows the authenticated poster. Content can be anonymized;
+        the account identity is not anonymous.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill slug
+      description: Public first-party Skillz skill slug, such as repository-readme-architect.
+      placeholder: example-skill-slug
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Feedback type
+      options:
+        - Reproducible defect
+        - Missing capability
+        - Ambiguous instruction
+        - Incorrect or unsafe outcome
+        - Portability or dependency issue
+        - Other improvement
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What happened?
+      description: Minimal, generalized, nonidentifying observed behavior. Label simulation or inference honestly.
+      placeholder: "On a synthetic input, the skill recommended X. No external run was made."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should the skill have done, and which existing safeguard must remain?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Sanitized reproduction (optional)
+      description: Use invented names/data only. Omit if a safe reproduction cannot be shared.
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy and authorization
+      options:
+        - label: I checked that the submitted content has no sensitive or identifying user, organization, repository, credential, or conversation data, and I have authorization to post publicly.
+          required: true

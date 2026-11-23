@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/work-period-evidence-reporter/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 1f009236ab80aba49095a55229a6109504035096
-complete_package_tree_sha: 5183dedbb6283ccd01b27198e9cd33a242e20a0e
+content_blob_sha: c2b3ae585e320f7c160b9823383609ce4da09f3a
+complete_package_tree_sha: 86fd72d4896c8f98b4d197a054dd6d9b794ac751
 historical_comparators: "skills/standup-writer/SKILL.md; skills/week-in-review/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

@@ -18,11 +18,11 @@ permission_tier: mutating
 default_permission_tier: read-only
 optional_action_boundary: "Approved coordination workspace/task writes only; never implied by inbox or daily brief"
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 485eec5425782c0310413de3a355a844ff856a25
-complete_package_tree_sha: 8a2036ee370e1918da0964b7dbeff91b0edf8a07
+content_blob_sha: a0e9c669b2d97317a3d73b66e7a6da163bf87877
+complete_package_tree_sha: 7107b646508d2366aa5751f394d771e487d754cf
 historical_comparators: "skills/daily-briefing/SKILL.md; skills/inbox-triage/SKILL.md; skills/task-surface/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

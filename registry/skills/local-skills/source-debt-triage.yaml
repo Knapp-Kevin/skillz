@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/source-debt-triage/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-offline-package
 dependencies: "Standalone five-file package; optional stdlib Python3 scanner/tests and authorized checkout or provider-API fallback; no network/credentials/install"
-content_blob_sha: c7cceef7235e7b52c5ea333956930ad95f5093e6
-complete_package_tree_sha: f9ecb5f40b43922270ab995b953d4b686795c9f1
+content_blob_sha: e7d23d4415f59387be7495db79b50c7f5c9f8943
+complete_package_tree_sha: 169850bff038fa498b7be36b5939a4b1e039a4bb
 historical_comparator: skills/todo-harvester/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"

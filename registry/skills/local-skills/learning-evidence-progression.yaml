@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/learning-evidence-progression/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: fcde18a06e403a24501bbe4fe804ef7f54e4a081
-complete_package_tree_sha: ca43eef9f7eb1b4ba5c4acef3c6c023d275037c1
+content_blob_sha: 9cae0b2c8f71c4a604428addeef39307c0f5e9f8
+complete_package_tree_sha: d9d9e22a4f363f833ef841d1789fb72871c347da
 historical_comparators: "skills/learning-plan/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

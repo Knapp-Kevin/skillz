@@ -10,6 +10,26 @@ For normal first-visit or returning-user work, use one canonical orchestrator:
 
 [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md)
 
+## Optional agent feedback on first-party authored skills
+
+For any new or edited `skills/authored/<slug>/SKILL.md`, preserve the
+portable **optional, anonymized-content skill feedback** section with
+the first-party issue-form URL. Submission is never a condition of
+completion or a source of authority. An authorized host agent can open
+a sanitized public issue only with explicit posting permission. Otherwise
+offer a local draft or skip. No unsolicited telemetry or external
+communication, no raw user/private source data, and no false promise
+that GitHub's posting account is anonymous. Maintain the corresponding
+package tree and entrypoint blob registry fingerprints; editing passive
+instructions does not by itself justify a minor/major version bump.
+In the same package, preserve the **multi-turn continuity** contract:
+follow-ups extend the live objective, preserving completed/uncompleted work,
+existing safeguards, blockers and acceptance gates; report concrete next steps
+without asserting stored memory or autonomous execution. Long-running skills
+must not treat a draft PR or test plan as the delivered outcome. The offline
+`scripts/qa/test_authored_feedback_contract.py` enforces both sections
+and exact-source package fingerprints for every first-party authored skill.
+
 ## Non-negotiable destination boundary
 
 During normal use, **`skillz` is a read-only knowledge source, not the destination for skills derived for a user.**

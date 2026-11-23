@@ -16,14 +16,14 @@ availability: in-repo
 local_path: skills/authored/reference-integrity-auditor/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib
 dependencies: >-
   Original seven-file self-contained skill; optional Python 3.9+
   standard-library checker over host-provided permitted JSON metadata.
   No online Skillz policy, sibling package, network, crawler or credentials required.
-content_blob_sha: 7ee18deb36d517b3c43b43cfdfbf47ae54efa327
-complete_package_tree_sha: 5a2008481596cc9b89d441a50c8db2dc00234571
+content_blob_sha: 230590495230a3a1bc724fc2ad853977499f06dd
+complete_package_tree_sha: fb4524778a6c5349801659b027ddf113bc447a85
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

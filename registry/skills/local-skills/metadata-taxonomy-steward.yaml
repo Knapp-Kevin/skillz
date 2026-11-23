@@ -16,14 +16,14 @@ availability: in-repo
 local_path: skills/authored/metadata-taxonomy-steward/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: >-
   Passive text/reference-only. Live source traversal, target verification, tag
   updates or shared indexes require separately available and explicitly
   authorized host capabilities; no scripts, credentials or service bundled.
-content_blob_sha: 4e4f7c0c4595e95c9628d933146cd253afa41fbd
-complete_package_tree_sha: dee7107d9886e44e9afca4d985db9a5fb92d5b56
+content_blob_sha: 93955fbd186afbb6238cd8a3eb5a5cfdbd954596
+complete_package_tree_sha: e0d7a19d08d33e625dfaa2b44925cbc3f4e44ff9
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/evidence-narrative-composer/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 1e8cb987017c06dd12b995ed22055dc6b3367b45
-complete_package_tree_sha: 2b1a5f2885c4d60bf7446ed1eeb0691ea7a8b12f
+content_blob_sha: 0e43a3e0a48bf7a3a1320416e613e723529d6ad8
+complete_package_tree_sha: f1b4c6286784a91fe0872dccd459cf121fa14365
 historical_comparators: "skills/deck-outline/SKILL.md; skills/devlog-draft/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

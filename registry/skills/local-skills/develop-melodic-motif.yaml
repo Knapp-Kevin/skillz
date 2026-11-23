@@ -16,12 +16,12 @@ availability: in-repo
 local_path: skills/authored/develop-melodic-motif/SKILL.md
 permission_tier: generate-only
 portability: high
-review_status: verified-structured
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: Task brief and authorized musical material; text output requires no external tool. Listening, transcription,
   MIDI export and file edits need available host capabilities and applicable action authority.
-content_blob_sha: daa9645531208e3f1df730792b984ac2afac5a03
-complete_package_tree_sha: 3342392bab431158deae93792dc87efe23e45397
+content_blob_sha: 78a870045b8f8e1a18ad4f4fd64cd461a35397bb
+complete_package_tree_sha: 660b3cfdf86ae8221e0d28ee982a3135036a24ed
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: Original, independently expressed constrained melody-development procedure and original event-table example. Complete

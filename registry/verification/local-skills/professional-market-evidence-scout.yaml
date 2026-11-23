@@ -7,16 +7,16 @@ license_evidence_path: skills/authored/professional-market-evidence-scout/LICENS
 copyright_holder: Kevin Knapp
 local_path: skills/authored/professional-market-evidence-scout/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5c1003c2bd3d13d972eff6fd52dd47ec03d327d2
-complete_package_tree_sha: 4c7fe969e2c9d181d46924c570e2653a7c067fc1
+content_blob_sha: 48d5c4a11f98bcf40f019f57df474ed69e5f5d7c
+complete_package_tree_sha: e77e02c6856b318d5dad57293afc1a8f07072475
 characterized_at: "2026-11-19"
 reviewed_at: "2026-11-19"
-verification_status: verified
-verification_basis: maintainer-complete-package-static-review
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
 validation_status: not-run
-validation_note: "Only original instruction, synthetic fixtures and license inspected. No behavioral agent or actual external source access test."
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]

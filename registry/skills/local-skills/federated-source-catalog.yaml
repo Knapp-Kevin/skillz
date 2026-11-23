@@ -16,14 +16,14 @@ availability: in-repo
 local_path: skills/authored/federated-source-catalog/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: >-
   Text-only catalog planning requires supplied source details. Live federation
   requires independently connected, authorized host source tools. No bundled
   OAuth/client, storage, index, sync, watcher, or deletion runtime.
-content_blob_sha: 8d218771193ccefa162479e1a57fd08e9b4ba60a
-complete_package_tree_sha: 68978717ac4bdb9766ebeab1616feec2196c8573
+content_blob_sha: 5b23996b83edcd6177cd84304173987adfa4b7b3
+complete_package_tree_sha: 5ff18fa29b02b0d15197895245fd7fb25952bc43
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

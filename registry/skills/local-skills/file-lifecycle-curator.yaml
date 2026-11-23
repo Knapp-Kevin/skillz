@@ -16,14 +16,14 @@ availability: in-repo
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-structured
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: >-
   Authorized inputs for source inspection. Inventory, tagging, metadata decks, planning
   and excerpt-limited indexing are text-only; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
-content_blob_sha: 3e35bdf625b617fea62d9758501d5fc61c444dca
-complete_package_tree_sha: 33a8e598e64478a763e335a2dea9f6eef34a7528
+content_blob_sha: f099e5d36af3e347a6241814b7b543dcc7ff82c2
+complete_package_tree_sha: d7bd1052e3f056138e57ec7651706e6416ea2458
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
