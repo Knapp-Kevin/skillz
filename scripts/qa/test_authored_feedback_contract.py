@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Portable first-party authored feedback contract: offline QA, no issue posting."""
 import json
+import re
 from pathlib import Path
 import re
 import subprocess
@@ -105,6 +106,32 @@ class FeedbackContractTests(unittest.TestCase):
                 git_sha("skills/authored/" + p.name),
                 p.name + " stale complete-package identity",
             )
+
+    def test_all_provenance_and_verification_companions_match_updated_source(self):
+        index = json.loads(INDEX.read_text(encoding="utf-8"))
+        for row in index["skills"]:
+            name = row["id"]
+            for prefix in ("skills", "verification"):
+                path = ROOT / "registry" / prefix / "local-skills" / (name + ".yaml")
+                text = path.read_text(encoding="utf-8")
+                self.assertRegex(text, r"(?m)^content_blob_sha: " +
+                                 re.escape(row["skill_blob_sha"]) + r"$")
+                self.assertRegex(text, r"(?m)^complete_package_tree_sha: " +
+                                 re.escape(row["package_tree_sha"]) + r"$")
+                if prefix == "skills":
+                    self.assertRegex(text, r"(?m)^review_status: needs-re-review$")
+                else:
+                    self.assertRegex(text, r"(?m)^verification_status: needs-re-review$")
+                    self.assertRegex(text, r"(?m)^validation_status: not-run$")
+            self.assertEqual(row["review_status"], "needs-re-review")
+            self.assertEqual(row["behavioral_validation"], "not-run")
+
+    def test_no_fake_anonymous_account_guarantee(self):
+        for p in packages():
+            footer = (p / "SKILL.md").read_text(encoding="utf-8").split(HEADING, 1)[1]
+            self.assertIn("GitHub displays the posting account", footer)
+            self.assertIn("only the **content** can be anonymized", footer)
+            self.assertNotIn("anonymous submission guaranteed", footer.casefold())
 
     def test_required_privacy_and_account_disclosure_in_issue_form(self):
         text = TEMPLATE.read_text(encoding="utf-8")
