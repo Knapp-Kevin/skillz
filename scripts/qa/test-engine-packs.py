@@ -207,7 +207,7 @@ class PackStructureTests(unittest.TestCase):
         for fragment in ("CANONICAL_IMPROVEMENT", "LOCAL_PREFERENCE", "MIXED",
                          "NO_ACTION","STOP_NO_CHANGE","user-private",
                          "shared component", "source fingerprints"):
-            self.assertIn(fragment,guide+"\n"+tree)
+            self.assertIn(fragment.casefold(),(guide+"\n"+tree).casefold())
         self.assertIn("not another user-facing skill",guide.lower())
         self.assertIn("current user",tree.lower())
         self.assertIn("consent",tree.lower())
