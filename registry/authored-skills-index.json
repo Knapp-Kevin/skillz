@@ -1356,8 +1356,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/effort-allocation-navigator.yaml",
       "verification_path": "registry/verification/local-skills/effort-allocation-navigator.yaml",
-      "skill_blob_sha": "93b29536b328a8c6f8f6a9f9bc46e36eb68f2b9a",
-      "package_tree_sha": "ffb2ee782db217a0da9ae8e3e685932b64858a79",
+      "skill_blob_sha": "1e3ad08ebf4951b1bd41f5d8bc0d3b5e55c645f4",
+      "package_tree_sha": "3546bf5d9ad7770dc48ce43da22a44d218bbb733",
       "package_file_count": 11,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1371,7 +1371,7 @@
         "time-productivity/personal-planning",
         "planning/decision-frameworks"
       ],
-      "review_note": "Second adversarial pass: 18 additional planted cases on unchanged production method, intended as red baseline before bounded refinement; pending actual CI. Prior 78/78 passed, real host outcomes NOT_RUN."
+      "review_note": "Second adversarial pass recorded exact-head RED baseline: 96 synthetic tests, 89 passing, 5 failures, 2 errors in newly planted cases, with 78 prior cases preserved. Four defects targeted by bounded refinement (external milestone blockers; unexpanded/acceptance-pending milestones; positive milestone duration refusal; same-lane mandatory alternative deferral). Refined 101-case exact-head qualification pending; no actual agent or user outcome validated. Package version unchanged 0.1.0."
     }
   ]
 }

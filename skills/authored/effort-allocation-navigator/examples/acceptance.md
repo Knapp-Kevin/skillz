@@ -35,6 +35,39 @@ narratives below support future authorized human/agent trials.
 | User says "continue" next turn | Reuse objective, selected option, actual progress, blockers; update only changed task edges |
 | AI claims user became more productive | Require independent baseline and actual measured outcome, not anecdote or synthetic pass |
 
+## Second adversarial-first qualification, November 23 2026
+
+**Order:** The 18 wholly fictional cases in
+[round-two adversarial tests](../tests/test_adversarial_round2.py)
+were committed and run against the **unchanged** merged v0.1.0 planner
+before production code was touched. The [recorded red run](https://github.com/Knapp-Kevin/skillz/actions/runs/45275341228)
+executed 96 tests: 89 passed, 5 failed assertions, and 2 errors
+in the new adversarial cases. All 78 prior tests passed.
+
+Four demonstrated correction targets:
+1. Represent externally blocked approval milestones as legitimate
+   blocked states rather than rejecting them at input validation.
+2. Distinguish an unexpanded unfinished milestone from BLOCKED,
+   and an unconfirmed milestone with all dependencies done from
+   actually completed work.
+3. Reject nonzero elapsed durations on milestones that the graph
+   otherwise silently excludes from critical-path estimates.
+4. Warn that choosing an alternative to start necessarily defers
+   the primary mandatory obligation even when both share the same
+   safety or imminent-deadline lane.
+
+**Refinement after red evidence:** These four changes are bounded.
+Five additional regression tests were added for newly distinguished
+milestone states, bringing source-method coverage to **101 cases**
+once executed on the refined head. They are not part of the original
+red run. The earlier 78 cases remain protected; no source or schema
+version increment or automatic task execution is introduced.
+
+**Evidence limitation:** Input claims are not externally authenticated.
+No genuine agent-host task interpretation, user outcome, preference
+persistence or measured ADHD benefit has been observed. Source
+tests establish only deterministic behavior of an offline helper.
+
 ## Evaluation roadmap
 
 1. **Source/algorithm:** synthetic graph and refusal tests; guard against

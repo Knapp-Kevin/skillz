@@ -101,7 +101,12 @@ def validate(document):
             integer(value, 1, 5)
         integer(urgency, 0, 3)
         if kind == "milestone":
-            refuse(effort is None and value is None and not external)
+            # Milestones represent zero-duration gates, not executable
+            # work. External approvals are legitimate non-executable
+            # blockers; their elapsed wait is unknown unless modeled as
+            # a separate action with supported duration.
+            refuse(effort is None and value is None)
+            refuse(elapsed is None or elapsed == 0)
         due = item.get("due_date")
         if due is not None:
             iso_date(due)
@@ -161,6 +166,11 @@ def critical_path(tasks, goal, scope):
     if any(tasks[key]["external_blocker"] and tasks[key]["state"] != "done"
            for key in scope):
         return {"status": "EXTERNAL_DURATION_UNBOUNDED", "path": []}
+    if any(tasks[key]["kind"] == "milestone" and
+           tasks[key]["state"] != "done" and
+           not tasks[key]["depends_on"] and
+           not tasks[key]["external_blocker"] for key in scope):
+        return {"status": "UNEXPANDED_MILESTONE", "path": []}
     if any(tasks[key]["duration_days"] is None and
            not (tasks[key]["kind"] == "milestone" or tasks[key]["state"] == "done")
            for key in scope):
@@ -208,6 +218,7 @@ def plan(document):
                 "coverage": {"considered": len(scope), "ready": 0, "blocked": 0, "unscored": 0}}
     path = critical_path(tasks, goal, goal_scope)
     ready, blocked = [], []
+    needs_decomposition, needs_verification = [], []
     for key in sorted(incomplete):
         task = tasks[key]
         missing = sorted(dep for dep in task["depends_on"]
@@ -217,6 +228,54 @@ def plan(document):
                             "external_blocker": task["external_blocker"]})
         elif task["kind"] == "action":
             ready.append(key)
+        elif not task["depends_on"]:
+            # A milestone is not an action. A bare, nonexternal
+            # unfinished milestone has no executable work defined.
+            needs_decomposition.append(key)
+        else:
+            # All predecessors are declared done; the milestone itself
+            # still lacks acceptance evidence. Do not mark it DONE.
+            needs_verification.append(key)
+
+    def assessment_choice(ids, action, mode):
+        chosen = ids[:choice_count]
+        return {
+            "status": "PROVISIONAL_CALLER_ASSERTIONS", "mode": mode,
+            "choices": [{"task_id": key,
+                         "role": "primary" if i == 0 else "alternative",
+                         "action": action} for i, key in enumerate(chosen)],
+            "critical_path": path,
+            "scope_extension_ids": scope_extensions,
+            "needs_decomposition_ids": needs_decomposition,
+            "needs_verification_ids": needs_verification,
+            "blocked": blocked,
+            "unscored_task_ids": [],
+            "coverage": {"considered": len(scope), "ready": len(ready),
+                         "blocked": len(blocked), "unscored": 0},
+        }
+
+    def protected_milestone(key):
+        task = tasks[key]
+        return (
+            task["obligation"] == "safety"
+            or (task["deadline_evidence"] == "owner-confirmed"
+                and (iso_date(task["due_date"]) - today).days <= 2)
+        )
+
+    # A mandatory but unexpanded obligation must not vanish behind
+    # a lower-priority scored task merely because it has no action row.
+    urgent_decomposition = [key for key in needs_decomposition
+                            if protected_milestone(key)]
+    if urgent_decomposition:
+        return assessment_choice(urgent_decomposition,
+                                 "DEFINE_REQUIRED_NEXT_STEP",
+                                 "NEEDS_DECOMPOSITION")
+    urgent_verification = [key for key in needs_verification
+                           if protected_milestone(key)]
+    if urgent_verification:
+        return assessment_choice(urgent_verification,
+                                 "CONFIRM_MILESTONE_COMPLETION",
+                                 "NEEDS_VERIFICATION")
     scored, unscored = [], []
 
     def exposure(key):
@@ -296,6 +355,8 @@ def plan(document):
                          "action": "ESTIMATE_OR_CONFIRM"} for i, key in enumerate(chosen)],
             "critical_path": path, "unscored_task_ids": unscored,
             "scope_extension_ids": scope_extensions, "blocked": blocked,
+            "needs_decomposition_ids": needs_decomposition,
+            "needs_verification_ids": needs_verification,
             "coverage": {"considered": len(scope), "ready": len(ready),
                          "blocked": len(blocked), "unscored": len(unscored)},
         }
@@ -332,12 +393,22 @@ def plan(document):
         row["fits_available_capacity"] = (
             None if capacity is None else row["effort_minutes"] <= capacity
         )
+        # Even equal-lane mandatory actions remain independent obligations.
+        # Choosing one to begin does not discharge the other.
         row["requires_deferral_of_primary"] = (
-            index > 0 and selected[0]["priority_lane"] != row["priority_lane"]
+            index > 0 and selected[0]["priority_lane"] != "DISCRETIONARY"
         )
         # A first slice is NOT proof the full task fits or was finished.
         # The user may choose an alternative; these are suggestions, not mandates.
     mode = "EXECUTE" if selected else ("ESTIMATE" if unscored else "BLOCKED")
+    if not selected and not unscored and needs_decomposition:
+        return assessment_choice(needs_decomposition,
+                                 "DEFINE_REQUIRED_NEXT_STEP",
+                                 "NEEDS_DECOMPOSITION")
+    if not selected and not unscored and needs_verification:
+        return assessment_choice(needs_verification,
+                                 "CONFIRM_MILESTONE_COMPLETION",
+                                 "NEEDS_VERIFICATION")
     if mode == "ESTIMATE":
         selected = [{"task_id": key, "role": "primary" if i == 0 else "alternative",
                      "action": "ESTIMATE_OR_CONFIRM"}
@@ -346,6 +417,8 @@ def plan(document):
         "status": "PROVISIONAL_CALLER_ASSERTIONS", "mode": mode,
         "choices": selected, "critical_path": path,
         "scope_extension_ids": scope_extensions,
+        "needs_decomposition_ids": needs_decomposition,
+        "needs_verification_ids": needs_verification,
         "unscored_task_ids": unscored,
         "blocked": blocked,
         "coverage": {"considered": len(scope), "ready": len(ready),

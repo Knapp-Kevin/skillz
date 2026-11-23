@@ -80,6 +80,11 @@ A task board is not authorization.
    dependence. Reject cycles and missing task IDs; never silently
    treat unknown ancestors as done. Show the nearest actionable
    prerequisite when the attractive downstream task is blocked.
+   Non-executable milestones require explicit classification: an
+   external approval gate is BLOCKED; an unfinished milestone without
+   prerequisites NEEDS_DECOMPOSITION; a milestone whose prerequisites
+   are declared done but whose acceptance is still missing
+   NEEDS_VERIFICATION. None is evidence of completion.
    A confirmed deadline or safety obligation on a downstream item
    elevates the eligible prerequisites that actually unlock it.
    A selected goal must not hide unrelated safety obligations or
@@ -91,7 +96,9 @@ A task board is not authorization.
    selected milestone, complete ancestor dependencies, comparable
    *elapsed durations* and explicit parallel-work assumptions exist.
    Person-hours, effort points and calendar elapsed days are not
-   interchangeable. If a single person must do all work, a
+   interchangeable. Milestones are zero-duration gates, never tasks
+   with silently ignored positive durations. An unexpanded goal
+   cannot produce a qualified delivery critical path. If a single person must do all work, a
    dependency-only critical path is **not a resource-constrained
    delivery forecast**. Otherwise show a qualitative structural
    blocker chain and label it unqualified.
@@ -121,7 +128,9 @@ A task board is not authorization.
    value. Do not manufacture novelty by choosing a markedly worse
    task. An alternative from a lower obligation lane must visibly
    disclose that it **defers** higher-priority work and is not
-   equivalent to meeting a mandatory obligation.
+   equivalent to meeting a mandatory obligation. Even two equally
+   mandatory alternatives remain separate obligations: starting one
+   postpones starting the other, which is not considered discharged.
    If no alternative is ready, state why. Never claim two tasks are
    interchangeable when one is a mandatory predecessor. **The user
    retains the decision.** A host may execute an authorized choice
@@ -141,8 +150,9 @@ local JSON task snapshot, validates dependency references and cycles,
 counts downstream/immediate unlocks, keeps missing estimates unscored,
 elevates required prerequisites of safety and confirmed near-deadline
 obligations, includes off-goal focus exceptions, refuses contradictory
-completed-dependency states and prefers genuinely different comparable
-alternatives. It offers up to two choices by default and optionally computes a
+completed-dependency states, distinguishes unexpanded milestones from
+external blocking and pending acceptance verification, and prefers
+genuinely different comparable alternatives. It offers up to two choices by default and optionally computes a
 dependency-only elapsed-duration critical path. It emits **task IDs
 only**, never free-text descriptions, private filenames, account
 identities or source content. The host maps IDs to authorized local

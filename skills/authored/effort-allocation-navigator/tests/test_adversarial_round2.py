@@ -149,5 +149,48 @@ class SecondAdversarialPass(unittest.TestCase):
         self.assertEqual(result["choices"][0]["task_id"], "audit")
 
 
+    # Refinement follow-up guards for the newly distinguished non-action
+    # milestone states, added AFTER the red adversarial evidence.
+    def test_all_prerequisites_done_milestone_needs_acceptance(self):
+        output = planner.plan(snapshot(
+            task("prepare", state="done"), goal("ready", ["prepare"]),
+            goal_id="ready"))
+        self.assertEqual(output["mode"], "NEEDS_VERIFICATION")
+        self.assertEqual(output["choices"][0]["action"],
+                         "CONFIRM_MILESTONE_COMPLETION")
+        self.assertEqual(output["needs_verification_ids"], ["ready"])
+
+    def test_mandatory_verification_preempts_unrelated_easy_work(self):
+        output = planner.plan(snapshot(
+            task("prepare", state="done"),
+            goal("audit-gate", ["prepare"], obligation="safety"),
+            task("optional", effort_minutes=5, value=5)))
+        self.assertEqual(output["mode"], "NEEDS_VERIFICATION")
+        self.assertEqual(output["choices"][0]["task_id"], "audit-gate")
+
+    def test_mandatory_decomposition_preempts_unrelated_easy_work(self):
+        output = planner.plan(snapshot(
+            goal("safety-gate", obligation="safety"),
+            task("optional", effort_minutes=5, value=5)))
+        self.assertEqual(output["mode"], "NEEDS_DECOMPOSITION")
+        self.assertEqual(output["choices"][0]["task_id"], "safety-gate")
+
+    def test_optional_milestone_gap_visible_while_work_progresses(self):
+        output = planner.plan(snapshot(
+            goal("unexpanded"), task("useful", value=4, effort_minutes=20)))
+        self.assertEqual(output["mode"], "EXECUTE")
+        self.assertEqual(output["choices"][0]["task_id"], "useful")
+        self.assertIn("unexpanded", output["needs_decomposition_ids"])
+
+    def test_blocked_external_gate_not_falsely_marked_verified(self):
+        output = planner.plan(snapshot(
+            task("prepare", state="done"),
+            goal("approval", ["prepare"], external_blocker=True),
+            goal_id="approval"))
+        self.assertEqual(output["mode"], "BLOCKED")
+        self.assertNotIn("approval", output["needs_verification_ids"])
+        self.assertEqual(output["blocked"][0]["task_id"], "approval")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
