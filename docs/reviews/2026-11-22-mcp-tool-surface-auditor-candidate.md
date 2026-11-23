@@ -44,7 +44,7 @@ security assessment is functionally equivalent to tool exposure parity.
 ## Acceptance and limitations
 
 - 33 synthetic tests planted; hosted exact source QA **PENDING**.
-- Package tree `5219219fcce04b619e7d6202acf8d3e0720eef1f`; skill blob `1b8e3367700452c3bd01bda4bb4840b9ca5bab8e`.
+- Package tree `1addc2d5a6ea52e4e14e9bc242161bbe8aef8cdd`; skill blob `61ee3ee491526be54577c3766673261abd6e2960`.
 - Independent semantic/host validation **NOT_RUN**; actual user
   integration recovery and social-post ROI **NOT_MEASURED**.
 - Published users must not confuse a synthetic comparison with a live
