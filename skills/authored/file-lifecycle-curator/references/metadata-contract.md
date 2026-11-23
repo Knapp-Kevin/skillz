@@ -66,4 +66,9 @@ RETENTION: <policy / unknown / hold> | ARCHIVE: <proposal only or actual receipt
 NEXT ACTION: <optional permissioned proposal>
 ```
 
-A deck is a readable view of the index, not an irreversible alteration to source files. If the card or index is exported, include the generation scope, observed snapshot, redaction status and data-owner permission.
+A deck is a readable view of the index, not an irreversible alteration to source files.
+An optional [visual structure view](visual-progress-contract.md) is also
+only a projection of source-scoped index and operation-ledger evidence:
+observed, proposed and read-back-attested states must not be merged into
+one unqualified "final" tree. It is not a new persistent metadata source
+or permission to display filenames to an unauthorized audience. If the card or index is exported, include the generation scope, observed snapshot, redaction status and data-owner permission.

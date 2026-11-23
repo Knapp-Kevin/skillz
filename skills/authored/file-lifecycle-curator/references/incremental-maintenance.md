@@ -72,6 +72,12 @@ requiring scope-specific authorization and readback.
    changed/new/missing-with-qualifier counts, no-change result or work items,
    primary safe next action and useful alternative, protected holds,
    cost/coverage and one continuation point. No verbose task avalanche.
+   When a source-scoped organization plan actually exists and the owner
+   requests it, re-render the [three-state visual structure](visual-progress-contract.md)
+   from the new authorized source/operation ledger. Do not promote an
+   old proposed diagram or stale checkpoint into current completion.
+   Private visual output to a scheduled delivery channel requires its
+   own approved audience.
 7. **Persist only if authorized**, with checksum/readback as supported.
    A proposed checkpoint is NOT_SAVED, and a saved checkpoint is NOT proof
    of performed file operations. Retries using the same accepted snapshot
