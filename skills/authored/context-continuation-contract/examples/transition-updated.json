@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "workstream_id": "fictional-release-repair",
+  "revision": 2,
+  "objective": "Verify fictional PR integration",
+  "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "permission_scope": [
+    "read_only"
+  ],
+  "guardrails": [
+    {
+      "id": "required-checks",
+      "text": "Keep security and native checks"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "chosen-scope",
+      "text": "Limit to source and hosted verification",
+      "authority_ref": "fictional-owner-note"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "source-test",
+      "criterion": "Run exact source tests",
+      "acceptance_kind": "local_test",
+      "state": "completed",
+      "proof": {
+        "kind": "local_test",
+        "ref": "fictional-offline-test",
+        "source_revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "host-gate",
+      "criterion": "Verify hosted gate at exact HEAD",
+      "acceptance_kind": "host_receipt",
+      "state": "current",
+      "proof": null
+    }
+  ],
+  "next_action": "host-gate",
+  "claimed_complete": false,
+  "context_gap": false
+}
