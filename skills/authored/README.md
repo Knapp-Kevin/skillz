@@ -93,6 +93,7 @@ packages or historical repo-bound procedures that we do not own.
 | [Professional Market Evidence Scout](professional-market-evidence-scout/SKILL.md) | Research professional roles and compensation evidence |
 | [Statement Variance Reviewer](statement-variance-reviewer/SKILL.md) | Reconcile financial statements and explain variances |
 | [Business Presence Observatory](business-presence-observatory/SKILL.md) | Assess public business presence and discoverability |
+| [Effort Allocation Navigator](effort-allocation-navigator/SKILL.md) | Prioritize dependent tasks, blockers and payoff versus effort with a primary next action and bounded alternative |
 | [Personal Operations Control Board](personal-operations-control-board/SKILL.md) | Plan personal work with honest status and priorities |
 | [Work Period Evidence Reporter](work-period-evidence-reporter/SKILL.md) | Report completed work using observable evidence |
 

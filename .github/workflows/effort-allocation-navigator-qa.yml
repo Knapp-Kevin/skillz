@@ -1,0 +1,34 @@
+name: Effort Allocation Navigator offline contracts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/effort-allocation-navigator/**'
+      - 'registry/skills/local-skills/effort-allocation-navigator.yaml'
+      - 'registry/verification/local-skills/effort-allocation-navigator.yaml'
+      - '.github/workflows/effort-allocation-navigator-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: effort-choice-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-task-graph:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # pinned v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Exercise synthetic graph, blocker and bounded-choice invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/effort-allocation-navigator/tests -p 'test_*.py' -v
+          python3 -B skills/authored/effort-allocation-navigator/scripts/plan.py --input skills/authored/effort-allocation-navigator/examples/fictional-tasks.json
