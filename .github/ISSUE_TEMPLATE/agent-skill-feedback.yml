@@ -8,6 +8,11 @@ body:
         This form is OPTIONAL. Use only fictional or cleared public examples.
         Do not paste conversations, private code, client/repository names, paths,
         credentials, identifiers, screenshots, logs, or raw user data.
+        Removing a project name is not enough: exact CI job/matrix counts,
+        run/commit IDs, distinctive timings and command/host combinations
+        can identify a consumer through public history. Replace them with
+        fully fictional, clearly labeled examples; do not include links
+        to the consuming project or reproduce real trace fragments.
         A skill-using agent may submit through an explicitly authorized host,
         but GitHub shows the authenticated poster. Content can be anonymized;
         the account identity is not anonymous.
@@ -36,7 +41,7 @@ body:
     id: evidence
     attributes:
       label: What happened?
-      description: Minimal, generalized, nonidentifying observed behavior. Label simulation or inference honestly.
+      description: Generalize the failure class without source fingerprints. Distinguish real observation (details withheld) from fictional reproductions or inferred outcomes.
       placeholder: "On a synthetic input, the skill recommended X. No external run was made."
     validations:
       required: true
@@ -59,5 +64,5 @@ body:
     attributes:
       label: Privacy and authorization
       options:
-        - label: I checked that the submitted content has no sensitive or identifying user, organization, repository, credential, or conversation data, and I have authorization to post publicly.
+        - label: I have authorization to post publicly and checked names, links, copied traces, exact run/commit IDs, distinctive metrics, timestamps and workflow details for possible consumer reidentification. The public example is fully fictional or explicitly cleared.
           required: true
