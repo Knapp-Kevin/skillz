@@ -256,7 +256,7 @@ class HostEvidenceTests(unittest.TestCase):
         old=observed()
         def fake(url,token):
             if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
-            if "page=1" in url:
+            if "&page=1" in url:
                 return {"total_count":101,"jobs":[{"id":i+1} for i in range(100)]}
             return {"total_count":100,"jobs":[{"id":101}]}
         with self.assertRaisesRegex(audit.Hold,"changed between pages"):
@@ -266,7 +266,7 @@ class HostEvidenceTests(unittest.TestCase):
         old=observed()
         def fake(url,token):
             if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
-            if "page=1" in url:
+            if "&page=1" in url:
                 return {"total_count":101,"jobs":[{"id":i+1} for i in range(100)]}
             return {"total_count":101,"jobs":[{"id":100}]}
         with self.assertRaisesRegex(audit.Hold,"duplicate provider job ID"):
@@ -277,9 +277,9 @@ class HostEvidenceTests(unittest.TestCase):
         def fake(url,token):
             seen.append(url)
             if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
-            if "page=1" in url:
+            if "&page=1" in url:
                 return {"total_count":101,"jobs":[{"id":i+1} for i in range(100)]}
-            if "page=2" in url:
+            if "&page=2" in url:
                 return {"total_count":101,"jobs":[{"id":101}]}
             raise AssertionError("unexpected third API request")
         result=audit.observe_live(mapping(),getter=fake)
