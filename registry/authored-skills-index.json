@@ -1184,6 +1184,37 @@
       "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA b2978c95e255b132d11720b32f6d22b246b6d17b and full package a7d3759fe1b8beb859702f40a3e43ccaa30eca52 pinned. Previous evidence applies to earlier source 4473795a0fbd41b0d7765ec61fd51c0e65da7948, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump.",
       "previous_reviewed_skill_blob_sha": "85f7e864733a18293a85b1dded50a93c79d75d73",
       "previous_reviewed_package_tree_sha": "463c5c51e3a1c2469420cfa2fde87c39967655a1"
+    },
+    {
+      "id": "mcp-tool-surface-auditor",
+      "display_name": "MCP Tool Surface Auditor",
+      "source_class": "first-party-authored",
+      "origin_issue": "https://github.com/Knapp-Kevin/skillz/issues/878",
+      "package_path": "skills/authored/mcp-tool-surface-auditor",
+      "entrypoint": "skills/authored/mcp-tool-surface-auditor/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/mcp-tool-surface-auditor/LICENSE",
+      "license_inheritance": "Independently authored original first-party text, stdlib static comparator and synthetic fixtures; no third-party skill material reused.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-22",
+      "provenance_path": "registry/skills/local-skills/mcp-tool-surface-auditor.yaml",
+      "verification_path": "registry/verification/local-skills/mcp-tool-surface-auditor.yaml",
+      "skill_blob_sha": "1b8e3367700452c3bd01bda4bb4840b9ca5bab8e",
+      "package_tree_sha": "5219219fcce04b619e7d6202acf8d3e0720eef1f",
+      "package_file_count": 7,
+      "review_status": "needs-re-review",
+      "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only; optional offline comparison on sanitized caller-supplied file; live host capture requires separate authorization",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original MIT skill; no private tool arguments, credentials, customer data or external source instructions copied. Source hashes are structural and do not authenticate actual host captures.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "agent-mcp-development/mcp-clients-servers",
+        "agent-mcp-development/evaluation"
+      ],
+      "review_note": "Standalone 7-file original source candidate. Optional stdlib offline backend/MCP/host list reconciliation and fictional 18/12 case, 33 adversarial tests pending hosted execution. Exact package pins established; no live MCP transport/host, security scans or consumer outcomes observed."
     }
   ]
 }

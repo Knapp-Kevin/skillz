@@ -47,6 +47,7 @@ packages or historical repo-bound procedures that we do not own.
 | [Skill Trial Evidence Auditor](skill-trial-evidence-auditor/SKILL.md) | Check paired skill-trial evidence and withheld effect claims |
 | [Agent Failure Boundary Analysis](agent-failure-boundary-analysis/SKILL.md) | Reconstruct agent failure causes and falsifiable boundaries |
 | [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) | Assess tool effects and connector security/authority |
+| [MCP Tool Surface Auditor](mcp-tool-surface-auditor/SKILL.md) | Compare claimed backend, MCP, and host-visible tool lists without inventing a root cause |
 | [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) | Map effective permissions and least-privilege change risk |
 | [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) | Distinguish scheduled jobs from observed delivery |
 | [Context Continuation Contract](context-continuation-contract/SKILL.md) | Carry verified context across agents and sessions |

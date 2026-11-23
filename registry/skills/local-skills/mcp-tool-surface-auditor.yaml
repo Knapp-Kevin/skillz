@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: mcp-tool-surface-auditor
+display_name: "MCP Tool Surface Auditor"
+skill_version: "0.1.0"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/authored/mcp-tool-surface-auditor/SKILL.md
+source_class: first-party-authored
+license: MIT
+relationship: newly-authored-original
+copyright_holder: Kevin Knapp
+license_evidence_path: skills/authored/mcp-tool-surface-auditor/LICENSE
+curated_at: "2026-11-22"
+last_checked_at: "2026-11-22"
+availability: in-repo
+local_path: skills/authored/mcp-tool-surface-auditor/SKILL.md
+permission_tier: read-only
+portability: high
+review_status: needs-re-review
+dependency_status: self-contained-optional-python-stdlib
+dependencies: "Standalone 7-file first-party MIT skill; optional offline Python 3.9+ stdlib comparison script and 33 fictional regression tests. No server, tokens, API access, CI service, sibling skill or network needed."
+content_blob_sha: 1b8e3367700452c3bd01bda4bb4840b9ca5bab8e
+complete_package_tree_sha: 5219219fcce04b619e7d6202acf8d3e0720eef1f
+import_eligibility: review-required
+source_rights: "First-party independently authored script, text, tests, fixtures and MIT license. External MCP specification is factual prior art and optional reference, not copied skill expression."
+rationale: "New v0.1.0 issue #878 prototype. Differentiates tool-presence/contract comparison from connector trust review. Exact source pinned, hosted source acceptance pending; no live host capture, independent agent behavioral result, security scan or product success observed."
