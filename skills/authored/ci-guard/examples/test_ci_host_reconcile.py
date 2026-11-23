@@ -388,7 +388,7 @@ class RetryReceiptTests(unittest.TestCase):
 
     def test_changed_carried_forward_interval_rejected(self):
         old,new=retry_pair()
-        new["workflow_runs"][0]["jobs"][1]["started_at"]="2026-11-22T12:02:00Z"
+        new["workflow_runs"][0]["jobs"][1]["started_at"]="2026-11-20T09:00:01Z"
         with self.assertRaisesRegex(audit.Hold,"changed execution window"):
             self.report(old,new)
 
