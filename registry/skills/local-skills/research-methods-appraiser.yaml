@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/research-methods-appraiser/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Host access to scoped sources as authorized; no bundled runtime or credentials"
-content_blob_sha: 022f443ef93cda1d3e9af25cc7cb2dfe9b75ad73
-complete_package_tree_sha: ee212b2da6863e8dc172ea95b67c6eb190603835
+content_blob_sha: 96330d08e0b4f7dc4d252b0f4d12ebb9ff112cd3
+complete_package_tree_sha: 82944c086c39bfa907a2b7913049e2f7099401ab
 historical_comparator: skills/paper-digest/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"

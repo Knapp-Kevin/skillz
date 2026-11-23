@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/scheduled-work-proof-auditor/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "No bundled execution or service; authorized host read scope only"
-content_blob_sha: 22fe02a8dc2b021c4badaeb1028f3e492ad8e12b
-complete_package_tree_sha: bd9254ce997d807b1bfe91c820b820fd51ae9cfc
+content_blob_sha: 58e5968f278459f4adaeac9542cb0e8f65b7354a
+complete_package_tree_sha: 48787dd5bde4341af123057e3fffbe9875f5228c
 historical_comparator: skills/automation-receipts/SKILL.md
 historical_origin_status: "Control of account does not establish underlying original authorship or rights"
 rights_resolution: "Only independently written new content is MIT; legacy texts remain untouched"
