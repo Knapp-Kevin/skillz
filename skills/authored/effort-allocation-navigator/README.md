@@ -70,15 +70,24 @@ blocked prerequisites, provisional scoring strategy, focus-scope exception
 IDs, explicit deferral warning on lower-lane alternatives, comparison
 coverage and conditional modeled critical path. The helper refuses
 DONE claims contradicted by incomplete mandatory prerequisites.
+It classifies unexpanded, externally blocked and acceptance-pending
+milestones separately, rather than inventing an executable action.
 It prefers a differently useful alternative when comparable without
 promoting a substantially lower-value task merely for variety.
+Even two choices in the same mandatory safety/deadline lane are not
+interchangeable; choosing the alternative defers the primary start.
 The host translates IDs to an actual approved, concrete
 next action with stop line and evidence. An optional third choice must
 be explicitly requested, and a single real choice must not be padded.
 
-**Critical path:** computed ONLY with a selected milestone and every
-unfinished antecedent having a distinct *elapsed duration*, no unknown
-external dependency and a declared model of unlimited parallel work.
+**Critical path:** computed ONLY with a selected, expanded milestone
+and every unfinished antecedent having a distinct *elapsed duration*,
+no unknown external dependency and a declared model of unlimited
+parallel work. A milestone must have zero duration; positive values
+are rejected rather than silently ignored. An unfinished unexpanded
+goal reports UNEXPANDED_MILESTONE, not a zero-day project.
+An externally blocked milestone is permitted, but its unknown wait
+prevents a qualified critical-path duration.
 It is NOT a personal resource-constrained schedule and is never
 calculated from effort minutes. Without these inputs, return
 NO_SELECTED_MILESTONE, GOAL_NOT_A_MILESTONE,
