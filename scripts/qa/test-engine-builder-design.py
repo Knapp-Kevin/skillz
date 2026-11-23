@@ -32,6 +32,7 @@ def pack_case():
         if not x["target"].startswith("steps.")
     ]
     d["probes"][-1]["obligation_ids"].remove("requirement-8")
+    d["probes"][0]["obligation_ids"].remove("requirement-8")
     for module in d["blueprint"]["modules"]:
         ident = "module-" + module["id"]
         d["obligations"].append({
