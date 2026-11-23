@@ -22,7 +22,7 @@ ACTIONS = {
 MAX_ACTIONS = 10
 
 
-def journal_health(conn, checkpoint):
+def journal_health(conn, checkpoint, deep=False):
     """Fail closed on broken generation continuity or forged last-run pointer.
 
     This verifies internal consistency, NOT authenticity against a hostile
@@ -49,11 +49,35 @@ def journal_health(conn, checkpoint):
             raise ValueError("invalid report")
     except (ValueError, reconcile.Invalid, TypeError):
         raise state.Refused("HISTORY_INTEGRITY_HOLD")
+    if deep:
+        # Weekly read-only structural audit, streaming rows without
+        # accumulating a second full copy of the accepted run journal.
+        # Schema 1 has no authenticated chain; this detects malformed
+        # history, not a malicious rewrite with valid replacement checksums.
+        for n, run, cadence, snapshot, payload, report_json in conn.execute(
+            "SELECT generation, run_id, cadence, snapshot_id, "
+            "payload_digest, report_json FROM accepted_runs ORDER BY generation"
+        ):
+            if cadence not in state.CADENCES or not isinstance(payload, str) or (
+                len(payload) != 64 or
+                any(ch not in "0123456789abcdef" for ch in payload)
+            ):
+                raise state.Refused("HISTORY_INTEGRITY_HOLD")
+            try:
+                reconcile.token(run)
+                reconcile.token(snapshot)
+                parsed = json.loads(
+                    report_json, object_pairs_hook=reconcile.unique_pairs)
+                if not isinstance(parsed, dict):
+                    raise ValueError("not a report")
+            except (reconcile.Invalid, TypeError, ValueError):
+                raise state.Refused("HISTORY_INTEGRITY_HOLD")
     return {"generation": generation, "accepted_runs": count,
-            "last_run_id": row[0]}
+            "last_run_id": row[0],
+            "audit_depth": "full-structural" if deep else "latest-and-continuity"}
 
 
-def inspect_checkpoint(store):
+def inspect_checkpoint(store, deep=False):
     """Read-only checkpoint inspection, never initializes or repairs a DB."""
     path = state.private_file_path(store)
     if not path.exists():
@@ -63,7 +87,7 @@ def inspect_checkpoint(store):
             checkpoint = state.read_state(conn)
             if checkpoint is None:
                 raise state.Refused("STATE_SCHEMA_HOLD")
-            receipt = journal_health(conn, checkpoint)
+            receipt = journal_health(conn, checkpoint, deep=deep)
             return checkpoint, receipt
     except sqlite3.DatabaseError as exc:
         raise state.Refused("STATE_IO_OR_INTEGRITY_HOLD") from exc
@@ -80,7 +104,7 @@ def maintenance(store, current, run_id, cadence, commit=False,
         row["viewer_check"] != "current-authorized" for row in current["records"]
     ):
         return {"status": "ACCESS_HOLD", "checkpoint_written": False}
-    found = inspect_checkpoint(store)
+    found = inspect_checkpoint(store, deep=(cadence == 'weekly'))
     previous_generation = found[0]["generation"] if found else 0
     if found is not None and found[0]["scan"]["scope"] != current["scope"]:
         raise state.Refused("CROSS_SCOPE_HOLD")
@@ -102,7 +126,8 @@ def maintenance(store, current, run_id, cadence, commit=False,
         return {"status": status, "checkpoint_written": False,
                 "generation": outcome["generation"], "maintenance": suggestions,
                 "maintenance_executed": False,
-                "source_operations_executed": False}
+                "source_operations_executed": False,
+                "journal_audit_depth": found[1]["audit_depth"] if found else "cold-start"}
     categories = list(ACTIONS[cadence])
     delta = outcome.get("counts", {})
     if delta.get("UNCHANGED_NO_REWORK", 0) and cadence == "weekly":
@@ -115,6 +140,7 @@ def maintenance(store, current, run_id, cadence, commit=False,
             "source_operations_executed": False,
             "continuity_verified_before_run": bool(found),
             "prior_generation": previous_generation,
+            "journal_audit_depth": found[1]["audit_depth"] if found else "cold-start",
             "maintenance_note": "Recommendations only; no source or index work executed."}
 
 
