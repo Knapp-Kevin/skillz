@@ -12,15 +12,19 @@ complete_package_tree_sha: 276956d067c8e86fdc8482a5242bedeefa0e22f4
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: persistent-state-source-contracts-pending-exact-head
-validation_status: not-run
+verification_basis: durable-local-state-exact-head-source-and-authored-tests-passed
+validation_status: passed-offline-contract-tests
 validation_note: >-
-  Source update adds opt-in durable private sqlite3 curation state
-  and 37 original synthetic persistence/adversarial tests,
-  alongside 81 protected maintenance and visual tests.
-  Initial 115-test CI 114 passed, 1 failed (cold-start cadence); final 118-case exact-head qualification PENDING. Real authorized file-host
-  readings, checkpoint in a user-controlled store, hourly/daily/
-  weekly scheduler invocations, source moves and user outcomes NOT_RUN.
+  Exact PR #904 head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6
+  118/118 source/adversarial tests PASS (run #45289252920),
+  including 37 new durable local SQLite tests and 81 prior
+  maintenance/visual cases. Authored registry tests 11/11 PASS
+  (run #45289253087). Socket PR and Project Report SUCCESS.
+  Cold-start cadence and historical snapshot-ID reuse reviewer
+  findings fixed and review threads resolved. Source tests
+  exercise real temporary local SQLite transactions, not actual
+  source-host permission, persistent user account, scheduler,
+  file mutation or production disaster recovery.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

@@ -183,7 +183,7 @@
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
       "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md",
-      "review_note": "Opt-in private SQLite persistent curation, still v1.1.1. Exact first CI 115 tests: 114 passed, 1 cadence validation fail, fixed. Automated review identified non-latest historical source snapshot ID reuse, which could falsify last_seen; fixed with accepted-runs lookup and two additional regression cases. Final 118 source tests pending exact-head CI; 81 prior tests unchanged. No live agent/host file access, actual private user store, recurring task, file move, index persistence or user outcome.",
+      "review_note": "Durable persistent organization state, original first-party v1.1.1; full 22-file package. PR #904 corrected source head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6 passed 118/118 offline source tests (81 prior + 37 new SQLite persistence/adversarial, GitHub Actions #45289252920), 11/11 authored integrity (#45289253087); Socket PR Alerts and Project Report SUCCESS. Automated review found and confirmed fixes to first-preview cadence guard and historical snapshot-ID replay; both threads resolved. Manual correction avoids falsely calling unobserved partial records unchanged. Real host account ACL, actual private user checkpoint, schedule creation/delivery, file operation, power-failure restore and user productivity NOT_RUN; review_status remains needs-re-review.",
       "previous_reviewed_skill_blob_sha": "3e35bdf625b617fea62d9758501d5fc61c444dca",
       "previous_reviewed_package_tree_sha": "33a8e598e64478a763e335a2dea9f6eef34a7528"
     },

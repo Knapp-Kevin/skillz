@@ -29,12 +29,16 @@ complete_package_tree_sha: 276956d067c8e86fdc8482a5242bedeefa0e22f4
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Original 22-file source version 1.1.1 gains opt-in transactional
-  private SQLite checkpoint continuity across hourly/daily/weekly agent
-  invocations, with 37 new synthetic tests and 81 historical protected
-  source tests. Initial 115-case CI 114 passed, 1 failed (cold-start cadence); final 118-case source CI pending. No host-proven user permissions,
-  actual source file mutation, scheduled task or real persistent
-  user checkpoint claimed.
+  Original first-party 22-file v1.1.1 curation skill supports
+  opt-in private SQLite checkpoints and long-lived agent
+  organization state, without creating schedules or source-file
+  mutations. PR #904 source head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6
+  PASS 118/118 synthetic source tests (run #45289252920),
+  PASS 11/11 authored tests (run #45289253087), Socket PR/Project
+  checks SUCCESS. Reviewer-identified cadence and historical
+  snapshot-replay defects fixed. No source account, real
+  private user state or scheduled host behavior was observed.
+
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
 # Optional composition still requires independent host availability/authorization.
 # An offline-only negative scenario is bundled; no new host validation claimed.
