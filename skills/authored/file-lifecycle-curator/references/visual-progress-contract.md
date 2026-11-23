@@ -68,6 +68,15 @@ attempts as completed organization.
 
 ## Stable planning and scheduled-agent replay
 
+The optional [durable state component](durable-state.md) can retain
+the *last supplied* visual plan across hourly/daily/weekly agent
+invocations, along with its plan ID/revision, original/source IDs
+and scoped run receipt. A stored plan is HISTORICAL_NOT_REVALIDATED
+until a current authorized plan and operation evidence are supplied.
+Never treat a persisted SVG, Mermaid text, percentage or old VERIFIED
+label as independent read-back. Re-render only from fresh authorized
+data; a private DB is not a source of permission or operation truth.
+
 A plan has immutable source-scoped **plan ID and plan revision** and
 each input record has stable source ID and source revision. A later
 snapshot with a changed target or original path under the same plan

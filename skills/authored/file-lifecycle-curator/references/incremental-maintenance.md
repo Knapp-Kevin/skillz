@@ -20,6 +20,16 @@ Using the skill does not create a recurring job or permission to change files.
 
 ## Durable checkpoint and safe recall
 
+For actual cross-process persistence, use the optional
+[private SQLite state component](durable-state.md). It defines
+the generation-checked write/readback, run-ID idempotence,
+partial-scan last-known catalog retention, transaction
+atomicity, explicit storage consent, schema/retention caps,
+hourly/daily/weekly cadence semantics and host authorization
+requirements. This document remains the semantic maintenance
+contract, not a declaration that the helper authenticates a
+connected source or provides a scheduler.
+
 A checkpoint is separately authorized, revocable, versioned evidence in an
 actual host's user-private storage. It is NOT an agent's presumed memory.
 Do not put raw private documents, identifying paths or account credentials
@@ -79,6 +89,12 @@ requiring scope-specific authorization and readback.
    Private visual output to a scheduled delivery channel requires its
    own approved audience.
 7. **Persist only if authorized**, with checksum/readback as supported.
+   For optional durable operation, require the host's user-approved
+   private SQLite store and the exact accepted generation before
+   using state.py. Persist across agent restarts, not into a chat
+   memory summary, source folder or a public repository.
+   Never promote a prior file's verified state on recall without
+   current source/receipt checks.
    A proposed checkpoint is NOT_SAVED, and a saved checkpoint is NOT proof
    of performed file operations. Retries using the same accepted snapshot
    should be idempotent, not duplicate writes or summarize old deltas again.

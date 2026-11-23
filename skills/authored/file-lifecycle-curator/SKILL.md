@@ -7,8 +7,9 @@ description: >-
   plan reversible reorganization, and evaluate archival and retention choices.
   Use for file organization, document libraries, folder cleanups, archives and
   knowledge-base intake, visual before/after folder structures with
-  evidence-based progress, and repeatable incremental maintenance with
-  optional authorized scheduled-agent handoff. Default read-only; never
+  evidence-based progress, durable opt-in private checkpoints across
+  hourly/daily/weekly agent runs, and repeatable incremental maintenance
+  with optional authorized scheduled-agent handoff. Default read-only; never
   silently move, overwrite, export, delete, or change access permissions.
 metadata:
   author: MythologIQ-Labs / Skillz
@@ -30,7 +31,7 @@ installed catalog are explanatory, not a required file or network resource.
 
 ## Activation and boundaries
 
-Activate when the operator requests organization, indexing, document summarization, keyword tagging, metadata cards/decks, deduplication, folder structure, searchability, archive preparation, retention review, visual organization previews, before/after folder structure diagrams, evidence-backed progress, incremental file-library maintenance, authorized checkpoint recall, or a combined file-library cleanup. A one-time request and a recurring schedule can use the same method; **neither the skill nor a schedule grants ongoing source or write permission**. Accept local directories, explicitly supplied uploads, repository files, or approved cloud-drive collections where the host genuinely has access.
+Activate when the operator requests organization, indexing, document summarization, keyword tagging, metadata cards/decks, deduplication, folder structure, searchability, archive preparation, retention review, visual organization previews, before/after folder structure diagrams, evidence-backed progress, incremental file-library maintenance, persistent authorized organization checkpoints, hourly/daily/weekly agent refresh, authorized checkpoint recall, or a combined file-library cleanup. A one-time request and a recurring schedule can use the same method; **neither the skill nor a schedule grants ongoing source or write permission**. Accept local directories, explicitly supplied uploads, repository files, or approved cloud-drive collections where the host genuinely has access.
 
 Do **not** activate on an unrelated writing task, unbounded whole-account crawl, hidden backup, email transmission, deployment artifact purge, compliance disposition, forensic recovery, or destructive deletion just because the user said "clean up." Refer specialized legal records disposition, security incident response, backup engineering and regulated data handling to their separately qualified workflows; this skill can still prepare a read-only inventory.
 
@@ -194,7 +195,24 @@ service or an assumed persistent index.
    visual organization plan exists, regenerate the observed/proposed/
    receipt-attested progress from the current source ledger, not
    a cached image or an old percentage.
-5. **Optional scheduled delivery.** Use the
+5. **Durable opt-in state:** For genuinely repeatable hourly, daily
+   and weekly runs, read
+   [durable-state.md](references/durable-state.md) and reuse a
+   **single host-approved private checkpoint** per exact principal,
+   root and audience. Source snapshots, last-known per-record
+   observations, accepted run receipts, and the last proposed/
+   receipt-asserted organization plan are preserved transactionally.
+   Compare-and-swap generation and unique run IDs prevent duplicate
+   or stale agent writes. A PARTIAL observation never erases
+   previously seen files; keep their last-seen times explicit.
+   The optional [state.py](scripts/state.py) Python standard-library
+   helper provides a real private SQLite checkpoint with read-only
+   previews by default and explicit write opt-in. It does not
+   authenticate a real source, maintain a permanent full-text index,
+   verify physical moves, or perform any schedule. The host selects
+   the private storage, approved retention, backups, encryption and
+   cross-run access authority.
+6. **Optional scheduled delivery.** Use the
    [scheduled-maintenance-template.md](examples/scheduled-maintenance-template.md)
    only as a user-reviewable handoff to a *real* scheduler the host
    supports. Require separately confirmed recurrence, timezone,
@@ -218,10 +236,15 @@ approved by the host:
     python3 -m unittest discover -s tests -p 'test_*.py' -v
 
 No Python, trusted snapshot, previous checkpoint or actual scheduler
-is required for the skill's ordinary text-only workflow. The helper
-does not scan files or folders, authenticate access, verify supplied
-hashes, save a checkpoint, write an index, create scheduled tasks,
-delete files or claim model-host validation. A tool-less host can
+is required for the skill's ordinary text-only workflow. The
+**read-only reconcile.py helper** does not scan files or folders,
+authenticate access, verify supplied hashes, save a checkpoint,
+write an index, create scheduled tasks, delete files or claim
+model-host validation. The **separate opt-in state.py helper**
+can persist a bounded private checkpoint *only* after explicit
+owner-approved host storage, a supplied current authorized snapshot,
+an affirmative commit flag and an expected generation. It still
+does not touch originals or schedule recurring work. A tool-less host can
 apply the same evidence/authority distinctions manually without
 pretending the helper ran.
 

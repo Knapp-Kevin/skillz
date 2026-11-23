@@ -7,22 +7,20 @@ license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 4935995d27708c5d6b65c0dd6b42cc444ae250db
-complete_package_tree_sha: 0870fcd6914e6df7261b9ab98d8a5aae9e13cbc4
+content_blob_sha: 9160e87d8bdac7b551859c3966d7f5dc381c4569
+complete_package_tree_sha: 12c7c0e1daae3e6ee66dacd87cc03c371f9f4001
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: visual-projection-exact-source-offline-contracts-pass
-validation_status: passed-offline-contract-tests
+verification_basis: persistent-state-source-contracts-pending-exact-head
+validation_status: not-run
 validation_note: >-
-  Exact PR #903 source head c7ff04cc23400937e6ec7be20ed08a982c3ea8f0
-  passed 81/81 read-only synthetic maintenance+visualizer Python
-  source cases (run 45286714176), 11/11 authored registry
-  checks (run 45286714275). Socket Alerts SUCCESS; Project
-  Report NEUTRAL. Review caught occupied-current target collisions
-  and falsely rounded 100 percent; corrections are tested and
-  both threads resolved. No host account auth, actual file writes,
-  index persistence, scheduled agent run or observed human outcome.
+  Source update adds opt-in durable private sqlite3 curation state
+  and 34 original synthetic persistence/adversarial tests,
+  alongside 81 protected maintenance and visual tests.
+  Exact PR HEAD qualification PENDING. Real authorized file-host
+  readings, checkpoint in a user-controlled store, hourly/daily/
+  weekly scheduler invocations, source moves and user outcomes NOT_RUN.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
@@ -47,7 +45,7 @@ tags:
   portability:
   - high
 notes: >-
-  Current thirteen-file complete package is source-only; v1.1 optional federated intake remains preserved and prior package inspections are historical. Permission changes,
+  Current 22-file package adds optional private checkpoint writes; v1.1 optional federated intake remains preserved and prior package inspections are historical. Permission changes,
   relocation, indexing persistence, external egress and deletions require fresh
   action-specific authority. Host behavioral validation, security scanner, restore
   and production utility NOT RUN. See docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
