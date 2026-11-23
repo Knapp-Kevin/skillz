@@ -92,3 +92,7 @@ Retain package v1.1.1 as a conservative bounded refinement.
 No automatic schedule and no unrelated package authoring/backlog
 work. Merge is completion; an unmerged PR is not an acceptable
 deliverable for this pass.
+
+## Initial executable adversarial result and correction
+
+The first exact-HEAD suite executed **115** source tests: 114 passed, and one scenario revealed that the cold-start *preview* path returned before validating its cadence value. No state or schedule was created. The input guard was moved to the common entrypoint so unsupported frequencies are refused even when the store does not exist. A secondary review identified that a PLAN_ONLY update after a PARTIAL snapshot must not report absent historical catalog entries as freshly unchanged. The refined method distinguishes actually observed unchanged IDs from NOT_OBSERVED_PARTIAL_SCOPE; an additional synthetic regression case raises the expected final source suite to **116** tests. Results after these corrections require a fresh exact-head CI receipt. No live source or host schedule has been touched.

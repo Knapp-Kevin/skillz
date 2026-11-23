@@ -396,5 +396,24 @@ class PersistentCurationStateTests(unittest.TestCase):
             self.assertNotIn(forbidden, text)
 
 
+    def test_plan_only_after_partial_does_not_call_unseen_records_unchanged(self):
+        self.init()
+        partial = next_scan(self.first)
+        partial["coverage"] = "partial"
+        partial["records"] = [record("alpha-id")]
+        self.run_case(data=partial, run_id="run-two",
+                      commit=True, expected=1, ack=True)
+        plan_update = plan(partial, observed="2026-11-23T11:00:00-05:00",
+                           snapshot_id="plan-shot-two")
+        result = self.run_case(data=partial, run_id="plan-three",
+                               obj=plan_update, commit=True, expected=2,
+                               ack=True)
+        self.assertEqual(result["run_type"], "PLAN_ONLY")
+        self.assertEqual(result["counts"]["UNCHANGED_NO_REWORK"], 1)
+        self.assertEqual(result["counts"]["NOT_OBSERVED_PARTIAL_SCOPE"], 1)
+        self.assertEqual(result["not_seen_this_run_count"], 1)
+        self.assertEqual(self.state()["generation"], 3)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

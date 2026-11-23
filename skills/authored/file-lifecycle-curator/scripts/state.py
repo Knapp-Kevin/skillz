@@ -252,9 +252,14 @@ def evaluate(conn, current, plan, run_id, cadence, commit, expected_generation,
         if prior is not None:
             refuse(prior["scope"] == current["scope"], "CROSS_SCOPE_HOLD")
         if source_same:
+            # A repeated PARTIAL scan cannot classify old unseen
+            # catalog members as re-observed unchanged files.
+            unseen = len(state["catalog"]) - len(current["records"])
+            counts = {"UNCHANGED_NO_REWORK": len(current["records"])}
+            if unseen:
+                counts["NOT_OBSERVED_PARTIAL_SCOPE"] = unseen
             delta = {"status": "PROVISIONAL_DELTA_ONLY",
-                     "changed_count": 0,
-                     "counts": {"UNCHANGED_NO_REWORK": len(state["catalog"])},
+                     "changed_count": 0, "counts": counts,
                      "actions": [], "omitted_action_count": 0}
         else:
             delta = reconcile.reconcile(prior, current)
@@ -345,6 +350,8 @@ def process(store, current, plan, run_id, cadence, commit=False,
             expected_generation=None, initialize=False, allow_replan=False,
             ack_private_store=False):
     reconcile.token(run_id)
+    refuse(type(cadence) is str and cadence in CADENCES,
+           "INVALID_INPUT")
     refuse(not commit or ack_private_store, "PRIVATE_STORAGE_APPROVAL_REQUIRED")
     if current["viewer_check"] != "current-authorized" or any(
         row["viewer_check"] != "current-authorized" for row in current["records"]

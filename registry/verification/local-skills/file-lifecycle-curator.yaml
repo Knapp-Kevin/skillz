@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9160e87d8bdac7b551859c3966d7f5dc381c4569
-complete_package_tree_sha: 12c7c0e1daae3e6ee66dacd87cc03c371f9f4001
+complete_package_tree_sha: cff10413673b6785d06417acd411d2ee618bc2be
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
@@ -16,9 +16,9 @@ verification_basis: persistent-state-source-contracts-pending-exact-head
 validation_status: not-run
 validation_note: >-
   Source update adds opt-in durable private sqlite3 curation state
-  and 34 original synthetic persistence/adversarial tests,
+  and 35 original synthetic persistence/adversarial tests,
   alongside 81 protected maintenance and visual tests.
-  Exact PR HEAD qualification PENDING. Real authorized file-host
+  Initial 115-test CI 114 passed, 1 failed (cold-start cadence); final 116-case exact-head qualification PENDING. Real authorized file-host
   readings, checkpoint in a user-controlled store, hourly/daily/
   weekly scheduler invocations, source moves and user outcomes NOT_RUN.
 rubric: docs/skill-verification.md
