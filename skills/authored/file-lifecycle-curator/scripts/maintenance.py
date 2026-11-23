@@ -29,27 +29,28 @@ def journal_health(conn, checkpoint):
     writer who can replace both the database and its checksums.
     """
     generation = checkpoint["generation"]
-    rows = conn.execute(
-        "SELECT generation, run_id, cadence, snapshot_id, payload_digest, "
-        "report_json FROM accepted_runs ORDER BY generation").fetchall()
-    if len(rows) != generation or any(row[0] != i for i, row in
-                                       enumerate(rows, start=1)):
+    # Primary-key uniqueness plus count/min/max proves a contiguous sequence
+    # without loading up to 100k receipts on every hourly invocation.
+    count, first, last = conn.execute(
+        "SELECT COUNT(*), MIN(generation), MAX(generation) FROM accepted_runs"
+    ).fetchone()
+    if count != generation or first != 1 or last != generation:
         raise state.Refused("HISTORY_INTEGRITY_HOLD")
-    if rows[-1][1] != checkpoint["last_run_id"]:
+    row = conn.execute(
+        "SELECT run_id, cadence, snapshot_id, payload_digest, report_json "
+        "FROM accepted_runs WHERE generation=?", (generation,)).fetchone()
+    if row is None or row[0] != checkpoint["last_run_id"] or (
+        row[2] != checkpoint["scan"]["snapshot_id"]
+    ) or row[1] not in state.CADENCES or not isinstance(row[3], str) or len(row[3]) != 64:
         raise state.Refused("HISTORY_INTEGRITY_HOLD")
-    if rows[-1][3] != checkpoint["scan"]["snapshot_id"]:
+    try:
+        report = json.loads(row[4], object_pairs_hook=reconcile.unique_pairs)
+        if not isinstance(report, dict):
+            raise ValueError("invalid report")
+    except (ValueError, reconcile.Invalid, TypeError):
         raise state.Refused("HISTORY_INTEGRITY_HOLD")
-    for _, _, cadence, _, payload_digest, report in rows:
-        if cadence not in state.CADENCES or not isinstance(payload_digest, str) or len(payload_digest) != 64:
-            raise state.Refused("HISTORY_INTEGRITY_HOLD")
-        try:
-            value = json.loads(report, object_pairs_hook=reconcile.unique_pairs)
-            if not isinstance(value, dict):
-                raise ValueError("invalid report")
-        except (ValueError, reconcile.Invalid):
-            raise state.Refused("HISTORY_INTEGRITY_HOLD")
-    return {"generation": generation, "accepted_runs": len(rows),
-            "last_run_id": rows[-1][1]}
+    return {"generation": generation, "accepted_runs": count,
+            "last_run_id": row[0]}
 
 
 def inspect_checkpoint(store):
@@ -94,9 +95,14 @@ def maintenance(store, current, run_id, cadence, commit=False,
     if status in {"ACCESS_HOLD", "ABSENT_IDENTITY_ACCESS_HOLD"}:
         return {"status": status, "checkpoint_written": False}
     if status in {"ALREADY_APPLIED", "SAME_SNAPSHOT_NO_WORK"}:
+        # Daily/weekly audits are useful even when source revision is stable.
+        # No duplicate source extraction, checkpoint write, or side effects.
+        suggestions = (["NO_DUPLICATE_PROCESSING"] if cadence == "hourly"
+                       else list(ACTIONS[cadence]))
         return {"status": status, "checkpoint_written": False,
-                "generation": outcome["generation"],
-                "maintenance": ["NO_DUPLICATE_PROCESSING"]}
+                "generation": outcome["generation"], "maintenance": suggestions,
+                "maintenance_executed": False,
+                "source_operations_executed": False}
     categories = list(ACTIONS[cadence])
     delta = outcome.get("counts", {})
     if delta.get("UNCHANGED_NO_REWORK", 0) and cadence == "weekly":
