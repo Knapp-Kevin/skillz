@@ -165,7 +165,7 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
       "verification_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
-      "skill_blob_sha": "9160e87d8bdac7b551859c3966d7f5dc381c4569",
+      "skill_blob_sha": "0edddcf885cd5fc32942ed25d63195c0b133ff76",
       "package_tree_sha": "276956d067c8e86fdc8482a5242bedeefa0e22f4",
       "package_file_count": 22,
       "review_status": "needs-re-review",
