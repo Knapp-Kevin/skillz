@@ -129,8 +129,8 @@ def local_digest(root, relative):
 
 
 def inspect(data, root):
-    fields(data, ("schema_version", "source", "build", "channels"),
-           where="release")
+    fields(data, ("schema_version", "source", "build", "expected_channels",
+                  "channels"), where="release")
     need(type(data["schema_version"]) is int and data["schema_version"] == 1,
          "UNSUPPORTED_SCHEMA")
     source = data["source"]
@@ -191,8 +191,16 @@ def inspect(data, root):
         elif check["state"] != "success":
             holds.append("REQUIRED_CHECK_NOT_SUCCESS:" + label)
 
+    expected = data["expected_channels"]
+    need(isinstance(expected, list) and 0 < len(expected) <= MAX_CHANNELS,
+         "INVALID_EXPECTED_CHANNELS")
+    declared_expected = set()
+    for item_id in expected:
+        key = ident(item_id, "expected channel")
+        need(key not in declared_expected, "DUPLICATE_EXPECTED_CHANNEL_ID")
+        declared_expected.add(key)
     channels = data["channels"]
-    need(isinstance(channels, list) and 0 < len(channels) <= MAX_CHANNELS,
+    need(isinstance(channels, list) and len(channels) <= MAX_CHANNELS,
          "INVALID_CHANNEL_COUNT")
     seen = set()
     output = []
@@ -258,6 +266,10 @@ def inspect(data, root):
             output.append({"id": key, "file_size": None,
                            "actual_local_sha256": None,
                            "matches_published_claim": False})
+    for missing in sorted(declared_expected - seen):
+        holds.append("EXPECTED_RELEASE_CHANNEL_NOT_OBSERVED:" + missing)
+    for unexpected in sorted(seen - declared_expected):
+        holds.append("UNDECLARED_RELEASE_CHANNEL:" + unexpected)
     status = ("BLOCKED_CONTRADICTORY_EVIDENCE" if blocked else
               "HOLD_INCOMPLETE_EVIDENCE" if holds else
               "LOCAL_BYTE_CHAIN_MATCHED_UNTRUSTED_RECEIPTS")
@@ -265,6 +277,7 @@ def inspect(data, root):
             "claimed_repository": source["repository"],
             "claimed_source_commit": source["commit"],
             "declared_channel_count": len(channels),
+            "expected_channel_count": len(declared_expected),
             "local_artifacts": output,
             "blockers": sorted(set(blocked)),
             "holds": sorted(set(holds)),
