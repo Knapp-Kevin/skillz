@@ -52,8 +52,12 @@ The helper expects:
 **Scores:** a documented ordinal *sorting heuristic* combining
 task value, urgency, real downstream/unblock leverage, working-state
 continuity, modeled path membership and a tempered effort denominator.
-A short-sprints setting only changes tie/tradeoffs in the eligible lane.
-Safety and owner-confirmed near deadlines are considered first. It does
+A short-sprints setting only changes tradeoffs within the eligible
+priority lane. Downstream declared safety or owner-confirmed imminent
+deadlines are propagated to unfinished hard prerequisites even when
+the owner selects a separate focus goal; off-goal mandatory obligations
+are reported as focus exceptions. These source claims are not independently
+authenticated. Safety and owner-confirmed near deadlines take precedence. It does
 not infer dollars, actual task impact, user condition, expected task
 duration or verified commitment from the JSON values. Unscored
 ready tasks are called out. Missing safety/near-deadline estimates
@@ -62,8 +66,13 @@ hold the comparison and produce an estimation action.
 **Outputs:** task IDs only (no original free-text task labels),
 the primary and at most one alternative by default, reason codes,
 a 25-minute-or-less first slice, fit to stated capacity if supplied,
-blocked prerequisites, comparison coverage and conditional modeled
-critical path. The host translates IDs to an actual approved, concrete
+blocked prerequisites, provisional scoring strategy, focus-scope exception
+IDs, explicit deferral warning on lower-lane alternatives, comparison
+coverage and conditional modeled critical path. The helper refuses
+DONE claims contradicted by incomplete mandatory prerequisites.
+It prefers a differently useful alternative when comparable without
+promoting a substantially lower-value task merely for variety.
+The host translates IDs to an actual approved, concrete
 next action with stop line and evidence. An optional third choice must
 be explicitly requested, and a single real choice must not be padded.
 
