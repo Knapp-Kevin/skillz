@@ -84,6 +84,15 @@ Material uncertainty: <only unresolved facts>
 
 ## Repeatable review of the newly corrected candidate
 
+Apply the shared [engine refinement handoff](../../refinement/README.md)
+so that each actionable finding has a source-bound reproduction,
+protected success behavior, actual counterexample, honest evidence level
+and ACCEPT / ITERATE / HOLD / REVERT / STOP_NO_CHANGE decision. The
+handoff does **not** confer behavioral validation, installation authority
+or source licensing rights; the independent evaluation rubric remains
+unchanged.
+
+
 For authorized refinement, evaluate the **original artifact**, identify
 the material failure and produce a bounded correction. Then evaluate
 the **new exact package**, not the old score or the edit description.

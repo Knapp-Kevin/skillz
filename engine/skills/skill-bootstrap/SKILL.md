@@ -332,6 +332,15 @@ Inability to write files is not inability to complete bootstrap. Produce complet
 
 ## S10 — Semantic adversarial review
 
+Use the shared [engine refinement handoff](../../refinement/README.md)
+when the first review finds a consequential defect in the finished package.
+Pass the exact outcome, original negative, protected successes and evidence
+state into the next bounded iteration; avoid a new account-wide intake,
+independent agent mandate, fresh install or public issue. A user-host
+refinement case is private unless explicitly authorized for disclosure.
+The protocol is guidance within Bootstrap, not another skill to install.
+
+
 Read each important custom/adapted artifact as a literal reader might.
 
 Challenge it for:

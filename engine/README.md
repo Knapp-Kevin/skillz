@@ -12,6 +12,14 @@ For FIRST_VISIT and RETURNING_USER work, use:
 
 No other engine procedure is required for normal bootstrap.
 
+## Shared refinement mechanism
+
+[Engine refinement handoff](refinement/README.md) is the common procedure
+used by Bootstrap, Forge and Eval for outcome-based, evidence-labeled,
+bounded refinement. It carries an optional fictional portable case
+receipt, not background work or mandatory telemetry. **No additional
+user-facing skill or runtime service is introduced.**
+
 ## Repository-maintenance procedures
 
 Other procedures support occasional curation or maintenance, such as:

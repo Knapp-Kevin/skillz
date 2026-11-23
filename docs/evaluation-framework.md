@@ -103,6 +103,15 @@ A skill-owned TypeScript/Python/shell helper is not repository engine code merel
 
 ## Semantic scenario review
 
+For cross-skill improvements, use the portable
+[engine refinement case](../engine/refinement/README.md). Keep the
+actual user's outcome and previously successful behavior fixed while
+challenging a correction. A reproducible static deficiency is not an
+observed host-agent failure, and a source file update does not prove
+consumer benefit. Each new pass needs a material falsifying observation,
+not just another proposed micro-refinement.
+
+
 Static semantic review may examine hypothetical representative situations such as:
 
 - a clear positive trigger;
