@@ -34,7 +34,7 @@ SLSA build provenance, or a delivery acceptance decision.
 
 ## Remaining evidence
 
-Exact-head GitHub-hosted tests PENDING; no independent agent trial,
+Exact-head GitHub-hosted tests **PASS 55/55** on [Actions #45123071252](https://github.com/Knapp-Kevin/skillz/actions/runs/45123071252); authored source/provenance [Actions #45123071291](https://github.com/Knapp-Kevin/skillz/actions/runs/45123071291) PASS 11/11. Both Socket Security checks SUCCESS; no independent agent trial,
 real repository or market study, security attestation, package
 installation, customer benefit or measured release ROI claimed.
 

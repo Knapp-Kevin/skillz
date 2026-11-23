@@ -1277,7 +1277,7 @@
         "security/supply-chain",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "Initial v0.1.0 eight-file package adds actual local SHA-256 byte measurement, 55 planted synthetic tests and explicit expected-channel completeness hold. Exact source currently awaiting hosted final HEAD QA. No authenticated provider/build/provenance, real installation or agent-host behavior observed."
+      "review_note": "First-party 8-file source package release byte-chain/auditor. Actions #45123071252 PASS 55/55 synthetic offline Python tests at PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea. Authored QA Actions #45123071291 PASS 11/11; both Socket checks SUCCESS. Local actual fixture byte SHA-256 measured, explicit expected-channel drift guards qualified. No real external provenance signature, publication origin, genuine installation, consuming-agent host or customer outcome tested; semantic re-review still pending."
     }
   ]
 }
