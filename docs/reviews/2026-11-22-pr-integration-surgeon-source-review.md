@@ -32,7 +32,7 @@ fictional. **No actual repository was integrated.**
 
 The 49 Python planted methods passed in a local container test run
 prior to upload (not independent GitHub provider qualification).
-Hosted exact-HEAD QA is pending. No live GitHub ruleset, merge event,
+Hosted exact-HEAD QA on PR #881 source head 5769bedab30b6fb92a8eed09b187156642148e9d PASS 49/49, Actions #45112426407; authored provenance/feedback QA PASS 11/11, Actions #45112426311. Socket Security checks SUCCESS. No live GitHub ruleset, merge event,
 customer outcome, or user-authorized source mutation was performed.
 Static success must not be upgraded to host behavior or real PR-closure ROI.
 
@@ -42,6 +42,6 @@ https://docs.github.com/en/rest/pulls/pulls
 https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue
 https://docs.github.com/en/pull-requests/get-started/about-stacked-prs
 
-**Next:** verify final source SHA with hosted 49-test run and authored-wide
+**Next:** verify final metadata-only SHA with hosted 49-test run and authored-wide
 provenance/security gates. Merge only after CI success; preserve true status
 under issue #880 for eventual authorized live paired trial.

@@ -12,9 +12,9 @@ complete_package_tree_sha: f993750a3e489d3f7ebaed86f9887caa4a338d6e
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: pr-integration-v0.1.0-exact-source-qa-pending
-validation_status: not-run
-validation_note: "49 synthetic offline Python methods planted; hosted exact-head execution pending. Live GitHub review/ruleset/check/merge-group behavior, agent-host adherence, actual merge and issue closure NOT_RUN."
+verification_basis: PR881-v0.1.0-source-49-of-49-hosted-tests
+validation_status: passed-offline-contract-tests
+validation_note: "Actions #45112426407 PASS 49/49 synthetic Python methods on PR #881 source HEAD 5769bedab30b6fb92a8eed09b187156642148e9d; authored feedback/provenance #45112426311 PASS 11/11. Socket Security checks SUCCESS. No live GitHub integration merge, provider ruleset proof, consuming-agent behavior, issue closure or user outcome performed."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
 tags:
