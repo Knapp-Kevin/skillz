@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "kind": "q8-three-incomplete-music-boundaries-static-dispositions",
+  "review_date": "2026-11-23",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 3,
+    "incomplete_reviewed_to_date": 23,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 10,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 30,
+    "flagged_total": 40,
+    "owned_files_reviewed": 6,
+    "upstream_shared_files_consulted": 7,
+    "root_license_files_read": 1,
+    "root_notice_files_read": 1,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Complete exact pinned owned packages: mc-melody two files, mc-rhythm-groove one file, mc-rhythm-section three files; root MIT/NOTICE, and seven referenced shared support files inspected as passive source. No playback, DAW, agents, scanner, rights transfer or execution.",
+  "shared_supporting_files": [
+    "plugins/music-composition/skills/mc-workflow/SKILL.md",
+    "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+    "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
+    "plugins/music-composition/skills/mc-workflow/backends.yaml",
+    "plugins/music-composition/skills/mc-progressions/reference.md",
+    "plugins/music-composition/skills/mc-progressions/progressions-full.md",
+    "plugins/music-composition/skills/mc-sound-design/reference.md"
+  ],
+  "root_license_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+  "root_notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+  "records": [
+    {
+      "id": "jtydhr88-music-composition-skills/mc-melody",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "package_path": "plugins/music-composition/skills/mc-melody",
+        "complete_package_git_tree_sha": "3d635b14d3df64c0b24aa06c353c2bb08f97d1fb",
+        "skill_md_git_blob_sha": "3aa2049057c44c5c32b52424c1c30f4b51589713",
+        "upstream_head_checked": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "3aa2049057c44c5c32b52424c1c30f4b51589713",
+        "reference.md": "b35268e82a38ab34985c9cbdfbf5457a9a1868ab"
+      },
+      "license": {
+        "type": "MIT-for-upstream-owned-expression-only",
+        "source": "root LICENSE + NOTICE",
+        "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "obligation": "Upstream copyright and full MIT notice for eligible original expression; separately protected published excerpts, translations and musical figures are not relicensed."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "singer-specific-range-overgeneralization",
+          "evidence": "SKILL.md §§3.1, 4.1–4.2, 10",
+          "finding": "Leap/range/passaggio heuristics are presented as hard musical limits or as sufficient to choose key. Actual vocalist range, technique, health and chosen genre are absent from the package; successful singability cannot be established by a text rubric."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unsupported-aesthetic-outcome",
+          "evidence": "SKILL.md §§7–9 checklist",
+          "finding": "A checklist against repeated motives and predictable phrases is useful, but treating it as proof that a melody feels original or emotionally effective is not evidence of actual sung/listener outcome."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "shared-arr-spec-and-lyric-schema-not-standalone",
+          "evidence": "SKILL.md lines 44–45 and §10",
+          "finding": "The local source refers to external meta.upstream.lyrics and ARR-SPEC fields plus sibling skills; the owned two-file package does not contain the shared schema or an authorized project input. A host must resolve those independently or mark unavailable."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "third-party-translated-reference-rights",
+          "evidence": "reference.md §§1–4 and root NOTICE §§What it does not cover",
+          "finding": "An attributed book-derived study reference may include separately protected quotations, translations or musical figures that the root MIT license expressly does not relicense. Do not vendor the reference as reusable MIT text without rights review."
+        }
+      ],
+      "positive_safeguards": [
+        "Precise trigger routing for unsingable melodies, range, leap and phrase problems; limits scope against chords and lyrics.",
+        "Bundled reference provides scale/cadence lookup and distinguishes optional musical choices from some categorical rules."
+      ],
+      "remediation": "Make singer-dependent claims conditional on actual recorded range and style, separately qualify any claimed aesthetic effectiveness, verify sibling schema/lyrics availability, and preserve original rights notices without importing protected passages.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "fc70acffd975bf81f3556c1f773e5f585c270a6a9c0cf3c13e056b90b1075ce8",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 2
+        },
+        "interpretation": "Historical scanner INCOMPLETE preserved; direct complete-source inspection is separate evidence, not scanner requalification."
+      },
+      "reviewed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "review_method": "Exact pinned full owned package, root LICENSE/NOTICE and applicable referenced shared source read as untrusted data; no source code execution, audio/DAW tests or host behavioral runs",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 2
+      },
+      "static_score": 15,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-rhythm-groove",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "package_path": "plugins/music-composition/skills/mc-rhythm-groove",
+        "complete_package_git_tree_sha": "3eeb3603c8b11a73e0bbf3c5ce9e297867fe0d9a",
+        "skill_md_git_blob_sha": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068",
+        "upstream_head_checked": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "1d38ecb2a2d2ecf78c64785906c56fa54d23d068"
+      },
+      "license": {
+        "type": "MIT-for-upstream-owned-expression-only",
+        "source": "root LICENSE + NOTICE",
+        "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "obligation": "Upstream copyright and full MIT notice for eligible original expression; separately protected published excerpts, translations and musical figures are not relicensed."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "style-conditional-heuristic-treated-as-universal",
+          "evidence": "SKILL.md §§2.2, 3 and 6",
+          "finding": "The instruction that bass must carry the root on a chord-changing strong beat is not safe as an invariant across syncopated, pedal-tone, no-bass, unmetered or deliberately displaced patterns. Genre and artistic intent require an exception route."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "missing-independent-listening-evidence",
+          "evidence": "SKILL.md §§4–7",
+          "finding": "Beat and accent prescriptions are plausible craft heuristics but do not demonstrate that a rendered groove works; no listener, renderer, audio fixture or side-by-side evaluation is bundled."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "cross-package-outcome-fields",
+          "evidence": "SKILL.md §8, lines 231–236 and reference to ../mc-rhythm-section/reference.md",
+          "finding": "The four historical scanner hits are dotted ARR-SPEC keys, not four proven missing files. Schema/companion rhythm-section reference exists in pinned upstream, but outside this standalone one-file package; portability of these steps remains conditional on authorized access to sibling materials."
+        }
+      ],
+      "positive_safeguards": [
+        "Keeps beat design separate from drum/bass microtiming and DAW programming.",
+        "Separates feel, tempo, meter and backbeat through a concise task-to-section decision table."
+      ],
+      "remediation": "Keep rhythm design as an explicit proposal with style exceptions and an actual listening/rehearsal check; distinguish structural schema references from files, and provide absent-sibling fallback without inventing successful rendering.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "ed55d1444c9fa5af5cef529b5c32a8071c76d86c47f90e43908f1454df07d93e",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 4
+        },
+        "interpretation": "Historical scanner INCOMPLETE preserved; direct complete-source inspection is separate evidence, not scanner requalification."
+      },
+      "reviewed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "review_method": "Exact pinned full owned package, root LICENSE/NOTICE and applicable referenced shared source read as untrusted data; no source code execution, audio/DAW tests or host behavioral runs",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 2,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-rhythm-section",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "package_path": "plugins/music-composition/skills/mc-rhythm-section",
+        "complete_package_git_tree_sha": "368d0aa91cd80a053a5528de78133de54ec3ef9b",
+        "skill_md_git_blob_sha": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a",
+        "upstream_head_checked": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "197bb5c3f4e4a91c585835d34d71c56b2f59ed0a",
+        "reference.md": "662bffe27c7428871ae3cd44f71f7ef423f05552",
+        "reference-styles.md": "0b6437a3633f031681367a9470b8c7f9a23aafac"
+      },
+      "license": {
+        "type": "MIT-for-upstream-owned-expression-only",
+        "source": "root LICENSE + NOTICE",
+        "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "obligation": "Upstream copyright and full MIT notice for eligible original expression; separately protected published excerpts, translations and musical figures are not relicensed."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "protected-book-derived-pattern-index",
+          "evidence": "reference-styles.md §8, reference.md §§1–9, root NOTICE",
+          "finding": "Extensive book/page-indexed beat-pattern and performance tables are bundled with the source. The upstream NOTICE expressly excludes quoted source texts, translations, and protected examples from its MIT grant; a code-level MIT license cannot authorize republication of original textbook patterns or passages."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "fixed-style-norms-and-microtiming",
+          "evidence": "SKILL.md §§1.1, 2.2, 3, 8",
+          "finding": "Preset tempo bands, offset examples and rejection of equally spaced fills are framed as strong rules, sometimes described as measured. They need style-specific exceptions and performed/replayed audio evidence; no host testing or established universal threshold was verified."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "missing-standalone-linter-and-shared-spec",
+          "evidence": "SKILL.md lines 212, 340, 361–367",
+          "finding": "Five historical scanner locations are ARR-SPEC fields and lint identifiers, not established missing file paths. The current package contains no executable lint #10/#11 or ARR-SPEC implementation; shared schema/backends are outside this package and cannot be assumed installed or verified."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "no-owner-authority-for-project-edits",
+          "evidence": "SKILL.md §§9–10 and reference-styles.md §8",
+          "finding": "A proposed filled arrangement is not permission to edit or upload a user's DAW project, install musical models, or use third-party samples. These operations need separately authorized local host capabilities and model/asset rights."
+        }
+      ],
+      "positive_safeguards": [
+        "Detailed separation of ensemble parts, groove choice, microtiming and fill policies.",
+        "Provides bounded before-render checklists and style-indexed support for tempo, feel and drum/bass coordination."
+      ],
+      "remediation": "Retain the general organizational method but not protected style/reference expression without independent permission, remove unproven universal success claims, require actual verified lint/host availability, and preserve explicit project edit/egress approval.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "4a36dc8b3e6c5341aa69696d46fa91ef1a1e6a1c8ac03c635e60da8a81bb3dab",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 5
+        },
+        "interpretation": "Historical scanner INCOMPLETE preserved; direct complete-source inspection is separate evidence, not scanner requalification."
+      },
+      "reviewed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "review_method": "Exact pinned full owned package, root LICENSE/NOTICE and applicable referenced shared source read as untrusted data; no source code execution, audio/DAW tests or host behavioral runs",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 2,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 14,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}

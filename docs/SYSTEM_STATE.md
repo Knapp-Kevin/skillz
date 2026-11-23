@@ -1,5 +1,7 @@
 # System State
 
+**November 23, 2026 exact-source Q8 review checkpoint:** [Three music-method complete source reviews](reviews/2026-11-23-issue402-music-three-source-dispositions.md) and [the recorded exact package/source dispositions](../registry/security/q8-three-incomplete-music-boundaries-static-dispositions-20261123.json) advance #402 direct security-content review of historically flagged sources to **30/40**, including **23/33 historically scanner-INCOMPLETE**. Ten incomplete source pins remain without first-time complete direct review. Historical scanner 10 PASS / 7 FAIL / 33 INCOMPLETE, rights holds, zero unchanged-use approvals and all host-test limits remain unchanged. This adds no newly discovered identities and does not revise the separate current corpus mapping denominator. The existing November 5 statements below are historical.
+
 **Skill Mason catalog handoff (November 17, 2026):** [The complete pinned inventory/export](../registry/exports/skill-mason-v1/README.md) exposes **61,326 G1–G3 path observations across 942 repositories**, the separately overlapping **4,813-path frontier**, all **170 discovery artifacts**, and **all 1,043 paired-companion review records**. The 1,043 figure is a governed review subset, **not the library size**. All 921 unmapped review records remain present. Exact source hashes, original evidence and review/rights/authority limits are preserved; import readiness does not establish generation eligibility. [Readiness evidence](reviews/2026-11-17-skill-mason-catalog-readiness.md).
 
 
