@@ -27,6 +27,18 @@ validated by the **existing** \`engine/packs/check_pack.py\`. Builder
 does not implement a second graph or permission validator. A self-contained
 single or phased skill does not require a pack.
 
+## Optional evidence-linked design preflight
+
+For consequential or multi-source designs, use the
+[author design gate](design-contract.md) to connect source identities,
+explicit capability obligations, authored blueprint targets, and
+planned adversarial checks. It routes only original CREATE or COMPOSE
+decisions into this same compiler. A source reference is not a permission
+to copy code, and linked probes are not executed consumer evidence.
+
+The ordinary complete-blueprint route below remains supported. No
+new service, external agent, mandatory file or release is required.
+
 ## Step-by-step generation
 
 1. **Define the user outcome and limits.** Preserve the user's explicit

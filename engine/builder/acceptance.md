@@ -21,6 +21,17 @@ have real independent meaning and handoff contracts. Verify
 compositional dependencies, authority ceilings and optional fallbacks.
 Do not add a pack solely to make an output look engineered.
 
+## Optional design trace check
+
+When a design dossier is used, the
+[design gate](design-contract.md) checks evidence-ID links to every
+required blueprint field and work unit, and the existence of planned
+positive, near-non-trigger, missing-input, permission, and false-success
+probes. Pack handoffs and optional fallbacks have additional planned
+challenges. These are **structural authored claims**, not verified source
+authenticity, semantic correctness or executed probes. A design gate
+receipt never substitutes for Gates 2–5.
+
 ## Gate 2: Whole-package closure
 
 Require every generated file, source/rights record, necessary scripts,

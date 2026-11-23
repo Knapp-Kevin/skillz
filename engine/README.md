@@ -27,6 +27,11 @@ authorize host actions, certify rights, install packages or qualify
 consumer behavior. Any host without Python may follow the same template
 contract manually; Bootstrap remains the one normal orchestrator.
 
+The [optional design preflight](builder/design-contract.md) checks author-supplied
+evidence IDs, task obligations, proposed adversarial probes and their
+mapping to an original-content blueprint before invoking that same
+compiler. No inference or actual task execution is claimed.
+
 ## Shared refinement mechanism
 
 [Engine refinement handoff](refinement/README.md) is the common procedure
