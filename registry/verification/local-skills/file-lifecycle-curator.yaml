@@ -7,21 +7,19 @@ license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: a639c21e673d535a5201ff6f5b721c1472399a2c
-complete_package_tree_sha: accde9df1e953b60cc9a5e756109e5b2eea22060
+content_blob_sha: 60b5ebce8d50a359fe623f8cb3853884c4b7e900
+complete_package_tree_sha: e324df81c41a540fe1f6cc208fcfe55eb18c2405
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: exact-pr-head-offline-reconcile-and-authored-contracts-pass
-validation_status: passed-offline-contract-tests
+verification_basis: reviewer-remediated-38-case-exact-source-ci-pending
+validation_status: not-run
 validation_note: >-
-  Exact PR #902 source HEAD b8bad75bf253359bb903c3bbfb58e6bb58529e66
-  passed 33/33 original fictional Python test cases in run 45279737987
-  and 11/11 authored-index/feedback checks in run 45279737985.
-  Both Socket Security results SUCCESS. No connected file host,
-  authenticated source permissions, independent consuming agent,
-  stored private checkpoint, scheduled job or real outcomes observed.
-  Earlier seven-file static review and H01-H12 oracle tests are historical.
+  Prior source head b8bad75 passed 33/33 synthetic tests and 11/11
+  authored QA, but review found two untested material edge cases.
+  Both are fixed in this new exact source with five extra scenarios.
+  Current 38-case exact-head CI PENDING. Real connected-file behavior,
+  current source permissions, private checkpoint and scheduler NOT_RUN.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

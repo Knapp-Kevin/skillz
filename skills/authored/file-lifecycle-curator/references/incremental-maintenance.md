@@ -91,6 +91,17 @@ requiring scope-specific authorization and readback.
   from a host-attested complete listing, not permission to delete/archive.
 - NOT_OBSERVED_PARTIAL_SCOPE must not become a deletion or missing-file fact.
 - ACCESS_HOLD suppresses private record IDs and summary counts.
+- ABSENT_IDENTITY_ACCESS_HOLD suppresses identifiers **and counts** of
+  previously indexed records omitted from the current listing unless
+  the host independently established current permission to discuss
+  those identities. A viewer may read a collection while a particular
+  file is newly hidden by ACL filtering. Collection access alone is
+  insufficient. The helper's optional absent_identity_access field
+  (unverified by default, host-asserted-current when established by the
+  host) is a caller assertion, NOT an actual permission check.
+- EXTRACTION_REGRESSION_HOLD has precedence over relocation or source
+  revision changes; any simultaneous relink/source-change signal must
+  remain visible in related_classes rather than disappearing.
 - EXTRACTION_REGRESSION_HOLD protects previously complete source knowledge
   from a partial replacement.
 - An actual operation stays PROPOSED, APPROVED, EXECUTED, VERIFIED, FAILED,
@@ -116,6 +127,11 @@ scope (collection_id, root_id, principal_id, audience_id), coverage
 (complete/partial), viewer_check, and records. Each record has an opaque
 stable record_id, locator_token, source_revision or null, extraction state,
 digest plus digest_basis, and a current viewer_check assertion.
+A backward-compatible optional absent_identity_access on the current
+snapshot defaults to unverified and allows old-ID absence details
+only when host-asserted-current is supplied after a separate current
+identity-level authorization check. Without it, an omitted old record
+causes ABSENT_IDENTITY_ACCESS_HOLD with no source-derived output.
 One snapshot is at most 1 MiB and 500 records. Unknown fields, duplicate
 object keys, invalid tokens, nonfinite JSON and symlink paths are rejected.
 The helper emits at most ten proposed delta actions, plus honest total

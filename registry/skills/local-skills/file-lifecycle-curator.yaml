@@ -22,18 +22,16 @@ dependencies: >-
   Authorized inputs for source inspection. Inventory, tagging, metadata decks, planning
   and excerpt-limited indexing are text-only; optional offline delta is Python 3.9+ standard library; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
-content_blob_sha: a639c21e673d535a5201ff6f5b721c1472399a2c
-complete_package_tree_sha: accde9df1e953b60cc9a5e756109e5b2eea22060
+content_blob_sha: 60b5ebce8d50a359fe623f8cb3853884c4b7e900
+complete_package_tree_sha: e324df81c41a540fe1f6cc208fcfe55eb18c2405
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Current thirteen-file version 1.1.1 package adds optional source-scoped
-  incremental maintenance, recall and scheduled-agent handoff with no
-  new task authority. Exact PR #902 head b8bad75bf253359bb903c3bbfb58e6bb58529e66
-  passed 33/33 synthetic offline reconciliation tests (run 45279737987)
-  and 11/11 authored integrity checks (run 45279737985).
-  No actual private file read, checkpoint write, scheduler creation or
-  user outcome was observed. Historic static review is not current.
+  Thirteen-file v1.1.1 package with portable incremental maintenance and
+  scheduled-agent run handoff. Initial 33/33 source tests passed but
+  automated review exposed two security/coverage gaps; repaired with
+  five new adversarial cases, 38-case final CI pending. No real source,
+  persistent private state, schedule or consuming-agent outcome observed.
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
 # Optional composition still requires independent host availability/authorization.
 # An offline-only negative scenario is bundled; no new host validation claimed.

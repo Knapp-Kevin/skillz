@@ -19,7 +19,8 @@ TOKEN = re.compile(r"^[a-z][a-z0-9._:-]{1,95}$")
 REVISION = re.compile(r"^[A-Za-z0-9._:@/-]{1,128}$")
 DIGEST = re.compile(r"^[a-f0-9]{64}$")
 TOP = {"schema_version", "snapshot_id", "observed_at", "scope",
-       "coverage", "viewer_check", "records"}
+       "coverage", "viewer_check", "records", "absent_identity_access"}
+REQUIRED_TOP = TOP - {"absent_identity_access"}
 SCOPE = {"collection_id", "root_id", "principal_id", "audience_id"}
 RECORD = {"record_id", "source_revision", "locator_token",
           "extraction", "digest", "digest_basis", "viewer_check"}
@@ -55,7 +56,12 @@ def timestamp(value):
 
 
 def validate(snapshot):
-    check(type(snapshot) is dict and set(snapshot) == TOP)
+    # Backward-compatible snapshots without the optional field are
+    # accepted, but must NOT expose old IDs absent from a new listing.
+    check(type(snapshot) is dict and REQUIRED_TOP <= set(snapshot) <= TOP)
+    absence_access = snapshot.get("absent_identity_access", "unverified")
+    check(type(absence_access) is str and
+          absence_access in {"unverified", "host-asserted-current"})
     check(type(snapshot["schema_version"]) is int and
           snapshot["schema_version"] == 1)
     token(snapshot["snapshot_id"])
@@ -123,6 +129,15 @@ def reconcile(previous, current):
             return outcome("SAME_SNAPSHOT_NO_WORK", actions=[],
                            checkpoint_written=False)
         check(current_time > old_time)
+        if old.keys() - now.keys():
+            # A collection-level viewer assertion and a filtered
+            # current listing cannot establish access to cached IDs.
+            # Displaying their IDs or even counts risks disclosure.
+            # Require a separate host-established CURRENT permission
+            # check specifically covering the previously seen IDs.
+            # This field is only a caller assertion, NOT proof.
+            if current.get("absent_identity_access") != "host-asserted-current":
+                return outcome("ABSENT_IDENTITY_ACCESS_HOLD", actions=[])
     else:
         old = {}
 
@@ -140,7 +155,25 @@ def reconcile(previous, current):
             note("NEW_RECORD_REVIEW", key)
             continue
         before = old[key]
-        if before["source_revision"] is None or record["source_revision"] is None:
+        # Decreased extraction must not be hidden by a simultaneous
+        # revision change or relocation; preserve both signals.
+        if ORDER[record["extraction"]] < ORDER[before["extraction"]]:
+            note("EXTRACTION_REGRESSION_HOLD", key)
+            related = []
+            if before["source_revision"] is None or record["source_revision"] is None:
+                related.append("REVISION_UNKNOWN_REVALIDATE")
+            elif before["source_revision"] != record["source_revision"]:
+                related.append("SOURCE_CHANGED_REVIEW")
+            elif (before["digest"] is not None and record["digest"] is not None
+                  and before["digest_basis"] == "observed-full-bytes"
+                  and record["digest_basis"] == "observed-full-bytes"
+                  and before["digest"] != record["digest"]):
+                related.append("SAME_REVISION_DIGEST_CONFLICT")
+            if before["locator_token"] != record["locator_token"]:
+                related.append("LOCATOR_CHANGED_RELINK")
+            if related:
+                actions[-1]["related_classes"] = related
+        elif before["source_revision"] is None or record["source_revision"] is None:
             note("REVISION_UNKNOWN_REVALIDATE", key)
         elif before["source_revision"] != record["source_revision"]:
             note("SOURCE_CHANGED_REVIEW", key)
@@ -153,8 +186,6 @@ def reconcile(previous, current):
             note("SAME_REVISION_DIGEST_CONFLICT", key)
         elif before["locator_token"] != record["locator_token"]:
             note("LOCATOR_CHANGED_RELINK", key)
-        elif ORDER[record["extraction"]] < ORDER[before["extraction"]]:
-            note("EXTRACTION_REGRESSION_HOLD", key)
         elif ORDER[record["extraction"]] > ORDER[before["extraction"]]:
             note("EXTRACTION_ENRICHMENT_REVIEW", key)
         elif before["digest"] != record["digest"] or before["digest_basis"] != record["digest_basis"]:

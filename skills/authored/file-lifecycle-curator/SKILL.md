@@ -125,6 +125,13 @@ service or an assumed persistent index.
    differences separately. A missing record in a PARTIAL scan is
    NOT_OBSERVED, not deleted. Even absent from a complete snapshot
    is review-only, not permission to remove any source or index.
+   A currently permitted *collection listing* is insufficient to disclose
+   a missing **previously cached record ID**: that record might now be
+   excluded by per-item ACL. Require a distinct host-established current
+   authorization for previously seen identities before outputting their
+   names, IDs or summary counts. If not verified, use a detail-free
+   absence access hold. When relocation coincides with reduced extraction
+   coverage, keep EXTRACT_REGRESSION_HOLD visible alongside relinking.
 3. **Do selective maintenance.** Recheck changed summaries, tags,
    link integrity, duplicate evidence, stale index results, archive
    holds and failed operations; keep full-source versus excerpt

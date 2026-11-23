@@ -71,3 +71,30 @@ method suite.
 ## Executed source qualification on PR #902
 
 GitHub Actions job [offline maintenance](https://github.com/Knapp-Kevin/skillz/actions/runs/45279737987) at source head `b8bad75bf253359bb903c3bbfb58e6bb58529e66` executed **33/33 fictional Python unit tests PASS**. The example delta correctly emitted 1 changed source, 1 newly seen record, 1 not-observed record from a partial scan and 1 unchanged record. It reported checkpoint_written=false. The independently scoped [authored-source contract job](https://github.com/Knapp-Kevin/skillz/actions/runs/45279737985) executed **11/11 PASS**, and both Socket Security checks returned SUCCESS. The first test attempt failed one fixture that had unintentionally marked both prior and current access unknown. The fixture was corrected to isolate historical access; no source security boundary was relaxed. These results establish only offline method behavior, not actual scheduled-agent integration, source account authorization or measured human/file outcomes.
+
+## Post-CI adversarial review corrections
+
+The initial exact-HEAD source tests were 33/33 PASS and authored contracts
+11/11 PASS after a fixture correction. Automated PR review identified two
+important *uncovered* cases; CI passing was not enough:
+
+- **Absent-ID permission leak:** a viewer can still inspect a collection
+  while losing access to an individual previously indexed file. An
+  ACL-filtered listing omits it, but a naive delta can print its cached
+  identity. The corrected algorithm requires an explicit *separate
+  current* old-identity permission assertion for absent-record output,
+  defaults to detail-free ABSENT_IDENTITY_ACCESS_HOLD, and does not
+  leak cached IDs or counts when it is missing. Caller assertion is
+  NOT authenticated by this offline helper.
+- **Combined extraction and relocation:** unchanged revision with a new
+  locator and reduced extraction coverage previously produced only
+  LOCATOR_CHANGED_RELINK. The refined algorithm prioritizes
+  EXTRACTION_REGRESSION_HOLD and retains the independent relink or
+  source-change signal in related_classes, preventing silent
+  replacement of prior complete evidence.
+
+Five extra synthetic adversarial scenarios qualify both corrections,
+while all original cases must remain passing. The first automated
+review comment was about an already-corrected test fixture and is
+tracked as such. No actual connected file host, scheduler or external
+viewer permission has been inspected.

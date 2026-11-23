@@ -38,5 +38,6 @@
       "digest_basis": "not-computed",
       "viewer_check": "current-authorized"
     }
-  ]
+  ],
+  "absent_identity_access": "unverified"
 }

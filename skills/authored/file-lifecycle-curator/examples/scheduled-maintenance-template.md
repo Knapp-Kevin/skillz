@@ -43,6 +43,10 @@ Your recurring trigger does not add permissions or waive safety rules.
    partial-scan-unseen, and confidently complete-listing-absent records.
    No disappearance or stale record triggers deletion. Revalidate current
    permission before displaying private index/search/card material.
+   A current collection viewer check alone cannot disclose an old file
+   missing from an ACL-filtered listing. For missing prior records,
+   establish separate current access to their cached identities or
+   return ABSENT_IDENTITY_ACCESS_HOLD without IDs or counts.
 5. Limit re-extraction/reindexing to qualified changed/stale records.
    Produce a concise result: scope and inspected/expected coverage, changed
    counts, what was actually rechecked, holds, **one next action and one

@@ -28,7 +28,7 @@ def rec(key, revision="v1", locator=None, extraction="complete", digest=DIGEST,
 
 def snap(ident="sample-one", when="2026-11-23T10:00:00-05:00",
          coverage="complete", viewer_check="current-authorized",
-         records=None):
+         records=None, absent_identity_access="host-asserted-current"):
     return {"schema_version": 1, "snapshot_id": ident,
             "observed_at": when, "scope": {
                 "collection_id": "fictional-library",
@@ -36,6 +36,7 @@ def snap(ident="sample-one", when="2026-11-23T10:00:00-05:00",
                 "principal_id": "synthetic-owner",
                 "audience_id": "synthetic-reader"},
             "coverage": coverage, "viewer_check": viewer_check,
+            "absent_identity_access": absent_identity_access,
             "records": [rec("alpha-id"), rec("beta-id")] if records is None else records}
 
 
@@ -275,6 +276,54 @@ class IncrementalCuratorTests(unittest.TestCase):
                        "urllib.request", "write_text(", "write_bytes(", "os.system",
                        "http.client"):
             self.assertNotIn(needle, source)
+
+
+    def test_absent_id_without_separate_current_authority_suppresses_all_ids(self):
+        old = snap()
+        now = updated(old)
+        now["records"] = [rec("alpha-id")]
+        now["absent_identity_access"] = "unverified"
+        response = tool.reconcile(old, now)
+        self.assertEqual(response, {"status": "ABSENT_IDENTITY_ACCESS_HOLD",
+                                    "actions": []})
+        self.assertNotIn("beta-id", json.dumps(response))
+        self.assertNotIn("counts", response)
+
+    def test_acl_filtered_listing_does_not_leak_old_ids(self):
+        old = snap()
+        now = updated(old)
+        now["coverage"] = "complete"
+        now["records"] = []
+        now["viewer_check"] = "current-authorized"
+        now["absent_identity_access"] = "unverified"
+        self.assertEqual(tool.reconcile(old, now)["status"],
+                         "ABSENT_IDENTITY_ACCESS_HOLD")
+
+    def test_legacy_snapshot_without_absent_access_defaults_to_hold(self):
+        old = snap()
+        now = updated(old)
+        now.pop("absent_identity_access")
+        now["records"] = [rec("alpha-id")]
+        self.assertEqual(tool.reconcile(old, now)["status"],
+                         "ABSENT_IDENTITY_ACCESS_HOLD")
+
+    def test_relocation_and_extraction_regression_preserve_both_alerts(self):
+        old = snap()
+        now = updated(old)
+        now["records"][0]["locator_token"] = "new-alpha-location"
+        now["records"][0]["extraction"] = "excerpt"
+        a = tool.reconcile(old, now)["actions"][0]
+        self.assertEqual(a["class"], "EXTRACTION_REGRESSION_HOLD")
+        self.assertIn("LOCATOR_CHANGED_RELINK", a["related_classes"])
+
+    def test_revision_change_and_extraction_regression_preserve_both(self):
+        old = snap()
+        now = updated(old)
+        now["records"][0]["source_revision"] = "rev-002"
+        now["records"][0]["extraction"] = "excerpt"
+        a = tool.reconcile(old, now)["actions"][0]
+        self.assertEqual(a["class"], "EXTRACTION_REGRESSION_HOLD")
+        self.assertIn("SOURCE_CHANGED_REVIEW", a["related_classes"])
 
 
 if __name__ == "__main__":
