@@ -7,20 +7,20 @@ license_evidence_path: skills/authored/reference-integrity-auditor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/reference-integrity-auditor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 7ee18deb36d517b3c43b43cfdfbf47ae54efa327
-complete_package_tree_sha: 5a2008481596cc9b89d441a50c8db2dc00234571
+content_blob_sha: 230590495230a3a1bc724fc2ad853977499f06dd
+complete_package_tree_sha: fb4524778a6c5349801659b027ddf113bc447a85
 characterized_at: '2026-11-20'
 reviewed_at: '2026-11-20'
-verification_status: verified
-verification_basis: maintainer-static-review-and-60-local-python-method-tests
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
 validation_status: not-run
-validation_note: >-
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
   Local Python 3.13.5 executed 60/60 offline method regressions;
   independently verified pinned real public GitHub package tree as
   positive source control. Not model-host A/B, source authentication,
   real user outcome or 1.5x improvement. docs/evals/receipts/2026-11-20-reference-integrity-v110-graph-check.json.
 rubric: docs/skill-verification.md
-rubric_score: 18/20
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [reference-integrity, file-information-management, document-maintenance]
   lifecycle: [verification, maintenance]

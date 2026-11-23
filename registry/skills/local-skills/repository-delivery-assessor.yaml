@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/repository-delivery-assessor/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Nine-file standalone original package, three focused components, optional Python 3.9+ offline triage script; no network or sibling package required"
-content_blob_sha: ea5994f8567dc06996641aea27608a6bc578c1dc
-complete_package_tree_sha: e210b1646f679e01017283ece402395e402798fe
+content_blob_sha: 73c1d64eaa9721f76e9c821ab091d7f9d3dbbc8a
+complete_package_tree_sha: a63cabbf61a03ac423ec5de510c614903278e5fe
 historical_comparators: "skills/repo-doctor/SKILL.md; skills/repo-pulse/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

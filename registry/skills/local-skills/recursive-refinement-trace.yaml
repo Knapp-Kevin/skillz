@@ -24,8 +24,8 @@ dependencies: >-
   No Skillz monorepo, sibling skill, network, automatic CI or second agent
   required. POSIX secure host-owned mode-0700 storage is required for capture
   and replay input; read-only reasoning remains available without running code.
-content_blob_sha: e4f8a1668b48646c99ae2aaf60dac076aae3ebe6
-complete_package_tree_sha: d46950b4d62d3eae06080b980b3ed7c8d8767014
+content_blob_sha: 82820fec6f9244ecb940796b2b06f910a906940a
+complete_package_tree_sha: 19c1bca7a7d8c951f78ee68a64c9d730e4db1f64
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

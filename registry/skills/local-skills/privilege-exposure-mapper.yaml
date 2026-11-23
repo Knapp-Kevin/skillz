@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/privilege-exposure-mapper/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "No bundled execution or service; authorized host read scope only"
-content_blob_sha: 2e07c2ff66fd6af2a55866d5b96c3bb877fb138f
-complete_package_tree_sha: 0bcb42382d152636c4b9f7c6c70367eb52633740
+content_blob_sha: c6253f2b37c328bcb7d69cbf1b5ae81fafaf908f
+complete_package_tree_sha: fee04d120f64aedad7924461173daa6f6d9558e5
 historical_comparator: skills/permissions-review/SKILL.md
 historical_origin_status: "Control of account does not establish underlying original authorship or rights"
 rights_resolution: "Only independently written new content is MIT; legacy texts remain untouched"

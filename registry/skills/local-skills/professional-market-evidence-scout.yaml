@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/professional-market-evidence-scout/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 5c1003c2bd3d13d972eff6fd52dd47ec03d327d2
-complete_package_tree_sha: 4c7fe969e2c9d181d46924c570e2653a7c067fc1
+content_blob_sha: 48d5c4a11f98bcf40f019f57df474ed69e5f5d7c
+complete_package_tree_sha: e77e02c6856b318d5dad57293afc1a8f07072475
 historical_comparators: "skills/career-radar/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
