@@ -198,6 +198,11 @@ class OfflineContract(unittest.TestCase):
         self.assertIn("DO NOT COMMIT", s)
         self.assertNotIn("example@example", s)
 
+    def test_file_type_checks_do_not_depend_on_ets_psiscontainer(self):
+        self.assertNotIn(".PSIsContainer", source(NEW))
+        self.assertNotIn(".PSIsContainer", source(CONNECT))
+        self.assertIn("-is [IO.DirectoryInfo]", source(NEW))
+
     def test_fixture_is_labeled_synthetic(self):
         self.assertIn("not windows test executions", source(ACCEPT).lower())
 

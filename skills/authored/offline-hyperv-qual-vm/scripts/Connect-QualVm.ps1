@@ -66,7 +66,7 @@ try {
         throw 'HOLD: mapped or network-backed credential path is prohibited.'
     }
     $item = Get-Item -LiteralPath $CredentialPath -Force -ErrorAction Stop
-    if ($item.PSIsContainer -or
+    if ($item -is [IO.DirectoryInfo] -or
         ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -or
         $item.Length -gt 1048576) {
         throw 'HOLD: credential path is unsafe or oversized.'

@@ -1326,7 +1326,7 @@
       "provenance_path": "registry/skills/local-skills/offline-hyperv-qual-vm.yaml",
       "verification_path": "registry/verification/local-skills/offline-hyperv-qual-vm.yaml",
       "skill_blob_sha": "cbf4179a3b7d5adbce84ac26161c6b153d6e2814",
-      "package_tree_sha": "4234e40490896a63f272cc017f1f7996bf67e5cd",
+      "package_tree_sha": "79d71a81774a977153ebd3232fcb38baf0cfc8b3",
       "package_file_count": 10,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
