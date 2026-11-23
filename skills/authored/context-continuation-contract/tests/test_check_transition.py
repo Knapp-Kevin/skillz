@@ -607,5 +607,15 @@ class MultiTurnChainTests(unittest.TestCase):
         self.assertEqual(result.returncode, 2)
         self.assertIn("either --chain or all", result.stderr)
 
+    def test_packaged_three_turn_fixture_passes_without_claiming_host_outcome(self):
+        source = ROOT / "examples" / "transition-chain.json"
+        data = mod.read_json(str(source))
+        result = mod.reconcile_chain(data)
+        self.assertEqual(result["status"], "STATIC_CHAIN_RECONCILED")
+        self.assertEqual(result["qualified_steps"], 2)
+        self.assertFalse(result["claimed_complete"])
+        self.assertFalse(result["model_agent_behavior_observed"])
+        self.assertFalse(result["provider_or_merge_outcome_verified"])
+
 if __name__ == "__main__":
     unittest.main()

@@ -19,6 +19,31 @@ The expected result is `STATIC_TRANSITION_RECONCILED` with
 agent obeyed the skill, that the source revision exists, or that host
 verification ran.
 
+## All-turn replay and an intermediate false-completion trap
+
+To check three complete supplied checkpoints rather than just the first
+and last, run:
+
+```sh
+python3 scripts/check_transition.py \
+  --chain examples/transition-chain.json \
+  --require-pass
+```
+
+The positive fictional fixture has **two** valid transitions and the
+final host qualification still **open**. A PASS is
+`STATIC_CHAIN_RECONCILED`, not evidence of completed provider checks.
+If the middle turn quietly drops the security gate, narrows acceptance
+to a plan, changes an authorized decision, or asserts an unrun host
+receipt, the full replay must fail or HOLD **at the first affected
+transition**. Restoring the final visible state does not erase
+intermediate drift. An explicit owner scope change produces `HOLD`
+and leaves later turns **UNEXAMINED**, pending actual authorization.
+
+The samples are caller-supplied fiction, not an independently observed
+model conversation. The checker neither authenticates their source
+nor scores an agent's real replies.
+
 ## Four contextual negative controls
 
 | Domain | Starting obligation | Later-turn challenge | Required result |
