@@ -245,12 +245,14 @@ class TransitionTests(unittest.TestCase):
     def test_unblocking_without_evidence_is_rejected(self):
         old = before()
         old["obligations"][1]["state"] = "blocked"
+        old["next_action"] = None
         new = after()
         self.refuse("UNBLOCKED_WITHOUT_EVIDENCE", old=old, new=new)
 
     def test_unblocking_with_explicit_reference_is_accepted(self):
         old = before()
         old["obligations"][1]["state"] = "blocked"
+        old["next_action"] = None
         new = after()
         new["obligations"][1]["unblocked_ref"] = "fictional-permission-receipt"
         self.assertEqual(self.check(old, new)["status"],
