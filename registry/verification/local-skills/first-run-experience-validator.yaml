@@ -1,0 +1,30 @@
+schema_version: 1
+skill_name: first-run-experience-validator
+skill_version: "0.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/first-run-experience-validator/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/first-run-experience-validator/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 65cc4eea47716c50abe4355aa65658ebd928c24e
+complete_package_tree_sha: 6b244f0f44a0122ed6528bd2c122e1808c332452
+characterized_at: "2026-11-23"
+reviewed_at: "2026-11-23"
+verification_status: needs-re-review
+verification_basis: issue-884-initial-source-candidate
+validation_status: not-run
+validation_note: "Source contains twenty original fictional adversarial scenarios and a blank audit ledger. No agent-host behavior, real isolated installation, first meaningful task, genuine novice, user outcome or security inspection has been executed. No claim of synthetic test pass."
+rubric: docs/skill-verification.md
+rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
+tags:
+  use_case: [first-run, onboarding, installation-instructions, novice-acceptance]
+  lifecycle: [documentation, testing, release-readiness]
+  characteristic: [standalone, offline, read-only, evidence-limits, fail-closed]
+  authority: [read-only]
+  portability: high
+notes: >-
+  Published instructions and exact-version user journey are audited
+  separately from CI completion, release bytes, and claimed installation.
+  Merely reading a fictional case never proves an actual host or customer
+  succeeded.

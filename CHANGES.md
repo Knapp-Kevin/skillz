@@ -1,5 +1,9 @@
 # Material changes
 
+## 2026-11-23
+- [#884](https://github.com/Knapp-Kevin/skillz/issues/884): Initial First-Run Experience Validator v0.1.0, original standalone MIT package with fresh-user first-value evidence ledger and 20 fictional adversarial cases. Source-only review; genuine clean-host/novice acceptance NOT_RUN.
+
+
 A hand-maintained dated pointer to meaningful **repository changes**, not a machine poller, adoption registry, or substitute for per-skill provenance and exact-version verification. For complete history use [commits](https://github.com/Knapp-Kevin/skillz/commits/main), [current state](docs/SYSTEM_STATE.md), and canonical `registry/` records. Entries identify confirmed work only; repository-side work in open PRs is not listed as shipped.
 
 ## 2026-11-20
