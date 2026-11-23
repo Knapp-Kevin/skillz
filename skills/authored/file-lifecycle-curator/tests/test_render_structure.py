@@ -307,5 +307,16 @@ class StructureVisualizationTests(unittest.TestCase):
                 item("doc-two", state="UNPLANNED", target_path=None)))
 
 
+    def test_199_of_200_verified_never_rounds_to_100(self):
+        rows = [verified(item("file-" + str(i).zfill(3)))
+                for i in range(199)]
+        rows.append(item("file-199"))
+        out = visual.checked_view(snapshot(*rows))
+        self.assertEqual(out["progress"]["planned_relocations"], 200)
+        self.assertEqual(out["progress"]["verified_relocations"], 199)
+        self.assertEqual(out["progress"]["percent_of_scoped_plan"], 99.5)
+        self.assertLess(out["progress"]["percent_of_scoped_plan"], 100)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

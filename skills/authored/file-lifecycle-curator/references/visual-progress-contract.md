@@ -56,6 +56,9 @@ attempts as completed organization.
   projection with an UNPLACED_KEEP_CURRENT marker. Do not erase them
   to make the target tree look cleaner or invent a real "unplaced" folder.
 - For no planned relocations, show "0 planned", not 100% complete.
+- **100% is reserved for an entirely receipt-attested planned set.**
+  With at most 200 records, show at least one decimal of scoped
+  percentage so 199/200 is 99.5%, never rounded to 100%.
 - Show FAILED, BLOCKED, EXECUTED-but-unverified, ROLLED_BACK and
   UNKNOWN counts independently. A rollback may require re-planning.
 - Preserve verified-to-unverified regressions across permitted

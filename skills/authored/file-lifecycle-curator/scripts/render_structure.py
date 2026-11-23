@@ -208,7 +208,7 @@ def checked_view(snapshot, previous=None):
         "verified_relocations": len(verified),
         "planned_relocations": total_planned,
         "percent_of_scoped_plan": (
-            round(100 * len(verified) / total_planned)
+            round(100 * len(verified) / total_planned, 1)
             if total_planned and snapshot["coverage"] == "complete" else None
         ),
         "denominator_basis": "CALLER_ASSERTED_COMPLETE_SCOPE" if
