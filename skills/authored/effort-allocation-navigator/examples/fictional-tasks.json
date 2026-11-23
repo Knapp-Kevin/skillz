@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-23",
+  "capacity_minutes": 40,
+  "goal_id": "deliver-guide",
+  "preferences": {
+    "choice_count": 2,
+    "pace": "balanced"
+  },
+  "tasks": [
+    {
+      "id": "collect-outline",
+      "label": "Draft an outline for a fictional public workshop",
+      "kind": "action",
+      "state": "todo",
+      "depends_on": [],
+      "effort_minutes": 30,
+      "duration_days": 1,
+      "value": 5,
+      "urgency": 1,
+      "obligation": "discretionary"
+    },
+    {
+      "id": "draft-pages",
+      "label": "Write fictional workshop guide pages",
+      "kind": "action",
+      "state": "todo",
+      "depends_on": [
+        "collect-outline"
+      ],
+      "effort_minutes": 180,
+      "duration_days": 2,
+      "value": 5,
+      "urgency": 2
+    },
+    {
+      "id": "check-citations",
+      "label": "Check public citations in the example",
+      "kind": "action",
+      "state": "todo",
+      "depends_on": [
+        "draft-pages"
+      ],
+      "effort_minutes": 40,
+      "duration_days": 1,
+      "value": 4,
+      "urgency": 2
+    },
+    {
+      "id": "prepare-visual",
+      "label": "Prepare an optional simple diagram",
+      "kind": "action",
+      "state": "todo",
+      "depends_on": [],
+      "effort_minutes": 25,
+      "duration_days": 1,
+      "value": 3,
+      "urgency": 0
+    },
+    {
+      "id": "deliver-guide",
+      "label": "Fictional guide is published after verification",
+      "kind": "milestone",
+      "state": "todo",
+      "depends_on": [
+        "check-citations",
+        "prepare-visual"
+      ],
+      "duration_days": 0
+    }
+  ]
+}

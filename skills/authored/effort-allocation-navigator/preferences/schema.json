@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional private effort allocation preferences (never commit filled values)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "skill_id",
+    "choice_count",
+    "pace"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "skill_id": {
+      "const": "effort-allocation-navigator"
+    },
+    "choice_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "default": 2
+    },
+    "pace": {
+      "type": "string",
+      "enum": [
+        "balanced",
+        "short-sprints"
+      ],
+      "default": "balanced"
+    }
+  }
+}
