@@ -13,7 +13,10 @@ Read this before presenting a physical reorganization, export, archive or any cl
 - `ROLLED_BACK`: rollback action was performed and its result checked; never infer from a suggested undo.
 - `UNKNOWN`: no reliable observation.
 
-Do not collapse these states into "done."
+Do not collapse these states into "done." A visual folder tree, completion
+percentage, planned "after" shape, generated image or chart is not
+an additional action state and never proves execution. See the
+[three-view visual contract](visual-progress-contract.md).
 
 ## Dry-run plan
 

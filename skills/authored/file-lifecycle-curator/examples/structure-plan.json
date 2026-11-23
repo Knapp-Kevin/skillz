@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "plan_id": "demo-plan-one",
+  "plan_revision": "plan-rev-one",
+  "snapshot_id": "demo-snapshot-one",
+  "observed_at": "2026-11-22T18:00:00-05:00",
+  "scope": {
+    "collection_id": "fictional-library",
+    "root_id": "fictional-root",
+    "principal_id": "fictional-owner",
+    "audience_id": "fictional-viewer"
+  },
+  "viewer_check": "current-authorized",
+  "coverage": "complete",
+  "records": [
+    {
+      "record_id": "meeting-notes",
+      "original_path": "inbox/meeting-notes.txt",
+      "observed_path": "inbox/meeting-notes.txt",
+      "target_path": "work/meetings/meeting-notes.txt",
+      "source_revision": "rev-001",
+      "state": "PROPOSED",
+      "viewer_check": "current-authorized",
+      "readback": null
+    },
+    {
+      "record_id": "roadmap-file",
+      "original_path": "inbox/roadmap.txt",
+      "observed_path": "inbox/roadmap.txt",
+      "target_path": "work/planning/roadmap.txt",
+      "source_revision": "rev-001",
+      "state": "PROPOSED",
+      "viewer_check": "current-authorized",
+      "readback": null
+    },
+    {
+      "record_id": "receipt-file",
+      "original_path": "inbox/receipt-001.txt",
+      "observed_path": "inbox/receipt-001.txt",
+      "target_path": "records/receipts/receipt-001.txt",
+      "source_revision": "rev-001",
+      "state": "PROPOSED",
+      "viewer_check": "current-authorized",
+      "readback": null
+    },
+    {
+      "record_id": "archive-note",
+      "original_path": "archive/old-roadmap.txt",
+      "observed_path": "archive/old-roadmap.txt",
+      "target_path": "archive/old-roadmap.txt",
+      "source_revision": "rev-001",
+      "state": "UNCHANGED",
+      "viewer_check": "current-authorized",
+      "readback": null
+    },
+    {
+      "record_id": "misc-note",
+      "original_path": "inbox/misc-note.txt",
+      "observed_path": "inbox/misc-note.txt",
+      "target_path": null,
+      "source_revision": "rev-001",
+      "state": "UNPLANNED",
+      "viewer_check": "current-authorized",
+      "readback": null
+    }
+  ]
+}

@@ -47,7 +47,14 @@ Your recurring trigger does not add permissions or waive safety rules.
    missing from an ACL-filtered listing. For missing prior records,
    establish separate current access to their cached identities or
    return ABSENT_IDENTITY_ACCESS_HOLD without IDs or counts.
-5. Limit re-extraction/reindexing to qualified changed/stale records.
+5. When a user-approved organization plan and current authorized
+   source/operation evidence exist, optionally render its observed,
+   proposed and receipt-attested trees using the local visual contract.
+   Display scope coverage and true progress denominator. Never attach
+   sensitive trees to an unapproved schedule destination, or infer
+   verified moves from a prior diagram. A scheduler trigger does not
+   make a visual report current.
+6. Limit re-extraction/reindexing to qualified changed/stale records.
    Produce a concise result: scope and inspected/expected coverage, changed
    counts, what was actually rechecked, holds, **one next action and one
    reasonable alternative**, no-change result, and unresolved evidence.

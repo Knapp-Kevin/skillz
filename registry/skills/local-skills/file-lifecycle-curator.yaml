@@ -22,19 +22,17 @@ dependencies: >-
   Authorized inputs for source inspection. Inventory, tagging, metadata decks, planning
   and excerpt-limited indexing are text-only; optional offline delta is Python 3.9+ standard library; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
-content_blob_sha: 60b5ebce8d50a359fe623f8cb3853884c4b7e900
-complete_package_tree_sha: e324df81c41a540fe1f6cc208fcfe55eb18c2405
+content_blob_sha: 4935995d27708c5d6b65c0dd6b42cc444ae250db
+complete_package_tree_sha: d6bb8bd22a2cfe6a31ffa188e449cfa1604f1d43
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Thirteen-file v1.1.1 package with portable incremental maintenance and
-  scheduled-agent run handoff. Initial 33/33 source tests passed but
-  automated review exposed two security/coverage gaps; repaired with
-  five new adversarial cases. Current source PR #902 head
-  07253a2d16fc6277c37b4d89249e5b61043d5cdc PASS 38/38 offline tests
-  (run 45280511489) and 11/11 authored checks (run 45280511700);
-  all review threads resolved. No real source, persistent private state,
-  schedule or consuming-agent outcome observed.
+  Current 19-file original first-party package preserves version 1.1.1
+  and adds portable visual before/after/progress projection for a
+  long-lived authorized curation agent. Source-only 38 new adversarial
+  cases and 38 prior maintenance cases are pending exact-head QA;
+  native file access and host scheduling never presumed.
+
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
 # Optional composition still requires independent host availability/authorization.
 # An offline-only negative scenario is bundled; no new host validation claimed.

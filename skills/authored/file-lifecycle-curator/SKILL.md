@@ -6,7 +6,8 @@ description: >-
   summarize documents, assign controlled keyword tags, detect duplicates,
   plan reversible reorganization, and evaluate archival and retention choices.
   Use for file organization, document libraries, folder cleanups, archives and
-  knowledge-base intake and repeatable incremental file maintenance with
+  knowledge-base intake, visual before/after folder structures with
+  evidence-based progress, and repeatable incremental maintenance with
   optional authorized scheduled-agent handoff. Default read-only; never
   silently move, overwrite, export, delete, or change access permissions.
 metadata:
@@ -29,7 +30,7 @@ installed catalog are explanatory, not a required file or network resource.
 
 ## Activation and boundaries
 
-Activate when the operator requests organization, indexing, document summarization, keyword tagging, metadata cards/decks, deduplication, folder structure, searchability, archive preparation, retention review, incremental file-library maintenance, authorized checkpoint recall, or a combined file-library cleanup. A one-time request and a recurring schedule can use the same method; **neither the skill nor a schedule grants ongoing source or write permission**. Accept local directories, explicitly supplied uploads, repository files, or approved cloud-drive collections where the host genuinely has access.
+Activate when the operator requests organization, indexing, document summarization, keyword tagging, metadata cards/decks, deduplication, folder structure, searchability, archive preparation, retention review, visual organization previews, before/after folder structure diagrams, evidence-backed progress, incremental file-library maintenance, authorized checkpoint recall, or a combined file-library cleanup. A one-time request and a recurring schedule can use the same method; **neither the skill nor a schedule grants ongoing source or write permission**. Accept local directories, explicitly supplied uploads, repository files, or approved cloud-drive collections where the host genuinely has access.
 
 Do **not** activate on an unrelated writing task, unbounded whole-account crawl, hidden backup, email transmission, deployment artifact purge, compliance disposition, forensic recovery, or destructive deletion just because the user said "clean up." Refer specialized legal records disposition, security incident response, backup engineering and regulated data handling to their separately qualified workflows; this skill can still prepare a read-only inventory.
 
@@ -46,7 +47,7 @@ Do **not** activate on an unrelated writing task, unbounded whole-account crawl,
 
 ### 1. Bound the collection
 
-Record the intended outcome (findability, tidy folders, knowledge intake, archive, or all), source roots and snapshot time, privacy/retention constraints, expected consumer and output destination. Select one or more work modes: **inventory**, **index**, **summarize**, **tag**, **metadata deck**, **deduplicate**, **organization plan**, **archive assessment**, **retrieve**, **incremental refresh**, **maintenance audit**.
+Record the intended outcome (findability, tidy folders, knowledge intake, archive, or all), source roots and snapshot time, privacy/retention constraints, expected consumer and output destination. Select one or more work modes: **inventory**, **index**, **summarize**, **tag**, **metadata deck**, **deduplicate**, **organization plan**, **archive assessment**, **retrieve**, **incremental refresh**, **maintenance audit**, **visual structure review**.
 
 Set a stable snapshot policy. A changing source or inaccessible file is recorded as a gap, not silently ignored. For huge collections, process a scoped batch with deterministic continuation and report the unvisited remainder.
 
@@ -80,6 +81,52 @@ Classify duplicate candidates as **EXACT** (verified complete-byte digest), **LI
 
 Propose a shallow navigable folder tree based on stable primary categories, ownership and use, not an unbounded hierarchy of tags. Supply a proposed old -> new mapping, reasons, collision list, link/reference breakage, access/permission risk, and rollback plan. Prefer labels/virtual collections to physical moves where shared links, version history or collaboration make relocation costly. Make no writes without approved per-batch execution; see [operation-and-archive-rules.md](references/operation-and-archive-rules.md).
 
+### 6a. Visualize the original, proposed and verified structure
+
+When a plan includes an organization change, or the operator wants to
+understand progress, show a **clear before/after folder-tree preview**
+and a compact progress indicator. Use three *explicitly distinct*
+views, never a single ambiguous "after" state:
+
+- **Observed:** actual source-scoped structure reported by the
+  authorized host at a named snapshot and capture time, including
+  PARTIAL/UNKNOWN coverage. File/folder counts and names can be
+  sensitive; enforce the current viewer and source access rules
+  before displaying any tree or change count.
+- **Proposed:** desired categorized folder structure, still a
+  hypothetical read-only plan, never the result of a file move.
+  Show collision/permission/link holds and unplaced records. Do
+  not treat an approved proposal as having been applied.
+- **Verified:** only relocations with current observed destination
+  and a host-checked source/plan/revision-bound readback receipt.
+  EXECUTED but unverified, BLOCKED, FAILED, ROLLED_BACK and UNKNOWN
+  remain separate. A visualization alone does not make a receipt
+  trustworthy.
+
+Progress means verified relocations / planned relocations **inside
+the actually observed scope**, not "files scanned" or "tasks closed".
+If scan coverage is partial, show counts but suppress a misleading
+global completion percentage. If the diagram is truncated for
+readability, say so and report the omitted count. Include accessible
+text labels and a plain-text tree fallback rather than relying only
+on color, image generation, or a particular charting app.
+
+Read [visual-progress-contract.md](references/visual-progress-contract.md)
+for full agent-lifetime safeguards: immutable plan identity/revision,
+permission-bound visual recall, observed-vs-proposed-vs-verified
+separation, progress accounting, replay/rollback, destination
+collisions, safe display aliases, version drift, source omission,
+scheduled runs, portability and adversarial failure conditions.
+The optional [render_structure.py](scripts/render_structure.py)
+accepts only explicitly supplied plan snapshots and produces
+read-only Mermaid and plain-text views. Never claim it verified
+real host operations or created private files. Any actual
+interactive viewer, exported diagram or persistent visual
+checkpoint requires separate supported host capability and
+permission. The user may choose the preferred display style,
+but a preference cannot remove provenance, protection or
+status distinction.
+
 ### 7. Assess archive and retention safely
 
 Separate **archive recommendation** from **archive creation**, **retention approval** and **deletion**. Identify reasons (inactive, superseded, completed, historical reference), proposed archive location/format, required metadata, immutability/holds, link preservation, owner, review date, future retrieval and restore expectations. Unknown legal, contractual or organizational retention is an OPEN HOLD, not an invitation to choose a guessed period.
@@ -98,7 +145,8 @@ Deliver:
 5. Exact/likely/related duplicate register (with basis);
 6. Proposed folder organization and archival candidates;
 7. Exceptions, privacy/retention holds and validation limits;
-8. **Action ledger:** proposed, approved, executed, verified and reversible, each independently stated.
+8. **Action ledger:** proposed, approved, executed, verified and reversible, each independently stated;
+9. **Visual structure:** observed/current and proposed folder trees, read-back-attested progress, unresolved holds, source coverage, and a text fallback when meaningful and authorized.
 
 If the operator authorizes a precise batch and the host truly has the required file tools, revalidate current version/size/hash and destination state immediately before action; stop on drift, ambiguous identity, symlink escape, permission change, collision or unsafe restore assumptions. Execute the minimum approved operations, verify read-back and references, record successes and failures per file, and never overstate rollback. Where those tools or approvals are absent, finish with a complete proposal rather than manufacturing side effects.
 
@@ -142,7 +190,10 @@ service or an assumed persistent index.
    what changed and actually ran, unchanged/skipped coverage,
    blocked/unknown work, one prioritized safe action and one
    genuinely useful alternative when available, stop condition,
-   and whether the next checkpoint was truly saved.
+   and whether the next checkpoint was truly saved. If an authorized
+   visual organization plan exists, regenerate the observed/proposed/
+   receipt-attested progress from the current source ledger, not
+   a cached image or an old percentage.
 5. **Optional scheduled delivery.** Use the
    [scheduled-maintenance-template.md](examples/scheduled-maintenance-template.md)
    only as a user-reviewable handoff to a *real* scheduler the host
