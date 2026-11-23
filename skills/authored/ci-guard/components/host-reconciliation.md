@@ -157,7 +157,7 @@ passing the manifest to the adapter.
 
 ## Negative controls
 
-The [41 executable planted tests](../examples/test_ci_host_reconcile.py)
+The [42 executable planted tests](../examples/test_ci_host_reconcile.py)
 reject stale/wrong source, job rerun attempt mix-ups, event/path mismatch,
 invalid selected source graph, missing/duplicated/unmapped verifier jobs,
 failed or skipped checks, false-green workflow-level conclusion, invalid
