@@ -17,21 +17,22 @@ local_path: skills/authored/file-lifecycle-curator/SKILL.md
 permission_tier: read-only
 portability: high
 review_status: needs-re-review
-dependency_status: self-contained-text-package
+dependency_status: self-contained-text-and-optional-stdlib
 dependencies: >-
   Authorized inputs for source inspection. Inventory, tagging, metadata decks, planning
-  and excerpt-limited indexing are text-only; full hashes, extraction and all mutation
+  and excerpt-limited indexing are text-only; optional offline delta is Python 3.9+ standard library; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
-content_blob_sha: f099e5d36af3e347a6241814b7b543dcc7ff82c2
-complete_package_tree_sha: d7bd1052e3f056138e57ec7651706e6416ea2458
+content_blob_sha: a639c21e673d535a5201ff6f5b721c1472399a2c
+complete_package_tree_sha: e573470e50b72dd23a1936ec654a8bbe6f536f7f
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Original seven-file MIT package, exact-version statically inspected on 2026-11-18
-  at 18/20 with no hard-fail; no executable files. It differentiates observed and
-  inferred metadata, plans from authorized changes, and archive from deletion.
-  Representative host behavioral validation and operational security scanning not run.
-  See docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
+  Current thirteen-file package adds original incrementality and safe
+  scheduled-agent handoff to v1.1.1 without changing authority or
+  version. New offline reconciler and 33 planted source-level tests
+  awaiting exact-head CI. Actual private checkpoint storage, source
+  account permissions, scheduler creation and consuming-agent behavior
+  NOT_RUN. Historical package-only static review not a current receipt.
 
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
 # Optional composition still requires independent host availability/authorization.

@@ -6,8 +6,9 @@ description: >-
   summarize documents, assign controlled keyword tags, detect duplicates,
   plan reversible reorganization, and evaluate archival and retention choices.
   Use for file organization, document libraries, folder cleanups, archives and
-  knowledge-base intake. Default read-only; never silently move, overwrite,
-  export, delete, or change access permissions.
+  knowledge-base intake and repeatable incremental file maintenance with
+  optional authorized scheduled-agent handoff. Default read-only; never
+  silently move, overwrite, export, delete, or change access permissions.
 metadata:
   author: MythologIQ-Labs / Skillz
   category: File & Information Management
@@ -28,7 +29,7 @@ installed catalog are explanatory, not a required file or network resource.
 
 ## Activation and boundaries
 
-Activate when the operator requests organization, indexing, document summarization, keyword tagging, metadata cards/decks, deduplication, folder structure, searchability, archive preparation, retention review, or a combined file-library cleanup. Accept local directories, explicitly supplied uploads, repository files, or approved cloud-drive collections where the host genuinely has access.
+Activate when the operator requests organization, indexing, document summarization, keyword tagging, metadata cards/decks, deduplication, folder structure, searchability, archive preparation, retention review, incremental file-library maintenance, authorized checkpoint recall, or a combined file-library cleanup. A one-time request and a recurring schedule can use the same method; **neither the skill nor a schedule grants ongoing source or write permission**. Accept local directories, explicitly supplied uploads, repository files, or approved cloud-drive collections where the host genuinely has access.
 
 Do **not** activate on an unrelated writing task, unbounded whole-account crawl, hidden backup, email transmission, deployment artifact purge, compliance disposition, forensic recovery, or destructive deletion just because the user said "clean up." Refer specialized legal records disposition, security incident response, backup engineering and regulated data handling to their separately qualified workflows; this skill can still prepare a read-only inventory.
 
@@ -45,7 +46,7 @@ Do **not** activate on an unrelated writing task, unbounded whole-account crawl,
 
 ### 1. Bound the collection
 
-Record the intended outcome (findability, tidy folders, knowledge intake, archive, or all), source roots and snapshot time, privacy/retention constraints, expected consumer and output destination. Select one or more work modes: **inventory**, **index**, **summarize**, **tag**, **metadata deck**, **deduplicate**, **organization plan**, **archive assessment**, **retrieve**.
+Record the intended outcome (findability, tidy folders, knowledge intake, archive, or all), source roots and snapshot time, privacy/retention constraints, expected consumer and output destination. Select one or more work modes: **inventory**, **index**, **summarize**, **tag**, **metadata deck**, **deduplicate**, **organization plan**, **archive assessment**, **retrieve**, **incremental refresh**, **maintenance audit**.
 
 Set a stable snapshot policy. A changing source or inaccessible file is recorded as a gap, not silently ignored. For huge collections, process a scoped batch with deterministic continuation and report the unvisited remainder.
 
@@ -100,6 +101,79 @@ Deliver:
 8. **Action ledger:** proposed, approved, executed, verified and reversible, each independently stated.
 
 If the operator authorizes a precise batch and the host truly has the required file tools, revalidate current version/size/hash and destination state immediately before action; stop on drift, ambiguous identity, symlink escape, permission change, collision or unsafe restore assumptions. Execute the minimum approved operations, verify read-back and references, record successes and failures per file, and never overstate rollback. Where those tools or approvals are absent, finish with a complete proposal rather than manufacturing side effects.
+
+## Incremental maintenance, safe recall and scheduled-agent handoff
+
+Use [incremental-maintenance.md](references/incremental-maintenance.md) whenever
+the user wants repeatable curation, source freshness, change-only updates,
+periodic quality checks, resumable work, recall from an earlier run, or
+integration with an actual authorized scheduler. **This is a separately
+invoked phase of the same skill**, not a mandatory external memory/scheduler
+service or an assumed persistent index.
+
+1. **Recover evidence, never invent memory.** Identify the prior
+   checkpoint only from the user-approved, host-accessible private
+   destination. Verify current scope, viewer, original source IDs,
+   revision types, snapshot completeness, index extraction coverage
+   and actual accepted processing receipts. If absent or inaccessible,
+   label COLD_START and proceed with current authorized data only.
+   A past answer or triggered job is not an authenticated checkpoint.
+2. **Reconcile incremental changes.** Compare current observed IDs,
+   revisions, locator and extraction evidence to the authorized prior
+   snapshot. Prioritize NEW/CHANGED/UNKNOWN/ACCESS_HOLD and avoid
+   re-extracting confirmed unchanged content; report unresolved
+   differences separately. A missing record in a PARTIAL scan is
+   NOT_OBSERVED, not deleted. Even absent from a complete snapshot
+   is review-only, not permission to remove any source or index.
+3. **Do selective maintenance.** Recheck changed summaries, tags,
+   link integrity, duplicate evidence, stale index results, archive
+   holds and failed operations; keep full-source versus excerpt
+   coverage explicit. Preserve verified work and never let partial
+   output overwrite previously complete evidence as current.
+   Only authorized writes with actual read-back change durable state.
+4. **Produce a bounded continuation.** Report last accepted snapshot,
+   what changed and actually ran, unchanged/skipped coverage,
+   blocked/unknown work, one prioritized safe action and one
+   genuinely useful alternative when available, stop condition,
+   and whether the next checkpoint was truly saved.
+5. **Optional scheduled delivery.** Use the
+   [scheduled-maintenance-template.md](examples/scheduled-maintenance-template.md)
+   only as a user-reviewable handoff to a *real* scheduler the host
+   supports. Require separately confirmed recurrence, timezone,
+   root/principal/audience, retention/cost bounds, private delivery
+   and storage permissions, stop/revocation rules and duplication
+   protection. Do not auto-create or self-perpetuate scheduled tasks,
+   reminders, agents, notification streams or checkpoints.
+   A scheduler trigger does not prove a successful delivered result.
+
+**Optional offline helper:** The separately usable,
+[read-only source-delta calculator](scripts/reconcile.py) operates
+only on explicit JSON snapshot input. The two
+[fictional](examples/maintenance-previous.json)
+[snapshots](examples/maintenance-current.json) and
+[offline adversarial tests](tests/test_reconcile.py) illustrate the
+state transition contract. Run from this complete package, where
+Python 3.9+ is available and the input file paths were independently
+approved by the host:
+
+    python3 scripts/reconcile.py --previous examples/maintenance-previous.json --current examples/maintenance-current.json
+    python3 -m unittest discover -s tests -p 'test_*.py' -v
+
+No Python, trusted snapshot, previous checkpoint or actual scheduler
+is required for the skill's ordinary text-only workflow. The helper
+does not scan files or folders, authenticate access, verify supplied
+hashes, save a checkpoint, write an index, create scheduled tasks,
+delete files or claim model-host validation. A tool-less host can
+apply the same evidence/authority distinctions manually without
+pretending the helper ran.
+
+**Refinement learning boundary:** A reproducible broadly applicable
+failure in source identity, access isolation, delta correctness or
+false-success classification is a candidate for separately reviewed
+canonical skill improvement. A user's desired cadence, taxonomy,
+choice count, reminder style or output format is a local preference:
+apply it in-session, persist only with specific consent and a real
+private store, never turn it into global correctness policy.
 
 ## Failure and abstention
 
