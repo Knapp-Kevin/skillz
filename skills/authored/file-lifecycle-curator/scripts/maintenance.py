@@ -124,13 +124,13 @@ def main(argv=None):
     parser.add_argument("--expected-generation", type=int)
     args = parser.parse_args(argv)
     try:
-        current = reconcile.read_input(args.current)
+        current = reconcile.read_snapshot(args.current)
         report = maintenance(
             args.store, current, args.run_id, args.cadence,
             commit=args.commit, expected_generation=args.expected_generation,
             initialize=args.initialize, ack_private_store=args.ack_private_store)
-    except (state.Refused, reconcile.Invalid) as exc:
-        report = {"status": getattr(exc, "code", str(exc)),
+    except (state.Refused, reconcile.Invalid, OSError, ValueError, KeyError, TypeError) as exc:
+        report = {"status": getattr(exc, "code", "INVALID_SNAPSHOT"),
                   "checkpoint_written": False}
     print(json.dumps(report, sort_keys=True))
     return 0 if report["status"] not in {
