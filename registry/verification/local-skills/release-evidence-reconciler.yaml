@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: release-evidence-reconciler
+skill_version: "0.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/release-evidence-reconciler/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/release-evidence-reconciler/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 5a14866dca63cc644520285988a0f412f93b0ae2
+complete_package_tree_sha: 3b8d00333b681561b1832e5b9a75560e11ac6e04
+characterized_at: "2026-11-23"
+reviewed_at: "2026-11-23"
+verification_status: needs-re-review
+verification_basis: initial-offline-source-qa-pending
+validation_status: not-run
+validation_note: "New local-hashing release-chain auditor with 49 synthetic tests planted and harmless ASCII fixture; hosted exact-head execution pending. No real GitHub build/provider receipt, cryptographic signer verification, published channel download authenticity, installation or end-user acceptance observed."
+rubric: docs/skill-verification.md
+rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
+tags:
+  use_case: [release-integrity, published-artifact-drift, provenance]
+  lifecycle: [verification, publication, assurance]
+  characteristic: [standalone, offline, hashed-local-bytes, evidence-limits, fail-closed]
+  authority: [read-only]
+  portability: high
+notes: >-
+  The tool hashes supplied local artifact bytes. Source, build, publication,
+  attestation and installer receipts are never independently authenticated
+  by this checker, even when they claim to pass.

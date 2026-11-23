@@ -36,6 +36,7 @@ packages or historical repo-bound procedures that we do not own.
 | [CI Guard](ci-guard/SKILL.md) | Classify CI changes and protect required delivery checks |
 | [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) | Diagnose repository delivery readiness from actual evidence |
 | [PR Integration Surgeon](pr-integration-surgeon/SKILL.md) | Resolve stacked PR dependency, conflict, stale-head CI and review blockers without treating a plan as a merge |
+| [Release Evidence Reconciler](release-evidence-reconciler/SKILL.md) | Compare tested source, build and published bytes, provenance claims, and installation evidence |
 | [Repository README Architect](repository-readme-architect/SKILL.md) | Create, improve, audit, and verify repository READMEs |
 | [Source Debt Triage](source-debt-triage/SKILL.md) | Identify and prioritize actionable source-code debt |
 | [Reference Integrity Auditor](reference-integrity-auditor/SKILL.md) | Audit document references and scoped dependency impact |

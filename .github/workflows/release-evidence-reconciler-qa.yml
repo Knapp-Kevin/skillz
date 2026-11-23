@@ -1,0 +1,33 @@
+name: Release Evidence Reconciler offline contracts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/release-evidence-reconciler/**'
+      - 'registry/skills/local-skills/release-evidence-reconciler.yaml'
+      - 'registry/verification/local-skills/release-evidence-reconciler.yaml'
+      - '.github/workflows/release-evidence-reconciler-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-evidence-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-contracts:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # pinned v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Check source-to-byte-chain offline falsifiers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/release-evidence-reconciler/tests -p 'test_*.py' -v

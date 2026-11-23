@@ -1246,6 +1246,38 @@
         "cloud-devops/ci-cd"
       ],
       "review_note": "First-party seven-file package source candidate, 49 synthetic offline tests at PR #881 source head 5769bedab30b6fb92a8eed09b187156642148e9d PASS on Actions #45112426407. Authored full-provenance/feedback contract 11/11 PASS on Actions #45112426311; both Socket Security checks SUCCESS. Exact package pins set. Actual host merge/queue review/production acceptance, independent consuming-agent behavior and user outcomes NOT_RUN."
+    },
+    {
+      "id": "release-evidence-reconciler",
+      "display_name": "Release Evidence Reconciler",
+      "source_class": "first-party-authored",
+      "origin_issue": "https://github.com/Knapp-Kevin/skillz/issues/882",
+      "package_path": "skills/authored/release-evidence-reconciler",
+      "entrypoint": "skills/authored/release-evidence-reconciler/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/release-evidence-reconciler/LICENSE",
+      "license_inheritance": "Original independently authored MIT text, standard-library read-only verifier, adversarial tests and fictional 29-byte artifact. No imported third-party skill implementation or customer data.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-23",
+      "provenance_path": "registry/skills/local-skills/release-evidence-reconciler.yaml",
+      "verification_path": "registry/verification/local-skills/release-evidence-reconciler.yaml",
+      "skill_blob_sha": "5a14866dca63cc644520285988a0f412f93b0ae2",
+      "package_tree_sha": "3b8d00333b681561b1832e5b9a75560e11ac6e04",
+      "package_file_count": 8,
+      "review_status": "needs-re-review",
+      "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only optional local file hashing of caller-authorized stable directory; no network, installation, publication, trust-store access or GitHub operations",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original first-party MIT package. Published third-party GitHub/SLSA documentation factual reference only; no licenses, secrets, software installer binaries or external snippets imported.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "software-engineering/maintenance",
+        "security/supply-chain",
+        "cloud-devops/ci-cd"
+      ],
+      "review_note": "New first-party eight-file skill includes local SHA-256 measurement of actual sample bytes plus synthetic release-claim reconciliation. Source tests not yet hosted on exact PR HEAD. No external attestation cryptography, actual installer execution, provider-authenticated release, independent agent evaluation or delivered-product acceptance observed."
     }
   ]
 }
