@@ -323,3 +323,21 @@ All numbers, hashes and labels in this sample are fictional. Passing the
 fixture is **not** GitHub-provider qualification, billable Actions cost
 verification, or release authorization. Preserve independent native,
 status/branch protection and deployment receipts.
+
+## Outcome-first pre-qualification readiness (CI Guard v1.6.4)
+
+The [fictional readiness test bundle](test_ci_readiness.py) recomputes the
+existing individual source, overlap, scenario, phase and strategy reports and
+provides a single advisory decision with **19 planted test cases**.
+Reject partial scheduling wins that miss the original runner/critical-path
+threshold, active same-revision nested duplicate execution, repeated setup
+that has not been characterized or made safe, missing scenario failures,
+stale cross-component revisions, lost native/required checks, missing rollback
+or first-failure regression. Also reject caller-forged source authority,
+duplicate JSON keys and nonfinite inputs.
+
+The positive test returns only `READY_FOR_ONE_QUALIFICATION` with
+`owner_authorization_granted=false`, `production_cutover_authorized=false`,
+`end_to_end_ci_qualified=false` and provider billing `NOT_MEASURED`.
+No synthetic result proves real provider semantic correctness or actual
+consumer economic savings.

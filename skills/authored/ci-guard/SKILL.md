@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.6.3
+  version: 1.6.4
   license: MIT
 ---
 
@@ -402,6 +402,33 @@ Live API reads are distinguished from caller-supplied offline receipts
 but are not cryptographically signed reports and may not upgrade
 simulator assertions to trusted host policy. Preserve separate host
 seeded-fault testing and end-to-end owner acceptance before cutover.
+
+## P0: outcome-first readiness before expensive qualification
+
+For substantial CI optimization, require the consolidated
+[outcome-first readiness gate](components/outcome-readiness.md) before
+requesting a costly live qualification. The optional, standard-library
+[readiness validator](scripts/ci_readiness.py) recomputes existing
+self-repair, cross-workflow overlap, strategy-fit and normalized scenario
+diagnostics, then checks a supplied static source/oracle receipt and the
+owner's actual economic and failure-feedback thresholds. It must HOLD
+if an idle-runner scheduler fix still leaves active duplicate terminal
+execution, repeated test-internal startup, unqualified protection,
+unresolved failed/skip scenarios or inadequate measured-baseline and
+projected cost/latency benefit. A partial fix may be reported as an
+interim correction, never as completion of a materially cheaper
+normative CI objective.
+
+A `READY_FOR_ONE_QUALIFICATION` result is advisory **AS SUPPLIED**,
+not permission to spend Actions minutes or change merge protection.
+It does not authenticate the Git HEAD, compiled oracle execution,
+real provider expressions, actual billed costs or release effects.
+The host must independently qualify these with explicit owner authority,
+retain rollback, and validate exact HEAD in real GitHub Actions.
+If preparation remains HOLD, prefer bounded offline falsification over
+another expensive full matrix. A successful narrow repair may still
+proceed on a separately recorded emergency exception, without claiming
+the original optimization is achieved.
 
 ## P0: publish measured before/after results proof after cutover
 
