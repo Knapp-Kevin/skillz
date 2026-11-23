@@ -23,7 +23,7 @@ dependencies: >-
   and excerpt-limited indexing are text-only; optional offline delta is Python 3.9+ standard library; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
 content_blob_sha: a639c21e673d535a5201ff6f5b721c1472399a2c
-complete_package_tree_sha: e573470e50b72dd23a1936ec654a8bbe6f536f7f
+complete_package_tree_sha: accde9df1e953b60cc9a5e756109e5b2eea22060
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

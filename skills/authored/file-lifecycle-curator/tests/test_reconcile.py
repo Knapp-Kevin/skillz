@@ -152,6 +152,7 @@ class IncrementalCuratorTests(unittest.TestCase):
     def test_prior_permission_unknown_does_not_authorize_cached_info(self):
         old = snap(viewer_check="unknown")
         now = updated(old)
+        now["viewer_check"] = "current-authorized"
         self.assertEqual(tool.reconcile(old, now),
                          {"status": "BASELINE_ACCESS_HOLD", "actions": []})
 
