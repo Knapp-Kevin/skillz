@@ -400,5 +400,222 @@ class TransitionTests(unittest.TestCase):
                 mod.read_json(str(path))
 
 
+
+def chain_fixture():
+    first = before()
+    second = after()
+    third = copy.deepcopy(second)
+    third["revision"] = 3
+    return {
+        "schema_version": 1,
+        "checkpoints": [first, second, third],
+        "transitions": [transition(), transition()],
+    }
+
+
+class MultiTurnChainTests(unittest.TestCase):
+    def test_three_turn_valid_chain_replays_every_step(self):
+        result = mod.reconcile_chain(chain_fixture())
+        self.assertEqual(result["status"], "STATIC_CHAIN_RECONCILED")
+        self.assertEqual(result["qualified_steps"], 2)
+        self.assertEqual(result["first_revision"], 1)
+        self.assertEqual(result["last_revision"], 3)
+        self.assertEqual(result["last_next_action"], "host-qualified")
+        self.assertFalse(result["model_agent_behavior_observed"])
+        self.assertFalse(result["source_and_proofs_authenticated"])
+        self.assertFalse(result["automatic_side_effect_authorized"])
+
+    def test_more_than_two_steps_with_new_blocked_obligation_can_pass(self):
+        data = chain_fixture()
+        item = {"id": "new-regression", "criterion": "Check fictional guard",
+                "acceptance_kind": "local_test", "state": "blocked", "proof": None}
+        data["checkpoints"][1]["obligations"].append(copy.deepcopy(item))
+        data["checkpoints"][2]["obligations"].append(copy.deepcopy(item))
+        result = mod.reconcile_chain(data)
+        self.assertEqual(result["status"], "STATIC_CHAIN_RECONCILED")
+
+    def test_missing_guardrail_in_middle_is_not_laundered_by_restoration(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["guardrails"].pop()
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: PROTECTED_GUARDRAIL_DRIFT"):
+            mod.reconcile_chain(data)
+
+    def test_missing_obligation_in_middle_is_not_laundered_by_restoration(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["obligations"].pop()
+        data["checkpoints"][1]["next_action"] = None
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: DROPPED_UNFINISHED"):
+            mod.reconcile_chain(data)
+
+    def test_rewritten_acceptance_in_middle_cannot_be_restored_silently(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["obligations"][1]["criterion"] = "Only draft a plan"
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: ACCEPTANCE_GATE_REWRITTEN"):
+            mod.reconcile_chain(data)
+
+    def test_dropped_decision_in_middle_detected_even_if_restored(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["decisions"] = []
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: DECISION_DROPPED"):
+            mod.reconcile_chain(data)
+
+    def test_unauthorized_privilege_expansion_midchain_refused(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["permission_scope"] = ["read_only", "release_publish"]
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: PERMISSION_SCOPE_DRIFT"):
+            mod.reconcile_chain(data)
+
+    def test_second_turn_revision_jump_identifies_exact_failing_transition(self):
+        data = chain_fixture()
+        data["checkpoints"][2]["revision"] = 100
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_2: NON_SEQUENTIAL_CONTINUATION"):
+            mod.reconcile_chain(data)
+
+    def test_second_turn_workstream_swap_is_refused(self):
+        data = chain_fixture()
+        data["checkpoints"][2]["workstream_id"] = "another-fictional-team"
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_2: WORKSTREAM_ID_CHANGED"):
+            mod.reconcile_chain(data)
+
+    def test_middle_source_change_requires_revalidation_immediately(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["source_revision"] = NEXT
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: STALE_OR_UNKNOWN_PROOF_REVISION"):
+            mod.reconcile_chain(data)
+
+    def test_middle_fake_completion_is_held_not_reported_success(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["claimed_complete"] = True
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: OPEN_OBLIGATIONS_CANNOT_CLAIM_COMPLETE"):
+            mod.reconcile_chain(data)
+
+    def test_explicit_scope_change_ends_replay_without_looking_past_hold(self):
+        data = chain_fixture()
+        data["transitions"][0] = {
+            "change_type": "user_scope_change_declared",
+            "change_ref": "fictional-new-owner-message"}
+        data["checkpoints"][1]["objective"] = "New fictional task"
+        result = mod.reconcile_chain(data)
+        self.assertEqual(result["status"], "HOLD")
+        self.assertEqual(result["held_step"], 1)
+        self.assertEqual(result["qualified_steps"], 0)
+        self.assertEqual(result["unexamined_steps"], 1)
+        self.assertFalse(result["user_authorization_authenticated"])
+
+    def test_scope_change_on_last_transition_reports_prior_qualification_only(self):
+        data = chain_fixture()
+        data["transitions"][1] = {
+            "change_type": "user_scope_change_declared",
+            "change_ref": "fictional-change-request"}
+        data["checkpoints"][2]["objective"] = "Changed assignment"
+        result = mod.reconcile_chain(data)
+        self.assertEqual(result["status"], "HOLD")
+        self.assertEqual(result["held_step"], 2)
+        self.assertEqual(result["qualified_steps"], 1)
+        self.assertEqual(result["unexamined_steps"], 0)
+
+    def test_route_count_cannot_hide_a_middle_transition(self):
+        data = chain_fixture()
+        data["transitions"].pop()
+        with self.assertRaisesRegex(mod.Hold, "CHAIN_ROUTE_COUNT_MISMATCH"):
+            mod.reconcile_chain(data)
+
+    def test_chain_rejects_empty_singleton_and_33_checkpoints(self):
+        for count in (0, 1, 33):
+            with self.subTest(count=count):
+                data = {"schema_version": 1,
+                        "checkpoints": [before()] * count,
+                        "transitions": [transition()] * max(0, count - 1)}
+                with self.assertRaisesRegex(mod.Hold, "CHAIN_LENGTH_OUT_OF_BOUNDS"):
+                    mod.reconcile_chain(data)
+
+    def test_chain_rejects_unrecognized_version_and_extra_fields(self):
+        for change, marker in (
+                ({"schema_version": 2}, "unsupported chain schema"),
+                ({"agent_has_authority": True}, "unexpected fields")):
+            with self.subTest(change=change):
+                data = chain_fixture()
+                data.update(change)
+                with self.assertRaisesRegex(mod.Hold, marker):
+                    mod.reconcile_chain(data)
+
+    def test_chain_requires_actual_sequence_not_only_passing_endpoints(self):
+        data = chain_fixture()
+        data["checkpoints"][1]["revision"] = 99
+        # Caller can provide a clean final checkpoint: the replay still
+        # fails on the bad middle checkpoint's true turn number.
+        with self.assertRaisesRegex(mod.Hold,
+                                    "CHAIN_STEP_1: NON_SEQUENTIAL_CONTINUATION"):
+            mod.reconcile_chain(data)
+
+    def test_chain_rejects_non_dict_snapshot_without_model_execution(self):
+        data = chain_fixture()
+        data["checkpoints"][1] = "an agent claimed this was fine"
+        with self.assertRaisesRegex(mod.Hold, "CHAIN_STEP_1: checkpoint"):
+            mod.reconcile_chain(data)
+
+    def test_chain_cli_accepts_valid_bundle_and_rejects_unsafe_middle(self):
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "chain.json"
+            data = chain_fixture()
+            p.write_text(json.dumps(data), encoding="utf8")
+            cmd = [sys.executable, str(SRC), "--chain", str(p), "--require-pass"]
+            success = subprocess.run(cmd, capture_output=True, text=True)
+            self.assertEqual(success.returncode, 0, success.stderr)
+            self.assertEqual(json.loads(success.stdout)["qualified_steps"], 2)
+            data["checkpoints"][1]["guardrails"].pop()
+            p.write_text(json.dumps(data), encoding="utf8")
+            failure = subprocess.run(cmd, capture_output=True, text=True)
+            self.assertEqual(failure.returncode, 2)
+            self.assertIn("CHAIN_STEP_1: PROTECTED_GUARDRAIL_DRIFT",
+                          failure.stderr)
+
+    def test_chain_cli_scope_change_holds_and_exits_3(self):
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "chain.json"
+            data = chain_fixture()
+            data["transitions"][1] = {"change_type": "user_scope_change_declared",
+                                      "change_ref": "fictional-message"}
+            p.write_text(json.dumps(data), encoding="utf8")
+            cmd = [sys.executable, str(SRC), "--chain", str(p), "--require-pass"]
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 3, result.stderr)
+            self.assertEqual(json.loads(result.stdout)["status"], "HOLD")
+
+    def test_old_cli_triplet_cannot_be_mixed_with_chain(self):
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "chain.json"
+            p.write_text(json.dumps(chain_fixture()), encoding="utf8")
+            cmd = [sys.executable, str(SRC), "--chain", str(p),
+                   "--previous", str(p)]
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 2)
+            self.assertIn("either --chain or all", result.stderr)
+
+    def test_old_cli_triplet_remains_optional_but_complete(self):
+        result = subprocess.run([sys.executable, str(SRC), "--updated", "test.json"],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("either --chain or all", result.stderr)
+
+    def test_packaged_three_turn_fixture_passes_without_claiming_host_outcome(self):
+        source = ROOT / "examples" / "transition-chain.json"
+        data = mod.read_json(str(source))
+        result = mod.reconcile_chain(data)
+        self.assertEqual(result["status"], "STATIC_CHAIN_RECONCILED")
+        self.assertEqual(result["qualified_steps"], 2)
+        self.assertFalse(result["claimed_complete"])
+        self.assertFalse(result["model_agent_behavior_observed"])
+        self.assertFalse(result["provider_or_merge_outcome_verified"])
+
 if __name__ == "__main__":
     unittest.main()

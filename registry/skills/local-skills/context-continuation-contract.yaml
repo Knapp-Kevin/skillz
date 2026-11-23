@@ -1,4 +1,4 @@
-current_change_note: "Active SKILL has new multi-turn domain-specific gates and (for context continuation) offline transition tool. Source review pending; earlier host receipts refer to previous Git blobs. Published skill version intentionally unchanged."
+current_change_note: "Bounded 2..32 checkpoint chain replay added; every adjacent turn checked with explicit HOLD on scope changes. Synthetic source contract tests pending. Real host/agent replies and source SHA authentication NOT_RUN; no published version bump."
 schema_version: 1
 skill_name: context-continuation-contract
 display_name: "Context Continuation Contract"
@@ -20,10 +20,10 @@ default_permission_tier: read-only
 optional_action_boundary: "Host continuity-record persistence only after specific user authorization and verified destination"
 portability: high
 review_status: needs-re-review
-dependency_status: self-contained-text-package
-dependencies: "Four-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 5aadd65bf5dc73d0f53edb7ad0803771cd4d8be9
-complete_package_tree_sha: 8a998c6c9f845c086d32d65c31ef14021f5b53d3
+dependency_status: self-contained-optional-python-stdlib
+dependencies: "Standalone 11-file package with offline optional Python standard-library two-state/chain checker and fictional examples; ordinary handoff needs no script, service, account, GitHub or sibling skill."
+content_blob_sha: 7a6099b89b21f03cf8a152890472874797e41bc7
+complete_package_tree_sha: f5bd8e4ae881891ae2fda0d3920f81088194ae51
 historical_comparators: "skills/handoff-writer/SKILL.md; skills/session-continuity/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

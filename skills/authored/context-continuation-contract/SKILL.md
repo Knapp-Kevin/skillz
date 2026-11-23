@@ -184,6 +184,38 @@ a synthetic permission grant. The tool is optional; no script, storage,
 network, issue submission or dependency is required for ordinary
 capture/resume or for a downloaded standalone package.
 
+## Optional full-chain replay across several follow-ups
+
+A single before/after comparison can miss an intermediate turn that
+temporarily discards an acceptance gate and then restores it. For a
+bounded **whole-chain source check**, use the same standalone
+`scripts/check_transition.py` with `--chain` instead of the
+three two-snapshot options:
+
+```sh
+python3 scripts/check_transition.py \
+  --chain examples/transition-chain.json --require-pass
+```
+
+The versioned JSON bundle has `schema_version: 1`, an ordered
+`checkpoints` list (2 through 32), and a `transitions` list with
+exactly one declared route for each adjacent pair. The checker validates
+**every step in order**. A dropped or rewritten safeguard, obligation,
+decision, user authority or source-bound proof at *any* step fails
+closed, even if the final caller-supplied checkpoint looks normal.
+The result reports `STATIC_CHAIN_RECONCILED`, the number of
+structurally qualified steps, and the last unresolved next action.
+Declared user scope changes produce `HOLD` with the last qualified
+step and the number of **unexamined** later steps; nothing after the
+hold is endorsed. The original three-input interface remains supported.
+
+This is an optional **offline structural audit of supplied JSON**.
+Neither the chain nor its claimed evidence is an authenticated
+conversation transcript, actual agent behavioral observation, Git
+attestation, permission grant, CI pass or completed user outcome.
+It never executes work or saves memory. Run real controlled agent-host
+follow-up trials separately and label their observed receipts honestly.
+
 ## Multi-turn continuity when the work is not one-shot
 
 Treat follow-up messages as continuation of the active task unless the user explicitly changes its objective. Before the next substantive action, recover from available conversation or authorized artifacts: **objective, confirmed decisions, completed and uncompleted work, protected checks, blockers, and next acceptance step**. Do not invent unavailable history or claim persistent storage. Reconcile new instructions with this state; current user direction may change scope, but never silently remove safety, approval, source integrity or verification gates. Execute the next concrete step rather than repeatedly restating a plan. For longer work, provide a compact progress/handoff note showing what is done, what remains, and what evidence supports completion. Do not equate a drafted artifact, open PR, proposed test or green isolated check with the user's actual finished outcome. No autonomous follow-up, session creation or background execution is implied.

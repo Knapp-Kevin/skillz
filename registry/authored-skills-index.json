@@ -787,9 +787,9 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/context-continuation-contract.yaml",
       "verification_path": "registry/verification/local-skills/context-continuation-contract.yaml",
-      "skill_blob_sha": "5aadd65bf5dc73d0f53edb7ad0803771cd4d8be9",
-      "package_tree_sha": "8a998c6c9f845c086d32d65c31ef14021f5b53d3",
-      "package_file_count": 10,
+      "skill_blob_sha": "7a6099b89b21f03cf8a152890472874797e41bc7",
+      "package_tree_sha": "f5bd8e4ae881891ae2fda0d3920f81088194ae51",
+      "package_file_count": 11,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
       "behavioral_validation": "not-run",
@@ -807,7 +807,7 @@
       "previous_reviewed_package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
       "default_authority": "read-only",
       "authority_note": "An optional durable-continuity record write is allowed only after verifying current or applicable standing destination-specific user authorization; no automatic writes.",
-      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA 5aadd65bf5dc73d0f53edb7ad0803771cd4d8be9 and full package 8a998c6c9f845c086d32d65c31ef14021f5b53d3 pinned. Previous evidence applies to earlier source c39c93c0b616cc89d17a43e7272acfac64cbca11, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump."
+      "review_note": "Optional bounded 2..32 step chain replay detects intermediate acceptance/permission drift and false completion, with 67 synthetic tests in Context Continuation Contract package. Exact-current package source/tree pinned, PR QA pending. Published version remains 1.2.0; host agent behavior, source/receipt authenticity, and consumer outcomes NOT_RUN."
     },
     {
       "id": "evidence-narrative-composer",
