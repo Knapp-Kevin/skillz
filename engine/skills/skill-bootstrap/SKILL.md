@@ -100,6 +100,20 @@ inspiration for independent original expression, but cannot be silently
 copied or approved. Prefer `USE_EXISTING` when a fully eligible package
 already solves the task; there is no creation quota.
 
+**Optional deterministic package compilation:** Once an agent has
+authored the actual task-specific procedure and judged an eligible
+single/phased/pack shape, use the [builder contract](../../builder/README.md)
+and original-content [blueprint example](../../builder/examples/single-blueprint.json) where
+a read-only render, reproducible complete-file inventory and explicit
+write handoff materially help. The builder is not mandatory and does
+not write unless an authorized host explicitly requests `--write` to
+a new destination. It does not generate missing semantics, establish
+copyright, install a skill, or validate user outcomes. If a blueprint
+still lacks real behavior, correct it **before** rendering; do not
+present a pretty scaffold as a finished usable skill. Hosts lacking
+Python or filesystem access can produce a complete portable handoff
+using the same template and rules.
+
 **Deliver the result:** If custom construction is actually needed,
 produce the full portable `SKILL.md` and every required file
 (script, reference, fixture, template, license, notice) in the user's

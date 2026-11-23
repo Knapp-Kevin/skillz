@@ -48,6 +48,16 @@ not automatically a callable tool. The agent selects relevant paths based
 on the request and declared dependencies. Optional branches must have
 complete non-deceptive fallbacks.
 
+## Authoring a pack from actual instructions
+
+The optional [Skillz builder](../builder/README.md) can compile a
+complete **original-content** blueprint into the same manifest,
+entrypoint and local module files. It derives the module inventory
+and ordered graph from the submitted owned instructions; it is not
+a natural-language agent, a permission grant, an adapter for unknown
+third-party licensed material or an installation pipeline. A pack
+still requires separate whole-outcome behavioral evaluation.
+
 ## Portable package shape
 
 A standalone example is in [fictional-evidence-brief](fictional-evidence-brief/).

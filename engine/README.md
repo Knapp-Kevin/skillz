@@ -16,6 +16,17 @@ A single-skill creation request follows the focused route inside this same
 orchestrator. It does not require a whole fitted-system interview or call
 repository-maintenance Forge.
 
+## Optional deterministic builder
+
+[Skill builder](builder/README.md) accepts an agent-authored original-content
+blueprint and emits one standalone skill, an internally phased skill or a
+[Skill Pack](packs/README.md). Its optional Python-standard-library compiler
+has a read-only planning default, an explicit non-overwriting write mode
+and truthful draft/evidence receipts. It **does not invent task instructions**,
+authorize host actions, certify rights, install packages or qualify
+consumer behavior. Any host without Python may follow the same template
+contract manually; Bootstrap remains the one normal orchestrator.
+
 ## Shared refinement mechanism
 
 [Engine refinement handoff](refinement/README.md) is the common procedure

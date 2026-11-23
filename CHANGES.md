@@ -1,6 +1,7 @@
 # Material changes
 
 ## 2026-11-23
+- Engine builder: implemented original-content blueprint compilation for standalone, phased and composed skills, including source templates, a read-only planning default, explicit safe output writing and offline adversarial acceptance tests. No engine SemVer bump or external consumer success claimed.
 - Engine composition: optional Skill Pack manifest and bounded graph checker, synthetic compositional tests, and shared hierarchical routing of canonical improvements versus opt-in user-private preferences. Existing Bootstrap/Forge/Eval versions unchanged; no consumer behavior claimed.
 - Engine capability update: direct single-skill build route for connected agents plus portable evidence-driven refinement handoff and optional offline receipt contract. Reuses Bootstrap, Forge and Eval; no micro-version bump or claimed host success.
 - CI Guard v1.6.5: bound live workflow-job pagination to consistent GitHub API `total_count`, run/source/job identity; added opt-in static source-map and exact local Git HEAD raw-byte verification to the outcome-readiness preflight. Fictional fail-closed tests; real provider billing/remote ref/host acceptance NOT_VERIFIED.

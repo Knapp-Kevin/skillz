@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "phased",
+  "name": "fictional-phased-note-ledger",
+  "description": "Prepare a traceable ledger of factual claims from supplied fictional notes, with missing data preserved as unknown.",
+  "outcome": "Deliver a structured note-to-claim ledger that attributes each claim to its actual supplied source and marks unsupported claims UNKNOWN.",
+  "trigger": "Use for an authorized request to organize and assess notes explicitly provided in this conversation.",
+  "non_trigger": "Do not activate for open-web research, inaccessible private records, unsupported claims, or requests to send the report.",
+  "inputs": "Only the current user's supplied fictional notes and requested report scope, with no network fetches or implied access.",
+  "verification": "Every claimed fact must cite a supplied note identifier; missing evidence and contradictions are visible rather than invented.",
+  "failure_handling": "When evidence is missing, label it UNKNOWN and request only the necessary note; do not infer a plausible source.",
+  "authority": "read-only",
+  "copyright_holder": "2026 Fictional Skill Author",
+  "rights_declaration": "caller-asserts-original-content",
+  "steps": [
+    {
+      "id": "extract",
+      "title": "Extract supported note claims",
+      "instructions": "Read the notes actually supplied for this task and record each distinct assertion with a stable local source identifier. Do not infer unstated participants or dates.",
+      "output": "Produce an extraction ledger linking each assertion to its source note or UNKNOWN."
+    },
+    {
+      "id": "verify",
+      "title": "Verify and qualify extracted claims",
+      "instructions": "Compare each assertion with its supplied source and any contradictions; separate established facts from guesses, then create a concise evidence ledger.",
+      "output": "Produce the verified final ledger with explicit disputed, missing, and supported categories."
+    }
+  ],
+  "modules": [],
+  "preference_slots": []
+}

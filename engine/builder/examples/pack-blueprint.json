@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "pack",
+  "name": "fictional-notes-brief-pack",
+  "description": "Compose a traceable factual brief from supplied fictional notes using independent intake, evidence and summarization modules.",
+  "outcome": "Produce a short factual brief where every factual statement is supported by a cited supplied note identifier or marked UNKNOWN.",
+  "trigger": "Use for an authorized request to organize and assess notes explicitly provided in this conversation.",
+  "non_trigger": "Do not activate for open-web research, inaccessible private records, unsupported claims, or requests to send the report.",
+  "inputs": "Only the current user's supplied fictional notes and requested report scope, with no network fetches or implied access.",
+  "verification": "Verify that all factual statements are supported by supplied note identifiers, and that omitted, conflicting or missing evidence is labeled UNKNOWN.",
+  "failure_handling": "When evidence is missing, label it UNKNOWN and request only the necessary note; do not infer a plausible source.",
+  "authority": "read-only",
+  "copyright_holder": "2026 Fictional Skill Author",
+  "rights_declaration": "caller-asserts-original-content",
+  "steps": [],
+  "modules": [
+    {
+      "id": "collect",
+      "kind": "phase",
+      "requires": [],
+      "required": true,
+      "fallback": null,
+      "authority": "read-only",
+      "output": "A complete indexed ledger of only the supplied fictional notes and any missing fields.",
+      "instructions": "Assign stable note indexes to the supplied materials, record only explicit dates and participants, and mark missing information UNKNOWN. Do not request files or external data without authorization."
+    },
+    {
+      "id": "check",
+      "kind": "component",
+      "requires": [
+        "collect"
+      ],
+      "required": true,
+      "fallback": null,
+      "authority": "read-only",
+      "output": "A coverage table linking every candidate claim to evidence, with conflicts and UNKNOWNs.",
+      "instructions": "For each candidate claim compare the statement to the collected note index, note supporting IDs, and reject claims without evidence or conflicting interpretations. Return a coverage table to the summarizer."
+    },
+    {
+      "id": "summarize",
+      "kind": "skill",
+      "requires": [
+        "check"
+      ],
+      "required": true,
+      "fallback": null,
+      "authority": "read-only",
+      "output": "A concise brief of only supported claims, with source IDs and an unresolved-evidence section.",
+      "instructions": "Write a brief summarizing supported facts from the coverage table. Attach source IDs to assertions, show contradictions separately, and list missing support as UNKNOWN."
+    },
+    {
+      "id": "style",
+      "kind": "phase",
+      "requires": [
+        "summarize"
+      ],
+      "required": false,
+      "fallback": "Return the supported neutral brief without personalization or persistence.",
+      "authority": "read-only",
+      "output": "An optional concise presentation variant that does not change claim accuracy or evidence.",
+      "instructions": "If the current user has explicitly asked for a concise presentation, shorten headings and sentences while retaining every source citation and UNKNOWN. Never change or drop factual obligations."
+    }
+  ],
+  "preference_slots": [
+    {
+      "key": "presentation_style",
+      "kind": "enum",
+      "choices": [
+        "neutral",
+        "concise"
+      ],
+      "default": "neutral",
+      "scope": "user-private-opt-in"
+    }
+  ]
+}

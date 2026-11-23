@@ -1,0 +1,30 @@
+---
+name: ${qualified_name}
+description: ${description_yaml}
+metadata:
+  version: 0.1.0
+---
+
+# ${title}
+
+This is a separately invocable subskill within the ${pack_name} pack. Its parent manifest describes declared sequencing, not a grant of authority.
+
+**Trigger:** ${trigger}
+
+**Non-trigger:** ${non_trigger}
+
+**Input dependencies:** ${dependencies}
+
+**Authority ceiling:** ${authority}. Respect the host's actual privileges and current user request.
+
+## Procedure
+
+${instructions}
+
+## Expected output
+
+${output}
+
+${fallback_note}
+
+Verify the output directly against the requested outcome. A passing pack manifest is not host execution or independent consumer acceptance.
