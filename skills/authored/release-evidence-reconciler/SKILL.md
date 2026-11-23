@@ -82,8 +82,11 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 
 The fictional example is merely **29 ASCII bytes** named
 `fictional-installer.bin`; it is not an executable installer. The
-manifest's `schema_version: 1` requires `source`, `build` and
-`channels`. Required checks are identified by `name + app`; all
+manifest's `schema_version: 1` requires `source`, `build`,
+`expected_channels` (the required distribution channel IDs), and
+`channels`. Every expected channel needs its own evidence; missing
+promised platforms or undeclared extra channels produce a HOLD even
+when the provided artifact hashes match. Required checks are identified by `name + app`; all
 checks and build source are matched to the exact declared source SHA.
 For each channel, an item declares platform/architecture, file name
 under the supplied root, build and published SHA-256 digests, a
@@ -97,7 +100,8 @@ bounded input contract.
   checksum, or a source, tag, check, attestation, installation or
   channel claim is materially inconsistent or reports failure.
 - `HOLD_INCOMPLETE_EVIDENCE`: essential receipts, successful checks,
-  verification assertions, complete file inventory or actual local
+  required channel coverage, verification assertions, complete file
+  inventory or actual local
   artifact bytes are absent/unsafe. A missing file cannot be called a
   valid release.
 - `LOCAL_BYTE_CHAIN_MATCHED_UNTRUSTED_RECEIPTS`: all supplied
