@@ -30,7 +30,7 @@ Both are independent and neither is required for the other.
    complete declared tool inventory. A source file or release note is
    not a live tool-discovery observation.
 2. **MCP transport:** Obtain the actual negotiated protocol revision,
-   all \`tools/list\` pages (including cursors), tool names and schemas,
+   all `tools/list` pages (including cursors), tool names and schemas,
    and applicable caching hints, through separately authorized
    read-only observation. A single page may be incomplete.
 3. **Host-visible inventory:** Obtain the actual list surfaced by
@@ -53,30 +53,30 @@ The bundle contains a read-only Python 3.9+ standard-library
 No network access, host installation, API account, sibling skill,
 credentials, or executable project checkout is required.
 
-\`\`\`sh
+```sh
 python3 scripts/audit.py --input examples/synthetic-18-versus-12.json
 python3 -m unittest discover -s tests -p 'test_*.py' -v
-\`\`\`
+```
 
 It accepts **normalized**, sanitized JSON only, not a live MCP endpoint:
-\`schema_version:1\`, \`protocol_revision\` (supported 2025-06-18,
-2025-11-25, 2026-07-28), \`source_revision\` (caller-asserted
-label), \`context_tag\` and \`stages\`. Each stage declares
-\`source_revision\`, \`context_tag\`, \`captured_at\` with timezone,
-and boolean \`complete\`.
+`schema_version:1`, `protocol_revision` (supported 2025-06-18,
+2025-11-25, 2026-07-28), `source_revision` (caller-asserted
+label), `context_tag` and `stages`. Each stage declares
+`source_revision`, `context_tag`, `captured_at` with timezone,
+and boolean `complete`.
 
-\`backend_registry\` and \`host_visible\` carry \`tools\`; \`mcp_list\`
-carries ordered \`pages\` with \`request_cursor\`, \`next_cursor\`,
-\`tools\` and, for negotiated 2026-07-28, \`ttlMs\` and
-\`cacheScope\`. A tool carries \`name\`, \`inputSchema\`, optional
-\`outputSchema\`. Schemas are reduced to deterministic canonical
+`backend_registry` and `host_visible` carry `tools`; `mcp_list`
+carries ordered `pages` with `request_cursor`, `next_cursor`,
+`tools` and, for negotiated 2026-07-28, `ttlMs` and
+`cacheScope`. A tool carries `name`, `inputSchema`, optional
+`outputSchema`. Schemas are reduced to deterministic canonical
 SHA-256 fingerprints; this **does not** validate JSON Schema
 compliance or runtime invocation.
 
 Outputs are **OBSERVED_PARITY**, **OBSERVED_DIFFERENCE**,
 **INCONCLUSIVE**, or a fail-closed **CAPTURE_HOLD**.
-\`NOT_VISIBLE_DOWNSTREAM\`, \`ONLY_VISIBLE_DOWNSTREAM\` and
-\`SCHEMA_FINGERPRINT_DIFF\` specify the observed boundary, **not**
+`NOT_VISIBLE_DOWNSTREAM`, `ONLY_VISIBLE_DOWNSTREAM` and
+`SCHEMA_FINGERPRINT_DIFF` specify the observed boundary, **not**
 which product is at fault. Incomplete pagination, partial captures,
 different claimed source/principal or capture times more than five
 minutes apart are INCONCLUSIVE without fabricated missing-tool
@@ -84,27 +84,27 @@ findings. Duplicate names, malformed pages, unsupported protocol
 revision, invalid cache hints or unsafe JSON yield CAPTURE_HOLD.
 
 The CLI exits 0 for any structurally completed audit, 2 for
-invalid input and, under optional \`--require-parity\`, 3 when
+invalid input and, under optional `--require-parity`, 3 when
 parity is not established. A successful exit without that flag
 is NOT a successful integration test. Results explicitly state
-\`backend_revision_authenticated:false\`,
-\`mcp_transport_observed:false\`,
-\`host_behavior_independently_observed:false\`
-and \`tool_invocations_tested:false\`: the auditor cannot authenticate
+`backend_revision_authenticated:false`,
+`mcp_transport_observed:false`,
+`host_behavior_independently_observed:false`
+and `tool_invocations_tested:false`: the auditor cannot authenticate
 caller-supplied evidence or contact a host.
 
 The 2026-07-28 protocol supports list-cache metadata; older
 revisions have different contracts. Do not apply modern requirements
 to older negotiated revisions. A public cache scope triggers an
 advisory to review authorization-sensitive use, not a confirmed
-data breach. \`listChanged\`, client refresh, or caching *cause*
+data breach. `listChanged`, client refresh, or caching *cause*
 cannot be established by static lists alone.
 
 ## Investigation and completion
 
 Start with the first **observed** divergent boundary. For a
 backend-to-MCP difference seek an authenticated deployed revision,
-complete \`tools/list\` pagination, and any real server registration
+complete `tools/list` pagination, and any real server registration
 or gateway evidence. For MCP-to-host, inspect actual available
 host-side registration, filtering, namespace mapping, cached catalogs
 and the negotiated protocol rather than inventing a refresh button.
