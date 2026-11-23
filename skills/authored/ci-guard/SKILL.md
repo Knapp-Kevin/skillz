@@ -9,7 +9,7 @@ metadata:
   author: Skillz Maintainers
   category: Software Engineering
   display-name: CI Guard
-  version: 1.6.4
+  version: 1.6.5
   license: MIT
 ---
 
@@ -379,6 +379,13 @@ Stale SHA, unknown/missing/extra jobs, unsupported conditions, skipped
 required checks, contradictory workflow conclusions and mixed retry
 attempts HOLD.
 
+For **direct GitHub attempt reads**, enforce the provider's `total_count`
+across every bounded job page, the exact expected number of distinct job
+rows and run identity **before** any job paging. Changed totals, short pages,
+duplicate IDs, cross-source job SHAs or future attempts HOLD. A provided
+offline jobs array cannot claim the pagination was verified or that its
+timestamps reflect billed runner time.
+
 For a **targeted retry**, do not count every provider job row from the
 later run attempt as newly executed compute. The optional
 `--retry-previous-observations` path compares *two complete, adjacent,
@@ -418,6 +425,18 @@ unresolved failed/skip scenarios or inadequate measured-baseline and
 projected cost/latency benefit. A partial fix may be reported as an
 interim correction, never as completion of a materially cheaper
 normative CI objective.
+
+For costly CI qualification, supplement the declared-readiness analysis
+with `ci_readiness.py --source-root /exact/checkout --source-map
+/path/to/source-map.json --require-ready --require-source-bound`.
+That optional **strict source-bound mode** re-runs the existing static
+workflow/oracle binder, matches all declared source files to their Git
+HEAD blobs and cross-checks the previously supplied source receipt.
+A modified checkout that only repins its JSON digests HOLDs. Use Git
+read-only builtins only, never source scripts, git filters or hooks.
+Missing/unsupported Git/object format, source map or unexpected source
+drift HOLD. This does not authenticate a GitHub remote ref, branch rules,
+actual runtime oracle execution, or host provider semantics.
 
 A `READY_FOR_ONE_QUALIFICATION` result is advisory **AS SUPPLIED**,
 not permission to spend Actions minutes or change merge protection.

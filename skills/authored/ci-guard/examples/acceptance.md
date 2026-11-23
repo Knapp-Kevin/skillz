@@ -341,3 +341,23 @@ The positive test returns only `READY_FOR_ONE_QUALIFICATION` with
 `end_to_end_ci_qualified=false` and provider billing `NOT_MEASURED`.
 No synthetic result proves real provider semantic correctness or actual
 consumer economic savings.
+
+## Source-to-provider receipt completeness (CI Guard v1.6.5)
+
+The existing host-reconciliation suite now includes **nine fictional
+pagination/source-custody tests**, increasing that suite to 51. It refuses
+missing, boolean, negative or inconsistent provider `total_count`,
+short pages, duplicated cross-page job IDs, oversized job matrices,
+wrong source SHA/attempt/path/event before job paging, job-level wrong
+source, future job attempt and false inferences about provider billing.
+A complete two-page fictional result is permitted but never treated as
+production qualification.
+
+The readiness suite gains **five fictional local source-bind tests**
+(24 total): exact locally committed Git source and oracle files pass
+the static binding, a modified file whose JSON SHA-256 was refreshed
+still fails the pinned Git HEAD blob comparison, wrong Git revision
+fails, a copied/mismatched static summary HOLDs, and strict CLI source
+binding rejects missing source input. No test executes fixture source
+oracles. A local source-bound receipt does not validate remote GitHub
+authenticity, live source dispatch, protected checks or actual economics.

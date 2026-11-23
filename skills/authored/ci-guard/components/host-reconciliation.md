@@ -109,6 +109,29 @@ a downstream release workflow that already completed. Supported scope:
 this simple receipt model to arbitrary cross-workflow retries, mixed-source
 rebuilds or provider semantics not yet verified.
 
+## Direct GitHub pagination completeness and source custody (v1.6.5)
+
+The documented per-attempt Jobs API reports `total_count` alongside
+`jobs` (see [GitHub's official workflow-job REST reference]
+(https://docs.github.com/en/rest/actions/workflow-jobs)). On **owner
+authorized** `--live`, the adapter checks the run ID, attempt, event, full
+source SHA, workflow path and completed conclusion before requesting jobs.
+Every page must declare the same integer `total_count`, with no page
+larger than 100, no repeated job IDs and exactly that many rows collected.
+Short/empty pages before the declared total, inconsistent counts and totals
+beyond the existing 200-job safety cap HOLD, rather than providing a
+partial green receipt. The cap is intentional: larger matrices need a
+separately audited, expanded adapter instead of an unbounded read.
+
+When a job row exposes `head_sha`, it must match the mapped full source
+revision. When `run_attempt` is present it must be a positive attempt
+not later than the selected run attempt, since carried-forward success
+rows may derive from an earlier attempt. The direct API read remains
+a **time-of-read observation**, not cryptographically signed evidence
+or proof of effective protection, workflow absence, runner occupancy
+or provider billing. Caller-supplied `--observations` never inherit a
+verified-pagination label: the JSON does not prove how it was fetched.
+
 ## Strict matching and fail-closed conditions
 
 The normalized v3 simulator result must be `STRUCTURAL_PASS` on the
@@ -157,7 +180,7 @@ passing the manifest to the adapter.
 
 ## Negative controls
 
-The [42 executable planted tests](../examples/test_ci_host_reconcile.py)
+The [51 executable planted tests](../examples/test_ci_host_reconcile.py)
 reject stale/wrong source, job rerun attempt mix-ups, event/path mismatch,
 invalid selected source graph, missing/duplicated/unmapped verifier jobs,
 failed or skipped checks, false-green workflow-level conclusion, invalid

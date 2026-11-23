@@ -11,6 +11,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import hashlib
+import os
+import subprocess
 from pathlib import Path
 import sys
 
@@ -18,6 +21,7 @@ import ci_self_repair
 import ci_overlap
 import ci_strategy_fit
 import ci_scenario
+import ci_source_reconcile
 
 MAX_BYTES = 1024 * 1024
 CONTROLS = (
@@ -59,7 +63,74 @@ def minutes(value, label):
     return float(value)
 
 
-def evaluate(data):
+
+def verify_local_source(root, manifest, source_map):
+    """Recompute static source/oracle evidence and compare bytes to local Git HEAD.
+
+    Uses only fixed, read-only git builtins, never status/filter/checkout/hooks.
+    This does NOT authenticate a remote ref, GitHub semantics or oracle execution.
+    """
+    directory=ci_source_reconcile.root_dir(root)
+    evidence=ci_source_reconcile.reconcile(str(directory),manifest,source_map)
+    revision=bounded(manifest["source_revision"],"source revision")
+    need(len(revision)==40 and all(c in "0123456789abcdef" for c in revision),
+         "local Git bridge currently supports SHA-1 repositories only")
+    def git(*args):
+        command=["git","-C",str(directory),"-c","core.fsmonitor=false",*args]
+        env=os.environ.copy()
+        env.update({"GIT_CONFIG_NOSYSTEM":"1", "GIT_CONFIG_GLOBAL":os.devnull,
+                    "GIT_OPTIONAL_LOCKS":"0","GIT_TERMINAL_PROMPT":"0",
+                    "GIT_ATTR_NOSYSTEM":"1"})
+        try:
+            run=subprocess.run(command,env=env,capture_output=True,
+                               timeout=8,check=False)
+        except (FileNotFoundError,subprocess.TimeoutExpired,OSError) as exc:
+            raise Hold("local Git evidence unavailable") from exc
+        need(run.returncode==0 and len(run.stdout)<=4096,
+             "local Git evidence unavailable or invalid")
+        try:return run.stdout.decode("utf-8").strip()
+        except UnicodeError as exc:
+            raise Hold("invalid local Git output") from exc
+    top=Path(git("rev-parse","--show-toplevel"))
+    need(top==directory,"source root must be exact Git worktree root")
+    need(git("rev-parse","--show-object-format")=="sha1",
+         "unsupported Git repository object format")
+    head=git("rev-parse","HEAD")
+    need(head==revision,"LOCAL_GIT_HEAD_MISMATCH")
+    paths=[x["path"] for x in source_map["workflow_files"]]+[
+        x["path"] for x in source_map["oracle_files"]]
+    need(len(set(paths))==len(paths) and bool(paths),
+         "duplicated or missing declared source paths")
+    for path in sorted(paths):
+        ci_source_reconcile.path_id(path,"tracked source path")
+        listing=git("ls-tree","HEAD","--",path)
+        line=listing.split("\n")
+        need(len(line)==1 and "\t" in listing,
+             "LOCAL_SOURCE_NOT_TRACKED_AT_HEAD:"+path)
+        header,gitpath=listing.split("\t",1)
+        words=header.split()
+        need(gitpath==path and len(words)==3 and
+             words[0] in {"100644","100755"} and words[1]=="blob" and
+             len(words[2])==40 and
+             all(c in "0123456789abcdef" for c in words[2]),
+             "LOCAL_SOURCE_GIT_TREE_INVALID:"+path)
+        file=directory.joinpath(*path.split("/"))
+        need(not file.is_symlink() and file.is_file(),
+             "LOCAL_SOURCE_PATH_MISSING_OR_LINKED:"+path)
+        raw=file.read_bytes()
+        need(len(raw)<=ci_source_reconcile.MAX_BYTES,
+             "LOCAL_SOURCE_OVERSIZED:"+path)
+        blob=hashlib.sha1(b"blob "+str(len(raw)).encode("ascii")+b"\0"+raw).hexdigest()
+        need(blob==words[2],"LOCAL_SOURCE_BYTES_NOT_AT_HEAD:"+path)
+    return {"source_receipt":evidence,
+            "binding":"LOCAL_GIT_HEAD_AND_TRACKED_SOURCE_BYTES_MATCHED",
+            "local_head":head, "verified_tracked_files":len(paths),
+            "git_remote_ref_authenticated":False,
+            "compiled_oracle_execution_verified":False,
+            "effective_github_semantics_verified":False}
+
+
+def evaluate(data, local_source=None):
     """Recompute the declared diagnostics; never accept a caller-forged PASS."""
     need(isinstance(data, dict), "root object required")
     keys = {"schema_version", "source_revision", "selected_strategy",
@@ -184,6 +255,18 @@ def evaluate(data):
             source["automatic_cutover_authorized"] is not False):
         issues.append("FORGED_SOURCE_VERIFICATION_AUTHORITY")
 
+    if local_source is not None:
+        need(isinstance(local_source,dict) and
+             local_source.get("binding")=="LOCAL_GIT_HEAD_AND_TRACKED_SOURCE_BYTES_MATCHED",
+             "invalid local source-bound evidence")
+        recomputed=local_source.get("source_receipt")
+        need(isinstance(recomputed,dict),"local source receipt unavailable")
+        for field in required:
+            if source.get(field)!=recomputed.get(field):
+                issues.append("LOCAL_SOURCE_RECEIPT_DRIFT:"+field)
+        if local_source.get("local_head")!=sha:
+            issues.append("LOCAL_SOURCE_HEAD_DRIFT")
+
     verdict = "HOLD" if issues else "READY_FOR_ONE_QUALIFICATION"
     return {
         "schema_version": 1, "status": verdict, "issues": sorted(set(issues)),
@@ -194,7 +277,12 @@ def evaluate(data):
         "projected_critical_path_savings_percent": round(critical_saving, 4),
         "projected_first_failure_feedback_delta_minutes": round(first_before - first_after, 4),
         "cost_basis": "ANALYST_DECLARED_ESTIMATE_NOT_MEASURED_SAVINGS",
-        "source_receipt_basis": "SUPPLIED_STATIC_REPORT_NOT_AUTHENTICATED",
+        "source_receipt_basis": ("LOCAL_TRACKED_BYTES_RECOMPUTED_NOT_REMOTE_AUTHENTICATED"
+                                  if local_source is not None else
+                                  "SUPPLIED_STATIC_REPORT_NOT_AUTHENTICATED"),
+        "local_git_source_binding_verified": local_source is not None,
+        "remote_git_identity_authenticated": False,
+        "source_oracle_runtime_executed_by_bridge": False,
         "diagnostic_results_recomputed_from_declared_inputs": True,
         "ready_only_for_one_bounded_qualification": verdict == "READY_FOR_ONE_QUALIFICATION",
         "owner_authorization_granted": False,
@@ -230,10 +318,24 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", required=True)
     parser.add_argument("--require-ready", action="store_true")
+    parser.add_argument("--source-root",
+                        help="Opt-in exact local Git worktree root; read-only source binding")
+    parser.add_argument("--source-map",
+                        help="Existing CI Guard static source map for the selected design")
+    parser.add_argument("--require-source-bound", action="store_true",
+                        help="Exit nonzero unless local Git HEAD and all mapped source bytes match")
     args = parser.parse_args(argv)
     try:
-        report = evaluate(load(args.input))
+        need(bool(args.source_root)==bool(args.source_map),
+             "source root and map must be provided together")
+        data=load(args.input)
+        bound=(verify_local_source(args.source_root,data["scenario_manifest"],
+               ci_source_reconcile.load_json(args.source_map))
+               if args.source_root else None)
+        report = evaluate(data, local_source=bound)
         print(json.dumps(report, indent=2, sort_keys=True, allow_nan=False))
+        if args.require_source_bound and bound is None:
+            return 3
         return 3 if args.require_ready and report["status"] != "READY_FOR_ONE_QUALIFICATION" else 0
     except (Hold, ValueError, TypeError, OSError, KeyError, OverflowError) as err:
         print("CI_READINESS_HOLD: " + str(err), file=sys.stderr)
