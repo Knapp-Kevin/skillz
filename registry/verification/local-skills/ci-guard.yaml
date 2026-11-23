@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9ebd0db855f12e0656eeabbc1dd8532646289695
-complete_package_tree_sha: 51494e556c7376e5551c8f95358cf51d959c00c2
+complete_package_tree_sha: 578f6cf6a8d212eca797a365359dab98e34c004f
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
 verification_basis: retry-source-revision-pending-exact-head-tests
 validation_status: not-run
-validation_note: "Fourteen new fictional targeted-retry cases complement the existing host test suite; exact-head source QA pending. Actual provider attempt-pair semantics, billed minutes, branch rules, and downstream release effects NOT_VERIFIED."
+validation_note: "Fifteen new fictional targeted-retry cases complement the existing host test suite; exact-head source QA pending. Actual provider attempt-pair semantics, billed minutes, branch rules, and downstream release effects NOT_VERIFIED."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

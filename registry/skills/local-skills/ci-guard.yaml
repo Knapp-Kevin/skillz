@@ -21,8 +21,8 @@ review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "50-file first-party MIT CI Guard package; optional Python-stdlib static/source and scenario evidence, host attempt and targeted-retry observation. Unsupported provider semantics HOLD."
 content_blob_sha: 9ebd0db855f12e0656eeabbc1dd8532646289695
-complete_package_tree_sha: 51494e556c7376e5551c8f95358cf51d959c00c2
+complete_package_tree_sha: 578f6cf6a8d212eca797a365359dab98e34c004f
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "Optional read-only offline targeted-retry accounting, 14 completely fictional adversarial cases, explicit hold for source/attempt/receipt mismatch. Not a CI repair or measured cost outcome; exact-source CI pending."
+rationale: "Optional read-only offline targeted-retry accounting, 15 completely fictional adversarial cases, explicit hold for source/attempt/receipt mismatch. Not a CI repair or measured cost outcome; exact-source CI pending."

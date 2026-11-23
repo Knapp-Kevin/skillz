@@ -1033,7 +1033,7 @@
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
       "skill_blob_sha": "9ebd0db855f12e0656eeabbc1dd8532646289695",
-      "package_tree_sha": "51494e556c7376e5551c8f95358cf51d959c00c2",
+      "package_tree_sha": "578f6cf6a8d212eca797a365359dab98e34c004f",
       "package_file_count": 50,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1047,7 +1047,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "v1.6.3 extends the existing optional host reconciliation to compare one failed and one successful adjacent attempt, separate newly executed intervals from carried success rows, and refuse forged/source-mismatched/partial receipts. A synthetic 14-case adversarial suite is authored; exact-head CI pending before merge. API-row timestamps do not prove billed runner occupancy; real consumer observations and release effects NOT_MEASURED/NOT_VERIFIED. Previous source evidence applies only to its recorded SHA.",
+      "review_note": "v1.6.3 extends the existing optional host reconciliation to compare one failed and one successful adjacent attempt, separate newly executed intervals from carried success rows, and refuse forged/source-mismatched/partial receipts. A synthetic 15-case adversarial suite is authored; exact-head CI pending before merge. API-row timestamps do not prove billed runner occupancy; real consumer observations and release effects NOT_MEASURED/NOT_VERIFIED. Previous source evidence applies only to its recorded SHA.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"
