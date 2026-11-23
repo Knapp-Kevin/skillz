@@ -16,6 +16,11 @@ submission. If posting is not authorized or unavailable, the agent can offer
 a copyable issue draft or simply skip it. The skill still works completely
 offline. **Nothing is automatically reported, and feedback is never required.**
 
+These skills also carry **multi-turn continuity guidance**: a follow-up
+continues the current task unless the user changes objectives, with completed
+work, outstanding evidence, safety requirements and the next acceptance step
+kept explicit. No automatic storage, sessions or background work is implied.
+
 The GitHub account that posts an issue is publicly attributable. This is
 **anonymous feedback content, not anonymous account submission**. Do not
 include real conversations, customer/project names, identifiable repository
