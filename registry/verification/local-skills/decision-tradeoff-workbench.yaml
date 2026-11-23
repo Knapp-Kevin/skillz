@@ -7,16 +7,16 @@ license_evidence_path: skills/authored/decision-tradeoff-workbench/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/decision-tradeoff-workbench/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: df9cd3a533be9bbddf262d09811046ca8cec7f4c
-complete_package_tree_sha: e73108630e053dacd700693dd24cc48110d70a72
+content_blob_sha: 409f03db70691591bdd7cf6bbd543343bb59b8a0
+complete_package_tree_sha: 40ae4ae5cbf3ec9be4c77c2ad0169ec72b8c758a
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
-verification_status: verified
-verification_basis: maintainer-complete-package-static-review-and-local-executable-method-tests
-validation_status: passed-offline-contract-tests
-validation_note: "Exact-source v1.2.1 GitHub Actions PR #862 run #45072270335 PASS on head 9a9efb66397dd8f8cc9d5bee5af691d636497675; 27/27 local-package Python method tests passed including two new symlink refusal negatives. Source/method checks authenticated to the CI run; external data rights, independent agent-host behavior, malicious concurrent filesystem path-swap and product/user effectiveness NOT_RUN."
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+validation_status: not-run
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_EXACT_V1_2_1"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [evidence-audit, workflow-review]
   lifecycle: [evaluation]

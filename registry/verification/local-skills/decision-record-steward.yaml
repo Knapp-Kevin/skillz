@@ -7,16 +7,16 @@ license_evidence_path: skills/authored/decision-record-steward/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/decision-record-steward/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: d9005c5c1b3fbed122a52d106104dbee02b5a165
-complete_package_tree_sha: 56b32d80412fbae75f05914e992156f081d8ce05
+content_blob_sha: a1f59719466000dd76b717db0c812712e5b54a49
+complete_package_tree_sha: a38fa3931832e88a657c9d7d2ab2c0e552c43eb5
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
-verification_status: verified
-verification_basis: maintainer-complete-package-static-review
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
 validation_status: not-run
-validation_note: "Only source text, fixtures and license reviewed. No observed host or external scan."
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: docs/skill-verification.md
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [decision-governance]
   lifecycle: [evaluation]

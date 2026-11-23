@@ -18,11 +18,11 @@ permission_tier: mutating
 default_permission_tier: read-only
 optional_action_boundary: "Approved append/create only in owner-designated decision log, with readback"
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Host access to scoped sources as authorized; no bundled runtime or credentials"
-content_blob_sha: d9005c5c1b3fbed122a52d106104dbee02b5a165
-complete_package_tree_sha: 56b32d80412fbae75f05914e992156f081d8ce05
+content_blob_sha: a1f59719466000dd76b717db0c812712e5b54a49
+complete_package_tree_sha: a38fa3931832e88a657c9d7d2ab2c0e552c43eb5
 historical_comparator: skills/decision-log/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"
