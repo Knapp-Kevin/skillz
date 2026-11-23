@@ -90,6 +90,27 @@ class MaintenanceTests(unittest.TestCase):
         with self.assertRaisesRegex(Exception, "HISTORY_INTEGRITY_HOLD"):
             self.invoke(next_scan(self.first), run="run-two")
 
+    def test_weekly_detects_malformed_intermediate_journal_entry(self):
+        self.initialize()
+        second = next_scan(self.first)
+        self.invoke(second, run="run-two", commit=True,
+                    expected_generation=1, ack_private_store=True)
+        third = next_scan(second, sid="shot-three",
+                          moment="2026-11-23T12:00:00-05:00")
+        self.invoke(third, run="run-three", commit=True,
+                    expected_generation=2, ack_private_store=True)
+        with sqlite3.connect(self.store) as conn:
+            conn.execute(
+                "UPDATE accepted_runs SET report_json='broken-json' "
+                "WHERE generation=1")
+        # This is a deliberately DEEP weekly check. Regular hourly checks
+        # validate latest receipt + continuous generation count only.
+        with self.assertRaisesRegex(Exception, "HISTORY_INTEGRITY_HOLD"):
+            self.invoke(third, run="weekly-check", cadence="weekly")
+        with sqlite3.connect(self.store) as conn:
+            self.assertEqual(conn.execute(
+                "SELECT generation FROM curator_state").fetchone()[0], 3)
+
     def test_revoked_access_never_leaks_cached_identity_or_counts(self):
         self.initialize()
         denied = next_scan(self.first)

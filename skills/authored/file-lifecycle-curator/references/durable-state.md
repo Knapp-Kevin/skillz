@@ -271,3 +271,24 @@ backups externally, and must resolve journal corruption instead of resetting
 the store. Scale remains at the documented 500-record catalog cap and
 100,000-generation history cap. Do not advertise months of unattended
 production operation or recovery qualification from these offline tests alone.
+
+
+## Endurance and recovery qualification (offline, opt-in)
+
+See [endurance-qualification.md](endurance-qualification.md) for the
+**adversarial architecture record, executable 90-day virtual-clock simulation,
+transaction failure injection and candidate-backup refusal tests**. The weekly
+maintenance invocation now performs a read-only full structural check of
+the accepted-run receipt journal using a streaming cursor, in addition to
+the fast continuity checks already performed on ordinary invocations.
+
+This does NOT run background work or create a schedule. A weekly invocation
+without a source change can audit the journal while declining to advance the
+generation. The deep check detects invalid historical receipt shape, not
+cryptographic authenticity or missing external side effects. A readable
+backup is not proof that restoring it is safe. No automatic restore or
+destructive state repair is permitted.
+
+From the package root, run python3 -B -m unittest discover -s tests
+-p 'test_*.py' -v and inspect the exact GitHub qualification run before
+claiming this tranche complete. Real host validation remains separately held.
