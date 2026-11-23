@@ -323,7 +323,9 @@ class LocalSourceBindingTests(unittest.TestCase):
                                capture_output=True,text=True,timeout=12)
             self.assertEqual(run.returncode,3,run.stderr)
             receipt=json.loads(run.stdout)
-            self.assertEqual(receipt["status"],"READY_FOR_ONE_QUALIFICATION")
+            self.assertEqual(receipt["status"],"HOLD")
+            self.assertIn("LOCAL_SOURCE_NOT_RECOMPUTED",receipt["issues"])
+            self.assertFalse(receipt["ready_only_for_one_bounded_qualification"])
             self.assertFalse(receipt["local_git_source_binding_verified"])
             self.assertFalse(receipt["remote_git_identity_authenticated"])
             no_map=subprocess.run([sys.executable,str(script),"--input",str(target),

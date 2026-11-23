@@ -333,10 +333,16 @@ def main(argv=None):
                ci_source_reconcile.load_json(args.source_map))
                if args.source_root else None)
         report = evaluate(data, local_source=bound)
-        print(json.dumps(report, indent=2, sort_keys=True, allow_nan=False))
         if args.require_source_bound and bound is None:
-            return 3
-        return 3 if args.require_ready and report["status"] != "READY_FOR_ONE_QUALIFICATION" else 0
+            report["status"]="HOLD"
+            report["issues"]=sorted(set(report["issues"]+
+                                        ["LOCAL_SOURCE_NOT_RECOMPUTED"]))
+            report["ready_only_for_one_bounded_qualification"]=False
+            report["next_action"]="RECOMPUTE_LOCAL_SOURCE_EVIDENCE"
+        print(json.dumps(report, indent=2, sort_keys=True, allow_nan=False))
+        needs_qualification=args.require_ready or args.require_source_bound
+        return (3 if needs_qualification and
+                report["status"]!="READY_FOR_ONE_QUALIFICATION" else 0)
     except (Hold, ValueError, TypeError, OSError, KeyError, OverflowError) as err:
         print("CI_READINESS_HOLD: " + str(err), file=sys.stderr)
         return 2

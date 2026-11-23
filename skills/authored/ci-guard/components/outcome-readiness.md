@@ -140,7 +140,8 @@ the Git blob committed at that HEAD. It uses only bounded read-only
 test execution. Symlinks, untracked mapped sources, changed bytes, stale
 digests and source receipt count/identity mismatches HOLD.
 
-`--require-source-bound` returns nonzero if no source is bound. The output
+`--require-source-bound` returns `HOLD` and exit 3 with
+`LOCAL_SOURCE_NOT_RECOMPUTED` if no source is bound. The output
 explicitly records `local_git_source_binding_verified` and keeps
 `remote_git_identity_authenticated=false` and
 `source_oracle_runtime_executed_by_bridge=false`.
