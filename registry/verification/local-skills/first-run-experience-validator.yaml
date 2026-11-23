@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/first-run-experience-validator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/first-run-experience-validator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 65cc4eea47716c50abe4355aa65658ebd928c24e
-complete_package_tree_sha: 6b244f0f44a0122ed6528bd2c122e1808c332452
+content_blob_sha: f6a4f7dd0dfb0b89da62d9b820550669cda62a79
+complete_package_tree_sha: 08a3f861087c5f92ea326a5a4e3eaa5adb6ea200
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review

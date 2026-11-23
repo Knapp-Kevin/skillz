@@ -19,8 +19,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-no-runtime
 dependencies: "Standalone five-file MIT package; original text, fictional adversarial cases, blank evidence ledger. No network, scripts, other Skillz packages, installer execution or account required for analysis."
-content_blob_sha: 65cc4eea47716c50abe4355aa65658ebd928c24e
-complete_package_tree_sha: 6b244f0f44a0122ed6528bd2c122e1808c332452
+content_blob_sha: f6a4f7dd0dfb0b89da62d9b820550669cda62a79
+complete_package_tree_sha: 08a3f861087c5f92ea326a5a4e3eaa5adb6ea200
 import_eligibility: review-required
 source_rights: "Original independently authored MIT source package; no third-party skill text, real private user data or installer binaries imported."
 rationale: "Initial issue #884 source candidate. Synthetic written cases are not runnable product tests or observed independent host validation. Genuine installation, novice walkthrough, authentication and first-use outcomes remain NOT_RUN."

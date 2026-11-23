@@ -1294,8 +1294,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/first-run-experience-validator.yaml",
       "verification_path": "registry/verification/local-skills/first-run-experience-validator.yaml",
-      "skill_blob_sha": "65cc4eea47716c50abe4355aa65658ebd928c24e",
-      "package_tree_sha": "6b244f0f44a0122ed6528bd2c122e1808c332452",
+      "skill_blob_sha": "f6a4f7dd0dfb0b89da62d9b820550669cda62a79",
+      "package_tree_sha": "08a3f861087c5f92ea326a5a4e3eaa5adb6ea200",
       "package_file_count": 5,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1308,7 +1308,7 @@
         "software-engineering/maintenance",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "Initial v0.1.0 source candidate; exact original 5-file package and 20 synthetic written adverse-case narratives. Independent semantic rubric and host/novice/user journey tests NOT_RUN. Documentation review cannot prove clean install, product function or user acceptance."
+      "review_note": "Initial v0.1.0 source candidate with exact canonical feedback and continuation contracts. 20 synthetic written adverse cases; exact-source host check pending. Independent semantic rubric and first-run installation/novice/user behavior NOT_RUN."
     }
   ]
 }
