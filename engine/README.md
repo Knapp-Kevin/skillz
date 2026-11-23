@@ -6,11 +6,23 @@ This directory contains passive Markdown procedures that explain how to use or m
 
 ## Canonical normal user flow
 
-For FIRST_VISIT and RETURNING_USER work, use:
+For SINGLE_SKILL_BUILD, FIRST_VISIT and RETURNING_USER work, use:
 
 - [`skills/skill-bootstrap/SKILL.md`](skills/skill-bootstrap/SKILL.md)
 
 No other engine procedure is required for normal bootstrap.
+
+A single-skill creation request follows the focused route inside this same
+orchestrator. It does not require a whole fitted-system interview or call
+repository-maintenance Forge.
+
+## Shared refinement mechanism
+
+[Engine refinement handoff](refinement/README.md) is the common procedure
+used by Bootstrap, Forge and Eval for outcome-based, evidence-labeled,
+bounded refinement. It carries an optional fictional portable case
+receipt, not background work or mandatory telemetry. **No additional
+user-facing skill or runtime service is introduced.**
 
 ## Repository-maintenance procedures
 

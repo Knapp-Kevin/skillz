@@ -12,6 +12,7 @@ Skillz is an open-ended, **passive capability library**. It combines original sk
 
 | Your goal | Start here | What you get |
 | --- | --- | --- |
+| Build one custom skill for a task | [Single-skill build workflow](engine/skills/skill-bootstrap/SKILL.md#single_skill_build-one-outcome-one-complete-package) | Compare relevant corpus methods, create a complete portable artifact, challenge it and report its evidence and installation state |
 | Solve a particular task | [Capability quickstart](docs/capability-quickstart.md) | Plain-language task examples and relevant skill routes |
 | Explore unfamiliar possibilities | [Capability directory](registry/capability-directory.json) | Domain → subdomain → evidence-linked candidates and explicit gaps |
 | Search beyond the mapped examples | [Full-corpus discovery contract](docs/discovery/full-corpus-search-contract.md) | A source-neutral search across reviewed identities and wider pinned leads |

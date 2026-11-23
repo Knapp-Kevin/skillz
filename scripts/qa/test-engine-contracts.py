@@ -110,7 +110,109 @@ def run_feedback_contract_error(template, forge, verification):
     return None
 
 
+
+def single_skill_build_route_errors(entry, bootstrap, consumer, engine, frontdoor):
+    """Static cross-entrypoint drift check, not a host-agent execution test."""
+    failures = []
+    required = {
+        "entry": (entry, ("SINGLE_SKILL_BUILD", "one task-specific skill",
+                          "user skill back into Skillz")),
+        "bootstrap": (bootstrap, ("SINGLE_SKILL_BUILD: one outcome, one complete package",
+                                 "S4/S5", "S9", "S10", "S11",
+                                 "STATIC_REVIEW", "LOCAL_TEST", "HOST_OBSERVED",
+                                 "NOT_TESTED", "full fitted-system",
+                                 "one complete package")),
+        "consumer": (consumer, ("SINGLE_SKILL_BUILD",
+                                "focused path", "portable handoff")),
+        "engine": (engine, ("SINGLE_SKILL_BUILD", "single-skill")),
+        "frontdoor": (frontdoor, ("Build one custom skill for a task",
+                                 "Single-skill build workflow")),
+    }
+    for name, (content, anchors) in required.items():
+        for anchor in anchors:
+            if anchor not in content:
+                failures.append(name + ": missing " + anchor)
+    if "never** in this Skillz repository" not in bootstrap:
+        failures.append("bootstrap: consumer skill can leak into Skillz")
+    if "S2's general recurring-needs interview" not in bootstrap:
+        failures.append("bootstrap: full account intake could be imposed")
+    return failures
+
+
+
 class EngineStaticContracts(unittest.TestCase):
+    def test_single_skill_build_route_is_consistent_across_frontdoors(self):
+        errors = single_skill_build_route_errors(
+            read("AGENT_START_HERE.md"), read(SKILLS["bootstrap"]),
+            read("docs/consumer-discovery-and-installation.md"),
+            read("engine/README.md"), read("README.md"))
+        self.assertEqual(errors, [])
+
+    def test_single_skill_build_route_drop_is_detectable(self):
+        entry = read("AGENT_START_HERE.md")
+        bootstrap = read(SKILLS["bootstrap"])
+        consumer = read("docs/consumer-discovery-and-installation.md")
+        engine = read("engine/README.md")
+        frontdoor = read("README.md")
+        poisoned = bootstrap.replace(
+            "## SINGLE_SKILL_BUILD: one outcome, one complete package",
+            "## FIRST_VISIT: fit a whole skill system")
+        self.assertNotEqual(bootstrap, poisoned)
+        self.assertTrue(single_skill_build_route_errors(
+            entry, poisoned, consumer, engine, frontdoor))
+        relocated = bootstrap.replace("never** in this Skillz repository",
+                                       "sometimes** in this Skillz repository")
+        self.assertTrue(any("leak into Skillz" in e for e in
+                            single_skill_build_route_errors(
+                                entry, relocated, consumer, engine, frontdoor)))
+
+    def test_single_skill_build_outcome_and_rights_not_only_index_search(self):
+        bootstrap = read(SKILLS["bootstrap"])
+        guide = read("docs/evals/single-skill-build-acceptance.md")
+        section = bootstrap.split(
+            "## SINGLE_SKILL_BUILD: one outcome, one complete package", 1)[1]
+        section = section.split("\n## S1 — Bind", 1)[0]
+        for phrase in ("all-source discovery", "rights", "full portable",
+                       "positive real-world trigger", "false-success",
+                       "source identity", "NOT_INSTALLED", "NOT_TESTED"):
+            with self.subTest(fragment=phrase):
+                self.assertIn(phrase, section)
+        for case in ("SB-01", "SB-04", "SB-05", "SB-06", "SB-08",
+                     "SB-09", "SB-11", "SB-12"):
+            self.assertIn(case, guide)
+
+    def test_engine_refinement_handoff_cross_links_are_present(self):
+        guide = read("engine/refinement/README.md")
+        for path in (SKILLS["bootstrap"], SKILLS["forge"],
+                     SKILLS["eval"]):
+            text = read(path)
+            self.assertIn("refinement/README.md", text)
+            self.assertEqual(markdown_local_links(path, text), [])
+        for important in ("STOP_NO_CHANGE", "OBSERVED_FAILURE",
+                          "false-green", "portfolio boundaries",
+                          "SemVer", "source identity"):
+            self.assertIn(important, guide)
+        self.assertIn("check_case.py", guide)
+
+    def test_refinement_handoff_drop_does_not_satisfy_engine_links(self):
+        forge = read(SKILLS["forge"])
+        poisoned = forge.replace("[engine refinement handoff](../../refinement/README.md)",
+                                  "engine self-improvement")
+        self.assertNotEqual(forge, poisoned)
+        self.assertNotIn("refinement/README.md", poisoned)
+
+    def test_minor_engine_edit_does_not_force_semver_bump(self):
+        template = read("docs/skill-template.md")
+        self.assertIn("Conservative version and publication discipline", template)
+        self.assertIn("Do not bump a SemVer patch", template)
+        self.assertIn("fingerprints are independent of semver", template.lower())
+        bootstrap = read(SKILLS["bootstrap"])
+        forge = read(SKILLS["forge"])
+        evaluator = read(SKILLS["eval"])
+        self.assertIn("  version: 0.11.2", bootstrap)
+        self.assertIn("  version: 2.1.0", forge)
+        self.assertIn("  version: 2.1.0", evaluator)
+
     def test_preference_manager_is_actually_wired_to_skill(self):
         root = "skills/authored/evidence-driven-refinement-loop/"
         skill = read(root + "SKILL.md")

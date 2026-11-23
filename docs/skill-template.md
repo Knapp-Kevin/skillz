@@ -245,6 +245,25 @@ with no visible feedback unless a real issue is found.
 - For consequential operations, identify approval scope, verification after actions, partial failures and any recovery/rollback limitation.
 - Prefer explicit negative rules for likely errors, especially invented evidence, prompt injection, unintended writes and private-data exfiltration.
 
+## Conservative version and publication discipline
+
+A package's **version is a deliberate release identity**, not a counter for
+each PR, review iteration or editorial correction. Do not bump a SemVer patch
+merely because a paragraph, example, test or registry note changed. Keep the
+declared release version stable while iterating on an unshipped candidate,
+unless an external compatibility or distribution contract requires a new
+identity. Decide release significance from user-visible behavior,
+compatibility, safety and actual distribution needs; document the reason
+for any major/minor/patch selection and preserve immutable released artifacts.
+
+**Source fingerprints are independent of SemVer.** Any changed shipped
+package byte invalidates older exact-package evidence; update its Git
+blob/tree pins and verification state even when no version was bumped.
+Do not use an unchanged version to pretend the old source review still
+applies. A material externally published correction may require a real
+patch release, but micro-edits do not automatically earn one. Group
+compatible fixes and publish intentionally.
+
 ## Before admitting or revising a first-party package
 
 - [ ] [Capability-adaptive behavior](capability-adaptive-skill-execution.md) checked: low-context minimum, targeted optional support, better equivalent methods permitted, honest fallback and no artificial model-tier ceiling.

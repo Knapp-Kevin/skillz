@@ -111,6 +111,15 @@ or a dedicated evidence-backed remediation pass.
 
 ## Iterative improvement as an execution discipline
 
+The common [engine refinement handoff](../../refinement/README.md)
+supplies the source-neutral case and stopping decision shared with Bootstrap
+and Eval. For Skillz maintainer changes, retain the same original user
+acceptance and exact package identity across turns. Check the *next*
+highest-value engine or corpus opportunity before doing another optional
+pass on the same already-usable authored package. Do not manufacture a new
+version, issue or PR from every editorial finding.
+
+
 For a material refinement, run a **bounded, evidence-driven cycle on the
 actual package** instead of collecting an unlimited series of suggestions:
 
