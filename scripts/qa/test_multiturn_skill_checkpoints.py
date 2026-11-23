@@ -9,10 +9,10 @@ AUTH = ROOT / "skills" / "authored"
 CASES = {
     "ci-guard": ("CI-specific continuation checkpoints",
                  "exact\nsource revision", "native and security", "older revision",
-                 "open PR", "actual hosted evidence"),
+                 "open PR", "incomplete host attempt"),
     "repository-delivery-assessor": ("Delivery-assessment continuation checkpoints",
                                     "verified\nrevision/as-of", "blocked merges",
-                                    "current evidence", "merged implementation"),
+                                    "current evidence", "a merge"),
     "repository-readme-architect": ("README-work continuation checkpoints",
                                    "generator-owned regions", "preservation baselines",
                                    "merged PR", "user comprehension"),
