@@ -25,6 +25,19 @@ The GitHub account that posts an issue is publicly attributable. This is
 **anonymous feedback content, not anonymous account submission**. Do not
 include real conversations, customer/project names, identifiable repository
 references, private logs, paths, credentials, or other sensitive data.
+**Do not rely on removing a name alone.** Exact workflow/job counts,
+runner durations, timestamps, commit or run IDs, distinctive command or
+platform combinations, charts, and verbatim error text can be matched
+against public CI history to reidentify a consumer. Generalize the failure
+mode; use entirely fictional names, workloads, numbers and timestamps
+for shared reproductions. Preserve authentic exact-run evidence only
+inside the authorized consuming project, not as a public Skillz citation
+or cross-repository link. Review the full public issue/PR body, comments,
+fixtures, screenshots, commit messages and outbound links for inadvertent
+attribution before publishing. When an exact real number matters to a
+technical claim, disclose that the public sample is illustrative and
+keep the evidence boundary explicit, rather than pretending the
+fictional value was observed.
 When a safe generalized report is impossible, do not submit one. This
 policy applies to original authored skills, not to third-party reference
 packages or historical repo-bound procedures that we do not own.
