@@ -161,7 +161,7 @@ def evaluate(data):
     selected = [x for x in scenario["results"] if x["design"] == design_id]
     if not selected or any(not row["matches_expected"] for row in selected):
         issues.append("SCENARIO_DESIGN_NOT_COVERED")
-    if not any(not row.get("qualifies", False) for row in selected):
+    if not any(row.get("actual_qualifies") is False for row in selected):
         issues.append("ADVERSE_SCENARIO_MISSING")
 
     # Supplied source receipt from existing static source reconciler. Cannot
