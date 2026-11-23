@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "fictional/release",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tag": "v0.1.0",
+    "tag_target": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "build": {
+    "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "run_id": "synthetic_run_101",
+    "conclusion": "success",
+    "checks_complete": true,
+    "required_checks": [
+      {
+        "name": "unit",
+        "app": "actions"
+      },
+      {
+        "name": "security",
+        "app": "security"
+      }
+    ],
+    "checks": [
+      {
+        "name": "unit",
+        "app": "actions",
+        "state": "success",
+        "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "name": "security",
+        "app": "security",
+        "state": "success",
+        "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ]
+  },
+  "channels": [
+    {
+      "id": "linux_x64",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "filename": "fictional-installer.bin",
+      "build_sha256": "7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292",
+      "published_sha256_claim": "7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292",
+      "provenance": {
+        "status": "reported_verified",
+        "subject_sha256": "7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292",
+        "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "repository": "fictional/release",
+        "verifier_receipt": "fictional-verifier-result"
+      },
+      "install": {
+        "status": "reported_pass",
+        "artifact_sha256": "7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292",
+        "receipt": "fictional-installed-smoke"
+      }
+    }
+  ]
+}
