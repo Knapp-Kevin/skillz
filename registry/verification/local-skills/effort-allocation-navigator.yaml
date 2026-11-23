@@ -8,13 +8,13 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/effort-allocation-navigator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 1e3ad08ebf4951b1bd41f5d8bc0d3b5e55c645f4
-complete_package_tree_sha: 3546bf5d9ad7770dc48ce43da22a44d218bbb733
+complete_package_tree_sha: f79f12513f700884def4ec15992b4c1e34d35a9f
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
-verification_basis: red-baseline-adversarial-then-bounded-source-refinement-pending-exact-ci
-validation_status: not-run
-validation_note: "Red baseline (unchanged method) 96 cases: 89 pass, 5 fail, 2 errors. Corrected method 101-case QA PENDING. No external consuming agent, actual task completion, user benefit or private preference persistence validated."
+verification_basis: planted-adversarial-red-baseline-followed-by-exact-head-offline-pass
+validation_status: passed-offline-contract-tests
+validation_note: "Exact-head PR #901 red test run 45275341228: 96 cases, 89 pass/5 fail/2 error planted adversarial. Targeted correction then 101/101 PASS run 45276005447 at head 835311a7386d7b78391f9a657ea4997d0d7cc375; authorship/index QA 11/11 PASS run 45276005477. Real agent-host, user outcomes, saving preferences or independent acceptance NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
 tags:

@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: self-contained-python-stdlib-optional
 dependencies: "Nine original first-party files, optional Python 3.9+ standard-library graph planner, fictional fixtures and blank preference schema; no network or other skills are required."
 content_blob_sha: 1e3ad08ebf4951b1bd41f5d8bc0d3b5e55c645f4
-complete_package_tree_sha: 3546bf5d9ad7770dc48ce43da22a44d218bbb733
+complete_package_tree_sha: f79f12513f700884def4ec15992b4c1e34d35a9f
 import_eligibility: review-required
 source_rights: "Independent MIT expression, not copied from third-party task-management skills. No real personal data, account history, user memory, telemetry or private preference files."
-rationale: "Adversarial-first qualification identified four concrete milestone and mandatory-alternative defects; bounded refinement with 101 offline tests pending exact-head QA. No version bump, external consumer validation or new task-store authority."
+rationale: "Adversarial FIRST, red source evidence 7/18 new failures; targeted four-defect refinement THEN 101/101 synthetic tests PASS (PR #901, run 45276005447, head 835311a7386d7b78391f9a657ea4997d0d7cc375). No version bump, external behavioral proof, persistence or new task authority."

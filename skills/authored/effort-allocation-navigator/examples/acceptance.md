@@ -59,9 +59,16 @@ Four demonstrated correction targets:
 **Refinement after red evidence:** These four changes are bounded.
 Five additional regression tests were added for newly distinguished
 milestone states, bringing source-method coverage to **101 cases**
-once executed on the refined head. They are not part of the original
-red run. The earlier 78 cases remain protected; no source or schema
-version increment or automatic task execution is introduced.
+on the refined head. They are not part of the original
+red run. **Observed final result:** [GitHub Actions run
+#45276005447](https://github.com/Knapp-Kevin/skillz/actions/runs/45276005447),
+at PR HEAD `835311a7386d7b78391f9a657ea4997d0d7cc375`,
+executed **101/101 cases PASS**, with the original 78 protected.
+[Authored contract run #45276005477](https://github.com/Knapp-Kevin/skillz/actions/runs/45276005477)
+executed **11/11 PASS**. Both available Socket security checks
+succeeded. These are exact-source-method checks, not independent
+host-user outcome evidence. No source or schema version increment
+or automatic task execution is introduced.
 
 **Evidence limitation:** Input claims are not externally authenticated.
 No genuine agent-host task interpretation, user outcome, preference
