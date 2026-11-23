@@ -162,8 +162,8 @@ def validate_blueprint(b):
              "INVALID_PREFERENCE_CHOICES")
         need(slot["default"] in choices, "INVALID_PREFERENCE_DEFAULT")
 
-def template(name, **values):
-    p = TEMPLATES / name
+def template(template_filename, **values):
+    p = TEMPLATES / template_filename
     need(p.is_file() and not p.is_symlink(),
          "TEMPLATE_MISSING_OR_SYMLINKED")
     return Template(p.read_text(encoding="utf-8")).substitute(**values)
