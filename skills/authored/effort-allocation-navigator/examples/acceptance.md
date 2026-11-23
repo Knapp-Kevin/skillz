@@ -51,3 +51,43 @@ narratives below support future authorized human/agent trials.
    revocation, no cross-user sharing and no automatic canonical changes.
    Compare whether local adaptation actually reduced friction and
    preserve the unmodified safety and evidentiary tests.
+
+## One bounded refinement and adversarial follow-up, November 23 2026
+
+**Refinement target:** previously ordinary task scoring could choose near-clone
+alternatives; a selected goal suppressed other mandatory obligations; a
+confirmed deadline on a blocked descendant did not elevate the action
+needed to unblock it; contradictory DONE states were accepted without
+reconciliation. The refined helper adds task-graph-inherited safety and
+confirmed deadline lanes, focus exceptions, DONE consistency refusal,
+qualified alternative diversity and a truthful deferral marker. The skill
+version remains **0.1.0**: this is a bounded correction and adversarial
+review, not a separately claimed functionality release.
+
+**Adversarial follow-up:**
+[tests/test_refinement_adversarial.py](../tests/test_refinement_adversarial.py)
+plants conflicting DONE/dependency states (including outside the selected
+goal), claimed versus owner-confirmed deadlines, safety obligations hidden
+behind a different project focus, long prerequisites to near deadlines,
+missing estimates on required work, forced choice diversity, deliberately
+low-payoff alternatives, malformed unhashable fields, user data in task
+labels, and permuted task order. These tests are additional to the
+original 42 source-method tests; their actual pass/fail state must be
+reported from an **executed exact-source test run**. Do not claim that
+writing test cases equals a passing run, an independent agent-host
+trial, measured human productivity or actual local preference learning.
+
+**Protected behaviors:** one primary plus at most one alternative by
+default; zero invented alternatives; offline privacy-bounded IDs only;
+owner-authenticated deadline and protected safety lanes remain higher
+priority than quick wins; source-only permission; no storage, telemetry,
+task writes, live third-party model, or publication permission.
+
+**Remaining limitations:** the safety/deadline classifications in the
+snapshot are caller assertions; the helper cannot authenticate them.
+Done-state consistency is necessary but not sufficient evidence of
+completion. The modeled path still assumes unlimited parallelism and
+has no personal capacity calendar. Its heuristic score is not a
+measured cost-benefit analysis. A live user/host trial, actual feedback
+consent/persistence workflow and real completion receipts are separate
+future qualifications, not deliverables of this pass.
