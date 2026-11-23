@@ -1357,8 +1357,8 @@
       "provenance_path": "registry/skills/local-skills/effort-allocation-navigator.yaml",
       "verification_path": "registry/verification/local-skills/effort-allocation-navigator.yaml",
       "skill_blob_sha": "93b29536b328a8c6f8f6a9f9bc46e36eb68f2b9a",
-      "package_tree_sha": "c8ed767e7113347335ded92badd848db41667bc0",
-      "package_file_count": 10,
+      "package_tree_sha": "ffb2ee782db217a0da9ae8e3e685932b64858a79",
+      "package_file_count": 11,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
       "behavioral_validation": "not-run",
@@ -1371,7 +1371,7 @@
         "time-productivity/personal-planning",
         "planning/decision-frameworks"
       ],
-      "review_note": "A bounded one-phase source refinement followed by 36 adversarial cases plus 42 protected baseline cases. Real exact-HEAD CI execution pending; do not claim live agent/user efficacy. Core protections include inherited safety/deadlines, reconciled DONE, scoped mandatory exceptions and diversified alternatives. No version bump. Independent consumer behavior and saved preference learning NOT_RUN."
+      "review_note": "Second adversarial pass: 18 additional planted cases on unchanged production method, intended as red baseline before bounded refinement; pending actual CI. Prior 78/78 passed, real host outcomes NOT_RUN."
     }
   ]
 }
