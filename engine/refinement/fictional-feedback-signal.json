@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "skill_id": "ci-guard",
+  "layer": "skill",
+  "failure_class": "false-success",
+  "scenario": "false-green",
+  "expected": "halted",
+  "observed": "continued-incorrectly",
+  "evidence_tier": "reported-claim",
+  "routing": "canonical-candidate",
+  "preference_class": "none"
+}

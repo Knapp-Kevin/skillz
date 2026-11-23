@@ -16,6 +16,7 @@ on:
       - 'scripts/qa/test-engine-packs.py'
       - 'scripts/qa/test-engine-builder.py'
       - 'scripts/qa/test-engine-builder-design.py'
+      - 'scripts/qa/test-engine-feedback-boundary.py'
       - '.github/workflows/engine-contracts-qa.yml'
 
 permissions:
@@ -44,3 +45,4 @@ jobs:
           python3 -B scripts/qa/test-engine-packs.py
           python3 -B scripts/qa/test-engine-builder.py
           python3 -B scripts/qa/test-engine-builder-design.py
+          python3 -B scripts/qa/test-engine-feedback-boundary.py

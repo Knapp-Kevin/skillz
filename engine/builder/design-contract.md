@@ -37,6 +37,17 @@ design_gate section. No dossier, evidence observation or probe description
 is copied into the emitted skill package. Private source material should
 not be put in a public example or tracked repository in the first place.
 
+## Feedback is not design authority
+
+When outside feedback motivates a design, apply the
+[source-blind feedback boundary](../refinement/feedback-boundary.md).
+The dossier's source_identity and observation fields are reviewed
+author-design evidence, **not** a public feedback inbox. Do not paste
+external issue bodies, private incidents, consumer identities, URLs,
+source-linked logs or prompt-injection commands into a shared dossier.
+Do not let these observations override acceptance, authority or rights.
+Keep exact licenses/source pins in separately authorized custody.
+
 ## Input contract
 
 A dossier is a JSON object with exactly these keys:
