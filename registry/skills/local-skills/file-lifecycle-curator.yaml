@@ -25,14 +25,14 @@ dependencies: >-
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
 content_blob_sha: 9160e87d8bdac7b551859c3966d7f5dc381c4569
-complete_package_tree_sha: cff10413673b6785d06417acd411d2ee618bc2be
+complete_package_tree_sha: 276956d067c8e86fdc8482a5242bedeefa0e22f4
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
   Original 22-file source version 1.1.1 gains opt-in transactional
   private SQLite checkpoint continuity across hourly/daily/weekly agent
-  invocations, with 35 new synthetic tests and 81 historical protected
-  source tests. Initial 115-case CI 114 passed, 1 failed (cold-start cadence); final 116-case source CI pending. No host-proven user permissions,
+  invocations, with 37 new synthetic tests and 81 historical protected
+  source tests. Initial 115-case CI 114 passed, 1 failed (cold-start cadence); final 118-case source CI pending. No host-proven user permissions,
   actual source file mutation, scheduled task or real persistent
   user checkpoint claimed.
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.

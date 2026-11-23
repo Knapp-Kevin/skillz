@@ -415,5 +415,35 @@ class PersistentCurationStateTests(unittest.TestCase):
         self.assertEqual(self.state()["generation"], 3)
 
 
+    def test_historical_snapshot_id_reuse_cannot_rewrite_last_seen_memory(self):
+        self.init()
+        partial = next_scan(self.first)
+        partial["coverage"] = "partial"
+        partial["records"] = [record("alpha-id")]
+        self.run_case(data=partial, run_id="run-two",
+                      commit=True, expected=1, ack=True)
+        reused = next_scan(partial, sid="shot-one",
+                           moment="2026-11-23T12:00:00-05:00")
+        with self.assertRaisesRegex(engine.Refused, "SNAPSHOT_REUSE_CONFLICT"):
+            self.run_case(data=reused, run_id="run-three",
+                          commit=True, expected=2, ack=True)
+        checkpoint = self.state()
+        self.assertEqual(checkpoint["generation"], 2)
+        self.assertEqual(checkpoint["catalog"]["beta-id"]["last_seen_id"],
+                         "shot-one")
+        self.assertEqual(checkpoint["scan"]["snapshot_id"], "shot-two")
+
+    def test_old_snapshot_id_reused_even_with_different_timestamp_is_refused(self):
+        self.init()
+        second = next_scan(self.first)
+        self.run_case(data=second, run_id="run-two",
+                      commit=True, expected=1, ack=True)
+        reused = next_scan(self.first, sid="shot-one",
+                           moment="2026-11-23T12:00:00-05:00")
+        with self.assertRaisesRegex(engine.Refused, "SNAPSHOT_REUSE_CONFLICT"):
+            self.run_case(data=reused, run_id="run-three",
+                          commit=True, expected=2, ack=True)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -135,8 +135,14 @@ record provenance; they do NOT create or configure a schedule.
 A run ID is unique to the specific host-observed input. Reusing it
 with the same input is ALREADY_APPLIED with no duplicate write;
 reusing it with different content is RUN_ID_REUSE_CONFLICT.
-Same snapshot ID with changed contents is also refused. On a
-genuinely fresh snapshot, state advances only once.
+Same snapshot ID with changed contents is also refused.
+Snapshot IDs are unique across **all accepted prior runs**, not
+just compared to the latest snapshot: reusing a historical ID
+after a later observation would corrupt file-level last_seen
+bookkeeping. PLAN_ONLY updates may intentionally reuse the
+*current latest* source snapshot ID with a separately advanced,
+approved plan snapshot. On a genuinely fresh source snapshot,
+state advances only once.
 
 ## Partial pages, absent files and privacy
 

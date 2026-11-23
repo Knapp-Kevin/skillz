@@ -239,6 +239,17 @@ def evaluate(conn, current, plan, run_id, cadence, commit, expected_generation,
                 return {"status": "ALREADY_APPLIED", "generation": generation,
                         "checkpoint_written": False}
             latest = state["scan"]
+            # Snapshot IDs identify unique observations within this
+            # private collection, not a rotating timestamp label.
+            # Reusing an older ID after another accepted snapshot
+            # corrupts per-record last_seen bookkeeping.
+            historical = conn.execute(
+                "SELECT generation FROM accepted_runs "
+                "WHERE snapshot_id=? LIMIT 1",
+                (current["snapshot_id"],)).fetchone()
+            if (historical is not None and
+                    current["snapshot_id"] != latest["snapshot_id"]):
+                raise Refused("SNAPSHOT_REUSE_CONFLICT")
             if current["snapshot_id"] == latest["snapshot_id"]:
                 refuse(current == latest, "SNAPSHOT_REUSE_CONFLICT")
                 source_same = True
