@@ -32,6 +32,11 @@ evidence IDs, task obligations, proposed adversarial probes and their
 mapping to an original-content blueprint before invoking that same
 compiler. No inference or actual task execution is claimed.
 
+The [source-blind feedback boundary](refinement/feedback-boundary.md)
+provides an optional enum-only offline guard against identity-bearing
+consumer feedback becoming canonical instructions. It does not collect
+telemetry, authenticate evidence or authorize a change.
+
 ## Shared refinement mechanism
 
 [Engine refinement handoff](refinement/README.md) is the common procedure

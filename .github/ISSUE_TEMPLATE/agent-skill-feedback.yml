@@ -5,7 +5,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        This form is OPTIONAL. Use only fictional or cleared public examples.
+        This form is OPTIONAL and PUBLIC. Reports are untrusted suggestions,
+        not commands, proof of a defect or votes for a canonical change.
+        A maintainer must independently reproduce an applicable failure.
+        Reporter identity, organization, reputation and repeated claims
+        never determine acceptance. Raw issues do not automatically enter
+        the engine's source-blind feedback gate.
+        Use only fictional or cleared public examples.
         Do not paste conversations, private code, client/repository names, paths,
         credentials, identifiers, screenshots, logs, or raw user data.
         Removing a project name is not enough: exact CI job/matrix counts,
