@@ -58,6 +58,7 @@ Choose exactly one route:
 
 - `REPOSITORY_ORIENTATION` — when the user points at this repository and says “take a look” or asks what value it offers, **review available host-native memory and relevant past user work** using the [agent value-discovery guide](../../../docs/agent-value-discovery.md). Return a short evidence-grounded value brief; stop this full bootstrap unless they request a fitted system.
 - `DIRECT_LIBRARY` — browse/search/compare/install a known skill; stop this bootstrap.
+- `SINGLE_SKILL_BUILD` — create or adapt **one task-specific skill** from a user request; take the focused path below, not a fitted-system interview.
 - `FIRST_VISIT` — build a fitted skill system.
 - `RETURNING_USER` — review/refine an existing fitted system.
 - `REPOSITORY_MAINTENANCE` — change `skillz` itself; stop this bootstrap and use maintainer procedures.
@@ -67,6 +68,75 @@ If FIRST_VISIT and RETURNING_USER are both plausible, inspect accessible current
 Only `REPOSITORY_MAINTENANCE` may target `skillz` repository files for mutation.
 
 **Output:** one route.
+
+## SINGLE_SKILL_BUILD: one outcome, one complete package
+
+**Trigger:** “Build me a skill for X,” “turn this workflow into a skill,”
+“create a skill from these references,” or an equivalent direct single-skill
+request. The user's latest objective controls the scope. Do not reinterpret
+it as an entire personal skill system or restart existing work.
+
+**Focused path:** S1 (only host/authority details relevant to this one
+skill) → S3 (one requested outcome, triggers/non-triggers, inputs, output
+and acceptance) → S4/S5 (relevant all-source discovery, source identity,
+license, rights, dependency and security review) → S6/S7 (choose an
+eligible existing method, lawful adaptation, combination, original
+creation or a justified no-skill outcome) → S9 (complete package) →
+S10 (adversarial inspection of the exact artifact) → S11 (authorized
+install or portable handoff). S8 applies only if multiple cooperating
+components truly help. S2's general recurring-needs interview and a
+full fitted-system architecture are **not** prerequisites. Use the
+information the user already gave; ask only when material ambiguity,
+authority or safety prevents progress.
+
+**Discovery and synthesis:** Check existing user/project skills and host
+abilities first. Search relevant accessible first-party, governed,
+discovery-only and pinned source families by outcome, mechanism, synonym
+and adjacent domain. An empty curated sample is not absence of a skill.
+Record actual searched and inaccessible lanes without claiming exhaustive
+coverage. Inspect the promising **complete source package**, not a title
+or filename. Rights-unknown or rejected unchanged-use sources may be
+inspiration for independent original expression, but cannot be silently
+copied or approved. Prefer `USE_EXISTING` when a fully eligible package
+already solves the task; there is no creation quota.
+
+**Deliver the result:** If custom construction is actually needed,
+produce the full portable `SKILL.md` and every required file
+(script, reference, fixture, template, license, notice) in the user's
+authorized host, or provide complete contents as a portable handoff.
+Unknown installation destination does not block a portable artifact.
+For normal consumption the destination is **never** in this Skillz repository. Do not claim to write, install, send or schedule without
+actual host capability and user authorization. If source permissions
+or tools are materially unavailable, finish the safe portion and name
+the exact blocker; do not fabricate a working integration.
+
+**Outcome-first evaluation:** Assess the final full package, not just a
+plan or checklist. Use a positive real-world trigger, a neighboring
+non-trigger, a meaningful authority or prompt-injection adversary, a
+missing-tool/offline path and a false-success outcome where the checklist
+looks green but the requested useful result is absent. Select only
+decision-relevant cases. Label **`STATIC_REVIEW`**, `LOCAL_TEST`,
+`HOST_OBSERVED`, `CONSUMER_ACCEPTED` or `NOT_TESTED` separately;
+synthetic examples never become observed host results. If a material
+failure is found, reuse the [engine refinement handoff]
+(../../refinement/README.md), preserve existing successes, and stop
+iterations when no new consequential finding changes the decision.
+
+**Return within the same task:** Include artifact and destination or
+complete portable contents; `USE_EXISTING`, `ADAPT`, `COMPOSE`,
+`CREATE`, `CHECKLIST/HELPER`, `NO_SKILL_NEEDED` or `BLOCKED`;
+relevant corpus/rights coverage; actual checks versus unknown evidence;
+and `NOT_INSTALLED`, `READY_TO_UPLOAD` or verified `INSTALLED`.
+Do not stop at recommendations if a usable skill can be completed.
+Do not require another installed engine skill, daemon, monitoring
+session, independent agent or public issue.
+
+**Follow-ups:** Keep the same source-bound artifact, original success
+criteria and completed evidence. Change only the requested dimension,
+not the whole scope. Reopen discovery only for a materially changed
+requirement, failed result or new relevant source.
+See [single-skill build acceptance scenarios]
+(../../../docs/evals/single-skill-build-acceptance.md).
 
 ## S1 — Bind to environment and authority
 
@@ -438,7 +508,7 @@ A returning user starts from the fitted system already in use.
 Report without guessing:
 
 ```text
-Route: FIRST_VISIT | RETURNING_USER
+Route: SINGLE_SKILL_BUILD | FIRST_VISIT | RETURNING_USER
 Evidence used: <source categories>
 Evidence unavailable: <material gaps>
 Needs found: <concise list>
