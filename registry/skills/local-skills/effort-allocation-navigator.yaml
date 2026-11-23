@@ -20,7 +20,7 @@ review_status: needs-re-review
 dependency_status: self-contained-python-stdlib-optional
 dependencies: "Nine original first-party files, optional Python 3.9+ standard-library graph planner, fictional fixtures and blank preference schema; no network or other skills are required."
 content_blob_sha: 93b29536b328a8c6f8f6a9f9bc46e36eb68f2b9a
-complete_package_tree_sha: a8b06927d927b59010dc3e075856c165732dbacd
+complete_package_tree_sha: 42444342522939a3fe691b0b8946d40339eab2d1
 import_eligibility: review-required
 source_rights: "Independent MIT expression, not copied from third-party task-management skills. No real personal data, account history, user memory, telemetry or private preference files."
 rationale: "Bounded refinement and post-refinement adversarial source suite. The original v0.1.0 source was corrected for downstream obligations, contradictory DONE and alternative choice diversity without adding runtime authority. Exact CI results pending."

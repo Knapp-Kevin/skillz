@@ -303,7 +303,7 @@ class TestRefinementAdversarial(unittest.TestCase):
                                           deadline_evidence="owner-confirmed"),
                                    action("other", value=5, effort_minutes=15)))
         self.assertEqual(output["choices"][0]["task_id"], "prep")
-        self.assertIn("blocked", [x["task_id"] for x in output["blocked"])
+        self.assertIn("blocked", [x["task_id"] for x in output["blocked"]])
 
     def test_older_completed_task_with_future_due_no_extra_focus(self):
         output = planner.plan(data(action("focus"),
