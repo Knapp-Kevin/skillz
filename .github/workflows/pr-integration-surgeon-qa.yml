@@ -1,0 +1,33 @@
+name: PR Integration Surgeon offline contracts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/pr-integration-surgeon/**'
+      - 'registry/skills/local-skills/pr-integration-surgeon.yaml'
+      - 'registry/verification/local-skills/pr-integration-surgeon.yaml'
+      - '.github/workflows/pr-integration-surgeon-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-surgeon-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-contracts:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # pinned v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Check 49 integration graph, exact-head and refusal scenarios
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/pr-integration-surgeon/tests -p 'test_*.py' -v

@@ -1,0 +1,29 @@
+schema_version: 1
+skill_name: pr-integration-surgeon
+skill_version: "0.1.0"
+source_id: local-skills
+license_spdx: MIT
+license_evidence_path: skills/authored/pr-integration-surgeon/LICENSE
+copyright_holder: Kevin Knapp
+local_path: skills/authored/pr-integration-surgeon/SKILL.md
+fingerprint_algorithm: git-blob-sha1
+content_blob_sha: 03beac120f5fc3cdde5ddffd6bfff78c6827342a
+complete_package_tree_sha: f993750a3e489d3f7ebaed86f9887caa4a338d6e
+characterized_at: "2026-11-22"
+reviewed_at: "2026-11-22"
+verification_status: needs-re-review
+verification_basis: pr-integration-v0.1.0-exact-source-qa-pending
+validation_status: not-run
+validation_note: "49 synthetic offline Python methods planted; hosted exact-head execution pending. Live GitHub review/ruleset/check/merge-group behavior, agent-host adherence, actual merge and issue closure NOT_RUN."
+rubric: docs/skill-verification.md
+rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
+tags:
+  use_case: [pr-backlog-integration, dependency-analysis, merge-gate-triage]
+  lifecycle: [evaluation, implementation, verification]
+  characteristic: [standalone, read-only, source-bound, fail-closed, multi-turn]
+  authority: [read-only]
+  portability: high
+notes: >-
+  A normalized snapshot planner never independently verifies provider
+  status or makes a write, even when all supplied checks are green.
+  Actual merge and customer acceptance are separate host-backed gates.
