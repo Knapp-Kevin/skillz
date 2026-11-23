@@ -122,9 +122,26 @@ class FeedbackContractTests(unittest.TestCase):
                     self.assertRegex(text, r"(?m)^review_status: needs-re-review$")
                 else:
                     self.assertRegex(text, r"(?m)^verification_status: needs-re-review$")
-                    self.assertRegex(text, r"(?m)^validation_status: not-run$")
+                    # Source-only unit tests may pass while real host/agent
+                    # behavior remains entirely unobserved. Do not conflate
+                    # these separate evidence axes.
+                    self.assertRegex(
+                        text, r"(?m)^validation_status: "
+                              r"(?:not-run|passed-offline-contract-tests)$")
             self.assertEqual(row["review_status"], "needs-re-review")
             self.assertEqual(row["behavioral_validation"], "not-run")
+
+    def test_recorded_offline_pass_does_not_claim_agent_host_validation(self):
+        index = json.loads(INDEX.read_text(encoding="utf-8"))
+        skill = next((x for x in index["skills"] if
+                      x["id"] == "mcp-tool-surface-auditor"), None)
+        self.assertIsNotNone(skill)
+        self.assertEqual(skill["behavioral_validation"], "not-run")
+        self.assertEqual(skill["review_status"], "needs-re-review")
+        source = (ROOT / "registry" / "verification" / "local-skills" /
+                  "mcp-tool-surface-auditor.yaml").read_text(encoding="utf-8")
+        self.assertIn("validation_status: passed-offline-contract-tests", source)
+        self.assertIn("No real MCP transport or host was inspected", source)
 
     def test_no_fake_anonymous_account_guarantee(self):
         for p in packages():
