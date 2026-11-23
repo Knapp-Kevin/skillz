@@ -37,7 +37,7 @@ class MaintenanceTests(unittest.TestCase):
 
     def test_recovers_across_runs_and_does_not_rewrite_replayed_snapshot(self):
         self.initialize()
-        same = self.invoke()
+        same = self.invoke(run="new-nochange-run")
         self.assertEqual(same["status"], "SAME_SNAPSHOT_NO_WORK")
         self.assertEqual(same["maintenance"], ["NO_DUPLICATE_PROCESSING"])
         updated = next_scan(self.first)
@@ -57,7 +57,7 @@ class MaintenanceTests(unittest.TestCase):
 
     def test_no_change_weekly_still_proposes_audit_without_commit(self):
         self.initialize()
-        result = self.invoke(cadence="weekly")
+        result = self.invoke(run="weekly-new-run", cadence="weekly")
         self.assertEqual(result["status"], "SAME_SNAPSHOT_NO_WORK")
         self.assertIn("CHECK_RECOVERY_READINESS", result["maintenance"])
         self.assertFalse(result["checkpoint_written"])
