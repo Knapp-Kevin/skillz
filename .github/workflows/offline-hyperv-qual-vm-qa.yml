@@ -31,3 +31,19 @@ jobs:
         run: |
           set -euo pipefail
           python3 -B -m unittest discover -s skills/authored/offline-hyperv-qual-vm/tests -p 'test_*.py' -v
+
+  synthetic-powershell-refusals:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: windows-2022
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # pinned v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Execute source entrypoints with a fake Hyper-V module only
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File 'skills/authored/offline-hyperv-qual-vm/tests/test_synthetic_host.ps1'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

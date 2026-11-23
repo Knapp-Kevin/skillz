@@ -1326,8 +1326,8 @@
       "provenance_path": "registry/skills/local-skills/offline-hyperv-qual-vm.yaml",
       "verification_path": "registry/verification/local-skills/offline-hyperv-qual-vm.yaml",
       "skill_blob_sha": "cbf4179a3b7d5adbce84ac26161c6b153d6e2814",
-      "package_tree_sha": "d5df8a732da7ccb2cf2cf59c5081b5b9b2a090fd",
-      "package_file_count": 8,
+      "package_tree_sha": "4234e40490896a63f272cc017f1f7996bf67e5cd",
+      "package_file_count": 10,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
       "behavioral_validation": "not-run",
@@ -1339,7 +1339,7 @@
         "software-engineering/maintenance",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "Initial standalone eight-file skill source candidate from #890. Script source and contract tests have NOT been executed on a Windows Hyper-V host. Private owner credential/OS installation, fresh-os checkpoint, actual guest isolation and native qualification remain NOT_RUN."
+      "review_note": "First-party ten-file original source package. Static Python 32 tests executed on prior exact main; additional fake-module PowerShell runtime checks scheduled on PR, not live Hyper-V. Real owner-host provisioning, credentials, OS, checkpoint, copy-out, native test and retirement remain NOT_RUN."
     }
   ]
 }
