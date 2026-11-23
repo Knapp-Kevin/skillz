@@ -12,6 +12,7 @@ INDEX = ROOT / "registry" / "authored-skills-index.json"
 TEMPLATE = ROOT / ".github" / "ISSUE_TEMPLATE" / "agent-skill-feedback.yml"
 TARGET = "https://github.com/Knapp-Kevin/skillz/issues/new?template=agent-skill-feedback.yml"
 HEADING = "## Optional, anonymized-content skill feedback"
+CONTINUITY = "## Multi-turn continuity when the work is not one-shot"
 
 
 def packages():
@@ -60,6 +61,30 @@ class FeedbackContractTests(unittest.TestCase):
             if error:
                 failures[p.name] = error
         self.assertEqual(failures, {})
+
+    def test_all_authored_packages_preserve_multiturn_work_state(self):
+        failures = {}
+        for p in packages():
+            skill = (p / "SKILL.md").read_text(encoding="utf-8")
+            if skill.count(CONTINUITY) != 1 or skill.index(CONTINUITY) > skill.index(HEADING):
+                failures[p.name] = "missing, duplicated or misplaced continuation"
+                continue
+            contract = skill.split(CONTINUITY, 1)[1].split(HEADING, 1)[0]
+            required = ("follow-up messages as continuation", "objective, confirmed decisions",
+                        "protected checks, blockers", "never silently remove safety",
+                        "do not invent unavailable history", "actual finished outcome",
+                        "no autonomous follow-up")
+            missing = [term for term in required if term not in contract.casefold()]
+            if missing:
+                failures[p.name] = "missing: " + ", ".join(missing)
+        self.assertEqual(failures, {})
+
+    def test_multiturn_does_not_imply_replay_storage_or_auto_actions(self):
+        skill = (AUTHORED / "ci-guard" / "SKILL.md").read_text(encoding="utf-8")
+        chunk = skill.split(CONTINUITY, 1)[1].split(HEADING, 1)[0]
+        self.assertIn("Do not invent unavailable history or claim persistent storage.", chunk)
+        self.assertIn("No autonomous follow-up, session creation or background execution is implied.", chunk)
+        self.assertIn("a drafted artifact, open PR, proposed test or green isolated check", chunk)
 
     def test_authored_registry_and_disk_package_identities_match(self):
         index = json.loads(INDEX.read_text(encoding="utf-8"))
