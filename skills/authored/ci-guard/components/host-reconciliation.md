@@ -112,8 +112,7 @@ rebuilds or provider semantics not yet verified.
 ## Direct GitHub pagination completeness and source custody (v1.6.5)
 
 The documented per-attempt Jobs API reports `total_count` alongside
-`jobs` (see [GitHub's official workflow-job REST reference]
-(https://docs.github.com/en/rest/actions/workflow-jobs)). On **owner
+`jobs` (see [GitHub's official workflow-job REST reference](https://docs.github.com/en/rest/actions/workflow-jobs)). On **owner
 authorized** `--live`, the adapter checks the run ID, attempt, event, full
 source SHA, workflow path and completed conclusion before requesting jobs.
 Every page must declare the same integer `total_count`, with no page

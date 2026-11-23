@@ -125,7 +125,9 @@ checkpoint, use both source options **and** require the local binding:
 ```sh
 python3 scripts/ci_readiness.py \
   --input /path/to/readiness-bundle.json \
-  --source-root /exact/checked-out/repository   --source-map /path/to/pinned-source-map.json   --require-ready --require-source-bound
+  --source-root /exact/checked-out/repository \
+  --source-map /path/to/pinned-source-map.json \
+  --require-ready --require-source-bound
 ```
 
 The tool recomputes `ci_source_reconcile.reconcile` from the actual
