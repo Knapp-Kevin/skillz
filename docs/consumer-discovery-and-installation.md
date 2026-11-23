@@ -76,6 +76,16 @@ permission, consumer acceptance or installation. A consumer's safe
 personalization is private and optional, while objective defects
 require separate governed source review.
 
+**Optional artifact builder:** For an original-content
+`SINGLE_SKILL_BUILD` decision with real instructions already authored,
+the [builder workflow](../engine/builder/README.md) can deterministically
+create a single skill, phased skill or pack with a complete local
+file inventory. Its default is read-only planning; writing requires
+a fresh explicitly authorized destination. A structural blueprint
+pass cannot establish actual skill behavior, license rights or
+installation. The agent can create the equivalent portable output
+directly if its host lacks Python.
+
 **Packaging:** distinguish a documentation-only skill from a skill package that requires scripts, references, templates, licenses, notices, fixtures or assets. Inventory these files, supported formats, tool prerequisites, minimum privileges, provider connections, costs, triggers/nontriggers and failure recovery. Do not silently drop required files or substitute an untested installation method. Place any generated or adapted user skill in the **user's active host/project**, or supply a **portable handoff** when no authorized installation surface is available. Never write the user's skill into `skillz`.
 
 **Consent and installation:** confirm the specific destination and action, whether instructions or executables will run, whether external data will be sent, and whether permissions or payments are involved. Use the host's documented install capability only. Do not infer that “add this skill” authorizes related credentials, background operation, repository mutation, or third-party account access. Unchanged package adoption must pass current exact-version content/safety review, rights, authority and fit. An external scanner is not a universal prerequisite for this passive text library; any actual host actions still require explicit approval.

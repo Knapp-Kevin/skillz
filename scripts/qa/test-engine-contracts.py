@@ -181,6 +181,25 @@ class EngineStaticContracts(unittest.TestCase):
                      "SB-09", "SB-11", "SB-12"):
             self.assertIn(case, guide)
 
+    def test_builder_compiler_is_optional_and_engine_wired(self):
+        engine = read("engine/README.md")
+        bootstrap = read(SKILLS["bootstrap"])
+        forge = read(SKILLS["forge"])
+        evaluation = read(SKILLS["eval"])
+        template = read("docs/skill-template.md")
+        builder = read("engine/builder/README.md")
+        for content in (engine, bootstrap, forge, evaluation, template):
+            self.assertIn("builder/README.md", content)
+        self.assertIn("fully authored", builder)
+        self.assertIn("--write", builder)
+        for shape in ("single", "phased", "pack"):
+            self.assertIn(shape, builder)
+        for name, version in (("bootstrap", "0.11.2"),
+                              ("forge", "2.1.0"), ("eval", "2.1.0")):
+            actual = read(SKILLS[name])
+            self.assertIn("version: " + version, actual)
+            self.assertEqual(markdown_local_links(SKILLS[name], actual), [])
+
     def test_composable_packs_are_optional_and_use_canonical_engine(self):
         guide = read("engine/packs/README.md")
         manifest = read("engine/packs/manifest-contract.md")

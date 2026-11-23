@@ -45,6 +45,13 @@ user outcome, not from a quota for subskills. The pack's
 public canonical defects from user-private optional preferences; it
 never authorizes automatic rewriting or preference persistence.
 
+The optional [skill builder](engine/builder/README.md) can turn
+a **fully authored** capability blueprint into complete source files
+for a single skill, internally phased skill or Skill Pack. It is
+not a competing orchestrator, an autonomous domain expert, a
+mandatory Python dependency, or a substitute for evaluating the
+actual user outcome.
+
 ## 1. Route the request first
 
 Choose exactly one route:

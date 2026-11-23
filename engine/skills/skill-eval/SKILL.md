@@ -82,6 +82,19 @@ Remediation and discriminating regression: <material defect and exact necessary 
 Material uncertainty: <only unresolved facts>
 ```
 
+## Generated skill qualification
+
+For any candidate produced with the optional
+[builder](../../builder/README.md), evaluate the **actual authored
+behavior**, not the fact that a blueprint compiled or a directory
+exists. Inspect the full resulting package, source rights, supported
+host and every mandatory output. Apply the independent
+[builder acceptance gates](../../builder/acceptance.md): positive
+trigger, non-trigger, incomplete dependency, adversarial scope and
+false-green outcome. The builder's local structure pass is
+`LOCAL_TEST` only for the compiler's mechanics, never an automatic
+`verified`, `validated` or user-accepted label.
+
 ## Skill Pack evaluation boundary
 
 For an optional [Skill Pack](../../packs/README.md), evaluate the

@@ -4,6 +4,24 @@ Use this as a **starting point** when an authorized maintainer adds or revises a
 
 **First-party destination:** place complete new packages only under `skills/authored/<slug>/`, record source/license/complete tree and governed review links, and keep legacy or rights-uncertain files outside the authored collection until independently rebuilt. This template is not authority to move-and-relabel another author's text. See [the 2026-11-18 historical-origin migration audit](reviews/2026-11-18-frostwulf-replacement-equivalence-and-retirement-gates.md).
 
+## Deterministic build after the real skill is authored
+
+For original-content candidates, the optional
+[engine builder](../engine/builder/README.md) provides separate
+[templates](../engine/builder/templates/skill.md.tmpl) and blueprints for
+standalone, internally phased and composed Skill Pack forms. The
+agent must first author actual task-specific instructions, trigger
+and non-trigger rules, outcome verification, rights assertions
+and safe fallbacks. The builder can create the complete portable
+file layout **only when specifically authorized**; without
+`--write` it plans and validates in a temporary area. It does
+not infer missing domain logic, create author permissions,
+prove semantic quality or complete user installation.
+
+Keep this human-readable template useful without requiring Python
+or an external generator. A static scaffold must never be labeled
+a finished skill merely because its Markdown and manifest are valid.
+
 ## Copy and adapt
 
 ```markdown

@@ -1,0 +1,161 @@
+# Skillz Builder: complete skill and pack drafting
+
+The builder turns **a fully authored capability blueprint** into an actual,
+portable skill or Skill Pack layout. This closes the gap between planning and
+producing the files. The normal route still begins with
+[Skill Bootstrap](../skills/skill-bootstrap/SKILL.md), relevant
+[corpus discovery](../../docs/consumer-discovery-and-installation.md),
+licensing, and the outcome decision.
+
+The builder is an **optional standard-library compiler**, not an LLM, a
+semantic skill generator, a hosted execution engine, an installer or an
+automatic publication pipeline. It does not invent instructions that the
+author failed to supply. A generated package is a **draft for review**.
+It is never called \`validated\`, \`installed\` or consumer accepted on the
+strength of scaffolding alone.
+
+## Choose the smallest shape
+
+| Outcome architecture | \`kind\` | Emitted files |
+| --- | --- | --- |
+| One coherent procedure | \`single\` | One \`SKILL.md\`, original-only MIT \`LICENSE\` |
+| One skill with separate checkpoints but one owner | \`phased\` | One \`SKILL.md\` with ordered, explicit step outputs; no pack manifest |
+| Multiple independently meaningful subskills, phases or components | \`pack\` | One entrypoint, \`pack.json\`, owned module files, license, optional preference declaration |
+
+The [pack manifest contract](../packs/manifest-contract.md) is
+validated by the **existing** \`engine/packs/check_pack.py\`. Builder
+does not implement a second graph or permission validator. A self-contained
+single or phased skill does not require a pack.
+
+## Step-by-step generation
+
+1. **Define the user outcome and limits.** Preserve the user's explicit
+   trigger, non-trigger, inputs, observable completion, failure behavior and
+   authority ceiling. First ask whether an existing eligible skill is
+   sufficient, a checklist would be better, or the task is too dynamic to
+   warrant a skill.
+2. **Search and evaluate candidate mechanisms.** Inspect relevant entire
+   first-party, governed and accessible third-party packages; record
+   missing discovery coverage, exact source identities and rights. Never
+   infer blanket permission from the Skillz root license.
+3. **Author a complete blueprint.** Use the
+   [single](examples/single-blueprint.json),
+   [phased](examples/phased-blueprint.json) or
+   [composed pack](examples/pack-blueprint.json) fictional model.
+   Replace the invented user-task instructions with real, task-specific
+   steps and verifiable outputs. The blueprint must state
+   \`rights_declaration: caller-asserts-original-content\`. This
+   **assertion is not a license determination**: blocked, copied, adapted or
+   third-party material requires separate legally permitted handling and
+   should not be laundered through this original-only generator.
+4. **Preflight without writing anything:**
+
+   \`\`\`sh
+   python3 engine/builder/build.py \
+     --input engine/builder/examples/pack-blueprint.json
+   \`\`\`
+
+   The JSON report lists the proposed files, stable content SHA-256
+   fingerprints, module sequence, structural status and evidence limits.
+   This uses a transient temporary directory for structural checks;
+   it does **not** create the user skill at a destination, install it or
+   call external tools.
+5. **Create the actual files only when specifically authorized:**
+
+   \`\`\`sh
+   python3 engine/builder/build.py \
+     --input /path/to/authorized-blueprint.json \
+     --output /path/to/new-skill-directory \
+     --write
+   \`\`\`
+
+   The target directory's **parent must exist**; the target itself
+   **must not exist**, even if empty. No force or overwrite mode exists.
+   The default writer also refuses destinations inside the Skillz
+   checkout. Maintainer-authorized repository writes additionally
+   require \`--repository-maintenance\`, but that flag itself is **not
+   approval** to modify a repository. If an output write fails halfway,
+   a partial directory may remain; the tool reports HOLD rather than
+   completion. Inspect and remove that partial candidate manually before
+   retrying.
+6. **Review the finished artifact, not the manifest.** Read every emitted
+   \`SKILL.md\`, support file and dependency. Test the original positive
+   trigger, a near non-trigger, missing-tool or offline fallback,
+   adversarial authority/rights issues, and the *false-success case*
+   where generated files exist but the requested task still cannot be
+   completed. Use \`STATIC_REVIEW\`, \`LOCAL_TEST\`, \`HOST_OBSERVED\`,
+   \`CONSUMER_ACCEPTED\` or \`NOT_TESTED\` precisely.
+7. **Only after actual qualification**: hand off a complete portable
+   package, or install in the user's authorized host; separately verify
+   actual destination, identity and execution. For first-party
+   Skillz maintenance, complete provenance, security, exact package
+   fingerprint, licensing and PR merge gates before saying delivered.
+
+## Blueprint v1 contract
+
+The whole blueprint has these required keys and **no hidden extras**:
+
+| Key | Role |
+| --- | --- |
+| \`schema_version: 1\` | Blueprint *format*, not SemVer release |
+| \`kind\` | \`single\`, \`phased\` or \`pack\` |
+| \`name\` | Safe kebab-case name |
+| \`description\`, \`outcome\`, \`trigger\`, \`non_trigger\` | Meaningful use and avoid-use contract |
+| \`inputs\`, \`verification\`, \`failure_handling\` | Required task evidence and safe outcome checking |
+| \`authority\` | \`read-only\` or \`approval-gated\` maximum, never a permission grant |
+| \`copyright_holder\` and \`rights_declaration\` | Author-provided *original* copyright and provenance assertion, subject to independent review |
+| \`steps\` | Ordered \`id\`, \`title\`, \`instructions\`, \`output\` entries for \`single\` or \`phased\` |
+| \`modules\` | For \`pack\` only: \`id\`, \`kind\`, \`requires\`, \`required\`, \`fallback\`, \`authority\`, \`output\`, \`instructions\` |
+| \`preference_slots\` | Only optional, public allowlisted enum *definitions*; never a saved consumer selection |
+
+All array and object fields are explicit. Unknown input fields, missing
+required data, placeholder text such as TODO, unsafe slugs, cycles,
+missing required support files, permission escalation, and non-declared
+preferences HOLD. A pack's module files are generated **inside** the
+same package, even for separately triggerable subskills. The pack's
+metadata and file inventory are derived from the actual generated
+modules, not manually trusted from a caller.
+
+The current optional builder is **original-content only**. To incorporate
+third-party adapted material, first complete its attribution, source
+pin, license/NOTICE and derivative-rights review through the existing
+engine procedures. Do not simply claim \`original\` in the blueprint.
+The builder only checks that the original-content declaration was
+provided; it **cannot know whether it is true**.
+
+A preference declaration describes *possible* neutral settings. It
+never grants storage permission, supplies an actual user's choice,
+overrides canonical safety, or becomes public personal data. Optional
+private preference persistence remains a **separate host-controlled
+consent, secure storage, revocation and compatibility workflow**. The
+[canonical-versus-preference tree](../packs/feedback-decision-tree.md)
+still governs whether feedback belongs in the shared skill.
+
+## Evaluation and bounded refinement
+
+Run:
+
+\`\`\`sh
+python3 -B scripts/qa/test-engine-builder.py
+\`\`\`
+
+The synthetic tests exercise three generated shapes, fresh output creation,
+stable hashes, complete links, no-overwrite, repository mutation guard,
+missing permissions, unsafe preferences, cycles and false completion
+claims. These are **local deterministic mechanics**, not external agent
+acceptance. The [authoring acceptance rubric](acceptance.md) defines the
+separate semantic and consumer gates.
+
+After material feedback, use the
+[engine refinement handoff](../refinement/README.md). Preserve the
+baseline and previously successful cases. Promote a general correction
+only with evidence and maintainer authority; honor an individual
+presentation preference only locally and persist it only with explicit
+consent in actual private storage. Stop when no consequential new finding
+changes the decision. **Do not increment versions for each micro-edit.**
+
+The acting agent is free to produce the same complete package directly
+if it lacks Python or filesystem access. The builder is useful when an
+explicit structured blueprint, deterministic formatting and a reproducible
+file inventory materially improve results, not a mandatory user
+prerequisite.

@@ -27,6 +27,14 @@ For normal FIRST_VISIT or RETURNING_USER synthesis, use `engine/skills/skill-boo
 2. Define the skill's durable capability, trigger/non-trigger conditions, inputs/outputs, authority, dependencies, portability, and completion criteria.
 3. Compare the proposed capability against first-party and **all accessible relevant governed and discovery-only source families**, not only an easy local index. Search by outcome, synonyms, mechanism and adjacent domain. Verify the actual package/behavior before declaring a duplicate or a genuine gap. An empty capability-directory slot or shared name establishes neither novelty nor equivalence. Record inaccessible sources rather than claiming exhaustive discovery.
 4. Use `docs/skill-template.md` as the structural starting point when applicable.
+   For a fully authored original-content candidate, the optional
+   [builder](../../builder/README.md) provides deterministic single,
+   phased, or composed pack packaging using the same source templates
+   and a default read-only plan. Maintainer writes into
+   `skills/authored/<slug>/` require separate current owner authority;
+   the builder's `--repository-maintenance` flag is only a guard,
+   never permission. Do not claim generated drafts qualify the
+   package or inherit review results from the template.
 5. Create or revise the full standalone skill package under **`skills/authored/<slug>/`**, not `skills/<name>/`, `engine/skills/` or a tracked upstream-source tree. Use a stable unique slug. A package may legitimately contain scripts, references, templates, fixtures, JSON, examples and other in-skill components where these change execution quality. Mandatory instructions and their supporting files must ship **inside the downloadable package**, work offline when the task permits, and not rely on the wider Skillz repository or a sibling skill to function.
 6. Preserve those skill-owned components unless there is a specific quality, safety, licensing, or redundancy reason to change them.
 7. Review the **actual finished complete package** semantically against `docs/skill-verification.md`, including provenance, licensing, dependencies, authority, portability, ambiguity, failure handling, likely misuse, and real user outcome. Use at least a positive trigger, non-trigger, high-risk adversarial boundary and a low-capability/offline execution scenario when applicable. Assess whether an instruction-only checklist would falsely pass without producing the intended artifact, and whether stronger hosts can perform safe equivalent methods without unnecessary restrictions. These are static interpretations unless genuinely executed. For every
