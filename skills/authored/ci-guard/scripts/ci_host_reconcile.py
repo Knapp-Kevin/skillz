@@ -338,6 +338,134 @@ def reconcile(sim,mapping,observed,live=False):
                             "provider_billing","monetary_cost"]}
 
 
+
+def reconcile_targeted_retry(sim, mapping, previous, current):
+    """Validate a targeted retry without counting carried-forward rows as new work.
+
+    All observations are caller-supplied; identical timestamp windows are
+    evidence of API row carry-forward, NOT authenticated runner billing.
+    This narrow check supports one workflow run, two adjacent attempts.
+    """
+    parse_mapping(mapping)
+    source = selected_result(sim, mapping)
+    require(len(mapping["workflow_runs"]) == 1,
+            "targeted retry currently supports exactly one workflow mapping")
+    w = mapping["workflow_runs"][0]
+    require(w["attempt"] >= 2, "target attempt must have a predecessor")
+    required = w["jobs"]
+    require(set(required) == set(source["scheduled_jobs"]) and
+            all(source["statuses"].get(j) == "success" for j in required),
+            "targeted retry requires complete successful source obligations")
+    wanted = set(required.values())
+
+    def inspect(envelope, attempt, run_conclusion):
+        shape(envelope, ("schema_version", "repository", "workflow_runs"),
+              label="retry observations")
+        require(type(envelope["schema_version"]) is int and
+                envelope["schema_version"] == 1 and
+                envelope["repository"] == mapping["repository"],
+                "retry observation source/schema mismatch")
+        rows = envelope["workflow_runs"]
+        require(isinstance(rows, list) and len(rows) == 1,
+                "retry requires one complete workflow envelope per attempt")
+        row = rows[0]
+        shape(row, ("run", "jobs", "attempt"), label="retry attempt")
+        require(row["attempt"] == attempt, "retry envelope attempt mismatch")
+        run = row["run"]
+        require(isinstance(run, dict), "invalid retry run record")
+        require(run.get("id") == w["run_id"] and
+                run.get("run_attempt") == attempt,
+                "retry run ID/attempt mismatch")
+        require(run.get("head_sha") == mapping["source_revision"],
+                "retry source revision mismatch")
+        require(run.get("event") == mapping["expected_event"],
+                "retry event mismatch")
+        path = run.get("path")
+        require(isinstance(path, str) and
+                path.split("@", 1)[0] == w["workflow_file"],
+                "retry workflow file mismatch")
+        require(run.get("status") == "completed" and
+                run.get("conclusion") == run_conclusion,
+                "retry attempt not in expected completed state")
+        jobs = row["jobs"]
+        require(isinstance(jobs, list) and len(jobs) == len(wanted) and
+                len(jobs) <= MAX_JOBS_PER_RUN,
+                "retry missing/extra required jobs or truncated receipt")
+        named = {}
+        ids = set()
+        for job in jobs:
+            require(isinstance(job, dict) and type(job.get("id")) is int and
+                    job["id"] > 0, "invalid retry provider job ID")
+            require(job["id"] not in ids, "duplicate retry provider job ID")
+            ids.add(job["id"])
+            name = identity(job.get("name"), "retry job name")
+            require(name not in named and name in wanted,
+                    "duplicate/unknown retry job name")
+            if "run_id" in job:
+                require(job["run_id"] == w["run_id"],
+                        "retry job attached to another run")
+            if "run_attempt" in job:
+                require(job["run_attempt"] == attempt,
+                        "retry job attached to another attempt")
+            require(job.get("status") == "completed" and
+                    job.get("conclusion") in {"success", "failure"},
+                    "incomplete, skipped or unsupported retry job")
+            began = time_value(job.get("started_at"))
+            ended = time_value(job.get("completed_at"))
+            require(ended >= began, "invalid retry execution interval")
+            named[name] = (job, began, ended)
+        require(set(named) == wanted, "incomplete required retry job set")
+        return named
+
+    before = inspect(previous, w["attempt"] - 1, "failure")
+    after = inspect(current, w["attempt"], "success")
+    carried = []
+    executed = []
+    prior_seconds = 0
+    new_seconds = 0
+    for name in sorted(wanted):
+        old, start0, end0 = before[name]
+        new, start1, end1 = after[name]
+        prior_seconds += (end0 - start0).total_seconds()
+        require(new["conclusion"] == "success",
+                "retry has incomplete required success")
+        if old["conclusion"] == "success":
+            require(start0 == start1 and end0 == end1,
+                    "claimed carried-forward success changed execution window")
+            carried.append(name)
+        else:
+            require(old["conclusion"] == "failure" and
+                    new["id"] != old["id"] and start1 >= end0 and
+                    (start0, end0) != (start1, end1),
+                    "failed job did not show a distinct later retry execution")
+            executed.append(name)
+            new_seconds += (end1 - start1).total_seconds()
+    require(executed, "no failed job was actually retried")
+    # Provider job IDs and run_attempt values identify API rows, not proof
+    # that a runner occupied every returned row in a later attempt.
+    return {
+        "schema_version": 1,
+        "status": "RETRY_ACCOUNTING_RECONCILED",
+        "source_revision": mapping["source_revision"],
+        "run_id": w["run_id"],
+        "prior_attempt": w["attempt"] - 1,
+        "new_attempt": w["attempt"],
+        "required_job_count": len(wanted),
+        "carried_forward_jobs": carried,
+        "newly_reexecuted_jobs": executed,
+        "prior_job_seconds": round(prior_seconds, 3),
+        "inferred_new_execution_seconds": round(new_seconds, 3),
+        "provider_billed_minutes": "NOT_MEASURED",
+        "observation_provenance": "OBSERVED_AS_SUPPLIED_NOT_AUTHENTICATED",
+        "runner_occupancy_proven": False,
+        "run_attempt_api_row_identity_not_execution_identity": True,
+        "protected_branch_rules": "NOT_VERIFIED",
+        "downstream_release_or_tag_retriggered": "NOT_VERIFIED",
+        "end_to_end_ci_qualified": False,
+        "automatic_cutover_authorized": False,
+    }
+
+
 def load_json(path):
     p=Path(path).absolute()
     require(not any(x.is_symlink() for x in (p,*p.parents)),
@@ -356,6 +484,8 @@ def main():
     evidence=p.add_mutually_exclusive_group(required=True)
     evidence.add_argument("--observations")
     evidence.add_argument("--live",action="store_true")
+    p.add_argument("--retry-previous-observations",
+                   help="Optional earlier-attempt JSON; offline targeted-retry audit only")
     p.add_argument("--require-pass",action="store_true")
     args=p.parse_args()
     try:
@@ -365,9 +495,16 @@ def main():
             obs=observe_live(mapping,token=os.environ.get("GH_TOKEN"))
         else:
             obs=load_json(args.observations)
-        result=reconcile(sim,mapping,obs,live=bool(args.live))
+        if args.retry_previous_observations:
+            require(not args.live,
+                    "retry history mode requires two supplied offline observation files")
+            prior=load_json(args.retry_previous_observations)
+            result=reconcile_targeted_retry(sim,mapping,prior,obs)
+        else:
+            result=reconcile(sim,mapping,obs,live=bool(args.live))
         print(json.dumps(result,sort_keys=True,allow_nan=False))
-        return 3 if args.require_pass and result["status"]!="HOST_JOB_RECONCILED" else 0
+        accepted={"HOST_JOB_RECONCILED","RETRY_ACCOUNTING_RECONCILED"}
+        return 3 if args.require_pass and result["status"] not in accepted else 0
     except (Hold,ValueError,OSError,UnicodeError,TypeError,KeyError) as err:
         print("CI_HOST_RECONCILE_HOLD: "+str(err),file=sys.stderr)
         return 2
