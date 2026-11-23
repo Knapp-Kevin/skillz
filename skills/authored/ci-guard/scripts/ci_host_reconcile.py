@@ -133,7 +133,12 @@ def selected_result(sim, mapping):
 
 
 def observe_live(mapping, token=None, getter=None):
-    """Only fixed GitHub API GET URLs. Inject getter for offline unit tests."""
+    """Read one exact GitHub run attempt and its COMPLETE bounded job listing.
+
+    The documented attempt-jobs response exposes total_count. Treat missing,
+    changing, oversized, repeated or short pages as incomplete, NOT success.
+    Inject a fake GET callback for offline tests; never dispatch CI.
+    """
     parse_mapping(mapping)
     if getter is None:
         getter=_github_get
@@ -142,19 +147,63 @@ def observe_live(mapping, token=None, getter=None):
         rid=w["run_id"]; attempt=w["attempt"]
         prefix="https://api.github.com/repos/"+mapping["repository"]+"/actions/runs/"+str(rid)
         run=getter(prefix+"/attempts/"+str(attempt),token)
-        # Per-attempt job endpoint. Do NOT silently blend jobs from reruns.
-        jobs=[]
+        require(isinstance(run,dict), "GitHub attempt response malformed")
+        require(run.get("id")==rid and run.get("run_attempt")==attempt,
+                "HOST_RUN_ID_OR_ATTEMPT_MISMATCH")
+        require(run.get("head_sha")==mapping["source_revision"],
+                "HOST_SOURCE_REVISION_MISMATCH")
+        require(run.get("event")==mapping["expected_event"],
+                "HOST_EVENT_MISMATCH")
+        path=run.get("path")
+        require(isinstance(path,str) and
+                path.split("@",1)[0]==w["workflow_file"],
+                "HOST_WORKFLOW_PATH_MISMATCH")
+        require(run.get("status")=="completed" and
+                run.get("conclusion") in CONCLUSIONS,
+                "HOST_RUN_NOT_COMPLETED_OR_CONCLUSION_UNKNOWN")
+
+        jobs=[]; count=None; ids=set()
         for page in (1,2,3):
-            path=prefix+"/attempts/"+str(attempt)+"/jobs?per_page=100&page="+str(page)
-            payload=getter(path,token)
-            require(isinstance(payload,dict) and isinstance(payload.get("jobs"),list),
+            url=prefix+"/attempts/"+str(attempt)+"/jobs?per_page=100&page="+str(page)
+            payload=getter(url,token)
+            require(isinstance(payload,dict) and
+                    isinstance(payload.get("jobs"),list),
                     "GitHub jobs response malformed")
-            jobs.extend(payload["jobs"])
-            require(len(jobs) <= MAX_JOBS_PER_RUN,"too many jobs, refuse truncated receipt")
-            if len(payload["jobs"]) < 100:
+            total=payload.get("total_count")
+            require(type(total) is int and 0 <= total <= MAX_JOBS_PER_RUN,
+                    "missing/invalid/too many jobs in provider total_count")
+            require(count is None or total==count,
+                    "provider job total_count changed between pages")
+            count=total
+            batch=payload["jobs"]
+            require(len(batch) <= 100 and len(jobs)+len(batch)<=count,
+                    "provider job page exceeds declared total_count")
+            for job in batch:
+                require(isinstance(job,dict) and
+                        type(job.get("id")) is int and job["id"]>0,
+                        "invalid provider job row")
+                require(job["id"] not in ids,
+                        "duplicate provider job ID across pages")
+                ids.add(job["id"])
+                if job.get("run_id") is not None:
+                    require(job["run_id"]==rid, "job attached to other run")
+                if job.get("head_sha") is not None:
+                    require(job["head_sha"]==mapping["source_revision"],
+                            "HOST_JOB_SOURCE_REVISION_MISMATCH")
+                # A previously successful carried row may report its earlier
+                # attempt. Do not require job attempt == selected run attempt.
+                if job.get("run_attempt") is not None:
+                    require(type(job["run_attempt"]) is int and
+                            1 <= job["run_attempt"] <= attempt,
+                            "job attached to a future/invalid attempt")
+            jobs.extend(batch)
+            if len(jobs)==count:
                 break
+            require(len(batch)==100,
+                    "incomplete provider pagination despite short job page")
         else:
             raise Hold("job pagination exceeds supported bounded read")
+        require(len(jobs)==count,"incomplete provider job pagination")
         collected.append({"run":run,"jobs":jobs,"attempt":attempt})
     return {"schema_version":1, "repository":mapping["repository"],
             "workflow_runs":collected}
@@ -280,6 +329,13 @@ def reconcile(sim,mapping,observed,live=False):
             names[name]=job
             if job.get("run_id") is not None:
                 require(job["run_id"]==w["run_id"],"job attached to other run")
+            if job.get("head_sha") is not None:
+                require(job["head_sha"]==mapping["source_revision"],
+                        "HOST_JOB_SOURCE_REVISION_MISMATCH")
+            if job.get("run_attempt") is not None:
+                require(type(job["run_attempt"]) is int and
+                        1 <= job["run_attempt"] <= w["attempt"],
+                        "job attached to future/invalid attempt")
         permitted=set(w["jobs"].values())
         if set(names)!=permitted:
             issues.append("UNMAPPED_OR_MISSING_HOST_JOBS:"+w["workflow"])

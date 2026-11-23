@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.6.4"
+skill_version: "1.6.5"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 2b7e48e905b8e3ddc0f30197ae6c0f57179927e2
-complete_package_tree_sha: 218bcb60e594372600d9f4e740a63bc8372d16ff
+content_blob_sha: fa5b4e7e04d113c1dffe9ff834136446e9a692e9
+complete_package_tree_sha: b4ffb28dd9c23d128ee456cf21df1e7253afb8a7
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: outcome-readiness-source-revision-pending-exact-head-tests
+verification_basis: source-provider-custody-pending-exact-head-tests
 validation_status: not-run
-validation_note: "Outcome-first cross-diagnostic readiness plus 19 fictional test cases; exact-head QA pending; real consuming provider, approved host negative controls and billed ROI NOT_RUN. Green preflight is not CI acceptance."
+validation_note: "v1.6.5 host total_count and source identity, local source/Git HEAD binding, with 14 fictional adversarial test additions. Exact-head hosted contract QA pending; real consumer, remote GitHub source assurance, executed conformance oracles and billed ROI NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
@@ -24,8 +24,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Version 1.6.4 adds advisory pre-qualification readiness based on canonical
-  self-repair, cross-workflow overlap, strategy fit and structural scenario
-  diagnostics plus a supplied static source receipt. No independent Git HEAD,
-  branch protection, live native/release checks or realized ROI evidence.
-  A positive result never grants owner authority to run expensive CI.
+  A bounded provider run can report incomplete or duplicated pagination.
+  Direct GitHub API attempt reads require stable total_count and exact
+  source and job identity. The optional local Git source binder verifies
+  tracked bytes at a pinned local HEAD, not authenticated remote provenance.
+  Runtime source oracles, branch policy, host CI semantics and actual savings
+  remain independently required and unverified.

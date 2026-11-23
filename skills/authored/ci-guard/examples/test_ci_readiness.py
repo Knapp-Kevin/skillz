@@ -4,6 +4,7 @@ No third-party consumer data, host API calls or CI dispatches.
 """
 import copy
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -230,6 +231,109 @@ class ReadinessContract(unittest.TestCase):
         report = ci_readiness.evaluate(fixture())
         self.assertTrue(report["diagnostic_results_recomputed_from_declared_inputs"])
         self.assertFalse(report["owner_authorization_granted"])
+
+
+class LocalSourceBindingTests(unittest.TestCase):
+    """Independent fictional Git checkout and static source binder exercises."""
+
+    def make_source(self):
+        from test_ci_source_reconcile import Sources
+        source=Sources("test_exact_source_reconciles_but_remains_unverified_host_claim")
+        source.setUp()
+        self.addCleanup(source.doCleanups)
+        root=source.root
+        def git(*args):
+            result=subprocess.run(["git","-C",str(root),*args],
+                                  capture_output=True,text=True,check=True,
+                                  timeout=8)
+            return result.stdout.strip()
+        git("init","-q")
+        git("add",".github/workflows/verify.yml",
+            ".github/workflows/release.yml","tests/test_workflow_contract.py")
+        git("-c","user.name=Fictional Fixture",
+            "-c","user.email=fixture@invalid.example",
+            "commit","-qm","synthetic source snapshot")
+        sha=git("rev-parse","HEAD")
+        scenario=copy.deepcopy(source.s)
+        scenario["source_revision"]=sha
+        scenario["inventory"]["source_revision"]=sha
+        for design in scenario["designs"]:
+            design["source_revision"]=sha
+        mapping=copy.deepcopy(source.mapping)
+        mapping["source_revision"]=sha
+        return source,scenario,mapping,sha
+
+    @unittest.skipUnless(shutil.which("git"),"local Git executable required")
+    def test_local_git_head_and_tracked_bytes_recomputed_without_oracle_execution(self):
+        source,scenario,mapping,sha=self.make_source()
+        result=ci_readiness.verify_local_source(source.root,scenario,mapping)
+        self.assertEqual(result["local_head"],sha)
+        self.assertEqual(result["verified_tracked_files"],3)
+        self.assertEqual(result["binding"],
+                         "LOCAL_GIT_HEAD_AND_TRACKED_SOURCE_BYTES_MATCHED")
+        self.assertFalse(result["git_remote_ref_authenticated"])
+        self.assertFalse(result["compiled_oracle_execution_verified"])
+        self.assertEqual(result["source_receipt"]["status"],
+                         "STATIC_SOURCE_RECONCILED")
+        self.assertTrue(all(not row["executed"] for row in
+                            result["source_receipt"]["oracle_evidence"]))
+
+    @unittest.skipUnless(shutil.which("git"),"local Git executable required")
+    def test_repinning_dirty_local_source_cannot_override_git_head(self):
+        source,scenario,mapping,_=self.make_source()
+        path=".github/workflows/verify.yml"
+        source.write(path,source.workflow_files[path]+"\n# altered\n")
+        source.repin()
+        for item in mapping["workflow_files"]:
+            if item["path"]==path:
+                item["sha256"]=source.hash(path)
+        with self.assertRaisesRegex(ci_readiness.Hold,
+                                    "LOCAL_SOURCE_BYTES_NOT_AT_HEAD"):
+            ci_readiness.verify_local_source(source.root,scenario,mapping)
+
+    @unittest.skipUnless(shutil.which("git"),"local Git executable required")
+    def test_claimed_revision_cannot_borrow_other_local_commit(self):
+        source,scenario,mapping,_=self.make_source()
+        scenario["source_revision"]="b"*40
+        scenario["inventory"]["source_revision"]="b"*40
+        for design in scenario["designs"]:
+            design["source_revision"]="b"*40
+        mapping["source_revision"]="b"*40
+        with self.assertRaisesRegex(ci_readiness.Hold,"LOCAL_GIT_HEAD_MISMATCH"):
+            ci_readiness.verify_local_source(source.root,scenario,mapping)
+
+    def test_copy_pasted_static_source_receipt_drift_is_hold(self):
+        case=fixture()
+        local={"binding":"LOCAL_GIT_HEAD_AND_TRACKED_SOURCE_BYTES_MATCHED",
+               "source_receipt":copy.deepcopy(case["source_receipt"]),
+               "local_head":SHA}
+        local["source_receipt"]["jobs"]=999
+        report=ci_readiness.evaluate(case,local_source=local)
+        self.assertIn("LOCAL_SOURCE_RECEIPT_DRIFT:jobs",report["issues"])
+        self.assertEqual(report["status"],"HOLD")
+
+    def test_source_bound_cli_guard_requires_actual_source_options(self):
+        case=fixture()
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp)/"bundle.json"
+            target.write_text(json.dumps(case),encoding="utf8")
+            script=ROOT/"scripts"/"ci_readiness.py"
+            run=subprocess.run([sys.executable,str(script),"--input",str(target),
+                                "--require-ready","--require-source-bound"],
+                               capture_output=True,text=True,timeout=12)
+            self.assertEqual(run.returncode,3,run.stderr)
+            receipt=json.loads(run.stdout)
+            self.assertEqual(receipt["status"],"HOLD")
+            self.assertIn("LOCAL_SOURCE_NOT_RECOMPUTED",receipt["issues"])
+            self.assertFalse(receipt["ready_only_for_one_bounded_qualification"])
+            self.assertFalse(receipt["local_git_source_binding_verified"])
+            self.assertFalse(receipt["remote_git_identity_authenticated"])
+            no_map=subprocess.run([sys.executable,str(script),"--input",str(target),
+                                   "--source-root",str(tmp),"--require-source-bound"],
+                                  capture_output=True,text=True,timeout=12)
+            self.assertEqual(no_map.returncode,2)
+            self.assertIn("source root and map",no_map.stderr)
+
 
 
 if __name__ == "__main__":

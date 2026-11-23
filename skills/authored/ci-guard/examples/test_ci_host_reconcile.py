@@ -68,7 +68,7 @@ class HostEvidenceTests(unittest.TestCase):
         o=observed()
         def fake(url,token):
             calls.append((url,token))
-            if "/jobs?" in url:return {"jobs":o["workflow_runs"][0]["jobs"]}
+            if "/jobs?" in url:return {"total_count":1,"jobs":o["workflow_runs"][0]["jobs"]}
             return o["workflow_runs"][0]["run"]
         result=audit.observe_live(mapping(),token="never-print-secret",getter=fake)
         self.assertEqual(result["workflow_runs"][0]["jobs"][0]["id"],991)
@@ -229,10 +229,113 @@ class HostEvidenceTests(unittest.TestCase):
         def fake(url,token):
             calls.append(url)
             if "/jobs?" not in url:return observed()["workflow_runs"][0]["run"]
-            return {"jobs":[{"id":i} for i in range(100)]}
+            return {"total_count":201,"jobs":[{"id":i+1} for i in range(100)]}
         with self.assertRaisesRegex(audit.Hold,"too many jobs"):
             audit.observe_live(mapping(),getter=fake)
         self.assertTrue(all("/attempts/1/jobs?" in x for x in calls[1:]))
+
+    def test_pagination_short_first_page_with_declared_more_jobs_holds(self):
+        old=observed()
+        def fake(url,token):
+            if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+            return {"total_count":2,"jobs":old["workflow_runs"][0]["jobs"]}
+        with self.assertRaisesRegex(audit.Hold,"incomplete provider pagination"):
+            audit.observe_live(mapping(),getter=fake)
+
+    def test_pagination_missing_noninteger_or_negative_total_count_holds(self):
+        old=observed()
+        for total in (None,True,"1",-1,1.5):
+            with self.subTest(total=total):
+                def fake(url,token):
+                    if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+                    return {"total_count":total,"jobs":old["workflow_runs"][0]["jobs"]}
+                with self.assertRaisesRegex(audit.Hold,"total_count"):
+                    audit.observe_live(mapping(),getter=fake)
+
+    def test_pagination_rejects_changed_total_count_between_pages(self):
+        old=observed()
+        def fake(url,token):
+            if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+            if "&page=1" in url:
+                return {"total_count":101,"jobs":[{"id":i+1} for i in range(100)]}
+            return {"total_count":100,"jobs":[{"id":101}]}
+        with self.assertRaisesRegex(audit.Hold,"changed between pages"):
+            audit.observe_live(mapping(),getter=fake)
+
+    def test_pagination_rejects_duplicate_ids_across_pages(self):
+        old=observed()
+        def fake(url,token):
+            if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+            if "&page=1" in url:
+                return {"total_count":101,"jobs":[{"id":i+1} for i in range(100)]}
+            return {"total_count":101,"jobs":[{"id":100}]}
+        with self.assertRaisesRegex(audit.Hold,"duplicate provider job ID"):
+            audit.observe_live(mapping(),getter=fake)
+
+    def test_exact_101_jobs_requires_two_pages_not_three(self):
+        old=observed();seen=[]
+        def fake(url,token):
+            seen.append(url)
+            if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+            if "&page=1" in url:
+                return {"total_count":101,"jobs":[{"id":i+1} for i in range(100)]}
+            if "&page=2" in url:
+                return {"total_count":101,"jobs":[{"id":101}]}
+            raise AssertionError("unexpected third API request")
+        result=audit.observe_live(mapping(),getter=fake)
+        self.assertEqual(len(result["workflow_runs"][0]["jobs"]),101)
+        self.assertEqual(len(seen),3)
+
+    def test_live_run_identity_refused_before_job_pages(self):
+        old=observed()
+        for field,value in (("head_sha","b"*40),("event","release"),
+                            ("path",".github/workflows/other.yml"),
+                            ("run_attempt",2),("status","in_progress"),
+                            ("id",9999)):
+            with self.subTest(field=field):
+                run=copy.deepcopy(old["workflow_runs"][0]["run"])
+                run[field]=value
+                seen=[]
+                def fake(url,token):
+                    seen.append(url)
+                    if "/jobs?" in url:raise AssertionError("should refuse before job read")
+                    return run
+                with self.assertRaises(audit.Hold):
+                    audit.observe_live(mapping(),getter=fake)
+                self.assertEqual(len(seen),1)
+
+    def test_live_job_source_and_future_attempt_refused(self):
+        old=observed()
+        for name,bad in (("head_sha","b"*40),("run_id",9999),
+                         ("run_attempt",2)):
+            with self.subTest(name=name):
+                row=copy.deepcopy(old["workflow_runs"][0]["jobs"][0])
+                row[name]=bad
+                def fake(url,token):
+                    if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+                    return {"total_count":1,"jobs":[row]}
+                with self.assertRaises(audit.Hold):
+                    audit.observe_live(mapping(),getter=fake)
+
+    def test_offline_job_source_and_future_attempt_refused(self):
+        for name,bad in (("head_sha","b"*40),("run_attempt",3)):
+            with self.subTest(name=name):
+                receipt=observed()
+                receipt["workflow_runs"][0]["jobs"][0][name]=bad
+                with self.assertRaises(audit.Hold):
+                    audit.reconcile(story(),mapping(),receipt)
+
+    def test_bounded_api_rows_do_not_imply_billed_minutes(self):
+        old=observed()
+        def fake(url,token):
+            if "/jobs?" not in url:return old["workflow_runs"][0]["run"]
+            return {"total_count":1,"jobs":old["workflow_runs"][0]["jobs"]}
+        report=audit.reconcile(story(),mapping(),
+                               audit.observe_live(mapping(),getter=fake),live=True)
+        self.assertEqual(report["status"],"HOST_JOB_RECONCILED")
+        self.assertEqual(report["provider_billed_minutes"],"NOT_MEASURED")
+        self.assertFalse(report["end_to_end_ci_qualified"])
+        self.assertFalse(report["automatic_cutover_authorized"])
 
     def test_invalid_repo_or_workflow_path_cannot_request_arbitrary_hosts(self):
         for badrepo in ("../evil", "org/..", "org/.", "./repo", "example.com/a/b", "a:b/c", "evil/../../escape"):
