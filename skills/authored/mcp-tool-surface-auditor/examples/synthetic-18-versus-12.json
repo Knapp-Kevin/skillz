@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "protocol_revision": "2026-07-28",
+  "source_revision": "synthetic-rev-one",
+  "context_tag": "fictional-principal-one",
+  "stages": {
+    "backend_registry": {
+      "source_revision": "synthetic-rev-one",
+      "context_tag": "fictional-principal-one",
+      "captured_at": "2026-11-22T20:00:00Z",
+      "complete": true,
+      "tools": [
+        {
+          "name": "tool_01",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_02",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_03",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_04",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_05",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_06",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_07",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_08",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_09",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_10",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_11",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_12",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_13",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_14",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_15",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_16",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_17",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_18",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "mcp_list": {
+      "source_revision": "synthetic-rev-one",
+      "context_tag": "fictional-principal-one",
+      "captured_at": "2026-11-22T20:00:00Z",
+      "complete": true,
+      "pages": [
+        {
+          "request_cursor": null,
+          "next_cursor": null,
+          "tools": [
+            {
+              "name": "tool_01",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_02",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_03",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_04",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_05",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_06",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_07",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_08",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_09",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_10",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_11",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_12",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_13",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_14",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_15",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_16",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_17",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "name": "tool_18",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "word": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          ],
+          "ttlMs": 0,
+          "cacheScope": "private"
+        }
+      ]
+    },
+    "host_visible": {
+      "source_revision": "synthetic-rev-one",
+      "context_tag": "fictional-principal-one",
+      "captured_at": "2026-11-22T20:00:00Z",
+      "complete": true,
+      "tools": [
+        {
+          "name": "tool_01",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_02",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_03",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_04",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_05",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_06",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_07",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_08",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_09",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_10",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_11",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "tool_12",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
