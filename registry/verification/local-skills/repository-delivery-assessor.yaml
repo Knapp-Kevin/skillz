@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/repository-delivery-assessor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-delivery-assessor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 73c1d64eaa9721f76e9c821ab091d7f9d3dbbc8a
-complete_package_tree_sha: a63cabbf61a03ac423ec5de510c614903278e5fe
+content_blob_sha: e5aafd69cf65d8fef5933725ad836cb49763de9c
+complete_package_tree_sha: c3a6698e17f505e28aecb32ed94a40347b33758c
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+verification_basis: multiturn-source-revision-pending-exact-head-tests
 validation_status: not-run
-validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
+validation_note: "New source has multi-turn continuation preservation gates; synthetic transition and static checks pending. Prior local/host tests and semantic scores refer to earlier content. Real multi-turn consuming-agent behavior and user outcomes NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

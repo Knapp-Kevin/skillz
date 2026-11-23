@@ -756,6 +756,23 @@ negative controls, and distinguish controlled analyst emulation from
 independently observed host behavior. A shorter pipeline that loses unique
 detection **fails**, as does an expensive pipeline with no demonstrated value.
 
+## CI-specific continuation checkpoints
+
+When a CI optimization, audit, or cutover spans turns, carry the **exact
+source revision**, selected classification obligations, existing
+workflow/job/nested-command overlap evidence, native and security
+check coverage, release/dispatch rules, planted regressions, measured
+before/after evidence (or NOT_MEASURED), any open PR and its **current
+HEAD**, blockers and the next real acceptance gate. Treat a shorter
+pipeline or successful simulator as a *candidate*, not production
+assurance. If a follow-up asks to skip expensive checks, first determine
+which obligations are unique and protected; never silently delete them
+or reuse a green receipt from an older revision. An open PR, incomplete
+host attempt or source-only scenario is never a merged fix. Keep the
+checkpoint in the current conversation or an explicitly authorized
+artifact; the optional independent transition checker in another
+package is not required for CI Guard to work.
+
 ## Multi-turn continuity when the work is not one-shot
 
 Treat follow-up messages as continuation of the active task unless the user explicitly changes its objective. Before the next substantive action, recover from available conversation or authorized artifacts: **objective, confirmed decisions, completed and uncompleted work, protected checks, blockers, and next acceptance step**. Do not invent unavailable history or claim persistent storage. Reconcile new instructions with this state; current user direction may change scope, but never silently remove safety, approval, source integrity or verification gates. Execute the next concrete step rather than repeatedly restating a plan. For longer work, provide a compact progress/handoff note showing what is done, what remains, and what evidence supports completion. Do not equate a drafted artifact, open PR, proposed test or green isolated check with the user's actual finished outcome. No autonomous follow-up, session creation or background execution is implied.

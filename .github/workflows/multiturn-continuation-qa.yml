@@ -1,0 +1,37 @@
+name: Authored multi-turn continuation offline contracts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/context-continuation-contract/**'
+      - 'skills/authored/ci-guard/SKILL.md'
+      - 'skills/authored/repository-delivery-assessor/SKILL.md'
+      - 'skills/authored/repository-readme-architect/SKILL.md'
+      - 'skills/authored/evidence-driven-refinement-loop/SKILL.md'
+      - 'scripts/qa/test_multiturn_skill_checkpoints.py'
+      - '.github/workflows/multiturn-continuation-qa.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: multiturn-continuation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-transitions:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # pinned v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Run portable transition negative controls and targeted source checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/context-continuation-contract/tests -p 'test_*.py' -v
+          python3 -B -m unittest discover -s scripts/qa -p 'test_multiturn_skill_checkpoints.py' -v

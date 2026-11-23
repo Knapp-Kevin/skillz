@@ -582,6 +582,21 @@ separate from model-host quality and actual customer acceptance.
 All examples and script checks are optional; neither a runtime nor
 arbitrary output-size or model-tier constraint is imposed. On missing permissions or evidence, complete the safely bounded portion and identify exact unresolved checks.
 
+## README-work continuation checkpoints
+
+For multi-turn CREATE or UPLIFT, carry the current README source and
+authorized edit scope, factual claims requiring verification,
+generator-owned regions and their preservation baselines, the intended
+reader journey, internal link/anchor findings, external links not
+checked, optional rendered visual review, and the next acceptance
+step. Follow-up requests for more polish or less history must not
+silently delete generated content, approved provenance, working links
+or accurate first-success instructions. A locally passing README
+checker is **not** rendered usability, user comprehension, a merged PR,
+or publication. If source or generator ownership changes, revalidate
+its current source and report any gap. Keep the continuation record
+portable, without requiring a separate Skillz checkout or host memory.
+
 ## Multi-turn continuity when the work is not one-shot
 
 Treat follow-up messages as continuation of the active task unless the user explicitly changes its objective. Before the next substantive action, recover from available conversation or authorized artifacts: **objective, confirmed decisions, completed and uncompleted work, protected checks, blockers, and next acceptance step**. Do not invent unavailable history or claim persistent storage. Reconcile new instructions with this state; current user direction may change scope, but never silently remove safety, approval, source integrity or verification gates. Execute the next concrete step rather than repeatedly restating a plan. For longer work, provide a compact progress/handoff note showing what is done, what remains, and what evidence supports completion. Do not equate a drafted artifact, open PR, proposed test or green isolated check with the user's actual finished outcome. No autonomous follow-up, session creation or background execution is implied.

@@ -1,3 +1,4 @@
+current_change_note: "Active SKILL has new multi-turn domain-specific acceptance and evidence preservation gates. Current source review pending; earlier host receipts refer to previous Git blob. Published skill version intentionally unchanged."
 schema_version: 1
 skill_name: evidence-driven-refinement-loop
 display_name: "Evidence-Driven Refinement Loop"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: standalone-with-optional-offline-local-preference-manager
 dependencies: "Ten-file standalone package. Optional offline POSIX Python 3 manager, 49-method test suite, and QA-only jsonschema==4.23.0 for draft-2020-12 schema tests. Core skill needs no install, network or private storage. Host must independently establish user approval; flags and JSON cannot prove consent."
-content_blob_sha: 4473795a0fbd41b0d7765ec61fd51c0e65da7948
-complete_package_tree_sha: 8054f1b050a95543dd135f0389f2b80adb55214e
+content_blob_sha: b2978c95e255b132d11720b32f6d22b246b6d17b
+complete_package_tree_sha: a7d3759fe1b8beb859702f40a3e43ccaa30eca52
 import_eligibility: review-required
 source_rights: "New independently authored original text, synthetic scenarios and MIT license; no protected third-party source material copied"
 rationale: "v0.3.4 adversarially protects against storing user-local preferences inside unrelated detected Git checkouts/worktrees, not only the current skill source. Two planted red tests failed on Python 3.9/3.11/3.13 at source 54ed4b77 (Actions 44949812573), then full tests passed after manager correction at 3d6da9c7 (44949878469). Exact ten-file blob/tree pinned; 49 manager/schema methods, 22 engine methods; separate Linux OS identity test retained. Self-emulation is not independent user/host acceptance; consent provenance remains host-side. Static semantic score 18/20."

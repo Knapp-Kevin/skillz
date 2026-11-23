@@ -1,3 +1,4 @@
+current_change_note: "Active SKILL has new multi-turn domain-specific gates and (for context continuation) offline transition tool. Source review pending; earlier host receipts refer to previous Git blobs. Published skill version intentionally unchanged."
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "50-file first-party MIT CI Guard package; optional Python-stdlib static workflow/YAML subset and checker AST, normalized v3 simulator, read-only owner-authorized host observation. Unsupported semantics HOLD."
-content_blob_sha: 3b6d88fe1ab4b671fe5979aff6d7c7154fbcadf8
-complete_package_tree_sha: 6cc323b74635a797c12aa6ccea0f3081b584533d
+content_blob_sha: 698cf2a21d675ce2cc154c0d810a493f0d08eea0
+complete_package_tree_sha: 4910a37785d1b69871bfa2e2fb28f28fc00cd0e0
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required

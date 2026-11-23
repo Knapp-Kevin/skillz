@@ -1,3 +1,4 @@
+current_change_note: "Active SKILL has new multi-turn domain-specific gates and (for context continuation) offline transition tool. Source review pending; earlier host receipts refer to previous Git blobs. Published skill version intentionally unchanged."
 schema_version: 1
 skill_name: context-continuation-contract
 display_name: "Context Continuation Contract"
@@ -21,8 +22,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Four-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: c39c93c0b616cc89d17a43e7272acfac64cbca11
-complete_package_tree_sha: 22d2b2f9e37fb7d409664a1e53c17124060c64b6
+content_blob_sha: 5aadd65bf5dc73d0f53edb7ad0803771cd4d8be9
+complete_package_tree_sha: 8a998c6c9f845c086d32d65c31ef14021f5b53d3
 historical_comparators: "skills/handoff-writer/SKILL.md; skills/session-continuity/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
