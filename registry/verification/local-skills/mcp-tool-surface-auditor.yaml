@@ -12,9 +12,9 @@ complete_package_tree_sha: 1addc2d5a6ea52e4e14e9bc242161bbe8aef8cdd
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: v0.1.0-exact-source-offline-qa-pending
-validation_status: not-run
-validation_note: "New standalone comparator with 33 planted methods and synthetic 18/12 tool-list fixture; hosted exact-head suite pending. No independently observed backend, transport, host, auth context, production tool call, user outcome or security scan."
+verification_basis: PR879-v0.1.0-source-33-of-33-hosted-tests
+validation_status: passed-offline-contract-tests
+validation_note: "Actions #45110247036 PASS 33/33 synthetic Python tests at exact source PR HEAD ba959d8813871a83c31b5629a19a389c735881ce. Authored feedback/source checks Actions #45110246947 PASS 10/10. Socket Security SUCCESS. No real MCP transport or host was inspected; semantic source/real-agent results still NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
 tags:

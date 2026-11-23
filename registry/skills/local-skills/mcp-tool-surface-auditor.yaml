@@ -23,4 +23,4 @@ content_blob_sha: 61ee3ee491526be54577c3766673261abd6e2960
 complete_package_tree_sha: 1addc2d5a6ea52e4e14e9bc242161bbe8aef8cdd
 import_eligibility: review-required
 source_rights: "First-party independently authored script, text, tests, fixtures and MIT license. External MCP specification is factual prior art and optional reference, not copied skill expression."
-rationale: "New v0.1.0 issue #878 prototype. Differentiates tool-presence/contract comparison from connector trust review. Exact source pinned, hosted source acceptance pending; no live host capture, independent agent behavioral result, security scan or product success observed."
+rationale: "New v0.1.0 issue #878 prototype. Differentiates tool-presence/contract comparison from connector trust review. Exact source pinned, hosted source QA PASS 33/33 on exact PR source head, independent host validation NOT_RUN; no live host capture, independent agent behavioral result, security scan or product success observed."

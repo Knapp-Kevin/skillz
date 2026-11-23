@@ -43,7 +43,7 @@ security assessment is functionally equivalent to tool exposure parity.
 
 ## Acceptance and limitations
 
-- 33 synthetic tests planted; hosted exact source QA **PENDING**.
+- 33 synthetic tests executed on exact source PR HEAD, **PASS 33/33** (Actions #45110247036), authored feedback exact-source QA PASS 10/10 (Actions #45110246947), both Socket Security checks SUCCESS.
 - Package tree `1addc2d5a6ea52e4e14e9bc242161bbe8aef8cdd`; skill blob `61ee3ee491526be54577c3766673261abd6e2960`.
 - Independent semantic/host validation **NOT_RUN**; actual user
   integration recovery and social-post ROI **NOT_MEASURED**.
