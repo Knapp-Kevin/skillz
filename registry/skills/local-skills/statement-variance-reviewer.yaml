@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/statement-variance-reviewer/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 94f76bdb554fc3f3ee2b51d072ba7de067f518bd
-complete_package_tree_sha: 21118d6dda9fe0f07a9e96e361f3cd38f15cb82f
+content_blob_sha: 254e07c740730369312777b724e21c0d6f9d8ad6
+complete_package_tree_sha: 31ca2a72a4dc8e00c00d0b58b41f44bd8d20b27a
 historical_comparators: "skills/finance-review/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
