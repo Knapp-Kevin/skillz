@@ -19,8 +19,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Eight-file standalone first-party MIT package; Python 3.9+ stdlib offline local-byte auditor and fictional SHA-256 sample, no network, other Skillz package, installer execution or third-party runtime."
-content_blob_sha: 5a14866dca63cc644520285988a0f412f93b0ae2
-complete_package_tree_sha: 3b8d00333b681561b1832e5b9a75560e11ac6e04
+content_blob_sha: 5c72e5b8f90164a67ca887f9c52459ef60a32c7a
+complete_package_tree_sha: be07cbcab1d83e00232c09bc4052b1305b0295ad
 import_eligibility: review-required
 source_rights: "Original MIT instructions/tests/stdlib code/fictional bytes, with official GitHub/SLSA guidance cited only as factual protocol and security background; no third-party skill expression imported."
 rationale: "Initial v0.1.0 issue #882 source-candidate. Attested provenance status is always a caller-provided claim; only actual local bytes are independently hashed, and local file provenance/origin remains unverified. Hosted exact-head source QA pending."

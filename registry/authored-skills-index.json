@@ -1262,8 +1262,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/release-evidence-reconciler.yaml",
       "verification_path": "registry/verification/local-skills/release-evidence-reconciler.yaml",
-      "skill_blob_sha": "5a14866dca63cc644520285988a0f412f93b0ae2",
-      "package_tree_sha": "3b8d00333b681561b1832e5b9a75560e11ac6e04",
+      "skill_blob_sha": "5c72e5b8f90164a67ca887f9c52459ef60a32c7a",
+      "package_tree_sha": "be07cbcab1d83e00232c09bc4052b1305b0295ad",
       "package_file_count": 8,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1277,7 +1277,7 @@
         "security/supply-chain",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "New first-party eight-file skill includes local SHA-256 measurement of actual sample bytes plus synthetic release-claim reconciliation. Source tests not yet hosted on exact PR HEAD. No external attestation cryptography, actual installer execution, provider-authenticated release, independent agent evaluation or delivered-product acceptance observed."
+      "review_note": "Initial v0.1.0 eight-file package adds actual local SHA-256 byte measurement, 55 planted synthetic tests and explicit expected-channel completeness hold. Exact source currently awaiting hosted final HEAD QA. No authenticated provider/build/provenance, real installation or agent-host behavior observed."
     }
   ]
 }

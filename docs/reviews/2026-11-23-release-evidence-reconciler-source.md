@@ -23,7 +23,7 @@ files, no path traversal/symlinks and on Linux O_NOFOLLOW for leaf.
 An example harmless 29-byte ASCII payload has SHA-256
 `7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292`.
 Its release, CI run, signature and installer data are fictional.
-The suite has 49 synthetic planted methods, including deliberate
+The suite has 55 synthetic planted methods, including explicit expected-channel coverage and deliberate
 local-byte tampering, mismatched build/tag/check/app/attestation
 subject/install digest and missing release channels.
 
