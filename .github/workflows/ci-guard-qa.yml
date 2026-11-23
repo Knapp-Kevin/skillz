@@ -35,6 +35,7 @@ jobs:
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_cutover.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_self_repair.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_strategy_fit.py' -v
+          python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_readiness.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_scenario.py' -v
           python3 skills/authored/ci-guard/examples/test_change_classification.py
           python3 skills/authored/ci-guard/examples/test_ci_plan.py

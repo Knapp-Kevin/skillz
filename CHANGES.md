@@ -1,6 +1,7 @@
 # Material changes
 
 ## 2026-11-23
+- CI Guard v1.6.4 candidate: source-bound, outcome-first pre-qualification receipt composed from existing diagnostic modules, fictional adverse regression tests. Exact-HEAD QA required before considering it delivered; no real consumer savings claimed.
 - CI Guard v1.6.3: source-bound, offline targeted retry attempt-pair accounting and 15 fictional adversarial tests added to the existing host reconciliation adapter. A returned API row is not treated as a new compute execution; actual provider billing and downstream release status remain unverified.
 - [#884](https://github.com/Knapp-Kevin/skillz/issues/884): Initial First-Run Experience Validator v0.1.0, original standalone MIT package with fresh-user first-value evidence ledger and 20 fictional adversarial cases. Source-only review; genuine clean-host/novice acceptance NOT_RUN.
 
