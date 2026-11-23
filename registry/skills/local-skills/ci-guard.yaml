@@ -1,8 +1,8 @@
-current_change_note: "v1.6.3 targeted retry receipts: two supplied adjacent attempts, carried API rows versus new execution intervals; exact-head source QA pending, real provider and billing NOT_VERIFIED."
+current_change_note: "v1.6.4 outcome-first consolidated readiness checker; reuses canonical diagnostics, source receipt as supplied, no CI authorization or real billed savings."
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
-skill_version: "1.6.3"
+skill_version: "1.6.4"
 source_id: local-skills
 source_repository: https://github.com/Knapp-Kevin/skillz
 source_path: skills/authored/ci-guard/SKILL.md
@@ -19,10 +19,10 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
-dependencies: "50-file first-party MIT CI Guard package; optional Python-stdlib static/source and scenario evidence, host attempt and targeted-retry observation. Unsupported provider semantics HOLD."
-content_blob_sha: 9ebd0db855f12e0656eeabbc1dd8532646289695
-complete_package_tree_sha: 578f6cf6a8d212eca797a365359dab98e34c004f
+dependencies: "53-file first-party MIT CI Guard package; optional stdlib source/scenario, overlap, self-repair and strategy-fit diagnostics and advisory prequalification readiness. Unverified semantics HOLD."
+content_blob_sha: 2b7e48e905b8e3ddc0f30197ae6c0f57179927e2
+complete_package_tree_sha: 7ba6e7dbe54c8b6d467de9eda376288429847a51
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
-rationale: "Optional read-only offline targeted-retry accounting, 15 completely fictional adversarial cases, explicit hold for source/attempt/receipt mismatch. Not a CI repair or measured cost outcome; exact-source CI pending."
+rationale: "Read-only economic readiness decision; 19 fictional planted cases including duplicate terminal invocations, ignored test-internal startup and insufficient critical-path savings. Exact-head tests pending; no real user/economic outcome verified."

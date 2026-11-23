@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.6.3"
+skill_version: "1.6.4"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 9ebd0db855f12e0656eeabbc1dd8532646289695
-complete_package_tree_sha: 578f6cf6a8d212eca797a365359dab98e34c004f
+content_blob_sha: 2b7e48e905b8e3ddc0f30197ae6c0f57179927e2
+complete_package_tree_sha: 7ba6e7dbe54c8b6d467de9eda376288429847a51
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: retry-source-revision-pending-exact-head-tests
+verification_basis: outcome-readiness-source-revision-pending-exact-head-tests
 validation_status: not-run
-validation_note: "Fifteen new fictional targeted-retry cases complement the existing host test suite; exact-head source QA pending. Actual provider attempt-pair semantics, billed minutes, branch rules, and downstream release effects NOT_VERIFIED."
+validation_note: "Outcome-first cross-diagnostic readiness plus 19 fictional test cases; exact-head QA pending; real consuming provider, approved host negative controls and billed ROI NOT_RUN. Green preflight is not CI acceptance."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
@@ -24,9 +24,8 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Version 1.6.3 adds one-workflow adjacent-attempt receipt attribution to
-  existing CI Guard host reconciliation. A newly returned job row or changed
-  attempt number is not necessarily fresh runner execution. Synthetic fixture
-  tests exercise source mismatch, incomplete maps, falsified old/new intervals,
-  false-green attempts and no double-count of carried successes. Actual
-  authenticated run cost and release qualification remain outside this receipt.
+  Version 1.6.4 adds advisory pre-qualification readiness based on canonical
+  self-repair, cross-workflow overlap, strategy fit and structural scenario
+  diagnostics plus a supplied static source receipt. No independent Git HEAD,
+  branch protection, live native/release checks or realized ROI evidence.
+  A positive result never grants owner authority to run expensive CI.
