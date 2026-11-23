@@ -1,0 +1,26 @@
+schema_version: 1
+skill_name: offline-hyperv-qual-vm
+display_name: "Offline Hyper-V Qualification VM"
+skill_version: "0.1.0"
+source_id: local-skills
+source_repository: https://github.com/Knapp-Kevin/skillz
+source_path: skills/authored/offline-hyperv-qual-vm/SKILL.md
+source_class: first-party-authored
+license: MIT
+relationship: newly-authored-original
+copyright_holder: Kevin Knapp
+license_evidence_path: skills/authored/offline-hyperv-qual-vm/LICENSE
+curated_at: "2026-11-23"
+last_checked_at: "2026-11-23"
+availability: in-repo
+local_path: skills/authored/offline-hyperv-qual-vm/SKILL.md
+permission_tier: approval-gated
+portability: windows-hyper-v-host-only
+review_status: needs-re-review
+dependency_status: requires-owner-windows-hyper-v-host-and-guest-iso
+dependencies: "Complete standalone eight-file MIT package. PowerShell 5.1+ with Hyper-V module for operational scripts; Windows host and owner authorization for actual provisioning. Python 3.9+ stdlib for portable static tests only. No network needed for hosted checks."
+content_blob_sha: cbf4179a3b7d5adbce84ac26161c6b153d6e2814
+complete_package_tree_sha: d5df8a732da7ccb2cf2cf59c5081b5b9b2a090fd
+import_eligibility: review-required
+source_rights: "Original first-party source and synthetic contracts. Microsoft Learn used solely for factual cmdlet syntax. Owner-held credentials, actual VM/card and proprietary Windows ISO are never bundled."
+rationale: "Issue #890 initial offline qualification VM implementation. Two scripts implement defensive planning/connecting. No actual Windows host behavior or credential/guest isolation was observed; source-only QA cannot establish operational safety. Reviewer and owner must qualify before use."
