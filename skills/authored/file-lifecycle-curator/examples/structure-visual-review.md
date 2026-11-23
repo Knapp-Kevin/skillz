@@ -36,6 +36,9 @@ complete collection enumeration.
 
 The target tree does not imply any move was approved or performed.
 The unplaced file is not discarded or force-fitted into a category.
+In the actual helper output it remains under its observed "inbox"
+location with UNPLACED_KEEP_CURRENT, not an actual folder called
+"unplaced"; the list above is just an explanatory review queue.
 
 ## During: read-back-attested state in the fictional plan
 

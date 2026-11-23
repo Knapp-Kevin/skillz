@@ -23,14 +23,14 @@ dependencies: >-
   and excerpt-limited indexing are text-only; optional offline delta is Python 3.9+ standard library; full hashes, extraction and all mutation
   operations require available host file capabilities and separately scoped authority.
 content_blob_sha: 4935995d27708c5d6b65c0dd6b42cc444ae250db
-complete_package_tree_sha: d6bb8bd22a2cfe6a31ffa188e449cfa1604f1d43
+complete_package_tree_sha: 551f3dcde5675e10a4f24dbd7981ea661fdb3597
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
   Current 19-file original first-party package preserves version 1.1.1
   and adds portable visual before/after/progress projection for a
-  long-lived authorized curation agent. Source-only 38 new adversarial
-  cases and 38 prior maintenance cases are pending exact-head QA;
+  long-lived authorized curation agent. Source-only 42 new adversarial
+  cases and 38 prior maintenance cases are awaiting revised exact-head QA;
   native file access and host scheduling never presumed.
 
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.

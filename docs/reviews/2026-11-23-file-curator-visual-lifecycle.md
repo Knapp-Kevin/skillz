@@ -93,3 +93,7 @@ agent-host and user outcomes are NOT_RUN.**
 This is a bounded correctness/UX refinement of v1.1.1.
 No cosmetic version increment, new scheduler, external backend,
 background agent, database or task session is authorized.
+
+## Post-green manual adversarial challenge
+
+The first 76/76 source test pass missed two meaningful long-lived-agent concerns. (1) A proposed destination could overlap a *currently occupied* file path of an unplanned record or an item assumed to move earlier, even if planned destinations were unique. This requires a staging/collision review, not an optimistic diagram; the renderer now rejects within-snapshot target/current conflicts and file/directory prefix overlaps. It does not prove external destination vacancy. (2) The future tree silently omitted unplanned records. The proposed projection now retains them at their observed location with UNPLACED_KEEP_CURRENT, not an invented physical destination. Four additional synthetic test cases exercise occupancy conflicts and the original unplanned test also checks visibility. The revised expected total is **80 source tests** (38 prior maintenance plus 42 visualizer), subject to exact-head CI.

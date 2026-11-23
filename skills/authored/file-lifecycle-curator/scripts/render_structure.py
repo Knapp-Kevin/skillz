@@ -137,6 +137,24 @@ def validate(data):
             parts = name.split("/")
             for i in range(1, len(parts)):
                 ensure("/".join(parts[:i]) not in names)
+    # A target cannot overwrite, become the parent of, or become
+    # a child of a currently occupied FILE from another record.
+    # Even when the occupant plans to move later, this simple visual
+    # contract does not qualify a safe operation ordering. Hold it.
+    # This is still only a within-snapshot check, never a global
+    # destination collision clearance.
+    for proposal in records:
+        target = proposal["target_path"]
+        if target is None or target == proposal["original_path"]:
+            continue
+        dest = target.casefold()
+        for other in records:
+            if other["record_id"] == proposal["record_id"]:
+                continue
+            existing = other["observed_path"].casefold()
+            ensure(dest != existing and
+                   not dest.startswith(existing + "/") and
+                   not existing.startswith(dest + "/"))
     return observed, records
 
 
@@ -202,8 +220,16 @@ def checked_view(snapshot, previous=None):
     visible = candidates[:MAX_VISIBLE]
     omitted = len(candidates) - len(visible)
     observed_view = [(r["observed_path"], r["state"]) for r in visible]
-    planned_view = [(r["target_path"], r["state"]) for r in visible
-                    if r["target_path"] is not None]
+    # Unplanned files are not erased from the hypothetical final
+    # shape. Keep their observed location, visibly tagged as still
+    # requiring a placement decision; no imaginary target is created.
+    planned_view = [
+        (r["target_path"] if r["target_path"] is not None
+         else r["observed_path"],
+         r["state"] if r["target_path"] is not None
+         else "UNPLACED_KEEP_CURRENT")
+        for r in visible
+    ]
     verified_view = [(r["target_path"], "RECEIPT_ASSERTED") for r in visible
                      if r["state"] == "VERIFIED"]
     def ascii_tree(items, label):

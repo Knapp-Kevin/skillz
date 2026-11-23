@@ -52,6 +52,9 @@ attempts as completed organization.
 - For PARTIAL coverage, show verified/planned **within observed scope**,
   but suppress the percentage; the full collection denominator is
   unknown. A truncated diagram is explicitly a sample, not a full tree.
+  UNPLANNED records remain at their observed locations in the proposed
+  projection with an UNPLACED_KEEP_CURRENT marker. Do not erase them
+  to make the target tree look cleaner or invent a real "unplaced" folder.
 - For no planned relocations, show "0 planned", not 100% complete.
 - Show FAILED, BLOCKED, EXECUTED-but-unverified, ROLLED_BACK and
   UNKNOWN counts independently. A rollback may require re-planning.
@@ -103,7 +106,11 @@ to run the helper.
   existed.
 - **Plan and destination conflicts:** reject within-snapshot
   case-insensitive duplicate targets, file-versus-directory path
-  conflicts and ambiguous source paths. This does **not** prove
+  conflicts and ambiguous source paths. Also reject a proposed target
+  that overlaps a currently occupied file path of another record,
+  including when the occupant itself plans to move. An external
+  host may qualify an explicit staged operation, but a read-only
+  diagram cannot assume safe ordering. This does **not** prove
   that a destination exists or lacks a conflicting file outside
   the supplied inventory. Host must re-evaluate native permissions,
   links, symlinks, hardlinks, provider-specific normalization,

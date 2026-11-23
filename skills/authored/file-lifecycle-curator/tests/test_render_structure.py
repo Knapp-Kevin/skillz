@@ -88,6 +88,8 @@ class StructureVisualizationTests(unittest.TestCase):
                                       target_path=None)))
         self.assertEqual(out["progress"]["planned_relocations"], 0)
         self.assertEqual(out["progress"]["percent_of_scoped_plan"], None)
+        self.assertIn("UNPLACED_KEEP_CURRENT", out["visuals"]["proposed"])
+        self.assertIn("inbox/", out["visuals"]["proposed"])
 
     def test_unchanged_is_not_a_relocation(self):
         unchanged = item(state="UNCHANGED", target_path="inbox/doc-one")
@@ -277,6 +279,32 @@ class StructureVisualizationTests(unittest.TestCase):
         for forbidden in ("import subprocess", "urllib.request", "import requests",
                           "import socket", "write_text(", "write_bytes(", "os.system("):
             self.assertNotIn(forbidden, data)
+
+
+    def test_target_occupied_by_unplanned_file_is_rejected(self):
+        with self.assertRaises(visual.Invalid):
+            visual.checked_view(snapshot(
+                item("doc-one", target_path="inbox/doc-two"),
+                item("doc-two", state="UNPLANNED", target_path=None)))
+
+    def test_target_occupied_by_a_moving_file_needs_staging_review(self):
+        with self.assertRaises(visual.Invalid):
+            visual.checked_view(snapshot(
+                item("doc-one", target_path="inbox/doc-two"),
+                item("doc-two", target_path="organized/doc-two")))
+
+    def test_target_cannot_replace_existing_directory_with_file(self):
+        with self.assertRaises(visual.Invalid):
+            visual.checked_view(snapshot(
+                item("doc-one", target_path="other"),
+                item("doc-two", state="UNPLANNED", target_path=None,
+                     observed_path="other/doc-two")))
+
+    def test_target_cannot_use_existing_file_as_folder(self):
+        with self.assertRaises(visual.Invalid):
+            visual.checked_view(snapshot(
+                item("doc-one", target_path="inbox/doc-two/nested"),
+                item("doc-two", state="UNPLANNED", target_path=None)))
 
 
 if __name__ == "__main__":
