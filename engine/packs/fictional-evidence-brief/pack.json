@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "pack_id": "fictional-evidence-brief",
+  "capability": "Summarize user-supplied fictional notes with traceable, explicitly unknown claims",
+  "entrypoint": "SKILL.md",
+  "completion": "Each asserted fact references supplied note evidence or is labeled UNKNOWN; no external claims added",
+  "authority": "read-only",
+  "license": "MIT",
+  "files": [
+    "pack.json",
+    "SKILL.md",
+    "LICENSE",
+    "phases/collect.md",
+    "components/evidence-check.md",
+    "components/feedback-policy.md",
+    "skills/summarize/SKILL.md",
+    "phases/style.md"
+  ],
+  "modules": [
+    {
+      "id": "collect",
+      "kind": "phase",
+      "path": "phases/collect.md",
+      "requires": [],
+      "required": true,
+      "fallback": null,
+      "authority": "read-only",
+      "output": "User-supplied evidence ledger with UNKNOWN for missing records",
+      "origin": "original",
+      "source_identity": "NONE",
+      "rights_basis": "ORIGINAL"
+    },
+    {
+      "id": "check",
+      "kind": "component",
+      "path": "components/evidence-check.md",
+      "requires": [
+        "collect"
+      ],
+      "required": true,
+      "fallback": null,
+      "authority": "read-only",
+      "output": "Claim-to-note coverage and conflict report",
+      "origin": "original",
+      "source_identity": "NONE",
+      "rights_basis": "ORIGINAL"
+    },
+    {
+      "id": "summary",
+      "kind": "skill",
+      "path": "skills/summarize/SKILL.md",
+      "requires": [
+        "check"
+      ],
+      "required": true,
+      "fallback": null,
+      "authority": "read-only",
+      "output": "Complete factual brief with supported claims and explicit unknowns",
+      "origin": "original",
+      "source_identity": "NONE",
+      "rights_basis": "ORIGINAL"
+    },
+    {
+      "id": "style",
+      "kind": "phase",
+      "path": "phases/style.md",
+      "requires": [
+        "summary"
+      ],
+      "required": false,
+      "fallback": "Return the unstyled, verified factual brief without changing claims",
+      "authority": "read-only",
+      "output": "Optional presentational variant preserving factual content",
+      "origin": "original",
+      "source_identity": "NONE",
+      "rights_basis": "ORIGINAL"
+    }
+  ],
+  "preference_slots": [
+    {
+      "key": "presentation_style",
+      "kind": "enum",
+      "choices": [
+        "neutral",
+        "concise"
+      ],
+      "default": "neutral",
+      "scope": "user-private-opt-in"
+    }
+  ],
+  "feedback_policy": {
+    "canonical": "maintainer-review",
+    "consumer": "private-opt-in",
+    "mixed": "split",
+    "iteration": "bounded"
+  }
+}

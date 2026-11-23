@@ -131,6 +131,12 @@ Do not stop at recommendations if a usable skill can be completed.
 Do not require another installed engine skill, daemon, monitoring
 session, independent agent or public issue.
 
+**Skill versus pack decision:** When this one capability requires truly
+independent subskills, phases with persistent handoff meaning or shared
+components, apply the [pack architecture tree](../../packs/README.md).
+A pack is an optional packaging shape **within** SINGLE_SKILL_BUILD,
+not an account-wide fitted-system route or extra orchestrator.
+
 **Follow-ups:** Keep the same source-bound artifact, original success
 criteria and completed evidence. Change only the requested dimension,
 not the whole scope. Reopen discovery only for a materially changed
@@ -370,6 +376,18 @@ Resolve:
 Favor a few coherent composable skills over one omnibus skill or many microscopic skills.
 
 If proposed skills repeatedly override each other, redraw responsibilities before artifact creation.
+
+For a single outcome with meaningful independent phases, subskills or
+shared components, use the optional [Skill Pack composition contract]
+(../../packs/README.md) instead of creating duplicate sibling skills or
+turning the one entrypoint into an omnibus document. Choose in order:
+one complete skill → one skill with internal phases → declared pack, only
+when explicit dependency ownership and phase handoffs justify it. For a
+pack, keep one user outcome, one entrypoint, a bounded acyclic graph,
+required versus optional obligations and safe fallbacks. Never infer
+permission from a manifest or require its Python checker on a host
+that cannot run it. Component/phase boundaries do not automatically
+create independent skill identities or new public repository records.
 
 **Output:** final fitted-system architecture.
 

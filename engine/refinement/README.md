@@ -57,6 +57,20 @@ specific authorization and reidentification review. A synthetic public
 fixture must be conspicuously fictional; source-specific real receipts stay
 in the authorized consumer workspace.
 
+## Hierarchical routing for component and user feedback
+
+When the target is a composed [Skill Pack](../packs/README.md),
+classify feedback before proposing edits using the
+[canonical-versus-consumer preference tree]
+(../packs/feedback-decision-tree.md). Route an evidenced shared defect
+to the narrowest owning component, phase, subskill or pack orchestration.
+Preserve cross-component handoffs and independent downstream
+regressions. Route optional format/ordering/tone choices to the current
+consumer and, only if consented, their compatible private overlay;
+keep that value out of the canonical package. MIXED requires two
+separate decisions and authorization boundaries. The shared refinement
+receipt remains a report, not automatic self-modification authority.
+
 ## Transferable lessons from sustained skill refinement
 
 1. **Verify the original obligation before optimizing its shape.** Map the

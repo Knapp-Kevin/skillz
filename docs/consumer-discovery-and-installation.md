@@ -66,6 +66,16 @@ A user requesting a “top 20” may receive up to 20 useful incremental opportu
 
 For `SINGLE_SKILL_BUILD`, `FIRST_VISIT` and `RETURNING_USER`, continue through [`skill-bootstrap`](../engine/skills/skill-bootstrap/SKILL.md), which must produce the finished artifact, not merely a list of recommendations. The `DIRECT_LIBRARY` route may stop at comparison or proceed to user-authorized installation of a named, eligible package.
 
+**Composability:** a single requested capability may remain one skill,
+use internal phases or become an optional
+[Skill Pack](../engine/packs/README.md) with an explicit owner,
+dependency graph and a single user outcome. Choose the smallest viable
+shape, not the most modules. The pack manifest is declarative; a
+locally verified graph does not establish host-side execution, license
+permission, consumer acceptance or installation. A consumer's safe
+personalization is private and optional, while objective defects
+require separate governed source review.
+
 **Packaging:** distinguish a documentation-only skill from a skill package that requires scripts, references, templates, licenses, notices, fixtures or assets. Inventory these files, supported formats, tool prerequisites, minimum privileges, provider connections, costs, triggers/nontriggers and failure recovery. Do not silently drop required files or substitute an untested installation method. Place any generated or adapted user skill in the **user's active host/project**, or supply a **portable handoff** when no authorized installation surface is available. Never write the user's skill into `skillz`.
 
 **Consent and installation:** confirm the specific destination and action, whether instructions or executables will run, whether external data will be sent, and whether permissions or payments are involved. Use the host's documented install capability only. Do not infer that “add this skill” authorizes related credentials, background operation, repository mutation, or third-party account access. Unchanged package adoption must pass current exact-version content/safety review, rights, authority and fit. An external scanner is not a universal prerequisite for this passive text library; any actual host actions still require explicit approval.
