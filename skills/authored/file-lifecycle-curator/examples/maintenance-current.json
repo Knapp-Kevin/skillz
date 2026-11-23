@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "fictional-run-002",
+  "observed_at": "2026-11-23T13:00:00-05:00",
+  "scope": {
+    "collection_id": "fictional-library",
+    "root_id": "approved-fictional-root",
+    "principal_id": "fictional-owner",
+    "audience_id": "fictional-reviewer"
+  },
+  "coverage": "partial",
+  "viewer_check": "current-authorized",
+  "records": [
+    {
+      "record_id": "alpha-doc",
+      "source_revision": "rev-001",
+      "locator_token": "fictional-path-alpha",
+      "extraction": "complete",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "digest_basis": "observed-full-bytes",
+      "viewer_check": "current-authorized"
+    },
+    {
+      "record_id": "beta-doc",
+      "source_revision": "rev-002",
+      "locator_token": "fictional-path-beta",
+      "extraction": "excerpt",
+      "digest": null,
+      "digest_basis": "not-computed",
+      "viewer_check": "current-authorized"
+    },
+    {
+      "record_id": "delta-doc",
+      "source_revision": "rev-001",
+      "locator_token": "fictional-path-delta",
+      "extraction": "metadata",
+      "digest": null,
+      "digest_basis": "not-computed",
+      "viewer_check": "current-authorized"
+    }
+  ],
+  "absent_identity_access": "host-asserted-current"
+}

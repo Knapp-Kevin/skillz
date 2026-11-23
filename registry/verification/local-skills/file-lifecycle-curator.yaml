@@ -7,19 +7,21 @@ license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: f099e5d36af3e347a6241814b7b543dcc7ff82c2
-complete_package_tree_sha: d7bd1052e3f056138e57ec7651706e6416ea2458
+content_blob_sha: 60b5ebce8d50a359fe623f8cb3853884c4b7e900
+complete_package_tree_sha: e324df81c41a540fe1f6cc208fcfe55eb18c2405
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
-validation_status: not-run
-validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
-  The H01-H12 synthetic policy oracle passed 12/12 *oracle rule checks* in first-party
-  offline evaluation; this does not execute the skill in an agent host or test
-  connector permissions. Behavior still NOT RUN.
-  Synthetic scenarios were statically inspected only; no host/model tool behavior,
-  file move, archive creation, restoration, ingestion, OCR or search backend tested.
+verification_basis: exact-current-package-offline-source-tests-pass-external-host-not-run
+validation_status: passed-offline-contract-tests
+validation_note: >-
+  PR #902 current source head 07253a2d16fc6277c37b4d89249e5b61043d5cdc
+  PASS 38/38 fictional Python tests run 45280511489, 11/11 authored
+  index/feedback contract tests run 45280511700; Socket PR Alerts
+  SUCCESS and Project Report NEUTRAL. All 3 reviewer threads resolved,
+  including P2 old-ID permission hold and extraction regression/relocation.
+  External connected file account rights, actual schedule, persisted
+  checkpoint, real file operations and independent agent host NOT_RUN.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
@@ -44,7 +46,7 @@ tags:
   portability:
   - high
 notes: >-
-  Complete original seven-file text package inspected; v1.1 optional federated intake contract statically reviewed. Permission changes,
+  Current thirteen-file complete package is source-only; v1.1 optional federated intake remains preserved and prior package inspections are historical. Permission changes,
   relocation, indexing persistence, external egress and deletions require fresh
   action-specific authority. Host behavioral validation, security scanner, restore
   and production utility NOT RUN. See docs/reviews/2026-11-18-file-pack-v1-1-static-review.md.
