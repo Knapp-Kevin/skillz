@@ -6,6 +6,24 @@ Choose a capability below, open its **SKILL.md**, and copy the **entire skill di
 
 [Explore all capability domains](../../registry/capability-directory.json) · [Skill quality and provenance](../../registry/authored-skills-index.json) · [How to evaluate a skill](../../docs/skill-verification.md)
 
+## Optional feedback from a using agent
+
+Every first-party authored `SKILL.md` includes a self-contained link to the
+[optional skill feedback issue form](https://github.com/Knapp-Kevin/skillz/issues/new?template=agent-skill-feedback.yml).
+An agent may prepare a minimal **fictionalized, sanitized** defect or
+improvement report when a user/host has explicitly authorized public issue
+submission. If posting is not authorized or unavailable, the agent can offer
+a copyable issue draft or simply skip it. The skill still works completely
+offline. **Nothing is automatically reported, and feedback is never required.**
+
+The GitHub account that posts an issue is publicly attributable. This is
+**anonymous feedback content, not anonymous account submission**. Do not
+include real conversations, customer/project names, identifiable repository
+references, private logs, paths, credentials, or other sensitive data.
+When a safe generalized report is impossible, do not submit one. This
+policy applies to original authored skills, not to third-party reference
+packages or historical repo-bound procedures that we do not own.
+
 ## Build, maintain, and deliver software
 
 | Skill | What it helps you accomplish |
