@@ -18,11 +18,11 @@ permission_tier: mutating
 default_permission_tier: read-only
 optional_action_boundary: "Mutating file operations only after exact-scope user consent and host capability verification"
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "No bundled execution or service; authorized host read scope only"
-content_blob_sha: d790e403e59319df5b148b93f4b24e8971c0e692
-complete_package_tree_sha: 0dbad84eadc96648879fdf2f279b07137d28d76c
+content_blob_sha: 6cf2bd1942f5075fcb6bd67c8fcef69474c7a7d4
+complete_package_tree_sha: 4d1f0036250873bd994f43c8f7adab1f1629a0c1
 historical_comparator: skills/agent-home-doctor/SKILL.md
 historical_origin_status: "Control of account does not establish underlying original authorship or rights"
 rights_resolution: "Only independently written new content is MIT; legacy texts remain untouched"

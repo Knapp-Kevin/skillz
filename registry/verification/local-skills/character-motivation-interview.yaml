@@ -7,16 +7,16 @@ license_evidence_path: skills/authored/character-motivation-interview/LICENSE
 copyright_holder: Kevin Knapp
 local_path: "skills/authored/character-motivation-interview/SKILL.md"
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5d6238b52cabf4aa4395a55aa22996fe2b7fecfe
-complete_package_tree_sha: 272e8ae648aaec8de7273018ca110687dd5112e8
+content_blob_sha: 42d10d987e3f430bb2c17aa4e0f1b3fc0a44ad33
+complete_package_tree_sha: 5f4b8dc20b69a37edb78bb1af724177e85e1d300
 characterized_at: 2026-11-08
 reviewed_at: 2026-11-22
-verification_status: verified
-verification_basis: "individual-structured-static-review"
+verification_status: needs-re-review
+verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
 validation_status: not-run
-validation_note: "All three original authored package files read and statically reviewed; synthetic expected-output cases are NOT host-executed validation. No scanner, privacy audit, or unchanged-use approval."
+validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: "docs/skill-verification.md"
-rubric_score: "18/20"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [writing, communication, planning]
   lifecycle: [planning, verification]

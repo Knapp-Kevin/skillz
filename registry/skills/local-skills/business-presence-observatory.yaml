@@ -16,11 +16,11 @@ availability: in-repo
 local_path: skills/authored/business-presence-observatory/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified-static
+review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: e310487e4a170b1ac6f6345d31f336d47887a495
-complete_package_tree_sha: fcfc6c359733c49daa58954e5d79af231e7677db
+content_blob_sha: 75c78fac4863447d084d43c3011fcdc3e5419497
+complete_package_tree_sha: 3473b90de4515ba65e627ea376293cf7a221766a
 historical_comparators: "skills/smallbiz-ops/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
