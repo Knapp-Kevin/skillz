@@ -12,15 +12,17 @@ complete_package_tree_sha: 0870fcd6914e6df7261b9ab98d8a5aae9e13cbc4
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
-verification_basis: visual-progress-source-tests-pending-exact-head
-validation_status: not-run
+verification_basis: visual-projection-exact-source-offline-contracts-pass
+validation_status: passed-offline-contract-tests
 validation_note: >-
-  Complete source has added read-only observed/proposed/readback-attested
-  visual projection, original Python renderer and 42 fictional adversarial
-  visualizer cases alongside the prior 38 maintenance tests. Source QA
-  awaiting final 81-case exact-head CI. No actual connected file host, authenticated
-  source revision, physical relocation, persistent diagram, schedule
-  or consuming-agent visual behavior observed.
+  Exact PR #903 source head c7ff04cc23400937e6ec7be20ed08a982c3ea8f0
+  passed 81/81 read-only synthetic maintenance+visualizer Python
+  source cases (run 45286714176), 11/11 authored registry
+  checks (run 45286714275). Socket Alerts SUCCESS; Project
+  Report NEUTRAL. Review caught occupied-current target collisions
+  and falsely rounded 100 percent; corrections are tested and
+  both threads resolved. No host account auth, actual file writes,
+  index persistence, scheduled agent run or observed human outcome.
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

@@ -27,11 +27,14 @@ complete_package_tree_sha: 0870fcd6914e6df7261b9ab98d8a5aae9e13cbc4
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Current 19-file original first-party package preserves version 1.1.1
-  and adds portable visual before/after/progress projection for a
-  long-lived authorized curation agent. Source-only 43 new adversarial
-  cases and 38 prior maintenance cases are awaiting final 81-case exact-head QA;
-  native file access and host scheduling never presumed.
+  Original 19-file v1.1.1 complete standalone source package with a
+  read-only visual preview of observed, proposed, read-back-asserted
+  structure and progress. Exact PR #903 head c7ff04cc23400937e6ec7be20ed08a982c3ea8f0
+  passed 81/81 fictional source tests (run 45286714176) and
+  11/11 registry tests (run 45286714275); reviewer collision and
+  false 100% progress issues corrected. No real source account,
+  private diagram export, file operation, scheduled agent or
+  independently observed user benefit claimed.
 
 # 2026-11-22: v1.1.1 removes the non-portable sibling Markdown hyperlinks.
 # Optional composition still requires independent host availability/authorization.
