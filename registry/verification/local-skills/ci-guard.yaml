@@ -1,20 +1,20 @@
 schema_version: 1
 skill_name: ci-guard
-skill_version: "1.6.2"
+skill_version: "1.6.3"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/ci-guard/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 698cf2a21d675ce2cc154c0d810a493f0d08eea0
-complete_package_tree_sha: 4910a37785d1b69871bfa2e2fb28f28fc00cd0e0
+content_blob_sha: 9ebd0db855f12e0656eeabbc1dd8532646289695
+complete_package_tree_sha: 578f6cf6a8d212eca797a365359dab98e34c004f
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: multiturn-source-revision-pending-exact-head-tests
+verification_basis: retry-source-revision-pending-exact-head-tests
 validation_status: not-run
-validation_note: "New source has multi-turn continuation preservation gates; synthetic transition and static checks pending. Prior local/host tests and semantic scores refer to earlier content. Real multi-turn consuming-agent behavior and user outcomes NOT_RUN."
+validation_note: "Fifteen new fictional targeted-retry cases complement the existing host test suite; exact-head source QA pending. Actual provider attempt-pair semantics, billed minutes, branch rules, and downstream release effects NOT_VERIFIED."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
@@ -24,8 +24,9 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Static file digests, source job/guard/needs parity and Python AST anchor
-  presence passed 27 planted tests within hosted 238-method suite. Final
-  metadata-only head still requires qualification before merge. This cannot
-  authenticate Git provider SHA, actual compiled conformance test behavior,
-  branch status, token dispatch or real user savings.
+  Version 1.6.3 adds one-workflow adjacent-attempt receipt attribution to
+  existing CI Guard host reconciliation. A newly returned job row or changed
+  attempt number is not necessarily fresh runner execution. Synthetic fixture
+  tests exercise source mismatch, incomplete maps, falsified old/new intervals,
+  false-green attempts and no double-count of carried successes. Actual
+  authenticated run cost and release qualification remain outside this receipt.

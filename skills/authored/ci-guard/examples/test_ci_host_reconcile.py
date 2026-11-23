@@ -280,5 +280,219 @@ class HostEvidenceTests(unittest.TestCase):
         self.assertEqual(report["provider_dispatch_causality"],"NOT_VERIFIED")
 
 
+
+def retry_story_and_mapping():
+    """Completely fictional 3-job retry; numbers are not provider traces."""
+    m=mapping()
+    m["workflow_runs"][0]["attempt"]=2
+    m["workflow_runs"][0]["jobs"]={
+        "forward":"synthetic compile", "audit":"synthetic audit",
+        "format":"synthetic format"
+    }
+    x=story()
+    selected=next(z for z in x["results"] if
+                  z["design"]==m["design_id"] and
+                  z["scenario"]==m["scenario_id"])
+    selected["scheduled_jobs"]=["forward","audit","format"]
+    selected["statuses"]={j:"success" for j in m["workflow_runs"][0]["jobs"]}
+    return x,m
+
+
+def retry_pair():
+    old=observed(outcome="failure")
+    row=old["workflow_runs"][0]
+    row["jobs"][0]["name"]="synthetic compile"
+    row["jobs"][0]["run_attempt"]=1
+    row["jobs"].append({
+        "id":992, "run_id":RUN, "run_attempt":1,
+        "name":"synthetic audit", "status":"completed",
+        "conclusion":"success",
+        "started_at":"2026-11-20T09:00:00Z",
+        "completed_at":"2026-11-20T09:00:08Z"
+    })
+    row["jobs"].append({
+        "id":993, "run_id":RUN, "run_attempt":1,
+        "name":"synthetic format", "status":"completed",
+        "conclusion":"success",
+        "started_at":"2026-11-20T09:01:00Z",
+        "completed_at":"2026-11-20T09:01:04Z"
+    })
+    newer=copy.deepcopy(old)
+    newrow=newer["workflow_runs"][0]
+    newrow["attempt"]=2
+    newrow["run"]["run_attempt"]=2
+    newrow["run"]["conclusion"]="success"
+    for job in newrow["jobs"]:
+        job["id"]+=100
+        job["run_attempt"]=2
+    changed=newrow["jobs"][0]
+    changed["conclusion"]="success"
+    changed["started_at"]="2026-11-22T12:01:00Z"
+    changed["completed_at"]="2026-11-22T12:01:10Z"
+    return old,newer
+
+
+class RetryReceiptTests(unittest.TestCase):
+    def report(self,old=None,new=None,m=None,scenario=None):
+        source,mm=retry_story_and_mapping()
+        before,after=retry_pair()
+        return audit.reconcile_targeted_retry(
+            scenario or source,m or mm,
+            old if old is not None else before,
+            new if new is not None else after)
+
+    def test_carries_old_success_without_counting_new_runner_time(self):
+        outcome=self.report()
+        self.assertEqual(outcome["status"],"RETRY_ACCOUNTING_RECONCILED")
+        self.assertEqual(outcome["newly_reexecuted_jobs"],["synthetic compile"])
+        self.assertEqual(outcome["carried_forward_jobs"],
+                         ["synthetic audit","synthetic format"])
+        self.assertEqual(outcome["inferred_new_execution_seconds"],10)
+        self.assertEqual(outcome["provider_billed_minutes"],"NOT_MEASURED")
+        self.assertFalse(outcome["runner_occupancy_proven"])
+        self.assertFalse(outcome["end_to_end_ci_qualified"])
+        self.assertEqual(outcome["downstream_release_or_tag_retriggered"],
+                         "NOT_VERIFIED")
+
+    def test_changed_api_ids_on_carry_forward_are_accepted(self):
+        old,new=retry_pair()
+        self.assertTrue(all(a["id"]!=b["id"] for a,b in
+                         zip(old["workflow_runs"][0]["jobs"],
+                             new["workflow_runs"][0]["jobs"])))
+        self.assertEqual(self.report(old,new)["required_job_count"],3)
+
+    def test_false_green_prior_failure_rejected(self):
+        old,new=retry_pair()
+        old["workflow_runs"][0]["run"]["conclusion"]="success"
+        with self.assertRaisesRegex(audit.Hold,"expected completed state"):
+            self.report(old,new)
+
+    def test_in_progress_or_false_green_target_rejected(self):
+        for key,value in (("status","in_progress"),("conclusion","failure"),
+                          ("run_attempt",1)):
+            with self.subTest(key=key):
+                old,new=retry_pair()
+                new["workflow_runs"][0]["run"][key]=value
+                with self.assertRaises(audit.Hold):
+                    self.report(old,new)
+
+    def test_missing_or_extra_required_status_rejected(self):
+        for action in ("drop","duplicate","rename"):
+            with self.subTest(action=action):
+                old,new=retry_pair()
+                jobs=new["workflow_runs"][0]["jobs"]
+                if action=="drop":jobs.pop()
+                if action=="duplicate":jobs.append(copy.deepcopy(jobs[-1]))
+                if action=="rename":jobs[-1]["name"]="unexpected job"
+                with self.assertRaises(audit.Hold):self.report(old,new)
+
+    def test_changed_carried_forward_interval_rejected(self):
+        old,new=retry_pair()
+        new["workflow_runs"][0]["jobs"][1]["started_at"]="2026-11-20T09:00:01Z"
+        with self.assertRaisesRegex(audit.Hold,"changed execution window"):
+            self.report(old,new)
+
+    def test_retried_failure_must_have_new_execution_interval(self):
+        for defect in ("same_id","same_window","early"):
+            with self.subTest(defect=defect):
+                old,new=retry_pair()
+                previous=old["workflow_runs"][0]["jobs"][0]
+                retried=new["workflow_runs"][0]["jobs"][0]
+                if defect=="same_id":retried["id"]=previous["id"]
+                if defect=="same_window":
+                    retried["started_at"]=previous["started_at"]
+                    retried["completed_at"]=previous["completed_at"]
+                if defect=="early":
+                    retried["started_at"]="2026-11-22T11:59:00Z"
+                with self.assertRaisesRegex(audit.Hold,"distinct later retry"):
+                    self.report(old,new)
+
+    def test_cross_revision_run_identity_and_workflow_refused(self):
+        for defect in ("head_sha","id","event","path"):
+            with self.subTest(defect=defect):
+                old,new=retry_pair()
+                new["workflow_runs"][0]["run"][defect]={
+                    "head_sha":"b"*40, "id":9999, "event":"release",
+                    "path":".github/workflows/evil.yml"}[defect]
+                with self.assertRaises(audit.Hold):self.report(old,new)
+
+    def test_cross_attempt_or_cross_run_job_refused(self):
+        for defect in ("run_attempt","run_id"):
+            with self.subTest(defect=defect):
+                old,new=retry_pair()
+                new["workflow_runs"][0]["jobs"][1][defect]=555
+                with self.assertRaises(audit.Hold):self.report(old,new)
+
+    def test_incomplete_retry_page_or_extra_envelope_refused(self):
+        old,new=retry_pair()
+        new["workflow_runs"].append(copy.deepcopy(new["workflow_runs"][0]))
+        with self.assertRaisesRegex(audit.Hold,"one complete workflow"):
+            self.report(old,new)
+
+    def test_skipped_or_still_failed_job_is_not_accepted(self):
+        for status,conclusion in (("completed","skipped"),
+                                  ("in_progress",None),
+                                  ("completed","failure")):
+            with self.subTest(status=status,conclusion=conclusion):
+                old,new=retry_pair()
+                new["workflow_runs"][0]["jobs"][0]["status"]=status
+                new["workflow_runs"][0]["jobs"][0]["conclusion"]=conclusion
+                with self.assertRaises(audit.Hold):self.report(old,new)
+
+    def test_prior_attempt_gaps_and_multiple_mapped_runs_refused(self):
+        scenario,m=retry_story_and_mapping()
+        old,new=retry_pair()
+        m["workflow_runs"][0]["attempt"]=3
+        with self.assertRaises(audit.Hold):
+            self.report(old,new,m=m,scenario=scenario)
+        scenario,m=retry_story_and_mapping()
+        m["workflow_runs"].append(copy.deepcopy(m["workflow_runs"][0]))
+        with self.assertRaises(audit.Hold):
+            self.report(old,new,m=m,scenario=scenario)
+
+    def test_forged_local_simulator_proof_refused(self):
+        scenario,m=retry_story_and_mapping()
+        scenario["host_execution_proven"]=True
+        with self.assertRaisesRegex(audit.Hold,"self-authentication"):
+            self.report(m=m,scenario=scenario)
+
+    def test_retry_and_live_conflict_refused_before_network_read(self):
+        scenario,m=retry_story_and_mapping()
+        old,_=retry_pair()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            for name,data in (("s",scenario),("m",m),("old",old)):
+                (root/(name+".json")).write_text(json.dumps(data),encoding="utf8")
+            cmd=[sys.executable,str(ROOT/"scripts"/"ci_host_reconcile.py"),
+                 "--simulator-results",str(root/"s.json"),
+                 "--mapping",str(root/"m.json"),
+                 "--retry-previous-observations",str(root/"old.json"),
+                 "--live","--require-pass"]
+            run=subprocess.run(cmd,capture_output=True,text=True,timeout=8)
+            self.assertEqual(run.returncode,2)
+            self.assertIn("two supplied offline observation files",run.stderr)
+            self.assertNotIn("GitHub API read failed",run.stderr)
+
+    def test_cli_two_offline_files_never_upgrade_provenance(self):
+        scenario,m=retry_story_and_mapping()
+        old,new=retry_pair()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            for name,content in (("s",scenario),("m",m),("old",old),("new",new)):
+                (root/(name+".json")).write_text(json.dumps(content),encoding="utf8")
+            cmd=[sys.executable,str(ROOT/"scripts"/"ci_host_reconcile.py"),
+                 "--simulator-results",str(root/"s.json"),
+                 "--mapping",str(root/"m.json"),
+                 "--retry-previous-observations",str(root/"old.json"),
+                 "--observations",str(root/"new.json"),"--require-pass"]
+            result=subprocess.run(cmd,capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+            report=json.loads(result.stdout)
+            self.assertEqual(report["status"],"RETRY_ACCOUNTING_RECONCILED")
+            self.assertEqual(report["observation_provenance"],
+                             "OBSERVED_AS_SUPPLIED_NOT_AUTHENTICATED")
+            self.assertFalse(report["automatic_cutover_authorized"])
+
+
 if __name__=="__main__":
     unittest.main()

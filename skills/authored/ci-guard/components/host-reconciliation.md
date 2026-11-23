@@ -69,6 +69,46 @@ signed or that host provider policy/permissions/custody are attested.
 Files later supplied through `--observations` revert to the unauthenticated
 label, even if they originated from a previous real API read.
 
+## Targeted retry attribution (offline, two complete attempt receipts)
+
+A retry may change provider job row IDs or the displayed `run_attempt`
+while re-exposing jobs that succeeded in the previous attempt. **A new API
+row is not necessarily new runner execution.** Supply a simulator summary,
+one workflow mapping with `attempt: 2` (or any later attempt) and a matching
+pair of *complete*, adjacent attempt observations:
+
+```sh
+python3 scripts/ci_host_reconcile.py \
+  --simulator-results /path/to/synthetic-scenario-output.json \
+  --mapping /path/to/approved-one-workflow-attempt-2-map.json \
+  --retry-previous-observations /path/to/attempt-1-observations.json \
+  --observations /path/to/attempt-2-observations.json \
+  --require-pass
+```
+
+This mode is deliberately **offline-only**, with no provider authentication
+and no authenticated pagination proof. The owner must separately verify that
+the original API reads covered every page. The same full source SHA,
+workflow path/event, run ID and required job set must appear in both
+attempts. The earlier attempt must be a completed failure, the later
+attempt a completed success, and the failed job must show a different job
+ID and a new non-overlapping execution window. Previously successful jobs
+must retain their old execution timestamps and conclusions even when
+provider row IDs change. Partial, failed, skipped or unrecognized receipts,
+missing/extra jobs, cross-run/source records and inconsistent attempts HOLD.
+
+The result gives `carried_forward_jobs`,
+`newly_reexecuted_jobs` and `inferred_new_execution_seconds`.
+These values are based on *supplied timestamp equivalence*, not invoice
+records or independently verified machine occupancy. Billing stays
+`NOT_MEASURED`, all actual release/tag re-triggering stays
+`NOT_VERIFIED`, and `end_to_end_ci_qualified` stays false. A final
+successful original workflow attempt does not independently authorize
+a downstream release workflow that already completed. Supported scope:
+**one** workflow's immediately preceding attempt; do not extrapolate
+this simple receipt model to arbitrary cross-workflow retries, mixed-source
+rebuilds or provider semantics not yet verified.
+
 ## Strict matching and fail-closed conditions
 
 The normalized v3 simulator result must be `STRUCTURAL_PASS` on the
@@ -117,7 +157,7 @@ passing the manifest to the adapter.
 
 ## Negative controls
 
-The [27 executable planted tests](../examples/test_ci_host_reconcile.py)
+The [42 executable planted tests](../examples/test_ci_host_reconcile.py)
 reject stale/wrong source, job rerun attempt mix-ups, event/path mismatch,
 invalid selected source graph, missing/duplicated/unmapped verifier jobs,
 failed or skipped checks, false-green workflow-level conclusion, invalid
