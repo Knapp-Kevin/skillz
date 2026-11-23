@@ -489,6 +489,9 @@ def main():
     p.add_argument("--require-pass",action="store_true")
     args=p.parse_args()
     try:
+        # Reject incompatible modes before even considering a network read.
+        require(not (args.live and args.retry_previous_observations),
+                "retry history mode requires two supplied offline observation files")
         sim=load_json(args.simulator_results)
         mapping=parse_mapping(load_json(args.mapping))
         if args.live:

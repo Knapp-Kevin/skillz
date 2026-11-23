@@ -456,6 +456,23 @@ class RetryReceiptTests(unittest.TestCase):
         with self.assertRaisesRegex(audit.Hold,"self-authentication"):
             self.report(m=m,scenario=scenario)
 
+    def test_retry_and_live_conflict_refused_before_network_read(self):
+        scenario,m=retry_story_and_mapping()
+        old,_=retry_pair()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            for name,data in (("s",scenario),("m",m),("old",old)):
+                (root/(name+".json")).write_text(json.dumps(data),encoding="utf8")
+            cmd=[sys.executable,str(ROOT/"scripts"/"ci_host_reconcile.py"),
+                 "--simulator-results",str(root/"s.json"),
+                 "--mapping",str(root/"m.json"),
+                 "--retry-previous-observations",str(root/"old.json"),
+                 "--live","--require-pass"]
+            run=subprocess.run(cmd,capture_output=True,text=True,timeout=8)
+            self.assertEqual(run.returncode,2)
+            self.assertIn("two supplied offline observation files",run.stderr)
+            self.assertNotIn("GitHub API read failed",run.stderr)
+
     def test_cli_two_offline_files_never_upgrade_provenance(self):
         scenario,m=retry_story_and_mapping()
         old,new=retry_pair()
