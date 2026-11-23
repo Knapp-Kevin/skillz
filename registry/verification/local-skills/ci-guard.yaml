@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/ci-guard/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: fa5b4e7e04d113c1dffe9ff834136446e9a692e9
-complete_package_tree_sha: c593477488d8bd0c6f2b0ab7d1c1f65daa08299f
+complete_package_tree_sha: 2497ea77b1fee7f555af113fe9239df6403b7318
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review

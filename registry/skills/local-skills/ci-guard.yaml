@@ -21,7 +21,7 @@ review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "53-file first-party MIT CI Guard package; optional stdlib source/scenario, overlap, self-repair and strategy-fit diagnostics and advisory prequalification readiness. Unverified semantics HOLD."
 content_blob_sha: fa5b4e7e04d113c1dffe9ff834136446e9a692e9
-complete_package_tree_sha: c593477488d8bd0c6f2b0ab7d1c1f65daa08299f
+complete_package_tree_sha: 2497ea77b1fee7f555af113fe9239df6403b7318
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required
