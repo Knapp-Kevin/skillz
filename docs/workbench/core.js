@@ -16,12 +16,13 @@ const profiles=[
 ["other","Other / not sure","manual","Identify exact host; portable handoff only",repo+"/blob/main/docs/getting-started-with-skills.md"]
 ].map(([id,label,mode,destination,docs])=>({id,label,mode,destination,docs,strict:["m365-agent-builder","m365-agents-toolkit"].includes(id)}));
 const domains=[["planning","Planning & decisions"],["time-productivity","Personal productivity"],["software-engineering","Software engineering"],["cloud-devops","CI & delivery"],["technical-writing","Documentation"],["memory-context","Files & knowledge"],["research","Research & evidence"],["agent-mcp-development","AI agents & tools"],["security","Security & permissions"],["business","Business & operations"],["sales","Sales"],["finance","Finance"],["marketing","Marketing"],["communication","Communication"],["career","Career"],["education","Learning"],["fiction-narrative-worldbuilding","Creative writing"],["music-composition","Music"],["law","Legal review"]];
-function normalize(a,g){
+function normalize(a,g,proof={}){
  const retired=new Set((g.retired_legacy_ids||[]).map(x=>x.id)), seen=new Set(), rows=[];
  for(const s of a.skills||[]){
   const id="local-skills/"+s.id;
   if(retired.has(id)||seen.has(id))continue;
-  seen.add(id); rows.push({id,title:s.display_name||s.id,tags:s.capability_paths||[],type:"authored",family:"local-skills",path:s.entrypoint,version:s.package_version,license:s.license_spdx,review:s.review_status,behavior:s.behavioral_validation,blob:s.skill_blob_sha,tree:s.package_tree_sha});
+  const p=proof.cards?.[s.id];const verified=Boolean(p&&p.blob===s.skill_blob_sha&&s.license_spdx==="MIT"&&/^[0-9a-f]{40}$/.test(proof.revision||""));
+  seen.add(id); rows.push({id,title:s.display_name||s.id,tags:s.capability_paths||[],type:"authored",family:"local-skills",path:s.entrypoint,version:s.package_version,license:s.license_spdx,review:s.review_status,behavior:s.behavioral_validation,blob:s.skill_blob_sha,tree:s.package_tree_sha,benefit:verified?p.benefit:null,evidence_example:verified?p.evidence:null,source_revision:verified?proof.revision:null});
  }
  for(const id of [...(g.first_party_ids||[]),...(g.third_party_ids||[])]){
   if(typeof id!=="string"||seen.has(id)||retired.has(id))continue;seen.add(id);
@@ -35,13 +36,13 @@ const unique=a=>[...new Set(a)];
 function search(rows,query,domain,source){
  const terms=unique(words(query)); const domainTerms=words(domain);
  return rows.map(row=>{
-  const hay=words([row.title,row.id,...row.tags].join(" "));const title=words(row.title);
-  const matches=terms.filter(t=>hay.some(w=>w===t||w.startsWith(t))).length;
+  const hay=words([row.title,row.id,...row.tags,row.benefit,row.evidence_example].join(" "));const title=words(row.title);
+  const matched=terms.filter(t=>hay.some(w=>w===t||w.startsWith(t)));const matches=matched.length;
   const domainMatch=!domain||row.tags.some(t=>t===domain||t.startsWith(domain+"/"))||domainTerms.every(t=>hay.includes(t));
   const score=matches*3+terms.filter(t=>title.includes(t)).length;
-  return {row,score,domainMatch};
+  return {row,score,domainMatch,matched};
  }).filter(x=>(!source||x.row.type===source)&&x.domainMatch&&(!terms.length||x.score>0))
- .sort((a,b)=>b.score-a.score||a.row.title.localeCompare(b.row.title)||a.row.id.localeCompare(b.row.id)).map(x=>x.row);
+ .sort((a,b)=>b.score-a.score||(a.row.type==="authored"?0:1)-(b.row.type==="authored"?0:1)||a.row.title.localeCompare(b.row.title)||a.row.id.localeCompare(b.row.id)).map(x=>({...x.row,matched_terms:x.matched}));
 }
 function nonnegative(value){const n=Number(value);return Number.isFinite(n)&&n>=0?n:0;}
 function estimate(x,weeks=13){
