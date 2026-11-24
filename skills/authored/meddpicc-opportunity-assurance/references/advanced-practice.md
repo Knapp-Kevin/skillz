@@ -19,6 +19,41 @@ or unresolved buyer-side action exists. `BLOCKED_OR_UNESTABLISHED`
 means a decision cannot currently be supported. These are
 **evidence categories**, not numerical forecast tiers.
 
+## Cross-source red-team decision matrix
+
+Use current **authorized** provenance, not word count or apparent seniority.
+`BUYER_CONFIRMED` is claim-specific; "we will explore a purchase" never
+equals authorized funding, a purchase order, legal approval or signatures.
+
+| Evidence presented | State for the material claim | What not to do |
+| --- | --- | --- |
+| Seller-pasted "buyer approved" text or optimistic CRM field | `SELLER_INFERRED` | Do not transform into a buyer-confirmed metric or approval |
+| An original authorized buyer document explicitly says approval is pending | `BUYER_CONFIRMED` **that approval is pending**, and `DISCONFIRMED` for seller's prior "approved" claim | Do not average a seller assertion with the direct buyer statement |
+| Two independent current buyer-controlled, authorized messages disagree about approval | `CONFLICTED` until source, role, time and decision status reconcile | Do not choose the more optimistic source or stage-promote |
+| Evidence exists only as older readback with a changed decision owner or unverifiable current revision | `STALE` or `UNKNOWN` according to what remains supportable | Do not refresh a buyer commitment by editing the CRM timestamp |
+| Viewer/record authorization is denied or revoked | `ACCESS_HOLD` and **detail-free** response | Do not surface cached record names, factor labels associated with private sources, excerpts or counts |
+| Role-play, invented account, or fictional transcript | `SIMULATED` outside the real deal ledger | Do not convert into a forecast or buyer testimony |
+
+A state is not permanent: a new authorized document may support a new
+claim while leaving a prior contradictory one unresolved. Preserve
+the prior event as historical, update the current decision only with
+properly sourced evidence and recheck access on subsequent turns.
+
+### Evidence-preserving cross-skill review
+
+When a Sandler conversation note is transferred here, carry its
+`source_kind | authentication_basis | source_id/revision |
+observed_at | participant_role | exact_claim | evidence_state |
+contradicted_by | permission_scope | next_confirmation`. A seller
+summary stays `SELLER_INFERRED`, even if the quote is formatted as direct
+speech. A source-observed buyer statement is relevant only within the
+specific observed role, timeframe and purchase context. Separately
+check actual engagement, economic authority, champion actions,
+purchase/legal steps and no-decision competition.
+
+Work with the original [fictional qualification counterexample](../examples/acceptance.md)
+as an adversarial interpretive case, not measured agent execution.
+
 ## Three-lane gap audit
 
 **Value lane:** metrics, consequences and current purchasing priority.
@@ -78,10 +113,13 @@ verified checkmarks:
 - Helpful sponsor -> stakeholder access, not a confirmed champion.
 - Post-agreement concern -> an unresolved implementation/decision risk.
 
-Only independently verified source evidence can increase confidence. If
-the two methods appear to disagree, retain both claims and ask the buyer
-a neutral clarifying question. One method is not authorized to overrule
-the other's evidence or customer autonomy.
+Only actually authenticated current source evidence can increase
+the buyer-confirmed confidence of a claim. If two **equally credible**
+buyer-controlled sources disagree, retain both as CONFLICTED and ask for
+reconciliation; if a buyer source merely refutes a seller assertion,
+mark that assertion DISCONFIRMED without pretending they are equal.
+One method is not authorized to overrule the other's evidence,
+the buyer's autonomy, or current permission limits.
 
 ## Red-team invariants
 

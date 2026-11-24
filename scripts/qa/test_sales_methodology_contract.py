@@ -77,6 +77,55 @@ class MethodologyPackageTests(unittest.TestCase):
             self.assertIn("no", cases)
             self.assertTrue("privacy" in cases or "access" in cases)
 
+    def test_buyer_evidence_is_not_promoted_from_seller_quotes(self):
+        sandler = self.skill(SLUGS[0])
+        med = self.skill(SLUGS[1])
+        self.assertIn("SELLER_ASSERTED", sandler)
+        self.assertIn("buyer quote", sandler.lower())
+        self.assertIn("BUYER_CONFIRMED", sandler)
+        self.assertIn("SELLER_INFERRED", med)
+        self.assertIn("authentication_basis", med)
+        self.assertIn("source_id/revision", med)
+        self.assertIn("not automatic", med.lower())
+
+    def test_eight_states_include_conflict_and_source_access_hold(self):
+        med = self.skill(SLUGS[1])
+        for state in ("BUYER_CONFIRMED", "DOCUMENT_OBSERVED",
+                      "SELLER_INFERRED", "UNKNOWN", "DISCONFIRMED",
+                      "CONFLICTED", "STALE", "ACCESS_HOLD"):
+            with self.subTest(state=state):
+                self.assertIn("| `" + state + "` |", med)
+        self.assertIn("two credible, current", med.lower())
+        self.assertIn("suppress private rows", med.lower())
+        self.assertIn("derived counts", med.lower())
+
+    def test_sandler_roi_uses_a_period_bound_monetary_baseline(self):
+        base = ROOT / SLUGS[0]
+        contract = (base / "references" / "advanced-practice.md").read_text()
+        self.assertIn("R_t", contract)
+        self.assertIn("benefit_t = R_t × u × m × a", contract)
+        self.assertIn("net_t = benefit_t - F_t - C_t", contract)
+        self.assertIn("first 12 months", contract)
+        self.assertIn("a = 1", contract)
+        self.assertIn("percentage points", contract)
+        self.assertIn("UNKNOWN", contract)
+        self.assertNotIn("B * r * m * a", contract)
+
+    def test_joint_case_is_identical_and_contains_three_evidence_transitions(self):
+        docs = [(ROOT / slug / "examples" / "acceptance.md").read_text()
+                for slug in SLUGS]
+        markers = [d.index("## CASE-JOINT-01:") for d in docs]
+        self.assertEqual(docs[0][markers[0]:], docs[1][markers[1]:],
+                         "The portable cross-method cases must not diverge")
+        case = docs[0][markers[0]:]
+        for stage in ("T0", "T1", "T2", "T3"):
+            self.assertIn(stage, case)
+        for requirement in ("seller-only", "buyer-controlled",
+                            "DISCONFIRMED", "CONFLICTED", "ACCESS_HOLD",
+                            "no close probability", "no numeric ROI",
+                            "not an actual"):
+            self.assertIn(requirement.lower(), case.lower())
+
     def test_no_prerequisite_specific_model_or_external_api(self):
         for slug in SLUGS:
             doc = self.skill(slug)
