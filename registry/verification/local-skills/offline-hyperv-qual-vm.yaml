@@ -7,13 +7,13 @@ license_evidence_path: skills/authored/offline-hyperv-qual-vm/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/offline-hyperv-qual-vm/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: cbf4179a3b7d5adbce84ac26161c6b153d6e2814
-complete_package_tree_sha: 79d71a81774a977153ebd3232fcb38baf0cfc8b3
+content_blob_sha: a4ac3d7ebcc6c6c17326973322f47c68c92a052e
+complete_package_tree_sha: ac104e334f80ddfcf36150d57d09fc7e9f735781
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
-verification_basis: static-and-mocked-runtime-contracts
-validation_status: passed-offline-contract-tests
+verification_basis: security-refinement-source-revision-pending-tests
+validation_status: not-run
 validation_note: "Source-only 32/32 Python tests passed at earlier merged source; new synthetic PowerShell fake-host refusal job requires exact-head CI qualification. No real Hyper-V guest, owner credential DPAPI read, OS installation, checkpoint or native outcome observed."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"

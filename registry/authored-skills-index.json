@@ -375,8 +375,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/source-debt-triage.yaml",
       "verification_path": "registry/verification/local-skills/source-debt-triage.yaml",
-      "skill_blob_sha": "e7d23d4415f59387be7495db79b50c7f5c9f8943",
-      "package_tree_sha": "169850bff038fa498b7be36b5939a4b1e039a4bb",
+      "skill_blob_sha": "e7a20e87ec8b5514e4eafc0658ab23b71c60b1c7",
+      "package_tree_sha": "7f7aec96cce319d93003764c4b589e277bb2f1c6",
       "package_file_count": 5,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -392,7 +392,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-20-source-debt-v1-2-executable-harvest-review.md",
       "previous_reviewed_skill_blob_sha": "fdd0f7d5b4e3996e6bd440751385ee537ca100c0",
       "previous_reviewed_package_tree_sha": "bb92a4ea4130ca50c0b110d96ab439f1498d741f",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob c7cceef7235e7b52c5ea333956930ad95f5093e6 and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob c7cceef7235e7b52c5ea333956930ad95f5093e6 and remain historical, not current-content validation. GitHub posting account is not anonymous. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged. Nonregular source files skipped; bounded reads and incomplete directory enumeration hold complete coverage."
     },
     {
       "id": "decision-record-steward",
@@ -1066,8 +1066,8 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
-      "skill_blob_sha": "5573cece2caed74e00700b4253ea5774985eea65",
-      "package_tree_sha": "b48661f9f50efe757315afd38d6c874a2eb4ee82",
+      "skill_blob_sha": "fae8ef92b4c95127842f303e214caec055ea3821",
+      "package_tree_sha": "51c9e49a6ac8c15c0e2fd0f957b544773f0fa5bf",
       "package_file_count": 18,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1083,7 +1083,7 @@
       ],
       "previous_reviewed_skill_blob_sha": "f9824eda1efb5df463ec46c77256edcd96d10b57",
       "previous_reviewed_package_tree_sha": "84bac1b6e2dd01ab568669f2ab7508c268fce983",
-      "review_note": "Portable entrypoint refactor; original binding quality, safeguards and five-step method preserved verbatim in required procedure-contract.md. Exact-head tests pending; host behavior and user acceptance not run. Version unchanged.",
+      "review_note": "Portable entrypoint refactor; original binding quality, safeguards and five-step method preserved verbatim in required procedure-contract.md. Exact-head tests pending; host behavior and user acceptance not run. Version unchanged. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/873"
     },
     {
@@ -1100,8 +1100,8 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/skill-trial-evidence-auditor.yaml",
       "verification_path": "registry/verification/local-skills/skill-trial-evidence-auditor.yaml",
-      "skill_blob_sha": "eeec099ea15ba82084209fb4d0bc7940b8314509",
-      "package_tree_sha": "531fc4f2c37ad1c5d62411a1fe302f71c1185865",
+      "skill_blob_sha": "dbfd874c69dec19a04fc0f8d35bc7ed598275d87",
+      "package_tree_sha": "ad22cbbde8bf7c15566011067d4f9018271db5e5",
       "package_file_count": 8,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1114,7 +1114,7 @@
         "agent-mcp-development/evaluation",
         "research/reproducibility"
       ],
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 4ab57ef3003285b7e6807776d7bfbc5a51118f97 and remain historical, not current-content validation. GitHub posting account is not anonymous.",
+      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 4ab57ef3003285b7e6807776d7bfbc5a51118f97 and remain historical, not current-content validation. GitHub posting account is not anonymous. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged. Unknown baseline or negative-control activation withholds signal; sanitized malformed-input errors and enum validation.",
       "previous_reviewed_skill_blob_sha": "4ab57ef3003285b7e6807776d7bfbc5a51118f97",
       "previous_reviewed_package_tree_sha": "22dc96c351ffcf9c77b81c613415d9010b16984f"
     },
@@ -1294,8 +1294,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/first-run-experience-validator.yaml",
       "verification_path": "registry/verification/local-skills/first-run-experience-validator.yaml",
-      "skill_blob_sha": "f6a4f7dd0dfb0b89da62d9b820550669cda62a79",
-      "package_tree_sha": "08a3f861087c5f92ea326a5a4e3eaa5adb6ea200",
+      "skill_blob_sha": "e2d2ec6367e97dd4008488f2098b5b90b9d7b8fd",
+      "package_tree_sha": "a44814534aea09dab6639c72ba5f3c8e72540f9e",
       "package_file_count": 5,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1308,7 +1308,7 @@
         "software-engineering/maintenance",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "Initial v0.1.0 source candidate with exact canonical feedback and continuation contracts. 20 synthetic written adverse cases; exact-source host check pending. Independent semantic rubric and first-run installation/novice/user behavior NOT_RUN."
+      "review_note": "Initial v0.1.0 source candidate with exact canonical feedback and continuation contracts. 20 synthetic written adverse cases; exact-source host check pending. Independent semantic rubric and first-run installation/novice/user behavior NOT_RUN. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged."
     },
     {
       "id": "offline-hyperv-qual-vm",
@@ -1325,8 +1325,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/offline-hyperv-qual-vm.yaml",
       "verification_path": "registry/verification/local-skills/offline-hyperv-qual-vm.yaml",
-      "skill_blob_sha": "cbf4179a3b7d5adbce84ac26161c6b153d6e2814",
-      "package_tree_sha": "79d71a81774a977153ebd3232fcb38baf0cfc8b3",
+      "skill_blob_sha": "a4ac3d7ebcc6c6c17326973322f47c68c92a052e",
+      "package_tree_sha": "ac104e334f80ddfcf36150d57d09fc7e9f735781",
       "package_file_count": 10,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1339,7 +1339,7 @@
         "software-engineering/maintenance",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "First-party ten-file original source package. Static Python 32 tests executed on prior exact main; additional fake-module PowerShell runtime checks scheduled on PR, not live Hyper-V. Real owner-host provisioning, credentials, OS, checkpoint, copy-out, native test and retirement remain NOT_RUN."
+      "review_note": "First-party ten-file original source package. Static Python 32 tests executed on prior exact main; additional fake-module PowerShell runtime checks scheduled on PR, not live Hyper-V. Real owner-host provisioning, credentials, OS, checkpoint, copy-out, native test and retirement remain NOT_RUN. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged."
     },
     {
       "id": "effort-allocation-navigator",

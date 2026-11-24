@@ -7,12 +7,12 @@ license_evidence_path: skills/authored/repository-readme-architect/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-readme-architect/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5573cece2caed74e00700b4253ea5774985eea65
-complete_package_tree_sha: b48661f9f50efe757315afd38d6c874a2eb4ee82
+content_blob_sha: fae8ef92b4c95127842f303e214caec055ea3821
+complete_package_tree_sha: 51c9e49a6ac8c15c0e2fd0f957b544773f0fa5bf
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: needs-re-review
-verification_basis: portable-entrypoint-refactor-pending-exact-head-tests
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
 validation_note: "Required procedure text preserved verbatim in package; structural preflight and regression tests pending. Real host behavior and user outcomes NOT_RUN."
 rubric: docs/skill-verification.md

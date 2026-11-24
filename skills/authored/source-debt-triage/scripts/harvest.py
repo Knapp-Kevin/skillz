@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import re
 import sys
+import stat
 import token
 import tokenize
 
@@ -135,7 +136,10 @@ def inspect(root: Path, max_rows: int = 100) -> dict:
     states, skipped = {}, []
     unsupported = scanned = omitted = 0
     stopped_at_limit = False
-    for folder, dirs, files in os.walk(root, topdown=True, followlinks=False):
+    def traversal_error(_error):
+        # Do not echo the OS error or a possibly private absolute path.
+        skipped.append({"path": "(withheld)", "reason": "directory-enumeration-failed"})
+    for folder, dirs, files in os.walk(root, topdown=True, onerror=traversal_error, followlinks=False):
         kept = []
         for d in sorted(dirs):
             p = Path(folder) / d
@@ -162,10 +166,19 @@ def inspect(root: Path, max_rows: int = 100) -> dict:
                 omitted += 1
                 continue
             try:
-                if p.stat().st_size > MAX_FILE_BYTES:
+                info = p.lstat()
+                if not stat.S_ISREG(info.st_mode):
+                    skipped.append({"path": rel, "reason": "nonregular-file"})
+                    continue
+                if info.st_size > MAX_FILE_BYTES:
                     skipped.append({"path": rel, "reason": "file-too-large"})
                     continue
-                content = p.read_text(encoding="utf-8")
+                with p.open("rb") as stream:
+                    raw = stream.read(MAX_FILE_BYTES + 1)
+                if len(raw) > MAX_FILE_BYTES:
+                    skipped.append({"path": rel, "reason": "file-too-large"})
+                    continue
+                content = raw.decode("utf-8")
             except (OSError, UnicodeError):
                 skipped.append({"path": rel, "reason": "unreadable-or-not-utf8"})
                 continue
@@ -224,6 +237,6 @@ def main() -> int:
 if __name__ == "__main__":
     try:
         sys.exit(main())
-    except (OSError, ValueError) as exc:
-        print("HARVEST_UNAVAILABLE: " + str(exc), file=sys.stderr)
+    except (OSError, ValueError, RecursionError):
+        print("HARVEST_UNAVAILABLE: invalid or unreadable approved root", file=sys.stderr)
         sys.exit(2)

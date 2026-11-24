@@ -164,6 +164,30 @@ class MethodTests(unittest.TestCase):
     def test_invalid_protocol_gate(self):
         d=mk();d['protocol']['minimum_pairs']=True
         with self.assertRaises(Invalid):audit(d)
+    def test_unknown_baseline_activation_withholds_signal(self):
+        d=mk();d['pairs'][0]['baseline']['skill_triggered']=None
+        x=audit(d)
+        self.assertIn('BASELINE_TRIGGER_UNKNOWN',x['excluded_pairs'][0]['reasons'])
+        self.assertIn('WITHHELD',x['determination'])
+    def test_unknown_negative_control_activation_withholds_signal(self):
+        d=mk();d['pairs'][-1]['treatment']['skill_triggered']=None
+        x=audit(d)
+        self.assertIn('NONTRIGGER_ACTIVATION_UNKNOWN',x['excluded_pairs'][0]['reasons'])
+        self.assertIn('WITHHELD',x['determination'])
+    def test_malformed_enum_is_invalid_not_type_error(self):
+        d=mk();d['pairs'][0]['baseline']['result']=[]
+        with self.assertRaises(Invalid):audit(d)
+    def test_cli_deep_json_and_private_path_errors_are_bounded(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td)/'PRIVATE-CONFIDENTIAL-SOURCE.json'
+            cmd=[sys.executable,str(HERE/'scripts'/'audit_trials.py'),'--input',str(p)]
+            x=subprocess.run(cmd,capture_output=True,text=True,timeout=5)
+            self.assertEqual(x.returncode,2)
+            self.assertNotIn('PRIVATE-CONFIDENTIAL-SOURCE',x.stderr)
+            p.write_text('['*2000+'0'+']'*2000,encoding='utf8')
+            x=subprocess.run(cmd,capture_output=True,text=True,timeout=5)
+            self.assertEqual(x.returncode,2)
+            self.assertNotIn('Traceback',x.stderr)
     def test_cli_roundtrip(self):
         d=mk();d['protocol']['run_kind']='CONTROLLED_EMULATION'
         with tempfile.TemporaryDirectory() as td:
