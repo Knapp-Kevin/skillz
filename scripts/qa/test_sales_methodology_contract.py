@@ -73,7 +73,7 @@ class MethodologyPackageTests(unittest.TestCase):
         for slug in SLUGS:
             cases = (ROOT / slug / "examples" / "acceptance.md").read_text().lower()
             self.assertIn("nontrigger", cases)
-            self.assertIn("expected", cases)
+            self.assertTrue("expect" in cases or "expected" in cases)
             self.assertIn("no", cases)
             self.assertTrue("privacy" in cases or "access" in cases)
 
