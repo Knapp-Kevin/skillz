@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scope": {
+    "route": "REPOSITORY_MAINTENANCE",
+    "destination": "skills/authored/sandler-conversation-strategist/",
+    "authority": "Owner-requested bounded repository revision; no consumer tool or customer authorization"
+  },
+  "target": {
+    "skill_id": "sandler-conversation-strategist",
+    "source_revision": "0891972aae8d3d0a1574d208005175373316ff46",
+    "package_tree": "8e40c64c0e76a7a25dda1d4e93902d3254a9dc09",
+    "rights": "Original MIT first-party instructions; public framework vocabulary only, no proprietary course content"
+  },
+  "objective": {
+    "result": "Buyer-respectful usable conversation decision and safe exit",
+    "pass_condition": "STOP_NO_CONTACT on explicit opt-out; concise meeting agenda on sparse input; seller-only quote stays unverified when translated."
+  },
+  "discovery": {
+    "searched": [
+      "Current first-party source package and both support references",
+      "Engine skill-eval, skill-audit, skill-forge and shared refinement contracts",
+      "Existing sales methodology overlap/prior review in Skillz"
+    ],
+    "unavailable": [
+      "Independent consuming-agent execution not available in this repository review"
+    ],
+    "full_corpus_claim": false
+  },
+  "finding": {
+    "evidence": "STATIC_RISK",
+    "input": "Original, synthetic source-only adversarial prompt from package-local acceptance cases",
+    "expected": "STOP_NO_CONTACT on explicit opt-out; concise meeting agenda on sparse input; seller-only quote stays unverified when translated.",
+    "actual": "Buyer explicit no-contact instruction was not routed to a hard stop, and copied seller quotes used a different state name from MEDDPICC.",
+    "mechanism": "Stage-oriented coaching lacked actionable buyer-signal branches and a lossless cross-method state-name translation."
+  },
+  "candidate": {
+    "change": "Add buyer-controlled decision branches and in-package portable state mapping with original positive, negative and false-success scenarios.",
+    "preserved": [
+      "Seven publicly described stages without proprietary materials",
+      "No unapproved outreach/CRM writes",
+      "No fictional quote treated as buyer-confirmed",
+      "Optional other-skill handoff stays standalone"
+    ],
+    "source_changed": true
+  },
+  "challenge": [
+    {
+      "name": "original",
+      "level": "STATIC_REVIEW",
+      "result": "S11 explicit opt-out expected STOP_NO_CONTACT; expected change statically reviewed, not executed agent outcome"
+    },
+    {
+      "name": "near-negative",
+      "level": "STATIC_REVIEW",
+      "result": "S12 sparse meeting expected limited agenda, not whole-framework lecture; no customer conversation run"
+    },
+    {
+      "name": "regression",
+      "level": "NOT_TESTED",
+      "result": "NOT_TESTED"
+    },
+    {
+      "name": "authority",
+      "level": "STATIC_REVIEW",
+      "result": "Retain read-only default, no CRM/outreach and buyer permission protections"
+    },
+    {
+      "name": "false-green",
+      "level": "STATIC_REVIEW",
+      "result": "S13 buyer requests a proposal but no authority: proposal output must not assert ready/approved; actual consuming agent not run"
+    }
+  ],
+  "decision": {
+    "state": "ITERATE",
+    "reason": "Pre-merge package changes require exact-head CI, reviewer challenge and verified merge; synthetic static observations alone insufficient",
+    "next": "Run current-head tests, resolve review findings, merge or hold"
+  },
+  "delivery": {
+    "artifact": "UPDATED_PACKAGE_DRAFT_IN_GITHUB_BRANCH",
+    "installation": "NOT_INSTALLED",
+    "repository_integration": "UNMERGED_AT_RECEIPT_AUTHORING",
+    "consumer_outcome": "NOT_OBSERVED"
+  }
+}
