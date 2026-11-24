@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/agent-failure-boundary-analysis/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/agent-failure-boundary-analysis/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 94a444a992f000105c4beca61187e33fc1409060
-complete_package_tree_sha: ba37cbc3f14d4f70e50f3970c1eb3b10882a3ab6
+content_blob_sha: 40d8925b488329613289cfa056ec293485687b7e
+complete_package_tree_sha: 5050fe4278bfcfe7d383ee09f119e79f6c242374
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
-validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
+validation_note: "Current package adds a skill-specific injection challenge and bounded improvement; exact-head QA pending, actual host behavior NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

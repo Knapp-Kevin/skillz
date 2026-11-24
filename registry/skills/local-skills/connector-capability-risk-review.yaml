@@ -1,3 +1,4 @@
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: connector-capability-risk-review
 display_name: "Connector Capability Risk Review"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "No bundled execution or service; authorized host read scope only"
-content_blob_sha: 49291dd21466ec40cd0c6312ec9afe9f13e5fc0b
-complete_package_tree_sha: 42ee098b335c5a88fdc0be1f55c416fb5112bcf3
+content_blob_sha: 37f9303c79ca56a350073633492e1cda8eac8f91
+complete_package_tree_sha: 28dfce26c49fb81cdae743f1abb6513ec419a6a1
 historical_comparator: skills/mcp-vetting/SKILL.md
 historical_origin_status: "Control of account does not establish underlying original authorship or rights"
 rights_resolution: "Only independently written new content is MIT; legacy texts remain untouched"

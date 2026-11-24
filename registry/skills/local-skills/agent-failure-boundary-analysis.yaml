@@ -1,3 +1,4 @@
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: agent-failure-boundary-analysis
 display_name: "Agent Failure Boundary Analysis"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Six-file portable package; optional Python 3.9+ stdlib trace-checker, governed host fallback"
-content_blob_sha: 94a444a992f000105c4beca61187e33fc1409060
-complete_package_tree_sha: ba37cbc3f14d4f70e50f3970c1eb3b10882a3ab6
+content_blob_sha: 40d8925b488329613289cfa056ec293485687b7e
+complete_package_tree_sha: 5050fe4278bfcfe7d383ee09f119e79f6c242374
 historical_comparators: "skills/agent-postmortem/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
