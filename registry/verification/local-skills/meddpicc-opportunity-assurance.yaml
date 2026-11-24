@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/meddpicc-opportunity-assurance/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/meddpicc-opportunity-assurance/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 83552a814a22514f452651465aafe3741c49b2db
-complete_package_tree_sha: 75794d0ac174b5fa44330e95d0e2e609a8feb14e
+content_blob_sha: 5f3c2486e833b841ba7452923eb26ee1e92d6877
+complete_package_tree_sha: 96c8262cc790d0a3b1cc63b439d636dfda3dc8ac
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
@@ -20,7 +20,7 @@ validation_note: >-
   integration, vendor endorsement, external security scanner or measured sales
   conversion improvement. Static package CI is not host behavioral validation.
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_NEW_SOURCE"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [sales, opportunity-qualification, evidence-review]
   lifecycle: [planning, evaluation, coaching]
@@ -38,3 +38,7 @@ notes: >-
 # Original method packages remain v0.1.0, formal needs-re-review and
 # host behavioral validation not-run. See
 # docs/reviews/2026-11-24-sales-methods-evidence-hardening.md.
+
+# 2026-11-24 engine-guided separate red-team review and bounded refinement.
+# Historical score is bound to prior package tree. Formal state remains
+# needs-re-review; consumer host trial and external security scan NOT_RUN.
