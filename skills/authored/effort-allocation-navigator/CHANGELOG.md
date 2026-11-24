@@ -7,6 +7,21 @@ memory or independently observed human outcome is claimed.
 
 ## 0.2.0 (2026-11-24): repeat-use continuity without task mutation
 
+**ADHD-supportive, diagnosis-free design refinement:** The default
+user-visible action is now a **specific 2–5-minute voluntary
+micro-start** with a concrete stop line and a one-line re-entry
+breadcrumb. `start_window_minutes` may be set to 2–10 for the
+current run and is bounded by actual capacity and the claimed
+task estimate. It is **not** a forced timer, a completion forecast
+or a stored personal trait. No blame, productivity streak or
+medical-effect claim is inferred from unchanged work.
+
+**Scope-hardening:** Two-snapshot comparison now requires matching
+caller-declared `scope_id` values. Missing/mismatched scope IDs
+fail closed; even matching IDs require independently checked
+viewer/source permission. This specifically guards accidental
+cross-project task-ID collisions and stale-history reuse.
+
 **Minor capability release**: an explicit authorized
 `--previous` snapshot comparison added to the existing offline
 `scripts/plan.py`. It labels caller-asserted completions and reopened
