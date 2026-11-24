@@ -33,6 +33,9 @@ same-day snapshots have caller-specified order, not authenticated
 source chronology. Goal changes are disclosed rather than treated as
 progress toward the old objective.
 
+A two-snapshot comparison requires a matching, **non-sensitive**
+`scope_id` in each snapshot; absent or differing scope IDs fail closed.
+This is a caller-declared namespace, **not** external authentication.
 The host must re-check **current permissions and source/task-ID
 namespace compatibility for both snapshots before providing them**;
 this helper cannot authenticate external sources. If an old task
@@ -47,6 +50,28 @@ rather than a growing history dashboard.
 Optional sales-method task handoffs are just text proposals; buyer
 contact/sending/booking stays blocked until explicit authorization.
 They do not install or require a second skill or create tasks.
+
+## ADHD-supportive default, no diagnosis required
+
+The recommended action must be **startable**, not merely ranked.
+Prefer one explicit physical or digital first move with a visible
+stop condition, a voluntary five-minute starter window, and at most
+one meaningful alternative. A user can choose a different 2–10 minute
+starter, a longer focus slice, or a pause. Neither a timer nor a
+medical-history disclosure is required. Low available capacity
+changes the **entry step**, not mandatory safety, actual completion
+checks, or the user's authority.
+
+A compact re-entry note externalizes where to resume after a pause:
+`objective | last_observed_step | next_visible_action | blocker |
+proof_needed`. It is only a note from authorized current context,
+not persistent memory. An unchanged snapshot is **not evidence of
+a person's motivation or an ADHD symptom**, and a suggested
+micro-start never proves task completion. The offline helper emits
+controlled ID-only cue codes, leaving actual task-specific wording
+to the authorized host/user. Choice reduction and shorter chunks
+are practical accessibility affordances, **not verified clinical
+benefits**.
 
 ## Package
 
@@ -77,8 +102,10 @@ Run only with an explicitly authorized private input file:
 
 The helper expects:
 - root keys: schema_version=1, as_of=YYYY-MM-DD (explicit local date),
+  optional `scope_id` (required for a two-snapshot comparison),
   optional capacity_minutes, optional goal_id (must be an actual milestone),
-  optional preferences and 1–200 tasks.
+  optional preferences and 1–200 tasks. A scope ID is a neutral
+  stable slug, never a real customer name or credential.
 - each task has a slug id, optional private label, optional state
   (todo/doing/done), optional kind (action/milestone), depends_on IDs
   forming an acyclic directed graph, optional effort_minutes (time
@@ -89,9 +116,10 @@ The helper expects:
   only actual host/user authorization can verify it. External blockers
   are separate boolean flags. A due_date is not a hard priority unless
   deadline_evidence is explicitly owner-confirmed.
-- preferences: choice_count 1–3 (default **2**) and pace
-  balanced/short-sprints (default balanced), currently scoped to the
-  input run. These fields **do not save preferences**.
+- preferences: choice_count 1–3 (default **2**), pace
+  balanced/short-sprints (default balanced) and optional
+  `start_window_minutes` 2–10 (default **5**) for a voluntary
+  task-activation window. These fields **do not save preferences**.
 
 **Scores:** a documented ordinal *sorting heuristic* combining
 task value, urgency, real downstream/unblock leverage, working-state
@@ -109,7 +137,8 @@ hold the comparison and produce an estimation action.
 
 **Outputs:** task IDs only (no original free-text task labels),
 the primary and at most one alternative by default, reason codes,
-a 25-minute-or-less first slice, fit to stated capacity if supplied,
+a **2–5-minute default micro-start** bounded by task estimate/capacity,
+plus a 25-minute-or-less optional focus slice, fit to stated capacity if supplied,
 blocked prerequisites, provisional scoring strategy, focus-scope exception
 IDs, explicit deferral warning on lower-lane alternatives, comparison
 coverage and conditional modeled critical path. The helper refuses
