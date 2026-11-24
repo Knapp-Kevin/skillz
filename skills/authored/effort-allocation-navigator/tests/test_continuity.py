@@ -27,6 +27,7 @@ def task(key, **kw):
 
 def snap(*tasks, day="2026-11-23", goal=None):
     return {"schema_version": 1, "as_of": day,
+            "scope_id": "fictional-continuity",
             "goal_id": goal, "tasks": list(tasks)}
 
 
