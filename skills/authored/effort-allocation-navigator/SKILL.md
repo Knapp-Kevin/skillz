@@ -57,45 +57,14 @@ dependency, consent, or proof requirements.
 
 ## User-chosen focus continuity, not algorithmic task-hopping
 
-**Trigger:** The user explicitly chooses an actionable task or says
-"continue the one I picked." Reconfirm current permissions and the
-active objective. When supported, preserve the selected task as the
-first recommendation **within its existing priority lane** rather
-than re-ranking them into a distracting new starting point over a
-small, provisional score difference. The optional offline helper
-accepts `focus_task_id` as a **caller-provided current-run task ID**,
-never as hidden inferred memory.
-
-This is intentionally *bounded*, not a reward for sunk cost:
-
-- A selected task may remain primary only when it is still present,
-  an eligible action, has usable estimates, has all hard prerequisites
-  satisfied and is within **85%** of the top provisional score **in
-  the same safety/deadline/ordinary lane**. This threshold is a
-  transparent sorting heuristic, not an ADHD or productivity score.
-- Mandatory safety work or an owner-confirmed imminent deadline
-  overrides unrelated optional focus. A blocked, completed,
-  externally held or materially poorer-value task cannot be
-  silently elevated. The user retains the right to make an
-  informed different choice, but the skill must clearly expose
-  protected obligations and the consequences of deferral.
-- If focus is unavailable, do not invent its prior history or
-  mark it done. Expose a **categorical reason** such as
-  `MISSING_FROM_SNAPSHOT`, `BLOCKED_OR_NOT_ACTIONABLE`,
-  `REQUIRES_ESTIMATE_OR_REVIEW`, `PROTECTED_PRIORITY_FIRST`
-  or `MATERIAL_PRIORITY_DIFFERENCE`; pair that with one safe
-  next action and one legitimate alternative. Do not echo
-  inaccessible IDs or ask for a full task dump simply to resume.
-- Without an explicit focus selection, preserve the established
-  dependency-first scoring. Never infer user consent or preferences
-  from `doing` status, task descriptions, activity patterns,
-  a diagnosis, or a fabricated remembered selection.
-
-**Aim:** reduce unnecessary switching while preserving honest
-priority changes, source boundaries and the user's own agency.
-The task is not considered progressed until actual authorized
-work evidence exists. Nothing is persisted, scheduled or
-automatically resumed by this procedure.
+When the user explicitly selects a focus task, preserve it only if ready,
+eligible, and near-equivalent inside the same protected priority lane.
+Never let focus preference override mandatory safety work, confirmed
+deadlines, source identity uncertainty or live permission. Read the
+[full focus gate](references/engagement-and-repeat-use.md#user-chosen-focus-continuity-not-algorithmic-task-hopping)
+before applying a chosen focus or claiming that prior work resumed.
+The optional `focus_task_id` is current-run input, not a stored streak,
+automatic task selection, or evidence that the user started work.
 
 ## Trigger and non-trigger
 
