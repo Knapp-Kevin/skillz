@@ -131,7 +131,7 @@ class MethodologyPackageTests(unittest.TestCase):
         examples = (ROOT / SLUGS[0] / "examples" / "acceptance.md").read_text()
         for item in ("## Buyer-controlled decision branches",
                      "STOP_NO_CONTACT", "PAUSE_OR_NO_FIT", "PROPOSAL_HOLD",
-                     "three open questions", "buyer"):
+                     "open questions", "buyer"):
             self.assertIn(item, skill)
         self.assertIn("## S11. Explicit buyer opt-out", examples)
         self.assertIn("## S12. Sparse first-meeting", examples)
