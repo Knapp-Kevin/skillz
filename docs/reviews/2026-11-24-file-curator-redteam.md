@@ -101,3 +101,19 @@ source identities rather than overwriting earlier review evidence.
 
 No user data, source credentials, external scheduler, or live file
 organization operation was used in this review.
+
+## Formal verification-status boundary discovered during CI
+
+Repository-wide `scripts/qa/test_authored_feedback_contract.py` currently
+asserts **every authored skill** has `review_status: needs-re-review` and
+`verification_status: needs-re-review`. This is not conditional on rubric
+score or package CI. The author-led 19/20 static assessment here is therefore
+**not a formal promotion** to `verified`, and we did **not** weaken the
+repository-wide policy to manufacture one.
+
+The 19/20 is a reasoned assessment of the reviewed semantic dimensions.
+Source identity and 151 synthetic behavior tests are supporting evidence,
+not a real consumer outcome or independent reviewer attestation. Formal
+promotion requires separately revisiting repository verification governance
+and a qualifying exact-version review, without conflating those decisions
+with this local skill-hardening PR.
