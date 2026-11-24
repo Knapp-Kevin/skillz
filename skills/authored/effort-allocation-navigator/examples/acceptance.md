@@ -35,6 +35,35 @@ narratives below support future authorized human/agent trials.
 | User says "continue" next turn | Reuse objective, selected option, actual progress, blockers; update only changed task edges |
 | AI claims user became more productive | Require independent baseline and actual measured outcome, not anecdote or synthetic pass |
 
+## Version 0.2.0: repeated use without false progress
+
+These are fictional task-system cases for the optional, **stateless**
+two-snapshot reader. No private data, real task outcome or external
+host proof is included.
+
+| Scenario | Expected task/choice behavior |
+| --- | --- |
+| Yesterday: blocker unfinished. Today: blocker marked done; successor can begin | Report COMPLETED_CLAIM and NEWLY_READY separately; user still verifies actual completion |
+| One old task ID is absent from the current snapshot | REMOVED_UNRECONCILED, never DONE or "time saved" |
+| Task moved from done back to todo | REOPENED; preserve current obligations and schedule, not positive throughput |
+| Existing task now requires an unfinished predecessor | DEPENDENCY_CHANGED and NEWLY_BLOCKED; stop recommending execution |
+| Current snapshot uses a different selected project milestone | GOAL_CHANGED, do not compare completion under different objectives as equivalent |
+| Both snapshots have the same date | No invented ordering proof; only caller-specified order |
+| New snapshot's as_of precedes previous as_of | Refuse invalid comparison |
+| Snapshot contains private labels or injected instructions | Only task ID tokens and controlled categories, never raw labels |
+| Viewer authorization to prior source is revoked | Host must not invoke comparison, disclose cached identifiers or print old progress |
+| User asks for a shorter action after seeing the diff | Apply local presentation preference only; don't edit public defaults or skip safety checks |
+| Sandler/MEDDPICC proposes preparing internal questions | May become an internal ready task if source/authority permit |
+| Sales skill proposes sending a buyer message without consent | External task blocked; no send, booking, contact or "verify opt-out" action |
+| Two snapshots genuinely unchanged | No invented progress or gratuitous replan; keep the current next action and alternative |
+
+**Qualification:** offline code tests can demonstrate the exact
+`compare_snapshots()` classifications, refusals and absence of
+labels/paths in outputs. They cannot authenticate consent, historical
+buyer/task events or ADHD/productivity outcomes. The original
+one-snapshot 101-case baseline is a preservation obligation, not
+evidence of measured human benefit.
+
 ## Second adversarial-first qualification, November 23 2026
 
 **Order:** The 18 wholly fictional cases in
