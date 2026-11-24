@@ -24,12 +24,12 @@ dependencies: >-
   Durable private checkpoint writes optionally use bundled Python sqlite3
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
-content_blob_sha: 0edddcf885cd5fc32942ed25d63195c0b133ff76
-complete_package_tree_sha: 9c9a3df2544005a7bbb3dc94fb8dd1224386078c
+content_blob_sha: 6f8d6eb1b2a554249a07fd47c06a15645c7bba21
+complete_package_tree_sha: 2854ef870663734feb3971f9441d61d89b705954
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
-  Original first-party 26-file v1.1.1 curation skill supports
+  Original first-party 29-file v1.1.1 curation skill supports
   opt-in private SQLite checkpoints and long-lived agent
   organization state, without creating schedules or source-file
   mutations. PR #904 source head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6

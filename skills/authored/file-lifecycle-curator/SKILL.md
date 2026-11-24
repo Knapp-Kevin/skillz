@@ -222,7 +222,8 @@ service or an assumed persistent index.
    not perform the proposed index review or file operations; the host agent
    remains responsible for separately approved work and evidence. Read the
    [durable-state contract](references/durable-state.md) before use.
-7. **Optional scheduled delivery.** Use the
+7. **Agent-host handoff.** Use [host_handoff.py](scripts/host_handoff.py) and [the host handoff contract](references/host-handoff.md) when a consuming agent supplies a new authorized source snapshot and current operation receipts. The helper reports a provisional comparison to the approved checkpoint. It does not authenticate a source, move files, persist an index, create a schedule or infer current progress from an old receipt. Any actual operation or checkpoint update remains a separately approved host action.
+8. **Optional scheduled delivery.** Use the
    [scheduled-maintenance-template.md](examples/scheduled-maintenance-template.md)
    only as a user-reviewable handoff to a *real* scheduler the host
    supports. Require separately confirmed recurrence, timezone,
