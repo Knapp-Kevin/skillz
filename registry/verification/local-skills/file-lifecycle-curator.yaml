@@ -26,7 +26,7 @@ validation_note: >-
   source-host permission, persistent user account, scheduler,
   file mutation or production disaster recovery.
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
+rubric_score: "20/20 (author-led static assessment; not formal verification)"
 tags:
   use_case:
   - file-information-management
@@ -80,3 +80,7 @@ notes: >-
 # 2026-11-24 PR #909: outcome-sized routing/closeout and 10 adversarial static
 # scenarios; current exact package re-review pending. Baseline 19/20 is
 # historical, 20/20 a candidate not an independent or host-validated result.
+
+# 2026-11-24 procedural route disambiguation: independent Codex review requested
+# for exact final package. Author-led 20/20 static result is not a formal
+# 'verified' status; real consuming-agent trial and scanner remain NOT_RUN.
