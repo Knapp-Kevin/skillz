@@ -491,6 +491,16 @@ Revise material failures and review again. A serious safety/authority ambiguity 
 
 ## S11 — Install or hand off
 
+Use the [host-aware getting-started guide](../../../docs/getting-started-with-skills.md)
+for official install paths, actual agent versus user responsibility,
+required package files, model-versus-host distinctions and per-target
+verification. For explicitly authorized local maintenance/preflight,
+the passive builder provides `engine/builder/host_compat.py` for static
+package checks; its outputs are never observed host behavior.
+When the host is unknown or a capability is unsupported, use a
+portable handoff and make the blocker visible. Do not claim every
+provider has equivalent tools or installation permissions.
+
 Determine the target's real installation/handoff mode from the active host:
 
 - `DIRECT-WRITE`
