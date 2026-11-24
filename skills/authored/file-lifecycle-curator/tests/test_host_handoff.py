@@ -141,6 +141,38 @@ class HostHandoffTests(unittest.TestCase):
         self.assertEqual(host_handoff.preview(self.store, later, newer_plan)[
             "status"], "PLAN_DRIFT_HOLD")
 
+    def test_injected_verified_record_under_same_plan_revision_blocks(self):
+        later, newer_plan = self.fresh()
+        invented_source = copy.deepcopy(later["records"][0])
+        invented_source.update(record_id="injected-id",
+                               locator_token="loc-injected-id")
+        later["records"].append(invented_source)
+        injected = copy.deepcopy(newer_plan["records"][0])
+        injected.update(
+            record_id="injected-id",
+            original_path="inbox/injected-id",
+            observed_path="organized/injected-id",
+            target_path="organized/injected-id",
+            state="VERIFIED",
+            readback={
+                "record_id": "injected-id", "plan_id": "file-plan",
+                "plan_revision": "plan-rev-one",
+                "source_revision": "rev-001",
+                "destination_path": "organized/injected-id",
+                "integrity": "matched", "access": "preserved",
+                "observed_at": "2026-11-23T11:00:00-05:00"})
+        newer_plan["records"].append(injected)
+        output = host_handoff.preview(self.store, later, newer_plan)
+        self.assertEqual(output["status"], "PLAN_MEMBERSHIP_CHANGE_HOLD")
+        self.assertIsNone(output["progress"])
+
+    def test_omitted_approved_plan_record_blocks(self):
+        later, newer_plan = self.fresh()
+        newer_plan["records"] = newer_plan["records"][:1]
+        output = host_handoff.preview(self.store, later, newer_plan)
+        self.assertEqual(output["status"], "PLAN_MEMBERSHIP_CHANGE_HOLD")
+        self.assertIsNone(output["progress"])
+
     def test_fresh_plan_preceding_source_observation_blocks(self):
         later, newer_plan = self.fresh()
         later["observed_at"] = "2026-11-23T11:30:00-05:00"
