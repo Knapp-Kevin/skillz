@@ -67,10 +67,11 @@ label them as such. New actions still require current host/user permission.
 ## Ten-dimension semantic scorecard
 
 Scores below use repository rubric, **not** a Qortara-produced score.
-The post-remediation judgment is contingent on current-head tests, review
-findings and exact-package fingerprint reconciliation.
+The post-remediation judgment is an **author-led, exact-package static semantic
+assessment**. Current-head qualification is tracked separately from the score;
+real agent-host validation remains NOT_RUN.
 
-| Dimension | Before | Target after repair | Evidence / reason |
+| Dimension | Before | After repair | Evidence / reason |
 | --- | ---: | ---: | --- |
 | Trigger precision | 2 | 2 | Explicit collection scope, non-trigger and default read-only |
 | Procedural clarity | 1 | 1 | Good phased references but a large multi-component entrypoint; smaller activation paths may help |
@@ -82,7 +83,7 @@ findings and exact-package fingerprint reconciliation.
 | Usefulness / differentiation | 2 | 2 | Persistent, incremental, visual and bounded next-action workflow |
 | Adversarial resilience | 1 | 2 | Actual injected/replay/coverage attack regressions, not only policy prose |
 | Effectiveness design | 2 | 2 | Concrete checkpoints, reconciliation, safe reports, deliberate limits |
-| **Total** | **15/20** | **19/20 contingent** | No claim of real-world consumer acceptance |
+| **Total** | **15/20** | **19/20 static** | No claim of real-world consumer acceptance |
 
 No 20/20 award is sought here merely to meet a target. Procedural complexity
 is a real remaining opportunity. Even a later exact-version semantic
@@ -91,11 +92,11 @@ is a real remaining opportunity. Even a later exact-version semantic
 
 ## Qualification and ship gate
 
-Status at drafting: **NOT YET QUALIFIED**. Required evidence before
-promotion: full package tests for exact changed head, authored provenance
-fingerprint CI, no unresolved red-team or code-review veto, optional
-Qortara verdict parse over the actual documented outcome, and a PR
-**merged** into main. Record failed runs as failures and keep historical
+The first post-repair test run for PR #908 completed with **151/151 offline
+contract tests passing in 3.419 seconds** (workflow #45336592672).
+The authored fingerprint gate initially refused an obsolete registered package
+tree, which must be reconciled and **requalified at the exact final head**.
+GitHub merge must be confirmed separately before calling the work delivered. Record failed runs as failures and keep historical
 source identities rather than overwriting earlier review evidence.
 
 No user data, source credentials, external scheduler, or live file
