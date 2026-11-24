@@ -10,11 +10,55 @@ prioritize consequences over busywork, preserve owner deadlines and safety
 constraints, and route generic quality corrections separately from
 user-specific pacing and presentation preferences.
 
+## Repeat-use mode, still passive
+
+Version **0.2.0** adds a bounded optional comparison between two
+**separately authorized** local JSON snapshots. No history is
+automatically found, saved, polled, installed or synchronized:
+
+```sh
+python3 scripts/plan.py \
+  --previous examples/fictional-tasks.json \
+  --input examples/fictional-tasks-next.json
+```
+
+The ordinary `--input` path remains unchanged. A `transition`
+block reports **only task IDs and categorical changes**: claimed
+completed, reopened, new, removed-but-unreconciled, changed
+dependencies/blockers/priorities/estimates, and newly ready or blocked.
+Removing a task from the snapshot is **not completion**, and task
+state `done` is merely the caller's claim until independently checked.
+An earlier date on the purported newer snapshot is invalid. Two
+same-day snapshots have caller-specified order, not authenticated
+source chronology. Goal changes are disclosed rather than treated as
+progress toward the old objective.
+
+The host must re-check **current permissions and source/task-ID
+namespace compatibility for both snapshots before providing them**;
+this helper cannot authenticate external sources. If an old task
+record is no longer authorized, do not call the comparison or print
+old private task IDs, labels or counts. Outputs never include labels,
+file paths or raw task content, but task IDs themselves may be
+sensitive and must remain inside the authorized host. For repeated
+work, the user-visible output should still prioritize one next
+action, one credible alternative and a small proof/stop condition,
+rather than a growing history dashboard.
+
+Optional sales-method task handoffs are just text proposals; buyer
+contact/sending/booking stays blocked until explicit authorization.
+They do not install or require a second skill or create tasks.
+
 ## Package
 
 - [scripts/plan.py](scripts/plan.py) is an **optional**, deterministic,
   read-only Python 3.9+ helper; it never connects to a task service or
   stores task histories. It operates on a locally approved JSON snapshot.
+- [CHANGELOG.md](CHANGELOG.md) records the intentional version change.
+- [examples/fictional-tasks-next.json](examples/fictional-tasks-next.json) is
+  a synthetic second snapshot for repeat-use comparisons.
+- [tests/test_continuity.py](tests/test_continuity.py) guards progress,
+  deletion/reopening semantics, and privacy; static tests cannot
+  verify genuine task changes.
 - [examples/fictional-tasks.json](examples/fictional-tasks.json) is
   entirely fictional; do not put real task content in the public package.
 - [examples/acceptance.md](examples/acceptance.md) gives positive,
