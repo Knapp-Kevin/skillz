@@ -207,19 +207,7 @@ class MethodologyPackageTests(unittest.TestCase):
                 for category in ("skills", "verification"):
                     yaml_path = repo / "registry" / category / "local-skills" / (slug + ".yaml")
                     companion = yaml_path.read_text(encoding="utf-8")
-                    self.assertRegex(companion, r'(?m)^skill_version: "0\\.2\\.0"
-        for slug in SLUGS:
-            doc = self.skill(slug)
-            self.assertNotIn("pip install", doc)
-            self.assertNotIn("import requests", doc)
-            self.assertNotIn("API_KEY", doc)
-            self.assertNotIn("must use GPT", doc)
-            self.assertNotIn("must install", doc)
-
-
-if __name__ == "__main__":
-    unittest.main()
-)
+                    self.assertIn('skill_version: "0.2.0"', companion)
                     self.assertIn("needs-re-review", companion)
 
     def test_sandler_roleplay_requires_user_rep_turn_and_noninvented_feedback(self):
