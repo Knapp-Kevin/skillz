@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scope": {
+    "route": "REPOSITORY_MAINTENANCE",
+    "destination": "skills/authored/effort-allocation-navigator/",
+    "authority": "Owner-authorized first-party Skillz maintenance, no authorization for external user task writes, health access or preference storage"
+  },
+  "target": {
+    "skill_id": "effort-allocation-navigator",
+    "source_revision": "1946d2d4b52496a269e976c4dacabcada1afcf39",
+    "package_tree": "1de24c983592388706d89361ae2cf0706b789624",
+    "rights": "Original first-party MIT licensed skill and synthetic test scenarios only"
+  },
+  "objective": {
+    "result": "Honor an explicitly chosen viable task without unnecessary task switching, while never counting a same-ID recycled task as completed or safely resumed",
+    "pass_condition": "Equal-priority ready user focus remains primary; safety/deadline or blocker wins when necessary; same-ID label/kind ambiguity blocks cross-snapshot progress and private labels do not leak"
+  },
+  "discovery": {
+    "searched": [
+      "Current complete 15-file main package, optional offline Python planner and its 130 synthetic tests",
+      "Skillz engine/refinement, Skill Eval, Skill Audit, Skill Forge, builder acceptance",
+      "Previous Skillz red-first QA and version release evidence"
+    ],
+    "unavailable": [
+      "Independent consuming model and real longitudinal ADHD/user engagement evidence",
+      "Authenticated external task ID source and consented persistent task state"
+    ],
+    "full_corpus_claim": false
+  },
+  "finding": {
+    "evidence": "OBSERVED_FAILURE",
+    "input": "18 synthetic task-reuse and current-run selected-focus scenarios committed before code changes on PR #915",
+    "expected": "Stable current focus should remain primary when safe; reused ID must not create claimed completion or resume",
+    "actual": "GitHub Actions #45445942389 ran 148 tests and recorded 4 failures + 12 errors in new tests, before production code changes",
+    "mechanism": "The comparator trusted an ID alone despite changed label/kind; the planner did not accept explicit selected focus and reranked slightly different tasks"
+  },
+  "candidate": {
+    "change": "Optional current-run focus_task_id preserved only within same protected lane and >=85% of top provisional score, with categorical safe fallback; mark changed-label/kind shared IDs identity_review, suppress affected progress and resume claims",
+    "preserved": [
+      "All 130 existing synthetic planner tests",
+      "Safety, owner-confirmed deadlines, blockers, missing estimates, no fabricated alternatives",
+      "Voluntary short start and no ADHD diagnosis, personal profiling or medical efficacy claims",
+      "No task creation, notifications, storage, model calls, cross-user sharing or sensitive label output",
+      "Standalone Python 3.9+ stdlib compatibility and one-snapshot default"
+    ],
+    "source_changed": true
+  },
+  "challenge": [
+    {
+      "name": "original",
+      "level": "LOCAL_TEST",
+      "result": "Opening PR #915 test-only red run #45445942389: 148 tests, 4 failures and 12 errors in the new synthetic cases"
+    },
+    {
+      "name": "near-negative",
+      "level": "LOCAL_TEST",
+      "result": "New tests challenge safety and deadline override, blocked/done/missing focus, missing estimates, task-label vs task-type reuse and private label suppression"
+    },
+    {
+      "name": "regression",
+      "level": "LOCAL_TEST",
+      "result": "Post-repair interim PR head 6da7d11e33626409b3404532352c4d683b7bec5c: Actions run #45446142605 passed all 148 synthetic planner tests; exact final-head rerun still required"
+    },
+    {
+      "name": "authority",
+      "level": "STATIC_REVIEW",
+      "result": "Focus must be current-run user-chosen, no inference from doing or diagnosis; identity review requires current authorized host confirmation; no external execution"
+    },
+    {
+      "name": "false-green",
+      "level": "STATIC_REVIEW",
+      "result": "No false completion from reused ID, no protected priority bypass, no progress/timer/medical claims from short focus or green tests"
+    }
+  ],
+  "decision": {
+    "state": "ITERATE",
+    "reason": "Pre-merge source and local test repair; formal review, final full-package SHA, current-head CI and actual merge are still required",
+    "next": "Complete source release and exact SHA registry updates, run existing CI and independent code review, fix defects, merge and verify main"
+  },
+  "delivery": {
+    "artifact": "CURRENT_PR_915_SOURCE_CANDIDATE",
+    "installation": "NOT_INSTALLED",
+    "repository_integration": "UNMERGED_AT_REVIEW_CASE_AUTHORING",
+    "consumer_outcome": "NOT_OBSERVED"
+  }
+}
