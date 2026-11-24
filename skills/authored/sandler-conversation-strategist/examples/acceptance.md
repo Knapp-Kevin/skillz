@@ -77,7 +77,10 @@ a short internal note that contact was declined (only if recording is
 authorized), no further persuasion questions, fabricated consent, cadence,
 meeting scheduling or a follow-up email. A polite closing response must
 not secretly propose a new outreach. A seller's quota has no authority
-to override the buyer's choice.
+to override the buyer's choice. **Adjacent negative:** If the opt-out
+is only reported in seller notes and current buyer-source verification
+is unavailable, still hold outreach as precautionary NO_CONTACT.
+Do not contact the buyer to "verify" that they asked for no contact.
 
 ## S12. Sparse first-meeting information, not a sales lecture
 
