@@ -161,7 +161,7 @@ For each selected skill, prefer:
   assets/            # only when needed
 ```
 
-When a host requires ZIP upload, also produce:
+For a generic host that specifically requires a folder-root ZIP, produce:
 
 ```text
 <skill-name>.zip
@@ -169,6 +169,10 @@ When a host requires ZIP upload, also produce:
     SKILL.md
     ...
 ```
+
+**Microsoft 365 Copilot Chat and Agent Builder require `SKILL.md` at the
+ZIP root**, not inside the enclosing folder shown above. Generate from
+the canonical source and verify the package layout before upload.
 
 If the target host expects a different shape, generate a host adapter while preserving the portable canonical source.
 
