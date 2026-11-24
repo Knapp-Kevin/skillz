@@ -7,7 +7,7 @@ license_evidence_path: skills/authored/file-lifecycle-curator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 6f8d6eb1b2a554249a07fd47c06a15645c7bba21
+content_blob_sha: b6e96282877320a9eae54bca1dbb6cd9a015209a
 complete_package_tree_sha: 8b1952511e1bff4130c6320cddd43f68a8669395
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-24'
@@ -26,7 +26,7 @@ validation_note: >-
   source-host permission, persistent user account, scheduler,
   file mutation or production disaster recovery.
 rubric: docs/skill-verification.md
-rubric_score: "19/20 (author-led; formal verification pending)"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case:
   - file-information-management
@@ -76,3 +76,7 @@ notes: >-
 # Governance hold: scripts/qa/test_authored_feedback_contract.py requires
 # needs-re-review for EVERY authored package. 19/20 is author-led analysis,
 # NOT a formal promotion. No modification of this repository-wide policy.
+
+# 2026-11-24 PR #909: outcome-sized routing/closeout and 10 adversarial static
+# scenarios; current exact package re-review pending. Baseline 19/20 is
+# historical, 20/20 a candidate not an independent or host-validated result.
