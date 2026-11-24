@@ -173,15 +173,29 @@ def write_zip(folder, host, output, receipt):
         raise ValueError("ZIP_PARENT_MISSING_OR_SYMLINKED")
     if destination.is_relative_to(ROOT):
         raise ValueError("REPOSITORY_ZIP_WRITE_NOT_ALLOWED")
-    # zip entries are rooted at SKILL.md, NOT nested under skill-name/.
+    # Refresh the exact package identity before output. A preflight report
+    # is not a durable authorization for source files changed afterward.
+    current = inspect(folder, host)
+    if not current["package_ready"] or current["manifest"] != receipt["manifest"]:
+        raise ValueError("ZIP_SOURCE_CHANGED_SINCE_PREFLIGHT")
+    payload = []
+    for row in receipt["manifest"]:
+        p = folder / row["source"]
+        if p.is_symlink() or not p.is_file():
+            raise ValueError("ZIP_SOURCE_FILE_INVALID")
+        data = p.read_bytes()
+        if hashlib.sha256(data).hexdigest() != row["sha256"]:
+            raise ValueError("ZIP_SOURCE_CHANGED_DURING_READ")
+        payload.append((row["output"], data))
+    # Root-level SKILL.md for Microsoft uploads, with no parent directory.
+    # Preloaded bytes ensure the output never silently changes after hashing.
     with destination.open("xb") as fd:
         with zipfile.ZipFile(fd, mode="w", compression=zipfile.ZIP_DEFLATED) as archive:
-            for row in receipt["manifest"]:
-                archive.write(folder / row["source"], arcname=row["output"])
+            for name, data in payload:
+                archive.writestr(name, data)
     with zipfile.ZipFile(destination) as archive:
-        actual = sorted(archive.namelist())
-        expected = sorted(row["output"] for row in receipt["manifest"])
-        if actual != expected or archive.testzip() is not None:
+        expected = sorted(name for name, _ in payload)
+        if sorted(archive.namelist()) != expected or archive.testzip() is not None:
             destination.unlink()
             raise ValueError("ZIP_READBACK_FAILED")
     receipt["artifact"] = str(destination)
