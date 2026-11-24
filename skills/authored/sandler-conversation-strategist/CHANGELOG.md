@@ -15,7 +15,10 @@ asserted from this file.
   Sandler-to-MEDDPICC evidence-state translation.
 - Added dimensionally safe, period-bound illustrative training value
   calculations, still not measured ROI.
-- Added **turn-by-turn optional fictional role-play**, one buyer turn
+- Distinguished **INTERACTIVE_REHEARSAL** from an explicitly requested
+  full-dialogue **DEMONSTRATION** so a fictional teaching example is
+  still possible without pretending the user performed both roles.
+- Added **turn-by-turn optional fictional role-play**,- Added **turn-by-turn optional fictional role-play**, one buyer turn
   at a time, with source-linked, buyer-respectful coaching and an
   explicit stop/continue choice. No rep turns or buyer history are
   fabricated or automatically persisted.
