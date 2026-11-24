@@ -224,3 +224,15 @@ choice reduction improved an individual outcome. Such assertions
 need separately approved real-user/host trials, baseline comparison
 and evidence. No skill or example text grants authority to take over
 task decisions.
+
+## Cross-host entrypoint structure
+
+The canonical `SKILL.md` keeps the default decision and authority contract
+short enough for hosts with a 20,000-character entrypoint limit. The full
+engagement and two-snapshot reconciliation instructions remain normative in
+[references/engagement-and-repeat-use.md](references/engagement-and-repeat-use.md).
+A host must load the relevant section before offering re-entry guidance or
+claiming changes between snapshots. Moving text is not behavioral validation.
+For verified host-specific installation/package paths, use the repository's
+cross-host packaging report; script execution and host acceptance remain
+separate gates.

@@ -6,6 +6,13 @@ It is complete when the user knows exactly how to get those skills working on th
 
 This document defines the installation handoff contract for `skill-bootstrap` and other skill-generation workflows.
 
+For current host-specific paths, official provider sources, and examples
+read [Getting started with Skillz](getting-started-with-skills.md). For a
+local authorized maintainer preflight, the existing builder's
+`engine/builder/host_compat.py` produces a static report;
+it does not install, upload or prove host behavior. Do not promise native
+support on hosts whose documented method or required tools are unknown.
+
 ## Selection-to-delivery continuity
 
 When a user has already approved **working on the adaptations** chosen during prior exploration, produce those complete adapted skills for the user's host or as portable artifacts. Do not ask the user to select the same adaptations again. A portable artifact requires no installation authority; an actual persistent write/install remains host- and permission-dependent. `NO CHANGE` decisions require no new package. Report `NOT INSTALLED` or `READY TO UPLOAD` rather than implying that generating a skill activated it.
@@ -154,7 +161,7 @@ For each selected skill, prefer:
   assets/            # only when needed
 ```
 
-When a host requires ZIP upload, also produce:
+For a generic host that specifically requires a folder-root ZIP, produce:
 
 ```text
 <skill-name>.zip
@@ -162,6 +169,10 @@ When a host requires ZIP upload, also produce:
     SKILL.md
     ...
 ```
+
+**Microsoft 365 Copilot Chat and Agent Builder require `SKILL.md` at the
+ZIP root**, not inside the enclosing folder shown above. Generate from
+the canonical source and verify the package layout before upload.
 
 If the target host expects a different shape, generate a host adapter while preserving the portable canonical source.
 

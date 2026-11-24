@@ -6,7 +6,7 @@
 
 Skillz is an open-ended, **passive capability library**. It combines original skills, individually reviewed third-party references, and source-pinned discovery leads. An entry in the library is not automatically safe, licensed for reuse, behaviorally tested, or authorized to run. Skill discovery is the beginning of a decision, not a permission slip.
 
-[Explore capabilities](registry/capability-directory.json) · [Start with a task](docs/capability-quickstart.md) · [Browse authored skills](skills/authored/README.md) · [Agent quickstart](AGENT_START_HERE.md)
+[Getting started: install a skill](docs/getting-started-with-skills.md) · [Explore capabilities](registry/capability-directory.json) · [Start with a task](docs/capability-quickstart.md) · [Browse authored skills](skills/authored/README.md) · [Agent quickstart](AGENT_START_HERE.md)
 
 ## Find what you need
 

@@ -143,6 +143,27 @@ consent, secure storage, revocation and compatibility workflow**. The
 [canonical-versus-preference tree](../packs/feedback-decision-tree.md)
 still governs whether feedback belongs in the shared skill.
 
+## Cross-host package preflight (optional)
+
+Use [Getting started with Skillz](../../docs/getting-started-with-skills.md)
+for destination, authority, upload and verification decisions. The optional
+`host_compat.py` is a **part of this existing builder**, not a new engine:
+
+```sh
+python3 engine/builder/host_compat.py --all
+python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agent-builder
+```
+
+This checks first-party SKILL.md structure, local reference closure, file
+extensions and selected documented host package limits, and can generate
+a ZIP with an explicit `--zip-output` or a directory handoff using
+`--directory-output`, each at a *new* path outside the Skillz repository. It never
+executes scripts, makes network calls, or installs a skill. Its corpus report
+is a list of **known blockers and untested execution capabilities**, not an
+assertion of universal consumer acceptance. Unknown hosts require review,
+not guessed compatibility. Add host adapters only after official method
+verification, and preserve one canonical portable package.
+
 ## Evaluation and bounded refinement
 
 Run:

@@ -17,6 +17,9 @@ on:
       - 'scripts/qa/test-engine-builder.py'
       - 'scripts/qa/test-engine-builder-design.py'
       - 'scripts/qa/test-engine-feedback-boundary.py'
+      - 'scripts/qa/test-host-compatibility.py'
+      - 'docs/getting-started-with-skills.md'
+      - 'skills/authored/effort-allocation-navigator/**'
       - '.github/workflows/engine-contracts-qa.yml'
 
 permissions:
@@ -46,3 +49,42 @@ jobs:
           python3 -B scripts/qa/test-engine-builder.py
           python3 -B scripts/qa/test-engine-builder-design.py
           python3 -B scripts/qa/test-engine-feedback-boundary.py
+          python3 -B scripts/qa/test-host-compatibility.py
+          python3 -B engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agent-builder >/tmp/navigator-package-check.json
+      - name: Full authored host packaging matrix (report-only, no false pass)
+        shell: bash
+        run: |
+          set -euo pipefail
+          rc=0
+          python3 -B engine/builder/host_compat.py --all > /tmp/host-matrix.json || rc=$?
+          if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then
+            echo "Unexpected audit failure: $rc" >&2
+            exit "$rc"
+          fi
+          python3 - <<'PY'
+          import json, os
+          with open('/tmp/host-matrix.json', encoding='utf-8') as f:
+              result = json.load(f)
+          lines = [
+              '## Authored host packaging preflight (not host execution)',
+              '',
+              f'Canonical skills: {result["canonical_skill_count"]}',
+              '',
+              '| Host | Package ready | Package holds |',
+              '| --- | ---: | ---: |',
+          ]
+          for host, status in result['summary'].items():
+              lines.append(f'| {host} | {status["ready"]} | {status["hold"]} |')
+          held = [r for r in result['results'] if not r['package_ready']]
+          lines.extend(['', f'Unqualified skill-host pairs: {len(held)}. '
+                        'These are **not** validated host failures.',
+                        'Host load, real script execution and consumer acceptance: NOT TESTED.'])
+          lines.extend(['', '### Exact static holds'])
+          for item in held:
+              reason = ', '.join(item['blockers']) if item['blockers'] else 'UNKNOWN'
+              lines.append(f'- {item["host"]} / {item["skill"]}: {reason}')
+          report = '\n'.join(lines) + '\n'
+          print(report)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+              f.write(report)
+          PY
