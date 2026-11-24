@@ -1,0 +1,27 @@
+name: Skillz Workbench offline contracts
+on:
+  pull_request:
+    paths:
+      - 'docs/workbench/**'
+      - 'docs/index.html'
+      - 'index.html'
+      - '.github/workflows/workbench-qa.yml'
+      - 'scripts/qa/test-workbench-browser.cjs'
+permissions:
+  contents: read
+jobs:
+  offline:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - run: |
+          node --check docs/workbench/app.js
+          node --check docs/workbench/core.js
+          node docs/workbench/test.js
+          node --check scripts/qa/test-workbench-browser.cjs
+          node scripts/qa/test-workbench-browser.cjs
