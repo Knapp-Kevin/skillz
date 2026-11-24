@@ -126,6 +126,61 @@ class MethodologyPackageTests(unittest.TestCase):
                             "not an actual"):
             self.assertIn(requirement.lower(), case.lower())
 
+    def test_sandler_buyer_choice_and_no_contact_precedence(self):
+        skill = self.skill(SLUGS[0])
+        examples = (ROOT / SLUGS[0] / "examples" / "acceptance.md").read_text()
+        for item in ("## Buyer-controlled decision branches",
+                     "STOP_NO_CONTACT", "PAUSE_OR_NO_FIT", "PROPOSAL_HOLD",
+                     "three open questions", "buyer"):
+            self.assertIn(item, skill)
+        self.assertIn("## S11. Explicit buyer opt-out", examples)
+        self.assertIn("## S12. Sparse first-meeting", examples)
+        self.assertIn("## S13. Buyer requested proposal", examples)
+        self.assertIn("STOP_NO_CONTACT", examples)
+        self.assertIn("PROPOSAL_HOLD", examples)
+
+    def test_meddpicc_decision_gates_are_not_scores_or_win_claims(self):
+        skill = self.skill(SLUGS[1])
+        examples = (ROOT / SLUGS[1] / "examples" / "acceptance.md").read_text()
+        for item in ("## Opportunity decision gates",
+                     "DISCOVERY_ONLY", "PROPOSAL_HOLD",
+                     "FORECAST_NOT_ESTABLISHED", "SIGNATURE_HOLD",
+                     "NOT_WON_OR_NOT_DELIVERED",
+                     "evidence_review_state", "requested_action_gate",
+                     "ACCESS_HOLD"):
+            self.assertIn(item, skill)
+        for item in ("## M13. Eight green fields", "## M14. Document observed",
+                     "## M15. Conflict precedence",
+                     "## M16. Readable dossier"):
+            self.assertIn(item, examples)
+        self.assertIn("SIGNATURE_HOLD", examples)
+        self.assertIn("CONFLICTED", examples)
+
+    def test_explicit_portable_state_translation_agrees_in_both_skills(self):
+        sandler, med = [self.skill(slug) for slug in SLUGS]
+        for text in (sandler, med):
+            for mapping in ("SELLER_ASSERTED → SELLER_INFERRED",
+                            "SOURCE_OBSERVED → DOCUMENT_OBSERVED",
+                            "BUYER_CONFIRMED → BUYER_CONFIRMED"):
+                self.assertIn(mapping, text)
+            self.assertIn("SIMULATED", text)
+            self.assertIn("ACCESS_HOLD", text)
+        self.assertIn("## S14. Cross-skill source-state", 
+                      (ROOT / SLUGS[0] / "examples" / "acceptance.md").read_text())
+        self.assertIn("## M17. Exact Sandler-to-MEDDPICC",
+                      (ROOT / SLUGS[1] / "examples" / "acceptance.md").read_text())
+
+    def test_false_success_is_explicit_in_both_original_walkthroughs(self):
+        sandler = (ROOT / SLUGS[0] / "references" / "advanced-practice.md").read_text()
+        med = (ROOT / SLUGS[1] / "references" / "advanced-practice.md").read_text()
+        self.assertIn("## Branch-first conversation practice", sandler)
+        self.assertIn("STOP", sandler.upper())
+        self.assertIn("SELLER_ASSERTED", sandler)
+        self.assertIn("## Decision-gate example", med)
+        self.assertIn("SIGNATURE_HOLD", med)
+        self.assertIn("evidence_review_state", med)
+        self.assertIn("requested_action_gate", med)
+
     def test_no_prerequisite_specific_model_or_external_api(self):
         for slug in SLUGS:
             doc = self.skill(slug)
