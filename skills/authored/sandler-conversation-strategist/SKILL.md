@@ -52,6 +52,47 @@ Ask only for missing information that changes the action. Work with anonymized f
 
 Never force the entire sequence when the user only needs a brief opening. The normal response is one evidence-based recommended next action **plus one useful alternative** when truly distinct, without overwhelming the rep.
 
+## Evidence provenance gate before coaching
+
+A confident-sounding buyer quote is **not** necessarily buyer evidence.
+Separate the **person who supplied the information** from the person
+allegedly speaking in it:
+
+- **SELLER_ASSERTED:** Seller's handwritten notes, pasted "buyer said"
+  quotation, CRM status, forwarded claim or an uninspected transcript.
+  Attribute it to the seller and ask what buyer-owned source or observed
+  exchange would corroborate it. Calling it a verbatim quote does not
+  upgrade it to buyer confirmation.
+- **SOURCE_OBSERVED:** A current, scope-authorized original email, document
+  or transcript was actually inspected with identifiable provenance and
+  revision. Report what the source *says*, not necessarily that its
+  author's proposal was approved by their organization. A transcript's
+  provenance is not automatically proof of the speaker's authority.
+- **BUYER_CONFIRMED:** A relevant statement or action from a buyer was
+  directly observed in an authorized interaction or traced to a genuinely
+  buyer-controlled, current, authenticated source, with role and date.
+  Confirmation is **limited to that particular claim**. A discussed
+  budget does not become approved funding; a friendly reaction does not
+  become legal consent or a signature.
+- **SIMULATED:** Fictional case, invented example or role-play. Never
+  upgrade it to observed sales performance.
+
+If an authorized buyer source contradicts a seller assertion, mark the
+seller's claim **DISCONFIRMED** rather than giving two unequal sources
+equal credibility. If two current, credible buyer sources conflict,
+mark **CONFLICTED** and request reconciliation; do not select the
+optimistic account. If current viewer access is lost, issue a
+detail-free **ACCESS_HOLD** without repeating cached private quotes,
+identifiers, relationship edges or counts. Retain uncertainty on
+repeated invocations; a model summary is not source authentication.
+
+For any substantive conclusion record the minimum:
+`source_kind | authentication_basis | source_id/revision | observed_at |
+buyer_role | exact claim | evidence_state | contradicted_by |
+current_permission | next_confirmation`. With no authenticated host
+read, work provisionally from the user's supplied context; never claim
+that a call or CRM was inspected.
+
 ## Operating method
 
 1. **Bind source, scope and mutual intent.** Identify buyer role, offering, business context, requested meeting outcome and whether observations are seller notes, buyer quotes, confirmed documents or hypotheses. Recheck permitted usage and intended audience. Treat competitor/participant identities, deal terms and recording contents as confidential unless explicitly cleared.
@@ -70,11 +111,11 @@ Run an **assumption inversion**: name the seller's strongest conviction, what wo
 
 For requested role-play, simulate a fictional buyer using only allowed supplied facts. Distinguish the simulation from a real customer's answer. After each turn, diagnose whether the seller clarified purpose, explored a real consequence, tested a decision assumption and preserved a respectful exit. An optional **original coaching checklist**, each 0/1/2 (absent/partial/evident), is a conversation-improvement heuristic, **not a Sandler certification, licensed rubric or probability of winning**. Scores cannot replace qualitative evidence.
 
-For value-based sales of training or advisory services, separate **seller fee, training participation costs, actual baseline measures, buyer-controlled adoption and illustrative uplift assumptions**. Attribute claimed revenue, hours, savings or conversion effects to dated buyer evidence; never label a spreadsheet's illustrative ROI as observed outcome.
+For value-based sales of training or advisory services, separate **seller fee, training participation costs, measured baseline, attributable uplift assumptions, buyer-controlled adoption, time period and contribution margin**. Use the [dimensionally bound illustrative ROI contract](references/advanced-practice.md) only when currency, unit and time bases align. Verify whether uplift already includes adoption so it is not multiplied twice. Attribute claimed revenue, hours, savings or conversion effects to dated buyer evidence; never label a spreadsheet's illustrative ROI as observed outcome.
 
 ## Optional MEDDPICC handoff, not automatic proof promotion
 
-When an independently installed MEDDPICC opportunity-review capability is actually available and wanted, pass only approved scoped observations: buyer quote/evidence locator, time, participant role, distinction between buyer-confirmed fact and seller inference, quantified assumptions and open decision questions. The handoff is **text-only** and independently useful without a second skill. Do not automatically infer an economic buyer, real champion or completed paper process from a pleasant meeting. A discussion of price is not verified budget; a positive reaction is not contract approval. Recheck current authorization before any private handoff.
+When an independently installed MEDDPICC opportunity-review capability is actually available and wanted, pass only approved scoped observations: buyer quote/evidence locator, time, participant role, distinction between buyer-confirmed fact and seller inference, quantified assumptions and open decision questions. The handoff is **text-only** and independently useful without a second skill. Transfer the exact source/authentication and evidence state, not an upgraded interpretation. A seller-pasted "buyer quote" stays SELLER_ASSERTED even when translated into a qualification category; simulated cases stay SIMULATED. Do not automatically infer an economic buyer, real champion or completed paper process from a pleasant meeting. A discussion of price is not verified budget; a positive reaction is not contract approval. Recheck current authorization before any private handoff.
 
 ## Failure and safety rules
 
