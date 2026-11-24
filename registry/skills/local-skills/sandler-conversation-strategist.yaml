@@ -19,8 +19,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Four-file standalone original source, no CRM, meeting, scheduler or vendor training dependency"
-content_blob_sha: 8d0f94de2fc308b2aabc6fa4d8f41b30173fa330
-complete_package_tree_sha: 48107b6e4353338c140a9d3d8f9a8d59048d1b73
+content_blob_sha: ad7918812ef991809f6221ec0dc7546605eceea5
+complete_package_tree_sha: 8e40c64c0e76a7a25dda1d4e93902d3254a9dc09
 import_eligibility: review-required
 rights_resolution: "Only independently written materials MIT; public high-level method attribution, no third-party texts/assets licensed or imported"
 rationale: >-
@@ -30,3 +30,8 @@ rationale: >-
   No actual buyer conversation/CRM source permission, production deployment,
   independent behavioral validation, external security scan or official
   vendor affiliation is established. Preserve needs-re-review.
+
+# 2026-11-24: author-led adversarial provenance/cross-method refinement.
+# Original method packages remain v0.1.0, formal needs-re-review and
+# host behavioral validation not-run. See
+# docs/reviews/2026-11-24-sales-methods-evidence-hardening.md.
