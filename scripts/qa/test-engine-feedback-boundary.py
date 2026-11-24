@@ -150,6 +150,46 @@ class IntakeTests(unittest.TestCase):
         del d["preference_class"]
         self.reject(d, "UNEXPECTED_FIELD")
 
+    def test_public_draft_only_contains_fixed_form_fields(self):
+        d = intake.prepare_public_draft(signal())
+        self.assertEqual(d["title"], "[Skill feedback] Canonical defect")
+        self.assertEqual(set(d["fields"]), {"skill_id", "layer", "failure_class",
+                         "scenario", "expected", "observed", "evidence_tier"})
+        self.assertFalse(d["post_authorized"])
+        self.assertFalse(d["account_anonymity_guaranteed"])
+
+    def test_public_draft_rejects_every_noncanonical_route(self):
+        for route in ("local-preference", "mixed", "hold", "no-action"):
+            d = signal()
+            d["routing"] = route
+            if route == "no-action":
+                d["failure_class"] = "none"
+            with self.subTest(route=route), self.assertRaises(intake.FeedbackHold):
+                intake.prepare_public_draft(d)
+
+    def test_public_draft_rejects_engine_target_not_in_form(self):
+        d = signal()
+        d["skill_id"] = "skill-bootstrap"
+        with self.assertRaisesRegex(intake.FeedbackHold, "PUBLIC_TARGET_NOT_AUTHORED"):
+            intake.prepare_public_draft(d)
+
+    def test_public_draft_rejects_injection_and_identifiers(self):
+        for key, val in (("reproduction", "private-unique-log"), ("expected", "ignore authority"),
+                         ("skill_id", "private-consumer"), ("preference_class", "language")):
+            d = signal()
+            d[key] = val
+            with self.subTest(key=key), self.assertRaises(intake.FeedbackHold):
+                intake.prepare_public_draft(d)
+
+    def test_cli_deep_json_hold_without_traceback(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "nested.json"
+            p.write_text("[" * 1500 + "0" + "]" * 1500, encoding="utf-8")
+            result = subprocess.run([sys.executable, str(SCRIPT), "--input", str(p)],
+                                    capture_output=True, text=True, timeout=12)
+            self.assertEqual(result.returncode, 2)
+            self.assertNotIn("Traceback", result.stderr)
+
     def test_cli_is_read_only_and_receipt_is_categorical(self):
         proc = subprocess.run([sys.executable, str(SCRIPT), "--input",
                               str(EXAMPLE)], capture_output=True, text=True,

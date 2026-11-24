@@ -1,3 +1,4 @@
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: privilege-exposure-mapper
 display_name: "Privilege Exposure Mapper"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "No bundled execution or service; authorized host read scope only"
-content_blob_sha: c6253f2b37c328bcb7d69cbf1b5ae81fafaf908f
-complete_package_tree_sha: fee04d120f64aedad7924461173daa6f6d9558e5
+content_blob_sha: a1c669e5a1b7d1b38143a399cf9c9cfea800a426
+complete_package_tree_sha: 767d2e99761e5489e07de6814fdd9654ef20ef7f
 historical_comparator: skills/permissions-review/SKILL.md
 historical_origin_status: "Control of account does not establish underlying original authorship or rights"
 rights_resolution: "Only independently written new content is MIT; legacy texts remain untouched"

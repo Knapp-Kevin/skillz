@@ -480,8 +480,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/connector-capability-risk-review.yaml",
       "verification_path": "registry/verification/local-skills/connector-capability-risk-review.yaml",
-      "skill_blob_sha": "49291dd21466ec40cd0c6312ec9afe9f13e5fc0b",
-      "package_tree_sha": "42ee098b335c5a88fdc0be1f55c416fb5112bcf3",
+      "skill_blob_sha": "37f9303c79ca56a350073633492e1cda8eac8f91",
+      "package_tree_sha": "28dfce26c49fb81cdae743f1abb6513ec419a6a1",
       "package_file_count": 3,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -498,7 +498,7 @@
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "8a926f202b9fa94e06ca29a7b86826445d1a08ab",
       "previous_reviewed_package_tree_sha": "864c622d0276f4efbe47d5b5ba21b23efbebbf29",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 7c19817cf91804c430b94364550aa50eda731fb1 and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Security and bounded recursive improvement contract; skill-specific injection counterexample; categorical feedback, private preferences. Exact-head static/offline checks pending; host behavior NOT_RUN; no version bump."
     },
     {
       "id": "privilege-exposure-mapper",
@@ -514,8 +514,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/privilege-exposure-mapper.yaml",
       "verification_path": "registry/verification/local-skills/privilege-exposure-mapper.yaml",
-      "skill_blob_sha": "c6253f2b37c328bcb7d69cbf1b5ae81fafaf908f",
-      "package_tree_sha": "fee04d120f64aedad7924461173daa6f6d9558e5",
+      "skill_blob_sha": "a1c669e5a1b7d1b38143a399cf9c9cfea800a426",
+      "package_tree_sha": "767d2e99761e5489e07de6814fdd9654ef20ef7f",
       "package_file_count": 3,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -532,7 +532,7 @@
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "7e1b0048bc244a4903ec2011b319e16317779970",
       "previous_reviewed_package_tree_sha": "d4a6a4b07469ee6753fa7da0164db4c9a39787ec",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 2e07c2ff66fd6af2a55866d5b96c3bb877fb138f and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Security and bounded recursive improvement contract; skill-specific injection counterexample; categorical feedback, private preferences. Exact-head static/offline checks pending; host behavior NOT_RUN; no version bump."
     },
     {
       "id": "scheduled-work-proof-auditor",
@@ -548,8 +548,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/scheduled-work-proof-auditor.yaml",
       "verification_path": "registry/verification/local-skills/scheduled-work-proof-auditor.yaml",
-      "skill_blob_sha": "58e5968f278459f4adaeac9542cb0e8f65b7354a",
-      "package_tree_sha": "48787dd5bde4341af123057e3fffbe9875f5228c",
+      "skill_blob_sha": "10e24daf446e203e0c9e444c38a244b837be5377",
+      "package_tree_sha": "5417ad3a695da7eb81f20c559414d14453a31525",
       "package_file_count": 3,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -566,7 +566,7 @@
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-safety-four-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "eccc5704701e8bba391bece41da7d74bba156403",
       "previous_reviewed_package_tree_sha": "951eb6f5d91f1e035ffeb4835255864d595eee61",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 22fe02a8dc2b021c4badaeb1028f3e492ad8e12b and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Security and bounded recursive improvement contract; skill-specific injection counterexample; categorical feedback, private preferences. Exact-head static/offline checks pending; host behavior NOT_RUN; no version bump."
     },
     {
       "id": "technology-change-intelligence",
@@ -616,8 +616,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/agent-failure-boundary-analysis.yaml",
       "verification_path": "registry/verification/local-skills/agent-failure-boundary-analysis.yaml",
-      "skill_blob_sha": "94a444a992f000105c4beca61187e33fc1409060",
-      "package_tree_sha": "ba37cbc3f14d4f70e50f3970c1eb3b10882a3ab6",
+      "skill_blob_sha": "40d8925b488329613289cfa056ec293485687b7e",
+      "package_tree_sha": "5050fe4278bfcfe7d383ee09f119e79f6c242374",
       "package_file_count": 6,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -634,7 +634,7 @@
       "capability_mapping_ref": "registry/discovery/frostwulf-independent-final-twelve-routing-20261118.json",
       "previous_reviewed_skill_blob_sha": "4a114972587060c79ee6df852526a0a047abd3c2",
       "previous_reviewed_package_tree_sha": "426391a3bea7e75f364fe86da8845dee2718f8a5",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob a7323faf06a660109004e2f73bba17293d9d4186 and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Security and bounded recursive improvement contract; skill-specific injection counterexample; categorical feedback, private preferences. Exact-head static/offline checks pending; host behavior NOT_RUN; no version bump."
     },
     {
       "id": "decision-tradeoff-workbench",

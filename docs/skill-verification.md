@@ -256,3 +256,7 @@ No upstream source is auto-upgraded merely because a newer commit exists.
 - `stale`, `rejected`, `retired`: excluded from normal unchanged selection.
 
 A high-quality skill may still be a bad fit for a particular user. Verification establishes eligibility, not inevitability.
+
+## Authored skill security and refinement acceptance (2026-11-24)
+
+Apply [authored security and refinement standard](authored-security-refinement.md) to each exact first-party package. This maps controls to risk guidance rather than claiming OWASP or NIST certification. Distinguish static, adversarial analyst, executable offline, host-observed and consumer acceptance evidence. Unknown or missing evidence is NOT_RUN/HOLD, never a global pass.

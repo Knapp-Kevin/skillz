@@ -166,3 +166,5 @@ for actual user outcomes.
 
 This protocol may be embedded within the existing engine's procedures; it
 must **not** be required as an additional installed skill, daemon or server.
+
+The public form is now categorical only. Use the optional `--public-draft` route in the source-blind validator to prepare a draft without network actions. Keep any actual reproducer private and have a maintainer independently create a fictional one. Never export preferences, even if useful to the individual.

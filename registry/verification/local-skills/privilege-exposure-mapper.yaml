@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/privilege-exposure-mapper/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/privilege-exposure-mapper/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c6253f2b37c328bcb7d69cbf1b5ae81fafaf908f
-complete_package_tree_sha: fee04d120f64aedad7924461173daa6f6d9558e5
+content_blob_sha: a1c669e5a1b7d1b38143a399cf9c9cfea800a426
+complete_package_tree_sha: 767d2e99761e5489e07de6814fdd9654ef20ef7f
 characterized_at: "2026-11-18"
 reviewed_at: "2026-11-18"
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
-validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
+validation_note: "Current package adds a skill-specific injection challenge and bounded improvement; exact-head QA pending, actual host behavior NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:

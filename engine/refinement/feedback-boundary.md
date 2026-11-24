@@ -119,3 +119,7 @@ prove public account anonymity or guarantee identity protection.
 This source-agnostic improvement lane remains inside the passive Skillz
 repository. No telemetry, mandatory collector, memory service, scheduled
 task or automatic canonical promotion is introduced.
+
+## Outbound public draft (2026-11-24)
+
+The public issue form accepts only fixed categories and public authored skill IDs. Leave its title unchanged. Do not attach or append prose, comments, logs, raw reproductions or source identifiers. The old free-text form is retired. Use `feedback_intake.py --input <categorical-json> --public-draft` optionally in a trusted checkout; it produces a fixed-title, categorical draft and never submits. Only canonical candidates qualify. Private preferences, mixed cases, holds and no-action are not public drafts. The form and checker cannot prevent manual GitHub submission, platform metadata, account identification or inference from combinations; if full content safety cannot be established, do not post. Never claim absolute anonymity. Vulnerability exploit details remain private; contact an authorized maintainer through a separately verified private channel, or HOLD if none exists.

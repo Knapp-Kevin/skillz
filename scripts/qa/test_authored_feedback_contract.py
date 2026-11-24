@@ -3,7 +3,6 @@
 import json
 import re
 from pathlib import Path
-import re
 import subprocess
 import unittest
 
@@ -156,9 +155,13 @@ class FeedbackContractTests(unittest.TestCase):
         self.assertIn("Use only fictional or cleared public examples", text)
         self.assertIn("I have authorization to post publicly", text)
         self.assertIn("required: true", text)
-        for key in ("id: skill", "id: kind", "id: evidence",
-                    "id: expected", "id: reproduction", "id: privacy"):
+        for key in ("id: skill_id", "id: layer", "id: failure_class", "id: scenario",
+                    "id: expected", "id: observed", "id: evidence_tier", "id: privacy"):
             self.assertIn(key, text)
+        self.assertNotRegex(text, r"(?m)^\s*- type: (input|textarea)\s*$")
+        self.assertIn('title: "[Skill feedback] Canonical defect"', text)
+        for p in packages():
+            self.assertIn('- "' + p.name + '"', text)
 
     def test_no_mandatory_or_invisible_submission_contract(self):
         for p in packages():
