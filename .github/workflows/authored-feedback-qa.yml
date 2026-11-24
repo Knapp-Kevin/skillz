@@ -6,6 +6,7 @@ on:
     paths:
       - 'skills/authored/**'
       - 'scripts/qa/test_authored_feedback_contract.py'
+      - 'scripts/qa/test_sales_methodology_contract.py'
       - '.github/ISSUE_TEMPLATE/agent-skill-feedback.yml'
       - '.github/workflows/authored-feedback-qa.yml'
 
@@ -32,3 +33,4 @@ jobs:
         run: |
           set -euo pipefail
           python3 -B -m unittest discover -s scripts/qa -p 'test_authored_feedback_contract.py' -v
+          python3 -B -m unittest discover -s scripts/qa -p 'test_sales_methodology_contract.py' -v
