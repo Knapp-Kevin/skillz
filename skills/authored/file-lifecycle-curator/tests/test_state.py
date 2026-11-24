@@ -345,6 +345,63 @@ class PersistentCurationStateTests(unittest.TestCase):
         self.assertEqual(result["generation"], 2)
         self.assertEqual(self.state()["plan"]["plan_revision"], "plan-rev-two")
 
+    def test_direct_checkpoint_rejects_new_members_under_same_plan_revision(self):
+        original = plan(self.first)
+        original["records"] = original["records"][:1]
+        self.init(obj=original)
+        injected = plan(self.first, observed="2026-11-23T11:00:00-05:00",
+                        snapshot_id="plan-shot-two")
+        with self.assertRaisesRegex(
+                engine.Refused, "PLAN_MEMBERSHIP_CHANGE_HOLD"):
+            self.run_case(run_id="injected-record", obj=injected, commit=True,
+                          expected=1, ack=True)
+        self.assertEqual(self.state()["generation"], 1)
+        self.assertEqual(len(self.state()["plan"]["records"]), 1)
+
+    def test_direct_checkpoint_rejects_removed_members_same_revision(self):
+        self.init(obj=plan(self.first))
+        missing = plan(self.first, observed="2026-11-23T11:00:00-05:00",
+                       snapshot_id="plan-shot-two")
+        missing["records"] = missing["records"][:1]
+        with self.assertRaisesRegex(
+                engine.Refused, "PLAN_MEMBERSHIP_CHANGE_HOLD"):
+            self.run_case(run_id="hidden-record", obj=missing, commit=True,
+                          expected=1, ack=True)
+        self.assertEqual(self.state()["generation"], 1)
+
+    def test_direct_checkpoint_rejects_stale_verified_readback(self):
+        self.init(obj=plan(self.first))
+        later = next_scan(self.first)
+        refreshed = plan(later, observed="2026-11-23T11:00:00-05:00",
+                         snapshot_id="plan-shot-two")
+        refreshed["records"][0]["observed_path"] = "organized/alpha-id"
+        refreshed["records"][0]["state"] = "VERIFIED"
+        refreshed["records"][0]["readback"] = {
+            "record_id": "alpha-id", "plan_id": "file-plan",
+            "plan_revision": "plan-rev-one",
+            "source_revision": "rev-001",
+            "destination_path": "organized/alpha-id",
+            "integrity": "matched", "access": "preserved",
+            "observed_at": "2026-11-23T10:30:00-05:00"}
+        with self.assertRaisesRegex(
+                engine.Refused, "STALE_OPERATION_READBACK_HOLD"):
+            self.run_case(data=later, run_id="stale-receipt",
+                          obj=refreshed, commit=True, expected=1, ack=True)
+        self.assertEqual(self.state()["generation"], 1)
+
+    def test_direct_checkpoint_rejects_forged_full_coverage(self):
+        self.init()
+        later = next_scan(self.first)
+        later["coverage"] = "partial"
+        incoming = plan(later, observed="2026-11-23T11:00:00-05:00",
+                        snapshot_id="plan-shot-two")
+        incoming["coverage"] = "complete"
+        with self.assertRaisesRegex(
+                engine.Refused, "PLAN_COVERAGE_CONFLICT_HOLD"):
+            self.run_case(data=later, run_id="false-completeness",
+                          obj=incoming, commit=True, expected=1, ack=True)
+        self.assertEqual(self.state()["generation"], 1)
+
     def test_plan_only_replay_does_not_duplicate_changes(self):
         self.init(obj=plan(self.first))
         new = plan(self.first, revision="plan-rev-two",
