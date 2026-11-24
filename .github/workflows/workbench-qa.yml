@@ -6,6 +6,7 @@ on:
       - 'docs/index.html'
       - 'index.html'
       - '.github/workflows/workbench-qa.yml'
+      - 'scripts/qa/test-workbench-browser.cjs'
 permissions:
   contents: read
 jobs:
@@ -22,3 +23,5 @@ jobs:
           node --check docs/workbench/app.js
           node --check docs/workbench/core.js
           node docs/workbench/test.js
+          node --check scripts/qa/test-workbench-browser.cjs
+          node scripts/qa/test-workbench-browser.cjs

@@ -29,7 +29,8 @@ function normalize(a,g){
  }
  return rows;
 }
-const words=s=>String(s||"").toLowerCase().split(/[^a-z0-9]+/).filter(x=>x.length>1);
+const stop=new Set(["the","and","with","for","my","our","want","need","help","into","from","that","this","work","using","can","would","like","more","better","how","to","of","in","on","a","an","is","it"]);
+const words=s=>String(s||"").toLowerCase().split(/[^a-z0-9]+/).filter(x=>x.length>1&&!stop.has(x)).map(x=>x.length>4&&x.endsWith("s")&&!x.endsWith("ss")?x.slice(0,-1):x);
 const unique=a=>[...new Set(a)];
 function search(rows,query,domain,source){
  const terms=unique(words(query)); const domainTerms=words(domain);
