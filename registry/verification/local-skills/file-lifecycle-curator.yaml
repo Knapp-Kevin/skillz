@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa
-complete_package_tree_sha: c56ba5e64869f2c3bf0f984ba911ac649512b2ec
+complete_package_tree_sha: 57a5f84e5a2ff1c44e8c848408b1a2903958abb9
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-24'
 verification_status: needs-re-review
