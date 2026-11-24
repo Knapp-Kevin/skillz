@@ -105,6 +105,15 @@ class HostCompatibilityTests(unittest.TestCase):
                       actual["warnings"])
         self.assertEqual(actual["behavior_tested"], "NOT_TESTED")
 
+    def test_source_changed_after_preflight_cannot_be_uploaded(self):
+        receipt = module.inspect(self.skill, "m365-agent-builder")
+        (self.skill / "references" / "guide.md").write_text(
+            "Changed instructions since inspection.\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "ZIP_SOURCE_CHANGED_SINCE_PREFLIGHT"):
+            module.write_zip(self.skill, "m365-agent-builder",
+                             str(self.root / "stale.zip"), receipt)
+        self.assertFalse((self.root / "stale.zip").exists())
+
     def test_secret_shaped_input_is_not_packaged_for_any_host(self):
         (self.skill / ".env").write_text("DUMMY=not-a-real-secret\n", encoding="utf-8")
         for host in ("github-copilot", "m365-agent-builder"):
