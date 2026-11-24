@@ -185,7 +185,7 @@ class MethodologyPackageTests(unittest.TestCase):
         self.assertIn("evidence_review_state", med)
         self.assertIn("requested_action_gate", med)
 
-    def test_version_minor_release_is_consistent_across_five_file_packages(self):
+    def test_version_minor_release_is_consistent_across_six_file_packages(self):
         repo = ROOT.parents[1]
         index = json.loads((repo / "registry" / "authored-skills-index.json")
                            .read_text(encoding="utf-8"))
@@ -201,7 +201,7 @@ class MethodologyPackageTests(unittest.TestCase):
                 record = next((x for x in index["skills"] if x["id"] == slug), None)
                 self.assertIsNotNone(record)
                 self.assertEqual("0.2.0", record["package_version"])
-                self.assertEqual(5, record["package_file_count"])
+                self.assertEqual(6, record["package_file_count"])
                 self.assertEqual("needs-re-review", record["review_status"])
                 self.assertEqual("not-run", record["behavioral_validation"])
                 for category in ("skills", "verification"):
@@ -273,6 +273,36 @@ class MethodologyPackageTests(unittest.TestCase):
         self.assertIn("BLOCKED", b)
         shared = "## CASE-JOINT-01:"
         self.assertEqual(a[a.index(shared):], b[b.index(shared):])
+
+    def test_normative_protocols_remain_complete_and_required(self):
+        protocols = (
+            (SLUGS[0], "conversation-protocol.md", (
+                "Buyer-controlled decision branches",
+                "Live practice protocol for authorized fictional role-play",
+                "Only a subsequently authorized, buyer-initiated reversal",
+                "one buyer utterance",
+                "Never write the rep's reply",
+                "STOP_NO_CONTACT",
+            )),
+            (SLUGS[1], "qualification-protocol.md", (
+                "Evidence-based release from a commercial HOLD",
+                "Operating procedure",
+                "Re-evaluate every dependency",
+                "CONTRACT_EXECUTION_OBSERVED",
+                "buyer no-contact",
+                "Do not compute an automatic close probability",
+            )),
+        )
+        for slug, filename, requirements in protocols:
+            with self.subTest(slug=slug):
+                entry = self.skill(slug)
+                source = (ROOT / slug / filename).read_text(encoding="utf-8")
+                self.assertLess(len(entry), 20000)
+                self.assertIn("**Read", entry)
+                self.assertIn(filename + "#", entry)
+                for requirement in requirements:
+                    self.assertIn(requirement, source)
+                self.assertIn("If unavailable, do not assert completion", source)
 
     def test_no_prerequisite_specific_model_or_external_api(self):
         for slug in SLUGS:
