@@ -96,7 +96,8 @@ class MethodologyPackageTests(unittest.TestCase):
             with self.subTest(state=state):
                 self.assertIn("| `" + state + "` |", med)
         self.assertIn("two credible, current", med.lower())
-        self.assertIn("detail-free", med.lower())
+        self.assertIn("suppress private rows", med.lower())
+        self.assertIn("derived counts", med.lower())
 
     def test_sandler_roi_uses_a_period_bound_monetary_baseline(self):
         base = ROOT / SLUGS[0]
