@@ -58,6 +58,24 @@ class HostCompatibilityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "MUST_BE_NEW_ZIP"):
             module.write_zip(self.skill, "m365-agent-builder", str(dest), result)
 
+    def test_directory_handoff_is_prepared_not_installed(self):
+        skillfile = self.skill / "SKILL.md"
+        skillfile.write_text(skillfile.read_text(encoding="utf-8") +
+                             "\nSee [license](LICENSE).\n", encoding="utf-8")
+        receipt = module.inspect(self.skill, "m365-agents-toolkit")
+        self.assertTrue(receipt["package_ready"], receipt["blockers"])
+        destination = self.root / "prepared"
+        module.write_directory(self.skill, "m365-agents-toolkit",
+                               str(destination), receipt)
+        self.assertEqual(receipt["artifact_status"], "PREPARED_NOT_INSTALLED")
+        self.assertIn("](LICENSE.txt)",
+                      (destination / "SKILL.md").read_text(encoding="utf-8"))
+        self.assertEqual((destination / "LICENSE.txt").read_bytes(),
+                         (self.skill / "LICENSE").read_bytes())
+        with self.assertRaisesRegex(ValueError, "MUST_BE_NEW_OUTSIDE_REPO"):
+            module.write_directory(self.skill, "m365-agents-toolkit",
+                                   str(destination), receipt)
+
     def test_microsoft_hard_limit_and_chat_guidance_are_separate(self):
         source = (self.skill / "SKILL.md").read_text(encoding="utf-8")
         (self.skill / "SKILL.md").write_text(source + "\n" + "a" * 21000, encoding="utf-8")
