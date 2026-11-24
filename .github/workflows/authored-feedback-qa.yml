@@ -7,6 +7,7 @@ on:
       - 'skills/authored/**'
       - 'scripts/qa/test_authored_feedback_contract.py'
       - 'scripts/qa/test_sales_methodology_contract.py'
+      - 'docs/reviews/fixtures/2026-11-24-*refinement-case.json'
       - '.github/ISSUE_TEMPLATE/agent-skill-feedback.yml'
       - '.github/workflows/authored-feedback-qa.yml'
 
@@ -34,3 +35,5 @@ jobs:
           set -euo pipefail
           python3 -B -m unittest discover -s scripts/qa -p 'test_authored_feedback_contract.py' -v
           python3 -B -m unittest discover -s scripts/qa -p 'test_sales_methodology_contract.py' -v
+          python3 -B engine/refinement/check_case.py --input docs/reviews/fixtures/2026-11-24-sandler-conversation-strategist-refinement-case.json
+          python3 -B engine/refinement/check_case.py --input docs/reviews/fixtures/2026-11-24-meddpicc-opportunity-assurance-refinement-case.json
