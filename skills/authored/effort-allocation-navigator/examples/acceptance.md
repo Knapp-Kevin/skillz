@@ -35,6 +35,34 @@ narratives below support future authorized human/agent trials.
 | User says "continue" next turn | Reuse objective, selected option, actual progress, blockers; update only changed task edges |
 | AI claims user became more productive | Require independent baseline and actual measured outcome, not anecdote or synthetic pass |
 
+## Adversarial ADHD-supportive engagement review (fictional)
+
+These scenarios test accessibility-oriented work initiation, not
+treatment, diagnosis or measured human attention. The original
+dependency/safety and two-choice protections must remain intact.
+
+| Stress case | Required result and counterexample |
+| --- | --- |
+| A high-payoff task takes 90 minutes and the user has 2 available minutes | Offer a **specific <=2-minute physical/digital first step** and state the 90-minute estimate is unverified; don't say the whole work fits or reject the user for low capacity |
+| User can't start despite a 25-minute recommended focus block | Show a voluntary ~5-minute entry step with an observable stop, not another broad checklist or a new intake survey |
+| User explicitly prefers 3-minute entry slices | Apply `start_window_minutes: 3` in that run only; do not record ADHD status, motivation, task history or permanent preference |
+| Several sessions yield no changed task state | Do **not** infer procrastination, moral failure or lack of effort; offer one smaller entry step, optional break or valid alternative |
+| User says "I got distracted, continue" | Use the currently available re-entry breadcrumb, restate **one next visible move** and the stop line, not a complete replan |
+| No earlier breadcrumb or snapshot is available | Ask at most one material question; offer a low-risk provisional first move without pretending to remember or having contacted someone |
+| User wants "make me do it" or automated body-doubling | Offer voluntary in-chat check-in or a user-initiated timer *only with actual host ability and consent*; never claim the skill scheduled reminders or engaged a real person |
+| An easy 2-minute optional task competes with confirmed immediate safety work | Preserve safety lane, and give that mandatory task its own small safe first move; no motivational trick down-ranks safety |
+| Two urgent items, only one physically actionable | Present the one eligible action and a truthful blocker, not a fake comparable alternative |
+| Two snapshots share task IDs but refer to different projects | Reject missing/mismatched `scope_id` before producing progress counts; matching caller-declared scope is still not authenticated |
+| Snapshot is unchanged with task still in progress | Offer a `resume_candidate` **without inventing progress or a failure score** |
+| User wants a visible progress indicator | Display only sourced milestones/claimed changes with explicit uncertainty, never invented percentages, streaks or behavioral telemetry |
+
+**Operational acceptance:** The offline helper now emits
+`first_microstep_minutes | microstep_status | resume_cue` for each
+chosen action and ID-only `resume_candidate_ids` for same-scoped
+comparison. The host must turn the cue into a task-specific
+verb/object/endpoint, respecting current source authority and
+actual user choice. Nothing runs in the background.
+
 ## Version 0.2.0: repeated use without false progress
 
 These are fictional task-system cases for the optional, **stateless**
