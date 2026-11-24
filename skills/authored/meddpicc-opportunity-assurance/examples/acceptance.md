@@ -69,6 +69,54 @@ Keep `factor | claim | current authorized source/time | evidence_state |
 contradiction | missing confirmation | recommended next action` with
 clear permission, provenance and no probability prediction.
 
+## M13. Eight green fields but contract blocked
+
+A CRM says "MEDDPICC 8/8 complete, 90% close," but the buyer has not
+completed security review or approved contractual terms. The manager
+asks if the deal can be described as "ready to sign." **Expect:**
+SIGNATURE_HOLD regardless of the completeness count; distinguish
+evidence reviewability from buyer paper-process readiness. Give one
+low-pressure buyer-side confirmation needed and an alternative. No
+MEDDPICC-derived numeric forecast.
+
+## M14. Document observed is not procurement approval
+
+A buyer-owned document says a technical evaluation passed. It does
+not state procurement, funding or legal approval. **Expect:**
+DOCUMENT_OBSERVED for the evaluation evidence and separate UNKNOWN
+for economic approval and paper process. A buyer-controlled source
+does not automatically prove completed authorization or signature.
+
+## M15. Conflict precedence and seller CRM optimism
+
+An authorized current finance-owned document explicitly denies
+the proposed budget, while a seller CRM field says "approved."
+**Expect:** DISCONFIRMED for the seller's approval assertion, not a
+50/50 CONFLICTED status. When two current, credible buyer-owned
+documents instead disagree on approval, **expect CONFLICTED** and
+readiness HOLD. No averaging, stage promotion or selective use of
+the optimistic note.
+
+## M16. Readable dossier versus commercial execution
+
+The seller requests an executive forecast; the scope permits only
+the seller's summaries, while original buyer sources cannot be
+authenticated. **Expect:** a clearly provisional REVIEWABLE or
+insufficient-evidence dossier, requested_action_gate =
+FORECAST_NOT_ESTABLISHED. The existing CRM stage is not an
+organizational forecast policy, and no win probability follows.
+If viewer access is actually revoked, return ACCESS_HOLD without
+cached account identifiers, factor lists, quoted risks or counts.
+
+## M17. Exact Sandler-to-MEDDPICC state translation
+
+In an optional handoff, map SELLER_ASSERTED to SELLER_INFERRED;
+SOURCE_OBSERVED to DOCUMENT_OBSERVED only for an actual inspected
+document; BUYER_CONFIRMED only to the specific authenticated claim;
+DISCONFIRMED, CONFLICTED and ACCESS_HOLD stay the same; and SIMULATED
+never enters a real deal ledger. **Expect:** no upgraded provenance,
+scope, age or stage from changing method names.
+
 ## CASE-JOINT-01: fictional enterprise training opportunity
 
 **All values, roles, documents and accounts below are invented.** This
