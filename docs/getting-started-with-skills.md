@@ -90,11 +90,13 @@ python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host
 python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agents-toolkit --directory-output ./navigator-toolkit-handoff
 ```
 
-The last command creates an uploadable ZIP **only** at an explicitly chosen
-new path, if the static package preflight passes. It does not upload it.
-The Microsoft adapter preserves canonical content while renaming an
-extensionless `LICENSE` to `LICENSE.txt`; any references that would break
-because of that transformation cause a packaging HOLD.
+The ZIP command creates an uploadable archive at an explicitly chosen
+new path, and the directory command creates a separate prepared handoff
+folder. Neither command installs or uploads anything. The Microsoft adapter
+preserves the canonical source while renaming an extensionless `LICENSE`
+to `LICENSE.txt` **in the distribution artifact only**, rewriting valid
+relative license links and checking transformed output digests. Unsupported
+file types and missing references remain packaging HOLDs.
 
 An actual host may still lack required Python modules, tool permissions,
 connectors, network access or account features. In Microsoft's skill sandbox,
