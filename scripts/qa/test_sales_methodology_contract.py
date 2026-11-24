@@ -95,7 +95,7 @@ class MethodologyPackageTests(unittest.TestCase):
                       "CONFLICTED", "STALE", "ACCESS_HOLD"):
             with self.subTest(state=state):
                 self.assertIn("| `" + state + "` |", med)
-        self.assertIn("two current", med.lower())
+        self.assertIn("two credible, current", med.lower())
         self.assertIn("detail-free", med.lower())
 
     def test_sandler_roi_uses_a_period_bound_monetary_baseline(self):
@@ -122,7 +122,7 @@ class MethodologyPackageTests(unittest.TestCase):
         for requirement in ("seller-only", "buyer-controlled",
                             "DISCONFIRMED", "CONFLICTED", "ACCESS_HOLD",
                             "no close probability", "no numeric ROI",
-                            "not a real"):
+                            "not an actual"):
             self.assertIn(requirement.lower(), case.lower())
 
     def test_no_prerequisite_specific_model_or_external_api(self):
