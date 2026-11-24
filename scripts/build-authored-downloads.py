@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Maintainer-only release artifact builder. No network, install or skill execution."""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+from pathlib import Path, PurePosixPath
+import re
+import subprocess
+import sys
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "engine" / "builder"))
+import host_compat
+
+def git(*args):
+    return subprocess.check_output(["git", "-C", str(ROOT), *args])
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def blob_tree(commit, prefix):
+    raw = git("ls-tree", "-r", "-z", commit, "--", prefix + "/")
+    result = {}
+    for item in raw.split(b"\0"):
+        if not item:
+            continue
+        meta, name = item.split(b"\t", 1)
+        mode, kind, oid = meta.decode("ascii").split()
+        path = name.decode("utf-8")
+        if not path.startswith(prefix + "/") or kind != "blob" or mode not in {"100644", "100755"}:
+            raise ValueError("unsafe package member")
+        rel = path[len(prefix)+1:]
+        p = PurePosixPath(rel)
+        if p.is_absolute() or ".." in p.parts or "\\" in rel or any(x.startswith(".") for x in p.parts):
+            raise ValueError("unsafe package path")
+        result[rel] = (mode, git("cat-file", "blob", oid))
+    return result
+
+def build(output):
+    commit = git("rev-parse", "HEAD").decode().strip()
+    if git("status", "--porcelain", "--untracked-files=no").strip():
+        raise ValueError("tracked checkout differs from commit")
+    output = output.absolute()
+    if output.exists() or output.is_relative_to(ROOT) or any(p.is_symlink() for p in output.parents):
+        raise ValueError("output must be new and outside repository")
+    index = json.loads(git("show", commit + ":registry/authored-skills-index.json"))
+    rows = index["skills"]
+    ids = [r["id"] for r in rows]
+    disk = {p.name for p in host_compat.AUTHORED.iterdir() if p.is_dir() and (p / "SKILL.md").is_file()}
+    if len(ids) != len(set(ids)) or set(ids) != disk:
+        raise ValueError("authored package index mismatch")
+    output.mkdir()
+    manifest = {"schema_version": 1, "source_commit": commit,
+                "claim": "AUTHORED_SOURCE_ARCHIVES_ONLY_HOST_BEHAVIOR_NOT_TESTED", "skills": []}
+    for row in sorted(rows, key=lambda r:r["id"]):
+        slug = row["id"]
+        prefix = "skills/authored/" + slug
+        if not re.fullmatch(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*", slug) or row["source_class"] != "first-party-authored" or row["license_spdx"] != "MIT" or row["package_path"] != prefix or row["entrypoint"] != prefix + "/SKILL.md" or row["license_file"] != prefix + "/LICENSE":
+            raise ValueError("noncanonical or unlicensed package")
+        tree = git("rev-parse", commit + ":" + prefix).decode().strip()
+        blob = git("rev-parse", commit + ":" + prefix + "/SKILL.md").decode().strip()
+        if tree != row["package_tree_sha"] or blob != row["skill_blob_sha"]:
+            raise ValueError("stale package identity: " + slug)
+        files = blob_tree(commit, prefix)
+        if len(files) != row["package_file_count"] or "SKILL.md" not in files or "LICENSE" not in files:
+            raise ValueError("incomplete package: " + slug)
+        if b"Permission is hereby granted" not in files["LICENSE"][1] or b"Copyright" not in files["LICENSE"][1]:
+            raise ValueError("missing MIT permission notice")
+        folder = ROOT / prefix
+        actual = {p.relative_to(folder).as_posix(): p for p in host_compat.source_files(folder)}
+        if set(actual) != set(files) or any(actual[n].read_bytes() != b for n, (_, b) in files.items()):
+            raise ValueError("checkout bytes differ: " + slug)
+        archive = output / (slug + ".zip")
+        with zipfile.ZipFile(archive, "x", compression=zipfile.ZIP_DEFLATED) as z:
+            for name, (mode, data) in sorted(files.items()):
+                info = zipfile.ZipInfo(slug + "/" + name, date_time=(1980, 1, 1, 0, 0, 0))
+                info.create_system = 3
+                info.external_attr = int(mode, 8) << 16
+                z.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED)
+        with zipfile.ZipFile(archive) as z:
+            if sorted(z.namelist()) != sorted(slug + "/" + n for n in files) or z.testzip() or any(z.read(slug + "/" + n) != b for n, (_, b) in files.items()):
+                raise ValueError("canonical archive readback failed")
+        entry = {"id": slug, "package_tree_sha": tree, "skill_blob_sha": blob,
+                 "license": "MIT", "canonical": {"asset": archive.name, "sha256": digest(archive)}, "hosts": {}}
+        profiles = {h: host_compat.inspect(folder, h) for h in host_compat.HOSTS}
+        ms = profiles["m365-copilot-chat"]
+        # Chat and Builder share the same adapter; toolkit consumes the extracted adapted directory.
+        variant = None
+        if ms["package_ready"]:
+            variant = output / (slug + "-m365.zip")
+            host_compat.write_zip(folder, "m365-copilot-chat", str(variant), ms)
+        for h, report in profiles.items():
+            ready = report["package_ready"]
+            microsoft = h.startswith("m365-")
+            asset = (variant.name if variant is not None else None) if microsoft else archive.name
+            if microsoft and ready and variant is None:
+                raise ValueError("Microsoft adapter unexpectedly unavailable")
+            entry["hosts"][h] = {"status": "PACKAGE_READY" if ready else "HOLD",
+                "asset": asset if ready else None, "sha256": digest(output / asset) if ready else None,
+                "blockers": report["blockers"], "warnings": report["warnings"], "behavior": "NOT_TESTED"}
+        manifest["skills"].append(entry)
+    (output / "authored-download-manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
+    print(f"Verified {len(rows)} canonical authored ZIPs; {len(list(output.glob('*-m365.zip')))} Microsoft variants; source {commit}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", required=True, type=Path)
+    args = parser.parse_args()
+    build(args.output)

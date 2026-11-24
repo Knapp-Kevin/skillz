@@ -2,17 +2,17 @@
 
 **Find a complete, reusable skill for the task you need to accomplish.** These are independently maintained first-party packages, not a running release log or a promise that every skill has been tested on every agent.
 
-Choose a capability below, open its **SKILL.md**, and copy the **entire skill directory** into your supported host when installation is authorized. Required examples, scripts, reference files, and rules are bundled with each package. No Skillz checkout, sibling skill or internet access is required to use an offline-capable package.
+Choose a capability below, use its **Download ZIP** link, and follow the [manual installation instructions for your AI](../../docs/getting-started-with-skills.md). Each archive contains the **entire skill directory**. Inspect the source and package before installing. Required examples, scripts, reference files, and rules are bundled with each package. No Skillz checkout, sibling skill or internet access is required to use an offline-capable package.
 
-[Explore all capability domains](../../registry/capability-directory.json) · [Skill quality and provenance](../../registry/authored-skills-index.json) · [How to evaluate a skill](../../docs/skill-verification.md)
+[Manual installation by host](../../docs/getting-started-with-skills.md) · [Download manifest and SHA-256 hashes](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json) · [Published snapshots](https://github.com/Knapp-Kevin/skillz/releases) · [Explore all capability domains](../../registry/capability-directory.json) · [Skill quality and provenance](../../registry/authored-skills-index.json) · [How to evaluate a skill](../../docs/skill-verification.md)
+
+**Archive choice:** the catalog ZIP is the canonical folder archive. Microsoft personal Chat/Agent Builder require a different root-level ZIP; see the [manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json) and [Microsoft instructions](../../docs/getting-started-with-skills.md#microsoft-365-copilot-chat-personal-skills). A missing or held host variant is not permission to bypass the host limits. Downloads are publication snapshots; inspect the manifest's source commit and compare current registry if you need the newest source. Never install from an unverified or incomplete archive.
 
 ## Optional feedback from a using agent
 
 Every first-party authored `SKILL.md` includes a self-contained link to the
 [optional skill feedback issue form](https://github.com/Knapp-Kevin/skillz/issues/new?template=agent-skill-feedback.yml).
-An agent may prepare a minimal **fictionalized, sanitized** defect or
-improvement report when a user/host has explicitly authorized public issue
-submission. If posting is not authorized or unavailable, the agent can offer
+An agent may prepare a **categorical, source-blind** canonical defect report only when safe and explicitly authorized. Keep fictional reproducers private; do not paste them in the public form. Personal preferences remain private. If posting is not authorized or unavailable, the agent can offer
 a copyable issue draft or simply skip it. The skill still works completely
 offline. **Nothing is automatically reported, and feedback is never required.**
 
@@ -30,7 +30,7 @@ runner durations, timestamps, commit or run IDs, distinctive command or
 platform combinations, charts, and verbatim error text can be matched
 against public CI history to reidentify a consumer. Generalize the failure
 mode; use entirely fictional names, workloads, numbers and timestamps
-for shared reproductions. Preserve authentic exact-run evidence only
+for private reproductions. Preserve authentic exact-run evidence only
 inside the authorized consuming project, not as a public Skillz citation
 or cross-repository link. Review the full public issue/PR body, comments,
 fixtures, screenshots, commit messages and outbound links for inadvertent
@@ -44,68 +44,75 @@ packages or historical repo-bound procedures that we do not own.
 
 ## Build, maintain, and deliver software
 
-| Skill | What it helps you accomplish |
-| --- | --- |
-| [Offline Hyper-V Qualification VM](offline-hyperv-qual-vm/SKILL.md) | Safely provision and qualify isolated Windows evidence VMs with owner-held credentials and checkpoint discipline |
-| [CI Guard](ci-guard/SKILL.md) | Classify CI changes and protect required delivery checks |
-| [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) | Diagnose repository delivery readiness from actual evidence |
-| [PR Integration Surgeon](pr-integration-surgeon/SKILL.md) | Resolve stacked PR dependency, conflict, stale-head CI and review blockers without treating a plan as a merge |
-| [Release Evidence Reconciler](release-evidence-reconciler/SKILL.md) | Compare tested source, build and published bytes, provenance claims, and installation evidence |
-| [First-Run Experience Validator](first-run-experience-validator/SKILL.md) | Audit a newcomer's published install/setup journey through an actually observed first useful outcome |
-| [Repository README Architect](repository-readme-architect/SKILL.md) | Create, improve, audit, and verify repository READMEs |
-| [Source Debt Triage](source-debt-triage/SKILL.md) | Identify and prioritize actionable source-code debt |
-| [Reference Integrity Auditor](reference-integrity-auditor/SKILL.md) | Audit document references and scoped dependency impact |
-| [Agent Workspace Footprint Assessor](agent-workspace-footprint-assessor/SKILL.md) | Inspect agent workspace storage and protected artifacts |
+| Skill | What it helps you accomplish | Download |
+| --- | --- | --- |
+| [Offline Hyper-V Qualification VM](offline-hyperv-qual-vm/SKILL.md) | Safely provision and qualify isolated Windows evidence VMs with owner-held credentials and checkpoint discipline | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/offline-hyperv-qual-vm.zip) |
+| [CI Guard](ci-guard/SKILL.md) | Classify CI changes and protect required delivery checks | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/ci-guard.zip) |
+| [Repository Delivery Assessor](repository-delivery-assessor/SKILL.md) | Diagnose repository delivery readiness from actual evidence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/repository-delivery-assessor.zip) |
+| [PR Integration Surgeon](pr-integration-surgeon/SKILL.md) | Resolve stacked PR dependency, conflict, stale-head CI and review blockers without treating a plan as a merge | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/pr-integration-surgeon.zip) |
+| [Release Evidence Reconciler](release-evidence-reconciler/SKILL.md) | Compare tested source, build and published bytes, provenance claims, and installation evidence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/release-evidence-reconciler.zip) |
+| [First-Run Experience Validator](first-run-experience-validator/SKILL.md) | Audit a newcomer's published install/setup journey through an actually observed first useful outcome | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/first-run-experience-validator.zip) |
+| [Repository README Architect](repository-readme-architect/SKILL.md) | Create, improve, audit, and verify repository READMEs | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/repository-readme-architect.zip) |
+| [Source Debt Triage](source-debt-triage/SKILL.md) | Identify and prioritize actionable source-code debt | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/source-debt-triage.zip) |
+| [Reference Integrity Auditor](reference-integrity-auditor/SKILL.md) | Audit document references and scoped dependency impact | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/reference-integrity-auditor.zip) |
+| [Agent Workspace Footprint Assessor](agent-workspace-footprint-assessor/SKILL.md) | Inspect agent workspace storage and protected artifacts | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/agent-workspace-footprint-assessor.zip) |
 
 ## Agent systems, security, and trustworthy execution
 
-| Skill | What it helps you accomplish |
-| --- | --- |
-| [Skill Trial Evidence Auditor](skill-trial-evidence-auditor/SKILL.md) | Check paired skill-trial evidence and withheld effect claims |
-| [Agent Failure Boundary Analysis](agent-failure-boundary-analysis/SKILL.md) | Reconstruct agent failure causes and falsifiable boundaries |
-| [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) | Assess tool effects and connector security/authority |
-| [MCP Tool Surface Auditor](mcp-tool-surface-auditor/SKILL.md) | Compare claimed backend, MCP, and host-visible tool lists without inventing a root cause |
-| [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) | Map effective permissions and least-privilege change risk |
-| [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) | Distinguish scheduled jobs from observed delivery |
-| [Context Continuation Contract](context-continuation-contract/SKILL.md) | Carry verified context across agents and sessions |
-| [Evidence-Driven Refinement Loop](evidence-driven-refinement-loop/SKILL.md) | Challenge real task outcomes, route supported improvements and keep personal preferences separate |
-| [Recursive Refinement Trace](recursive-refinement-trace/SKILL.md) | Opt-in host-local trace capture and observed-only replay of recorded refinement attempts |
+| Skill | What it helps you accomplish | Download |
+| --- | --- | --- |
+| [Skill Trial Evidence Auditor](skill-trial-evidence-auditor/SKILL.md) | Check paired skill-trial evidence and withheld effect claims | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/skill-trial-evidence-auditor.zip) |
+| [Agent Failure Boundary Analysis](agent-failure-boundary-analysis/SKILL.md) | Reconstruct agent failure causes and falsifiable boundaries | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/agent-failure-boundary-analysis.zip) |
+| [Connector Capability Risk Review](connector-capability-risk-review/SKILL.md) | Assess tool effects and connector security/authority | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/connector-capability-risk-review.zip) |
+| [MCP Tool Surface Auditor](mcp-tool-surface-auditor/SKILL.md) | Compare claimed backend, MCP, and host-visible tool lists without inventing a root cause | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/mcp-tool-surface-auditor.zip) |
+| [Privilege Exposure Mapper](privilege-exposure-mapper/SKILL.md) | Map effective permissions and least-privilege change risk | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/privilege-exposure-mapper.zip) |
+| [Scheduled Work Proof Auditor](scheduled-work-proof-auditor/SKILL.md) | Distinguish scheduled jobs from observed delivery | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/scheduled-work-proof-auditor.zip) |
+| [Context Continuation Contract](context-continuation-contract/SKILL.md) | Carry verified context across agents and sessions | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/context-continuation-contract.zip) |
+| [Evidence-Driven Refinement Loop](evidence-driven-refinement-loop/SKILL.md) | Challenge real task outcomes, route supported improvements and keep personal preferences separate | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/evidence-driven-refinement-loop.zip) |
+| [Recursive Refinement Trace](recursive-refinement-trace/SKILL.md) | Opt-in host-local trace capture and observed-only replay of recorded refinement attempts | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/recursive-refinement-trace.zip) |
 
 ## Research, evidence, and information management
 
-| Skill | What it helps you accomplish |
-| --- | --- |
-| [Claim Evidence Adjudicator](claim-evidence-adjudicator/SKILL.md) | Adjudicate contested claims with source independence |
-| [Research Methods Appraiser](research-methods-appraiser/SKILL.md) | Evaluate methods, validity and reproducibility |
-| [Research Question Dossier](research-question-dossier/SKILL.md) | Research bounded questions with rival explanations |
-| [Technology Change Intelligence](technology-change-intelligence/SKILL.md) | Track technology changes by user interests and primary evidence |
-| [Federated Source Catalog](federated-source-catalog/SKILL.md) | Discover authorized information across connected sources |
-| [File Lifecycle Curator](file-lifecycle-curator/SKILL.md) | Organize and summarize scoped file collections safely |
-| [Metadata Taxonomy Steward](metadata-taxonomy-steward/SKILL.md) | Govern categories, tags, aliases and vocabulary changes |
-| [Decision Tradeoff Workbench](decision-tradeoff-workbench/SKILL.md) | Compare options with gates, weights and uncertainty |
-| [Decision Record Steward](decision-record-steward/SKILL.md) | Capture and reconcile decisions and supersession |
+| Skill | What it helps you accomplish | Download |
+| --- | --- | --- |
+| [Claim Evidence Adjudicator](claim-evidence-adjudicator/SKILL.md) | Adjudicate contested claims with source independence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/claim-evidence-adjudicator.zip) |
+| [Research Methods Appraiser](research-methods-appraiser/SKILL.md) | Evaluate methods, validity and reproducibility | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/research-methods-appraiser.zip) |
+| [Research Question Dossier](research-question-dossier/SKILL.md) | Research bounded questions with rival explanations | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/research-question-dossier.zip) |
+| [Technology Change Intelligence](technology-change-intelligence/SKILL.md) | Track technology changes by user interests and primary evidence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/technology-change-intelligence.zip) |
+| [Federated Source Catalog](federated-source-catalog/SKILL.md) | Discover authorized information across connected sources | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/federated-source-catalog.zip) |
+| [File Lifecycle Curator](file-lifecycle-curator/SKILL.md) | Organize and summarize scoped file collections safely | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/file-lifecycle-curator.zip) |
+| [Metadata Taxonomy Steward](metadata-taxonomy-steward/SKILL.md) | Govern categories, tags, aliases and vocabulary changes | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/metadata-taxonomy-steward.zip) |
+| [Decision Tradeoff Workbench](decision-tradeoff-workbench/SKILL.md) | Compare options with gates, weights and uncertainty | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/decision-tradeoff-workbench.zip) |
+| [Decision Record Steward](decision-record-steward/SKILL.md) | Capture and reconcile decisions and supersession | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/decision-record-steward.zip) |
 
 ## Business, operations, and professional work
 
-| Skill | What it helps you accomplish |
-| --- | --- |
-| [Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) | Review healthcare contracts against supplied evidence |
-| [Professional Market Evidence Scout](professional-market-evidence-scout/SKILL.md) | Research professional roles and compensation evidence |
-| [Statement Variance Reviewer](statement-variance-reviewer/SKILL.md) | Reconcile financial statements and explain variances |
-| [Business Presence Observatory](business-presence-observatory/SKILL.md) | Assess public business presence and discoverability |
-| [Effort Allocation Navigator](effort-allocation-navigator/SKILL.md) | Prioritize dependent tasks, blockers and payoff versus effort with a primary next action and bounded alternative |
-| [Personal Operations Control Board](personal-operations-control-board/SKILL.md) | Plan personal work with honest status and priorities |
-| [Work Period Evidence Reporter](work-period-evidence-reporter/SKILL.md) | Report completed work using observable evidence |
+| Skill | What it helps you accomplish | Download |
+| --- | --- | --- |
+| [Healthcare Contract Forensics](healthcare-contract-forensics/SKILL.md) | Review healthcare contracts against supplied evidence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/healthcare-contract-forensics.zip) |
+| [Professional Market Evidence Scout](professional-market-evidence-scout/SKILL.md) | Research professional roles and compensation evidence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/professional-market-evidence-scout.zip) |
+| [Statement Variance Reviewer](statement-variance-reviewer/SKILL.md) | Reconcile financial statements and explain variances | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/statement-variance-reviewer.zip) |
+| [Business Presence Observatory](business-presence-observatory/SKILL.md) | Assess public business presence and discoverability | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/business-presence-observatory.zip) |
+| [Effort Allocation Navigator](effort-allocation-navigator/SKILL.md) | Prioritize dependent tasks, blockers and payoff versus effort with a primary next action and bounded alternative | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/effort-allocation-navigator.zip) |
+| [Personal Operations Control Board](personal-operations-control-board/SKILL.md) | Plan personal work with honest status and priorities | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/personal-operations-control-board.zip) |
+| [Work Period Evidence Reporter](work-period-evidence-reporter/SKILL.md) | Report completed work using observable evidence | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/work-period-evidence-reporter.zip) |
 
 ## Creative production and learning
 
-| Skill | What it helps you accomplish |
-| --- | --- |
-| [Narrative Scene Gap Audit](narrative-scene-gap-audit/SKILL.md) | Diagnose scene and story-structure gaps |
-| [Character Motivation Interview](character-motivation-interview/SKILL.md) | Elicit consistent character motivations |
-| [Develop a Melodic Motif](develop-melodic-motif/SKILL.md) | Develop reusable musical motifs within real constraints |
-| [Evidence Narrative Composer](evidence-narrative-composer/SKILL.md) | Turn verified findings into presentations and narratives |
-| [Learning Evidence Progression](learning-evidence-progression/SKILL.md) | Plan and assess learning through demonstrable outcomes |
+| Skill | What it helps you accomplish | Download |
+| --- | --- | --- |
+| [Narrative Scene Gap Audit](narrative-scene-gap-audit/SKILL.md) | Diagnose scene and story-structure gaps | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/narrative-scene-gap-audit.zip) |
+| [Character Motivation Interview](character-motivation-interview/SKILL.md) | Elicit consistent character motivations | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/character-motivation-interview.zip) |
+| [Develop a Melodic Motif](develop-melodic-motif/SKILL.md) | Develop reusable musical motifs within real constraints | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/develop-melodic-motif.zip) |
+| [Evidence Narrative Composer](evidence-narrative-composer/SKILL.md) | Turn verified findings into presentations and narratives | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/evidence-narrative-composer.zip) |
+| [Learning Evidence Progression](learning-evidence-progression/SKILL.md) | Plan and assess learning through demonstrable outcomes | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/learning-evidence-progression.zip) |
+
+## Additional authored skills
+
+| Skill | What it helps you accomplish | Download |
+| --- | --- | --- |
+| [Sandler-aligned Conversation Strategist](sandler-conversation-strategist/SKILL.md) | Prepare and improve evidence-grounded sales conversations | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/sandler-conversation-strategist.zip) |
+| [MEDDPICC Opportunity Assurance](meddpicc-opportunity-assurance/SKILL.md) | Assess complex B2B opportunity evidence and qualification gaps | [ZIP](https://github.com/Knapp-Kevin/skillz/releases/latest/download/meddpicc-opportunity-assurance.zip) |
 
 ## Use responsibly
 

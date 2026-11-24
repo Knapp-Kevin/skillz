@@ -1,0 +1,79 @@
+name: Authored skill download snapshots
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'skills/authored/**'
+      - 'registry/authored-skills-index.json'
+      - 'scripts/build-authored-downloads.py'
+      - 'engine/builder/host_compat.py'
+      - '.github/workflows/authored-downloads.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/authored/**'
+      - 'registry/authored-skills-index.json'
+      - 'scripts/build-authored-downloads.py'
+      - 'engine/builder/host_compat.py'
+      - '.github/workflows/authored-downloads.yml'
+permissions:
+  contents: read
+concurrency:
+  group: authored-downloads-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  qualify:
+    if: ${{ github.event_name == 'pull_request' && !github.event.pull_request.draft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - run: python3 -B scripts/build-authored-downloads.py --output "$RUNNER_TEMP/authored-downloads"
+  publish:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'Knapp-Kevin/skillz' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - run: python3 -B scripts/build-authored-downloads.py --output "$RUNNER_TEMP/authored-downloads"
+      - name: Publish complete source-bound snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Do not publish a superseded source as the latest channel.
+          live="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)"
+          if [ "$live" != "$GITHUB_SHA" ]; then
+            echo "Superseded snapshot; a newer main revision owns publication."
+            exit 0
+          fi
+          tag="authored-$GITHUB_SHA"
+          directory="$RUNNER_TEMP/authored-downloads"
+          gh release create "$tag" --target "$GITHUB_SHA" --draft --title "Authored skill downloads ($GITHUB_SHA)" --notes "Original MIT skill packages, source-pinned manifest and SHA-256 hashes. Static packaging only; no host installation or behavior claim." "$directory"/*
+          gh release view "$tag" --json assets,isDraft,tagName > "$RUNNER_TEMP/release.json"
+          python3 - "$directory" "$RUNNER_TEMP/release.json" <<'PY'
+          import json, pathlib, sys
+          directory = pathlib.Path(sys.argv[1])
+          release = json.loads(pathlib.Path(sys.argv[2]).read_text())
+          expected = {p.name: p.stat().st_size for p in directory.iterdir()}
+          actual = {p["name"]: p["size"] for p in release["assets"]}
+          if expected != actual or not release["isDraft"]:
+              raise SystemExit("release asset inventory mismatch")
+          PY
+          live="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)"
+          if [ "$live" != "$GITHUB_SHA" ]; then
+            echo "Superseded; leaving draft unpublished."
+            exit 0
+          fi
+          gh release edit "$tag" --draft=false --latest
+          gh release view "$tag" --json isDraft,url,tagName,assets --jq '{isDraft,url,tagName,assetCount:(.assets|length)}'
