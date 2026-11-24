@@ -95,6 +95,16 @@ def preview(store, current, plan=None):
     if any(row["source_revision"] != now[row["record_id"]]["source_revision"]
            for row in plan["records"]):
         return hold("PLAN_SOURCE_REVISION_HOLD")
+    # A newer plan wrapper cannot refresh an old operation receipt.
+    # Current progress requires a per-record host re-observation no earlier
+    # than the new source observation and strictly after the accepted plan.
+    baseline_time = render_structure.date(prior_plan["observed_at"])
+    source_time = reconcile.timestamp(current["observed_at"])
+    for row in plan["records"]:
+        if row["state"] in {"VERIFIED", "ROLLED_BACK"}:
+            when = render_structure.date(row["readback"]["observed_at"])
+            if when <= baseline_time or when < source_time:
+                return hold("STALE_OPERATION_READBACK_HOLD")
     view = render_structure.checked_view(plan, prior_plan)
     if view["status"] != "PROVISIONAL_VISUAL_ONLY":
         return hold(view["status"])
