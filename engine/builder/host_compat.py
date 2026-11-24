@@ -78,6 +78,24 @@ def package_name(source, profile):
     return source
 
 
+def render_package_bytes(folder, source, profile):
+    """Return host-specific bytes without changing the canonical source."""
+    raw = (folder / source).read_bytes()
+    if "extensions" not in profile or not source.endswith(".md"):
+        return raw
+    text = raw.decode("utf-8")
+    def rewrite(match):
+        original = match.group(1)
+        link, marker, fragment = original.partition("#")
+        if not link or link.startswith(("https://", "http://", "mailto:", "data:")):
+            return match.group(0)
+        resolved = ((folder / source).parent / link).resolve()
+        if resolved == (folder / "LICENSE").resolve() and (folder / "LICENSE").is_file():
+            return "](" + link + ".txt" + (marker + fragment if marker else "") + ")"
+        return match.group(0)
+    return MARKDOWN_LINK.sub(rewrite, text).encode("utf-8")
+
+
 def inspect(folder, host):
     if host not in HOSTS:
         raise ValueError("UNKNOWN_HOST")
@@ -100,7 +118,8 @@ def inspect(folder, host):
     blockers, warnings = [], []
     if len(set(dst_names)) != len(dst_names):
         blockers.append("TRANSFORMED_NAME_COLLISION")
-    length = len(entrypoint)
+    # Enforce host limits on the actual transformed entrypoint, not source.
+    length = len(render_package_bytes(folder, "SKILL.md", profile).decode("utf-8"))
     if length >= profile.get("strict_char_limit", float("inf")):
         blockers.append("SKILL_MD_OVER_HOST_HARD_LIMIT")
     if length >= profile.get("advisory_char_limit", float("inf")):
@@ -140,14 +159,24 @@ def inspect(folder, host):
                 blockers.append("NONPORTABLE_LOCAL_LINK:" + src)
                 continue
             resolved = (f.parent / link).resolve()
-            if not resolved.is_relative_to(folder.resolve()) or not resolved.is_file():
+            if not resolved.is_relative_to(folder.resolve()) or not resolved.exists():
+                blockers.append("BROKEN_LOCAL_LINK:" + src + ":" + link)
+                continue
+            if resolved.is_dir():
+                if not any(p.is_relative_to(resolved) for p in files):
+                    blockers.append("EMPTY_LINKED_DIRECTORY:" + src + ":" + link)
+                continue
+            if not resolved.is_file():
                 blockers.append("BROKEN_LOCAL_LINK:" + src + ":" + link)
                 continue
             referent = resolved.relative_to(folder).as_posix()
             if referent not in source_names:
                 blockers.append("LINKED_RESOURCE_NOT_IN_PACKAGE:" + src)
             if package_name(referent, profile) != referent:
-                blockers.append("TRANSFORM_REQUIRES_LINK_REWRITE:" + src)
+                if referent == "LICENSE":
+                    warnings.append("LOSSLESS_LICENSE_LINK_REWRITE_FOR_HOST")
+                else:
+                    blockers.append("TRANSFORM_REQUIRES_LINK_REWRITE:" + src)
     result["blockers"] = sorted(set(blockers))
     result["warnings"] = sorted(set(warnings))
     result["package_ready"] = not blockers
@@ -156,8 +185,10 @@ def inspect(folder, host):
     result["file_count"] = len(files)
     result["package_bytes"] = total
     result["manifest"] = [
-        {"source": s, "output": d, "sha256": hashlib.sha256(f.read_bytes()).hexdigest()}
-        for f, s, d in zip(files, src_names, dst_names)
+        {"source": src, "output": dst,
+         "sha256": hashlib.sha256(f.read_bytes()).hexdigest(),
+         "output_sha256": hashlib.sha256(render_package_bytes(folder, src, profile)).hexdigest()}
+        for f, src, dst in zip(files, src_names, dst_names)
     ]
     return result
 
@@ -186,7 +217,10 @@ def write_zip(folder, host, output, receipt):
         data = p.read_bytes()
         if hashlib.sha256(data).hexdigest() != row["sha256"]:
             raise ValueError("ZIP_SOURCE_CHANGED_DURING_READ")
-        payload.append((row["output"], data))
+        adapted = render_package_bytes(folder, row["source"], HOSTS[host])
+        if hashlib.sha256(adapted).hexdigest() != row["output_sha256"]:
+            raise ValueError("ZIP_ADAPTER_DIGEST_MISMATCH")
+        payload.append((row["output"], adapted))
     # Root-level SKILL.md for Microsoft uploads, with no parent directory.
     # Preloaded bytes ensure the output never silently changes after hashing.
     with destination.open("xb") as fd:
