@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/meddpicc-opportunity-assurance/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/meddpicc-opportunity-assurance/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: e0b293b96459b01db4535adc0a917225ce2cabb9
-complete_package_tree_sha: 6980f6e74f8a519e7d93347618f04311d60ef026
+content_blob_sha: c1ab2990fa71d29283a5cba21ec012e443a48c28
+complete_package_tree_sha: 65a809cb3ddb41de70672c7528be56c94d5a803f
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
@@ -28,7 +28,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Original four-file MEDDPICC Opportunity Assurance package. Only high-level public
+  Original six-file MEDDPICC Opportunity Assurance package. Only high-level public
   methodology terms are referenced; no licensed Sandler/MEDDICC curriculum,
   brand impersonation, certification, proprietary course script, CRM
   write, outbound contact or scheduled task. Independent host and consumer
@@ -42,3 +42,8 @@ notes: >-
 # 2026-11-24: bounded optional task handoff safeguard; unchanged v0.2.0.
 # Source fingerprint changed, requiring exact-package review. Real host
 # behavioral validation remains not-run. See docs/reviews/2026-11-24-task-continuity-sales-handoff.md.
+
+# Host portability refactor: 18351 character entrypoint, 6-file package.
+# Complete original procedure retained in qualification-protocol.md; exact source review pending.
+# Prior blob e0b293b96459b01db4535adc0a917225ce2cabb9, tree 6980f6e74f8a519e7d93347618f04311d60ef026 are historical.
+# Version unchanged; real host behavior remains NOT TESTED.
