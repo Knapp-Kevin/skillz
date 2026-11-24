@@ -1356,9 +1356,9 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/effort-allocation-navigator.yaml",
       "verification_path": "registry/verification/local-skills/effort-allocation-navigator.yaml",
-      "skill_blob_sha": "99d2391719768974975e14a4950867f5c9095b13",
-      "package_tree_sha": "12a43062a1d38e1139d546c8575ea1ae9a0a5655",
-      "package_file_count": 14,
+      "skill_blob_sha": "bc3710ae61508e24860e83d8023e66aab2438050",
+      "package_tree_sha": "1de24c983592388706d89361ae2cf0706b789624",
+      "package_file_count": 15,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
       "behavioral_validation": "not-run",
@@ -1371,7 +1371,7 @@
         "time-productivity/personal-planning",
         "planning/decision-frameworks"
       ],
-      "review_note": "v0.2.0 new user-facing read-only two-snapshot continuation comparator, caller-asserted progress/reopens/removals, explicit current-source access gate and opt-in consent-safe sales-task handoff. Fourteen files; source-level adversarial checks are distinct from host/user behavioral evidence and real persistence. Previous v0.1.0 101/101 synthetic checks historical. See docs/reviews/2026-11-24-task-continuity-sales-handoff.md.",
+      "review_note": "v0.2.0 ADHD-supportive, diagnosis-free task initiation and repeat-use capability. Default 5-minute voluntary microstart (task/capacity bounded), current-run 2–10-minute private preference, nonjudgmental interrupted-work re-entry cue and caller-scope-checked two-snapshot comparison; IDs/claims only. Initial synthetic red nine errors PR #914 CI 45440239015 followed by 130/130 passing offline tests 45440863551; full exact-head authored/source QA and independent review required before merge. No diagnosis, timer, telemetry, actual task completion, user outcome or host persistence claimed. docs/reviews/2026-11-24-task-continuity-sales-handoff.md.",
       "previous_reviewed_skill_blob_sha": "1e3ad08ebf4951b1bd41f5d8bc0d3b5e55c645f4",
       "previous_reviewed_package_tree_sha": "f79f12513f700884def4ec15992b4c1e34d35a9f"
     },
