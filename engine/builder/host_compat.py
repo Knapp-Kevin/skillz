@@ -236,6 +236,46 @@ def write_zip(folder, host, output, receipt):
     receipt["artifact_status"] = "CREATED_NOT_UPLOADED"
 
 
+def write_directory(folder, host, output, receipt):
+    """Prepare an exclusive, transformed folder; NEVER install into the host."""
+    if HOSTS[host]["mode"] != "directory" or not receipt["package_ready"]:
+        raise ValueError("DIRECTORY_REQUIRES_READY_DIRECTORY_HOST")
+    destination = Path(output).expanduser().absolute()
+    if destination.exists() or destination.is_symlink() or destination.is_relative_to(ROOT):
+        raise ValueError("DIRECTORY_DESTINATION_MUST_BE_NEW_OUTSIDE_REPO")
+    if (not destination.parent.is_dir() or
+            any(p.is_symlink() for p in (destination.parent, *destination.parent.parents))):
+        raise ValueError("DIRECTORY_PARENT_MISSING_OR_SYMLINKED")
+    current = inspect(folder, host)
+    if not current["package_ready"] or current["manifest"] != receipt["manifest"]:
+        raise ValueError("DIRECTORY_SOURCE_CHANGED_SINCE_PREFLIGHT")
+    payload = []
+    for row in receipt["manifest"]:
+        p = folder / row["source"]
+        if p.is_symlink() or not p.is_file():
+            raise ValueError("DIRECTORY_SOURCE_FILE_INVALID")
+        raw = p.read_bytes()
+        if hashlib.sha256(raw).hexdigest() != row["sha256"]:
+            raise ValueError("DIRECTORY_SOURCE_CHANGED_DURING_READ")
+        data = render_package_bytes(folder, row["source"], HOSTS[host])
+        if hashlib.sha256(data).hexdigest() != row["output_sha256"]:
+            raise ValueError("DIRECTORY_ADAPTER_DIGEST_MISMATCH")
+        payload.append((row["output"], data))
+    # Exclusive new handoff folder; a failed mid-copy operation leaves a
+    # partial candidate, never an installed or completed skill.
+    destination.mkdir(mode=0o700)
+    for name, data in payload:
+        target = destination / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with target.open("xb") as fd:
+            fd.write(data)
+    for name, data in payload:
+        if (destination / name).read_bytes() != data:
+            raise ValueError("DIRECTORY_READBACK_FAILED")
+    receipt["artifact"] = str(destination)
+    receipt["artifact_status"] = "PREPARED_NOT_INSTALLED"
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     choice = parser.add_mutually_exclusive_group(required=True)
@@ -243,11 +283,16 @@ def main(argv=None):
     choice.add_argument("--all", action="store_true", help="Audit every authored package")
     parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all host profiles")
     parser.add_argument("--zip-output", help="Explicit NEW ZIP output, single skill and ZIP host only")
+    parser.add_argument("--directory-output", help="Explicit NEW handoff directory, not host installation")
     args = parser.parse_args(argv)
     if args.skill and (not NAME.fullmatch(args.skill) or len(args.skill) > 64):
         raise ValueError("INVALID_SKILL_SLUG")
+    if args.zip_output and args.directory_output:
+        parser.error("Choose only one output artifact")
     if args.zip_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "zip"):
         parser.error("--zip-output requires --skill and a ZIP-based --host")
+    if args.directory_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "directory"):
+        parser.error("--directory-output requires --skill and a directory-based --host")
     packages = (
         sorted(p for p in AUTHORED.iterdir() if p.is_dir() and (p / "SKILL.md").is_file())
         if args.all else [AUTHORED / args.skill]
@@ -255,6 +300,8 @@ def main(argv=None):
     results = [inspect(p, h) for p in packages for h in ([args.host] if args.host else HOSTS)]
     if args.zip_output:
         write_zip(packages[0], args.host, args.zip_output, results[0])
+    if args.directory_output:
+        write_directory(packages[0], args.host, args.directory_output, results[0])
     summary = {h: {
         "ready": sum(r["package_ready"] for r in results if r["host"] == h),
         "hold": sum(not r["package_ready"] for r in results if r["host"] == h),
