@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: statement-variance-reviewer
 display_name: "Statement Variance Reviewer"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "Three-file text package; optional scoped host access, no bundled runtime"
-content_blob_sha: 254e07c740730369312777b724e21c0d6f9d8ad6
-complete_package_tree_sha: 31ca2a72a4dc8e00c00d0b58b41f44bd8d20b27a
+content_blob_sha: d2ba7039ff1462ac9bcb9854cc57d11f4c4b1fd3
+complete_package_tree_sha: ab9d51c34bef67904a8319fc691815ca5b0e3fec
 historical_comparators: "skills/finance-review/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"

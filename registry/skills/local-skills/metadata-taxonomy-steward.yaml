@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: metadata-taxonomy-steward
 display_name: Metadata Taxonomy Steward
@@ -22,8 +23,8 @@ dependencies: >-
   Passive text/reference-only. Live source traversal, target verification, tag
   updates or shared indexes require separately available and explicitly
   authorized host capabilities; no scripts, credentials or service bundled.
-content_blob_sha: 93955fbd186afbb6238cd8a3eb5a5cfdbd954596
-complete_package_tree_sha: e0d7a19d08d33e625dfaa2b44925cbc3f4e44ff9
+content_blob_sha: f2ff7f8c98ea78091c51e55782b43fd5faadfc5b
+complete_package_tree_sha: 84b4441f38b192b46d92c82851a8a1883f419213
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

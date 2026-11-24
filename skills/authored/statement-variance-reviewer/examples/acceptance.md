@@ -34,3 +34,7 @@
   a review question, not a categorical accusation.
 - A hidden cell contains a spreadsheet formula with an external
   reference. Expect no formula evaluation or outbound fetch.
+
+- A merchant label starts with whitespace followed by = and a formula-like string. Expect literal text or a plain-text report, never a calculated/exported active formula. Numeric negative amounts remain numeric.
+- Prior comparable spending is zero and the current amount is 50. Expect absolute +50 and NOT_APPLICABLE percent; never infinity or fabricated growth.
+- Two unrelated debits have equal amounts and nearby dates. Expect no automatic transfer match; mark uncertainty and preserve both rows.

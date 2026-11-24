@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: agent-workspace-footprint-assessor
 display_name: "Agent Workspace Footprint Assessor"
@@ -21,8 +22,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
 dependencies: "No bundled execution or service; authorized host read scope only"
-content_blob_sha: 6cf2bd1942f5075fcb6bd67c8fcef69474c7a7d4
-complete_package_tree_sha: 4d1f0036250873bd994f43c8f7adab1f1629a0c1
+content_blob_sha: fe0be55ac87f38de575652d26d7292b199628a57
+complete_package_tree_sha: 06de23836f18a40f927607d11a071726e5051020
 historical_comparator: skills/agent-home-doctor/SKILL.md
 historical_origin_status: "Control of account does not establish underlying original authorship or rights"
 rights_resolution: "Only independently written new content is MIT; legacy texts remain untouched"

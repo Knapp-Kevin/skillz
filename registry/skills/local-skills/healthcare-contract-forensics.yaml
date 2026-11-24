@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: healthcare-contract-forensics
 display_name: "Healthcare Contract Forensics"
@@ -26,5 +27,5 @@ rationale: "First-party independent creation for issue #714, following cross-dom
 # 2026-11-22 exact current package: MIT LICENSE bundled in standalone skill directory.
 # Offline redistribution no longer depends on a parent repository license file.
 # Negative-case scenarios included; model-host behavior remains NOT_RUN.
-content_blob_sha: 9e49eeba8fd9a0f0f1ad4e2daf2290f7e3199203
-complete_package_tree_sha: 8d16573d212cd66c8c41bd9d7b00bc9f973ebd89
+content_blob_sha: 6d8303ac175a5ca5bc76b895a22870f17a2a5872
+complete_package_tree_sha: 1b21d3497b0048dd964bbb13b98402618eb534eb
