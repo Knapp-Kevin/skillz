@@ -5,6 +5,44 @@ Git source/package tree fingerprints, not this narrative, identify
 the precise reviewed content. No hosted task system, persistent
 memory or independently observed human outcome is claimed.
 
+## 0.3.0 (2026-11-24): focus continuity and task-identity integrity
+
+**Deliberate minor release**, not a patch per test or document edit.
+
+- Introduces optional current-run `focus_task_id`: a task explicitly
+  chosen by the user remains primary when still eligible and near
+  the top provisional score (within 85%) in the same priority lane.
+  Mandatory safety, confirmed imminent deadlines, blocked work,
+  completed claims, missing estimates and materially worse choices
+  are not bypassed. Missing focus IDs return a categorical reason,
+  not fabricated history or task completion.
+- **Hardens two-snapshot task identity**: a recycled-looking ID whose
+  task label or kind changed is held under `identity_review_ids`.
+  Completion, reopening, readiness and resume claims for that ID
+  do not proceed automatically. A normal task rename also produces
+  review, not an accusation of ID recycling. Original task labels
+  are never emitted by the offline helper.
+- Adds 18 red-first adversarial regression cases and a fictional
+  opt-in current-run focus example. The established single-snapshot
+  format remains valid; the additional focus input is optional.
+- Retains one primary and one meaningful alternative by default,
+  voluntary micro-starts, no ADHD diagnosis or medical claims,
+  read-only local execution, source permission gates, no stored
+  user focus/preference history, and no automatic task mutations.
+
+**Version rationale:** task selection now accepts an additional
+explicit user choice with material runtime effects. That is a
+new user-visible capability, so a minor version is warranted.
+No claim of independent consuming-agent behavior, real user
+engagement improvement, task completion or paid installation
+follows from synthetic source-method tests.
+
+**Evidence:** the adversarial test-only branch of PR #915 produced
+a red 148-case run with 4 failures and 12 errors in the 18 new
+cases, before changing the original planner. Subsequent
+source corrections must pass the entire test suite and
+the exact package fingerprint/review gates before merge.
+
 ## 0.2.0 (2026-11-24): repeat-use continuity without task mutation
 
 **ADHD-supportive, diagnosis-free design refinement:** The default
