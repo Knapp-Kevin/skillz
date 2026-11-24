@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/sandler-conversation-strategist/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/sandler-conversation-strategist/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5d844ac0e8d4f733f904cafa63966dd33ff4a032
-complete_package_tree_sha: 770c367d10cd7bb52e0fb0fb1b24ed95a57a7b25
+content_blob_sha: 4bab4ca1f5ac1a184ed4f38bb3f87d1fb5479ed6
+complete_package_tree_sha: 0de2fdc88f7f703bd53c2687ea82d33e5892dd79
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
@@ -28,7 +28,7 @@ tags:
   authority: [read-only]
   portability: [high]
 notes: >-
-  Original four-file Sandler-aligned Conversation Strategist package. Only high-level public
+  Original six-file Sandler-aligned Conversation Strategist package. Only high-level public
   methodology terms are referenced; no licensed Sandler/MEDDICC curriculum,
   brand impersonation, certification, proprietary course script, CRM
   write, outbound contact or scheduled task. Independent host and consumer
@@ -42,3 +42,8 @@ notes: >-
 # 2026-11-24: bounded optional task handoff safeguard; unchanged v0.2.0.
 # Source fingerprint changed, requiring exact-package review. Real host
 # behavioral validation remains not-run. See docs/reviews/2026-11-24-task-continuity-sales-handoff.md.
+
+# Host portability refactor: 19285 character entrypoint, 6-file package.
+# Complete original procedure retained in conversation-protocol.md; exact source review pending.
+# Prior blob 5d844ac0e8d4f733f904cafa63966dd33ff4a032, tree 770c367d10cd7bb52e0fb0fb1b24ed95a57a7b25 are historical.
+# Version unchanged; real host behavior remains NOT TESTED.

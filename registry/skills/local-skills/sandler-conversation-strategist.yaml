@@ -18,9 +18,9 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: self-contained-text-package
-dependencies: "Four-file standalone original source, no CRM, meeting, scheduler or vendor training dependency"
-content_blob_sha: 5d844ac0e8d4f733f904cafa63966dd33ff4a032
-complete_package_tree_sha: 770c367d10cd7bb52e0fb0fb1b24ed95a57a7b25
+dependencies: "Six-file standalone original source, no CRM, meeting, scheduler or vendor training dependency"
+content_blob_sha: 4bab4ca1f5ac1a184ed4f38bb3f87d1fb5479ed6
+complete_package_tree_sha: 0de2fdc88f7f703bd53c2687ea82d33e5892dd79
 import_eligibility: review-required
 rights_resolution: "Only independently written materials MIT; public high-level method attribution, no third-party texts/assets licensed or imported"
 rationale: >-
@@ -39,3 +39,8 @@ rationale: >-
 # 2026-11-24: bounded optional task handoff safeguard; unchanged v0.2.0.
 # Source fingerprint changed, requiring exact-package review. Real host
 # behavioral validation remains not-run. See docs/reviews/2026-11-24-task-continuity-sales-handoff.md.
+
+# Host portability refactor: 19285 character entrypoint, 6-file package.
+# Complete original procedure retained in conversation-protocol.md; exact source review pending.
+# Prior blob 5d844ac0e8d4f733f904cafa63966dd33ff4a032, tree 770c367d10cd7bb52e0fb0fb1b24ed95a57a7b25 are historical.
+# Version unchanged; real host behavior remains NOT TESTED.
