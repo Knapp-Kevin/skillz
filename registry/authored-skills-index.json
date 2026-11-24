@@ -1372,6 +1372,66 @@
         "planning/decision-frameworks"
       ],
       "review_note": "Adversarial FIRST: exact-head red baseline PR #901 96 cases (78 prior PASS, 11/18 new PASS, 7/18 planted cases fail/error), GitHub Actions #45275341228. Then four evidence-backed bounded refinements, with five additional regression checks; final refined PR head 835311a7386d7b78391f9a657ea4997d0d7cc375 passed 101/101 synthetic graph tests (run #45276005447) and 11/11 authored integrity checks (run #45276005477); Socket PR/project checks SUCCESS. No independent model-host/user task outcome, genuine preference persistence or measured productivity/ADHD benefit; skill version held at 0.1.0."
+    },
+    {
+      "id": "sandler-conversation-strategist",
+      "display_name": "Sandler-aligned Conversation Strategist",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/sandler-conversation-strategist",
+      "entrypoint": "skills/authored/sandler-conversation-strategist/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/sandler-conversation-strategist/LICENSE",
+      "license_inheritance": "Four-file first-party original skill and original synthetic cases; only public method terms attributed, no vendor-owned course content copied.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-24",
+      "provenance_path": "registry/skills/local-skills/sandler-conversation-strategist.yaml",
+      "verification_path": "registry/verification/local-skills/sandler-conversation-strategist.yaml",
+      "skill_blob_sha": "8d0f94de2fc308b2aabc6fa4d8f41b30173fa330",
+      "package_tree_sha": "48107b6e4353338c140a9d3d8f9a8d59048d1b73",
+      "package_file_count": 4,
+      "review_status": "needs-re-review",
+      "review_score": "NOT_ASSESSED_NEW_SOURCE",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original independently drafted text, fictional acceptance tests, public high-level framework terms. No affiliation with Sandler or MEDDPICC training providers; external trademark/legal rights not adjudicated.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "sales",
+        "communication"
+      ],
+      "review_note": "See docs/reviews/2026-11-24-sales-methods-gap-sandler-meddpicc.md; offline source identity checks and independent model-host validation pending. No external CRM, scheduling, prospect contact, vendor certification or real sales results."
+    },
+    {
+      "id": "meddpicc-opportunity-assurance",
+      "display_name": "MEDDPICC Opportunity Assurance",
+      "source_class": "first-party-authored",
+      "package_path": "skills/authored/meddpicc-opportunity-assurance",
+      "entrypoint": "skills/authored/meddpicc-opportunity-assurance/SKILL.md",
+      "source_repository": "https://github.com/Knapp-Kevin/skillz",
+      "license_spdx": "MIT",
+      "license_file": "skills/authored/meddpicc-opportunity-assurance/LICENSE",
+      "license_inheritance": "Four-file first-party original skill and original synthetic cases; only public method terms attributed, no vendor-owned course content copied.",
+      "copyright_holder": "Kevin Knapp",
+      "license_verified_at": "2026-11-24",
+      "provenance_path": "registry/skills/local-skills/meddpicc-opportunity-assurance.yaml",
+      "verification_path": "registry/verification/local-skills/meddpicc-opportunity-assurance.yaml",
+      "skill_blob_sha": "241b1ac2fc444bc85207ab5a7db6c6c06cba2626",
+      "package_tree_sha": "2d8ab7df769ee1bc2979922444f19c6734ca6c7c",
+      "package_file_count": 4,
+      "review_status": "needs-re-review",
+      "review_score": "NOT_ASSESSED_NEW_SOURCE",
+      "behavioral_validation": "not-run",
+      "host_authority": "read-only",
+      "publication_status": "reference-only-not-production-qualified",
+      "rights_note": "Original independently drafted text, fictional acceptance tests, public high-level framework terms. No affiliation with Sandler or MEDDPICC training providers; external trademark/legal rights not adjudicated.",
+      "package_version": "0.1.0",
+      "capability_paths": [
+        "sales",
+        "business"
+      ],
+      "review_note": "See docs/reviews/2026-11-24-sales-methods-gap-sandler-meddpicc.md; offline source identity checks and independent model-host validation pending. No external CRM, scheduling, prospect contact, vendor certification or real sales results."
     }
   ]
 }
