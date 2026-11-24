@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Productivity
   display-name: Effort Allocation Navigator
-  version: 0.1.0
+  version: 0.2.0
   license: MIT
 ---
 
@@ -166,6 +166,8 @@ Run from a copied *complete package* with Python 3.9+:
 See [the contract and limits](README.md),
 [synthetic acceptance cases](examples/acceptance.md) and
 [private preference template](preferences/README.md).
+See [version history](CHANGELOG.md) for the deliberate minor capability release.
+
 The helper is **optional**: a host with an equivalent approved
 dependency/decision tool may implement the same checks. An agent
 without Python must not claim to have run the helper.
@@ -179,6 +181,82 @@ make API requests, update issues, schedule work, learn user behavior
 or fetch any external information. A score is not permission.
 Its modeled path assumes unconstrained parallelism and cannot replace
 real resource-constrained scheduling.
+
+## Repeat-use continuity, without inventing a task database
+
+**Trigger:** The user returns after an earlier planning pass, supplies
+a newer task snapshot, or says "what changed?" For a single fresh
+brain dump, follow the normal one-snapshot route. This supports
+hourly, daily or weekly repetitions but does **not** schedule or
+persist them. A host may provide previously authorized snapshots;
+it must not discover private histories merely because the skill ran.
+
+1. **Confirm current scope on both inputs.** Check that old and new
+   snapshots are authorized for this viewer, use a comparable task-ID
+   namespace and represent the intended project. If source access
+   was revoked or cannot be established, **HOLD without disclosing
+   cached task IDs, counts, labels or prior choices**.
+2. **Reconcile, then prioritize.** Distinguish `COMPLETED_CLAIM`,
+   `REOPENED`, `ADDED`, `REMOVED_UNRECONCILED`,
+   `DEPENDENCY_CHANGED`, `BLOCKER_CHANGED`,
+   `PRIORITY_CHANGED`, `ESTIMATE_CHANGED`,
+   `NEWLY_READY` and `NEWLY_BLOCKED`. A removed task is **not DONE**;
+   a rewritten task ID is **not proven the same task**; a DONE claim
+   is not an independently observed outcome.
+3. **Keep the active objective visible.** If the selected goal
+   changed, report `GOAL_CHANGED` and confirm whether the new
+   objective supersedes the old one. Do not count tasks dropped from
+   a snapshot as productivity.
+4. **Update only affected decisions.** Re-evaluate blockers,
+   dependents, mandatory safety/deadline obligations and the next
+   action from the new task graph; preserve the success criteria
+   and one-primary/one-alternative default. Report the consequential
+   progress/regression, one action, one viable alternative and stop
+   condition, not a new overwhelming backlog.
+5. **Keep preferences private.** User requests for fewer choices or
+   shorter work slices affect the current run. Persistent learning
+   requires independently available, consented, revocable private
+   host storage; no background collector, memory store or scheduler
+   ships with the package.
+
+The optional, **stateless** helper accepts two explicitly authorized
+local snapshots, using `--previous` alongside `--input`:
+
+    python3 scripts/plan.py --previous examples/fictional-tasks.json --input examples/fictional-tasks.json
+
+The one-snapshot route is unchanged. The optional `transition`
+output exposes **task ID tokens and bounded counts**, not titles,
+paths or account identities. It compares caller-provided assertions,
+not authenticated work receipts. Same-day inputs have only
+caller-specified order; reversed snapshot dates are rejected.
+Current host permission/source identity must be checked **before
+reading either snapshot**. If that cannot be established, do not
+invoke this helper on previously cached private data.
+
+## Optional consent-aware handoff of sales follow-ups
+
+When asked to combine sales-method review with task prioritization,
+a source skill may **propose** a bounded next task in a source-labelled,
+text-only handoff. This skill neither requires another sales skill
+nor treats a seller's suggested customer action as authorization.
+
+Map only cleared **internal preparation** (such as drafting internal
+buyer questions) to eligible work. A proposed external buyer-facing
+action (contacting a prospect, sending a proposal or scheduling a
+call) is **BLOCKED** using `external_blocker: true` until the
+current user and host confirm necessary buyer consent, permitted
+scope and the specific external action. A buyer opt-out is a STOP,
+**not** a "contact to verify consent" task. One buyer-confirmed
+fact or an upbeat CRM stage never authorizes customer outreach.
+Revoked viewer access suppresses cached opportunity details.
+
+Accept an optional minimal text exchange:
+`source_method | source_evidence_state | internal_or_external |
+blocking_condition | proposed_action | acceptance_evidence |
+viewer_scope`. Translate to the task graph only in the user's
+authorized host, preserving real dependency and blocker states.
+The planner does not accept these raw private fields, call other
+skills or create task records by itself.
 
 ## Preference adaptation without canonical contamination
 
