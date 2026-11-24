@@ -118,6 +118,11 @@ def inspect(folder, host):
             blockers.append("MAX_FILE_BYTES:" + dst)
         if "extensions" in profile and Path(dst).suffix.lower() not in profile["extensions"]:
             blockers.append("UNSUPPORTED_EXTENSION:" + dst)
+        sensitive_name = Path(src).name.lower()
+        if (sensitive_name == ".env" or sensitive_name.startswith(".env.local") or
+                sensitive_name in {"id_rsa", "id_ed25519", "credentials.json", "secrets.json"} or
+                sensitive_name.endswith((".pem", ".p12", ".pfx", ".key"))):
+            blockers.append("POTENTIALLY_SENSITIVE_FILE:" + src)
         if Path(src).suffix.lower() in SCRIPT_EXTENSIONS:
             warnings.append("SCRIPT_RUNTIME_AND_PERMISSIONS_REQUIRE_HOST_TEST")
         if f.suffix.lower() != ".md":
@@ -163,8 +168,11 @@ def write_zip(folder, host, output, receipt):
     destination = Path(output).expanduser().absolute()
     if destination.suffix.lower() != ".zip" or destination.exists() or destination.is_symlink():
         raise ValueError("ZIP_DESTINATION_MUST_BE_NEW_ZIP")
-    if not destination.parent.is_dir() or destination.parent.is_symlink():
+    if (not destination.parent.is_dir() or
+            any(p.is_symlink() for p in (destination.parent, *destination.parent.parents))):
         raise ValueError("ZIP_PARENT_MISSING_OR_SYMLINKED")
+    if destination.is_relative_to(ROOT):
+        raise ValueError("REPOSITORY_ZIP_WRITE_NOT_ALLOWED")
     # zip entries are rooted at SKILL.md, NOT nested under skill-name/.
     with destination.open("xb") as fd:
         with zipfile.ZipFile(fd, mode="w", compression=zipfile.ZIP_DEFLATED) as archive:
@@ -188,6 +196,8 @@ def main(argv=None):
     parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all host profiles")
     parser.add_argument("--zip-output", help="Explicit NEW ZIP output, single skill and ZIP host only")
     args = parser.parse_args(argv)
+    if args.skill and (not NAME.fullmatch(args.skill) or len(args.skill) > 64):
+        raise ValueError("INVALID_SKILL_SLUG")
     if args.zip_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "zip"):
         parser.error("--zip-output requires --skill and a ZIP-based --host")
     packages = (
