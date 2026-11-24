@@ -52,7 +52,10 @@ jobs:
           python3 -B scripts/qa/test-engine-feedback-boundary.py
           python3 -B scripts/qa/test-host-compatibility.py
           python3 -B scripts/qa/test_sales_methodology_contract.py
-          python3 -B engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agent-builder >/tmp/navigator-package-check.json
+          # Protect already-remediated packages against future size or link regressions.
+          for skill in effort-allocation-navigator sandler-conversation-strategist meddpicc-opportunity-assurance evidence-driven-refinement-loop; do
+            python3 -B engine/builder/host_compat.py --skill "$skill" > "/tmp/$skill-package-check.json"
+          done
       - name: Full authored host packaging matrix (report-only, no false pass)
         shell: bash
         run: |
