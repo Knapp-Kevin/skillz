@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/sandler-conversation-strategist/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/sandler-conversation-strategist/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 905b18268a867bc62d169f32e5699915e23d6b41
-complete_package_tree_sha: 645b235cc4d3981e71437138ba14b8ddd7e6364c
+content_blob_sha: 8d0f94de2fc308b2aabc6fa4d8f41b30173fa330
+complete_package_tree_sha: 48107b6e4353338c140a9d3d8f9a8d59048d1b73
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
