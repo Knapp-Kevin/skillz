@@ -98,11 +98,12 @@ instructions; actual independent agent execution remains NOT_RUN.
 | Usefulness/differentiation | 2 | 2 | Same original file curation, persistent maintenance and visual contracts |
 | Adversarial resilience | 2 | 2 | Explicit nontrigger, permission and false-success scenarios |
 | Effectiveness design | 2 | 2 | Agent can choose minimum needed path with full-workflow exception |
-| **Total** | **19/20** | **20/20 author-led candidate** | **Not formal independent review** |
+| **Total** | **19/20** | **20/20 author-led static assessment** | **Not formal independent review** |
 
-The new text is designed to make the last 1/2 point defensible, not to
-guarantee that every agent or user will navigate it flawlessly. This score
-remains a **candidate** until exact-package CI and independent review.
+The final source-only checks support the last procedural clarity point
+under an **author-led, static semantic review**, not a guarantee that every
+agent or user will navigate it flawlessly. Independent model-host semantic
+qualification remains separate and has not been established.
 The repository's mandatory `needs-re-review` status is retained even if
 the author-led static rubric reaches 20/20. Real independent host behavior,
 consumer acceptance and external security scanning are separate axes.
@@ -120,3 +121,19 @@ consumer acceptance and external security scanning are separate axes.
   the change merits a version bump.
 - Distinguish author-led score from an independently signed/evidenced
   review; only report the latter if one actually happens.
+
+## Exact package qualification after second red-team revision
+
+The revised package retains **31 first-party files** with entrypoint Git blob
+`9849a98323956fe8ad6cd01fba5fab0c54dd0ffa` and complete tree
+`57a5f84e5a2ff1c44e8c848408b1a2903958abb9`. The current-head CI
+runs #45338471500 (curator tests) and #45338470942 (authored source/tree
+fingerprint tests) both passed. Those are deterministic source/package checks,
+not independent model execution.
+
+Codex's manual GitHub review of an earlier qualified head
+(`0bcc056e35b9ab2e9b25eb51e6249e630a156b25`) completed with no
+findings. That is a **code review of that head**, not evidence that the
+new native-lookup routing revision has independently passed. A review of
+the final head was requested separately. The formal repository status
+remains `needs-re-review`; an author-led 20/20 rating does not waive it.
