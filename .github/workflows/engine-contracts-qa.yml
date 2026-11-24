@@ -7,6 +7,9 @@ on:
       - 'engine/**'
       - 'AGENT_START_HERE.md'
       - 'README.md'
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'scripts/qa/test-readme-onboarding.py'
       - 'docs/consumer-discovery-and-installation.md'
       - 'docs/evaluation-framework.md'
       - 'docs/skill-template.md'
@@ -44,6 +47,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 -B scripts/qa/test-readme-onboarding.py
           python3 -B scripts/qa/test-engine-contracts.py
           python3 -B scripts/qa/test-engine-refinement-cases.py
           python3 -B scripts/qa/test-engine-packs.py

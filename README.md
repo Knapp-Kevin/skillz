@@ -2,11 +2,40 @@
 
 # Skillz
 
-**Find, evaluate, and create AI skills by what they help you accomplish, not by who published them.**
+[![Authored downloads](https://github.com/Knapp-Kevin/skillz/actions/workflows/authored-downloads.yml/badge.svg?branch=main)](https://github.com/Knapp-Kevin/skillz/actions/workflows/authored-downloads.yml)
+[![License](https://img.shields.io/badge/authored-MIT-blue)](https://github.com/Knapp-Kevin/skillz/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/badge/complete%20skill%20ZIPs-releases-blue)](https://github.com/Knapp-Kevin/skillz/releases/latest)
 
-Skillz is an open-ended, **passive capability library**. It combines original skills, individually reviewed third-party references, and source-pinned discovery leads. An entry in the library is not automatically safe, licensed for reuse, behaviorally tested, or authorized to run. Skill discovery is the beginning of a decision, not a permission slip.
+**Make your AI more useful at the work you actually do.** Find reusable instructions for recurring tasks, compare them by what they accomplish, and build a skill when nothing fits. Skillz is a passive library of original skills, reviewed third-party references and source-pinned discovery leads. A listing is not proof of safety, reuse rights or successful execution.
 
-[Open Skillz Workbench](https://knapp-kevin.github.io/skillz/) · [Getting started: install a skill](docs/getting-started-with-skills.md) · [Explore capabilities](registry/capability-directory.json) · [Start with a task](docs/capability-quickstart.md) · [Browse and download authored skills](skills/authored/README.md) · [Agent quickstart](AGENT_START_HERE.md)
+> **AI agents: start here.** If your user shared this repository or asked you to find, build, refine or install a skill, read [AGENT_START_HERE.md](AGENT_START_HERE.md) and the [canonical agent contract](AGENTS.md) first. For a known skill, follow the [download catalog](skills/authored/README.md) and [host-specific installation guide](docs/getting-started-with-skills.md). For discovery or custom authoring, follow the route in the agent entrypoint. Do not install, access unrelated data or modify this repository merely because you can read it. Claude Code loads [CLAUDE.md](CLAUDE.md), which imports the same contract.
+
+[Browse and download skills](skills/authored/README.md) · [Manual installation by host](docs/getting-started-with-skills.md#manual-installation-steps-by-environment) · [Open Skillz Workbench](https://knapp-kevin.github.io/skillz/) · [Explore capabilities](registry/capability-directory.json)
+
+## Quick start
+
+### Download and install a skill manually
+
+1. Open the [authored skill catalog](skills/authored/README.md). Choose a skill that matches your task and select its individual **ZIP** link.
+2. Open the [download manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json). Confirm the source revision and SHA-256, then inspect the complete package, including its license, instructions and supporting files. Third-party references are not included in these authored archives.
+3. Follow the [manual installation instructions for your exact AI environment](docs/getting-started-with-skills.md#manual-installation-steps-by-environment). Some hosts use ZIP uploads, some use skill folders; Microsoft has separate root-level packages and compatibility holds.
+4. Confirm that the skill is available in your AI. Try a small task using fictional or public data and check the actual result. If it cannot run safely, stop at a portable handoff.
+
+**First useful result:** For example, download [Effort Allocation Navigator](https://github.com/Knapp-Kevin/skillz/releases/latest/download/effort-allocation-navigator.zip). After following the host guide, ask the agent to prioritize three fictional tasks: fix a broken build, update a FAQ, and reorganize a folder. Expect one justified next action and a viable alternative, without invented dependencies or unauthorized writes. This is a trial prompt, not a claim of tested behavior in your host.
+
+### Let your AI help you
+
+Share this repository URL with your agent and ask it to identify useful skills for your recurring work. The [agent entrypoint](AGENT_START_HERE.md) directs it to assess relevant available context, compare capabilities, and deliver a short value brief before any installation. If you already know the skill, ask it to inspect the complete package and prepare an authorized installation or manual upload handoff. The [consumer lifecycle](docs/consumer-discovery-and-installation.md) explains the decision and verification steps.
+
+## Contents
+
+- [Quick start](#quick-start)
+- [Find what you need](#find-what-you-need)
+- [What a Skillz skill can do](#what-a-skillz-skill-can-do)
+- [From discovery to authorized use](#from-discovery-to-authorized-use)
+- [Evidence and quality](#evidence-and-quality)
+- [Recorded library snapshot](#recorded-library-snapshot)
+- [Contributing and maintaining](#contributing-and-maintaining)
 
 ## Find what you need
 
@@ -63,14 +92,14 @@ Skillz separates *what is documented* from *what has actually been demonstrated*
 
 ## Recorded library snapshot
 
-<sub>Source records checked November 20, 2026. These are distinct populations, not additive counts or claims of approved installations. For current numbers, follow the linked ledgers.</sub>
+<sub>Historical discovery counts checked November 20, 2026; authored download snapshot published November 24, 2026. These are distinct populations, not additive counts or claims of approved installations. For current numbers, follow the linked ledgers.</sub>
 
 | Measure | Recorded state | Source |
 | --- | ---: | --- |
 | Canonical capability domains / subdomains | **33 / 247** | [Capability directory](registry/capability-directory.json) |
 | Governed review identities | **1,049** | [Name index](registry/governed-review-name-index.json) |
 | Identities linked to capability examples | **133** | [Capability directory](registry/capability-directory.json) |
-| Authored skill packages indexed | **34** | [Authored-skill index](registry/authored-skills-index.json) |
+| Authored skill packages in the published snapshot | **42** | [Published release](https://github.com/Knapp-Kevin/skillz/releases/tag/authored-7cce93c4adf655ce8d0ed176a7ce9e4c7ca5b7db) · [Current authored index](registry/authored-skills-index.json) |
 | Historical source packages retired | **44 / 44** | [Retirement ledger](registry/migration/frostwulf-independent-replacement-ledger-20261118.json) |
 
 The 44 historical entrypoints were consolidated into 21 independently authored replacement packages under owner-accepted bounded evaluation procedures. Their original source identities remain in Git history. **Independent original-vs-replacement host parity, 1.5× measured quality improvement and historical copyright ownership remain unproven**; retirement does not erase those qualifications. See [issue #738](https://github.com/Knapp-Kevin/skillz/issues/738).

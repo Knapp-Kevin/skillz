@@ -4,6 +4,8 @@
 
 This file is Claude Code's repository entrypoint. The imported root `AGENTS.md` is the **canonical project contract**, including authority, privacy, discovery, source provenance, maintenance routing, and the read-only consumer boundary. Keep those requirements in one place; do not duplicate or weaken them here. The import is a **local file reference**, not a network request, and works in an offline checkout containing both files.
 
+**For downloads and installation:** read [the authored catalog](skills/authored/README.md) and [manual installation by host](docs/getting-started-with-skills.md#manual-installation-steps-by-environment). Use the Claude Code filesystem route only when it is the actual host; Claude web/desktop uploads are a separate interface. Follow the imported AGENTS.md contract and verify host discovery and behavior separately.
+
 ## Claude Code operating guidance
 
 1. **Choose the correct route before touching files.** Read `AGENT_START_HERE.md` and use `engine/skills/skill-bootstrap/SKILL.md` when the canonical contract calls for it. An ordinary user consuming the library does **not** authorize repository changes. Only an explicit `REPOSITORY_MAINTENANCE` task may alter Skillz files.

@@ -57,7 +57,7 @@ Stop a stage when additional work is unlikely to materially change the next deci
 Choose exactly one route:
 
 - `REPOSITORY_ORIENTATION` — when the user points at this repository and says “take a look” or asks what value it offers, **review available host-native memory and relevant past user work** using the [agent value-discovery guide](../../../docs/agent-value-discovery.md). Return a short evidence-grounded value brief; stop this full bootstrap unless they request a fitted system.
-- `DIRECT_LIBRARY` — browse/search/compare/install a known skill; stop this bootstrap.
+- `DIRECT_LIBRARY` — browse/search/compare/install a known skill; stop this bootstrap. For installation, follow the [authored download catalog](../../../skills/authored/README.md) and [host-aware getting-started guide](../../../docs/getting-started-with-skills.md) before handing off or performing an authorized host-specific install. Check the manifest, complete package, permissions and actual host outcome; do not install on discovery alone.
 - `SINGLE_SKILL_BUILD` — create or adapt **one task-specific skill** from a user request; take the focused path below, not a fitted-system interview.
 - `FIRST_VISIT` — build a fitted skill system.
 - `RETURNING_USER` — review/refine an existing fitted system.
