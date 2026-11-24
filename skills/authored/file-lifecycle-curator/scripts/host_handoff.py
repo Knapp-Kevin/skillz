@@ -74,6 +74,13 @@ def preview(store, current, plan=None):
         plan["plan_id"], plan["plan_revision"]
     ):
         return hold("REPLAN_REQUIRES_APPROVAL")
+    # An immutable plan revision also has an immutable membership set.
+    # Otherwise an injected newly VERIFIED record could bypass original/target
+    # comparisons and inflate progress without owner-approved re-planning.
+    previous_ids = {row["record_id"] for row in prior_plan["records"]}
+    incoming_ids = {row["record_id"] for row in plan["records"]}
+    if previous_ids != incoming_ids:
+        return hold("PLAN_MEMBERSHIP_CHANGE_HOLD")
     if render_structure.date(plan["observed_at"]) <= render_structure.date(
         prior_plan["observed_at"]
     ):
