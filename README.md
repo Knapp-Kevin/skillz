@@ -6,7 +6,7 @@
 
 Skillz is an open-ended, **passive capability library**. It combines original skills, individually reviewed third-party references, and source-pinned discovery leads. An entry in the library is not automatically safe, licensed for reuse, behaviorally tested, or authorized to run. Skill discovery is the beginning of a decision, not a permission slip.
 
-[Open Skillz Workbench](https://knapp-kevin.github.io/skillz/) · [Getting started: install a skill](docs/getting-started-with-skills.md) · [Explore capabilities](registry/capability-directory.json) · [Start with a task](docs/capability-quickstart.md) · [Browse authored skills](skills/authored/README.md) · [Agent quickstart](AGENT_START_HERE.md)
+[Open Skillz Workbench](https://knapp-kevin.github.io/skillz/) · [Getting started: install a skill](docs/getting-started-with-skills.md) · [Explore capabilities](registry/capability-directory.json) · [Start with a task](docs/capability-quickstart.md) · [Browse and download authored skills](skills/authored/README.md) · [Agent quickstart](AGENT_START_HERE.md)
 
 ## Find what you need
 
@@ -17,7 +17,7 @@ Skillz is an open-ended, **passive capability library**. It combines original sk
 | Explore unfamiliar possibilities | [Capability directory](registry/capability-directory.json) | Domain → subdomain → evidence-linked candidates and explicit gaps |
 | Search beyond the mapped examples | [Full-corpus discovery contract](docs/discovery/full-corpus-search-contract.md) | A source-neutral search across reviewed identities and wider pinned leads |
 | Find a known, reviewed skill | [Governed review name index](registry/governed-review-name-index.json) | Exact-version review identities, including rejected or reference-only entries |
-| Use or author a first-party skill | [Authored skill packages](skills/authored/README.md) | Standalone `SKILL.md` packages and their local references |
+| Use or author a first-party skill | [Authored skill packages](skills/authored/README.md) | Individual complete skill ZIPs, source and manual install guidance |
 | Work as an AI agent | [Agent start](AGENT_START_HERE.md) · [Host guidance](AGENTS.md) · [Claude guidance](CLAUDE.md) | Discover, evaluate and act only within the user's approved scope |
 
 Browse the human-friendly [skill categories](skills/README.md) for planning, information management, writing, research, software, agent operations, monitoring, business and career work. The directory is intentionally incomplete; **no match does not mean no such skill exists**.
