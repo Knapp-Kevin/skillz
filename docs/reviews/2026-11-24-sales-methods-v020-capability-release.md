@@ -74,7 +74,7 @@ the interaction boundary between an *agent-invented buyer utterance*
 and a *real user-written rep reply*. That could yield a long fabricated
 two-sided dialogue and unearned coaching scores while looking complete.
 
-**Repair:** Add the SETUP → PLAY → OBSERVE → COACH → CONTINUE/CLOSE
+**Repair:** Distinguish explicit full-dialogue fictional DEMONSTRATION from INTERACTIVE_REHEARSAL, then add the SETUP → PLAY → OBSERVE → COACH → CONTINUE/CLOSE
 procedure: one fictional buyer utterance, **stop for rep input**,
 separate `SIMULATED` buyer and `ROLE_PLAY_OBSERVED` rep evidence,
 one behavior-linked coaching improvement and a meaningful alternative.
@@ -82,7 +82,7 @@ A stop instruction stops practice; a no-contact response is not an
 objection to overcome. A user who never supplies a rep turn gets
 `NOT_OBSERVED_REP_BEHAVIOR`, not a fabricated grade.
 This works in text-only offline host environments with no connected
-CRM, audio or external course. Cases S15–S17 cover positive, false-green,
+CRM, audio or external course. Cases S15–S18 cover positive, false-green,
 zero-turn and no-recording situations.
 
 ### MEDDPICC: recovery from a justified action hold
@@ -146,7 +146,7 @@ Proposed source identities, bound to the final five-file packages:
 
 | Package | SKILL.md Git blob | Complete Git tree |
 | --- | --- | --- |
-| Sandler `0.2.0` | `86c34fcda236e1cfbfe16f0091a74b677b875ec0` | `122a326894cd481856efd4ed0d5d97d26f86e337` |
+| Sandler `0.2.0` | `adf3fb41ba362b484a6f1caa307c1de773da4752` | `4418e608782c4a3811c6ec12f409e8404f51126d` |
 | MEDDPICC `0.2.0` | `c2d59e2102430c6b4845130dd39cd8ee4b7983a0` | `8c25620e8a9394ce87cf9d88a0bc8d5ba034943e` |
 
 **Release completion:** exact-head authored CI, full-package review,
