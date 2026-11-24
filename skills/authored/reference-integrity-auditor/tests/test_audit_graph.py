@@ -181,6 +181,44 @@ class ReferenceGraphTests(unittest.TestCase):
         self.assertEqual(mod.audit(d)['impacts'][0]['status'],'PROPOSED_ONLY_REVALIDATE_BEFORE_ANY_WRITE')
     def test_missing_enumeration_coverage_flag_rejected(self):
         self.reject(lambda d:d['enumeration'].pop('visibility_complete'))
+    def test_unresolved_reference_prevents_orphan_claim(self):
+        d=row('NOT_RUN')
+        d['enumeration']['sources_complete']=True
+        out=mod.audit(d)
+        self.assertEqual(out['orphan_candidates_within_approved_scope'],[])
+        self.assertEqual(out['orphan_coverage'],'UNDETERMINED_INCOMPLETE_ENUMERATION')
+
+    def test_malformed_enum_containers_rejected(self):
+        for key in ('state','anchor'):
+            with self.subTest(key=key):
+                self.reject(lambda d:d['edges'][0]['lookup'].update({key:[]}))
+        self.reject(lambda d:d['edges'][0].update(kind={}))
+        self.reject(lambda d:d['changes'][0].update(operation=[]))
+        self.reject(lambda d:d['edges'][0].pop('target'))
+
+    def test_cli_invalid_hidden_identity_is_not_echoed(self):
+        with tempfile.TemporaryDirectory() as td:
+            d=original()
+            d['nodes'][0].update(id='PRIVATE-CONFIDENTIAL-OBJECT',visible='malformed')
+            p=Path(td)/'in.json';p.write_text(json.dumps(d),encoding='utf-8')
+            v=subprocess.run([sys.executable,str(ROOT/'scripts'/'audit_graph.py'),'--input',str(p)],capture_output=True,text=True,timeout=10)
+            self.assertEqual(v.returncode,2)
+            self.assertNotIn('PRIVATE-CONFIDENTIAL-OBJECT',v.stderr+v.stdout)
+
+    def test_cli_missing_private_path_is_not_echoed(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td)/'PRIVATE-CONFIDENTIAL-PATH.json'
+            v=subprocess.run([sys.executable,str(ROOT/'scripts'/'audit_graph.py'),'--input',str(p)],capture_output=True,text=True,timeout=10)
+            self.assertEqual(v.returncode,2)
+            self.assertNotIn('PRIVATE-CONFIDENTIAL-PATH',v.stderr+v.stdout)
+
+    def test_cli_deep_json_is_bounded_without_traceback(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td)/'in.json';p.write_text('['*2000+'0'+']'*2000,encoding='utf-8')
+            v=subprocess.run([sys.executable,str(ROOT/'scripts'/'audit_graph.py'),'--input',str(p)],capture_output=True,text=True,timeout=10)
+            self.assertEqual(v.returncode,2)
+            self.assertNotIn('Traceback',v.stderr)
+
     def test_cli_valid_json_stdout_no_files(self):
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/'in.json';p.write_text(json.dumps(original()),encoding='utf-8')

@@ -1,3 +1,4 @@
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: file-lifecycle-curator
 display_name: File Lifecycle Curator
@@ -24,8 +25,8 @@ dependencies: >-
   Durable private checkpoint writes optionally use bundled Python sqlite3
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
-content_blob_sha: d8a978accc25d1c44dcb724f154647433c533e4b
-complete_package_tree_sha: 71dc3efa91efc753a065b326bd1fefa0ad3a6c75
+content_blob_sha: 5a8dd109c88b118e6ccb6371901ba0b316de58fd
+complete_package_tree_sha: 87a8db631fd2a9b84a92e5a886d983d3c1437e18
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

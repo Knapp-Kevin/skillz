@@ -7,12 +7,12 @@ license_evidence_path: skills/authored/context-continuation-contract/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/context-continuation-contract/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 7a6099b89b21f03cf8a152890472874797e41bc7
-complete_package_tree_sha: f5bd8e4ae881891ae2fda0d3920f81088194ae51
+content_blob_sha: 2489f97644cb99a524761a305761f71ab9a4f636
+complete_package_tree_sha: 78bc066bfdc92b6112cc169f2937d9bfbd350fd7
 characterized_at: "2026-11-19"
 reviewed_at: "2026-11-19"
 verification_status: needs-re-review
-verification_basis: multiturn-chain-replay-source-awaiting-exact-head-tests
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
 validation_note: "Added bounded chain replay and 23 new synthetic cases (67 transition test methods total), source QA pending. No authenticated model/host trial, owner consent, proof receipt or real user outcome established. Prior package verification remains historical, source needs fresh review."
 rubric: docs/skill-verification.md

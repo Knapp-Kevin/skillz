@@ -62,6 +62,20 @@ class FeedbackContractTests(unittest.TestCase):
                 failures[p.name] = error
         self.assertEqual(failures, {})
 
+    def test_hardened_packages_keep_both_improvement_routes_and_categorical_feedback(self):
+        hardened = ["file-lifecycle-curator","federated-source-catalog","reference-integrity-auditor","context-continuation-contract","connector-capability-risk-review","privilege-exposure-mapper","agent-failure-boundary-analysis","scheduled-work-proof-auditor"]
+        for name in hardened:
+            with self.subTest(skill=name):
+                skill = (AUTHORED / name / "SKILL.md").read_text(encoding="utf-8")
+                self.assertEqual(skill.count("## Bounded recursive improvement and input security"), 1)
+                for term in ("CANONICAL_CANDIDATE", "LOCAL_PREFERENCE", "MIXED",
+                             "Counterexample:", "STOP_NO_CHANGE", "untrusted data", "revocation"):
+                    self.assertIn(term, skill)
+                footer = skill.split(HEADING, 1)[1]
+                for term in ("categorical draft", "reidentification", "claimed evidence tier", "fictional"):
+                    self.assertIn(term, footer)
+                self.assertNotIn("Include the skill slug, expected versus observed behavior", footer)
+
     def test_all_authored_packages_preserve_multiturn_work_state(self):
         failures = {}
         for p in packages():

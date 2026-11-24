@@ -71,8 +71,8 @@ def parse(doc):
         fields(node, {"id", "visible", "revision"}, f"nodes[{i}]")
         nid = ident(node.get("id"), f"nodes[{i}].id")
         require(nid not in nodes, "duplicate node id")
-        boolean(node.get("visible"), f"node {nid}.visible")
-        ident(node.get("revision"), f"node {nid}.revision", REV)
+        boolean(node.get("visible"), f"nodes[{i}].visible")
+        ident(node.get("revision"), f"nodes[{i}].revision", REV)
         nodes[nid] = node
     edge_data = doc.get("edges")
     require(isinstance(edge_data, list) and len(edge_data) <= MAX_EDGES, "edges: max 1000")
@@ -83,26 +83,27 @@ def parse(doc):
         require(eid not in seen_edges, "duplicate edge id")
         seen_edges.add(eid)
         source = ident(edge.get("source"), "edge.source")
-        require(source in nodes, f"edge {eid}: unknown source")
+        require(source in nodes, f"edges[{i}]: unknown source")
+        require("target" in edge, f"edges[{i}]: missing target field")
         target = edge.get("target")
         if target is not None:
             ident(target, "edge.target")
-        require(edge.get("kind") in KINDS, f"edge {eid}: unsupported kind")
+        require(isinstance(edge.get("kind"), str) and edge.get("kind") in KINDS, f"edges[{i}]: unsupported kind")
         ident(edge.get("evidence_ref"), "edge.evidence_ref", REV)
         lookup = edge.get("lookup")
-        fields(lookup, {"state", "authorized", "complete", "absence_proven", "source_current", "target_current", "anchor", "anchor_renderer_verified", "redirect_verified"}, f"edge {eid}.lookup")
-        require(lookup.get("state") in LOOKUPS, f"edge {eid}: invalid lookup state")
+        fields(lookup, {"state", "authorized", "complete", "absence_proven", "source_current", "target_current", "anchor", "anchor_renderer_verified", "redirect_verified"}, f"edges[{i}].lookup")
+        require(isinstance(lookup.get("state"), str) and lookup.get("state") in LOOKUPS, f"edges[{i}]: invalid lookup state")
         for field in ("authorized", "complete", "absence_proven", "redirect_verified", "anchor_renderer_verified"):
-            boolean(lookup.get(field), f"edge {eid}.{field}")
+            boolean(lookup.get(field), f"edges[{i}].{field}")
         for field in ("source_current", "target_current"):
-            require(lookup.get(field) is None or type(lookup[field]) is bool, f"edge {eid}.{field}: bool or null")
-        require(lookup.get("anchor") in ANCHORS, f"edge {eid}: invalid anchor state")
+            require(lookup.get(field) is None or type(lookup[field]) is bool, f"edges[{i}].{field}: bool or null")
+        require(isinstance(lookup.get("anchor"), str) and lookup.get("anchor") in ANCHORS, f"edges[{i}]: invalid anchor state")
         if lookup["state"] == "ABSENT":
-            require(lookup["target_current"] is None, f"edge {eid}: absent target cannot have a current target revision")
+            require(lookup["target_current"] is None, f"edges[{i}]: absent target cannot have a current target revision")
         if lookup["state"] != "ABSENT":
-            require(not lookup["absence_proven"], f"edge {eid}: absence proof only applies to ABSENT lookup")
+            require(not lookup["absence_proven"], f"edges[{i}]: absence proof only applies to ABSENT lookup")
         if lookup["state"] != "REDIRECT":
-            require(not lookup["redirect_verified"], f"edge {eid}: redirect proof only applies to REDIRECT lookup")
+            require(not lookup["redirect_verified"], f"edges[{i}]: redirect proof only applies to REDIRECT lookup")
         edges.append(edge)
     changes = doc.get("changes", [])
     require(isinstance(changes, list) and len(changes) <= MAX_CHANGES, "changes: max 30")
@@ -114,7 +115,7 @@ def parse(doc):
         seen_change.add(cid)
         nid = ident(change.get("node"), "change.node")
         require(nid in nodes, "change.node: not in authorized snapshot")
-        require(change.get("operation") in {"MOVE", "RENAME", "DELETE_PROPOSAL"}, "change.operation: unsupported")
+        require(isinstance(change.get("operation"), str) and change.get("operation") in {"MOVE", "RENAME", "DELETE_PROPOSAL"}, "change.operation: unsupported")
     return nodes, edges, changes, enum
 
 
@@ -186,6 +187,8 @@ def audit(doc):
                 possible_reverse.setdefault(edge["target"], set()).add(edge["source"])
     # A bounded graph yields only within-scope candidates, never deletion permission.
     full_local = enum["sources_complete"] and enum["visibility_complete"] and not privacy_limited and all(n["visible"] for n in nodes.values())
+    unresolved_inbound = any(row["status"] in {"UNRESOLVED", "BLOCKED", "INACCESSIBLE"} for row in findings)
+    full_local = full_local and not unresolved_inbound
     orphans = sorted(k for k, value in inbound.items() if value == 0) if full_local else []
     impacts = []
     for change in changes:
@@ -225,14 +228,23 @@ def main(argv=None):
     try:
         if any(path.is_symlink() for path in (args.input, *args.input.parents)):
             raise InvalidInput("symlinked input path or parent is not allowed")
+        if not args.input.is_file():
+            raise InvalidInput("regular input file required")
         if args.input.stat().st_size > MAX_BYTES:
             raise InvalidInput("input exceeds 1 MiB")
-        with args.input.open("r", encoding="utf-8") as file:
-            doc = json.load(file, object_pairs_hook=pairs_no_duplicates,
+        with args.input.open("rb") as file:
+            raw = file.read(MAX_BYTES + 1)
+            if len(raw) > MAX_BYTES:
+                raise InvalidInput("input exceeds 1 MiB")
+            doc = json.loads(raw.decode("utf-8"), object_pairs_hook=pairs_no_duplicates,
                             parse_constant=lambda value: (_ for _ in ()).throw(InvalidInput("nonfinite JSON constant")))
         result = audit(doc)
-    except (OSError, UnicodeError, ValueError) as exc:
+    except InvalidInput as exc:
+        # Fixed text and schema positions only; never input IDs or paths.
         print(f"INVALID_INPUT: {exc}", file=sys.stderr)
+        return 2
+    except (OSError, UnicodeError, ValueError, TypeError, KeyError, RecursionError):
+        print("INVALID_INPUT: unreadable or malformed evidence", file=sys.stderr)
         return 2
     print(json.dumps(result, indent=2, ensure_ascii=True))
     return 0

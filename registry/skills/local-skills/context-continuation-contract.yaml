@@ -1,4 +1,4 @@
-current_change_note: "Bounded 2..32 checkpoint chain replay added; every adjacent turn checked with explicit HOLD on scope changes. Synthetic source contract tests pending. Real host/agent replies and source SHA authentication NOT_RUN; no published version bump."
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: context-continuation-contract
 display_name: "Context Continuation Contract"
@@ -22,8 +22,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Standalone 11-file package with offline optional Python standard-library two-state/chain checker and fictional examples; ordinary handoff needs no script, service, account, GitHub or sibling skill."
-content_blob_sha: 7a6099b89b21f03cf8a152890472874797e41bc7
-complete_package_tree_sha: f5bd8e4ae881891ae2fda0d3920f81088194ae51
+content_blob_sha: 2489f97644cb99a524761a305761f71ab9a4f636
+complete_package_tree_sha: 78bc066bfdc92b6112cc169f2937d9bfbd350fd7
 historical_comparators: "skills/handoff-writer/SKILL.md; skills/session-continuity/SKILL.md"
 historical_origin_status: "Historical author marker/account ownership known, underlying authorship and rights not proven"
 rights_resolution: "Only new independently drafted content MIT; legacy files unchanged"
