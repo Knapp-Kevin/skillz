@@ -156,7 +156,8 @@ python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host
 
 This checks first-party SKILL.md structure, local reference closure, file
 extensions and selected documented host package limits, and can generate
-a ZIP with an explicit `--zip-output` to a *new* path. It never
+a ZIP with an explicit `--zip-output` or a directory handoff using
+`--directory-output`, each at a *new* path outside the Skillz repository. It never
 executes scripts, makes network calls, or installs a skill. Its corpus report
 is a list of **known blockers and untested execution capabilities**, not an
 assertion of universal consumer acceptance. Unknown hosts require review,
