@@ -6,6 +6,7 @@ on:
     paths:
       - 'skills/authored/effort-allocation-navigator/**'
       - 'registry/skills/local-skills/effort-allocation-navigator.yaml'
+      - 'docs/reviews/fixtures/2026-11-24-effort-allocation-adhd-engagement-refinement-case.json'
       - 'registry/verification/local-skills/effort-allocation-navigator.yaml'
       - '.github/workflows/effort-allocation-navigator-qa.yml'
 
@@ -32,3 +33,5 @@ jobs:
           set -euo pipefail
           python3 -B -m unittest discover -s skills/authored/effort-allocation-navigator/tests -p 'test_*.py' -v
           python3 -B skills/authored/effort-allocation-navigator/scripts/plan.py --input skills/authored/effort-allocation-navigator/examples/fictional-tasks.json
+          python3 -B skills/authored/effort-allocation-navigator/scripts/plan.py --previous skills/authored/effort-allocation-navigator/examples/fictional-tasks.json --input skills/authored/effort-allocation-navigator/examples/fictional-tasks-next.json
+          python3 -B engine/refinement/check_case.py --input docs/reviews/fixtures/2026-11-24-effort-allocation-adhd-engagement-refinement-case.json
