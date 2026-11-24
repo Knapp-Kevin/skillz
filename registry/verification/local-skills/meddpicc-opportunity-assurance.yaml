@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/meddpicc-opportunity-assurance/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/meddpicc-opportunity-assurance/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 241b1ac2fc444bc85207ab5a7db6c6c06cba2626
-complete_package_tree_sha: 2d8ab7df769ee1bc2979922444f19c6734ca6c7c
+content_blob_sha: 83552a814a22514f452651465aafe3741c49b2db
+complete_package_tree_sha: 75794d0ac174b5fa44330e95d0e2e609a8feb14e
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
@@ -33,3 +33,8 @@ notes: >-
   brand impersonation, certification, proprietary course script, CRM
   write, outbound contact or scheduled task. Independent host and consumer
   acceptance evidence NOT_RUN. See docs/reviews/2026-11-24-sales-methods-gap-sandler-meddpicc.md.
+
+# 2026-11-24: author-led adversarial provenance/cross-method refinement.
+# Original method packages remain v0.1.0, formal needs-re-review and
+# host behavioral validation not-run. See
+# docs/reviews/2026-11-24-sales-methods-evidence-hardening.md.
