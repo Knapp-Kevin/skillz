@@ -7,6 +7,9 @@ on:
       - 'index.html'
       - '.github/workflows/workbench-qa.yml'
       - 'scripts/qa/test-workbench-browser.cjs'
+      - '_config.yml'
+      - 'docs/_config.yml'
+      - 'LICENSE'
 permissions:
   contents: read
 jobs:

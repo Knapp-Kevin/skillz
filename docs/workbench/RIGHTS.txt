@@ -1,0 +1,21 @@
+Skillz Workbench publication and third-party rights
+
+The Workbench software is original first-party material licensed under MIT.
+See LICENSE.txt for the full copyright and permission notice.
+
+The catalog includes factual source and skill identifiers and first-party
+metadata. The site does not distribute upstream SKILL.md text, scripts,
+assets, templates, binaries or complete third-party packages. Third-party
+identifiers are reference leads, not endorsements or licenses. Trademarks
+and names remain with their respective owners.
+
+Before copying, adapting, installing, redistributing or commercially using
+a third-party skill, inspect its actual upstream repository, exact revision
+and package-specific license, NOTICE, attribution and use restrictions.
+The Skillz MIT license does not override upstream terms. Unknown or
+incompatible rights must block the proposed action, not be inferred from a
+repository's public visibility.
+
+Source and licensing registry:
+https://github.com/Knapp-Kevin/skillz/blob/main/THIRD_PARTY_NOTICES.md
+https://github.com/Knapp-Kevin/skillz/blob/main/registry/sources.yaml
