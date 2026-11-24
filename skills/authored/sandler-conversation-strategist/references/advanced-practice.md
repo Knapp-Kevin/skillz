@@ -60,6 +60,47 @@ with uncertainty when the only evidence is seller notes. If
 a recommendation requires a new conversation, mark it proposed
 until the buyer and host have independently authorized it.
 
+## Interactive rehearsal mini-example (original, fictional)
+
+**Input:** The user requests a two-response practice with a skeptical
+operations buyer and coaching after both rep turns. This is a
+**fictional simulation**, not testimony or vendor-owned course content.
+
+The agent opens with a single invented buyer line, such as:
+> "We're interested in making onboarding less expensive, but our
+> current process isn't clearly failing. What's actually different?"
+
+**The agent then stops for the user's rep reply.** It may ask one
+clarifying question if the user has not assigned a buyer role, but
+a request for a quick practice can use fictional defaults without
+an intake questionnaire. After the user replies, the agent responds
+as the consistent fictional buyer, possibly with skepticism or a
+no-fit statement; it doesn't compose the user's sales response.
+
+After the agreed number of **user-authored rep turns**, a short
+coaching note identifies a specific moment:
+`observed_rep_phrase | intended_buyer_outcome | supported_issue |
+one_improvement | one_ethical_alternative`. A polite exploration
+without manufactured urgency is a success even when the simulated
+buyer declines. If the agent has only its own invented buyer turns
+and no rep replies, it must report **NOT_OBSERVED_REP_BEHAVIOR**,
+not a zero or positive skill score.
+
+This procedure requires only an ordinary conversation. Optional
+simulator/CRM/voice hosts must have independently scoped authority;
+absence of such a host does not block the text-only exercise.
+
+## Full fictional demonstration is not an observed rehearsal
+
+When a user explicitly requests a **short sample conversation** rather
+than participating as the rep, provide a clearly invented dialogue
+for study. Label **both voices SIMULATED / DEMO_ONLY** and show a
+possible respectful no-fit ending. Never claim the user spoke those
+lines, that the example represents a customer's real statement,
+or that a coaching score measures observed user behavior.
+A normal "practice with me" request instead uses one buyer line
+and awaits the user's actual response. Neither mode contacts a buyer.
+
 ## Original buyer-respectful prompts
 
 - "What would make this conversation worthwhile from your perspective?"

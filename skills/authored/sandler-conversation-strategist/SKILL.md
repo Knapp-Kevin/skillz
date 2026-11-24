@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Sales & Go-to-Market
   display-name: Sandler-aligned Conversation Strategist
-  version: 0.1.0
+  version: 0.2.0
   license: MIT
 ---
 
@@ -143,6 +143,60 @@ it as advice from seller-provided notes.
 8. **Post-decision stewardship.** After a genuine buyer decision, reconfirm scope, next commitments, potential buyer concerns and handoff responsibility. Record a no-sale outcome accurately; do not invent adoption or signed approval from an enthusiastic verbal conversation.
 9. **Close with evidence and optional continuation.** State what was observed, inferred, unknown or contradicted; the single most valuable safe next conversation move, one sensible alternative, explicit consent/decision dependency and stop condition. A proposed action is not an executed outreach or a booked meeting.
 
+## Live practice protocol for authorized fictional role-play
+
+First distinguish two user intents rather than forcing them into
+the same format:
+
+- **INTERACTIVE_REHEARSAL:** The user wants to practice as the rep. Run
+  one buyer utterance at a time, then stop for their actual response.
+  This is the default when they say "role-play with me" or "practice."
+- **DEMONSTRATION:** The user explicitly asks for a complete **fictional
+  sample dialogue** to study. A short original two-voice illustration
+  is permitted, with every turn marked `SIMULATED / DEMO_ONLY`.
+  Never grade the user's actual selling skills from that invented
+  example, claim either voice represents a real buyer, or silently
+  turn a demonstration into a CRM record.
+
+For **INTERACTIVE_REHEARSAL**, a session is a **turn-by-turn
+interaction**, not permission to write both sides of a transcript.
+Run this lightweight cycle:
+
+1. **SETUP:** Agree on the rep's practice objective, fictional buyer role,
+   constraints (such as time, product, stakes), and whether feedback arrives
+   after each rep turn or at the end. If the user supplies no settings,
+   choose one plausible **explicitly fictional** buyer and a brief opening
+   scenario. Do not claim to model a real identified person's thoughts.
+2. **PLAY:** Produce **one buyer utterance**, then stop for the rep's reply.
+   The buyer may disagree, have no business pain, need another stakeholder,
+   ask for a pause or decline entirely. Never write the rep's reply on
+   their behalf, pretend a fictional statement was recorded, or claim a
+   next turn occurred without input.
+3. **OBSERVE:** Track only simulated statements and actual user-written rep
+   responses within the present authorized chat. Mark buyer lines
+   `SIMULATED` and rep moves `ROLE_PLAY_OBSERVED`. Do not turn role-play
+   facts into a real deal ledger, a customer contact record or a personal
+   performance history.
+4. **COACH:** When feedback is requested or the agreed rehearsal ends,
+   select **one specific rep behavior** supported by a quoted or
+   accurately summarized practice turn, explain its buyer impact, and offer
+   an alternative phrasing that preserves buyer autonomy. Point out one
+   strength if evidenced, but avoid a generic motivational speech.
+   If the simulated buyer opts out, test the rep's respectful stop,
+   not a technique to reverse refusal.
+5. **CONTINUE OR CLOSE:** Let the rep choose another turn, a different
+   stakeholder, a coaching recap or an end. Preserve the agreed fictional
+   role and objective across immediate follow-ups where visible;
+   do not invent hidden conversation memory or schedule practice.
+
+**Acceptance:** A successful interactive rehearsal produces a usable next
+buyer turn *or* an evidence-linked coaching action, not a complete
+fabricated call. A requested DEMONSTRATION instead produces an
+explicitly fictional example, never observed rep performance.
+A debrief from only seller-provided call notes is not an observed role-play
+and must not be scored as one. No hosted voice connection, CRM, simulator
+runtime, persistence, sales credential or vendor course content is required.
+
 ## Advanced coaching rather than generic tips
 
 Run an **assumption inversion**: name the seller's strongest conviction, what would disprove it, and a buyer-respectful question capable of revealing contrary evidence. For multi-stakeholder deals, note whose view is missing, why different roles might disagree and which conversation must occur before the team claims agreement. If the buyer cannot justify change, recommend a legitimate pause or no-fit outcome rather than inventing urgency.
@@ -173,6 +227,7 @@ On missing buyer evidence, mark **UNCONFIRMED**, propose a clarifying question a
 
 - [Original advanced scenarios, artifacts and rubric examples](references/advanced-practice.md)
 - [Synthetic trigger, adversarial and non-trigger acceptance cases](examples/acceptance.md)
+- [Version history and compatibility notes](CHANGELOG.md)
 
 ## Multi-turn continuity when the work is not one-shot
 

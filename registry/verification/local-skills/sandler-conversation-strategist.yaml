@@ -1,18 +1,18 @@
 schema_version: 1
 skill_name: sandler-conversation-strategist
-skill_version: "0.1.0"
+skill_version: "0.2.0"
 source_id: local-skills
 license_spdx: MIT
 license_evidence_path: skills/authored/sandler-conversation-strategist/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/sandler-conversation-strategist/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: eec91ad97c79eae4aa581a2f2b8cc93895ff5565
-complete_package_tree_sha: 114b08933425ca2239a03193ea24f075bb83c3c1
+content_blob_sha: adf3fb41ba362b484a6f1caa307c1de773da4752
+complete_package_tree_sha: 4418e608782c4a3811c6ec12f409e8404f51126d
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
-verification_basis: author-led-public-method-gap-and-adversarial-static-scenarios
+verification_basis: author-led-engine-guided-static-adversarial-review-and-source-release
 validation_status: not-run
 validation_note: >-
   Authored text and fictional adversarial cases only. No executed independent
@@ -34,11 +34,7 @@ notes: >-
   write, outbound contact or scheduled task. Independent host and consumer
   acceptance evidence NOT_RUN. See docs/reviews/2026-11-24-sales-methods-gap-sandler-meddpicc.md.
 
-# 2026-11-24: author-led adversarial provenance/cross-method refinement.
-# Original method packages remain v0.1.0, formal needs-re-review and
-# host behavioral validation not-run. See
-# docs/reviews/2026-11-24-sales-methods-evidence-hardening.md.
-
-# 2026-11-24 engine-guided separate red-team review and bounded refinement.
-# Historical score is bound to prior package tree. Formal state remains
-# needs-re-review; consumer host trial and external security scan NOT_RUN.
+# 2026-11-24: Deliberate v0.2.0 minor capability release. Full source
+# history and compatibility rationale ship in CHANGELOG.md. Five-file
+# complete package; no vendor certification or external consuming host
+# acceptance is claimed. Exact current review status needs-re-review.
