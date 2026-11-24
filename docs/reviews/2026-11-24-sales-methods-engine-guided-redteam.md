@@ -145,9 +145,15 @@ The receipts at
 and
 `fixtures/2026-11-24-meddpicc-opportunity-assurance-refinement-case.json`
 carry `STATIC_RISK` and pre-merge `ITERATE/UNMERGED`
-truthfully. They are fictional source-neutral public templates,
-not actual buyer incident reports. The common checker cannot
-prove source authenticity, severity, licensing or outcome.
+truthfully. They are **fictional, first-party source-bound maintainer
+case receipts**, *not* source-blind consumer feedback signals or actual
+buyer incident reports. Their public first-party skill slugs and
+repository source pins are allowed **only in this maintainer evidence
+plane**; they carry no private consumer identity, raw report,
+sales interaction or user preference. The separate source-blind
+`engine/refinement/feedback_intake.py` route is NOT invoked or
+replaced. The common checker cannot prove source authenticity,
+severity, licensing or outcome.
 
 ## Rubric and qualification boundaries
 
