@@ -25,7 +25,7 @@ dependencies: >-
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
 content_blob_sha: b6e96282877320a9eae54bca1dbb6cd9a015209a
-complete_package_tree_sha: 8b1952511e1bff4130c6320cddd43f68a8669395
+complete_package_tree_sha: c56ba5e64869f2c3bf0f984ba911ac649512b2ec
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
