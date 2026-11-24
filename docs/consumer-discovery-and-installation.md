@@ -1,5 +1,10 @@
 # Consuming-agent discovery, creation, and installation contract
 
+**Installation entrypoint:** Read [Getting started with Skillz](getting-started-with-skills.md)
+for consumer-specific installation, host discovery, manual versus agent-led
+execution and per-target verification. This is part of delivery, not an
+optional afterthought. See also [installation handoff](installation-handoff.md).
+
 **Static-first review:** [Exact-content freshness policy](static-review-and-freshness.md). The user can inspect and review any static skill without external scan jobs. New tracked package content is marked pending until reviewed. Installation, operations and private access remain separately authorized.
 
 **Scope:** normal read-only consumption of `skillz` by a host agent. This is a passive procedure, not a repository-owned installer, generator, executable gate, or promise that any host supports skills. The agent acts only with its real tools and the user's authorization. **A generic first look should establish potential value before attempting skill selection or installation**; use [agent value discovery](agent-value-discovery.md). See [the agent entrypoint](../AGENT_START_HERE.md) and [the canonical bootstrap](../engine/skills/skill-bootstrap/SKILL.md).
