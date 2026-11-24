@@ -64,6 +64,26 @@ Complete fictional inputs and acceptance decisions are bundled in
 `examples/routing-and-closeout-cases.md`. This matrix is the author's
 static scenario review, **not independent agent-execution evidence**.
 
+## Second adversarial pass: eliminate lookup/organization ambiguity
+
+The initial table placed "find files" in the same row as "organize a
+collection", implicitly recommending an inventory and index build for a
+narrow file lookup. Another row combined retrieval with incremental refresh.
+Those shortcuts conflicted with S3, which expects a current-authorized
+host-native search before expensive index construction. This was recorded
+as an **author-led VETO** against claiming 20/20 procedural clarity.
+
+The revised map now has independent routes for **find/retrieve**,
+**categorize/organize**, and **refresh/continue**. Narrow lookup uses the
+host's native source search or existing eligible index when available,
+checks current viewer/revision facts, and limits any fallback inventory
+to an authorized bounded scope. The synthetic structural test explicitly
+locks these route labels and native lookup method. No new runtime,
+authorization grant or automatic action is introduced.
+
+This resolves the specific documented ambiguity at the level of written
+instructions; actual independent agent execution remains NOT_RUN.
+
 ## Semantic rubric after changes
 
 | Dimension | Baseline | Proposed post-change | Qualification |
