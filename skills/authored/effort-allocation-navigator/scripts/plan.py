@@ -17,7 +17,7 @@ import sys
 MAX_BYTES = 1024 * 1024
 MAX_TASKS = 200
 ID_RE = re.compile(r"^[a-z][a-z0-9-]{1,63}$")
-ROOT_KEYS = {"schema_version", "as_of", "scope_id", "capacity_minutes", "goal_id", "preferences", "tasks"}
+ROOT_KEYS = {"schema_version", "as_of", "scope_id", "capacity_minutes", "goal_id", "focus_task_id", "preferences", "tasks"}
 TASK_KEYS = {
     "id", "label", "kind", "state", "depends_on", "effort_minutes", "duration_days",
     "value", "urgency", "obligation", "external_blocker", "due_date",
@@ -65,6 +65,11 @@ def validate(document):
     goal = document.get("goal_id")
     if goal is not None:
         refuse(type(goal) is str and ID_RE.fullmatch(goal) is not None)
+    # Focus must be an explicit caller-supplied task ID, not inferred from
+    # urgency, doing state, recent history or a personal/medical profile.
+    focus = document.get("focus_task_id")
+    if focus is not None:
+        refuse(type(focus) is str and ID_RE.fullmatch(focus) is not None)
     prefs = document.get("preferences", {})
     refuse(type(prefs) is dict and set(prefs) <= PREF_KEYS)
     count = integer(prefs.get("choice_count", 2), 1, 3)
@@ -365,6 +370,20 @@ def _plan_raw(document):
                          "blocked": len(blocked), "unscored": len(unscored)},
         }
     scored.sort(key=lambda x: (x["lane"], -x["_sort_score"], x["task_id"]))
+    # Keep an explicitly selected, still-ready task in focus when its
+    # provisional utility is close to the current best in the SAME lane.
+    # Do not preserve it across a real safety/deadline obligation, block,
+    # missing estimate or materially different opportunity cost.
+    focus = document.get("focus_task_id")
+    if scored and focus is not None:
+        candidate = next((row for row in scored
+                          if row["task_id"] == focus), None)
+        best = scored[0]
+        if (candidate is not None and candidate["lane"] == best["lane"]
+                and candidate["_sort_score"] >= 0.85 * best["_sort_score"]):
+            scored.remove(candidate)
+            scored.insert(0, candidate)
+            candidate["reasons"].append("PRESERVE_USER_SELECTED_FOCUS")
     selected = scored[:1]
     rest = scored[1:]
     # An alternative should offer a meaningful different way to progress
@@ -459,6 +478,40 @@ def plan(document):
             effort if effort is not None else start)
         choice["microstep_status"] = "TIMEBOX_NOT_COMPLETION"
         choice["resume_cue"] = "PICK_NEXT_VISIBLE_ACTION"
+    requested_focus = document.get("focus_task_id")
+    if requested_focus is not None:
+        tasks = {row["id"]: row for row in document["tasks"]}
+        focus = tasks.get(requested_focus)
+        choices = output.get("choices", [])
+        first = choices[0] if choices else None
+        if focus is None:
+            status = "MISSING_FROM_SNAPSHOT"
+        elif focus.get("state", "todo") == "done":
+            status = "CLAIMED_DONE_NOT_RESUMABLE"
+        elif (focus.get("kind", "action") != "action"
+              or focus.get("external_blocker", False)
+              or any(tasks[dep].get("state", "todo") != "done"
+                     for dep in focus.get("depends_on", []))):
+            status = "BLOCKED_OR_NOT_ACTIONABLE"
+        elif focus.get("effort_minutes") is None or focus.get("value") is None:
+            status = "REQUIRES_ESTIMATE_OR_REVIEW"
+        elif first is not None and first["task_id"] == requested_focus:
+            status = ("CONTINUED_ELIGIBLE_SELECTION"
+                      if first.get("action") == "BEGIN_USER_CONFIRMED_STEP"
+                      else "REQUIRES_ESTIMATE_OR_REVIEW")
+        elif first is not None and first.get("priority_lane") in (
+                "MANDATORY_SAFETY", "CONFIRMED_IMMINENT_DEADLINE"):
+            focus_choice = next((c for c in choices
+                                 if c["task_id"] == requested_focus), None)
+            status = ("PROTECTED_PRIORITY_FIRST"
+                      if focus_choice is None or
+                      focus_choice.get("priority_lane") == "DISCRETIONARY"
+                      else "MATERIAL_PRIORITY_DIFFERENCE")
+        else:
+            status = "MATERIAL_PRIORITY_DIFFERENCE"
+        # Do not echo an absent focus ID, original task label or private
+        # history. The host alone decides whether to ask one clarification.
+        output["focus_resolution"] = status
     return output
 
 
@@ -480,6 +533,18 @@ def compare_snapshots(previous, current):
     shared = sorted(old_ids & new_ids)
     added = sorted(new_ids - old_ids)
     removed = sorted(old_ids - new_ids)
+    # Task IDs alone do not authenticate continuity. A changed label or
+    # kind may be an innocuous edit OR a recycled ID with new work.
+    # Hold all cross-snapshot progress transitions for those rows pending
+    # host/user review; never expose the original labels.
+    previous_labels = {row["id"]: row.get("label", "")
+                       for row in previous["tasks"]}
+    current_labels = {row["id"]: row.get("label", "")
+                      for row in current["tasks"]}
+    identity_review = sorted(key for key in shared
+                             if older[key]["kind"] != newer[key]["kind"]
+                             or previous_labels[key] != current_labels[key])
+    stable_ids = set(shared) - set(identity_review)
 
     def ready(tasks, key):
         row = tasks[key]
@@ -491,15 +556,17 @@ def compare_snapshots(previous, current):
     def changed(key, fields):
         return any(older[key][field] != newer[key][field] for field in fields)
 
-    completed = sorted(key for key in shared
+    completed = sorted(key for key in stable_ids
                        if older[key]["state"] != "done"
                        and newer[key]["state"] == "done")
-    reopened = sorted(key for key in shared
+    reopened = sorted(key for key in stable_ids
                       if older[key]["state"] == "done"
                       and newer[key]["state"] != "done")
+    state_transition_review = sorted(key for key in identity_review
+                                     if older[key]["state"] != newer[key]["state"])
     state_changed = sorted(key for key in shared
                            if changed(key, ("state",)))
-    resume_candidates = sorted(key for key in shared
+    resume_candidates = sorted(key for key in stable_ids
                                if older[key]["state"] == "doing"
                                and newer[key]["state"] == "doing")
     dep_changed = sorted(key for key in shared
@@ -513,9 +580,9 @@ def compare_snapshots(previous, current):
     estimate_changed = sorted(key for key in shared
                               if changed(key, ("effort_minutes",
                                                "duration_days", "value")))
-    newly_ready = sorted(key for key in shared
+    newly_ready = sorted(key for key in stable_ids
                          if not ready(older, key) and ready(newer, key))
-    newly_blocked = sorted(key for key in shared
+    newly_blocked = sorted(key for key in stable_ids
                            if ready(older, key) and not ready(newer, key)
                            and newer[key]["state"] != "done")
     return {
@@ -528,6 +595,13 @@ def compare_snapshots(previous, current):
         "goal_changed": before_goal != after_goal,
         "completed_claim_ids": completed,
         "reopened_ids": reopened,
+        "identity_review_ids": identity_review,
+        "state_transition_review_ids": state_transition_review,
+        "identity_notice": (
+            "A changed label or task type requires identity review; "
+            "it may be a simple rename, not proof of task-ID reuse. "
+            "Hold completion, reopening and readiness claims until verified."
+        ),
         "resume_candidate_ids": resume_candidates,
         "added_ids": added,
         "removed_unreconciled_ids": removed,
@@ -542,6 +616,8 @@ def compare_snapshots(previous, current):
             "common": len(shared), "added": len(added),
             "removed_unreconciled": len(removed),
             "completed_claims": len(completed), "reopened": len(reopened),
+            "identity_review": len(identity_review),
+            "state_transition_review": len(state_transition_review),
             "newly_ready": len(newly_ready),
             "newly_blocked": len(newly_blocked),
         },

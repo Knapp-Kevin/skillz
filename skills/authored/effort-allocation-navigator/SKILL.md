@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Productivity
   display-name: Effort Allocation Navigator
-  version: 0.2.0
+  version: 0.3.0
   license: MIT
 ---
 
@@ -102,6 +102,48 @@ rules intact. The recommendation is provisional until selected;
 the smallest action must make sense for that *specific* task.
 This is supportive interaction design, not a medical
 intervention or a measured improvement in ADHD symptoms.
+
+## User-chosen focus continuity, not algorithmic task-hopping
+
+**Trigger:** The user explicitly chooses an actionable task or says
+"continue the one I picked." Reconfirm current permissions and the
+active objective. When supported, preserve the selected task as the
+first recommendation **within its existing priority lane** rather
+than re-ranking them into a distracting new starting point over a
+small, provisional score difference. The optional offline helper
+accepts `focus_task_id` as a **caller-provided current-run task ID**,
+never as hidden inferred memory.
+
+This is intentionally *bounded*, not a reward for sunk cost:
+
+- A selected task may remain primary only when it is still present,
+  an eligible action, has usable estimates, has all hard prerequisites
+  satisfied and is within **85%** of the top provisional score **in
+  the same safety/deadline/ordinary lane**. This threshold is a
+  transparent sorting heuristic, not an ADHD or productivity score.
+- Mandatory safety work or an owner-confirmed imminent deadline
+  overrides unrelated optional focus. A blocked, completed,
+  externally held or materially poorer-value task cannot be
+  silently elevated. The user retains the right to make an
+  informed different choice, but the skill must clearly expose
+  protected obligations and the consequences of deferral.
+- If focus is unavailable, do not invent its prior history or
+  mark it done. Expose a **categorical reason** such as
+  `MISSING_FROM_SNAPSHOT`, `BLOCKED_OR_NOT_ACTIONABLE`,
+  `REQUIRES_ESTIMATE_OR_REVIEW`, `PROTECTED_PRIORITY_FIRST`
+  or `MATERIAL_PRIORITY_DIFFERENCE`; pair that with one safe
+  next action and one legitimate alternative. Do not echo
+  inaccessible IDs or ask for a full task dump simply to resume.
+- Without an explicit focus selection, preserve the established
+  dependency-first scoring. Never infer user consent or preferences
+  from `doing` status, task descriptions, activity patterns,
+  a diagnosis, or a fabricated remembered selection.
+
+**Aim:** reduce unnecessary switching while preserving honest
+priority changes, source boundaries and the user's own agency.
+The task is not considered progressed until actual authorized
+work evidence exists. Nothing is persisted, scheduled or
+automatically resumed by this procedure.
 
 ## Trigger and non-trigger
 
@@ -264,17 +306,27 @@ it must not discover private histories merely because the skill ran.
    `NEWLY_READY` and `NEWLY_BLOCKED`. A removed task is **not DONE**;
    a rewritten task ID is **not proven the same task**; a DONE claim
    is not an independently observed outcome.
-3. **Keep the active objective visible.** If the selected goal
+3. **Reconcile stable task identity.** Matching IDs alone do **not**
+   prove the task still represents the same work. If its label or
+   kind changed, produce `IDENTITY_REVIEW` before claiming a
+   completion, reopening, newly ready/blocked transition or
+   resume candidate. A legitimate rename is possible and should
+   be confirmed with **one** minimal user/host clarification,
+   not automatically treated as a deleted or completed task.
+   Suppress private labels, old notes and source paths from the
+   optional helper's ID-only output; a caller-declared scope ID
+   does not authenticate actual source continuity.
+4. **Keep the active objective visible.** If the selected goal
    changed, report `GOAL_CHANGED` and confirm whether the new
    objective supersedes the old one. Do not count tasks dropped from
    a snapshot as productivity.
-4. **Update only affected decisions.** Re-evaluate blockers,
+5. **Update only affected decisions.** Re-evaluate blockers,
    dependents, mandatory safety/deadline obligations and the next
    action from the new task graph; preserve the success criteria
    and one-primary/one-alternative default. Report the consequential
    progress/regression, one action, one viable alternative and stop
    condition, not a new overwhelming backlog.
-5. **Keep preferences private.** User requests for fewer choices or
+6. **Keep preferences private.** User requests for fewer choices or
    shorter work slices affect the current run. Persistent learning
    requires independently available, consented, revocable private
    host storage; no background collector, memory store or scheduler
@@ -285,7 +337,11 @@ local snapshots, using `--previous` alongside `--input`:
 
     python3 scripts/plan.py --previous examples/fictional-tasks.json --input examples/fictional-tasks.json
 
-The one-snapshot route is unchanged. When comparing two snapshots, provide a stable, non-sensitive
+The one-snapshot route remains backward compatible; a current-run,
+explicitly user-selected `focus_task_id` can optionally appear in
+the task snapshot. It changes the selected primary only when safe
+and near-equivalent, without taking over the user's decision.
+When comparing two snapshots, provide a stable, non-sensitive
 `scope_id` in **both** documents. Missing or mismatched scope IDs
 are rejected; matching caller-declared IDs are not independently
 authenticated source identity. The same required authorization
@@ -293,7 +349,15 @@ checks still apply.
 
 The optional `transition`
 output exposes **task ID tokens and bounded counts**, not titles,
-paths or account identities. It compares caller-provided assertions,
+and reports `identity_review_ids` and
+`state_transition_review_ids` for same-ID records whose
+label or type changed. Those rows cannot produce confident
+completion, reopening, newly ready/blocked or resume claims until
+their identity is confirmed. Task label edits are not proof that
+an ID was reused. The helper shows only the ID for review; the
+authorized host/user must compare the actual source privately.
+It does not emit task labels, private source paths or account
+identities. It compares caller-provided assertions,
 not authenticated work receipts. Same-day inputs have only
 caller-specified order; reversed snapshot dates are rejected.
 Current host permission/source identity must be checked **before

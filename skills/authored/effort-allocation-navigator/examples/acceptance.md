@@ -35,6 +35,37 @@ narratives below support future authorized human/agent trials.
 | User says "continue" next turn | Reuse objective, selected option, actual progress, blockers; update only changed task edges |
 | AI claims user became more productive | Require independent baseline and actual measured outcome, not anecdote or synthetic pass |
 
+## Version 0.3.0: adversarial focus and task-identity cases
+
+These synthetic challenges target *continuity of the user's work
+without inventing accomplishments*. They are source-level tests,
+not observed ADHD symptoms, actual human focus or measured value.
+
+| Challenge | Expected result |
+| --- | --- |
+| User explicitly chose the second of two equally viable ordinary tasks | `focus_task_id` makes that task primary when its score is near-equivalent; no duplicate or third choice |
+| User did **not** supply a focus | Keep the existing default ranking, with no invented personal history |
+| User's focus is now externally blocked or waiting on a predecessor | Do not suggest executing it; explain a safe alternative or the next eligible prerequisite |
+| A safety obligation or owner-confirmed imminent deadline appears | Protected obligation stays primary, even if a different task was selected previously |
+| User chose a materially lower-value action | Do not quietly promote it based solely on inertia; disclose the tradeoff without taking away user agency |
+| Chosen task is missing from this authorized snapshot | `MISSING_FROM_SNAPSHOT`; no cached task title, source ID or claim that work was done |
+| Chosen task lacks basic value/effort estimates | `REQUIRES_ESTIMATE_OR_REVIEW`; do not invent scores |
+| Same task ID now describes unrelated work, and new source says DONE | Hold the completion claim under `identity_review_ids` and `state_transition_review_ids`; no fraudulent throughput count |
+| Same ID has the same label but changes from action to milestone | Treat as identity-ambiguous, not automatic completion or readiness |
+| A document's task was merely renamed | Request lightweight identity review; do not assume malicious reuse or silently accept it as the same completed task |
+| The same identity still holds and the status changes to done | Keep `completed_claim_ids` as **caller-asserted**, not verified work |
+| An in-progress ID was recycled for a different task | Do not use it as a safe automatic resume candidate |
+| Task label contains private organization details | Return only bounded IDs and status codes; no raw labels, filenames or private account text |
+| User stops or interrupts the selected task | Preserve the voluntary 2–5-minute re-entry cue, not a guilt-driven streak |
+| User supplies no prior focus after reset | Offer one action and a valid alternative; do not claim persistent memory or independent scheduling |
+
+**Decision boundary:** the 85% same-lane rule is a transparent
+provisional heuristic, not an objective human preference. If
+the user explicitly directs a different authorized action, it
+is their choice; do not silently erase safety and approval
+obligations. Focus selection never triggers task execution,
+reminders, unauthorized source inspection or profile storage.
+
 ## Adversarial ADHD-supportive engagement review (fictional)
 
 These scenarios test accessibility-oriented work initiation, not
