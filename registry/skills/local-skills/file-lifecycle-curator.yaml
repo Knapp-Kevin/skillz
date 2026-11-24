@@ -24,8 +24,8 @@ dependencies: >-
   Durable private checkpoint writes optionally use bundled Python sqlite3
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
-content_blob_sha: 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa
-complete_package_tree_sha: 57a5f84e5a2ff1c44e8c848408b1a2903958abb9
+content_blob_sha: d8a978accc25d1c44dcb724f154647433c533e4b
+complete_package_tree_sha: 71dc3efa91efc753a065b326bd1fefa0ad3a6c75
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
@@ -53,3 +53,9 @@ rationale: >-
 
 # 2026-11-24 PR #909: two additional original package files; route map and
 # closeout text updated. Prior score tied to old package, exact review pending.
+
+# Host portability refactor: 18,453-character SKILL.md; 33-file package.
+# Full original workflow phases and maintenance protocol retained verbatim in
+# workflow-protocol.md and maintenance-protocol.md. Entry route and closeout unchanged.
+# Prior blob 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa, tree 57a5f84e5a2ff1c44e8c848408b1a2903958abb9 are historical.
+# Skill version unchanged; exact source re-review pending; host behavior NOT TESTED.

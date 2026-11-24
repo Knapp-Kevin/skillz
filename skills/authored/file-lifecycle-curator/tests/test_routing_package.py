@@ -15,17 +15,46 @@ SCENARIOS = ROOT / "examples" / "routing-and-closeout-cases.md"
 
 class RoutingPackageClosureTests(unittest.TestCase):
     def test_linked_text_contracts_stay_inside_complete_skill_package(self):
-        source = ENTRYPOINT.read_text(encoding="utf-8")
-        links = re.findall(r"(?<![!])\]\(([^)]+)\)", source)
-        self.assertGreaterEqual(len(links), 15)
+        documents = (ENTRYPOINT, ROOT / "workflow-protocol.md",
+                     ROOT / "maintenance-protocol.md")
+        all_links = []
         root = ROOT.resolve()
-        for link in links:
-            if re.match(r"https?://", link):
-                continue
-            path = (ROOT / link.split("#", 1)[0]).resolve()
-            self.assertTrue(path.is_relative_to(root),
-                            f"nonportable reference: {link}")
-            self.assertTrue(path.is_file(), f"missing package file: {link}")
+        for document in documents:
+            source = document.read_text(encoding="utf-8")
+            links = re.findall(r"(?<![!])\]\(([^)]+)\)", source)
+            all_links.extend(links)
+            for link in links:
+                if re.match(r"https?://", link):
+                    continue
+                path = (document.parent / link.split("#", 1)[0]).resolve()
+                self.assertTrue(path.is_relative_to(root),
+                                f"nonportable reference: {link}")
+                self.assertTrue(path.is_file(), f"missing package file: {link}")
+        self.assertGreaterEqual(len(all_links), 15)
+
+    def test_full_protocols_required_and_safety_controls_preserved(self):
+        source = ENTRYPOINT.read_text(encoding="utf-8")
+        self.assertLess(len(source), 20000)
+        self.assertIn("**Read the applicable numbered phases", source)
+        self.assertIn("workflow-protocol.md", source)
+        self.assertIn("maintenance-protocol.md", source)
+        self.assertIn("before reconciling or recalling any prior state", source)
+        self.assertIn("do not claim a completed curation", source)
+        self.assertIn("COLD_START or HOLD", source)
+        workflow = (ROOT / "workflow-protocol.md").read_text(encoding="utf-8")
+        maintenance = (ROOT / "maintenance-protocol.md").read_text(encoding="utf-8")
+        self.assertEqual(re.findall(r"^### (\d+a?)\.", workflow, re.MULTILINE),
+                         ["1", "2", "3", "4", "5", "6", "6a", "7"])
+        for term in ("complete bytes", "source_context", "NOT INDEXED",
+                     "verified relocations", "partial", "separate** explicit disposal"):
+            self.assertIn(term.lower(), workflow.lower())
+        for term in ("COLD_START", "EXTRACT_REGRESSION_HOLD",
+                     "previously cached record ID", "Compare-and-swap",
+                     "unique run IDs", "explicit write opt-in",
+                     "stop/revocation", "does not prove a successful delivered result"):
+            self.assertIn(term, maintenance)
+        for protocol in (workflow, maintenance):
+            self.assertIn("Missing or inaccessible guidance is a dependency hold", protocol)
 
     def test_one_shot_routing_and_minimum_closeout_are_in_entrypoint(self):
         source = ENTRYPOINT.read_text(encoding="utf-8")
