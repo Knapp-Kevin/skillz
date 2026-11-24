@@ -431,6 +431,89 @@ def plan(document):
     }
 
 
+
+def compare_snapshots(previous, current):
+    """Compare two explicit caller snapshots without storing either.
+
+    Host permissions, source identity, and real completion are not
+    authenticated. Only task IDs and categorical changes leave this
+    function; labels, paths, and original source text stay private.
+    """
+    older, before_date, before_goal, _, _, _ = validate(previous)
+    newer, after_date, after_goal, _, _, _ = validate(current)
+    refuse(after_date >= before_date)
+    old_ids, new_ids = set(older), set(newer)
+    shared = sorted(old_ids & new_ids)
+    added = sorted(new_ids - old_ids)
+    removed = sorted(old_ids - new_ids)
+
+    def ready(tasks, key):
+        row = tasks[key]
+        return (row["state"] != "done" and row["kind"] == "action"
+                and not row["external_blocker"]
+                and all(tasks[dep]["state"] == "done"
+                        for dep in row["depends_on"]))
+
+    def changed(key, fields):
+        return any(older[key][field] != newer[key][field] for field in fields)
+
+    completed = sorted(key for key in shared
+                       if older[key]["state"] != "done"
+                       and newer[key]["state"] == "done")
+    reopened = sorted(key for key in shared
+                      if older[key]["state"] == "done"
+                      and newer[key]["state"] != "done")
+    state_changed = sorted(key for key in shared
+                           if changed(key, ("state",)))
+    dep_changed = sorted(key for key in shared
+                         if set(older[key]["depends_on"]) !=
+                         set(newer[key]["depends_on"]))
+    blocker_changed = sorted(key for key in shared
+                             if changed(key, ("external_blocker",)))
+    priority_changed = sorted(key for key in shared
+                              if changed(key, ("obligation", "due_date",
+                                               "deadline_evidence", "urgency")))
+    estimate_changed = sorted(key for key in shared
+                              if changed(key, ("effort_minutes",
+                                               "duration_days", "value")))
+    newly_ready = sorted(key for key in shared
+                         if not ready(older, key) and ready(newer, key))
+    newly_blocked = sorted(key for key in shared
+                           if ready(older, key) and not ready(newer, key)
+                           and newer[key]["state"] != "done")
+    return {
+        "status": "PROVISIONAL_SNAPSHOT_COMPARISON",
+        "source_and_viewer_permission": "HOST_MUST_VERIFY_BOTH_SNAPSHOTS",
+        "completion_evidence": "CALLER_ASSERTED_NOT_AUTHENTICATED",
+        "date_order": ("SAME_DAY_CALLER_ORDER_ONLY"
+                       if after_date == before_date else "DATED_ORDER_ONLY"),
+        "goal_changed": before_goal != after_goal,
+        "completed_claim_ids": completed,
+        "reopened_ids": reopened,
+        "added_ids": added,
+        "removed_unreconciled_ids": removed,
+        "state_changed_ids": state_changed,
+        "dependency_changed_ids": dep_changed,
+        "blocker_changed_ids": blocker_changed,
+        "priority_changed_ids": priority_changed,
+        "estimate_changed_ids": estimate_changed,
+        "newly_ready_ids": newly_ready,
+        "newly_blocked_ids": newly_blocked,
+        "counts": {
+            "common": len(shared), "added": len(added),
+            "removed_unreconciled": len(removed),
+            "completed_claims": len(completed), "reopened": len(reopened),
+            "newly_ready": len(newly_ready),
+            "newly_blocked": len(newly_blocked),
+        },
+        "notice": (
+            "Task removal, ID replacement or declared DONE does not "
+            "prove completion. Verify authorization, real evidence "
+            "and changed goal before acting on a recommendation."
+        ),
+    }
+
+
 def unique_pairs(pairs):
     result = {}
     for key, value in pairs:
@@ -455,9 +538,14 @@ def read_input(filename):
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Offline source-declared task graph and bounded-choice plan")
     ap.add_argument("--input", required=True)
+    ap.add_argument("--previous", help="Optional, separately authorized earlier snapshot")
     args = ap.parse_args(argv)
     try:
-        response = plan(read_input(args.input))
+        current = read_input(args.input)
+        response = plan(current)
+        if args.previous is not None:
+            previous = read_input(args.previous)
+            response["transition"] = compare_snapshots(previous, current)
     except (Invalid, ValueError, OSError, UnicodeError, RecursionError, TypeError):
         print(json.dumps({"status": "INVALID_INPUT"}))
         return 2
