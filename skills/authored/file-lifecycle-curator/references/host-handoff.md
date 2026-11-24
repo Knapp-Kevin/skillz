@@ -112,3 +112,21 @@ member, asserting both are refused before progress calculation.
 
 This resolution does not make caller-provided readback receipts
 cryptographically authentic or independently attest source permissions.
+
+## Third adversarial pass: stale per-record evidence (VETO remediation)
+
+A GitHub code reviewer found that a new plan snapshot can still carry an old
+VERIFIED receipt whose readback time predates the current source observation.
+Freshness of the wrapper is **not** freshness of an operation. This was
+correctly treated as a VETO rather than a warning.
+
+Every counted VERIFIED or ROLLED_BACK record must now have a host-supplied
+readback time **strictly later** than the accepted baseline plan observation
+and **no earlier** than the current source observation. A stale receipt
+produces `STALE_OPERATION_READBACK_HOLD`, with no current progress.
+Regression cases check both first-time old receipt reuse and replay of a
+previously committed VERIFIED receipt inside a newly timestamped wrapper.
+
+This timing condition is a fail-closed *necessary* condition, not proof
+that a host truly read the destination. Provider-side independent access,
+revision checks and byte/permission readbacks remain host obligations.
