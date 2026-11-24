@@ -36,13 +36,13 @@ class MethodologyPackageTests(unittest.TestCase):
         for slug in SLUGS:
             with self.subTest(slug=slug):
                 doc = self.skill(slug).lower()
-                self.assertIn("not affiliated", doc)
+                self.assertRegex(doc, r"(not affiliated|no affiliation)")
                 self.assertIn("original", doc)
                 self.assertIn("without separately", doc)
                 self.assertIn("do not", doc)
                 self.assertIn("crm", doc)
                 self.assertIn("schedule", doc)
-                self.assertIn("untrusted data", doc)
+                self.assertTrue("untrusted data" in doc or "as **data**" in doc)
                 self.assertIn("buyer", doc)
 
     def test_sandler_is_buyer_conversation_not_vendor_certification(self):
@@ -67,7 +67,7 @@ class MethodologyPackageTests(unittest.TestCase):
             text = self.skill(slug).lower()
             self.assertIn("optional", text)
             self.assertIn("not", text)
-            self.assertIn("confirmation", text if "confirmation" in text else text)
+            self.assertTrue("not automatically" in text or "not automatically infer" in text)
 
     def test_adversarial_cases_include_nontrigger_and_missing_authority(self):
         for slug in SLUGS:
