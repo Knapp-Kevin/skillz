@@ -1066,9 +1066,9 @@
       "license_verified_at": "2026-11-20",
       "provenance_path": "registry/skills/local-skills/repository-readme-architect.yaml",
       "verification_path": "registry/verification/local-skills/repository-readme-architect.yaml",
-      "skill_blob_sha": "f9824eda1efb5df463ec46c77256edcd96d10b57",
-      "package_tree_sha": "84bac1b6e2dd01ab568669f2ab7508c268fce983",
-      "package_file_count": 17,
+      "skill_blob_sha": "5573cece2caed74e00700b4253ea5774985eea65",
+      "package_tree_sha": "b48661f9f50efe757315afd38d6c874a2eb4ee82",
+      "package_file_count": 18,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
       "behavioral_validation": "not-run",
@@ -1081,9 +1081,9 @@
         "software-engineering/developer-experience",
         "marketing/content"
       ],
-      "previous_reviewed_skill_blob_sha": "e4ba8915e5141b87ab45111d0ddc5d526b551d60",
-      "previous_reviewed_package_tree_sha": "aeb51bc194874ad18df1af7fb8d9b137d768da1b",
-      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA f9824eda1efb5df463ec46c77256edcd96d10b57 and full package 84bac1b6e2dd01ab568669f2ab7508c268fce983 pinned. Previous evidence applies to earlier source 678f4688d04a7a82da4f1f1b83da48ca64c6f201, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump.",
+      "previous_reviewed_skill_blob_sha": "f9824eda1efb5df463ec46c77256edcd96d10b57",
+      "previous_reviewed_package_tree_sha": "84bac1b6e2dd01ab568669f2ab7508c268fce983",
+      "review_note": "Portable entrypoint refactor; original binding quality, safeguards and five-step method preserved verbatim in required procedure-contract.md. Exact-head tests pending; host behavior and user acceptance not run. Version unchanged.",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/873"
     },
     {

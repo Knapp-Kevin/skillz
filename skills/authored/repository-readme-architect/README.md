@@ -6,7 +6,7 @@ The skill produces a finished Markdown artifact or an explicitly authorized focu
 
 ## Start here
 
-**[Read the full standalone skill](SKILL.md)**. The normative CREATE, UPLIFT, AUDIT and VERIFY methods, authority boundaries, safe fallback and delivery criteria all live in its entrypoint. No Skillz repository, account connection, runtime, or sibling skill is required.
+**[Read the full standalone skill](SKILL.md)**. The entrypoint defines CREATE, UPLIFT, AUDIT and VERIFY, authority and core gates; the [required procedure contract](procedure-contract.md) preserves the binding detailed quality and delivery methods. Read both for complete profile acceptance. No Skillz repository, account connection, runtime, or sibling skill is required.
 
 The read-only `scripts/check_readme.py` also flags a dense chronological
 PR/date history under a log-like README heading as

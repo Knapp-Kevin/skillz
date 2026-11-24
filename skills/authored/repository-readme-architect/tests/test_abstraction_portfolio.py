@@ -75,6 +75,13 @@ class AbstractionNavigationTests(unittest.TestCase):
 
     def test_package_guidance_covers_alternatives_and_false_dependencies(self):
         guide = (PACKAGE / "SKILL.md").read_text(encoding="utf-8")
+        procedure = (PACKAGE / "procedure-contract.md").read_text(encoding="utf-8")
+        self.assertIn("](procedure-contract.md)", guide)
+        self.assertLess(len(guide), 20000)
+        self.assertIn("## Binding quality profiles:", procedure)
+        self.assertIn("## Four mandatory README delivery safeguards", procedure)
+        self.assertIn("## Five-step production method", procedure)
+        self.assertIn("## Portfolio and multi-project information architecture:", procedure)
         self.assertIn("abstraction-first", guide)
         self.assertIn("flat", guide)
         self.assertIn("conceptual layer", guide)

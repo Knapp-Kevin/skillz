@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/repository-readme-architect/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/repository-readme-architect/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: f9824eda1efb5df463ec46c77256edcd96d10b57
-complete_package_tree_sha: 84bac1b6e2dd01ab568669f2ab7508c268fce983
+content_blob_sha: 5573cece2caed74e00700b4253ea5774985eea65
+complete_package_tree_sha: b48661f9f50efe757315afd38d6c874a2eb4ee82
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: needs-re-review
-verification_basis: multiturn-source-revision-pending-exact-head-tests
+verification_basis: portable-entrypoint-refactor-pending-exact-head-tests
 validation_status: not-run
-validation_note: "New source has explicit multi-turn continuation acceptance checkpoints; static tests pending. Prior host/semantic receipts refer to earlier source only. Real consuming-agent behavior and user outcomes NOT_RUN."
+validation_note: "Required procedure text preserved verbatim in package; structural preflight and regression tests pending. Real host behavior and user outcomes NOT_RUN."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
