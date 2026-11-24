@@ -145,8 +145,22 @@ it as advice from seller-provided notes.
 
 ## Live practice protocol for authorized fictional role-play
 
-A rehearsal request is a **turn-by-turn interaction**, not permission to
-write both sides of a complete transcript. Run this lightweight cycle:
+First distinguish two user intents rather than forcing them into
+the same format:
+
+- **INTERACTIVE_REHEARSAL:** The user wants to practice as the rep. Run
+  one buyer utterance at a time, then stop for their actual response.
+  This is the default when they say "role-play with me" or "practice."
+- **DEMONSTRATION:** The user explicitly asks for a complete **fictional
+  sample dialogue** to study. A short original two-voice illustration
+  is permitted, with every turn marked `SIMULATED / DEMO_ONLY`.
+  Never grade the user's actual selling skills from that invented
+  example, claim either voice represents a real buyer, or silently
+  turn a demonstration into a CRM record.
+
+For **INTERACTIVE_REHEARSAL**, a session is a **turn-by-turn
+interaction**, not permission to write both sides of a transcript.
+Run this lightweight cycle:
 
 1. **SETUP:** Agree on the rep's practice objective, fictional buyer role,
    constraints (such as time, product, stakes), and whether feedback arrives
@@ -175,8 +189,10 @@ write both sides of a complete transcript. Run this lightweight cycle:
    role and objective across immediate follow-ups where visible;
    do not invent hidden conversation memory or schedule practice.
 
-**Acceptance:** A successful rehearsal produces a usable next buyer turn
-*or* an evidence-linked coaching action, not a complete fabricated call.
+**Acceptance:** A successful interactive rehearsal produces a usable next
+buyer turn *or* an evidence-linked coaching action, not a complete
+fabricated call. A requested DEMONSTRATION instead produces an
+explicitly fictional example, never observed rep performance.
 A debrief from only seller-provided call notes is not an observed role-play
 and must not be scored as one. No hosted voice connection, CRM, simulator
 runtime, persistence, sales credential or vendor course content is required.
