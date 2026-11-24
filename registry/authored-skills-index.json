@@ -1387,8 +1387,8 @@
       "license_verified_at": "2026-11-24",
       "provenance_path": "registry/skills/local-skills/sandler-conversation-strategist.yaml",
       "verification_path": "registry/verification/local-skills/sandler-conversation-strategist.yaml",
-      "skill_blob_sha": "ad7918812ef991809f6221ec0dc7546605eceea5",
-      "package_tree_sha": "8e40c64c0e76a7a25dda1d4e93902d3254a9dc09",
+      "skill_blob_sha": "eec91ad97c79eae4aa581a2f2b8cc93895ff5565",
+      "package_tree_sha": "114b08933425ca2239a03193ea24f075bb83c3c1",
       "package_file_count": 4,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1401,9 +1401,9 @@
         "sales",
         "communication"
       ],
-      "review_note": "2026-11-24 author-led source and cross-method provenance hardening. See docs/reviews/2026-11-24-sales-methods-evidence-hardening.md. Previous 19/20 candidate was for an older package and is historical. Current exact-version independent behavioral validation NOT_RUN. No affiliation, production CRM execution, or official certification claimed.",
-      "previous_reviewed_skill_blob_sha": "8d0f94de2fc308b2aabc6fa4d8f41b30173fa330",
-      "previous_reviewed_package_tree_sha": "48107b6e4353338c140a9d3d8f9a8d59048d1b73"
+      "review_note": "Engine-guided Sandler/MEDDPICC independent adversarial review and material source refinement. See docs/reviews/2026-11-24-sales-methods-engine-guided-redteam.md and its two source-neutral premerge case receipts. Changed exact source requires fresh review; behavioral host validation and consumer outcomes not run. Prior author-led static score is historical. Version held at 0.1.0.",
+      "previous_reviewed_skill_blob_sha": "ad7918812ef991809f6221ec0dc7546605eceea5",
+      "previous_reviewed_package_tree_sha": "8e40c64c0e76a7a25dda1d4e93902d3254a9dc09"
     },
     {
       "id": "meddpicc-opportunity-assurance",
@@ -1419,8 +1419,8 @@
       "license_verified_at": "2026-11-24",
       "provenance_path": "registry/skills/local-skills/meddpicc-opportunity-assurance.yaml",
       "verification_path": "registry/verification/local-skills/meddpicc-opportunity-assurance.yaml",
-      "skill_blob_sha": "83552a814a22514f452651465aafe3741c49b2db",
-      "package_tree_sha": "75794d0ac174b5fa44330e95d0e2e609a8feb14e",
+      "skill_blob_sha": "5f3c2486e833b841ba7452923eb26ee1e92d6877",
+      "package_tree_sha": "96c8262cc790d0a3b1cc63b439d636dfda3dc8ac",
       "package_file_count": 4,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -1433,9 +1433,9 @@
         "sales",
         "business"
       ],
-      "review_note": "2026-11-24 author-led source and cross-method provenance hardening. See docs/reviews/2026-11-24-sales-methods-evidence-hardening.md. Previous 19/20 candidate was for an older package and is historical. Current exact-version independent behavioral validation NOT_RUN. No affiliation, production CRM execution, or official certification claimed.",
-      "previous_reviewed_skill_blob_sha": "241b1ac2fc444bc85207ab5a7db6c6c06cba2626",
-      "previous_reviewed_package_tree_sha": "2d8ab7df769ee1bc2979922444f19c6734ca6c7c"
+      "review_note": "Engine-guided Sandler/MEDDPICC independent adversarial review and material source refinement. See docs/reviews/2026-11-24-sales-methods-engine-guided-redteam.md and its two source-neutral premerge case receipts. Changed exact source requires fresh review; behavioral host validation and consumer outcomes not run. Prior author-led static score is historical. Version held at 0.1.0.",
+      "previous_reviewed_skill_blob_sha": "83552a814a22514f452651465aafe3741c49b2db",
+      "previous_reviewed_package_tree_sha": "75794d0ac174b5fa44330e95d0e2e609a8feb14e"
     }
   ]
 }

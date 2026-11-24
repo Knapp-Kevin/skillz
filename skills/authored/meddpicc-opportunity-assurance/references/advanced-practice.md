@@ -54,6 +54,43 @@ purchase/legal steps and no-decision competition.
 Work with the original [fictional qualification counterexample](../examples/acceptance.md)
 as an adversarial interpretive case, not measured agent execution.
 
+## Decision-gate example: populated ledger, unready contract
+
+**Fictional test, not CRM or buyer evidence.** A rep shows all eight
+MEDDPICC factors as checked, quotes a potential $120,000 annual
+benefit and claims the deal can sign this week. The sole authorized
+buyer-controlled source actually observed says technical evaluation
+was favorable; security review, purchase order, legal terms, and
+who can execute the contract are still unknown.
+
+Return **two different outputs** rather than conflating them:
+
+`evidence_review_state: REVIEWABLE` may be reasonable if the
+actual eight claims and their provenance are shown with missing
+and contradictory values. This is *reviewability*, not
+completeness or buyer acceptance.
+
+`requested_action_gate: SIGNATURE_HOLD` because buyer-backed
+paper-process steps, contract authority and completion receipts
+are absent. State one useful buyer-respectful confirmation
+(e.g. what team owns security/legal review and what remains
+unresolved), an alternative (e.g. preserve the opportunity
+as evaluation-in-progress rather than signing-ready) and a
+**no-change/no-decision** alternative if pursuit no longer fits.
+
+**Adverse variation:** A buyer-side finance source explicitly
+rejects funding. That **DISCONFIRMS** the rep's "funded"
+assertion, even if the other seven factors are supported.
+Two equally credible buyer-controlled conflicting approval
+messages instead require **CONFLICTED**, not a tie-breaker
+based on seniority guessed from job titles. If access is
+withdrawn before next use, disclose no old deal-specific
+factor names, counts, quotations or computed statuses.
+
+The test's invented numbers, statuses and stakeholders are
+not independently observed customer outcomes and should
+never be copied into an actual forecast.
+
 ## Three-lane gap audit
 
 **Value lane:** metrics, consequences and current purchasing priority.

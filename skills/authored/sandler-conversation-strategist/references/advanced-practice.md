@@ -26,6 +26,40 @@ A mutually agreed next interaction is still a proposal until actually
 scheduled and confirmed with authorized host tools. A verbal "looks good"
 is not a procurement or contractual signature.
 
+## Branch-first conversation practice and safe exits
+
+Use this original miniature exercise to challenge *behavior*, not
+only the presence of public seven-stage vocabulary.
+
+**Fictional prompt:** A buyer has requested a 15-minute meeting but
+has stated no business pain, budget, purchasing authority or deadline.
+The seller wants to "close by Friday." A useful prepared answer is:
+
+- **Mutual meeting contract:** "Would it be useful to spend a few
+  minutes on what you wanted to explore, compare it with what we can
+  actually provide, then decide together whether another conversation
+  is worth your time?"
+- **Three buyer-open questions:** What prompted your interest?
+  What would be different if the current process changed? How would
+  your team decide whether any change was worth exploring?
+- **Two legitimate exits:** With permission, verify one evidence gap
+  together; or stop because the problem/fit is not established.
+- **Evidence state:** Seller target deadline is SELLER_ASSERTED.
+  Meeting request confirms interest in a meeting, not buying intent,
+  a deadline, a signatory or quantified pain.
+
+**Adverse variation:** The same buyer subsequently writes "Do not
+contact us again." Stop. Do not transform the request into a
+"hidden objection" for the rep to overcome, or propose follow-up
+cadences. The sales role-play can simulate a respectful closing
+line, but should label all invented buyer responses SIMULATED.
+
+For a requested call debrief, recommend at most **one improvement
+and one alternative** grounded in the observed buyer exchange,
+with uncertainty when the only evidence is seller notes. If
+a recommendation requires a new conversation, mark it proposed
+until the buyer and host have independently authorized it.
+
 ## Original buyer-respectful prompts
 
 - "What would make this conversation worthwhile from your perspective?"
