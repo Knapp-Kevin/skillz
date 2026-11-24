@@ -250,6 +250,30 @@ class MethodologyPackageTests(unittest.TestCase):
         self.assertIn("T4:", practice)
         self.assertIn("SIGNATURE_HOLD", practice)
 
+    def test_optional_task_handoff_preserves_buyer_consent_boundaries(self):
+        docs = [self.skill(slug) for slug in SLUGS]
+        contract = ("source_method | source_evidence_state | internal_or_external |")
+        for doc in docs:
+            self.assertIn("## Optional task-planning handoff", doc)
+            self.assertIn(contract, doc.replace("\n", " "))
+            self.assertIn("BLOCKED", doc)
+            self.assertIn("buyer", doc.lower())
+            self.assertIn("host", doc.lower())
+        self.assertIn("STOP_NO_CONTACT", docs[0])
+        self.assertIn("SIGNATURE_PREREQUISITES_OBSERVED", docs[1])
+        self.assertIn("ACCESS_HOLD", docs[1])
+
+    def test_sales_handoff_adversaries_preserve_shared_crosswalk(self):
+        a = (ROOT / SLUGS[0] / "examples" / "acceptance.md").read_text()
+        b = (ROOT / SLUGS[1] / "examples" / "acceptance.md").read_text()
+        self.assertIn("## S19. Task planner", a)
+        self.assertIn("## M22. Readiness gate", b)
+        self.assertIn("STOP_NO_CONTACT", a)
+        self.assertIn("SELLER_INFERRED", b)
+        self.assertIn("BLOCKED", b)
+        shared = "## CASE-JOINT-01:"
+        self.assertEqual(a[a.index(shared):], b[b.index(shared):])
+
     def test_no_prerequisite_specific_model_or_external_api(self):
         for slug in SLUGS:
             doc = self.skill(slug)
