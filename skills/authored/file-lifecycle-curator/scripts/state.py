@@ -168,6 +168,34 @@ def previous_catalog_scan(state):
     return old
 
 
+def guard_plan_observation(incoming, stored, current):
+    """Apply the same safety contract to checkpoint writers and host previews.
+
+    Caller timestamps, source IDs, and receipts remain assertions; this
+    only prevents contradictory claims from being durably promoted.
+    """
+    refuse(incoming["coverage"] == current["coverage"],
+           "PLAN_COVERAGE_CONFLICT_HOLD")
+    source_time = reconcile.timestamp(current["observed_at"])
+    refuse(render_structure.date(incoming["observed_at"]) >= source_time,
+           "PLAN_BEFORE_SOURCE_HOLD")
+    baseline_time = (render_structure.date(stored["observed_at"])
+                     if stored is not None else None)
+    if stored is not None and (incoming["plan_id"],
+                               incoming["plan_revision"]) == (
+                                   stored["plan_id"], stored["plan_revision"]):
+        previous_ids = {r["record_id"] for r in stored["records"]}
+        incoming_ids = {r["record_id"] for r in incoming["records"]}
+        refuse(previous_ids == incoming_ids, "PLAN_MEMBERSHIP_CHANGE_HOLD")
+    # The plan's timestamp is not a substitute for fresh per-record readback.
+    for row in incoming["records"]:
+        if row["state"] in {"VERIFIED", "ROLLED_BACK"}:
+            when = render_structure.date(row["readback"]["observed_at"])
+            refuse(when >= source_time and
+                   (baseline_time is None or when > baseline_time),
+                   "STALE_OPERATION_READBACK_HOLD")
+
+
 def guarded_plan(incoming, stored, current, allow_replan):
     if incoming is None:
         return stored, "HISTORICAL_NOT_REVALIDATED" if stored else "NO_PLAN"
@@ -183,6 +211,7 @@ def guarded_plan(incoming, stored, current, allow_replan):
            "PLAN_SOURCE_ACCESS_HOLD")
     refuse(all(r["source_revision"] == now[r["record_id"]]["source_revision"]
                for r in incoming["records"]), "PLAN_SOURCE_REVISION_HOLD")
+    guard_plan_observation(incoming, stored, current)
     if stored is not None:
         same = (stored["plan_id"], stored["plan_revision"]) == (
             incoming["plan_id"], incoming["plan_revision"])
