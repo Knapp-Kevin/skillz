@@ -205,6 +205,39 @@ A named economic buyer is **not** evidence of economic buyer engagement. An enth
 
 For a caller using a Sandler-aligned conversation skill, accept only authorized, source-labeled observations with **authentication_basis, source kind/revision, time, current scope and unchanged evidence state**. Translate `SELLER_ASSERTED → SELLER_INFERRED`, `SOURCE_OBSERVED → DOCUMENT_OBSERVED` only when a document was actually inspected, `BUYER_CONFIRMED → BUYER_CONFIRMED` only for its specific authenticated claim, and retain `DISCONFIRMED`, `CONFLICTED` and `ACCESS_HOLD` unchanged. `SIMULATED` is excluded from the real opportunity ledger. Translation never increases authority or recency. Translate a genuinely buyer-confirmed need to **candidate** pain evidence, an investment conversation to **candidate** funding constraints, and a decision conversation to **candidate** decision-process items. A conversation summary claiming the buyer said it remains SELLER_INFERRED unless the underlying source was actually authenticated. A simulated role-play remains simulated. These transfers cannot automatically establish economic buyer, champion or paper process, override a current contradiction, or widen permissions. The skill does not require Sandler or any other second skill to run; the transfer is optional text-only.
 
+## Optional task-planning handoff under commercial gate controls
+
+A MEDDPICC action gate may propose useful internal follow-through,
+but it **does not authorize** a customer-facing task. When the
+user requests an action shortlist or transfer to an independently
+available task-prioritization skill, provide only a **text-only**
+minimum handoff:
+`source_method | source_evidence_state | internal_or_external |
+blocking_condition | proposed_action | acceptance_evidence |
+viewer_scope`.
+
+An **internal** preparatory action, such as checking an approved
+source's finance evidence or preparing neutral procurement
+questions, can be a candidate for task prioritization under
+its own user-authorized scope. Any external buyer message,
+document delivery, forecast submission, proposal send, CRM
+write or signature request stays **BLOCKED** unless the
+specific operation has separately established current
+buyer/user permission and tool authority. Even
+`SIGNATURE_PREREQUISITES_OBSERVED` does not permit a
+contract signature or outreach; `SIGNATURE_HOLD` never
+becomes a buyer-contact instruction.
+
+The receiving task method must preserve `ACCESS_HOLD`,
+buyer opt-out, `CONFLICTED`, `DISCONFIRMED`, no-decision
+and permission limits; it cannot convert a seller's
+`SELLER_INFERRED` note into buyer-confirmed proof.
+Keep neutral task IDs without exposing customer identities
+or original record content. The whole skill remains usable
+without any other skill, scheduler, CRM or task service.
+A handoff is advisory text, not external execution or proof
+that a deal advanced.
+
 ## Failure and authority boundaries
 
 If the host cannot access a buyer record or current permissions, report **INSUFFICIENT_AUTHORIZED_EVIDENCE**, not a fake filled ledger. On sensitive account details, minimize display and avoid putting full notes into logs, third-party searches, public artifacts or metrics telemetry. Without explicit authorization, do not write CRM, create activities, email prospects, book meetings, update forecasts or schedule recurring audits. On contradictory **current, credible buyer-controlled** statements mark the factor CONFLICTED and request direct verification; a buyer source contradicting only a seller assertion instead DISCONFIRMS that assertion. A skeptical buyer, disqualification or lost deal is not a coaching failure if it is supported by evidence.

@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/meddpicc-opportunity-assurance/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/meddpicc-opportunity-assurance/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: c2d59e2102430c6b4845130dd39cd8ee4b7983a0
-complete_package_tree_sha: 8c25620e8a9394ce87cf9d88a0bc8d5ba034943e
+content_blob_sha: e0b293b96459b01db4535adc0a917225ce2cabb9
+complete_package_tree_sha: 6980f6e74f8a519e7d93347618f04311d60ef026
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
@@ -38,3 +38,7 @@ notes: >-
 # history and compatibility rationale ship in CHANGELOG.md. Five-file
 # complete package; no vendor certification or external consuming host
 # acceptance is claimed. Exact current review status needs-re-review.
+
+# 2026-11-24: bounded optional task handoff safeguard; unchanged v0.2.0.
+# Source fingerprint changed, requiring exact-package review. Real host
+# behavioral validation remains not-run. See docs/reviews/2026-11-24-task-continuity-sales-handoff.md.

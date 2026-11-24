@@ -10,7 +10,7 @@ metadata:
   author: Skillz Maintainers
   category: Productivity
   display-name: Effort Allocation Navigator
-  version: 0.1.0
+  version: 0.2.0
   license: MIT
 ---
 
@@ -28,7 +28,8 @@ the recommendation, pursue the alternative, or change objectives.
 The default user-facing view should fit on one screen:
 
 1. **Now:** one action with a completion condition and the smallest
-   useful start (normally 10–25 minutes), why it matters, and confidence.
+   concrete, visible start (normally 2–5 minutes), followed by
+   an optional focus slice of up to 25 minutes, why it matters, and confidence.
 2. **Instead:** one viable alternative with a different useful payoff
    (for example, a verified unblocker versus a bounded quick win).
    State the cost of deferring the first option when meaningful.
@@ -41,6 +42,66 @@ The default user-facing view should fit on one screen:
 When the user's capacity is low, **reduce presentation complexity**, not
 verification, required work or ownership. This is useful for ADHD-related
 analysis paralysis but requires no diagnosis or personal data.
+
+## ADHD-supportive engagement contract (diagnosis-free default)
+
+Optimize for **actually starting, sustaining and safely resuming work**,
+not merely producing the mathematically highest-ranked task. This
+method is useful without diagnosing the user or claiming to treat ADHD.
+The host must offer these affordances regardless of whether the user
+has disclosed any condition:
+
+1. **Reduce activation energy.** Turn the selected legitimate action
+   into **one physical or digital first move**, using a verb, object
+   and observable endpoint ("Open the draft and correct its first
+   failing check", not "be productive"). Default to a **5-minute
+   optional starting window**, or a user-chosen **2–10-minute**
+   window. If only 1–2 minutes are available, offer a bounded
+   orientation action. A starting window is not a forced timer,
+   a claim that a 90-minute task fits, or a substituted DONE state.
+2. **Keep choice count genuinely bounded.** Present the primary
+   action and one *meaningfully different* eligible alternative
+   by default; one choice is acceptable if only one is viable.
+   Keep a third hidden unless the user opts in. Avoid unbounded
+   motivational tips, extensive intake forms, forced scoring,
+   shame framing or a new list of planning tasks.
+3. **Make time visible without pretending accuracy.** Display the
+   short start, any user-supplied **unverified full-task estimate**,
+   remaining available time if known and the next stopping point.
+   Effort minutes and elapsed days are different. Don't invent
+   duration confidence, insist on a timer, or promise completion
+   inside a timebox. A pause or break is a valid user choice.
+4. **Leave a re-entry breadcrumb.** At a voluntary stop or change,
+   offer a compact `objective | last_observed_step |
+   next_visible_action | blocker | proof_needed` note from
+   information genuinely present in this authorized interaction.
+   At a later "continue", start with that next visible action
+   if still valid; verify any changed blocker first. If context
+   is missing, ask **at most one essential question**, then
+   offer a provisional low-risk first step.
+5. **Recover without blame.** An unchanged task after several
+   snapshots is **not evidence of procrastination, failure, or
+   unwillingness**. If starting felt difficult, offer **one**
+   bounded adjustment (smaller entry move, environmental cue,
+   alternate useful task, or consented support) without
+   replacing the protected primary obligation or moralizing.
+   No fabricated completion streaks, escalating reminders,
+   guilt-driven nudges or inferred diagnosis.
+6. **Keep momentum voluntary.** After a user-observed slice, give
+   a compact next choice: continue the same task, switch to the
+   alternative, or pause with a re-entry note. A checkpoint
+   counts as a checkpoint, **not** task completion. User may
+   request a visual progress marker or optional timer only
+   where the host truly supports it; never claim an alarm,
+   reminder, body-double partner or recurring check-in was
+   created without explicit consent and an actual capability.
+
+**Success criteria:** an actionable step and a return path the user
+can actually use, with protected safety/deadline and dependency
+rules intact. The recommendation is provisional until selected;
+the smallest action must make sense for that *specific* task.
+This is supportive interaction design, not a medical
+intervention or a measured improvement in ADHD symptoms.
 
 ## Trigger and non-trigger
 
@@ -166,6 +227,8 @@ Run from a copied *complete package* with Python 3.9+:
 See [the contract and limits](README.md),
 [synthetic acceptance cases](examples/acceptance.md) and
 [private preference template](preferences/README.md).
+See [version history](CHANGELOG.md) for the deliberate minor capability release.
+
 The helper is **optional**: a host with an equivalent approved
 dependency/decision tool may implement the same checks. An agent
 without Python must not claim to have run the helper.
@@ -179,6 +242,88 @@ make API requests, update issues, schedule work, learn user behavior
 or fetch any external information. A score is not permission.
 Its modeled path assumes unconstrained parallelism and cannot replace
 real resource-constrained scheduling.
+
+## Repeat-use continuity, without inventing a task database
+
+**Trigger:** The user returns after an earlier planning pass, supplies
+a newer task snapshot, or says "what changed?" For a single fresh
+brain dump, follow the normal one-snapshot route. This supports
+hourly, daily or weekly repetitions but does **not** schedule or
+persist them. A host may provide previously authorized snapshots;
+it must not discover private histories merely because the skill ran.
+
+1. **Confirm current scope on both inputs.** Check that old and new
+   snapshots are authorized for this viewer, use a comparable task-ID
+   namespace and represent the intended project. If source access
+   was revoked or cannot be established, **HOLD without disclosing
+   cached task IDs, counts, labels or prior choices**.
+2. **Reconcile, then prioritize.** Distinguish `COMPLETED_CLAIM`,
+   `REOPENED`, `ADDED`, `REMOVED_UNRECONCILED`,
+   `DEPENDENCY_CHANGED`, `BLOCKER_CHANGED`,
+   `PRIORITY_CHANGED`, `ESTIMATE_CHANGED`,
+   `NEWLY_READY` and `NEWLY_BLOCKED`. A removed task is **not DONE**;
+   a rewritten task ID is **not proven the same task**; a DONE claim
+   is not an independently observed outcome.
+3. **Keep the active objective visible.** If the selected goal
+   changed, report `GOAL_CHANGED` and confirm whether the new
+   objective supersedes the old one. Do not count tasks dropped from
+   a snapshot as productivity.
+4. **Update only affected decisions.** Re-evaluate blockers,
+   dependents, mandatory safety/deadline obligations and the next
+   action from the new task graph; preserve the success criteria
+   and one-primary/one-alternative default. Report the consequential
+   progress/regression, one action, one viable alternative and stop
+   condition, not a new overwhelming backlog.
+5. **Keep preferences private.** User requests for fewer choices or
+   shorter work slices affect the current run. Persistent learning
+   requires independently available, consented, revocable private
+   host storage; no background collector, memory store or scheduler
+   ships with the package.
+
+The optional, **stateless** helper accepts two explicitly authorized
+local snapshots, using `--previous` alongside `--input`:
+
+    python3 scripts/plan.py --previous examples/fictional-tasks.json --input examples/fictional-tasks.json
+
+The one-snapshot route is unchanged. When comparing two snapshots, provide a stable, non-sensitive
+`scope_id` in **both** documents. Missing or mismatched scope IDs
+are rejected; matching caller-declared IDs are not independently
+authenticated source identity. The same required authorization
+checks still apply.
+
+The optional `transition`
+output exposes **task ID tokens and bounded counts**, not titles,
+paths or account identities. It compares caller-provided assertions,
+not authenticated work receipts. Same-day inputs have only
+caller-specified order; reversed snapshot dates are rejected.
+Current host permission/source identity must be checked **before
+reading either snapshot**. If that cannot be established, do not
+invoke this helper on previously cached private data.
+
+## Optional consent-aware handoff of sales follow-ups
+
+When asked to combine sales-method review with task prioritization,
+a source skill may **propose** a bounded next task in a source-labelled,
+text-only handoff. This skill neither requires another sales skill
+nor treats a seller's suggested customer action as authorization.
+
+Map only cleared **internal preparation** (such as drafting internal
+buyer questions) to eligible work. A proposed external buyer-facing
+action (contacting a prospect, sending a proposal or scheduling a
+call) is **BLOCKED** using `external_blocker: true` until the
+current user and host confirm necessary buyer consent, permitted
+scope and the specific external action. A buyer opt-out is a STOP,
+**not** a "contact to verify consent" task. One buyer-confirmed
+fact or an upbeat CRM stage never authorizes customer outreach.
+Revoked viewer access suppresses cached opportunity details.
+
+Accept an optional minimal text exchange:
+`source_method | source_evidence_state | internal_or_external |
+blocking_condition | proposed_action | acceptance_evidence |
+viewer_scope`. Translate to the task graph only in the user's
+authorized host, preserving real dependency and blocker states.
+The planner does not accept these raw private fields, call other
+skills or create task records by itself.
 
 ## Preference adaptation without canonical contamination
 
@@ -203,10 +348,13 @@ hesitation. Distinguish:
   to skip safety, hide uncertainty or falsify completion is not
   an allowable preference.
 
-An optional input preference (`pace` or `choice_count`) influences
+An optional input preference (`pace`, `choice_count`, or
+`start_window_minutes`) influences
 the **presentation/ranking within an eligible lane**. It never
 down-ranks a mandatory safety obligation or transfers task-write
-authority. The neutral default is two choices and balanced pacing.
+authority. The neutral default is two choices, balanced pacing and a
+5-minute voluntary micro-start; none of these are a diagnosis
+or task-completion claim.
 [preferences/README.md](preferences/README.md) is guidance and a
 public **blank schema**, not a memory system. No auto learning,
 telemetry, cross-user sharing, automatic preference updates or

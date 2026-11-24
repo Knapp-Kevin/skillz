@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scope": {
+    "route": "REPOSITORY_MAINTENANCE",
+    "destination": "skills/authored/effort-allocation-navigator/",
+    "authority": "Owner-requested bounded skill refinement on fictional source inputs; no task-system, medical-record or schedule authority"
+  },
+  "target": {
+    "skill_id": "effort-allocation-navigator",
+    "source_revision": "03a5591999a09c47f1a734b2222c58a8d2166877",
+    "package_tree": "f79f12513f700884def4ec15992b4c1e34d35a9f",
+    "rights": "Original MIT Skillz package and public CHADD/NHS reference ideas; no licensed course content copied"
+  },
+  "objective": {
+    "result": "An actionable, bounded next choice that is easy to begin and resume, preserving dependency and safety obligations",
+    "pass_condition": "A task with large estimated effort offers a <=5 minute truthful first window and a re-entry path; cross-project snapshots fail closed; no fabricated completion, diagnosis or permission"
+  },
+  "discovery": {
+    "searched": [
+      "Live complete 11-file main-branch original Skillz navigator package and its 101 synthetic tests",
+      "Shared Skillz refinement lifecycle, Forge, Eval, Audit and builder acceptance contracts",
+      "Public CHADD ADHD task initiation, planning and workplace practical guidance"
+    ],
+    "unavailable": [
+      "Independent consuming-agent trial and individual longitudinal human-outcome study",
+      "Authenticated private task-system/history and preference store"
+    ],
+    "full_corpus_claim": false
+  },
+  "finding": {
+    "evidence": "OBSERVED_FAILURE",
+    "input": "Fictional large task and 2-minute available focus, same task IDs in two different project snapshots",
+    "expected": "Time-bounded start <=2 minutes with truthful completion boundary; reject cross-project source comparison",
+    "actual": "Before correction, red CI #45440239015 reported nine errors across activation, preference and cross-scope cases",
+    "mechanism": "25-minute-only action display and single-source-ID comparison did not model task activation/reentry or enforce caller-declared project namespace"
+  },
+  "candidate": {
+    "change": "Expose voluntary <=5-minute microstart bounded by capacity/effort, optional 2–10 minute current-run start preference, interrupted-task resume candidates, scope_id equality required for comparisons, no-shame re-entry procedure",
+    "preserved": [
+      "One primary action and one meaningful alternative by default",
+      "Safety and confirmed deadline lane precedence",
+      "No task writes, reminders, healthcare claims or private preference persistence",
+      "Unchanged snapshot never counts as observed completion or lack of motivation",
+      "Prior planner tests, prior fictional cases and independent optional skill use"
+    ],
+    "source_changed": true
+  },
+  "challenge": [
+    {
+      "name": "original",
+      "level": "LOCAL_TEST",
+      "result": "Recorded prior RED: CI #45440239015 new activation and cross-scope tests failed on old source; corrections then passed 130 planner tests in CI #45440863551"
+    },
+    {
+      "name": "near-negative",
+      "level": "LOCAL_TEST",
+      "result": "Synthetic microstart respects 2-minute capacity, per-run preference, unknown task completion and deliberate refusal of mixed/missing scope IDs; CI #45440863551"
+    },
+    {
+      "name": "regression",
+      "level": "LOCAL_TEST",
+      "result": "All 130 local synthetic unittest cases PASS on PR #914 pre-registry source commit 576c9c0c787bd365fee0e78a16602f7d07118a6a; final exact-head QA remains required"
+    },
+    {
+      "name": "authority",
+      "level": "STATIC_REVIEW",
+      "result": "Host must revalidate viewer/scope on each previous snapshot before invocation; no diagnosis, private task disclosure, background execution or medical outcomes asserted"
+    },
+    {
+      "name": "false-green",
+      "level": "STATIC_REVIEW",
+      "result": "Microstart never marks task DONE, identical snapshots never imply laziness, a source-scope match is caller asserted rather than authenticated, and a removed task remains unreconciled"
+    }
+  ],
+  "decision": {
+    "state": "ITERATE",
+    "reason": "Pre-merge tests demonstrate local source behavior, but exact package registry identity, full QA and independent review remain to be qualified",
+    "next": "Reconcile 15-file package pins, run existing authored and navigator CI at final head, resolve code review findings, merge then verify main"
+  },
+  "delivery": {
+    "artifact": "BOUND_BOUNDED_SOURCE_DRAFT_IN_PR_914",
+    "installation": "NOT_INSTALLED",
+    "repository_integration": "UNMERGED_AT_CASE_AUTHORING",
+    "consumer_outcome": "NOT_OBSERVED"
+  }
+}

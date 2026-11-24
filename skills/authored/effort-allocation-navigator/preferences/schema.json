@@ -29,6 +29,13 @@
         "short-sprints"
       ],
       "default": "balanced"
+    },
+    "start_window_minutes": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 10,
+      "default": 5,
+      "description": "Current-run user-selected micro-start window. It is a timebox, not a task duration, completion estimate, forced timer, or medical preference."
     }
   }
 }
