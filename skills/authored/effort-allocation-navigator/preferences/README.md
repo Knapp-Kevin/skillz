@@ -14,6 +14,17 @@ The standalone CLI optionally accepts:
 - pace: balanced by default; short-sprints may favor eligible tasks
   taking at most 30 minutes but **cannot** change the hard safety or
   owner-confirmed imminent-deadline lane.
+- start_window_minutes: an optional current-run **2–10 minute**
+  starter (default **5**). Shorter windows help make the first move
+  explicit; they do **not** imply a forced timer, realistic completion
+  time, higher reward score, ADHD diagnosis or persistent habit.
+  A remaining capacity of 1 minute still permits a 1-minute
+  orientation microstep without changing the stored preference.
+
+Never infer or persist a diagnosis, attention span, motivation,
+"streak" or health information from the user selecting this option.
+Return to neutral defaults without criticism whenever the user
+changes preferences or the private host has no current permission.
 
 An agent may additionally adapt written explanation length or suggested
 first-slice duration **within safe, authorized task acceptance** in the
