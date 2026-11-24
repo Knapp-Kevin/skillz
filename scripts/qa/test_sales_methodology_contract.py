@@ -137,6 +137,9 @@ class MethodologyPackageTests(unittest.TestCase):
         self.assertIn("## S12. Sparse first-meeting", examples)
         self.assertIn("## S13. Buyer requested proposal", examples)
         self.assertIn("STOP_NO_CONTACT", examples)
+        self.assertIn("precautionary", skill.lower())
+        self.assertIn("Do not seek to verify a no-contact", skill)
+        self.assertIn("NO_CONTACT", examples)
         self.assertIn("PROPOSAL_HOLD", examples)
 
     def test_meddpicc_decision_gates_are_not_scores_or_win_claims(self):
