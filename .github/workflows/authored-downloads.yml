@@ -51,12 +51,27 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Do not publish a superseded source as the latest channel.
-          live="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)"
-          if [ "$live" != "$GITHUB_SHA" ]; then
-            echo "Superseded snapshot; a newer main revision owns publication."
-            exit 0
-          fi
+          # Compare precisely the same source paths that trigger publication.
+          # An unrelated documentation merge must not strand a valid snapshot.
+          assert_current_inputs() {
+            git fetch --no-tags --depth=1 origin refs/heads/main || exit 1
+            live="$(git rev-parse FETCH_HEAD)" || exit 1
+            if git diff --quiet "$GITHUB_SHA" "$live" -- \
+              skills/authored/ registry/authored-skills-index.json \
+              scripts/build-authored-downloads.py engine/builder/host_compat.py \
+              .github/workflows/authored-downloads.yml; then
+              return 0
+            else
+              rc=$?
+              if [ "$rc" -ne 1 ]; then
+                echo "Cannot verify current publication inputs."
+                exit "$rc"
+              fi
+              echo "Superseded publication inputs; leaving snapshot unpublished."
+              exit 0
+            fi
+          }
+          assert_current_inputs
           tag="authored-$GITHUB_SHA"
           directory="$RUNNER_TEMP/authored-downloads"
           gh release create "$tag" --target "$GITHUB_SHA" --draft --title "Authored skill downloads ($GITHUB_SHA)" --notes "Original MIT skill packages, source-pinned manifest and SHA-256 hashes. Static packaging only; no host installation or behavior claim." "$directory"/*
@@ -70,10 +85,6 @@ jobs:
           if expected != actual or not release["isDraft"]:
               raise SystemExit("release asset inventory mismatch")
           PY
-          live="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)"
-          if [ "$live" != "$GITHUB_SHA" ]; then
-            echo "Superseded; leaving draft unpublished."
-            exit 0
-          fi
+          assert_current_inputs
           gh release edit "$tag" --draft=false --latest
           gh release view "$tag" --json isDraft,url,tagName,assets --jq '{isDraft,url,tagName,assetCount:(.assets|length)}'
