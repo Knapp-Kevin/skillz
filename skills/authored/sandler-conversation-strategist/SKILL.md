@@ -93,6 +93,39 @@ current_permission | next_confirmation`. With no authenticated host
 read, work provisionally from the user's supplied context; never claim
 that a call or CRM was inspected.
 
+## Buyer-controlled decision branches
+
+Choose the **actual next conversation behavior**, not merely a public
+methodology stage. Before suggesting any script, classify the buyer signal
+from currently usable evidence:
+
+| Signal | Response the rep can actually use | Stop / evidence boundary |
+| --- | --- | --- |
+| Buyer explicitly declines, opts out or asks for no contact | Acknowledge and close courteously. No objection handling or reopening tactic | **STOP_NO_CONTACT**. Do not propose unsolicited re-engagement or schedule another attempt |
+| No identified business problem, or change is a low priority | Summarize the current understanding and offer a no-fit / no-change exit | **PAUSE_OR_NO_FIT**, not a manufactured pain claim |
+| Seller-only claim of urgency, impact, budget or commitment | State the assumption as tentative; propose one non-leading validation question | **DISCOVER**, with no buyer-confirmed promotion |
+| Buyer confirms a problem but not business impact, investment or how they decide | Ask permission to examine one consequential gap, giving the buyer a genuine option to decline | **DISCOVER**, not a proposal, discount or close |
+| Buyer wants a proposal but material fit, decision rights or commercial constraints are unresolved | Explain which specific assumptions must be agreed before a responsible proposal; offer a scoped exploratory option | **PROPOSAL_HOLD** until the buyer clarifies relevant facts |
+| Buyer has confirmed the problem and its priority and **consents** to explore solutions | Propose a transparent possible fit, limitations, investment terms and a mutually chosen next action | **PROPOSE**, not proof of purchase, signatures or onboarding |
+
+When evidence contradicts the proposed branch, prioritize the most
+recent authenticated and authorized buyer choice. **A stated no or
+opt-out outranks any seller objective or internal quota.** A missing
+response is not an invitation to follow up automatically. Do not
+turn a fictional role-play instruction or a seller's CRM quote into
+buyer consent. If private source access was revoked, withhold
+relationship-specific detail and return `ACCESS_HOLD`.
+
+For a first-meeting preparation request, provide an **original usable
+micro-agenda**: (a) a two-way purpose/time agreement; (b) at most
+three open questions grounded in known facts and the buyer's role;
+(c) two valid exits, continued exploration *with the buyer's
+agreement* or a respectful no-fit; (d) one material assumption to
+test. Avoid an eleven-stage scripted dialogue when the evidence
+supports only the meeting opening. For coaching after a real meeting,
+pair each suggested change to what was actually observed, or mark
+it as advice from seller-provided notes.
+
 ## Operating method
 
 1. **Bind source, scope and mutual intent.** Identify buyer role, offering, business context, requested meeting outcome and whether observations are seller notes, buyer quotes, confirmed documents or hypotheses. Recheck permitted usage and intended audience. Treat competitor/participant identities, deal terms and recording contents as confidential unless explicitly cleared.
@@ -115,11 +148,21 @@ For value-based sales of training or advisory services, separate **seller fee, t
 
 ## Optional MEDDPICC handoff, not automatic proof promotion
 
-When an independently installed MEDDPICC opportunity-review capability is actually available and wanted, pass only approved scoped observations: buyer quote/evidence locator, time, participant role, distinction between buyer-confirmed fact and seller inference, quantified assumptions and open decision questions. The handoff is **text-only** and independently useful without a second skill. Transfer the exact source/authentication and evidence state, not an upgraded interpretation. A seller-pasted "buyer quote" stays SELLER_ASSERTED even when translated into a qualification category; simulated cases stay SIMULATED. Do not automatically infer an economic buyer, real champion or completed paper process from a pleasant meeting. A discussion of price is not verified budget; a positive reaction is not contract approval. Recheck current authorization before any private handoff.
+When an independently installed MEDDPICC opportunity-review capability is actually available and wanted, pass only approved scoped observations: buyer quote/evidence locator, time, participant role, distinction between buyer-confirmed fact and seller inference, quantified assumptions and open decision questions. The handoff is **text-only** and independently useful without a second skill. Transfer the exact source/authentication and evidence state, not an upgraded interpretation. Use this explicit **portable translation**, preserving original evidence:
+`SELLER_ASSERTED → SELLER_INFERRED`,
+`SOURCE_OBSERVED → DOCUMENT_OBSERVED` (only for an actual inspected document; a live interaction stays source-labeled pending verification),
+`BUYER_CONFIRMED → BUYER_CONFIRMED` **for its narrow authenticated claim only**,
+`DISCONFIRMED → DISCONFIRMED`,
+`CONFLICTED → CONFLICTED`,
+`ACCESS_HOLD → ACCESS_HOLD`;
+`SIMULATED` stays **outside** any real opportunity evidence ledger.
+A source observation is not converted to buyer agreement. A seller-pasted
+"buyer quote" stays SELLER_ASSERTED at origin and SELLER_INFERRED
+in the MEDDPICC ledger; a simulated role-play stays SIMULATED. Do not automatically infer an economic buyer, real champion or completed paper process from a pleasant meeting. A discussion of price is not verified budget; a positive reaction is not contract approval. Recheck current authorization before any private handoff.
 
 ## Failure and safety rules
 
-On missing buyer evidence, mark **UNCONFIRMED**, propose a clarifying question and do not invent dialogue. On contradictory buyer and seller notes, preserve both and request corroboration. If a suggested tactic relies on fear, fabricated scarcity, deception, exploiting vulnerability, concealing material terms or overriding an explicit no, refuse the tactic and replace it with transparent dialogue. If the host lacks a CRM/meeting tool, draft a consented manual handoff only. No guaranteed performance lift, certification, credential, signed deal, recorded meeting or external action without direct evidence.
+On missing buyer evidence, mark **UNCONFIRMED**, propose a clarifying question and do not invent dialogue. If the buyer has explicitly refused further contact, show **STOP_NO_CONTACT** rather than an objection-handling tactic. On contradictory buyer and seller notes, preserve both and request corroboration. If a suggested tactic relies on fear, fabricated scarcity, deception, exploiting vulnerability, concealing material terms or overriding an explicit no, refuse the tactic and replace it with transparent dialogue. If the host lacks a CRM/meeting tool, draft a consented manual handoff only. No guaranteed performance lift, certification, credential, signed deal, recorded meeting or external action without direct evidence.
 
 ## Standalone supporting material
 
