@@ -110,8 +110,13 @@ from currently usable evidence:
 
 When evidence contradicts the proposed branch, prioritize the most
 recent authenticated and authorized buyer choice. **A stated no or
-opt-out outranks any seller objective or internal quota.** A missing
-response is not an invitation to follow up automatically. Do not
+opt-out outranks any seller objective or internal quota.** Even if an
+opt-out is reported only in a seller's notes, treat it as a **precautionary
+do-not-contact hold** rather than guessing permission to re-engage.
+Do not seek to verify a no-contact request by contacting the buyer.
+Only a subsequently authorized, buyer-initiated reversal can change
+that restriction. A missing response is not an invitation to follow
+up automatically. Do not
 turn a fictional role-play instruction or a seller's CRM quote into
 buyer consent. If private source access was revoked, withhold
 relationship-specific detail and return `ACCESS_HOLD`.
