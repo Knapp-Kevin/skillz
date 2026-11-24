@@ -105,6 +105,18 @@ class HostCompatibilityTests(unittest.TestCase):
                       actual["warnings"])
         self.assertEqual(actual["behavior_tested"], "NOT_TESTED")
 
+    def test_secret_shaped_input_is_not_packaged_for_any_host(self):
+        (self.skill / ".env").write_text("DUMMY=not-a-real-secret\n", encoding="utf-8")
+        for host in ("github-copilot", "m365-agent-builder"):
+            with self.subTest(host=host):
+                actual = module.inspect(self.skill, host)
+                self.assertFalse(actual["package_ready"])
+                self.assertIn("POTENTIALLY_SENSITIVE_FILE:.env", actual["blockers"])
+
+    def test_slug_traversal_is_rejected_at_cli_boundary(self):
+        with self.assertRaisesRegex(ValueError, "INVALID_SKILL_SLUG"):
+            module.main(["--skill", "../private"])
+
     def test_repo_navigator_entrypoint_limit_and_reference_closure(self):
         navigator = ROOT / "skills" / "authored" / "effort-allocation-navigator"
         if not navigator.exists():
