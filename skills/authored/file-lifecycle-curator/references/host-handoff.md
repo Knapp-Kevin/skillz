@@ -93,3 +93,22 @@ host evidence. Even after the state checkpoint commits, another invocation
 needs a **new current source observation** to claim freshness. All source
 file operations, permissions, storage, delivery, time budget and scheduler
 remain exclusively in the external host's authority boundary.
+
+## Second adversarial pass (VETO resolved in revised implementation)
+
+The author-led follow-up review identified a plan-membership authorization
+gap: an otherwise legitimate plan preview could introduce a new record with
+VERIFIED status while keeping the same plan ID and revision. Existing target
+comparisons cover old records, not newly added members. This is an
+unapproved expansion of the plan's denominator and an integrity/security
+failure, not merely a display change.
+
+The handoff now requires an **exact approved plan record-ID membership set**.
+Added or removed IDs yield `PLAN_MEMBERSHIP_CHANGE_HOLD`, with no progress or
+private per-record details. Changing plan membership requires a separately
+authorized new plan revision; no silent replan is performed. Adversarial
+fixtures deliberately inject a fictional VERIFIED record and omit an approved
+member, asserting both are refused before progress calculation.
+
+This resolution does not make caller-provided readback receipts
+cryptographically authentic or independently attest source permissions.
