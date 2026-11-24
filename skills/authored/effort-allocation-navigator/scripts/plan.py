@@ -17,13 +17,13 @@ import sys
 MAX_BYTES = 1024 * 1024
 MAX_TASKS = 200
 ID_RE = re.compile(r"^[a-z][a-z0-9-]{1,63}$")
-ROOT_KEYS = {"schema_version", "as_of", "capacity_minutes", "goal_id", "preferences", "tasks"}
+ROOT_KEYS = {"schema_version", "as_of", "scope_id", "capacity_minutes", "goal_id", "preferences", "tasks"}
 TASK_KEYS = {
     "id", "label", "kind", "state", "depends_on", "effort_minutes", "duration_days",
     "value", "urgency", "obligation", "external_blocker", "due_date",
     "deadline_evidence",
 }
-PREF_KEYS = {"choice_count", "pace"}
+PREF_KEYS = {"choice_count", "pace", "start_window_minutes"}
 STATES = {"todo", "doing", "done"}
 OBLIGATIONS = {"discretionary", "committed", "safety"}
 EVIDENCE = {"none", "claimed", "owner-confirmed"}
@@ -56,6 +56,9 @@ def validate(document):
     refuse(type(document) is dict and set(document) <= ROOT_KEYS)
     refuse(document.get("schema_version") == 1 and type(document.get("schema_version")) is int)
     today = iso_date(document.get("as_of"))
+    scope_id = document.get("scope_id")
+    if scope_id is not None:
+        refuse(type(scope_id) is str and ID_RE.fullmatch(scope_id) is not None)
     capacity = document.get("capacity_minutes")
     if capacity is not None:
         integer(capacity, 1, 10080)
@@ -67,6 +70,7 @@ def validate(document):
     count = integer(prefs.get("choice_count", 2), 1, 3)
     pace = prefs.get("pace", "balanced")
     refuse(type(pace) is str and pace in PACES)
+    integer(prefs.get("start_window_minutes", 5), 2, 10)
     entries = document.get("tasks")
     refuse(type(entries) is list and 1 <= len(entries) <= MAX_TASKS)
     tasks = {}
@@ -193,7 +197,7 @@ def critical_path(tasks, goal, scope):
     }
 
 
-def plan(document):
+def _plan_raw(document):
     tasks, today, goal, capacity, choice_count, pace = validate(document)
     goal_scope = ancestors(tasks, goal) if goal else set(tasks)
     scope = set(goal_scope)
@@ -432,6 +436,32 @@ def plan(document):
 
 
 
+
+def plan(document):
+    """Add activation support to the already-qualified graph planner.
+
+    A five-minute micro-start is a proposed timebox, never a new task,
+    elapsed-time measurement, medical intervention or done receipt.
+    The host still selects a concrete physical first action from the
+    authorized task. Missing task estimates remain missing.
+    """
+    output = _plan_raw(document)
+    start = document.get("preferences", {}).get("start_window_minutes", 5)
+    capacity = document.get("capacity_minutes")
+    for choice in output.get("choices", []):
+        task = next(row for row in document["tasks"]
+                    if row["id"] == choice["task_id"])
+        effort = task.get("effort_minutes")
+        # A micro-start may be planning or verification, not execution.
+        # Never claim the whole task fits based on this small window.
+        choice["first_microstep_minutes"] = min(
+            start, capacity if capacity is not None else start,
+            effort if effort is not None else start)
+        choice["microstep_status"] = "TIMEBOX_NOT_COMPLETION"
+        choice["resume_cue"] = "PICK_NEXT_VISIBLE_ACTION"
+    return output
+
+
 def compare_snapshots(previous, current):
     """Compare two explicit caller snapshots without storing either.
 
@@ -441,6 +471,10 @@ def compare_snapshots(previous, current):
     """
     older, before_date, before_goal, _, _, _ = validate(previous)
     newer, after_date, after_goal, _, _, _ = validate(current)
+    before_scope, after_scope = previous.get("scope_id"), current.get("scope_id")
+    # A caller-declared namespace is a guard against accidental project
+    # collisions; it is NOT proof of source identity or viewer authority.
+    refuse(before_scope is not None and before_scope == after_scope)
     refuse(after_date >= before_date)
     old_ids, new_ids = set(older), set(newer)
     shared = sorted(old_ids & new_ids)
@@ -465,6 +499,9 @@ def compare_snapshots(previous, current):
                       and newer[key]["state"] != "done")
     state_changed = sorted(key for key in shared
                            if changed(key, ("state",)))
+    resume_candidates = sorted(key for key in shared
+                               if older[key]["state"] == "doing"
+                               and newer[key]["state"] == "doing")
     dep_changed = sorted(key for key in shared
                          if set(older[key]["depends_on"]) !=
                          set(newer[key]["depends_on"]))
@@ -483,6 +520,7 @@ def compare_snapshots(previous, current):
                            and newer[key]["state"] != "done")
     return {
         "status": "PROVISIONAL_SNAPSHOT_COMPARISON",
+        "scope_check": "CALLER_DECLARED_MATCH_NOT_AUTHENTICATED",
         "source_and_viewer_permission": "HOST_MUST_VERIFY_BOTH_SNAPSHOTS",
         "completion_evidence": "CALLER_ASSERTED_NOT_AUTHENTICATED",
         "date_order": ("SAME_DAY_CALLER_ORDER_ONLY"
@@ -490,6 +528,7 @@ def compare_snapshots(previous, current):
         "goal_changed": before_goal != after_goal,
         "completed_claim_ids": completed,
         "reopened_ids": reopened,
+        "resume_candidate_ids": resume_candidates,
         "added_ids": added,
         "removed_unreconciled_ids": removed,
         "state_changed_ids": state_changed,
