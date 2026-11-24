@@ -117,7 +117,7 @@ benefits**.
   stores task histories. It operates on a locally approved JSON snapshot.
 - [CHANGELOG.md](CHANGELOG.md) records the intentional version change.
 - [examples/fictional-user-focus.json](examples/fictional-user-focus.json) is
-  a fictional current-run user-chosen focus example, with no task records.
+  an original fictional current-run focus example, with no real task records.
 - [tests/test_focus_identity_adversarial.py](tests/test_focus_identity_adversarial.py)
   protects identity-review and chosen-focus priority boundaries.
 - [examples/fictional-tasks-next.json](examples/fictional-tasks-next.json) is
