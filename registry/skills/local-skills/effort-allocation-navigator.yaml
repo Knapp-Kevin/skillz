@@ -18,9 +18,9 @@ permission_tier: read-only
 portability: high
 review_status: needs-re-review
 dependency_status: self-contained-python-stdlib-optional
-dependencies: "Fourteen original first-party files, optional Python 3.9+ standard-library graph planner, fictional fixtures and blank preference schema; no network or other skills are required."
-content_blob_sha: 99d2391719768974975e14a4950867f5c9095b13
-complete_package_tree_sha: 12a43062a1d38e1139d546c8575ea1ae9a0a5655
+dependencies: "Fifteen original first-party files, optional Python 3.9+ standard-library graph planner, fictional fixtures and blank preference schema; no network or other skills are required."
+content_blob_sha: bc3710ae61508e24860e83d8023e66aab2438050
+complete_package_tree_sha: 1de24c983592388706d89361ae2cf0706b789624
 import_eligibility: review-required
 source_rights: "Independent MIT expression, not copied from third-party task-management skills. No real personal data, account history, user memory, telemetry or private preference files."
-rationale: "Adversarial FIRST, red source evidence 7/18 new failures; targeted four-defect refinement THEN 101/101 synthetic tests PASS (PR #901, run 45276005447, head 835311a7386d7b78391f9a657ea4997d0d7cc375). Deliberate v0.2.0 minor capability release adds read-only two-snapshot comparison; no external behavioral proof, persistence or task authority."
+rationale: "v0.2.0 new read-only snapshot continuity and bounded 2–5-minute ADHD-supportive activation. Red-first nine adversarial errors run #45440239015, then 130/130 synthetic local tests PASS run #45440863551. Complete-package release and live agent-host/user outcome still require separate validation. See docs/reviews/2026-11-24-task-continuity-sales-handoff.md."
