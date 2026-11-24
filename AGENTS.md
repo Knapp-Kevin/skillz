@@ -6,6 +6,8 @@
 
 **Start with [`AGENT_START_HERE.md`](AGENT_START_HERE.md).** A generic “look at this repository” request uses [agent value discovery](docs/agent-value-discovery.md) and the host agent's own accessible memory/relevant task history to assess the user's recurring needs before deciding whether a full personal bootstrap is warranted. `skillz` does not process that memory. External connector access and skill installation remain subject to their own permissions.
 
+**Install or use a selected skill:** Read the [authored download catalog](skills/authored/README.md) and [host-specific manual installation guide](docs/getting-started-with-skills.md#manual-installation-steps-by-environment) before preparing an installation. Confirm the exact host, source revision, complete package and applicable authorization; consult the [published manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json) for archive checksums and host-specific holds. Prepare a manual upload or portable handoff if the actual host cannot install it. Verify discovery and actual behavior separately; never treat a download as installation.
+
 For normal first-visit or returning-user work, use one canonical orchestrator:
 
 [`engine/skills/skill-bootstrap/SKILL.md`](engine/skills/skill-bootstrap/SKILL.md)

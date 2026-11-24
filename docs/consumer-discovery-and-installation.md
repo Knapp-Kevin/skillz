@@ -1,6 +1,6 @@
 # Consuming-agent discovery, creation, and installation contract
 
-**Installation entrypoint:** Read [Getting started with Skillz](getting-started-with-skills.md)
+**Installation entrypoint:** Find complete individual authored ZIPs in the [authored download catalog](../skills/authored/README.md). Read [Getting started with Skillz](getting-started-with-skills.md)
 for consumer-specific installation, host discovery, manual versus agent-led
 execution and per-target verification. This is part of delivery, not an
 optional afterthought. See also [installation handoff](installation-handoff.md).
