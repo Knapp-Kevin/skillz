@@ -80,12 +80,27 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertIn("UNSUPPORTED_EXTENSION:payload.bin", actual["blockers"])
         self.assertTrue(module.inspect(self.skill, "claude-code")["package_ready"])
 
-    def test_microsoft_license_reference_cannot_break_silently(self):
+    def test_microsoft_license_reference_is_rewritten_losslessly(self):
         skillfile = self.skill / "SKILL.md"
         skillfile.write_text(skillfile.read_text(encoding="utf-8") +
                              "\nSee [license](LICENSE).\n", encoding="utf-8")
         actual = module.inspect(self.skill, "m365-agent-builder")
-        self.assertIn("TRANSFORM_REQUIRES_LINK_REWRITE:SKILL.md", actual["blockers"])
+        self.assertTrue(actual["package_ready"], actual["blockers"])
+        self.assertIn("LOSSLESS_LICENSE_LINK_REWRITE_FOR_HOST", actual["warnings"])
+        zippath = self.root / "reference-adapter.zip"
+        module.write_zip(self.skill, "m365-agent-builder", str(zippath), actual)
+        with zipfile.ZipFile(zippath) as archive:
+            self.assertIn("](LICENSE.txt)", archive.read("SKILL.md").decode("utf-8"))
+            self.assertEqual(archive.read("LICENSE.txt"),
+                             (self.skill / "LICENSE").read_bytes())
+        self.assertIn("](LICENSE)", skillfile.read_text(encoding="utf-8"))
+
+    def test_valid_bundled_directory_link_is_not_broken(self):
+        skillfile = self.skill / "SKILL.md"
+        skillfile.write_text(skillfile.read_text(encoding="utf-8") +
+                             "\nBrowse [references](references/).\n", encoding="utf-8")
+        actual = module.inspect(self.skill, "github-copilot")
+        self.assertTrue(actual["package_ready"], actual["blockers"])
 
     def test_symlink_in_package_fails_closed(self):
         try:
