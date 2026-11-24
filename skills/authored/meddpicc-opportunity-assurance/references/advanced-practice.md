@@ -91,6 +91,47 @@ The test's invented numbers, statuses and stakeholders are
 not independently observed customer outcomes and should
 never be copied into an actual forecast.
 
+## Releasing a hold without a false deal win
+
+**Original fictional progression**, not a CRM or buyer result:
+
+- **T0:** An internal sales note claims the procurement cycle is
+  complete. Independent current buyer-owned legal, security and
+  finance approval are absent. `SIGNATURE_HOLD`; the dossier
+  may be `REVIEWABLE` but does not establish signature readiness.
+- **T1:** The authorized current buyer-owned security system
+  reports an accepted review for *this scoped opportunity*.
+  Record that particular security requirement as supported.
+  `SIGNATURE_HOLD` remains because legal terms, signatory
+  authority and economic approval are still unproven.
+- **T2:** Separate authorized buyer-controlled finance approval,
+  purchaser-accepted terms, legal completion and actual signatory
+  authority are now authenticated for this same opportunity,
+  with current dates and no credible conflicting source.
+  `SIGNATURE_PREREQUISITES_OBSERVED` can be reported as
+  **advisory readiness evidence**, still not a signed deal or
+  permission to request/sign/send a contract automatically.
+- **T3:** A signed agreement is actually inspected by an
+  authorized host and verified within scope.
+  `CONTRACT_EXECUTION_OBSERVED` may now be reported for that
+  claim; delivery and customer acceptance still require
+  separate actual receipts.
+- **T4:** The viewer loses access to source records. Return
+  `ACCESS_HOLD` and suppress the private transition timeline,
+  factor labels, account identity and derived risk counts.
+
+An authorized newer finance decision may supersede an old
+denial, but the old event stays on the evidence timeline.
+A seller-only `approved` CRM update does not supersede a
+buyer-controlled denial. Compare exact opportunity ID/scope,
+source ownership, evidence date and revision; a document from a
+different account cannot clear this opportunity's gate.
+
+**Anti-false-success:** a pleasant senior executive call, all
+eight MEDDPICC letters populated, a technical win and a
+countersigned draft are four different facts. None by itself
+proves every prerequisite of the requested commercial action.
+
 ## Three-lane gap audit
 
 **Value lane:** metrics, consequences and current purchasing priority.
