@@ -34,7 +34,9 @@ class RoutingPackageClosureTests(unittest.TestCase):
         self.assertLess(heading, workflow)
         routing = source[heading:workflow]
         for term in ("summarize supplied file(s)", "folder shape or progress",
-                     "on a cadence", "current permission", "a route is a work plan"):
+                     "on a cadence", "current viewer/source access",
+                     "host-native search", "refresh or continue an existing library",
+                     "a route is a work plan"):
             self.assertIn(term, routing.lower())
         closeout = source[source.index("### 8. Check, report"):source.index(
             "## Incremental maintenance, safe recall")]
