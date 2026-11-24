@@ -16,7 +16,7 @@ availability: in-repo
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 permission_tier: read-only
 portability: high
-review_status: verified
+review_status: needs-re-review
 dependency_status: self-contained-text-and-optional-stdlib-sqlite
 dependencies: >-
   Authorized host source inputs for real file inspection. Text-only curation
@@ -47,3 +47,6 @@ rationale: >-
 # See docs/reviews/2026-11-24-file-curator-redteam.md. Offline 151/151 contracts PASS
 # at initial PR #908 test head; live provider, consumer, scheduler and security
 # scanner results are NOT_RUN. No source permissions granted by this review.
+
+# Formal governance status remains needs-re-review under repository QA.
+# Author-led 19/20 is evidence in docs/reviews, not a promotion.
