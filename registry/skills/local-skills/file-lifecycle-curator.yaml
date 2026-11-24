@@ -24,7 +24,7 @@ dependencies: >-
   Durable private checkpoint writes optionally use bundled Python sqlite3
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
-content_blob_sha: b6e96282877320a9eae54bca1dbb6cd9a015209a
+content_blob_sha: 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa
 complete_package_tree_sha: c56ba5e64869f2c3bf0f984ba911ac649512b2ec
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
