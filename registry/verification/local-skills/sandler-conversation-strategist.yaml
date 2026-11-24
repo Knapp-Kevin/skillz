@@ -7,8 +7,8 @@ license_evidence_path: skills/authored/sandler-conversation-strategist/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/sandler-conversation-strategist/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: ad7918812ef991809f6221ec0dc7546605eceea5
-complete_package_tree_sha: 8e40c64c0e76a7a25dda1d4e93902d3254a9dc09
+content_blob_sha: eec91ad97c79eae4aa581a2f2b8cc93895ff5565
+complete_package_tree_sha: 114b08933425ca2239a03193ea24f075bb83c3c1
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
@@ -20,7 +20,7 @@ validation_note: >-
   integration, vendor endorsement, external security scanner or measured sales
   conversion improvement. Static package CI is not host behavioral validation.
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_NEW_SOURCE"
+rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
   use_case: [sales, buyer-conversation, evidence-review]
   lifecycle: [planning, evaluation, coaching]
@@ -38,3 +38,7 @@ notes: >-
 # Original method packages remain v0.1.0, formal needs-re-review and
 # host behavioral validation not-run. See
 # docs/reviews/2026-11-24-sales-methods-evidence-hardening.md.
+
+# 2026-11-24 engine-guided separate red-team review and bounded refinement.
+# Historical score is bound to prior package tree. Formal state remains
+# needs-re-review; consumer host trial and external security scan NOT_RUN.
