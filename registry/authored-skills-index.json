@@ -1356,9 +1356,9 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/effort-allocation-navigator.yaml",
       "verification_path": "registry/verification/local-skills/effort-allocation-navigator.yaml",
-      "skill_blob_sha": "5f4ca42c67115008cce171e44e82f6e724ad09a4",
-      "package_tree_sha": "e0d3889620bc7ee7e410912be8655f4c1730a003",
-      "package_file_count": 17,
+      "skill_blob_sha": "72bb115f17aa720c6d5025407a435d47b9aa0bb7",
+      "package_tree_sha": "39855f50ad155ad8324b38d771929a69a343fe82",
+      "package_file_count": 18,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
       "behavioral_validation": "not-run",
@@ -1371,7 +1371,7 @@
         "time-productivity/personal-planning",
         "planning/decision-frameworks"
       ],
-      "review_note": "v0.3.0 intentional minor capability release: explicit focus_task_id reduces unnecessary switching only within eligible same-priority-lane near-equivalent work, and changed-label/type IDs require identity review before completion/resume/readiness claims. Red-first 18 new synthetic tests, original PR #915 run #45445942389: 4 FAIL/12 ERROR; interim repair 148/148 PASS run #45446142605; exact HEAD whole-package CI and independent review still required. No actual user task proof, ADHD outcome, persistent preference or independent consuming-agent behavior. docs/reviews/2026-11-24-navigator-focus-identity-red-first.md.",
+      "review_note": "v0.3.0 intentional minor capability release: explicit focus_task_id reduces unnecessary switching only within eligible same-priority-lane near-equivalent work, and changed-label/type IDs require identity review before completion/resume/readiness claims. Red-first 18 new synthetic tests, original PR #915 run #45445942389: 4 FAIL/12 ERROR; interim repair 148/148 PASS run #45446142605; exact HEAD whole-package CI and independent review still required. No actual user task proof, ADHD outcome, persistent preference or independent consuming-agent behavior. docs/reviews/2026-11-24-navigator-focus-identity-red-first.md. 2026-11-24 host-portability source-only refactor: SKILL.md 26,351 -> 18,378 characters; engagement, chosen focus and repeat-use rules kept intact in bundled references/engagement-and-repeat-use.md. Microsoft Agent Builder static packaging qualifies only after exact-head targeted QA; actual external host loading, script use, model behavior and consumer outcomes NOT TESTED. No version bump for this internal refactor.",
       "previous_reviewed_skill_blob_sha": "bc3710ae61508e24860e83d8023e66aab2438050",
       "previous_reviewed_package_tree_sha": "1de24c983592388706d89361ae2cf0706b789624"
     },
