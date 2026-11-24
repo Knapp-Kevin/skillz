@@ -166,7 +166,7 @@
       "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
       "verification_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
       "skill_blob_sha": "b6e96282877320a9eae54bca1dbb6cd9a015209a",
-      "package_tree_sha": "8b1952511e1bff4130c6320cddd43f68a8669395",
+      "package_tree_sha": "c56ba5e64869f2c3bf0f984ba911ac649512b2ec",
       "package_file_count": 31,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
