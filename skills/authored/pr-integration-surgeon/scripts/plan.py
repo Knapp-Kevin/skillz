@@ -80,8 +80,10 @@ def read_json(path):
     need(p.is_file() and not any(x.is_symlink() for x in (p, *p.parents)),
          "input missing or symlinked")
     need(p.stat().st_size <= MAX_BYTES, "input exceeds one MiB")
-    with p.open(encoding="utf-8") as f:
-        return json.load(f, object_pairs_hook=unique_keys,
+    with p.open("rb") as f:
+        raw = f.read(MAX_BYTES + 1)
+        need(len(raw) <= MAX_BYTES, "input exceeds one MiB")
+        return json.loads(raw.decode("utf-8"), object_pairs_hook=unique_keys,
                          parse_constant=lambda _: (_ for _ in ()).throw(Hold("nonfinite JSON")))
 
 
@@ -283,8 +285,11 @@ def main():
         output = plan(read_json(args.input))
         print(json.dumps(output, sort_keys=True, indent=2))
         return (3 if args.require_candidate and output["first_recheck_candidate"] is None else 0)
-    except (Hold, ValueError, KeyError, TypeError, OSError, UnicodeError) as err:
+    except Hold as err:
         print("INTEGRATION_HOLD: " + str(err), file=sys.stderr)
+        return 2
+    except (ValueError, KeyError, TypeError, OSError, UnicodeError, RecursionError):
+        print("INTEGRATION_HOLD: malformed or unreadable input", file=sys.stderr)
         return 2
 
 

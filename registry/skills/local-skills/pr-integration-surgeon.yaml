@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: pr-integration-surgeon
 display_name: "PR Integration Surgeon"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Seven-file standalone original MIT package; optional offline Python 3.9+ stdlib planner, 49 synthetic tests and fictional PR inventory; no GitHub account, network, external tools or sibling skill."
-content_blob_sha: 03beac120f5fc3cdde5ddffd6bfff78c6827342a
-complete_package_tree_sha: f993750a3e489d3f7ebaed86f9887caa4a338d6e
+content_blob_sha: bd3d30d5ed64f9e0948d88089b892763ca3bf66a
+complete_package_tree_sha: 4ca1ed2f89b8305c78423826c924e06df9695177
 import_eligibility: review-required
 source_rights: "Original authored MIT text, Python script, tests and fixture. GitHub documentation consulted for factual semantics only; no third-party skill implementation imported."
 rationale: "Initial v0.1.0 source candidate (#880) provides dependency-ordered conservative PR integration triage distinct from delivery assessment and CI optimization. Output remains recheck candidate, not merge authorization; source-only hosted QA PASS 49/49 on PR #881 exact source head; no actual host agent/merges/user outcomes observed."

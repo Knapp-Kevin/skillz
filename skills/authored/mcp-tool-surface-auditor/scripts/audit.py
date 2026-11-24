@@ -70,8 +70,10 @@ def load(path):
     require(path.is_file() and not any(p.is_symlink() for p in (path, *path.parents)),
             "missing or symlinked input")
     require(path.stat().st_size <= MAX_BYTES, "input exceeds one MiB")
-    with path.open("r", encoding="utf-8") as stream:
-        return json.load(stream, object_pairs_hook=no_duplicates,
+    with path.open("rb") as stream:
+        raw = stream.read(MAX_BYTES + 1)
+        require(len(raw) <= MAX_BYTES, "input exceeds one MiB")
+        return json.loads(raw.decode("utf-8"), object_pairs_hook=no_duplicates,
                          parse_constant=lambda _: (_ for _ in ()).throw(
                              EvidenceHold("nonfinite JSON value")))
 
@@ -83,12 +85,12 @@ def tool_map(tools):
     for tool in tools:
         fields(tool, ("name", "inputSchema"), ("outputSchema",), "tool")
         name = identifier(tool["name"], "tool name")
-        require(name not in result, "duplicate tool name: " + name)
+        require(name not in result, "duplicate tool name")
         require(isinstance(tool["inputSchema"], dict),
-                "inputSchema must be a JSON object: " + name)
+                "inputSchema must be a JSON object")
         output = tool.get("outputSchema")
         require(output is None or isinstance(output, dict),
-                "outputSchema must be JSON object or absent: " + name)
+                "outputSchema must be JSON object or absent")
         payload = {"inputSchema": tool["inputSchema"],
                    "outputSchema": output}
         try:
@@ -96,7 +98,7 @@ def tool_map(tools):
                                    separators=(",", ":"), ensure_ascii=True,
                                    allow_nan=False)
         except (TypeError, ValueError) as err:
-            raise EvidenceHold("invalid JSON schema for " + name) from err
+            raise EvidenceHold("invalid JSON schema") from err
         result[name] = hashlib.sha256(canonical.encode("utf-8")).hexdigest()
     return result
 
@@ -263,9 +265,11 @@ def main():
         result = audit(load(args.input))
         print(json.dumps(result, indent=2, sort_keys=True))
         return 3 if args.require_parity and result["status"] != "OBSERVED_PARITY" else 0
-    except (EvidenceHold, TypeError, KeyError, ValueError, OSError,
-            UnicodeError) as exc:
+    except EvidenceHold as exc:
         print("CAPTURE_HOLD: " + str(exc), file=sys.stderr)
+        return 2
+    except (TypeError, KeyError, ValueError, OSError, UnicodeError, RecursionError):
+        print("CAPTURE_HOLD: malformed or unreadable input", file=sys.stderr)
         return 2
 
 

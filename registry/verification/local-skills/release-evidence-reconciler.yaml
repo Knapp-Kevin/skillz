@@ -7,13 +7,13 @@ license_evidence_path: skills/authored/release-evidence-reconciler/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/release-evidence-reconciler/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5c72e5b8f90164a67ca887f9c52459ef60a32c7a
-complete_package_tree_sha: be07cbcab1d83e00232c09bc4052b1305b0295ad
+content_blob_sha: 30a3352df67fdf7820189422f57f51e9272a29e4
+complete_package_tree_sha: 80685ce089d1b57edd9d4d65ab3cbe39bf236db4
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
-verification_basis: PR883-v0.1.0-source-55-of-55-hosted-tests
-validation_status: passed-offline-contract-tests
+verification_basis: security-refinement-source-revision-pending-tests
+validation_status: not-run
 validation_note: "Actions #45123071252 PASS 55/55 synthetic Python tests at PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea. Authored provenance/feedback #45123071291 PASS 11/11, Socket Security SUCCESS. No real GitHub build or publishing origin, cryptographic attestation trust verification, actual installation, user outcome or consuming agent."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"

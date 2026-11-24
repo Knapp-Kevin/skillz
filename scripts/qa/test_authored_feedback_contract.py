@@ -63,7 +63,7 @@ class FeedbackContractTests(unittest.TestCase):
         self.assertEqual(failures, {})
 
     def test_hardened_packages_keep_both_improvement_routes_and_categorical_feedback(self):
-        hardened = ["file-lifecycle-curator","federated-source-catalog","reference-integrity-auditor","context-continuation-contract","connector-capability-risk-review","privilege-exposure-mapper","agent-failure-boundary-analysis","scheduled-work-proof-auditor","personal-operations-control-board","statement-variance-reviewer","healthcare-contract-forensics","metadata-taxonomy-steward","agent-workspace-footprint-assessor"]
+        hardened = ["file-lifecycle-curator","federated-source-catalog","reference-integrity-auditor","context-continuation-contract","connector-capability-risk-review","privilege-exposure-mapper","agent-failure-boundary-analysis","scheduled-work-proof-auditor","personal-operations-control-board","statement-variance-reviewer","healthcare-contract-forensics","metadata-taxonomy-steward","agent-workspace-footprint-assessor","ci-guard","repository-delivery-assessor","pr-integration-surgeon","release-evidence-reconciler","mcp-tool-surface-auditor"]
         for name in hardened:
             with self.subTest(skill=name):
                 skill = (AUTHORED / name / "SKILL.md").read_text(encoding="utf-8")

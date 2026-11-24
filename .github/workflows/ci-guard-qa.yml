@@ -31,6 +31,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_procedure_contract.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_overlap.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_cutover.py' -v
           python3 -m unittest discover -s skills/authored/ci-guard/examples -p 'test_ci_self_repair.py' -v

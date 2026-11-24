@@ -1,4 +1,4 @@
-current_change_note: "v1.6.5 live attempt-jobs total_count/pagination checks and local Git HEAD/source-file rebinding for advisory readiness; real host/remote authority not verified."
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: ci-guard
 display_name: "CI Guard"
@@ -20,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: standalone-optional-python-stdlib-git-and-trusted-consumer-checks
 dependencies: "53-file first-party MIT CI Guard package; optional stdlib source/scenario, overlap, self-repair and strategy-fit diagnostics and advisory prequalification readiness. Unverified semantics HOLD."
-content_blob_sha: fa5b4e7e04d113c1dffe9ff834136446e9a692e9
-complete_package_tree_sha: b4ffb28dd9c23d128ee456cf21df1e7253afb8a7
+content_blob_sha: 3468bea1ddd8492a9cb2593efea841194c082be7
+complete_package_tree_sha: 165b33602fd1ec3a8dccaa39ca30e4d875ff4f48
 historical_origin_status: "Independently authored original first-party method; no historical external skill imported"
 rights_resolution: "MIT for original material only; no other source rights claimed"
 import_eligibility: review-required

@@ -7,13 +7,13 @@ license_evidence_path: skills/authored/pr-integration-surgeon/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/pr-integration-surgeon/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 03beac120f5fc3cdde5ddffd6bfff78c6827342a
-complete_package_tree_sha: f993750a3e489d3f7ebaed86f9887caa4a338d6e
+content_blob_sha: bd3d30d5ed64f9e0948d88089b892763ca3bf66a
+complete_package_tree_sha: 4ca1ed2f89b8305c78423826c924e06df9695177
 characterized_at: "2026-11-22"
 reviewed_at: "2026-11-22"
 verification_status: needs-re-review
-verification_basis: PR881-v0.1.0-source-49-of-49-hosted-tests
-validation_status: passed-offline-contract-tests
+verification_basis: security-refinement-source-revision-pending-tests
+validation_status: not-run
 validation_note: "Actions #45112426407 PASS 49/49 synthetic Python methods on PR #881 source HEAD 5769bedab30b6fb92a8eed09b187156642148e9d; authored feedback/provenance #45112426311 PASS 11/11. Socket Security checks SUCCESS. No live GitHub integration merge, provider ruleset proof, consuming-agent behavior, issue closure or user outcome performed."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_EXACT_V0_1_0"
