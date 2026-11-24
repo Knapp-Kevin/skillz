@@ -55,11 +55,12 @@ more sources, persist results, move files or schedule future runs.
 | User's actual goal | Minimum route | Add only when useful or requested |
 | --- | --- | --- |
 | Understand or summarize supplied file(s) | Bound permitted input (1), inspect readable portions (2-3), grounded summary (4), concise closeout (8) | Tags, cards or an index only when asked |
-| Organize, categorize or find files | Bound and inventory (1-2); classify (3) for categories, build index (5) for search, or plan (6) for physical organization; closeout (8) | Diagram (6a), deduplication or summary if relevant; no move by default |
+| Find or retrieve an authorized file | Recheck current viewer/source access and revision; use capable host-native search or an existing authorized index (5), then closeout (8) | If no usable search exists, inventory only an approved bounded source (1-2), then build a provisional index (5); no mandatory full crawl |
+| Categorize or organize a collection | Bound and inventory (1-2); classify (3) for categories or propose folder organization (6); closeout (8) | Optional index (5), diagram (6a), deduplication or summary when useful; no move by default |
 | Show current/proposed folder shape or progress | Observe authorized scope (1-2), review plan (6), three-view projection (6a), closeout (8) | Receipt-qualified completion only with a fresh host observation |
 | Investigate duplicates | Bound and inventory (1-2), verify duplicate basis (6), closeout (8) | Never delete or pick a canonical source automatically |
 | Evaluate old files for archiving | Bound and inventory (1-2), assess retention and recovery (7), closeout (8) | Creation, restore or disposal needs separate operation approval |
-| Retrieve an indexed file or update an existing library | Recheck current permission and source/revision evidence; retrieve using (5) or refresh through [incremental maintenance](references/incremental-maintenance.md); closeout (8) | Optional private checkpoint or [host handoff](references/host-handoff.md) only when genuinely available and authorized |
+| Refresh or continue an existing library | Recheck current source/viewer authority and compare a fresh scoped snapshot with a truly accepted checkpoint through [incremental maintenance](references/incremental-maintenance.md); closeout (8) | Optional private checkpoint or [host handoff](references/host-handoff.md) only when genuinely available and authorized |
 | Keep a library organized on a cadence | Run an authorized **on-demand** refresh as above; offer the [scheduler handoff](examples/scheduled-maintenance-template.md) as a proposal | Configure an actual scheduler only with separately confirmed cadence, audience and host permission |
 
 If the request spans several outcomes, combine **only their necessary phases**.
