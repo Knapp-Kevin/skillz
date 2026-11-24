@@ -11,7 +11,7 @@ content_blob_sha: 6f8d6eb1b2a554249a07fd47c06a15645c7bba21
 complete_package_tree_sha: 8b1952511e1bff4130c6320cddd43f68a8669395
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-24'
-verification_status: verified
+verification_status: needs-re-review
 verification_basis: exact-package-author-led-static-semantic-review-with-red-team-regressions
 validation_status: not-run
 validation_note: >-
@@ -26,7 +26,7 @@ validation_note: >-
   source-host permission, persistent user account, scheduler,
   file mutation or production disaster recovery.
 rubric: docs/skill-verification.md
-rubric_score: "19/20"
+rubric_score: "19/20 (author-led; formal verification pending)"
 tags:
   use_case:
   - file-information-management
@@ -72,3 +72,7 @@ notes: >-
 # in run #45336592672. Host-executed independent behavior, real scheduling,
 # provider authorization and exact-version external security scanning NOT_RUN.
 # This 'verified' is static-semantic only, never 'validated' host behavior.
+
+# Governance hold: scripts/qa/test_authored_feedback_contract.py requires
+# needs-re-review for EVERY authored package. 19/20 is author-led analysis,
+# NOT a formal promotion. No modification of this repository-wide policy.
