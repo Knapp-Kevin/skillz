@@ -433,9 +433,19 @@ class EngineStaticContracts(unittest.TestCase):
         self.assertEqual(markdown_local_links(root + "SKILL.md", skill), [])
         self.assertNotIn(chr(92) + chr(96), skill)  # Reject Markdown-escaped backticks.
         self.assertEqual(skill.count("~~~"), 0)  # Keep Markdown fences consistent.
-        self.assertEqual(skill.count(chr(96) * 3), 4)  # One SH and one text fence.
-        self.assertEqual(skill.count(chr(96) * 3 + "sh"), 1)
-        self.assertEqual(skill.count(chr(96) * 3 + "text"), 1)
+        protocol = read(root + "preference-workflow.md")
+        self.assertIn("preference-workflow.md#", skill)
+        self.assertIn("**Read the full", skill)
+        self.assertLess(len(skill), 20000)
+        self.assertEqual(markdown_local_links(root + "preference-workflow.md", protocol), [])
+        self.assertEqual((skill + protocol).count(chr(96) * 3), 4)
+        self.assertEqual((skill + protocol).count(chr(96) * 3 + "sh"), 1)
+        self.assertEqual((skill + protocol).count(chr(96) * 3 + "text"), 1)
+        for invariant in ("Reject the entire overlay", "explicitly approved full revocation",
+                          "nonblocking advisory lock", "Never select a configuration",
+                          "do not run a partial write", "Do not misreport"):
+            self.assertIn(invariant, protocol)
+        self.assertIn("If unavailable, do not assert completion", protocol)
 
     def test_iteration_method_can_refuse_false_improvement(self):
         root = "skills/authored/evidence-driven-refinement-loop/"
