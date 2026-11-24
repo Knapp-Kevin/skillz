@@ -90,6 +90,17 @@ This procedure requires only an ordinary conversation. Optional
 simulator/CRM/voice hosts must have independently scoped authority;
 absence of such a host does not block the text-only exercise.
 
+## Full fictional demonstration is not an observed rehearsal
+
+When a user explicitly requests a **short sample conversation** rather
+than participating as the rep, provide a clearly invented dialogue
+for study. Label **both voices SIMULATED / DEMO_ONLY** and show a
+possible respectful no-fit ending. Never claim the user spoke those
+lines, that the example represents a customer's real statement,
+or that a coaching score measures observed user behavior.
+A normal "practice with me" request instead uses one buyer line
+and awaits the user's actual response. Neither mode contacts a buyer.
+
 ## Original buyer-respectful prompts
 
 - "What would make this conversation worthwhile from your perspective?"
