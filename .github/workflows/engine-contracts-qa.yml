@@ -17,6 +17,9 @@ on:
       - 'scripts/qa/test-engine-builder.py'
       - 'scripts/qa/test-engine-builder-design.py'
       - 'scripts/qa/test-engine-feedback-boundary.py'
+      - 'scripts/qa/test-host-compatibility.py'
+      - 'docs/getting-started-with-skills.md'
+      - 'skills/authored/effort-allocation-navigator/**'
       - '.github/workflows/engine-contracts-qa.yml'
 
 permissions:
@@ -46,3 +49,5 @@ jobs:
           python3 -B scripts/qa/test-engine-builder.py
           python3 -B scripts/qa/test-engine-builder-design.py
           python3 -B scripts/qa/test-engine-feedback-boundary.py
+          python3 -B scripts/qa/test-host-compatibility.py
+          python3 -B engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agent-builder >/tmp/navigator-package-check.json
