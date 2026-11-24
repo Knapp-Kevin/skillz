@@ -7,14 +7,14 @@ license_evidence_path: skills/authored/effort-allocation-navigator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/effort-allocation-navigator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 5f4ca42c67115008cce171e44e82f6e724ad09a4
-complete_package_tree_sha: e0d3889620bc7ee7e410912be8655f4c1730a003
+content_blob_sha: 72bb115f17aa720c6d5025407a435d47b9aa0bb7
+complete_package_tree_sha: 39855f50ad155ad8324b38d771929a69a343fe82
 characterized_at: "2026-11-24"
 reviewed_at: "2026-11-24"
 verification_status: needs-re-review
-verification_basis: red-first-synthetic-failures-then-interim-source-tests
-validation_status: passed-offline-contract-tests
-validation_note: "PR #915 synthetic red-first run #45445942389 had 4 failures + 12 errors among 148 tests, all new cases. Interim repair run #45446142605 passed 148/148 offline tests. Current v0.3.0 complete package 17 files; final exact-head CI, independent review and main readback required. No agent-host/user attention outcomes, external source authentication or private persistence observed."
+verification_basis: revised-entrypoint-structural-review-pending
+validation_status: not-run
+validation_note: "The previous v0.3.0 source passed 148 synthetic offline tests. New canonical entrypoint is 18,378 characters; full engagement/focus/repeat-use instructions relocated intact into bundled references/engagement-and-repeat-use.md. This revised package needs exact-HEAD tests and review. Host loading, scripts, consumer outcomes NOT TESTED."
 rubric: docs/skill-verification.md
 rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
 tags:
@@ -42,3 +42,7 @@ notes: >-
 # The optional focus value is user supplied only for the current run.
 # Changed task labels/kinds require lightweight identity review before
 # progress claims; no medical/profiling/scheduling capabilities.
+
+# 2026-11-24: portability-only structure change, not semantic-version release.
+# All previous behavioral/test evidence belongs to the former exact tree.
+# Static package checks do not verify Microsoft/Copilot runtime behavior.
