@@ -219,6 +219,38 @@ A source observation is not converted to buyer agreement. A seller-pasted
 "buyer quote" stays SELLER_ASSERTED at origin and SELLER_INFERRED
 in the MEDDPICC ledger; a simulated role-play stays SIMULATED. Do not automatically infer an economic buyer, real champion or completed paper process from a pleasant meeting. A discussion of price is not verified budget; a positive reaction is not contract approval. Recheck current authorization before any private handoff.
 
+## Optional task-planning handoff without contact permission
+
+When the user wants to prioritize follow-through, offer a **minimal
+text-only action proposal** that an independently available task
+planner can consider. Do **not** require the Effort Allocation
+Navigator or any other skill to be installed. The existing one
+next-action plus one useful-alternative output works standalone.
+
+Use `source_method | source_evidence_state | internal_or_external |
+blocking_condition | proposed_action | acceptance_evidence |
+viewer_scope`. Preserve the original `SELLER_ASSERTED`,
+`SOURCE_OBSERVED`, `BUYER_CONFIRMED` or `SIMULATED` basis,
+and use neutral task IDs and only authorized minimum detail.
+
+**Internal preparation** (drafting three discovery questions,
+checking pricing assumptions locally, or reviewing authorized
+meeting notes) can be proposed as an internally actionable
+task with its own observable stop line. **External buyer-facing
+outreach**, including contacting a buyer, sending a proposal,
+sharing a draft or booking a meeting, must be treated as
+**BLOCKED** until buyer consent, user authorization, target
+scope and actual host capability are separately established.
+A buyer no-contact request is `STOP_NO_CONTACT`, not a task
+to contact the buyer to "confirm" their decision.
+
+Never translate a friendly buyer quote, a hypothetical role-play,
+a salesperson's CRM entry or a `PROPOSE` coaching stage into
+permission to send. If access is revoked, withhold the underlying
+task proposal, IDs, counts and private source detail. A handoff
+is **not** a task created, a reminder scheduled, a message sent
+or a completed user outcome.
+
 ## Failure and safety rules
 
 On missing buyer evidence, mark **UNCONFIRMED**, propose a clarifying question and do not invent dialogue. If the buyer has explicitly refused further contact, show **STOP_NO_CONTACT** rather than an objection-handling tactic. On contradictory buyer and seller notes, preserve both and request corroboration. If a suggested tactic relies on fear, fabricated scarcity, deception, exploiting vulnerability, concealing material terms or overriding an explicit no, refuse the tactic and replace it with transparent dialogue. If the host lacks a CRM/meeting tool, draft a consented manual handoff only. No guaranteed performance lift, certification, credential, signed deal, recorded meeting or external action without direct evidence.
