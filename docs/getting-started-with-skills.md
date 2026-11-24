@@ -87,6 +87,7 @@ install anything:
 python3 engine/builder/host_compat.py --all
 python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agent-builder
 python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-copilot-chat --zip-output ./navigator-chat.zip
+python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agents-toolkit --directory-output ./navigator-toolkit-handoff
 ```
 
 The last command creates an uploadable ZIP **only** at an explicitly chosen
