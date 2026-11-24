@@ -165,8 +165,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/file-lifecycle-curator.yaml",
       "verification_path": "registry/verification/local-skills/file-lifecycle-curator.yaml",
-      "skill_blob_sha": "d8a978accc25d1c44dcb724f154647433c533e4b",
-      "package_tree_sha": "71dc3efa91efc753a065b326bd1fefa0ad3a6c75",
+      "skill_blob_sha": "5a8dd109c88b118e6ccb6371901ba0b316de58fd",
+      "package_tree_sha": "87a8db631fd2a9b84a92e5a886d983d3c1437e18",
       "package_file_count": 33,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -183,7 +183,7 @@
       "proposed_capability_domain": "file-information-management",
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
       "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md",
-      "review_note": "Durable persistent organization state, original first-party v1.1.1; full 22-file package. PR #904 corrected source head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6 passed 118/118 offline source tests (81 prior + 37 new SQLite persistence/adversarial, GitHub Actions #45289252920), 11/11 authored integrity (#45289253087); Socket PR Alerts and Project Report SUCCESS. Automated review found and confirmed fixes to first-preview cadence guard and historical snapshot-ID replay; both threads resolved. Manual correction avoids falsely calling unobserved partial records unchanged. Real host account ACL, actual private user checkpoint, schedule creation/delivery, file operation, power-failure restore and user productivity NOT_RUN; review_status remains needs-re-review. 2026-11-24 host portability refactor: exact entrypoint 18,453 characters; all original detailed phases 1–7 and incremental maintenance protocol retained verbatim in mandatory bundled workflow-protocol.md and maintenance-protocol.md. Routing, authority and phase 8 closeout remain in the entrypoint. Prior blob 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa, tree 57a5f84e5a2ff1c44e8c848408b1a2903958abb9 are historical. Version unchanged; exact source re-review pending, external host behavior NOT TESTED.",
+      "review_note": "Durable persistent organization state, original first-party v1.1.1; full 22-file package. PR #904 corrected source head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6 passed 118/118 offline source tests (81 prior + 37 new SQLite persistence/adversarial, GitHub Actions #45289252920), 11/11 authored integrity (#45289253087); Socket PR Alerts and Project Report SUCCESS. Automated review found and confirmed fixes to first-preview cadence guard and historical snapshot-ID replay; both threads resolved. Manual correction avoids falsely calling unobserved partial records unchanged. Real host account ACL, actual private user checkpoint, schedule creation/delivery, file operation, power-failure restore and user productivity NOT_RUN; review_status remains needs-re-review. 2026-11-24 host portability refactor: exact entrypoint 18,453 characters; all original detailed phases 1–7 and incremental maintenance protocol retained verbatim in mandatory bundled workflow-protocol.md and maintenance-protocol.md. Routing, authority and phase 8 closeout remain in the entrypoint. Prior blob 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa, tree 57a5f84e5a2ff1c44e8c848408b1a2903958abb9 are historical. Version unchanged; exact source re-review pending, external host behavior NOT TESTED. Current source update: categorical feedback, private preferences, bounded recursive improvement and tailored injection challenge. Prior receipts historical; actual host behavior NOT_RUN. Version unchanged.",
       "previous_reviewed_skill_blob_sha": "3e35bdf625b617fea62d9758501d5fc61c444dca",
       "previous_reviewed_package_tree_sha": "33a8e598e64478a763e335a2dea9f6eef34a7528"
     },
@@ -201,8 +201,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/federated-source-catalog.yaml",
       "verification_path": "registry/verification/local-skills/federated-source-catalog.yaml",
-      "skill_blob_sha": "5b23996b83edcd6177cd84304173987adfa4b7b3",
-      "package_tree_sha": "5ff18fa29b02b0d15197895245fd7fb25952bc43",
+      "skill_blob_sha": "86b97ccdf0db845e5061af5f00470ac44cf9435b",
+      "package_tree_sha": "4261d94972dfd1b2206b65081361f2f2c6917923",
       "package_file_count": 8,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -220,7 +220,7 @@
       "proposed_capability_mapping_ref": "registry/discovery/file-information-management-domain-proposal-20261118.json",
       "capability_mapping_ref": "docs/reviews/2026-11-18-file-pack-v1-1-static-review.md",
       "related_authored_skill": "file-lifecycle-curator",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 8d218771193ccefa162479e1a57fd08e9b4ba60a and remain historical, not current-content validation. GitHub posting account is not anonymous.",
+      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 8d218771193ccefa162479e1a57fd08e9b4ba60a and remain historical, not current-content validation. GitHub posting account is not anonymous. Current source update: categorical feedback, private preferences, bounded recursive improvement and tailored injection challenge. Prior receipts historical; actual host behavior NOT_RUN. Version unchanged.",
       "previous_reviewed_skill_blob_sha": "8d218771193ccefa162479e1a57fd08e9b4ba60a",
       "previous_reviewed_package_tree_sha": "68978717ac4bdb9766ebeab1616feec2196c8573"
     },
@@ -273,8 +273,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/reference-integrity-auditor.yaml",
       "verification_path": "registry/verification/local-skills/reference-integrity-auditor.yaml",
-      "skill_blob_sha": "230590495230a3a1bc724fc2ad853977499f06dd",
-      "package_tree_sha": "fb4524778a6c5349801659b027ddf113bc447a85",
+      "skill_blob_sha": "d5acaf61f86a1c5465d91fb708b8a60b0387018d",
+      "package_tree_sha": "0662ec9bc1d01ce77312c54966ee462be0b9f390",
       "package_file_count": 7,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -292,7 +292,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-18-taxonomy-reference-integrity-static-review.md",
       "previous_reviewed_skill_blob_sha": "1dd69184869a203e63d7afbefc0a50452d3f586b",
       "previous_reviewed_package_tree_sha": "42795d95d88a27203317bde8ac25fbbba50fb3ca",
-      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 7ee18deb36d517b3c43b43cfdfbf47ae54efa327 and remain historical, not current-content validation. GitHub posting account is not anonymous."
+      "review_note": "Current package includes OPTIONAL sanitized agent-observed GitHub issue route and multi-turn task continuation with explicit authority; source fingerprint updated without publishing an arbitrary version bump. Source-only contract QA pending. Previous exact-source reviews/host tests refer to the former blob 7ee18deb36d517b3c43b43cfdfbf47ae54efa327 and remain historical, not current-content validation. GitHub posting account is not anonymous. Current source update: categorical feedback, private preferences, bounded recursive improvement and tailored injection challenge. Prior receipts historical; actual host behavior NOT_RUN. Version unchanged. Graph checker rejects malformed containers, masks private IDs/paths in diagnostics and holds orphan claims on unresolved inbound evidence."
     },
     {
       "id": "claim-evidence-adjudicator",
@@ -787,8 +787,8 @@
       "license_verified_at": "2026-11-18",
       "provenance_path": "registry/skills/local-skills/context-continuation-contract.yaml",
       "verification_path": "registry/verification/local-skills/context-continuation-contract.yaml",
-      "skill_blob_sha": "7a6099b89b21f03cf8a152890472874797e41bc7",
-      "package_tree_sha": "f5bd8e4ae881891ae2fda0d3920f81088194ae51",
+      "skill_blob_sha": "2489f97644cb99a524761a305761f71ab9a4f636",
+      "package_tree_sha": "78bc066bfdc92b6112cc169f2937d9bfbd350fd7",
       "package_file_count": 11,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -807,7 +807,7 @@
       "previous_reviewed_package_tree_sha": "c779e8414ea60ae28d7942b0311e518485e480f0",
       "default_authority": "read-only",
       "authority_note": "An optional durable-continuity record write is allowed only after verifying current or applicable standing destination-specific user authorization; no automatic writes.",
-      "review_note": "Optional bounded 2..32 step chain replay detects intermediate acceptance/permission drift and false completion, with 67 synthetic tests in Context Continuation Contract package. Exact-current package source/tree pinned, PR QA pending. Published version remains 1.2.0; host agent behavior, source/receipt authenticity, and consumer outcomes NOT_RUN."
+      "review_note": "Optional bounded 2..32 step chain replay detects intermediate acceptance/permission drift and false completion, with 67 synthetic tests in Context Continuation Contract package. Exact-current package source/tree pinned, PR QA pending. Published version remains 1.2.0; host agent behavior, source/receipt authenticity, and consumer outcomes NOT_RUN. Current source update: categorical feedback, private preferences, bounded recursive improvement and tailored injection challenge. Prior receipts historical; actual host behavior NOT_RUN. Version unchanged."
     },
     {
       "id": "evidence-narrative-composer",

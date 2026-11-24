@@ -4,6 +4,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
     paths:
+      - 'skills/authored/reference-integrity-auditor/**'
       - 'skills/authored/agent-failure-boundary-analysis/**'
       - 'skills/authored/decision-tradeoff-workbench/**'
       - 'skills/authored/repository-delivery-assessor/**'
@@ -32,6 +33,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 -B -m unittest discover -s skills/authored/reference-integrity-auditor/tests -p 'test_*.py' -v
           python3 -B -m unittest discover -s skills/authored/agent-failure-boundary-analysis/tests -p 'test_*.py' -v
           python3 -B -m unittest discover -s skills/authored/decision-tradeoff-workbench/tests -p 'test_*.py' -v
           python3 -B -m unittest discover -s skills/authored/repository-delivery-assessor/tests -p 'test_*.py' -v

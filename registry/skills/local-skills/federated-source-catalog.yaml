@@ -1,3 +1,4 @@
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: federated-source-catalog
 display_name: Federated Source Catalog
@@ -22,8 +23,8 @@ dependencies: >-
   Text-only catalog planning requires supplied source details. Live federation
   requires independently connected, authorized host source tools. No bundled
   OAuth/client, storage, index, sync, watcher, or deletion runtime.
-content_blob_sha: 5b23996b83edcd6177cd84304173987adfa4b7b3
-complete_package_tree_sha: 5ff18fa29b02b0d15197895245fd7fb25952bc43
+content_blob_sha: 86b97ccdf0db845e5061af5f00470ac44cf9435b
+complete_package_tree_sha: 4261d94972dfd1b2206b65081361f2f2c6917923
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

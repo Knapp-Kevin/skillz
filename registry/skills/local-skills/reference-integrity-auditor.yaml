@@ -1,3 +1,4 @@
+current_change_note: "Security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: reference-integrity-auditor
 display_name: Reference Integrity Auditor
@@ -22,8 +23,8 @@ dependencies: >-
   Original seven-file self-contained skill; optional Python 3.9+
   standard-library checker over host-provided permitted JSON metadata.
   No online Skillz policy, sibling package, network, crawler or credentials required.
-content_blob_sha: 230590495230a3a1bc724fc2ad853977499f06dd
-complete_package_tree_sha: fb4524778a6c5349801659b027ddf113bc447a85
+content_blob_sha: d5acaf61f86a1c5465d91fb708b8a60b0387018d
+complete_package_tree_sha: 0662ec9bc1d01ce77312c54966ee462be0b9f390
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-

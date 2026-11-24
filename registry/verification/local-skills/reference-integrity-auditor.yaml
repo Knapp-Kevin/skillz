@@ -7,12 +7,12 @@ license_evidence_path: skills/authored/reference-integrity-auditor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/reference-integrity-auditor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 230590495230a3a1bc724fc2ad853977499f06dd
-complete_package_tree_sha: fb4524778a6c5349801659b027ddf113bc447a85
+content_blob_sha: d5acaf61f86a1c5465d91fb708b8a60b0387018d
+complete_package_tree_sha: 0662ec9bc1d01ce77312c54966ee462be0b9f390
 characterized_at: '2026-11-20'
 reviewed_at: '2026-11-20'
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
 validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
   Local Python 3.13.5 executed 60/60 offline method regressions;
