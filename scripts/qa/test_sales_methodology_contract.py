@@ -223,6 +223,11 @@ class MethodologyPackageTests(unittest.TestCase):
             self.assertIn(name, examples)
         self.assertIn("NOT_OBSERVED_REP_BEHAVIOR", practice)
         self.assertIn("stops for the user's rep reply", practice)
+        self.assertIn("INTERACTIVE_REHEARSAL", skill)
+        self.assertIn("DEMONSTRATION", skill)
+        self.assertIn("SIMULATED / DEMO_ONLY", skill)
+        self.assertIn("## S18. Explicit fictional full-dialogue", examples)
+        self.assertIn("full fictional demonstration", practice.lower())
 
     def test_meddpicc_hold_can_progress_only_after_complete_current_evidence(self):
         skill = self.skill(SLUGS[1])
