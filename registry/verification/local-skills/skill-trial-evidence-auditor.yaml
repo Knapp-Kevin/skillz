@@ -7,12 +7,12 @@ license_evidence_path: skills/authored/skill-trial-evidence-auditor/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/skill-trial-evidence-auditor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: eeec099ea15ba82084209fb4d0bc7940b8314509
-complete_package_tree_sha: 531fc4f2c37ad1c5d62411a1fe302f71c1185865
+content_blob_sha: dbfd874c69dec19a04fc0f8d35bc7ed598275d87
+complete_package_tree_sha: ad22cbbde8bf7c15566011067d4f9018271db5e5
 characterized_at: "2026-11-20"
 reviewed_at: "2026-11-20"
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
 validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: docs/skill-verification.md

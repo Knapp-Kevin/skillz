@@ -1,4 +1,4 @@
-current_change_note: "Portable entrypoint refactor; mandatory detailed procedure preserved verbatim. Host execution not tested; version unchanged."
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: repository-readme-architect
 display_name: "Repository README Architect"
@@ -20,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-eighteen-file-optional-python-stdlib
 dependencies: "Standalone 18-file MIT README Architect package with three optional offline stdlib checkers and tests; compatible history-log advisory, no new runtime dependencies. Repo-local QA workflow is not packaged."
-content_blob_sha: 5573cece2caed74e00700b4253ea5774985eea65
-complete_package_tree_sha: b48661f9f50efe757315afd38d6c874a2eb4ee82
+content_blob_sha: fae8ef92b4c95127842f303e214caec055ea3821
+complete_package_tree_sha: 51c9e49a6ac8c15c0e2fd0f957b544773f0fa5bf
 import_eligibility: review-required
 source_rights: "Independently authored original MIT skill; no external skill text or assets copied"
 rationale: "v0.5.2 compatible patch reinforces prior front-door vs changelog guidance with high-threshold, nonblocking repeated-PR/date-history detection and eight planted tests. Complete exact package pinned. Hosted complete package source QA PASS 190/190 at source head fde064a23a0cad1364433fd315783a2f9ceaeb33; final metadata head pending; independent host/reader behavior NOT_RUN."

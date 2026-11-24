@@ -83,7 +83,7 @@ def arm(a):
         text(a[k],k)
     for k in ["config_sha", "snapshot_sha", "grader_sha", "receipt_sha"]:
         digest(a[k],k)
-    if a["result"] not in RESULTS or a["verification_kind"] not in VERIFIERS:
+    if not isinstance(a["result"],str) or not isinstance(a["verification_kind"],str) or a["result"] not in RESULTS or a["verification_kind"] not in VERIFIERS:
         raise Invalid("unsupported result/verifier")
     for k in ["verifier_independent", "blind_to_arm", "observed_execution", "authority_violation"]:
         boolval(a[k],k)
@@ -122,7 +122,7 @@ def audit(data):
     protocol=data["protocol"]
     exact(protocol,{"id","run_kind","preregistered","minimum_pairs","minimum_delta_pp","holdout_isolated"})
     text(protocol["id"],"protocol.id")
-    if protocol["run_kind"] not in KINDS: raise Invalid("invalid run kind")
+    if not isinstance(protocol["run_kind"],str) or protocol["run_kind"] not in KINDS: raise Invalid("invalid run kind")
     boolval(protocol["preregistered"],"preregistered")
     boolval(protocol["holdout_isolated"],"holdout_isolated")
     integer(protocol["minimum_pairs"],"minimum_pairs",1,MAX_PAIRS)
@@ -141,7 +141,7 @@ def audit(data):
         should=boolval(item["should_trigger"],"should_trigger")
         case_types.add("POSITIVE" if should else "NONTRIGGER")
         case_counts[case_id]=case_counts.get(case_id,0)+1
-        if item["leakage_review"] not in LEAKAGE: raise Invalid("invalid leakage review")
+        if not isinstance(item["leakage_review"],str) or item["leakage_review"] not in LEAKAGE: raise Invalid("invalid leakage review")
         b=arm(item["baseline"]);t=arm(item["treatment"])
         if b["run_id"]==t["run_id"] or b["run_id"] in seen_run or t["run_id"] in seen_run:
             raise Invalid("duplicate run receipt identity")
@@ -153,6 +153,8 @@ def audit(data):
         for k in ("host_id","model_id","agent_version","config_sha","snapshot_sha","grader_sha","verification_kind"):
             if b[k]!=t[k]: reasons.append("INCOMPARABLE_"+k.upper())
         if b["skill_triggered"] is True: reasons.append("BASELINE_SKILL_TRIGGERED")
+        if b["skill_triggered"] is None: reasons.append("BASELINE_TRIGGER_UNKNOWN")
+        if not should and t["skill_triggered"] is None: reasons.append("NONTRIGGER_ACTIVATION_UNKNOWN")
         if should and t["skill_triggered"] is not True: reasons.append("SKILL_NOT_OBSERVED_TRIGGERED")
         if not should and t["skill_triggered"] is True: reasons.append("NONTRIGGER_FIRED")
         if item["leakage_review"]!="CLEAR":reasons.append("LEAKAGE_"+item["leakage_review"])
@@ -227,8 +229,11 @@ def main(argv=None):
         if len(payload)>MAX_BYTES:raise Invalid("input exceeds 1MiB")
         data=parse(payload.decode("utf-8"))
         result=audit(data)
-    except (OSError,UnicodeError,Invalid,ValueError,TypeError) as ex:
+    except Invalid as ex:
         print("INVALID_INPUT: "+str(ex),file=sys.stderr)
+        return 2
+    except (OSError,UnicodeError,ValueError,TypeError,RecursionError):
+        print("INVALID_INPUT: malformed or unreadable evidence",file=sys.stderr)
         return 2
     print(json.dumps(result,sort_keys=True,indent=2,allow_nan=False))
     return 0

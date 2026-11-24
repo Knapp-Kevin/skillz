@@ -7,12 +7,12 @@ license_evidence_path: skills/authored/first-run-experience-validator/LICENSE
 copyright_holder: Kevin Knapp
 local_path: skills/authored/first-run-experience-validator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: f6a4f7dd0dfb0b89da62d9b820550669cda62a79
-complete_package_tree_sha: 08a3f861087c5f92ea326a5a4e3eaa5adb6ea200
+content_blob_sha: e2d2ec6367e97dd4008488f2098b5b90b9d7b8fd
+complete_package_tree_sha: a44814534aea09dab6639c72ba5f3c8e72540f9e
 characterized_at: "2026-11-23"
 reviewed_at: "2026-11-23"
 verification_status: needs-re-review
-verification_basis: issue-884-initial-source-candidate
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
 validation_note: "Source contains twenty original fictional adversarial scenarios and a blank audit ledger. No agent-host behavior, real isolated installation, first meaningful task, genuine novice, user outcome or security inspection has been executed. No claim of synthetic test pass."
 rubric: docs/skill-verification.md

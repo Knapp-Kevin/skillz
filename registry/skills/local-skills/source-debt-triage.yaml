@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: source-debt-triage
 display_name: "Source Debt Triage"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-offline-package
 dependencies: "Standalone five-file package; optional stdlib Python3 scanner/tests and authorized checkout or provider-API fallback; no network/credentials/install"
-content_blob_sha: e7d23d4415f59387be7495db79b50c7f5c9f8943
-complete_package_tree_sha: 169850bff038fa498b7be36b5939a4b1e039a4bb
+content_blob_sha: e7a20e87ec8b5514e4eafc0658ab23b71c60b1c7
+complete_package_tree_sha: 7f7aec96cce319d93003764c4b589e277bb2f1c6
 historical_comparator: skills/todo-harvester/SKILL.md
 historical_origin_status: "Repository account and author marker identified; underlying authorship and licensing unknown"
 rights_resolution: "New original instructions and synthetic examples MIT; historical source not imported or relicensed"
