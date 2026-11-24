@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scope": {
+    "route": "REPOSITORY_MAINTENANCE",
+    "destination": "skills/authored/meddpicc-opportunity-assurance/",
+    "authority": "Owner-requested bounded repository revision; no consumer tool or customer authorization"
+  },
+  "target": {
+    "skill_id": "meddpicc-opportunity-assurance",
+    "source_revision": "0891972aae8d3d0a1574d208005175373316ff46",
+    "package_tree": "75794d0ac174b5fa44330e95d0e2e609a8feb14e",
+    "rights": "Original MIT first-party instructions; public framework vocabulary only, no proprietary course content"
+  },
+  "objective": {
+    "result": "Buyer-evidence-backed opportunity action readiness without fictitious certainty",
+    "pass_condition": "Signature and forecast gates HOLD until buyer-owned process/authority/contract evidence exists, even when eight boxes are green."
+  },
+  "discovery": {
+    "searched": [
+      "Current first-party source package and both support references",
+      "Engine skill-eval, skill-audit, skill-forge and shared refinement contracts",
+      "Existing sales methodology overlap/prior review in Skillz"
+    ],
+    "unavailable": [
+      "Independent consuming-agent execution not available in this repository review"
+    ],
+    "full_corpus_claim": false
+  },
+  "finding": {
+    "evidence": "STATIC_RISK",
+    "input": "Original, synthetic source-only adversarial prompt from package-local acceptance cases",
+    "expected": "Signature and forecast gates HOLD until buyer-owned process/authority/contract evidence exists, even when eight boxes are green.",
+    "actual": "A complete eight-factor ledger could be mistaken for a signing-ready or forecast-committed opportunity, and crosswalk states were not explicitly normalized.",
+    "mechanism": "Factor evidence reviewability was conflated with action-specific commercial readiness; counterpart source-state names differed."
+  },
+  "candidate": {
+    "change": "Add action gates, distinction between evidence_review_state and requested_action_gate, and lossless state translation, with independent negative scenario cases.",
+    "preserved": [
+      "Eight MEDDPICC evidence categories",
+      "No auto win-probability derived from score",
+      "No unauthorized CRM mutation or outreach",
+      "Current source revocation and conflict precedence"
+    ],
+    "source_changed": true
+  },
+  "challenge": [
+    {
+      "name": "original",
+      "level": "STATIC_REVIEW",
+      "result": "M13 green fields but procurement incomplete expected SIGNATURE_HOLD; expected change statically reviewed, not executed agent outcome"
+    },
+    {
+      "name": "near-negative",
+      "level": "STATIC_REVIEW",
+      "result": "M14 observed technical evaluation is not funding or legal approval; no customer conversation run"
+    },
+    {
+      "name": "regression",
+      "level": "NOT_TESTED",
+      "result": "NOT_TESTED"
+    },
+    {
+      "name": "authority",
+      "level": "STATIC_REVIEW",
+      "result": "Retain read-only default, no CRM/outreach and buyer permission protections"
+    },
+    {
+      "name": "false-green",
+      "level": "STATIC_REVIEW",
+      "result": "M16 a reviewable dossier has no calibrated forecast policy: FORECAST_NOT_ESTABLISHED; actual consuming agent not run"
+    }
+  ],
+  "decision": {
+    "state": "ITERATE",
+    "reason": "Pre-merge package changes require exact-head CI, reviewer challenge and verified merge; synthetic static observations alone insufficient",
+    "next": "Run current-head tests, resolve review findings, merge or hold"
+  },
+  "delivery": {
+    "artifact": "UPDATED_PACKAGE_DRAFT_IN_GITHUB_BRANCH",
+    "installation": "NOT_INSTALLED",
+    "repository_integration": "UNMERGED_AT_RECEIPT_AUTHORING",
+    "consumer_outcome": "NOT_OBSERVED"
+  }
+}
