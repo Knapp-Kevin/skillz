@@ -178,6 +178,15 @@ Use the strongest path actually available: repository-native, connector/API/web,
 
 Unknown installation method does not block discovery. If still unknown at handoff, report that honestly.
 
+For each requested skill, identify the actual target host/surface and its
+current package format, file and instruction limits, ability to load
+bundled references, supported tool/runtime integrations, persistence
+and approval boundaries. Verify current official documentation and
+available host tools; a model name is not a host capability. If no
+target can be established, design against all configured package
+profiles, disclose that they are a portability baseline, and retain
+the unknown destination instead of guessing.
+
 **Output:** environment/authority record.
 
 ## S2 — Discover durable needs
@@ -423,6 +432,25 @@ For each artifact define at minimum:
 - completion criteria;
 - provenance/attribution when material was copied or adapted;
 - the target host's actual skill/package format, required bundled files, controlling license and NOTICE obligations, installation destination and permission/credential implications.
+
+Host compatibility is a **required design and delivery guard**, not an
+optional quality upgrade. Before drafting, use the S1 target and the
+[builder host compatibility contract](../../builder/README.md) to choose
+a viable package shape and dependency/fallback plan. Keep one canonical
+package; move detailed procedures to explicitly required bundled references
+when necessary, never omit correctness, authority or verification rules to
+fit a limit. Check every entrypoint and required support file.
+
+For generated blueprints, the builder and design gate automatically run
+the shared static preflight before a destination write; pass repeated
+`--host` options for established targets. For existing/adapted or manually
+authored packages, use `host_compat.py --package /approved/skill-name --host
+<profile>` when the host can run it. Without Python, manually inspect the
+exact package against current official target rules and label the execution
+NOT_RUN. Do not claim package-ready on a known blocker or unknown rules.
+Repair the incompatibility, use a genuinely equivalent capability with
+evidence, or return a clearly labeled portable draft/HOLD with the remaining
+dependency. Do not silently switch targets to manufacture a pass.
 
 Use host-specific packaging only when established. Otherwise produce portable Markdown preserving the semantic contract and clearly describe any supporting files the target skill requires.
 

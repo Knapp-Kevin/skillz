@@ -46,7 +46,8 @@ MARKDOWN_LINK = re.compile(r"\]\(([^)\n]+)\)")
 
 
 def source_files(folder):
-    if not folder.is_dir() or folder.is_symlink():
+    if (not folder.is_dir() or folder.is_symlink() or
+            any(p.is_symlink() for p in folder.absolute().parents)):
         raise ValueError("SKILL_DIRECTORY_MISSING_OR_SYMLINKED")
     children = sorted(folder.rglob("*"))
     if any(p.is_symlink() or not (p.is_file() or p.is_dir()) for p in children):
@@ -130,6 +131,20 @@ def inspect(folder, host):
     if total > profile.get("max_package_bytes", float("inf")):
         blockers.append("MAX_PACKAGE_BYTES_EXCEEDED")
     source_names = set(src_names)
+    nested = [name for name in src_names if name != "SKILL.md" and
+              Path(name).name == "SKILL.md"]
+    if nested:
+        warnings.append("NESTED_SKILL_DISCOVERY_REQUIRES_HOST_TEST")
+    for name in nested:
+        try:
+            n = len(render_package_bytes(folder, name, profile).decode("utf-8"))
+        except UnicodeError:
+            blockers.append("INVALID_UTF8_MARKDOWN:" + name)
+            continue
+        if n >= profile.get("strict_char_limit", float("inf")):
+            blockers.append("NESTED_SKILL_MD_OVER_HOST_HARD_LIMIT:" + name)
+        if n >= profile.get("advisory_char_limit", float("inf")):
+            warnings.append("NESTED_SKILL_MD_OVER_HOST_RECOMMENDATION:" + name)
     for f, src, dst in zip(files, src_names, dst_names):
         if len(Path(dst).parts) - 1 > profile.get("max_depth", float("inf")):
             blockers.append("MAX_DEPTH:" + dst)
@@ -281,6 +296,7 @@ def main(argv=None):
     choice = parser.add_mutually_exclusive_group(required=True)
     choice.add_argument("--skill", help="First-party authored skill slug")
     choice.add_argument("--all", action="store_true", help="Audit every authored package")
+    choice.add_argument("--package", help="Explicit user-authorized custom package directory; no discovery")
     parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all host profiles")
     parser.add_argument("--zip-output", help="Explicit NEW ZIP output, single skill and ZIP host only")
     parser.add_argument("--directory-output", help="Explicit NEW handoff directory, not host installation")
@@ -290,12 +306,13 @@ def main(argv=None):
     if args.zip_output and args.directory_output:
         parser.error("Choose only one output artifact")
     if args.zip_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "zip"):
-        parser.error("--zip-output requires --skill and a ZIP-based --host")
+        parser.error("--zip-output requires --skill or --package and a ZIP-based --host")
     if args.directory_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "directory"):
-        parser.error("--directory-output requires --skill and a directory-based --host")
+        parser.error("--directory-output requires --skill or --package and a directory-based --host")
     packages = (
         sorted(p for p in AUTHORED.iterdir() if p.is_dir() and (p / "SKILL.md").is_file())
-        if args.all else [AUTHORED / args.skill]
+        if args.all else [Path(args.package).expanduser().absolute() if args.package
+                          else AUTHORED / args.skill]
     )
     results = [inspect(p, h) for p in packages for h in ([args.host] if args.host else HOSTS)]
     if args.zip_output:

@@ -44,6 +44,42 @@ class BuilderCases(unittest.TestCase):
         self.assertFalse(r["installed_or_published"])
         self.assertFalse(r["rights_authenticated"])
 
+
+    def test_host_default_checks_all_profiles_without_identifying_user_host(self):
+        receipt = builder.build(fixture())["host_compatibility"]
+        self.assertEqual(receipt["scope"], "ALL_CONFIGURED_PROFILES_TARGET_NOT_ESTABLISHED")
+        self.assertEqual({r["host"] for r in receipt["profiles"]},
+                         set(builder.host_compat.HOSTS))
+        self.assertTrue(all(r["package_ready"] for r in receipt["profiles"]))
+        self.assertFalse(receipt["actual_target_host_verified"])
+        self.assertFalse(receipt["runtime_capabilities_verified"])
+
+    def test_host_specific_target_and_no_silent_universal_claim(self):
+        receipt = builder.build(fixture(), hosts=["claude-code"])["host_compatibility"]
+        self.assertEqual(receipt["scope"], "CALLER_SELECTED_PROFILES")
+        self.assertEqual([r["host"] for r in receipt["profiles"]], ["claude-code"])
+        self.assertFalse(receipt["native_installation_method_verified"])
+
+    def test_host_hard_limit_blocks_write_before_destination_exists(self):
+        data = fixture("phased")
+        for step in data["steps"]:
+            step["instructions"] = "Inspect authorized evidence carefully. " * 350
+        with tempfile.TemporaryDirectory() as tmp:
+            dst = Path(tmp) / "never-created"
+            for targets in (None, ["m365-agent-builder"], ["claude-code", "m365-agents-toolkit"]):
+                with self.subTest(targets=targets):
+                    with self.assertRaisesRegex(builder.BuildHold, "SKILL_MD_OVER_HOST_HARD_LIMIT"):
+                        builder.build(data, str(dst), write=True, hosts=targets)
+                    self.assertFalse(dst.exists())
+            report = builder.build(data, hosts=["claude-code"])
+            self.assertTrue(report["host_compatibility"]["profiles"][0]["package_ready"])
+
+    def test_unknown_empty_and_duplicate_targets_are_rejected(self):
+        for targets in ([], ["unverified-host"], ["claude-code", "claude-code"], "claude-code"):
+            with self.subTest(targets=targets):
+                with self.assertRaises(builder.BuildHold):
+                    builder.build(fixture(), hosts=targets)
+
     def test_phased_skill_does_not_force_a_pack(self):
         r = builder.build(fixture("phased"))
         self.assertEqual(r["kind"], "phased")

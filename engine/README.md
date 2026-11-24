@@ -37,6 +37,17 @@ provides an optional enum-only offline guard against identity-bearing
 consumer feedback becoming canonical instructions. It does not collect
 telemetry, authenticate evidence or authorize a change.
 
+## Required host compatibility guard
+
+The builder and design gate enforce the same static package preflight
+before any destination write. Authors identify the actual target surface
+and capability constraints before drafting, pass explicit `--host` targets
+or use the all-configured-profiles baseline when unknown, and resolve known
+blockers before handoff. Existing or manually authored custom packages
+can use `host_compat.py --package`; hosts without Python apply the same
+rules manually. Package readiness does not prove native loading,
+runtime functionality or user acceptance.
+
 ## Shared refinement mechanism
 
 [Engine refinement handoff](refinement/README.md) is the common procedure

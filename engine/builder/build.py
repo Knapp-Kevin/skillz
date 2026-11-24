@@ -20,6 +20,8 @@ REPO_ROOT = HERE.parents[1]
 TEMPLATES = HERE / "templates"
 sys.path.insert(0, str(REPO_ROOT / "engine" / "packs"))
 import check_pack
+sys.path.insert(0, str(HERE))
+import host_compat
 
 MAX_BLUEPRINT = 192 * 1024
 MAX_PROSE = 16000
@@ -370,12 +372,42 @@ def output_target(raw, maintainer):
     return target
 
 
-def build(blueprint, output=None, write=False, maintainer=False):
+def host_preflight(stage, hosts=None):
+    """Shared package gate, never an installation or behavioral claim."""
+    if hosts is None:
+        selected = sorted(host_compat.HOSTS)
+        scope = "ALL_CONFIGURED_PROFILES_TARGET_NOT_ESTABLISHED"
+    else:
+        need(type(hosts) in (list, tuple) and bool(hosts) and
+             all(type(h) is str and h in host_compat.HOSTS for h in hosts),
+             "UNKNOWN_OR_EMPTY_HOST_TARGET")
+        need(len(set(hosts)) == len(hosts), "DUPLICATE_HOST_TARGET")
+        selected = sorted(hosts)
+        scope = "CALLER_SELECTED_PROFILES"
+    reports = [host_compat.inspect(stage, h) for h in selected]
+    blocked = [r["host"] + ":" + ",".join(r["blockers"])
+               for r in reports if not r["package_ready"]]
+    need(not blocked, "HOST_PACKAGE_HOLD:" + "; ".join(blocked))
+    return {
+        "scope": scope,
+        "status": "STATIC_PACKAGE_PREFLIGHT_ONLY",
+        "profiles": [{k: v for k, v in r.items() if k != "manifest"}
+                     for r in reports],
+        "native_installation_method_verified": False,
+        "runtime_capabilities_verified": False,
+        "actual_target_host_verified": False,
+        "host_execution_observed": False,
+        "next_action": "VERIFY_ACTUAL_HOST_CAPABILITIES_AND_INSTALL_METHOD",
+    }
+
+
+def build(blueprint, output=None, write=False, maintainer=False, hosts=None):
     files = generate_files(blueprint)
     with tempfile.TemporaryDirectory(prefix="skillz-build-") as folder:
         stage = Path(folder) / blueprint["name"]
         write_files(stage, files)
         evidence = verify_layout(stage, blueprint, files)
+        compatibility = host_preflight(stage, hosts)
         digests = {
             name: hashlib.sha256(data.encode("utf-8")).hexdigest()
             for name, data in sorted(files.items())
@@ -398,6 +430,10 @@ def build(blueprint, output=None, write=False, maintainer=False):
             "files": sorted(files), "sha256": digests,
             "structural_check": evidence["status"],
             "sequence": evidence["sequence"], "destination": destination,
+            "host_compatibility": compatibility,
+            "canonical_directory_name": blueprint["name"],
+            "output_is_canonical_directory_name": (None if destination is None else
+                                                    Path(destination).name == blueprint["name"]),
             "rights_authenticated": False,
             "semantic_task_quality_verified": False,
             "host_execution_observed": False,
@@ -412,6 +448,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--input", required=True)
     ap.add_argument("--output")
+    ap.add_argument("--host", action="append", choices=sorted(host_compat.HOSTS),
+                    help="Repeat for each target; default checks all configured profiles")
     ap.add_argument("--write", action="store_true",
                     help="Explicitly create a NEW output directory")
     ap.add_argument("--repository-maintenance", action="store_true",
@@ -421,7 +459,7 @@ def main(argv=None):
         need(not args.repository_maintenance or args.write,
              "MAINTENANCE_FLAG_WITHOUT_WRITE")
         result = build(read_json(args.input), args.output, args.write,
-                       args.repository_maintenance)
+                       args.repository_maintenance, hosts=args.host)
         print(json.dumps(result, indent=2, sort_keys=True, ensure_ascii=False))
         return 0
     except (BuildHold, check_pack.PackHold, ValueError, TypeError,

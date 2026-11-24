@@ -143,7 +143,7 @@ consent, secure storage, revocation and compatibility workflow**. The
 [canonical-versus-preference tree](../packs/feedback-decision-tree.md)
 still governs whether feedback belongs in the shared skill.
 
-## Cross-host package preflight (optional)
+## Required cross-host compatibility guard
 
 Use [Getting started with Skillz](../../docs/getting-started-with-skills.md)
 for destination, authority, upload and verification decisions. The optional
@@ -154,7 +154,31 @@ python3 engine/builder/host_compat.py --all
 python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host m365-agent-builder
 ```
 
-This checks first-party SKILL.md structure, local reference closure, file
+Both `build.py` and `design.py` automatically run this same static gate
+against the complete staged package before any destination write, including
+dry runs. Repeat `--host` for each established target, for example:
+
+```sh
+python3 engine/builder/build.py --input /path/to/blueprint.json --host claude-code --host github-copilot
+python3 engine/builder/design.py --input /path/to/design.json --host m365-agent-builder
+python3 engine/builder/host_compat.py --package /approved/custom-skill --host m365-agent-builder
+```
+
+With no target option, the compiler checks all eight configured profiles;
+this does not establish the actual user's host. A hard blocker on any
+selected profile returns HOLD before creating the destination. No bypass
+or automatic instruction truncation is provided. Keep the canonical
+name as the final installed directory name; an arbitrarily named draft
+destination is not an installed skill. The receipt includes per-profile
+results, warnings, explicit unknown host/runtime evidence and the required
+next verification. Unsupported hosts use manual current official rules
+and a portable handoff until qualified. Never mistake model identity for
+host functionality. Before implementation, identify actual permissions,
+tool dependencies, bundled reference loading, runtime and persistence;
+provide safe fallback or HOLD if any required capability is unavailable.
+Manual authoring uses the same guard without requiring Python.
+
+This checks authored or explicitly supplied custom SKILL.md structure, local reference closure, file
 extensions and selected documented host package limits, and can generate
 a ZIP with an explicit `--zip-output` or a directory handoff using
 `--directory-output`, each at a *new* path outside the Skillz repository. It never
