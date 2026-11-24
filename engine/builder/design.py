@@ -203,9 +203,9 @@ def validate(dossier):
     }
 
 
-def design_build(dossier, output=None, write=False, maintainer=False):
+def design_build(dossier, output=None, write=False, maintainer=False, hosts=None):
     report = validate(dossier)
-    receipt = builder.build(dossier["blueprint"], output, write, maintainer)
+    receipt = builder.build(dossier["blueprint"], output, write, maintainer, hosts=hosts)
     fingerprint = json.dumps(dossier, sort_keys=True, separators=(",", ":"),
                              ensure_ascii=False).encode("utf-8")
     receipt["design_gate"] = report
@@ -219,6 +219,8 @@ def main(argv=None):
     parser.add_argument("--input", required=True,
                         help="Authored design dossier (not source instructions)")
     parser.add_argument("--output")
+    parser.add_argument("--host", action="append", choices=sorted(builder.host_compat.HOSTS),
+                        help="Repeat for each target; default checks all configured profiles")
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--repository-maintenance", action="store_true")
     args = parser.parse_args(argv)
@@ -226,7 +228,7 @@ def main(argv=None):
         hold(not args.repository_maintenance or args.write,
              "MAINTENANCE_FLAG_WITHOUT_WRITE")
         result = design_build(builder.read_json(args.input), args.output,
-                              args.write, args.repository_maintenance)
+                              args.write, args.repository_maintenance, hosts=args.host)
         print(json.dumps(result, indent=2, ensure_ascii=False, sort_keys=True))
         return 0
     except (builder.BuildHold, builder.check_pack.PackHold, OSError,

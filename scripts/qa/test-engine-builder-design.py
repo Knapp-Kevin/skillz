@@ -80,6 +80,20 @@ class DesignCases(unittest.TestCase):
         self.assertFalse(report["consumer_outcome_accepted"])
         self.assertIsNone(report["destination"])
 
+    def test_design_gate_propagates_host_targets_and_hard_limit(self):
+        d = case()
+        d["blueprint"]["steps"][0]["instructions"] = "Inspect authorized evidence. " * 400
+        d["blueprint"]["verification"] = "Check actual evidence and output. " * 400
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "not-created"
+            with self.assertRaisesRegex(design.builder.BuildHold, "SKILL_MD_OVER_HOST_HARD_LIMIT"):
+                design.design_build(d, str(target), write=True, hosts=["m365-agent-builder"])
+            self.assertFalse(target.exists())
+        receipt = design.design_build(d, hosts=["claude-code"])
+        self.assertEqual([x["host"] for x in receipt["host_compatibility"]["profiles"]],
+                         ["claude-code"])
+        self.assertFalse(receipt["host_execution_observed"])
+
     def test_written_draft_does_not_package_research_notes_or_case(self):
         with tempfile.TemporaryDirectory() as tmp:
             target = Path(tmp) / "new-skill"

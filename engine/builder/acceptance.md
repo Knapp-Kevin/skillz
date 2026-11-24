@@ -41,6 +41,21 @@ assertion, no host-installed state from a local file write, and no
 cross-package references from a standalone portable build unless
 explicitly resolved.
 
+## Gate 2a: Host compatibility before delivery
+
+Establish actual target surfaces and current official constraints before
+design. Check the complete package against each established target;
+unknown targets use the configured profile baseline without a native
+compatibility claim. The compiler enforces static checks before writing;
+manually generated or adapted packages use the same checker or documented
+manual inspection. Known hard blockers require correction or HOLD, not
+truncation or discarded dependencies. Check nested entrypoint sizes,
+extension restrictions, linked support files, archive layout and source
+identity. Confirm actual reference loading, tool/runtime capability,
+persistence, permissions and installation method separately. Unknown
+or untested host behavior must not become READY_TO_UPLOAD or INSTALLED
+on a static receipt alone.
+
 ## Gate 3: Outcome-first challenge
 
 Compare the finished package against an actual **positive trigger**,

@@ -159,6 +159,33 @@ class HostCompatibilityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "INVALID_SKILL_SLUG"):
             module.main(["--skill", "../private"])
 
+    def test_nested_entrypoint_hard_limit_cannot_hide_inside_pack(self):
+        nested = self.skill / "skills" / "nested" / "SKILL.md"
+        nested.parent.mkdir(parents=True)
+        nested.write_text("---\nname: nested\ndescription: A fictional skill.\n---\n" +
+                          "x" * 21000, encoding="utf-8")
+        strict = module.inspect(self.skill, "m365-agent-builder")
+        self.assertIn("NESTED_SKILL_MD_OVER_HOST_HARD_LIMIT:skills/nested/SKILL.md",
+                      strict["blockers"])
+        other = module.inspect(self.skill, "claude-code")
+        self.assertTrue(other["package_ready"], other["blockers"])
+        self.assertIn("NESTED_SKILL_DISCOVERY_REQUIRES_HOST_TEST", other["warnings"])
+
+    def test_custom_package_cli_preflights_and_writes_without_install(self):
+        import contextlib
+        import io
+        import json
+        output = io.StringIO()
+        destination = self.root / "custom.zip"
+        with contextlib.redirect_stdout(output):
+            rc = module.main(["--package", str(self.skill), "--host",
+                              "m365-agent-builder", "--zip-output", str(destination)])
+        self.assertEqual(rc, 0)
+        self.assertTrue(destination.is_file())
+        result = json.loads(output.getvalue())["results"][0]
+        self.assertEqual(result["artifact_status"], "CREATED_NOT_UPLOADED")
+        self.assertEqual(result["host_loaded"], "NOT_TESTED")
+
     def test_repo_navigator_entrypoint_limit_and_reference_closure(self):
         navigator = ROOT / "skills" / "authored" / "effort-allocation-navigator"
         if not navigator.exists():
