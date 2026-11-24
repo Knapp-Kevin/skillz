@@ -1,3 +1,4 @@
+current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: mcp-tool-surface-auditor
 display_name: "MCP Tool Surface Auditor"
@@ -19,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Standalone 7-file first-party MIT skill; optional offline Python 3.9+ stdlib comparison script and 33 fictional regression tests. No server, tokens, API access, CI service, sibling skill or network needed."
-content_blob_sha: 61ee3ee491526be54577c3766673261abd6e2960
-complete_package_tree_sha: 1addc2d5a6ea52e4e14e9bc242161bbe8aef8cdd
+content_blob_sha: 12bc7486b76aec0f39584b5b2c512e56103aaa7f
+complete_package_tree_sha: c532ae5b50381bbc9ebd1a2e4ef165aa240d51b2
 import_eligibility: review-required
 source_rights: "First-party independently authored script, text, tests, fixtures and MIT license. External MCP specification is factual prior art and optional reference, not copied skill expression."
 rationale: "New v0.1.0 issue #878 prototype. Differentiates tool-presence/contract comparison from connector trust review. Exact source pinned, hosted source QA PASS 33/33 on exact PR source head, independent host validation NOT_RUN; no live host capture, independent agent behavioral result, security scan or product success observed."

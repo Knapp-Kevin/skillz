@@ -311,6 +311,19 @@ class IntegrationTest(unittest.TestCase):
             with self.assertRaisesRegex(mod.Hold, "one MiB"):
                 mod.read_json(path)
 
+    def test_cli_rejects_deep_json_and_does_not_echo_private_path(self):
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "PRIVATE-CONFIDENTIAL-SOURCE.json"
+            base = [sys.executable, str(SCRIPT), "--input", str(path)]
+            missing = subprocess.run(base, capture_output=True, text=True, timeout=10)
+            self.assertEqual(missing.returncode, 2)
+            self.assertNotIn("PRIVATE-CONFIDENTIAL-SOURCE", missing.stderr)
+            path.write_text("[" * 2000 + "0" + "]" * 2000, encoding="utf8")
+            malformed = subprocess.run(base, capture_output=True, text=True, timeout=10)
+            self.assertEqual(malformed.returncode, 2)
+            self.assertNotIn("Traceback", malformed.stderr)
+            self.assertNotIn("PRIVATE-CONFIDENTIAL-SOURCE", malformed.stderr)
+
     def test_nonfinite_json_refused(self):
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "nonfinite.json"

@@ -930,8 +930,8 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/repository-delivery-assessor.yaml",
       "verification_path": "registry/verification/local-skills/repository-delivery-assessor.yaml",
-      "skill_blob_sha": "e5aafd69cf65d8fef5933725ad836cb49763de9c",
-      "package_tree_sha": "c3a6698e17f505e28aecb32ed94a40347b33758c",
+      "skill_blob_sha": "793c5a0a49cea4afc89bf41b4de039531eab274d",
+      "package_tree_sha": "2d1b1b08bb7fc06fc366531b36a2b3f5d8621b44",
       "package_file_count": 9,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
@@ -948,7 +948,7 @@
       "capability_mapping_ref": "docs/reviews/2026-11-19-ci-guard-delivery-components.md",
       "previous_reviewed_skill_blob_sha": "75c09e83d13a388e591f384f8029090edbe0bc50",
       "previous_reviewed_package_tree_sha": "58662de287377f9b479d80cfa92e454413f9dc0e",
-      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA e5aafd69cf65d8fef5933725ad836cb49763de9c and full package c3a6698e17f505e28aecb32ed94a40347b33758c pinned. Previous evidence applies to earlier source 73c1d64eaa9721f76e9c821ab091d7f9d3dbbc8a, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump."
+      "review_note": "Optional multi-turn specific checkpoint guards and synthetic adversarial replay refinement (issue #828); v1 source SHA e5aafd69cf65d8fef5933725ad836cb49763de9c and full package c3a6698e17f505e28aecb32ed94a40347b33758c pinned. Previous evidence applies to earlier source 73c1d64eaa9721f76e9c821ab091d7f9d3dbbc8a, not this revision. Host model/agent behavior and real user outcomes NOT_RUN. No gratuitous SemVer bump. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged."
     },
     {
       "id": "business-presence-observatory",
@@ -1032,9 +1032,9 @@
       "license_verified_at": "2026-11-19",
       "provenance_path": "registry/skills/local-skills/ci-guard.yaml",
       "verification_path": "registry/verification/local-skills/ci-guard.yaml",
-      "skill_blob_sha": "fa5b4e7e04d113c1dffe9ff834136446e9a692e9",
-      "package_tree_sha": "b4ffb28dd9c23d128ee456cf21df1e7253afb8a7",
-      "package_file_count": 53,
+      "skill_blob_sha": "3468bea1ddd8492a9cb2593efea841194c082be7",
+      "package_tree_sha": "165b33602fd1ec3a8dccaa39ca30e4d875ff4f48",
+      "package_file_count": 55,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_UPDATED_SOURCE",
       "behavioral_validation": "not-run",
@@ -1047,7 +1047,7 @@
         "software-engineering/maintenance"
       ],
       "capability_mapping_ref": "docs/reviews/2026-11-20-ci-guard-v1-3-classification-budget-review.md",
-      "review_note": "v1.6.5 hardens read-only GitHub attempt-jobs page completeness with total_count, run and optional job source/attempt identity, plus optional local Git HEAD and tracked source byte rebinding before expensive CI. 9 new fictional host and 5 new source-binding tests; real provider billing, GitHub remote authority and live consumer outcomes remain unverified. Exact-head CI QA pending.",
+      "review_note": "v1.6.5 hardens read-only GitHub attempt-jobs page completeness with total_count, run and optional job source/attempt identity, plus optional local Git HEAD and tracked source byte rebinding before expensive CI. 9 new fictional host and 5 new source-binding tests; real provider billing, GitHub remote authority and live consumer outcomes remain unverified. Exact-head CI QA pending. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged. Relocates 38333 characters verbatim into mandatory procedure-contract.md; adds structural regression.",
       "previous_reviewed_skill_blob_sha": "a98f04ad42fedec08d316605ba7d390c7de3b5f1",
       "previous_reviewed_package_tree_sha": "950bf5db6b9740bdd3fa92721ffb5a8a0fb9c258",
       "source_pr": "https://github.com/Knapp-Kevin/skillz/pull/854"
@@ -1200,8 +1200,8 @@
       "license_verified_at": "2026-11-22",
       "provenance_path": "registry/skills/local-skills/mcp-tool-surface-auditor.yaml",
       "verification_path": "registry/verification/local-skills/mcp-tool-surface-auditor.yaml",
-      "skill_blob_sha": "61ee3ee491526be54577c3766673261abd6e2960",
-      "package_tree_sha": "1addc2d5a6ea52e4e14e9bc242161bbe8aef8cdd",
+      "skill_blob_sha": "12bc7486b76aec0f39584b5b2c512e56103aaa7f",
+      "package_tree_sha": "c532ae5b50381bbc9ebd1a2e4ef165aa240d51b2",
       "package_file_count": 7,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1214,7 +1214,7 @@
         "agent-mcp-development/mcp-clients-servers",
         "agent-mcp-development/evaluation"
       ],
-      "review_note": "Original 7-file MCP audit package v0.1.0. Exact-source hosted QA on PR #879 head ba959d8813871a83c31b5629a19a389c735881ce passed 33/33 Python falsifier methods (Actions #45110247036), authored exact-source/feedback QA passed 10/10 (Actions #45110246947), both Socket Security checks SUCCESS. Exact package SHA pinned; independent agent-host tool discovery, provider authenticated captures, production/security acceptance and user outcomes NOT_RUN."
+      "review_note": "Original 7-file MCP audit package v0.1.0. Exact-source hosted QA on PR #879 head ba959d8813871a83c31b5629a19a389c735881ce passed 33/33 Python falsifier methods (Actions #45110247036), authored exact-source/feedback QA passed 10/10 (Actions #45110246947), both Socket Security checks SUCCESS. Exact package SHA pinned; independent agent-host tool discovery, provider authenticated captures, production/security acceptance and user outcomes NOT_RUN. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged. Bounded input read and sanitized malformed-input CLI holds; new executable regressions."
     },
     {
       "id": "pr-integration-surgeon",
@@ -1231,8 +1231,8 @@
       "license_verified_at": "2026-11-22",
       "provenance_path": "registry/skills/local-skills/pr-integration-surgeon.yaml",
       "verification_path": "registry/verification/local-skills/pr-integration-surgeon.yaml",
-      "skill_blob_sha": "03beac120f5fc3cdde5ddffd6bfff78c6827342a",
-      "package_tree_sha": "f993750a3e489d3f7ebaed86f9887caa4a338d6e",
+      "skill_blob_sha": "bd3d30d5ed64f9e0948d88089b892763ca3bf66a",
+      "package_tree_sha": "4ca1ed2f89b8305c78423826c924e06df9695177",
       "package_file_count": 7,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1245,7 +1245,7 @@
         "software-engineering/maintenance",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "First-party seven-file package source candidate, 49 synthetic offline tests at PR #881 source head 5769bedab30b6fb92a8eed09b187156642148e9d PASS on Actions #45112426407. Authored full-provenance/feedback contract 11/11 PASS on Actions #45112426311; both Socket Security checks SUCCESS. Exact package pins set. Actual host merge/queue review/production acceptance, independent consuming-agent behavior and user outcomes NOT_RUN."
+      "review_note": "First-party seven-file package source candidate, 49 synthetic offline tests at PR #881 source head 5769bedab30b6fb92a8eed09b187156642148e9d PASS on Actions #45112426407. Authored full-provenance/feedback contract 11/11 PASS on Actions #45112426311; both Socket Security checks SUCCESS. Exact package pins set. Actual host merge/queue review/production acceptance, independent consuming-agent behavior and user outcomes NOT_RUN. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged. Bounded input read and sanitized malformed-input CLI holds; new executable regressions."
     },
     {
       "id": "release-evidence-reconciler",
@@ -1262,8 +1262,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/release-evidence-reconciler.yaml",
       "verification_path": "registry/verification/local-skills/release-evidence-reconciler.yaml",
-      "skill_blob_sha": "5c72e5b8f90164a67ca887f9c52459ef60a32c7a",
-      "package_tree_sha": "be07cbcab1d83e00232c09bc4052b1305b0295ad",
+      "skill_blob_sha": "30a3352df67fdf7820189422f57f51e9272a29e4",
+      "package_tree_sha": "80685ce089d1b57edd9d4d65ab3cbe39bf236db4",
       "package_file_count": 8,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1277,7 +1277,7 @@
         "security/supply-chain",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "First-party 8-file source package release byte-chain/auditor. Actions #45123071252 PASS 55/55 synthetic offline Python tests at PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea. Authored QA Actions #45123071291 PASS 11/11; both Socket checks SUCCESS. Local actual fixture byte SHA-256 measured, explicit expected-channel drift guards qualified. No real external provenance signature, publication origin, genuine installation, consuming-agent host or customer outcome tested; semantic re-review still pending."
+      "review_note": "First-party 8-file source package release byte-chain/auditor. Actions #45123071252 PASS 55/55 synthetic offline Python tests at PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea. Authored QA Actions #45123071291 PASS 11/11; both Socket checks SUCCESS. Local actual fixture byte SHA-256 measured, explicit expected-channel drift guards qualified. No real external provenance signature, publication origin, genuine installation, consuming-agent host or customer outcome tested; semantic re-review still pending. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged."
     },
     {
       "id": "first-run-experience-validator",
