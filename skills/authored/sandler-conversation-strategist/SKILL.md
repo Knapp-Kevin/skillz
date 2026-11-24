@@ -18,6 +18,19 @@ metadata:
 
 An **independent** skill for improving buyer-centered sales conversations using the **publicly described** seven-stage Sandler Selling System as a high-level reference. This package is **not affiliated with, licensed by, endorsed by or certified by Sandler**. It contains original questions, scenarios and coaching procedures, not their proprietary training, scripts, diagrams, tests, recordings or branded materials. The linked official public description is contextual, not a required online dependency: https://sandler.com/sandler-selling-system/ . Sandler's marks belong to their owners.
 
+## Public seven-stage alignment (original interpretation)
+
+The publicly described Sandler sequence names **Bonding and Rapport**,
+**Up-Front Contract**, **Pain**, **Budget**, **Decision**, **Fulfillment** and
+**Post-Sell**. This skill uses those published headings only to organize
+original, buyer-respectful practice: build trust; agree on a mutual meeting
+purpose; explore a real business problem and its consequences; discuss
+investment constraints; clarify how the buyer decides; evaluate a suitable
+solution only when warranted; and support the actual post-decision
+commitment. The seven headings are **not seven automatic steps to force a
+buyer through**, and using them does not confer training certification.
+For a narrow requested task, select only the relevant stages.
+
 ## Activate narrowly, without inventing authority
 
 **Use** for a user-requested sales discovery plan, opening and meeting outcome agreement, problem exploration, commercial/decision conversation, proposal-readiness critique, ethical objection coaching, role-play, call debrief, onboarding handoff or buyer-centered rep coaching. One narrow request needs only the relevant portion of the method.
