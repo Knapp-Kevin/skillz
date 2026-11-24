@@ -99,6 +99,49 @@ class HostHandoffTests(unittest.TestCase):
         self.assertEqual(result["status"], "STALE_PLAN_EVIDENCE_HOLD")
         self.assertIsNone(result["progress"])
 
+    def test_old_receipt_inside_new_plan_wrapper_is_not_current_progress(self):
+        later, current_plan = self.fresh()
+        current_plan["records"][0]["observed_path"] = "organized/alpha-id"
+        current_plan["records"][0]["state"] = "VERIFIED"
+        current_plan["records"][0]["readback"] = {
+            "record_id": "alpha-id", "plan_id": "file-plan",
+            "plan_revision": "plan-rev-one",
+            "source_revision": "rev-001",
+            "destination_path": "organized/alpha-id",
+            "integrity": "matched", "access": "preserved",
+            "observed_at": "2026-11-23T10:30:00-05:00"}
+        # Current source observation is 11:00, so an old readback cannot
+        # establish current progress even when a plan wrapper says 11:00.
+        output = host_handoff.preview(self.store, later, current_plan)
+        self.assertEqual(output["status"], "STALE_OPERATION_READBACK_HOLD")
+        self.assertIsNone(output["progress"])
+
+    def test_previously_accepted_verified_receipt_cannot_be_replayed(self):
+        later, accepted_plan = self.fresh()
+        accepted_plan["records"][0]["observed_path"] = "organized/alpha-id"
+        accepted_plan["records"][0]["state"] = "VERIFIED"
+        accepted_plan["records"][0]["readback"] = {
+            "record_id": "alpha-id", "plan_id": "file-plan",
+            "plan_revision": "plan-rev-one",
+            "source_revision": "rev-001",
+            "destination_path": "organized/alpha-id",
+            "integrity": "matched", "access": "preserved",
+            "observed_at": "2026-11-23T11:00:00-05:00"}
+        stored = state.process(
+            self.store, later, accepted_plan, "accepted-progress",
+            "hourly", commit=True, expected_generation=1,
+            ack_private_store=True)
+        self.assertTrue(stored["checkpoint_written"])
+        fresh = next_scan(later, sid="shot-three",
+                          moment="2026-11-23T12:00:00-05:00")
+        wrapper = copy.deepcopy(accepted_plan)
+        wrapper["snapshot_id"] = "plan-shot-three"
+        wrapper["observed_at"] = "2026-11-23T12:00:00-05:00"
+        # The wrapper is fresh but its per-record receipt remains 11:00.
+        output = host_handoff.preview(self.store, fresh, wrapper)
+        self.assertEqual(output["status"], "STALE_OPERATION_READBACK_HOLD")
+        self.assertIsNone(output["progress"])
+
     def test_checkpoint_snapshot_replay_is_not_host_qualification(self):
         old = host_handoff.preview(self.store, self.first, self.initial_plan)
         self.assertEqual(old["status"], "SAME_SNAPSHOT_NO_FRESH_HOST_EVIDENCE")
