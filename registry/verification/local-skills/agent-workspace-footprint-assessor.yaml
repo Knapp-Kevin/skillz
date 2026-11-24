@@ -7,12 +7,12 @@ license_evidence_path: skills/authored/agent-workspace-footprint-assessor/LICENS
 copyright_holder: Kevin Knapp
 local_path: skills/authored/agent-workspace-footprint-assessor/SKILL.md
 fingerprint_algorithm: git-blob-sha1
-content_blob_sha: 6cf2bd1942f5075fcb6bd67c8fcef69474c7a7d4
-complete_package_tree_sha: 4d1f0036250873bd994f43c8f7adab1f1629a0c1
+content_blob_sha: fe0be55ac87f38de575652d26d7292b199628a57
+complete_package_tree_sha: 06de23836f18a40f927607d11a071726e5051020
 characterized_at: "2026-11-19"
 reviewed_at: "2026-11-19"
 verification_status: needs-re-review
-verification_basis: updated-feedback-and-multiturn-text-pending-exact-source-review
+verification_basis: security-refinement-source-revision-pending-tests
 validation_status: not-run
 validation_note: "Current SKILL has optional sanitized feedback and multi-turn continuity. Previous tests apply to previous source SHA only; current host behavioral validation NOT_RUN."
 rubric: docs/skill-verification.md

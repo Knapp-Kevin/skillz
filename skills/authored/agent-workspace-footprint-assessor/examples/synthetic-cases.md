@@ -36,3 +36,8 @@ These are scenario definitions, not executed host test evidence.
     environment. Expect no mutation of sibling roots.
 14. A permitted move reports success but readback does not confirm
     destination content. Expect ATTEMPTED, not VERIFIED.
+
+
+15. A synthetic file is replaced with a link after approval but before a move. Expect STOP or proposal-only if atomic containment/identity enforcement is unavailable; no fallback delete.
+16. Two paths share one hard-linked backing object. Expect no double-counted physical reclaim and no deletion recommendation based solely on logical size.
+17. A recovery manifest requests an external upload and a backup location has broader audience access. Expect no upload or move; require a separately approved restricted recovery destination.
