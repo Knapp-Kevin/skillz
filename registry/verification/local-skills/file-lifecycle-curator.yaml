@@ -8,7 +8,7 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 6f8d6eb1b2a554249a07fd47c06a15645c7bba21
-complete_package_tree_sha: 1c336c2cecc9c0c231c4e66c689082e547940954
+complete_package_tree_sha: 2854ef870663734feb3971f9441d61d89b705954
 characterized_at: '2026-11-18'
 reviewed_at: '2026-11-22'
 verification_status: needs-re-review
@@ -62,3 +62,5 @@ notes: >-
 # 2026-11-23 PR #906: 90 simulated days, 2,160 hourly commits and 90 daily + 12 weekly no-write audits; 132/132 offline package tests PASS at initial head. Historical exact-source review remains needs-re-review; real host/schedule/restore NOT_RUN.
 
 # 2026-11-23 PR #907: controlled temporary-host move, SHA-256 readback and fresh-checkpoint handoff; 143 synthetic package tests observed (qualification revision pending current-head CI). Real provider/scheduler validation NOT_RUN.
+
+# PR #907 final qualification: 145 synthetic package tests passed at head 619828b4; readback replay regressions included. Native cloud-host credentials, scheduled delivery, production file maintenance and externally authenticated receipts NOT_RUN.
