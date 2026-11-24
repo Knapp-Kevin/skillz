@@ -79,6 +79,10 @@ jobs:
           lines.extend(['', f'Unqualified skill-host pairs: {len(held)}. '
                         'These are **not** validated host failures.',
                         'Host load, real script execution and consumer acceptance: NOT TESTED.'])
+          lines.extend(['', '### Exact static holds'])
+          for item in held:
+              reason = ', '.join(item['blockers']) if item['blockers'] else 'UNKNOWN'
+              lines.append(f'- {item["host"]} / {item["skill"]}: {reason}')
           report = '\n'.join(lines) + '\n'
           print(report)
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
