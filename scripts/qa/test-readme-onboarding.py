@@ -48,6 +48,8 @@ class OnboardingTests(unittest.TestCase):
 
     def test_architect_local_links_and_document_first_profile(self):
         asset = ROOT / "docs/assets/skillz-original-banner.png"
+        # The original committed banner identity must not drift silently.
+        self.assertEqual(subprocess.check_output(["git", "hash-object", str(asset)], cwd=ROOT, text=True).strip(), "f5f65d45feabe20440ed8af2ba12498fa5141783")
         cfg = {"schema_version": 1, "profile": "gold", "project_identity": "Skillz",
                "banner_path": "docs/assets/skillz-original-banner.png",
                "required_badge_labels": ["Authored downloads", "License", "Downloads"],

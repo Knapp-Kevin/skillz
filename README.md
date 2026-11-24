@@ -110,6 +110,8 @@ The source corpus is larger than the governed review set, and the coverage map h
 
 New original skills belong under [`skills/authored/`](skills/authored/), with a complete standalone package, provenance, licensing, precise capability routes and review evidence. Third-party references remain separately attributed; the repository's [MIT license](LICENSE) does **not** relicense external source, code, assets or derivatives.
 
+### Technical documentation
+
 | Maintainer reference | Purpose |
 | --- | --- |
 | [Governance index](docs/GOVERNANCE_INDEX.md) | Decision rights, source boundaries and controlled workflow rules |
