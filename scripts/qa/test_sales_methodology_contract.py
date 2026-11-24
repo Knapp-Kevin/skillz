@@ -4,6 +4,7 @@ These tests inspect text and package closure only. They do not simulate
 a real buyer, train a salesperson, test independent agent interpretation,
 verify third-party trademarks, or grant external account access.
 """
+import json
 import re
 from pathlib import Path
 import unittest
@@ -183,6 +184,78 @@ class MethodologyPackageTests(unittest.TestCase):
         self.assertIn("SIGNATURE_HOLD", med)
         self.assertIn("evidence_review_state", med)
         self.assertIn("requested_action_gate", med)
+
+    def test_version_minor_release_is_consistent_across_five_file_packages(self):
+        repo = ROOT.parents[1]
+        index = json.loads((repo / "registry" / "authored-skills-index.json")
+                           .read_text(encoding="utf-8"))
+        for slug in SLUGS:
+            with self.subTest(slug=slug):
+                skill = self.skill(slug)
+                self.assertIn("  version: 0.2.0", skill)
+                changelog = ROOT / slug / "CHANGELOG.md"
+                self.assertTrue(changelog.is_file())
+                notes = changelog.read_text(encoding="utf-8")
+                self.assertIn("## 0.2.0:", notes)
+                self.assertIn("minor", notes.lower())
+                record = next((x for x in index["skills"] if x["id"] == slug), None)
+                self.assertIsNotNone(record)
+                self.assertEqual("0.2.0", record["package_version"])
+                self.assertEqual(5, record["package_file_count"])
+                self.assertEqual("needs-re-review", record["review_status"])
+                self.assertEqual("not-run", record["behavioral_validation"])
+                for category in ("skills", "verification"):
+                    yaml_path = repo / "registry" / category / "local-skills" / (slug + ".yaml")
+                    companion = yaml_path.read_text(encoding="utf-8")
+                    self.assertRegex(companion, r'(?m)^skill_version: "0\\.2\\.0"
+        for slug in SLUGS:
+            doc = self.skill(slug)
+            self.assertNotIn("pip install", doc)
+            self.assertNotIn("import requests", doc)
+            self.assertNotIn("API_KEY", doc)
+            self.assertNotIn("must use GPT", doc)
+            self.assertNotIn("must install", doc)
+
+
+if __name__ == "__main__":
+    unittest.main()
+)
+                    self.assertIn("needs-re-review", companion)
+
+    def test_sandler_roleplay_requires_user_rep_turn_and_noninvented_feedback(self):
+        skill = self.skill(SLUGS[0])
+        examples = (ROOT / SLUGS[0] / "examples" / "acceptance.md").read_text()
+        practice = (ROOT / SLUGS[0] / "references" / "advanced-practice.md").read_text()
+        for token in ("## Live practice protocol", "**SETUP:**", "**PLAY:**",
+                      "**OBSERVE:**", "**COACH:**", "**CONTINUE OR CLOSE:**",
+                      "one buyer utterance", "ROLE_PLAY_OBSERVED", "SIMULATED"):
+            self.assertIn(token, skill)
+        for name in ("## S15. Multi-turn role-play", "## S16. Role-play stop",
+                     "## S17. Host has no recording"):
+            self.assertIn(name, examples)
+        self.assertIn("NOT_OBSERVED_REP_BEHAVIOR", practice)
+        self.assertIn("stops for the user's rep reply", practice)
+
+    def test_meddpicc_hold_can_progress_only_after_complete_current_evidence(self):
+        skill = self.skill(SLUGS[1])
+        examples = (ROOT / SLUGS[1] / "examples" / "acceptance.md").read_text()
+        practice = (ROOT / SLUGS[1] / "references" / "advanced-practice.md").read_text()
+        for token in ("## Evidence-based release from a commercial HOLD",
+                      "PROPOSAL_INPUTS_SUPPORTED", "FORECAST_POLICY_CHECK_READY",
+                      "SIGNATURE_PREREQUISITES_OBSERVED", "CONTRACT_EXECUTION_OBSERVED",
+                      "UNKNOWN_PREVIOUS_STATE", "ACCESS_HOLD", "CONFLICTED",
+                      "prior_gate | new_gate", "never"):
+            self.assertIn(token.lower(), skill.lower())
+        for name in ("## M18. New security evidence clears", 
+                     "## M19. Complete buyer authorization",
+                     "## M20. Other-account source substitution",
+                     "## M21. Old rejection"):
+            self.assertIn(name, examples)
+        self.assertIn("T1:", practice)
+        self.assertIn("T2:", practice)
+        self.assertIn("T3:", practice)
+        self.assertIn("T4:", practice)
+        self.assertIn("SIGNATURE_HOLD", practice)
 
     def test_no_prerequisite_specific_model_or_external_api(self):
         for slug in SLUGS:
