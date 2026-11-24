@@ -168,6 +168,33 @@ class HostHandoffTests(unittest.TestCase):
         self.assertEqual(result["status"], "ABSENT_IDENTITY_ACCESS_HOLD")
         self.assertNotIn("beta-id", json.dumps(result))
 
+    def test_forged_complete_plan_over_partial_source_suppresses_percent(self):
+        later, incoming = self.fresh()
+        later["coverage"] = "partial"
+        # Same known records, but source coverage is explicitly incomplete.
+        # The plan cannot claim a complete denominator.
+        result = host_handoff.preview(self.store, later, incoming)
+        self.assertEqual(result["status"], "PLAN_COVERAGE_CONFLICT_HOLD")
+        self.assertIsNone(result["progress"])
+        self.assertNotIn("counts", result)
+
+    def test_partial_plan_has_no_percentage_even_with_valid_readback(self):
+        later, incoming = self.fresh()
+        later["coverage"] = "partial"
+        incoming["coverage"] = "partial"
+        incoming["records"][0]["observed_path"] = "organized/alpha-id"
+        incoming["records"][0]["state"] = "VERIFIED"
+        incoming["records"][0]["readback"] = {
+            "record_id": "alpha-id", "plan_id": "file-plan",
+            "plan_revision": "plan-rev-one", "source_revision": "rev-001",
+            "destination_path": "organized/alpha-id",
+            "integrity": "matched", "access": "preserved",
+            "observed_at": "2026-11-23T11:00:00-05:00"}
+        result = host_handoff.preview(self.store, later, incoming)
+        self.assertEqual(result["status"], "HANDOFF_PREVIEW_NOT_PERSISTED")
+        self.assertEqual(result["progress"]["verified_relocations"], 1)
+        self.assertIsNone(result["progress"]["percent_of_scoped_plan"])
+
     def test_wrong_scope_and_revision_do_not_disclose_progress(self):
         later, newer_plan = self.fresh()
         later["scope"]["principal_id"] = "different-principal"

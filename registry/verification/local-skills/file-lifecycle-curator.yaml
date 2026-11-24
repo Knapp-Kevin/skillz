@@ -8,12 +8,12 @@ copyright_holder: Kevin Knapp
 local_path: skills/authored/file-lifecycle-curator/SKILL.md
 fingerprint_algorithm: git-blob-sha1
 content_blob_sha: 6f8d6eb1b2a554249a07fd47c06a15645c7bba21
-complete_package_tree_sha: 2854ef870663734feb3971f9441d61d89b705954
+complete_package_tree_sha: 8b1952511e1bff4130c6320cddd43f68a8669395
 characterized_at: '2026-11-18'
-reviewed_at: '2026-11-22'
+reviewed_at: '2026-11-24'
 verification_status: needs-re-review
-verification_basis: durable-local-state-exact-head-source-and-authored-tests-passed
-validation_status: passed-offline-contract-tests
+verification_basis: exact-package-author-led-static-semantic-review-with-red-team-regressions
+validation_status: not-run
 validation_note: >-
   Exact PR #904 head 176eb8e4c226c8542a695eebdaabf7ac734ba9d6
   118/118 source/adversarial tests PASS (run #45289252920),
@@ -26,7 +26,7 @@ validation_note: >-
   source-host permission, persistent user account, scheduler,
   file mutation or production disaster recovery.
 rubric: docs/skill-verification.md
-rubric_score: "NOT_ASSESSED_UPDATED_SOURCE"
+rubric_score: "19/20 (author-led; formal verification pending)"
 tags:
   use_case:
   - file-information-management
@@ -64,3 +64,15 @@ notes: >-
 # 2026-11-23 PR #907: controlled temporary-host move, SHA-256 readback and fresh-checkpoint handoff; 143 synthetic package tests observed (qualification revision pending current-head CI). Real provider/scheduler validation NOT_RUN.
 
 # PR #907 final qualification: 145 synthetic package tests passed at head 619828b4; readback replay regressions included. Native cloud-host credentials, scheduled delivery, production file maintenance and externally authenticated receipts NOT_RUN.
+
+# 2026-11-24 current static-review evidence: docs/reviews/2026-11-24-file-curator-redteam.md
+# 19/20 author-led semantic score: all criteria 2 except procedural clarity 1.
+# RT-01, RT-02 and RT-03 attacked direct state writer and source/plan coverage;
+# central guard + regression tests at initial PR #908 head: 151/151 offline PASS
+# in run #45336592672. Host-executed independent behavior, real scheduling,
+# provider authorization and exact-version external security scanning NOT_RUN.
+# This 'verified' is static-semantic only, never 'validated' host behavior.
+
+# Governance hold: scripts/qa/test_authored_feedback_contract.py requires
+# needs-re-review for EVERY authored package. 19/20 is author-led analysis,
+# NOT a formal promotion. No modification of this repository-wide policy.
