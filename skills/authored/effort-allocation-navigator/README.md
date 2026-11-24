@@ -10,9 +10,45 @@ prioritize consequences over busywork, preserve owner deadlines and safety
 constraints, and route generic quality corrections separately from
 user-specific pacing and presentation preferences.
 
+## User-selected focus mode (v0.3.0)
+
+A task planner can create avoidable friction by changing its top
+recommendation on each refresh. The optional `focus_task_id` root
+field lets a **current user-selected task** remain the recommended
+primary when its work is still ready, its evidence is usable, and
+its provisional score is at least 85% of the highest score **in
+the same protected lane**:
+
+```sh
+python3 scripts/plan.py --input examples/fictional-user-focus.json
+```
+
+The original default is unchanged when no `focus_task_id` is
+provided. An explicit focus is *not* a forced daily streak,
+a diagnosis, a record of prior activity, or proof the task was
+started. If it is blocked, completed, absent or unsupported by
+estimates, the planner returns a categorical `focus_resolution`
+rather than promoting the task. Real safety work, owner-confirmed
+imminent deadlines and materially different opportunity costs
+override this continuity preference. The user still owns the
+choice.
+
+**Task identity is a separate concern.** When comparing two
+authorized snapshots, a matching task ID whose **label or kind
+changed** is now flagged under `identity_review_ids`. Completion,
+reopening, newly ready/blocked and automatic resume claims for
+that row are held until the host/user verifies that it truly
+represents the same work. A renamed task may be legitimate,
+so the result is an evidence-review request, **not** a declaration
+of ID recycling. No task labels or paths are printed in the
+JSON output.
+
+These are accessibility-oriented continuity controls, not
+clinical treatment or measured improvements in user attention.
+
 ## Repeat-use mode, still passive
 
-Version **0.2.0** adds a bounded optional comparison between two
+Since **0.2.0**, a bounded optional comparison is available between two
 **separately authorized** local JSON snapshots. No history is
 automatically found, saved, polled, installed or synchronized:
 
@@ -23,7 +59,8 @@ python3 scripts/plan.py \
 ```
 
 The ordinary `--input` path remains unchanged. A `transition`
-block reports **only task IDs and categorical changes**: claimed
+block reports **only task IDs and categorical changes**, with
+ambiguous same-ID label/type changes separately held for identity review: claimed
 completed, reopened, new, removed-but-unreconciled, changed
 dependencies/blockers/priorities/estimates, and newly ready or blocked.
 Removing a task from the snapshot is **not completion**, and task
@@ -79,6 +116,10 @@ benefits**.
   read-only Python 3.9+ helper; it never connects to a task service or
   stores task histories. It operates on a locally approved JSON snapshot.
 - [CHANGELOG.md](CHANGELOG.md) records the intentional version change.
+- [examples/fictional-user-focus.json](examples/fictional-user-focus.json) is
+  a fictional current-run user-chosen focus example, with no task records.
+- [tests/test_focus_identity_adversarial.py](tests/test_focus_identity_adversarial.py)
+  protects identity-review and chosen-focus priority boundaries.
 - [examples/fictional-tasks-next.json](examples/fictional-tasks-next.json) is
   a synthetic second snapshot for repeat-use comparisons.
 - [tests/test_continuity.py](tests/test_continuity.py) guards progress,
@@ -102,6 +143,7 @@ Run only with an explicitly authorized private input file:
 
 The helper expects:
 - root keys: schema_version=1, as_of=YYYY-MM-DD (explicit local date),
+  optional `focus_task_id` (current-run, explicitly selected user task),
   optional `scope_id` (required for a two-snapshot comparison),
   optional capacity_minutes, optional goal_id (must be an actual milestone),
   optional preferences and 1–200 tasks. A scope ID is a neutral
