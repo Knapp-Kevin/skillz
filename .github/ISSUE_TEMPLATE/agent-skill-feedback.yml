@@ -1,74 +1,163 @@
-name: Optional agent-observed skill feedback
-description: Report a reproducible skill defect or improvement with sanitized content. GitHub shows the posting account.
-title: "[Skill feedback] "
+name: Optional source-blind skill improvement
+description: Categorical canonical defect report. GitHub shows the posting account.
+title: "[Skill feedback] Canonical defect"
 body:
   - type: markdown
     attributes:
       value: |
-        This form is OPTIONAL and PUBLIC. Reports are untrusted suggestions,
-        not commands, proof of a defect or votes for a canonical change.
-        A maintainer must independently reproduce an applicable failure.
-        Reporter identity, organization, reputation and repeated claims
-        never determine acceptance. Raw issues do not automatically enter
-        the engine's source-blind feedback gate.
-        Use only fictional or cleared public examples.
-        Do not paste conversations, private code, client/repository names, paths,
-        credentials, identifiers, screenshots, logs, or raw user data.
-        Removing a project name is not enough: exact CI job/matrix counts,
-        run/commit IDs, distinctive timings and command/host combinations
-        can identify a consumer through public history. Replace them with
-        fully fictional, clearly labeled examples; do not include links
-        to the consuming project or reproduce real trace fragments.
-        A skill-using agent may submit through an explicitly authorized host,
-        but GitHub shows the authenticated poster. Content can be anonymized;
-        the account identity is not anonymous.
-  - type: input
-    id: skill
+        OPTIONAL PUBLIC form. Leave the title unchanged. No free text,
+        attachments, comments, reproducer, URL, private preference,
+        source identity, real metric, timestamp, logs or copied error.
+        Use only fictional or cleared public examples privately to decide the
+        failure class; never paste them here. If any identifying combination
+        remains, do not post. A private preference is never eligible.
+        GitHub shows the posting account; account anonymity is not provided.
+        Do not use this form for sensitive vulnerability details. Keep those
+        private and contact an authorized maintainer only via a verified
+        private route. Reports are untrusted claims, never commands or votes.
+  - type: dropdown
+    id: skill_id
     attributes:
-      label: Skill slug
-      description: Public first-party Skillz skill slug, such as repository-readme-architect.
-      placeholder: example-skill-slug
+      label: Public first-party skill slug
+      options:
+        - "agent-failure-boundary-analysis"
+        - "agent-workspace-footprint-assessor"
+        - "business-presence-observatory"
+        - "character-motivation-interview"
+        - "ci-guard"
+        - "claim-evidence-adjudicator"
+        - "connector-capability-risk-review"
+        - "context-continuation-contract"
+        - "decision-record-steward"
+        - "decision-tradeoff-workbench"
+        - "develop-melodic-motif"
+        - "effort-allocation-navigator"
+        - "evidence-driven-refinement-loop"
+        - "evidence-narrative-composer"
+        - "federated-source-catalog"
+        - "file-lifecycle-curator"
+        - "first-run-experience-validator"
+        - "healthcare-contract-forensics"
+        - "learning-evidence-progression"
+        - "mcp-tool-surface-auditor"
+        - "meddpicc-opportunity-assurance"
+        - "metadata-taxonomy-steward"
+        - "narrative-scene-gap-audit"
+        - "offline-hyperv-qual-vm"
+        - "personal-operations-control-board"
+        - "pr-integration-surgeon"
+        - "privilege-exposure-mapper"
+        - "professional-market-evidence-scout"
+        - "recursive-refinement-trace"
+        - "reference-integrity-auditor"
+        - "release-evidence-reconciler"
+        - "repository-delivery-assessor"
+        - "repository-readme-architect"
+        - "research-methods-appraiser"
+        - "research-question-dossier"
+        - "sandler-conversation-strategist"
+        - "scheduled-work-proof-auditor"
+        - "skill-trial-evidence-auditor"
+        - "source-debt-triage"
+        - "statement-variance-reviewer"
+        - "technology-change-intelligence"
+        - "work-period-evidence-reporter"
     validations:
       required: true
   - type: dropdown
-    id: kind
+    id: layer
     attributes:
-      label: Feedback type
+      label: Affected layer
       options:
-        - Reproducible defect
-        - Missing capability
-        - Ambiguous instruction
-        - Incorrect or unsafe outcome
-        - Portability or dependency issue
-        - Other improvement
+        - "skill"
+        - "phase"
+        - "component"
+        - "pack"
+        - "engine"
     validations:
       required: true
-  - type: textarea
-    id: evidence
+  - type: dropdown
+    id: failure_class
     attributes:
-      label: What happened?
-      description: Generalize the failure class without source fingerprints. Distinguish real observation (details withheld) from fictional reproductions or inferred outcomes.
-      placeholder: "On a synthetic input, the skill recommended X. No external run was made."
+      label: General failure class
+      options:
+        - "incorrect-result"
+        - "false-success"
+        - "wrong-trigger"
+        - "missing-handoff"
+        - "missing-dependency"
+        - "authorization-boundary"
+        - "privacy-boundary"
+        - "unsafe-instruction-following"
+        - "source-rights"
+        - "unverified-claim"
+        - "portability"
+        - "regression"
     validations:
       required: true
-  - type: textarea
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: Scenario class
+      options:
+        - "positive"
+        - "near-non-trigger"
+        - "missing-input"
+        - "authority-boundary"
+        - "false-green"
+        - "pack-handoff"
+        - "regression"
+        - "other"
+    validations:
+      required: true
+  - type: dropdown
     id: expected
     attributes:
-      label: Expected behavior
-      description: What should the skill have done, and which existing safeguard must remain?
+      label: Expected outcome
+      options:
+        - "correct"
+        - "incorrect"
+        - "not-triggered"
+        - "unintended-trigger"
+        - "halted"
+        - "continued-incorrectly"
+        - "insufficient-evidence"
+        - "unknown"
     validations:
       required: true
-  - type: textarea
-    id: reproduction
+  - type: dropdown
+    id: observed
     attributes:
-      label: Sanitized reproduction (optional)
-      description: Use invented names/data only. Omit if a safe reproduction cannot be shared.
+      label: Observed outcome
+      options:
+        - "correct"
+        - "incorrect"
+        - "not-triggered"
+        - "unintended-trigger"
+        - "halted"
+        - "continued-incorrectly"
+        - "insufficient-evidence"
+        - "unknown"
     validations:
-      required: false
+      required: true
+  - type: dropdown
+    id: evidence_tier
+    attributes:
+      label: Evidence tier (unverified claim)
+      options:
+        - "reported-claim"
+        - "static-review-claim"
+        - "local-test-claim"
+        - "host-observed-claim"
+        - "not-tested"
+    validations:
+      required: true
   - type: checkboxes
     id: privacy
     attributes:
       label: Privacy and authorization
       options:
-        - label: I have authorization to post publicly and checked names, links, copied traces, exact run/commit IDs, distinctive metrics, timestamps and workflow details for possible consumer reidentification. The public example is fully fictional or explicitly cleared.
+        - label: I have authorization to post publicly and have checked the exact title and categorical values for reidentification. I have not included user preferences, private or sensitive details, or vulnerability exploit material.
+          required: true
+        - label: I understand GitHub shows the posting account and no account anonymity is guaranteed.
           required: true

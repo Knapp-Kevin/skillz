@@ -98,9 +98,6 @@ def validate(signal):
                 "CANONICAL_CANNOT_INCLUDE_PERSONAL_PREFERENCE")
         require(signal["expected"] != signal["observed"],
                 "NO_DEMONSTRATED_BEHAVIOR_DIFFERENCE")
-    elif route == "local-preference":
-        require(failure == "none" and pref != "none",
-                "PREFERENCE_MUST_STAY_LOCAL")
     elif route == "no-action":
         require(failure == "none" and pref == "none",
                 "UNRESOLVED_FEEDBACK_NOT_NO_ACTION")
@@ -133,6 +130,31 @@ def validate(signal):
     }
 
 
+
+def prepare_public_draft(signal):
+    """Only canonical candidates; fixed text, no issue submission or network."""
+    result = validate(signal)
+    require(result["routing_requested"] == "canonical-candidate",
+            "PUBLIC_DRAFT_REQUIRES_CANONICAL_CANDIDATE")
+    require(signal["skill_id"] in authored_targets(), "PUBLIC_TARGET_NOT_AUTHORED")
+    # Values were independently allowlisted by validate. Never copy arbitrary keys.
+    return {
+        "status": "DRAFT_ONLY_PRIVACY_AND_AUTHORIZATION_REVIEW_REQUIRED",
+        "title": "[Skill feedback] Canonical defect",
+        "template_url": "https://github.com/Knapp-Kevin/skillz/issues/new?template=agent-skill-feedback.yml",
+        "fields": {key: signal[key] for key in ("skill_id", "layer", "failure_class",
+                   "scenario", "expected", "observed", "evidence_tier")},
+        "post_authorized": False,
+        "account_anonymity_guaranteed": False,
+    }
+
+
+def authored_targets():
+    parent = ROOT / "skills" / "authored"
+    return {p.name for p in parent.iterdir() if p.is_dir() and not p.is_symlink()
+            and (p / "SKILL.md").is_file() and not (p / "SKILL.md").is_symlink()}
+
+
 def pairs_unique(pairs):
     value = {}
     for key, item in pairs:
@@ -155,13 +177,16 @@ def load(path):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", required=True)
+    parser.add_argument("--public-draft", action="store_true", help="Prepare a categorical draft only; never submit.")
     args = parser.parse_args(argv)
     try:
-        print(json.dumps(validate(load(args.input)), sort_keys=True, indent=2))
+        signal = load(args.input)
+        result = prepare_public_draft(signal) if args.public_draft else validate(signal)
+        print(json.dumps(result, sort_keys=True, indent=2))
         return 0
-    except (FeedbackHold, ValueError, OSError, TypeError, UnicodeError) as exc:
+    except (FeedbackHold, ValueError, OSError, TypeError, UnicodeError, RecursionError) as exc:
         # Emit only fixed diagnostic codes, never rejected input contents.
-        message = str(exc)
+        message = str(exc) if isinstance(exc, FeedbackHold) else "INVALID_JSON_OR_INPUT"
         if not re.fullmatch(r"[A-Z0-9_:-]+", message, re.ASCII):
             message = "INVALID_JSON_OR_INPUT"
         print("FEEDBACK_INTAKE_HOLD:" + message, file=sys.stderr)
