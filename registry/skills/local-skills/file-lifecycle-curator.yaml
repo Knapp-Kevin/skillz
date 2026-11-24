@@ -24,8 +24,8 @@ dependencies: >-
   Durable private checkpoint writes optionally use bundled Python sqlite3
   with user-approved local private storage. No scheduler, connector, network
   account, source file mutation or automatic retention/deletion included.
-content_blob_sha: 6f8d6eb1b2a554249a07fd47c06a15645c7bba21
-complete_package_tree_sha: 8b1952511e1bff4130c6320cddd43f68a8669395
+content_blob_sha: 9849a98323956fe8ad6cd01fba5fab0c54dd0ffa
+complete_package_tree_sha: 57a5f84e5a2ff1c44e8c848408b1a2903958abb9
 authored_index_path: registry/authored-skills-index.json
 import_eligibility: review-required
 rationale: >-
@@ -50,3 +50,6 @@ rationale: >-
 
 # Formal governance status remains needs-re-review under repository QA.
 # Author-led 19/20 is evidence in docs/reviews, not a promotion.
+
+# 2026-11-24 PR #909: two additional original package files; route map and
+# closeout text updated. Prior score tied to old package, exact review pending.
