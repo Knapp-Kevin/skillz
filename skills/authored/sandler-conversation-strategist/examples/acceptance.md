@@ -148,6 +148,17 @@ seller notes are an observed transcript, and no official
 methodology certification or objective historical call grade.
 The skill remains usable offline with the user in the chat.
 
+## S18. Explicit fictional full-dialogue request (0.2.0)
+
+User: "Show me a short invented seller-and-buyer exchange to study,
+not a live practice with me." **Expected:** route to DEMONSTRATION,
+write an original fictional illustration with both sides explicitly
+SIMULATED / DEMO_ONLY, allow a buyer to decide no fit, and do not grade
+the user, invent real call history or create customer records. By
+contrast, "practice with me" must route to INTERACTIVE_REHEARSAL,
+generate only one buyer utterance and stop for the real user reply.
+Do not confuse a full sample with observed rep behavior.
+
 ## CASE-JOINT-01: fictional enterprise training opportunity
 
 **All values, roles, documents and accounts below are invented.** This
