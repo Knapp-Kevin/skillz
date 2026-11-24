@@ -356,8 +356,8 @@ completion, reopening, newly ready/blocked or resume claims until
 their identity is confirmed. Task label edits are not proof that
 an ID was reused. The helper shows only the ID for review; the
 authorized host/user must compare the actual source privately.
-It does not emit task labels or source paths;
-paths or account identities. It compares caller-provided assertions,
+It does not emit task labels, private source paths or account
+identities. It compares caller-provided assertions,
 not authenticated work receipts. Same-day inputs have only
 caller-specified order; reversed snapshot dates are rejected.
 Current host permission/source identity must be checked **before
