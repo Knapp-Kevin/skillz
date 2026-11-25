@@ -10,6 +10,10 @@ import json
 from pathlib import Path
 import re
 import sys
+import zipfile
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import host_compat
 
 HEX40 = re.compile(r"[0-9a-f]{40}")
 HEX64 = re.compile(r"[0-9a-f]{64}")
@@ -50,11 +54,61 @@ def local_file(path, limit):
 
 def read_json(path):
     data = local_file(path, MAX_JSON).read_bytes()
-    return json.loads(data, object_pairs_hook=unique_keys), hashlib.sha256(data).hexdigest()
+    def reject_constant(_):
+        raise ValueError("NONFINITE_JSON")
+    return json.loads(data, object_pairs_hook=unique_keys,
+                      parse_constant=reject_constant), hashlib.sha256(data).hexdigest()
 
 
 def valid(pattern, value):
     return type(value) is str and bool(pattern.fullmatch(value))
+
+
+def archive_contract(skill, host, asset):
+    """Known distribution routes only; an unknown future adapter fails closed."""
+    require(host in host_compat.HOSTS, "HOST_UNASSESSED")
+    if host.startswith("m365-"):
+        require(asset == skill + "-m365.zip", "HOST_ASSET_LAYOUT_MISMATCH")
+        return "", "LICENSE.txt"
+    if host == "gemini-apps":
+        require(asset == skill + "-gemini.zip", "HOST_ASSET_LAYOUT_MISMATCH")
+        return "", "LICENSE.txt"
+    if host == "claude-apps":
+        require(asset in (skill + ".zip", skill + "-claude.zip"),
+                "HOST_ASSET_LAYOUT_MISMATCH")
+        return skill + "/", "LICENSE"
+    require(host_compat.HOSTS[host]["mode"] == "directory" and asset == skill + ".zip",
+            "HOST_ASSET_LAYOUT_MISMATCH")
+    return skill + "/", "LICENSE"
+
+
+def check_archive_layout(stream, prefix, license_name):
+    """Inspect the central directory only; never extract or execute payloads."""
+    try:
+        with zipfile.ZipFile(stream) as z:
+            members = z.infolist()
+            require(0 < len(members) <= 10000 and
+                    sum(m.file_size for m in members) <= MAX_ARCHIVE,
+                    "ARCHIVE_INVENTORY_LIMIT")
+            names = []
+            for m in members:
+                name = m.orig_filename
+                mode = (m.external_attr >> 16) & 0o170000
+                require(not m.is_dir() and not (m.flag_bits & 1) and
+                        mode in (0, 0o100000) and
+                        name.startswith(prefix) and name == m.filename,
+                        "INVALID_ARCHIVE_MEMBER")
+                rel = name[len(prefix):]
+                require(bool(rel) and all(p not in ("", ".", "..") for p in rel.split("/")),
+                        "INVALID_ARCHIVE_MEMBER")
+                names.append(rel)
+            require(len(names) == len(set(names)) and
+                    not host_compat.portable_path_blockers(names),
+                    "NONPORTABLE_ARCHIVE_INVENTORY")
+            require({"SKILL.md", license_name} <= set(names),
+                    "MISSING_ARCHIVE_ENTRYPOINT_OR_LICENSE")
+    except (zipfile.BadZipFile, NotImplementedError):
+        raise ValueError("INVALID_ZIP_ARCHIVE") from None
 
 
 def validate(manifest, manifest_sha, archive, receipt):
@@ -70,6 +124,7 @@ def validate(manifest, manifest_sha, archive, receipt):
             "MANIFEST_OR_SOURCE_MISMATCH")
     skill, host = receipt["skill"], receipt["host"]
     require(valid(SLUG, skill) and valid(SLUG, host), "INVALID_SKILL_OR_HOST")
+    require(host in host_compat.HOSTS, "HOST_UNASSESSED")
     rows = [r for r in manifest["skills"] if type(r) is dict and r.get("id") == skill]
     require(len(rows) == 1, "SKILL_MISSING_OR_DUPLICATE")
     row = rows[0]
@@ -86,16 +141,23 @@ def validate(manifest, manifest_sha, archive, receipt):
                       skill + "-m365.zip"} and valid(HEX64, digest) and
             receipt["asset"] == asset and receipt["sha256"] == digest,
             "HOST_ASSET_IDENTITY_MISMATCH")
+    prefix, license_name = archive_contract(skill, host, asset)
     p = local_file(archive, MAX_ARCHIVE)
     require(p.name == asset, "ARCHIVE_NAME_MISMATCH")
     with p.open("rb") as stream:
         actual = hashlib.sha256()
+        size = 0
         for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            size += len(chunk)
+            require(size <= MAX_ARCHIVE, "ARCHIVE_SIZE_LIMIT")
             actual.update(chunk)
-    require(actual.hexdigest() == digest, "ARCHIVE_DIGEST_MISMATCH")
+        require(actual.hexdigest() == digest, "ARCHIVE_DIGEST_MISMATCH")
+        stream.seek(0)
+        check_archive_layout(stream, prefix, license_name)
     env = receipt["environment"]
     require(type(env) is dict and set(env) == ENV_FIELDS and
             all(valid(ID, v) for v in env.values()), "INVALID_ENVIRONMENT_IDENTITY")
+    unknown_env = any(v.casefold() in {"unknown", "not-run", "not_run", "unset", "none", "na", "n-a", "n.a", "placeholder"} for v in env.values())
     require(receipt["execution_kind"] in ("NATIVE_HOST_CLAIMED", "EMULATED", "NOT_RUN"),
             "INVALID_EXECUTION_KIND")
     require(receipt["authorization"] in ("APPROVAL_CLAIMED", "NOT_ESTABLISHED"),
@@ -133,13 +195,16 @@ def validate(manifest, manifest_sha, archive, receipt):
     if any(v == "FAIL_CLAIMED" for v in by_stage.values()):
         status = "HOLD_REPORTED_FAILURE"
     elif (receipt["execution_kind"] != "NATIVE_HOST_CLAIMED" or
-          receipt["authorization"] != "APPROVAL_CLAIMED" or
+          receipt["authorization"] != "APPROVAL_CLAIMED" or unknown_env or
           any(v != "PASS_CLAIMED" for v in by_stage.values())):
         status = "HOLD_INCOMPLETE_NATIVE_CLAIM"
     else:
         status = "COMPLETE_CLAIMS_REVIEW_REQUIRED"
     return {"schema_version": 1, "status": status, "skill": skill, "host": host,
             "manifest_sha256": manifest_sha, "archive_sha256": digest,
+            "source_commit": receipt["source_commit"], "package_tree_sha": receipt["package_tree_sha"],
+            "asset": asset, "archive_directory_layout_checked": True,
+            "archive_payload_crc_verified": False,
             "stage_claims": by_stage, "local_archive_matches_manifest": True,
             "manifest_authenticity_verified": False, "authorization_verified": False,
             "host_execution_observed": False, "independent_oracles_verified": False,
@@ -155,8 +220,9 @@ def main(argv=None):
     args = ap.parse_args(argv)
     try:
         manifest, digest = read_json(args.manifest)
-        receipt, _ = read_json(args.receipt)
+        receipt, receipt_digest = read_json(args.receipt)
         result = validate(manifest, digest, args.archive, receipt)
+        result["receipt_sha256"] = receipt_digest
     except (OSError, ValueError, TypeError, KeyError, RecursionError):
         # Do not echo raw private receipt values or local paths.
         print(json.dumps({"status": "HOLD_INVALID_RECEIPT_OR_ARTIFACT",

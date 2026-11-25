@@ -5,6 +5,7 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location("host_acceptance", ROOT / "engine/builder/host_acceptance.py")
@@ -17,7 +18,9 @@ class ReceiptTests(unittest.TestCase):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         self.archive = Path(tmp.name) / "demo-claude.zip"
-        self.archive.write_bytes(b"fictional archive identity only")
+        with zipfile.ZipFile(self.archive, "w") as z:
+            z.writestr("demo/SKILL.md", "Fictional instructions; not executed.")
+            z.writestr("demo/LICENSE", "Fictional license.")
         self.digest = hashlib.sha256(self.archive.read_bytes()).hexdigest()
         self.manifest_sha = "b" * 64
         self.manifest = {"schema_version": 1, "source_commit": "a" * 40,
@@ -102,6 +105,50 @@ class ReceiptTests(unittest.TestCase):
         self.receipt["execution_kind"] = "NOT_RUN"
         with self.assertRaisesRegex(ValueError, "NOT_RUN_WITH_OBSERVATION_CLAIM"):
             self.check()
+
+    def refresh_archive_digest(self):
+        digest = hashlib.sha256(self.archive.read_bytes()).hexdigest()
+        self.receipt["sha256"] = digest
+        self.manifest["skills"][0]["hosts"][self.receipt["host"]]["sha256"] = digest
+
+    def test_forged_unassessed_profile_cannot_be_ready(self):
+        hosts = self.manifest["skills"][0]["hosts"]
+        for host in ("chatgpt", "openclaude-other", "fictional-new-host"):
+            self.receipt["host"] = host
+            hosts[host] = dict(hosts["claude-apps"])
+            with self.assertRaisesRegex(ValueError, "HOST_UNASSESSED"):
+                self.check()
+
+    def test_wrong_host_variant_is_rejected_even_with_matching_digest(self):
+        self.receipt["host"] = "gemini-apps"
+        self.manifest["skills"][0]["hosts"]["gemini-apps"] = dict(
+            self.manifest["skills"][0]["hosts"]["claude-apps"])
+        with self.assertRaisesRegex(ValueError, "HOST_ASSET_LAYOUT_MISMATCH"):
+            self.check()
+
+    def test_archive_layout_holds_even_when_manifest_digest_matches(self):
+        self.archive.write_bytes(b"not a ZIP")
+        self.refresh_archive_digest()
+        with self.assertRaisesRegex(ValueError, "INVALID_ZIP_ARCHIVE"):
+            self.check()
+        for members in (["SKILL.md", "LICENSE"],
+                        ["demo/SKILL.md"],
+                        ["demo/SKILL.md", "demo/LICENSE", "demo/../escape.txt"],
+                        ["demo/SKILL.md", "demo/LICENSE", "demo/a.txt", "demo/A.txt"]):
+            with self.subTest(members=members):
+                with zipfile.ZipFile(self.archive, "w") as z:
+                    for name in members:
+                        z.writestr(name, "fictional")
+                self.refresh_archive_digest()
+                with self.assertRaises(ValueError):
+                    self.check()
+
+    def test_unknown_environment_cannot_complete_claim(self):
+        for field in m.ENV_FIELDS:
+            previous = self.receipt["environment"][field]
+            self.receipt["environment"][field] = "UNKNOWN"
+            self.assertEqual(self.check()["status"], "HOLD_INCOMPLETE_NATIVE_CLAIM")
+            self.receipt["environment"][field] = previous
 
     def test_duplicate_manifest_skill_and_unknown_receipt_field_rejected(self):
         self.manifest["skills"].append(self.manifest["skills"][0])

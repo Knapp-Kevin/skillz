@@ -43,14 +43,18 @@ one receipt per skill/host/environment; no pooling or cross-host inheritance.
 
 The archive basename must match the selected host asset exactly. The tool
 checks the raw manifest SHA-256, source commit, package tree, host entry,
-archive name and actual local bytes. It does not verify the remote download
-origin or unpack/run the ZIP. Verify release authenticity and complete
-package contents separately. The receipt uses exact schema v1 fields in the
+archive name and actual local bytes. It rejects unknown profiles even if
+a supplied manifest labels them ready, and checks the selected ZIP layout,
+required entrypoint/license, bounded central-directory inventory and portable
+member names. It does not extract, execute, or verify every member's CRC,
+or authenticate remote download origin. Verify release authenticity and
+complete package contents separately. The CLI emits the exact input receipt
+SHA-256 to bind the review result to the original claim. The receipt uses exact schema v1 fields in the
 [fictional example](examples/host-acceptance-not-run.json), with opaque
 bounded identity tokens (no spaces, URLs or raw logs). Actual observations
 remain claims; PASS_CLAIMED and FAIL_CLAIMED each require distinct evidence
 and oracle IDs, while NOT_RUN and UNKNOWN require null IDs. A real failure,
-missing stage, emulation, absent approval claim or contradictory stage order
+missing stage, emulation, unknown environment identity, absent approval claim or contradictory stage order
 cannot yield a complete native claim.
 
 Exit 0 means COMPLETE_CLAIMS_REVIEW_REQUIRED, **not** host validation.
