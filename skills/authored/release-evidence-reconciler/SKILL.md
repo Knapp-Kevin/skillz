@@ -81,7 +81,7 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
 The fictional example is merely **29 ASCII bytes** named
-`fictional-installer.bin`; it is not an executable installer. The
+`fictional-installer.txt`; it is not an executable installer. The
 manifest's `schema_version: 1` requires `source`, `build`,
 `expected_channels` (the required distribution channel IDs), and
 `channels`. Every expected channel needs its own evidence; missing

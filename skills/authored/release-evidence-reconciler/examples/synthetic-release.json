@@ -41,7 +41,7 @@
       "id": "linux_x64",
       "platform": "linux",
       "architecture": "x86_64",
-      "filename": "fictional-installer.bin",
+      "filename": "fictional-installer.txt",
       "build_sha256": "7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292",
       "published_sha256_claim": "7c6b04f68d62a909a01a535b6d5506f3834ae359d090eb88f534d94e033de292",
       "provenance": {

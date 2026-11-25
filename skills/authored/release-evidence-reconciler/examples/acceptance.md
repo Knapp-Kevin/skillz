@@ -3,7 +3,7 @@
 Everything in this package is **fictional**. The included
 `synthetic-release.json` references the byte string
 `FICTIONAL_RELEASE_PAYLOAD_V1\\n` in
-`examples/artifacts/fictional-installer.bin`. Despite its filename,
+`examples/artifacts/fictional-installer.txt`. Despite its filename,
 this is a harmless 29-byte text file. No installer is ever executed.
 
 Expected SHA-256 of the literal bytes:
