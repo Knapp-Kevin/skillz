@@ -97,8 +97,12 @@ Git blob identities and SHA-256 values:
       --contract /private/source-contract.json --host claude-apps
 
 See the [Scheduled Work Proof Auditor pilot](examples/scheduled-work-source-contract.json):
-three exact source blobs and nine concrete fictional cases. It is NOT_RUN,
-not a native-host pass. The contract's fields are schema_version, skill,
+three exact source blobs and nine concrete fictional cases. The [MCP Tool
+Surface Auditor pilot](examples/mcp-tool-surface-source-contract.json)
+adds seven exact source blobs, twelve cases, two script targets, separate
+helper-unavailable and maintainer-suite boundaries, and an offline fictional
+18-to-12 comparison oracle. Both native plans are NOT_RUN, not native-host
+passes. The offline fixture test is separate from actual host activation. The contract's fields are schema_version, skill,
 source_blobs (complete path-to-Git-blob-ID map), and cases. Each case has
 id, kind, source (package-relative Markdown path), anchor (unique exact
 excerpt), setup and expected. Required kinds are load, positive,
