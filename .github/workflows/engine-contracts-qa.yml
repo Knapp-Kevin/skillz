@@ -56,23 +56,13 @@ jobs:
           python3 -B scripts/qa/test-engine-feedback-boundary.py
           python3 -B scripts/qa/test-host-compatibility.py
           python3 -B scripts/qa/test_sales_methodology_contract.py
-          # Preserve the eight previously established package-readiness gates.
-          # Newly assessed app profiles have their own adversarial tests and full
-          # matrix below; an explicit new-host HOLD is not a legacy regression.
-          # Never use an unscoped all-host command as a frozen readiness baseline.
-          for skill in effort-allocation-navigator sandler-conversation-strategist meddpicc-opportunity-assurance evidence-driven-refinement-loop file-lifecycle-curator repository-readme-architect ci-guard; do
-            for host in github-copilot claude-code openai-codex gemini-cli hermes-agent m365-copilot-chat m365-agent-builder m365-agents-toolkit; do
-              echo "Required package readiness: $skill / $host"
-              python3 -B engine/builder/host_compat.py --skill "$skill" --host "$host" > "/tmp/$skill-$host-package-check.json"
-            done
-          done
-      - name: Full authored host packaging matrix (report-only, no false pass)
+      - name: Full authored host packaging matrix and admission gate
         shell: bash
         run: |
           set -euo pipefail
           rc=0
-          python3 -B engine/builder/host_compat.py --all > /tmp/host-matrix.json || rc=$?
-          if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then
+          python3 -B engine/builder/host_compat.py --all --require-authored-ready > /tmp/host-matrix.json || rc=$?
+          if [ "$rc" -ne 0 ] && [ "$rc" -ne 3 ]; then
             echo "Unexpected audit failure: $rc" >&2
             exit "$rc"
           fi
@@ -94,7 +84,10 @@ jobs:
           lines.extend(['', f'Unqualified skill-host pairs: {len(held)}. '
                         'These are **not** validated host failures.',
                         'Host load, real script execution and consumer acceptance: NOT TESTED.'])
-          lines.extend(['', '### Exact static holds'])
+          lines.extend(['', 'Admission: ' + result['authored_admission']['status'],
+                        'Unassessed hosts: ' + ', '.join(sorted(result['unassessed_hosts'])),
+                        'Unexpected holds: ' + str(len(result['authored_admission']['unexpected_holds'])),
+                        '', '### Exact static holds'])
           for item in held:
               reason = ', '.join(item['blockers']) if item['blockers'] else 'UNKNOWN'
               lines.append(f'- {item["host"]} / {item["skill"]}: {reason}')
@@ -103,3 +96,4 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
               f.write(report)
           PY
+          exit "$rc"

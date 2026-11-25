@@ -15,19 +15,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "engine" / "builder"))
 import host_compat
 
-# Documented host routes without a verified machine-checkable package profile.
-# A canonical archive is still available, but it is not a host-ready asset.
-MANUAL_HOSTS = {
-    "chatgpt": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
-    "openclaude-other": "EXACT_HOST_IDENTITY_NOT_ESTABLISHED",
-}
+# Share the same assessed/unassessed boundary as the authoring engine.
+MANUAL_HOSTS = host_compat.UNASSESSED_HOSTS
 
 def add_manual_host_statuses(hosts):
     if set(hosts) & MANUAL_HOSTS.keys():
         raise ValueError("manual host status would overwrite a checked profile")
-    for host, reason in MANUAL_HOSTS.items():
-        hosts[host] = {"status": "HOLD", "asset": None, "sha256": None,
-                       "blockers": [reason], "warnings": [], "behavior": "NOT_TESTED"}
+    hosts.update(host_compat.unassessed_host_statuses())
 
 class ManualHostTests(unittest.TestCase):
     def test_unassessed_routes_fail_closed(self):
@@ -124,6 +118,9 @@ def build(output):
         entry = {"id": slug, "package_tree_sha": tree, "skill_blob_sha": blob,
                  "license": "MIT", "canonical": {"asset": archive.name, "sha256": digest(archive)}, "hosts": {}}
         profiles = {h: host_compat.inspect(folder, h) for h in host_compat.HOSTS}
+        admission = host_compat.authored_admission(profiles.values())
+        if admission["unexpected_holds"]:
+            raise ValueError("authored portability admission failed: " + json.dumps(admission["unexpected_holds"]))
         ms = profiles["m365-copilot-chat"]
         # Chat and Builder share the same adapter; toolkit consumes the extracted adapted directory.
         variant = None

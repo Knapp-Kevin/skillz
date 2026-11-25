@@ -31,6 +31,39 @@ class HostCompatibilityTests(unittest.TestCase):
         (self.skill / "LICENSE").write_text(
             "Original example permission text.\n", encoding="utf-8")
 
+    def test_authored_admission_rejects_new_holds_and_only_allows_exact_exceptions(self):
+        known = {"skill": "offline-hyperv-qual-vm", "host": "gemini-apps",
+                 "format_valid": True, "package_ready": False,
+                 "blockers": sorted(module.HYPERV_REQUIRED_FILES)}
+        result = module.authored_admission([known])
+        self.assertEqual(len(result["documented_holds"]), 1)
+        self.assertEqual(result["unexpected_holds"], [])
+        for changed in (dict(known, skill="new-skill"), dict(known, host="claude-apps"),
+                        dict(known, blockers=known["blockers"] + ["BROKEN_LOCAL_LINK:fixture"]),
+                        dict(known, blockers=[]), dict(known, format_valid=False)):
+            with self.subTest(changed=changed):
+                self.assertEqual(module.authored_admission([changed])["status"],
+                                 "HOLD_UNEXPECTED_PACKAGE_BLOCKERS")
+        self.assertEqual(module.authored_admission([dict(known, package_ready=True)])["status"],
+                         "STATIC_ADMISSION_READY")
+
+    def test_new_authored_skill_cannot_pass_admission_with_unsupported_file(self):
+        (self.skill / "fixture.bin").write_bytes(b"fictional")
+        reports = [module.inspect(self.skill, host) for host in module.HOSTS]
+        result = module.authored_admission(reports)
+        self.assertTrue(result["unexpected_holds"])
+        self.assertFalse(result["documented_holds"])
+
+    def test_unassessed_receipts_never_claim_ready(self):
+        statuses = module.unassessed_host_statuses()
+        self.assertEqual(set(statuses), set(module.UNASSESSED_HOSTS))
+        self.assertFalse(set(statuses) & set(module.HOSTS))
+        for entry in statuses.values():
+            self.assertEqual(entry["status"], "HOLD")
+            self.assertIsNone(entry["asset"])
+            self.assertIsNone(entry["sha256"])
+            self.assertEqual(entry["behavior"], "NOT_TESTED")
+
     def test_single_canonical_package_is_directory_ready(self):
         for host in ("github-copilot", "claude-code", "openai-codex",
                      "gemini-cli", "hermes-agent"):

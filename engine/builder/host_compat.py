@@ -54,6 +54,59 @@ HOSTS = {
                                strict_char_limit=MAX_ENTRYPOINT, extensions=MICROSOFT_EXTENSIONS,
                                max_files=350, max_depth=3, max_package_bytes=10*1024*1024),
 }
+# These are documented routes, not assessed package profiles. Keep them visible
+# in all receipts and release manifests without inventing host requirements.
+UNASSESSED_HOSTS = {
+    "chatgpt": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
+    "openclaude-other": "EXACT_HOST_IDENTITY_NOT_ESTABLISHED",
+}
+
+# Narrow existing exception: functional PowerShell dependencies are essential
+# to the Windows Hyper-V skill. No wildcard, new skill or additional blocker
+# is covered. Changing this policy requires explicit maintainer review.
+HYPERV_REQUIRED_FILES = frozenset({
+    "UNSUPPORTED_EXTENSION:scripts/Connect-QualVm.ps1",
+    "UNSUPPORTED_EXTENSION:scripts/New-OfflineQualVm.ps1",
+    "UNSUPPORTED_EXTENSION:tests/fake/Hyper-V/Hyper-V.psm1",
+    "UNSUPPORTED_EXTENSION:tests/test_synthetic_host.ps1",
+})
+AUTHORED_HOLD_EXCEPTIONS = {
+    ("offline-hyperv-qual-vm", host): HYPERV_REQUIRED_FILES
+    for host in ("gemini-apps", "m365-copilot-chat", "m365-agent-builder",
+                 "m365-agents-toolkit")
+}
+
+
+def authored_admission(reports):
+    """Classify a complete assessed matrix; no exception makes a host ready."""
+    expected, unexpected = [], []
+    for report in reports:
+        if report["package_ready"]:
+            continue
+        pair = (report["skill"], report["host"])
+        reasons = set(report["blockers"])
+        row = {"skill": pair[0], "host": pair[1], "blockers": sorted(reasons)}
+        allowed = AUTHORED_HOLD_EXCEPTIONS.get(pair, frozenset())
+        if report["format_valid"] and reasons and reasons <= allowed:
+            expected.append(row)
+        else:
+            unexpected.append(row)
+    return {
+        "status": "HOLD_UNEXPECTED_PACKAGE_BLOCKERS" if unexpected else
+                  "STATIC_ADMISSION_READY_WITH_DOCUMENTED_HOLDS" if expected else
+                  "STATIC_ADMISSION_READY",
+        "documented_holds": expected,
+        "unexpected_holds": unexpected,
+        "host_behavior": "NOT_TESTED",
+    }
+
+
+def unassessed_host_statuses():
+    return {host: {"status": "HOLD", "asset": None, "sha256": None,
+                   "blockers": [reason], "warnings": [], "behavior": "NOT_TESTED"}
+            for host, reason in UNASSESSED_HOSTS.items()}
+
+
 # Curated Claude Apps discovery summaries, bound to exact canonical Git blobs.
 # Do not truncate, infer or silently refresh descriptions after a source change.
 CLAUDE_DISCOVERY = {
@@ -519,12 +572,16 @@ def main(argv=None):
     choice.add_argument("--skill", help="First-party authored skill slug")
     choice.add_argument("--all", action="store_true", help="Audit every authored package")
     choice.add_argument("--package", help="Explicit user-authorized custom package directory; no discovery")
-    parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all host profiles")
+    parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all assessed host profiles")
+    parser.add_argument("--require-authored-ready", action="store_true",
+                        help="Require all assessed authored pairs except exact documented holds")
     parser.add_argument("--zip-output", help="Explicit NEW ZIP output, single skill and ZIP host only")
     parser.add_argument("--directory-output", help="Explicit NEW handoff directory, not host installation")
     args = parser.parse_args(argv)
     if args.skill and (not NAME.fullmatch(args.skill) or len(args.skill) > 64):
         raise ValueError("INVALID_SKILL_SLUG")
+    if args.require_authored_ready and (args.package or args.host or args.zip_output or args.directory_output):
+        parser.error("--require-authored-ready requires --all or --skill with all profiles and no output")
     if args.zip_output and args.directory_output:
         parser.error("Choose only one output artifact")
     if args.zip_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "zip"):
@@ -545,12 +602,17 @@ def main(argv=None):
         "ready": sum(r["package_ready"] for r in results if r["host"] == h),
         "hold": sum(not r["package_ready"] for r in results if r["host"] == h),
     } for h in ([args.host] if args.host else HOSTS)}
+    admission = authored_admission(results) if not args.package and not args.host else None
     print(json.dumps({
         "schema_version": 1, "claim": "STATIC_PACKAGE_PREFLIGHT_ONLY",
+        "unassessed_hosts": unassessed_host_statuses(),
+        "authored_admission": admission,
         "canonical_skill_count": len(packages),
         "host_qualification": "NOT_TESTED",
         "summary": summary, "results": results,
     }, indent=2))
+    if args.require_authored_ready:
+        return 3 if not packages or admission["unexpected_holds"] else 0
     return 0 if all(r["package_ready"] for r in results) else 2
 
 

@@ -393,6 +393,8 @@ def host_preflight(stage, hosts=None):
         "status": "STATIC_PACKAGE_PREFLIGHT_ONLY",
         "profiles": [{k: v for k, v in r.items() if k != "manifest"}
                      for r in reports],
+        "unassessed_hosts": host_compat.unassessed_host_statuses(),
+        "assessed_not_selected": sorted(set(host_compat.HOSTS) - set(selected)),
         "native_installation_method_verified": False,
         "runtime_capabilities_verified": False,
         "actual_target_host_verified": False,
@@ -402,6 +404,11 @@ def host_preflight(stage, hosts=None):
 
 
 def build(blueprint, output=None, write=False, maintainer=False, hosts=None):
+    if maintainer and hosts is not None:
+        need(type(hosts) in (list, tuple) and len(hosts) == len(host_compat.HOSTS)
+             and all(type(h) is str for h in hosts)
+             and set(hosts) == set(host_compat.HOSTS),
+             "MAINTENANCE_REQUIRES_ALL_ASSESSED_HOSTS")
     files = generate_files(blueprint)
     with tempfile.TemporaryDirectory(prefix="skillz-build-") as folder:
         stage = Path(folder) / blueprint["name"]

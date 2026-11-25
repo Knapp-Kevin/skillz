@@ -54,6 +54,23 @@ class BuilderCases(unittest.TestCase):
         self.assertFalse(receipt["actual_target_host_verified"])
         self.assertFalse(receipt["runtime_capabilities_verified"])
 
+    def test_maintainer_cannot_narrow_portability_scope(self):
+        with self.assertRaisesRegex(builder.BuildHold, "MAINTENANCE_REQUIRES_ALL_ASSESSED_HOSTS"):
+            builder.build(fixture(), maintainer=True, hosts=["claude-code"])
+
+    def test_default_builder_refuses_overlong_description_without_truncation(self):
+        data = fixture()
+        data["description"] = "x" * 201
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "never-written"
+            with self.assertRaisesRegex(builder.BuildHold, "DESCRIPTION_OVER_HOST_LIMIT"):
+                builder.build(data, output=str(target), write=True)
+            self.assertFalse(target.exists())
+        report = builder.build(data, hosts=["claude-code"])["host_compatibility"]
+        self.assertIn("claude-apps", report["assessed_not_selected"])
+        self.assertEqual(report["unassessed_hosts"]["chatgpt"]["status"], "HOLD")
+        self.assertEqual(report["unassessed_hosts"]["openclaude-other"]["behavior"], "NOT_TESTED")
+
     def test_host_specific_target_and_no_silent_universal_claim(self):
         receipt = builder.build(fixture(), hosts=["claude-code"])["host_compatibility"]
         self.assertEqual(receipt["scope"], "CALLER_SELECTED_PROFILES")
