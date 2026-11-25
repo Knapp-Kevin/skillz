@@ -23,6 +23,12 @@ MICROSOFT_EXTENSIONS = frozenset((
     ".html .htm .png .jpg .jpeg .gif .bmp .log "
     ".py .js .mjs .cjs .ts .mts .sh .bash"
 ).split())
+# Google Gemini Apps upload requirements and transfer guide, checked 2026-11-25.
+GEMINI_EXTENSIONS = frozenset((
+    ".docx .pdf .rtf .tex .log .md .rst .txt .markdown .odt "
+    ".csv .ods .xlsx .odp .pptx .jpg .png .svg .gif .heic .ico .jpeg "
+    ".tif .webp .py .sh .ipynb .js .css .html .htm .json .toml .xml .yaml .yml"
+).split())
 SCRIPT_EXTENSIONS = frozenset((".py", ".js", ".mjs", ".cjs", ".ts", ".mts", ".sh", ".bash"))
 # Profile paths are *target examples*, not a claim of local host installation.
 HOSTS = {
@@ -31,6 +37,13 @@ HOSTS = {
     "openai-codex": dict(mode="directory", destination=".agents/skills/<skill>/"),
     "gemini-cli": dict(mode="directory", destination=".gemini/skills/<skill>/"),
     "hermes-agent": dict(mode="directory", destination="~/.hermes/skills/<skill>/"),
+    # Claude Help Center custom skills: folder-wrapped ZIP and 200-char description.
+    "claude-apps": dict(mode="zip", destination="Claude Customize > Skills > Upload",
+                        folder_wrapped=True, description_limit=200),
+    "gemini-apps": dict(mode="zip", destination="Gemini Customize > Skills > Upload",
+                        extensions=GEMINI_EXTENSIONS, description_limit=1024,
+                        max_files=100, max_package_bytes=100_000_000,
+                        max_entrypoint_bytes=10_000_000),
     "m365-copilot-chat": dict(mode="zip", destination="Copilot Chat > Agents > More agents > Add > Upload skill",
                              advisory_char_limit=MAX_ENTRYPOINT, extensions=MICROSOFT_EXTENSIONS),
     "m365-agent-builder": dict(mode="zip", destination="Agent Builder > Skills > Upload ZIP",
@@ -72,8 +85,35 @@ def read_entrypoint(folder):
     return instructions
 
 
+def bounded_description(instructions):
+    """Recognize plain or simple folded scalar; unsupported YAML stays on HOLD."""
+    header = instructions.splitlines()[1:]
+    header = header[:header.index("---")] if "---" in header else []
+    matches = [i for i, line in enumerate(header) if line.startswith("description:")]
+    if len(matches) != 1:
+        return None
+    i = matches[0]
+    value = header[i].split(":", 1)[1].strip()
+    following = []
+    for line in header[i+1:]:
+        if line and not line.startswith(" "):
+            break
+        following.append(line)
+    if value in {">", ">-"}:
+        if not following or any(not line.strip() or not line.startswith("  ") or
+                                line.startswith("   ") for line in following):
+            return None
+        value = " ".join(line.strip() for line in following)
+        if "\\x00" in value:
+            return None
+        return value
+    if (following or not value or value[0] in "'\\\"|>&*!{[?#@\x60" or
+            ": " in value or " #" in value):
+        return None
+    return value
+
 def package_name(source, profile):
-    """Microsoft accepts LICENSE.txt but not extensionless LICENSE."""
+    """Preserve the license under a supported text extension for upload hosts."""
     if source == "LICENSE" and "extensions" in profile:
         return "LICENSE.txt"
     return source
@@ -117,17 +157,27 @@ def inspect(folder, host):
     src_names = [f.relative_to(folder).as_posix() for f in files]
     dst_names = [package_name(p, profile) for p in src_names]
     blockers, warnings = [], []
+    if "description_limit" in profile:
+        desc = bounded_description(entrypoint)
+        if desc is None:
+            blockers.append("DESCRIPTION_METADATA_NOT_ASSESSED")
+        elif len(desc) > profile["description_limit"]:
+            blockers.append("DESCRIPTION_OVER_HOST_LIMIT")
     if len(set(dst_names)) != len(dst_names):
         blockers.append("TRANSFORMED_NAME_COLLISION")
     # Enforce host limits on the actual transformed entrypoint, not source.
     length = len(render_package_bytes(folder, "SKILL.md", profile).decode("utf-8"))
+    if len(render_package_bytes(folder, "SKILL.md", profile)) > profile.get("max_entrypoint_bytes", float("inf")):
+        blockers.append("SKILL_MD_OVER_HOST_BYTE_LIMIT")
+    if host == "gemini-apps":
+        warnings.append("NO_EXTERNAL_SCRIPT_REQUESTS_HOST_RUNTIME_NOT_TESTED")
     if length >= profile.get("strict_char_limit", float("inf")):
         blockers.append("SKILL_MD_OVER_HOST_HARD_LIMIT")
     if length >= profile.get("advisory_char_limit", float("inf")):
         warnings.append("SKILL_MD_OVER_HOST_RECOMMENDATION")
     if len(files) > profile.get("max_files", float("inf")):
         blockers.append("MAX_FILES_EXCEEDED")
-    total = sum(f.stat().st_size for f in files)
+    total = sum(len(render_package_bytes(folder, src, profile)) for src in src_names)
     if total > profile.get("max_package_bytes", float("inf")):
         blockers.append("MAX_PACKAGE_BYTES_EXCEEDED")
     source_names = set(src_names)
@@ -146,6 +196,8 @@ def inspect(folder, host):
         if n >= profile.get("advisory_char_limit", float("inf")):
             warnings.append("NESTED_SKILL_MD_OVER_HOST_RECOMMENDATION:" + name)
     for f, src, dst in zip(files, src_names, dst_names):
+        if host == "gemini-apps" and any(part.startswith(".") or part == "__pycache__" for part in Path(dst).parts):
+            blockers.append("HIDDEN_OR_CACHE_FILE:" + dst)
         if len(Path(dst).parts) - 1 > profile.get("max_depth", float("inf")):
             blockers.append("MAX_DEPTH:" + dst)
         if f.stat().st_size > profile.get("max_file_bytes", float("inf")):
@@ -236,7 +288,9 @@ def write_zip(folder, host, output, receipt):
         if hashlib.sha256(adapted).hexdigest() != row["output_sha256"]:
             raise ValueError("ZIP_ADAPTER_DIGEST_MISMATCH")
         payload.append((row["output"], adapted))
-    # Root-level SKILL.md for Microsoft uploads, with no parent directory.
+    if HOSTS[host].get("folder_wrapped"):
+        payload = [(folder.name + "/" + name, data) for name, data in payload]
+    # Upload layout follows the target profile; preserve every member.
     # Preloaded bytes ensure the output never silently changes after hashing.
     with destination.open("xb") as fd:
         with zipfile.ZipFile(fd, mode="w", compression=zipfile.ZIP_DEFLATED) as archive:
@@ -244,7 +298,8 @@ def write_zip(folder, host, output, receipt):
                 archive.writestr(name, data)
     with zipfile.ZipFile(destination) as archive:
         expected = sorted(name for name, _ in payload)
-        if sorted(archive.namelist()) != expected or archive.testzip() is not None:
+        if (sorted(archive.namelist()) != expected or archive.testzip() is not None or
+                any(archive.read(name) != data for name, data in payload)):
             destination.unlink()
             raise ValueError("ZIP_READBACK_FAILED")
     receipt["artifact"] = str(destination)
