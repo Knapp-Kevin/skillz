@@ -137,6 +137,37 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
+    def test_curator_complex_package_all_assessed_hosts(self):
+        slug = "file-lifecycle-curator"
+        package = ROOT / "skills/authored" / slug
+        contract = json.loads((ROOT / "engine/builder/examples" /
+                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
+        self.assertEqual(len(contract["source_blobs"]), 33)
+        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+        scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
+        self.assertEqual(len(scripts), 12)
+        for host in m.compat.HOSTS:
+            with self.subTest(host=host):
+                plan = m.plan(contract, package, host)["plan"]
+                self.assertEqual(len(plan["cases"]), 24)
+                self.assertEqual(plan["script_resource_coverage"], scripts)
+                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
+                self.assertFalse(plan["host_execution_observed"])
+
+    def test_curator_offline_visual_progress_oracle(self):
+        import subprocess
+        package = ROOT / "skills/authored/file-lifecycle-curator"
+        result = subprocess.run([sys.executable, "-B", str(package / "scripts/render_structure.py"),
+                                 "--current", str(package / "examples/structure-progress.json")],
+                                capture_output=True, text=True, timeout=15, check=True)
+        report = json.loads(result.stdout)
+        self.assertEqual(report["status"], "PROVISIONAL_VISUAL_ONLY")
+        self.assertEqual(report["progress"]["planned_relocations"], 3)
+        self.assertEqual(report["progress"]["verified_relocations"], 1)
+        self.assertEqual(report["progress"]["state_counts"]["EXECUTED"], 1)
+        self.assertFalse(report["checkpoint_written"])
+        self.assertTrue({"observed", "proposed", "verified"} <= set(report["visuals"]))
+
     def test_navigator_complex_package_all_assessed_hosts(self):
         slug = "effort-allocation-navigator"
         package = ROOT / "skills/authored" / slug
