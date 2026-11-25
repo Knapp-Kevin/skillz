@@ -39,7 +39,7 @@ HOSTS = {
     "hermes-agent": dict(mode="directory", destination="~/.hermes/skills/<skill>/"),
     # Claude Help Center custom skills: folder-wrapped ZIP and 200-char description.
     "claude-apps": dict(mode="zip", destination="Claude Customize > Skills > Upload",
-                        folder_wrapped=True, description_limit=200),
+                        folder_wrapped=True, description_limit=200, curated_discovery=True),
     "gemini-apps": dict(mode="zip", destination="Gemini Customize > Skills > Upload",
                         extensions=GEMINI_EXTENSIONS, description_limit=1024,
                         max_files=100, max_package_bytes=100_000_000,
@@ -54,6 +54,115 @@ HOSTS = {
                                strict_char_limit=MAX_ENTRYPOINT, extensions=MICROSOFT_EXTENSIONS,
                                max_files=350, max_depth=3, max_package_bytes=10*1024*1024),
 }
+# Curated Claude Apps discovery summaries, bound to exact canonical Git blobs.
+# Do not truncate, infer or silently refresh descriptions after a source change.
+CLAUDE_DISCOVERY = {
+    "agent-failure-boundary-analysis": (
+        "40d8925b488329613289cfa056ec293485687b7e",
+        "Diagnose failed, costly or drifting agent sessions from evidence and authority boundaries; identify plausible causes and testable lessons. Read-only, not incident repair or memory writes.",
+    ),
+    "character-motivation-interview": (
+        "42d10d987e3f430bb2c17aa4e0f1b3fc0a44ad33",
+        "Interview writers to deepen fictional characters, motives, choices and relationships; create a cited character card separating canon from proposals. Never overwrite canon.",
+    ),
+    "ci-guard": (
+        "3468bea1ddd8492a9cb2593efea841194c082be7",
+        "Audit, repair or optimize CI reliability, cost and workflow obligations; preserve proven safeguards and validate evidence before changing merge requirements.",
+    ),
+    "claim-evidence-adjudicator": (
+        "8c347e81615e1bdb711267d692b57f759062a16b",
+        "Adjudicate contested factual claims with falsifiable subclaims, independently identified sources, contradictions and explicit confidence. Not for publishing corrections.",
+    ),
+    "decision-record-steward": (
+        "a1f59719466000dd76b717db0c812712e5b54a49",
+        "Capture or reconcile decision records with owner authority, sourced rationale, supersession and revisit rules. Never silently create policy.",
+    ),
+    "decision-tradeoff-workbench": (
+        "409f03db70691591bdd7cf6bbd543343bb59b8a0",
+        "Compare alternatives or write decision briefs using sourced criteria, evidence, uncertainty, sensitivity and reversibility. Recommend without deciding or purchasing for the user.",
+    ),
+    "develop-melodic-motif": (
+        "78a870045b8f8e1a18ad4f4fd64cd461a35397bb",
+        "Compose or revise original melodic motifs and phrases with explicit notes, rhythmic and range constraints, variations and musical checks. No mastered audio or originality guarantee.",
+    ),
+    "effort-allocation-navigator": (
+        "72bb115f17aa720c6d5025407a435d47b9aa0bb7",
+        "Turn task dumps into dependencies, blockers, effort/payoff tradeoffs and one recommended next action plus a viable alternative. Preserve user choice and private preferences.",
+    ),
+    "evidence-driven-refinement-loop": (
+        "cf159bfd76551698567e5b3972a7e2cb79c5335d",
+        "Refine or harden actual skills, prompts, documents, code and workflows via bounded repairs, adversarial tests and regression evidence. Do not equate checklists with improvement.",
+    ),
+    "federated-source-catalog": (
+        "86b97ccdf0db845e5061af5f00470ac44cf9435b",
+        "Discover, inventory, reconcile, search and cite authorized local, cloud and repository sources using native identities, tags, freshness and permission boundaries. Read-only by default.",
+    ),
+    "file-lifecycle-curator": (
+        "5a8dd109c88b118e6ccb6371901ba0b316de58fd",
+        "Organize authorized files, classify, summarize, index, tag, deduplicate and plan reversible archives; visualize progress and maintain opt-in checkpoints. Read-only by default.",
+    ),
+    "first-run-experience-validator": (
+        "e2d2ec6367e97dd4008488f2098b5b90b9d7b8fd",
+        "Validate fresh-user onboarding against published instructions and a meaningful first outcome. Distinguish desk review, author tests, clean-host and novice evidence from green CI.",
+    ),
+    "healthcare-contract-forensics": (
+        "6d8303ac175a5ca5bc76b895a22870f17a2a5872",
+        "Audit authorized employer healthcare, PBM and benefits contracts for fees, rebates, opaque compensation, billing and audit restrictions. Not clinical advice or personal plan selection.",
+    ),
+    "mcp-tool-surface-auditor": (
+        "12bc7486b76aec0f39584b5b2c512e56103aaa7f",
+        "Compare captured backend tool registry, complete MCP tools/list and host-visible tool inventories. Locate observed differences without inventing cause, access or host support.",
+    ),
+    "meddpicc-opportunity-assurance": (
+        "c1ab2990fa71d29283a5cba21ec012e443a48c28",
+        "Review complex B2B deals with independently authored MEDDPICC-aligned evidence checks, stakeholder mapping, qualification, disconfirmation and honest forecasts. No invented odds or CRM access.",
+    ),
+    "metadata-taxonomy-steward": (
+        "f2ff7f8c98ea78091c51e55782b43fd5faadfc5b",
+        "Design, audit and evolve authorized cross-collection metadata vocabularies, tags and aliases; preserve source labels and test migrations. Read-only proposals, not single-file classification.",
+    ),
+    "narrative-scene-gap-audit": (
+        "864417c74ff1f8a5969d4b29774b09695f685b09",
+        "Audit supplied story outlines or scenes for causal gaps, missing setup/payoff, continuity, character decisions and unresolved threads. Do not rewrite or modify the manuscript.",
+    ),
+    "pr-integration-surgeon": (
+        "bd3d30d5ed64f9e0948d88089b892763ca3bf66a",
+        "Plan dependency-safe PR backlog recovery using exact-head evidence, conflicts, stale checks, review holds, stacks and postmerge proof. A snapshot grants no merge authority.",
+    ),
+    "recursive-refinement-trace": (
+        "82820fec6f9244ecb940796b2b06f910a906940a",
+        "Record and verify authorized public or synthetic skill-refinement attempts in a bounded tamper-evident tree; compare observed branches. No autonomous learning or private history capture.",
+    ),
+    "reference-integrity-auditor": (
+        "d5acaf61f86a1c5465d91fb708b8a60b0387018d",
+        "Audit authorized cross-document references, citations, paths and dependency edges for broken, stale, inaccessible or changed targets and impact. No private target leaks or writes.",
+    ),
+    "repository-readme-architect": (
+        "fae8ef92b4c95127842f303e214caec055ea3821",
+        "Create, improve or audit repository READMEs, onboarding, badges, navigation, links and evidence-backed claims. Not for changing product features, governance or releases.",
+    ),
+    "research-methods-appraiser": (
+        "96330d08e0b4f7dc4d252b0f4d12ebb9ff112cd3",
+        "Appraise scientific or technical research design, measurements, baselines and replication evidence for engineering adoption decisions. Not abstract paraphrasing.",
+    ),
+    "sandler-conversation-strategist": (
+        "4bab4ca1f5ac1a184ed4f38bb3f87d1fb5479ed6",
+        "Coach ethical Sandler-aligned buyer conversations: meeting outcomes, discovery, investment, decisions, objections and follow-through. Independent guidance, not licensed training or CRM automation.",
+    ),
+    "skill-trial-evidence-auditor": (
+        "dbfd874c69dec19a04fc0f8d35bc7ed598275d87",
+        "Audit claimed skill effectiveness using comparable paired trials, verified outcomes, trigger controls, leakage, configurations and uncertainty. Not a benchmark runner or host proof.",
+    ),
+    "source-debt-triage": (
+        "e7a20e87ec8b5514e4eafc0658ab23b71c60b1c7",
+        "Audit codebase maintenance annotations as risk-ranked evidence-bound work; distinguish actionable defects, uncertain markers and obsolete remarks. No automatic edits.",
+    ),
+    "technology-change-intelligence": (
+        "cea048fbe0e74de7f5e508e988e6c5f077bb3a5e",
+        "Deliver interest-led, evidence-grounded technology updates on models, providers, protocols, research, tools or standards. Optional portable profiles, no implied scheduling or subscriptions.",
+    ),
+}
+
 NAME = re.compile(r"^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$")
 MARKDOWN_LINK = re.compile(r"\]\(([^)\n]+)\)")
 
@@ -135,9 +244,42 @@ def package_name(source, profile):
     return source
 
 
+def claude_discovery_bytes(folder, raw):
+    """Adapt only a maintained, exact canonical entrypoint; preserve its full scope."""
+    if folder.resolve().parent != AUTHORED.resolve():
+        return raw
+    record = CLAUDE_DISCOVERY.get(folder.name)
+    if record is None:
+        return raw
+    expected, short = record
+    blob = hashlib.sha1(b"blob " + str(len(raw)).encode("ascii") + b"\0" + raw,
+                        usedforsecurity=False).hexdigest()
+    if blob != expected or not short.strip() or len(short) > 200:
+        return raw
+    original = raw.decode("utf-8")
+    description = bounded_description(original)
+    if description is None or len(description) <= 200:
+        return raw
+    if "\n---\n" not in original:
+        return raw
+    header, body = original.split("\n---\n", 1)
+    header, count = re.subn(r"(?m)^description: >-\n(?:  [^\n]+\n)+",
+                            lambda _: "description: " + json.dumps(short, ensure_ascii=False) + "\n",
+                            header + "\n")
+    if count != 1:
+        return raw
+    adapted = (header + "---\n" + body.rstrip("\n") +
+               "\n\n## Canonical activation scope (preserved)\n\n" + description + "\n")
+    if bounded_description(adapted) != short:
+        return raw
+    return adapted.encode("utf-8")
+
+
 def render_package_bytes(folder, source, profile):
     """Return host-specific bytes without changing the canonical source."""
     raw = (folder / source).read_bytes()
+    if profile.get("curated_discovery") and source == "SKILL.md":
+        return claude_discovery_bytes(folder, raw)
     if "extensions" not in profile or not source.endswith(".md"):
         return raw
     text = raw.decode("utf-8")
@@ -173,8 +315,12 @@ def inspect(folder, host):
     src_names = [f.relative_to(folder).as_posix() for f in files]
     dst_names = [package_name(p, profile) for p in src_names]
     blockers, warnings = [], []
+    rendered_entrypoint = render_package_bytes(folder, "SKILL.md", profile)
+    adapted_entrypoint = rendered_entrypoint.decode("utf-8")
+    if profile.get("curated_discovery") and rendered_entrypoint != (folder / "SKILL.md").read_bytes():
+        warnings.append("CLAUDE_DISCOVERY_DESCRIPTION_ADAPTED_CANONICAL_SCOPE_PRESERVED")
     if "description_limit" in profile:
-        desc = bounded_description(entrypoint)
+        desc = bounded_description(adapted_entrypoint)
         if desc is None:
             blockers.append("DESCRIPTION_METADATA_NOT_ASSESSED")
         elif len(desc) > profile["description_limit"]:
@@ -182,8 +328,8 @@ def inspect(folder, host):
     if len(set(dst_names)) != len(dst_names):
         blockers.append("TRANSFORMED_NAME_COLLISION")
     # Enforce host limits on the actual transformed entrypoint, not source.
-    length = len(render_package_bytes(folder, "SKILL.md", profile).decode("utf-8"))
-    if len(render_package_bytes(folder, "SKILL.md", profile)) > profile.get("max_entrypoint_bytes", float("inf")):
+    length = len(adapted_entrypoint)
+    if len(rendered_entrypoint) > profile.get("max_entrypoint_bytes", float("inf")):
         blockers.append("SKILL_MD_OVER_HOST_BYTE_LIMIT")
     if host == "gemini-apps":
         warnings.append("NO_EXTERNAL_SCRIPT_REQUESTS_HOST_RUNTIME_NOT_TESTED")
