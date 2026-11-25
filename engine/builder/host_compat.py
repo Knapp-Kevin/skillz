@@ -86,10 +86,12 @@ def authored_admission(reports, skills=None):
             unexpected.append({"skill": pair[0], "host": pair[1],
                                "blockers": ["DUPLICATE_OR_UNKNOWN_MATRIX_PAIR"]})
         seen.add(pair)
-        if report["package_ready"]:
-            continue
-        pair = (report["skill"], report["host"])
         reasons = set(report["blockers"])
+        if report["package_ready"]:
+            if not report["format_valid"] or reasons:
+                unexpected.append({"skill": pair[0], "host": pair[1],
+                                   "blockers": ["CONTRADICTORY_PACKAGE_READY_RECEIPT"]})
+            continue
         row = {"skill": pair[0], "host": pair[1], "blockers": sorted(reasons)}
         allowed = AUTHORED_HOLD_EXCEPTIONS.get(pair, frozenset())
         if report["format_valid"] and reasons and reasons <= allowed:

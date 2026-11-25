@@ -44,14 +44,15 @@ class HostCompatibilityTests(unittest.TestCase):
             with self.subTest(changed=changed):
                 self.assertEqual(module.authored_admission([changed])["status"],
                                  "HOLD_UNEXPECTED_PACKAGE_BLOCKERS")
-        self.assertEqual(module.authored_admission([dict(known, package_ready=True)])["status"],
+        self.assertEqual(module.authored_admission([dict(known, package_ready=True, blockers=[])])["status"],
                          "STATIC_ADMISSION_READY")
 
     def test_authored_admission_requires_complete_unique_matrix(self):
         reports = [module.inspect(self.skill, host) for host in module.HOSTS]
         self.assertEqual(module.authored_admission(reports, [self.skill.name])["status"],
                          "STATIC_ADMISSION_READY")
-        for broken in (reports[:-1], reports + [reports[0]]):
+        for broken in (reports[:-1], reports + [reports[0]],
+                       [dict(reports[0], blockers=["BROKEN_LOCAL_LINK:fixture"])] + reports[1:]):
             self.assertEqual(module.authored_admission(broken, [self.skill.name])["status"],
                              "HOLD_UNEXPECTED_PACKAGE_BLOCKERS")
 

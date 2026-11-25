@@ -118,7 +118,7 @@ def build(output):
         entry = {"id": slug, "package_tree_sha": tree, "skill_blob_sha": blob,
                  "license": "MIT", "canonical": {"asset": archive.name, "sha256": digest(archive)}, "hosts": {}}
         profiles = {h: host_compat.inspect(folder, h) for h in host_compat.HOSTS}
-        admission = host_compat.authored_admission(profiles.values())
+        admission = host_compat.authored_admission(profiles.values(), [slug])
         if admission["unexpected_holds"]:
             raise ValueError("authored portability admission failed: " + json.dumps(admission["unexpected_holds"]))
         ms = profiles["m365-copilot-chat"]
