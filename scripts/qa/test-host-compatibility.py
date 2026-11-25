@@ -186,6 +186,64 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertEqual(result["artifact_status"], "CREATED_NOT_UPLOADED")
         self.assertEqual(result["host_loaded"], "NOT_TESTED")
 
+    def test_claude_upload_preserves_folder_wrapper(self):
+        result = module.inspect(self.skill, "claude-apps")
+        self.assertTrue(result["package_ready"], result["blockers"])
+        dest = self.root / "claude.zip"
+        module.write_zip(self.skill, "claude-apps", str(dest), result)
+        with zipfile.ZipFile(dest) as archive:
+            self.assertEqual(set(archive.namelist()), {
+                "demo-skill/SKILL.md", "demo-skill/LICENSE",
+                "demo-skill/references/guide.md"})
+        self.assertEqual(result["behavior_tested"], "NOT_TESTED")
+
+    def test_claude_description_limit_does_not_apply_to_gemini(self):
+        file = self.skill / "SKILL.md"
+        file.write_text("---\nname: demo-skill\ndescription: >-\n  " +
+                        "x" * 201 + "\n---\n\n# Demo\n")
+        self.assertIn("DESCRIPTION_OVER_HOST_LIMIT",
+                      module.inspect(self.skill, "claude-apps")["blockers"])
+        self.assertTrue(module.inspect(self.skill, "gemini-apps")["package_ready"])
+
+    def test_ambiguous_description_not_treated_as_valid(self):
+        file = self.skill / "SKILL.md"
+        file.write_text("---\nname: demo-skill\ndescription: *alias\n---\n\n# Demo\n")
+        for host in ("claude-apps", "gemini-apps"):
+            self.assertIn("DESCRIPTION_METADATA_NOT_ASSESSED",
+                          module.inspect(self.skill, host)["blockers"])
+
+    def test_gemini_upload_root_and_license_link(self):
+        file = self.skill / "SKILL.md"
+        file.write_text(file.read_text() + "\nSee [license](LICENSE).\n")
+        result = module.inspect(self.skill, "gemini-apps")
+        self.assertTrue(result["package_ready"], result["blockers"])
+        dest = self.root / "gemini.zip"
+        module.write_zip(self.skill, "gemini-apps", str(dest), result)
+        with zipfile.ZipFile(dest) as archive:
+            self.assertEqual(set(archive.namelist()),
+                             {"SKILL.md", "LICENSE.txt", "references/guide.md"})
+            self.assertIn("](LICENSE.txt)", archive.read("SKILL.md").decode())
+            self.assertEqual(archive.read("LICENSE.txt"),
+                             (self.skill / "LICENSE").read_bytes())
+        self.assertIn("](LICENSE)", file.read_text())
+
+    def test_gemini_unsupported_content_and_file_count_hold(self):
+        (self.skill / "app.ts").write_text("export const n = 1;")
+        for i in range(98):
+            (self.skill / f"ref-{i}.txt").write_text("fictional")
+        result = module.inspect(self.skill, "gemini-apps")
+        self.assertIn("UNSUPPORTED_EXTENSION:app.ts", result["blockers"])
+        self.assertIn("MAX_FILES_EXCEEDED", result["blockers"])
+        self.assertFalse(result["package_ready"])
+
+    def test_gemini_script_constraint_is_not_execution_proof(self):
+        (self.skill / "tool.py").write_text("print('fictional')\n")
+        result = module.inspect(self.skill, "gemini-apps")
+        self.assertIn("NO_EXTERNAL_SCRIPT_REQUESTS_HOST_RUNTIME_NOT_TESTED",
+                      result["warnings"])
+        self.assertEqual(result["host_loaded"], "NOT_TESTED")
+        self.assertEqual(result["behavior_tested"], "NOT_TESTED")
+
     def test_repo_navigator_entrypoint_limit_and_reference_closure(self):
         navigator = ROOT / "skills" / "authored" / "effort-allocation-navigator"
         if not navigator.exists():
