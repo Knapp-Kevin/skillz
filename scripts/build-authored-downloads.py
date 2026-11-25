@@ -130,6 +130,12 @@ def build(output):
         if ms["package_ready"]:
             variant = output / (slug + "-m365.zip")
             host_compat.write_zip(folder, "m365-copilot-chat", str(variant), ms)
+        claude = None
+        claude_report = profiles["claude-apps"]
+        if claude_report["package_ready"] and any(
+                member["sha256"] != member["output_sha256"] for member in claude_report["manifest"]):
+            claude = output / (slug + "-claude.zip")
+            host_compat.write_zip(folder, "claude-apps", str(claude), claude_report)
         gemini = None
         if profiles["gemini-apps"]["package_ready"]:
             gemini = output / (slug + "-gemini.zip")
@@ -138,6 +144,8 @@ def build(output):
             ready = report["package_ready"]
             microsoft = h.startswith("m365-")
             asset = (variant.name if variant is not None else None) if microsoft else archive.name
+            if h == "claude-apps" and claude is not None:
+                asset = claude.name
             if h == "gemini-apps":
                 asset = gemini.name if gemini is not None else None
             if ready and asset is None:
@@ -148,7 +156,7 @@ def build(output):
         add_manual_host_statuses(entry["hosts"])
         manifest["skills"].append(entry)
     (output / "authored-download-manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
-    print(f"Verified {len(rows)} canonical authored ZIPs; {len(list(output.glob('*-m365.zip')))} Microsoft variants; {len(list(output.glob('*-gemini.zip')))} Gemini variants; source {commit}")
+    print(f"Verified {len(rows)} canonical authored ZIPs; {len(list(output.glob('*-m365.zip')))} Microsoft variants; {len(list(output.glob('*-claude.zip')))} Claude variants; {len(list(output.glob('*-gemini.zip')))} Gemini variants; source {commit}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)

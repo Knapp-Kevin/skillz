@@ -40,7 +40,7 @@ If a published snapshot is older than current main, inspect the exact published 
 
 ### Claude web, desktop and Cowork
 
-1. Check `claude-apps` in the manifest. If PACKAGE_READY, keep the canonical folder-wrapped ZIP intact. Claude's documented description limit is 200 characters; a longer or unassessed description remains HOLD. Do not truncate it automatically. Enable code execution/file creation only if required and permitted.
+1. Check `claude-apps` in the manifest. If PACKAGE_READY, download and verify the exact listed asset. This is either the canonical folder-wrapped ZIP or a dedicated `-claude.zip` with a curated discovery description of at most 200 characters. The adapted archive preserves the original instruction body, full canonical activation scope, license and supporting files. Do not automatically truncate descriptions or substitute the canonical ZIP when the manifest selects an adapted archive. Changed, unmatched or unassessed source stays HOLD if it exceeds the limit. Enable code execution/file creation only if required and permitted.
 2. Open Customize > Skills, use the plus/create menu, select the upload option and choose the complete ZIP.
 3. Confirm the skill is listed and enabled. Test it in the intended Claude surface; organization sharing requires separate consent. [Official Claude guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
@@ -180,7 +180,7 @@ folder. Neither command installs or uploads anything. The Microsoft and Gemini u
 preserve the canonical source while renaming an extensionless `LICENSE`
 to `LICENSE.txt` **in the distribution artifact only**, rewriting valid
 relative license links and checking transformed output digests. Unsupported
-file types and missing references remain packaging HOLDs. Gemini's static profile also checks its documented file count, byte limits and description length; Claude apps use the canonical folder archive and check the separate description limit. Neither profile confirms account entitlement, upload scanning or model execution.
+file types and missing references remain packaging HOLDs. Gemini's static profile also checks its documented file count, byte limits and description length; Claude apps check the separate description limit and select either the canonical folder archive or a source-pinned `-claude.zip` variant. Curated variants are generated only for explicitly maintained canonical source blobs; any changed source must be reassessed before its adapted variant can be published. Neither profile confirms account entitlement, upload scanning or model execution.
 
 An actual host may still lack required Python modules, tool permissions,
 connectors, network access or account features. In Microsoft's skill sandbox,
