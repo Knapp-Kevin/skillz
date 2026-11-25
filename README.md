@@ -16,9 +16,9 @@
 
 ### Download and install a skill manually
 
-1. Open the [authored skill catalog](skills/authored/README.md). Choose a skill that matches your task and select its individual **ZIP** link.
-2. Open the [download manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json). Confirm the source revision and SHA-256, then inspect the complete package, including its license, instructions and supporting files. Third-party references are not included in these authored archives.
-3. Follow the [manual installation instructions for your exact AI environment](docs/getting-started-with-skills.md#manual-installation-steps-by-environment). Some hosts use ZIP uploads, some use skill folders; Microsoft has separate root-level packages and compatibility holds.
+1. Open the [authored skill catalog](skills/authored/README.md), choose a skill and identify your exact AI host. The individual **ZIP** links are canonical source archives.
+2. Open the [download manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json). Select the host's `PACKAGE_READY` asset and download it from that same source-pinned release, following the [download and checksum guide](docs/getting-started-with-skills.md#download-your-skill). Verify its SHA-256 and inspect the complete package, license, instructions and supporting files. If the host is held, stop at the documented fallback; do not substitute a different archive.
+3. Follow the [manual installation instructions for your exact AI environment](docs/getting-started-with-skills.md#manual-installation-steps-by-environment). Claude Apps may need a `-claude.zip` variant; Gemini Apps and Microsoft use separate root-level archives. Third-party references are not bundled.
 4. Confirm that the skill is available in your AI. Try a small task using fictional or public data and check the actual result. If it cannot run safely, stop at a portable handoff.
 
 **First useful result:** For example, download [Effort Allocation Navigator](https://github.com/Knapp-Kevin/skillz/releases/latest/download/effort-allocation-navigator.zip). After following the host guide, ask the agent to prioritize three fictional tasks: fix a broken build, update a FAQ, and reorganize a folder. Expect one justified next action and a viable alternative, without invented dependencies or unauthorized writes. This is a trial prompt, not a claim of tested behavior in your host.

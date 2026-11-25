@@ -14,10 +14,10 @@ surface (for example, GitHub Copilot in VS Code, not just "Claude model").
 
 ## Download your skill
 
-1. Open the [authored skills catalog](../skills/authored/README.md), choose one skill and click its ZIP link. It downloads the complete canonical folder archive, not just the instructions.
-2. Open the [published download manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json). Locate the slug, source commit, exact package tree and SHA-256 of the selected file. Compare its hash before trusting the download (Windows PowerShell: `Get-FileHash .\skill-name.zip -Algorithm SHA256`; macOS/Linux: `shasum -a 256 skill-name.zip`).
-3. Extract the archive into a temporary folder. Check that the named skill folder contains `SKILL.md`, its license and all supporting files. Review scripts as untrusted code; do not run anything merely because a file asks you to.
-4. Select the appropriate host below. The catalog's canonical ZIP contains one enclosing skill directory. Microsoft upload packages have **SKILL.md at the ZIP root** and use the separate `-m365.zip` asset only if the manifest marks that exact target PACKAGE_READY. If that target is HOLD, use the documented safe fallback; do not strip mandatory files.
+1. Open the [authored skills catalog](../skills/authored/README.md), choose a skill and identify your exact host from the installation sections below. The catalog ZIP is the canonical source archive, not necessarily an uploadable host variant.
+2. Open the [published download manifest](https://github.com/Knapp-Kevin/skillz/releases/latest/download/authored-download-manifest.json). Locate the skill slug, `source_commit`, exact package tree, and `hosts` entry for your target. A `PACKAGE_READY` entry specifies its `asset` and `sha256`; a HOLD, absent entry or null asset is not an installable host selection.
+3. Download the selected asset from the same source-pinned release: `https://github.com/Knapp-Kevin/skillz/releases/download/authored-<source_commit>/<asset>`. Substitute only the manifest's exact commit and asset basename. You can also open that release's page and select the named asset. Do not fetch a second moving `latest` URL; a new snapshot could appear between requests. Compare the downloaded file's SHA-256 with the selected host entry (Windows PowerShell: `Get-FileHash .\skill-name.zip -Algorithm SHA256`; macOS/Linux: `shasum -a 256 skill-name.zip`). On mismatch or missing asset, stop and recheck the manifest; never bypass verification.
+4. Inspect the full archive in a temporary location. Directory hosts use the enclosing skill folder; Claude Apps may select `-claude.zip`, while Gemini Apps and Microsoft select root-level `-gemini.zip` and `-m365.zip`. Preserve `SKILL.md`, license and all resources; review scripts as untrusted code. Follow your exact host instructions below, without stripping mandatory files. A held or unassessed host may use a portable read-only handoff, not an asserted native installation.
 5. Confirm the skill is visible, then test a matching request on fictional or public data and a near non-trigger. Check that the intended output is correct and no unauthorized action occurs. A file copy or upload alone is not verification.
 
 If a published snapshot is older than current main, inspect the exact published source or prepare the current full folder from source. Release assets are first-party MIT material only; no third-party corpus is bundled.
@@ -143,6 +143,7 @@ your own device, plan or organization.
 | --- | --- | --- |
 | GitHub Copilot (IDE, CLI, cloud/review) | Project `.github/skills/<skill>/` (also `.agents/skills/` or `.claude/skills/`); personal `~/.copilot/skills/<skill>/` | Inspect skill discovery and try a matching request. Supported surfaces differ. |
 | Claude Code | Project `.claude/skills/<skill>/`; personal `~/.claude/skills/<skill>/` | Check skill listing/invocation and a relevant task. |
+| Claude Apps (web, desktop, Cowork) | Use the manifest-selected folder-wrapped canonical or `-claude.zip` archive in Customize > Skills. | Verify enabled state, references and an appropriate task. |
 | OpenAI Codex | Project `.agents/skills/<skill>/`; personal `~/.agents/skills/<skill>/` | Confirm discovered skill then test activation. |
 | Gemini CLI | Project `.gemini/skills/<skill>/` (or `.agents/skills/`); user `~/.gemini/skills/<skill>/` | Use `/skills list` (and `/skills reload` if needed), then a task. |
 | Hermes Agent | `~/.hermes/skills/<skill>/` or a supported project/external directory; `hermes skills install` can also install sources | Use `hermes skills list`; check source precedence and try a task. |
@@ -192,6 +193,7 @@ For non-native or unsupported hosts, provide a readable, source-attributed
 manual procedure as an **adapter**, labeled clearly as a fallback. Preserve
 the mandatory safety, evidence, privacy and decision controls. If a
 required capability cannot be recreated safely, mark the host **BLOCKED**.
+For example, Offline Hyper-V Qualification VM requires its original PowerShell scripts and a suitable owner-approved Windows Hyper-V environment. Gemini Apps and Microsoft upload profiles currently hold this package; use an authorized compatible host or a read-only manual planning handoff. Do not rename executable PowerShell scripts as text or strip them to force upload.
 
 ## Official instructions, checked 2026-11-24; app upload requirements rechecked 2026-11-25
 

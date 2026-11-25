@@ -46,6 +46,22 @@ class OnboardingTests(unittest.TestCase):
         self.assertEqual(len(downloads), len(ids))
         self.assertIn("## Manual installation steps by environment", read("docs/getting-started-with-skills.md"))
 
+    def test_host_asset_selection_and_release_identity_precede_installation(self):
+        guide = read("docs/getting-started-with-skills.md")
+        download = guide.split("## Download your skill", 1)[1].split("## Manual installation", 1)[0]
+        for phrase in ("source_commit", "PACKAGE_READY", "hosts", "sha256",
+                       "releases/download/authored-<source_commit>/<asset>",
+                       "Do not fetch a second moving", "-claude.zip", "-gemini.zip", "-m365.zip"):
+            self.assertIn(phrase, download)
+        self.assertLess(download.index("PACKAGE_READY"), download.index("Download the selected asset"))
+        self.assertLess(download.index("Compare the downloaded"), download.index("Follow your exact host"))
+        for path in ("README.md", "skills/authored/README.md", "AGENT_START_HERE.md", "AGENTS.md"):
+            source = read(path)
+            self.assertIn("source-pinned", source, path)
+            self.assertIn("#download-your-skill", source, path)
+        self.assertIn("| Claude Apps (web, desktop, Cowork) |", guide)
+        self.assertIn("Do not rename executable PowerShell scripts as text", guide)
+
     def test_architect_local_links_and_document_first_profile(self):
         asset = ROOT / "docs/assets/skillz-original-banner.png"
         # The original committed banner identity must not drift silently.
