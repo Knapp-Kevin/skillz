@@ -137,6 +137,35 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
+    def test_navigator_complex_package_all_assessed_hosts(self):
+        slug = "effort-allocation-navigator"
+        package = ROOT / "skills/authored" / slug
+        contract = json.loads((ROOT / "engine/builder/examples" /
+                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
+        self.assertEqual(len(contract["source_blobs"]), 18)
+        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+        expected_scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
+        self.assertEqual(len(expected_scripts), 7)
+        for host in m.compat.HOSTS:
+            with self.subTest(host=host):
+                result = m.plan(contract, package, host)["plan"]
+                self.assertEqual(len(result["cases"]), 18)
+                self.assertEqual(result["script_resource_coverage"], expected_scripts)
+                self.assertEqual({c["status"] for c in result["cases"]}, {"NOT_RUN"})
+                self.assertFalse(result["consumer_accepted"])
+
+    def test_navigator_offline_focus_oracle(self):
+        import subprocess
+        package = ROOT / "skills/authored/effort-allocation-navigator"
+        result = subprocess.run([sys.executable, "-B", str(package / "scripts/plan.py"),
+                                 "--input", str(package / "examples/fictional-user-focus.json")],
+                                capture_output=True, text=True, timeout=15, check=True)
+        report = json.loads(result.stdout)
+        self.assertEqual([c["task_id"] for c in report["choices"]],
+                         ["review-notes", "draft-note"])
+        self.assertEqual(report["focus_resolution"], "CONTINUED_ELIGIBLE_SELECTION")
+        self.assertNotIn("Review fictional public project notes", result.stdout)
+
     def test_authority_boundary_corpus_batch_all_assessed_hosts(self):
         for slug in ("decision-record-steward", "agent-workspace-footprint-assessor",
                      "connector-capability-risk-review"):
