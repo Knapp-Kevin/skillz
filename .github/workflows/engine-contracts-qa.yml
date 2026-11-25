@@ -21,6 +21,7 @@ on:
       - 'scripts/qa/test-engine-builder-design.py'
       - 'scripts/qa/test-engine-feedback-boundary.py'
       - 'scripts/qa/test-host-compatibility.py'
+      - 'scripts/qa/test-host-acceptance.py'
       - 'docs/getting-started-with-skills.md'
       - 'skills/authored/**'
       - 'registry/authored-skills-index.json'
@@ -56,6 +57,7 @@ jobs:
           python3 -B scripts/qa/test-engine-builder-design.py
           python3 -B scripts/qa/test-engine-feedback-boundary.py
           python3 -B scripts/qa/test-host-compatibility.py
+          python3 -B scripts/qa/test-host-acceptance.py
           python3 -B scripts/qa/test_sales_methodology_contract.py
       - name: Full authored host packaging matrix and admission gate
         shell: bash

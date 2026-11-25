@@ -210,6 +210,10 @@ For example, Offline Hyper-V Qualification VM requires its original PowerShell s
 - [ChatGPT Skills help](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - [Anthropic Claude Code Skills](https://code.claude.com/docs/en/skills)
 
+For an actual authorized trial, the optional [native host acceptance protocol](../engine/builder/host-acceptance.md)
+provides a private evidence checklist and offline receipt consistency checker.
+No checker output certifies that a host installed or ran the skill.
+
 **Completion rule:** a successfully formatted package is not a successful
 user deployment. The handoff ends only when the intended target's current
 installation status, next action and verification evidence are explicit.
