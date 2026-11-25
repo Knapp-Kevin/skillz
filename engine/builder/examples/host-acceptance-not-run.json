@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "skill": "fictional-notes",
+  "host": "claude-apps",
+  "source_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "package_tree_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "asset": "fictional-notes-claude.zip",
+  "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "environment": {
+    "surface": "fictional-surface",
+    "host_version": "fictional-version",
+    "model": "fictional-model",
+    "configuration_id": "fictional-config",
+    "isolation_id": "fictional-isolation",
+    "actor_id": "fictional-actor"
+  },
+  "execution_kind": "NOT_RUN",
+  "authorization": "NOT_ESTABLISHED",
+  "cases": [
+    {
+      "stage": "load",
+      "status": "NOT_RUN",
+      "evidence_id": null,
+      "oracle_id": null
+    },
+    {
+      "stage": "positive_trigger",
+      "status": "NOT_RUN",
+      "evidence_id": null,
+      "oracle_id": null
+    },
+    {
+      "stage": "near_non_trigger",
+      "status": "NOT_RUN",
+      "evidence_id": null,
+      "oracle_id": null
+    },
+    {
+      "stage": "outcome",
+      "status": "NOT_RUN",
+      "evidence_id": null,
+      "oracle_id": null
+    },
+    {
+      "stage": "authority_boundary",
+      "status": "NOT_RUN",
+      "evidence_id": null,
+      "oracle_id": null
+    },
+    {
+      "stage": "cleanup",
+      "status": "NOT_RUN",
+      "evidence_id": null,
+      "oracle_id": null
+    }
+  ]
+}

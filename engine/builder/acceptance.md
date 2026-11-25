@@ -64,6 +64,11 @@ persistence, permissions and installation method separately. Unknown
 or untested host behavior must not become READY_TO_UPLOAD or INSTALLED
 on a static receipt alone.
 
+For an authorized native host trial, use the [host acceptance protocol](host-acceptance.md)
+to bind exact artifact identity and separate loading, triggering, non-trigger,
+meaningful outcome, authority and reset observations. A consistent claim
+receipt is not an authenticated observation or independent acceptance.
+
 ## Gate 3: Outcome-first challenge
 
 Compare the finished package against an actual **positive trigger**,

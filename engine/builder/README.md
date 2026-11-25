@@ -250,6 +250,14 @@ assertion of universal consumer acceptance. Unknown hosts require review,
 not guessed compatibility. Add host adapters only after official method
 verification, and preserve one canonical portable package.
 
+## Native host evidence (optional)
+
+Use the [native host acceptance protocol](host-acceptance.md) after static
+preflight for actual bounded host trials. The read-only `host_acceptance.py`
+checks exact manifest/archive identity and consistency of recorded stage
+claims, without authenticating or executing them. It cannot promote a skill
+to validated. No live trial is required for static source admission.
+
 ## Evaluation and bounded refinement
 
 Run:
