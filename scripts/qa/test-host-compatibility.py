@@ -205,6 +205,20 @@ class HostCompatibilityTests(unittest.TestCase):
                       module.inspect(self.skill, "claude-apps")["blockers"])
         self.assertTrue(module.inspect(self.skill, "gemini-apps")["package_ready"])
 
+    def test_builder_json_quoted_description_and_exact_limit(self):
+        import json
+        file = self.skill / "SKILL.md"
+        for text, ready in (('A "quoted" description ' + "x" * 178, True),
+                            ("x" * 201, False)):
+            self.assertEqual(len(text), 200 if ready else 201)
+            file.write_text("---\nname: demo-skill\ndescription: " +
+                            json.dumps(text, ensure_ascii=False) + "\n---\n")
+            report = module.inspect(self.skill, "claude-apps")
+            self.assertEqual(report["package_ready"], ready, report["blockers"])
+        file.write_text('---\nname: demo-skill\ndescription: "valid" # extra\n---\n')
+        self.assertIn("DESCRIPTION_METADATA_NOT_ASSESSED",
+                      module.inspect(self.skill, "claude-apps")["blockers"])
+
     def test_ambiguous_description_not_treated_as_valid(self):
         file = self.skill / "SKILL.md"
         file.write_text("---\nname: demo-skill\ndescription: *alias\n---\n\n# Demo\n")
