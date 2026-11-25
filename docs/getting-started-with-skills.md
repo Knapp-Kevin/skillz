@@ -22,7 +22,7 @@ surface (for example, GitHub Copilot in VS Code, not just "Claude model").
 
 If a published snapshot is older than current main, inspect the exact published source or prepare the current full folder from source. Release assets are first-party MIT material only; no third-party corpus is bundled.
 
-**Read your host's manifest status before installation.** `PACKAGE_READY` means the static package profile passed, not that the host loaded or ran it. `HOLD` means packaging is blocked or has not been assessed; read its `blockers` before proceeding. The `chatgpt`, `claude-apps`, `gemini-apps` and `openclaude-other` entries deliberately remain HOLD until their exact host-specific packaging requirements can be established and assessed. A canonical source ZIP is still available for inspection and portable handoff, but a null host asset is not a validated upload package. Older manifests may omit these entries; an absent host means unassessed, never ready.
+**Read your host's manifest status before installation.** `PACKAGE_READY` means the static package profile passed, not that the host loaded or ran it. `HOLD` means packaging is blocked or has not been assessed; read its `blockers` before proceeding. The `chatgpt` and `openclaude-other` entries deliberately remain HOLD until their exact host-specific packaging requirements can be established and assessed. Claude apps and Gemini Apps have separately checked static profiles; individual skills may still be held. A canonical source ZIP is still available for inspection and portable handoff, but a null host asset is not a validated upload package. Older manifests may omit these entries; an absent host means unassessed, never ready.
 
 ## Manual installation steps by environment
 
@@ -40,13 +40,13 @@ If a published snapshot is older than current main, inspect the exact published 
 
 ### Claude web, desktop and Cowork
 
-1. Keep the canonical ZIP intact. In eligible Claude accounts enable code execution/file creation if required and permitted.
+1. Check `claude-apps` in the manifest. If PACKAGE_READY, keep the canonical folder-wrapped ZIP intact. Claude's documented description limit is 200 characters; a longer or unassessed description remains HOLD. Do not truncate it automatically. Enable code execution/file creation only if required and permitted.
 2. Open Customize > Skills, use the plus/create menu, select the upload option and choose the complete ZIP.
 3. Confirm the skill is listed and enabled. Test it in the intended Claude surface; organization sharing requires separate consent. [Official Claude guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
 ### ChatGPT
 
-1. Download and inspect the canonical ZIP. In an eligible account open Plugins > Skills, then Create > Upload from your computer.
+1. Download and inspect the canonical ZIP. The official help lists eligible Business, Enterprise, Healthcare and Edu accounts, subject to workspace settings. In an eligible account open Plugins > Skills, then Create > Upload from your computer. The exact upload profile remains HOLD; confirm the supported layout before proceeding.
 2. Select the supported package in the upload picker. If the picker requires a different supported layout, retain all required files and follow the current official help; do not silently downgrade to a bare instruction file.
 3. Wait for scanning and review any Needs Review or Blocked state. Check the skill in the installed list and try an appropriate task. If Skills is not available in this account, use portable handoff only. [Official ChatGPT Skills help](https://help.openai.com/en/articles/20001066-skills-in-chatgpt).
 
@@ -63,9 +63,9 @@ If a published snapshot is older than current main, inspect the exact published 
 
 ### Gemini Apps (web and supported desktop/mobile)
 
-1. Open Gemini's Customize > Skills page. Choose Create, then Upload.
-2. Select the extracted skill folder containing `SKILL.md` and references, or the ZIP if the current picker supports that layout. Review and save the skill.
-3. Verify reference support, particularly any scripts: internet-requiring scripts are not supported. Test an appropriate prompt. [Official Gemini Apps guide](https://support.google.com/gemini/answer/17094296).
+1. Check `gemini-apps` in the manifest. If PACKAGE_READY, download and verify the listed `-gemini.zip` asset. It contains `SKILL.md` at the archive root with all resources and a lossless `LICENSE.txt` adaptation. Do not upload the folder-wrapped canonical archive as-is.
+2. Open Gemini's Customize > Skills page, choose Create, then Upload. Select the Gemini ZIP or extract it into a single folder and select that folder. Review and save the skill.
+3. Verify included references and test a matching prompt. Scripts cannot make external requests; the static profile does not prove runtime parity. For unsupported files or a HOLD, do not delete required resources to force upload. [Official Gemini Apps guide](https://support.google.com/gemini/answer/17094296) · [Transfer requirements](https://support.google.com/gemini/answer/18977944).
 
 ### Hermes Agent
 
@@ -150,7 +150,7 @@ your own device, plan or organization.
 | Microsoft 365 Agent Builder | Upload complete ZIP with `SKILL.md` at root, observing Agent Builder's limits | Confirm agent's skill is listed, can read bundled references, and executes an approved test. |
 | Microsoft 365 Agents Toolkit | Add a complete skill *directory* under the relevant `appPackage/skills/` path, not a ZIP | Package/deploy with the intended agent and observe invocation. |
 | ChatGPT | Plugins > Skills > Create > Upload from your computer, where available; see detailed steps above. | Check the connected skill in the current host and run a task. |
-| Gemini Apps | Customize > Skills > Create > Upload; select the supported folder or archive. This is **not Gemini CLI** | Confirm it is available in Skills and actually applied in a test. |
+| Gemini Apps | Customize > Skills > Create > Upload; use the manifest-selected root-level `-gemini.zip` or its extracted folder. This is **not Gemini CLI** | Confirm it is available in Skills and actually applied in a test. |
 | OpenClaude and other hosts | **Identify the exact project and official maintained installation docs first**. Names can be shared by unrelated products | Unsupported or unverified paths are handoff-only, not claimed compatible. |
 
 Some host systems allow an agent to write files; others require a user to
@@ -176,11 +176,11 @@ python3 engine/builder/host_compat.py --skill effort-allocation-navigator --host
 
 The ZIP command creates an uploadable archive at an explicitly chosen
 new path, and the directory command creates a separate prepared handoff
-folder. Neither command installs or uploads anything. The Microsoft adapter
-preserves the canonical source while renaming an extensionless `LICENSE`
+folder. Neither command installs or uploads anything. The Microsoft and Gemini upload adapters
+preserve the canonical source while renaming an extensionless `LICENSE`
 to `LICENSE.txt` **in the distribution artifact only**, rewriting valid
 relative license links and checking transformed output digests. Unsupported
-file types and missing references remain packaging HOLDs.
+file types and missing references remain packaging HOLDs. Gemini's static profile also checks its documented file count, byte limits and description length; Claude apps use the canonical folder archive and check the separate description limit. Neither profile confirms account entitlement, upload scanning or model execution.
 
 An actual host may still lack required Python modules, tool permissions,
 connectors, network access or account features. In Microsoft's skill sandbox,
@@ -193,7 +193,7 @@ manual procedure as an **adapter**, labeled clearly as a fallback. Preserve
 the mandatory safety, evidence, privacy and decision controls. If a
 required capability cannot be recreated safely, mark the host **BLOCKED**.
 
-## Official instructions, checked 2026-11-24
+## Official instructions, checked 2026-11-24; app upload requirements rechecked 2026-11-25
 
 - [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)
 - [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/skills/)
@@ -203,7 +203,9 @@ required capability cannot be recreated safely, mark the host **BLOCKED**.
 - [Microsoft Agent Builder upload](https://learn.microsoft.com/en-us/plugins/agent-builder-add-skills)
 - [Microsoft Agents Toolkit](https://learn.microsoft.com/en-us/plugins/build-declarative-agents-add-custom-skills)
 - [OpenAI Skills](https://developers.openai.com/plugins/concepts/skills)
-- [Google Gemini Apps Help](https://support.google.com/gemini/answer/17094296)
+- [Google Gemini Apps Help](https://support.google.com/gemini/answer/17094296) and [transfer requirements](https://support.google.com/gemini/answer/18977944)
+- [Claude custom skill packaging](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
+- [ChatGPT Skills help](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - [Anthropic Claude Code Skills](https://code.claude.com/docs/en/skills)
 
 **Completion rule:** a successfully formatted package is not a successful
