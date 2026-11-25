@@ -32,7 +32,9 @@ GEMINI_EXTENSIONS = frozenset((
     ".csv .ods .xlsx .odp .pptx .jpg .png .svg .gif .heic .ico .jpeg "
     ".tif .webp .py .sh .ipynb .js .css .html .htm .json .toml .xml .yaml .yml"
 ).split())
-SCRIPT_EXTENSIONS = frozenset((".py", ".js", ".mjs", ".cjs", ".ts", ".mts", ".sh", ".bash"))
+SCRIPT_EXTENSIONS = frozenset((".py", ".js", ".mjs", ".cjs", ".ts", ".mts", ".sh", ".bash",
+                               ".ps1", ".psm1", ".psd1", ".bat", ".cmd", ".ipynb",
+                               ".rb", ".pl", ".lua", ".php", ".vbs", ".csx"))
 # Profile paths are *target examples*, not a claim of local host installation.
 HOSTS = {
     "github-copilot": dict(mode="directory", destination=".github/skills/<skill>/"),

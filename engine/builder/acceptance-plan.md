@@ -103,8 +103,17 @@ source_blobs (complete path-to-Git-blob-ID map), and cases. Each case has
 id, kind, source (package-relative Markdown path), anchor (unique exact
 excerpt), setup and expected. Required kinds are load, positive,
 near-non-trigger, outcome, missing-input, false-green, dependency-unavailable,
-authority-boundary and cleanup. Script-bearing packages also require a resource
-case; nested entrypoints each require an anchored nested-skill case.
+authority-boundary and cleanup. Each recognized script resource (including
+PowerShell and Windows command scripts) must be explicitly covered by both
+a resource case and a dependency-unavailable case. These two case kinds
+accept a nonempty resource_paths list of exact package-relative members;
+other kinds cannot declare that field. A case may cover several related
+paths if the concrete fixture and oracle actually check them all. For
+resources used only by maintainers or tests, verify presence and the
+safe non-invocation boundary rather than requiring a consumer to run them.
+The unavailable-capability case must preserve a valid fallback or HOLD;
+never execute code just to prove it exists. Plans bind every target's SHA-256.
+Nested entrypoints each require an anchored nested-skill case.
 These are structural coverage minima, not exhaustive semantic coverage.
 Core cases must cite normative instructions, not just test examples.
 
