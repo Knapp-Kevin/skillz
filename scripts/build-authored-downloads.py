@@ -19,8 +19,6 @@ import host_compat
 # A canonical archive is still available, but it is not a host-ready asset.
 MANUAL_HOSTS = {
     "chatgpt": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
-    "claude-apps": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
-    "gemini-apps": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
     "openclaude-other": "EXACT_HOST_IDENTITY_NOT_ESTABLISHED",
 }
 
@@ -35,7 +33,7 @@ class ManualHostTests(unittest.TestCase):
     def test_unassessed_routes_fail_closed(self):
         hosts = {}
         add_manual_host_statuses(hosts)
-        self.assertEqual(set(hosts), {"chatgpt", "claude-apps", "gemini-apps", "openclaude-other"})
+        self.assertEqual(set(hosts), {"chatgpt", "openclaude-other"})
         for row in hosts.values():
             self.assertEqual(row["status"], "HOLD")
             self.assertIsNone(row["asset"])
@@ -132,19 +130,25 @@ def build(output):
         if ms["package_ready"]:
             variant = output / (slug + "-m365.zip")
             host_compat.write_zip(folder, "m365-copilot-chat", str(variant), ms)
+        gemini = None
+        if profiles["gemini-apps"]["package_ready"]:
+            gemini = output / (slug + "-gemini.zip")
+            host_compat.write_zip(folder, "gemini-apps", str(gemini), profiles["gemini-apps"])
         for h, report in profiles.items():
             ready = report["package_ready"]
             microsoft = h.startswith("m365-")
             asset = (variant.name if variant is not None else None) if microsoft else archive.name
-            if microsoft and ready and variant is None:
-                raise ValueError("Microsoft adapter unexpectedly unavailable")
+            if h == "gemini-apps":
+                asset = gemini.name if gemini is not None else None
+            if ready and asset is None:
+                raise ValueError("host adapter unexpectedly unavailable")
             entry["hosts"][h] = {"status": "PACKAGE_READY" if ready else "HOLD",
                 "asset": asset if ready else None, "sha256": digest(output / asset) if ready else None,
                 "blockers": report["blockers"], "warnings": report["warnings"], "behavior": "NOT_TESTED"}
         add_manual_host_statuses(entry["hosts"])
         manifest["skills"].append(entry)
     (output / "authored-download-manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
-    print(f"Verified {len(rows)} canonical authored ZIPs; {len(list(output.glob('*-m365.zip')))} Microsoft variants; source {commit}")
+    print(f"Verified {len(rows)} canonical authored ZIPs; {len(list(output.glob('*-m365.zip')))} Microsoft variants; {len(list(output.glob('*-gemini.zip')))} Gemini variants; source {commit}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
