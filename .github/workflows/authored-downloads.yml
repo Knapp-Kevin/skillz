@@ -6,6 +6,7 @@ on:
       - 'skills/authored/**'
       - 'registry/authored-skills-index.json'
       - 'scripts/build-authored-downloads.py'
+      - 'scripts/verify-authored-release.py'
       - 'engine/builder/host_compat.py'
       - '.github/workflows/authored-downloads.yml'
   push:
@@ -14,6 +15,7 @@ on:
       - 'skills/authored/**'
       - 'registry/authored-skills-index.json'
       - 'scripts/build-authored-downloads.py'
+      - 'scripts/verify-authored-release.py'
       - 'engine/builder/host_compat.py'
       - '.github/workflows/authored-downloads.yml'
 permissions:
@@ -31,6 +33,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+      - run: python3 -B scripts/verify-authored-release.py --self-test
       - run: python3 -B scripts/build-authored-downloads.py --output "$RUNNER_TEMP/authored-downloads"
   publish:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'Knapp-Kevin/skillz' }}
@@ -58,7 +61,8 @@ jobs:
             live="$(git rev-parse FETCH_HEAD)" || exit 1
             if git diff --quiet "$GITHUB_SHA" "$live" -- \
               skills/authored/ registry/authored-skills-index.json \
-              scripts/build-authored-downloads.py engine/builder/host_compat.py \
+              scripts/build-authored-downloads.py scripts/verify-authored-release.py \
+              engine/builder/host_compat.py \
               .github/workflows/authored-downloads.yml; then
               return 0
             else
@@ -75,16 +79,16 @@ jobs:
           tag="authored-$GITHUB_SHA"
           directory="$RUNNER_TEMP/authored-downloads"
           gh release create "$tag" --target "$GITHUB_SHA" --draft --title "Authored skill downloads ($GITHUB_SHA)" --notes "Original MIT skill packages, source-pinned manifest and SHA-256 hashes. Static packaging only; no host installation or behavior claim." "$directory"/*
-          gh release view "$tag" --json assets,isDraft,tagName > "$RUNNER_TEMP/release.json"
-          python3 - "$directory" "$RUNNER_TEMP/release.json" <<'PY'
-          import json, pathlib, sys
-          directory = pathlib.Path(sys.argv[1])
-          release = json.loads(pathlib.Path(sys.argv[2]).read_text())
-          expected = {p.name: p.stat().st_size for p in directory.iterdir()}
-          actual = {p["name"]: p["size"] for p in release["assets"]}
-          if expected != actual or not release["isDraft"]:
-              raise SystemExit("release asset inventory mismatch")
-          PY
+          python3 -B scripts/verify-authored-release.py --directory "$directory" --repo "$GH_REPO" --tag "$tag"
           assert_current_inputs
           gh release edit "$tag" --draft=false --latest
           gh release view "$tag" --json isDraft,url,tagName,assets --jq '{isDraft,url,tagName,assetCount:(.assets|length)}'
+          # Confirm the anonymous public latest route serves the same manifest
+          # and the README's first-use example, not just an API-visible release.
+          for asset in authored-download-manifest.json effort-allocation-navigator.zip; do
+            curl --fail --silent --show-error --location --retry 3 --retry-all-errors --max-time 30 \
+              "https://github.com/$GH_REPO/releases/latest/download/$asset" \
+              --output "$RUNNER_TEMP/public-$asset"
+            cmp "$directory/$asset" "$RUNNER_TEMP/public-$asset"
+            echo "Verified public latest download: $asset"
+          done
