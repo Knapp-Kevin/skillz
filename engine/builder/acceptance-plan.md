@@ -102,7 +102,12 @@ Surface Auditor pilot](examples/mcp-tool-surface-source-contract.json)
 adds seven exact source blobs, twelve cases, two script targets, separate
 helper-unavailable and maintainer-suite boundaries, and an offline fictional
 18-to-12 comparison oracle. Both native plans are NOT_RUN, not native-host
-passes. The offline fixture test is separate from actual host activation. The contract's fields are schema_version, skill,
+passes. The offline fixture test is separate from actual host activation.
+The authority-boundary batch adds [Decision Record Steward](examples/decision-record-steward-source-contract.json),
+[Agent Workspace Footprint Assessor](examples/agent-workspace-footprint-assessor-source-contract.json)
+and [Connector Capability Risk Review](examples/connector-capability-risk-review-source-contract.json).
+Each adds ten source-anchored cases, including independent outcome, authority,
+missing capability and false-success challenges. These are plans, not observations. The contract's fields are schema_version, skill,
 source_blobs (complete path-to-Git-blob-ID map), and cases. Each case has
 id, kind, source (package-relative Markdown path), anchor (unique exact
 excerpt), setup and expected. Required kinds are load, positive,
