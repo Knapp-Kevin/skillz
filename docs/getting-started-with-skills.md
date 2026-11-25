@@ -22,6 +22,8 @@ surface (for example, GitHub Copilot in VS Code, not just "Claude model").
 
 If a published snapshot is older than current main, inspect the exact published source or prepare the current full folder from source. Release assets are first-party MIT material only; no third-party corpus is bundled.
 
+**Read your host's manifest status before installation.** `PACKAGE_READY` means the static package profile passed, not that the host loaded or ran it. `HOLD` means packaging is blocked or has not been assessed; read its `blockers` before proceeding. The `chatgpt`, `claude-apps`, `gemini-apps` and `openclaude-other` entries deliberately remain HOLD until their exact host-specific packaging requirements can be established and assessed. A canonical source ZIP is still available for inspection and portable handoff, but a null host asset is not a validated upload package. Older manifests may omit these entries; an absent host means unassessed, never ready.
+
 ## Manual installation steps by environment
 
 ### GitHub Copilot (IDE, CLI and cloud)
