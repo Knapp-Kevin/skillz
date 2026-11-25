@@ -159,6 +159,9 @@ class SourceTests(unittest.TestCase):
         result = json.loads(run.stdout)
         self.assertEqual(result["counts"], {"backend_registry": 18, "mcp_list": 18, "host_visible": 12})
         self.assertEqual(result["status"], "OBSERVED_DIFFERENCE")
+        self.assertEqual(result["observed_differences"], [
+            {"boundary": "mcp_list_to_host_visible", "finding": "NOT_VISIBLE_DOWNSTREAM",
+             "name": f"tool_{i:02d}"} for i in range(13, 19)])
         self.assertFalse(result["host_or_server_fault_assigned"])
         self.assertFalse(result["mcp_transport_observed"])
         self.assertFalse(result["tool_invocations_tested"])
