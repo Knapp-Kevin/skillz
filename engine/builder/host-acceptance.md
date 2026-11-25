@@ -32,7 +32,7 @@ oracle, store records or promote a skill to validated.
    with comparable paired conditions; for fresh-user onboarding use the
    [First-Run Experience Validator](../../skills/authored/first-run-experience-validator/SKILL.md).
 
-For builder-generated skills, the [contract-derived acceptance plan](acceptance-plan.md)
+For builder-generated and source-reviewed manually authored skills, the [contract-derived acceptance plan](acceptance-plan.md)
 provides exact-package-bound adversarial cases and a conjunctive mapping to
 the six receipt stages. Use its detailed case ledger reconciler for generated
 skills; the stage-only checker below explicitly reports case_ledger_reconciled

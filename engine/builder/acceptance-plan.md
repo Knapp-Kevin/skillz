@@ -11,10 +11,9 @@ It then checks the selected assessed host and produces a private NOT_RUN plan.
 
 The package folder must have its canonical slug and contain every expected
 file, with no added or changed members. This route covers builder-generated
-original skills; manually authored or adapted packages use the
-[manual native host protocol](host-acceptance.md) until a reviewed
-contract for their actual source is available. Do not force them through
-an unrelated blueprint.
+original skills. For manually authored or adapted packages, use the reviewed
+source route below or the [manual native host protocol](host-acceptance.md).
+Do not force them through an unrelated blueprint.
 
 The output binds the plan to the canonical file SHA-256 map, the dossier
 digest and the selected host member transformation manifest. Every case
@@ -84,3 +83,37 @@ input. A match is a consistency check, not authenticated proof of execution,
 fixture contents, preregistration timing, or independent consumer acceptance.
 Keep the original case plan, private fixtures/oracles and raw observations
 outside the distributed package. Do not publish or transmit them by default.
+
+## Existing or manually authored skills
+
+Use the same case-ledger engine without reconstructing a fictitious design
+dossier. Read the complete package, obtain its exact inventory, then author
+a reviewed source contract with explicit cases and unique verbatim anchors
+in its actual normative instructions. The read-only tool can list its
+Git blob identities and SHA-256 values:
+
+    python3 -B engine/builder/source_acceptance.py --package /private/skill-slug --inventory
+    python3 -B engine/builder/source_acceptance.py --package /private/skill-slug \
+      --contract /private/source-contract.json --host claude-apps
+
+See the [Scheduled Work Proof Auditor pilot](examples/scheduled-work-source-contract.json):
+three exact source blobs and nine concrete fictional cases. It is NOT_RUN,
+not a native-host pass. The contract's fields are schema_version, skill,
+source_blobs (complete path-to-Git-blob-ID map), and cases. Each case has
+id, kind, source (package-relative Markdown path), anchor (unique exact
+excerpt), setup and expected. Required kinds are load, positive,
+near-non-trigger, outcome, missing-input, false-green, dependency-unavailable,
+authority-boundary and cleanup. Script-bearing packages also require a resource
+case; nested entrypoints each require an anchored nested-skill case.
+These are structural coverage minima, not exhaustive semantic coverage.
+Core cases must cite normative instructions, not just test examples.
+
+The tool verifies actual Git blob identities (historical source pins, not
+authenticated trust), records SHA-256 of every canonical member and host
+transformation, and maps each case into the same six stages. Review all
+essential capabilities and add cases as needed. A changed source requires
+re-review, not blind repinning. Use the same acceptance_ledger.py command
+with --source-contract instead of --design to regenerate the source plan,
+verify exact archive member bytes and reconcile case results. Never infer
+real execution or approval from a coherent ledger. Keep consumer inputs and
+observations private.

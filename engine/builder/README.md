@@ -259,7 +259,10 @@ are bound to the plan. Prepare concrete fixtures and independent oracles
 before an authorized native trial; a plan is not an observed result.
 After the trial, use the same protocol's read-only acceptance_ledger.py to
 regenerate the plan, verify all archive member bytes and reconcile each
-case claim to its stage receipt. It does not authenticate observations.
+case claim to its stage receipt. It does not authenticate observations. For existing manually authored skills,
+use the same protocol's source_acceptance.py with a reviewed exact-source
+contract; the included Scheduled Work Proof Auditor pilot exercises that
+route without claiming any native execution.
 
 ## Native host evidence (optional)
 
