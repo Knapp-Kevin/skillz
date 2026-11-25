@@ -79,17 +79,51 @@ jobs:
           assert_current_inputs
           tag="authored-$GITHUB_SHA"
           directory="$RUNNER_TEMP/authored-downloads"
-          gh release create "$tag" --target "$GITHUB_SHA" --draft --title "Authored skill downloads ($GITHUB_SHA)" --notes "Original MIT skill packages, source-pinned manifest and SHA-256 hashes. Static packaging only; no host installation or behavior claim." "$directory"/*
-          python3 -B scripts/verify-authored-release.py --directory "$directory" --repo "$GH_REPO" --tag "$tag"
+          # Verify any pre-existing tag rather than silently publishing under
+          # a tag pointing to a different source commit. Annotated tags use
+          # their peeled commit; a missing tag is allowed only before publish.
+          check_tag() {
+            refs="$(git ls-remote --tags origin "refs/tags/$tag" "refs/tags/$tag^{}")" || exit 1
+            if [ -z "$refs" ]; then
+              [ "$1" = optional ] || { echo "Published tag missing"; exit 1; }
+              return
+            fi
+            actual="$(printf '%s\n' "$refs" | awk -v tag="refs/tags/$tag" '$2 == tag {direct=$1} $2 == tag "^{}" {peeled=$1} END {print (peeled ? peeled : direct)}')"
+            [ "$actual" = "$GITHUB_SHA" ] || { echo "Release tag source mismatch"; exit 1; }
+          }
+          check_tag optional
+          python3 -B scripts/verify-authored-release.py --prepare --directory "$directory" --repo "$GH_REPO" --tag "$tag" --commit "$GITHUB_SHA"
           assert_current_inputs
-          gh release edit "$tag" --draft=false --latest
+          draft="$(gh release view "$tag" --json isDraft --jq .isDraft)"
+          case "$draft" in
+            true) check_tag optional; gh release edit "$tag" --draft=false --latest ;;
+            false) echo "Already published; verified without changing it" ;;
+            *) echo "Unexpected release state"; exit 1 ;;
+          esac
+          check_tag required
           gh release view "$tag" --json isDraft,url,tagName,assets --jq '{isDraft,url,tagName,assetCount:(.assets|length)}'
           # Confirm the anonymous public latest route serves the same manifest
           # and the README's first-use example, not just an API-visible release.
           for asset in authored-download-manifest.json effort-allocation-navigator.zip; do
             curl --fail --silent --show-error --location --retry 3 --retry-all-errors --max-time 30 \
-              "https://github.com/$GH_REPO/releases/latest/download/$asset" \
-              --output "$RUNNER_TEMP/public-$asset"
-            cmp "$directory/$asset" "$RUNNER_TEMP/public-$asset"
+              "https://github.com/$GH_REPO/releases/download/$tag/$asset" \
+              --output "$RUNNER_TEMP/pinned-$asset"
+            cmp "$directory/$asset" "$RUNNER_TEMP/pinned-$asset"
+            echo "Verified public source-pinned download: $asset"
+            # A successful HTTP response can still be an older cached latest.
+            # Retry the byte comparison, not merely transport errors.
+            matched=false
+            for attempt in 1 2 3; do
+              assert_current_inputs
+              if curl --fail --silent --show-error --location --max-time 30 \
+                "https://github.com/$GH_REPO/releases/latest/download/$asset" \
+                --output "$RUNNER_TEMP/public-$asset" && \
+                cmp -s "$directory/$asset" "$RUNNER_TEMP/public-$asset"; then
+                matched=true
+                break
+              fi
+              sleep 2
+            done
+            [ "$matched" = true ] || { echo "Public latest bytes do not match: $asset"; exit 1; }
             echo "Verified public latest download: $asset"
           done
