@@ -32,6 +32,22 @@ must not treat a draft PR or test plan as the delivered outcome. The offline
 `scripts/qa/test_authored_feedback_contract.py` enforces both sections
 and exact-source package fingerprints for every first-party authored skill.
 
+## Mandatory cross-host authoring gate
+
+For all new or revised first-party packages, design against all assessed
+host profiles, not only the authoring agent's environment. Follow the
+[builder compatibility contract](engine/builder/README.md) and
+[skill template](docs/skill-template.md): concise discovery metadata (at
+most 200 characters for general-purpose skills), compact entrypoints,
+complete portable resources, and explicit runtime/authority/fallback rules.
+Run `python3 engine/builder/host_compat.py --skill <slug> --require-authored-ready`
+on the exact finished package. The existing engine and release workflows
+reject unexpected packaging holds; only explicit, exact reviewed intrinsic
+exceptions remain HOLD. No silent narrowing, truncation, resource removal,
+or extension disguise. A new host profile expands the assessed matrix;
+unknown hosts and actual execution remain unverified. This is a maintainer
+rule, not a dependency on the Skillz repository for downloaded skills.
+
 ## Non-negotiable destination boundary
 
 During normal use, **`skillz` is a read-only knowledge source, not the destination for skills derived for a user.**

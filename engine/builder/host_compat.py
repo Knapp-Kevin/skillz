@@ -12,11 +12,14 @@ import json
 from pathlib import Path
 import re
 import sys
+import unicodedata
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 AUTHORED = ROOT / "skills" / "authored"
 MAX_ENTRYPOINT = 20000
+MAX_SKILL_NAME = 64
+BASE_DESCRIPTION_LIMIT = 1024
 MICROSOFT_EXTENSIONS = frozenset((
     ".json .xml .yaml .yml .ini .config .utf8 .docx .doc .docm "
     ".pdf .txt .rtf .md .ppt .pptx .ppsm .xlsx .xls .xlsm .csv .tsv "
@@ -54,6 +57,98 @@ HOSTS = {
                                strict_char_limit=MAX_ENTRYPOINT, extensions=MICROSOFT_EXTENSIONS,
                                max_files=350, max_depth=3, max_package_bytes=10*1024*1024),
 }
+# These are documented routes, not assessed package profiles. Keep them visible
+# in all receipts and release manifests without inventing host requirements.
+UNASSESSED_HOSTS = {
+    "chatgpt": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
+    "openclaude-other": "EXACT_HOST_IDENTITY_NOT_ESTABLISHED",
+}
+
+# Narrow existing exception: functional PowerShell dependencies are essential
+# to the Windows Hyper-V skill. No wildcard, new skill or additional blocker
+# is covered. Changing this policy requires explicit maintainer review.
+HYPERV_REQUIRED_FILES = frozenset({
+    "UNSUPPORTED_EXTENSION:scripts/Connect-QualVm.ps1",
+    "UNSUPPORTED_EXTENSION:scripts/New-OfflineQualVm.ps1",
+    "UNSUPPORTED_EXTENSION:tests/fake/Hyper-V/Hyper-V.psm1",
+    "UNSUPPORTED_EXTENSION:tests/test_synthetic_host.ps1",
+})
+AUTHORED_HOLD_EXCEPTIONS = {
+    ("offline-hyperv-qual-vm", host): HYPERV_REQUIRED_FILES
+    for host in ("gemini-apps", "m365-copilot-chat", "m365-agent-builder",
+                 "m365-agents-toolkit")
+}
+
+
+def authored_admission(reports, skills=None):
+    """Classify assessed pairs; require complete coverage when skills are supplied."""
+    expected, unexpected, seen = [], [], set()
+    for report in reports:
+        pair = (report["skill"], report["host"])
+        if pair in seen or pair[1] not in HOSTS:
+            unexpected.append({"skill": pair[0], "host": pair[1],
+                               "blockers": ["DUPLICATE_OR_UNKNOWN_MATRIX_PAIR"]})
+        seen.add(pair)
+        reasons = set(report["blockers"])
+        if report["package_ready"]:
+            if not report["format_valid"] or reasons:
+                unexpected.append({"skill": pair[0], "host": pair[1],
+                                   "blockers": ["CONTRADICTORY_PACKAGE_READY_RECEIPT"]})
+            continue
+        row = {"skill": pair[0], "host": pair[1], "blockers": sorted(reasons)}
+        allowed = AUTHORED_HOLD_EXCEPTIONS.get(pair, frozenset())
+        if report["format_valid"] and reasons and reasons <= allowed:
+            expected.append(row)
+        else:
+            unexpected.append(row)
+    if skills is not None:
+        required = {(skill, host) for skill in skills for host in HOSTS}
+        for slug in asset_namespace_conflicts(skills):
+            unexpected.append({"skill": slug, "host": "distribution",
+                               "blockers": ["RELEASE_ASSET_NAMESPACE_COLLISION"]})
+        for skill, host in sorted(required - seen):
+            unexpected.append({"skill": skill, "host": host, "blockers": ["MISSING_MATRIX_PAIR"]})
+        for skill, host in sorted(seen - required):
+            unexpected.append({"skill": skill, "host": host, "blockers": ["UNDECLARED_MATRIX_PAIR"]})
+    return {
+        "status": "HOLD_UNEXPECTED_PACKAGE_BLOCKERS" if unexpected else
+                  "STATIC_ADMISSION_READY_WITH_DOCUMENTED_HOLDS" if expected else
+                  "STATIC_ADMISSION_READY",
+        "documented_holds": expected,
+        "unexpected_holds": unexpected,
+        "host_behavior": "NOT_TESTED",
+    }
+
+
+def portability_envelope():
+    """Compute broad design bounds from the same assessed profile definitions."""
+    def strictest(key, default=None):
+        values = [p[key] for p in HOSTS.values() if key in p]
+        if default is not None:
+            values.append(default)
+        return min(values) if values else None
+    restrictions = [set(p["extensions"]) for p in HOSTS.values() if "extensions" in p]
+    return {
+        "name_max_characters": MAX_SKILL_NAME,
+        "description_max_characters": strictest("description_limit", BASE_DESCRIPTION_LIMIT),
+        "entrypoint_characters_exclusive": strictest("strict_char_limit"),
+        "entrypoint_max_bytes": strictest("max_entrypoint_bytes"),
+        "max_files": strictest("max_files"),
+        "max_directory_depth": strictest("max_depth"),
+        "max_uncompressed_package_bytes": strictest("max_package_bytes"),
+        "max_file_bytes": strictest("max_file_bytes"),
+        "shared_extensions": sorted(set.intersection(*restrictions)) if restrictions else None,
+        "license_adapter": "LICENSE_TO_LICENSE_TXT_WHERE_REQUIRED",
+        "scope": "STATIC_DESIGN_TARGETS_NOT_NATIVE_EXECUTION_OR_TOOL_AVAILABILITY",
+    }
+
+
+def unassessed_host_statuses():
+    return {host: {"status": "HOLD", "asset": None, "sha256": None,
+                   "blockers": [reason], "warnings": [], "behavior": "NOT_TESTED"}
+            for host, reason in UNASSESSED_HOSTS.items()}
+
+
 # Curated Claude Apps discovery summaries, bound to exact canonical Git blobs.
 # Do not truncate, infer or silently refresh descriptions after a source change.
 CLAUDE_DISCOVERY = {
@@ -180,17 +275,40 @@ def source_files(folder):
     return found
 
 
-def read_entrypoint(folder):
-    instructions = (folder / "SKILL.md").read_text(encoding="utf-8")
+def check_entrypoint_metadata(instructions, directory_name):
+    """Check the supported required-field subset, not arbitrary YAML syntax."""
     header = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n", instructions, re.S)
     if not header:
         raise ValueError("YAML_FRONTMATTER_MISSING")
-    name = re.search(r"(?m)^name:\s*([a-z0-9-]+)\s*$", header.group(1))
-    desc = re.search(r"(?m)^description:\s*(?:\S|[>|])", header.group(1))
-    if not name or not NAME.fullmatch(name.group(1)) or name.group(1) != folder.name:
+    # A deliberately conservative top-level YAML subset. Ambiguous quoted
+    # keys, explicit keys, merge keys and duplicates must not masquerade as
+    # ordinary required fields. This does not certify arbitrary nested YAML.
+    keys = set()
+    lines = header.group(1).splitlines()
+    for i, line in enumerate(lines):
+        if not line.strip() or line.startswith((" ", "#")):
+            continue
+        match = re.fullmatch(r"([A-Za-z][A-Za-z0-9_-]*):[ \t]*(.*)", line)
+        if not match or match.group(1) in keys:
+            raise ValueError("AMBIGUOUS_FRONTMATTER_KEYS")
+        key, value = match.groups()
+        keys.add(key)
+        if key == "name" and (not NAME.fullmatch(value.strip()) or
+                              value.strip() != directory_name or
+                              (i+1 < len(lines) and lines[i+1].startswith((" ", "\t")))):
+            raise ValueError("SKILL_NAME_MISMATCH")
+    if "name" not in keys or len(directory_name) > MAX_SKILL_NAME:
         raise ValueError("SKILL_NAME_MISMATCH")
-    if len(folder.name) > 64 or not desc:
-        raise ValueError("INVALID_NAME_OR_DESCRIPTION")
+    desc = bounded_description(instructions)
+    if desc is None:
+        raise ValueError("DESCRIPTION_METADATA_NOT_ASSESSED")
+    if len(desc) > BASE_DESCRIPTION_LIMIT:
+        raise ValueError("DESCRIPTION_OVER_BASE_LIMIT")
+
+
+def read_entrypoint(folder):
+    instructions = (folder / "SKILL.md").read_text(encoding="utf-8")
+    check_entrypoint_metadata(instructions, folder.name)
     return instructions
 
 
@@ -237,6 +355,37 @@ def bounded_description(instructions):
         return None
     return value
 
+def portable_path_blockers(names):
+    """Reject paths that alias or cannot be materialized on common filesystems."""
+    seen, blockers = {}, set()
+    reserved = {"con", "prn", "aux", "nul", "conin$", "conout$"}
+    reserved.update(prefix + digit for prefix in ("com", "lpt")
+                    for digit in "123456789¹²³")
+    for name in names:
+        parts = name.split("/")
+        for i, part in enumerate(parts):
+            if (not part or part.startswith(".") or part == "__pycache__" or
+                    part.endswith((" ", ".")) or
+                    any(ord(c) < 32 or c in '<>:"\\|?*' for c in part) or
+                    part.split(".", 1)[0].rstrip().casefold() in reserved):
+                blockers.add("NONPORTABLE_MEMBER_PATH:" + name)
+            prefix = "/".join(parts[:i+1])
+            key = unicodedata.normalize("NFC", unicodedata.normalize("NFC", prefix).casefold())
+            role = "file" if i == len(parts)-1 else "directory"
+            prior = seen.get(key)
+            if prior is not None and prior != (prefix, role):
+                blockers.add("PORTABLE_PATH_COLLISION:" + name)
+            seen[key] = (prefix, role)
+    return sorted(blockers)
+
+
+def asset_namespace_conflicts(skills):
+    """Reserve possible variant basenames so future profiles cannot shadow skills."""
+    names = set(skills)
+    return sorted({slug + suffix for slug in names for suffix in
+                   ("-claude", "-gemini", "-m365") if slug + suffix in names})
+
+
 def package_name(source, profile):
     """Preserve the license under a supported text extension for upload hosts."""
     if source == "LICENSE" and "extensions" in profile:
@@ -280,7 +429,7 @@ def render_package_bytes(folder, source, profile):
     raw = (folder / source).read_bytes()
     if profile.get("curated_discovery") and source == "SKILL.md":
         return claude_discovery_bytes(folder, raw)
-    if "extensions" not in profile or not source.endswith(".md"):
+    if "extensions" not in profile or not source.lower().endswith(".md"):
         return raw
     text = raw.decode("utf-8")
     def rewrite(match):
@@ -314,7 +463,17 @@ def inspect(folder, host):
     result["format_valid"] = True
     src_names = [f.relative_to(folder).as_posix() for f in files]
     dst_names = [package_name(p, profile) for p in src_names]
-    blockers, warnings = [], []
+    blockers = portable_path_blockers([folder.name]) + portable_path_blockers(dst_names)
+    warnings = []
+    for f in files:
+        if f.suffix.lower() == ".md":
+            try:
+                f.read_text(encoding="utf-8")
+            except UnicodeError:
+                blockers.append("INVALID_UTF8_MARKDOWN:" + f.relative_to(folder).as_posix())
+    if any(b.startswith("INVALID_UTF8_MARKDOWN:") for b in blockers):
+        result["blockers"] = sorted(set(blockers))
+        return result
     rendered_entrypoint = render_package_bytes(folder, "SKILL.md", profile)
     adapted_entrypoint = rendered_entrypoint.decode("utf-8")
     if profile.get("curated_discovery") and rendered_entrypoint != (folder / "SKILL.md").read_bytes():
@@ -348,11 +507,18 @@ def inspect(folder, host):
     if nested:
         warnings.append("NESTED_SKILL_DISCOVERY_REQUIRES_HOST_TEST")
     for name in nested:
+        data = render_package_bytes(folder, name, profile)
+        text = data.decode("utf-8")
         try:
-            n = len(render_package_bytes(folder, name, profile).decode("utf-8"))
-        except UnicodeError:
-            blockers.append("INVALID_UTF8_MARKDOWN:" + name)
-            continue
+            check_entrypoint_metadata(text, Path(name).parent.name)
+        except ValueError as exc:
+            blockers.append("NESTED_" + str(exc) + ":" + name)
+        desc = bounded_description(text)
+        if "description_limit" in profile and desc is not None and len(desc) > profile["description_limit"]:
+            blockers.append("NESTED_DESCRIPTION_OVER_HOST_LIMIT:" + name)
+        if len(data) > profile.get("max_entrypoint_bytes", float("inf")):
+            blockers.append("NESTED_SKILL_MD_OVER_HOST_BYTE_LIMIT:" + name)
+        n = len(text)
         if n >= profile.get("strict_char_limit", float("inf")):
             blockers.append("NESTED_SKILL_MD_OVER_HOST_HARD_LIMIT:" + name)
         if n >= profile.get("advisory_char_limit", float("inf")):
@@ -518,13 +684,35 @@ def main(argv=None):
     choice = parser.add_mutually_exclusive_group(required=True)
     choice.add_argument("--skill", help="First-party authored skill slug")
     choice.add_argument("--all", action="store_true", help="Audit every authored package")
+    choice.add_argument("--profiles", action="store_true", help="Read current static host constraints before authoring")
     choice.add_argument("--package", help="Explicit user-authorized custom package directory; no discovery")
-    parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all host profiles")
+    parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all assessed host profiles")
+    parser.add_argument("--require-authored-ready", action="store_true",
+                        help="Require all assessed authored pairs except exact documented holds")
     parser.add_argument("--zip-output", help="Explicit NEW ZIP output, single skill and ZIP host only")
     parser.add_argument("--directory-output", help="Explicit NEW handoff directory, not host installation")
     args = parser.parse_args(argv)
+    if args.profiles:
+        if args.host or args.zip_output or args.directory_output or args.require_authored_ready:
+            parser.error("--profiles is a read-only authoring reference, not a package operation")
+        print(json.dumps({
+            "schema_version": 1,
+            "claim": "STATIC_HOST_CONSTRAINTS_NOT_RUNTIME_CAPABILITIES",
+            "assessed_profiles": {
+                name: {key: sorted(value) if isinstance(value, (set, frozenset)) else value
+                       for key, value in profile.items()}
+                for name, profile in HOSTS.items()
+            },
+            "portable_authoring_envelope": portability_envelope(),
+            "unassessed_hosts": unassessed_host_statuses(),
+            "host_behavior": "NOT_TESTED",
+            "next_action": "VERIFY_CURRENT_OFFICIAL_HOST_RULES_AND_REQUIRED_CAPABILITIES",
+        }, indent=2))
+        return 0
     if args.skill and (not NAME.fullmatch(args.skill) or len(args.skill) > 64):
         raise ValueError("INVALID_SKILL_SLUG")
+    if args.require_authored_ready and (args.package or args.host or args.zip_output or args.directory_output):
+        parser.error("--require-authored-ready requires --all or --skill with all profiles and no output")
     if args.zip_output and args.directory_output:
         parser.error("Choose only one output artifact")
     if args.zip_output and (args.all or not args.host or HOSTS[args.host]["mode"] != "zip"):
@@ -545,12 +733,25 @@ def main(argv=None):
         "ready": sum(r["package_ready"] for r in results if r["host"] == h),
         "hold": sum(not r["package_ready"] for r in results if r["host"] == h),
     } for h in ([args.host] if args.host else HOSTS)}
+    admission = None
+    if not args.package and not args.host:
+        skills = [p.name for p in packages]
+        if args.all:
+            index = json.loads((ROOT / "registry" / "authored-skills-index.json").read_text(encoding="utf-8"))
+            indexed = [row["id"] for row in index["skills"]]
+            if len(indexed) != len(set(indexed)) or set(indexed) != set(skills):
+                raise ValueError("AUTHORED_INDEX_PACKAGE_INVENTORY_MISMATCH")
+        admission = authored_admission(results, skills)
     print(json.dumps({
         "schema_version": 1, "claim": "STATIC_PACKAGE_PREFLIGHT_ONLY",
+        "unassessed_hosts": unassessed_host_statuses(),
+        "authored_admission": admission,
         "canonical_skill_count": len(packages),
         "host_qualification": "NOT_TESTED",
         "summary": summary, "results": results,
     }, indent=2))
+    if args.require_authored_ready:
+        return 3 if not packages or admission["unexpected_holds"] else 0
     return 0 if all(r["package_ready"] for r in results) else 2
 
 

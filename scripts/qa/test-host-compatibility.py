@@ -31,6 +31,70 @@ class HostCompatibilityTests(unittest.TestCase):
         (self.skill / "LICENSE").write_text(
             "Original example permission text.\n", encoding="utf-8")
 
+    def test_authored_admission_rejects_new_holds_and_only_allows_exact_exceptions(self):
+        known = {"skill": "offline-hyperv-qual-vm", "host": "gemini-apps",
+                 "format_valid": True, "package_ready": False,
+                 "blockers": sorted(module.HYPERV_REQUIRED_FILES)}
+        result = module.authored_admission([known])
+        self.assertEqual(len(result["documented_holds"]), 1)
+        self.assertEqual(result["unexpected_holds"], [])
+        for changed in (dict(known, skill="new-skill"), dict(known, host="claude-apps"),
+                        dict(known, blockers=known["blockers"] + ["BROKEN_LOCAL_LINK:fixture"]),
+                        dict(known, blockers=[]), dict(known, format_valid=False)):
+            with self.subTest(changed=changed):
+                self.assertEqual(module.authored_admission([changed])["status"],
+                                 "HOLD_UNEXPECTED_PACKAGE_BLOCKERS")
+        self.assertEqual(module.authored_admission([dict(known, package_ready=True, blockers=[])])["status"],
+                         "STATIC_ADMISSION_READY")
+
+    def test_authored_admission_requires_complete_unique_matrix(self):
+        reports = [module.inspect(self.skill, host) for host in module.HOSTS]
+        self.assertEqual(module.authored_admission(reports, [self.skill.name])["status"],
+                         "STATIC_ADMISSION_READY")
+        for broken in (reports[:-1], reports + [reports[0]],
+                       [dict(reports[0], blockers=["BROKEN_LOCAL_LINK:fixture"])] + reports[1:]):
+            self.assertEqual(module.authored_admission(broken, [self.skill.name])["status"],
+                             "HOLD_UNEXPECTED_PACKAGE_BLOCKERS")
+
+    def test_new_authored_skill_cannot_pass_admission_with_unsupported_file(self):
+        (self.skill / "fixture.bin").write_bytes(b"fictional")
+        reports = [module.inspect(self.skill, host) for host in module.HOSTS]
+        result = module.authored_admission(reports)
+        self.assertTrue(result["unexpected_holds"])
+        self.assertFalse(result["documented_holds"])
+
+    def test_read_only_profile_inventory_exposes_actual_authoring_constraints(self):
+        import contextlib
+        import io
+        import json
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual(module.main(["--profiles"]), 0)
+        receipt = json.loads(output.getvalue())
+        self.assertEqual(set(receipt["assessed_profiles"]), set(module.HOSTS))
+        self.assertEqual(receipt["assessed_profiles"]["claude-apps"]["description_limit"], 200)
+        self.assertIn(".txt", receipt["assessed_profiles"]["gemini-apps"]["extensions"])
+        envelope = receipt["portable_authoring_envelope"]
+        self.assertEqual(envelope["description_max_characters"], 200)
+        self.assertEqual(envelope["max_files"], 100)
+        self.assertEqual(envelope["max_uncompressed_package_bytes"], 10 * 1024 * 1024)
+        self.assertIn(".txt", envelope["shared_extensions"])
+        self.assertNotIn(".ps1", envelope["shared_extensions"])
+        self.assertEqual(receipt["unassessed_hosts"]["chatgpt"]["status"], "HOLD")
+        self.assertEqual(receipt["host_behavior"], "NOT_TESTED")
+        with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            module.main(["--profiles", "--require-authored-ready"])
+
+    def test_unassessed_receipts_never_claim_ready(self):
+        statuses = module.unassessed_host_statuses()
+        self.assertEqual(set(statuses), set(module.UNASSESSED_HOSTS))
+        self.assertFalse(set(statuses) & set(module.HOSTS))
+        for entry in statuses.values():
+            self.assertEqual(entry["status"], "HOLD")
+            self.assertIsNone(entry["asset"])
+            self.assertIsNone(entry["sha256"])
+            self.assertEqual(entry["behavior"], "NOT_TESTED")
+
     def test_single_canonical_package_is_directory_ready(self):
         for host in ("github-copilot", "claude-code", "openai-codex",
                      "gemini-cli", "hermes-agent"):
@@ -183,6 +247,50 @@ class HostCompatibilityTests(unittest.TestCase):
     def test_slug_traversal_is_rejected_at_cli_boundary(self):
         with self.assertRaisesRegex(ValueError, "INVALID_SKILL_SLUG"):
             module.main(["--skill", "../private"])
+
+    def test_nested_metadata_is_checked_for_each_host_not_only_root(self):
+        path = self.skill / "skills" / "nested" / "SKILL.md"
+        path.parent.mkdir(parents=True)
+        path.write_text("---\nname: nested\ndescription: " + "x" * 201 + "\n---\n# Nested\n")
+        self.assertIn("NESTED_DESCRIPTION_OVER_HOST_LIMIT:skills/nested/SKILL.md",
+                      module.inspect(self.skill, "claude-apps")["blockers"])
+        self.assertTrue(module.inspect(self.skill, "gemini-apps")["package_ready"])
+        path.write_text("---\nname: different\ndescription: A fictional skill.\n---\n# Nested\n")
+        for host in module.HOSTS:
+            self.assertIn("NESTED_SKILL_NAME_MISMATCH:skills/nested/SKILL.md",
+                          module.inspect(self.skill, host)["blockers"])
+        path.write_text("---\nname: nested\ndescription: " + "x" * 1025 + "\n---\n# Nested\n")
+        self.assertIn("NESTED_DESCRIPTION_OVER_BASE_LIMIT:skills/nested/SKILL.md",
+                      module.inspect(self.skill, "claude-code")["blockers"])
+
+    def test_root_duplicate_required_metadata_and_base_limit_hold(self):
+        p = self.skill / "SKILL.md"
+        for header in ("name: demo-skill\nname: another\ndescription: A fictional skill.",
+                       'name: demo-skill\n"name": another\ndescription: A fictional skill.',
+                       "name: demo-skill\n  continuation\ndescription: A fictional skill.",
+                       "name: demo-skill\ndescription: A fictional skill.\ndescription: Another.",
+                       "name: demo-skill\ndescription: " + "x" * 1025):
+            p.write_text("---\n" + header + "\n---\n# Demo\n")
+            self.assertFalse(module.inspect(self.skill, "claude-code")["package_ready"])
+
+    def test_portable_member_names_and_casefolded_directory_aliases(self):
+        for paths in (["references/A.md", "References/b.md"],
+                      ["a.txt", "A.txt"], ["NUL.txt"], ["foo/bar. "],
+                      ["hidden/.cache/fixture.txt"], ["x\\\\y.txt"],
+                      ["a.txt", "A.txt/other.txt"]):
+            with self.subTest(paths=paths):
+                self.assertTrue(module.portable_path_blockers(paths))
+        self.assertEqual(module.portable_path_blockers(["LICENSE", "references/guide.md"]), [])
+
+    def test_release_asset_namespace_conflict_blocks_complete_admission(self):
+        self.assertEqual(module.asset_namespace_conflicts(["demo", "demo-claude"]),
+                         ["demo-claude"])
+        self.assertEqual(module.asset_namespace_conflicts(["demo", "other"]), [])
+        reports = [dict(module.inspect(self.skill, h), skill=slug)
+                   for slug in ("demo", "demo-claude") for h in module.HOSTS]
+        receipt = module.authored_admission(reports, ["demo", "demo-claude"])
+        self.assertEqual(receipt["unexpected_holds"], [{"skill": "demo-claude",
+                         "host": "distribution", "blockers": ["RELEASE_ASSET_NAMESPACE_COLLISION"]}])
 
     def test_nested_entrypoint_hard_limit_cannot_hide_inside_pack(self):
         nested = self.skill / "skills" / "nested" / "SKILL.md"

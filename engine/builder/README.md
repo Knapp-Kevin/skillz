@@ -105,7 +105,7 @@ new service, external agent, mandatory file or release is required.
 
 ## Blueprint v1 contract
 
-The whole blueprint has these required keys and **no hidden extras**:
+The whole blueprint has these required keys and **no hidden extras** (a subskill module may additionally declare `discovery_description`):
 
 | Key | Role |
 | --- | --- |
@@ -117,7 +117,7 @@ The whole blueprint has these required keys and **no hidden extras**:
 | \`authority\` | \`read-only\` or \`approval-gated\` maximum, never a permission grant |
 | \`copyright_holder\` and \`rights_declaration\` | Author-provided *original* copyright and provenance assertion, subject to independent review |
 | \`steps\` | Ordered \`id\`, \`title\`, \`instructions\`, \`output\` entries for \`single\` or \`phased\` |
-| \`modules\` | For \`pack\` only: \`id\`, \`kind\`, \`requires\`, \`required\`, \`fallback\`, \`authority\`, \`output\`, \`instructions\` |
+| \`modules\` | For \`pack\` only: \`id\`, \`kind\`, \`requires\`, \`required\`, \`fallback\`, \`authority\`, \`output\`, \`instructions\`; optional \`discovery_description\` for independently discoverable subskills |
 | \`preference_slots\` | Only optional, public allowlisted enum *definitions*; never a saved consumer selection |
 
 All array and object fields are explicit. Unknown input fields, missing
@@ -164,7 +164,7 @@ python3 engine/builder/design.py --input /path/to/design.json --host m365-agent-
 python3 engine/builder/host_compat.py --package /approved/custom-skill --host m365-agent-builder
 ```
 
-With no target option, the compiler checks all eight configured profiles;
+With no target option, the compiler checks all currently assessed profiles (ten as of 2026-11-25);
 this does not establish the actual user's host. A hard blocker on any
 selected profile returns HOLD before creating the destination. No bypass
 or automatic instruction truncation is provided. Keep the canonical
@@ -177,6 +177,68 @@ host functionality. Before implementation, identify actual permissions,
 tool dependencies, bundled reference loading, runtime and persistence;
 provide safe fallback or HOLD if any required capability is unavailable.
 Manual authoring uses the same guard without requiring Python.
+
+### Author for portability before drafting
+
+Read the current machine-readable packaging constraints before choosing the
+package architecture:
+
+```sh
+python3 engine/builder/host_compat.py --profiles
+```
+
+This read-only inventory is generated from the same profiles used for
+preflight; `portable_authoring_envelope` calculates the strictest numeric
+bounds and shared extension set, with separate profile rows for exact
+exceptions. It is not live host capability discovery. The common name,
+folder and description rules follow the [Agent Skills specification](https://agentskills.io/specification). The standard-library checker recognizes a conservative required-field subset, not arbitrary YAML validation. Recheck official rules
+and use the manual guide when shell/Python is unavailable.
+
+For general-purpose skills, author a clear discovery description of at most
+200 characters; put the full activation/non-trigger contract in the body.
+Keep each independently discoverable entrypoint compact (target fewer than
+20,000 characters), use supported text/data/resource types and a shallow
+package tree. The current broad-portability targets include at most 100 files,
+three nested directory levels and at most 10 MiB of uncompressed content;
+consult the current profile inventory for host-specific limits. Avoid hidden or
+cache files, extensionless resources other than the handled license, and
+unsupported executable formats. Prefer portable standard-library or
+instruction-only methods. Keep all needed resources, rights notices and safety constraints. For packs,
+each nested `SKILL.md` must also have valid metadata, a matching parent
+folder name, and host-compliant discovery text. The builder uses a qualified
+`<pack>-<module>` name and matching folder (maximum 64 characters); provide
+an authored `discovery_description` if the full output contract is too long
+for discovery. Full output stays in the body. Avoid case-insensitive or
+Unicode-normalized path collisions, reserved Windows names and archive
+basenames that collide with another skill's host variants.
+The strictest assessed profile is a design target, not a reason to remove
+essential functionality. Check the actual profile constraints in
+`host_compat.py` and current official host guidance; do not infer tools,
+script runtimes, network, persistence or permissions from ZIP acceptance.
+
+**Repository admission is all assessed profiles, not a chosen subset.**
+`build.py` and `design.py` reject narrowed `--host` scope in repository
+maintenance. Manually authored or modified packages must run:
+
+```sh
+python3 engine/builder/host_compat.py --skill <slug> --require-authored-ready
+python3 engine/builder/host_compat.py --all --require-authored-ready
+```
+
+The existing engine CI and release builder enforce the same all-profile
+admission policy. Any unexpected static HOLD blocks admission/publication.
+The only current narrow exception is the named PowerShell files of
+`offline-hyperv-qual-vm` on four restricted upload profiles; those pairs
+remain HOLD, not PACKAGE_READY. An additional exception requires explicit
+maintainer review of essential functionality, exact skill/host/blockers,
+and a safe fallback. Do not use extension disguises, automatic truncation,
+resource deletion, weakened verification or a reduced target list to pass.
+
+Builder receipts separately list assessed-but-not-selected profiles and
+unassessed routes (currently ChatGPT and unidentified OpenClaude/other).
+An unknown host is an explicit HOLD requiring current official documentation
+and actual host testing. Adding a new assessed profile expands the default
+admission matrix; no universal native execution claim follows.
 
 This checks authored or explicitly supplied custom SKILL.md structure, local reference closure, file
 extensions and selected documented host package limits, and can generate

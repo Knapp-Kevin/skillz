@@ -32,7 +32,12 @@ builder's repository and no-overwrite protections:
       --write --output /path/to/new-skill-folder
 
 This path invokes the same engine/builder/build.py, not a parallel
-compiler. It returns the builder's draft receipt with an additional
+compiler. Design against all assessed profiles by default; repository
+maintenance cannot narrow them with `--host`. Plan short discovery metadata,
+complete portable resources, runtime dependencies and safe unavailable-tool
+fallbacks before rendering. The shared admission gate blocks new unexpected
+holds; unassessed hosts remain HOLD rather than inferred compatible.
+It returns the builder's draft receipt with an additional
 design_gate section. No dossier, evidence observation or probe description
 is copied into the emitted skill package. Private source material should
 not be put in a public example or tracked repository in the first place.

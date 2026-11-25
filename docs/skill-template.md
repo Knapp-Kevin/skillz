@@ -22,13 +22,32 @@ Keep this human-readable template useful without requiring Python
 or an external generator. A static scaffold must never be labeled
 a finished skill merely because its Markdown and manifest are valid.
 
+## Cross-host authoring requirement
+
+Before drafting, consult the [builder host compatibility contract](../engine/builder/README.md)
+and current official host constraints (`python3 engine/builder/host_compat.py --profiles`
+for the machine-readable inventory). For general-purpose skills, use a
+meaningful discovery description at most 200 characters, compact entrypoints
+(target fewer than 20,000 characters), portable resource types and a shallow
+layout. Keep the complete activation contract and essential supporting files;
+never truncate instructions or disguise dependencies to satisfy a host limit.
+Apply the name/folder and discovery constraints to every nested SKILL.md;
+use portable filenames without case or Unicode-normalization collisions,
+reserved Windows names or hidden/cache members. Name required tools, script runtimes, permissions, and a truthful fallback
+for unsupported capabilities. For repository admission, check the exact full
+package with `python3 engine/builder/host_compat.py --skill <slug> --require-authored-ready`.
+All assessed profiles are mandatory; new unexpected holds block admission and
+publication. Existing narrow intrinsic exceptions remain explicit HOLDs;
+unassessed hosts are not deemed compatible. Actual loading, execution and
+user outcomes remain independent verification gates.
+
 ## Copy and adapt
 
 ```markdown
 ---
 name: <kebab-case-name>
 description: >-
-  <One-sentence outcome.> Use when <specific trigger>; not for <important non-trigger>.
+  <Meaningful discovery summary, at most 200 characters.>
 metadata:
   author: <responsible first-party maintainer>
   category: <controlled category>
@@ -39,6 +58,7 @@ metadata:
 # <Title>
 
 <What it helps accomplish, for whom, and the limits of the procedure.>
+<Full activation and non-trigger contract.>
 
 ## Inputs and dependencies
 
