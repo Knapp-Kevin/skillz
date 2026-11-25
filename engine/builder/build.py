@@ -120,12 +120,22 @@ def validate_blueprint(b):
             prose(item[key], "step." + key, 6 if key == "title" else 12)
     seen.clear()
     for item in modules:
-        fields(item, MODULE_FIELDS, "module")
+        # An independently discoverable subskill may need a concise authored
+        # discovery summary distinct from its full output contract.
+        fields(item, MODULE_FIELDS | ({"discovery_description"} if
+              isinstance(item, dict) and "discovery_description" in item else set()), "module")
         slug(item["id"], "module.id")
         need(item["id"] not in seen, "DUPLICATE_MODULE_ID")
         seen.add(item["id"])
         need(type(item["kind"]) is str and item["kind"] in check_pack.MODULE_KINDS,
              "INVALID_MODULE_KIND")
+        if "discovery_description" in item:
+            need(item["kind"] == "skill", "DISCOVERY_DESCRIPTION_REQUIRES_SUBSKILL")
+            prose(item["discovery_description"], "module.discovery_description", 12, 1024)
+            need("\n" not in item["discovery_description"] and "\r" not in item["discovery_description"],
+                 "HEADER_OR_LICENSE_LINE_BREAK")
+        if item["kind"] == "skill":
+            need(len(b["name"] + "-" + item["id"]) <= 64, "SUBSKILL_NAME_OVER_LIMIT")
         authority(item["authority"], "module.authority")
         need(check_pack.AUTHORITY[item["authority"]] <=
              check_pack.AUTHORITY[b["authority"]],
@@ -173,9 +183,9 @@ def template(template_filename, **values):
 def title(value):
     return " ".join(p.capitalize() for p in value.split("-"))
 
-def module_path(m):
+def module_path(m, pack_name):
     k, ident = m["kind"], m["id"]
-    return ("skills/" + ident + "/SKILL.md" if k == "skill" else
+    return ("skills/" + pack_name + "-" + ident + "/SKILL.md" if k == "skill" else
             ("phases/" if k == "phase" else "components/") + ident + ".md")
 
 def preferences_markdown(slots):
@@ -237,7 +247,7 @@ def generate_files(b):
         normalized = []
         for name in ordered:
             m = by_id[name]
-            path = module_path(m)
+            path = module_path(m, b["name"])
             data = {
                 "name": m["id"], "kind": m["kind"], "title": title(m["id"]),
                 "dependencies": ", ".join(m["requires"]) or "None",
@@ -249,7 +259,8 @@ def generate_files(b):
                 "pack_name": b["name"],
                 "qualified_name": b["name"] + "-" + m["id"],
                 "description_yaml": json.dumps(
-                    "Within " + b["name"] + ", " + m["output"].rstrip("."),
+                    m.get("discovery_description",
+                          "Within " + b["name"] + ", " + m["output"].rstrip(".")),
                     ensure_ascii=False),
                 "trigger": b["trigger"], "non_trigger": b["non_trigger"],
             }

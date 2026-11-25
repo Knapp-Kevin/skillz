@@ -110,9 +110,31 @@ class BuilderCases(unittest.TestCase):
                          "PACK_STRUCTURE_VALID_NOT_EXECUTED")
         self.assertEqual(r["sequence"], ["collect", "check", "summarize", "style"])
         self.assertIn("pack.json", r["files"])
-        self.assertIn("skills/summarize/SKILL.md", r["files"])
+        self.assertIn("skills/fictional-notes-brief-pack-summarize/SKILL.md", r["files"])
         self.assertIn("preferences.md", r["files"])
         self.assertFalse(r["user_preference_persisted"])
+
+    def test_nested_discovery_matches_directory_and_long_output_requires_authored_summary(self):
+        data = fixture("pack")
+        sub = next(m for m in data["modules"] if m["kind"] == "skill")
+        sub["output"] = "Produce a source-grounded fictional brief with every finding explicitly linked to its supplied evidence. " * 3
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "draft"
+            with self.assertRaisesRegex(builder.BuildHold, "NESTED_DESCRIPTION_OVER_HOST_LIMIT"):
+                builder.build(data, output=str(target), write=True)
+            self.assertFalse(target.exists())
+            sub["discovery_description"] = "Summarize supplied fictional notes with evidence and unresolved claims."
+            report = builder.build(data, output=str(target), write=True)
+            path = target / "skills" / (data["name"] + "-" + sub["id"]) / "SKILL.md"
+            self.assertIn("name: " + path.parent.name, path.read_text())
+            self.assertIn(sub["output"], path.read_text())
+            self.assertIn(sub["discovery_description"], path.read_text())
+            self.assertTrue(all(x["package_ready"] for x in report["host_compatibility"]["profiles"]))
+
+    def test_overlong_qualified_subskill_name_is_rejected_before_write(self):
+        data = fixture("pack")
+        data["name"] = "x" * 60
+        self.reject(data, "SUBSKILL_NAME_OVER_LIMIT")
 
     def test_pack_with_out_of_order_source_still_emits_correct_order(self):
         data = fixture("pack")
@@ -127,7 +149,7 @@ class BuilderCases(unittest.TestCase):
             self.assertEqual(r["status"], "WRITTEN_DRAFT_REVIEW_REQUIRED")
             self.assertTrue((dst / "SKILL.md").is_file())
             self.assertTrue((dst / "LICENSE").is_file())
-            self.assertTrue((dst / "skills" / "summarize" / "SKILL.md").is_file())
+            self.assertTrue((dst / "skills" / "fictional-notes-brief-pack-summarize" / "SKILL.md").is_file())
             m = json.loads((dst / "pack.json").read_text())
             self.assertEqual(sorted(m["files"]), r["files"])
             self.assertEqual(m["feedback_policy"]["consumer"], "private-opt-in")

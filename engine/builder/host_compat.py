@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import unicodedata
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -100,6 +101,9 @@ def authored_admission(reports, skills=None):
             unexpected.append(row)
     if skills is not None:
         required = {(skill, host) for skill in skills for host in HOSTS}
+        for slug in asset_namespace_conflicts(skills):
+            unexpected.append({"skill": slug, "host": "distribution",
+                               "blockers": ["RELEASE_ASSET_NAMESPACE_COLLISION"]})
         for skill, host in sorted(required - seen):
             unexpected.append({"skill": skill, "host": host, "blockers": ["MISSING_MATRIX_PAIR"]})
         for skill, host in sorted(seen - required):
@@ -246,17 +250,24 @@ def source_files(folder):
     return found
 
 
-def read_entrypoint(folder):
-    instructions = (folder / "SKILL.md").read_text(encoding="utf-8")
+def check_entrypoint_metadata(instructions, directory_name):
+    """Check the supported required-field subset, not arbitrary YAML syntax."""
     header = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n", instructions, re.S)
     if not header:
         raise ValueError("YAML_FRONTMATTER_MISSING")
-    name = re.search(r"(?m)^name:\s*([a-z0-9-]+)\s*$", header.group(1))
-    desc = re.search(r"(?m)^description:\s*(?:\S|[>|])", header.group(1))
-    if not name or not NAME.fullmatch(name.group(1)) or name.group(1) != folder.name:
+    names = re.findall(r"(?m)^name:[ \t]*(.*?)\s*$", header.group(1))
+    if len(names) != 1 or not NAME.fullmatch(names[0]) or names[0] != directory_name:
         raise ValueError("SKILL_NAME_MISMATCH")
-    if len(folder.name) > 64 or not desc:
+    desc = bounded_description(instructions)
+    if len(directory_name) > 64 or desc is None:
         raise ValueError("INVALID_NAME_OR_DESCRIPTION")
+    if len(desc) > 1024:
+        raise ValueError("DESCRIPTION_OVER_BASE_LIMIT")
+
+
+def read_entrypoint(folder):
+    instructions = (folder / "SKILL.md").read_text(encoding="utf-8")
+    check_entrypoint_metadata(instructions, folder.name)
     return instructions
 
 
@@ -303,6 +314,37 @@ def bounded_description(instructions):
         return None
     return value
 
+def portable_path_blockers(names):
+    """Reject paths that alias or cannot be materialized on common filesystems."""
+    seen, blockers = {}, set()
+    reserved = {"con", "prn", "aux", "nul", "conin$", "conout$"}
+    reserved.update(prefix + digit for prefix in ("com", "lpt")
+                    for digit in "123456789¹²³")
+    for name in names:
+        parts = name.split("/")
+        for i, part in enumerate(parts):
+            if (not part or part.startswith(".") or part == "__pycache__" or
+                    part.endswith((" ", ".")) or
+                    any(ord(c) < 32 or c in '<>:"\\|?*' for c in part) or
+                    part.split(".", 1)[0].rstrip().casefold() in reserved):
+                blockers.add("NONPORTABLE_MEMBER_PATH:" + name)
+            prefix = "/".join(parts[:i+1])
+            key = unicodedata.normalize("NFC", prefix).casefold()
+            role = "file" if i == len(parts)-1 else "directory"
+            prior = seen.get(key)
+            if prior is not None and prior != (prefix, role):
+                blockers.add("PORTABLE_PATH_COLLISION:" + name)
+            seen[key] = (prefix, role)
+    return sorted(blockers)
+
+
+def asset_namespace_conflicts(skills):
+    """Reserve possible variant basenames so future profiles cannot shadow skills."""
+    names = set(skills)
+    return sorted({slug + suffix for slug in names for suffix in
+                   ("-claude", "-gemini", "-m365") if slug + suffix in names})
+
+
 def package_name(source, profile):
     """Preserve the license under a supported text extension for upload hosts."""
     if source == "LICENSE" and "extensions" in profile:
@@ -346,7 +388,7 @@ def render_package_bytes(folder, source, profile):
     raw = (folder / source).read_bytes()
     if profile.get("curated_discovery") and source == "SKILL.md":
         return claude_discovery_bytes(folder, raw)
-    if "extensions" not in profile or not source.endswith(".md"):
+    if "extensions" not in profile or not source.lower().endswith(".md"):
         return raw
     text = raw.decode("utf-8")
     def rewrite(match):
@@ -380,7 +422,16 @@ def inspect(folder, host):
     result["format_valid"] = True
     src_names = [f.relative_to(folder).as_posix() for f in files]
     dst_names = [package_name(p, profile) for p in src_names]
-    blockers, warnings = [], []
+    blockers, warnings = portable_path_blockers(dst_names), []
+    for f in files:
+        if f.suffix.lower() == ".md":
+            try:
+                f.read_text(encoding="utf-8")
+            except UnicodeError:
+                blockers.append("INVALID_UTF8_MARKDOWN:" + f.relative_to(folder).as_posix())
+    if any(b.startswith("INVALID_UTF8_MARKDOWN:") for b in blockers):
+        result["blockers"] = sorted(set(blockers))
+        return result
     rendered_entrypoint = render_package_bytes(folder, "SKILL.md", profile)
     adapted_entrypoint = rendered_entrypoint.decode("utf-8")
     if profile.get("curated_discovery") and rendered_entrypoint != (folder / "SKILL.md").read_bytes():
@@ -414,11 +465,18 @@ def inspect(folder, host):
     if nested:
         warnings.append("NESTED_SKILL_DISCOVERY_REQUIRES_HOST_TEST")
     for name in nested:
+        data = render_package_bytes(folder, name, profile)
+        text = data.decode("utf-8")
         try:
-            n = len(render_package_bytes(folder, name, profile).decode("utf-8"))
-        except UnicodeError:
-            blockers.append("INVALID_UTF8_MARKDOWN:" + name)
-            continue
+            check_entrypoint_metadata(text, Path(name).parent.name)
+        except ValueError as exc:
+            blockers.append("NESTED_" + str(exc) + ":" + name)
+        desc = bounded_description(text)
+        if "description_limit" in profile and desc is not None and len(desc) > profile["description_limit"]:
+            blockers.append("NESTED_DESCRIPTION_OVER_HOST_LIMIT:" + name)
+        if len(data) > profile.get("max_entrypoint_bytes", float("inf")):
+            blockers.append("NESTED_SKILL_MD_OVER_HOST_BYTE_LIMIT:" + name)
+        n = len(text)
         if n >= profile.get("strict_char_limit", float("inf")):
             blockers.append("NESTED_SKILL_MD_OVER_HOST_HARD_LIMIT:" + name)
         if n >= profile.get("advisory_char_limit", float("inf")):

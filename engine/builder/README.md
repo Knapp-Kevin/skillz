@@ -105,7 +105,7 @@ new service, external agent, mandatory file or release is required.
 
 ## Blueprint v1 contract
 
-The whole blueprint has these required keys and **no hidden extras**:
+The whole blueprint has these required keys and **no hidden extras** (a subskill module may additionally declare `discovery_description`):
 
 | Key | Role |
 | --- | --- |
@@ -117,7 +117,7 @@ The whole blueprint has these required keys and **no hidden extras**:
 | \`authority\` | \`read-only\` or \`approval-gated\` maximum, never a permission grant |
 | \`copyright_holder\` and \`rights_declaration\` | Author-provided *original* copyright and provenance assertion, subject to independent review |
 | \`steps\` | Ordered \`id\`, \`title\`, \`instructions\`, \`output\` entries for \`single\` or \`phased\` |
-| \`modules\` | For \`pack\` only: \`id\`, \`kind\`, \`requires\`, \`required\`, \`fallback\`, \`authority\`, \`output\`, \`instructions\` |
+| \`modules\` | For \`pack\` only: \`id\`, \`kind\`, \`requires\`, \`required\`, \`fallback\`, \`authority\`, \`output\`, \`instructions\`; optional \`discovery_description\` for independently discoverable subskills |
 | \`preference_slots\` | Only optional, public allowlisted enum *definitions*; never a saved consumer selection |
 
 All array and object fields are explicit. Unknown input fields, missing
@@ -200,7 +200,14 @@ three nested directory levels and at most 10 MiB of uncompressed content;
 consult the current profile inventory for host-specific limits. Avoid hidden or
 cache files, extensionless resources other than the handled license, and
 unsupported executable formats. Prefer portable standard-library or
-instruction-only methods. Keep all needed resources, rights notices and safety constraints.
+instruction-only methods. Keep all needed resources, rights notices and safety constraints. For packs,
+each nested `SKILL.md` must also have valid metadata, a matching parent
+folder name, and host-compliant discovery text. The builder uses a qualified
+`<pack>-<module>` name and matching folder (maximum 64 characters); provide
+an authored `discovery_description` if the full output contract is too long
+for discovery. Full output stays in the body. Avoid case-insensitive or
+Unicode-normalized path collisions, reserved Windows names and archive
+basenames that collide with another skill's host variants.
 The strictest assessed profile is a design target, not a reason to remove
 essential functionality. Check the actual profile constraints in
 `host_compat.py` and current official host guidance; do not infer tools,

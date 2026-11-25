@@ -57,7 +57,9 @@ keep fuller activation rules and every essential dependency in the package.
 Repository admission and publication require all assessed profiles, with only
 explicit exact documented intrinsic exceptions; no target narrowing. Use
 `host_compat.py --skill <slug> --require-authored-ready` on manual source.
-Unknown profiles remain separate HOLDs. Confirm actual reference loading, tool/runtime capability,
+Unknown profiles remain separate HOLDs. Validate nested discovery metadata
+and matching folder names, not only root metadata; reject nonportable member
+paths, case/Unicode aliases and potential archive basename collisions. Confirm actual reference loading, tool/runtime capability,
 persistence, permissions and installation method separately. Unknown
 or untested host behavior must not become READY_TO_UPLOAD or INSTALLED
 on a static receipt alone.

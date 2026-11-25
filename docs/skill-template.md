@@ -31,7 +31,9 @@ meaningful discovery description at most 200 characters, compact entrypoints
 (target fewer than 20,000 characters), portable resource types and a shallow
 layout. Keep the complete activation contract and essential supporting files;
 never truncate instructions or disguise dependencies to satisfy a host limit.
-Name required tools, script runtimes, permissions, and a truthful fallback
+Apply the name/folder and discovery constraints to every nested SKILL.md;
+use portable filenames without case or Unicode-normalization collisions,
+reserved Windows names or hidden/cache members. Name required tools, script runtimes, permissions, and a truthful fallback
 for unsupported capabilities. For repository admission, check the exact full
 package with `python3 engine/builder/host_compat.py --skill <slug> --require-authored-ready`.
 All assessed profiles are mandatory; new unexpected holds block admission and

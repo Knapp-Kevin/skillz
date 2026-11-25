@@ -242,6 +242,43 @@ class HostCompatibilityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "INVALID_SKILL_SLUG"):
             module.main(["--skill", "../private"])
 
+    def test_nested_metadata_is_checked_for_each_host_not_only_root(self):
+        path = self.skill / "skills" / "nested" / "SKILL.md"
+        path.parent.mkdir(parents=True)
+        path.write_text("---\nname: nested\ndescription: " + "x" * 201 + "\n---\n# Nested\n")
+        self.assertIn("NESTED_DESCRIPTION_OVER_HOST_LIMIT:skills/nested/SKILL.md",
+                      module.inspect(self.skill, "claude-apps")["blockers"])
+        self.assertTrue(module.inspect(self.skill, "gemini-apps")["package_ready"])
+        path.write_text("---\nname: different\ndescription: A fictional skill.\n---\n# Nested\n")
+        for host in module.HOSTS:
+            self.assertIn("NESTED_SKILL_NAME_MISMATCH:skills/nested/SKILL.md",
+                          module.inspect(self.skill, host)["blockers"])
+        path.write_text("---\nname: nested\ndescription: " + "x" * 1025 + "\n---\n# Nested\n")
+        self.assertIn("NESTED_DESCRIPTION_OVER_BASE_LIMIT:skills/nested/SKILL.md",
+                      module.inspect(self.skill, "claude-code")["blockers"])
+
+    def test_root_duplicate_required_metadata_and_base_limit_hold(self):
+        p = self.skill / "SKILL.md"
+        for header in ("name: demo-skill\nname: another\ndescription: A fictional skill.",
+                       "name: demo-skill\ndescription: A fictional skill.\ndescription: Another.",
+                       "name: demo-skill\ndescription: " + "x" * 1025):
+            p.write_text("---\n" + header + "\n---\n# Demo\n")
+            self.assertFalse(module.inspect(self.skill, "claude-code")["package_ready"])
+
+    def test_portable_member_names_and_casefolded_directory_aliases(self):
+        for paths in (["references/A.md", "References/b.md"],
+                      ["a.txt", "A.txt"], ["NUL.txt"], ["foo/bar. "],
+                      ["hidden/.cache/fixture.txt"], ["x\\\\y.txt"],
+                      ["a.txt", "A.txt/other.txt"]):
+            with self.subTest(paths=paths):
+                self.assertTrue(module.portable_path_blockers(paths))
+        self.assertEqual(module.portable_path_blockers(["LICENSE", "references/guide.md"]), [])
+
+    def test_release_asset_namespace_conflict_blocks_complete_admission(self):
+        self.assertEqual(module.asset_namespace_conflicts(["demo", "demo-claude"]),
+                         ["demo-claude"])
+        self.assertEqual(module.asset_namespace_conflicts(["demo", "other"]), [])
+
     def test_nested_entrypoint_hard_limit_cannot_hide_inside_pack(self):
         nested = self.skill / "skills" / "nested" / "SKILL.md"
         nested.parent.mkdir(parents=True)

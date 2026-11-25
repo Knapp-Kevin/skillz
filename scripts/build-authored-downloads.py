@@ -84,6 +84,8 @@ def build(output):
     disk = {p.name for p in host_compat.AUTHORED.iterdir() if p.is_dir() and (p / "SKILL.md").is_file()}
     if len(ids) != len(set(ids)) or set(ids) != disk:
         raise ValueError("authored package index mismatch")
+    if host_compat.asset_namespace_conflicts(ids):
+        raise ValueError("canonical and potential variant asset names collide")
     output.mkdir()
     manifest = {"schema_version": 1, "source_commit": commit,
                 "claim": "AUTHORED_SOURCE_ARCHIVES_ONLY_HOST_BEHAVIOR_NOT_TESTED", "skills": []}
