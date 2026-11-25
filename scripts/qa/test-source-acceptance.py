@@ -137,6 +137,34 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
+    def test_ci_guard_complex_package_all_assessed_hosts(self):
+        slug = "ci-guard"
+        package = ROOT / "skills/authored" / slug
+        contract = json.loads((ROOT / "engine/builder/examples" /
+                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
+        self.assertEqual(len(contract["source_blobs"]), 55)
+        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+        scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
+        self.assertEqual(len(scripts), 24)
+        for host in m.compat.HOSTS:
+            with self.subTest(host=host):
+                plan = m.plan(contract, package, host)["plan"]
+                self.assertEqual(len(plan["cases"]), 26)
+                self.assertEqual(plan["script_resource_coverage"], scripts)
+                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
+                self.assertFalse(plan["consumer_accepted"])
+
+    def test_ci_guard_offline_nested_overlap_oracle(self):
+        import subprocess
+        package = ROOT / "skills/authored/ci-guard"
+        run = subprocess.run([sys.executable, "-B", "-m", "unittest",
+                              "test_ci_overlap.OverlapTest.test_nested_alias_is_found_as_partial_overlap",
+                              "test_ci_overlap.OverlapTest.test_different_platform_is_unproven_not_safe_to_remove"],
+                             cwd=package / "examples", capture_output=True, text=True,
+                             timeout=15, check=True)
+        self.assertIn("Ran 2 tests", run.stderr)
+        self.assertIn("OK", run.stderr)
+
     def test_readme_architect_complex_package_all_assessed_hosts(self):
         slug = "repository-readme-architect"
         package = ROOT / "skills/authored" / slug
