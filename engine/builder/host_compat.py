@@ -86,7 +86,7 @@ def read_entrypoint(folder):
 
 
 def bounded_description(instructions):
-    """Recognize plain or simple folded scalar; unsupported YAML stays on HOLD."""
+    """Recognize plain, JSON-quoted or simple folded scalar; other YAML stays on HOLD."""
     header = instructions.splitlines()[1:]
     header = header[:header.index("---")] if "---" in header else []
     matches = [i for i, line in enumerate(header) if line.startswith("description:")]
@@ -107,6 +107,19 @@ def bounded_description(instructions):
         if any(ord(c) < 32 for c in folded):
             return None
         return folded + ("\n" if value == ">" else "")
+    if value.startswith('"'):
+        # The engine emits JSON-quoted scalars, a supported YAML subset.
+        # Do not interpret arbitrary YAML escapes, aliases or trailing tokens.
+        if following:
+            return None
+        try:
+            decoded = json.loads(value)
+        except (ValueError, TypeError):
+            return None
+        if not isinstance(decoded, str) or not decoded.strip() or any(
+                ord(c) < 32 or 0xD800 <= ord(c) <= 0xDFFF for c in decoded):
+            return None
+        return decoded
     if (following or not value or value[0] in "'\\\"|>&*!{[?#@\x60" or
             ": " in value or " #" in value):
         return None
