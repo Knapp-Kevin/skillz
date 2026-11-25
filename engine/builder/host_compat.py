@@ -456,8 +456,13 @@ def write_zip(folder, host, output, receipt):
     # Preloaded bytes ensure the output never silently changes after hashing.
     with destination.open("xb") as fd:
         with zipfile.ZipFile(fd, mode="w", compression=zipfile.ZIP_DEFLATED) as archive:
-            for name, data in payload:
-                archive.writestr(name, data)
+            for name, data in sorted(payload):
+                # Match canonical archives' stable timestamp; do not encode
+                # wall-clock time, host platform, or output path in the ZIP.
+                info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                info.create_system = 3
+                info.external_attr = 0o600 << 16
+                archive.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED)
     with zipfile.ZipFile(destination) as archive:
         expected = sorted(name for name, _ in payload)
         if (sorted(archive.namelist()) != expected or archive.testzip() is not None or
