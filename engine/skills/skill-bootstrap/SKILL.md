@@ -439,7 +439,12 @@ optional quality upgrade. Before drafting, use the S1 target and the
 a viable package shape and dependency/fallback plan. Keep one canonical
 package; move detailed procedures to explicitly required bundled references
 when necessary, never omit correctness, authority or verification rules to
-fit a limit. Check every entrypoint and required support file.
+fit a limit. Check every entrypoint and required support file. For general-purpose
+skills, target a meaningful discovery description of at most 200 characters,
+compact entrypoints, portable file types and shallow package structure before
+authoring. Retain complete trigger/non-trigger rules in the body and define
+runtime, reference loading, persistence, permissions and fallback separately.
+Unknown profiles must remain visible as HOLD; static readiness is not behavior.
 
 For generated blueprints, the builder and design gate automatically run
 the shared static preflight before a destination write; pass repeated

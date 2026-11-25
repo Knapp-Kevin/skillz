@@ -164,7 +164,7 @@ python3 engine/builder/design.py --input /path/to/design.json --host m365-agent-
 python3 engine/builder/host_compat.py --package /approved/custom-skill --host m365-agent-builder
 ```
 
-With no target option, the compiler checks all eight configured profiles;
+With no target option, the compiler checks all currently assessed profiles (ten as of 2026-11-25);
 this does not establish the actual user's host. A hard blocker on any
 selected profile returns HOLD before creating the destination. No bypass
 or automatic instruction truncation is provided. Keep the canonical
@@ -177,6 +177,43 @@ host functionality. Before implementation, identify actual permissions,
 tool dependencies, bundled reference loading, runtime and persistence;
 provide safe fallback or HOLD if any required capability is unavailable.
 Manual authoring uses the same guard without requiring Python.
+
+### Author for portability before drafting
+
+For general-purpose skills, author a clear discovery description of at most
+200 characters; put the full activation/non-trigger contract in the body.
+Keep each independently discoverable entrypoint compact (target fewer than
+20,000 characters), use supported text/data/resource types and a shallow
+package tree, and prefer portable standard-library or instruction-only
+methods. Keep all needed resources, rights notices and safety constraints.
+The strictest assessed profile is a design target, not a reason to remove
+essential functionality. Check the actual profile constraints in
+`host_compat.py` and current official host guidance; do not infer tools,
+script runtimes, network, persistence or permissions from ZIP acceptance.
+
+**Repository admission is all assessed profiles, not a chosen subset.**
+`build.py` and `design.py` reject narrowed `--host` scope in repository
+maintenance. Manually authored or modified packages must run:
+
+```sh
+python3 engine/builder/host_compat.py --skill <slug> --require-authored-ready
+python3 engine/builder/host_compat.py --all --require-authored-ready
+```
+
+The existing engine CI and release builder enforce the same all-profile
+admission policy. Any unexpected static HOLD blocks admission/publication.
+The only current narrow exception is the named PowerShell files of
+`offline-hyperv-qual-vm` on four restricted upload profiles; those pairs
+remain HOLD, not PACKAGE_READY. An additional exception requires explicit
+maintainer review of essential functionality, exact skill/host/blockers,
+and a safe fallback. Do not use extension disguises, automatic truncation,
+resource deletion, weakened verification or a reduced target list to pass.
+
+Builder receipts separately list assessed-but-not-selected profiles and
+unassessed routes (currently ChatGPT and unidentified OpenClaude/other).
+An unknown host is an explicit HOLD requiring current official documentation
+and actual host testing. Adding a new assessed profile expands the default
+admission matrix; no universal native execution claim follows.
 
 This checks authored or explicitly supplied custom SKILL.md structure, local reference closure, file
 extensions and selected documented host package limits, and can generate

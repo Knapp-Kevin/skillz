@@ -45,7 +45,13 @@ and capability constraints before drafting, pass explicit `--host` targets
 or use the all-configured-profiles baseline when unknown, and resolve known
 blockers before handoff. Existing or manually authored custom packages
 can use `host_compat.py --package`; hosts without Python apply the same
-rules manually. Package readiness does not prove native loading,
+rules manually. For repository maintenance, the all-assessed-profile
+admission gate is mandatory for generated and manual packages, including
+publication; `--require-authored-ready` rejects unexpected holds. New skills
+should meet the strictest applicable profile by design (including a
+200-character discovery description), with complete resources and explicit
+runtime/fallback requirements. Unknown profiles stay visible as HOLD.
+Package readiness does not prove native loading,
 runtime functionality or user acceptance.
 
 ## Shared refinement mechanism
