@@ -268,7 +268,7 @@ def claude_discovery_bytes(folder, raw):
                             header + "\n")
     if count != 1:
         return raw
-    adapted = (header + "---\n" + body.rstrip("\n") +
+    adapted = (header + "---\n" + body +
                "\n\n## Canonical activation scope (preserved)\n\n" + description + "\n")
     if bounded_description(adapted) != short:
         return raw
