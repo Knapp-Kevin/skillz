@@ -180,7 +180,7 @@ new path, and the directory command creates a separate prepared handoff
 folder. Neither command installs or uploads anything. The Microsoft and Gemini upload adapters
 preserve the canonical source while renaming an extensionless `LICENSE`
 to `LICENSE.txt` **in the distribution artifact only**, rewriting valid
-relative license links and checking transformed output digests. Unsupported
+relative license links and checking transformed output digests. Adapted ZIPs use sorted members, fixed archive timestamps and stable metadata so identical inputs rebuild identically under the same Python/zlib toolchain; this is not a claim of byte reproducibility across arbitrary toolchain versions. Unsupported
 file types and missing references remain packaging HOLDs. Gemini's static profile also checks its documented file count, byte limits and description length; Claude apps check the separate description limit and select either the canonical folder archive or a source-pinned `-claude.zip` variant. Curated variants are generated only for explicitly maintained canonical source blobs; any changed source must be reassessed before its adapted variant can be published. Neither profile confirms account entitlement, upload scanning or model execution.
 
 An actual host may still lack required Python modules, tool permissions,

@@ -42,6 +42,31 @@ class HostCompatibilityTests(unittest.TestCase):
                 self.assertEqual(result["behavior_tested"], "NOT_TESTED")
                 self.assertEqual(result["consumer_accepted"], "NOT_TESTED")
 
+    def test_upload_zip_rebuild_is_byte_stable_across_clock_and_sorted_members(self):
+        from unittest.mock import patch
+        for host, profile in module.HOSTS.items():
+            if profile["mode"] != "zip":
+                continue
+            with self.subTest(host=host):
+                first = self.root / (host + "-first.zip")
+                second = self.root / (host + "-second.zip")
+                receipt = module.inspect(self.skill, host)
+                self.assertTrue(receipt["package_ready"], receipt["blockers"])
+                with patch("zipfile.time.localtime", return_value=(2025, 1, 1, 0, 0, 0, 0, 1, 0)):
+                    module.write_zip(self.skill, host, str(first), receipt)
+                # A future wall-clock time must not alter otherwise identical bytes.
+                with patch("zipfile.time.localtime", return_value=(2026, 11, 25, 12, 0, 0, 2, 329, 0)):
+                    module.write_zip(self.skill, host, str(second), module.inspect(self.skill, host))
+                self.assertEqual(first.read_bytes(), second.read_bytes())
+                with zipfile.ZipFile(first) as archive:
+                    names = archive.namelist()
+                    self.assertEqual(names, sorted(names))
+                    for item in archive.infolist():
+                        self.assertEqual(item.date_time, (1980, 1, 1, 0, 0, 0))
+                        self.assertEqual(item.create_system, 3)
+                        self.assertEqual(item.external_attr, 0o600 << 16)
+                        self.assertEqual(item.compress_type, zipfile.ZIP_DEFLATED)
+
     def test_microsoft_license_is_safe_and_lossless(self):
         result = module.inspect(self.skill, "m365-agent-builder")
         self.assertTrue(result["package_ready"], result["blockers"])
