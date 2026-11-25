@@ -37,7 +37,7 @@ def fixture():
                               "state": "success", "head_sha": SRC}]},
         "channels": [{"id": "linux_x64", "platform": "linux",
                       "architecture": "x86_64",
-                      "filename": "fictional-installer.bin",
+                      "filename": "fictional-installer.txt",
                       "build_sha256": DIGEST,
                       "published_sha256_claim": DIGEST,
                       "provenance": {"status": "reported_verified",
@@ -56,7 +56,7 @@ class ReleaseEvidenceTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        (self.root / "fictional-installer.bin").write_bytes(PAYLOAD)
+        (self.root / "fictional-installer.txt").write_bytes(PAYLOAD)
 
     def inspect(self, data=None):
         return m.inspect(fixture() if data is None else data, self.root)
@@ -78,14 +78,14 @@ class ReleaseEvidenceTests(unittest.TestCase):
             self.assertFalse(result[field], field)
 
     def test_real_local_byte_change_blocks_claimed_digest(self):
-        (self.root / "fictional-installer.bin").write_bytes(b"tampered")
+        (self.root / "fictional-installer.txt").write_bytes(b"tampered")
         result = self.inspect()
         self.assertEqual(result["status"], "BLOCKED_CONTRADICTORY_EVIDENCE")
         self.assertIn("LOCAL_PUBLISHED_BYTES_DIGEST_DIFFERS:linux_x64",
                       result["blockers"])
 
     def test_missing_published_bytes_holds(self):
-        (self.root / "fictional-installer.bin").unlink()
+        (self.root / "fictional-installer.txt").unlink()
         result = self.inspect()
         self.assertEqual(result["status"], "HOLD_INCOMPLETE_EVIDENCE")
         self.assertIn("LOCAL_ARTIFACT_UNAVAILABLE_OR_UNSAFE:linux_x64",
@@ -346,7 +346,7 @@ class ReleaseEvidenceTests(unittest.TestCase):
     def test_leaf_symlink_refused(self):
         target = self.root / "secret.txt"
         target.write_bytes(PAYLOAD)
-        p = self.root / "fictional-installer.bin"
+        p = self.root / "fictional-installer.txt"
         p.unlink()
         try:
             p.symlink_to(target)
@@ -376,7 +376,7 @@ class ReleaseEvidenceTests(unittest.TestCase):
         self.assertEqual(self.inspect(data)["status"], "HOLD_INCOMPLETE_EVIDENCE")
 
     def test_oversize_artifact_holds(self):
-        p = self.root / "fictional-installer.bin"
+        p = self.root / "fictional-installer.txt"
         with p.open("wb") as f:
             f.truncate(m.MAX_ARTIFACT_BYTES + 1)
         result = self.inspect()
@@ -426,7 +426,7 @@ class ReleaseEvidenceTests(unittest.TestCase):
     def test_cli_mismatch_exits_three_when_required(self):
         p = self.root / "release.json"
         p.write_text(json.dumps(fixture()), encoding="utf8")
-        (self.root / "fictional-installer.bin").write_bytes(b"tampered")
+        (self.root / "fictional-installer.txt").write_bytes(b"tampered")
         process = subprocess.run(
             [sys.executable, str(SCRIPT), "--manifest", str(p),
              "--artifact-root", str(self.root), "--require-local-match"],

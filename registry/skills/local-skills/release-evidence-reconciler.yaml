@@ -1,4 +1,4 @@
-current_change_note: "Domain security and bounded recursive refinement; exact-head qualification pending; no version bump."
+current_change_note: "Text fixture portability correction; identical bytes; exact-head qualification pending; no version bump."
 schema_version: 1
 skill_name: release-evidence-reconciler
 display_name: "Release Evidence Reconciler"
@@ -20,8 +20,8 @@ portability: high
 review_status: needs-re-review
 dependency_status: self-contained-optional-python-stdlib
 dependencies: "Eight-file standalone first-party MIT package; Python 3.9+ stdlib offline local-byte auditor and fictional SHA-256 sample, no network, other Skillz package, installer execution or third-party runtime."
-content_blob_sha: 30a3352df67fdf7820189422f57f51e9272a29e4
-complete_package_tree_sha: 80685ce089d1b57edd9d4d65ab3cbe39bf236db4
+content_blob_sha: 007387635d0c9a92347ed85d3b72cdea2d10a57b
+complete_package_tree_sha: 79b85a943c3de5c7e98fba8bada7f051deae20cc
 import_eligibility: review-required
 source_rights: "Original MIT instructions/tests/stdlib code/fictional bytes, with official GitHub/SLSA guidance cited only as factual protocol and security background; no third-party skill expression imported."
 rationale: "Initial v0.1.0 issue #882 source-candidate. Attested provenance status is always a caller-provided claim; only actual local bytes are independently hashed, and local file provenance/origin remains unverified. Hosted exact-head source QA PASS 55/55 on PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea; real host acceptance NOT_RUN."

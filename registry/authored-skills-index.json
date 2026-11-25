@@ -1262,8 +1262,8 @@
       "license_verified_at": "2026-11-23",
       "provenance_path": "registry/skills/local-skills/release-evidence-reconciler.yaml",
       "verification_path": "registry/verification/local-skills/release-evidence-reconciler.yaml",
-      "skill_blob_sha": "30a3352df67fdf7820189422f57f51e9272a29e4",
-      "package_tree_sha": "80685ce089d1b57edd9d4d65ab3cbe39bf236db4",
+      "skill_blob_sha": "007387635d0c9a92347ed85d3b72cdea2d10a57b",
+      "package_tree_sha": "79b85a943c3de5c7e98fba8bada7f051deae20cc",
       "package_file_count": 8,
       "review_status": "needs-re-review",
       "review_score": "NOT_ASSESSED_EXACT_V0_1_0",
@@ -1277,7 +1277,7 @@
         "security/supply-chain",
         "cloud-devops/ci-cd"
       ],
-      "review_note": "First-party 8-file source package release byte-chain/auditor. Actions #45123071252 PASS 55/55 synthetic offline Python tests at PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea. Authored QA Actions #45123071291 PASS 11/11; both Socket checks SUCCESS. Local actual fixture byte SHA-256 measured, explicit expected-channel drift guards qualified. No real external provenance signature, publication origin, genuine installation, consuming-agent host or customer outcome tested; semantic re-review still pending. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged."
+      "review_note": "First-party 8-file source package release byte-chain/auditor. Actions #45123071252 PASS 55/55 synthetic offline Python tests at PR #883 source HEAD 0561bb4abf7d9260b5de105d184d1978fcc6ecea. Authored QA Actions #45123071291 PASS 11/11; both Socket checks SUCCESS. Local actual fixture byte SHA-256 measured, explicit expected-channel drift guards qualified. No real external provenance signature, publication origin, genuine installation, consuming-agent host or customer outcome tested; semantic re-review still pending. Current source update: domain-specific injection challenge, categorical feedback, private preference routing and bounded recursive improvement. Prior receipts historical; host behavior NOT_RUN. Version unchanged. Fixture filename corrected from .bin to .txt; identical bytes and digest; exact-head requalification pending."
     },
     {
       "id": "first-run-experience-validator",
