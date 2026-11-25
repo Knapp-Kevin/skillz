@@ -188,7 +188,10 @@ python3 engine/builder/host_compat.py --profiles
 ```
 
 This read-only inventory is generated from the same profiles used for
-preflight; it is not live host capability discovery. Recheck official rules
+preflight; `portable_authoring_envelope` calculates the strictest numeric
+bounds and shared extension set, with separate profile rows for exact
+exceptions. It is not live host capability discovery. The common name,
+folder and description rules follow the [Agent Skills specification](https://agentskills.io/specification). The standard-library checker recognizes a conservative required-field subset, not arbitrary YAML validation. Recheck official rules
 and use the manual guide when shell/Python is unavailable.
 
 For general-purpose skills, author a clear discovery description of at most

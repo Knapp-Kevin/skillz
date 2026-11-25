@@ -92,6 +92,8 @@ jobs:
           for item in held:
               reason = ', '.join(item['blockers']) if item['blockers'] else 'UNKNOWN'
               lines.append(f'- {item["host"]} / {item["skill"]}: {reason}')
+          for item in result['authored_admission']['unexpected_holds']:
+              lines.append(f'- Admission blocker {item["host"]} / {item["skill"]}: {", ".join(item["blockers"])}')
           report = '\n'.join(lines) + '\n'
           print(report)
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:

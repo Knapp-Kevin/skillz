@@ -18,6 +18,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[2]
 AUTHORED = ROOT / "skills" / "authored"
 MAX_ENTRYPOINT = 20000
+MAX_SKILL_NAME = 64
+BASE_DESCRIPTION_LIMIT = 1024
 MICROSOFT_EXTENSIONS = frozenset((
     ".json .xml .yaml .yml .ini .config .utf8 .docx .doc .docm "
     ".pdf .txt .rtf .md .ppt .pptx .ppsm .xlsx .xls .xlsm .csv .tsv "
@@ -115,6 +117,29 @@ def authored_admission(reports, skills=None):
         "documented_holds": expected,
         "unexpected_holds": unexpected,
         "host_behavior": "NOT_TESTED",
+    }
+
+
+def portability_envelope():
+    """Compute broad design bounds from the same assessed profile definitions."""
+    def strictest(key, default=None):
+        values = [p[key] for p in HOSTS.values() if key in p]
+        if default is not None:
+            values.append(default)
+        return min(values) if values else None
+    restrictions = [set(p["extensions"]) for p in HOSTS.values() if "extensions" in p]
+    return {
+        "name_max_characters": MAX_SKILL_NAME,
+        "description_max_characters": strictest("description_limit", BASE_DESCRIPTION_LIMIT),
+        "entrypoint_characters_exclusive": strictest("strict_char_limit"),
+        "entrypoint_max_bytes": strictest("max_entrypoint_bytes"),
+        "max_files": strictest("max_files"),
+        "max_directory_depth": strictest("max_depth"),
+        "max_uncompressed_package_bytes": strictest("max_package_bytes"),
+        "max_file_bytes": strictest("max_file_bytes"),
+        "shared_extensions": sorted(set.intersection(*restrictions)) if restrictions else None,
+        "license_adapter": "LICENSE_TO_LICENSE_TXT_WHERE_REQUIRED",
+        "scope": "STATIC_DESIGN_TARGETS_NOT_NATIVE_EXECUTION_OR_TOOL_AVAILABILITY",
     }
 
 
@@ -255,13 +280,29 @@ def check_entrypoint_metadata(instructions, directory_name):
     header = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n", instructions, re.S)
     if not header:
         raise ValueError("YAML_FRONTMATTER_MISSING")
-    names = re.findall(r"(?m)^name:[ \t]*(.*?)\s*$", header.group(1))
-    if len(names) != 1 or not NAME.fullmatch(names[0]) or names[0] != directory_name:
+    # A deliberately conservative top-level YAML subset. Ambiguous quoted
+    # keys, explicit keys, merge keys and duplicates must not masquerade as
+    # ordinary required fields. This does not certify arbitrary nested YAML.
+    keys = set()
+    lines = header.group(1).splitlines()
+    for i, line in enumerate(lines):
+        if not line.strip() or line.startswith((" ", "#")):
+            continue
+        match = re.fullmatch(r"([A-Za-z][A-Za-z0-9_-]*):[ \t]*(.*)", line)
+        if not match or match.group(1) in keys:
+            raise ValueError("AMBIGUOUS_FRONTMATTER_KEYS")
+        key, value = match.groups()
+        keys.add(key)
+        if key == "name" and (not NAME.fullmatch(value.strip()) or
+                              value.strip() != directory_name or
+                              (i+1 < len(lines) and lines[i+1].startswith((" ", "\t")))):
+            raise ValueError("SKILL_NAME_MISMATCH")
+    if "name" not in keys or len(directory_name) > MAX_SKILL_NAME:
         raise ValueError("SKILL_NAME_MISMATCH")
     desc = bounded_description(instructions)
-    if len(directory_name) > 64 or desc is None:
-        raise ValueError("INVALID_NAME_OR_DESCRIPTION")
-    if len(desc) > 1024:
+    if desc is None:
+        raise ValueError("DESCRIPTION_METADATA_NOT_ASSESSED")
+    if len(desc) > BASE_DESCRIPTION_LIMIT:
         raise ValueError("DESCRIPTION_OVER_BASE_LIMIT")
 
 
@@ -329,7 +370,7 @@ def portable_path_blockers(names):
                     part.split(".", 1)[0].rstrip().casefold() in reserved):
                 blockers.add("NONPORTABLE_MEMBER_PATH:" + name)
             prefix = "/".join(parts[:i+1])
-            key = unicodedata.normalize("NFC", prefix).casefold()
+            key = unicodedata.normalize("NFC", unicodedata.normalize("NFC", prefix).casefold())
             role = "file" if i == len(parts)-1 else "directory"
             prior = seen.get(key)
             if prior is not None and prior != (prefix, role):
@@ -422,7 +463,8 @@ def inspect(folder, host):
     result["format_valid"] = True
     src_names = [f.relative_to(folder).as_posix() for f in files]
     dst_names = [package_name(p, profile) for p in src_names]
-    blockers, warnings = portable_path_blockers(dst_names), []
+    blockers = portable_path_blockers([folder.name]) + portable_path_blockers(dst_names)
+    warnings = []
     for f in files:
         if f.suffix.lower() == ".md":
             try:
@@ -661,6 +703,7 @@ def main(argv=None):
                        for key, value in profile.items()}
                 for name, profile in HOSTS.items()
             },
+            "portable_authoring_envelope": portability_envelope(),
             "unassessed_hosts": unassessed_host_statuses(),
             "host_behavior": "NOT_TESTED",
             "next_action": "VERIFY_CURRENT_OFFICIAL_HOST_RULES_AND_REQUIRED_CAPABILITIES",

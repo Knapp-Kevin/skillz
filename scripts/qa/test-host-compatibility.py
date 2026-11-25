@@ -74,6 +74,12 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertEqual(set(receipt["assessed_profiles"]), set(module.HOSTS))
         self.assertEqual(receipt["assessed_profiles"]["claude-apps"]["description_limit"], 200)
         self.assertIn(".txt", receipt["assessed_profiles"]["gemini-apps"]["extensions"])
+        envelope = receipt["portable_authoring_envelope"]
+        self.assertEqual(envelope["description_max_characters"], 200)
+        self.assertEqual(envelope["max_files"], 100)
+        self.assertEqual(envelope["max_uncompressed_package_bytes"], 10 * 1024 * 1024)
+        self.assertIn(".txt", envelope["shared_extensions"])
+        self.assertNotIn(".ps1", envelope["shared_extensions"])
         self.assertEqual(receipt["unassessed_hosts"]["chatgpt"]["status"], "HOLD")
         self.assertEqual(receipt["host_behavior"], "NOT_TESTED")
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
@@ -260,6 +266,8 @@ class HostCompatibilityTests(unittest.TestCase):
     def test_root_duplicate_required_metadata_and_base_limit_hold(self):
         p = self.skill / "SKILL.md"
         for header in ("name: demo-skill\nname: another\ndescription: A fictional skill.",
+                       'name: demo-skill\n"name": another\ndescription: A fictional skill.',
+                       "name: demo-skill\n  continuation\ndescription: A fictional skill.",
                        "name: demo-skill\ndescription: A fictional skill.\ndescription: Another.",
                        "name: demo-skill\ndescription: " + "x" * 1025):
             p.write_text("---\n" + header + "\n---\n# Demo\n")
@@ -278,6 +286,11 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertEqual(module.asset_namespace_conflicts(["demo", "demo-claude"]),
                          ["demo-claude"])
         self.assertEqual(module.asset_namespace_conflicts(["demo", "other"]), [])
+        reports = [dict(module.inspect(self.skill, h), skill=slug)
+                   for slug in ("demo", "demo-claude") for h in module.HOSTS]
+        receipt = module.authored_admission(reports, ["demo", "demo-claude"])
+        self.assertEqual(receipt["unexpected_holds"], [{"skill": "demo-claude",
+                         "host": "distribution", "blockers": ["RELEASE_ASSET_NAMESPACE_COLLISION"]}])
 
     def test_nested_entrypoint_hard_limit_cannot_hide_inside_pack(self):
         nested = self.skill / "skills" / "nested" / "SKILL.md"
