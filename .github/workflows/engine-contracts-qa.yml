@@ -56,9 +56,15 @@ jobs:
           python3 -B scripts/qa/test-engine-feedback-boundary.py
           python3 -B scripts/qa/test-host-compatibility.py
           python3 -B scripts/qa/test_sales_methodology_contract.py
-          # Protect already-remediated packages against future size or link regressions.
+          # Preserve the eight previously established package-readiness gates.
+          # Newly assessed app profiles have their own adversarial tests and full
+          # matrix below; an explicit new-host HOLD is not a legacy regression.
+          # Never use an unscoped all-host command as a frozen readiness baseline.
           for skill in effort-allocation-navigator sandler-conversation-strategist meddpicc-opportunity-assurance evidence-driven-refinement-loop file-lifecycle-curator repository-readme-architect ci-guard; do
-            python3 -B engine/builder/host_compat.py --skill "$skill" > "/tmp/$skill-package-check.json"
+            for host in github-copilot claude-code openai-codex gemini-cli hermes-agent m365-copilot-chat m365-agent-builder m365-agents-toolkit; do
+              echo "Required package readiness: $skill / $host"
+              python3 -B engine/builder/host_compat.py --skill "$skill" --host "$host" > "/tmp/$skill-$host-package-check.json"
+            done
           done
       - name: Full authored host packaging matrix (report-only, no false pass)
         shell: bash
