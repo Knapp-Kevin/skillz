@@ -8,11 +8,52 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import sys
+import unittest
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "engine" / "builder"))
 import host_compat
+
+# Documented host routes without a verified machine-checkable package profile.
+# A canonical archive is still available, but it is not a host-ready asset.
+MANUAL_HOSTS = {
+    "chatgpt": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
+    "claude-apps": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
+    "gemini-apps": "HOST_UPLOAD_PROFILE_NOT_ASSESSED",
+    "openclaude-other": "EXACT_HOST_IDENTITY_NOT_ESTABLISHED",
+}
+
+def add_manual_host_statuses(hosts):
+    if set(hosts) & MANUAL_HOSTS.keys():
+        raise ValueError("manual host status would overwrite a checked profile")
+    for host, reason in MANUAL_HOSTS.items():
+        hosts[host] = {"status": "HOLD", "asset": None, "sha256": None,
+                       "blockers": [reason], "warnings": [], "behavior": "NOT_TESTED"}
+
+class ManualHostTests(unittest.TestCase):
+    def test_unassessed_routes_fail_closed(self):
+        hosts = {}
+        add_manual_host_statuses(hosts)
+        self.assertEqual(set(hosts), {"chatgpt", "claude-apps", "gemini-apps", "openclaude-other"})
+        for row in hosts.values():
+            self.assertEqual(row["status"], "HOLD")
+            self.assertIsNone(row["asset"])
+            self.assertIsNone(row["sha256"])
+            self.assertTrue(row["blockers"])
+            self.assertEqual(row["behavior"], "NOT_TESTED")
+
+    def test_checked_profile_preserved(self):
+        row = {"status": "PACKAGE_READY"}
+        hosts = {"claude-code": row}
+        add_manual_host_statuses(hosts)
+        self.assertIs(hosts["claude-code"], row)
+
+    def test_collision_never_overwrites(self):
+        hosts = {"chatgpt": {"status": "PACKAGE_READY"}}
+        with self.assertRaises(ValueError):
+            add_manual_host_statuses(hosts)
+        self.assertEqual(hosts, {"chatgpt": {"status": "PACKAGE_READY"}})
 
 def git(*args):
     return subprocess.check_output(["git", "-C", str(ROOT), *args])
@@ -100,12 +141,21 @@ def build(output):
             entry["hosts"][h] = {"status": "PACKAGE_READY" if ready else "HOLD",
                 "asset": asset if ready else None, "sha256": digest(output / asset) if ready else None,
                 "blockers": report["blockers"], "warnings": report["warnings"], "behavior": "NOT_TESTED"}
+        add_manual_host_statuses(entry["hosts"])
         manifest["skills"].append(entry)
     (output / "authored-download-manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
     print(f"Verified {len(rows)} canonical authored ZIPs; {len(list(output.glob('*-m365.zip')))} Microsoft variants; source {commit}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
-    build(args.output)
+    if args.self_test:
+        suite = unittest.defaultTestLoader.loadTestsFromTestCase(ManualHostTests)
+        if not unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful():
+            raise SystemExit(1)
+    elif args.output is None:
+        parser.error("--output is required unless --self-test is selected")
+    else:
+        build(args.output)
