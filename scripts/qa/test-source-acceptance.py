@@ -137,6 +137,35 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
+    def test_script_bearing_real_pilot_all_assessed_hosts(self):
+        contract = json.loads((ROOT / "engine/builder/examples/mcp-tool-surface-source-contract.json").read_text(encoding="utf-8"))
+        package = ROOT / "skills/authored/mcp-tool-surface-auditor"
+        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+        for host in m.compat.HOSTS:
+            with self.subTest(host=host):
+                plan = m.plan(contract, package, host)["plan"]
+                self.assertEqual(len(plan["cases"]), 12)
+                self.assertEqual(plan["script_resource_coverage"], ["scripts/audit.py", "tests/test_audit.py"])
+                self.assertFalse(plan["host_execution_observed"])
+                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
+
+    def test_actual_mcp_fixture_matches_predeclared_offline_oracle(self):
+        # This is an offline helper fixture test, not native-host activation.
+        import subprocess
+        package = ROOT / "skills/authored/mcp-tool-surface-auditor"
+        run = subprocess.run([sys.executable, "-B", str(package / "scripts/audit.py"),
+                              "--input", str(package / "examples/synthetic-18-versus-12.json")],
+                             capture_output=True, text=True, timeout=15, check=True)
+        result = json.loads(run.stdout)
+        self.assertEqual(result["counts"], {"backend_registry": 18, "mcp_list": 18, "host_visible": 12})
+        self.assertEqual(result["status"], "OBSERVED_DIFFERENCE")
+        self.assertEqual(result["observed_differences"], [
+            {"boundary": "mcp_list_to_host_visible", "finding": "NOT_VISIBLE_DOWNSTREAM",
+             "name": f"tool_{i:02d}"} for i in range(13, 19)])
+        self.assertFalse(result["host_or_server_fault_assigned"])
+        self.assertFalse(result["mcp_transport_observed"])
+        self.assertFalse(result["tool_invocations_tested"])
+
     def test_real_source_plan_to_ledger_handoff_preserves_not_run(self):
         host = "gemini-apps"
         p = m.plan(self.contract, PACKAGE, host)
