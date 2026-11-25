@@ -34,8 +34,9 @@ oracle, store records or promote a skill to validated.
 
 For builder-generated skills, the [contract-derived acceptance plan](acceptance-plan.md)
 provides exact-package-bound adversarial cases and a conjunctive mapping to
-the six receipt stages. Do not claim a stage passed if any mapped case is
-missing or failed. The receipt checker alone does not verify the case ledger.
+the six receipt stages. Use its detailed case ledger reconciler for generated
+skills; the stage-only checker below explicitly reports case_ledger_reconciled
+as false. Do not claim a stage passed if any mapped case is missing or failed.
 
 ## Optional receipt checker
 
