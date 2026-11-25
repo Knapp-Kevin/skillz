@@ -103,12 +103,15 @@ def bounded_description(instructions):
         if not following or any(not line.strip() or not line.startswith("  ") or
                                 line.startswith("   ") for line in following):
             return None
-        value = " ".join(line.strip() for line in following)
-        if "\\x00" in value:
+        folded = " ".join(line.strip() for line in following)
+        if any(ord(c) < 32 for c in folded):
             return None
-        return value
+        return folded + ("\n" if value == ">" else "")
     if (following or not value or value[0] in "'\\\"|>&*!{[?#@\x60" or
             ": " in value or " #" in value):
+        return None
+    if not any(c.isalpha() for c in value) or value.lower() in {
+            "true", "false", "yes", "no", "on", "off", "null", "~"}:
         return None
     return value
 
