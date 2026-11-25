@@ -197,11 +197,10 @@ Keep each independently discoverable entrypoint compact (target fewer than
 20,000 characters), use supported text/data/resource types and a shallow
 package tree. The current broad-portability targets include at most 100 files,
 three nested directory levels and at most 10 MiB of uncompressed content;
-consult the live profile inventory for host-specific limits. Avoid hidden or
+consult the current profile inventory for host-specific limits. Avoid hidden or
 cache files, extensionless resources other than the handled license, and
-unsupported executable formats. Prefer supported text/data/resource types
-and a shallow package tree, and prefer portable standard-library or instruction-only
-methods. Keep all needed resources, rights notices and safety constraints.
+unsupported executable formats. Prefer portable standard-library or
+instruction-only methods. Keep all needed resources, rights notices and safety constraints.
 The strictest assessed profile is a design target, not a reason to remove
 essential functionality. Check the actual profile constraints in
 `host_compat.py` and current official host guidance; do not infer tools,
