@@ -208,7 +208,7 @@ class HostCompatibilityTests(unittest.TestCase):
     def test_builder_json_quoted_description_and_exact_limit(self):
         import json
         file = self.skill / "SKILL.md"
-        for text, ready in (('A "quoted" description ' + "x" * 178, True),
+        for text, ready in (('A "quoted" description ' + "x" * (200 - len('A "quoted" description ')), True),
                             ("x" * 201, False)):
             self.assertEqual(len(text), 200 if ready else 201)
             file.write_text("---\nname: demo-skill\ndescription: " +
