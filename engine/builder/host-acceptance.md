@@ -32,6 +32,11 @@ oracle, store records or promote a skill to validated.
    with comparable paired conditions; for fresh-user onboarding use the
    [First-Run Experience Validator](../../skills/authored/first-run-experience-validator/SKILL.md).
 
+For builder-generated skills, the [contract-derived acceptance plan](acceptance-plan.md)
+provides exact-package-bound adversarial cases and a conjunctive mapping to
+the six receipt stages. Do not claim a stage passed if any mapped case is
+missing or failed. The receipt checker alone does not verify the case ledger.
+
 ## Optional receipt checker
 
 Copy the fictional NOT_RUN example and replace its identities with exact
