@@ -584,6 +584,7 @@ def main(argv=None):
     choice = parser.add_mutually_exclusive_group(required=True)
     choice.add_argument("--skill", help="First-party authored skill slug")
     choice.add_argument("--all", action="store_true", help="Audit every authored package")
+    choice.add_argument("--profiles", action="store_true", help="Read current static host constraints before authoring")
     choice.add_argument("--package", help="Explicit user-authorized custom package directory; no discovery")
     parser.add_argument("--host", choices=sorted(HOSTS), help="Default: all assessed host profiles")
     parser.add_argument("--require-authored-ready", action="store_true",
@@ -591,6 +592,22 @@ def main(argv=None):
     parser.add_argument("--zip-output", help="Explicit NEW ZIP output, single skill and ZIP host only")
     parser.add_argument("--directory-output", help="Explicit NEW handoff directory, not host installation")
     args = parser.parse_args(argv)
+    if args.profiles:
+        if args.host or args.zip_output or args.directory_output or args.require_authored_ready:
+            parser.error("--profiles is a read-only authoring reference, not a package operation")
+        print(json.dumps({
+            "schema_version": 1,
+            "claim": "STATIC_HOST_CONSTRAINTS_NOT_RUNTIME_CAPABILITIES",
+            "assessed_profiles": {
+                name: {key: sorted(value) if isinstance(value, (set, frozenset)) else value
+                       for key, value in profile.items()}
+                for name, profile in HOSTS.items()
+            },
+            "unassessed_hosts": unassessed_host_statuses(),
+            "host_behavior": "NOT_TESTED",
+            "next_action": "VERIFY_CURRENT_OFFICIAL_HOST_RULES_AND_REQUIRED_CAPABILITIES",
+        }, indent=2))
+        return 0
     if args.skill and (not NAME.fullmatch(args.skill) or len(args.skill) > 64):
         raise ValueError("INVALID_SKILL_SLUG")
     if args.require_authored_ready and (args.package or args.host or args.zip_output or args.directory_output):

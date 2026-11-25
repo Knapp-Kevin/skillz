@@ -63,6 +63,22 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertTrue(result["unexpected_holds"])
         self.assertFalse(result["documented_holds"])
 
+    def test_read_only_profile_inventory_exposes_actual_authoring_constraints(self):
+        import contextlib
+        import io
+        import json
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual(module.main(["--profiles"]), 0)
+        receipt = json.loads(output.getvalue())
+        self.assertEqual(set(receipt["assessed_profiles"]), set(module.HOSTS))
+        self.assertEqual(receipt["assessed_profiles"]["claude-apps"]["description_limit"], 200)
+        self.assertIn(".txt", receipt["assessed_profiles"]["gemini-apps"]["extensions"])
+        self.assertEqual(receipt["unassessed_hosts"]["chatgpt"]["status"], "HOLD")
+        self.assertEqual(receipt["host_behavior"], "NOT_TESTED")
+        with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            module.main(["--profiles", "--require-authored-ready"])
+
     def test_unassessed_receipts_never_claim_ready(self):
         statuses = module.unassessed_host_statuses()
         self.assertEqual(set(statuses), set(module.UNASSESSED_HOSTS))

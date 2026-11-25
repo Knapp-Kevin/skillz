@@ -180,11 +180,27 @@ Manual authoring uses the same guard without requiring Python.
 
 ### Author for portability before drafting
 
+Read the current machine-readable packaging constraints before choosing the
+package architecture:
+
+```sh
+python3 engine/builder/host_compat.py --profiles
+```
+
+This read-only inventory is generated from the same profiles used for
+preflight; it is not live host capability discovery. Recheck official rules
+and use the manual guide when shell/Python is unavailable.
+
 For general-purpose skills, author a clear discovery description of at most
 200 characters; put the full activation/non-trigger contract in the body.
 Keep each independently discoverable entrypoint compact (target fewer than
 20,000 characters), use supported text/data/resource types and a shallow
-package tree, and prefer portable standard-library or instruction-only
+package tree. The current broad-portability targets include at most 100 files,
+three nested directory levels and at most 10 MiB of uncompressed content;
+consult the live profile inventory for host-specific limits. Avoid hidden or
+cache files, extensionless resources other than the handled license, and
+unsupported executable formats. Prefer supported text/data/resource types
+and a shallow package tree, and prefer portable standard-library or instruction-only
 methods. Keep all needed resources, rights notices and safety constraints.
 The strictest assessed profile is a design target, not a reason to remove
 essential functionality. Check the actual profile constraints in

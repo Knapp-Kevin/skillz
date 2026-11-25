@@ -25,7 +25,8 @@ a finished skill merely because its Markdown and manifest are valid.
 ## Cross-host authoring requirement
 
 Before drafting, consult the [builder host compatibility contract](../engine/builder/README.md)
-and current official host constraints. For general-purpose skills, use a
+and current official host constraints (`python3 engine/builder/host_compat.py --profiles`
+for the machine-readable inventory). For general-purpose skills, use a
 meaningful discovery description at most 200 characters, compact entrypoints
 (target fewer than 20,000 characters), portable resource types and a shallow
 layout. Keep the complete activation contract and essential supporting files;
