@@ -137,6 +137,25 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
+    def test_authority_boundary_corpus_batch_all_assessed_hosts(self):
+        for slug in ("decision-record-steward", "agent-workspace-footprint-assessor",
+                     "connector-capability-risk-review"):
+            contract = json.loads((ROOT / "engine/builder/examples" /
+                                  (slug + "-source-contract.json")).read_text(encoding="utf-8"))
+            package = ROOT / "skills/authored" / slug
+            self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+            for host in m.compat.HOSTS:
+                with self.subTest(skill=slug, host=host):
+                    report = m.plan(contract, package, host)
+                    plan = report["plan"]
+                    self.assertEqual(len(plan["cases"]), 10)
+                    self.assertEqual(set(plan["receipt_stage_requirements"]), set(m.a.STAGES))
+                    self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
+                    self.assertEqual(plan["script_resource_coverage"], [])
+                    self.assertEqual(report["plan_sha256"], m.generated.canonical_sha(plan))
+                    self.assertFalse(plan["host_execution_observed"])
+                    self.assertFalse(plan["consumer_accepted"])
+
     def test_script_bearing_real_pilot_all_assessed_hosts(self):
         contract = json.loads((ROOT / "engine/builder/examples/mcp-tool-surface-source-contract.json").read_text(encoding="utf-8"))
         package = ROOT / "skills/authored/mcp-tool-surface-auditor"
