@@ -250,6 +250,14 @@ assertion of universal consumer acceptance. Unknown hosts require review,
 not guessed compatibility. Add host adapters only after official method
 verification, and preserve one canonical portable package.
 
+## Contract-derived acceptance planning (optional)
+
+For a builder-generated skill, use [acceptance_plan.py and its protocol](acceptance-plan.md)
+to derive NOT_RUN cases from the validated design dossier and exact completed
+package. The selected host transformation manifest and each required case
+are bound to the plan. Prepare concrete fixtures and independent oracles
+before an authorized native trial; a plan is not an observed result.
+
 ## Native host evidence (optional)
 
 Use the [native host acceptance protocol](host-acceptance.md) after static

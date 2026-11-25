@@ -42,6 +42,12 @@ design_gate section. No dossier, evidence observation or probe description
 is copied into the emitted skill package. Private source material should
 not be put in a public example or tracked repository in the first place.
 
+For the finished generated canonical package, the optional
+[acceptance plan generator](acceptance-plan.md) reuses these probes and
+obligations and expands each step/module handoff into separate planned
+cases. It binds exact package and selected host member digests, but does
+not execute probes or authenticate evidence.
+
 ## Feedback is not design authority
 
 When outside feedback motivates a design, apply the
