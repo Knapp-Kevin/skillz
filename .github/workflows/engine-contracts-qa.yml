@@ -23,6 +23,7 @@ on:
       - 'scripts/qa/test-host-compatibility.py'
       - 'docs/getting-started-with-skills.md'
       - 'skills/authored/**'
+      - 'registry/authored-skills-index.json'
       - 'scripts/qa/test_sales_methodology_contract.py'
       - '.github/workflows/engine-contracts-qa.yml'
 

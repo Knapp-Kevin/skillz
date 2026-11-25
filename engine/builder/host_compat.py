@@ -77,10 +77,15 @@ AUTHORED_HOLD_EXCEPTIONS = {
 }
 
 
-def authored_admission(reports):
-    """Classify a complete assessed matrix; no exception makes a host ready."""
-    expected, unexpected = [], []
+def authored_admission(reports, skills=None):
+    """Classify assessed pairs; require complete coverage when skills are supplied."""
+    expected, unexpected, seen = [], [], set()
     for report in reports:
+        pair = (report["skill"], report["host"])
+        if pair in seen or pair[1] not in HOSTS:
+            unexpected.append({"skill": pair[0], "host": pair[1],
+                               "blockers": ["DUPLICATE_OR_UNKNOWN_MATRIX_PAIR"]})
+        seen.add(pair)
         if report["package_ready"]:
             continue
         pair = (report["skill"], report["host"])
@@ -91,6 +96,12 @@ def authored_admission(reports):
             expected.append(row)
         else:
             unexpected.append(row)
+    if skills is not None:
+        required = {(skill, host) for skill in skills for host in HOSTS}
+        for skill, host in sorted(required - seen):
+            unexpected.append({"skill": skill, "host": host, "blockers": ["MISSING_MATRIX_PAIR"]})
+        for skill, host in sorted(seen - required):
+            unexpected.append({"skill": skill, "host": host, "blockers": ["UNDECLARED_MATRIX_PAIR"]})
     return {
         "status": "HOLD_UNEXPECTED_PACKAGE_BLOCKERS" if unexpected else
                   "STATIC_ADMISSION_READY_WITH_DOCUMENTED_HOLDS" if expected else
@@ -602,7 +613,15 @@ def main(argv=None):
         "ready": sum(r["package_ready"] for r in results if r["host"] == h),
         "hold": sum(not r["package_ready"] for r in results if r["host"] == h),
     } for h in ([args.host] if args.host else HOSTS)}
-    admission = authored_admission(results) if not args.package and not args.host else None
+    admission = None
+    if not args.package and not args.host:
+        skills = [p.name for p in packages]
+        if args.all:
+            index = json.loads((ROOT / "registry" / "authored-skills-index.json").read_text(encoding="utf-8"))
+            indexed = [row["id"] for row in index["skills"]]
+            if len(indexed) != len(set(indexed)) or set(indexed) != set(skills):
+                raise ValueError("AUTHORED_INDEX_PACKAGE_INVENTORY_MISMATCH")
+        admission = authored_admission(results, skills)
     print(json.dumps({
         "schema_version": 1, "claim": "STATIC_PACKAGE_PREFLIGHT_ONLY",
         "unassessed_hosts": unassessed_host_statuses(),

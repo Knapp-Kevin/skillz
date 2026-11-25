@@ -47,6 +47,14 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertEqual(module.authored_admission([dict(known, package_ready=True)])["status"],
                          "STATIC_ADMISSION_READY")
 
+    def test_authored_admission_requires_complete_unique_matrix(self):
+        reports = [module.inspect(self.skill, host) for host in module.HOSTS]
+        self.assertEqual(module.authored_admission(reports, [self.skill.name])["status"],
+                         "STATIC_ADMISSION_READY")
+        for broken in (reports[:-1], reports + [reports[0]]):
+            self.assertEqual(module.authored_admission(broken, [self.skill.name])["status"],
+                             "HOLD_UNEXPECTED_PACKAGE_BLOCKERS")
+
     def test_new_authored_skill_cannot_pass_admission_with_unsupported_file(self):
         (self.skill / "fixture.bin").write_bytes(b"fictional")
         reports = [module.inspect(self.skill, host) for host in module.HOSTS]
