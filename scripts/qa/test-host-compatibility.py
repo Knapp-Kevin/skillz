@@ -258,6 +258,62 @@ class HostCompatibilityTests(unittest.TestCase):
         self.assertEqual(result["host_loaded"], "NOT_TESTED")
         self.assertEqual(result["behavior_tested"], "NOT_TESTED")
 
+    def test_curated_claude_adaptation_preserves_scope_and_canonical_bytes(self):
+        import hashlib
+        from unittest.mock import patch
+        entry = self.skill / "SKILL.md"
+        original_description = "Analyze fictional evidence without claiming authorization. " * 5
+        source = ("---\nname: demo-skill\ndescription: >-\n  " +
+                  original_description.strip() + "\n---\n\n# Demo\n\nRead [guide](references/guide.md).\n\n").encode()
+        entry.write_bytes(source)
+        blob = hashlib.sha1(b"blob " + str(len(source)).encode() + b"\0" + source,
+                            usedforsecurity=False).hexdigest()
+        short = "Analyze fictional evidence; preserve authorization boundaries."
+        with patch.object(module, "AUTHORED", self.root), patch.dict(
+                module.CLAUDE_DISCOVERY, {"demo-skill": (blob, short)}, clear=True):
+            report = module.inspect(self.skill, "claude-apps")
+            self.assertTrue(report["package_ready"], report["blockers"])
+            self.assertIn("CLAUDE_DISCOVERY_DESCRIPTION_ADAPTED_CANONICAL_SCOPE_PRESERVED", report["warnings"])
+            self.assertEqual(module.render_package_bytes(self.skill, "SKILL.md",
+                             module.HOSTS["claude-code"]), source)
+            dest = self.root / "curated.zip"
+            module.write_zip(self.skill, "claude-apps", str(dest), report)
+            with zipfile.ZipFile(dest) as archive:
+                output = archive.read("demo-skill/SKILL.md")
+                self.assertEqual(module.bounded_description(output.decode()), short)
+                self.assertIn(source.split(b"\n---\n", 1)[1], output)
+                self.assertIn(original_description.strip().encode(), output)
+                self.assertEqual(archive.read("demo-skill/LICENSE"),
+                                 (self.skill / "LICENSE").read_bytes())
+                self.assertEqual(archive.read("demo-skill/references/guide.md"),
+                                 (self.skill / "references/guide.md").read_bytes())
+            self.assertEqual(entry.read_bytes(), source)
+            entry.write_bytes(source + b"Changed source.\n")
+            stale = module.inspect(self.skill, "claude-apps")
+            self.assertIn("DESCRIPTION_OVER_HOST_LIMIT", stale["blockers"])
+            with self.assertRaisesRegex(ValueError, "ZIP_SOURCE_CHANGED_SINCE_PREFLIGHT"):
+                module.write_zip(self.skill, "claude-apps",
+                                 str(self.root / "stale.zip"), report)
+        entry.write_bytes(source)
+        with patch.dict(module.CLAUDE_DISCOVERY, {"demo-skill": (blob, short)}, clear=True):
+            self.assertIn("DESCRIPTION_OVER_HOST_LIMIT",
+                          module.inspect(self.skill, "claude-apps")["blockers"])
+
+    def test_curated_records_cover_only_exact_authored_sources(self):
+        if not module.AUTHORED.is_dir():
+            self.skipTest("Repository packages unavailable")
+        for slug, (blob, short) in module.CLAUDE_DISCOVERY.items():
+            with self.subTest(skill=slug):
+                import hashlib
+                source = (module.AUTHORED / slug / "SKILL.md").read_bytes()
+                current = hashlib.sha1(b"blob " + str(len(source)).encode() + b"\0" + source,
+                                       usedforsecurity=False).hexdigest()
+                self.assertEqual(current, blob, "Re-review discovery summary against changed canonical source")
+                self.assertLessEqual(len(short), 200)
+                report = module.inspect(module.AUTHORED / slug, "claude-apps")
+                self.assertTrue(report["package_ready"], report["blockers"])
+                self.assertEqual(report["behavior_tested"], "NOT_TESTED")
+
     def test_repo_navigator_entrypoint_limit_and_reference_closure(self):
         navigator = ROOT / "skills" / "authored" / "effort-allocation-navigator"
         if not navigator.exists():
