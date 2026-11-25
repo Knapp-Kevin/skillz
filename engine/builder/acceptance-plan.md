@@ -42,12 +42,45 @@ establish semantic coverage, authorization or execution.
 4. Use the plan's receipt_stage_requirements as a **conjunctive** checklist:
    only claim a stage pass if every mapped case has independently supported
    successful observations. Missing or failed cases block that stage.
-   The six-stage [host acceptance checker](host-acceptance.md) currently
-   checks claims and archive identity, not this plan's detailed case ledger.
-   Preserve that ledger for independent review; no automatic conversion
-   or promotion is performed.
+   For generated skills, use the detailed case ledger reconciler below.
+   The six-stage [host acceptance checker](host-acceptance.md) alone cannot
+   establish this coverage. No automatic evidence promotion is performed.
 
 The CLI prints private design-derived text to stdout. Do not publish its
 output, include it in a skill archive, or send it as anonymous feedback.
 If Python is unavailable, perform the same bounded design-to-package review
 manually and label the tool NOT_RUN.
+
+## Reconcile the detailed case ledger
+
+The optional read-only checker regenerates the plan from the exact design
+and canonical package instead of accepting a potentially pruned plan.
+It verifies the selected release archive's complete member inventory,
+payload digests and CRC readback against the generated host member manifest.
+Then it compares every case and derives each stage claim: any failure
+wins; all passed means PASS_CLAIMED; all NOT_RUN means NOT_RUN; a mixture
+with missing observations is UNKNOWN. The submitted stage receipt must
+match these derived states exactly.
+
+    python3 -B engine/builder/acceptance_ledger.py --design /private/design.json \
+      --package /private/skill-slug --manifest /private/manifest.json \
+      --archive /private/skill.zip --receipt /private/receipt.json \
+      --ledger /private/cases.json
+
+The ledger has exactly four top-level fields: schema_version (integer 1),
+plan_sha256 (from the generated plan), receipt_sha256 (SHA-256 of the
+raw receipt JSON file), and cases (one row for every generated case ID).
+Each row has case_id, status, fixture_id, oracle_id and evidence_id.
+Statuses are PASS_CLAIMED, FAIL_CLAIMED, NOT_RUN or UNKNOWN. Observed
+claims need distinct non-placeholder opaque IDs for the concrete fixture,
+independent oracle and evidence. Fixture IDs may be shared for the same
+test input; oracle/evidence IDs must not be reused between cases or as
+stage-level evidence. Unobserved rows have null evidence_id; fixture and
+oracle IDs may both be null or both specified for prepared cases.
+No extra case, dropped failure, or altered plan can be silently accepted.
+
+Exit 0 means COMPLETE_CASE_CLAIMS_REVIEW_REQUIRED; exit 2 is HOLD or invalid
+input. A match is a consistency check, not authenticated proof of execution,
+fixture contents, preregistration timing, or independent consumer acceptance.
+Keep the original case plan, private fixtures/oracles and raw observations
+outside the distributed package. Do not publish or transmit them by default.

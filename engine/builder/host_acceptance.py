@@ -206,6 +206,7 @@ def validate(manifest, manifest_sha, archive, receipt):
             "asset": asset, "archive_directory_layout_checked": True,
             "archive_payload_crc_verified": False,
             "stage_claims": by_stage, "local_archive_matches_manifest": True,
+            "case_ledger_reconciled": False,
             "manifest_authenticity_verified": False, "authorization_verified": False,
             "host_execution_observed": False, "independent_oracles_verified": False,
             "consumer_accepted": False, "installed_or_published": False,

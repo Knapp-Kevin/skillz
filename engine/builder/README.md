@@ -257,6 +257,9 @@ to derive NOT_RUN cases from the validated design dossier and exact completed
 package. The selected host transformation manifest and each required case
 are bound to the plan. Prepare concrete fixtures and independent oracles
 before an authorized native trial; a plan is not an observed result.
+After the trial, use the same protocol's read-only acceptance_ledger.py to
+regenerate the plan, verify all archive member bytes and reconcile each
+case claim to its stage receipt. It does not authenticate observations.
 
 ## Native host evidence (optional)
 
