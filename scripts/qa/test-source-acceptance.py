@@ -137,6 +137,33 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
+    def test_readme_architect_complex_package_all_assessed_hosts(self):
+        slug = "repository-readme-architect"
+        package = ROOT / "skills/authored" / slug
+        contract = json.loads((ROOT / "engine/builder/examples" /
+                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
+        self.assertEqual(len(contract["source_blobs"]), 18)
+        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+        scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
+        self.assertEqual(len(scripts), 7)
+        for host in m.compat.HOSTS:
+            with self.subTest(host=host):
+                plan = m.plan(contract, package, host)["plan"]
+                self.assertEqual(len(plan["cases"]), 17)
+                self.assertEqual(plan["script_resource_coverage"], scripts)
+                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
+                self.assertFalse(plan["consumer_accepted"])
+
+    def test_readme_architect_offline_gold_cannot_self_certify(self):
+        import subprocess
+        package = ROOT / "skills/authored/repository-readme-architect"
+        run = subprocess.run([sys.executable, "-B", "-m", "unittest",
+                              "test_profile_acceptance.QualityProfileTests.test_complete_structure_still_does_not_self_award_gold"],
+                             cwd=package / "tests", capture_output=True, text=True,
+                             timeout=15, check=True)
+        self.assertIn("Ran 1 test", run.stderr)
+        self.assertIn("OK", run.stderr)
+
     def test_curator_complex_package_all_assessed_hosts(self):
         slug = "file-lifecycle-curator"
         package = ROOT / "skills/authored" / slug
