@@ -69,14 +69,18 @@ def aggregate(statuses):
     return "UNKNOWN"
 
 
-def reconcile(dossier, folder, manifest, manifest_sha, archive, receipt, receipt_sha, ledger):
+def reconcile(dossier, folder, manifest, manifest_sha, archive, receipt, receipt_sha, ledger, source_contract=False):
     # Regenerate the plan from actual canonical bytes; never trust a supplied
     # plan that could have removed inconvenient cases or changed their mappings.
     a.require(type(ledger) is dict and set(ledger) == FIELDS and
               type(ledger["schema_version"]) is int and ledger["schema_version"] == 1,
               "INVALID_LEDGER_FIELDS")
     native = a.validate(manifest, manifest_sha, archive, receipt)
-    regenerated = planner.plan(dossier, folder, receipt["host"])
+    if source_contract:
+        import source_acceptance
+        regenerated = source_acceptance.plan(dossier, folder, receipt["host"])
+    else:
+        regenerated = planner.plan(dossier, folder, receipt["host"])
     body = regenerated["plan"]
     a.require(body["skill"] == receipt["skill"], "PLAN_SKILL_MISMATCH")
     a.require(ledger["plan_sha256"] == regenerated["plan_sha256"], "PLAN_DIGEST_MISMATCH")
@@ -145,16 +149,20 @@ def reconcile(dossier, folder, manifest, manifest_sha, archive, receipt, receipt
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("design", "package", "manifest", "archive", "receipt", "ledger"):
+    route = parser.add_mutually_exclusive_group(required=True)
+    route.add_argument("--design")
+    route.add_argument("--source-contract")
+    for name in ("package", "manifest", "archive", "receipt", "ledger"):
         parser.add_argument("--" + name, required=True)
     args = parser.parse_args(argv)
     try:
-        dossier = planner.builder.read_json(args.design)
+        dossier = (a.read_json(args.source_contract)[0] if args.source_contract else
+                   planner.builder.read_json(args.design))
         manifest, manifest_sha = a.read_json(args.manifest)
         receipt, receipt_sha = a.read_json(args.receipt)
         ledger, ledger_sha = a.read_json(args.ledger)
         result = reconcile(dossier, args.package, manifest, manifest_sha, args.archive,
-                           receipt, receipt_sha, ledger)
+                           receipt, receipt_sha, ledger, source_contract=bool(args.source_contract))
         result["ledger_sha256"] = ledger_sha
     except (OSError, ValueError, TypeError, KeyError, RecursionError,
             zipfile.BadZipFile, RuntimeError, NotImplementedError):
