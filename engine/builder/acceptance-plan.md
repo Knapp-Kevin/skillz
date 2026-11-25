@@ -137,3 +137,5 @@ real execution or approval from a coherent ledger. Keep consumer inputs and
 observations private.
 
 The [Effort Allocation Navigator source contract](examples/effort-allocation-navigator-source-contract.json) covers 18 exact files, 18 cases and seven Python resources, including protected priority, bounded choices, focus continuity, snapshot identity, capacity, authority and preference retention. Its separate offline focus oracle is not evidence of native activation or real productivity improvement.
+
+The [File Lifecycle Curator source contract](examples/file-lifecycle-curator-source-contract.json) covers 33 source files, 24 cases and 12 Python resources. It separates read-only curation, private checkpoint writes, stale/revoked evidence, visual progress, and scheduler authorization. Its offline visual fixture checks one receipt-attested relocation out of three planned; native operation and real provider behavior remain NOT_RUN.
