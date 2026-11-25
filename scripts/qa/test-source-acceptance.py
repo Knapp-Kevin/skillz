@@ -74,6 +74,69 @@ class SourceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.plan(self.contract, PACKAGE, "claude-code")
 
+    def script_package(self):
+        folder = self.copy_package()
+        (folder / "scripts").mkdir()
+        for name in ("helper.py", "check.ps1", "module.psm1"):
+            (folder / "scripts" / name).write_text("# Fictional; never executed.\n", encoding="utf-8")
+        c = copy.deepcopy(self.contract)
+        c["source_blobs"] = m.inventory(folder)["source_blobs"]
+        return folder, c
+
+    def resource_case(self, paths):
+        return {"id": "script-resource", "kind": "resource", "source": "SKILL.md",
+                "anchor": self.contract["cases"][0]["anchor"],
+                "setup": "Inspect the fictional helper resources without invoking them.",
+                "expected": "Verify resource presence and respect the authorized runtime boundary.",
+                "resource_paths": paths}
+
+    def test_each_script_needs_exact_resource_and_unavailable_capability_coverage(self):
+        folder, c = self.script_package()
+        paths = ["scripts/helper.py", "scripts/check.ps1", "scripts/module.psm1"]
+        with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
+            m.plan(c, folder, "claude-code")
+        c["cases"].append(self.resource_case(paths[:1]))
+        with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
+            m.plan(c, folder, "claude-code")
+        c["cases"][-1]["resource_paths"] = paths
+        with self.assertRaisesRegex(ValueError, "SCRIPT_DEPENDENCY_FAILURE_COVERAGE_INCOMPLETE"):
+            m.plan(c, folder, "claude-code")
+        dependency = next(x for x in c["cases"] if x["kind"] == "dependency-unavailable")
+        dependency["resource_paths"] = paths[:2]
+        with self.assertRaisesRegex(ValueError, "SCRIPT_DEPENDENCY_FAILURE_COVERAGE_INCOMPLETE"):
+            m.plan(c, folder, "claude-code")
+        dependency["resource_paths"] = paths
+        result = m.plan(c, folder, "claude-code")["plan"]
+        self.assertEqual(result["script_resource_coverage"], sorted(paths))
+        resource = next(x for x in result["cases"] if x["kind"] == "resource")
+        self.assertEqual({x["path"]: x["sha256"] for x in resource["resource_targets"]},
+                         {p: result["canonical_files_sha256"][p] for p in paths})
+        self.assertFalse(result["host_execution_observed"])
+
+    def test_resource_case_rejects_unbound_duplicate_or_misplaced_paths(self):
+        folder, c = self.script_package()
+        for paths in ([], ["scripts/nonexistent.py"], ["scripts/helper.py"] * 2,
+                      ["../outside.py"], ["SKILL.md"], "scripts/helper.py"):
+            with self.subTest(paths=paths):
+                c["cases"] = copy.deepcopy(self.contract["cases"]) + [self.resource_case(paths)]
+                with self.assertRaises(ValueError):
+                    m.plan(c, folder, "claude-code")
+        c["cases"] = copy.deepcopy(self.contract["cases"])
+        c["cases"][0]["resource_paths"] = ["scripts/helper.py"]
+        with self.assertRaisesRegex(ValueError, "INVALID_RESOURCE_CASE_TARGETS"):
+            m.plan(c, folder, "claude-code")
+
+    def test_script_paths_cannot_be_bypassed_by_repinning_changed_inventory(self):
+        folder, c = self.script_package()
+        paths = ["scripts/helper.py", "scripts/check.ps1", "scripts/module.psm1"]
+        c["cases"].append(self.resource_case(paths))
+        next(x for x in c["cases"] if x["kind"] == "dependency-unavailable")["resource_paths"] = paths
+        self.assertEqual(m.plan(c, folder, "claude-code")["plan"]["script_resource_coverage"], sorted(paths))
+        (folder / "scripts" / "new.cmd").write_text("rem Fictional.\n")
+        c["source_blobs"] = m.inventory(folder)["source_blobs"]
+        with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
+            m.plan(c, folder, "claude-code")
+
     def test_real_source_plan_to_ledger_handoff_preserves_not_run(self):
         host = "gemini-apps"
         p = m.plan(self.contract, PACKAGE, host)
