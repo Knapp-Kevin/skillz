@@ -81,6 +81,10 @@ class SourceTests(unittest.TestCase):
             "metadata-taxonomy-steward": (4, 10, 0),
             "narrative-scene-gap-audit": (4, 10, 0),
             "character-motivation-interview": (4, 10, 0),
+            "claim-evidence-adjudicator": (6, 13, 2),
+            "agent-failure-boundary-analysis": (6, 13, 2),
+            "source-debt-triage": (5, 13, 2),
+            "decision-tradeoff-workbench": (6, 13, 2),
         }
         registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
         authored = {row["id"]: row for row in registry["skills"]}
