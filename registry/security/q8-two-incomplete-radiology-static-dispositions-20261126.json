@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "kind": "q8-two-incomplete-radiology-static-dispositions",
+  "review_date": "2026-11-26",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 2,
+    "incomplete_reviewed_to_date": 28,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 5,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 35,
+    "flagged_total": 40,
+    "owned_files_reviewed": 19,
+    "root_license_files_read": 1,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Complete pinned owned files (10 consensus, 9 reproducibility); returned blob IDs matched untruncated pinned recursive tree inventory; root MIT/disclaimer inspected. 15 sibling entrypoint paths confirmed at pin, not reviewed. No external standards freshness verification or clinical execution.",
+  "records": [
+    {
+      "id": "huang-sir1-radiology-skills/radiology-consensus-guideline",
+      "source": {
+        "repository": "huang-sir1/radiology-skills",
+        "pin": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+        "package_path": "radiology-skills/skills/radiology-consensus-guideline",
+        "complete_package_git_tree_sha": "4bb70d9b65dc1f05239c97187dedbc23276bfcb6",
+        "skill_md_git_blob_sha": "3ddce5c15bebf667729da82269dbc558c2606072",
+        "upstream_head_checked": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "3ddce5c15bebf667729da82269dbc558c2606072",
+        "agents/openai.yaml": "d1b4a2b87487d38a16b133abebdb52d92a697646",
+        "references/evidence-to-recommendation.md": "19b673dab7189cb7c3ee9dc9b68f481616ac7f37",
+        "references/formal-consensus-methods.md": "bd2bff0a2ef9f57d9872583cfd999cb36ea55ba6",
+        "references/radiology-guidance-lifecycle.md": "926712904abf4df375b431a8a2e6b82bec83805c",
+        "references/source-registry.md": "83187e2f51efa458f32220e8bd88d463fae5c580",
+        "scripts/validate_consensus_guideline_skill.ps1": "4b1aedd316f6669ec47ac1cf7c236cef91a37bcf",
+        "templates/consensus-guideline-protocol.md": "102934290fd61c6bc21b97da1844221d5e2da36c",
+        "templates/recommendation-etd-ledger.md": "860a0d2b034117f9948128c56a6c5f0ba5da44ae",
+        "tests/routing-cases.json": "b3aa32bf960c284cefdb9f4d8af543f4bc24e8c0"
+      },
+      "license": {
+        "type": "MIT with medical/research disclaimer",
+        "source": "root LICENSE",
+        "git_blob_sha": "35a6f4139bc3ce9d8a40be5f3c78fe5c0603b438",
+        "obligation": "Preserve MIT notice; separate third-party standards, data, weights and clinical authority."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "panel-confidentiality-and-destination",
+          "evidence": "SKILL.md input passport and steps 3, 6, 8; formal-consensus-methods.md §§1–4; protocol template §3",
+          "finding": "The protocol preserves named-member evidence, COI, patient/public participation, feedback and dissent; anonymity and ethics are recognized, but no explicit per-artifact audience, redaction, retention or small-panel re-identification rule is defined. A template can be populated with sensitive records and circulated too widely. Require restricted identifiable records and separately approved minimized release copies."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "evidence-authority-and-currency-assurance",
+          "evidence": "SKILL.md steps 4–5; evidence-to-recommendation.md §§1–4; source-registry.md",
+          "finding": "The handoff requires a digest and source locators, and stale evidence is a stop, but no explicit independently checked digest/identity procedure or bounded source-currency receipt is defined. The registry is a dated source list, not fresh verification. Do not grant evidence-ready or clinical-use status from an asserted frozen packet; verify scope, version, provenance and responsible human approval."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "validator-static-coverage-ceiling",
+          "evidence": "scripts/validate_consensus_guideline_skill.ps1; tests/routing-cases.json",
+          "finding": "The validator searches pooled text, checks URL strings and minimum counts; it does not run routing prompts, test actual rejection of unsupported endorsement, or validate a completed evidence ledger. A nonempty or contradictory checklist can pass its structural checks. The script explicitly labels its result static; preserve that ceiling."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "standalone-dependency-limit",
+          "evidence": "SKILL.md handoffs; validator boundary-case loop",
+          "finding": "Five named sibling owners exist at the upstream pin outside the owned package. The validator expects these sibling directories; installing only this skill cannot satisfy that prerequisite. Do not silently fetch or activate missing siblings or assume a portable behavioral pass."
+        }
+      ],
+      "positive_safeguards": [
+        "Clear non-endorsement and patient-care authority limits; explicit stop for stale evidence and unmanaged COI.",
+        "Separates evidence certainty, recommendation strength and panel agreement; avoids inventing GRADE for priority-only consensus."
+      ],
+      "remediation": "Add controlled audience and retention for identifiable panel records, verify evidence handoff identities and current authority, declare sibling dependency and independently exercise stop/route cases.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "32895b08087f59b976ebb14fea6e2e633501b285752d5abed0c0e3d37797b0b4",
+        "findings": [],
+        "incomplete_reasons": {
+          "static_parse_limit": 1
+        },
+        "interpretation": "Static parse limit retained; no rerun."
+      },
+      "reviewed_at": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "review_method": "Complete owned files read as passive source, returned blobs matched untruncated pinned recursive Git inventory and original package tree; upstream main matches pin. Root license read. Sibling entrypoints checked for presence only; cited external standards not freshly verified. No execution.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 14,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    },
+    {
+      "id": "huang-sir1-radiology-skills/radiology-reproducibility",
+      "source": {
+        "repository": "huang-sir1/radiology-skills",
+        "pin": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+        "package_path": "radiology-skills/skills/radiology-reproducibility",
+        "complete_package_git_tree_sha": "779011b2e2f2b706e2beff0730bdd0537649dbb0",
+        "skill_md_git_blob_sha": "9a250af4fbe7a98057c73a14cad8d63c9dc358e2",
+        "upstream_head_checked": "aaa0fe621c404d3146333e0e1a2a22ed51f415fe",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "9a250af4fbe7a98057c73a14cad8d63c9dc358e2",
+        "agents/openai.yaml": "5223e60f3f1eab4b4e93566527b08ad66b9d0bfc",
+        "references/replay-contract-and-levels.md": "b7eeb8e172631ff76449f4378ffa7b4beea12130",
+        "references/restricted-data-archiving-and-software.md": "e5b20a278e87c6b91027f9f6e8f8977b2a4d7d41",
+        "references/source-registry.md": "d6501a14262b9e6045a1fda165d69069f1d9c85c",
+        "scripts/validate_reproducibility_skill.ps1": "91f5321b67e6d60d3bb2fc4b6363c60392e18b3e",
+        "templates/minimum-replay-package-manifest.md": "9f7c3041a18e83c7631306f2072af5d20e1412b7",
+        "templates/reproducibility-passport.md": "d90c347c812c9feb3b094c161f001898d1eae950",
+        "tests/routing-cases.json": "13dbf48e0e69d32c0c9b650a4816e34a707f6706"
+      },
+      "license": {
+        "type": "MIT with medical/research disclaimer",
+        "source": "root LICENSE",
+        "git_blob_sha": "35a6f4139bc3ce9d8a40be5f3c78fe5c0603b438",
+        "obligation": "Preserve MIT notice; separate third-party standards, data, weights and clinical authority."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "sensitive-replay-receipt-capture",
+          "evidence": "SKILL.md steps 3–5 and output contract; replay-contract-and-levels.md §3; passport run receipt",
+          "finding": "The workflow requests exact commands, resolved configuration, stdout/stderr and every output. The public manifest prohibition is good but no explicit capture-time minimization or controlled receipt/redacted release split covers these artifacts. Commands/configuration/logs can contain PHI, secrets or signed URLs. Preserve restricted originals only when authorized and emit sanitized receipts; never copy secret values into a shareable manifest."
+        },
+        {
+          "severity": "HIGH",
+          "type": "execution-isolation-and-egress",
+          "evidence": "SKILL.md step 5 and STOP_REPLAY_NOT_AUTHORIZED; replay-contract-and-levels.md §5",
+          "finding": "Authorization and a fresh bounded workspace are required, but the replay protocol does not specify immutable read-only input mounts, least-privilege process isolation, egress denial, secret exclusion or review of untrusted entrypoints and dependency installation. A documented command is not necessarily safe. Do not execute an untrusted package merely to obtain reproducibility credit."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "pseudonymization-not-anonymity",
+          "evidence": "restricted-data-archiving-and-software.md §§1, 5; SKILL.md radiology provenance",
+          "finding": "Pseudonymous or hashed local keys and lawful checksums can be useful but ordinary hashes of predictable identifiers may remain linkable. Source requires an authorized linkage table and no public PHI, but does not define keyed pseudonyms, per-scope separation or review before release. Treat derived keys and counts as controlled unless disclosure is independently approved."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "static-validator-acceptance-limit",
+          "evidence": "scripts/validate_reproducibility_skill.ps1; tests/routing-cases.json",
+          "finding": "Validation is phrase, URL, field-presence and count checking; it does not run the declared replay prompts, verify signed receipts or test actual isolation and tolerance. In particular the radiomics-reference discrepancy case has expected REPLAYED even though a discrepancy alone cannot establish tolerance passage. Require conditional observed acceptance rather than expected-level labels as proof."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "historical-credential-flag-context",
+          "evidence": "Historical PE3 HIGH at restricted-data-archiving-and-software.md line 23; §1",
+          "finding": "The matched text prohibits exposing tokens, secrets and signed URLs in public manifests. It is not affirmative credential-access guidance. This supports a proposed contextual false-positive interpretation of that particular match only, not a maintainer-accepted disposition or scanner clearance. Independent capture and execution risks remain."
+        }
+      ],
+      "positive_safeguards": [
+        "Strong per-target computational evidence ladder separate from external scientific validity.",
+        "Frozen tolerances, lawful data routes, no silent repair, preservation of failed runs, and explicit non-certification boundaries."
+      ],
+      "remediation": "Separate restricted and sanitized receipts, require least-privilege sandbox and egress policy, prevent credential/PHI capture or publication, strengthen pseudonymization and verify actual evidence-dependent routing/level behavior.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "c20dbfaa86680123d7490e0ee4407d18e3a9e51692de29e6883e798a9cc35f08",
+        "findings": [
+          {
+            "id": "PE3",
+            "pattern": "Credential Access",
+            "severity": "HIGH",
+            "file": "references/restricted-data-archiving-and-software.md",
+            "line": 23,
+            "host_disposition": null,
+            "accepted_by_maintainer": false
+          }
+        ],
+        "incomplete_reasons": {
+          "static_parse_limit": 1
+        },
+        "interpretation": "PE3 HIGH is retained; context suggests a prohibition rather than affirmative credential access, not an accepted false-positive disposition. Static parse limit unchanged."
+      },
+      "reviewed_at": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "review_method": "Complete owned files read as passive source, returned blobs matched untruncated pinned recursive Git inventory and original package tree; upstream main matches pin. Root license read. Sibling entrypoints checked for presence only; cited external standards not freshly verified. No execution.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 2,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 15,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}
