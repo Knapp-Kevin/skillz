@@ -163,3 +163,15 @@ The continuity and delivery batch adds [context-continuation-contract](examples/
 The federation, reference and technology intelligence batch adds [federated-source-catalog](examples/federated-source-catalog-source-contract.json), [reference-integrity-auditor](examples/reference-integrity-auditor-source-contract.json), [technology-change-intelligence](examples/technology-change-intelligence-source-contract.json). These cases challenge typed identities, incomplete enumeration, viewer confidentiality, source-bound handoffs, link absence proof, scoped graph impact, interest scope, source-lane coverage and dated change evidence. No native behavioral acceptance is asserted.
 
 The final authored batch adds [healthcare-contract-forensics](examples/healthcare-contract-forensics-source-contract.json), [sandler-conversation-strategist](examples/sandler-conversation-strategist-source-contract.json), [meddpicc-opportunity-assurance](examples/meddpicc-opportunity-assurance-source-contract.json), [offline-hyperv-qual-vm](examples/offline-hyperv-qual-vm-source-contract.json). Corpus qualification now requires exact equality between registered authored skills and reviewed contracts. The four documented Hyper-V package holds require the exact listed unsupported PowerShell resource blockers and a failed plan attempt (HOST_PACKAGE_HOLD); they are not successful plans. All other assessed pairs require normal source-bound NOT_RUN plans. Native behavior and consumer outcomes remain unobserved.
+
+## Bind a reviewed source contract to locally built/downloaded bytes
+
+Use the read-only release handoff after an approved release manifest and exact host asset are available:
+
+```sh
+python3 -B engine/builder/release_handoff.py --contract engine/builder/examples/scheduled-work-source-contract.json --package skills/authored/scheduled-work-proof-auditor --manifest /approved/authored-download-manifest.json --archive /approved/scheduled-work-proof-auditor-gemini.zip --host gemini-apps
+```
+
+This regenerates the source plan, hashes the actual manifest and asset, verifies every adapted archive member and reconciles a deliberately unexecuted receipt and complete case ledger. The returned `receipt_json` and `ledger_json` are exact UTF-8 payload strings; if the authorized host saves them, write the strings as-is without appending a newline or changing JSON formatting. A successful handoff is **DESIGNED_NOT_RUN**; it does not authenticate publication, permissions, the host or any observations. It performs no writes. Use independently verified publication/source provenance and separate execution authority before a trial. Held/unassessed profiles fail closed.
+
+The existing authored-download qualification job consumes its actual builder output (no second archive build) and exercises every registered assessed pair, every documented hold, unassessed hosts, wrong archive routing and a deliberately rehashed altered member. Local build integration is not evidence of public delivery, attestation or native installation.
