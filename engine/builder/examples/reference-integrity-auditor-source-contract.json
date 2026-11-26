@@ -36,7 +36,7 @@
       "expected": "No native reference-integrity activation or crawling."
     },
     {
-      "id": "403",
+      "id": "denied-403",
       "kind": "outcome",
       "source": "SKILL.md",
       "anchor": "A reported 403 remains INACCESSIBLE,",
@@ -44,7 +44,7 @@
       "expected": "INACCESSIBLE not confirmed missing; no protected target details."
     },
     {
-      "id": "404",
+      "id": "unproven-404",
       "kind": "false-green",
       "source": "SKILL.md",
       "anchor": "A bare HTTP 404, unknown permission, unsupported",
