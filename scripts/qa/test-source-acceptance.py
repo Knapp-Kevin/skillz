@@ -88,6 +88,11 @@ class SourceTests(unittest.TestCase):
             "recursive-refinement-trace": (12, 18, 7),
             "evidence-driven-refinement-loop": (11, 16, 2),
             "skill-trial-evidence-auditor": (8, 15, 2),
+            "context-continuation-contract": (11, 14, 2),
+            "first-run-experience-validator": (5, 11, 0),
+            "repository-delivery-assessor": (9, 13, 2),
+            "release-evidence-reconciler": (8, 13, 2),
+            "pr-integration-surgeon": (7, 14, 2),
         }
         registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
         authored = {row["id"]: row for row in registry["skills"]}
