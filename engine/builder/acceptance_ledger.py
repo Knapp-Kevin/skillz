@@ -17,11 +17,8 @@ FIELDS = {"schema_version", "plan_sha256", "receipt_sha256", "cases"}
 CASE_FIELDS = {"case_id", "status", "fixture_id", "oracle_id", "evidence_id"}
 CLAIMED = ("PASS_CLAIMED", "FAIL_CLAIMED")
 STATUSES = CLAIMED + ("NOT_RUN", "UNKNOWN")
-UNKNOWN_IDS = {"unknown", "not-run", "not_run", "none", "unset", "na", "n-a", "placeholder"}
-
-
 def identity(value):
-    return a.valid(a.ID, value) and value.casefold() not in UNKNOWN_IDS
+    return a.evidence_identity(value)
 
 
 def verify_members(archive, body, receipt):
@@ -127,6 +124,17 @@ def reconcile(dossier, folder, manifest, manifest_sha, archive, receipt, receipt
     groups = body["receipt_stage_requirements"]
     derived = {stage: aggregate([by_case[c] for c in group]) for stage, group in groups.items()}
     a.require(derived == native["stage_claims"], "STAGE_SUMMARY_CONTRADICTS_CASES")
+    # A mixed group collapses to UNKNOWN (or FAIL_CLAIMED), which must
+    # never conceal an individual passing behavior without its prerequisite.
+    if derived["load"] != "PASS_CLAIMED":
+        a.require(not any(by_case[c] == "PASS_CLAIMED"
+                          for stage in ("positive_trigger", "near_non_trigger",
+                                        "outcome", "authority_boundary")
+                          for c in groups[stage]),
+                  "CASE_BEHAVIOR_PASS_WITHOUT_LOAD")
+    if derived["positive_trigger"] != "PASS_CLAIMED":
+        a.require(not any(by_case[c] == "PASS_CLAIMED" for c in groups["outcome"]),
+                  "CASE_OUTCOME_PASS_WITHOUT_TRIGGER")
     if receipt["execution_kind"] == "NOT_RUN":
         a.require(not any(s in CLAIMED for s in by_case.values()), "NOT_RUN_WITH_CASE_CLAIMS")
     counts = {s: sum(v == s for v in by_case.values()) for s in STATUSES}
