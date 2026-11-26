@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "kind": "q8-two-incomplete-arrangement-edm-static-dispositions",
+  "review_date": "2026-11-26",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 2,
+    "incomplete_reviewed_to_date": 25,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 8,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 32,
+    "flagged_total": 40,
+    "owned_files_reviewed": 3,
+    "root_license_files_read": 1,
+    "root_notice_files_read": 1,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Complete owned source for two pinned packages, all three Git blobs and reconstructed package trees verified. Root LICENSE/NOTICE read. Shared sibling schema and sound-design reference existence and selected excerpts consulted; no claim of full sibling review.",
+  "shared_reference_checks": {
+    "plugins/music-composition/skills/mc-sound-design/reference.md": "82b0142bf67b841b61727afbbd6404d740d47a47",
+    "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md": "eff1a0187377e750ab3468f973224c9222e39731"
+  },
+  "records": [
+    {
+      "id": "jtydhr88-music-composition-skills/mc-arrangement-arch",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "package_path": "plugins/music-composition/skills/mc-arrangement-arch",
+        "complete_package_git_tree_sha": "f372d0e4348f02b9fb51cf7d39d91c05b0bb3fe8",
+        "skill_md_git_blob_sha": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10",
+        "upstream_head_checked": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "b1b6bc1bbc4e99612cd8cee9ee9460f4eabf4e10",
+        "reference.md": "c0efd30e7a04e9f2011a314fbabb3e76fdfd8f99"
+      },
+      "license": {
+        "type": "MIT-for-upstream-owned-expression-only",
+        "source": "root LICENSE + NOTICE",
+        "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "obligation": "Preserve complete MIT notice for eligible original expression; third-party book text, translations, audio and model/asset rights are separate."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "inconsistent-reported-denominator",
+          "evidence": "reference.md §3; SKILL.md §3.3",
+          "finding": "The reference equates 36/62 with 70%; the fraction is approximately 58.1%. The source does not establish which numerator or percentage is correct. Do not use the published 70% as verified or silently repair the underlying observation."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "inconsistent-lint-identity",
+          "evidence": "SKILL.md §10; reference.md §4",
+          "finding": "Energy decline is assigned lint #5 in the entrypoint and #1 in the reference; the reference calls #3 a multiples-of-four constraint while the entrypoint calls it multiples-of-eight. A consumer cannot treat these conflicting identifiers as the same executable check."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "sample-to-universal-generalization",
+          "evidence": "SKILL.md §§2.2, 4.2, 5.1, 7, 11; reference.md §3",
+          "finding": "Finite corpus observations and unverified segmentation do not establish universal arrangement or AI-origin detection rules. The entrypoint itself recognizes minimal, short and repetitive exceptions; its compulsory checklist can still invite forced alterations. No listening or source-classification outcome was independently measured."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "project-mutation-and-rights-boundary",
+          "evidence": "SKILL.md §§3.1, 4.1; root NOTICE",
+          "finding": "The proposed fill/delete and reference-audio import/remove workflow is useful as a method but does not authorize actual DAW edits, deletion, acquisition or copying of third-party audio. The assertion about structural borrowing is not a legal clearance. Book quotations and translations are explicitly outside root MIT."
+        }
+      ],
+      "positive_safeguards": [
+        "Explicit source uncertainty and a distinction between sampled tendencies and techniques, including contradictory peak-detection evidence.",
+        "Role boundaries and intentional-exception guidance for solo, loop-based and short forms."
+      ],
+      "remediation": "Reconcile numerator/denominator against original measurements, align lint identifiers with an independently verified schema, constrain assertions to the studied population, require authorized disposable project edits and preserve separate third-party rights.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "cdb66fb33a47b5c7a89ea81a2466eb65fe74ab88e8a7877506991c5a7e70fac1",
+        "findings": [],
+        "incomplete_reasons": {
+          "obfuscated_instruction_text": 1
+        },
+        "interpretation": "Historical partial static coverage of non-ASCII instruction text; language alone is not obfuscation. No scanner rerun."
+      },
+      "reviewed_at": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "review_method": "Complete pinned owned files read as passive source; reconstructed Git tree from exact returned blob IDs and regular file modes, matched historical tree; default branch comparison identical; root LICENSE/NOTICE inspected. Referenced sibling files existence verified; no executable or listening test.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 13,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    },
+    {
+      "id": "jtydhr88-music-composition-skills/mc-style-edm",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "package_path": "plugins/music-composition/skills/mc-style-edm",
+        "complete_package_git_tree_sha": "803834c1b9360986a7d90e738e4fffb515628640",
+        "skill_md_git_blob_sha": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2",
+        "upstream_head_checked": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "ead9d62ebcfc7d64eda31f987a6dbd22ba897dc2"
+      },
+      "license": {
+        "type": "MIT-for-upstream-owned-expression-only",
+        "source": "root LICENSE + NOTICE",
+        "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "obligation": "Preserve complete MIT notice for eligible original expression; third-party book text, translations, audio and model/asset rights are separate."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "style-exception-versus-hard-check",
+          "evidence": "SKILL.md §§3.3, 4.2, 6.1, 10",
+          "finding": "The entrypoint describes sustained-density dub techno and intentional all-grid production, but the final checklist calls for build/drop contrast, low-frequency removal and a new drop element. These checks need conditional applicability for tracks without drops; otherwise a valid style is treated as failed."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unverified-sample-and-aesthetic-claim",
+          "evidence": "SKILL.md §§4.2, 6, 8",
+          "finding": "Cross-genre numerical comparisons rely on ten examples per named genre and unverified upstream measurements. A finite set of examples does not prove grid alignment identifies AI, or that a proposed drop works on a dance floor. The source acknowledges beat-tracking errors; no actual audio or listener test was performed."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "sibling-reference-not-standalone",
+          "evidence": "SKILL.md §§7, 9; scanner incomplete locations 215, 285",
+          "finding": "The one-file export points to the neighboring sound-design reference and shared ARR-SPEC fields. The named reference and schema exist at the immutable upstream pin, outside this package. The recorded missing-reference count is not evidence of two missing owned files; no scanner rerun or executable lint pass is claimed."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "third-party-reference-and-project-authority",
+          "evidence": "SKILL.md §§5.1a, 7; root NOTICE",
+          "finding": "Book-derived recipes and attributed technique descriptions are not a blanket MIT grant over the underlying published text. Suggested synthesis, sampling and render changes do not authorize backend calls, paid usage, external assets or DAW modifications."
+        }
+      ],
+      "positive_safeguards": [
+        "Separates listening context and subgenre, provides transfer limitations and explicitly allows justified quantization exemptions.",
+        "Reports uncertain BPM measurement rather than presenting detected tempo as ground truth."
+      ],
+      "remediation": "Make drop-specific checks conditional, preserve exemption semantics, verify companion resources and output applicability, measure actual listening outcomes, and review rights and destination authority independently.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "3c4bc57f8b8d589172c1fed86d11dd910a1e13d7dd87259651ab3f5e317f0804",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 2
+        },
+        "interpretation": "Historical missing-reference coverage limit retained; sibling source exists outside owned package. No scanner rerun."
+      },
+      "reviewed_at": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "review_method": "Complete pinned owned files read as passive source; reconstructed Git tree from exact returned blob IDs and regular file modes, matched historical tree; default branch comparison identical; root LICENSE/NOTICE inspected. Referenced sibling files existence verified; no executable or listening test.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 13,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}
