@@ -75,6 +75,12 @@ class SourceTests(unittest.TestCase):
             "personal-operations-control-board": (3, 10, 0),
             "evidence-narrative-composer": (3, 10, 0),
             "learning-evidence-progression": (3, 10, 0),
+            "business-presence-observatory": (3, 10, 0),
+            "professional-market-evidence-scout": (3, 10, 0),
+            "develop-melodic-motif": (3, 10, 0),
+            "metadata-taxonomy-steward": (4, 10, 0),
+            "narrative-scene-gap-audit": (4, 10, 0),
+            "character-motivation-interview": (4, 10, 0),
         }
         registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
         authored = {row["id"]: row for row in registry["skills"]}
