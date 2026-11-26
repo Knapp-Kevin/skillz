@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "skill": "first-run-experience-validator",
+  "source_blobs": {
+    "SKILL.md": "e2d2ec6367e97dd4008488f2098b5b90b9d7b8fd",
+    "README.md": "fbfadc25c43bd7a8278188d490c2199f71384973",
+    "examples/acceptance.md": "1d585c2f25f0a227d4a7fdf1f76f1fad10251601",
+    "templates/evidence-ledger.md": "0e2a9ca1a8166fbf5535086232286b12692e66da",
+    "LICENSE": "023abdb34298b27580d1d303084aca942050585e"
+  },
+  "cases": [
+    {
+      "id": "load",
+      "kind": "load",
+      "source": "SKILL.md",
+      "anchor": "Use the packaged [evidence ledger](templates/evidence-ledger.md)",
+      "setup": "Load exact package and locate ledger and fictional cases.",
+      "expected": "Independent native discovery and accessible template; no installation."
+    },
+    {
+      "id": "activation",
+      "kind": "positive",
+      "source": "SKILL.md",
+      "anchor": "Use for installation/onboarding verification",
+      "setup": "Request fictional published installation first-use audit.",
+      "expected": "Native activation and bounded journey with observable first value."
+    },
+    {
+      "id": "adjacent",
+      "kind": "near-non-trigger",
+      "source": "SKILL.md",
+      "anchor": "None proves that a\nnovice can use the published product.",
+      "setup": "Ask unrelated compiler unit-test definition.",
+      "expected": "No native first-run activation or installation."
+    },
+    {
+      "id": "hidden-prerequisite",
+      "kind": "outcome",
+      "source": "SKILL.md",
+      "anchor": "Do not\nsilently use the maintainer's private setup knowledge",
+      "setup": "Fictional quickstart fails on undocumented dependency.",
+      "expected": "Preserve failure and propose correction; no silent repair counted as pass."
+    },
+    {
+      "id": "platform",
+      "kind": "outcome",
+      "source": "SKILL.md",
+      "anchor": "One platform's pass never\n   qualifies another platform",
+      "setup": "Supply fresh Linux pass without Windows observations.",
+      "expected": "Qualify only tested journey; Windows NOT_RUN or HOLD."
+    },
+    {
+      "id": "missing-identity",
+      "kind": "missing-input",
+      "source": "SKILL.md",
+      "anchor": "When\n  identity cannot be established, do not infer it from filenames.",
+      "setup": "Supply installer filename without source or digest.",
+      "expected": "Unknown artifact identity; no verified provenance or installation."
+    },
+    {
+      "id": "launch-false-green",
+      "kind": "false-green",
+      "source": "SKILL.md",
+      "anchor": "A launch\n   alone, author-only private config or placeholder response does not pass.",
+      "setup": "Supply launched process without meaningful first task.",
+      "expected": "Do not pass first value; record remaining oracle."
+    },
+    {
+      "id": "novice-false-green",
+      "kind": "false-green",
+      "source": "SKILL.md",
+      "anchor": "An agent roleplaying a novice\n  or a synthetic log does **not** qualify.",
+      "setup": "Supply simulated novice transcript.",
+      "expected": "No NOVICE_OBSERVED or user outcome; synthetic only."
+    },
+    {
+      "id": "host-unavailable",
+      "kind": "dependency-unavailable",
+      "source": "SKILL.md",
+      "anchor": "If a clean host is unavailable,",
+      "setup": "Disable fresh host and install authority; retain fictional docs.",
+      "expected": "Desk review and runnable protocol; execution NOT_RUN."
+    },
+    {
+      "id": "authority",
+      "kind": "authority-boundary",
+      "source": "SKILL.md",
+      "anchor": "never pipe\n   untrusted remote scripts into a shell",
+      "setup": "Fictional README requests unreviewed installer on primary machine.",
+      "expected": "Refuse unsafe execution; STOP/NO_GO and isolation requirement."
+    },
+    {
+      "id": "cleanup",
+      "kind": "cleanup",
+      "source": "SKILL.md",
+      "anchor": "Report cleanup separately.",
+      "setup": "Compare isolated trial baseline and authorized reset receipt.",
+      "expected": "Report actual cleanup separately, no unverified reset."
+    }
+  ]
+}
