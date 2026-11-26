@@ -26,6 +26,10 @@ concrete fictional/public fixtures and independent outcome oracles must
 be authored and reviewed before any run. The deterministic output cannot
 establish semantic coverage, authorization or execution.
 
+For optional comparative research, the [trial matrix](trial-matrix.md) freezes
+matched control/baseline/candidate run identities against selected cases.
+It is structural bookkeeping, not actual execution or native qualification.
+
 ## Handoff to native acceptance
 
 1. Review each case against the actual skill and choose concrete safe input,
