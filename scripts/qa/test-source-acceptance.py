@@ -23,15 +23,89 @@ class SourceTests(unittest.TestCase):
         self.addCleanup(tmp.cleanup)
         self.root = Path(tmp.name)
 
-    def test_real_authored_pilot_exact_pins_and_all_assessed_hosts(self):
-        self.assertEqual(m.inventory(PACKAGE)["source_blobs"], self.contract["source_blobs"])
-        for host in m.compat.HOSTS:
-            with self.subTest(host=host):
-                p = m.plan(self.contract, PACKAGE, host)
-                self.assertEqual(p, m.plan(self.contract, PACKAGE, host))
-                self.assertEqual(set(p["plan"]["receipt_stage_requirements"]), set(m.a.STAGES))
-                self.assertEqual({c["status"] for c in p["plan"]["cases"]}, {"NOT_RUN"})
-                self.assertFalse(p["plan"]["host_execution_observed"])
+    def read_corpus_contracts(self, files, authored, minimum):
+        contracts = {}
+        for path in files:
+            contract, _ = m.a.read_json(path)
+            self.assertIs(type(contract), dict, str(path))
+            slug = contract.get("skill")
+            self.assertIs(type(slug), str, str(path))
+            self.assertIn(slug, authored, str(path))
+            self.assertNotIn(slug, contracts, "Duplicate contract for " + slug)
+            contracts[slug] = contract
+        self.assertTrue(set(minimum) <= set(contracts), "Missing reviewed contracts: " +
+                        ", ".join(sorted(set(minimum) - set(contracts))))
+        return contracts
+
+    def test_corpus_identity_uses_contents_and_rejects_duplicate_or_missing_contracts(self):
+        slug = self.contract["skill"]
+        alias = self.root / "short-alias-source-contract.json"
+        alias.write_text(json.dumps(self.contract), encoding="utf-8")
+        authored = {slug: {}}
+        self.assertEqual(self.read_corpus_contracts([alias], authored, {slug}), {slug: self.contract})
+        duplicate = self.root / "another-alias-source-contract.json"
+        duplicate.write_text(json.dumps(self.contract), encoding="utf-8")
+        with self.assertRaisesRegex(AssertionError, "Duplicate contract"):
+            self.read_corpus_contracts([alias, duplicate], authored, {slug})
+        with self.assertRaisesRegex(AssertionError, "Missing reviewed contracts"):
+            self.read_corpus_contracts([], authored, {slug})
+        foreign = self.root / "foreign-source-contract.json"
+        foreign.write_text(json.dumps(dict(self.contract, skill="unregistered-skill")), encoding="utf-8")
+        with self.assertRaises(AssertionError):
+            self.read_corpus_contracts([foreign], authored, set())
+
+    def test_all_reviewed_corpus_contracts_across_assessed_hosts(self):
+        # Minimum reviewed coverage floor. A missing contract or removed case
+        # cannot silently disappear from automatic discovery.
+        minimum = {
+            "scheduled-work-proof-auditor": (3, 9, 0),
+            "mcp-tool-surface-auditor": (7, 12, 2),
+            "decision-record-steward": (3, 10, 0),
+            "agent-workspace-footprint-assessor": (3, 10, 0),
+            "connector-capability-risk-review": (3, 10, 0),
+            "effort-allocation-navigator": (18, 18, 7),
+            "file-lifecycle-curator": (33, 24, 12),
+            "repository-readme-architect": (18, 17, 7),
+            "ci-guard": (55, 26, 24),
+            "privilege-exposure-mapper": (3, 10, 0),
+            "research-methods-appraiser": (3, 10, 0),
+            "research-question-dossier": (3, 10, 0),
+            "statement-variance-reviewer": (3, 10, 0),
+            "work-period-evidence-reporter": (3, 10, 0),
+            "personal-operations-control-board": (3, 10, 0),
+            "evidence-narrative-composer": (3, 10, 0),
+            "learning-evidence-progression": (3, 10, 0),
+        }
+        registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
+        authored = {row["id"]: row for row in registry["skills"]}
+        suffix = "-source-contract.json"
+        files = sorted((ROOT / "engine/builder/examples").glob("*" + suffix))
+        contracts = self.read_corpus_contracts(files, authored, minimum)
+        for slug, contract in sorted(contracts.items()):
+            with self.subTest(skill=slug):
+                package = ROOT / "skills/authored" / slug
+                self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
+                self.assertEqual(len(contract["source_blobs"]), authored[slug]["package_file_count"])
+                scripts = sorted(p for p in contract["source_blobs"]
+                                 if Path(p).suffix.lower() in m.compat.SCRIPT_EXTENSIONS)
+                if slug in minimum:
+                    count, case_count, script_count = minimum[slug]
+                    self.assertGreaterEqual(len(contract["source_blobs"]), count)
+                    self.assertGreaterEqual(len(contract["cases"]), case_count)
+                    self.assertGreaterEqual(len(scripts), script_count)
+                for host in m.compat.HOSTS:
+                    with self.subTest(host=host):
+                        report = m.plan(contract, package, host)
+                        plan = report["plan"]
+                        self.assertEqual(len(plan["cases"]), len(contract["cases"]))
+                        self.assertEqual(plan["script_resource_coverage"], scripts)
+                        self.assertEqual(set(plan["receipt_stage_requirements"]), set(m.a.STAGES))
+                        self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
+                        self.assertEqual(report["plan_sha256"], m.generated.canonical_sha(plan))
+                        self.assertFalse(plan["host_execution_observed"])
+                        self.assertFalse(plan["consumer_accepted"])
+                        if slug == "scheduled-work-proof-auditor":
+                            self.assertEqual(report, m.plan(contract, package, host))
 
     def copy_package(self):
         import shutil
@@ -137,23 +211,6 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "SCRIPT_RESOURCE_COVERAGE_INCOMPLETE"):
             m.plan(c, folder, "claude-code")
 
-    def test_ci_guard_complex_package_all_assessed_hosts(self):
-        slug = "ci-guard"
-        package = ROOT / "skills/authored" / slug
-        contract = json.loads((ROOT / "engine/builder/examples" /
-                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
-        self.assertEqual(len(contract["source_blobs"]), 55)
-        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
-        scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
-        self.assertEqual(len(scripts), 24)
-        for host in m.compat.HOSTS:
-            with self.subTest(host=host):
-                plan = m.plan(contract, package, host)["plan"]
-                self.assertEqual(len(plan["cases"]), 26)
-                self.assertEqual(plan["script_resource_coverage"], scripts)
-                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
-                self.assertFalse(plan["consumer_accepted"])
-
     def test_ci_guard_offline_nested_overlap_oracle(self):
         import subprocess
         package = ROOT / "skills/authored/ci-guard"
@@ -165,23 +222,6 @@ class SourceTests(unittest.TestCase):
         self.assertIn("Ran 2 tests", run.stderr)
         self.assertIn("OK", run.stderr)
 
-    def test_readme_architect_complex_package_all_assessed_hosts(self):
-        slug = "repository-readme-architect"
-        package = ROOT / "skills/authored" / slug
-        contract = json.loads((ROOT / "engine/builder/examples" /
-                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
-        self.assertEqual(len(contract["source_blobs"]), 18)
-        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
-        scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
-        self.assertEqual(len(scripts), 7)
-        for host in m.compat.HOSTS:
-            with self.subTest(host=host):
-                plan = m.plan(contract, package, host)["plan"]
-                self.assertEqual(len(plan["cases"]), 17)
-                self.assertEqual(plan["script_resource_coverage"], scripts)
-                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
-                self.assertFalse(plan["consumer_accepted"])
-
     def test_readme_architect_offline_gold_cannot_self_certify(self):
         import subprocess
         package = ROOT / "skills/authored/repository-readme-architect"
@@ -191,23 +231,6 @@ class SourceTests(unittest.TestCase):
                              timeout=15, check=True)
         self.assertIn("Ran 1 test", run.stderr)
         self.assertIn("OK", run.stderr)
-
-    def test_curator_complex_package_all_assessed_hosts(self):
-        slug = "file-lifecycle-curator"
-        package = ROOT / "skills/authored" / slug
-        contract = json.loads((ROOT / "engine/builder/examples" /
-                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
-        self.assertEqual(len(contract["source_blobs"]), 33)
-        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
-        scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
-        self.assertEqual(len(scripts), 12)
-        for host in m.compat.HOSTS:
-            with self.subTest(host=host):
-                plan = m.plan(contract, package, host)["plan"]
-                self.assertEqual(len(plan["cases"]), 24)
-                self.assertEqual(plan["script_resource_coverage"], scripts)
-                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
-                self.assertFalse(plan["host_execution_observed"])
 
     def test_curator_offline_visual_progress_oracle(self):
         import subprocess
@@ -223,23 +246,6 @@ class SourceTests(unittest.TestCase):
         self.assertFalse(report["checkpoint_written"])
         self.assertTrue({"observed", "proposed", "verified"} <= set(report["visuals"]))
 
-    def test_navigator_complex_package_all_assessed_hosts(self):
-        slug = "effort-allocation-navigator"
-        package = ROOT / "skills/authored" / slug
-        contract = json.loads((ROOT / "engine/builder/examples" /
-                              (slug + "-source-contract.json")).read_text(encoding="utf-8"))
-        self.assertEqual(len(contract["source_blobs"]), 18)
-        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
-        expected_scripts = sorted(p for p in contract["source_blobs"] if p.endswith(".py"))
-        self.assertEqual(len(expected_scripts), 7)
-        for host in m.compat.HOSTS:
-            with self.subTest(host=host):
-                result = m.plan(contract, package, host)["plan"]
-                self.assertEqual(len(result["cases"]), 18)
-                self.assertEqual(result["script_resource_coverage"], expected_scripts)
-                self.assertEqual({c["status"] for c in result["cases"]}, {"NOT_RUN"})
-                self.assertFalse(result["consumer_accepted"])
-
     def test_navigator_offline_focus_oracle(self):
         import subprocess
         package = ROOT / "skills/authored/effort-allocation-navigator"
@@ -251,37 +257,6 @@ class SourceTests(unittest.TestCase):
                          ["review-notes", "draft-note"])
         self.assertEqual(report["focus_resolution"], "CONTINUED_ELIGIBLE_SELECTION")
         self.assertNotIn("Review fictional public project notes", result.stdout)
-
-    def test_authority_boundary_corpus_batch_all_assessed_hosts(self):
-        for slug in ("decision-record-steward", "agent-workspace-footprint-assessor",
-                     "connector-capability-risk-review"):
-            contract = json.loads((ROOT / "engine/builder/examples" /
-                                  (slug + "-source-contract.json")).read_text(encoding="utf-8"))
-            package = ROOT / "skills/authored" / slug
-            self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
-            for host in m.compat.HOSTS:
-                with self.subTest(skill=slug, host=host):
-                    report = m.plan(contract, package, host)
-                    plan = report["plan"]
-                    self.assertEqual(len(plan["cases"]), 10)
-                    self.assertEqual(set(plan["receipt_stage_requirements"]), set(m.a.STAGES))
-                    self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
-                    self.assertEqual(plan["script_resource_coverage"], [])
-                    self.assertEqual(report["plan_sha256"], m.generated.canonical_sha(plan))
-                    self.assertFalse(plan["host_execution_observed"])
-                    self.assertFalse(plan["consumer_accepted"])
-
-    def test_script_bearing_real_pilot_all_assessed_hosts(self):
-        contract = json.loads((ROOT / "engine/builder/examples/mcp-tool-surface-source-contract.json").read_text(encoding="utf-8"))
-        package = ROOT / "skills/authored/mcp-tool-surface-auditor"
-        self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
-        for host in m.compat.HOSTS:
-            with self.subTest(host=host):
-                plan = m.plan(contract, package, host)["plan"]
-                self.assertEqual(len(plan["cases"]), 12)
-                self.assertEqual(plan["script_resource_coverage"], ["scripts/audit.py", "tests/test_audit.py"])
-                self.assertFalse(plan["host_execution_observed"])
-                self.assertEqual({c["status"] for c in plan["cases"]}, {"NOT_RUN"})
 
     def test_actual_mcp_fixture_matches_predeclared_offline_oracle(self):
         # This is an offline helper fixture test, not native-host activation.
