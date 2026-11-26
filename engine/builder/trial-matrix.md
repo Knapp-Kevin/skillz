@@ -17,17 +17,22 @@ not regenerate their source contracts or verify actual package bytes itself.
 identity experiment plan and explicit expected run inventory. The caller
 provides:
 
-- schema_version (integer 1), runtime_sha256 (digest of reviewed, pinned
-  environment and model settings), budget_per_trial (positive integer,
-  unit established separately in the experiment protocol), repetitions
-  (1-10);
+- schema_version (integer 1), experiment_id (unique per authorized experiment),
+  runtime_sha256 (digest of reviewed, pinned environment and model settings),
+  budget_unit (wall-seconds, tokens or tool-calls), budget_per_trial (positive
+  integer), repetitions (1-10);
 - fixtures (explicit comparable acceptance case IDs, family, development
   or held-out partition, fixture_sha256 and independently reviewed
   oracle_sha256). Both partitions are required; identical families or
   fixture digests may not span them.
 
 Each selected case/repetition has a no-skill control, baseline and candidate
-arm. Same fixture/oracle identities and shared environment/budget apply.
+arm. Same fixture/oracle identities and shared environment/budget apply. Every run
+ID binds the entire normalized experiment scope, including both package plans,
+unique experiment ID, runtime, budget and fixture inventory; changing any
+invalidates earlier run IDs. Identical package/host manifest arms are refused,
+as are changed expected contracts in selected cases. The caller still owns
+semantic comparability and experiment-ID uniqueness.
 Host activation and cleanup are separate native acceptance obligations,
 not comparable no-skill tasks. The selection is deliberately a subset,
 not full acceptance coverage. Review semantic comparability and preserve
@@ -43,6 +48,18 @@ unknown runs, plan/oracle drift, reused evidence, and evidence on NOT_RUN
 refuse; incomplete/invalid/timed-out inventories hold. Complete claimed
 pass/fail inventories still require review. No score, approval, qualification,
 evidence authentication or promotion is inferred.
+
+For byte-bound observation review, call `reconcile_receipts` with the same
+inputs plus two mappings (run_id to raw receipt bytes, run_id to raw payload
+bytes), exactly covering observed rows. The strict JSON receipt contains
+schema_version (1), experiment_sha256, run_id, status and payload_sha256;
+the ledger's evidence_sha256 is the SHA-256 of its original receipt bytes.
+The payload digest, scope, outcome and complete inventory must match. Duplicate
+JSON keys, altered bytes and extra/missing receipts refuse. Per-receipt, per-payload
+and aggregate byte limits apply. Identical payloads across different legitimate
+runs are possible; matching bytes do not establish independent execution,
+trusted authorship, actual artifact semantics or oracle truth. The lower-level
+`reconcile` remains a claims-only route, not a byte verification claim.
 
 This module is an optional Python standard-library library, with no CLI,
 network, model calls, execution adapter, subprocess, file writes or consumer
