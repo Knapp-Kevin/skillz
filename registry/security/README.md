@@ -1,5 +1,7 @@
 # Security evidence registry
 
+**November 26, 2026 #402 checkpoint:** [Two complete exact-source arrangement and EDM reviews](../../docs/reviews/2026-11-26-issue402-arrangement-edm.md) ([machine ledger](q8-two-incomplete-arrangement-edm-static-dispositions-20261126.json)) reconcile three owned files and both pinned trees. **32/40 direct static dispositions = 7/7 historical FAILED + 25/33 INCOMPLETE; eight remain.** Historical scanner results remain 10 PASS / 7 FAIL / 33 INCOMPLETE; no new scanner, host pass or unchanged-use permission. Previous checkpoints below are historical.
+
 This directory stores persisted exact-version skill-package security evidence.
 
 Security evidence is intentionally separate from provenance under `registry/skills/` and semantic quality evidence under `registry/verification/`.
