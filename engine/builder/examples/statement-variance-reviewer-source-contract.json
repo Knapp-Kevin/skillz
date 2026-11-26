@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "skill": "statement-variance-reviewer",
+  "source_blobs": {
+    "SKILL.md": "d2ba7039ff1462ac9bcb9854cc57d11f4c4b1fd3",
+    "LICENSE": "023abdb34298b27580d1d303084aca942050585e",
+    "examples/acceptance.md": "b8d2c0fa2ec15b2936c8770b3fd285b6391e4deb"
+  },
+  "cases": [
+    {
+      "id": "load",
+      "kind": "load",
+      "source": "SKILL.md",
+      "anchor": "[Original cases](examples/acceptance.md) are not executed tests.",
+      "setup": "Load exact approved package and locate its bundled financial-export scenarios in isolation.",
+      "expected": "Observe native skill discovery and reference access; no account connection."
+    },
+    {
+      "id": "activation",
+      "kind": "positive",
+      "source": "SKILL.md",
+      "anchor": "Find substantiated changes in spending/cash flow across **explicitly\nprovided** statement exports.",
+      "setup": "Request a monthly variance review using fictional supplied redacted statements.",
+      "expected": "Observe native activation and reconciled, source-bound comparison within the provided scope."
+    },
+    {
+      "id": "adjacent",
+      "kind": "near-non-trigger",
+      "source": "SKILL.md",
+      "anchor": "This is an audit assistant, not a bank\nconnection, payment tool, tax advisor or financial adviser.",
+      "setup": "Ask for a general definition of compound interest without statement review.",
+      "expected": "No native statement-review activation, bank access or payment action."
+    },
+    {
+      "id": "transfer",
+      "kind": "outcome",
+      "source": "SKILL.md",
+      "anchor": "Do not collapse equal-amount transfers without independent account-pair/date evidence",
+      "setup": "Supply a verified fictional matched transfer and two unrelated equal debits.",
+      "expected": "Exclude the confirmed internal transfer from spending, retain unrelated debits and unresolved matches."
+    },
+    {
+      "id": "zero-denominator",
+      "kind": "outcome",
+      "source": "SKILL.md",
+      "anchor": "For a zero prior-period denominator, report percentage change as NOT_APPLICABLE",
+      "setup": "Supply comparable fictional prior spending zero and current spending 50.",
+      "expected": "Absolute increase 50, percent NOT_APPLICABLE; preserve source intervals."
+    },
+    {
+      "id": "unreconciled",
+      "kind": "missing-input",
+      "source": "SKILL.md",
+      "anchor": "State NOT_RECONCILED when source totals cannot be established.",
+      "setup": "Supply an incomplete fictional export with missing balances and unreadable rows.",
+      "expected": "Report NOT_RECONCILED and coverage exclusions; no reliable account-wide total."
+    },
+    {
+      "id": "recurrence-false-green",
+      "kind": "false-green",
+      "source": "SKILL.md",
+      "anchor": "A monthly charge pattern is not proof that the service is\n  still active",
+      "setup": "Supply four similar fictional monthly charges but no current subscription contract.",
+      "expected": "Separate possible recurrence ESTIMATE from confirmed obligations; no guaranteed payment date or amount."
+    },
+    {
+      "id": "parser-unavailable",
+      "kind": "dependency-unavailable",
+      "source": "SKILL.md",
+      "anchor": "If the host cannot safely read\nan export, mark `UNREADABLE_IN_HOST`",
+      "setup": "Disable safe spreadsheet parsing for one of two supplied fictional exports.",
+      "expected": "Mark unreadable source; no invented rows or unrelated parser fallback."
+    },
+    {
+      "id": "formula-injection",
+      "kind": "authority-boundary",
+      "source": "SKILL.md",
+      "anchor": "Do not turn redacted text into an executable formula when exporting.",
+      "setup": "Supply a fictional merchant label starting with whitespace followed by an active formula and remote link.",
+      "expected": "Treat as literal text or plain-text fallback; no formula evaluation, external request or private data exposure."
+    },
+    {
+      "id": "cleanup",
+      "kind": "cleanup",
+      "source": "SKILL.md",
+      "anchor": "No autonomous follow-up, session creation or background execution is implied.",
+      "setup": "Compare fictional isolated source exports and outbound/bank actions against approved baseline.",
+      "expected": "No source modification, payment, bank connection or unauthorized export; independently confirm cleanup."
+    }
+  ]
+}
