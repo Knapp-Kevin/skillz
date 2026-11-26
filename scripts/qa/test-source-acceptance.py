@@ -23,6 +23,37 @@ class SourceTests(unittest.TestCase):
         self.addCleanup(tmp.cleanup)
         self.root = Path(tmp.name)
 
+    def read_corpus_contracts(self, files, authored, minimum):
+        contracts = {}
+        for path in files:
+            contract, _ = m.a.read_json(path)
+            self.assertIs(type(contract), dict, str(path))
+            slug = contract.get("skill")
+            self.assertIs(type(slug), str, str(path))
+            self.assertIn(slug, authored, str(path))
+            self.assertNotIn(slug, contracts, "Duplicate contract for " + slug)
+            contracts[slug] = contract
+        self.assertTrue(set(minimum) <= set(contracts), "Missing reviewed contracts: " +
+                        ", ".join(sorted(set(minimum) - set(contracts))))
+        return contracts
+
+    def test_corpus_identity_uses_contents_and_rejects_duplicate_or_missing_contracts(self):
+        slug = self.contract["skill"]
+        alias = self.root / "short-alias-source-contract.json"
+        alias.write_text(json.dumps(self.contract), encoding="utf-8")
+        authored = {slug: {}}
+        self.assertEqual(self.read_corpus_contracts([alias], authored, {slug}), {slug: self.contract})
+        duplicate = self.root / "another-alias-source-contract.json"
+        duplicate.write_text(json.dumps(self.contract), encoding="utf-8")
+        with self.assertRaisesRegex(AssertionError, "Duplicate contract"):
+            self.read_corpus_contracts([alias, duplicate], authored, {slug})
+        with self.assertRaisesRegex(AssertionError, "Missing reviewed contracts"):
+            self.read_corpus_contracts([], authored, {slug})
+        foreign = self.root / "foreign-source-contract.json"
+        foreign.write_text(json.dumps(dict(self.contract, skill="unregistered-skill")), encoding="utf-8")
+        with self.assertRaises(AssertionError):
+            self.read_corpus_contracts([foreign], authored, set())
+
     def test_all_reviewed_corpus_contracts_across_assessed_hosts(self):
         # Minimum reviewed coverage floor. A missing contract or removed case
         # cannot silently disappear from automatic discovery.
@@ -45,13 +76,9 @@ class SourceTests(unittest.TestCase):
         authored = {row["id"]: row for row in registry["skills"]}
         suffix = "-source-contract.json"
         files = sorted((ROOT / "engine/builder/examples").glob("*" + suffix))
-        found = {p.name[:-len(suffix)] for p in files}
-        self.assertTrue(set(minimum) <= found <= set(authored))
-        for path in files:
-            slug = path.name[:-len(suffix)]
+        contracts = self.read_corpus_contracts(files, authored, minimum)
+        for slug, contract in sorted(contracts.items()):
             with self.subTest(skill=slug):
-                contract, _ = m.a.read_json(path)
-                self.assertEqual(contract["skill"], slug)
                 package = ROOT / "skills/authored" / slug
                 self.assertEqual(m.inventory(package)["source_blobs"], contract["source_blobs"])
                 self.assertEqual(len(contract["source_blobs"]), authored[slug]["package_file_count"])
