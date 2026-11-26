@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "q8-one-incomplete-video-scoring-static-disposition",
+  "review_date": "2026-11-26",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 1,
+    "incomplete_reviewed_to_date": 29,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 4,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 36,
+    "flagged_total": 40,
+    "owned_files_reviewed": 1,
+    "root_license_files_read": 1,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Complete one-file owned package, root LICENSE and four related out-of-package files read, including score_cue.py. No full repository or binary asset audit.",
+  "shared_reference_checks": {
+    "scripts/score_cue.py": "c8aab6a0fd930f7eb386b2295653f0e5ffb63d20",
+    "examples/cue_reveal.json": "44d3f6dc156f1e071b8bca7a73e8b6615ca5b1b6",
+    "tests/test_music.py": "c5fd25f72e520698f17f0f640a8626b292144c95",
+    "tests/test_scripts.py": "34754cf3c2a515de294551f9c14931f22a163ef2"
+  },
+  "records": [
+    {
+      "id": "grapeot-opus-video-audio-skill/video-scoring-audio",
+      "source": {
+        "repository": "grapeot/opus-video-audio-skill",
+        "pin": "0abc18d22d6baf9e55d4fce9a01d29e2528ee426",
+        "package_path": "skills/video-scoring-audio",
+        "complete_package_git_tree_sha": "9c53aaf2275e7ddc1b82f5bb22ddcc080f3f9449",
+        "skill_md_git_blob_sha": "d1fdfc6fba00bbb4b322a1fb13a442632246d2d2",
+        "upstream_head_checked": "0abc18d22d6baf9e55d4fce9a01d29e2528ee426",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "d1fdfc6fba00bbb4b322a1fb13a442632246d2d2"
+      },
+      "license": {
+        "type": "MIT for source-authored work",
+        "source": "root LICENSE",
+        "git_blob_sha": "225c9df040c1875ba11cd064e8d4d0625e5ffc32",
+        "obligation": "Preserve MIT notice; external soundfont, samples, models and generated-output rights separately governed."
+      },
+      "material_findings": [
+        {
+          "severity": "HIGH",
+          "type": "uncontained-output-paths-and-overwrites",
+          "evidence": "scripts/score_cue.py cmd_render, compose, post_process; SKILL.md render example",
+          "finding": "The JSON name is interpolated into MIDI, raw/final WAV and report paths without a basename or containment check. Absolute or parent-relative names can escape outdir; existing files and symlink targets are not protected. MIDI save, ffmpeg forced replacement and report write can replace existing content, including before a later validation failure. Require safe leaf names, bounded fresh workspace, no-follow/exclusive output handling and explicit replacement permission."
+        },
+        {
+          "severity": "HIGH",
+          "type": "filter-language-and-resource-authority",
+          "evidence": "scripts/score_cue.py post_process, load_channels, cmd_render",
+          "finding": "Untrusted JSON values are inserted directly into FFmpeg filtergraph expressions, including a freeform loudnorm string and fade fields. Argument arrays avoid shell interpolation but do not prevent filter-language injection. Unrestricted input paths and whole decoded audio buffering plus missing numeric/resource limits also weaken isolation. Use typed validated fields, fixed filter graph, approved local files, explicit stream selection, bounded decoding and time/resource limits."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "storyboard-fail-open",
+          "evidence": "scripts/score_cue.py measure, cmd_render, cmd_measure",
+          "finding": "The inclusive median comparisons accept both quiet and loud checks at the same constant level, including silence; out-of-range timecodes are matched to the nearest existing window; unknown expectations are not failed. cmd_measure exits nonzero only for clipping, not failed storyboard checks. Enforce positive dynamic margins, valid ranges and labels, nonempty finite audio, and consistent failure status."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "measurement-and-variant-claim-ceiling",
+          "evidence": "SKILL.md measurement and variants; scripts/score_cue.py load_channels, measure, cmd_fingerprint",
+          "finding": "Sample peak does not certify true peak or loudness, mean downmix can cancel opposing channels, and the probe selects first audio stream but decoding does not explicitly map it. Distinct rounded duration/peak/centroid tuples prove only those metrics differ, not the intended instrument or arrangement; identical tuples do not prove byte identity. Bind comparisons to changed parameters, decoded signal identity and target metrics."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "provider-egress-cost-and-filter-boundaries",
+          "evidence": "SKILL.md Route B and Secrets; historical E1 MEDIUM line 171",
+          "finding": "The documented API sends prompts externally with an API key; the source recommends rephrasing after a copyright filter and makes broad provider architecture, timing and licensing claims from limited dated observations. Do not retry to defeat safeguards, infer universal model behavior, or send private prompts, spend quota or access credentials without separate authorization. Historical documented-egress finding remains unchanged and unaccepted."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "asset-identity-and-standalone-dependency",
+          "evidence": "SKILL.md Toolchain, Soundfonts, helper script; root LICENSE; earlier issue #402 rights note",
+          "finding": "The single owned file refers to root-level score_cue.py, which exists at the pin outside the scanner package, and unpinned local tools/packages and a remote soundfont. Root MIT covers authored source, not every asset. Prior issue evidence corroborates the MuseScore General family-level MIT statement, but exact hosted binary digest/notice and applicable rendered-output terms remain unresolved. Verify dependencies, asset identity and rights separately."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "overclaimed-audio-normalization-and-timing",
+          "evidence": "SKILL.md Route A, music under voice-over",
+          "finding": "A MIDI event schedule does not guarantee exact audible onset or envelope after synthesis. FFmpeg linear normalization can fall back to dynamic behavior; the instruction does not require verifying normalization_type. One model experiment cannot prove all generative systems lack timed control. Verify actual mode, true peak, integrated loudness and timing against the delivery contract; retain human listening acceptance."
+        }
+      ],
+      "positive_safeguards": [
+        "Separates quantitative checks from human listening judgments; explicit peak/duration checks and warns about failed variant substitution.",
+        "Starter init refuses existing destination unless force; subprocess argument lists avoid shell interpolation; discourages bulk credential retrieval."
+      ],
+      "remediation": "Contain and stage writes, disallow untrusted filter syntax, enforce strict bounded input and output contracts, fail closed on silent/invalid storyboard checks, verify true peak/loudness and actual normalization mode, and require separately authorized provider/asset operations and exact rights receipts.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "cac60b618fb7e400fb22ec520d2cfe92e4b085a07736a4fad76228b8bc5f36d4",
+        "findings": [
+          {
+            "id": "E1",
+            "pattern": "External Transmission",
+            "severity": "MEDIUM",
+            "file": "SKILL.md",
+            "line": 171,
+            "host_disposition": "true-positive-documented-egress",
+            "accepted_by_maintainer": false
+          }
+        ],
+        "incomplete_reasons": {
+          "reference_missing": 8
+        },
+        "interpretation": "Historical E1 documented egress remains material and not maintainer-accepted. Root helper exists outside owned tree; not all eight missing-reference indications resolved. No scan rerun."
+      },
+      "reviewed_at": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "review_method": "Complete owned SKILL read, returned Git blob matched untruncated recursive pinned tree inventory and historical tree; master head matches pin. Root LICENSE and material out-of-package score helper read as passive text; example and two related test modules inspected. No execution, external binary retrieval or listening test.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 0,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 11,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}
