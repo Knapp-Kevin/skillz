@@ -1,7 +1,9 @@
 import copy
+import hashlib
+import json
 import unittest
 
-from trial_matrix import digest, freeze, reconcile
+from trial_matrix import digest, freeze, reconcile, reconcile_receipts
 
 
 def inputs():
@@ -10,10 +12,12 @@ def inputs():
         body = {"schema_version": 1, "status": "DESIGNED_NOT_RUN", "skill": "fictional-skill",
                 "host": "claude-apps", "canonical_files_sha256": {"SKILL.md": digest(tag)},
                 "host_member_manifest": manifest, "host_member_manifest_sha256": digest(manifest),
-                "cases": [{"id": k, "kind": "positive", "receipt_stage": "outcome", "status": "NOT_RUN"}
+                "cases": [{"id": k, "kind": "positive", "receipt_stage": "outcome", "status": "NOT_RUN",
+                           "expected_contract": "fictional outcome"}
                           for k in ("case-a", "case-b")]}
         return {"plan": body, "plan_sha256": digest(body)}
-    config = {"schema_version": 1, "runtime_sha256": digest("fake-runtime"),
+    config = {"schema_version": 1, "experiment_id": "fictional-one",
+              "runtime_sha256": digest("fake-runtime"), "budget_unit": "tool-calls",
               "budget_per_trial": 10, "repetitions": 2,
               "fixtures": [{"case_id": k, "family": k, "partition": p,
                             "fixture_sha256": digest(k), "oracle_sha256": digest(k + "-oracle")}
@@ -92,6 +96,92 @@ class TrialMatrixTests(unittest.TestCase):
     def test_failure_retained(self):
         self.ledger["rows"][2]["status"] = "FAIL_CLAIMED"
         self.assertEqual(self.result()["counts"]["development"]["candidate"]["FAIL_CLAIMED"], 1)
+
+    def test_run_ids_bound_to_experiment_scope(self):
+        original = {r["run_id"] for r in self.frozen["experiment"]["runs"]}
+        for field, value in (("experiment_id", "fictional-two"),
+                             ("runtime_sha256", digest("other-runtime")),
+                             ("budget_unit", "tokens"), ("budget_per_trial", 20)):
+            with self.subTest(field=field):
+                config = {**self.config, field: value}
+                other = freeze(self.b, self.c, config)
+                self.assertFalse(original & {r["run_id"] for r in other["experiment"]["runs"]})
+                self.ledger["experiment_sha256"] = other["experiment_sha256"]
+                with self.assertRaisesRegex(ValueError, "UNKNOWN_DUPLICATE"):
+                    reconcile(self.b, self.c, config, self.ledger)
+
+    def test_same_package_new_plan_refused(self):
+        self.c = copy.deepcopy(self.b)
+        self.c["plan"]["dossier_sha256"] = digest("different-dossier")
+        self.c["plan_sha256"] = digest(self.c["plan"])
+        with self.assertRaisesRegex(ValueError, "IDENTICAL_PACKAGE"):
+            freeze(self.b, self.c, self.config)
+
+    def test_changed_expectation_refused(self):
+        self.c["plan"]["cases"][0]["expected_contract"] = "weaker outcome"
+        self.c["plan_sha256"] = digest(self.c["plan"])
+        with self.assertRaisesRegex(ValueError, "CASE_EXPECTATION_CHANGED"):
+            freeze(self.b, self.c, self.config)
+
+    def bound_receipts(self):
+        receipts, payloads = {}, {}
+        for row in self.ledger["rows"]:
+            run_id = row["run_id"]
+            payload = b"fictional output"
+            receipt = {"schema_version": 1, "experiment_sha256": self.frozen["experiment_sha256"],
+                       "run_id": run_id, "status": row["status"],
+                       "payload_sha256": hashlib.sha256(payload).hexdigest()}
+            raw = json.dumps(receipt).encode()
+            row["evidence_sha256"] = hashlib.sha256(raw).hexdigest()
+            receipts[run_id], payloads[run_id] = raw, payload
+        return receipts, payloads
+
+    def receipt_result(self, receipts, payloads):
+        return reconcile_receipts(self.b, self.c, self.config, self.ledger, receipts, payloads)
+
+    def test_receipt_payload_match_not_authentication(self):
+        receipts, payloads = self.bound_receipts()
+        result = self.receipt_result(receipts, payloads)
+        self.assertEqual(result["matched_receipts"], 12)
+        self.assertTrue(result["local_receipt_payloads_matched"])
+        self.assertFalse(result["evidence_authenticated"])
+        self.assertFalse(result["host_execution_verified"])
+
+    def test_payload_mutation(self):
+        receipts, payloads = self.bound_receipts()
+        payloads[next(iter(payloads))] = b"altered"
+        with self.assertRaisesRegex(ValueError, "PAYLOAD_DIGEST_MISMATCH"):
+            self.receipt_result(receipts, payloads)
+
+    def test_status_relabel(self):
+        receipts, payloads = self.bound_receipts()
+        self.ledger["rows"][0]["status"] = "PASS_CLAIMED"
+        with self.assertRaisesRegex(ValueError, "OBSERVATION_SUBJECT_MISMATCH"):
+            self.receipt_result(receipts, payloads)
+
+    def test_receipt_missing(self):
+        receipts, payloads = self.bound_receipts()
+        receipts.pop(next(iter(receipts)))
+        with self.assertRaisesRegex(ValueError, "EVIDENCE_INVENTORY_MISMATCH"):
+            self.receipt_result(receipts, payloads)
+
+    def test_receipt_relabel(self):
+        receipts, payloads = self.bound_receipts()
+        row = self.ledger["rows"][0]
+        raw = receipts[row["run_id"]].replace(row["run_id"].encode(), b"0" * 64)
+        receipts[row["run_id"]] = raw
+        row["evidence_sha256"] = hashlib.sha256(raw).hexdigest()
+        with self.assertRaisesRegex(ValueError, "OBSERVATION_SUBJECT_MISMATCH"):
+            self.receipt_result(receipts, payloads)
+
+    def test_duplicate_receipt_key(self):
+        receipts, payloads = self.bound_receipts()
+        row = self.ledger["rows"][0]
+        raw = receipts[row["run_id"]].replace(b'{', b'{"schema_version": 1,', 1)
+        receipts[row["run_id"]] = raw
+        row["evidence_sha256"] = hashlib.sha256(raw).hexdigest()
+        with self.assertRaisesRegex(ValueError, "DUPLICATE_RECEIPT_KEY"):
+            self.receipt_result(receipts, payloads)
 
     def test_input_not_modified(self):
         before = copy.deepcopy((self.b, self.c, self.config, self.ledger))
