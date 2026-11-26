@@ -71,6 +71,10 @@ class SourceTests(unittest.TestCase):
             "research-methods-appraiser": (3, 10, 0),
             "research-question-dossier": (3, 10, 0),
             "statement-variance-reviewer": (3, 10, 0),
+            "work-period-evidence-reporter": (3, 10, 0),
+            "personal-operations-control-board": (3, 10, 0),
+            "evidence-narrative-composer": (3, 10, 0),
+            "learning-evidence-progression": (3, 10, 0),
         }
         registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
         authored = {row["id"]: row for row in registry["skills"]}
