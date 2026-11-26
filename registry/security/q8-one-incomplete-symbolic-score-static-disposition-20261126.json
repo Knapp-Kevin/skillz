@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "kind": "q8-one-incomplete-symbolic-score-static-disposition",
+  "review_date": "2026-11-26",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 1,
+    "incomplete_reviewed_to_date": 26,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 7,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 33,
+    "flagged_total": 40,
+    "owned_files_reviewed": 2,
+    "root_license_files_read": 1,
+    "root_notice_files_read": 1,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Complete pinned owned source; two returned Git blobs reconciled to full recursive Git inventory, root MIT/NOTICE inspected. Selected external-to-package references checked for existence only.",
+  "shared_reference_checks": {
+    "plugins/music-composition/skills/mc-orchestration/reference.md": "37ef97ea9bc3c350095008d407f0fb1af6bb54e3",
+    "plugins/music-composition/skills/mc-progressions/reference.md": "e92411172b416074a69e871487b9b2896ab75445",
+    "plugins/music-composition/skills/mc-render-compile/SKILL.md": "b59ce61cf129a96371f6e40f6203f4c05803e8cc",
+    "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md": "eff1a0187377e750ab3468f973224c9222e39731",
+    "plugins/music-composition/skills/mc-workflow/backends.yaml": "d7ad949fa296a7d9bbe1d63b32b6353617c4b7da"
+  },
+  "records": [
+    {
+      "id": "jtydhr88-music-composition-skills/mc-symbolic-score",
+      "source": {
+        "repository": "jtydhr88/music-composition-skills",
+        "pin": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "package_path": "plugins/music-composition/skills/mc-symbolic-score",
+        "complete_package_git_tree_sha": "4e2500d61b989b399c45ba70df795f7c5d820459",
+        "skill_md_git_blob_sha": "d84cd65170744219c64a46387e6ff675bc1fabbd",
+        "upstream_head_checked": "e283141babb8806f2798d5fd2d9e833e75c1bd26",
+        "current_head_package_tree_matches_pin": true
+      },
+      "owned_files": {
+        "SKILL.md": "d84cd65170744219c64a46387e6ff675bc1fabbd",
+        "reference.md": "4c5183b6d7f0c15ef5e0df59f73139e5faeb522d"
+      },
+      "license": {
+        "type": "MIT-for-upstream-owned-expression-only",
+        "source": "root LICENSE + NOTICE",
+        "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
+        "notice_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
+        "obligation": "Preserve complete MIT notice for eligible original expression; third-party book text, translations, audio and model/asset rights are separate."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "contradictory-backend-capability",
+          "evidence": "SKILL.md §§6b, 7.2 and source appendix; reference.md §§1.6, 5",
+          "finding": "The entrypoint reports tested two-voice support and says the dialect is known; its appendix and companion reference still classify dialect and multi-voice support as unconfirmed. No backend version, exact fixture or reproducibility receipt is supplied. Require a versioned capability probe and conservative fallback."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unsupported-deterministic-render-claim",
+          "evidence": "SKILL.md §§2.2, 5.3, 8",
+          "finding": "Identical symbolic input alone does not establish identical audio or isolate a single variable. Renderer, soundfont, plugins, timing resolution, settings and environment must also be pinned; no emitter executable is owned by this two-file package. The described author experiment is not an independent host test."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "unescaped-format-and-private-metadata",
+          "evidence": "SKILL.md §§3.1, 9",
+          "finding": "Raw title, motif ABC and lyrics insertion, and wholesale export of intent/mix/vocal text into comments or metadata, lack escaping, field allowlists and privacy controls. Embedded line breaks or target-format delimiters can alter output structure; internal notes may be carried into shared files. Require format-aware serialization, validated motifs, minimization and separately approved destinations."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "insufficient-semantic-validation",
+          "evidence": "SKILL.md §§6, 8, 9; reference.md §1.2–1.3",
+          "finding": "Aggregate bar count and chord-degree checks do not establish per-voice measure durations, note/lyric alignment, effective accidentals, supported target features or lossless conversion. The source acknowledges that the named parser drops lyric lines and chord playback. Require per-format semantic round-trip and explicit loss reporting."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "external-dependencies-and-authority",
+          "evidence": "SKILL.md §§7–9; root NOTICE",
+          "finding": "Neighboring schema, backend configuration, render and orchestration skills and external parsers/synths are dependencies. Their presence is not authorization to execute, upload lyrics, install software, spend credits or distribute protected material. Preserve MIT notice for original content; model weights and protected material have separate rights."
+        }
+      ],
+      "positive_safeguards": [
+        "Explicit format capability differences and pre-synthesis checks.",
+        "Acknowledges parser lyric loss, chord playback gaps and unresolved melody-density experiment."
+      ],
+      "remediation": "Version and test backend capability, pin renderer dependencies, serialize and minimize metadata, require per-voice and per-target semantic checks, separate external execution and publication authorization.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "3e616044588b6be40b127d4136a330b19cc176c4c2697213abf4a36a4de5cdf9",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 16
+        },
+        "interpretation": "Historical reference_missing count preserved. Selected sibling references exist outside owned tree; not all 16 scanner locations independently resolved. No scanner rerun."
+      },
+      "reviewed_at": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "review_method": "Complete two owned files read as passive source; returned file blob IDs match untruncated pinned recursive Git tree inventory and historical package tree. Default branch matches pin. Root LICENSE/NOTICE read; selected sibling reference paths verified in pinned tree only. No runtime test.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 1,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 0,
+        "effectiveness_design": 1
+      },
+      "static_score": 12,
+      "quality_state": "unverified",
+      "freshness": "current-reviewed-pin-still-head-identical",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}
