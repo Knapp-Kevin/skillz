@@ -55,9 +55,11 @@ def freeze(baseline, candidate, config):
     """Consume existing plan envelopes; callers must regenerate and verify them."""
     b, c = plan_body(baseline), plan_body(candidate)
     need((b["skill"], b["host"]) == (c["skill"], c["host"]), "INCOMPARABLE_PLANS")
-    need(keys(config, "schema_version runtime_sha256 budget_per_trial repetitions fixtures") and
+    need(keys(config, "schema_version experiment_id runtime_sha256 budget_unit budget_per_trial repetitions fixtures") and
          type(config["schema_version"]) is int and config["schema_version"] == 1 and
-         hex64(config["runtime_sha256"]) and type(config["budget_per_trial"]) is int and
+         ident(config["experiment_id"]) and hex64(config["runtime_sha256"]) and
+         config["budget_unit"] in ("wall-seconds", "tokens", "tool-calls") and
+         type(config["budget_per_trial"]) is int and
          1 <= config["budget_per_trial"] <= 1000000 and type(config["repetitions"]) is int and
          1 <= config["repetitions"] <= 10, "INVALID_EXPERIMENT_CONFIG")
     fixtures = config["fixtures"]
@@ -72,8 +74,14 @@ def freeze(baseline, candidate, config):
              hex64(f["fixture_sha256"]) and hex64(f["oracle_sha256"]), "INVALID_FIXTURE")
         k = f["case_id"]
         need(k in common and k in other and k not in seen, "UNKNOWN_OR_DUPLICATE_CASE")
-        need(common[k].get("kind") == other[k].get("kind") and
+        need(ident(common[k].get("kind")) and type(common[k].get("receipt_stage")) is str and
+             bool(common[k]["receipt_stage"]) and
+             common[k].get("kind") == other[k].get("kind") and
              common[k].get("receipt_stage") == other[k].get("receipt_stage"), "CASE_MAPPING_CHANGED")
+        need("expected_contract" in common[k] and "expected_contract" in other[k] and
+             common[k]["expected_contract"] is not None and
+             digest(common[k]["expected_contract"]) == digest(other[k]["expected_contract"]),
+             "CASE_EXPECTATION_CHANGED")
         need(common[k].get("kind") not in ("host-load", "load", "cleanup"), "NONCOMPARABLE_HOST_CASE")
         need(families.setdefault(f["family"], f["partition"]) == f["partition"] and
              fixture_partitions.setdefault(f["fixture_sha256"], f["partition"]) == f["partition"],
@@ -82,15 +90,23 @@ def freeze(baseline, candidate, config):
     need(set(families.values()) == {"development", "held-out"}, "MISSING_PARTITION")
     subjects = {"control": None, "baseline": baseline["plan_sha256"],
                 "candidate": candidate["plan_sha256"]}
-    need(subjects["baseline"] != subjects["candidate"], "IDENTICAL_PLAN_ARMS")
+    need(b["canonical_files_sha256"] != c["canonical_files_sha256"] and
+         b["host_member_manifest_sha256"] != c["host_member_manifest_sha256"],
+         "IDENTICAL_PACKAGE_ARMS")
+    scope = {"skill": b["skill"], "host": b["host"], "subjects": subjects,
+             "config": {**config, "fixtures": sorted(fixtures, key=lambda f: f["case_id"])}}
+    scope_sha = digest(scope)
     runs = []
     for f in sorted(fixtures, key=lambda row: row["case_id"]):
         for rep in range(1, config["repetitions"] + 1):
             for arm in ARMS:
-                row = {**f, "repetition": rep, "arm": arm, "subject_sha256": subjects[arm]}
+                row = {**f, "repetition": rep, "arm": arm, "subject_sha256": subjects[arm],
+                       "scope_sha256": scope_sha}
                 runs.append({"run_id": digest(row), **row})
     body = {"schema_version": 1, "skill": b["skill"], "host": b["host"],
-            "runtime_sha256": config["runtime_sha256"], "budget_per_trial": config["budget_per_trial"],
+            "experiment_id": config["experiment_id"], "scope_sha256": scope_sha,
+            "runtime_sha256": config["runtime_sha256"], "budget_unit": config["budget_unit"],
+            "budget_per_trial": config["budget_per_trial"],
             "subjects": subjects, "runs": runs, "status": "DESIGNED_NOT_RUN"}
     return {"experiment": body, "experiment_sha256": digest(body)}
 
@@ -125,3 +141,49 @@ def reconcile(baseline, candidate, config, ledger):
             "experiment_sha256": frozen["experiment_sha256"], "expected_runs": len(expected),
             "submitted_runs": len(found), "counts": groups, "host_execution_verified": False,
             "evidence_authenticated": False, "consumer_accepted": False, "promotion_authorized": False}
+
+
+MAX_RECEIPT = 16 * 1024
+MAX_PAYLOAD = 8 * 1024 * 1024
+MAX_TOTAL_EVIDENCE = 64 * 1024 * 1024
+
+
+def _unique_object(pairs):
+    obj = {}
+    for key, value in pairs:
+        need(key not in obj, "DUPLICATE_RECEIPT_KEY")
+        obj[key] = value
+    return obj
+
+
+def _reject_constant(value):
+    raise ValueError("NONFINITE_RECEIPT")
+
+
+def reconcile_receipts(baseline, candidate, config, ledger, receipts, payloads):
+    """Bind local observation bytes to expected runs; never authenticate authors."""
+    result = reconcile(baseline, candidate, config, ledger)
+    observed = {row["run_id"]: row for row in ledger["rows"] if row["status"] in OBSERVED}
+    need(type(receipts) is dict and type(payloads) is dict and
+         set(receipts) == set(payloads) == set(observed), "EVIDENCE_INVENTORY_MISMATCH")
+    total = 0
+    for run_id, row in observed.items():
+        raw, payload = receipts[run_id], payloads[run_id]
+        need(type(raw) is bytes and 0 < len(raw) <= MAX_RECEIPT and
+             type(payload) is bytes and 0 < len(payload) <= MAX_PAYLOAD, "INVALID_EVIDENCE_BYTES")
+        total += len(raw) + len(payload)
+        need(total <= MAX_TOTAL_EVIDENCE, "EVIDENCE_SIZE_LIMIT")
+        need(hashlib.sha256(raw).hexdigest() == row["evidence_sha256"], "RECEIPT_DIGEST_MISMATCH")
+        try:
+            receipt = json.loads(raw.decode("utf-8"), object_pairs_hook=_unique_object,
+                                 parse_constant=_reject_constant)
+        except (UnicodeError, RecursionError) as exc:
+            raise ValueError("INVALID_RECEIPT_ENCODING") from exc
+        need(keys(receipt, "schema_version experiment_sha256 run_id status payload_sha256") and
+             type(receipt["schema_version"]) is int and receipt["schema_version"] == 1 and
+             receipt["experiment_sha256"] == result["experiment_sha256"] and
+             receipt["run_id"] == run_id and receipt["status"] == row["status"],
+             "OBSERVATION_SUBJECT_MISMATCH")
+        need(receipt["payload_sha256"] == hashlib.sha256(payload).hexdigest(), "PAYLOAD_DIGEST_MISMATCH")
+    result.update({"local_receipt_payloads_matched": True, "matched_receipts": len(observed)})
+    return result
