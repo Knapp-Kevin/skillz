@@ -39,6 +39,10 @@ to copy code, and linked probes are not executed consumer evidence.
 The ordinary complete-blueprint route below remains supported. No
 new service, external agent, mandatory file or release is required.
 
+## Optional session-derived authoring intake
+
+For reviewed, minimized session evidence, use the [session design intake](session-design.md). It binds current requirements, correction history and observation claims to the existing design dossier before the same draft preflight. It does not accept raw native transcripts or automatically derive instructions, write packages, or authenticate success.
+
 ## Step-by-step generation
 
 1. **Define the user outcome and limits.** Preserve the user's explicit
