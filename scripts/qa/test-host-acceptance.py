@@ -143,6 +143,18 @@ class ReceiptTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     self.check()
 
+    def test_placeholder_stage_evidence_is_not_an_observation(self):
+        row = self.receipt["cases"][0]
+        for field in ("evidence_id", "oracle_id"):
+            original = row[field]
+            for value in ("UNKNOWN", "not-run", "n.a", "placeholder", "NONE"):
+                with self.subTest(field=field, value=value):
+                    row[field] = value
+                    with self.assertRaisesRegex(ValueError, "MISSING_OR_REUSED_EVIDENCE"):
+                        self.check()
+            row[field] = original
+        self.assertEqual(self.check()["status"], "COMPLETE_CLAIMS_REVIEW_REQUIRED")
+
     def test_unknown_environment_cannot_complete_claim(self):
         for field in m.ENV_FIELDS:
             previous = self.receipt["environment"][field]

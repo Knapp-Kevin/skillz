@@ -19,6 +19,7 @@ HEX40 = re.compile(r"[0-9a-f]{40}")
 HEX64 = re.compile(r"[0-9a-f]{64}")
 SLUG = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*")
 ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,79}")
+UNKNOWN_IDS = frozenset({"unknown", "not-run", "not_run", "unset", "none", "na", "n-a", "n.a", "placeholder"})
 STAGES = ("load", "positive_trigger", "near_non_trigger", "outcome",
           "authority_boundary", "cleanup")
 FIELDS = {"schema_version", "skill", "host", "source_commit", "package_tree_sha",
@@ -62,6 +63,10 @@ def read_json(path):
 
 def valid(pattern, value):
     return type(value) is str and bool(pattern.fullmatch(value))
+
+
+def evidence_identity(value):
+    return valid(ID, value) and value.casefold() not in UNKNOWN_IDS
 
 
 def archive_contract(skill, host, asset):
@@ -157,7 +162,7 @@ def validate(manifest, manifest_sha, archive, receipt):
     env = receipt["environment"]
     require(type(env) is dict and set(env) == ENV_FIELDS and
             all(valid(ID, v) for v in env.values()), "INVALID_ENVIRONMENT_IDENTITY")
-    unknown_env = any(v.casefold() in {"unknown", "not-run", "not_run", "unset", "none", "na", "n-a", "n.a", "placeholder"} for v in env.values())
+    unknown_env = any(not evidence_identity(v) for v in env.values())
     require(receipt["execution_kind"] in ("NATIVE_HOST_CLAIMED", "EMULATED", "NOT_RUN"),
             "INVALID_EXECUTION_KIND")
     require(receipt["authorization"] in ("APPROVAL_CLAIMED", "NOT_ESTABLISHED"),
@@ -175,7 +180,7 @@ def validate(manifest, manifest_sha, archive, receipt):
                 "INVALID_STAGE_STATUS")
         if status in ("PASS_CLAIMED", "FAIL_CLAIMED"):
             evidence, oracle = case["evidence_id"], case["oracle_id"]
-            require(valid(ID, evidence) and valid(ID, oracle) and evidence != oracle and
+            require(evidence_identity(evidence) and evidence_identity(oracle) and evidence != oracle and
                     evidence not in ids and oracle not in ids, "MISSING_OR_REUSED_EVIDENCE")
             ids.update((evidence, oracle))
         else:

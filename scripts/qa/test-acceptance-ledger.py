@@ -148,6 +148,55 @@ class LedgerTests(unittest.TestCase):
                 self.check()
             row[key] = old
 
+    def set_stage_cases(self, stage, status):
+        for ident in self.plan["plan"]["receipt_stage_requirements"][stage]:
+            row = self.row(ident)
+            row["status"] = status
+            if status not in m.CLAIMED:
+                row.update(evidence_id=None, fixture_id=None, oracle_id=None)
+        self.stage(stage, status)
+
+    def test_mixed_outcome_cannot_hide_pass_without_trigger(self):
+        self.set_stage_cases("positive_trigger", "NOT_RUN")
+        self.row("probe-missing-input").update(status="NOT_RUN", evidence_id=None)
+        self.stage("outcome", "UNKNOWN")
+        with self.assertRaisesRegex(ValueError, "CASE_OUTCOME_PASS_WITHOUT_TRIGGER"):
+            self.check()
+
+    def test_mixed_outcome_cannot_hide_pass_without_load(self):
+        self.set_stage_cases("load", "NOT_RUN")
+        for stage in ("positive_trigger", "near_non_trigger", "authority_boundary"):
+            self.set_stage_cases(stage, "NOT_RUN")
+        self.row("probe-missing-input").update(status="NOT_RUN", evidence_id=None)
+        self.stage("outcome", "UNKNOWN")
+        with self.assertRaisesRegex(ValueError, "CASE_BEHAVIOR_PASS_WITHOUT_LOAD"):
+            self.check()
+
+    def test_failed_outcome_group_cannot_hide_other_pass_without_trigger(self):
+        self.set_stage_cases("positive_trigger", "NOT_RUN")
+        self.row("probe-false-green")["status"] = "FAIL_CLAIMED"
+        self.stage("outcome", "FAIL_CLAIMED")
+        with self.assertRaisesRegex(ValueError, "CASE_OUTCOME_PASS_WITHOUT_TRIGGER"):
+            self.check()
+
+    def test_failed_load_retains_failure_without_fabricated_behavior(self):
+        self.set_stage_cases("load", "FAIL_CLAIMED")
+        for stage in ("positive_trigger", "near_non_trigger", "outcome", "authority_boundary"):
+            self.set_stage_cases(stage, "NOT_RUN")
+        self.assertEqual(self.check()["status"], "HOLD_REPORTED_FAILURE")
+
+    def test_placeholder_case_identifiers_rejected(self):
+        row = self.ledger["cases"][0]
+        for field in ("fixture_id", "oracle_id", "evidence_id"):
+            original = row[field]
+            for value in ("n.a", "UNKNOWN", "placeholder"):
+                with self.subTest(field=field, value=value):
+                    row[field] = value
+                    with self.assertRaisesRegex(ValueError, "CASE_EVIDENCE_REQUIRED"):
+                        self.check()
+            row[field] = original
+        self.assertEqual(self.check()["status"], "COMPLETE_CASE_CLAIMS_REVIEW_REQUIRED")
+
     def test_all_not_run_preserves_hold(self):
         for row in self.ledger["cases"]:
             row.update(status="NOT_RUN", evidence_id=None, fixture_id=None, oracle_id=None)
