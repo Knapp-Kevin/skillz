@@ -96,12 +96,18 @@ class SourceTests(unittest.TestCase):
             "federated-source-catalog": (8, 14, 0),
             "reference-integrity-auditor": (7, 14, 2),
             "technology-change-intelligence": (11, 15, 0),
+            "healthcare-contract-forensics": (11, 12, 0),
+            "sandler-conversation-strategist": (6, 12, 0),
+            "meddpicc-opportunity-assurance": (6, 12, 0),
+            "offline-hyperv-qual-vm": (10, 17, 5),
         }
         registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
         authored = {row["id"]: row for row in registry["skills"]}
         suffix = "-source-contract.json"
         files = sorted((ROOT / "engine/builder/examples").glob("*" + suffix))
         contracts = self.read_corpus_contracts(files, authored, minimum)
+        self.assertEqual(set(contracts), set(authored), "Every authored skill needs a reviewed contract")
+        observed_holds = set()
         for slug, contract in sorted(contracts.items()):
             with self.subTest(skill=slug):
                 package = ROOT / "skills/authored" / slug
@@ -116,6 +122,17 @@ class SourceTests(unittest.TestCase):
                     self.assertGreaterEqual(len(scripts), script_count)
                 for host in m.compat.HOSTS:
                     with self.subTest(host=host):
+                        pair = (slug, host)
+                        allowed = m.compat.AUTHORED_HOLD_EXCEPTIONS.get(pair)
+                        if allowed is not None:
+                            admission = m.compat.inspect(package, host)
+                            self.assertFalse(admission["package_ready"])
+                            self.assertTrue(admission["format_valid"])
+                            self.assertEqual(set(admission["blockers"]), set(allowed))
+                            with self.assertRaisesRegex(ValueError, "^HOST_PACKAGE_HOLD$"):
+                                m.plan(contract, package, host)
+                            observed_holds.add(pair)
+                            continue
                         report = m.plan(contract, package, host)
                         plan = report["plan"]
                         self.assertEqual(len(plan["cases"]), len(contract["cases"]))
@@ -127,6 +144,7 @@ class SourceTests(unittest.TestCase):
                         self.assertFalse(plan["consumer_accepted"])
                         if slug == "scheduled-work-proof-auditor":
                             self.assertEqual(report, m.plan(contract, package, host))
+        self.assertEqual(observed_holds, set(m.compat.AUTHORED_HOLD_EXCEPTIONS))
 
     def copy_package(self):
         import shutil
