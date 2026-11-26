@@ -88,3 +88,25 @@ evidence. Run the focused checks:
 The current module is structural bookkeeping. Neither hashes nor claims
 authenticate a producer, prove isolation, validate the oracle or establish
 causal benefit. No live trials are implied by passing its unit tests.
+
+## Deterministic synthetic adapter (offline only)
+
+`trial_fake.run(..., execute=False)` is the next bounded controller slice.
+It regenerates the matrix and verifies exact runtime, fixture and oracle bytes
+before any emulation. The default returns the entire NOT_RUN ledger without
+invoking the adapter. Explicit `execute=True` permits only the fixed
+`synthetic-in-memory-v1` adapter; no callbacks, shell, filesystem, network,
+credentials, model invocation or package code execution are provided.
+The original fictional fixture is a bounded integer list; the controller's
+independent property oracle checks sorted unique membership rather than trusting
+adapter success. Each run has fresh local state and a simulated step budget.
+Fixed modes plant wrong outputs, setup failure, timeout, missing trace,
+unauthorized effect and cleanup failure. Invalid or timed-out runs remain
+in the complete denominator. Payloads explicitly say SYNTHETIC_FAKE_ONLY;
+the existing receipt reconciler binds every raw payload and receipt to the
+frozen run identity. These are simulated steps, not measured model/tool costs.
+No actual host isolation, native activation, skill effectiveness, or promotion
+is asserted. The fixture/oracle byte maps belong to the trusted controller;
+do not expose held-out bytes to real refinement. This adapter cannot qualify
+a native host or arbitrary executable oracle. See test_trial_fake.py for the
+fully reproducible positive and planted-failure pilot.

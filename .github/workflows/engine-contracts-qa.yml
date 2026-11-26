@@ -64,7 +64,7 @@ jobs:
           python3 -B scripts/qa/test-acceptance-plan.py
           python3 -B scripts/qa/test-acceptance-ledger.py
           python3 -B scripts/qa/test-source-acceptance.py
-          python3 -B -m unittest discover -s engine/builder -p test_trial_matrix.py -v
+          python3 -B -m unittest discover -s engine/builder -p 'test_trial*.py' -v
           python3 -B scripts/qa/test_sales_methodology_contract.py
       - name: Full authored host packaging matrix and admission gate
         shell: bash
