@@ -93,6 +93,9 @@ class SourceTests(unittest.TestCase):
             "repository-delivery-assessor": (9, 13, 2),
             "release-evidence-reconciler": (8, 13, 2),
             "pr-integration-surgeon": (7, 14, 2),
+            "federated-source-catalog": (8, 14, 0),
+            "reference-integrity-auditor": (7, 14, 2),
+            "technology-change-intelligence": (11, 15, 0),
         }
         registry = json.loads((ROOT / "registry/authored-skills-index.json").read_text(encoding="utf-8"))
         authored = {row["id"]: row for row in registry["skills"]}
