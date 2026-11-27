@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "kind": "q8-one-incomplete-caail-static-disposition",
+  "review_date": "2026-11-27",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "historical_register": "registry/security/q12-featured-security-evidence-reconciliation-20261103.json",
+  "counts": {
+    "new_incomplete_reviewed": 1,
+    "incomplete_reviewed_to_date": 30,
+    "incomplete_original": 33,
+    "incomplete_remaining_direct_static": 3,
+    "failed_reviewed_to_date": 7,
+    "flagged_risk_reviewed_to_date": 37,
+    "flagged_total": 40,
+    "owned_files_reviewed": 1,
+    "root_license_files_read": 1,
+    "new_scans": 0,
+    "behavioral_tests": 0,
+    "unchanged_use_approvals": 0
+  },
+  "scope": "Complete historical owned package, root license and two material out-of-package files read. Endpoint inventory existence only; newer package separately reviewed, not counted twice.",
+  "shared_reference_checks": {
+    "site/public/api/index.json": "ea9751bfac6de69bcdcb08dd95c7a6dc4ac6b40f",
+    "plugin/.claude-plugin/plugin.json": "2336e896bbf26ae55f3ce54f846d257de8637448"
+  },
+  "records": [
+    {
+      "id": "tucca-cellag-caail/caail",
+      "source": {
+        "repository": "tucca-cellag/caail",
+        "pin": "5db336dbe013e06187a63724ef66bfd7c39c24fc",
+        "package_path": "plugin/skills/caail",
+        "complete_package_git_tree_sha": "3a44185c15af28341050f850f1dcfcba9690ac8e",
+        "skill_md_git_blob_sha": "8699f83f9dfc63b549cf9f743b62e820d8d0317c",
+        "upstream_head_checked": "da4deee6ce6c8476adee9f02bed0b061458bdb60",
+        "current_head_package_tree_matches_pin": false
+      },
+      "owned_files": {
+        "SKILL.md": "8699f83f9dfc63b549cf9f743b62e820d8d0317c"
+      },
+      "license": {
+        "type": "MIT for source-authored curation",
+        "source": "root LICENSE",
+        "git_blob_sha": "4406e01d90ceef8c3ccece9d9a2a4919284d3eb1",
+        "obligation": "Preserve MIT notice; verify linked resource rights separately."
+      },
+      "material_findings": [
+        {
+          "severity": "MEDIUM",
+          "type": "mutable-multifile-snapshot",
+          "evidence": "SKILL.md Start here, endpoint table and counting; pinned index.json",
+          "finding": "All operational URLs use mutable main. Reading index and data at different revisions can produce count mismatches or silently combine inconsistent records even when counts match. Resolve one immutable source revision for the full query; check schema, row identities, uniqueness and referential integrity. Record observed corpus date and revision."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "network-capability-overclaim",
+          "evidence": "SKILL.md Which endpoint answers what and fallback",
+          "finding": "The statement that GitHub fetching works everywhere is unsupported across hosts; permission, network reachability, connector limits and policy vary. Use authorized read-only retrieval, report unavailable capabilities and never bypass an organizational restriction or transmit private research details."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "external-data-trust-boundary",
+          "evidence": "SKILL.md endpoint table and contributing",
+          "finding": "Fetched JSON, Markdown, paper metadata and linked URLs are untrusted data. The skill has no explicit instruction-isolation or approved-link policy; treat remote text as data, do not follow embedded commands, do not execute linked software or send private inputs, and separate approval for upstream issue creation."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "completeness-and-currency-overclaim",
+          "evidence": "SKILL.md count/truncation guidance; pinned index.json",
+          "finding": "The small manifest is not guaranteed to arrive intact, and matching counts alone cannot verify contents. Pinned index is 5431 bytes, not a fixed 4 KB; it explicitly marks the corpus beta and placements under review. Validate raw bytes and record IDs, distinguish author-provided claims from verified primary evidence, and never infer field-wide absence."
+        },
+        {
+          "severity": "MEDIUM",
+          "type": "license-tier-claim-ceiling",
+          "evidence": "SKILL.md Licenses; root LICENSE; pinned index.json",
+          "finding": "The text appropriately requires source verification but later says the tier tells the user what can ship, which can be read as a clearance. Root MIT covers authored curation only. Verify exact third-party terms, conditions and rights independently; treat unknown or unresolved terms as a hold."
+        },
+        {
+          "severity": "LOW",
+          "type": "package-vs-service-dependencies",
+          "evidence": "SKILL.md endpoints and fallback; pinned recursive tree",
+          "finding": "One owned instruction file, no executable owned files; named API JSON and fallback Markdown exist outside the package at the historical pin. This does not prove endpoint availability or all referenced locations, nor resolve 16 historical missing-reference indications. No live service or catalog-wide qualification performed."
+        }
+      ],
+      "positive_safeguards": [
+        "Explicitly distinguishes curated corpus absence from field-wide absence; warns about silently truncated results and matrix scope.",
+        "Distinguishes access from copying rights and requires primary source verification."
+      ],
+      "remediation": "Pin all endpoint reads to one revision; validate bytes, schema and cross-file identities, declare host/network limits, isolate untrusted remote content, and independently verify evidence and reuse rights.",
+      "historical_scan": {
+        "state": "incomplete",
+        "report_sha256": "f1a0f89c24090dc36ee04153ef41f042cae229268e1bba0dcdd763102cd4c450",
+        "findings": [],
+        "incomplete_reasons": {
+          "reference_missing": 16
+        },
+        "interpretation": "Historical 16 missing-reference indications retained. Named endpoint/fallback paths checked in repository inventory, not all scanner locations resolved; no rerun."
+      },
+      "reviewed_at": "2026-11-27",
+      "checked_at": "2026-11-27",
+      "review_method": "Complete owned one-file package read and blob/tree matched untruncated pinned recursive tree inventory; root license, pinned API index and plugin descriptor read as passive data. Other named endpoint and fallback paths checked for presence only. Current main differs and gets separate refresh receipt.",
+      "reviewer": "ChatGPT direct static source review",
+      "static_rubric": {
+        "trigger_precision": 2,
+        "procedural_clarity": 2,
+        "authority_and_safety": 1,
+        "failure_handling": 2,
+        "evidence_discipline": 1,
+        "dependency_coherence": 1,
+        "portability_honesty": 1,
+        "usefulness_and_differentiation": 2,
+        "adversarial_resilience": 1,
+        "effectiveness_design": 1
+      },
+      "static_score": 14,
+      "quality_state": "unverified",
+      "freshness": "reviewed-pin-upstream-update-available; separate refresh receipt",
+      "consumer_disposition": "reference-only; unchanged use held",
+      "historical_scanner_state": "incomplete",
+      "scanner_state_preserved": true,
+      "unchanged_use_approved": false,
+      "new_scanner_executed": false,
+      "host_behavior_observed": false
+    }
+  ]
+}

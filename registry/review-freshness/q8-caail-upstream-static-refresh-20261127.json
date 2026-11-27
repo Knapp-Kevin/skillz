@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "q8-upstream-pinned-package-refresh-static-review",
+  "repository": "Knapp-Kevin/skillz",
+  "issue": 402,
+  "reviewed_at": "2026-11-27",
+  "checked_at": "2026-11-27",
+  "source_id": "tucca-cellag-caail/caail",
+  "source_repository": "tucca-cellag/caail",
+  "package_path": "plugin/skills/caail",
+  "historical_source": {
+    "pin": "5db336dbe013e06187a63724ef66bfd7c39c24fc",
+    "package_tree_sha": "3a44185c15af28341050f850f1dcfcba9690ac8e",
+    "skill_md_git_blob_sha": "8699f83f9dfc63b549cf9f743b62e820d8d0317c",
+    "scanner_report_sha256": "f1a0f89c24090dc36ee04153ef41f042cae229268e1bba0dcdd763102cd4c450",
+    "scanner_gate": "incomplete"
+  },
+  "refreshed_source": {
+    "revision": "da4deee6ce6c8476adee9f02bed0b061458bdb60",
+    "complete_package_tree_sha": "4216bcbf455657b3455510e0a9eae4906ef59c26",
+    "skill_md_git_blob_sha": "c70ace05d98b9ddc226929a33faac5fbb95a56e0",
+    "files": {
+      "SKILL.md": "c70ace05d98b9ddc226929a33faac5fbb95a56e0"
+    },
+    "root_license_sha": "ff72b6cdc99512ddc5c48f5abf849ca5ce23dba0",
+    "manifest_sha": "72293239762feaf98aad4920c49ff469a6b962ed"
+  },
+  "scope": "Complete current owned SKILL read, exact current package tree enumerated and blob matched; current root LICENSE and index manifest read. Other endpoint contents not inspected.",
+  "change": {
+    "topics": [
+      "new network endpoint",
+      "on-request study category distinguished from datasets",
+      "model links and post-publication notices",
+      "data accessions and links"
+    ],
+    "material_behavior_change": "New retrieval surfaces and fields; does not grant external execution, access requests or additional rights."
+  },
+  "current_static_review": {
+    "score_20": 13,
+    "method": "Full current one-file package review and current index reconciliation",
+    "previous_findings_retained": [
+      "mutable-multifile-snapshot",
+      "network-capability-overclaim",
+      "external-data-trust-boundary",
+      "completeness-and-currency-overclaim",
+      "license-tier-claim-ceiling",
+      "package-vs-service-dependencies"
+    ],
+    "new_finding": "MEDIUM: The current index has grown to 12428 bytes and declares 218 datasets (59 curated plus 159 inventory) and four on-request studies, while the skill retains its roughly 4 KB always-complete claim and static count prose. The network endpoint introduces author/citation association claims; verify primary records, avoid overinterpreting graph edges, and do not treat on-request studies as available datasets. Post-publication notices must be checked before evidence use, not merely displayed.",
+    "freshness_disposition": "newer exact tree statically reviewed; unchanged-use held",
+    "unchanged_use_approved": false,
+    "host_behavior_observed": false,
+    "scanner_for_current_tree": "not-run"
+  },
+  "reconciliation": {
+    "historical_q8_review_count_effect": 0,
+    "source_review_refresh_count_effect": 1,
+    "historical_scanner_receipt_reused_for_current_tree": false,
+    "prior_incomplete_preserved": true
+  }
+}
